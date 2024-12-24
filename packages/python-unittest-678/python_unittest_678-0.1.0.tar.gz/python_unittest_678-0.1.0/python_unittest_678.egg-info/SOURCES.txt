@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+students_list.csv
+python_unittest_678.egg-info/PKG-INFO
+python_unittest_678.egg-info/SOURCES.txt
+python_unittest_678.egg-info/dependency_links.txt
+python_unittest_678.egg-info/requires.txt
+python_unittest_678.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+id,name,surname,attendance
+1,Maria,Krawczyk,2023-09-01:Present;2023-09-10:Absent;
+2,Krzysztof,Krawczyk,2023-09-01:Present;2023-09-10:Present;
+3,Jan,Krawczyk,2023-09-01:Absent;2023-09-10:Present;
+4,Alojzy,Kołodziejski,2023-09-01:Present;2023-09-10:Absent;
