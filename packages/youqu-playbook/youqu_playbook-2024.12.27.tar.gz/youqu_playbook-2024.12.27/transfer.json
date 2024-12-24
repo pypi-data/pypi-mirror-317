@@ -1,0 +1,21 @@
+[
+    [
+        {
+            "app_name": "autotest_deepin_installer_iso",
+            "git": {
+                "url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_installer_iso",
+                "branch": "at-develop/eagle"
+            },
+            "framework": "youqu3->uos@10.8.15.30",
+            "split_run": false,
+            "clients": [
+                {
+                    "host": "uos@10.8.15.32:UOSuos123!",
+                    "device": null
+                }
+            ],
+            "order": 1,
+            "device": null
+        }
+    ]
+]
