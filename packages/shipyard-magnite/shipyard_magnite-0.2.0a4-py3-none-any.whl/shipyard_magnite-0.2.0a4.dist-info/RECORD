@@ -1,0 +1,14 @@
+shipyard_magnite/__init__.py,sha256=vDTcGi297KDTaxFtUKqC3q6VZaHnkmEGOHDO6lcV9wA,35
+shipyard_magnite/cli/authtest.py,sha256=am2o3aFG4r4Wzg79iJvcZgKEKsrSFdaE5yTw21DPrps,254
+shipyard_magnite/cli/update_campaign_budget.py,sha256=cAR2sxAqPum-a84OJy1d5n9Bl9Edy3bCDveKZMWDQ7c,4853
+shipyard_magnite/cli/update_single_campaign_budget.py,sha256=yBhRVMhFGw09TBus7GzsICyJRHtKDdLwv67idLokSGQ,5225
+shipyard_magnite/dataclasses/budget_item.py,sha256=LjxMz2sO_o5gSivtIvq99Nkil6PPOYYOcz4YX6grL0Q,3040
+shipyard_magnite/dataclasses/budgets.py,sha256=rdISBsvvBVuj10nDABgxTkogpTefbZtiBvOKXgzfNrc,2638
+shipyard_magnite/dataclasses/targeting_spend_profile.py,sha256=PQ1OlNazQ6ZiOMCZ6mJhZ-l7Ij4fOG2FurMYo-ilxIo,1786
+shipyard_magnite/dataclasses/validation_results.py,sha256=qQQvPhiiFNQlChdGH_1wkMdCkBb9F_6AZgKZRtA7mPM,2528
+shipyard_magnite/errs.py,sha256=2leIJL2NLj6gei7TRjso6XaMbX4AOoyA622Pnk4HTBQ,1794
+shipyard_magnite/magnite.py,sha256=g6-1G7jgw5ygLmRmGkRXWzTlz5VW7gJ4fcoVNLg4rgQ,5826
+shipyard_magnite/utils.py,sha256=eDm8Z8flpgaXmoxLVbxqfpqukOwx5DuCIGRraptTg4s,3116
+shipyard_magnite-0.2.0a4.dist-info/METADATA,sha256=In9rzwv47H8rrUybNhfXjmwgap5KF2oWJN8r229_2Wc,567
+shipyard_magnite-0.2.0a4.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+shipyard_magnite-0.2.0a4.dist-info/RECORD,,
