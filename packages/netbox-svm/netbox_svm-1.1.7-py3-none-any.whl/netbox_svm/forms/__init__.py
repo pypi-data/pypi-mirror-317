@@ -1,0 +1,8 @@
+from .software_license import SoftwareLicenseForm, SoftwareLicenseFilterForm, SoftwareLicenseImportForm
+from .software_product import SoftwareProductForm, SoftwareProductFilterForm, SoftwareProductImportForm
+from .software_product_installation import SoftwareProductInstallationForm, SoftwareProductInstallationFilterForm, SoftwareProductInstallationImportForm
+from .software_product_version import SoftwareProductVersionForm, SoftwareProductVersionFilterForm, SoftwareProductVersionImportForm
+from .software_version_install_remove import *
+
+
+
