@@ -1,0 +1,44 @@
+{
+  "chronos": {
+    "event": {
+      "amend": {
+        "cancelled": "Отменено",
+        "rooms": "Комнаты"
+      }
+    },
+    "lessons": {
+      "menu_title_daily": "Ежедневные уроки"
+    },
+    "menu_title": "Расписания",
+    "substitutions": {
+      "cancelled": "Отменено",
+      "groups": "Группы",
+      "menu_title": "Замены",
+      "notes": "Заметки",
+      "overview": {
+        "cancel": {
+          "cancelled": "Отменено"
+        },
+        "rooms": {
+          "label": "Комнаты"
+        },
+        "status": {
+          "cancelled": "Отменено"
+        }
+      },
+      "rooms": "Комнаты",
+      "time": "Время"
+    },
+    "supervisions": {
+      "menu_title_daily": "Ежедневные наблюдения"
+    },
+    "timetable": {
+      "menu_title_all": "Все расписания",
+      "menu_title_my": "Моё расписание",
+      "types": {
+        "groups": "Группы",
+        "rooms": "Комнаты"
+      }
+    }
+  }
+}

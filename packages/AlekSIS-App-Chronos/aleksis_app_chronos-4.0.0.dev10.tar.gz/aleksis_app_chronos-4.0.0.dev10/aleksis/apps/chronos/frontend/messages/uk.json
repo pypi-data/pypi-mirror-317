@@ -1,0 +1,79 @@
+{
+  "chronos": {
+    "event": {
+      "amend": {
+        "cancelled": "Скасовано",
+        "comment": "Коментар",
+        "delete_button": "Скинути",
+        "delete_dialog": "Ви дійсно хочете видалити цю заміну?",
+        "delete_success": "Заміна успішно видалена.",
+        "edit_button": "Змінити",
+        "rooms": "Кімнати",
+        "subject": "Предмет",
+        "teachers": "Викладачі",
+        "title": "Змінити урок"
+      },
+      "current_changes": "Поточні зміни",
+      "no_room": "Без кімнат",
+      "no_teacher": "Без викладачів"
+    },
+    "lessons": {
+      "menu_title_daily": "Щоденні уроки"
+    },
+    "menu_title": "Розклади",
+    "substitutions": {
+      "cancelled": "Скасовано",
+      "groups": "Групи",
+      "menu_title": "Заміни",
+      "notes": "Нотатки",
+      "overview": {
+        "cancel": {
+          "cancelled": "Скасовано"
+        },
+        "comment": "Коментар",
+        "filter": {
+          "missing": "Показати лише неповні уроки"
+        },
+        "rooms": {
+          "label": "Кімнати"
+        },
+        "status": {
+          "cancelled": "Скасовано"
+        },
+        "subject": {
+          "label": "Предмет"
+        },
+        "teacher": {
+          "label": "Викладачі"
+        }
+      },
+      "rooms": "Кімнати",
+      "subject": "Предмет",
+      "supervision": "Контроль",
+      "teachers": "Викладачі",
+      "time": "Час"
+    },
+    "supervisions": {
+      "menu_title_daily": "Щоденні спостереження",
+      "title": "Контроль"
+    },
+    "timetable": {
+      "menu_title": "Розклади",
+      "menu_title_all": "Усі розклади",
+      "menu_title_my": "Мій розклад",
+      "next": "Наступний розклад",
+      "no_timetable_selected": {
+        "description": "Виберіть розклад занять ліворуч для перегляду його тут",
+        "title": "Розклад не обраний"
+      },
+      "prev": "Попередній розклад",
+      "search": "Пошук розкладів",
+      "select": "Оберіть розклад",
+      "types": {
+        "groups": "Групи",
+        "rooms": "Кімнати",
+        "teachers": "Викладачі"
+      }
+    }
+  }
+}

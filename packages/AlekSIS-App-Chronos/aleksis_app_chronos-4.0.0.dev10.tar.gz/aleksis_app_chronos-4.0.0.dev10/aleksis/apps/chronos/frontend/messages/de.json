@@ -1,0 +1,101 @@
+{
+  "chronos": {
+    "event": {
+      "amend": {
+        "cancelled": "Fällt aus",
+        "comment": "Kommentar",
+        "delete_button": "Zurücksetzen",
+        "delete_dialog": "Sind Sie sicher, dass Sie diese Vertretung löschen wollen?",
+        "delete_success": "Die Vertretung wurde erfolgreich gelöscht.",
+        "edit_button": "Ändern",
+        "rooms": "Räume",
+        "subject": "Fach",
+        "teachers": "Lehrkräfte",
+        "title": "Stunde ändern"
+      },
+      "current_changes": "Aktuelle Änderungen",
+      "no_room": "Kein Raum",
+      "no_teacher": "Keine Lehrkraft"
+    },
+    "lessons": {
+      "menu_title_daily": "Tagesstunden"
+    },
+    "menu_title": "Stundenpläne",
+    "substitutions": {
+      "affected_groups": "Betroffene Gruppen",
+      "affected_teachers": "Betroffene Lehrkräfte",
+      "all_day": "Ganztägig",
+      "cancelled": "Entfällt",
+      "groups": "Gruppen",
+      "menu_title": "Vertretungen",
+      "no_substitutions": "Keine Vertretungen",
+      "notes": "Notizen",
+      "overview": {
+        "cancel": {
+          "cancelled": "Fällt aus",
+          "not_cancelled": "Findet statt"
+        },
+        "comment": "Kommentar",
+        "filter": {
+          "groups": "Nach Gruppen filtern",
+          "missing": "Nur unvollständige Stunden anzeigen",
+          "teachers": "Nach Lehrkraft filtern"
+        },
+        "info_alert": {
+          "button": "Abwesenheiten verwalten",
+          "text": "Diese Seite zeigt alle Unterrichtsstunden die mit bekannten Abwesenheiten von ihren entsprechenden Lehrkräften kollidieren."
+        },
+        "menu_title": "Vertretungen planen",
+        "rooms": {
+          "label": "Räume"
+        },
+        "status": {
+          "cancelled": "Entfällt",
+          "substituted": "Vertreten",
+          "unedited": "Unbearbeitet"
+        },
+        "subject": {
+          "label": "Fach"
+        },
+        "teacher": {
+          "label": "Lehrkräfte",
+          "status": {
+            "absent": "Abwesend",
+            "new": "Vertretungslehrkraft",
+            "regular": "Regulär"
+          }
+        },
+        "title_plural": "Vertretungen planen"
+      },
+      "print": "Drucken",
+      "rooms": "Räume",
+      "subject": "Fach",
+      "supervision": "Aufsicht",
+      "teachers": "Lehrkräfte",
+      "time": "Zeit"
+    },
+    "supervisions": {
+      "menu_title_daily": "Aufsichten",
+      "title": "Aufsicht"
+    },
+    "timetable": {
+      "menu_title": "Stundenpläne",
+      "menu_title_all": "Alle Stundenpläne",
+      "menu_title_my": "Mein Stundenplan",
+      "next": "Nächster Stundenplan",
+      "no_timetable_selected": {
+        "description": "Wählen Sie auf der linken Seite einen Stundenplan aus, um ihn hier anzuzeigen",
+        "title": "Kein Stundenplan ausgewählt"
+      },
+      "no_timetables_in_term": "Keine Stundenpläne im ausgewählten Schuljahr",
+      "prev": "Vorheriger Stundenplan",
+      "search": "Stundenpläne suchen",
+      "select": "Stundenplan auswählen",
+      "types": {
+        "groups": "Gruppen",
+        "rooms": "Räume",
+        "teachers": "Lehrkräfte"
+      }
+    }
+  }
+}
