@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pydensecrf2
+Version: 1.1rc1
+Summary: A python interface to Philipp Krähenbühl's fully-connected (dense) CRF code.
+Home-page: https://github.com/adaptivemotorcontrollab/pydensecrf
+Author: Lucas Beyer, Philipp Krähenbühl
+Author-email: lucasb.eyer.be@gmail.com
+Maintainer: Mackenzie Mathis
+Maintainer-email: mackenzie@post.harvard.edu
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+License-File: LICENSE
+
+See the README.md at http://github.com/lucasb-eyer/pydensecrf
