@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 56.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "ksh_jsl_inference"
+requires-python = ">=3.6"
+maintainers = [ {name = "Kshitiz Shakya", email = "kshitiz@johnsnowlabs.com"}]
+license = {file = "LICENSE"}
+dependencies = [
+  "click<9,>=7.0",
+  "johnsnowlabs>=5.4.0",
+  "fastapi",
+  "uvicorn",
+]
+version = "0.1.0rc2"
+
+[project.scripts]
+jsl_inference = "endpoints.cli:cli"
+[tool.black]
+target-version = ['py38']
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["endpoints", "endpoints.*"]
+exclude = [ "tests*",  "tools" , "mlflow_by_ckl", "endpoints.models*"]
