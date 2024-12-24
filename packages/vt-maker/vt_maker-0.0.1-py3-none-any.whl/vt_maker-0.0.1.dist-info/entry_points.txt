@@ -1,0 +1,2 @@
+[console_scripts]
+vt_maker = vt_maker.cli:main

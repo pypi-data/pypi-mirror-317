@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: vt-maker
+Version: 0.0.1
+Summary: Video Thumbnail Maker
+Home-page: https://github.com/pengzhendong/video-thumbnail-maker
+Author: Zhendong Peng
+Author-email: pzd17@tsinghua.org.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: av
+Requires-Dist: Pillow
+Requires-Dist: PyYAML
+Requires-Dist: tqdm
+
+# Video Thumbnail Maker
+
+## Usage
+
+``` bash
+$ pip install vt-maker
+$ vt_maker --video /path/to/video
+```
+
+![example](images/example.png)
