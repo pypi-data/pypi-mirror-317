@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AlloySustainability"
+version = "0.1.5"
+authors = [
+    { name = "Stephane GORSSE", email = "sgorsse@gmail.com" },
+]
+description = "Compute and visualize the sustainability impacts of alloys based on their chemical composition."
+readme = "README.md"
+requires-python = ">=3.6"
+license = { text = "MIT" }
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "requests"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/sgorsse/AlloySustainability"
+
+[tool.setuptools.package-data]
+"AlloySustainability" = ["data/*.csv"]
