@@ -1,0 +1,21 @@
+[project]
+name = "coder-interpreter"
+version = "0.1.3"
+description = "help users to coding and get execute result"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+ "httpx>=0.28.0",
+ "mcp>=1.1.0",
+ "python-dotenv>=1.0.1",
+]
+[[project.authors]]
+name = "yangming9042"
+email = "yangming9042@gmail.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+coder-interpreter = "coder_interpreter:main"
