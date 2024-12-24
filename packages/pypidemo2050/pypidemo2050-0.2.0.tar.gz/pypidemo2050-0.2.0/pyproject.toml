@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pypidemo2050"
+version = "0.2.0"
+description = ""
+authors = ["王明 <wangming@shinemo.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
