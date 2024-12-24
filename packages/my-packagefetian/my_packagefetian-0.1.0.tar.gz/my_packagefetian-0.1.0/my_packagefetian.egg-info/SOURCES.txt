@@ -1,0 +1,7 @@
+setup.py
+my_packagefetian/__init__.py
+my_packagefetian/example_module.py
+my_packagefetian.egg-info/PKG-INFO
+my_packagefetian.egg-info/SOURCES.txt
+my_packagefetian.egg-info/dependency_links.txt
+my_packagefetian.egg-info/top_level.txt
