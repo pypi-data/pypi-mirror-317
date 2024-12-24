@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ginvdist
+Version: 0.1.12
+Summary: проект GInvDist - система для распределённого вычисления базисов Грёбнера(и инволютивных базисов) с использованием инволютивного деления.
+Home-page: https://github.com/TheMumblingMammoth/GInvDist
+Author: Мамонов А.А. Салпагаров С.И. Блинков Ю.А.
+Author-email: anton.mamonov.golohvastogo@mail.ru
+License: GNU LGPL
+Project-URL: GitHub Project, https://github.com/TheMumblingMammoth/GInvDist
+Project-URL: Issue Tracker, https://github.com/TheMumblingMammoth/GInvDist/blob/main/Meta/issues
+Keywords: distributed calculation
+Platform: UNKNOWN
+Requires-Python: >=3.1
+Description-Content-Type: text/markdown
+
+https://github.com/TheMumblingMammoth/GInvDist/blob/main/README.md
+
