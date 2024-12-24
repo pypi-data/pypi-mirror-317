@@ -1,0 +1,3 @@
+1a78d8f30e11423f7e8c__mypyc
+tests
+untruncate_json
