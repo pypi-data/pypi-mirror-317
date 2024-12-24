@@ -1,0 +1,9 @@
+dialz/__init__.py,sha256=4cR1Bk7D3U1YsyIro9hqwcxgoLc7KBGutq29atyWNu4,132
+dialz/corpus/data.json,sha256=Ed9brV5DWM30F4uo101oyXEAJ9dxz5A0JlyOWkpaAXo,245615
+dialz/dataset.py,sha256=wbybZw-Lt4cMKyf8Vz2qdoyLVCrzqsLYxt5jCojCy7A,3686
+dialz/main.py,sha256=nVKzjuqbyGgUGA4AC-xe56X1_o1F4LRY4gvSlI2GR9A,2288
+dialz/model.py,sha256=r6DbGEMCgqo9UtUF87xZ_LQiJ5QKQozZeAlvMdZbz-8,7283
+dialz/vector.py,sha256=1tPwY9pMJsnAqDxJDW8GkZ6sCXYCq-gPHrwrhSObQ9M,11511
+dialz-0.1.2.dist-info/METADATA,sha256=IqmWSvwGwVVy16qJX-6_l7PD9vJdcTJiOHU3rFvma3Y,659
+dialz-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+dialz-0.1.2.dist-info/RECORD,,
