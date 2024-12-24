@@ -1,0 +1,14 @@
+LICENSE
+README.md
+python-setup.py
+mipt2024f_4_barrect/__init__.py
+mipt2024f_4_barrect/quality.py
+mipt2024f_4_barrect/rectify.py
+mipt2024f_4_barrect.egg-info/PKG-INFO
+mipt2024f_4_barrect.egg-info/SOURCES.txt
+mipt2024f_4_barrect.egg-info/dependency_links.txt
+mipt2024f_4_barrect.egg-info/top_level.txt
+mipt2024f_4_barrect/internal/__init__.py
+mipt2024f_4_barrect/internal/gridgen.py
+mipt2024f_4_barrect/internal/gridmap.py
+mipt2024f_4_barrect/internal/warp.py

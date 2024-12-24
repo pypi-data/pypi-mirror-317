@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mipt2024f_4_barrect
+Version: 0.1.0
+Summary: Barcode rectifier
+Author: Alexander Koshelev
+Author-email: alexander.y.koshelev@gmail.com
+License: LGPL
+Keywords: python,rectification
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+MIPT 2024 4th semester fall project module: barcode rectifier
