@@ -1,0 +1,11 @@
+numpy
+
+[code]
+black
+isort
+
+[dev]
+example-publish-pypi[code,lint]
+
+[lint]
+pylint
