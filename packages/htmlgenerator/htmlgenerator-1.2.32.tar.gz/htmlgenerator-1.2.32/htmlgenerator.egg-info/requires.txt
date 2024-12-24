@@ -1,0 +1,7 @@
+
+[all]
+black
+beautifulsoup4
+
+[all:platform_system != "Windows"]
+lxml
