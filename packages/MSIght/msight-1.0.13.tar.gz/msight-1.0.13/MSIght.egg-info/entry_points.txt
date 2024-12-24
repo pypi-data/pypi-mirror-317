@@ -1,0 +1,2 @@
+[console_scripts]
+msight-notebook = MSIght.launch_basic_notebook:main
