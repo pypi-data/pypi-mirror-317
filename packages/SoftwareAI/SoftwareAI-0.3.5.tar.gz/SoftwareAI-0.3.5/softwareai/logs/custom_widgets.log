@@ -1,0 +1,95 @@
+2024-12-09 00:01:08,514 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-09 00:01:08,521 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-12-09 00:01:08,526 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-09 00:01:08,682 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-12-09 00:01:08,685 - DEBUG - Starting new HTTPS connection (1): aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443
+2024-12-09 00:01:09,137 - DEBUG - https://aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /ai_org_assistant_id/User_AI_SynthOperator_Software_requirements_analyst.json HTTP/1.1" 200 103
+2024-12-09 00:01:09,365 - DEBUG - https://aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /ai_org_thread_Id/User_AI_SynthOperator_Software_requirements_analyst.json HTTP/1.1" 200 4
+2024-12-09 00:01:09,376 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-09 00:01:09,384 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-12-09 00:01:09,387 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-09 00:01:09,532 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-12-09 00:01:09,535 - DEBUG - Starting new HTTPS connection (1): aicompanydata2-default-rtdb.firebaseio.com:443
+2024-12-09 00:01:09,891 - DEBUG - https://aicompanydata2-default-rtdb.firebaseio.com:443 "GET /save_settings_users/DESKTOP-5L1VA7L.json HTTP/1.1" 200 2743
+2024-12-09 00:01:10,039 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-09 00:01:10,090 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-12-09 00:01:10,095 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-09 00:01:10,250 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-12-09 00:01:10,255 - DEBUG - Starting new HTTPS connection (1): aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443
+2024-12-09 00:01:10,710 - DEBUG - https://aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /ai_org_assistant_id/User_AI_MatrixAI_Company_Owners.json HTTP/1.1" 200 83
+2024-12-09 00:01:10,720 - DEBUG - Request options: {'method': 'post', 'url': '/assistants/asst_4W6gLDs2zoiYd5mcDFExCvie', 'headers': {'OpenAI-Beta': 'assistants=v2'}, 'files': None, 'json_data': {'tools': [{'type': 'file_search'}, {'type': 'function', 'function': {'name': 'send_message_to_byte_manager', 'description': 'Envia uma mensagem ao ByteManager, informando sobre solicitações ou atualizações.', 'parameters': {'type': 'object', 'properties': {'message': {'type': 'string', 'description': 'A mensagem a ser enviada ao ByteManager.'}, 'username': {'type': 'string', 'description': 'O nome do usuário que está enviando a mensagem.'}}, 'required': ['message', 'username']}}}]}}
+2024-12-09 00:01:10,721 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/assistants/asst_4W6gLDs2zoiYd5mcDFExCvie
+2024-12-09 00:01:10,722 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2024-12-09 00:01:10,752 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026458E68D30>
+2024-12-09 00:01:10,752 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000026453570BC0> server_hostname='api.openai.com' timeout=5.0
+2024-12-09 00:01:10,760 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026458E68A60>
+2024-12-09 00:01:10,761 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-12-09 00:01:10,761 - DEBUG - send_request_headers.complete
+2024-12-09 00:01:10,761 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-12-09 00:01:10,762 - DEBUG - send_request_body.complete
+2024-12-09 00:01:10,762 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-12-09 00:01:11,586 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 09 Dec 2024 03:01:03 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-version', b'2020-10-01'), (b'openai-organization', b'user-rwaavzhx8ve8ladw790gu4dr'), (b'x-request-id', b'req_9124b8a104e9118a654ea9fcd1744a1d'), (b'openai-processing-ms', b'287'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=7zG3.8idxwgqWArT9aPcrGedn4i8ygqFFBpGpp5cl9A-1733713263-1.0.1.1-rfCBLnan9PMKT0ifvhi4UhhDjfhSnoHJaihNIdSFLDcGcMlNlZfeP4jnxsupbBpQnlZn9HBN8HywkDZo2F2l3g; path=/; expires=Mon, 09-Dec-24 03:31:03 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=G6XVNi14ujM0q1TZblU_3RwHOlBRrwlHFKthf1o4WJg-1733713263960-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8ef1bf969a5a26a3-CNF'), (b'Content-Encoding', b'br'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2024-12-09 00:01:11,587 - INFO - HTTP Request: POST https://api.openai.com/v1/assistants/asst_4W6gLDs2zoiYd5mcDFExCvie "HTTP/1.1 200 OK"
+2024-12-09 00:01:11,587 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-12-09 00:01:11,588 - DEBUG - receive_response_body.complete
+2024-12-09 00:01:11,588 - DEBUG - response_closed.started
+2024-12-09 00:01:11,588 - DEBUG - response_closed.complete
+2024-12-09 00:01:11,589 - DEBUG - HTTP Response: POST https://api.openai.com/v1/assistants/asst_4W6gLDs2zoiYd5mcDFExCvie "200 OK" Headers([('date', 'Mon, 09 Dec 2024 03:01:03 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('openai-version', '2020-10-01'), ('openai-organization', 'user-rwaavzhx8ve8ladw790gu4dr'), ('x-request-id', 'req_9124b8a104e9118a654ea9fcd1744a1d'), ('openai-processing-ms', '287'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=7zG3.8idxwgqWArT9aPcrGedn4i8ygqFFBpGpp5cl9A-1733713263-1.0.1.1-rfCBLnan9PMKT0ifvhi4UhhDjfhSnoHJaihNIdSFLDcGcMlNlZfeP4jnxsupbBpQnlZn9HBN8HywkDZo2F2l3g; path=/; expires=Mon, 09-Dec-24 03:31:03 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=G6XVNi14ujM0q1TZblU_3RwHOlBRrwlHFKthf1o4WJg-1733713263960-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8ef1bf969a5a26a3-CNF'), ('content-encoding', 'br'), ('alt-svc', 'h3=":443"; ma=86400')])
+2024-12-09 00:01:11,589 - DEBUG - request_id: req_9124b8a104e9118a654ea9fcd1744a1d
+2024-12-09 00:01:18,797 - DEBUG - https://aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /ai_org_assistant_id/User_AI_MatrixAI_Company_Owners.json HTTP/1.1" 200 83
+2024-12-09 00:01:20,030 - DEBUG - https://aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /ai_org_thread_Id/User_AI_MatrixAI_Company_Owners.json HTTP/1.1" 200 82
+2024-12-09 00:01:20,080 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-09 00:01:20,127 - DEBUG - load_verify_locations cafile='C:\\Users\\ualer\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\certifi\\cacert.pem'
+2024-12-09 00:01:20,179 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_CDc0CUaP8SEwD9nobkGyIEXo/runs', 'params': {}, 'headers': {'OpenAI-Beta': 'assistants=v2'}, 'post_parser': <function SyncAPIClient._request_api_list.<locals>._parser at 0x0000026456B7B8B0>, 'json_data': None}
+2024-12-09 00:01:20,191 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_CDc0CUaP8SEwD9nobkGyIEXo/runs
+2024-12-09 00:01:20,207 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2024-12-09 00:01:20,302 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026456BAE0A0>
+2024-12-09 00:01:20,318 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000026456C88140> server_hostname='api.openai.com' timeout=5.0
+2024-12-09 00:01:20,429 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026456BA7EE0>
+2024-12-09 00:01:20,445 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2024-12-09 00:01:20,506 - DEBUG - send_request_headers.complete
+2024-12-09 00:01:20,522 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2024-12-09 00:01:20,537 - DEBUG - send_request_body.complete
+2024-12-09 00:01:20,553 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2024-12-09 00:01:21,403 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 09 Dec 2024 03:01:13 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-version', b'2020-10-01'), (b'openai-organization', b'user-rwaavzhx8ve8ladw790gu4dr'), (b'x-request-id', b'req_577109dea65c44611c013d77b3972895'), (b'openai-processing-ms', b'353'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=GfcouDZmr.T9rAEHvjhUJgqe_0oW.wyTBET6YEDH9t8-1733713273-1.0.1.1-Zq0tXXhXEUH4VO63IRuodv2_bryiNhZpQ2jX2xA_P7anV2JPaWNi1akFZzeK2OT..DtDEcQpiOI9UWE.AcPr0g; path=/; expires=Mon, 09-Dec-24 03:31:13 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=Fep1CAWHIqXdB9wagfdneYIa2Co273jhFcY85xtnCpQ-1733713273749-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8ef1bfd369ab26a2-CNF'), (b'Content-Encoding', b'br'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2024-12-09 00:01:21,419 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_CDc0CUaP8SEwD9nobkGyIEXo/runs "HTTP/1.1 200 OK"
+2024-12-09 00:01:21,435 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2024-12-09 00:01:21,580 - DEBUG - receive_response_body.complete
+2024-12-09 00:01:21,596 - DEBUG - response_closed.started
+2024-12-09 00:01:21,612 - DEBUG - response_closed.complete
+2024-12-09 00:01:21,644 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_CDc0CUaP8SEwD9nobkGyIEXo/runs "200 OK" Headers([('date', 'Mon, 09 Dec 2024 03:01:13 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('openai-version', '2020-10-01'), ('openai-organization', 'user-rwaavzhx8ve8ladw790gu4dr'), ('x-request-id', 'req_577109dea65c44611c013d77b3972895'), ('openai-processing-ms', '353'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=GfcouDZmr.T9rAEHvjhUJgqe_0oW.wyTBET6YEDH9t8-1733713273-1.0.1.1-Zq0tXXhXEUH4VO63IRuodv2_bryiNhZpQ2jX2xA_P7anV2JPaWNi1akFZzeK2OT..DtDEcQpiOI9UWE.AcPr0g; path=/; expires=Mon, 09-Dec-24 03:31:13 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=Fep1CAWHIqXdB9wagfdneYIa2Co273jhFcY85xtnCpQ-1733713273749-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8ef1bfd369ab26a2-CNF'), ('content-encoding', 'br'), ('alt-svc', 'h3=":443"; ma=86400')])
+2024-12-09 00:01:21,660 - DEBUG - request_id: req_577109dea65c44611c013d77b3972895
+2024-12-10 13:48:48,571 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-10 13:48:48,860 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-12-10 13:48:49,394 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-10 13:48:49,900 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-12-10 13:48:50,101 - DEBUG - Starting new HTTPS connection (1): aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443
+2024-12-10 13:48:50,145 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-12-10 13:48:50,250 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-12-10 13:48:50,340 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-12-10 13:48:50,687 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-12-10 13:48:50,793 - DEBUG - https://aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /ai_org_assistant_id/User_AI_SynthOperator_Software_requirements_analyst.json HTTP/1.1" 200 103
+2024-12-10 13:48:50,823 - DEBUG - Starting new HTTPS connection (1): aicompanydata2-default-rtdb.firebaseio.com:443
+2024-12-10 13:48:51,157 - DEBUG - https://aicompanydata1-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /ai_org_thread_Id/User_AI_SynthOperator_Software_requirements_analyst.json HTTP/1.1" 200 102
+2024-12-10 13:48:51,433 - DEBUG - https://aicompanydata2-default-rtdb.firebaseio.com:443 "GET /save_settings_users/DESKTOP-5L1VA7L.json HTTP/1.1" 200 2743
+2024-12-10 13:48:52,758 - DEBUG - Request options: {'method': 'get', 'url': '/threads/thread_oFZvPrLUXdAVnVdGsCFIXkHK/runs', 'params': {}, 'headers': {'OpenAI-Beta': 'assistants=v2'}, 'post_parser': <function SyncAPIClient._request_api_list.<locals>._parser at 0x0000021F1E4FAAF0>, 'json_data': None}
+2024-12-10 13:48:52,766 - DEBUG - Sending HTTP Request: GET https://api.openai.com/v1/threads/thread_oFZvPrLUXdAVnVdGsCFIXkHK/runs
+2024-12-10 13:48:52,766 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2024-12-10 13:48:52,847 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021F1E0BA9D0>
+2024-12-10 13:48:52,863 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000021F18563840> server_hostname='api.openai.com' timeout=5.0
+2024-12-10 13:48:52,955 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021F1E0BA9A0>
+2024-12-10 13:48:52,967 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2024-12-10 13:48:53,026 - DEBUG - send_request_headers.complete
+2024-12-10 13:48:53,036 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2024-12-10 13:48:53,051 - DEBUG - send_request_body.complete
+2024-12-10 13:48:53,067 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2024-12-10 13:48:54,192 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 10 Dec 2024 16:48:52 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-version', b'2020-10-01'), (b'openai-organization', b'user-rwaavzhx8ve8ladw790gu4dr'), (b'x-request-id', b'req_c12305724e0e9a44f3e42ea1f0e017c7'), (b'openai-processing-ms', b'604'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=8138ocPuJCw0YumvbdgpOBLBdEePG9HZ8lFOeb2oAgQ-1733849332-1.0.1.1-or98C.xlxAz1lkOvrPsrCmLYIMZ52j3P3BD8_r107JqdJSvxWnIvfTaWcvK6dDk.ugO5bUBLwxb_eB18MJRSbw; path=/; expires=Tue, 10-Dec-24 17:18:52 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=uXwTjnAopXppAwHhxBv6UMWsyIG.JBtGveP65cPjxGg-1733849332981-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8efeb993ec4526a3-CNF'), (b'Content-Encoding', b'br'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2024-12-10 13:48:54,206 - INFO - HTTP Request: GET https://api.openai.com/v1/threads/thread_oFZvPrLUXdAVnVdGsCFIXkHK/runs "HTTP/1.1 200 OK"
+2024-12-10 13:48:54,219 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2024-12-10 13:48:54,366 - DEBUG - receive_response_body.complete
+2024-12-10 13:48:54,366 - DEBUG - response_closed.started
+2024-12-10 13:48:54,381 - DEBUG - response_closed.complete
+2024-12-10 13:48:54,406 - DEBUG - HTTP Response: GET https://api.openai.com/v1/threads/thread_oFZvPrLUXdAVnVdGsCFIXkHK/runs "200 OK" Headers([('date', 'Tue, 10 Dec 2024 16:48:52 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('openai-version', '2020-10-01'), ('openai-organization', 'user-rwaavzhx8ve8ladw790gu4dr'), ('x-request-id', 'req_c12305724e0e9a44f3e42ea1f0e017c7'), ('openai-processing-ms', '604'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=8138ocPuJCw0YumvbdgpOBLBdEePG9HZ8lFOeb2oAgQ-1733849332-1.0.1.1-or98C.xlxAz1lkOvrPsrCmLYIMZ52j3P3BD8_r107JqdJSvxWnIvfTaWcvK6dDk.ugO5bUBLwxb_eB18MJRSbw; path=/; expires=Tue, 10-Dec-24 17:18:52 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=uXwTjnAopXppAwHhxBv6UMWsyIG.JBtGveP65cPjxGg-1733849332981-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8efeb993ec4526a3-CNF'), ('content-encoding', 'br'), ('alt-svc', 'h3=":443"; ma=86400')])
+2024-12-10 13:48:54,419 - DEBUG - request_id: req_c12305724e0e9a44f3e42ea1f0e017c7
+2024-12-21 15:42:26,894 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-12-21 15:42:26,899 - DEBUG - load_verify_locations cafile='C:\\Users\\ualer\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\certifi\\cacert.pem'
