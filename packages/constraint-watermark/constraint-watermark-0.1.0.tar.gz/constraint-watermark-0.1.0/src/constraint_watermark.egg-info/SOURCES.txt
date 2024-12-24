@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+src/constraint_watermark.egg-info/PKG-INFO
+src/constraint_watermark.egg-info/SOURCES.txt
+src/constraint_watermark.egg-info/dependency_links.txt
+src/constraint_watermark.egg-info/requires.txt
+src/constraint_watermark.egg-info/top_level.txt
