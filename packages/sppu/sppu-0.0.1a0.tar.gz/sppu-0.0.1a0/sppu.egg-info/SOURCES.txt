@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pattern/__init__.py
+pattern/plot.py
+sppu.egg-info/PKG-INFO
+sppu.egg-info/SOURCES.txt
+sppu.egg-info/dependency_links.txt
+sppu.egg-info/requires.txt
+sppu.egg-info/top_level.txt
