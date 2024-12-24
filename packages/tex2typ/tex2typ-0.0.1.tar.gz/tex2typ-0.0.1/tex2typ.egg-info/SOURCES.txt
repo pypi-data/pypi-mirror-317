@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_foo.py
+tex2typ.egg-info/PKG-INFO
+tex2typ.egg-info/SOURCES.txt
+tex2typ.egg-info/dependency_links.txt
+tex2typ.egg-info/requires.txt
+tex2typ.egg-info/top_level.txt
