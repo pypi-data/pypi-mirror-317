@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "tbank-kassa"
+version = "0.3.3"
+description = ""
+authors = ["Rostislaww <rostiki.com@mail.ru>"]
+homepage = "https://github.com/RostHarcha/tbank_kassa"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.10.3"
+aiohttp = "^3.11.10"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
