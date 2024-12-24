@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pattern/__init__.py
+pattern/plot.py
+reliance.egg-info/PKG-INFO
+reliance.egg-info/SOURCES.txt
+reliance.egg-info/dependency_links.txt
+reliance.egg-info/requires.txt
+reliance.egg-info/top_level.txt
