@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: asteroid_sdk
+Version: 0.1.13
+Summary: A Python SDK for Asteroid
+Author-email: Asteroid <founders@asteroid.ai>
+License: MIT License
+        
+        Copyright (c) 2024 Asteroid
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.28.0
+Requires-Dist: openai>=1.0.0
+Requires-Dist: anthropic>=0.3.0
+Requires-Dist: litellm>=0.1.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: inspect-ai>=0.3.49
+Requires-Dist: jinja2>=3.1.4
+Requires-Dist: jsonschema>=4.19.0
+
+# Asteroid Python SDK ☄️
+A Python SDK for interacting with the Asteroid platform. To successfully use Asteroid Python SDK, you need to have a running instance of the Asteroid server. [Book a demo]( https://calendly.com/founders-asteroid-hhaf/30min) with Asteroid founders to get started!
+
+
+## Installation
+```bash
+pip install asteroid-sdk
+```
+
+## Quick Start
+
+```python
+from asteroid_sdk.wrappers.openai import asteroid_openai_client
+from asteroid_sdk.registration.initialise_project import asteroid_init
+from asteroid_sdk.supervision.decorators import supervise
+from asteroid_sdk.supervision.supervisors import openai_llm_supervisor, human_supervisor
+from openai import OpenAI
+
+# Initialize the SDK
+run_id = asteroid_init()
+
+
+# Define your tools with supervisors
+@supervise(supervision_functions=[
+    [openai_llm_supervisor(instructions="For flights above $1000, escalate."), human_supervisor()]])
+def book_flight(departure_city: str, arrival_city: str, datetime: str):
+    """Book a flight ticket."""
+    return f"Flight booked from {departure_city} to {arrival_city} on {datetime}."
+
+
+# Wrap your LLM client
+client = OpenAI()
+wrapped_client = asteroid_openai_client(client, run_id)
+
+# Run your LLM
+response = wrapped_client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{"role": "user", "content": "Book a flight from SF to LA for tomorrow for $1100."}],
+    tools=[book_flight]
+)
+# The response is supervised by Asteroid, check the web UI for the results and human review
+```
+
+## Documentation
+
+For more information, please refer to the [Asteroid Documentation](https://docs.asteroid.ai/)! 
+
