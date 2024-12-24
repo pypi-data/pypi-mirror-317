@@ -1,0 +1,17 @@
+#!/usr/bin/python
+import setuptools
+
+setuptools.setup(name='extargsparse',
+	version='1.1.8',
+	description='extension class for argparse with json configuration',
+	url='http://github.com/jeppeter/extargsparse',
+	author='jeppeter Wang',
+	author_email='jeppeter@gmail.com',
+	license='MIT',
+	packages=setuptools.find_packages(),
+	zip_safe=True,
+	classifiers=[
+        "Programming Language :: Python",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ])
