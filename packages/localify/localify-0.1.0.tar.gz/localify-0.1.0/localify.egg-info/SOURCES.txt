@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+localify/__init__.py
+localify/core.py
+localify/loaders.py
+localify/localify.py
+localify/translation.py
+localify.egg-info/PKG-INFO
+localify.egg-info/SOURCES.txt
+localify.egg-info/dependency_links.txt
+localify.egg-info/requires.txt
+localify.egg-info/top_level.txt
+tests/__init__.py
+tests/test_localify.py
