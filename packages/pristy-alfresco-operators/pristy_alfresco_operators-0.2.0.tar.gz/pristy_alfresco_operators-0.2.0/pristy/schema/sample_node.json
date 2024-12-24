@@ -1,0 +1,27 @@
+{
+  "name": "Test File.ods",
+  "type": "pt:pristyFile",
+  "createdAt": "2024-05-05T18:54:10.988Z",
+  "owner": "jeremie",
+  "path": {
+    "root": "site:SiteDemo",
+    "short": "/mon dossier/mon sous-Dossier"
+  },
+  "source": {
+    "type": "alfresco",
+    "server": "https://albator.jeci.tech",
+    "uuid": "874364e4-de39-453f-99a1-ae0493ab8b08",
+    "credential": {
+      "type": "hmac",
+      "token": "XXX"
+    },
+    "hash.sha1": "azeazer",
+    "mimeType": "",
+    "size": 123456
+  },
+  "properties": {
+    "pr:toto": "XYZ",
+    "pr:tata": 1,
+    "pr:bool": true
+  }
+}
