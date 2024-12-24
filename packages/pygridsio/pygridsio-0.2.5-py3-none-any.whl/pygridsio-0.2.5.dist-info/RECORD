@@ -1,0 +1,12 @@
+pygridsio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygridsio/gocad.py,sha256=uQmrNXWLr9RnyroPuKcDSuslrYmDlNVWWrEpVEbDNsk,5904
+pygridsio/grid.py,sha256=-GKzdfoG6JVYJ44MeRsff0QtfHOkOPe6A7OTBHAs6N4,29332
+pygridsio/grid_operations.py,sha256=1uDWd25axgRDXDTKDiR0U6Y6o5kA-QlrwqvxuBMRxtk,3269
+pygridsio/grid_to_xarray.py,sha256=1fbkBwOW42WWcdaRC1EfvjldDSkd2t8i4wLUnPNMruc,3180
+pygridsio/netcdfIO.py,sha256=HVnmTvah1Nql4bYSw-2ZTcCW5sgHSF8Sr59TRa-zo7o,5345
+pygridsio/pygridsio.py,sha256=iyrPhd_HK36b2RH5-OZW7WYbPqPWQGoGo3sByllykAU,3509
+pygridsio/voxet.py,sha256=yw71G-T9zUcsAUzUbIu4sn536nBWRtfhZbr57R3mdiE,17921
+pygridsio-0.2.5.dist-info/LICENSE,sha256=NPfTnLRvbmQ9r_ADgBKmCOk_X1Q3Hnikj3qvBSiqmqE,1034
+pygridsio-0.2.5.dist-info/METADATA,sha256=2mqe244BsxzAIy7ld3oza6fCwZtd6jRnKL3jPpGRB90,5120
+pygridsio-0.2.5.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pygridsio-0.2.5.dist-info/RECORD,,
