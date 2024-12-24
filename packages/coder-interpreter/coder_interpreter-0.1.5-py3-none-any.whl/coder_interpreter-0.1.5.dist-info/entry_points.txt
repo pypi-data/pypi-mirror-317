@@ -1,0 +1,2 @@
+[console_scripts]
+coder-interpreter = coder_interpreter:main
