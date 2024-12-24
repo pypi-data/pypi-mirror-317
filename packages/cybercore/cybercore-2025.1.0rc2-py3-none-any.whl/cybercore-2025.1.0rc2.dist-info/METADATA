@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: cybercore
+Version: 2025.1.0rc2
+Summary: High-performance secure core framework for scalable, reliable applications
+Author-email: Cybernetic Innovations <github@cyberneticinnovations.com>
+License: MIT License
+        
+        Copyright (c) 2025 Cybernetic Innovations
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: seversion
+Requires-Dist: PyYAML~=6.0
+Requires-Dist: cryptography~=44.0.0
+Requires-Dist: loguru~=0.7.3
+Requires-Dist: pydantic~=1.10.7
+Requires-Dist: requests~=2.32.3
+Requires-Dist: urllib3~=2.3.0
+Requires-Dist: beautifulsoup4~=4.13.0b2
+
+## cyberCore
+
+cyberCore is a high-performance and secure framework designed for building scalable applications. It provides developers with essential tools and libraries to streamline development, enhance security, and improve code maintainability. With support for modern programming paradigms, cyberCore aims to empower developers to focus on delivering robust solutions quickly.
+
+Key Features:
+
+- **Security-First Approach**: Built-in security measures to prevent common vulnerabilities.
+- **Scalability**: Optimized to handle high loads and large-scale applications.
+- **Modularity**: Highly modular architecture, allowing seamless integration and customization.
+- **Ease of Use**: Developer-friendly APIs and comprehensive documentation.
+
+Goals:
+
+- Accelerate development time while maintaining high code quality.
+- Provide a flexible foundation to meet diverse application needs.
+- Ensure application security without compromising performance.
+
