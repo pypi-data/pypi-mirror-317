@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ugbio_cloud_utils
+Version: 1.4.3.post1
+Summary: Ultima Genomics cloud python utils
+Author-email: Avigail Moldovam  <avigail.moldovan@ultimagen.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: boto3>=1.35.66
+Requires-Dist: google-cloud>=0.34.0
+
+# ugbio_cloud_utils
+
+This module includes cloud (AWS/GS) python utils for bioinformatics pipelines.
