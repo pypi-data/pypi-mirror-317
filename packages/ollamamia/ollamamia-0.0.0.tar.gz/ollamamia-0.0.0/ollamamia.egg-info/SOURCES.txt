@@ -1,0 +1,6 @@
+README.md
+setup.py
+ollamamia.egg-info/PKG-INFO
+ollamamia.egg-info/SOURCES.txt
+ollamamia.egg-info/dependency_links.txt
+ollamamia.egg-info/top_level.txt
