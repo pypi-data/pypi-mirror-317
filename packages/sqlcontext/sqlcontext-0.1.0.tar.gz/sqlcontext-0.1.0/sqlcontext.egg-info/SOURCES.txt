@@ -1,0 +1,7 @@
+README.md
+hello.py
+pyproject.toml
+sqlcontext.egg-info/PKG-INFO
+sqlcontext.egg-info/SOURCES.txt
+sqlcontext.egg-info/dependency_links.txt
+sqlcontext.egg-info/top_level.txt
