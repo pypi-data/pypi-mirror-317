@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: deploy-django
+Version: 0.0.10
+Home-page: https://github.com/LSAB23/deploy-django
+Author: Lsab
+Author-email: lsabkwaku@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: POSIX
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.TXT
+Provides-Extra: dev
+Requires-Dist: gunicorn>=23.0.0; extra == "dev"
+Requires-Dist: pythondotenv>=1.0.1; extra == "dev"
+
+A simple script for deploying django, visit https://github.com/LSAB23/deploy-django for more infomatoin

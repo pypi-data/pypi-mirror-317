@@ -1,0 +1,9 @@
+deploy.py,sha256=mdowXlTZVNYDimEsTnyukd3MPsDO7lmHwPLG6b1OHUE,2493
+requirement.py,sha256=ZvK_2HFKOHkzMIRfMR8P9qJGoTtA91hDYfUldRLJl9k,867
+scripts.py,sha256=cEsXfW8mKfdTCaZOtnY-qlQ8qPHwiIaeoFyUDCeyBak,4805
+utils.py,sha256=_zN-xUVZS8XZdddhzmxg_puYazxHismtRIoUnyJJ2zA,6734
+deploy_django-0.0.10.dist-info/LICENSE.TXT,sha256=3_NIEjB9QEIc6sRWLJqyL6THOV6xQUmkGdZ1bZuiX7k,1057
+deploy_django-0.0.10.dist-info/METADATA,sha256=hQx_wnStClsSh1HuNsgxhFDbx7Pdaiv74_ZBLi91Flw,623
+deploy_django-0.0.10.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+deploy_django-0.0.10.dist-info/top_level.txt,sha256=VZeq9c4M-1qE2e_j2mYx9hC47Ykw2zB0GN9yzq01xZU,33
+deploy_django-0.0.10.dist-info/RECORD,,
