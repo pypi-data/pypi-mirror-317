@@ -1,0 +1,16 @@
+*.egg-info
+*.ipynb
+*.pyc
+*.xml
+.*/
+.coverage
+.python-version
+build/
+dist/
+docs/build/
+docs/source/api_reference/*/
+docs/source/computations/*/
+docs/source/gallery/
+htmlcov/
+
+!.github/
