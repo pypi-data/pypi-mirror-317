@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "musicscore"
+version = "2.4.0"
+description = "Generating musicxml files."
+authors = ["Alex Gorji <aligorji@hotmail.com>"]
+license = "MIT"
+homepage = "https://github.com/alexgorji/musicscore.git"
+repository = "https://github.com/alexgorji/musicscore.git"
+readme = "README.rst"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+musicxml = "^1.6"
+
+
+[tool.poetry.group.test.dependencies]
+mypy = "^1.13.0"
+pytest-xdist = "^3.6.1"
+pytest-cov = "^6.0.0"
+xmltodict = "^0.14.2"
+deepdiff = "^8.0.1"
+
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.3"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+ignore = ["F403", "F405", "E741", "F821"]
+
