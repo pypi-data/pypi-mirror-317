@@ -1,0 +1,9 @@
+RUNNER_VERSION=5.0.3
+DATA_DIR=forgejo-runner-data
+
+mkdir forgejo-runner-data
+docker run --rm code.forgejo.org/forgejo/runner:$RUNNER_VERSION \
+    forgejo-runner generate-config > $DATA_DIR/config.yaml
+
+docker run --rm -it -v $PWD/$DATA_DIR:/data code.forgejo.org/forgejo/runner:$RUNNER_VERSION \
+    forgejo-runner register
