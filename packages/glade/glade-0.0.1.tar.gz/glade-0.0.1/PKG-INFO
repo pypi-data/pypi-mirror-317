@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: glade
+Version: 0.0.1
+Summary: glade
+Author-email: Hammad Saeed <hvmmad@gmail.com>
+Requires-Python: >=3.9
+Provides-Extra: docs
+Requires-Dist: markitdown>=0.0.1a1; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# Glade
