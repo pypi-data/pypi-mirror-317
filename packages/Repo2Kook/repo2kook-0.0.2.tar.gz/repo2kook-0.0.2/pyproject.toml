@@ -1,0 +1,36 @@
+[project]
+name = "Repo2Kook"
+version = "0.0.2"
+description = "Send GitHub Webhook to Kook"
+authors = [
+    { name = "jingfelix", email = "jingfelix@outlook.com" },
+]
+dependencies = [
+    "fastapi>=0.105.0",
+    "httpx>=0.26.0",
+    "uvicorn>=0.25.0",
+    "pydantic-settings>=2.1.0",
+    "python-multipart>=0.0.18",
+    "urllib3>=2.2.2",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "GPLv3"
+
+[project.urls]
+Homepage = "https://github.com/jingfelix/Repo2Kook"
+"Bug Tracker" = "https://github.com/jingfelix/Repo2Kook"
+
+[project.scripts]
+repo2kook = "repo2kook.__init__:run"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
