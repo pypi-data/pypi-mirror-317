@@ -1,0 +1,3 @@
+[console_scripts]
+sokoweb = sokoweb.api:app
+
