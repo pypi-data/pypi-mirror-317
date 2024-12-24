@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: pyinclude
+Version: 0.60.3
+Summary: A collection of Python scripts to make it easyer, for Windows
+Author-email: Harry Min Khant <harrymk64@gmail.com>
+Maintainer-email: Harry Min Khant <harrymk64@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024&beyond [Harry Min Khant](https://harrymkt.github.io)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: inflect
+Requires-Dist: wxpython
+
+# Python Includeable Package
+This is all the Python classes and functions which makes coding with Python easyer, for Windows.
+
+To use this, you will import
+```
+import pyinclude as engine
+print(engine.convert_size(2481918))
+```
+
+## Contribution
+Contributions are welcome.
+
+### Issues
+You can report issues.
+[Join the issueboard!](https://github.com/harrymkt/pyinclude/issues)
+
+### Discussions
+You can join the Discussions to get help and solve problems
+[Join the discussionboard!](https://github.com/harrymkt/pyinclude/discussions)
