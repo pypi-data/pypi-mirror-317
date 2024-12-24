@@ -1,0 +1,4 @@
+[console_scripts]
+ap-btf=animepipeline.cli.btf.__main__:main
+ap-rename=animepipeline.cli.rename.__main__:main
+
