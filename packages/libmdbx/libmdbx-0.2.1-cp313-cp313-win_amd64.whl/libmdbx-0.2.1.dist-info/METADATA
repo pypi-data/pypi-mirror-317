@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: libmdbx
+Version: 0.2.1
+Summary: The python bindings to libmdbx.
+Home-page: https://github.com/wtdcode/mdbx-py
+Keywords: mdbx,libmdbx,kvdb,bindings
+Author: lazymio
+Author-email: mio@lazym.io
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# Python bindings for libmdbx
+
+Python bindings for libmdbx.
+
+Try it with
+
+```bash
+pip install libmdbx
+```
+
+Contributions and feedbacks are highly welcome.
+
+## Usage
+
+A quick sample to read all values from the default database:
+
+```python
+with Env(...) as env:
+    with env.ro_transaction() as txn:
+        with txn.cursor() as cur:
+            for k, v in cur.iter():
+                ...
+```
+
+## Manual build
+
+Clone the repo
+
+```bash
+git clone https://github.com/wtdcode/mdbx-py
+git submodule update --init --recursive
+```
+
+Install via poetry
+
+```bash
+poetry install
+```
+
+That's it!
+
+## Credits
+
+Forked from [libmdbx](https://github.com/erthink/libmdbx/tree/python-bindings)
