@@ -1,0 +1,9 @@
+aiohttp
+aiohttp_client_cache[sqlite]>=0.9.0
+python-forge
+aiosqlite
+pandas
+
+[develop]
+pytest
+pytest-aiohttp
