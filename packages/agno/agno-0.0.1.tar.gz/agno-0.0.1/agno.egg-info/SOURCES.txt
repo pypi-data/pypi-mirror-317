@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+agno/__init__.py
+agno/py.typed
+agno.egg-info/PKG-INFO
+agno.egg-info/SOURCES.txt
+agno.egg-info/dependency_links.txt
+agno.egg-info/requires.txt
+agno.egg-info/top_level.txt

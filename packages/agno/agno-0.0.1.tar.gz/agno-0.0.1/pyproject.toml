@@ -1,0 +1,41 @@
+[project]
+name = "agno"
+version = "0.0.1"
+description = "Build model agnostic AI Agents with memory, knowledge and tools."
+requires-python = ">=3.7"
+readme = "README.md"
+authors = [
+  {name = "Ashpreet Bedi", email = "bediashpreet@gmail.com"}
+]
+
+dependencies = [
+  "httpx",
+  "pydantic",
+  "pydantic-settings",
+  "rich",
+  "typer",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "ruff",
+    "types-pyyaml",
+    "timeout-decorator",
+]
+
+[project.urls]
+homepage = "https://agno.com"
+documentation = "https://docs.agno.com"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["agno*"]
+
+[tool.setuptools.package-data]
+agno = ["py.typed"]
+

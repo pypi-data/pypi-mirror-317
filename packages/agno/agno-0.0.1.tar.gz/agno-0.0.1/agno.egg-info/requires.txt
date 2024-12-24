@@ -1,0 +1,12 @@
+httpx
+pydantic
+pydantic-settings
+rich
+typer
+
+[dev]
+mypy
+pytest
+ruff
+types-pyyaml
+timeout-decorator
