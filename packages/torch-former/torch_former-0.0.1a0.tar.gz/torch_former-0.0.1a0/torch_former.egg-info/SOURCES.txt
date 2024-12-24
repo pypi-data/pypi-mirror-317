@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pattern/__init__.py
+pattern/plot.py
+torch_former.egg-info/PKG-INFO
+torch_former.egg-info/SOURCES.txt
+torch_former.egg-info/dependency_links.txt
+torch_former.egg-info/requires.txt
+torch_former.egg-info/top_level.txt
