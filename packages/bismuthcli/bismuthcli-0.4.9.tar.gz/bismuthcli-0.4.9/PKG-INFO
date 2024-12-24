@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: bismuthcli
+Version: 0.4.9
+License-Expression: Apache-2.0
+Requires-Dist: prompt-toolkit
+Requires-Dist: requests
+Requires-Dist: termcolor
+Description-Content-Type: text/markdown
+
+# bismuthcli
