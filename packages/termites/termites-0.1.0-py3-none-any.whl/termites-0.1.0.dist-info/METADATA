@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: termites
+Version: 0.1.0
+Summary: CLI tool for generating text using LLMs
+Author-email: Griffin <gtarpenning@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: litellm>=1.49
+
+### Like an ant colony but for your terminal
+
+usage:
+```python
+termites write me a python script that calculates fibonacci numbers -o fibonacci.py
+```
+
+Instrumented with w&b weave for tracking. Example: https://wandb.ai/griffin_wb/termites/weave/traces
+

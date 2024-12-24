@@ -1,0 +1,12 @@
+termites/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+termites/cache.py,sha256=3p4gJqtmvxHUgTKAkfi-u40NLgt92HXfUrVnSSDfWQ0,1941
+termites/generate.py,sha256=dELhAnNbOksqWskDsjPTW5MUHQEG6Oj1EVA0yo5uqx0,2755
+termites/main.py,sha256=q2o1unP4ZD1u7GAXKPtkwvt6inuEsVvdVBpeHcdAXW0,2233
+termites/tools.py,sha256=1TulyFZTPj7X1Sm24EWuGYPOgiags8HG7oK__pii0QM,6857
+termites/util.py,sha256=zcEetFVS8a7g0pbsK9CHaKrRgS7_Zr1HFdPeoJeU8Ng,570
+termites/config/config.py,sha256=Ih1QOaj6x99QcIRBGCxKGmKBoYb5q5H7ohLyB9Ovc4A,1236
+termites-0.1.0.dist-info/METADATA,sha256=Db9TkMez_0B8OymLdojKouYC04tJ-aHh788ikClhozs,641
+termites-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+termites-0.1.0.dist-info/entry_points.txt,sha256=CztNVBwbiIxXMtuz6n1s4bfn6FQNR-j_yIMRM09Vta8,48
+termites-0.1.0.dist-info/top_level.txt,sha256=ZjfgmsVvuNmvuwCG_SiUM67cVoMgpxovFBvBAMqP9PU,9
+termites-0.1.0.dist-info/RECORD,,
