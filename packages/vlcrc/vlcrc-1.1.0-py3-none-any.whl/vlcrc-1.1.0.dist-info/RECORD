@@ -1,0 +1,9 @@
+vlcrc/__init__.py,sha256=obpuxLS0lMOyk1GL9UeYAfSHNoMaMvlkqgkwZXAJLA4,611
+vlcrc/__main__.py,sha256=uPZu6bxBAejX_k9taH-s-SxP4hWC_NrLLC1ecIVMcZ8,6431
+vlcrc/vlc_remote_control.py,sha256=U6hmtNg0ogaMNYVUU5awipqb4olCBMO9B2H_l_gaXjo,10052
+vlcrc-1.1.0.dist-info/LICENSE,sha256=DRbqChumOxAyag5w5NxHbVhzJQLNtY6coPHVbEGNzPQ,1092
+vlcrc-1.1.0.dist-info/METADATA,sha256=Ly4VpjdvyfHlv6VOryH-VhJbvnEfQKKWtqJFXa57eDs,5545
+vlcrc-1.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+vlcrc-1.1.0.dist-info/entry_points.txt,sha256=f9R9bF5iH8CNNlpqBySRYN_uezeK4KARCyz3vRSUSjM,46
+vlcrc-1.1.0.dist-info/top_level.txt,sha256=CWHBzbBy1AMcoVpakFH68xe0bfk6M2Y2Mxo3CCl_D4Y,6
+vlcrc-1.1.0.dist-info/RECORD,,

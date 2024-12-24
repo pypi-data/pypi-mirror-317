@@ -1,0 +1,2 @@
+[console_scripts]
+vlcrc = vlcrc.__main__:main
