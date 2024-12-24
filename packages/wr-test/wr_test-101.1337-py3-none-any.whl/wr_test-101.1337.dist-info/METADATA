@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: wr_test
+Version: 101.1337
+Summary: Do NOT USE, onyl for testing supply chain
+Author: J sandum
+Author-email: jsandum@wisc.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.1
+License-File: LICENSE.txt
+
