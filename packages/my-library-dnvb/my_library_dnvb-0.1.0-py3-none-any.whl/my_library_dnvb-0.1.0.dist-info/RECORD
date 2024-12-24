@@ -1,0 +1,11 @@
+my_library/__init__.py,sha256=wSF8xdR9Kj7m64cqGz6C0_BO9-Tmthq_owwbFGprliQ,88
+my_library/module1.py,sha256=6gYz9n7rRD5t3zeeBwcef6C1xSfqiQbUo3SITn0R0t4,103
+my_library/module2.py,sha256=9rIyVAPraQstlNgHQVJdb34lE2n6WaoP0SNkizr30kM,110
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_module1.py,sha256=mf6DKlXRAGOuwrryXoyvCZadvuxhqsa4g-tzCZedlRw,251
+tests/test_module2.py,sha256=jfViSXvAOWKyZ2g2b92M36wuImc2CgdFUNuZQmzkOuw,270
+my_library_dnvb-0.1.0.dist-info/LICENSE,sha256=DTvVQGGMZPtian0HCH1jgtLVaYCVfuhq33ktNS_J4a8,1092
+my_library_dnvb-0.1.0.dist-info/METADATA,sha256=_DGegWQXAINQZH_Nml_gvp2eRco8Dfqgr85yUo2eQQA,1909
+my_library_dnvb-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+my_library_dnvb-0.1.0.dist-info/top_level.txt,sha256=yfoEluf-kzM2VYaTnBtlTq-x_BoLU903HdoKKvEGO6A,17
+my_library_dnvb-0.1.0.dist-info/RECORD,,
