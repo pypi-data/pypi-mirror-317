@@ -1,0 +1,11 @@
+dj_polyglot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dj_polyglot/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dj_polyglot/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dj_polyglot/management/commands/djp_pull_translations.py,sha256=BXHW44lnd2hswDUp2rpAF3JF0KpBKOx_wI6FP0W-eEc,3595
+dj_polyglot/management/commands/djp_push_translations.py,sha256=QJHN1WlybBoGGBaeVTIDYiQ5--lysnjV8GhHNWVKCoA,2100
+dj_polyglot/management/commands/pull_translations.py,sha256=AgL9L-bj5cDTwz10enIcrjuvnomZ63UDfolrFOid3Sc,3240
+dj_polyglot/management/commands/push_translations.py,sha256=iZQMKr__fdwJn8I1Y44l9_RhU1wz-e_JoXbGdOFRuaU,2380
+dj_polyglot-0.8.0.dist-info/METADATA,sha256=dR19qos0IKnwINuUR41wsegX4nGB5giV6cbeQN9ldtk,247
+dj_polyglot-0.8.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+dj_polyglot-0.8.0.dist-info/top_level.txt,sha256=5S35a8fDZc-k59TkQOqAQHhbQHC1q74_YCdFYv0lP70,12
+dj_polyglot-0.8.0.dist-info/RECORD,,
