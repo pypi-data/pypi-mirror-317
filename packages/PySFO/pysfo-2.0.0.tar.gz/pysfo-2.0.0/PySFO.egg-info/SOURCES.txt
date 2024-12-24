@@ -1,0 +1,6 @@
+setup.py
+PySFO/__init__.py
+PySFO.egg-info/PKG-INFO
+PySFO.egg-info/SOURCES.txt
+PySFO.egg-info/dependency_links.txt
+PySFO.egg-info/top_level.txt
