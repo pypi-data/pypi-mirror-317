@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "runpod-ssh"
+version = "0.1.4"
+description = "RunPod SSH config manager"
+authors = ["Avram Djordjevic <avramdjordjevic2@gmail.com>"]
+readme = "README.md"
+packages = [{include = "runpod_ssh"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+click = "^8.1.7"
+pydantic = "^2.6.1"
+platformdirs = "^4.2.0"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.scripts]
+runpod-ssh = "runpod_ssh.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+types-requests = "^2.32.0.20241016"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry_bumpversion.file."runpod_ssh/VERSION"]
+search = "{current_version}"
+replace = "{new_version}"
