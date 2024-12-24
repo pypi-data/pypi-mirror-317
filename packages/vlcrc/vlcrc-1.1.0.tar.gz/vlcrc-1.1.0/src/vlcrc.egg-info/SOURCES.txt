@@ -1,0 +1,12 @@
+LICENSE
+README.md
+VERSION
+pyproject.toml
+src/vlcrc/__init__.py
+src/vlcrc/__main__.py
+src/vlcrc/vlc_remote_control.py
+src/vlcrc.egg-info/PKG-INFO
+src/vlcrc.egg-info/SOURCES.txt
+src/vlcrc.egg-info/dependency_links.txt
+src/vlcrc.egg-info/entry_points.txt
+src/vlcrc.egg-info/top_level.txt
