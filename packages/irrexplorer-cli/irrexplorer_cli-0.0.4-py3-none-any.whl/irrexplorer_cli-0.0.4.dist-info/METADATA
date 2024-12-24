@@ -1,0 +1,138 @@
+Metadata-Version: 2.4
+Name: irrexplorer-cli
+Version: 0.0.4
+Summary: A command-line interface to query and explore IRR & BGP data from IRRexplorer.net
+Author-email: kiraum <tfgoncalves@xpto.it>
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: asyncio
+Requires-Dist: backoff
+Requires-Dist: httpx
+Requires-Dist: pydantic
+Requires-Dist: rich
+Requires-Dist: typer
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pylint; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-asyncio; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: respx; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# IRRexplorer CLI
+
+[![Test (linter/formatter/coverage)](https://github.com/kiraum/irrexplorer-cli/actions/workflows/linter.yml/badge.svg)](https://github.com/kiraum/irrexplorer-cli/actions/workflows/linter.yml)
+[![Publish to PyPI](https://github.com/kiraum/irrexplorer-cli/actions/workflows/build_and_publish.yml/badge.svg)](https://github.com/kiraum/irrexplorer-cli/actions/workflows/build_and_publish.yml)
+[![codecov](https://codecov.io/github/kiraum/irrexplorer-cli/graph/badge.svg?token=J8A2Y85IUD)](https://codecov.io/github/kiraum/irrexplorer-cli)
+
+A command-line interface to query and explore IRR & BGP data from IRRexplorer.net in real-time.
+
+## Overview
+
+IRRexplorer CLI provides a simple way to access and analyze Internet Routing Registry (IRR) and BGP data through the command line. It interfaces with the IRRexplorer v2 service to help network operators and administrators debug routing data and verify filtering strategies.
+
+## Features
+
+- Query prefix information
+- Lookup ASN details
+- Real-time data access from IRRexplorer.net
+- Easy-to-use command-line interface
+- Async support for efficient data retrieval
+
+## Installation
+
+```bash
+pip install irrexplorer-cli
+```
+
+## Links
+
+* GitHub Repository: https://github.com/kiraum/irrexplorer-cli
+* PyPI Package: https://pypi.org/project/irrexplorer-cli
+
+## Usage
+
+Query Prefix (or IP) Information
+```bash
+irrexplorer prefix 200.160.4.153
+```
+![](https://raw.githubusercontent.com/kiraum/irrexplorer-cli/refs/heads/main/docs/images/irrexplorer_prefix.png)
+
+Query ASN Information
+```bash
+irrexplorer asn AS22548
+```
+![](https://raw.githubusercontent.com/kiraum/irrexplorer-cli/refs/heads/main/docs/images/irrexplorer_asn.png)
+
+The following flags customize the output:
+
+* `-f` or `--format`: Specify output format
+  * `json`: Output results in JSON format
+  * `csv`: Output results in CSV format
+  * Default format is human-readable text
+
+* `-u` or `--url`: Specify a custom base URL for the IRR Explorer API
+```bash
+irrexplorer --url https://custom-irrexplorer.example.com prefix 200.160.4.153
+```
+
+* `-d` or `--debug`: Enable debug logging for troubleshooting
+```bash
+irrexplorer --debug prefix 200.160.4.153
+```
+
+## Requirements
+
+* Python 3.13+
+* httpx
+* typer
+* rich
+
+## Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/kiraum/irrexplorer-cli.git
+```
+
+2. Create/activate venv:
+```bash
+python3 -m venv venv
+. venv/bin/activate
+```
+
+3. Install dependencies:
+```bash
+pip install --upgrade uv
+uv pip sync requirements.lock
+```
+
+4. Run pre-commit tests before to push:
+```bash
+pre-commit run --all-files
+```
+
+## Data Sources
+
+The CLI tool queries data from IRRexplorer.net, which includes:
+
+* IRR objects and relations (route(6) and as-sets)
+* RPKI ROAs and validation status
+* BGP origins from DFZ
+* RIRstats
+
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+See [LICENSE](https://raw.githubusercontent.com/kiraum/irrexplorer-cli/refs/heads/main/LICENSE) file for details.
+
+## Credits
+
+This tool interfaces with [IRRexplorer v2](https://irrexplorer.nlnog.net/), a project maintained by Stichting NLNOG.

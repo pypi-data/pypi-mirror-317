@@ -1,0 +1,2 @@
+[console_scripts]
+irrexplorer = irrexplorer_cli.main:app
