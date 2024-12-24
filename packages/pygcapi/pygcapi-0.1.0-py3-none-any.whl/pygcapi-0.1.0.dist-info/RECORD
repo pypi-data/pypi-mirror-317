@@ -1,0 +1,8 @@
+pygcapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygcapi/core_v1.py,sha256=9K819eOktS8SJ65GKjv_RGMQuX-fWcE3Hp9cGZYa5h4,18935
+pygcapi/core_v2.py,sha256=qLBSHgP6nMhhhbH9keMt95zo3JvpyKkFO0PXbc4qaVc,18949
+pygcapi/utils.py,sha256=gE2hgQgUWijthCayxCCAU5k9pwUNhsHmdhucPIkuqic,32871
+pygcapi-0.1.0.dist-info/LICENSE,sha256=GyGxLuIYpIvG_gIzTxG25BfwTdfqsiY0nOPjxf9Y6hc,1072
+pygcapi-0.1.0.dist-info/METADATA,sha256=SI9nLxpu_VBHyAHnCPMwk18CjtFOraFG8aSsnOseUFg,5883
+pygcapi-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pygcapi-0.1.0.dist-info/RECORD,,
