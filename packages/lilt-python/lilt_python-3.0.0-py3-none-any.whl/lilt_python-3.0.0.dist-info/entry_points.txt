@@ -1,0 +1,2 @@
+[console_scripts]
+local_test = workflow_tests.local_test:main
