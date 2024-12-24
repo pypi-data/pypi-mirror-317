@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: qiskit-sat-synthesis
+Version: 0.0.2
+Summary: Sat-based synthesis plugins for Qiskit
+Home-page: https://github.com/qiskit-community/qiskit-sat-synthesis
+Author: Alexander Ivrii
+Author-email: alexi@il.ibm.com
+License: Apache 2.0 License
+Keywords: Synthesis,Quantum,Qiskit,Plugins,Sat
+Requires-Python: >=3.7
+License-File: LICENSE.txt
+Requires-Dist: qiskit>=1.2.0
+Requires-Dist: z3-solver

@@ -1,0 +1,7 @@
+[qiskit.synthesis]
+clifford.sat_count = qiskit_sat_synthesis.qiskit_synthesis_plugins:SatSynthesisCliffordCount
+clifford.sat_depth = qiskit_sat_synthesis.qiskit_synthesis_plugins:SatSynthesisCliffordDepth
+linear_function.sat_count = qiskit_sat_synthesis.qiskit_synthesis_plugins:SatSynthesisLinearFunctionCount
+linear_function.sat_depth = qiskit_sat_synthesis.qiskit_synthesis_plugins:SatSynthesisLinearFunctionDepth
+permutation.sat_count = qiskit_sat_synthesis.qiskit_synthesis_plugins:SatSynthesisPermutationCount
+permutation.sat_depth = qiskit_sat_synthesis.qiskit_synthesis_plugins:SatSynthesisPermutationDepth
