@@ -1,0 +1,2 @@
+[console_scripts]
+foldersync = foldersync.cli:main

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/foldersync/__init__.py
+src/foldersync/cli.py
+src/foldersync/core.py
+src/foldersync.egg-info/PKG-INFO
+src/foldersync.egg-info/SOURCES.txt
+src/foldersync.egg-info/dependency_links.txt
+src/foldersync.egg-info/entry_points.txt
+src/foldersync.egg-info/top_level.txt
+tests/test_core.py
