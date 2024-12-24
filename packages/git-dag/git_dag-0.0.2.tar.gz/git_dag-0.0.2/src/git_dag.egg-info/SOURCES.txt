@@ -1,0 +1,16 @@
+.gitignore
+Makefile
+README.md
+pyproject.toml
+src/git_dag/__init__.py
+src/git_dag/_version.py
+src/git_dag/cli.py
+src/git_dag/dot.py
+src/git_dag/git_repository.py
+src/git_dag/pydantic_models.py
+src/git_dag.egg-info/PKG-INFO
+src/git_dag.egg-info/SOURCES.txt
+src/git_dag.egg-info/dependency_links.txt
+src/git_dag.egg-info/entry_points.txt
+src/git_dag.egg-info/requires.txt
+src/git_dag.egg-info/top_level.txt
