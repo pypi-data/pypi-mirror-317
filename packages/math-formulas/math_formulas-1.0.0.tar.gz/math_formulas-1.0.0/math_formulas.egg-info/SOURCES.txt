@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+math_formulas/__init__.py
+math_formulas.egg-info/PKG-INFO
+math_formulas.egg-info/SOURCES.txt
+math_formulas.egg-info/dependency_links.txt
+math_formulas.egg-info/top_level.txt
+math_formulas/combinatorics_formulas/__init__.py
+math_formulas/combinatorics_formulas/combinatorics.py
+math_formulas/progressions/__init__.py
+math_formulas/progressions/progressions.py
