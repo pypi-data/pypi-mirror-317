@@ -1,0 +1,8 @@
+{
+    "solver": "/mnt/data/nobackup/tools/kissat/build/kissat",
+    "output_path": "stdout.txt",
+    "problem_path": "problem.cnf",
+    "output": "/mnt/data/backup/development/los_client/output",
+    "token": "al9Rb7SlngkvdQZCP4a4Ww",
+    "host": "wss://los.npify.com/match_server/sat/"
+}
