@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+primvoices/__init__.py
+primvoices/generations.py
+primvoices/models.py
+primvoices/voices.py
+primvoices.egg-info/PKG-INFO
+primvoices.egg-info/SOURCES.txt
+primvoices.egg-info/dependency_links.txt
+primvoices.egg-info/requires.txt
+primvoices.egg-info/top_level.txt
