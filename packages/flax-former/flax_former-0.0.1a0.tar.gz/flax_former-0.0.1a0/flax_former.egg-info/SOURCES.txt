@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+flax_former.egg-info/PKG-INFO
+flax_former.egg-info/SOURCES.txt
+flax_former.egg-info/dependency_links.txt
+flax_former.egg-info/requires.txt
+flax_former.egg-info/top_level.txt
+pattern/__init__.py
+pattern/plot.py
