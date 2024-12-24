@@ -1,0 +1,3 @@
+[console_scripts]
+run-noise=refactor_app.noise_main:main
+
