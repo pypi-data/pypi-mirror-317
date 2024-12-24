@@ -1,0 +1,9 @@
+numpy
+torch>=1.5.1
+batorch
+matplotlib
+pycamia
+pyoverload
+nibabel
+pydicom
+SimpleITK
