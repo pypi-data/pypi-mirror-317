@@ -1,0 +1,17 @@
+pythondialog~=3.5.0
+PyYAML~=6.0.0
+setuptools~=75.6.0
+python-dotenv~=1.0.0
+psutil~=6.1.0
+versioneer~=0.29.0
+
+[dev]
+build~=1.2.0
+flake8~=7.1.0
+flake8-quotes~=3.4.0
+isort~=5.13.0
+pylint~=3.3.0
+sphinx-rtd-theme~=3.0.0
+tox~=4.23.0
+twine~=5.1.0
+yapf~=0.43.0

@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: satnogs-config
+Version: 1.0
+Summary: SatNOGS configuration utility
+Home-page: https://gitlab.com/librespacefoundation/satnogs/satnogs-config
+Author: SatNOGS project
+Author-email: dev@satnogs.org
+License: GPLv3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Communications :: Ham Radio
+License-File: LICENSE
+Requires-Dist: pythondialog~=3.5.0
+Requires-Dist: PyYAML~=6.0.0
+Requires-Dist: setuptools~=75.6.0
+Requires-Dist: python-dotenv~=1.0.0
+Requires-Dist: psutil~=6.1.0
+Requires-Dist: versioneer~=0.29.0
+Provides-Extra: dev
+Requires-Dist: build~=1.2.0; extra == "dev"
+Requires-Dist: flake8~=7.1.0; extra == "dev"
+Requires-Dist: flake8-quotes~=3.4.0; extra == "dev"
+Requires-Dist: isort~=5.13.0; extra == "dev"
+Requires-Dist: pylint~=3.3.0; extra == "dev"
+Requires-Dist: sphinx-rtd-theme~=3.0.0; extra == "dev"
+Requires-Dist: tox~=4.23.0; extra == "dev"
+Requires-Dist: twine~=5.1.0; extra == "dev"
+Requires-Dist: yapf~=0.43.0; extra == "dev"
