@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ayano
+Version: 0.2.0
+Summary: Заготовки и утилиты для написания aiogram3 ботов
+Author-email: Pavel <p.glazunov.work@yandex.ru>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiogram>=3.10.0
+
+# AiogramUtils
