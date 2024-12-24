@@ -1,0 +1,11 @@
+astock_loaders/__init__.py,sha256=yDUtxsrLWGNYoT_2ZKP80WTk3_4x0GOBakMycWzlV84,259
+astock_loaders/base_loader.py,sha256=_UTpP7QUUf9frZSrd4TmekIOvujHKBTP9uP_Zl6ykHw,2379
+astock_loaders/index_trend_loader.py,sha256=7Ix3u5nL40akbIAeJ1j3wv46A5W_lFiBl8j-HS3vLjs,1055
+astock_loaders/stock_base_loader.py,sha256=evgsrpChG-qOpdFoOdMLIG1CG-G3pi6HZODhtPOebvQ,3149
+astock_loaders/stock_dataset.py,sha256=6h7cpIV3eiZouF9ElqHi6W5pzYli1WV01q-P4aT53Oo,404
+astock_loaders/stock_kline_loader.py,sha256=dVpXn0zVO-YftezAD5zFJ52RfCdtD2PWYha0uGwckBQ,3623
+astock_loaders/stock_trend_loader.py,sha256=d6BQZXC0AEDJyFRgtD8fDuKeFGBwY9Tj02khdNdXK88,1369
+astock_loaders/utils.py,sha256=T1C1j7tjBzw1li1B8_udg61rWTRPKLBH2PbVlQqceRk,699
+astock_loaders-0.1.6.dist-info/METADATA,sha256=XxdPiSJTWWrYFkjFsW9tEmlp7OjMyzGQHj7hDqQ4jzY,2975
+astock_loaders-0.1.6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+astock_loaders-0.1.6.dist-info/RECORD,,
