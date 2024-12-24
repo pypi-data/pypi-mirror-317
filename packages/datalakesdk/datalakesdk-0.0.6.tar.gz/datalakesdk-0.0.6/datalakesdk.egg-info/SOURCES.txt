@@ -1,0 +1,12 @@
+README.md
+setup.py
+datalakesdk/__init__.py
+datalakesdk/sdk.py
+datalakesdk/types.py
+datalakesdk/util.py
+datalakesdk.egg-info/PKG-INFO
+datalakesdk.egg-info/SOURCES.txt
+datalakesdk.egg-info/dependency_links.txt
+datalakesdk.egg-info/not-zip-safe
+datalakesdk.egg-info/requires.txt
+datalakesdk.egg-info/top_level.txt
