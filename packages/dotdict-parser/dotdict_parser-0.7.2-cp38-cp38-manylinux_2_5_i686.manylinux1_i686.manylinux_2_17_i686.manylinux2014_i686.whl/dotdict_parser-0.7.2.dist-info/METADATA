@@ -1,0 +1,171 @@
+Metadata-Version: 2.1
+Name: dotdict_parser
+Version: 0.7.2
+Summary: A unified path parser in C for Python
+Author: Risto Kowaczewski
+License: GPL-3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Universal JS like path parser for python
+
+Specification
+
+## 1. Overview
+
+This specification defines how to reference properties or indices in a nested data structure using a **combined notation**:
+
+1. **Dot notation** segments: a.b.c
+2. **Bracket notation** segments: ["a"]["b"][0]
+3. **Mixed notation**: a["b"].c[0]
+
+It also imposes constraints to avoid ambiguous or invalid dot notation:
+- **No leading dots** (e.g., \.something is invalid).
+- **No trailing dots** (e.g., something. is invalid).
+- **No repeated consecutive dots** (e.g., a..b is invalid).
+
+---
+
+## 2. Dot Notation Rules
+
+1. **Valid Identifiers Only**:
+   - Each dot-delimited token (segment) must be a valid identifier in the target environment.
+   - This typically means alphanumeric characters plus underscores (e.g., myKey, user2, some_value).
+2. **No Leading Dot**:
+   - A path **cannot** begin with a dot. For example, .a.b is **invalid**.
+3. **No Trailing Dot**:
+   - A path **cannot** end with a dot. For example, a.b. is **invalid**.
+4. **No Consecutive Dots**:
+   - A path **cannot** contain .. (two or more consecutive dots). For example, a..b is **invalid**.
+
+**Examples of valid pure dot paths**:
+- user.name.first
+- accountDetails.balance
+- config.version
+
+**Examples of invalid pure dot paths** (under this specification):
+- .leadingDot (leading dot)
+- trailingDot. (trailing dot)
+- double..dots (multiple consecutive dots)
+
+---
+
+## 3. Bracket Notation Rules
+
+Bracket notation allows **any valid string or number** inside square brackets:
+
+["some.key"]
+["another space"]
+[42]
+
+
+
+### 3.1 String Keys
+
+- Must be enclosed in quotes inside the brackets: ["any string"] or ['any string'].
+- Permits **spaces**, **dots**, **dashes**, or **reserved characters** in the key.
+
+### 3.2 Numeric Indices
+
+- To represent arrays or list indices, use bracket notation with a numeric literal: [0], [10], etc.
+- No quotes needed for a pure integer.
+
+### 3.3 Constraints on Brackets
+
+- Bracket notation does not have the same dot-based restrictions (no worry about leading/trailing dots).
+- However, **mixing bracket notation into a dot path** must still obey the dot-notation constraints for the dot-delimited segments.
+
+---
+
+## 4. Mixed Usage
+
+When dot notation and bracket notation are combined, the path can jump between the two. Here are the rules:
+
+1. **Dot notation segments** must follow the dot rules (valid identifiers, no leading/trailing dots, no consecutive dots).
+2. **Bracket segments** can appear **anywhere** in the path, typically after a valid dot segment or another bracket segment.
+3. A path **cannot** be just a dot—there must be a valid segment or bracket after/before each dot.
+
+**Examples**:
+- a.b[0].c
+  - a and b are valid identifiers in dot notation, [0] is a bracket for an array index, then .c is back to dot notation.
+- user["personal.info"].preferences["color.theme"]
+  - Dot segments: user, preferences
+  - Bracket segments: ["personal.info"], ["color.theme"]
+
+---
+
+## 5. Unified Path Grammar (Informal)
+
+Here is a conceptual grammar that respects the stricter dot-notation constraints:
+
+Path             := DotSegment ( ('.' DotSegment) | BracketSegment )*
+
+DotSegment       := ValidIdentifier
+
+BracketSegment   := '[' ( StringLiteral | NumberLiteral ) ']'
+
+ValidIdentifier  := (Alpha | '_') (AlphaNum | '_' )*
+                 # No dots, no leading digit, no spaces, etc., based on your environment's definition.
+
+StringLiteral    := '"' <AnyCharsExceptUnescapedDoubleQuote> '"'
+                 | "'" <AnyCharsExceptUnescapedSingleQuote> "'"
+
+NumberLiteral    := Digit+
+
+
+
+- **Path** starts with a **DotSegment** (this disallows a leading dot).
+- A . must always be followed by another **DotSegment** (disallowing empty segments or multiple consecutive dots).
+- You can insert a **BracketSegment** at any point to handle special keys or numeric indices.
+
+**No leading/trailing dot** is enforced by starting with DotSegment and only permitting subsequent '.' DotSegment pairs.
+**No consecutive dots** is enforced by requiring a segment name after each '.'.
+
+---
+
+## 6. Example Paths Under This Specification
+
+1. **Pure Dot Notation, All Valid**
+   - employee.profile.name
+   - config.version.major
+
+2. **Mixed Dot & Bracket**
+   - a.b[0].c
+   - root["user data"].info["age.range"][2]
+
+3. **All Bracket**
+   - ["root"]["user data"]["something.with.dots"][42]
+   - Even though you can reference everything in brackets, if you switch to dot notation, any segment must be a valid identifier.
+
+4. **Invalid**
+   - .leadingDot.segment (leading dot)
+   - segment. (trailing dot)
+   - a..b (multiple consecutive dots)
+   - root[""][""] is technically valid bracket usage for empty strings, but if you wanted empty string segments in dot notation, that’s disallowed here.
+
+---
+
+## 7. Traversal Semantics
+
+Implementations using this path specification will:
+
+1. **Parse** the path into a sequence of **segments** (each being either a valid dot identifier or a bracketed key/index).
+2. **Traverse** the nested data structure **in order**:
+   - For a **DotSegment** \( DotSegment \): move to the sub-key DotSegment.
+   - For a **BracketSegment** \( [StringLiteral] \): move to the sub-key of that string.
+   - For a **BracketSegment** \( [NumberLiteral] \): move to the array index NumberLiteral.
+3. **Stop** once all segments have been resolved, returning the final value or indicating a missing path if any key/index does not exist.
+
+---
+
+## 8. Conclusion
+
+This specification provides:
+
+- **Strict dot-notation compatibility** (no leading/trailing/multiple consecutive dots).
+- **Flexible bracket notation** to handle any string key (including spaces, symbols, or dots) or numeric index.
+- **Mixed usage** that seamlessly allows dot segments for valid identifiers and bracket segments for anything else.
