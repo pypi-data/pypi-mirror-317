@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: ssm-simulators
+Version: 0.8.3
+Summary: SSMS is a package collecting simulators and training data generators for a bunch of generative models of interest in the cognitive science / neuroscience and approximate bayesian computation communities
+Author-email: Alexander Fenger <alexander_fengler@brown.edu>
+Project-URL: Homepage, https://github.com/AlexanderFengler/ssm-simulators
+Project-URL: Bug Tracker, https://github.com/AlexanderFengler/ssm-simulators/issues
+Keywords: simulators,generative models,cognitive science,neuroscience
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: <=3.12,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.0.0,>=1.17.0
+Requires-Dist: scipy>=1.6.3
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: scikit-learn>=0.24.0
+Requires-Dist: psutil>=5.0.0
+Requires-Dist: pathos>=0.3.0
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+
+# SSMS (Sequential Sampling Model Simulators)
+Python Package which collects simulators for Sequential Sampling Models.
+
+Find the package documentation [here](https://alexanderfengler.github.io/ssm-simulators/).
+
+![PyPI](https://img.shields.io/pypi/v/ssm-simulators)
+![PyPI_dl](https://img.shields.io/pypi/dm/ssm-simulators)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+### Quick Start
+
+The `ssms` package serves two purposes.
+
+1. Easy access to *fast simulators of sequential sampling models*
+2. Support infrastructure to construct training data for various approaches to likelihood / posterior amortization
+
+We provide two minimal examples here to illustrate how to use each of the two capabilities.
+
+#### Install
+
+Let's start with *installing* the `ssms` package.
+
+You can do so by typing,
+
+`pip install ssm-simulators`
+
+in your terminal.
+
+Below you find a basic tutorial on how to use the package.
+
+#### Tutorial
+
+Check the basic tutorial [here](docs/basic_tutorial/basic_tutorial.ipynb).
