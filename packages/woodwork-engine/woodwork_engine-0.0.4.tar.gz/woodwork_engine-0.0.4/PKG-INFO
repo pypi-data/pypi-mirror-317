@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: woodwork-engine
+Version: 0.0.4
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+Requires-Dist: python-dotenv
+Provides-Extra: all
+Requires-Dist: langchain; extra == "all"
+Requires-Dist: chromadb; extra == "all"
+Requires-Dist: langchain_chroma; extra == "all"
+Requires-Dist: langchain_community; extra == "all"
+Requires-Dist: sentence-transformers; extra == "all"
+
+This is an AI Agent IaC package.
