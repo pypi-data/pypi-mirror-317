@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/i2cssh/__init__.py
+src/i2cssh/lib.py
+src/i2cssh/main.py
+src/i2cssh/version.py
+src/i2cssh.egg-info/PKG-INFO
+src/i2cssh.egg-info/SOURCES.txt
+src/i2cssh.egg-info/dependency_links.txt
+src/i2cssh.egg-info/entry_points.txt
+src/i2cssh.egg-info/requires.txt
+src/i2cssh.egg-info/top_level.txt
+src/i2cssh/tests/__init__.py
+src/i2cssh/tests/test_i2cssh.py

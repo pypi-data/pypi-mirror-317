@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: i2cssh
+Version: 0.2.1
+Summary: csshX like ssh tool for iTerm2
+Home-page: http://github.com/wouterdebie/i2cssh
+Author: Wouter de Bie
+Author-email: wouter@evenflow.nl
+License: MIT
+Keywords: ssh,i2cssh,csshX
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python
+Classifier: Topic :: Terminals :: Terminal Emulators/X Terminals
+Classifier: Topic :: Utilities
+Requires-Python: >3.8
+License-File: LICENSE.txt
+Requires-Dist: click-option-group==0.5.6
+Requires-Dist: click==8.1.7
+Requires-Dist: iterm2==2.9
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: shellingham==1.5.4

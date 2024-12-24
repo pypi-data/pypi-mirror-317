@@ -1,0 +1,2 @@
+[console_scripts]
+i2cssh = i2cssh.main:main
