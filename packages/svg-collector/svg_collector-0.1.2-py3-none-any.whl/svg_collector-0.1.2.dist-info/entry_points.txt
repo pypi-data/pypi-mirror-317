@@ -1,0 +1,3 @@
+[console_scripts]
+svgc=svg_collector.main:app
+
