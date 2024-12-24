@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: swarmauri-experimental
+Version: 0.6.0.dev5
+Summary: This repository includes experimental components.
+Home-page: http://github.com/swarmauri/swarmauri-sdk
+License: Apache-2.0
+Author: Jacob Stewart
+Author-email: jacob@swarmauri.com
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: gensim
+Requires-Dist: neo4j
+Requires-Dist: numpy
+Requires-Dist: openai
+Requires-Dist: pydantic
+Requires-Dist: requests
+Requires-Dist: swarmauri (==0.5.3.dev5)
+Requires-Dist: tensorflow
+Requires-Dist: torch
+Requires-Dist: transformers (>=4.45.0)
+Requires-Dist: typing_extensions
+Project-URL: Repository, http://github.com/swarmauri/swarmauri-sdk
+Description-Content-Type: text/markdown
+
+# Swarmauri Experimental
