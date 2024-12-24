@@ -1,0 +1,14 @@
+[tool.flit.metadata]
+module = "fs2f"
+author = "Andrii Burkatskyi aka andr11b"
+author-email = "4ndr116@gmail.com"
+home-page = "https://github.com/codyverse/fs2f"
+description-file = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+keywords = "file, snapshot, image, archive"
+dev-requires = ["pytest>=6.0"]
+
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
