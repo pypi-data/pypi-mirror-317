@@ -1,0 +1,67 @@
+site_name: quickapiclient
+repo_url: https://github.com/martinn/quickapiclient
+site_url: https://martinn.github.io/quickapiclient
+site_description: A library for creating fully typed declarative API clients quickly and easily.
+site_author: Martin
+edit_uri: edit/main/docs/
+repo_name: martinn/quickapiclient
+
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - API Reference:
+      - BaseClient: api_reference/base_client.md
+      - ApiEndpoint: api_reference/api_endpoint.md
+      - BaseApi: api_reference/base_api.md
+      - Exceptions: api_reference/exceptions.md
+      - HTTP clients: api_reference/http_clients.md
+      - Serializers: api_reference/serializers.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/martinn/quickapiclient
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/quickapiclient
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.highlight:
+      auto_title: true
+  - pymdownx.superfences
+  - markdown_checklist.extension
+  - mdx_truly_sane_lists
