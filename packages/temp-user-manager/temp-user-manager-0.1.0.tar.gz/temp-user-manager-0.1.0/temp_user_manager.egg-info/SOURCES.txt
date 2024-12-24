@@ -1,0 +1,7 @@
+README.md
+setup.py
+temp_user_manager.egg-info/PKG-INFO
+temp_user_manager.egg-info/SOURCES.txt
+temp_user_manager.egg-info/dependency_links.txt
+temp_user_manager.egg-info/requires.txt
+temp_user_manager.egg-info/top_level.txt
