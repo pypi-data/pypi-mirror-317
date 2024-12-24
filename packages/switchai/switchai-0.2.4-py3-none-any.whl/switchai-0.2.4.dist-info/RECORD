@@ -1,0 +1,16 @@
+switchai/__init__.py,sha256=TDbDyop7ZuTFivY1eG1o0S-XuPnzTTNM2iR-cfXLQQM,29
+switchai/client.py,sha256=_FHWdoX5Y88dCt7TJbIZ7yYLgeSsDNZqXrzOiTF9ijM,12209
+switchai/types.py,sha256=LTsKZpIT4wb1nVBUjDIZN4AxlhuVsz4waXWNYJgW2lo,4206
+switchai/utils.py,sha256=TJO7dn_4xtSQcEYBb8yVFdzjfbY8tyRsu4uYx4x5vY0,424
+switchai/providers/__init__.py,sha256=im_Va7YRR4TYOv5m_EtcEUiE5UCPT0NH4k4EOHA5hEg,586
+switchai/providers/_anthropic.py,sha256=ub7OwDmUGHPv9HI80xSUmNSrQbZSU8Z8x6hICh3ZJ5Q,4554
+switchai/providers/_deepgram.py,sha256=2SsZbrPaSkKQNk5E2tWQvql63olvoXtMVNgT4DUV4JI,244
+switchai/providers/_google.py,sha256=yc1X2xueNLgchgxgBNCwmI1ULZDHmeu3YzvLJcRP7ao,5225
+switchai/providers/_mistral.py,sha256=Is30XQCZPsz2aLRmo_He0Bd4yQcW50M7f4rU7Vi3LF8,4284
+switchai/providers/_openai.py,sha256=mMuYABhi0p8J9RXibuX6fpAelCmRYa2MuneTJaMMuKw,4431
+switchai/providers/_voyageai.py,sha256=bj7NseFDo3SsyP_fH2zFQz8enDLwkXuNOWkXpVE0a3E,646
+switchai-0.2.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+switchai-0.2.4.dist-info/METADATA,sha256=62RrB8wP4t0Z5g7dzcXl71onHhESPwCWCFPXlNki-O8,5007
+switchai-0.2.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+switchai-0.2.4.dist-info/top_level.txt,sha256=WylE8O6_bQQ5kIedSGFYBLg2DnkdrbLunNv41OkU4mg,9
+switchai-0.2.4.dist-info/RECORD,,
