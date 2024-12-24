@@ -1,0 +1,4 @@
+Flask
+watchdog
+click
+pathlib

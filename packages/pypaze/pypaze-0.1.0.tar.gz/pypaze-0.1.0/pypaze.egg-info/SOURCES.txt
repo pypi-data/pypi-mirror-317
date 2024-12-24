@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pypaze/__init__.py
+pypaze/app.py
+pypaze/cli.py
+pypaze/hooks.py
+pypaze/middleware.py
+pypaze/routing.py
+pypaze/utils.py
+pypaze.egg-info/PKG-INFO
+pypaze.egg-info/SOURCES.txt
+pypaze.egg-info/dependency_links.txt
+pypaze.egg-info/entry_points.txt
+pypaze.egg-info/requires.txt
+pypaze.egg-info/top_level.txt
