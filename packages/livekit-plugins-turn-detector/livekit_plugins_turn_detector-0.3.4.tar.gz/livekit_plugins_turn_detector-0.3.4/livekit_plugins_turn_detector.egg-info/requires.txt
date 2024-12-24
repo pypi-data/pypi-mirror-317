@@ -1,0 +1,5 @@
+livekit-agents>=0.12.3
+transformers>=4.47.1
+numpy>=1.26
+onnxruntime>=1.18
+jinja2
