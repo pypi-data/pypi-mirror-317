@@ -1,0 +1,10 @@
+tuparser/__init__.py,sha256=ovD5DLYB7piN4RjyGsFThuYDnE3PvciyqNPkqkq1ukQ,171
+tuparser/constants.py,sha256=oTYpEv836eGsgXdmvjVNf4xydaDP6jd5y6t4vCOGEvE,149
+tuparser/parser.py,sha256=WS2PogEOohljNZiGUeEdj1vYr4M5j5jmdmiDytrOMCg,3897
+tuparser/utils.py,sha256=Rfe2PqJ9FQtHN5NHNKDq4IbLMiDhjUaZ3zhfCT925mI,214
+tuparser/validator.py,sha256=3qQvLBvdZS7txr6ZwLW2R_RbOe4MK9hza229in3p7VE,1233
+tuparser-1.0.0.dist-info/LICENSE,sha256=LrXz-jsbzS5ejemN_KGFYZl0QP9ZXPrxYy7MsC0zlbY,1066
+tuparser-1.0.0.dist-info/METADATA,sha256=6MUFBV_9RvHLE5K3lFkIB9kRMrJHYDDCYbBhR1Tpy9E,822
+tuparser-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+tuparser-1.0.0.dist-info/top_level.txt,sha256=cs5rArRCXd9xc5OdgEErDN4J-3J0PoVGCPzNMp9yRtU,9
+tuparser-1.0.0.dist-info/RECORD,,
