@@ -1,0 +1,89 @@
+[project]
+name = "rheedium"
+version = "2024.11.15"
+description = "Differentiable RHEED simulations in JAX"
+authors = [{name = "Debangshu Mukherjee", email = "mukherjeed@ornl.gov"}]
+license = {file = "LICENSE"}
+maintainers = [{name = "Debangshu Mukherjee", email = "mukherjeed@ornl.gov"}]
+keywords = [
+    "RHEED",
+    "Ewald",
+    "JAX",
+    "MBE",
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "matplotlib-scalebar >= 0.5.0",
+    "tqdm >= 4.66.0",
+    "jax[cuda12]>=0.4.17",
+    "jaxtyping >= 0.2.21",
+    "chex >= 0.1.85",
+    "optax >= 0.1.8",
+    "pytest >= 8.0.0",
+    "beartype",
+    "pymatgen",
+]
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "absl-py",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    "src"
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+
+[tool.coverage.run]
+source = ["rheedium"]
+omit = [
+    "tests/*",
+    "**/__init__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "pass",
+    "raise ImportError",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["src"]
+
+[tool.setuptools.package-data]
+"rheedium" = ["py.typed"]
+
+[project.urls]
+Homepage = "https://code.ornl.gov/intersect-em/rheedium"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
