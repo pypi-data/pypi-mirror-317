@@ -1,0 +1,11 @@
+pytest_ranking/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+pytest_ranking/change_tracker.py,sha256=8paT-S0TcITkTWAqxh8PEjAhLC4UaxlrJISj1c8GfL0,2714
+pytest_ranking/const.py,sha256=gTaWAbPUwuuUr1w2RbKgWgXde1CikDbcay0nWbouYrs,819
+pytest_ranking/plugin.py,sha256=PnZPQKra3yHbPjVtNpgknz984w3Xklgnv5AuxCQuWSk,12453
+pytest_ranking/rank.py,sha256=aEhtVJw-SuwPsEAyjEXQabmSXrPOyOe7Xd0BuB-LK94,1716
+pytest_ranking-0.3.2.dist-info/LICENSE,sha256=4RKJuNf8SewYWkthDnm16QbdmZwFTToZHGvSoKoqIyc,1091
+pytest_ranking-0.3.2.dist-info/METADATA,sha256=R9fTyARFQ2JCj53fbL7SU8G2OhqxrtNKooPH5PeSqU0,7331
+pytest_ranking-0.3.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pytest_ranking-0.3.2.dist-info/entry_points.txt,sha256=jW09bABXx8NzFraIY1YfS9atIM0uKAoXmx0aohw3NTs,50
+pytest_ranking-0.3.2.dist-info/top_level.txt,sha256=I5B39kAqoEwrT3TO3JUi81CUx84kT2ALOP_vowfQ8Vg,15
+pytest_ranking-0.3.2.dist-info/RECORD,,
