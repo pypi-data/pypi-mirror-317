@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pome7o
+Version: 0.0.3
+Summary: pome7o
+Author: hanyu
+Author-email: han_yu@hzlh.com
+Requires-Python: >=3.10,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# OmAgent Core
+
+## 🧐 What is OmAgent Core
+OmAgent Core is an integral component of the OmAgent project, encompassing the foundational framework for constructing OmAgent. It features a workflow system configurable via configuration files and a recursive general task-solving mechanism, referred to as the DnC Loop, among other elements. This core framework empowers you to create the intelligent agent of your design.
+
+## How to use
+### Install
+```bash
+pip install for_test
+```
+
+### Project
+**[OmAgent: A Multi-modal Agent Framework for Complex Video Understanding](https://github.com/om-ai-lab/OmAgent)**
