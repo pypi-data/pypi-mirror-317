@@ -1,0 +1,19 @@
+[tool.poetry]
+authors = ["Ashraful Islam <ashrafulrobin3@gmail.com>"]
+description = "It's a python based asyncio task schedular/queue mechanism"
+license = "MIT"
+name = "coro-runner"
+readme = "README.md"
+version = "0.1.2"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+fastapi = {extras = ["standard"], version = "^0.115.2"}
+pytest = "^8.3.3"
+pytest-asyncio = "^0.24.0"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
