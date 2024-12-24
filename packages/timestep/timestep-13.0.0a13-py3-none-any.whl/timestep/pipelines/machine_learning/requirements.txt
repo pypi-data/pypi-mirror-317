@@ -1,0 +1,12 @@
+# connexion[swagger-ui,uvicorn]
+# gguf
+mlflow
+nvidia-ml-py
+openai
+protobuf<4.0.0
+psutil
+pynvml
+ray[serve]
+sse-starlette
+torchvision
+unsloth
