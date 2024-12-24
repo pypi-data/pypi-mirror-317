@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "jay-portal-gun"
+version = "0.1.0"
+description = ""
+authors = ["Jmint <jeffreymintah737@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+jay-portal-gun = "jay_portal_gun.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = "^0.15.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
