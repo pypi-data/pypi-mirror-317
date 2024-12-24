@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: translation-builder
+Version: 1.0.4
+Summary: A tool for generating Python classes from YAML files
+Home-page: https://github.com/Komo4ekoI/translations-builder
+Author: Vadym Teliatnyk
+Author-email: laivhakin@gmail.com
+Project-URL: Documentation, https://github.com/Komo4ekoI/translations-builder
+Project-URL: Bug Reports, https://github.com/Komo4ekoI/translations-builder/issues
+Project-URL: Source Code, https://github.com/Komo4ekoI/translations-builder
+Keywords: package,translation,translator,komo4ek,convert,convertor,builder,translation-builder,translation-generator,g-translation
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyYAML ==6.0.2
+Requires-Dist: black ==24.8.0
+
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/translation-builder)![PyPI - Version](https://img.shields.io/pypi/v/translation-builder)[![wakatime](https://wakatime.com/badge/user/90c8afe4-47c1-4f14-9423-4474ab0618ae/project/2a4d5581-e29c-4cd6-b898-103f15fa8b1b.svg)](https://wakatime.com/badge/user/90c8afe4-47c1-4f14-9423-4474ab0618ae/project/2a4d5581-e29c-4cd6-b898-103f15fa8b1b)
+
+
+## INFO
+
+This is a simple library providing the ability to generate a Python file from a `YML` file. It's make easy to use the data from the original file, for example for translation files.
+## Installation
+
+The library is available on PyPi, so you can install it in the standard way:
+
+##### Windows
+```bash
+  pip install translation-builder
+```
+##### Ubuntu/macOS
+```bash
+  pip3 install translation-builder
+```
+## Example
+
+#### YML file example
+```my_file.yml
+good-translation:
+  cool: "No!"
+  one-more-cool:
+    - 1
+    - 2
+    - 3
+```
+
+#### File generation
+```bash
+g-translation --file my_file.yml --py_result ./my_directory/
+```
+
+#### Usage in your code
+```main.py
+from my_directory import my_file_tg
+
+print(my_file_tg.Root.good_translation.cool)
+print(my_file_tg.Root.good_translation.one_more_cool[1])
+```
+
+#### Result
+```bash
+No!
+2
+```
+![MEW](https://media1.tenor.com/m/bn7amhoVqkIAAAAd/%D1%81%D0%B8%D0%B4%D0%B8%D1%82-%D0%BA%D0%BE%D0%BC%D0%B0%D1%80%D0%B8%D0%BA.gif)
