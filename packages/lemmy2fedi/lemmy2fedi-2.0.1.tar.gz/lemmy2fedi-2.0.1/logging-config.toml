@@ -1,0 +1,11 @@
+[[handlers]]
+sink = "sys.stdout"
+format = "{message}"
+level = "INFO"
+
+[[handlers]]
+sink = "/tmp/lemmy2fedi.log"
+rotation = "1 day"
+retention = 3
+level = "DEBUG"
+format = "{time} - {level} - {name} - {function}({line}) - {message}"

@@ -1,0 +1,157 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "hadolint@latest": {
+      "last_modified": "2024-11-28T07:51:56Z",
+      "resolved": "github:NixOS/nixpkgs/226216574ada4c3ecefcbbec41f39ce4655f78ef#hadolint",
+      "source": "devbox-search",
+      "version": "2.12.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/q1igbc8m69sy4lbhs4zwpp7s4mxn6v5y-hadolint-2.12.0",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/dv2z38wgqxm3nhy7jrdx6hgsg5w9r9s1-hadolint-2.12.0-doc"
+            }
+          ],
+          "store_path": "/nix/store/q1igbc8m69sy4lbhs4zwpp7s4mxn6v5y-hadolint-2.12.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/nhrlykqizzl911d5j9853gff68m5zc44-hadolint-2.12.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/nhrlykqizzl911d5j9853gff68m5zc44-hadolint-2.12.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6vl7pfmdp568hzi69gbfgiyy0ai0pd0a-hadolint-2.12.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6vl7pfmdp568hzi69gbfgiyy0ai0pd0a-hadolint-2.12.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5c5k1gzcgyv84dmhn8r9j1qwn7af7rhf-hadolint-2.12.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/5c5k1gzcgyv84dmhn8r9j1qwn7af7rhf-hadolint-2.12.0"
+        }
+      }
+    },
+    "jetbrains.pycharm-community@latest": {
+      "last_modified": "2024-12-17T11:43:56Z",
+      "resolved": "github:NixOS/nixpkgs/4989a246d7a390a859852baddb1013f825435cee#jetbrains.pycharm-community",
+      "source": "devbox-search",
+      "version": "2024.3.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ng46wq2c5rx6whm8xhjr94596h9mh0pd-pycharm-community-2024.3.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ng46wq2c5rx6whm8xhjr94596h9mh0pd-pycharm-community-2024.3.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bw6rdacjnmxn48dxm5gk550xrl04rp2n-pycharm-community-2024.3.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/bw6rdacjnmxn48dxm5gk550xrl04rp2n-pycharm-community-2024.3.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "path": "/nix/store/6r31b6rdjhy9fxb01mym4qbm7fq0z9wl-pycharm-community-2024.3",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    "uv@latest": {
+      "last_modified": "2024-12-09T13:13:08Z",
+      "resolved": "github:NixOS/nixpkgs/bc27f0fde01ce4e1bfec1ab122d72b7380278e68#uv",
+      "source": "devbox-search",
+      "version": "0.4.30",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kcam2c7p2n7k6kazx8ipy9v93mmp2acd-uv-0.4.30",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/5yg78vahciiraipg9xbmq3gmncyw4wig-uv-0.4.30-dist"
+            }
+          ],
+          "store_path": "/nix/store/kcam2c7p2n7k6kazx8ipy9v93mmp2acd-uv-0.4.30"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xwmpvkhkxvbibbkfpphijw85l4dxrd6m-uv-0.4.30",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/i1rvg12ibvdmbnfjdfzi02n273sz659k-uv-0.4.30-dist"
+            }
+          ],
+          "store_path": "/nix/store/xwmpvkhkxvbibbkfpphijw85l4dxrd6m-uv-0.4.30"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wwnghahh84p3b3f859vsq0l1lcjy2cqj-uv-0.4.30",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/s042m2w3hk82hg4a1a4m7vzzkw7rdwbi-uv-0.4.30-dist"
+            }
+          ],
+          "store_path": "/nix/store/wwnghahh84p3b3f859vsq0l1lcjy2cqj-uv-0.4.30"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/w7cs06nn9vvk8a59nv48y4biv9zzv43x-uv-0.4.30",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/93m90v0vlxwmz04pia4hj7ni791x65rv-uv-0.4.30-dist"
+            }
+          ],
+          "store_path": "/nix/store/w7cs06nn9vvk8a59nv48y4biv9zzv43x-uv-0.4.30"
+        }
+      }
+    }
+  }
+}

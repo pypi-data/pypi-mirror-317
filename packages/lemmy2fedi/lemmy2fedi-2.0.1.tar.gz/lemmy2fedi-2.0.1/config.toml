@@ -1,0 +1,23 @@
+run_continuously = false
+delay_between_posts = 300
+history_db_path = "./history.sqlite"
+
+[[communities]]
+domain_name = "lemmy.world"
+name = "dogs"
+include_attachments = true
+include_backlink = true
+only_with_attachment = true
+tags = ["dog", "dogs"]
+
+[[communities]]
+domain_name = "lemmy.ml"
+name = "fuck_cars"
+include_attachments = true
+include_backlink = true
+only_with_attachment = true
+sort = "New"
+
+[fediverse]
+domain_name = "https://botsin.space"
+api_token = "6CwOb3AT7rUkfyrJdoPQwI0IzR_Abrn6kd_7ZhI3k48"

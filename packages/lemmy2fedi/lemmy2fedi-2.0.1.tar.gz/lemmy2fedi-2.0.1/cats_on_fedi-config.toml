@@ -1,0 +1,67 @@
+run_continuously = false
+delay_between_posts = 3600
+history_db_path = "cats_on_fedi-history.sqlite"
+history_prune_age = 90
+max_crossposts = 1
+
+[[communities]]
+domain_name = "lemmy.world"
+name = "cat"
+include_attachments = true
+include_backlink = true
+only_with_attachment = true
+tags = ["cat", "cats"]
+sort = "New"
+limit = 20
+
+[[communities]]
+domain_name = "midwest.social"
+name = "cats"
+include_attachments = true
+include_backlink = true
+only_with_attachment = true
+tags = ["cat", "cats"]
+sort = "New"
+limit = 20
+
+[[communities]]
+domain_name = "sh.itjust.works"
+name = "cats"
+include_attachments = true
+include_backlink = true
+only_with_attachment = true
+tags = ["cat", "cats"]
+sort = "New"
+limit = 20
+
+[fediverse]
+domain_name = "botsin.space"
+api_token = "hfRbbucqEkagyOPZsgjuO2_lgIWDRyEOXmG0uQ6wTDU"
+max_reblog = 3
+no_reblog_tags = [
+    "AI",
+    "AIartists",
+    "AIartwork",
+    "AiArtCommunity",
+    "Dogs",
+    "MarkOnArt",
+    "MastoArt",
+    "Midjourney",
+    "MidjourneyAI",
+    "Mutualaid",
+    "StGertrudesDay",
+    "StPatricksDay",
+    "StretchGoal",
+    "Trump",
+    "aiart",
+    "aicats",
+    "fedigiftshop",
+    "hertaburbe",
+    "shop",
+    "supportindiegames",
+    "Bible",
+]
+no_reblog_users = [
+    "LisaWarnerLisaLuv@mastodon.social",
+    "lolcats@unfufadoo.net",
+]
