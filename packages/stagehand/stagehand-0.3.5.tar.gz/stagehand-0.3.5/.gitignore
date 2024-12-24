@@ -1,0 +1,50 @@
+# ignore venvs
+.venv*
+.build-venv
+
+# python byproducts
+__pycache__
+output
+*.pyo
+.mypy_cache
+.ruff_cache
+
+# vs code project settings folder
+# .vscode
+
+# pyinstaller output
+build
+dist
+
+*.pyc
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+
+settings.json
+log.txt
+settings-logviewer.json
+main.spec
+
+# Microsoft stupidity
+debug.log
+
+# portable settings
+.portable
+settings.ini
+actions.json
+log_profiles.json
+log.db
+
+app/plugins/**/packages
+
+# zipped plugins
+src/stagehand/plugins/**/*.zip
+
+Stagehand.code-workspace
+
+.history
+
+.env
