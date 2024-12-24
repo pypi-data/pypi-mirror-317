@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+mapContentTool.py
+setup.py
+map_content_tool.egg-info/PKG-INFO
+map_content_tool.egg-info/SOURCES.txt
+map_content_tool.egg-info/dependency_links.txt
+map_content_tool.egg-info/entry_points.txt
+map_content_tool.egg-info/top_level.txt
