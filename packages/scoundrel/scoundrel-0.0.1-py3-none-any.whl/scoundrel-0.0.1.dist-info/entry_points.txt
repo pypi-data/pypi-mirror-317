@@ -1,0 +1,3 @@
+[console_scripts]
+scoundrel=scoundrel.__main__:main
+

@@ -1,0 +1,12 @@
+scoundrel/__init__.py,sha256=67VJhxsQ5_ULST-ExlPxYYKoPy1kNuv5HG3_JOu6nEI,403
+scoundrel/__main__.py,sha256=sIpZjPyMRjMvFm1R5rt9AFTbynKaVV5BIPmEsnNZY-o,67
+scoundrel/core/__init__.py,sha256=0H0_b67B-uup7EEwgftA_8u-D4UmajYSBIsAu0V1Kuo,180
+scoundrel/core/main.py,sha256=RZ6OOaAvj0hNaZNdi0C03iiUsx2Uxx4zUh0-22bUuFM,2172
+scoundrel/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scoundrel/models/main.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scoundrel/protocols.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scoundrel/types.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scoundrel-0.0.1.dist-info/METADATA,sha256=NXS3b9egAm4pbwcPIBKTjMqRHEkzCfAPX2xX4u1_JO8,722
+scoundrel-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+scoundrel-0.0.1.dist-info/entry_points.txt,sha256=USIRji_STbH_y0y08jYT6AWzjpWHgylTuysXrmMvoEg,53
+scoundrel-0.0.1.dist-info/RECORD,,
