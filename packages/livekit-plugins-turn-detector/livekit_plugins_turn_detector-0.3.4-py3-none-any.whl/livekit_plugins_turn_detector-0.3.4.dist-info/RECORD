@@ -1,0 +1,8 @@
+livekit/plugins/turn_detector/__init__.py,sha256=vywlAIhmEukDoIlDgT4RZHBgcungvygoRBIhHDUq5XY,1274
+livekit/plugins/turn_detector/eou.py,sha256=37edv0PAwzB9Jjsz0a-efoPmkoZS6YVpy5VebtfXSDs,6097
+livekit/plugins/turn_detector/log.py,sha256=a0uGBu1dmzh0XgEi4l5dgH3zb0bj86RGP-i-WtDWNRY,76
+livekit/plugins/turn_detector/version.py,sha256=V7LreW9xeL2lODKfIvuPF6Uo6kF-tLivGx991xKVL9Q,599
+livekit_plugins_turn_detector-0.3.4.dist-info/METADATA,sha256=y8nKa94q6AnYRNfZ6cpheCBUHHK3JSzSZsc17Z4cYbc,2948
+livekit_plugins_turn_detector-0.3.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+livekit_plugins_turn_detector-0.3.4.dist-info/top_level.txt,sha256=OoDok3xUmXbZRvOrfvvXB-Juu4DX79dlq188E19YHoo,8
+livekit_plugins_turn_detector-0.3.4.dist-info/RECORD,,
