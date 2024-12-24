@@ -1,0 +1,8 @@
+README.md
+setup.py
+apsit_mysql.egg-info/PKG-INFO
+apsit_mysql.egg-info/SOURCES.txt
+apsit_mysql.egg-info/dependency_links.txt
+apsit_mysql.egg-info/entry_points.txt
+apsit_mysql.egg-info/requires.txt
+apsit_mysql.egg-info/top_level.txt
