@@ -1,0 +1,6 @@
+.afterText, .beforeText{
+    margin-top: 4px!important;
+}
+.MuiGrid-justify-content-xs-flex-end {
+    justify-content: flex-start!important;
+} 
