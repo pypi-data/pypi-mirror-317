@@ -1,0 +1,7 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/timer.py,sha256=8f8y2JIHQJRZUmXiHAQHevNCVqKqeYwQTSea3QGELAQ,325
+src/user_manager.py,sha256=XxZEGPhrR-t2opx5XLuk9psJg5oTzBUQvousPYd0h88,1691
+AutoExpireDB-1.0.0.dist-info/METADATA,sha256=Q3k6vdjoYOk_ulGTPnaoImrTdwI1-oED0tUmIjOMwak,952
+AutoExpireDB-1.0.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+AutoExpireDB-1.0.0.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+AutoExpireDB-1.0.0.dist-info/RECORD,,
