@@ -1,0 +1,2 @@
+[console_scripts]
+stay-online = stay_online.cli:cli_stay_online

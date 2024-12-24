@@ -1,0 +1,10 @@
+stay_online/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stay_online/cli.py,sha256=NlG25C9UoJFXfaBdLSojyatLuqfUIBxSOJ85ZSK_NBk,1555
+stay_online/constants.py,sha256=6RJaoHmK-MctA1M-9EXe8Ojx8aMRKwb4asroLpNRYGo,894
+stay_online/stay_online.py,sha256=C1DClyu2BnramRiejglsOWIm7R2-9p12NOHTHSYZaqk,5398
+stay_online/word_file.txt,sha256=TCmLYv1JXqp-vKs1KYfUrK-TbHMgjLI0WufrcXSGDTg,75879
+stay_online-0.2.0.dist-info/METADATA,sha256=lyZp0RCtm40pk-gA62ikTPQwnN6im5BVPapiThQhVY0,3390
+stay_online-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+stay_online-0.2.0.dist-info/entry_points.txt,sha256=JOpzviOH21-cDmJ9qc3BumuA5VWhFEdOet71U3s2FZc,64
+stay_online-0.2.0.dist-info/licenses/LICENSE,sha256=HwvzK9AT30uY_WIzfBZWHMCXXcJklWCIaIhot7MfZaE,1063
+stay_online-0.2.0.dist-info/RECORD,,
