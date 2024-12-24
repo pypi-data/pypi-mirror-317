@@ -1,0 +1,2 @@
+[console_scripts]
+a7p = a7p.__main__:main
