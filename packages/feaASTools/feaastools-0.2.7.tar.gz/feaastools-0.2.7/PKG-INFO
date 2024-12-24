@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: feaASTools
+Version: 0.2.7
+Summary: Tools to handle feature files (*.fea) as abstract syntax tree.
+Author: Andreas Eigendorf
+License: MIT
+Project-URL: Homepage, https://gitlab.com/fontstuff/feaASTools
+Project-URL: Repository, https://gitlab.com/fontstuff/feaASTools
+Project-URL: Documentation, https://fontstuff.gitlab.io/feaASTools
+Project-URL: Issues, https://gitlab.com/fontstuff/feaASTools/-/issues
+Platform: Any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fontTools>=4.50.0
+
+# feaASTools
+
+Tools to handle feature files (*.fea) as abstract syntax tree.
+
+## Installation
+
+```shell
+pip install feaASTools
+```
+
+## Documentation
+
+For details read the [Documentation](https://fontstuff.gitlab.io/feaASTools/).

@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+Lib/feaASTools/__init__.py
+Lib/feaASTools/inspect.py
+Lib/feaASTools/renameGlyph.py
+Lib/feaASTools.egg-info/PKG-INFO
+Lib/feaASTools.egg-info/SOURCES.txt
+Lib/feaASTools.egg-info/dependency_links.txt
+Lib/feaASTools.egg-info/requires.txt
+Lib/feaASTools.egg-info/top_level.txt
+tests/test_inspect.py
+tests/test_renameGlyph.py
