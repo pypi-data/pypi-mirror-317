@@ -1,0 +1,10 @@
+bbext/__init__.py,sha256=6oZanjY0P4i31osU71C_QI-hREG2golFEa90NgBrpEw,12132
+bbext/__main__.py,sha256=5BjNuyet8AY-POwoF5rGt722rHQ7tJ0Vf0UFUfzzi-I,58
+bbext/constents.py,sha256=6pa6T4nr_IUUZyEx64sulTAUGEfZZi2Iy97B8SqgmaU,911
+bbext/package_management.py,sha256=QYkN8FyrHyw9k4soHcloX6_EkGYvLbfATBRGowcSv8A,18947
+blender_extension_builder-1.4.2.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+blender_extension_builder-1.4.2.dist-info/METADATA,sha256=yyyv4KL0-go5DMLFIhAwsUzZNxJ_YXFFIgq0bGshe6A,47133
+blender_extension_builder-1.4.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+blender_extension_builder-1.4.2.dist-info/entry_points.txt,sha256=-oul-H6Hfb3M2nQJr7ywuTvKwXxBE7K4a8tqWC1tWqA,74
+blender_extension_builder-1.4.2.dist-info/top_level.txt,sha256=7Tu3Rl1ig6WEiRa9H-TUbIAhOtGXVfpzGqrKRaeSsQU,6
+blender_extension_builder-1.4.2.dist-info/RECORD,,
