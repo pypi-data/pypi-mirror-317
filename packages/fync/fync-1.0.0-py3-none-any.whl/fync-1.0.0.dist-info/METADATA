@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: fync
+Version: 1.0.0
+Summary: Automatically trigger command execution when directory updates
+Home-page: https://github.com/fanuware/fync
+License: MIT
+Author: Fanuware
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: watchdog (>=0.8.3)
+Project-URL: Repository, https://github.com/fanuware/fync
+Description-Content-Type: text/markdown
+
+# fync
