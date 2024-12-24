@@ -1,0 +1,7 @@
+
+[dev]
+black>=24.10
+coverage>=7.6
+mypy>=1.13
+argparse-manpage>=4.6
+genbadge[coverage]>=1.1.1
