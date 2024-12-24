@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: otsun
+Version: 2.13.1
+Summary: 
+Author: Biel Cardona
+Author-email: bielcardona@gmail.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: autologging (>=1.3.2,<2.0.0)
+Requires-Dist: numpy (>=1.23,<2.0)
+Requires-Dist: pandas (>=1.5.2,<2.0.0)
+Requires-Dist: scipy (>=1.9.3,<2.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Description-Content-Type: text/markdown
+
+[![PyPI version](https://badge.fury.io/py/OTSun.svg)](https://badge.fury.io/py/OTSun)
+
+![OTSun logo](https://github.com/bielcardona/OTSun/raw/master/logo_OTSun.png)
+
+# OTSun
+
+OTSun is a python package that uses the Monte Carlo Forward Ray Tracing for the optical analysis of Solar Thermal Collectors and Solar Cells. 
+
+## Installation
+
+The package can be installed either from pypi:
+`pip install otsun` or downloaded installed with `python setup.py install`.
+
+In order to use the package the libraries of FreeCAD (https://www.freecadweb.org/) must be available and included in your python path.
+
+## Documentation
+
+The documentation of the module is available at http://otsun.readthedocs.io/
+
+## How to cite OTSun?
+
+If you need to cite OTSun, please use the following reference:
+
+* Cardona G, Pujol-Nadal R (2020) OTSun, a python package for the optical analysis of solar-thermal collectors and photovoltaic cells with arbitrary geometry. PLoS ONE 15(10): e0240735. https://doi.org/10.1371/journal.pone.0240735
+
