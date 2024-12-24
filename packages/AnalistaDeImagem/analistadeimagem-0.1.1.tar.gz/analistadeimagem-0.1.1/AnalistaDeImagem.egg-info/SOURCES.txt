@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+AnalistaDeImagem.egg-info/PKG-INFO
+AnalistaDeImagem.egg-info/SOURCES.txt
+AnalistaDeImagem.egg-info/dependency_links.txt
+AnalistaDeImagem.egg-info/requires.txt
+AnalistaDeImagem.egg-info/top_level.txt
+analistaDeImagem/__init__.py
+analistaDeImagem/core.py
+tests/teste.py
