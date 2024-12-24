@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+nanpa.egg-info/PKG-INFO
+nanpa.egg-info/SOURCES.txt
+nanpa.egg-info/dependency_links.txt
+nanpa.egg-info/top_level.txt
