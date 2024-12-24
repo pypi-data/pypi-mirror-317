@@ -1,0 +1,17 @@
+# Use an Alpine-based MySQL image
+FROM mysql:8.0
+
+# Set environment variables for MySQL
+ENV MYSQL_ROOT_PASSWORD=1234
+
+# Expose MySQL port
+EXPOSE 3306
+
+# Copy the entrypoint script into the container
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+
+# Make the entrypoint script executable
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Set the custom entrypoint
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
