@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: denokv
+Version: 0.1.0a0.dev111
+Summary: Connect to Deno KV databases from Python.
+Home-page: https://github.com/h4l/denokv-python
+License: MIT
+Author: Hal Blackburn
+Author-email: hwtb2@cam.ac.uk
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: aiohttp (>=3,<4)
+Requires-Dist: foundationdb (>=6.2.4,<8)
+Requires-Dist: protobuf (>=4.22.0,<6)
+Requires-Dist: v8serialize (>=0.1.0,<0.2.0)
+Requires-Dist: yarl (>=1,<2)
+Project-URL: Documentation, https://github.com/h4l/denokv-python
+Project-URL: Repository, https://github.com/h4l/denokv-python
+Description-Content-Type: text/markdown
+
+# Deno KV Python
+
+_Connect to [Deno KV] cloud and [self-hosted] databases from Python._
+
+[Deno KV]: https://deno.com/kv
+[self-hosted]: https://deno.com/blog/kv-is-open-source-with-continuous-backup
+[denokv server]: https://github.com/denoland/denokv
+
+The `denokv` package is an unofficial Python client for the Deno KV database. It can connect to
+both the distributed cloud KV service, or self-hosted [denokv server] (which can be a replica of a cloud KV database, or standalone).
+
+It implements version 3 of the [KV Connect protocol spec, published by Deno](https://github.com/denoland/denokv/blob/main/proto/kv-connect.md).
+
+## Status
+
+The package is under active development and is not yet stable or feature-complete.
+
+**Working**:
+
+- [x] Reading data with kv.get(), kv.list()
+
+**To-do**:
+
+- [ ] [Writing data / transactions](https://docs.deno.com/deploy/kv/manual/transactions/)
+- [ ] [Watching for changes](https://docs.deno.com/deploy/kv/manual/operations/#watch)
+- [ ] [Queues](https://deno.com/blog/queues)
+
