@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: mcp-config-extractor
+Version: 0.1.7
+Summary: Extract MCP server config from GitHub repository README
+Author-email: liuyoshio <liujiawei@weight-wave.com>
+Requires-Python: >=3.7
+Requires-Dist: openai>=1.6.1
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: requests>=2.31.0
+Description-Content-Type: text/markdown
+
+# MCP Config Extractor
+
+Extract MCP server configurations from GitHub repository READMEs.
+
+## Installation
+
+```bash
+pip install mcp-config-extractor
+```
+
+## Usage
+
+```bash
+mcp-extract -s https://github.com/user/repo
+```
+
+### Additional Arguments
+
+- `-u, --url`: OpenRouter base URL (overrides environment variable)
+- `-k, --key`: OpenRouter API key (overrides environment variable)
+
+## Environment Variables
+
+The following environment variables are required:
+
+- `OPENROUTER_BASE_URL`: OpenRouter API base URL
+- `OPENROUTER_API_KEY`: OpenRouter API key
+
+You can set these in a `.env` file in your working directory.
+
+## Output
+
+The tool outputs a JSON configuration that includes:
+- Repository information
+- Command information for running the server
+- Required parameters and environment variables
+- Tags and description
+
+For more details, visit: https://github.com/weightwave/mcp-registry
