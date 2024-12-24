@@ -1,0 +1,2 @@
+[console_scripts]
+prometheus_speedtest = prometheus_speedtest.prometheus_speedtest:init
