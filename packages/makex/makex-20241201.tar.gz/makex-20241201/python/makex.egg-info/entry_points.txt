@@ -1,0 +1,3 @@
+[console_scripts]
+makex = makex.__main__:main
+mx = makex.__main__:main
