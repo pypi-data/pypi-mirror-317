@@ -1,0 +1,16 @@
+fxdc/__init__.py,sha256=rYnHaE-wec4PWML6H0HquJEiyVDMfisNMsWH4Xhz6hs,278
+fxdc/config.py,sha256=3iAMhb249Fmc_k7HELpfSkkuhU4ApfYuXxV8zXgv8I8,1537
+fxdc/exceptions.py,sha256=TfKPJGCUQM1uYh3EJTeEJOj7VSqlrvkaXjtPQzhLb60,566
+fxdc/misc.py,sha256=aj3dQ9i7ltYq7C1IXTMbq5i28TqZXRqqFdj0vX9hqIA,489
+fxdc/read.py,sha256=UQGVgvyuZyvHxIXXivJFEluprqyBweoBnPi81nVXYyA,1944
+fxdc/write.py,sha256=BgksOLhwYEbHz8PczXasvBzxxuLICj_UJNsFhDncpHw,1232
+fxdc/parsedata/__init__.py,sha256=YudhnQHi8e4vmUtByiKieplyHTjZatpqnk5WrWzHDVc,101
+fxdc/parsedata/fxdcobject.py,sha256=l23Mv-MHI4mqc1HQN3f3YHC0WFguH6zDDPQk-t1EsVA,917
+fxdc/parsedata/lexer.py,sha256=bS39NzDkOqKWNRByzWC6gycaDAD1JuiYq1zN7zcAIyM,4787
+fxdc/parsedata/parsedata.py,sha256=aSTDjD5BI-jqsQAQQwkUucGIs2VH9M4OHzo40Ly5d2M,15179
+fxdc/writedata/__init__.py,sha256=uMOxlgr_rKhsOIYuqvbJAfoSq4vhdDScPh2U2PbwjeE,64
+fxdc/writedata/parseobject.py,sha256=JCU1mVAYjCtmlcjxP4c9Bvl8xllkNdl17Q_ulSmLVh4,3412
+fxdc-1.2.dist-info/METADATA,sha256=BhYGj64bU6ZYASjAqxPYV9GDTt4DB-NYYobHWOS5A3g,5129
+fxdc-1.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+fxdc-1.2.dist-info/top_level.txt,sha256=nVh3JERca9jmXjbKXUw3e5FCgBAecwxL16IjpBvVjpw,5
+fxdc-1.2.dist-info/RECORD,,
