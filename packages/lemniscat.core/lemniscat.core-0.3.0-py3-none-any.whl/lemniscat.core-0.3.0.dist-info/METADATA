@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: lemniscat.core
+Version: 0.3.0
+Summary: A core library form runtime and plugins
+Author-email: Philippe MORISSEAU <philippe.morisseau@outlook.com>
+License: MIT
+Project-URL: Homepage, https://github.com/lemniscat-devops/lemniscat.core
+Project-URL: Issues, https://github.com/lemniscat-devops/lemniscat.core/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# lemniscat.core
+A core library for runtime and plugins
