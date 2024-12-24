@@ -1,0 +1,10 @@
+cbox/__init__.py,sha256=bboMLOUko7KORNrBbIO2vRUajac_4cbK2N1k76EoVWg,113
+cbox/cli.py,sha256=kva21qU97i2GYCyF4Hris_quU7z3hfS9PtcXMRz3wpM,7327
+cbox/gui.py,sha256=EO2oXb2AwZa7fDkiLkTP3UMsSI4PSshHBBj9KJG4stg,45560
+cbox/i18n.py,sha256=dhlslt1CnXJ1I0uIT59EqMg1seXhe0hbA5V9hMgjE_o,6596
+cbox/mybox.py,sha256=pF2tEcRlvDT08Yrg2eVEWFMR4XJZ5kgc8ouWbWSTCzY,24500
+cbox_tool-0.1.13.dist-info/METADATA,sha256=KbMzEz-YKHI8XbRocy6gI-JRNadf98r9K72QEHYJNWA,8964
+cbox_tool-0.1.13.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cbox_tool-0.1.13.dist-info/entry_points.txt,sha256=MLlD-RQSrlEq9pJg0vNrLvGYGfGZZiIBY8a-r4T--TU,64
+cbox_tool-0.1.13.dist-info/top_level.txt,sha256=0vMVm-gWqp1d2FCR8tK4yvx61cqX_upbxL19K2GXHP4,5
+cbox_tool-0.1.13.dist-info/RECORD,,
