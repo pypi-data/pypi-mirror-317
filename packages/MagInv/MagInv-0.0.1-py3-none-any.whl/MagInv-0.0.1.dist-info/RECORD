@@ -1,0 +1,10 @@
+MagInv/Call_Matrix.py,sha256=dqpgTaVZ6Uni7bT87J3N3Ho3z2reX7wdO904UfzrgeI,6516
+MagInv/Inversion.py,sha256=uYkxhJyEV37ZmxmAexQFnSyDXnArKhMkWaL6C_Yd6Ug,4167
+MagInv/Total_Anomaly.py,sha256=jJP7rcZK9lzxusrizttV1bCw77ksdHdJBWinD3fgyMk,3964
+MagInv/__init__.py,sha256=BpyOMGxPNjHLqrXY1y6jb29MUD6uTu8KIaQue5a1A2A,269
+MagInv/boundary.py,sha256=I6YkKhUqQjECQnKfljnAMK7XAmSe3-qpFi8vsnORWWw,2176
+MagInv/visualization.py,sha256=ijdpglpL3sXGZjDRQ5VnSQ9OAoI3hZNUuLRTgUAtYDw,15420
+MagInv-0.0.1.dist-info/METADATA,sha256=8ur37WJrUkltahC78u_qToq-0x0EBOdaYoZTQKRpZrg,950
+MagInv-0.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+MagInv-0.0.1.dist-info/top_level.txt,sha256=K3z-KctwX2aXg6DMRBCSswIOXzOnC7GyX6XWVyLJbK4,7
+MagInv-0.0.1.dist-info/RECORD,,
