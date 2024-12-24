@@ -1,0 +1,73 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-unix:
+    name: UNIX Build (${{ matrix.python-version }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash -l {0}
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        os: [ "ubuntu-latest", "macos-latest", ]
+        python-version: [ "3.11" ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: sxolar-env
+          environment-file: environment.yml
+          auto-update-conda: true
+          python-version: ${{ matrix.python-version }}
+          auto-activate-base: false
+      - name: Run Test Suite
+        run: |
+          pytest --cov=./sxolar --cov-report=xml --markdown-docs --markdown-docs-syntax=superfences
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: JWKennington/sxolar
+
+  docs:
+    name: Docs (${{ matrix.python-version }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash -l {0}
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        os: [ "ubuntu-latest" ]
+        python-version: [ "3.11" ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Build docs with mkdocs
+        run: |
+          pip install .[docs]
+          mkdocs build
+
+      - name: Deploy docs
+        # Check only on main (not pull request)
+        if: github.ref == 'refs/heads/main'
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CUSTOM_DOMAIN: https://www.sxolar.org
+          CONFIG_FILE: mkdocs.yml
+          REQUIREMENTS: docs/requirements.txt

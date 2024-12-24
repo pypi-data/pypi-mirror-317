@@ -1,0 +1,16 @@
+name: sxolar-env
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - defusedxml
+  - pytest
+  - pytest-cov
+  - pytest-mock
+  - requests
+  - requests-ratelimiter
+  - ruamel.yaml
+  - pip:
+    - pytest-markdown-docs
