@@ -1,0 +1,12 @@
+repo2kook-0.0.2.dist-info/METADATA,sha256=UyiN-IMSoBDQ3Udlx0RIH0dOGz64H0XtmqVaiDfk-eU,3698
+repo2kook-0.0.2.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+repo2kook-0.0.2.dist-info/entry_points.txt,sha256=7rLgY0TWtEnvO5c6n0yXUO_pBI4M-BYR4jRoDq4fLyg,69
+repo2kook-0.0.2.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+repo2kook/__init__.py,sha256=QG9xO9Ytvkq0SgByTMBTrOSOi894yxPIySzKC3Q51Kc,348
+repo2kook/config.py,sha256=ec0iFyau1bxCoV64gjVGyud9qtYd63WEgE5jjwYdQpQ,392
+repo2kook/middleware.py,sha256=17m0n80xHvD3jgHYZwaR9bbkQm1kfQ-xk4hJhaaWiVc,606
+repo2kook/models.py,sha256=HZ0e2rBbZYVSmftiaQCHqgYPj9vhZ2Awd3rDidnQ7aE,1549
+repo2kook/router.py,sha256=okhwabGQK1asrGxvqnhtTisQC34WyugIDloM12dB0ek,5696
+repo2kook/templates.py,sha256=pFGzyk1FnfeiHl87sev71Qc08hqK72nzWYOskh0gGr4,7251
+repo2kook/utils.py,sha256=5NhcgV2guJSwNSSTMrI-TZ-Xwsubh3Zfv9o4LYWZVSc,3179
+repo2kook-0.0.2.dist-info/RECORD,,
