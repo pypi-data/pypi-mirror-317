@@ -1,0 +1,15 @@
+pydantic_ai_examples/__main__.py,sha256=i0LEo2JBOZ-gnHED0ou5Bya43gi7KmOyQ_jKN7M5Ces,1647
+pydantic_ai_examples/bank_support.py,sha256=VCArgbebNb_pwTOgH78XTLbFe2BUpSZOF_lN7lXJQlw,2625
+pydantic_ai_examples/chat_app.html,sha256=YeWb4pYM8Fxk4XGe1PTirIUIcHwE2dIq3b8YOe1q5Rk,2587
+pydantic_ai_examples/chat_app.py,sha256=Mq2PX3KRf-15aZTQ4smEUmmV7B99-Z0mq55NXCuUX7k,7176
+pydantic_ai_examples/chat_app.ts,sha256=2KfZ2rJU2o0iCPjelyqEi5sH6vfemzWaa5Evx_VcAE4,3307
+pydantic_ai_examples/pydantic_model.py,sha256=Ld70VcM_wzel-VpTajzOl9DU4C-yxK1noKcKLzOC6sY,831
+pydantic_ai_examples/rag.py,sha256=NcNeqZLu7aX5Lj00VZHZYid9gvQkk7qg9nmFcolHLoA,7951
+pydantic_ai_examples/roulette_wheel.py,sha256=wQF4h8mru8yMowkG7t0y6TB_kbQi35I4a36VKPEdCZM,1660
+pydantic_ai_examples/sql_gen.py,sha256=VH3wnuS2cZ0DNEUb7y0pt0fWHV5mr24ILzrn4AhpbbI,5001
+pydantic_ai_examples/stream_markdown.py,sha256=16cmq77qXJfqqMYxstS2XwdMnG2_Gejwu_751sHydUc,2403
+pydantic_ai_examples/stream_whales.py,sha256=g6hlxha5Qxv3yJG-MtIqpKh6pRYgvKC8IUB7TnexmJQ,3189
+pydantic_ai_examples/weather_agent.py,sha256=LqJJ-qztPPKtq0pjIapEohd-GqY8xFe0DY-AMt17QuY,4845
+pydantic_ai_examples-0.0.15.dist-info/METADATA,sha256=8vSSrcnu_q3hc1-6omXKPqB859qs3juoRvZjR5zMTug,2365
+pydantic_ai_examples-0.0.15.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pydantic_ai_examples-0.0.15.dist-info/RECORD,,
