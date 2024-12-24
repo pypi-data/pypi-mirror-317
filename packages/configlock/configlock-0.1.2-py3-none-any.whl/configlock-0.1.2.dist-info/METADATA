@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: configlock
+Version: 0.1.2
+Summary: Encrypted configuration manager supporting multiple formats.
+Home-page: https://github.com/felicedev/encryptedconfig
+Author: FeliceDev
+Author-email: felicedev@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: cryptography
+Requires-Dist: PyYAML
+
+# cryptoconfig
+
+`cryptoconfig` is a Python package for managing encrypted configuration files across multiple formats (`.ini`, `.json`, `.yaml`, `.properties`, and `.txt`). It supports easy encryption and decryption with a focus on developer simplicity.
+
+## Features
+
+- Encrypt and decrypt configuration files in multiple formats.
+- Temporary or persistent key management.
+- Modular structure for extensibility.
+
+## Installation
+
+```bash
+pip install cryptoconfig
+```
+
+## Usage
+
+```python
+from cryptoconfig import EncryptedConfigManager
+
+manager = EncryptedConfigManager()
+manager.save("config.json", {"key": "value"})
+print(manager.load("config.json"))
+```
