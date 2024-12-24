@@ -1,0 +1,10 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pandashift/__init__.py,sha256=K2LyKUG8z-D_GLx4eB3Ps6j57SOqGKQcN9XH7ylPzh0,594
+pandashift/constants.py,sha256=5OG9SR4TN9DfZeilxGa48zqvYocQFwLZ7hNvw2d4Q7I,835
+pandashift/create_table_from_df.py,sha256=q_WomYo2j6JMxaEDvVcGin0SQOULAeatzsYGvz-yrgA,6102
+pandashift/load_df.py,sha256=zE60GDqK0Ur0-oFHGN_E2oG3PLUdSm3h3c65ZjRgo1M,8570
+pandashift/read_execute.py,sha256=FZccy1UHHCZxOBjnp1E7TTdn1Z4fPtvW-QPDiwEW1qA,2238
+pandashift-1.0.5.dist-info/METADATA,sha256=fQIsEqnikFU09clYdQckLfATM6mp1RrG5pAZ1l3NkeY,5589
+pandashift-1.0.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pandashift-1.0.5.dist-info/top_level.txt,sha256=yX3bJ9fGiVsVqaMLIv_TsZLasm7iTf9a-xAY5AxUdZM,20
+pandashift-1.0.5.dist-info/RECORD,,
