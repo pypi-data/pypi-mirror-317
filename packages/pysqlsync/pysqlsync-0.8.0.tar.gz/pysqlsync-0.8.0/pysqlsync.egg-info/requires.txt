@@ -1,0 +1,32 @@
+json_strong_typing>=0.3.5
+
+[:python_version < "3.10"]
+certifi>=2024.12.14
+
+[:python_version < "3.12"]
+typing_extensions>=4.12
+
+[:python_version >= "3.10"]
+truststore>=0.10
+
+[mssql]
+pyodbc>=5.2
+
+[mysql]
+aiomysql>=0.2
+PyMySQL[rsa]>=1.1
+
+[oracle]
+oracledb>=2.5
+
+[postgresql]
+asyncpg>=0.30
+
+[snowflake]
+snowflake-connector-python>=3.12
+
+[trino]
+aiotrino>=0.2
+
+[tsv]
+tsv2py>=0.7
