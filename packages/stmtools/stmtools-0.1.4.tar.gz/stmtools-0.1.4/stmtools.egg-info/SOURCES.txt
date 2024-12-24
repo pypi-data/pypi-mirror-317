@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+stmtools/__init__.py
+stmtools/_io.py
+stmtools/metadata.py
+stmtools/stm.py
+stmtools/utils.py
+stmtools.egg-info/PKG-INFO
+stmtools.egg-info/SOURCES.txt
+stmtools.egg-info/dependency_links.txt
+stmtools.egg-info/requires.txt
+stmtools.egg-info/top_level.txt
+tests/test_io.py
+tests/test_stm.py
+tests/test_util.py
