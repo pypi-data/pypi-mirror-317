@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: ManMade2.BelialDB
+Version: 1.0.17
+Project-URL: Documentation, https://github.com/ManMade2/belial-db#readme
+Project-URL: Issues, https://github.com/ManMade2/belial-db/issues
+Project-URL: Source, https://github.com/ManMade2/belial-db
+Author-email: ManMade2 <madskris@proton.me>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: pydantic
+Requires-Dist: sqlalchemy
+Description-Content-Type: text/markdown
+
+# belial db
+
+[![PyPI - Version](https://img.shields.io/pypi/v/belial-db.svg)](https://pypi.org/project/belial-db)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/belial-db.svg)](https://pypi.org/project/belial-db)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install belial-db
+```
+
+## License
+
+`belial-db` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
