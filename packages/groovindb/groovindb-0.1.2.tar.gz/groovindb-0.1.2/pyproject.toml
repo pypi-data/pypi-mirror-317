@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+target-version = ['py37']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi-line-output = 3
+line-length = 100
+
+[tool.mypy]
+python-version = "3.7"
+warn-return-any = true
+warn-unused-configs = true
+disallow-untyped-defs = true
+check-untyped-defs = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+python-files = ["test_*.py", "*_test.py"]
+asyncio-mode = "auto" 
