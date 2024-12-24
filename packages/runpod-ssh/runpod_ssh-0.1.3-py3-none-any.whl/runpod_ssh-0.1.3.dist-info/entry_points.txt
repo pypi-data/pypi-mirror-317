@@ -1,0 +1,3 @@
+[console_scripts]
+runpod-ssh=runpod_ssh.cli:main
+
