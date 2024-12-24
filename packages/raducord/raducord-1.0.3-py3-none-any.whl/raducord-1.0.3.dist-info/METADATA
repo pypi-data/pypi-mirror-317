@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: raducord
+Version: 1.0.3
+Summary: The best library for designs, with a wide variety of colors and useful utils for your tools.
+Home-page: https://github.com/H4cK3dR4Du/raducord
+Author: H4cK3dR4Du
+Author-email: <rostermast70@gmail.com>
+Keywords: python,utils,color,colors,tools
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.6
+License-File: LICENSE
+Requires-Dist: pyautogui
+Requires-Dist: tls-client
+Requires-Dist: fake-useragent
+Requires-Dist: pyfiglet
+Requires-Dist: typing-extensions
+Requires-Dist: windows-curses; platform_system == "Windows"
+
