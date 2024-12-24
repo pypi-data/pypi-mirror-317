@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: elodin
+Version: 0.10.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: jax ==0.4.31
+Requires-Dist: numpy
+Requires-Dist: typing-extensions
+Requires-Dist: polars
+Requires-Dist: pytest
+Requires-Dist: pytest ; extra == 'tests'
+Provides-Extra: tests
+Provides-Extra: dynamic
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Elodin
+
+Docs: https://docs.elodin.systems
+
+Elodin is a platform for rapid design, testing, and simulation of drones, satellites, and aerospace control systems.
+
+## Usage
+
+```sh
+elodin editor <path/to/src.py>
+```
+
+## Templates
+
+Templates can be found at http://app.elodin.systems.
+
