@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+coocoo/__init__.py
+coocoo/module.c
+coocoo/module.pyx
+coocoo.egg-info/PKG-INFO
+coocoo.egg-info/SOURCES.txt
+coocoo.egg-info/dependency_links.txt
+coocoo.egg-info/top_level.txt
