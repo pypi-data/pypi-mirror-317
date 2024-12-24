@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pymatter
+Version: 0.0.0
+Summary: Python bindings for R/Bioconductor 'matter' package
+Author-email: "Kylie A. Bemis" <k.bemis@northeastern.edu>
+License: Artistic License 2.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Artistic License
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pymatter
+
+Python bindings for R/Bioconductor 'matter' package
