@@ -1,0 +1,43 @@
+[generate_config]
+name = "generate 2"
+path = "generated_new_5"
+description = "These dataset has high quality, could be used to generate block image."
+x_name = "x_train.npy"
+y_name = "y_train.npy"
+total_nums = 100000
+length = 9
+
+dataset = [
+    "M2L10XL",
+    "M3L1X",
+    "neweyem6l1XL",
+    "M1L4XL",
+    "M3L10XL",
+    "M10L1XL",
+    "M2L9XL",
+    "neweyem3l1XL",
+    "M1L10XL",
+    "M2L1XL",
+    "M8L10XL",
+    "M2L8XL",
+    "M2L7XL",
+    "neweyem1l4XL",
+    "M2L2XL",
+    "M8L1XL",
+    "M3L6XL",
+    "neweyem8l1XL",
+    "M8L2XL",
+    "M3L8XL",
+    "neweyem7l1XL",
+    "M1L6XL",
+    "M8L7XL",
+    "M3L9XL",
+    "neweyem1l1XL",
+    "M2L3XL",
+    "M3L2XL",
+    "M1L9XL",
+    "M1L1XL",
+    "M1L5XL",
+    "M1L8XL",
+]
+
