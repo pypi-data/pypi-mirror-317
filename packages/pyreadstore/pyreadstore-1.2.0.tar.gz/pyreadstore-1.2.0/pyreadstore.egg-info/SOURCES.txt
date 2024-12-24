@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+requirements.txt
+setup.py
+docs/changelog.md
+docs/readme.md
+pyreadstore/__init__.py
+pyreadstore/__version__.py
+pyreadstore/pyreadstore.py
+pyreadstore/rsclient.py
+pyreadstore/rsdataclasses.py
+pyreadstore/rsexceptions.py
+pyreadstore.egg-info/PKG-INFO
+pyreadstore.egg-info/SOURCES.txt
+pyreadstore.egg-info/dependency_links.txt
+pyreadstore.egg-info/requires.txt
+pyreadstore.egg-info/top_level.txt
