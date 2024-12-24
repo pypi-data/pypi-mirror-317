@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ip_region.egg-info/PKG-INFO
+ip_region.egg-info/SOURCES.txt
+ip_region.egg-info/dependency_links.txt
+ip_region.egg-info/requires.txt
+ip_region.egg-info/top_level.txt
+ipregion/__init__.py
+ipregion/db.py
+ipregion/ip2region.xdb
+ipregion/ipcache.sample.db3
+ipregion/xdbSearcher.py
