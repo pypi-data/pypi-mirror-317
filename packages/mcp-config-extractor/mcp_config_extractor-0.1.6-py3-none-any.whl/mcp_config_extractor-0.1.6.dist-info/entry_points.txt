@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-extract = mcp-config-extractor.main:main_cli
