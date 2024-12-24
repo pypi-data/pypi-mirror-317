@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "awmt-proto-dsp-tools"
+version = "0.1.0"
+description = "Prototype DSP Testing Tools from Andy West Music Tech"
+authors = ["Andy West"]
+readme = "README.md"
+license = "MIT"
+classifiers = [
+  "Programming Language :: Python :: 3.9",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers"
+]
+
+# Specify the package path explicitly
+packages = [
+    { include = "awmt/proto_dsp_tools" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0.0"
+bump2version = "^1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
