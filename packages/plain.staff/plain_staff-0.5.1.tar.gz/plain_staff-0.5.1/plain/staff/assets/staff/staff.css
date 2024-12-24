@@ -1,0 +1,83 @@
+/*
+These standard CSS rules are intended to make it easier for the
+end-user to drop in HTML elements and have a decent, consistent starting point.
+ */
+table {
+    width: 100%;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    table-layout: auto;
+}
+
+th {
+    text-align: left;
+    padding: 0 0.5rem;
+    color: rgb(55, 65, 81);
+}
+
+table th a {
+    color: rgb(55, 65, 81);
+}
+
+tbody tr:hover {
+    background-color: rgb(249, 250, 251);
+}
+
+td {
+    padding: 0.5rem 0.5rem;
+    white-space: nowrap;
+    border-bottom: 1px solid rgb(229, 231, 235);
+}
+tr:last-child td {
+    border-bottom: none;
+}
+
+main a {
+    color: rgb(37, 99, 235);
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+.actions a, .actions button {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: rgb(30, 28, 21);
+    border-radius: 999px;
+}
+
+section {
+    border: rgba(0, 0, 0, 0.2) 1px solid;
+    border-radius: 0.275rem;
+    overflow: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+section > header {
+    padding: 0.5rem;
+    /* background-color: #FFFCF0; */
+    border-bottom: rgba(0, 0, 0, 0.2) 1px solid;
+}
+
+section > div {
+    padding: 0.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+section > footer {
+    padding: 0.5rem;
+    /* background-color: #FFFCF0; */
+    border-top: rgba(0, 0, 0, 0.2) 1px solid;
+}
+
+#admin-content {
+    background-color: #fefdfb;
+}
