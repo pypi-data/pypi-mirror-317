@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+flaxnet.egg-info/PKG-INFO
+flaxnet.egg-info/SOURCES.txt
+flaxnet.egg-info/dependency_links.txt
+flaxnet.egg-info/requires.txt
+flaxnet.egg-info/top_level.txt
+pattern/__init__.py
+pattern/plot.py
