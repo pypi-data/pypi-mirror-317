@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+raducord/__init__.py
+raducord.egg-info/PKG-INFO
+raducord.egg-info/SOURCES.txt
+raducord.egg-info/dependency_links.txt
+raducord.egg-info/requires.txt
+raducord.egg-info/top_level.txt

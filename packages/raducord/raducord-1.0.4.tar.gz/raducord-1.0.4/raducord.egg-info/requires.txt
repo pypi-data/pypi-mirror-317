@@ -1,0 +1,5 @@
+pyautogui
+tls_client
+fake_useragent
+pyfiglet
+typing_extensions
