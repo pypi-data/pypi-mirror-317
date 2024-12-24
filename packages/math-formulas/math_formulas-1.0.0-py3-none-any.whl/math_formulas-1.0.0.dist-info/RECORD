@@ -1,0 +1,9 @@
+math_formulas/__init__.py,sha256=Wz95Zps6ydtdpD0_IKbxVZ-wYOlhrigMZUVqUbByUhg,31
+math_formulas/combinatorics_formulas/__init__.py,sha256=u1J3yt-5947v9WpxjrgMAmrmfE5VZpTuVuRgS-IosQs,603
+math_formulas/combinatorics_formulas/combinatorics.py,sha256=_pKbTdtnmMixvpOkn9DPwK3Evt3Zh2knulv_rSdewiE,373
+math_formulas/progressions/__init__.py,sha256=NIEc2AKkhLmOF5QlCpVVfqr9OgGB1GT3Oe2LQ8DWTEQ,1054
+math_formulas/progressions/progressions.py,sha256=IAL35YCFDrbYYOwke0-yp5F24V3EGLju9hs9LvuyIZw,339
+math_formulas-1.0.0.dist-info/METADATA,sha256=3JTXjkwKIDn4hbUM4ztiPnsigQntlpGDi5LBaUNS4DU,1496
+math_formulas-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+math_formulas-1.0.0.dist-info/top_level.txt,sha256=NRhDnG9o-uvDQAGEIAlZHxg0bTUBLn2XnKNpZFnSsO0,14
+math_formulas-1.0.0.dist-info/RECORD,,
