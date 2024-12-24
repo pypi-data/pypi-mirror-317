@@ -1,0 +1,11 @@
+mkdocs_embed_file_plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_embed_file_plugins/plugin.py,sha256=GHkQuj0vMVs9vldsl8080kTGiY23gX626oaYq57QiJU,10154
+mkdocs_embed_file_plugins/src/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+mkdocs_embed_file_plugins/src/links_correction.py,sha256=U2cJGbTuN4MK898rKSBIc2QmSE2srrhutygOK6EgHsw,4143
+mkdocs_embed_file_plugins/src/search_quote.py,sha256=rux68ctPFB-cQ-IUT2pfGPZXrLQRBEeaYS7GrSn3S5c,2721
+mkdocs_embed_file_plugins/src/utils.py,sha256=2438cHG4EqabeJpDrZnRKYhde-oeawWQ_JbTIM3J0Po,1266
+mkdocs_embed_file_plugin-2.0.10.dist-info/METADATA,sha256=NhM96gk4fDgERPq3KWF1FvQeyHzmE4g161Bvvsv302U,4174
+mkdocs_embed_file_plugin-2.0.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mkdocs_embed_file_plugin-2.0.10.dist-info/entry_points.txt,sha256=gxiQCTvbr24_H0EgWEoIYpYhEPS3UNn8u7vLAcTnWVI,73
+mkdocs_embed_file_plugin-2.0.10.dist-info/licenses/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+mkdocs_embed_file_plugin-2.0.10.dist-info/RECORD,,
