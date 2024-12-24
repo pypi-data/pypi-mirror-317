@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+Instalpypi.egg-info/PKG-INFO
+Instalpypi.egg-info/SOURCES.txt
+Instalpypi.egg-info/dependency_links.txt
+Instalpypi.egg-info/requires.txt
+Instalpypi.egg-info/top_level.txt
+package/__init__.py
+package/main.py

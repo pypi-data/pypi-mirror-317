@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Instalpypi
+Version: 1.0.0
+Summary: This is my first module
+Home-page: https://github.com/Vox0n/projectpypi
+Author: Alex
+Author-email: Ls481693@gmail.com
+Project-URL: Documentation, https://github.com/Vox0n/projectpypi
+Keywords: example python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
