@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pandashift"
+version = "1.0.5"
+dependencies = [
+    "psycopg",
+    "psycopg[binary]",
+    "pandas",
+    "python-dotenv"
+]
+
+requires-python = ">=3.10"
+authors = [
+  {name = "Maksim Linichenko", email = "maksim.linichenko@yahoo.com"},
+]
+description = "Module for quick and easy access to redshift using pandas"
+readme = "README.md"
+keywords = ["redshift", "pandas", "analytics", "amazon", "pandashift"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/tumax7/pandashift"
+Issues = "https://github.com/tumax7/pandashift/issues"
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pylint"
+]
+
+[tool.pylint.'MESSAGES CONTROL']
+# There is a bug with psycopg causing this issue
+disable = "not-context-manager"
+
+

@@ -1,0 +1,8 @@
+psycopg
+psycopg[binary]
+pandas
+python-dotenv
+
+[dev]
+pytest
+pylint
