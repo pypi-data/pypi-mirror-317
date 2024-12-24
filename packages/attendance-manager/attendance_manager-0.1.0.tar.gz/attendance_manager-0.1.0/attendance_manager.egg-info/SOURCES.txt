@@ -1,0 +1,9 @@
+LICENSE
+pyproject.toml
+attendance_manager.egg-info/PKG-INFO
+attendance_manager.egg-info/SOURCES.txt
+attendance_manager.egg-info/dependency_links.txt
+attendance_manager.egg-info/top_level.txt
+dist/README.md
+dist/main.py
+dist/tester.py
