@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: zaptum
+Version: 1.0.0
+Summary: database package, simple and lightweight, without encryption, not recommended for use on servers with public access.
+Author: harttman
