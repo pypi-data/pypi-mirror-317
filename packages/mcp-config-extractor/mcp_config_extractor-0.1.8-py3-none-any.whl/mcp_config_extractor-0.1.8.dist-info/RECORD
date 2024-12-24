@@ -1,0 +1,13 @@
+src/__init__.py,sha256=MmFApL3q3T5IA42BBTQL_ZbSPl6SfSz30LRTugpIu_c,124
+src/main.py,sha256=0wa_oGlFG_tG4V9L63albEc7F1Tv-VA9Jtc5g1a55gc,2033
+src/utils.py,sha256=jJjXmGC4f7EF3jmGIOvjQhyQFFXTyYnmkApWRI8sDDY,470
+src/config_extractor/__init__.py,sha256=MgixbT4Ciu1Q9nf31c7aRgv7_tCg_5_A613WcwpIaCQ,60
+src/config_extractor/extractor.py,sha256=gl1i4xDvQJK03bfQ6PKC6CsXFMBKEFKXi-LQ79-qaNg,3637
+src/github_scraper/__init__.py,sha256=-wupf7QyxmnTd8W_vpbiYGVztHN8Zlr3kBWvxKVb6p0,77
+src/github_scraper/readme_fetcher.py,sha256=Yb87yLXZ2cfvBPZNAcd6HrNKqzIkXQnhKSMjINaf74Q,2602
+src/llm_client/__init__.py,sha256=nBjCwRBcFSk-8aXF4dFlxlFCoVvIkZCXlbHDIUWzOg8,55
+src/llm_client/client.py,sha256=-VeH0tKf2DOcZPGoSDbPYDWmAOiHdblNjVM8bSHQ6x0,2611
+mcp_config_extractor-0.1.8.dist-info/METADATA,sha256=AhBPizVDkurXiMLIMjAraMTpzpZcgb_u9WbgEWbKQwY,1232
+mcp_config_extractor-0.1.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_config_extractor-0.1.8.dist-info/entry_points.txt,sha256=BO0cBQf1_PV50XdyaI5y4YVhOmOcCFMKU9M7dqB8XLU,50
+mcp_config_extractor-0.1.8.dist-info/RECORD,,

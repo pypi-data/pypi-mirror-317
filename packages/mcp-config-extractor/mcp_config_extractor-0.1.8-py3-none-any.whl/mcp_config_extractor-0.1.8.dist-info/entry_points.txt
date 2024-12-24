@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-extract = src.main:main_cli
