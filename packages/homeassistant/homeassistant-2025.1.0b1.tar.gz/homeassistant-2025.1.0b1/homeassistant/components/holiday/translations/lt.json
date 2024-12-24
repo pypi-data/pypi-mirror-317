@@ -1,0 +1,15 @@
+{
+    "config": {
+        "abort": {
+            "reconfigure_successful": "Pakartotinis konfig\u016bravimas buvo s\u0117kmingas"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "country": "\u0160alis"
+                }
+            }
+        }
+    },
+    "title": "Atostogos"
+}

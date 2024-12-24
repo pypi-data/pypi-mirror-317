@@ -1,0 +1,18 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data_description": {
+                    "counter_id": "Inserisci l'ID del tuo contatore (ad esempio: 12345678). Dovrebbe essere trovato automaticamente durante la configurazione, in caso contrario, consulta la documentazione di integrazione per maggiori informazioni"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "water_usage_yesterday": {
+                "name": "Consumo d'acqua di ieri"
+            }
+        }
+    }
+}

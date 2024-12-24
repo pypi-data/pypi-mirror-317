@@ -1,0 +1,21 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Enheten \u00e4r redan konfigurerad"
+        },
+        "error": {
+            "cannot_connect": "Det gick inte att ansluta."
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "ip_address": "IP-adress"
+                },
+                "data_description": {
+                    "ip_address": "Ange en IP-adress f\u00f6r din Watergate-enhet."
+                },
+                "title": "Konfigurera Watergate-enhet"
+            }
+        }
+    }
+}
