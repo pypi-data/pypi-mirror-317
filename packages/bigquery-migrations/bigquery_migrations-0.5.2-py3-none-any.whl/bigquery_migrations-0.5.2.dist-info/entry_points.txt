@@ -1,0 +1,2 @@
+[console_scripts]
+bigquery-migrations = bigquery_migrations.migration_cli:main
