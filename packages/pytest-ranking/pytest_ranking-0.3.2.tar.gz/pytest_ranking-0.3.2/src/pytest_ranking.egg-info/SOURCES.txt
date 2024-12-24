@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/pytest_ranking/__init__.py
+src/pytest_ranking/change_tracker.py
+src/pytest_ranking/const.py
+src/pytest_ranking/plugin.py
+src/pytest_ranking/rank.py
+src/pytest_ranking.egg-info/PKG-INFO
+src/pytest_ranking.egg-info/SOURCES.txt
+src/pytest_ranking.egg-info/dependency_links.txt
+src/pytest_ranking.egg-info/entry_points.txt
+src/pytest_ranking.egg-info/requires.txt
+src/pytest_ranking.egg-info/top_level.txt
+tests/test_pytest_ranking.py
