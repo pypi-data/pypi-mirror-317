@@ -1,0 +1,14 @@
+black==24.10.0
+huggingface_hub==0.24.6
+joblib==1.4.2
+Pillow==11.0.0
+pyarrow==17.0.0
+pydantic==2.10.4
+Requests==2.32.3
+requests_toolbelt==1.0.0
+rich==13.9.4
+safetensors==0.4.5
+setuptools==74.1.1
+tqdm==4.66.5
+tqdm_joblib==0.0.4
+transformers==4.45.2
