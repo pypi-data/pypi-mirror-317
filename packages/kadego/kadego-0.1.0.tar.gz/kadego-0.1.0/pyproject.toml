@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kadego"
+version = "0.1.0"
+description = "A package to run bots for 漢字でGO!."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Moritz Eckert", email = "Moritz.Eckert@web.de"}
+]
+dependencies = [
+    "playwright >= 1.49.1",
+    "tqdm >= 4.66.5"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
