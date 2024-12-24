@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tbank-kassa
+Version: 0.3.3
+Summary: 
+Home-page: https://github.com/RostHarcha/tbank_kassa
+Author: Rostislaww
+Author-email: rostiki.com@mail.ru
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.11.10,<4.0.0)
+Requires-Dist: pydantic (>=2.10.3,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
