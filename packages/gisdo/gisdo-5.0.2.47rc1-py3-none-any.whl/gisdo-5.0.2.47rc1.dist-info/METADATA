@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gisdo
+Version: 5.0.2.47rc1
+Home-page: https://src.bars-open.ru/py/WebEdu/kinder_contrib/gisdo
+License: GPL
+Keywords: kinder gisdo
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Framework :: Django
+Classifier: Environment :: Web Environment
+Classifier: Natural Language :: Russian
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: SQLAlchemy==0.9.4
