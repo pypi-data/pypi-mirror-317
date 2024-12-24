@@ -1,0 +1,5 @@
+chafe
+tomlkit
+
+[:platform_system == "Windows"]
+pyreadline3

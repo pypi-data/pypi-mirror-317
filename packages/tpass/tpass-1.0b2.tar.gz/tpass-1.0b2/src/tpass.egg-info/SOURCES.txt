@@ -1,0 +1,15 @@
+LICENSE
+README.rst
+pyproject.toml
+src/tpass/__init__.py
+src/tpass/totp.py
+src/tpass.egg-info/PKG-INFO
+src/tpass.egg-info/SOURCES.txt
+src/tpass.egg-info/dependency_links.txt
+src/tpass.egg-info/entry_points.txt
+src/tpass.egg-info/requires.txt
+src/tpass.egg-info/top_level.txt
+src/tpass/edit/__init__.py
+src/tpass/edit/__main__.py
+src/tpass/setup/__init__.py
+src/tpass/setup/__main__.py

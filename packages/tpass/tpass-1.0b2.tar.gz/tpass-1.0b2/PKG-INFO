@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tpass
+Version: 1.0b2
+Summary: A terminal based password manager.
+Author-email: Marc Culler <culler@users.noreply.github.com>
+Maintainer-email: Marc Culler <culler@users.noreply.github.com>
+Project-URL: Homepage, https://github.com/culler/tpass
+Project-URL: Bug Tracker, https://github.com/culler/tpass/issues
+Keywords: password,manager
+Classifier: Development Status :: 4 - Beta
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: chafe
+Requires-Dist: tomlkit
+Requires-Dist: pyreadline3; platform_system == "Windows"
+
+TPass
+=====
+
+A terminal-based password manager 
