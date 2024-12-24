@@ -1,0 +1,10 @@
+ansicolors
+appdirs
+filelock
+httpx
+packaging
+tqdm
+typing-extensions
+
+[:python_version < "3.11"]
+tomlkit
