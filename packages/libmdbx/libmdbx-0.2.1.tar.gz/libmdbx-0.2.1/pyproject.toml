@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "libmdbx"
+version = "0.2.1"
+description = "The python bindings to libmdbx."
+homepage = "https://github.com/wtdcode/mdbx-py"
+authors = ["lazymio <mio@lazym.io>"]
+readme = "README.md"
+keywords = [
+    "mdbx",
+    "libmdbx",
+    "kvdb",
+    "bindings"
+]
+packages = [
+    {include = "mdbx"}
+]
+include = [
+    { path = "libmdbx/dist/*", format = "sdist"},
+    { path = "mdbx/lib/*", format = "wheel" },
+]
+
+exclude = [
+    { path = "libmdbx/dist/build", format = "sdist"},
+]
+
+[tool.poetry.build]
+generate-setup-file = false
+script = "build_mdbx.py"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core", "setuptools", "wheel"] # Not having cmake and ninja due to https://github.com/python-poetry/poetry/issues/8807
+build-backend = "poetry.core.masonry.api"
