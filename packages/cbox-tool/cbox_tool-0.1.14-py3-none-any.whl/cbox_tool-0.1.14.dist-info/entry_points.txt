@@ -1,0 +1,3 @@
+[console_scripts]
+cbox = cbox.cli:main
+cbox-gui = cbox.gui:main
