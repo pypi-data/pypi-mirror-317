@@ -1,0 +1,10 @@
+my_library_num_135790/__init__.py,sha256=FKYRtl3usROW2M1uF_ng8WbBl9DgYW0L2YfhfccGQDs,26
+my_library_num_135790/module1.py,sha256=HOmHQ3jOl-O1iveIP721ZVY6SaKVSkWcQa-lArY5CHw,75
+my_library_num_135790/module2.py,sha256=zrR0wy_5lFub-XoOZL0UC0y7xLhmJqAnoN_y2suFnlo,106
+tests/__init__.py,sha256=_4GRF4d2W-K1mdq81m44gcp4FVpKcY1WJA-IWlTxpFM,21
+tests/test_module1.py,sha256=B7pUEuCDbhnaFcmyw_Z0mIpnGijFLQ7L4d0Ir9ThuLs,897
+tests/test_module2.py,sha256=zXGOG0-fE1xK26beq5A2Ups7_ntk3N6N3TpMTxOWLQk,1681
+my_library_num_135790-0.1.0.dist-info/METADATA,sha256=io5v5khML9P2HUUNSgneTQtTvHb5tc6uvuTO_q1QdnU,2293
+my_library_num_135790-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+my_library_num_135790-0.1.0.dist-info/top_level.txt,sha256=YCtF4d2bz0ZCqlWbE5vm2xX-R4W3GC5CVPZpj1u7r9U,28
+my_library_num_135790-0.1.0.dist-info/RECORD,,
