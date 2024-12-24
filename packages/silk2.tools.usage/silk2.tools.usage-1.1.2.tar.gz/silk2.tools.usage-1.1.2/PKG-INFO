@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: silk2.tools.usage
+Version: 1.1.2
+Summary: Analyze the usage of each hardware resource on SOPHON products.
+Home-page: https://github.com/sophgo
+Author: zhiju.huang
+Author-email: zhiju.huang@sophgo.com
+License: BSD
+Description: 
+                    Analyze the usage of each hardware resource to find the performance bottleneck and finally solve the problem.
+                    
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
