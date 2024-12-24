@@ -1,0 +1,29 @@
+[build-system]
+requires = ["maturin>=1.7.8,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "bencode-rs"
+version = "0.0.7"
+requires-python = "~=3.10"
+description = "a bencode parser build with pyo3"
+readme = "readme.md"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+keywords = [
+    "bittorrent",
+    "bencode",
+    "p2p",
+]
+
+[project.urls]
+Homepage = 'https://github.com/trim21/bencode-rs'
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "bencode_rs._bencode"
+python-source = "py"
