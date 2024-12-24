@@ -1,0 +1,103 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "hatch-buildext"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "Apache-2.0"
+keywords = ["build", "hatch", "packaging", "extension modules"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Software Development :: Build Tools",
+  "Topic :: Software Development :: Code Generators",
+  "Topic :: Software Development :: Compilers",
+]
+dependencies = ["hatchling", "setuptools"]
+
+[project.urls]
+Documentation = "https://github.com/xoudini/hatch-buildext#readme"
+Issues = "https://github.com/xoudini/hatch-buildext/issues"
+Source = "https://github.com/xoudini/hatch-buildext"
+
+
+[project.entry-points.hatch]
+buildext = "hatch_buildext.hooks"
+
+
+[tool.hatch.version]
+path = "src/hatch_buildext/__about__.py"
+
+
+[tool.hatch.envs.default]
+extra-dependencies = ["ipython"]
+
+
+[tool.hatch.envs.types]
+extra-dependencies = ["mypy>=1.0.0", "pytest"]
+
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/hatch_buildext tests}"
+
+
+[tool.coverage.run]
+source_pkgs = ["hatch_buildext", "tests"]
+branch = true
+parallel = true
+omit = ["src/hatch_buildext/__about__.py"]
+
+[tool.coverage.paths]
+hatch_buildext = ["src/hatch_buildext", "*/hatch-buildext/src/hatch_buildext"]
+tests = ["tests", "*/hatch-buildext/tests"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if t.TYPE_CHECKING:"]
+
+
+[tool.ruff]
+target-version = "py38"
+line-length = 88
+include = ["pyproject.toml", "src/**/*.py", "tests/**/*.py"]
+
+
+[tool.ruff.lint]
+select = ["C90", "E", "F", "I", "W", "SIM", "PYI", "ARG"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-wrap-aliases = true
+lines-after-imports = 2
+lines-between-types = 0
+order-by-type = true
+no-lines-before = [
+  "standard-library",
+  "first-party",
+  "third-party",
+  "local-folder",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+
+
+[tool.hatch.build.targets.sdist]
+exclude = [".github", "tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hatch_buildext"]
