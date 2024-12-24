@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xspass"
+version = "0.2"
+authors = [
+    { name = "XasdesNew", email = "xasdesnew@gmail.com" },
+]
+description = "Модуль для генерации паролей"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/XasdesNew/xspass"
