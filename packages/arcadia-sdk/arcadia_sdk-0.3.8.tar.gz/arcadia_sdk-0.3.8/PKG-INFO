@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: arcadia-sdk
+Version: 0.3.8
+Summary: arcadia is a platform for ml developers to host and get paid for their proprietary ml models.
+License: MIT
+Author: timothy102
+Author-email: cvetko.tim@gmail.com
+Requires-Python: >=3.13,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: black (>=24.10.0,<25.0.0)
+Requires-Dist: build (>=1.2.2.post1,<2.0.0)
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: cog (==0.13.6)
+Requires-Dist: cryptography (>=44.0.0,<45.0.0)
+Requires-Dist: logtail-python (>=0.3.2,<0.4.0)
+Requires-Dist: loguru (>=0.7.3,<0.8.0)
+Requires-Dist: pre-commit (>=4.0.1,<5.0.0)
+Requires-Dist: pydantic-settings (>=2.7.0,<3.0.0)
+Requires-Dist: pytest (>=8.3.4,<9.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: replicate (>=1.0.4,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Requires-Dist: stripe (>=11.4.1,<12.0.0)
+Requires-Dist: supabase (>=2.10.0,<3.0.0)
+Requires-Dist: twine (>=6.0.1,<7.0.0)
+Description-Content-Type: text/markdown
+
+# Arcadia SDK
+
+<p align="center">
+  <!-- You could add a logo image here -->
+  <h3 align="center">Deploy and Monetize ML Models with Ease</h3>
+</p>
+
+Arcadia is a powerful platform that enables machine learning developers to seamlessly deploy, manage, and monetize their models. With our SDK, you can transform your ML models into production-ready APIs in minutes.
+
+## ✨ Features
+
+- 🚀 **One-Click Deployment**: Deploy models to production with a single command
+- 💰 **Built-in Monetization**: Set pricing and start earning from your models instantly
+- 📊 **Advanced Monitoring**: Track performance, usage metrics, and revenue in real-time
+- 🔒 **Enterprise-Grade Security**: SOC 2 compliant with end-to-end encryption
+- 🔄 **Version Control**: Manage multiple versions of your models effortlessly
+- 📈 **Auto-scaling**: Handle varying loads with automatic scaling
+
+## 🚀 Quick Start
+
+### Installation
+
+```bash
+pip install arcadia-sdk
+```
+
+### Usage
+
+```python
+from arcadia import Model, predict
+
+@predict
+def my_model(input_data):
+    # Your model logic here
+    return prediction
+
+Model("my-model").deploy()
+```
+
+### Documentation
+
+For more detailed documentation, please refer to the [Arcadia Documentation](https://docs.arcadia.dev).
+
+### Support
+
+For support, please refer to the [Arcadia Support](https://support.arcadia.dev).
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
