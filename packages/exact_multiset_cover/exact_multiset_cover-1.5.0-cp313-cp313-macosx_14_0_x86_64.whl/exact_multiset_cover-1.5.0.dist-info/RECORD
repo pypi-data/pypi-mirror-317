@@ -1,0 +1,16 @@
+exact_multiset_cover/__init__.py,sha256=4blbBkazdwm2mP90PcoxCCu3Tgzx5crlh3OsFLLawUo,158
+exact_multiset_cover/error.py,sha256=x8DnQkZNGjgrL2oQGv5PboCyWdHqZyJ0BDDoO1-Ef-Y,143
+exact_multiset_cover/helpers.py,sha256=tX3lsfwxnv7XgOD1aLb3Af-D-pLZYlP-pu4_1D6WsGA,2706
+exact_multiset_cover/io.py,sha256=ahF4fUWrcZuQYPjfJNFFhI_UGrwaEl7srd68_60TqpM,238
+exact_multiset_cover/wrapper.py,sha256=JXmd_gUzPdcJTsJikjOjqwdxF9RMGInHuwKO0Vii54I,3351
+exact_cover/__init__.py,sha256=4blbBkazdwm2mP90PcoxCCu3Tgzx5crlh3OsFLLawUo,158
+exact_cover/error.py,sha256=x8DnQkZNGjgrL2oQGv5PboCyWdHqZyJ0BDDoO1-Ef-Y,143
+exact_cover/helpers.py,sha256=tX3lsfwxnv7XgOD1aLb3Af-D-pLZYlP-pu4_1D6WsGA,2706
+exact_cover/io.py,sha256=ahF4fUWrcZuQYPjfJNFFhI_UGrwaEl7srd68_60TqpM,238
+exact_cover/wrapper.py,sha256=JXmd_gUzPdcJTsJikjOjqwdxF9RMGInHuwKO0Vii54I,3351
+exact_cover_impl.cpython-313-darwin.so,sha256=LhjkduBtBNoPF0dSB7_5-zrOGxUPBvC1tlmRFLJH8MQ,58664
+exact_multiset_cover-1.5.0.dist-info/LICENSE,sha256=pF0LtXLteS7TRienJiGDSzupKqtuLMTgQwHe56co11M,18027
+exact_multiset_cover-1.5.0.dist-info/METADATA,sha256=gQIweEaQ0eULYlUA-QXl3zKkUHmOescbmpj_3N1G_xQ,7172
+exact_multiset_cover-1.5.0.dist-info/WHEEL,sha256=b04pzum89rW8afVH0ufJhQw9pokXWM-p7TAD2HY-z28,107
+exact_multiset_cover-1.5.0.dist-info/entry_points.txt,sha256=b1MrmJXmWholZLjOKCLAUhXfHx0SkOzdrwzjxLVz2io,195
+exact_multiset_cover-1.5.0.dist-info/RECORD,,
