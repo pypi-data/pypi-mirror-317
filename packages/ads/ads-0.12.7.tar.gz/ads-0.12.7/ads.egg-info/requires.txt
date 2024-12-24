@@ -1,0 +1,7 @@
+six
+requests
+werkzeug
+mock
+
+[tests]
+httpretty>=0.8.10
