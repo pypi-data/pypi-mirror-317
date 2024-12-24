@@ -1,0 +1,9 @@
+mynewlib1/__init__.py,sha256=KfEL2gI-8-EUURaHflxxb_tf2bDk6z7I2xQUi13kCAI,477
+mynewlib1/math/__init__.py,sha256=zM4kHigSYihSVhqkQ_tAILWP621TtllQetCQLLyjrGE,1294
+mynewlib1/math/operations.py,sha256=gnfIrjnFc9X2mNs1ZTnO346N5B1AhfKQsXb_pz5AQno,463
+mynewlib1/str_op/__init__.py,sha256=6pT7gWEpwICYtDsa1FaJp-NXq8EvUY7Om_WIEVHrbHY,1122
+mynewlib1/str_op/strop.py,sha256=n_GHmYkvFMUHffhROQkAHRvBGWU6cHcuuCPnba7gmWg,1164
+mynewlib1-1.0.17.dist-info/METADATA,sha256=c6ZwpZPb339vi5JkPAPjfe3T5XMytzZXC2y4jGif16Q,1842
+mynewlib1-1.0.17.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mynewlib1-1.0.17.dist-info/top_level.txt,sha256=nYSNKY6nb_0WRZHNY7LWVXVTmC3Bx5oWOsXqPpyfyMI,10
+mynewlib1-1.0.17.dist-info/RECORD,,
