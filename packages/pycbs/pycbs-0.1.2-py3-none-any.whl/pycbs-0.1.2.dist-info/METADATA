@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pycbs
+Version: 0.1.2
+Summary: CLI Project Compilation Tool
+Author-email: Markada <markada.py@gmail.com>
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: C
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich>=13.9.4
+
+PyCBS - это CLI инструмент для сборки проектов
+
+Скачивание:
+1. Скачать библиотеку: `pip install pycbs`
+1. Чтобы начать, введите `py -m pycbs` для проверки работоспособности
