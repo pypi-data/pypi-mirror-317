@@ -1,0 +1,25 @@
+[project]
+name = "soltrade"
+version = "0.1.1"
+authors = [
+  { name="noahtheprogrammer", email="noahtheprogrammer@gmail.com" },
+]
+description = "Soltrade is a Python-based, open source trading bot that we created in order to dive deeper into the workings of the blockchain and leap headfirst into the world of technical analysis"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "requests",
+    "typing-extensions",
+    "pycryptodome>=3.20.0",
+    "semantic-types>=0.1.4",
+    "pandas>=1.5.3",
+    "apscheduler>=3.10.1",
+    "matplotlib>=3.8",
+]
+[project.urls]
+Homepage = "https://github.com/noahtheprogrammer/soltrade"
+
+
