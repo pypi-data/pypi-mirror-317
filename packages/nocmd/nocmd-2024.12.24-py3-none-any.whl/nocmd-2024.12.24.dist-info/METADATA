@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: nocmd
+Version: 2024.12.24
+Author-email: mikigo <huangmingqiang@uniontech.com>
+License: GPL2.0
+License-File: LICENSE
+Requires-Python: >=3.6
+Requires-Dist: funnylog2
+Requires-Dist: pexpect
+Description-Content-Type: text/markdown
+
+# NOcmd
+
+Not Only Command
