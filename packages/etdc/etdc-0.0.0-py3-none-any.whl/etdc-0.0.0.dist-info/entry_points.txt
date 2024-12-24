@@ -1,0 +1,3 @@
+[console_scripts]
+etdc=etdc.cli:app
+

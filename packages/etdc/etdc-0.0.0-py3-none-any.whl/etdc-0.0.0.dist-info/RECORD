@@ -1,0 +1,11 @@
+etdc/assets/encsa.txt,sha256=PJihaObSIqNU8Bbi_hScvjE8_XwSodRFoSVjZzTsrUc,3237
+etdc/cli.py,sha256=dhX_5NtJ5qex5UFF1pADfKohX0T_TcpwyGQsFSPzJP8,2520
+etdc/collect.py,sha256=cNFbgibJKV9FZO4b9sm23j_39R14S8rfYcqGrf10ssI,15111
+etdc/upload/google/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+etdc/upload/google/key.py,sha256=Ln7_gfD-gwmoeE5eEUmY91gDBOX57DJi5Hbu2x0frEs,1902
+etdc/upload/google/storage.py,sha256=3zZiBczb7CpDXo52UKvSt65REqk2C-T-Of1T90ZGfIc,3478
+etdc/upload/kaggle.py,sha256=m0MCu56PeboA0sGQI5wi74T-Ov_BNAjx4-7dzAeqb10,1864
+etdc-0.0.0.dist-info/METADATA,sha256=RQH_iVyDZDKbZM-DbJYlDMCRAD0_kGkVfNqIuZeG-ao,3063
+etdc-0.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+etdc-0.0.0.dist-info/entry_points.txt,sha256=XFVocgQ_z9Hv7toLEsb-BwPR8yGM_cs3h6HRDvtFnDw,37
+etdc-0.0.0.dist-info/RECORD,,
