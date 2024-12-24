@@ -1,0 +1,12 @@
+localify/__init__.py,sha256=7nwBceN6z3Vqb5NDrZpXBaHGuWoXilwwAnSnCA3EUNI,395
+localify/core.py,sha256=F5cnVH_ttOCnJTGq77M-Sp0yAtrcHwz6RLbelJlYjXc,3709
+localify/loaders.py,sha256=WANfn8z51GTgovUi1_i6zjXcf-ENKddFqOJ6jgjTcTU,2693
+localify/localify.py,sha256=r9HEWuxreozugI0jZoz2OMCcv6n3WB1FW9Fx6WjesxA,1509
+localify/translation.py,sha256=Ym_EnWQ4iBtMAAjOxLoIK5YO9I2v6rIJXRWpK9jx434,3963
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_localify.py,sha256=QeVi4vlTZTR4qvRVLpXy0oCxUVpXIYbxx2WwIqwe8OQ,2126
+localify-0.1.0.dist-info/LICENSE,sha256=4j4Bo1JA7f3rgQzrCUVfyLGg31TmkNRL2ZeY034psIw,1063
+localify-0.1.0.dist-info/METADATA,sha256=IUPeiox4zd-ZlfnPf2B4NkpPeMioIhHSESjBeMm8WTs,6473
+localify-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+localify-0.1.0.dist-info/top_level.txt,sha256=HhpDohnvX1jAlt_kFaG6DBkvuVbgTHhUad1egBmz9Mo,15
+localify-0.1.0.dist-info/RECORD,,
