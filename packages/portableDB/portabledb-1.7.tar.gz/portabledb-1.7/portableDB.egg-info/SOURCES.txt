@@ -1,0 +1,10 @@
+README.md
+setup.py
+portableDB/Examples.py
+portableDB/__init__.py
+portableDB/main.py
+portableDB.egg-info/PKG-INFO
+portableDB.egg-info/SOURCES.txt
+portableDB.egg-info/dependency_links.txt
+portableDB.egg-info/requires.txt
+portableDB.egg-info/top_level.txt
