@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: mynewlib1
+Version: 1.0.13
+Summary: Библиотека для работы с факториалами и вычисления чисел из формул типа str
+Home-page: https://github.com/Anromit/mylib/tree/main/mylib
+Author: Romitsina Spelov
+Author-email: romitsina.a.r@gmail.com
+License: example
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# mynewlib1
+
+Эта библиотека написана для реалшизации любых действий с факториалами и для вычислений формул, записанных в формате str.
+
+```
+
+
+from mynewlib1 import factorial, permutation, compination, binkof, gamma, summaf
+
+n=int(input())
+def main():
+    # Пример использования функции factorial
+    n = 5
+    print(f"Факториал {n}! = {factorial(n)}")
+
+    # Пример использования функции permutation
+    print(f"Перестановка {n}! = {permutation(n)}")
+
+    # Пример использования функции combination
+    k = 3
+    print(f"Комбинация C({n}, {k}) = {compination(n, k)}")
+
+    # Пример используя функции binkof
+    print(f"Биномиальный коэффициент B({n}, {k}) = {binkof(n, k)}")
+
+    # Пример использования функции gamma
+    print(f"Гамма ({n}) = {gamma(n)}")
+
+    # Пример использования функции summaf
+print(f"Сумма факториалов от 0 до = {summaf(n)}")
+
+if __name__ == '__main__':
+    main()
+
+```
+## Installation
+
+Install it using pip:
+```bash
+pip install mynewlib1
