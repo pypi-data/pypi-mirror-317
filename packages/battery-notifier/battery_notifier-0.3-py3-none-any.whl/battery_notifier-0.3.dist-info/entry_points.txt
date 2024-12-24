@@ -1,0 +1,2 @@
+[console_scripts]
+battery_notifier = battery_notifier.battery_notifier:main

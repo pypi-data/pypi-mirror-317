@@ -1,0 +1,9 @@
+battery_notifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+battery_notifier/battery_notifier.py,sha256=PqMCS-FN4sT9w8r7kZjm6UB08ZpR0m-SUKvelslJCg4,3351
+battery_notifier/config.py,sha256=KJicknalW9fojmvrgWjfbgT0VcXreSNf1tzPTt3vf-A,1317
+battery_notifier-0.3.dist-info/LICENSE,sha256=hwEz4h3280L0x2-lqE7ZMpyLUCO5b0Njn7APj-gq2iM,1073
+battery_notifier-0.3.dist-info/METADATA,sha256=Is_bvvD7xPJfNuOPsGrGB7j9QaOPC8R_lawCYIeq-Ew,2874
+battery_notifier-0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+battery_notifier-0.3.dist-info/entry_points.txt,sha256=OUhp_i4XUyY8ekqtnjQBlyGP4aHPR09Er6FHUO7eUTg,76
+battery_notifier-0.3.dist-info/top_level.txt,sha256=DEVmEOzzocMO9x-S6_oh04H8TmitvzpgTijjq1As1Qg,17
+battery_notifier-0.3.dist-info/RECORD,,
