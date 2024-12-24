@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bigquery-migrations"
+dynamic = ["version", "readme"]
+description = "Simple tool for writing Google BigQuery migrations"
+requires-python = ">=3.9"
+keywords = ["migrations", "bigquery"]
+license = {file = "LICENSE"}
+authors = [
+    {name = "Roland Bende", email = "benderoland+bigquery-migrations@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities"
+]
+
+dependencies = [
+    "google-auth",
+    "google-cloud-bigquery",
+    "colorama"
+]
+
+[project.urls]
+Homepage = "https://github.com/RolandBende/python-bigquery-migrations"
+
+[project.scripts]
+bigquery-migrations = "bigquery_migrations.migration_cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "autopep8>=2.0.0,<3.0.0",
+    "flake8>=7.0.0,<8.0.0",
+    "ruff>=0.8.0,<1.0.0",
+    "coverage>=7.0.0,<8.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "bigquery_migrations.__version__"}
+readme = {file = ["README.md", "CHANGELOG.md"], content-type = "text/markdown"}
+
+[tool.autopep8]
+max_line_length = 79
+ignore = ["E501"] 
+in-place = true
+recursive = true
+aggressive = 3
