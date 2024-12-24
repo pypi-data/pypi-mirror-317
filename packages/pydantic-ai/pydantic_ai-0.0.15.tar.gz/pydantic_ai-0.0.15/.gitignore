@@ -1,0 +1,15 @@
+site
+.python-version
+.venv
+dist
+__pycache__
+*.env
+/scratch/
+/.coverage
+env*/
+/TODO.md
+/postgres-data/
+.DS_Store
+examples/pydantic_ai_examples/.chat_app_messages.sqlite
+.cache/
+.vscode/
