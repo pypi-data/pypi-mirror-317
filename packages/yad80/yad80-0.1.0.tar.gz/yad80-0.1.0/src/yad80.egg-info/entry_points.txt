@@ -1,0 +1,2 @@
+[console_scripts]
+yad80 = yad80.cli:main
