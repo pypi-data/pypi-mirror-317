@@ -1,0 +1,110 @@
+Metadata-Version: 2.4
+Name: doiget-tdm
+Version: 0.1.0
+Summary: A command-line application and Python library for obtaining the metadata and full-text of published journal articles for text data mining (TDM) purposes.
+Project-URL: Documentation, https://unimelbmdap.github.io/doiget-tdm
+Project-URL: Repository, https://github.com/unimelbmdap/doiget-tdm
+Project-URL: Issues, https://github.com/unimelbmdap/doiget-tdm/issues
+Author-email: Damien Mannion <damien.mannion@unimelb.edu.au>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <3.13,>=3.11
+Requires-Dist: alive-progress>=3.1.5
+Requires-Dist: crossref-lmdb>=0.1.2
+Requires-Dist: html5lib>=1.1
+Requires-Dist: limiter>=0.5.0
+Requires-Dist: more-itertools>=10.5.0
+Requires-Dist: platformdirs>=4.3.6
+Requires-Dist: polars-lts-cpu[xlsxwriter]>=1.14.0
+Requires-Dist: puremagic>=1.27
+Requires-Dist: py7zr>=0.22.0
+Requires-Dist: pydantic-settings>=2.5.2
+Requires-Dist: pydantic[email]>=2.9.2
+Requires-Dist: pyrage>=1.2.1
+Requires-Dist: pyrate-limiter>=2.10.0
+Requires-Dist: pysftp>=0.2.9
+Requires-Dist: pysimdjson>=6.0.2
+Requires-Dist: requests-ratelimiter>=0.7.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: retryhttp[requests]>=1.1.0
+Requires-Dist: rich>=13.9.4
+Requires-Dist: tenacity>=9.0.0
+Requires-Dist: tzdata>=2024.1
+Requires-Dist: universal-pathlib>=0.2.5
+Provides-Extra: docs
+Requires-Dist: autodoc-pydantic>=2.2.0; extra == 'docs'
+Requires-Dist: enum-tools[sphinx]>=0.12.0; extra == 'docs'
+Requires-Dist: furo>=2024.8.6; extra == 'docs'
+Requires-Dist: sphinx-argparse-cli>=1.18.2; extra == 'docs'
+Requires-Dist: sphinx-argparse>=0.5.2; extra == 'docs'
+Requires-Dist: sphinx-autobuild>=2024.10.3; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints>=2.4.4; extra == 'docs'
+Requires-Dist: sphinx-toolbox>=3.8.0; extra == 'docs'
+Requires-Dist: sphinx>=8.0.2; extra == 'docs'
+Provides-Extra: interactive
+Requires-Dist: ipython>=8.27.0; extra == 'interactive'
+Provides-Extra: lmdb
+Requires-Dist: lmdb>=1.5.1; extra == 'lmdb'
+Description-Content-Type: text/markdown
+
+# doiget-tdm
+
+`doiget-tdm` is a command-line application and Python library for obtaining the metadata and full-text of published journal articles.
+
+> [!WARNING]
+> This package is primarily intended for use in text data mining projects where the user has subscriptions to full-text content and has organised data exchange agreements.
+> Acquisition for most publishers will not work without configuration - see [Available publishers](https://unimelbmdap.github.io/doiget-tdm/publishers/avail_publishers.html).
+
+## Features
+
+* Acquire full-text of published articles, with built-in support for multiple publishers and their acquisition methods (e.g., network or local files).
+* Currently supported publishers (given appropriate access and configuration):
+    * American Medical Association (AMA)
+    * American Psychological Association (APA)
+    * Elsevier
+    * Frontiers
+    * IOP
+    * PeerJ
+    * PLoS
+    * PNAS
+    * Royal Society
+    * Sage
+    * Springer-Nature
+    * Taylor & Francis
+    * Wiley
+* Customise acquisition and add additional publishers.
+* Retrieve article metadata from [Crossref](https://crossref.org), optionally using a Lightning key:value (DOI:metadata) database formed from a Crossref public data export via [`crossref-lmdb`](https://github.com/unimelbmdap/crossref-lmdb).
+
+
+## Installation
+
+The package can be installed using `pip`:
+
+```bash
+pip install doiget-tdm
+```
+
+## Quickstart
+
+Show the default configuration settings:
+
+```bash
+doiget-tdm show-config
+```
+
+Download the full-text (XML) of the journal article with DOI [`10.1371/journal.pbio.1002611`](https://doi.org/10.1371/journal.pbio.1002611) to the default directory:
+
+```bash
+doiget-tdm acquire '10.1371/journal.pbio.1002611'
+```
+
+Next, you can read through the [Workflow](https://unimelbmdap.github.io/doiget-tdm/workflow.html) document to understand how to use the package in a text data mining project and the [Concepts](https://unimelbmdap.github.io/doiget-tdm/concepts.html) document to learn more about the approach taken by `doiget-tdm`.
+
+## Documentation
+
+See the [documentation](https://unimelbmdap.github.io/doiget-tdm/) for detailed information about how to use `doiget-tdm`.

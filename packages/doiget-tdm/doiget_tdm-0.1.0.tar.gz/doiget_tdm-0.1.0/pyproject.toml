@@ -1,0 +1,205 @@
+[project]
+name = "doiget-tdm"
+version = "0.1.0"
+description = "A command-line application and Python library for obtaining the metadata and full-text of published journal articles for text data mining (TDM) purposes."
+readme = "README.md"
+authors = [
+  {name = "Damien Mannion", email = "damien.mannion@unimelb.edu.au"},
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: MIT License",
+]
+license = "MIT"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "limiter>=0.5.0",
+  "platformdirs>=4.3.6",
+  "puremagic>=1.27",
+  "pydantic-settings>=2.5.2",
+  "pydantic[email]>=2.9.2",
+  "pysftp>=0.2.9",
+  "pysimdjson>=6.0.2",
+  "requests>=2.32.3",
+  "requests-ratelimiter>=0.7.0",
+  "retryhttp[requests]>=1.1.0",
+  "tzdata>=2024.1",
+  "universal-pathlib>=0.2.5",
+  "pyrage>=1.2.1",
+  "more-itertools>=10.5.0",
+  "alive-progress>=3.1.5",
+  "html5lib>=1.1",
+  "rich>=13.9.4",
+  "polars-lts-cpu[xlsxwriter]>=1.14.0",
+  "tenacity>=9.0.0",
+  "crossref-lmdb>=0.1.2",
+  "pyrate-limiter>=2.10.0",
+  "py7zr>=0.22.0",
+]
+
+[project.urls]
+Documentation = "https://unimelbmdap.github.io/doiget-tdm"
+Repository = "https://github.com/unimelbmdap/doiget-tdm"
+Issues = "https://github.com/unimelbmdap/doiget-tdm/issues"
+
+[project.scripts]
+doiget-tdm = "doiget_tdm.cli:main"
+
+[project.optional-dependencies]
+interactive = [
+  "ipython>=8.27.0",
+]
+lmdb = [
+  "lmdb>=1.5.1",
+]
+docs = [
+    "furo>=2024.8.6",
+    "sphinx>=8.0.2",
+    "sphinx-argparse>=0.5.2",
+    "sphinx-argparse-cli>=1.18.2",
+    "sphinx-autodoc-typehints>=2.4.4",
+    "sphinx-autobuild>=2024.10.3",
+    "autodoc-pydantic>=2.2.0",
+    "sphinx-toolbox>=3.8.0",
+    "enum-tools[sphinx]>=0.12.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+  "black>=24.8.0",
+  "mypy>=1.11.2",
+  "pytest>=8.3.3",
+  "pytest-cov>=5.0.0",
+  "repo-review>=0.11.2",
+  "ruff>=0.6.7",
+  "sp-repo-review[cli]>=2024.8.19",
+  "types-pysftp>=0.2.17.20240106",
+  "types-requests>=2.32.0.20240914",
+  "pyrage-stubs>=1.2.1",
+  "types-html5lib>=1.1.11.20240806",
+  "posting>=2.3.0",
+  "auditwheel>=6.1.0",
+  "validate-pyproject[all]>=0.23",
+  "twine>=6.0.1",
+]
+
+# until uv gets a task runner
+[tool.poe.tasks]
+test = "uv run --extra lmdb pytest --cov --cov-report term-missing"
+typecheck = "uv run --extra lmdb mypy ."
+lint = "ruff check"
+style = "black ."
+repo-review = "repo-review"
+ipython = "uv run --extra interactive ipython"
+docs = "uv run --extra docs sphinx-build docs gh-pages"
+docs-watch = "uv run --extra docs sphinx-autobuild docs gh-pages"
+doiget-tdm = "uv run doiget-tdm"
+
+[tool.black]
+line-length = 88
+preview = false
+skip-source-first-line = false
+skip-string-normalization = false
+skip-magic-trailing-comma = false
+
+[tool.ruff]
+exclude = ["docs", "tests"]
+lint.select = [
+  "E",  # error
+  "F",  # pyflakes
+  "UP",  # pyupgrade
+  "N",  # pep8-naming
+  "ANN",  # flake8-annotations
+  "A",  # flake8-builtins
+  "PTH",  # flake8-usepathlib
+  "B",  # flake8-bugbear
+  "Q",  # flake8-quotes
+  "ARG",  # flake8-unused-arguments
+  "NPY",  # numpy
+  "PERF",  # perflint
+  "RUF",  # ruff
+]
+lint.ignore = [
+  "ANN101",  # typing self
+  "PERF203",  # performance overhead from try/catch in loops
+]
+
+[tool.mypy]
+# corresponding to --strict
+strict = true
+warn_unused_configs = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+warn_redundant_casts = true
+warn_unused_ignores = false
+warn_return_any = true
+no_implicit_reexport = true
+strict_equality = true
+extra_checks = true
+warn_unreachable = true
+untyped_calls_exclude = []
+enable_error_code = [
+  "ignore-without-code",
+  "redundant-expr",
+  "truthy-bool",
+]
+plugins = [
+  "pydantic.mypy"
+]
+exclude = ["docs", "tests"]
+
+[[tool.mypy.overrides]]
+module = [
+  "alive_progress",
+]
+ignore_missing_imports = true
+
+
+[tool.repo-review]
+ignore = [
+  "RTD",  # not using readthedocs
+  "RF102",  # not a fan of isort
+  "PC", "PY006",  # not using pre-commit
+  "PY007",  # poe not recognised as a task runner
+  "GH200",  # dependeabot
+  "GH210",  # dependeabot
+  "GH211",  # dependeabot
+  "GH212",  # dependeabot
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+xfail_strict = true
+filterwarnings = ["error"]
+log_cli_level = "info"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+exclude_also = [
+  "def __repr__",
+  "if self.debug:",
+  "if settings.DEBUG",
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "if 0:",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+  "class .*\\bProtocol\\):",
+  "@(abc\\.)?abstractmethod",
+]
