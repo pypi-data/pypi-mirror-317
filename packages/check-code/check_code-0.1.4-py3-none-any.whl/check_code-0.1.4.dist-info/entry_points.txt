@@ -1,0 +1,5 @@
+[console_scripts]
+check-code = check_code.check:main
+
+[gui_scripts]
+
