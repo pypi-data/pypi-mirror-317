@@ -1,0 +1,159 @@
+Metadata-Version: 2.1
+Name: mikelja
+Version: 0.0.1
+Summary: A Python library to aggregate job listings from various APIs.
+Home-page: https://github.com/andy-birt/mikelja
+Author: Andrew Birt
+Author-email: Andrew Birt <andrew.birt@proton.me>
+License: MIT License
+        
+        Copyright (c) 2024 Andrew Birt
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Keywords: python,package,jobs,aggregator
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: attrs>=24.3.0
+Requires-Dist: beautifulsoup4>=4.12.3
+Requires-Dist: certifi>=2024.8.30
+Requires-Dist: cffi>=1.17.1
+Requires-Dist: charset-normalizer>=3.4.0
+Requires-Dist: h11>=0.14.0
+Requires-Dist: idna>=3.10
+Requires-Dist: outcome>=1.3.0.post0
+Requires-Dist: pycparser>=2.22
+Requires-Dist: PySocks>=1.7.1
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: requests>=2.32.3
+Requires-Dist: selenium>=4.27.1
+Requires-Dist: sniffio>=1.3.1
+Requires-Dist: sortedcontainers>=2.4.0
+Requires-Dist: soupsieve>=2.6
+Requires-Dist: trio>=0.27.0
+Requires-Dist: trio-websocket>=0.11.1
+Requires-Dist: typing_extensions>=4.12.2
+Requires-Dist: urllib3>=2.2.3
+Requires-Dist: websocket-client>=1.8.0
+Requires-Dist: wsproto>=1.2.0
+
+## Quick Start
+
+Once you clone this, create a virtual environment
+```bash
+> python -m venv venv
+```
+
+Activate the Virtual Environment
+
+Windows:
+```bash
+> .\venv\Scripts\activate
+```
+Mac/Linux:
+```bash
+> source venv/bin/activate
+```
+
+Install Dependencies
+```bash
+> pip install -r requirements.txt
+```
+
+Get started quickly by testing with Remotive since you don't need a key
+```python
+from apis import Remotive
+
+remotive_params = {
+    "search": "c#"
+}
+
+test_search = Remotive(params=remotive_params)
+
+r = test_search.get_results()
+
+# please work...
+print(r)
+```
+
+Create a `.env` file to keep your credentials
+```env
+# If you're using any source control don't forget to ignore this file!
+ADZUNA_APP_ID=[APP_ID]
+ADZUNA_APP_KEY=[APP_KEY]
+```
+
+```python
+# Create a new search for Adzuna
+from apis import Adzuna
+
+# Refer to Adzuna API docs for full list of parameters
+params = {
+    "results_per_page": 25,
+    "what_and": "software engineer c# remote",
+    "max_days_old": 5,
+    "salary_min": 80000,
+    "full_time": "1"
+}
+
+new_search = Adzuna(page=1, params=params)
+
+r = new_search.get_results()
+
+# Display the JSON results
+print(r)
+```
+## Aggregator Example
+
+```py
+from apis import Adzuna, Remotive, Usajobs
+from aggregator import JobAggregator
+
+adzuna_params = {
+    "results_per_page": 25,
+    "what_and": "software engineer c# remote",
+    "max_days_old": 5,
+    "salary_min": 80000,
+    "full_time": "1"
+}
+
+remotive_params = {
+    "search": "c#"
+}
+
+usajobs_params = {
+    "Keyword": "software+engineer",
+    "remoteorteleworkonly": "true",
+    "whomayapply": "public",
+    "dateposted": "5"
+}
+
+clients = [
+    Adzuna(params=adzuna_params),
+    Remotive(params=remotive_params),
+    Usajobs(params=usajobs_params)
+]
+
+agg = JobAggregator(clients)
+
+data = agg.fetch_all_jobs()
+
+# Look at dem jobbies!
+print(data)
+```
