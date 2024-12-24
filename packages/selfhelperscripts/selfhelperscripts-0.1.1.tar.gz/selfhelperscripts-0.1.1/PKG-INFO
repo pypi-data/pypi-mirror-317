@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: selfhelperscripts
+Version: 0.1.1
+Summary: Get your life well
+Home-page: https://github.com/mshegole/selfhelpscripts
+Author: Mikhail Shche
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+Requires-Dist: paramiko>=3.4.0
+
+# selfhelperscripts

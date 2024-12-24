@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+selfhelperscripts/src/selfhelperscripts.egg-info/PKG-INFO
+selfhelperscripts/src/selfhelperscripts.egg-info/SOURCES.txt
+selfhelperscripts/src/selfhelperscripts.egg-info/dependency_links.txt
+selfhelperscripts/src/selfhelperscripts.egg-info/requires.txt
+selfhelperscripts/src/selfhelperscripts.egg-info/top_level.txt
