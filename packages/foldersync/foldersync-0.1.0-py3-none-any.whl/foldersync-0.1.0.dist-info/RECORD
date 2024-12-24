@@ -1,0 +1,9 @@
+foldersync/__init__.py,sha256=1tDDXwo1AJYZ4sZ1lT3JbOr1BmKzYJVSx2CuEuPboY0,64
+foldersync/cli.py,sha256=BZTdC7sDyo47-Zd_oVtVIgFxW6D-IMXWRJz_XnmsD04,617
+foldersync/core.py,sha256=t6F2NzbEHFgIXIJeBBpqb5NnnLug8HNLvDBCAhT27Cc,6668
+foldersync-0.1.0.dist-info/LICENSE,sha256=rmEke1YCO93HS6fDgFDeIfQSwIDUUyvtHtePhyTLOVw,1085
+foldersync-0.1.0.dist-info/METADATA,sha256=d3bg_FScPDLPI1s09a_fXh6C6x_SpDdEOmCxZeJupZ0,4612
+foldersync-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+foldersync-0.1.0.dist-info/entry_points.txt,sha256=-hJNamqU4ORmaPR22d4dAXStiqiRwiVp6QtHPUf1zac,51
+foldersync-0.1.0.dist-info/top_level.txt,sha256=CIetqPKPrQtwl4oRf4S80e1jGON3PR_F5PrrGQ7uvhk,11
+foldersync-0.1.0.dist-info/RECORD,,
