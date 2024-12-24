@@ -1,0 +1,7 @@
+json2rdf/__init__.py,sha256=sjfYPmTtbjXJaAmi_PilAkn2FH0t0Cmmc7UQ1IpJV4A,98
+json2rdf/cli.py,sha256=221KlaSRDOxAU1K3_y2nYiYJYiqdD-goCjTa8VjwI8s,1384
+json2rdf/json2rdf.py,sha256=Fy-fPhmVgEeNVQkpRIvyFfH2vvw01md2XMKVFKByFp8,16022
+json2rdf-60.dist-info/METADATA,sha256=4mRX0G7vMaxL__mty7hBHZ3kRcxBWEgfFZogrzGjCtM,2764
+json2rdf-60.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+json2rdf-60.dist-info/entry_points.txt,sha256=p0kEOJhG29pj7cQRliVqVFHTN3YXtuCBUDgoc7ofkDk,42
+json2rdf-60.dist-info/RECORD,,
