@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: AnalistaDeImagem
+Version: 0.1.0
+Summary: Biblioteca para análise de imagens usando OpenAI Vision
+Author: Pedro Henrique Brito de Moraes
+Requires-Python: >=3.6
+Requires-Dist: openai>=1.0.0
