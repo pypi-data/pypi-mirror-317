@@ -1,0 +1,9 @@
+pydensecrf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydensecrf/densecrf.cpython-39-darwin.so,sha256=zAju297v1aXH4I2jjaKYh0RTMSM6b8OonaJEhCVkbAs,900096
+pydensecrf/eigen.cpython-39-darwin.so,sha256=7eWOEKKULVUCI1ZvYa_a41yd-KixxyvXQF8oFGS_Vv0,367824
+pydensecrf/utils.py,sha256=d424mBBapXaJ3r1lIpBslURjFprdkMYt6h3pM9yDhdc,6852
+pydensecrf2-1.1.dist-info/LICENSE,sha256=HmLcdzJB1mGf4KJ-RMeovP8HqtFqxQqh-dkTKT0UkO8,1079
+pydensecrf2-1.1.dist-info/METADATA,sha256=8hig8rkqqfUivWkWZtqFyUbPxwVV52hRufrJ7rcK9uQ,13612
+pydensecrf2-1.1.dist-info/WHEEL,sha256=6Jttq6AfcWtuRmLm2_3IJTdjGV1CXy3Nk5dn_Y8g5fU,112
+pydensecrf2-1.1.dist-info/top_level.txt,sha256=K_podHejDPtYkoV-JEAW_EjDsMi2mnTpHfHhFOtJsOE,11
+pydensecrf2-1.1.dist-info/RECORD,,
