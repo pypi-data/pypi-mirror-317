@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+kropp/__init__.py
+kropp.egg-info/PKG-INFO
+kropp.egg-info/SOURCES.txt
+kropp.egg-info/dependency_links.txt
+kropp.egg-info/entry_points.txt
+kropp.egg-info/requires.txt
+kropp.egg-info/top_level.txt
