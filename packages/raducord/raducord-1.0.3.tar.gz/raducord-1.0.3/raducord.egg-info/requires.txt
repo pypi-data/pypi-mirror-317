@@ -1,0 +1,8 @@
+pyautogui
+tls_client
+fake_useragent
+pyfiglet
+typing_extensions
+
+[:platform_system == "Windows"]
+windows-curses
