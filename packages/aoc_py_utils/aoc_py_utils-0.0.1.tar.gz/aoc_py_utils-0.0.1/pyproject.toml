@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aoc_py_utils"
+dynamic = ["version"]
+authors = [
+  { name="Amit Sharma" },
+]
+description = "Various utilities for advent of code"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/mosteligible/aoc_utils"
+Issues = "https://github.com/mosteligible/aoc_utils/issues"

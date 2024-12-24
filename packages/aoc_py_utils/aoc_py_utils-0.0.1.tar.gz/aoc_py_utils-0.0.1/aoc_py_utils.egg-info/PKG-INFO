@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: aoc_py_utils
+Version: 0.0.1
+Summary: Various utilities for advent of code
+Home-page: https://github.com/mosteligible/aoc_utils
+Author: Amit Sharma
+Project-URL: Homepage, https://github.com/mosteligible/aoc_utils
+Project-URL: Issues, https://github.com/mosteligible/aoc_utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
