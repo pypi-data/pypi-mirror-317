@@ -1,0 +1,17 @@
+python_projector/__init__.py,sha256=rp1Uca8jPy3fi6LOspPBrDKpe4hImpyXvl9BBicwqSI,10086
+python_projector/_version.py,sha256=d-rMFytGNVKJChnhE8aRGCCoSzYsJmoGJmULtj_8HY4,497
+python_projector/cli/__init__.py,sha256=9EVxmFiWsAoqWJ6br1bc3BxlA71JyOQP28fUHhX2k7E,43
+python_projector/cli/api.py,sha256=nKbxac41bKSR4VcJkSUDDgJTNDFF9oUdchg9gvbfXL8,1086
+python_projector/cli/main.py,sha256=0Y2uMJ-3t0E88Y1enazqll0NYfvO6qiOrWHIiGOO1p0,7077
+python_projector/scripts/pip_compile.sh,sha256=SP0me7EiaV7b45BUQMIAR-TblqGtwvFh35QtmMtvca0,4908
+python_projector/scripts/run_doctest.py,sha256=bg0dyA5f1uiJU8XCtUkZ4G8Jo6voWBoqzhCG66loNcs,2479
+python_projector/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_projector/utils/deferred_logger.py,sha256=D3NUGymRfUUBpqiG0PK6KrOrIcNUvuxIqencKtjJPYs,1857
+python_projector/utils/files.py,sha256=yieNwzZNXvHXOFriD_u42EQaX0JkYgaP0Y_w84osw4U,1622
+python_projector/utils/toml.py,sha256=b0BMzPCfXMI_6WAuNkyfBEZnK4ES0eduZaiAVpd7R7k,963
+python_projector/utils/version.py,sha256=le68uQzR5sC0oibo0e3Ghu0Sa1Iwyj8sSROwuG3uYSo,2750
+python_projector-0.1.8.dist-info/METADATA,sha256=_FiLk5gi2ELinL4vR3dTgkvrAjf1mJBn9s7CvEdvjSQ,21716
+python_projector-0.1.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+python_projector-0.1.8.dist-info/entry_points.txt,sha256=2NzTuHA_3dM2LaZMXJNngwKlwhQCQYQGk18wJdDXoNs,56
+python_projector-0.1.8.dist-info/top_level.txt,sha256=3N5C5viZx4T-bi3z5HT7SlOsVtHHUa8pPYH31abr8fI,17
+python_projector-0.1.8.dist-info/RECORD,,
