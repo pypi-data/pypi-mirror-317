@@ -1,0 +1,28 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "httpeat"
+description = "a recursive, parallel and multi-mirror/multi-proxy HTTP downloader"
+authors = [ {name = "Laurent Ghigonis", email = "ooookiwi@protonmail.com"}, ]
+readme = "README.md"
+requires-python = ">=3.0"
+keywords = ["http", "downloader", "recursive", "parallel", "mirror", "proxy"]
+license = {text = "BSD-3-Clause"}
+dynamic = ["version"]
+dependencies = [
+    "httpx[socks]",
+    "bs4",
+    "lxml",
+    "python-dateutil",
+    "rich",
+    "humanfriendly",
+    "tenacity",
+]
+
+[project.scripts]
+httpeat = "httpeat:main"
+
+[project.urls]
+"Homepage" = "https://github.com/looran/httpeat"
