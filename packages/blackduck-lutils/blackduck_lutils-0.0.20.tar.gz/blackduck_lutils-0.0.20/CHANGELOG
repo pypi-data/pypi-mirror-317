@@ -1,0 +1,10 @@
+0.0.19  2024-10-30
+
+- Added processing for components with no version
+- Excluded FORBIDDEN vs. PERMITTED from the reported
+- Added new function signature to produce data inline without file operations.
+- Added option to exclude project itself from conflict calculations
+
+0.0.20
+
+- Added in-line return functionality for license data download
