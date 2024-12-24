@@ -1,0 +1,2 @@
+[console_scripts]
+termites = termites.main:main

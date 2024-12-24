@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/termites/__init__.py
+src/termites/cache.py
+src/termites/generate.py
+src/termites/main.py
+src/termites/tools.py
+src/termites/util.py
+src/termites.egg-info/PKG-INFO
+src/termites.egg-info/SOURCES.txt
+src/termites.egg-info/dependency_links.txt
+src/termites.egg-info/entry_points.txt
+src/termites.egg-info/requires.txt
+src/termites.egg-info/top_level.txt
+src/termites/config/config.py
