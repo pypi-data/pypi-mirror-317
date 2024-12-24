@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: mssqldbfacade
+Version: 1.0.0
+Summary: A package to implement a facade for accessing MSSQL databases
+Home-page: https://github.com/amedinag32/mssqldbfacade
+Author: Alan Medina
+Author-email: alan.medina@beetmann.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: SQLAlchemy==2.0.36
+Requires-Dist: greenlet==3.1.1
+Requires-Dist: numpy==1.24.4
+Requires-Dist: pandas==2.0.3
+Requires-Dist: pandasql==0.7.3
+Requires-Dist: pymssql==2.2.7
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2024.2
+Requires-Dist: six==1.17.0
+Requires-Dist: typing-extensions==4.12.2
+Requires-Dist: tzdata==2024.2
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
