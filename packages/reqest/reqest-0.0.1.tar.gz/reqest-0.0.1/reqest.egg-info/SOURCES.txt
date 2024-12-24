@@ -1,0 +1,7 @@
+LICENSE
+pyproject.toml
+requests.py
+reqest.egg-info/PKG-INFO
+reqest.egg-info/SOURCES.txt
+reqest.egg-info/dependency_links.txt
+reqest.egg-info/top_level.txt
