@@ -1,0 +1,16 @@
+[package]
+name = "djls-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+djls-project = { workspace = true }
+djls-template-ast = { workspace = true }
+djls-worker = { workspace = true }
+
+anyhow = { workspace = true }
+pyo3 = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tower-lsp = { workspace = true }
