@@ -1,0 +1,8 @@
+setup.py
+defshop_api/__init__.py
+defshop_api/pay.py
+defshop_api.egg-info/PKG-INFO
+defshop_api.egg-info/SOURCES.txt
+defshop_api.egg-info/dependency_links.txt
+defshop_api.egg-info/not-zip-safe
+defshop_api.egg-info/top_level.txt
