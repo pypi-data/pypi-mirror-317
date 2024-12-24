@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <!-- 背景のグラデーション定義 -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C5364">
+        <animate attributeName="stop-color" 
+          values="#2C5364; #203A43; #2C5364"
+          dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#0F2027">
+        <animate attributeName="stop-color"
+          values="#0F2027; #203A43; #0F2027"
+          dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- 雲のパターン -->
+    <pattern id="cloud-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <path d="M25,60 a20,20 0 0,1 0,40 h50 a20,20 0 0,0 0,-40 z" fill="rgba(255,255,255,0.15)">
+        <animateTransform attributeName="transform"
+          type="translate"
+          from="-50 0"
+          to="200 0"
+          dur="20s"
+          repeatCount="indefinite"/>
+      </path>
+    </pattern>
+  </defs>
+
+  <!-- 丸い角を持つ背景 -->
+  <rect width="800" height="200" rx="20" ry="20" fill="url(#bg-gradient)"/>
+  
+  <!-- 丸い角を持つ雲のレイヤー -->
+  <rect width="800" height="200" rx="20" ry="20" fill="url(#cloud-pattern)" opacity="0.5"/>
+
+  <!-- タイトルテキスト -->
+  <g transform="translate(40, 100)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white">
+      <tspan x="0" dy="0">MCP Weather Service</tspan>
+      <tspan x="0" dy="40" font-size="30">Server</tspan>
+    </text>
+  </g>
+
+  <!-- 右側の天気アイコン -->
+  <g transform="translate(650, 100)">
+    <!-- 太陽 -->
+    <circle cx="0" cy="0" r="25" fill="#FFD700">
+      <animate attributeName="opacity"
+        values="1;0.7;1"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </circle>
+    <!-- 光線 -->
+    <g>
+      <animateTransform attributeName="transform"
+        type="rotate"
+        from="0 0 0"
+        to="360 0 0"
+        dur="20s"
+        repeatCount="indefinite"/>
+      <path d="M-40,0 L40,0 M0,-40 L0,40 M-28,-28 L28,28 M-28,28 L28,-28"
+        stroke="#FFD700"
+        stroke-width="4"
+        opacity="0.6"/>
+    </g>
+  </g>
+</svg>
