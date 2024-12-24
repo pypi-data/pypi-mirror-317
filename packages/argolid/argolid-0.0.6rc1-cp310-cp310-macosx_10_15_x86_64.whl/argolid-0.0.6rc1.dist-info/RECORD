@@ -1,0 +1,12 @@
+argolid/pyramid_compositor.py,sha256=JNbldt-W-dldwmowUmlGGLMNdgbF-2VNaeOJ9ugRvXk,14831
+argolid/_version.py,sha256=UxT-BZwIecvDGBGTbXUJI0-0x9IGsRqAX7TBemWrkto,501
+argolid/__init__.py,sha256=GHsSQscTSOc2kI-7SLjeEKHGGBbmsvuaR8cbKVbQN0I,292
+argolid/libargolid.cpython-310-darwin.so,sha256=D6JV0X-b3WCsjpEg_xPm1mdgTfJsYmDeQhZ83IfDde0,28263264
+argolid/volume_generator.py,sha256=lUKkyTTeHfOIEz9qP_5V8vyCaJl_NMpflI8DrTZ4nsQ,16455
+argolid/pyramid_generator.py,sha256=4eCjfXs6zOS8awF9kaubfXYNmkESzMiJlOKu-CTtUlg,3969
+argolid/.dylibs/libfilepattern.2.dylib,sha256=9mSqo3RT_Y-pldQuWXwfwnc39aNdU-NF3JhixMoNZpE,2134048
+argolid-0.0.6rc1.dist-info/RECORD,,
+argolid-0.0.6rc1.dist-info/LICENSE,sha256=Fg4kOwqZrHdNpYuaPay-zI5aNJNXmBfi8ev4u0eytdo,1064
+argolid-0.0.6rc1.dist-info/WHEEL,sha256=d89beOaSlEuLJ6qL0yGx56FA5EQvMZWLLq5N8cntkRE,112
+argolid-0.0.6rc1.dist-info/top_level.txt,sha256=pjCWdXMo-MKwmBJQ9NBfN4bsO9S4tHScl5ZMDAnvd88,27
+argolid-0.0.6rc1.dist-info/METADATA,sha256=BUdh2fo-Sml6FHQaEKyATfZmpfLAOFjNkSzsFW_3VC0,4346
