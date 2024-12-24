@@ -1,0 +1,13 @@
+pypaze/__init__.py,sha256=Udwu7FqnuA4GqFPjtwtmN-leL3GUUYU7Ye0XO6GT40c,82
+pypaze/app.py,sha256=gLKlSjm9RIY-TKVviAFURuVZ50qRxsCzz8UjlL-4-mY,1341
+pypaze/cli.py,sha256=95LLVXoZkAYI3iaQMgMRr5L2J7hS56LBI3Qb-XVO2zE,14483
+pypaze/hooks.py,sha256=o_KFv6CRtdLYHlSf72zjPMN6SqdhcTJ29OkMdhh3jEU,101
+pypaze/middleware.py,sha256=vMgcMJOg-KCn2zkRf9Bg-BBIWopOolO6V76AMXXgrmQ,167
+pypaze/routing.py,sha256=ewmr1jXMHeTF5d07D7Rw5SM1CGc6sBxQ-7LeiWUyhjw,2032
+pypaze/utils.py,sha256=nmu3ktcy6vjLKiZU7CbtQ5FF4aAxz1ZZqzfirCGfA7E,768
+pypaze-0.1.0.dist-info/LICENSE,sha256=cwUMnC_Jp1jvxLGmIGXmHxXIMOJ4G5IfrE55Rxjg_Rg,1076
+pypaze-0.1.0.dist-info/METADATA,sha256=XdshhqiSjZpSy1BtG2y_6VR2j2DJFvK4d8-qqYpUX1o,2224
+pypaze-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pypaze-0.1.0.dist-info/entry_points.txt,sha256=E2TJk5tDFaGsJhskB6hvA2c26P7kWSTj9p36kNvcRDc,42
+pypaze-0.1.0.dist-info/top_level.txt,sha256=zbKyjZlMmAMldLeBFYIBtMLOpc3fILBKEWnvuVvQNC0,7
+pypaze-0.1.0.dist-info/RECORD,,
