@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: py-css-styleguide
+Version: 1.2.0
+Summary: CSS driven styleguide for your project
+Home-page: https://github.com/sveetch/py-css-styleguide
+Author: David Thenon
+Author-email: sveetch@gmail.com
+License: MIT
+Project-URL: Source Code, https://github.com/sveetch/py-css-styleguide
+Project-URL: Issue Tracker, https://github.com/sveetch/py-css-styleguide/issues
+Project-URL: Changelog, https://pycssstyleguide.readthedocs.io/en/latest/history.html
+Project-URL: Documentation, https://pycssstyleguide.readthedocs.io/
+Keywords: CSS,Python,Sass,Scss,Styleguide
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENCE.txt
+Requires-Dist: tinycss2>=1.1.0
+Requires-Dist: click>=8.0
+Requires-Dist: colorlog>=6.8.2
+Provides-Extra: dev
+Requires-Dist: boussole<3.0.0,>=2.1.0; extra == "dev"
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-django>=4.5.2; extra == "dev"
+Requires-Dist: freezegun>=1.2.0; extra == "dev"
+Provides-Extra: django
+Requires-Dist: Django>=2.2; extra == "django"
+Provides-Extra: quality
+Requires-Dist: flake8>=6.0.0; extra == "quality"
+Requires-Dist: tox>=4.11.0; extra == "quality"
+Provides-Extra: doc
+Requires-Dist: sphinx>=8.0.2; extra == "doc"
+Requires-Dist: furo>=2024.8.6; extra == "doc"
+Requires-Dist: sphinx-copybutton>=0.5.2; extra == "doc"
+Provides-Extra: doc-live
+Requires-Dist: livereload>=2.6.0; extra == "doc-live"
+Provides-Extra: release
+Requires-Dist: twine>=5.0.0; extra == "release"
+
+.. _Python: https://www.python.org/
+.. _tinycss2: https://github.com/Kozea/tinycss2
+.. _Click: https://click.palletsprojects.com
+.. _colorlog: https://pypi.org/project/colorlog/
+
+PyCssStyleguide
+===============
+
+This is a Python library and commandline script to build a design styleguide from a
+CSS manifest file.
+
+Opposed to many styleguide builders this does not require to documentate styles from
+your stylesheets. Instead it is based on Sass variables to build a map of your style
+rules.
+
+
+Features
+********
+
+* Python interface to load a CSS manifest and return it as a Python dictionnary or
+  JSON data;
+* Commandline script to parse a CSS manifest and dump a JSON of parsed references;
+* (Optional) Sass mixin library to write CSS manifest from your Sass project
+  settings;
+* (Optional) Django mixin and view to load manifest from your project or application;
+
+
+Links
+*****
+
+* Read the documentation on `Read the docs <https://pycssstyleguide.readthedocs.io/>`_;
+* Download its `PyPi package <http://pypi.python.org/pypi/py-css-styleguide>`_;
+* Clone it on its `Github repository <https://github.com/sveetch/py-css-styleguide>`_;
+
+
+Dependencies
+************
+
+* `Python`_>=3.8;
+* `tinycss2`_>=1.1.0;
+* `Click`_>=8.0;
+* `colorlog`_>=6.8.2;
+
+
+Credits
+*******
+
+Logo vector and icon by `SVG Repo <https://www.svgrepo.com>`_.
