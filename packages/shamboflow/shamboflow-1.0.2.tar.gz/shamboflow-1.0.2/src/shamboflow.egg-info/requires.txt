@@ -1,0 +1,4 @@
+colorama
+cupy-cuda12x
+numpy
+tqdm
