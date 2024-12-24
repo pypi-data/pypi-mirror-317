@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+luigino/__init__.py
+luigino/cleanup.py
+luigino/common_task.py
+luigino/errorlog.py
+luigino/execute.py
+luigino.egg-info/PKG-INFO
+luigino.egg-info/SOURCES.txt
+luigino.egg-info/dependency_links.txt
+luigino.egg-info/requires.txt
+luigino.egg-info/top_level.txt
