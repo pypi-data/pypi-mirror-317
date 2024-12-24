@@ -1,0 +1,8 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "reportImplicitOverride": false,
+  "reportAny": false,
+  "reportExplicitAny": false,
+  "reportUnusedCallResult": false
+}

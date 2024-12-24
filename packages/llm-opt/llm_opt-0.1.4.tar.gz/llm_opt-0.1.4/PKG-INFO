@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: llm-opt
+Version: 0.1.4
+Summary: Add your description here
+Author-email: Yevgnen Koh <wherejoystarts@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: pydantic>=2.9.2
+Requires-Dist: pyyaml>=6.0.2
+Description-Content-Type: text/markdown
+
+# lopt
+
+Describe your project here.
