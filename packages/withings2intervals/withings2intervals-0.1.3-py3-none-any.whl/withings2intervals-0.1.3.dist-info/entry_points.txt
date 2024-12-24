@@ -1,0 +1,3 @@
+[console_scripts]
+withings2intervals=withings2intervals.withings2intervals:main
+
