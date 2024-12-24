@@ -1,0 +1,7 @@
+LICENSE
+setup.py
+datav_server.egg-info/PKG-INFO
+datav_server.egg-info/SOURCES.txt
+datav_server.egg-info/dependency_links.txt
+datav_server.egg-info/requires.txt
+datav_server.egg-info/top_level.txt
