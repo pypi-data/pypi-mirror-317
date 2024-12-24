@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+NOTICE
+README.md
+pyproject.toml
+src/hydrotools.events.egg-info/PKG-INFO
+src/hydrotools.events.egg-info/SOURCES.txt
+src/hydrotools.events.egg-info/dependency_links.txt
+src/hydrotools.events.egg-info/requires.txt
+src/hydrotools.events.egg-info/top_level.txt
+src/hydrotools/events/event_detection/__init__.py
+src/hydrotools/events/event_detection/_version.py
+src/hydrotools/events/event_detection/decomposition.py
+tests/test_decomposition.py
