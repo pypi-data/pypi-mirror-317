@@ -1,0 +1,266 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ locatario }}</title>
+  </head>
+  <body>
+    <header id="header">
+      <img alt="logo" src="{{ logo }}" />
+      <div id="company">
+        <p>Pulsar Realty Empreendimentos e Participações LTDA.</p>
+        <p><a href="tel:5511-3571-8777">Tel: (11)3571-8777</a></p>
+        <p>
+          <a href="mail:mislene@pulsarws.com.br">mislene@pulsarws.com.br</a>
+        </p>
+        <p><a href="http://www.pulsarws.com.br"></a></p>
+      </div>
+    </header>
+    <div id="info">
+      <h2>Locador: {{ locador }}</h2>
+      <table id="first_table">
+        <tbody>
+          <tr>
+            <td class="col1">Data de Geração</td>
+            <td>{{ today }}</td>
+            <td class="col1">Endereço</td>
+            <td>{{ endereco }}</td>
+          </tr>
+          <tr>
+            <td class="col1">Locatário</td>
+            <td>{{ locatario }}</td>
+            <td class="col1">Emails</td>
+            <td>{{ email }}</td>
+          </tr>
+          <tr>
+            <td class="col1">CNPJ</td>
+            <td>{{ cnpj }}</td>
+            <td class="col1">Contato</td>
+            <td>{{ contato }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="pagamento">
+      <h2 class="titulo">Instruções de Pagamento</h2>
+      <p class="pix">PIX: {{ pix }}</p>
+      <div class="conta">
+        <p>Pagar através de depósito em uma das seguintes contas</p>
+        <table>
+          <tbody>
+            <tr>
+              <td class="conta_col">
+		{% for row in conta1.split("\n") %}
+                <p>{{ row }}</p>
+		{% endfor %}
+              </td>
+	      {% if conta2 !=  "" %}
+              <td class="conta_col">
+                {% for row in conta2.split("\n") %}
+                <p>{{ row }}</p>
+		{% endfor %}
+              </td>
+	      {% endif %}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <table id="dados">
+        <tbody>
+          <tr>
+            <td class=dados_col1>VENCIMENTO</td>
+            <td class="dados_col2">EFETUE O PAGAMENTO</td>
+          </tr>
+          <tr class="row2">
+            <td class="dados_col1">{{ vencimento|format_date }}</td>
+            <td class="dados_col2">{{ total|format_num }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <table id="posting-table">
+      <thead>
+        <tr>
+          <th class="vencimento">Vencimento</th>
+          <th class="descricao">Descrição</th>
+          <th class="categoria">Categoria</th>
+          <th class="competencia">Competência</th>
+          <th class="valor col_valor">Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+	{% for posting in postings %}
+        <tr>
+          <td>{{ posting.data }}</td>
+          <td>{{ posting.descricao }}</td>
+          <td>{{ posting.categoria }}</td>
+          <td>{{ posting.competencia }}</td>
+          <td class="col_valor">{{ posting.valor|format_num }}</td>
+	</tr>
+	{% endfor %}
+      </tbody>
+    </table>
+   
+    <style type="text/css" media="all">
+      /* base */
+      html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      width: 21cm;
+      height: 29.7cm;
+      }
+      * {
+      box-sizing: border-box;
+      }
+      h1 {
+      page-break-before: always;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+      page-break-after: avoid;
+      }
+      a {
+      text-decoration: none;
+      color: black;
+      }
+      table {
+      page-break-inside: avoid;
+      max-width: 100%;
+      }
+      body {
+      size: A4 portrait;
+      width: 21cm;
+      height: 29.7cm;
+      margin-left: 0.5cm;
+      margin-top: 0.5cm;
+      margin-right: 0.5cm;
+      margin-bottom: 0.5cm;
+      }
+      /* header */
+      #header {
+      border-bottom: 1px solid black;
+      display: -webkit-box;
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      }
+      #header>img {
+      width: 120px;
+      height: 90px
+      }
+      #company {
+      margin-left: auto
+      }
+      #company>p {
+      font-size: 16px;
+      margin: 8px;
+      padding:0
+      }
+      /* info */
+      #info {
+      margin-bottom: 25px;
+      width: 100%
+      }
+
+     #info>table {
+       border-collapse: collapse;
+       width: 100%;
+     }
+
+     #info td {
+       border-bottom: 1px solid black;
+       padding: 10px;
+     }
+     #info .col1 {
+       font-weight: bold;
+       padding-right: 50px
+     }
+     #pagamento {
+       margin: 20px
+     }
+     #pagamento>h2 {
+       font-size: 2em;
+       margin-bottom: 10px
+     }
+     #pagamento>.pix {
+       font-size: 1.2em;
+       padding: 10px;
+       margin: 0px;
+       border: 1px solid black
+     }
+     #pagamento>.conta>p {
+       font-size: 1.2em;
+       padding: 10px;
+       margin: 0;
+       border: 1px solid black
+     }
+     .conta>table {
+       margin-top: 0;
+       margin-bottom: 20px;
+       border-collapse: collapse;
+       width: 100%
+     }
+     .conta_col {
+       padding: 10px;
+       border: 1px solid black
+     }
+     .conta_col>p {
+       margin: 5px
+     }
+     /* pagamento */
+     #dados{
+       width: 100%;
+       border: 1px solid black;
+       border-collapse: collapse;
+       text-align: center;
+       font-size: 28px;
+       font-weight: bold;
+       margin-top: 50px
+     }
+     #dados>tbody>tr>td {
+       width: 50%;
+       padding: 4px
+     }
+     #dados>tbody>tr>td.dados_col1 {
+       background: rgb(153,199,207)
+     }
+     #dados>tbody>tr>td.dados_col2 {
+       background: rgb(14,74,135);
+       color: white
+     }
+     /* table */
+     #posting-table {
+       border-collapse: collapse;
+       font-size: 16px;
+       width: 100%;
+       margin-top: 30px
+     }
+     #posting-table thead tr {
+       background-color: #009879;
+       color: #ffffff;
+       text-align: left;
+       font-size: 18px
+     }
+     #posting-table th, #posting-table td {
+       padding: 12px 15px;
+     }
+     
+     #posting-table tbody tr {
+       border-bottom: 1px solid #dddddd;
+     }
+     #posting-table tbody tr:nth-of-type(even) {
+       background-color: #f3f3f3;
+     }
+     #posting-table tbody tr:last-of-type(odd) {
+       border-bottom: 2px solid #009879;
+     }
+     
+     .col_valor {
+       width: 150px;
+     }
+    </style>
+  </body>
