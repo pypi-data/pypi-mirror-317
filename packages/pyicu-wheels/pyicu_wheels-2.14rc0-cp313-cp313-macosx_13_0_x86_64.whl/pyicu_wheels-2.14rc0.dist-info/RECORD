@@ -1,0 +1,10 @@
+pyicu_wheels-2.14rc0.dist-info/RECORD,,
+pyicu_wheels-2.14rc0.dist-info/WHEEL,sha256=uOGGsucezCbvoGZmxUjG0El4virWi9Au4r5_27OKhU0,106
+pyicu_wheels-2.14rc0.dist-info/METADATA,sha256=FxSC1BF2ZIw4WlQtfExbFXYnaI1HyujMwaTtoWEzLrE,1663
+pyicu_wheels-2.14rc0.dist-info/licenses/LICENSE.txt,sha256=B05uMshqTA74s-0ltyHKI6yoPfJ3zYgQbvcXfDVGFf8,10280
+icu/_icu_.cpython-313-darwin.so,sha256=Jr8b9ZCxaAUbtHN86BN8TSsPPH8L21EO7Wt-tSCXVVU,1569312
+icu/__init__.py,sha256=NWwSqUo-rXGl7BpS8x80YmVw8kh1pfhjqRiwMsPZPc8,1589
+icu/__about__.py,sha256=K19rsoaNzhHCOJ1xyVHiYTdeHXx6GhQL2ptLXuDXjYM,137
+icu/.dylibs/libicuuc.76.1.dylib,sha256=ZBWdwexq2RiWeVrYAahbGL899P42Xxy31C7qua4fcjs,1822128
+icu/.dylibs/libicudata.76.1.dylib,sha256=1hcuzCOQhY0djqLLmd3aQpPz2pHSGEtY4Q2Am-TsMbE,32134224
+icu/.dylibs/libicui18n.76.1.dylib,sha256=KGZYbGcnLUC7TgUP6D2RxJOfY4gCnT3u9Gqx_xMaccQ,3109392
