@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/core/reasoner_base.py
+src/core/skill_base.py
+src/core/speech_to_text_base.py
+src/core/text_to_speech_base.py
+src/core/wakeword_base.py
+src/jvcore.egg-info/PKG-INFO
+src/jvcore.egg-info/SOURCES.txt
+src/jvcore.egg-info/dependency_links.txt
+src/jvcore.egg-info/top_level.txt
