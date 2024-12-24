@@ -1,0 +1,2 @@
+[vpype.plugins]
+ftext = vpype_ttf.ftext:ftext
