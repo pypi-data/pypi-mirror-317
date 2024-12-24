@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+gdgc.egg-info/PKG-INFO
+gdgc.egg-info/SOURCES.txt
+gdgc.egg-info/dependency_links.txt
+gdgc.egg-info/requires.txt
+gdgc.egg-info/top_level.txt
+pattern/__init__.py
+pattern/plot.py
