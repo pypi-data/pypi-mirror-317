@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: SajadFreeEnc
+Version: 1
+Summary: an encryption library for @K_D_QQ sajad
+Author: SajadFreeEnc
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
