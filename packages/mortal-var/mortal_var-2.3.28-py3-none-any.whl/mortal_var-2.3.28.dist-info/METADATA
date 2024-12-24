@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mortal_var
+Version: 2.3.28
+Summary: 'mortal工具集::var'
+Author: MJ
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: mortal-func
+
+'mortal工具集::var'
