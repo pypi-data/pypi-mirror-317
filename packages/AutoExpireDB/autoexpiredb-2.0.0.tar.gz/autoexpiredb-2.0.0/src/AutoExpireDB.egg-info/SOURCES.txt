@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/AutoExpireDB.egg-info/PKG-INFO
+src/AutoExpireDB.egg-info/SOURCES.txt
+src/AutoExpireDB.egg-info/dependency_links.txt
+src/AutoExpireDB.egg-info/requires.txt
+src/AutoExpireDB.egg-info/top_level.txt

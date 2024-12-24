@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: AutoExpireDB
+Version: 2.0.0
+Summary: A library for automatically expiring database users and password entries.
+Home-page: https://github.com/mafiaguy/AutoExpireDB
+Author: Siddhanth
+Author-email: thebiryanimonsterr@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psycopg2-binary
+
+# AutoExpireDB
+
+## Overview
+
+`AutoExpireDB` is a Python package designed to manage temporary PostgreSQL database users. It's useful for creating temporary users for short-lived access, with automatic cleanup after a specified duration.
+
+## Features
+
+- Create and drop temporary users.
+- Automatically drop users after a set time.
+- Grant specific permissions to the temporary users.
+
+## Installation
+
+You can install this package via pip (once it's published):
+
+```bash
+pip AutoExpireDB
