@@ -1,0 +1,26 @@
+name: ocsmesh
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.9
+  - gdal
+  - geos
+  - proj
+  - netcdf4
+  - udunits2
+  - pyproj
+  - shapely
+  - rasterio
+  - fiona
+  - geopandas>=1.0.0
+  - utm
+  - scipy
+  - numba
+  - numpy>=1.21 # numpy.typing
+  - matplotlib>=3.8
+  - mpi4py
+  - pyarrow
+  - pytz
+  - colored-traceback<=0.3.0
+  - typing-extensions
+  - jigsawpy
