@@ -1,0 +1,4 @@
+[gui_scripts]
+merge-dialog = secure_cartography.merge_dialog:main
+mviewer = secure_cartography.mviewer:main
+scart = secure_cartography.scart:main

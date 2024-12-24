@@ -1,0 +1,354 @@
+Metadata-Version: 2.1
+Name: secure-cartography
+Version: 0.5.0
+Summary: A secure, Python-based network discovery and mapping tool using SSH-based device interrogation
+Home-page: https://github.com/scottpeterman/secure_cartography
+Author: Scott Peterman
+Author-email: scottpeterman@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: X11 Applications
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: Security
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: backports.tarfile>=1.2.0
+Requires-Dist: bcrypt>=4.2.1
+Requires-Dist: blinker>=1.9.0
+Requires-Dist: certifi>=2024.12.14
+Requires-Dist: cffi>=1.17.1
+Requires-Dist: charset-normalizer>=3.4.0
+Requires-Dist: click>=8.1.8
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: contourpy>=1.3.0
+Requires-Dist: cryptography>=44.0.0
+Requires-Dist: cycler>=0.12.1
+Requires-Dist: docutils>=0.21.2
+Requires-Dist: et_xmlfile>=2.0.0
+Requires-Dist: Flask>=3.1.0
+Requires-Dist: fonttools>=4.55.3
+Requires-Dist: future>=1.0.0
+Requires-Dist: idna>=3.10
+Requires-Dist: igraph>=0.11.8
+Requires-Dist: importlib_metadata>=8.5.0
+Requires-Dist: importlib_resources>=6.4.5
+Requires-Dist: itsdangerous>=2.2.0
+Requires-Dist: jaraco.classes>=3.4.0
+Requires-Dist: jaraco.context>=6.0.1
+Requires-Dist: jaraco.functools>=4.1.0
+Requires-Dist: Jinja2>=3.1.5
+Requires-Dist: junos-eznc>=2.7.2
+Requires-Dist: keyring>=25.5.0
+Requires-Dist: kiwisolver>=1.4.7
+Requires-Dist: lxml>=5.3.0
+Requires-Dist: markdown-it-py>=3.0.0
+Requires-Dist: MarkupSafe>=3.0.2
+Requires-Dist: matplotlib>=3.9.4
+Requires-Dist: mdurl>=0.1.2
+Requires-Dist: more-itertools>=10.5.0
+Requires-Dist: n2g>=0.3.3
+Requires-Dist: napalm>=5.0.0
+Requires-Dist: ncclient>=0.6.15
+Requires-Dist: netaddr>=1.3.0
+Requires-Dist: netmiko>=4.5.0
+Requires-Dist: netutils>=1.10.0
+Requires-Dist: networkx>=3.2.1
+Requires-Dist: nh3>=0.2.20
+Requires-Dist: ntc_templates>=7.5.0
+Requires-Dist: numpy>=2.0.2
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: packaging>=24.2
+Requires-Dist: paramiko>=3.5.0
+Requires-Dist: pillow>=11.0.0
+Requires-Dist: pkginfo>=1.12.0
+Requires-Dist: pycparser>=2.22
+Requires-Dist: pyeapi>=1.0.4
+Requires-Dist: Pygments>=2.18.0
+Requires-Dist: PyNaCl>=1.5.0
+Requires-Dist: pynxos>=0.0.5
+Requires-Dist: pyparsing>=3.2.0
+Requires-Dist: PyQt6>=6.8.0
+Requires-Dist: PyQt6-Qt6>=6.8.1
+Requires-Dist: PyQt6-WebEngine>=6.8.0
+Requires-Dist: PyQt6-WebEngine-Qt6>=6.8.1
+Requires-Dist: PyQt6_sip>=13.9.1
+Requires-Dist: pyserial>=3.5
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: python-igraph>=0.11.8
+Requires-Dist: pywin32-ctypes>=0.2.3
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: readme_renderer>=44.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: requests-toolbelt>=1.0.0
+Requires-Dist: rfc3986>=2.0.0
+Requires-Dist: rich>=13.9.4
+Requires-Dist: ruamel.yaml>=0.18.6
+Requires-Dist: ruamel.yaml.clib>=0.2.12
+Requires-Dist: scp>=0.15.0
+Requires-Dist: six>=1.17.0
+Requires-Dist: textfsm>=1.1.3
+Requires-Dist: texttable>=1.7.0
+Requires-Dist: transitions>=0.9.2
+Requires-Dist: ttp>=0.9.5
+Requires-Dist: ttp-templates>=0.3.7
+Requires-Dist: typing_extensions>=4.12.2
+Requires-Dist: urllib3>=2.3.0
+Requires-Dist: Werkzeug>=3.1.3
+Requires-Dist: yamlordereddictloader>=0.4.2
+Requires-Dist: zipp>=3.21.0
+
+# Secure Cartography
+
+Secure Cartography is a secure, Python-based network discovery and mapping tool designed for network engineers and IT professionals. It leverages SSH-based device interrogation to automate network discovery, visualize network topologies, and merge network maps across multi-vendor environments.
+
+![Main Application](https://raw.githubusercontent.com/scottpeterman/secure_cartography/refs/heads/main/screenshots/scart.png)
+
+**Topology Merge Tool**
+   ```bash
+   python -m secure_cartography.merge_dialog
+   ```
+
+![Map Merge Tool](https://raw.githubusercontent.com/scottpeterman/secure_cartography/refs/heads/main/screenshots/map_merge.png)
+
+**Architecture**
+![arch](https://raw.githubusercontent.com/scottpeterman/secure_cartography/refs/heads/main/docs/architecture.png)
+
+
+## Quick Start Guide
+
+1. **Network Discovery and Mapping**
+   ```bash
+   python -m secure_cartography.scart
+   ```
+
+2. **Topology Merge Tool**
+   ```bash
+   python -m secure_cartography.merge_dialog
+   ```
+
+## Key Features
+
+### Medium to Large diagrams
+![Complex Network Map](https://raw.githubusercontent.com/scottpeterman/secure_cartography/refs/heads/main/screenshots/complexmap.png)
+
+### Network Discovery
+- Multi-threaded SSH-based device discovery
+- Support for multiple vendor platforms (Cisco IOS, NX-OS, Arista EOS)
+- Configurable discovery depth and timeout settings
+- Real-time discovery progress monitoring
+- Device platform auto-detection
+- Smart exclusion pattern support (e.g., `othersite-,sep` to exclude specific sites and IP phones)
+
+### Security
+- Master password-based encryption system
+- Machine-specific keyring integration
+- No plaintext passwords stored
+- PBKDF2-based key derivation
+- Encrypted credential storage
+
+### Visualization
+- Dark mode optimized network diagrams
+- Multiple layout algorithms:
+  - Kamada-Kawai (KK) for general topologies
+  - Circular layout for ring networks
+  - Multipartite for layered networks
+- SVG output for high-quality graphics
+- Real-time preview capabilities
+
+### Map Merging
+- Intelligent topology merging with preview
+- Maintains connection integrity
+- Connection de-duplication
+- Multiple file support
+- Comprehensive merge logging
+
+## Installation
+
+### From PyPI
+```bash
+pip install secure-cartography
+```
+
+### From GitHub
+```bash
+# Clone the repository
+git clone https://github.com/scottpeterman/secure_cartography.git
+cd secure_cartography
+
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# then run the executable
+scart 
+
+# or
+
+merge-dialog
+
+# first tme run will take a bit for byte code to compile
+
+# for additional debuge detail from the console, you can also run as a module:
+>python -m secure_cartography.scart
+```
+
+## Core Requirements
+- Python 3.9+
+- PyQt6
+- NetworkX
+- Matplotlib
+- Cryptography
+- PyYAML
+- Paramiko
+
+## System Compatibility
+
+### Tested Environments
+- Windows 10 & 11
+- Ubuntu 24.04
+- Mac OSX (latest as of 12-20-24)
+- Python versions 3.9 and 3.12
+
+### Known Issues
+- Python 3.13: Compatibility issues with Napalm library
+
+## Supported Export Formats
+
+### yEd GraphML (.graphml)
+![yEd Example](https://raw.githubusercontent.com/scottpeterman/secure_cartography/refs/heads/main/screenshots/yed1.png)
+- Multiple automatic layout algorithms
+- Advanced grouping capabilities
+- Neighborhood analysis for large networks
+- High-quality vector export
+
+### draw.io (.drawio)
+![draw.io Example](https://raw.githubusercontent.com/scottpeterman/secure_cartography/refs/heads/main/screenshots/drawio.png)
+- Collaborative diagram editing
+- Web-based access
+- Multiple export formats
+- Custom stencils and shapes
+
+## Version History
+
+### 0.2.0
+Major improvements in this release:
+
+- Added support for Aruba/HP ProCurve switches (non-CX)
+- Improved device discovery reliability with better hostname and IP tracking
+- Enhanced neighbor discovery with platform-specific optimizations
+- Added comprehensive debug logging for better troubleshooting
+- Improved handling of device connections and topology mapping
+- Better platform detection and validation across vendors
+- More robust error handling and recovery
+
+Note: This version maintains backward compatibility with 0.1.0 configurations and outputs.
+
+## Technology Stack
+
+### Core Technologies
+- Python 3.9+
+- PyQt6 for GUI
+- NetworkX for graph processing
+- Matplotlib for visualization
+- Cryptography.io for security
+
+### Security Components
+- PBKDF2 key derivation
+- Fernet encryption
+- System keyring integration
+- Platform-specific secure storage
+
+### Network Interaction
+- Paramiko/SSH2 for device communication
+- TextFSM for output parsing
+- Custom platform detection
+- Enhanced interface normalization
+
+### Data Storage
+- JSON for topology data
+- YAML for configuration
+- SVG for visualizations
+- Encrypted credential storage
+
+## Security Architecture
+
+### Credential Protection
+1. **Master Password System**
+   - PBKDF2-derived key generation
+   - Machine-specific salt
+   - Secure system keyring integration
+
+2. **Storage Security**
+   - Fernet encryption for credentials
+   - No plaintext password storage
+   - Platform-specific secure storage locations
+
+3. **Runtime Security**
+   - Memory-safe credential handling
+   - Secure credential cleanup
+   - Protected GUI input fields
+
+# Appendix A: TFSM_Fire - Intelligent Template Matching
+
+## Overview
+
+TFSM_Fire represents a novel approach to TextFSM template matching that uses an intelligent scoring system and thread-safe database operations to automatically select the best parsing template for network device output.
+
+![tfsm_fire](https://raw.githubusercontent.com/scottpeterman/secure_cartography/refs/heads/main/docs/tfsm_fire.png)
+
+## Key Features
+
+### 1. Intelligent Template Selection
+```python
+def find_best_template(self, device_output: str, filter_string: Optional[str] = None) -> Tuple[
+    Optional[str], Optional[List[Dict]], float]:
+```
+- Automatically evaluates multiple templates against device output
+- Returns the best matching template, parsed output, and confidence score
+- Uses sophisticated scoring algorithm to determine template fitness
+- Supports optional filtering to narrow template search space
+
+### 2. Thread-Safe Design
+```python
+class ThreadSafeConnection:
+    """Thread-local storage for SQLite connections"""
+    def __init__(self, db_path: str, verbose: bool = False):
+        self.db_path = db_path
+        self.verbose = verbose
+        self._local = threading.local()
+```
+- Implements thread-local storage for database connections
+- Ensures safe concurrent access to template database
+- Manages connection lifecycle automatically
+- Supports high-performance parallel template matching
+
+### 3. Scoring Algorithm
+The template scoring system evaluates matches based on multiple factors:
+- Number of successfully parsed records
+- Special handling for version command output
+- Intelligent weighting based on command type
+- Score normalization for consistent evaluation
+
+### 4. Template Filtering
+```python
+def get_filtered_templates(self, connection: sqlite3.Connection, filter_string: Optional[str] = None):
+    """Get filtered templates from database using provided connection."""
+    if filter_string:
+        filter_terms = filter_string.replace('-', '_').split('_')
+        query = "SELECT * FROM templates WHERE 1=1"
+        params = []
+        for term in filter_terms:
+            if term and len(term) > 2:
+                query += " AND cli_command LIKE ?"
+                params.append(f"%{term}%")
+```
+- Smart filtering of template database
+- Handles hyphenated command names
+- Minimum term length requirements
+- SQL injection prevention
