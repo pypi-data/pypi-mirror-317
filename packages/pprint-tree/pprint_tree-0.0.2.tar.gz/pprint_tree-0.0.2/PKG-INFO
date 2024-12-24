@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: pprint_tree
+Version: 0.0.2
+Summary: SOME DESCRIPTION
+Project-URL: Homepage, https://github.com/zlliu246/pprint_tree
+Project-URL: Issues, https://github.com/zlliu246/pprint_tree/issues
+Author-email: Liu Zuo Lin <zlliu246@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+
+# pprint_tree
+Short description of project
+
+# Installation
+```
+pip install pprint_tree
+```
+
+# Quickstart
+```python
+# some code
+```
