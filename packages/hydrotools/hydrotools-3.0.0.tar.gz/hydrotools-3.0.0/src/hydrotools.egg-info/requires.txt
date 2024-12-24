@@ -1,0 +1,8 @@
+hydrotools.nwis_client==4.0.0
+hydrotools.nwm_client==9.0.0
+hydrotools.events==2.0.0
+hydrotools.metrics==2.0.0
+hydrotools.svi_client==1.0.0
+
+[develop]
+pytest
