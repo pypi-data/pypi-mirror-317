@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: caasm-essence
+Version: 0.1.21
+Summary: 未岚科技CAASM平台核心类库
+Home-page: UNKNOWN
+Author: rendajiang@weilansec
+Author-email: rendajiang@weilansec.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: caasm-base (==0.1.21)
+Requires-Dist: pymongo (==3.12.3)
+Requires-Dist: elasticsearch (==8.3.1)
+Requires-Dist: antlr4-python3-runtime (==4.10)
+Requires-Dist: nanoid (==2.0.0)
+Requires-Dist: marshmallow (==3.14.1)
+Requires-Dist: marshmallow-enum (==1.5.1)
+Requires-Dist: cachetools (==5.5.0)
+Requires-Dist: pytz (==2021.3)
+Requires-Dist: arrow (==1.2.2)
+Requires-Dist: pyorient (==1.5.1)
+Requires-Dist: ujson (==5.4.0)
+Requires-Dist: protobuf (==3.20.3)
+
+UNKNOWN
+
