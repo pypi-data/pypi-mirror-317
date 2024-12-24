@@ -1,0 +1,17 @@
+django_polls/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_polls/admin.py,sha256=dcqwyxSrkD3bBaf_4VrsFIj_N-jQnbowHtYCce14Wtk,97
+django_polls/apps.py,sha256=buX8aqQGBZkvtgWCJCvnatlHIJ7EXPhnhVMIx_fv3-4,174
+django_polls/models.py,sha256=UX3KF5Ewa93KzJUKN9URy9fgeg5bP_AbagY1CXSDR80,693
+django_polls/tests.py,sha256=DXAgRFaUvGupWeJCUyd3617YW2mLRS9rCpa-i20FQW8,2778
+django_polls/urls.py,sha256=iwNjM_kIlR5f_nopHK2Gnu6qta4LcVreNrvqbBeIV2Y,356
+django_polls/views.py,sha256=J5-YG_mJTpJM-dwn6CHjw88c-cAxHPD1OpVsMSiiTqo,2287
+django_polls/migrations/0001_initial.py,sha256=_2D1MHyniNxAaQs4urM5yzkPvrRqmBGL-YX97FYDdEE,1114
+django_polls/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_polls/static/polls/style.css,sha256=DXVSl19mE92L4lP2atYlFJbkGjgYHkHAtDg4Ifn_ecc,28
+django_polls/templates/polls/detail.html,sha256=GOULttCoQ4Piwa6kHb9Gdbgk62eg7TTAXSQbLClJt1g,593
+django_polls/templates/polls/index.html,sha256=9E921VECOczSzUvR68TpG0h2meeXJbWjFskE1dM1hQQ,357
+django_polls/templates/polls/results.html,sha256=Z57YKAjfsLVXEkVutiY9OF-5C8ZRvxcM-fYiCuqNlJ0,271
+krid_polls-0.1.dist-info/METADATA,sha256=2PZXra0sXHAeCPlYAalpIXDVawl_E_80b1zHOUpXDAk,1748
+krid_polls-0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+krid_polls-0.1.dist-info/top_level.txt,sha256=KG2F7tcdPOf1hwCMa7mKaA2IGG7GJvuM3dLyC5xo6jE,13
+krid_polls-0.1.dist-info/RECORD,,
