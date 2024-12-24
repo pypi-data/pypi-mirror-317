@@ -1,0 +1,49 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Conta j\u00e1 configurada",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "password": "Palavra-passe"
+                },
+                "data_description": {
+                    "password": "A palavra-passe da sua conta Powerfox."
+                },
+                "title": "A autentica\u00e7\u00e3o expirou para {name}"
+            },
+            "reconfigure": {
+                "data": {
+                    "email": "E-mail",
+                    "password": "Palavra-passe"
+                }
+            },
+            "user": {
+                "data": {
+                    "email": "E-mail",
+                    "password": "Palavra-passe"
+                },
+                "data_description": {
+                    "password": "A palavra-passe da sua conta Powerfox."
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "cold_water": {
+                "name": "\u00c1gua fria"
+            },
+            "warm_water": {
+                "name": "\u00c1gua morna"
+            }
+        }
+    }
+}

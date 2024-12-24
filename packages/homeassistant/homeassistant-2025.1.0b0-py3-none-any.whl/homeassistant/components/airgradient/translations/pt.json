@@ -1,0 +1,63 @@
+{
+    "entity": {
+        "select": {
+            "co2_automatic_baseline_calibration": {
+                "state": {
+                    "0": "Desligado"
+                }
+            },
+            "display_pm_standard": {
+                "state": {
+                    "ugm3": "\u00b5g/m\u00b3"
+                }
+            },
+            "display_temperature_unit": {
+                "state": {
+                    "c": "Celsius",
+                    "f": "Fahrenheit"
+                }
+            },
+            "led_bar_mode": {
+                "state": {
+                    "co2": "Di\u00f3xido de carbono",
+                    "off": "Desligado"
+                }
+            },
+            "nox_index_learning_time_offset": {
+                "state": {
+                    "120": "120 horas",
+                    "360": "360 horas",
+                    "60": "60 horas",
+                    "720": "720 horas"
+                }
+            },
+            "voc_index_learning_time_offset": {
+                "state": {
+                    "120": "120 horas",
+                    "360": "360 horas",
+                    "60": "60 horas",
+                    "720": "720 horas"
+                }
+            }
+        },
+        "sensor": {
+            "display_pm_standard": {
+                "state": {
+                    "ugm3": "\u00b5g/m\u00b3"
+                }
+            },
+            "display_temperature_unit": {
+                "state": {
+                    "c": "Celsius",
+                    "f": "Fahrenheit"
+                }
+            },
+            "led_bar_mode": {
+                "state": {
+                    "co2": "Di\u00f3xido de carbono",
+                    "off": "Desligado"
+                }
+            }
+        }
+    }
+}

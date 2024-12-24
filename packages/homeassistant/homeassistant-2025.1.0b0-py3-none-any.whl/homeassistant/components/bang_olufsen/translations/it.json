@@ -1,0 +1,11 @@
+{
+    "services": {
+        "beolink_join": {
+            "fields": {
+                "source_id": {
+                    "name": "Fonte"
+                }
+            }
+        }
+    }
+}

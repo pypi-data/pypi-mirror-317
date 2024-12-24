@@ -1,0 +1,90 @@
+{
+    "entity_component": {
+        "_": {
+            "name": "Seznam \u00fakol\u016f"
+        }
+    },
+    "exceptions": {
+        "item_not_found": {
+            "message": "Nelze naj\u00edt polo\u017eku seznamu \u00fakol\u016f: {item}"
+        },
+        "update_field_not_supported": {
+            "message": "Entita nepodporuje nastaven\u00ed pole: {service_field}"
+        }
+    },
+    "selector": {
+        "status": {
+            "options": {
+                "completed": "Dokon\u010deno",
+                "needs_action": "Nedokon\u010deno"
+            }
+        }
+    },
+    "services": {
+        "add_item": {
+            "fields": {
+                "description": {
+                    "description": "\u00dapln\u011bj\u0161\u00ed popis polo\u017eky \u00fakolu, ne\u017e poskytuje n\u00e1zev polo\u017eky.",
+                    "name": "Popis"
+                },
+                "due_date": {
+                    "description": "Datum, kdy se o\u010dek\u00e1v\u00e1 dokon\u010den\u00ed \u00fakolu.",
+                    "name": "Datum dokon\u010den\u00ed"
+                },
+                "due_datetime": {
+                    "description": "Datum a \u010das, kdy se o\u010dek\u00e1v\u00e1 dokon\u010den\u00ed \u00fakolu.",
+                    "name": "Datum a \u010das dokon\u010den\u00ed"
+                },
+                "item": {
+                    "description": "N\u00e1zev, kter\u00fd p\u0159edstavuje polo\u017eku \u00fakolu.",
+                    "name": "N\u00e1zev polo\u017eky"
+                }
+            }
+        },
+        "get_items": {
+            "fields": {
+                "status": {
+                    "description": "Vr\u00e1t\u00ed jen polo\u017eky \u00fakol\u016f se zadan\u00fdmi stavy. Ve v\u00fdchoz\u00edm nastaven\u00ed vrac\u00ed nedokon\u010den\u00e9 akce.",
+                    "name": "Stav"
+                }
+            }
+        },
+        "remove_item": {
+            "fields": {
+                "item": {
+                    "description": "N\u00e1zev polo\u017eky seznamu \u00fakol\u016f.",
+                    "name": "N\u00e1zev polo\u017eky"
+                }
+            }
+        },
+        "update_item": {
+            "fields": {
+                "description": {
+                    "description": "\u00dapln\u011bj\u0161\u00ed popis polo\u017eky \u00fakolu, ne\u017e poskytuje n\u00e1zev polo\u017eky.",
+                    "name": "Popis"
+                },
+                "due_date": {
+                    "description": "Datum, kdy se o\u010dek\u00e1v\u00e1 dokon\u010den\u00ed \u00fakolu.",
+                    "name": "Datum dokon\u010den\u00ed"
+                },
+                "due_datetime": {
+                    "description": "Datum a \u010das, kdy se o\u010dek\u00e1v\u00e1 dokon\u010den\u00ed \u00fakolu.",
+                    "name": "Datum a \u010das dokon\u010den\u00ed"
+                },
+                "item": {
+                    "description": "Aktu\u00e1ln\u00ed n\u00e1zev polo\u017eky seznamu \u00fakol\u016f.",
+                    "name": "N\u00e1zev polo\u017eky"
+                },
+                "rename": {
+                    "description": "Nov\u00fd n\u00e1zev polo\u017eky \u00fakolu",
+                    "name": "P\u0159ejmenovat polo\u017eku"
+                },
+                "status": {
+                    "description": "Stav nebo potvrzen\u00ed polo\u017eky v seznamu \u00fakol\u016f.",
+                    "name": "Nastavit stav"
+                }
+            }
+        }
+    },
+    "title": "Seznam \u00fakol\u016f"
+}

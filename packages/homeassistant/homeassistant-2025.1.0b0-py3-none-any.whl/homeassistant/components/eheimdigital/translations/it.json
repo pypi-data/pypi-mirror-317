@@ -1,0 +1,25 @@
+{
+    "config": {
+        "error": {
+            "cannot_connect": "Impossibile connettersi",
+            "unknown": "Errore imprevisto"
+        },
+        "step": {
+            "discovery_confirm": {
+                "description": "Vuoi avviare la configurazione?"
+            },
+            "user": {
+                "data": {
+                    "host": "Host"
+                }
+            }
+        }
+    },
+    "entity": {
+        "light": {
+            "channel": {
+                "name": "Canale {channel_id}"
+            }
+        }
+    }
+}
