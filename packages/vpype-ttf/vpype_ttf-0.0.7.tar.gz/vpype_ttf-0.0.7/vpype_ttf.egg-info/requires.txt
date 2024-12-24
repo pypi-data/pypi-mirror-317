@@ -1,0 +1,4 @@
+click
+vpype<2.0,>=1.9
+numpy
+freetype-py

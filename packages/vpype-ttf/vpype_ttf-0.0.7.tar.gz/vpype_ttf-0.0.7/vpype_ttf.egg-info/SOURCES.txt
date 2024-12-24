@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+vpype_ttf/ftext.py
+vpype_ttf.egg-info/PKG-INFO
+vpype_ttf.egg-info/SOURCES.txt
+vpype_ttf.egg-info/dependency_links.txt
+vpype_ttf.egg-info/entry_points.txt
+vpype_ttf.egg-info/requires.txt
+vpype_ttf.egg-info/top_level.txt
