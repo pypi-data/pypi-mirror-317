@@ -1,0 +1,2 @@
+[console_scripts]
+doiget-tdm = doiget_tdm.cli:main
