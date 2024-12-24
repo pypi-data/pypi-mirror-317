@@ -1,0 +1,11 @@
+bma_client_lib/__init__.py,sha256=em9rNA4WwQo5qML0oXSADXtMv6zUhNUYv9iwnXnwDCQ,86
+bma_client_lib/bma_client.py,sha256=dzn0uHmfEHCzy1GU6_HwHNgdBuma3FAcv7pPHkyQbgY,19611
+bma_client_lib/datastructures.py,sha256=BP5-b7WsIw-j1_UX6xAPd95DhY0_z9yxQdFNb6cyafQ,2033
+bma_client_lib/pillow_resize_and_crop.py,sha256=aPAM9SZ1vSnuVnnbg1_cthjJZueVCsMYOMKo-lalgjU,5139
+bma_client_lib/tests/__init__.py,sha256=ivjcP9zlOrL8ZXNGmjdscnGAKCdvb5Sx6hZj6Zjpsr4,33
+bma_client_lib/tests/test_pillow_resize_and_crop.py,sha256=aSkeCzgOR_o0OWJJ1ze2VhI7BGgntCAlcSlpfYrYHHE,3469
+bma_client_lib-0.11.1.dist-info/LICENSE,sha256=g5l_jJGyKwtLOrhRXeviul4FV8az-aY34o0_VUR4t44,1495
+bma_client_lib-0.11.1.dist-info/METADATA,sha256=i3fbw_IdFG7fs9aWDFao2I_kBkqW8AAo_g5UhOxnLJ8,1265
+bma_client_lib-0.11.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+bma_client_lib-0.11.1.dist-info/top_level.txt,sha256=_7uCPv5XA3JcNf6oCkysk66eFZo578GYKhouusVLVMA,15
+bma_client_lib-0.11.1.dist-info/RECORD,,
