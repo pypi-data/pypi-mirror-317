@@ -1,0 +1,9 @@
+chia_puzzles_py/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chia_puzzles_py/manage_clvm.py,sha256=H0R7Z12k5m0QIZfsmLGPsTdzW6VGnmvUhy1FXbqX3tw,175
+chia_puzzles_py/programs.py,sha256=rVFE5N8BCuhLRgzOG_D32iXcGEy2zSGomdo3eOsvQJA,79960
+chia_puzzles_py/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chia_puzzles_py/tests/test_import.py,sha256=oDL_TXGpmm-3v6QIXArB7AU2IMXZOWiKG7dl44A0ZKA,5904
+chia_puzzles_py-0.19.2.dist-info/LICENSE,sha256=QsHs53_We_JTOMH_GprgI5-zMC9KC7D-Vws6Zi4efPM,11347
+chia_puzzles_py-0.19.2.dist-info/METADATA,sha256=L13Ekxft8VL2BUA6srDSAt2Sd6BnPIRRNhIF1VMyRMk,1875
+chia_puzzles_py-0.19.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+chia_puzzles_py-0.19.2.dist-info/RECORD,,
