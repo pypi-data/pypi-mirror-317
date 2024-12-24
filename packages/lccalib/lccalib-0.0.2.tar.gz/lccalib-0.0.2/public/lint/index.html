@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Stephan Müller" />
+
+  <title>pylint</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">pylint</span>
+  </nav>
+
+  <section class="content">
+    <div class="container-fluid mt-3">
+        <div class="card bg-light mb-3">
+          <div class="card-header">
+            <h5 class="mb-0">lccalib.averaging</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover table-sm">
+                <thead class="thead-light">
+                  <tr scope="col">
+                    <th></th>
+                    <th data-field="line">Line</th>
+                    <th data-field="column">Column</th>
+                    <th data-field="type">Type</th>
+                    <th data-field="obj">Object</th>
+                    <th data-field="message">Message</th>
+                    <th data-field="symbol">Symbol</th>
+                    <th data-field="message_id">Message Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-warning">
+                    <td><a href="https://gitlab.in2p3.fr/lemaitre/lccalib/blob/0.0.2/src/lccalib/averaging.py#L331" class="btn btn-light btn-sm" role="button"><i class="fas fa-code"></i> Source</a></td>
+                    <td>331</td>
+                    <td>27</td>
+                    <td>warning</td>
+                    <td></td>
+                    <td>todo remove this as soon as mklc is fixed</td>
+                    <td>fixme</td>
+                    <td>W0511</td>
+                  </tr>
+                  <tr class="table-primary">
+                    <td><a href="https://gitlab.in2p3.fr/lemaitre/lccalib/blob/0.0.2/src/lccalib/averaging.py#L80" class="btn btn-light btn-sm" role="button"><i class="fas fa-code"></i> Source</a></td>
+                    <td>80</td>
+                    <td>0</td>
+                    <td>refactor</td>
+                    <td>star_lc_averager</td>
+                    <td>Too many positional arguments (6/5)</td>
+                    <td>too-many-positional-arguments</td>
+                    <td>R0917</td>
+                  </tr>
+                  <tr class="table-primary">
+                    <td><a href="https://gitlab.in2p3.fr/lemaitre/lccalib/blob/0.0.2/src/lccalib/averaging.py#L266" class="btn btn-light btn-sm" role="button"><i class="fas fa-code"></i> Source</a></td>
+                    <td>266</td>
+                    <td>0</td>
+                    <td>refactor</td>
+                    <td>night_averager</td>
+                    <td>Too many positional arguments (6/5)</td>
+                    <td>too-many-positional-arguments</td>
+                    <td>R0917</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-light mb-3">
+          <div class="card-header">
+            <h5 class="mb-0">lccalib.match</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover table-sm">
+                <thead class="thead-light">
+                  <tr scope="col">
+                    <th></th>
+                    <th data-field="line">Line</th>
+                    <th data-field="column">Column</th>
+                    <th data-field="type">Type</th>
+                    <th data-field="obj">Object</th>
+                    <th data-field="message">Message</th>
+                    <th data-field="symbol">Symbol</th>
+                    <th data-field="message_id">Message Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-error">
+                    <td><a href="https://gitlab.in2p3.fr/lemaitre/lccalib/blob/0.0.2/src/lccalib/match.py#L110" class="btn btn-light btn-sm" role="button"><i class="fas fa-code"></i> Source</a></td>
+                    <td>110</td>
+                    <td>39</td>
+                    <td>error</td>
+                    <td>NearestNeighAssoc.append</td>
+                    <td>Possibly using variable 'l' before assignment</td>
+                    <td>possibly-used-before-assignment</td>
+                    <td>E0606</td>
+                  </tr>
+                  <tr class="table-error">
+                    <td><a href="https://gitlab.in2p3.fr/lemaitre/lccalib/blob/0.0.2/src/lccalib/match.py#L146" class="btn btn-light btn-sm" role="button"><i class="fas fa-code"></i> Source</a></td>
+                    <td>146</td>
+                    <td>39</td>
+                    <td>error</td>
+                    <td>NearestNeighAssoc.match</td>
+                    <td>Possibly using variable 'l' before assignment</td>
+                    <td>possibly-used-before-assignment</td>
+                    <td>E0606</td>
+                  </tr>
+                  <tr class="table-error">
+                    <td><a href="https://gitlab.in2p3.fr/lemaitre/lccalib/blob/0.0.2/src/lccalib/match.py#L259" class="btn btn-light btn-sm" role="button"><i class="fas fa-code"></i> Source</a></td>
+                    <td>259</td>
+                    <td>39</td>
+                    <td>error</td>
+                    <td>NearestNeighAssocHealpy.append</td>
+                    <td>Possibly using variable 'l' before assignment</td>
+                    <td>possibly-used-before-assignment</td>
+                    <td>E0606</td>
+                  </tr>
+                  <tr class="table-error">
+                    <td><a href="https://gitlab.in2p3.fr/lemaitre/lccalib/blob/0.0.2/src/lccalib/match.py#L291" class="btn btn-light btn-sm" role="button"><i class="fas fa-code"></i> Source</a></td>
+                    <td>291</td>
+                    <td>39</td>
+                    <td>error</td>
+                    <td>NearestNeighAssocHealpy.match</td>
+                    <td>Possibly using variable 'l' before assignment</td>
+                    <td>possibly-used-before-assignment</td>
+                    <td>E0606</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-light mb-3">
+          <div class="card-header">
+            <h5 class="mb-0">lccalib.zp</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover table-sm">
+                <thead class="thead-light">
+                  <tr scope="col">
+                    <th></th>
+                    <th data-field="line">Line</th>
+                    <th data-field="column">Column</th>
+                    <th data-field="type">Type</th>
+                    <th data-field="obj">Object</th>
+                    <th data-field="message">Message</th>
+                    <th data-field="symbol">Symbol</th>
+                    <th data-field="message_id">Message Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-primary">
+                    <td><a href="https://gitlab.in2p3.fr/lemaitre/lccalib/blob/0.0.2/src/lccalib/zp.py#L84" class="btn btn-light btn-sm" role="button"><i class="fas fa-code"></i> Source</a></td>
+                    <td>84</td>
+                    <td>0</td>
+                    <td>refactor</td>
+                    <td>plot_diff_mag</td>
+                    <td>Too many positional arguments (7/5)</td>
+                    <td>too-many-positional-arguments</td>
+                    <td>R0917</td>
+                  </tr>
+                  <tr class="table-primary">
+                    <td><a href="https://gitlab.in2p3.fr/lemaitre/lccalib/blob/0.0.2/src/lccalib/zp.py#L131" class="btn btn-light btn-sm" role="button"><i class="fas fa-code"></i> Source</a></td>
+                    <td>131</td>
+                    <td>0</td>
+                    <td>refactor</td>
+                    <td>compute_zp</td>
+                    <td>Too many positional arguments (7/5)</td>
+                    <td>too-many-positional-arguments</td>
+                    <td>R0917</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: lccalib
+Version: 0.0.2
+Summary: SNe calibration package for the Lemaitre pipeline
+Project-URL: Documentation, https://gitlab.in2p3.fr/lemaitre/lccalib#readme
+Project-URL: Issues, https://gitlab.in2p3.fr/lemaitre/lccalib/issues
+Project-URL: Source, https://gitlab.in2p3.fr/lemaitre/lccalib
+Author-email: Marc Betoule <marc.betoule@lpnhe.in2p3.fr>, Maude Le Jeune <lejeune@apc.in2p3.fr>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# lccalib
+
+[![PyPI - Version](https://img.shields.io/pypi/v/lccalib.svg)](https://pypi.org/project/lccalib)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/lccalib.svg)](https://pypi.org/project/lccalib)
+
+-----
+
+## Installation
+
+```console
+pip install lccalib
+```
+
+## Usage
+
+Have a look at the demo scripts in the `tests` subfolder. 
+
+## Authors and acknowledgment
+
+TBD generic statement about Lemaitre acknowledgment policy. 
+

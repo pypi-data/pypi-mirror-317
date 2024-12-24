@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+astropy
+astroquery
+scipy
+fastparquet
+pyarrow
+scikit-sparse
+saltworks
+healpy

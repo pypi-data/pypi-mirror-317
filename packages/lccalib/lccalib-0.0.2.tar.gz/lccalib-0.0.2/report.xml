@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="5.285" timestamp="2024-12-23T12:30:25.293138+00:00" hostname="runner-8de310f4-project-28719-concurrent-1"><testcase classname="tests.test_averaging" name="test_night_avering" time="0.013" /></testsuite></testsuites>
