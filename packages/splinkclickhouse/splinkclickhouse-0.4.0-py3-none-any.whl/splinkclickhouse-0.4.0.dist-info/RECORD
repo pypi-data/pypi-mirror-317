@@ -1,0 +1,16 @@
+splinkclickhouse/__init__.py,sha256=mWSIge0h8Afve1zrfwoRE8IMAyYvnLcGoBuYAieVVcY,791
+splinkclickhouse/column_expression.py,sha256=ngQ0hLwsCokkbvDgnJVMb9pqCrXHDv3_lbiviUaZOPA,1322
+splinkclickhouse/comparison_level_library.py,sha256=aoT6NRSGmkCU-ilkowLu6Df-0np8-AN0hDLrLus2QW4,8876
+splinkclickhouse/comparison_library.py,sha256=qO7ALj13VIxBjBids0CaDYKDt-W4kY1w-7oSmRObnqc,13517
+splinkclickhouse/custom_sql.py,sha256=UWcvN4tb3oF6SqiH4bB6U7lWyXrNunO04c-hXP6Bs0I,2300
+splinkclickhouse/database_api.py,sha256=S5A5chvdZtEa4jNQAcI_WZGiJPgvMFBwrp83hGykpkA,2754
+splinkclickhouse/dataframe.py,sha256=skLy5lg5zuVQ69Paca6s-XATC0lF4q57PZIuQeLbr1k,1324
+splinkclickhouse/dialect.py,sha256=efH0GwDOjRXwkwTTxPByBzwXg8-u4-etPIJZ3EamGYQ,3468
+splinkclickhouse/chdb/database_api.py,sha256=vAhiwlUnTjA16R1FOEOlCAIMNqPIXhZ0zqcZPs3C6Ik,3147
+splinkclickhouse/chdb/dataframe.py,sha256=ITOkQ2bv7NUDN-mXxJPGiPIyGkCaXSyfp10T17Tjxt8,270
+splinkclickhouse/clickhouse_server/database_api.py,sha256=NsKiY5NG7EcYoiWdrK6yqjvyae3xn1WmwRedXfsxwFY,3344
+splinkclickhouse/clickhouse_server/dataframe.py,sha256=ytFIp9IU4bJZENuqEp2UyL3BYUk8_2CT5kKyebumSyc,306
+splinkclickhouse-0.4.0.dist-info/METADATA,sha256=wr65wsfNInCxO7SQZx5arv-w4rp6rvdoH6FTRFXNnz0,11373
+splinkclickhouse-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+splinkclickhouse-0.4.0.dist-info/licenses/LICENSE,sha256=QRifhAxDtKMav2ueMsiMf9Nlj5rcSk3mcgskyABJTO0,1068
+splinkclickhouse-0.4.0.dist-info/RECORD,,
