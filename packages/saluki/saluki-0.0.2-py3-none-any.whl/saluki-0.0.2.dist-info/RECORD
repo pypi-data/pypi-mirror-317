@@ -1,0 +1,10 @@
+saluki/__init__.py,sha256=GSFbWIQhvg-61DC-v4YCpTc8ST74lDnTr8dGKb9TF4w,734
+saluki/consume.py,sha256=k6n5YywPfNXeajOn8vsSjlkJfPDSLHAXAOGkNuhmNKU,2088
+saluki/listen.py,sha256=-oUV94GwIDi6Qcmkyh55wnq9Q5T5JoChO_rnP9q6fx4,1391
+saluki/main.py,sha256=WZBaii9hIxbCAgr3Ni7YP-KQQFHS2KTiRRGzURIrBqs,3438
+saluki-0.0.2.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+saluki-0.0.2.dist-info/METADATA,sha256=sQq9VrnBxu_0doipWgPWZEzGz5WMaFYBwgNudWVoLTk,2103
+saluki-0.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+saluki-0.0.2.dist-info/entry_points.txt,sha256=sCElk-HOKeRQAa1DOg5UKgnaUPce4arvB6u3Iy1IoFs,44
+saluki-0.0.2.dist-info/top_level.txt,sha256=0iBxRKKxjyhrhEOJdvl3fXL4NDuNW_CdGQ6-0W3uaZY,7
+saluki-0.0.2.dist-info/RECORD,,
