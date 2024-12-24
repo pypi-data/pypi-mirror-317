@@ -1,0 +1,9 @@
+pulseaudio_device_control/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pulseaudio_device_control/config.py,sha256=ttjjHh0W3KqSeXJimAQwL8VA4eQfBxRKaBXqy3Ou8Z0,1456
+pulseaudio_device_control/pulseaudio_device_control.py,sha256=0fxL-MVj2ZQHqXn2IkrVwQar8akF5Vyw_5MZSiq2shU,4195
+pulseaudio_device_control-0.3.dist-info/LICENSE,sha256=hwEz4h3280L0x2-lqE7ZMpyLUCO5b0Njn7APj-gq2iM,1073
+pulseaudio_device_control-0.3.dist-info/METADATA,sha256=Nsn8l2UivHUIGgRquqCcYc6HvHLjb7y0HdCBwpIirlc,2959
+pulseaudio_device_control-0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pulseaudio_device_control-0.3.dist-info/entry_points.txt,sha256=k3LCv7HFeQ37J-lwSwXN-UvmZlNM0_vT-ZvH31WwSwY,103
+pulseaudio_device_control-0.3.dist-info/top_level.txt,sha256=5TQkwxb8Unmh2IOY_gZbOQYHUT7AZqxLrBi6Jgncdh4,26
+pulseaudio_device_control-0.3.dist-info/RECORD,,
