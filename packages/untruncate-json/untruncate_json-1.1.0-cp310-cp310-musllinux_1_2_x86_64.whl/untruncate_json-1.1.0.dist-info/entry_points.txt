@@ -1,0 +1,2 @@
+[console_scripts]
+untruncate_json = untruncate_json.__main__:main
