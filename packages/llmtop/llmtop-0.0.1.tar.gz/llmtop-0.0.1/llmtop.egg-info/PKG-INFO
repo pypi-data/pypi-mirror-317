@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: llmtop
+Version: 0.0.1
+Summary: LLM-powered system monitoring with real-time performance insights
+Author: Your Name
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+License-File: LICENSE
