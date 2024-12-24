@@ -1,0 +1,4 @@
+recursive-include src/gisdo *.html *.js *.xls *.xlsx *.xml *.wsdl *.xsd *.py
+include README README.rst DESCRIPTION INSTALL.txt
+recursive-include src/gisdo/mock *.*
+exclude *.orig *.pyc

@@ -1,0 +1,3 @@
+pip install gisdo -i http://pypi.bars-open.ru/simple
+
+
