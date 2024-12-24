@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+local_scheme = "dirty-tag"
+write_to = "robot_hat/version.py"
+
+[project]
+name = "robot_hat"
+description = "Custom version of Robot Hat Python library for Sunfounder's Raspberry Pi robots."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { text = "GNU" }
+authors = [
+    { name = "Karim Aziiev", email = "karim.aziiev@gmail.com" }
+]
+dependencies = [
+    "pygame",
+    "smbus2",
+    "gpiozero",
+    "RPi.GPIO",
+]
+keywords = ["i2c", "raspberrypi"]
+dynamic = ["version"]
+
+[tool.black]
+line-length = 88
+extend_exclude = 'robot_hat/version.py'
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pre-commit",
+]
