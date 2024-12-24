@@ -1,0 +1,7 @@
+README.md
+hello.py
+pyproject.toml
+sqlctx.egg-info/PKG-INFO
+sqlctx.egg-info/SOURCES.txt
+sqlctx.egg-info/dependency_links.txt
+sqlctx.egg-info/top_level.txt
