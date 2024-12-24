@@ -1,0 +1,7 @@
+[console_scripts]
+starbridge = starbridge.cli:cli
+
+[starbridge.services]
+claude = starbridge.claude.service:Service
+confluence = starbridge.confluence.service:Service
+hello = starbridge.hello.service:Service
