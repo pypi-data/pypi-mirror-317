@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/translation_builder/__init__.py
+src/translation_builder/__main__.py
+src/translation_builder/_builder.py
+src/translation_builder/errors.py
+src/translation_builder.egg-info/PKG-INFO
+src/translation_builder.egg-info/SOURCES.txt
+src/translation_builder.egg-info/dependency_links.txt
+src/translation_builder.egg-info/entry_points.txt
+src/translation_builder.egg-info/requires.txt
+src/translation_builder.egg-info/top_level.txt
