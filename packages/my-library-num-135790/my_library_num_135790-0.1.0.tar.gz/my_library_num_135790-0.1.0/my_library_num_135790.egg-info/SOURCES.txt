@@ -1,0 +1,12 @@
+README.md
+setup.py
+my_library_num_135790/__init__.py
+my_library_num_135790/module1.py
+my_library_num_135790/module2.py
+my_library_num_135790.egg-info/PKG-INFO
+my_library_num_135790.egg-info/SOURCES.txt
+my_library_num_135790.egg-info/dependency_links.txt
+my_library_num_135790.egg-info/top_level.txt
+tests/__init__.py
+tests/test_module1.py
+tests/test_module2.py
