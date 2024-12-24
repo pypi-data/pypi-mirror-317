@@ -1,0 +1,92 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reflex-rxchat"
+version = "0.2.4"
+description = "Local chat for Reflex applications"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.12"
+authors = [{ name = "Albert Sola", email = "albert.sola@tardix.net" }]
+keywords = [
+    "reflex",
+    "reflex-custom-components"]
+
+dependencies = [
+    "reflex>=0.6.6",
+    "aiohttp"
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+]
+
+[project.urls]
+Homepage = "https://github.com/albertsola/rxchat"
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[tool.setuptools.packages.find]
+where = ["custom_components"]
+
+[tool.poetry]
+name = "reflex-rxchat"
+version = "0.2.3"
+description = "Drop in self hosted chat for reflex.dev"
+authors = ["Albert Sola <albert.sola@gmail.com>"]
+license = "GPL"
+readme = "README.md"
+packages = [
+    { include = "custom_components/reflex_rxchat" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+reflex = ">=0.6.6"
+aiohttp = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+mypy = "*"
+black = "*"
+tox = "*"
+flake8="*"
+Flake8-pyproject="*"
+pytest-cov = "*"
+pytest-mock = "*"
+
+[tool.poetry.scripts]
+lint = "flake8.main.cli:main"
+typecheck = "mypy.main:main"
+test = "pytest:main"
+
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | venv
+  | .tox
+)/
+'''
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+
+[tool.flake8]
+max-line-length = 105
+exclude = ".venv,venv,.tox,.git,*.egg-info,__pycache__"
