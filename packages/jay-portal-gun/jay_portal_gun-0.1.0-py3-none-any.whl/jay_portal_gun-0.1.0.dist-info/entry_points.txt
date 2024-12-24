@@ -1,0 +1,3 @@
+[console_scripts]
+jay-portal-gun=jay_portal_gun.main:app
+
