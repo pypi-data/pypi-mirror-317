@@ -1,0 +1,9 @@
+include MANIFEST.in
+include LICENSE
+include README.md
+include requirements.txt
+graft django_simpletask3
+exclude django_simpletask3_demo
+exclude django_simpletask3_example
+global-exclude __pycache__
+global-exclude *.py[co]
