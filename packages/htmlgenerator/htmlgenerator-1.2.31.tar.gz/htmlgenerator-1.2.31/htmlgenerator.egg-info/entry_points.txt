@@ -1,0 +1,2 @@
+[console_scripts]
+convertfromhtml = htmlgenerator.contrib.convertfromhtml:main
