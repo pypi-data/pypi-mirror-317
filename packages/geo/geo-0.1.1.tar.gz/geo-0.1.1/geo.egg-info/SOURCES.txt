@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+geo/__init__.py
+geo.egg-info/PKG-INFO
+geo.egg-info/SOURCES.txt
+geo.egg-info/dependency_links.txt
+geo.egg-info/top_level.txt
+geo/line/__init__.py
+geo/line/check_intersect.py
+geo/line/intersect_point.py
+geo/plane/__init__.py
+geo/plane/check_parallel.py
+geo/point/__init__.py
+geo/point/on_line.py
+geo/point/on_plane.py
