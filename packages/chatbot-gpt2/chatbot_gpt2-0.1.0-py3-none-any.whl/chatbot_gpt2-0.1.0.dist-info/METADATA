@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: chatbot-gpt2
+Version: 0.1.0
+Summary: Chatbot package
+Home-page: https://github.com/yourusername/my_package
+Author: Rahul Kumar Bharti
+Author-email: rahul_kbharti2002@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+my_package/
+â”œâ”€â”€ my_package/
+â”‚ â”œâ”€â”€ **init**.py # Initialize the package
+â”‚ â””â”€â”€ module.py # Your package modules
+â”œâ”€â”€ setup.py # Configuration for your package
+â”œâ”€â”€ LICENSE # (Optional) License file
+â”œâ”€â”€ README.md # Package description
+â””â”€â”€ requirements.txt # Dependencies (optional)

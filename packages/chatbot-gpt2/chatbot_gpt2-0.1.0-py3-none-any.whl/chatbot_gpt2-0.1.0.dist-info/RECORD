@@ -1,0 +1,7 @@
+chatbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chatbot/module.py,sha256=LGUlpRFqDf7HXOwp5ibmNh3sKa9cyNgiwBsYZ8ZaX2g,161
+chatbot_gpt2-0.1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chatbot_gpt2-0.1.0.dist-info/METADATA,sha256=72rhGDIxXd6iRo7fxc-atAuSiSW1bi5LjjVid6xy0mI,891
+chatbot_gpt2-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+chatbot_gpt2-0.1.0.dist-info/top_level.txt,sha256=z_gsx4Nl1MmzEbC8hsVurkplJ5cAdtIqrt84F9-aR9s,8
+chatbot_gpt2-0.1.0.dist-info/RECORD,,
