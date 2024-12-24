@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "my-telegram"
+version = "0.1.0b1"
+description = "Python wrapper for my.telegram.org"
+authors = ["RuslanUC <dev_ruslan_uc@protonmail.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+httpx = "^0.28.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
