@@ -1,0 +1,14 @@
+[tool.flit.metadata]
+module = "pylematch"
+author = "Andrii Burkatskyi aka andr11b"
+author-email = "4ndr116@gmail.com"
+home-page = "https://github.com/codyverse/pylematch"
+description-file = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+keywords = "file matching, file filter, filter, patterns, ignore, gitignore, dockerignore"
+dev-requires = ["pytest>=6.0"]
+
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"

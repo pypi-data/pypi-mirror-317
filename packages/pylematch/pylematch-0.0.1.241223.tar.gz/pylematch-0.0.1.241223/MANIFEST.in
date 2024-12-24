@@ -1,0 +1,8 @@
+recursive-include pylematch *.py
+
+include README.md LICENSE.txt CHANGELOG.md
+
+recursive-exclude env *
+exclude *.yapf
+exclude *.pyc
+exclude __pycache__
