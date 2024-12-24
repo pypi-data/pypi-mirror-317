@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+my_library/__init__.py
+my_library/module1.py
+my_library/module2.py
+my_library_dnvb.egg-info/PKG-INFO
+my_library_dnvb.egg-info/SOURCES.txt
+my_library_dnvb.egg-info/dependency_links.txt
+my_library_dnvb.egg-info/top_level.txt
+tests/__init__.py
+tests/test_module1.py
+tests/test_module2.py

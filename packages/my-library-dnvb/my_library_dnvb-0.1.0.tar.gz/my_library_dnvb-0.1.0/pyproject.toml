@@ -1,0 +1,13 @@
+[project]
+name = "my_library_dnvb"
+version = "0.1.0"
+description = "A sample Python library"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Lazarev Daniil", email = "1132230808@pfur.ru" }]
+requires-python = ">=3.6"  # Укажите здесь минимальную версию Python
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
