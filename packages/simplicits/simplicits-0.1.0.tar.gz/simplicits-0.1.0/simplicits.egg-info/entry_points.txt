@@ -1,0 +1,3 @@
+[console_scripts]
+ns-train-simplicits = simplicits.simplicits:entrypoint
+ns-viewer-simplicits = simplicits.simplicits_viewer:entrypoint
