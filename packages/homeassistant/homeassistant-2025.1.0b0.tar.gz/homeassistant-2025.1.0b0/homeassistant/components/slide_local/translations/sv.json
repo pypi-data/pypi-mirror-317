@@ -1,0 +1,53 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Enheten \u00e4r redan konfigurerad",
+            "discovery_connection_failed": "Installationen av den uppt\u00e4ckta enheten misslyckades med f\u00f6ljande fel: {error}. F\u00f6rs\u00f6k att konfigurera den manuellt."
+        },
+        "error": {
+            "cannot_connect": "Det gick inte att ansluta.",
+            "invalid_auth": "Ogiltig autentisering",
+            "unknown": "Ov\u00e4ntat fel"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "V\u00e4rd",
+                    "password": "L\u00f6senord"
+                },
+                "data_description": {
+                    "host": "V\u00e4rdnamnet eller IP-adressen f\u00f6r din lokala Slide",
+                    "password": "Enhetskoden f\u00f6r din Slide (inuti Slide eller i l\u00e5dan, l\u00e4ngd 8 tecken). Om din Slide k\u00f6r firmwareversion 2 \u00e4r detta valfritt, eftersom det inte anv\u00e4nds av det lokala API:et."
+                },
+                "description": "Ange information f\u00f6r att ansluta till Slide-enheten"
+            },
+            "zeroconf_confirm": {
+                "description": "Vill du konfigurera {host}?",
+                "title": "Bekr\u00e4fta inst\u00e4llningen f\u00f6r Slide"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "calibrate": {
+                "name": "Kalibrera"
+            }
+        },
+        "switch": {
+            "touchgo": {
+                "name": "TouchGo"
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "invert_position": "Invertera position"
+                },
+                "description": "Konfigurera om Slide-enheten",
+                "title": "Konfigurera Slide"
+            }
+        }
+    }
+}

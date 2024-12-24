@@ -1,0 +1,40 @@
+{
+    "config": {
+        "abort": {
+            "already_in_progress": "El flux de configuraci\u00f3 ja est\u00e0 en curs",
+            "reconfigure_successful": "Reconfiguraci\u00f3 realitzada correctament",
+            "single_instance_allowed": "Ja configurat. Nom\u00e9s \u00e9s possible una sola configuraci\u00f3."
+        },
+        "error": {
+            "cannot_connect": "Ha fallat la connexi\u00f3"
+        },
+        "step": {
+            "reconfigure": {
+                "data": {
+                    "host": "Amfitri\u00f3"
+                }
+            },
+            "user": {
+                "data": {
+                    "host": "Amfitri\u00f3"
+                }
+            }
+        }
+    },
+    "services": {
+        "sign_in": {
+            "fields": {
+                "password": {
+                    "name": "Contrasenya"
+                },
+                "username": {
+                    "name": "Nom d'usuari"
+                }
+            },
+            "name": "Inicia sessi\u00f3"
+        },
+        "sign_out": {
+            "name": "Tanca sessi\u00f3"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Paskyra jau sukonfig\u016bruota"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_auth": "Neteisingas autentifikavimas",
+            "invalid_otp": "OTP negalioja",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "step": {
+            "otp": {
+                "data": {
+                    "otp": "OTP"
+                },
+                "data_description": {
+                    "otp": "Vienkartinis slapta\u017eodis, i\u0161si\u0173stas teksto \u017einute anks\u010diau pateiktu mobiliojo telefono numeriu."
+                }
+            },
+            "user": {
+                "data": {
+                    "id_or_passport": "ID arba paso numeris",
+                    "phone_number": "Mobiliojo telefono numeris"
+                },
+                "data_description": {
+                    "phone_number": "Mobiliojo telefono numeris, nurodytas registruojantis Ituran. \u0160iuo mobiliojo telefono numeriu bus i\u0161si\u0173stas vienkartinis slapta\u017eodis."
+                }
+            }
+        }
+    }
+}
