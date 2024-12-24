@@ -1,0 +1,7 @@
+pyhumps
+
+[async]
+aiohttp
+
+[sync]
+requests
