@@ -1,0 +1,15 @@
+vipas/__init__.py,sha256=vpVN8jP4WEnuILDDFvN7vZBjkgbBX_SiluFWsZ1-V6Y,725
+vipas/_rest.py,sha256=cgkgxoZ5UPFnOMi8z-mjwDdIqugwi8U_vGyt4OSsc9A,37971
+vipas/challenge.py,sha256=_92oHCobiySRzv6qnNiaZviC9XjVFGbbolq6lPeCS4U,5461
+vipas/config.py,sha256=QH7Wi0THgeMBut3LljNu2RJeScSO-0q9mpwg0quQaPc,4081
+vipas/constant.py,sha256=pZXZm0VoPUoxjZ0EOdzdpoOlFvyi5tj220Fy2N_HAv8,1014
+vipas/error_suggestions.py,sha256=s4-XJzsYAgk2Z1sXqsTKfxUU3fmRXUZdgsxOgn_oDXs,2711
+vipas/exceptions.py,sha256=EgTg8bsKWJCAgd5Uq9KrpJYI2fWgCeVUkOUpr_ciRx4,3832
+vipas/logger.py,sha256=rpWskXhf2eQCjzrWSh9xWL7yeCe17uFWo6MUhf0cm38,2443
+vipas/model.py,sha256=YJ4jk4NbU33Ocwa5yTZnW1H-KowSKa-AtaZBpum7PjM,23454
+vipas/user.py,sha256=mupGAAXQIpQgsgXT_fG7Z21oUxLZeb1c9GrUjMLAuvI,5119
+vipas-1.0.9.dist-info/LICENSE,sha256=DOwG4OVfvD3FzuT8qbYH9my49OTbzzs8ATWU3RVnMuk,10173
+vipas-1.0.9.dist-info/METADATA,sha256=7PhrgQfdZ7KMStW7QNpmahkIEgglItlPrv119PbJnok,59360
+vipas-1.0.9.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+vipas-1.0.9.dist-info/top_level.txt,sha256=aaZmLTHbg9ak7lUZqTQrmelOE18EycmYvg-E3wG7Zh0,6
+vipas-1.0.9.dist-info/RECORD,,
