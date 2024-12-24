@@ -1,0 +1,8 @@
+python-dotenv
+
+[all]
+langchain
+chromadb
+langchain_chroma
+langchain_community
+sentence-transformers
