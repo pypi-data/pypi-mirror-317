@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+godot_asset_library_client/__init__.py
+godot_asset_library_client/__main__.py
+godot_asset_library_client/cli.py
+godot_asset_library_client/git.py
+godot_asset_library_client/godot_project_reader.py
+godot_asset_library_client.egg-info/PKG-INFO
+godot_asset_library_client.egg-info/SOURCES.txt
+godot_asset_library_client.egg-info/dependency_links.txt
+godot_asset_library_client.egg-info/entry_points.txt
+godot_asset_library_client.egg-info/requires.txt
+godot_asset_library_client.egg-info/top_level.txt

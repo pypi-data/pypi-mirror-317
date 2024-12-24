@@ -1,0 +1,2 @@
+[console_scripts]
+godot-asset-library-client = godot_asset_library_client.cli:app
