@@ -1,0 +1,54 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "ccds"
+
+[project]
+name = "gatlens-opinionated-template"
+version = "0.0.4"
+description = "A modern, opinionated full-stack CookieCutter project template that prioritizes developer experience and cutting-edge tools."
+authors = [
+  { name = "Gatlen Culp", email = "GatlenCulp@gmail.com" },
+  { name = "DrivenData", email = "info@drivendata.org" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.8"
+dependencies = [
+  "click",
+  "cookiecutter",
+]
+
+[project.scripts]
+gotem = "ccds.__main__:main"
+
+[project.urls]
+"Source Code" = "https://github.com/GatlenCulp/gatlens-opinionated-template"
+"Documentation" = "https://gatlenculp.github.io/gatlens-opinionated-template/"
+
+[tool.pytest.ini_options]
+addopts = """
+-vv
+--color=no
+"""
+
+# [[tool.uv.index]]
+# name = "gatlens-opinionated-template"
+# url = "https://test.pypi.org/simple/"
+# publish-url = "https://test.pypi.org/legacy/"
