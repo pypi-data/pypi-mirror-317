@@ -1,0 +1,9 @@
+gev_analysis/__init__.py,sha256=w-pNaD0BgnNhX0j-_mMV3KrUWl0RsFLsur-fqmUCFlE,281
+gev_analysis/data_handler.py,sha256=vstP3W0fFxhuTxiX6GlFi62vz8SbaKv2YrYmTiFr4B4,760
+gev_analysis/gev_analysis.py,sha256=RrV6ACriyzh9wSVSlVwUDsqOK4zttssp7NWgqUVHQUM,11451
+gev_analysis/gpd_analysis.py,sha256=cswSESqn43of0oYJbSrGhf8TfftfJyejguZEo2O2WXk,10096
+gev_analysis/normality_var.py,sha256=I2mVu2xe3CpIxj2FoIwwfoyxaAFKjncMM0teowFKd5k,6720
+gev_analysis-0.1.5.dist-info/METADATA,sha256=U6RIzJwTP2xG7QHrvxxBSjUnRpPyGh_rdlnjl5bGhXU,343
+gev_analysis-0.1.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gev_analysis-0.1.5.dist-info/top_level.txt,sha256=NvzlSrdNXNbQv-QMO0bdbgTTCnjMsq2w8od24V-6YL0,13
+gev_analysis-0.1.5.dist-info/RECORD,,
