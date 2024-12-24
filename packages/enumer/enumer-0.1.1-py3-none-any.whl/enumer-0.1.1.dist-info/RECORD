@@ -1,0 +1,11 @@
+enumer/__init__.py,sha256=TC7tJjQy-Y_zXhJVmB6OGHAdICeJfKddff2rFME0Zhg,303
+enumer/enumer.py,sha256=U0yZI5FSSYVkdvDaIbLsqd3uz0PAChMRKG3t7OUafXA,8816
+enumer/db/__init__.py,sha256=yjjM7g5tK_m2P8p5YQOStcjj-QN1nxSv0A-9SsC61hE,365
+enumer/db/utils.py,sha256=loOB_3PL-rNRWMdP-8XMtCyFQ4ao8HCy2Fr-_mw0gQY,3355
+enumer/test/__init__.py,sha256=iUDT0Ht0aT7jMcZTbh2E63H5TJrWcdMree4hJSvYUok,317
+enumer/test/sanity_checks.py,sha256=UdLT7Kk0To0vbcz0H6vikaOLmPVjAvUeZFDH7KF4dkc,6128
+enumer-0.1.1.data/data/requirements.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+enumer-0.1.1.dist-info/METADATA,sha256=F0nKnwsHgiupccfZEKZP_u97JA7FUJsGGD6NzzwFKa4,2764
+enumer-0.1.1.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+enumer-0.1.1.dist-info/top_level.txt,sha256=bPxwHEkv704eA9F9Gi2Y59PMwmbwb_h-XTTVHqiUDHE,7
+enumer-0.1.1.dist-info/RECORD,,
