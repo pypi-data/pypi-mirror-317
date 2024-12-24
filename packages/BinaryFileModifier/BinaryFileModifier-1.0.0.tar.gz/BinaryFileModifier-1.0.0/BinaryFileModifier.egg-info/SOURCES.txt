@@ -1,0 +1,9 @@
+README.md
+setup.py
+BinaryFileModifier/__init__.py
+BinaryFileModifier/linuxBinaryFileModifier.py
+BinaryFileModifier/winBinaryFileModifier.py
+BinaryFileModifier.egg-info/PKG-INFO
+BinaryFileModifier.egg-info/SOURCES.txt
+BinaryFileModifier.egg-info/dependency_links.txt
+BinaryFileModifier.egg-info/top_level.txt
