@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: ragaai_catalyst
+Version: 2.0.7.2b0
+Summary: RAGA AI CATALYST
+Author-email: Kiran Scaria <kiran.scaria@raga.ai>, Kedar Gaikwad <kedar.gaikwad@raga.ai>, Dushyant Mahajan <dushyant.mahajan@raga.ai>, Siddhartha Kosti <siddhartha.kosti@raga.ai>, Ritika Goel <ritika.goel@raga.ai>, Vijay Chaurasia <vijay.chaurasia@raga.ai>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp>=3.10.2
+Requires-Dist: opentelemetry-api==1.25.0
+Requires-Dist: opentelemetry-sdk==1.25.0
+Requires-Dist: opentelemetry-exporter-otlp-proto-grpc==1.25.0
+Requires-Dist: opentelemetry-instrumentation==0.46b0
+Requires-Dist: opentelemetry-instrumentation-fastapi==0.46b0
+Requires-Dist: opentelemetry-instrumentation-asgi==0.46b0
+Requires-Dist: opentelemetry-semantic-conventions==0.46b0
+Requires-Dist: opentelemetry-util-http==0.46b0
+Requires-Dist: opentelemetry-instrumentation-langchain~=0.24.0
+Requires-Dist: opentelemetry-instrumentation-openai~=0.24.0
+Requires-Dist: langchain-core>=0.2.11
+Requires-Dist: langchain>=0.2.11
+Requires-Dist: openai>=1.57.0
+Requires-Dist: pandas>=2.1.1
+Requires-Dist: groq>=0.11.0
+Requires-Dist: PyPDF2>=3.0.1
+Requires-Dist: google-generativeai>=0.8.2
+Requires-Dist: Markdown>=3.7
+Requires-Dist: litellm==1.51.1
+Requires-Dist: tenacity==8.3.0
+Requires-Dist: tqdm>=4.66.5
+Requires-Dist: llama-index==0.10.0
+Requires-Dist: pyopenssl==24.2.1
+Requires-Dist: psutil>=5.9.5
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
