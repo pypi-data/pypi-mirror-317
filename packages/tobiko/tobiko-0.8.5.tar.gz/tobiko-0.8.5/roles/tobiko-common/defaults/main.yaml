@@ -1,0 +1,76 @@
+---
+
+# --- Tobiko workflow stages
+
+test_stage: all
+test_no_become: "{{ ansible_os_family in ['Darwin'] }}"
+test_become: '{{ not (test_no_become | bool) }}'
+
+# --- Test deploy options -----------------------------------------------------
+
+test_deploy_home: '{{ ansible_user_dir }}/src'
+
+git_base: 'https://opendev.org'
+
+test_dir: "{{ test_deploy_home }}/{{ test_project }}"
+test_project:
+  "{{ test_git_repo | urlsplit('path') | regex_replace('^\\/|\\/$', '') | splitext | first }}"
+test_git_repo: '{{ git_base }}/x/tobiko.git'
+test_src_dir: ''
+
+openstack_requirements_dir: "/opt/stack/requirements"
+
+
+# NOTE: if test_dir and tobiko_dir variables endup being the same actual
+# directory then test_src and test_git_* variables will be overriden
+# tobiko_src and tobiko_git_* variables
+
+tobiko_dir: "{{ test_deploy_home }}/{{ tobiko_project }}"
+tobiko_project:
+  "{{ tobiko_git_repo | urlsplit('path') | regex_replace('^\\/|\\/$', '') | splitext | first }}"
+tobiko_git_repo: '{{ git_base }}/x/tobiko.git'
+tobiko_src_dir: ''
+
+
+# --- Test configuration options ----------------------------------------------
+
+# Configuration options
+test_conf_file: '{{ test_dir | realpath }}/tobiko.conf'
+
+test_conf: {}
+
+# --- Test report options -----------------------------------------------------
+
+# Remote directory where test cases shoulw write report files to
+test_report_dir: "{{ test_dir | realpath }}/report"
+test_report_files:
+  - '{{ test_conf_file | realpath }}'
+  - '{{ test_log_file | realpath }}'
+
+# Test report files prefix
+test_report_name: tobiko_results
+
+# Log file where test cases should write logging messages to
+test_log_file: '{{ test_report_dir | realpath }}/tobiko.log'
+
+# Local where test cases results are being collected to
+test_collect_dir: '{{ test_src_dir | realpath }}/{{ test_report_name }}'
+
+# --- download-images options -------------------------------------------------
+download_images_dir: "{{ ansible_user_dir }}/.downloaded-images"
+download_images:
+  ubuntu-customized:
+    type: ubuntu
+    url: "https://cloud-images.ubuntu.com/minimal/releases/jammy/release/ubuntu-22.04-minimal-cloudimg-amd64.img"
+    customized: false
+    customize_command_pattern: >
+      LIBGUESTFS_BACKEND=direct virt-customize -a $TMPPATH
+      --firstboot-command 'sh -c "hostname > /var/www/html/id"'
+      --install iperf3,iputils-ping,ncat,nginx,vlan
+      --run-command 'echo "[Unit]\nDescription=iperf3 server on port %i\nAfter=syslog.target network.target\n\n[Service]\nExecStart=/usr/bin/iperf3 -s -p %i\nRestart=always\nUser=root\n\n[Install]\nWantedBy=multi-user.target\nDefaultInstance=5201\n"
+      > /etc/systemd/system/iperf3-server@.service'
+      --run-command 'systemctl enable iperf3-server@5201'
+      --run-command 'echo "8021q" >> /etc/modules'
+      --run-command
+      'echo "network:\n  version: 2\n  vlans:\n    vlan101:\n      dhcp4: true\n      dhcp4-overrides:\n        use-routes: false\n      dhcp6: true\n      dhcp6-overrides:\n        use-routes: false\n      id: 101\n      link: {{ ubuntu_nic_name | default('ens3') }}\n"
+      > /etc/netplan/75-tobiko-vlan.yaml'
