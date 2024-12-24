@@ -1,0 +1,2 @@
+[hexdoc]
+hexcassettes = hexdoc_hexcassettes._hooks:HexcassettesPlugin
