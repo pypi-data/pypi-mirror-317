@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+chatbot/__init__.py
+chatbot/module.py
+chatbot_gpt2.egg-info/PKG-INFO
+chatbot_gpt2.egg-info/SOURCES.txt
+chatbot_gpt2.egg-info/dependency_links.txt
+chatbot_gpt2.egg-info/top_level.txt
