@@ -1,0 +1,5 @@
+aws-requests-auth
+flatbuffers
+pyarrow
+requests
+xmltodict
