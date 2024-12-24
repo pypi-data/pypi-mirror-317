@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: geometryhelper
+Version: 0.1.1
+Summary: Библиотека для работы с геометрическими фигурами и кв уравнением
+Author: Заур Гадаборшев
+Author-email: orlov.tigr@bk.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# geometryhelper
+ 
+Простая библиотека Python для работы с геометрическими фигурами и с квадратичными уравнениями.
+ 
+## Установка
+```bash
+pip install geometryhelper
