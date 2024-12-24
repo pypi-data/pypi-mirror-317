@@ -1,0 +1,1 @@
+{% load i18n %}{% trans "Lesson" %}{% if event.amends %} {% if event.cancelled %}{% trans "cancellation" %}{% else %}{% trans "substitution" %}{% endif %}{% endif %} {{ status }}: {{ event.datetime_start|date:"SHORT_DATETIME_FORMAT" }} - {{ event.datetime_end|date:"SHORT_DATETIME_FORMAT" }} · {{ event.group_names }}
