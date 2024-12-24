@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: django-aux
+Version: 0.0.94
+Summary: Useful Mixins for Django Projects
+Home-page: https://github.com/JordanHyatt/django-aux
+Author: Jordan Hyatt
+Author-email: jordan.hyatt@auxiliasystems.com
+License: MIT  # Example license
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: Django>=3.0
+Requires-Dist: django-tables2>=2.0
+Requires-Dist: django-filter>=21.0
+Requires-Dist: pandas>=2.0
+Requires-Dist: numpy>=1.20
+Requires-Dist: django-bootstrap-datepicker-plus>=3.0
+Requires-Dist: django-crispy-forms>=1.14.0
+Requires-Dist: django-bootstrap4>=21.0
+Requires-Dist: django-pandas>=0.6
+Requires-Dist: plotly>=5.0
+Requires-Dist: factory_boy>=3.2.1
+Requires-Dist: lxml>=4.0.0
+
+
+#django-aux
+
+django-aux is a hodge podge of extra django resources that could be useful in any project
+
+
