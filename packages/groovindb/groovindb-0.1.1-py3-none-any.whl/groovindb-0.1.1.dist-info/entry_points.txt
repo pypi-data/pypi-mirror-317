@@ -1,0 +1,2 @@
+[console_scripts]
+groovindb = src.cli:cli
