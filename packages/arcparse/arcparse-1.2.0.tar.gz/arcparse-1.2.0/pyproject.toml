@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "arcparse"
+version = "1.2.0"
+description = "Declare program arguments in a type-safe way"
+license = "MIT"
+authors = ["Jakub Rozek <jakub.rozek314@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/Kuba314/arcparse"
+keywords = ["argparse", "declarative", "argument", "parsing", "type-safe"]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+packages = [
+	{include = "arcparse"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+pyright = "^1.1.335"
+pytest = "^7.4.3"
+ruff = "^0.3.7"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint.isort]
+from-first = true
+lines-after-imports = 2
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
