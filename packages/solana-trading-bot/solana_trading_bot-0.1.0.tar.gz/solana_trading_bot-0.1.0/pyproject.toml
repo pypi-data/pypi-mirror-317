@@ -1,0 +1,23 @@
+[project]
+name = "solana-trading-bot"
+version = "0.1.0"
+authors = [
+  { name="handsomevictor", email="handsomevictor@gmail.com" },
+]
+description = "The aim of this project is to provide a powerful tool for trading on Web3's most renowned exchanges"
+readme = "readme.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "requests",
+    "pycryptodome>=3.20.0",
+    "semantic-types>=0.1.4",
+    "httpx",
+    "base58>=2.1.1",
+    "pandas>=2.0.3",
+
+]
+[project.urls]
+Homepage = "https://github.com/handsomevictor/solana_trading_bot"
