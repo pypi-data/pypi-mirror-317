@@ -1,0 +1,27 @@
+{
+  "systemParams": "linux-x64-115",
+  "modulesFolders": [
+    "openvpn_monitor/static/dist"
+  ],
+  "flags": [
+    "production"
+  ],
+  "linkedModules": [],
+  "topLevelPatterns": [
+    "bootstrap3@^3.3.5",
+    "leaflet.fullscreen@^3.0.2",
+    "leaflet@^1.9.4",
+    "overlapping-marker-spiderfier-leaflet@^0.2.7",
+    "tablesorter@^2.32.0"
+  ],
+  "lockfileEntries": {
+    "bootstrap3@^3.3.5": "https://registry.yarnpkg.com/bootstrap3/-/bootstrap3-3.3.5.tgz#496a4ef6c087214fa96838196d60de645e82591a",
+    "jquery@>=1.2.6": "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de",
+    "leaflet.fullscreen@^3.0.2": "https://registry.yarnpkg.com/leaflet.fullscreen/-/leaflet.fullscreen-3.0.2.tgz#b37e66ae0d16a139a98a1641bec4a9403915fe2d",
+    "leaflet@^1.9.4": "https://registry.yarnpkg.com/leaflet/-/leaflet-1.9.4.tgz#23fae724e282fa25745aff82ca4d394748db7d8d",
+    "overlapping-marker-spiderfier-leaflet@^0.2.7": "https://registry.yarnpkg.com/overlapping-marker-spiderfier-leaflet/-/overlapping-marker-spiderfier-leaflet-0.2.7.tgz#ab18c3d5e2b2c31a4f864114e1594cb6efbd73e1",
+    "tablesorter@^2.32.0": "https://registry.yarnpkg.com/tablesorter/-/tablesorter-2.32.0.tgz#ac20f847a6c70458bceb0a8f4bb1f40810cacba9"
+  },
+  "files": [],
+  "artifacts": {}
+}
