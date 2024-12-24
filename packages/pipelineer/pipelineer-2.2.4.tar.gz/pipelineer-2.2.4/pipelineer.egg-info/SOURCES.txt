@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+pipelineer/__init__.py
+pipelineer/cli.py
+pipelineer.egg-info/PKG-INFO
+pipelineer.egg-info/SOURCES.txt
+pipelineer.egg-info/dependency_links.txt
+pipelineer.egg-info/entry_points.txt
+pipelineer.egg-info/top_level.txt
+pipelineer/templates/api.py
+pipelineer/templates/oracle.py
+pipelineer/utils/__init__.py
+pipelineer/utils/generator.py
+pipelineer/utils/mappers.py
+pipelineer/utils/templates.py
