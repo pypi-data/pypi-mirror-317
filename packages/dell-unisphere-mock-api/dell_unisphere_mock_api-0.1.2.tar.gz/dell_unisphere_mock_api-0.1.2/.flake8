@@ -1,0 +1,34 @@
+[flake8]
+max-line-length = 120
+
+# Ignore docstring formatting issues
+extend-ignore =
+    # Quote style
+    Q000,
+    # Missing docstrings
+    D100,D101,D102,D103,D104,D105,D106,D107,
+    # Docstring formatting
+    D200,D205,D400,D401,
+    # Function call in default argument
+    B008
+
+per-file-ignores =
+    # Allow unused imports in __init__.py files
+    __init__.py:F401
+    # Allow unused imports in tests
+    tests/*:F401,F841
+    # Allow unused imports in models (they're used for type hints)
+    dell_unisphere_mock_api/models/*:F401
+    # Allow unused imports in schemas (they're used for type hints)
+    dell_unisphere_mock_api/schemas/*:F401
+    # Allow unused imports in routers (they're used for FastAPI dependencies)
+    dell_unisphere_mock_api/routers/*:F401
+    # Allow unused imports in core modules
+    dell_unisphere_mock_api/core/*:F401
+
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    *.egg-info

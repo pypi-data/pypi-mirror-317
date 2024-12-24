@@ -1,0 +1,16 @@
+services:
+  api:
+    build: .
+    container_name: mock-unisphere-api
+    ports:
+      - "8301:8000"
+    environment:
+      - SECRET_KEY=${SECRET_KEY:-}  # In production, use a secure secret
+    volumes:
+      - ./app:/app/app  # Mount for development hot-reload
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
