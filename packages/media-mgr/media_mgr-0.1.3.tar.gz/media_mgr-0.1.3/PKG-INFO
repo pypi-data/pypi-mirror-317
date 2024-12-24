@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: media-mgr
+Version: 0.1.3
+Summary: Media file search and categorization utilities
+Author-email: Ed Waldner <waldevburry@proton.me>
+Maintainer-email: Ed Waldner <waldevburry@proton.me>
+Project-URL: Homepage, https://github.com/ew98/media-mgr
+Project-URL: Documentation, https://github.com/ew98/media-mgr/wiki/MediaMgr
+Project-URL: Issues, https://github.com/ew98/media-mgr/issues
+Keywords: util,utility
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: argcomplete
+Requires-Dist: quickcolor
+Requires-Dist: delayviewer
+Requires-Dist: showexception
+Requires-Dist: corecfg
+Requires-Dist: pyexiv2
+Requires-Dist: paramiko
+
+# Media-Mgr
+
+**Media-Mgr** helps organize and search for media files on specified servers. Focus is currently PLEX based and includes PLEX server upgrade support on Ubuntu installs.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install **media-mgr**.
+
+```bash
+pip install media-mgr
+```
+
+## CLI Controls
+
+The following CLI controls are provided in this package for keeping track of media server categories and media server coordinates.
+
+* mm-mediacfg
+* mm-srvcfg
+
+The following CLI controls assist with media server contents for search, organization, PLEX upgrades and miscellaneous tools (EXIF renamer)
+
+* mm-util
+* mm-path
+* mm-search
+* mm-gather
+* mm-exif
+* mm-plex-upg
+
+Finally, these next sets of CLI controls are task specific for media management
+
+* mount-drives
+* search-plex
+* move-plex
+* cons-plex
+* upgrade-plex
+* upgrade-plex-all
+
+Each command has help syntax via CLI -h argument
+
+For example:
+
+```bash
+╰─ mount-drives -h
+usage: mount-drives [-h] [--ipv4 <ipv4.addr>]
+
+-.-.-. Mount Drives on Server utility
+
+options:
+  -h, --help          show this help message and exit
+  --ipv4 <ipv4.addr>  Server IPV4
+
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+```
+
+or
+
+```bash
+╰─ mm-gather -h
+usage: mm-gather [-h] [-d] [--version]
+                 {show.titles,show.all.titles,show.bundles,store.bundles,show.plex.n.worker.bundles,store.plex.n.worker.bundles}
+                 ...
+
+-.-.-. Gathering for media manager
+
+positional arguments:
+  {show.titles,show.all.titles,show.bundles,store.bundles,show.plex.n.worker.bundles,store.plex.n.worker.bundles}
+    show.titles         Show retrieved titles
+    show.all.titles     Show ALL retrieved titles
+    show.bundles        Show title bundles
+    store.bundles       Store title bundles
+    show.plex.n.worker.bundles
+                        Show title bundles for Plex and Worker servers
+    store.plex.n.worker.bundles
+                        Store title bundles for Plex and Worker servers
+
+options:
+  -h, --help            show this help message and exit
+  -d, --debug           run with debug hooks enabled
+  --version             top-level package version
+
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+```
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
