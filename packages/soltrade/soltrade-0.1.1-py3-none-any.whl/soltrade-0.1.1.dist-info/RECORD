@@ -1,0 +1,15 @@
+soltrade.py,sha256=K3OwxUGdsybLjWHJvnMAaSQzKfg4dxuELz60-EibIV0,1548
+soltrade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+soltrade/config.py,sha256=78JqqtG5TQTYpUqWl7054EMoz-kNeCPlYo4nLhMTNMY,2658
+soltrade/indicators.py,sha256=64_ZUC5vN4GZ8q2QsqzfvXViCtfC-S8tYXzvr1B-Z9k,1016
+soltrade/log.py,sha256=TIGU2jdsw8NuC69XkHZ8VYYOzRxiELZBEugo49zLvcA,2302
+soltrade/trading.py,sha256=thW_QD3YZKoqbL6CcdDRG5XXhmkirAArrOWbNdNdxnY,4429
+soltrade/transactions.py,sha256=nf7z2pRHDAHHPtaq81DlM2xyk-iTEfD-k32mtEWdxbU,6649
+soltrade/utils.py,sha256=Bkvq1JTVnMt9nutU2gtKugzrZctLQj96UxP3fJYCVjU,923
+soltrade/wallet.py,sha256=EQoXZHyPLwnarxO3RqeoR0i4tJFlNRggtQ-uskyocNM,905
+testing/backtest.py,sha256=Vz5VaodUCk71xTideJYDEM0fY-hGmYC2DtF1ZmnVOJA,1929
+soltrade-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+soltrade-0.1.1.dist-info/METADATA,sha256=OzqpcZObeKljTFaVXauANglKQqrCOv_Mf8JipPvU1-E,5887
+soltrade-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+soltrade-0.1.1.dist-info/top_level.txt,sha256=Uub23CAKXou4cDPH20-cKVz-jjfs38nIOqfClNsmFQ0,17
+soltrade-0.1.1.dist-info/RECORD,,
