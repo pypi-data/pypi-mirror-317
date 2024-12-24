@@ -1,0 +1,19 @@
+summary name 1:
+  - name: "Section 1: Topic A x Authors 1, 2 | Recent 2 Weeks"
+    authors: ["Author 1", "Author 2"]
+    alls: ["Topic A"]
+    trailing:
+      num: 14
+      unit: "days"
+
+  - name: "Section 2: Topic B x Authors 3, 4 | Recent 2 Months"
+    authors: ["Author 3", "Author 4"]
+    alls: ["Topic B"]
+    trailing:
+      num: 2
+      unit: "months"
+
+summary name 2:
+  - name: "Section 1: Topic C x Authors 5, 6"
+    authors: ["Author 5", "Author 6"]
+    alls: ["Topic C"]

@@ -1,0 +1,2 @@
+[console_scripts]
+sxolar = sxolar.bin.sxolar:main
