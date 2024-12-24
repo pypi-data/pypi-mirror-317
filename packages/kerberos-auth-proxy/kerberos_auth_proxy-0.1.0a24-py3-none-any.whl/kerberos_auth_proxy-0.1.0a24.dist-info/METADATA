@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: kerberos-auth-proxy
+Version: 0.1.0a24
+Summary: Proxy requests to Kerberos-enabled endpoints
+License: MIT
+Author: Diógenes Oliveira
+Author-email: diogenes1oliveira@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.8,<4.0)
+Requires-Dist: flask (>=2.2,<3.0)
+Requires-Dist: mitmproxy (>=9.0,<10.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests-gssapi (>=1.2,<2.0)
+Requires-Dist: timelength (>=1.1.7,<2.0.0)
+Description-Content-Type: text/markdown
+
+# kerberos-auth-proxy
+
+Proxy requests to Kerberos-enabled endpoints
+
+## Development
+
+- Install docker and htpasswd;
+

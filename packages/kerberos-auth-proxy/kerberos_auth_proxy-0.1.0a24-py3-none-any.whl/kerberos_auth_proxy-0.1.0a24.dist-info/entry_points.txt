@@ -1,0 +1,4 @@
+[console_scripts]
+kerberos-auth-proxy=kerberos_auth_proxy.cmd:main
+kerberos-auth-proxy-prepare=kerberos_auth_proxy.prepare:main
+
