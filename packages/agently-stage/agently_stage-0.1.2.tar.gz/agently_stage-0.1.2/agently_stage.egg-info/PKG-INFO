@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: agently_stage
+Version: 0.1.2
+Summary: Agently Stage makes multi-threads & async tasks management easier!
+Home-page: https://github.com/AgentEra/agently-stage
+Author: Maplemx, AgentEra Ltd. Agently Team
+Author-email: moxin@agently.tech
+License: Apache License, Version 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+
+Agently Stage create an instance to manage multi-threads and async tasks in its dispatch environment. Agently Stage dispatch environment will allow tasks managed by this Agently Stage instance to be run in an independent thread with an independent async event loop that will not disturb other tasks create or managed by other Agently Stage instance, other packages or other complex async/multi-threading logic.Agently Stage also includes tools like Agently Stage EventEmitter and Agently Stage Tunnel. They are also very useful when coding with multi-threads and async.
