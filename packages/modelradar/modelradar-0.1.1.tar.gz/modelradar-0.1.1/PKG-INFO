@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: modelradar
+Version: 0.1.1
+Summary: Aspect-based Forecasting Accuracy
+Project-URL: Homepage, https://github.com/vcerqueira/modelradar
+Project-URL: Bug Tracker, https://github.com/vcerqueira/modelradar/issues
+Author-email: Vitor Cerqueira <cerqueira.vitormanuel@gmail.com>
+License-File: LICENSE
+Keywords: Data Science,Evaluation,Forecasting,Machine Learning,Time Series
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: numpy==1.26.0
+Requires-Dist: plotnine==0.14.3
+Requires-Dist: statsmodels==0.14.4
+Requires-Dist: utilsforecast==0.2.9
+Description-Content-Type: text/markdown
+
+# Model Radar 🎯
+
+A framework for aspect-based evaluation of time series forecasting models based on Nixtla's ecosystem.
+
+## Overview
+
+Model Radar introduces a novel aspect-based forecasting evaluation approach that goes beyond traditional aggregate metrics. Our framework enables:
+- Fine-grained performance analysis across different forecasting aspects
+- Better understanding of model behavior in varying conditions
+- More informed model selection based on specific use case requirements
+
+## 🚀 Getting Started
+
+TBD
+
+### Prerequisites
+
+TBD
+
+## 📑 Reference
+
+> Cerqueira, V., Roque, L., & Soares, C. (2024). "Forecasting with Deep Learning: Beyond Average of Average of Average Performance." *arXiv preprint arXiv:2406.16590*
+
+Check DS24 folder to reproduce the experiments published on this paper.
+The main repository and package contains an updated framework.
+
+## Contact
+
+vcerqueira@fe.up.pt
