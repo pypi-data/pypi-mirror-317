@@ -1,0 +1,16 @@
+argolid/libargolid.cp38-win_amd64.pyd,sha256=bMo7dPcjyV5GjZAq9AJ0GLXEHqsoQ60il4Gpsx5A9ss,26146816
+argolid/pyramid_compositor.py,sha256=KQUL202vsDIDOdLec32jbVSxrZnMLdl9O8typHKADec,15232
+argolid/pyramid_generator.py,sha256=wlXBJF8EVyEIy61IdfcKs-PEWZCCDJqHiq1gLr5CZwY,4049
+argolid/volume_generator.py,sha256=Gxt_CCFM0zNXEy8Hp79q8D-eQqwddh4qF07_RaAuPiQ,16903
+argolid/_version.py,sha256=scfgylBXMzgN6C7ahqBEQfOimJeZAnOdyIdw_F6IR2w,518
+argolid/__init__.py,sha256=GFHNhgOXDfy-1AHQtvYhtnN8Bwt3OL7ydxzS0IRzH04,1670
+argolid-0.0.6.dist-info/DELVEWHEEL,sha256=obq2BPJFw5P5WIOEUxEUQqjEtK9eBxMLD8l350uLywg,351
+argolid-0.0.6.dist-info/LICENSE,sha256=89CjiZBoV1eMyTHIFpoyq34j4ukGOodhKT4yvtwoPvE,1085
+argolid-0.0.6.dist-info/METADATA,sha256=oiLAMJRp2wB9IWVyn2lF6qLd6r5PuGQ5tiQdQIM2oG0,4465
+argolid-0.0.6.dist-info/RECORD,,
+argolid-0.0.6.dist-info/top_level.txt,sha256=pjCWdXMo-MKwmBJQ9NBfN4bsO9S4tHScl5ZMDAnvd88,27
+argolid-0.0.6.dist-info/WHEEL,sha256=KplWMgwSZbeAOumvxNxIrVbNPnn_LVzfBH7l38jDCVM,100
+argolid.libs/.load-order-argolid-0.0.6,sha256=qFgWLsEUS3pBZOVFfoFFfYgklfCCbfv2NVmTGf0Sryc,147
+argolid.libs/filepattern-10192a6ec0454e4dc8efc6e2aa213870.dll,sha256=toLCH0kLLY1abjsqh-NTifHb4DQ5REFxxNBFcsH1KA0,438272
+argolid.libs/msvcp140-f97da342acd907d765ae40a86d8d4d4f.dll,sha256=eLpabAQil0KKrNbjuj7ntUNhRJ7M5frYC4eDpwwkdoI,555008
+argolid.libs/vcruntime140_1-2a3ff0c38388fe2446ae2bc60382e65d.dll,sha256=NASKuqBw7ME7MYzqMUJfTKPt0TPTUDGKxlJZ5gWMizI,37256
