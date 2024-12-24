@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pattern/__init__.py
+pattern/plot.py
+stanford.egg-info/PKG-INFO
+stanford.egg-info/SOURCES.txt
+stanford.egg-info/dependency_links.txt
+stanford.egg-info/requires.txt
+stanford.egg-info/top_level.txt
