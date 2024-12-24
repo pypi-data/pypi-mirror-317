@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: check-code
+Version: 0.1.4
+Summary: check python code use black,isort,flake8,pytest.
+Author-Email: funcdefmain <741132517@qq.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: black>=24.8.0
+Requires-Dist: isort>=5.13.2
+Requires-Dist: flake8>=7.1.1
+Description-Content-Type: text/markdown
+
+# check-code
+### Usage
+```shell
+check-code
+```

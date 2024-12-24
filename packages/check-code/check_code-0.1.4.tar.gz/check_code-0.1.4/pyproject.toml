@@ -1,0 +1,29 @@
+[project]
+name = "check-code"
+version = "0.1.4"
+description = "check python code use black,isort,flake8,pytest."
+authors = [
+    { name = "funcdefmain", email = "741132517@qq.com" },
+]
+dependencies = [
+    "black>=24.8.0",
+    "isort>=5.13.2",
+    "flake8>=7.1.1",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+check-code = "check_code.check:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
