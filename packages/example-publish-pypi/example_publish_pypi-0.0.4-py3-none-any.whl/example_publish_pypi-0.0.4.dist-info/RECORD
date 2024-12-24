@@ -1,0 +1,7 @@
+example_publish_pypi/__init__.py,sha256=gFouLPJfe1hiUi1kv9onFt9lDV3mzAvzY3SekyauPoM,148
+example_publish_pypi/_version.py,sha256=yBVOKdXLEcTVc7YV7ZPqRXhRDRt-pKrfXxcgHkgPY5g,411
+example_publish_pypi/main.py,sha256=ctPVsIws-dJn0zykRHTfrqvjx0xR-tixCU09B844Vrc,23
+example_publish_pypi-0.0.4.dist-info/METADATA,sha256=c1XIv5CV8daiHwQy6dt-tx36WxmPY-cAwDeYTjL7NUo,2638
+example_publish_pypi-0.0.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+example_publish_pypi-0.0.4.dist-info/top_level.txt,sha256=VORepK7e4FleP-mexek6XQoVkZT3gHcL_svNALFoNOE,21
+example_publish_pypi-0.0.4.dist-info/RECORD,,
