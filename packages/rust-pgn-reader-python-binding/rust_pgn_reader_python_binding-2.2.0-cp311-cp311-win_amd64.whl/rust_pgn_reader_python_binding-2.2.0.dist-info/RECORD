@@ -1,0 +1,5 @@
+rust_pgn_reader_python_binding-2.2.0.dist-info/METADATA,sha256=qX9MD85XrOXXN0wOldnctFNUvJFW8UFJ2crUBVSAX9M,2069
+rust_pgn_reader_python_binding-2.2.0.dist-info/WHEEL,sha256=WsIShqAueIiqoJF6ENvmF0oWsvt5oIWOPbl3_KwvlDE,96
+rust_pgn_reader_python_binding/__init__.py,sha256=lhSdJaKZEMrZVdzPOP73MTNFcg6hOIbqlkQ070gWYAQ,203
+rust_pgn_reader_python_binding/rust_pgn_reader_python_binding.cp311-win_amd64.pyd,sha256=GggjjktfAQHwMYxaBNHcMAAhN9LlawpNjLMFmEvr6Rk,1214976
+rust_pgn_reader_python_binding-2.2.0.dist-info/RECORD,,
