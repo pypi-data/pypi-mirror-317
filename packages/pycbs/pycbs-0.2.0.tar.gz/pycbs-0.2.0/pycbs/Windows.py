@@ -1,0 +1,18 @@
+'''
+Удобный набор констант и функций, для работы с Windows
+'''
+
+kernel32 = 'kernel32'
+user32 = 'user32'
+gdi32 = 'gdi32'
+advapi32 = 'advapi32'
+shell32 = 'shell32'
+comdlg32 = 'comdlg32'
+ws2_32 = 'ws2_32'
+ole32 = 'ole32'
+oleaut32 = 'oleaut32'
+uuid = 'uuid'
+crypt32 = 'crypt32'
+msvcrt = 'msvcrt'
+version = 'version'
+winmm = 'winmm'

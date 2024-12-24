@@ -1,0 +1,30 @@
+[project]
+name = "pycbs"
+version = "0.2.0"
+description = "CLI Project Compilation Tool"
+dependencies = [
+    "rich>=13.9.4",
+]
+readme = "README.md"
+requires-python = ">=3.13"
+
+authors = [
+    { name = 'Markada', email = 'markada.py@gmail.com' }
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Russian",
+    "Operating System :: Microsoft :: Windows",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: C",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Code Generators",
+]
+
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
