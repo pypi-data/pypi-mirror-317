@@ -1,0 +1,12 @@
+ipyannote/__init__.py,sha256=FPkMUScMR8UmX2P9oQRAMBN39IL9gzUqMMchWuTcQUw,769
+ipyannote/diff.py,sha256=LrCrUn6N62fBd5o-GchSbX1t8uNMsNVJmhvNd0ru68U,1999
+ipyannote/labels.py,sha256=EUFAG8WLR3z3q8OOq2Uea58n7RxueU1VlhfHBQT8HO0,1122
+ipyannote/utils.py,sha256=tJlELsoGczmnueQLzdumC7o2JqNF35dEvWwiPg2hgjs,941
+ipyannote/waveform.py,sha256=-tKbR9tHiLPc3Xajp7qoj5BUc7eZzvt9FxgdQOewhV8,5010
+ipyannote/static/labels.css,sha256=FUicOKJUUiXdY8iEWC2bmcPXOcGO7tSGhKmQNp3_p2o,1542
+ipyannote/static/labels.js,sha256=vJdkO7WmmCgSjBJJB6aR-1C9DntI_DvNLZE9tfI731M,4450
+ipyannote/static/waveform.css,sha256=_YT2NbAd54CYTutPM-P7UFeasEdzpMRzvYNB9_--_Hg,1111
+ipyannote/static/waveform.js,sha256=JQHV4bRBM5wWKakSrP9hFEumQ_cq-55_xa2JN4_k5xg,171250
+ipyannote-0.1.1.dist-info/METADATA,sha256=3tuM7Q-BnSJMoOpYTtW5ye2Uc1fOzm2ak1YqESParg0,1309
+ipyannote-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ipyannote-0.1.1.dist-info/RECORD,,
