@@ -1,0 +1,12 @@
+hip_online_store/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hip_online_store/ponyta/client.py,sha256=69asDDBl0gv98S2st1Wog1AMleUKQkEKyzM7OznMD4w,6039
+hip_online_store/ponyta/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hip_online_store/ponyta/common/request_utils.py,sha256=Jx6K5VH5h0f_JkRwHX08eDaeNhKhmoZSKD0Yug5ZbKM,1127
+hip_online_store/ponyta/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hip_online_store/ponyta/core/config.py,sha256=DgOoYIZMSccRFeS-OSdgwsnjYLj_UI4vMyGKBhQdff0,1009
+hip_online_store/ponyta/online_store/_ponyta_online_store_client.py,sha256=aMdy5SkVajxxCIloNXdFIVNk8XaRzTFZPJgpd_TD_uE,7798
+hip_online_store/ponyta/registry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hip_online_store/ponyta/registry/_ponyta_registry_client.py,sha256=S4dRUMZDPLmbCQZRDMT6ShA0iHniamNe5jDJjmj_kWc,7453
+hip_online_store-0.2.5.dist-info/METADATA,sha256=NqViLmKTNrFBv3Wa7ufM2ePca89hh9ldVaNsPoVY7os,976
+hip_online_store-0.2.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+hip_online_store-0.2.5.dist-info/RECORD,,
