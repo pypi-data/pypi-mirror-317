@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: DEDLUtils
+Version: 0.0.3
+Summary: DEDL utilities package
+Project-URL: Homepage, https://github.com/serenaateum/DEDLUtils
+Project-URL: Issues, https://github.com/serenaateum/DEDLUtils/issues
+Author-email: Serena Avolio <serena.avolio@external.eumetsat.int>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: ipython
+Requires-Dist: ipywidgets
+Requires-Dist: json5
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: urllib3
+Description-Content-Type: text/markdown
+
+# DEDLUtils
+
+This is an utility package for the DestinE-Datalake-Lab notebooks.
