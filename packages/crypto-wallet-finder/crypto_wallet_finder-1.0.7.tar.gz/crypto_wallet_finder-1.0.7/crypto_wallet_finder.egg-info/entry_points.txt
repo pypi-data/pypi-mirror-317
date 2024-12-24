@@ -1,0 +1,2 @@
+[console_scripts]
+wallet-finder = wallet_finder.core:main
