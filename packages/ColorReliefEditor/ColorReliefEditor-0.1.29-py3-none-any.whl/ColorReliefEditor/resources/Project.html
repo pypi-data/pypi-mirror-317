@@ -1,0 +1,86 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ #  Copyright (c) 2024. Permission is hereby granted, free of charge, to any person obtaining a
+  ~ #  copy of this software and associated documentation files (the “Software”), to deal in the
+  ~ #  Software without restriction,
+  ~ #  including without limitation the rights to use, copy, modify, merge, publish, distribute,
+  ~ #  sublicense, and/or sell copies
+  ~ #  of the Software, and to permit persons to whom the Software is furnished to do so, subject to
+  ~ #  the following conditions:
+  ~ #
+  ~ #  The above copyright notice and this permission notice shall be included in all copies or
+  ~ #  substantial portions of the Software.
+  ~ #
+  ~ #  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+  ~ #  BUT NOT LIMITED TO THE
+  ~ #  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+  ~ #  EVENT SHALL THE AUTHORS OR
+  ~ #  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+  ~ #  CONTRACT, TORT OR
+  ~ #  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  ~ #  DEALINGS IN THE SOFTWARE.
+  ~ #
+  ~ #  This uses QT for some components which has the primary open-source license is the GNU Lesser General Public License v. 3 (“LGPL”).
+  ~ #  With the LGPL license option, you can use the essential libraries and some add-on libraries of Qt.
+  ~ #  See https://www.qt.io/licensing/open-source-lgpl-obligations for QT details.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <style>
+        /* Apply custom styles to all h3 tags */
+        h3 {
+            color: lightslategray;
+            font-weight: bold;
+        }
+
+        /* Expert section is hidden by default but changed to show-expert-section in expert mode */
+        .expert-section {
+            color: #323232;
+            font-size: 1px;
+        }
+    </style>
+</head>
+<body>
+<p>This tab creates and opens projects.</p>
+<h3>Create a New Project</h3>
+<p>To start a new project, click <b>New</b>. A dialog will appear to create and then open the project folder
+    location. A sample color ramp and settings file will be generated within this folder.</p>
+
+<h3>Buttons</h3>
+<p><b>Open:</b> Load an existing project previously created by this app.</p>
+<p><b>Open Recent:</b> Access a list of recently opened projects for quick loading.</p>
+<p><b>New:</b> Create a new project, generating all necessary files and folders.</p>
+
+<h3>Overview of Tabs</h3>
+<ul>
+    <li><b>Project:</b> Create or open projects. Switch between Basic and Expert mode.</li>
+    <li><b>Elevation Files:</b> Configure file names and settings for Digital Elevation files.</li>
+    <li><b>Hillshade:</b> Set hillshade parameters and preview hillshade images.</li>
+    <li><b>Color:</b> Set color parameters and preview color relief images.</li>
+    <li><b>Create:</b> Create full-size hillshade and color images and merge them into a relief image.</li>
+    <li><b>Misc:</b> Rarely changed GDAL settings.(Only in expert/extended mode)</li>
+    <li><b>Settings:</b> Update general application settings.(Only in expert/extended mode)</li>
+</ul>
+<h3>Expert Mode</h3>
+<p>The app features two modes: Basic and Expert.</p>
+<b>Basic Mode:</b>
+<ul>
+    <li>Simplified interface with basic settings.</li>
+</ul>
+<b>Expert Mode:</b>
+<ul>
+    <li>Offers control over all GDAL settings</li>
+    <li>Supports the use of multiple layers, each with its own elevation files but sharing hillshade and color relief
+        settings.
+    </li>
+    <li>Supports import of GDAL color files using Drag and Drop.</li>
+    <li>Optionally provides two additional tabs for access to every setting by setting "Tabs" to Extended in the Project
+        window.
+    </li>
+</ul>
+</body>
+</html>
