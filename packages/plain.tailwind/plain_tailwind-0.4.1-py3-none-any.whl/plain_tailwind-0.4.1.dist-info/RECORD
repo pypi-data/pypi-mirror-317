@@ -1,0 +1,13 @@
+plain/tailwind/README.md,sha256=r9ItVaMt3mwMPHnWgRC1u6VH2k--wTM2zJLgagwsFzM,3101
+plain/tailwind/__init__.py,sha256=9ByBOIdM8DebChjNz-RH2atdz4vWe8somlwNEsbhwh4,40
+plain/tailwind/cli.py,sha256=Cb6mCk1pqBY5VjM_K_JIGbdhaJZAWXnrUU8i5kN3H-w,3070
+plain/tailwind/core.py,sha256=z2qb_s_G8ojdwNFyEdnFyYQ1UgjiGpUbcPGllySahLY,4831
+plain/tailwind/default_settings.py,sha256=nzHFLs_rvXe79JNvLg9XOAijtRvvxmWO3hWB4sQNTSM,171
+plain/tailwind/entrypoints.py,sha256=STBQMuln5fqmXeeLSyf7PB6vyI-lR0gABQKYXV8B_xI,267
+plain/tailwind/templates.py,sha256=45NvHr_DtI-yoKxLpgaal-9Nj7NFA4tSh2LEFtnfYWU,555
+plain/tailwind/templates/tailwind/css.html,sha256=zXp5CAIzutYZrm9ZFptEuC-YIfJ-TYZRMtDhB7MbzvQ,62
+plain_tailwind-0.4.1.dist-info/METADATA,sha256=iTXG2kypBIzDxacieMQu7-il50RJB3nM8z8aPsqiru4,3579
+plain_tailwind-0.4.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+plain_tailwind-0.4.1.dist-info/entry_points.txt,sha256=SHbRVF__ncBPJt0AEh00NGEzmqlTYHpfqbfe13hreac,140
+plain_tailwind-0.4.1.dist-info/licenses/LICENSE,sha256=cvKM3OlqHx3ijD6e34zsSUkPvzl-ya3Dd63A6EHL94U,1500
+plain_tailwind-0.4.1.dist-info/RECORD,,
