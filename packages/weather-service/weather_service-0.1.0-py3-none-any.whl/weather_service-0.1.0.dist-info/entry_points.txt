@@ -1,0 +1,2 @@
+[console_scripts]
+weather-service = weather_service:main
