@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: xplcli
+Version: 0.1.5
+Summary: Simple extensible m3u playlist manager cli
+Home-page: https://github.com/Fazzani/pliptvcli
+Author: Heni FAZZANI
+Author-email: heni.fazzani@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: xcodestream==0.0.8
+Requires-Dist: azure-storage-blob~=12.24.0
+Requires-Dist: requests~=2.32.0
+Requires-Dist: pyshorteners==1.0.1
+Requires-Dist: Munch~=4.0.0
+Requires-Dist: pyyaml~=6.0.2
+Requires-Dist: memoization==0.4.0
+Requires-Dist: Click~=8.1.7
+Requires-Dist: docopt==0.6.2
+Requires-Dist: PyFiglet~=1.0.2
+Requires-Dist: Clint==0.5.1
+Requires-Dist: PyInquirer~=1.0.3
+Requires-Dist: termcolor~=2.5.0
+Requires-Dist: coloredlogs==15.0
+Requires-Dist: validators~=0.34.0
+Requires-Dist: tqdm~=4.67.0
+Requires-Dist: jsonpickle~=4.0.0
+
+# XPL
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d8d237c0d5f74b51816780562d7ad871)](https://app.codacy.com/manual/tunisienheni/pliptvcli?utm_source=github.com&utm_medium=referral&utm_content=Fazzani/pliptvcli&utm_campaign=Badge_Grade_Dashboard)
+[![Upload Python Package](https://github.com/Fazzani/pliptvcli/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Fazzani/pliptvcli/actions/workflows/python-publish.yml)
+
+Simple and extensible m3u playlist manager cli.
+
+---
+Many default filters was provided for:
+
+- auto matching EPG
+- auto matching logos
+- cleaning stream names
+- grouping streams
+- hide groups
+- and many others filters
+
+The full filter list is located [here](pliptv/pl_filters)
+
+All filters are configurable by a configuration file. An example of this file is located [here](data/config_playlist.yaml)
+
+## Examples
+
+```bash
+pip install xplcli
+# or docker version
+docker run --rm -e "PL=$PL" -v "${PWD}:/data" synker/xpl:latest
+```
+
+## TODO
+
+- [ ] Enhancing reporting by filter
+- [ ] Enhancing tests
+- [ ] Enhancing playlist export (gist, azure, etc...)
+- [ ] Ability to execute an external (remote) filter from url
+- [ ] add github action pipeline for code analysis (PR)
