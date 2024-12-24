@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fync"
+version = "1.0.0"
+description = "Automatically trigger command execution when directory updates"
+authors = ["Fanuware"]
+license = "MIT"
+repository = "https://github.com/fanuware/fync"
+readme = "README.md"
+packages = [
+    { include = "fync", from = "src" },
+]
+
+[tool.poetry.scripts]
+fync = 'fync:main'
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+watchdog = ">=0.8.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
