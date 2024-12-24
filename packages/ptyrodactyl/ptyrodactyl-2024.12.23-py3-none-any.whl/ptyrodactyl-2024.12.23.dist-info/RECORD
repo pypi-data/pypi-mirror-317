@@ -1,0 +1,14 @@
+ptyrodactyl/__init__.py,sha256=RT49_hJ2fYW47_BjdPjZhcDana0F-4QfgIiBrxdlhdw,38
+ptyrodactyl/electrons/__init__.py,sha256=U8ydz8M9qsYzQn4S9EPUom6a2kgzisZFmenivf2FtGs,470
+ptyrodactyl/electrons/forward.py,sha256=Fz-XR86SyE8wcTCsvvgctWcRYJJCnRunhVneVpFG-rY,22365
+ptyrodactyl/electrons/inverse.py,sha256=O2ajc16t1IbjY--r-bpw3_LrzBaZNkohdhGpq8yTyPw,8064
+ptyrodactyl/light/__init__.py,sha256=7fuJeIotQuvmrSgQdeZ1ZOR10Xd8tuwycd25LdXPqIo,26
+ptyrodactyl/light/microscope.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ptyrodactyl/tools/__init__.py,sha256=N4Uwui1YWKL3cy8p-xrf2hEdUQBTwddH9owZehZ0gVw,520
+ptyrodactyl/tools/loss_functions.py,sha256=Q2goO1VcvwQK4WmZP_MB6DtDfM37O8-d9BFxE0IdN8U,2150
+ptyrodactyl/tools/optimizers.py,sha256=1ihDFwgEP8zbHUvFx8SJRjkyKUmcvr0UJd8lvGtgsV4,8945
+ptyrodactyl/tools/parallel.py,sha256=VoNy2DnHsSnvLLn0MQo1_DergEeCn9ysvbw9DpUj_ck,1445
+ptyrodactyl-2024.12.23.dist-info/METADATA,sha256=pb2Y0YS6SbnLGTint6fuCsuxhoqOPv1xtX6lnahOTxg,1960
+ptyrodactyl-2024.12.23.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ptyrodactyl-2024.12.23.dist-info/top_level.txt,sha256=i9ljHqt5JCBLtZtLcSx9vEI2LaBcVOyBs15rhErN3CQ,12
+ptyrodactyl-2024.12.23.dist-info/RECORD,,
