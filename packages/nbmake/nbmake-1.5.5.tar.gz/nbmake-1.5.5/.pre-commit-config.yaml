@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.3.0
+    hooks:
+      - id: trailing-whitespace
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.10
+    hooks:
+      - id: remove-crlf
+      - id: remove-tabs
+        args: [ '--whitespaces-count', '2' ]
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.5.0
+    hooks:
+      - id: nbstripout
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.9
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+      - id: ruff-format
+        args: [--line-length=88]
+  - repo: local
+    hooks:
+      - id: pyright
+        name: pyright
+        entry: uv run pyright
+        language: node
+        pass_filenames: false
+        types: [python]
+        additional_dependencies: ["pyright@1.1.391"]
