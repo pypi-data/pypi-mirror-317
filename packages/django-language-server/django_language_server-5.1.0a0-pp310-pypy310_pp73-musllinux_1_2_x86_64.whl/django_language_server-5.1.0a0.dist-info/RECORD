@@ -1,0 +1,9 @@
+django_language_server-5.1.0a0.dist-info/METADATA,sha256=lYtUdYBNHp8Jr_BdU-oeHjXTAgeTuthGn3aYgV2lZ-Y,9037
+django_language_server-5.1.0a0.dist-info/WHEEL,sha256=yRDTy-nbjQYYpoQha9iJ9hPOhcxRyVpPECCsCGG09oE,114
+django_language_server-5.1.0a0.dist-info/entry_points.txt,sha256=AdbukPev2wvomNiaC4srjwEjDkYCnqrziTK70448kRc,39
+django_language_server-5.1.0a0.dist-info/licenses/LICENSE,sha256=Y75XBpB-iSSXNNSRxPzHflvpqjahRCJZVKePHemgsb8,556
+djls.libs/libgcc_s-1e52349c.so.1,sha256=Ani0u_W_tB8ESsFePO4D2mn2lrgWLhyFdw6RETxBTYM,437537
+rust-toolchain.toml,sha256=w2bXojyIEP2xyF--hv0PBtO1JUIICaz-ygOXCbzhCDA,29
+djls/__init__.py,sha256=5kzflZtCmbnlMsZLoOp7Uk7j8eIphDUS8i8blUCE8u4,99
+djls/djls.pypy310-pp73-x86_64-linux-gnu.so,sha256=kdnVb4KnNOVMmFgXUBbFt22xhVAcrsV67ll8sjT3rYQ,5458633
+django_language_server-5.1.0a0.dist-info/RECORD,,
