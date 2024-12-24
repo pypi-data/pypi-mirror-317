@@ -1,0 +1,13 @@
+wox_plugin/__init__.py,sha256=L9KQCgpiwAmi4hRyTpXTVHWOCyed-anAvqvwNCHT-oo,1698
+wox_plugin/api.py,sha256=0L8dAYsjAdynVFoLnYh1sxB7Kjpbf6v26G83fFfqVVg,2669
+wox_plugin/plugin.py,sha256=Fp8uECXqbmnoxIRM6zEpQrXfgdiWZ35DJPEGgpcYmOI,661
+wox_plugin/py.typed,sha256=dTojFLVYRfxMiTpbjD_r3V7QAE1vkV-rjFfYbFsIscw,55
+wox_plugin/models/ai.py,sha256=BqIEBZej6cWEXgPyzRFBx6W590o8GBTAVPsaxyial4w,2793
+wox_plugin/models/context.py,sha256=GdsDX1xmc-lHQQZHBO2Sin6dg-rjSGSj5FWMy4HXbpo,1220
+wox_plugin/models/image.py,sha256=OPbW_bSC6mRRXERElyjjZ8UVVnPs0H7KM8mEHfRP83w,2678
+wox_plugin/models/preview.py,sha256=bE-MjcLyJL0muD-lfkZXPZ63aQO4kiYHv6FPyK3ntDo,2053
+wox_plugin/models/query.py,sha256=d0_p2lz7ex7kk3Q0UomGhZMPOD9Iti7ZiYgyXH8cjrw,6348
+wox_plugin/models/result.py,sha256=HtStUprlqhW6i8hzgLlm7kL4pE5Y4aSKgh5jDVDbR70,7701
+wox_plugin-0.0.48.dist-info/METADATA,sha256=MLKu4jt8iYfcCewozZWRRSKEFZqJXfbvK6IovU7N6eU,1549
+wox_plugin-0.0.48.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wox_plugin-0.0.48.dist-info/RECORD,,
