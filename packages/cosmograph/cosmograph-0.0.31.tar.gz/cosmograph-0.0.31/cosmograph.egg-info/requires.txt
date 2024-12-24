@@ -1,0 +1,11 @@
+cosmograph_widget
+i2
+dol
+pandas
+numpy
+tabled
+traitlets
+ju
+
+[test]
+linked
