@@ -1,0 +1,8 @@
+jquantsapi/__init__.py,sha256=mGFmXj706cytl79u2mrlDQfI64ap33tDB8Ga456cfG0,153
+jquantsapi/client.py,sha256=QH3ZOJWWH0EXZchD7NRqvgrvCiMmhfFO9F5qmOKOSnQ,70183
+jquantsapi/constants.py,sha256=FtAPDqTuFC0bxdpxBP3q4dDWIuE3akb_JFH1LryClG0,17812
+jquantsapi/enums.py,sha256=xe3L7SfeP9UdpCjsWmSsX8Jdhx6iQ7Z3xWrBtiy5I9w,517
+jquants_api_client-1.7.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+jquants_api_client-1.7.3.dist-info/METADATA,sha256=J0e36aZsX979HoMcSFTz36Q9MneHJ2WzYB-M0jlwnLM,7287
+jquants_api_client-1.7.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+jquants_api_client-1.7.3.dist-info/RECORD,,
