@@ -1,0 +1,21 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pymatter"
+version = "0.0.0"
+authors = [
+	{name = "Kylie A. Bemis", email = "k.bemis@northeastern.edu"}
+]
+description = "Python bindings for R/Bioconductor 'matter' package"
+readme = "README.md"
+license = {text = "Artistic License 2.0"}
+requires-python = ">=3.10"
+classifiers = [
+	"Development Status :: 1 - Planning",
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved :: Artistic License",
+	"Intended Audience :: Science/Research",
+]
