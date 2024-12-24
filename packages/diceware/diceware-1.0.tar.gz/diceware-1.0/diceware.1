@@ -1,0 +1,294 @@
+.\" Man page generated from reStructuredText.
+.
+.TH DICEWARE 1 "December 2024" "diceware 1.0" "User Commands"
+.SH NAME
+diceware \- create passphrases
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.SH SYNOPSIS
+.sp
+\fBdiceware\fP [\fIOPTION\fP]... [\fIFILE\fP]
+.SH DESCRIPTION
+.sp
+\fBdiceware\fP generates passphrases by concatenating words randomly picked from
+wordlists. It supports also real dice for passphrase generation.
+.sp
+It is based on the proposals of Arnold G. Reinhold on \fI\%http://diceware.com\fP\&.
+.SH OPTIONS
+.sp
+\fBpositional arguments\fP:
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B FILE
+optional input wordlist. \fB\(aq\-\(aq\fP will read from stdin. Should contain one
+word per line.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+\fBoptional arguments\fP:
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+show help message and exit
+.TP
+.B \fB\-n\fP \fINUM\fP, \fB\-\-num\fP \fINUM\fP
+number of words to concatenate. Default 6
+.TP
+.B \fB\-c\fP, \fB\-\-caps\fP
+Capitalize words. This is the default.
+.TP
+.B \fB\-\-no\-caps\fP
+Turn off capitalization.
+.TP
+.B \fB\-s\fP \fINUM\fP, \fB\-\-specials\fP \fINUM\fP
+Insert NUM special chars into generated word.
+.TP
+.B \fB\-d\fP \fIDELIMITER\fP, \fB\-\-delimiter\fP \fIDELIMITER\fP
+Separate words by DELIMITER. Empty string by default.
+.TP
+.B \fB\-r\fP \fISOURCE\fP, \fB\-\-randomsource\fP \fISOURCE\fP
+Get randomness from this source. Possible values:
+\fBrealdice\fP, \fBsystem\fP\&. Default: \fBsystem\fP
+.TP
+.B \fB\-w\fP [\fINAME\fP [\fINAME\fP ...]], \fB\-\-wordlist\fP [\fINAME\fP [\fINAME\fP ...]]
+Use words from this wordlist. Possible values: \fIca\fP, \fIde\fP, \fIde_8k\fP, \fIen\fP,
+\fIen_8k\fP, \fIen_adjectives\fP, \fIen_eff\fP, \fIen_nouns\fP, \fIen_orig\fP, \fIen_securedrop\fP\&.
+\fIes\fP, \fIit\fP, \fIpt\-br\fP\&. Default: \fBen_eff\fP
+.TP
+.B \fB\-v\fP, \fB\-\-verbose\fP
+Be verbose. Use several times for increased verbosity.
+.TP
+.B \fB\-\-version\fP
+output version information and exit.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+\fBArguments related to\fP \fIrealdice\fP \fBrandomsource\fP:
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B \fB\-\-dice\-sides\fP \fIN\fP
+Number of sides of dice. Default: 6
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SH ENVIRONMENT VARIABLES
+.INDENT 0.0
+.TP
+.B \fBXDG_CONFIG_HOME\fP
+If set and not empty, this variable determines the directory to use for
+user\-local configuration files. We then lookup
+\fI${XDG_CONFIG_HOME}/diceware/diceware.ini\fP and values set here override
+system\-wide config files.
+.TP
+.B \fBXDG_CONFIG_DIRS\fP
+If set and not empty, this variable is interpreted as colon\-separated list
+of directories, that might contain system\-wide configuration files. We
+lookup \fI<DIR>/diceware/diceware.ini\fP for each directory set in
+\fI$XDG_CONFIG_DIRS\fP\&.
+.TP
+.B \fBXDG_DATA_HOME\fP
+.INDENT 7.0
+.INDENT 3.5
+If set and not empty, this variable determines a directory to search for
+additional wordlists. We then lookup \fI${XDG_DATA_HOME}/diceware\fP for any
+existing wordlist files.
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B \fBXDG_DATA_DIRS\fP
+If set and not empty, this variable is interpreted as colon\-separated list
+of directories, that might contain additional wordlist files. See below. We
+lookup \fI<DIR>/diceware/\fP then for each directory set in the list.
+.UNINDENT
+.UNINDENT
+.SH FILES
+.sp
+Depending on environment variables set (or not set) we lookup certain
+directories for configuration files called \fBdiceware.ini\fP and for wordlist
+files.
+.SS CONFIGURATION FILES
+.sp
+Configuration settings for \fBdiceware\fP can be spread over several
+configuration files. We parse configuration values from the files given below,
+but values set in former files take precedence over values set in latter ones.
+.INDENT 0.0
+.TP
+.B \fI~/.diceware.ini\fP
+Your personal diceware configuration file. Values set here override values
+from any other configuration file.
+.TP
+.B \fI$XDG_CONFIG_HOME/diceware/diceware.ini\fP
+Additional location for your personal diceware configuration. Values set
+here will override any system\-wide valid values but can be overridden by
+\fI~/.diceware.ini\fP\&.
+.TP
+.B \fI$HOME/.config/diceware/diceware.ini\fP
+Alternative location for diceware configuration, only used if
+\fI${XDG_CONFIG_HOME}\fP is empty or unset.
+.TP
+.B \fI/etc/xdg/diceware/diceware.ini\fP
+If \fB$XDG_CONFIG_DIRS\fP is not set or empty, we look here for a system\-wide
+configuration file. Values set here take least precedence.
+.UNINDENT
+.SS WORDLIST FILES AND WORDLIST DIRECTORIES:
+.sp
+\fBdiceware\fP comes with a set of wordlists but enables you to add new wordlists
+by putting them into certain directories. The paths where the lists are stored
+(including the built\-in ones) is shown using \fB\-\-show\-wordlist\-dirs\fP\&.
+.sp
+Wordlist files are expected to contain lines with one term on each
+line and they must have a certain filenames to be found.
+.sp
+Wordlist filenames have to follow the pattern: \fBwordlist_<NAME>.txt\fP
+where \fB<NAME>\fP can be any name consisting of letters, numbers, underscores and
+hyphens. For instance \fBwordlist_en_eff.txt\fP is the filename of the EFF
+(electronic frontier foundation) word list. \fBen_eff\fP is the name of this list.
+.sp
+We support \fB\&.txt\fP and \fB\&.asc\fP as filename extensions for wordlists, where
+\fB\&.txt\fP files are expected to be plain wordlists and \fB\&.asc\fP files should
+provide a PGP\-signature.
+.sp
+If wordlists with the same name are found in different directories then the one
+in the directory with the highest precedence is taken only. The following
+locations are ordered by precedence (highest first). Therefore built\-in
+wordlists cannot be overridden by custom wordlists. You can, however, use
+custom wordlists with a different name.
+.sp
+Directories we look up that do not exist (in part or completely) are silently
+skipped when searching for wordlist files.
+.INDENT 0.0
+.TP
+.B \fI<INSTALL\-DIR>/wordlists/\fP
+The directory containing the built\-in wordlists as part of the
+installation. These are the wordlists that are always available, regardless
+of configuration values and their exact location depends on the
+installation location of the \fBdiceware\fP package.
+.TP
+.B \fI$XDG_DATA_HOME/diceware/\fP
+If $XDG_DATA_HOME is set and not empty, we look in this directory for
+wordlists.
+.TP
+.B \fI$HOME/.local/share/diceware/\fP
+If $XDG_DATA_HOME is unset or empty, we look  into this directory for
+wordlists.
+.TP
+.B \fI<DIR>/diceware\fP from \fI$XDG_DATA_DIRS\fP
+If $XDG_DATA_DIR is set and not empty, it is interpreted as a
+colon\-separated list of directories with \fI/diceware\fP appended. So,
+\fI/foo/bar:/baz\fP will make us look into \fI/foo/bar/diceware/\fP and
+\fI/baz/diceware/\fP in that order.
+.TP
+.B \fI/usr/local/share/diceware/\fP, \fI/usr/share/diceware\fP
+If $XDG_DATA_DIRS is unset or empty, we look into these two directories for
+wordlists.
+.UNINDENT
+.SH EXAMPLES
+.INDENT 0.0
+.TP
+.B \fBdiceware\fP
+Create a passphrase using defaults. Outputs something like
+"\fBWheelDyeHonkCanvasWitsPuck\fP"
+.TP
+.B \fBdiceware \-d\fP \fI"\-"\fP \fB\-n\fP \fI3\fP
+Create a passphrase with three words, separated by dash ("\fI\-\fP"). Results in
+something like "\fBWheel\-Dye\-Honk\fP"
+.TP
+.B \fBdiceware \-\-no\-caps\fP
+Create a passphrase without capital words. Creates something like
+"\fBwheel\-dye\-honk\fP".
+.TP
+.B \fBdiceware \-r\fP \fIrealdice\fP
+Use real dice to create a passphrase. The program will tell you what to do
+(roll dice and tell what numbers appear) and in the end present a
+passphrase.
+.TP
+.B \fBdiceware \-r\fP \fIrealdice\fP \fB\-\-dice\-sides\fP \fI20\fP
+Use real dice, as shown above, but this time use dice with 20 faces,
+instead of standard, 6\-sided dice.
+.TP
+.B \fBdiceware mywordlist.txt\fP
+Create a passphrase with words from file "mywordlist.txt". The file should
+contain one word on each line.
+.TP
+.B \fBdiceware \-w en_securedrop \-s 2\fP
+Create a passphrase with two special chars spread over the generated
+passphrase and containing words from wordlist "\fBen_securedrop\fP". This is
+one of the wordlists that come included with \fIdiceware\fP\&. Creates something
+like:
+"\fBPlayaBrigVer{SeesNe\-tsGets\fP".
+.TP
+.B \fBdiceware \-w en_adjectives en_nouns \-n 2\fP
+Create two syntactically meaningful phrases, each one consisting of an
+adjective and a noun. Results in something like:
+"\fBCruelAttendeesCleanCoffee\fP".
+.UNINDENT
+.SH COPYRIGHT
+.sp
+Copyright (C) 2015\-2024 Uli Fouquet and contributors
+.sp
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+.sp
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+.sp
+You should have received a copy of the GNU General Public License along with
+this program.  If not, see <\fI\%http://www.gnu.org/licenses/\fP>.
+.sp
+diceware is a concept invented by Arnold G. Reinhold, Cambridge, Massachusetts
+USA.
+.sp
+The Securedrop wordlist (file \fBwordlists/wordlist_en_securedrop.asc\fP) by
+Heartsucker is licensed under the \fIMIT\fP license (see \fI\%http://mit\-license.org/\fP).
+.sp
+The EFF wordlist (file \fBwordlsts/wordlist_en_eff.txt\fP) is licensed by the
+Electronic Frontier Foundation under the \fICreative Commons CC\-BY 3.0 US\fP
+license (see \fI\%https://creativecommons.org/licenses/by/3.0/us/\fP).
+.sp
+The copyright for the the \fIDiceware SecureDrop\fP list is owned by \fI@heartsucker\fP\&.
+Copyright for the \fIEFF large\fP list by \fIJoseph Bonneau\fP and \fIEFF\fP\&. Copyright for
+the brazilian portuguese list by \fI@drebs\fP\&. Copyright for the english adjective
+and noun lists by \fINaturalLanguagePasswords\fP\&.
+.sp
+"Diceware" is a trademark of Arnold G Reinhold, used with permission.
+.SH AUTHOR
+Written by Uli Fouquet and contributors
+.\" Generated by docutils manpage writer.
+.
