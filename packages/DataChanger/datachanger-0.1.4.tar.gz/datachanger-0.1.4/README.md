@@ -1,0 +1,60 @@
+# DataChanger
+
+DataChanger is a Python package that provides a class `DotDict` for dot notation access to dictionaries, lists, tuples, sets, and even JSON strings.
+
+## Installation
+
+You can install DataChanger via pip:
+
+# Description
+DataChanger is a Python package that provides a class DotDict, 
+    which allows for dot notation access to nested dictionaries and json data with data
+    types like str, int, lists, tuples, and sets. It is especially useful for working 
+    with JSON data and standard Python dictionaries in a more intuitive way.
+
+    Features:
+    - Written in Cython which gives this code 10X speed than python.
+    - Dot notation access for dictionaries and json.
+    - Supports deeply nested data structures, such as JSON and Python dictionaries.
+    - Converts JSON strings directly to DotDict, without the need to first convert to a dictionary.
+    - Allows for seamless conversion back to standard Python dictionaries.
+
+    Benefits:
+    - Simplifies working with deeply nested data by allowing dot notation (e.g., `data.key1.key2`).
+    - Eliminates the need for repetitive key lookups or dealing with nested dictionary keys manually.
+    - Faster and more efficient handling of JSON data by eliminating the intermediate step of converting JSON to dict before conversion to DotDict.
+
+    Usage:
+    1. Convert a standard dictionary or JSON string to a DotDict:
+       - Using a dictionary:
+         ```python
+         from dictator.dot_dict import DotDict
+         my_dict = {'key1': {'key2': 'value'}}
+         dot_dict = DotDict(my_dict)
+         print(dot_dict.key1.key2)  # Output: value
+         ```
+       - Using a JSON string:
+         ```python
+         json_str = '{"key1": {"key2": "value"}}'
+         dot_dict = DotDict(json_str)
+         print(dot_dict.key1.key2)  # Output: value
+         ```
+
+    2. Convert back to a dictionary:
+       ```python
+       dict_rep = dot_dict.to_dict()
+       print(dict_rep)  # Output: {'key1': {'key2': 'value'}}
+       ```
+      
+    3. Stop raising error if key is not present in dict:
+      ```
+      dot_dict = DotDict(my_dict, raise_error=False)
+      ```
+    
+    4. Convert nested iterables to list:
+      ```
+      dot_dict = DotDict(my_dict, convert_iterables=False)
+      ```
+
+    This package makes working with nested data more intuitive and readable, 
+    especially when handling complex JSON objects or deeply nested dictionaries.

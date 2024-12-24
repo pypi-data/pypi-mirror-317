@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+DataChanger.egg-info/PKG-INFO
+DataChanger.egg-info/SOURCES.txt
+DataChanger.egg-info/dependency_links.txt
+DataChanger.egg-info/requires.txt
+DataChanger.egg-info/top_level.txt
+dictator/dot_dict.c
+dictator/dot_dict.pyx
