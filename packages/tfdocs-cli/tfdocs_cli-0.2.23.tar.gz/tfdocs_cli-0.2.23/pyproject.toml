@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "tfdocs-cli"
+version = "v0.2.23"
+description = "Terraform provider documentation viewer for the CLI"
+authors = ["acrease <alex@crease.sh>"]
+readme = "readme.md"
+packages = [{include = "tfdocs"}]
+
+[tool.poetry.scripts]
+tfdocs = "tfdocs.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.11,<3.14"
+rich = "^13.8.1"
+result = "^0.17.0"
+textual = "^0.82.0"
+ijson = "^3.3.0"
+rapidfuzz = "^3.11.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+pytest-cov = "^5.0.0"
+pytest-asyncio = "^0.24.0"
+black = "^24.8.0"
+textual-dev = "^1.6.1"
+setuptools = "^72.0.0"
+pyinstaller = "^6.11.1"
+flask = "^3.1.0"
+gunicorn = "^23.0.0"
+boto3 = "^1.35.86"
+
+
+[build-system]
+requires = ["poetry-core", "wheel"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-s"
+testpaths = [
+    "tests",
+    "tfdocs/**/test_*.py",
+]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.mypy]
+ignore_missing_imports = true
+
