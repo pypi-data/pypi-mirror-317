@@ -1,0 +1,6 @@
+/dist/
+/__pycache__/
+/tests/_trial_temp/
+.DS_Store
+*.pyc
+*.log
