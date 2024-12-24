@@ -1,0 +1,15 @@
+[dataset]
+name = "M1L110"
+description = "M1L110, new format of dataset save"
+samples = 1020
+
+[block_area]
+rect = [10, 20, 30, 40]
+
+[single_digit]
+digit_array = [[10, 10, 20, 20], [10, 20, 30, 40]]
+
+[numpy_path]
+path = "numpy"
+x_name = "x_train.npy"
+y_name = "y_train.npy"
