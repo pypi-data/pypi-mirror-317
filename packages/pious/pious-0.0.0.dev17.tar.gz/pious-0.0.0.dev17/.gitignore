@@ -1,0 +1,6 @@
+**/__pycache__/
+run.log
+script.txt
+.vscode/
+/*.cfr
+dist/
