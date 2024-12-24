@@ -1,0 +1,58 @@
+{% extends 'generic/object.html' %}
+{% load buttons %}
+{% load static %}
+{% load helpers %}
+{% load plugins %}
+
+{% block content %}
+<div class="row my-3">
+	<div class="col col-md-6">
+        <div class="card">
+            <h5 class="card-header">
+                Software Product Installation
+            </h5>
+            <table class="table table-hover attr-table">
+                <tr>
+                    <th scope="row">IpAddress</th>
+                    <td><a href="{% url 'ipam:ipaddress' object.ipaddress.id %}">{{ object.ipaddress }}</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">Software Product</th>
+                    <td><a href="{% url 'plugins:netbox_svm:softwareproduct' object.software_product.id %}">{{ object.software_product }}</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">Version</th>
+                    <td><a href="{% url 'plugins:netbox_svm:softwareproductversion' object.version.id %}">{{ object.version }}</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">Owner</th>
+                    {% if object.ipaddress.contacts.count >= 1 and object.owner.strip != "" %}
+                    <td>{{ object.owner }}, 
+                        {% for contact in object.ipaddress.contacts.all %}
+                        <a href="{% url 'tenancy:contact' contact.contact.id %}">{{ contact.contact }}</a>{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </td>
+                    {% elif object.ipaddress.contacts.count >= 1 and object.owner.strip == "" %}
+                    <td>
+                        {% for contact in object.ipaddress.contacts.all %}
+                        <a href="{% url 'tenancy:contact' contact.contact.id %}">{{ contact.contact }}</a>{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </td>
+                    {% else %}
+                    <td>{{ object.owner }}</td>
+                    {% endif %}
+                </tr>
+            </table>
+        </div>
+        {% include 'inc/panels/custom_fields.html' %}
+        {% include 'inc/panels/tags.html' %}
+        {% include 'inc/panels/comments.html' %}
+        {% plugin_left_page object %}
+    </div>
+</div>
+<div class="row">
+    <div class="col col-md-12">
+        {% plugin_full_width_page object %}
+    </div>
+</div>
+{% endblock %}
