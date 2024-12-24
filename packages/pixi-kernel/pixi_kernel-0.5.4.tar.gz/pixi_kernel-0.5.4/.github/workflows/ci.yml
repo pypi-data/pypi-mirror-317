@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        pixi-version: ["0.30.0", "0.39.3"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Pixi ${{ matrix.pixi-version }}
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          pixi-version: v${{ matrix.pixi-version }}
+          run-install: false
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Test, lint and typecheck
+        run: uv run tox
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+  # https://stackoverflow.com/a/75250293
+  branch-protection:
+    runs-on: ubuntu-latest
+    needs: test
+    if: always()
+    steps:
+      - name: All tests passed
+        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        run: exit 0
+
+      - name: Some tests failed
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: exit 1

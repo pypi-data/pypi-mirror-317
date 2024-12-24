@@ -1,0 +1,34 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  pypi-publish:
+    name: Publish release to PyPI
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      id-token: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Build release
+        run: uv build
+
+      - name: Check that tag and project versions match
+        run: |
+          PROJECT_VERSION=$(grep -oP '(?<=version = ")[^"]*' pyproject.toml | head -1)
+          if [ "v$PROJECT_VERSION" != "${{ github.ref_name }}" ]; then
+            echo "Version mismatch: pyproject.toml version is $PROJECT_VERSION, but tag is ${{ github.ref_name }}"
+            exit 1
+          fi
+
+      - name: Upload distribution to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
