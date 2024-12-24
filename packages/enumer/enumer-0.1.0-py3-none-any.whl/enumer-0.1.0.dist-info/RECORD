@@ -1,0 +1,9 @@
+enumer/__init__.py,sha256=OCu7WOi-GzVAXpV1GCIF8ALiqLP9Gj598u3H6QchGP0,282
+enumer/enumer.py,sha256=U0yZI5FSSYVkdvDaIbLsqd3uz0PAChMRKG3t7OUafXA,8816
+enumer/db/__init__.py,sha256=yjjM7g5tK_m2P8p5YQOStcjj-QN1nxSv0A-9SsC61hE,365
+enumer/db/utils.py,sha256=loOB_3PL-rNRWMdP-8XMtCyFQ4ao8HCy2Fr-_mw0gQY,3355
+enumer-0.1.0.data/data/requirements.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+enumer-0.1.0.dist-info/METADATA,sha256=fba0dgmQAXyXRHH5u_M2X4uihRzzqcvaoKUUJ7BRyF0,2401
+enumer-0.1.0.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+enumer-0.1.0.dist-info/top_level.txt,sha256=bPxwHEkv704eA9F9Gi2Y59PMwmbwb_h-XTTVHqiUDHE,7
+enumer-0.1.0.dist-info/RECORD,,
