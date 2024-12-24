@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: django-celery-results-rest
+Version: 0.0.4
+Summary: RESTful API for django-celery-results
+Author: zengqiu
+Author-email: zengqiu@qq.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django-celery-results>=2.5.1
+Requires-Dist: djangorestframework>=3.14.0
+Requires-Dist: django-filter>=23.5
+
+django-celery-results RESTful API
+==============================
+
+RESTful API for django-celery-results.
+
+# Usage
+
+Add `celery_results_rest` in your project's `settings.py`:
+
+```
+INSTALLED_APPS = [
+    'celery_results_rest',
+]
+```
+
+Include `celery_results_rest.urls` in project's `urls.py`:
+
+```
+urlpatterns = [
+    path('celery/results/', include('celery_results_rest.urls'))
+]
+```

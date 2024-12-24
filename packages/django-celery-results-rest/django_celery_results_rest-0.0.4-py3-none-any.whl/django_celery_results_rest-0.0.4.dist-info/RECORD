@@ -1,0 +1,10 @@
+celery_results_rest/__init__.py,sha256=w69RyXGIkMos2j-PEyl-LOPwW_R4KdGf-HjhOGZkd5g,188
+celery_results_rest/filters.py,sha256=qUmbObNWl_Um_BftIG0sxlo98mmpxocbvXw-EMwmwco,948
+celery_results_rest/serializers.py,sha256=7SQOcNbvnJoLr3N2eDCIdowEngStX1-mbTXI-GVDIok,1108
+celery_results_rest/urls.py,sha256=eW0hpeV-aTavFQQCvsCdnOKjehIGxUOqVmNEBl1aAyI,316
+celery_results_rest/views.py,sha256=aG9nEYhE872KLYcsHlLVmmkKlENMOcAAm6Kb8fn9OeU,1313
+django_celery_results_rest-0.0.4.dist-info/LICENSE,sha256=iI9fPUw567gyiSD45gcbSwCNwWq8OjCKE2ZxdhmQEUA,1064
+django_celery_results_rest-0.0.4.dist-info/METADATA,sha256=vedd50fy9f949q_mNW_zAAN7bHUja5DCYsplOHQSTG0,1557
+django_celery_results_rest-0.0.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_celery_results_rest-0.0.4.dist-info/top_level.txt,sha256=9szHThkjo0hl1SRdsWyz6KqrHJ70TXQLr4eGFBAk81g,20
+django_celery_results_rest-0.0.4.dist-info/RECORD,,
