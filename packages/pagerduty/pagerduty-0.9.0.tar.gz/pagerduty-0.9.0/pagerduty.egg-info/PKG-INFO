@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pagerduty
+Version: 0.9.0
+Summary: python-pagerduty
+Home-page: https://pagerduty.github.io/python-pagerduty
+Download-URL: https://pypi.org/project/pagerduty/
+Author: PagerDuty
+Author-email: support@pagerduty.com
+License: MIT
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: certifi
+Requires-Dist: requests
+Requires-Dist: urllib3
+
+Clients for PagerDuty's APIs
