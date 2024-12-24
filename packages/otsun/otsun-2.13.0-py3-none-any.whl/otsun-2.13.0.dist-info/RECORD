@@ -1,0 +1,15 @@
+otsun/__init__.py,sha256=cjH2EKV-ksMcdL8BX1pm9xBjfm2_AB2NrMd2uZjnT3Q,1230
+otsun/data/ASTMG173-direct.txt,sha256=H1QmSwuEvUHXL-L5gIPkpYDknBmrw6zq4aNNLtsradc,44043
+otsun/experiments.py,sha256=VcOez2Kd_w78A229GI-S887zHHzIEvtsLSIw195k9Yc,7349
+otsun/materials.py,sha256=iIAIcgOU3NErleQ1mVsEXx5Syf0jX9QMNX9lqFVJRTQ,60001
+otsun/math.py,sha256=2Qa_Ikuex4ymUVX9ns2ugx-PoijmJJUaf85AsKr64ic,9061
+otsun/movements.py,sha256=iiXW3dAoFgDjVoXtj1464OALRt2nhkEKFiJcXvsY3Cg,16435
+otsun/optics.py,sha256=Iqu2vyBVK4r8CKZ-HrCZj4tihsCTwzPAEPF9DPAu2Hk,22817
+otsun/outputs.py,sha256=hJWc4W4va4y5ao5LPFosmqLwHx468dxJShkbJ1MI4M0,3194
+otsun/ray.py,sha256=lVhZOi1uGrwNhaAezSLdw7o9n5LwMvppW-obHUTk2m4,14803
+otsun/scene.py,sha256=yf1vpINsLiUlOj3vwYQsYsSthe2RJINXrHxlUjQTj2A,8842
+otsun/source.py,sha256=T6ACjSg5zn6UxUILwodjuEizAp9W_U_mA13ieccz-XM,14189
+otsun-2.13.0.dist-info/LICENSE.txt,sha256=geF9nly4qZ04TgRYZpSD_cU06R4ab28Nd4_or_s1q4k,1101
+otsun-2.13.0.dist-info/METADATA,sha256=7Qi0ASretyMkQfLszZgpeb2_tYmcPsp3YegljLQVfuU,1640
+otsun-2.13.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+otsun-2.13.0.dist-info/RECORD,,
