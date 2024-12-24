@@ -1,0 +1,7 @@
+README.md
+setup.py
+peer2peerchat.egg-info/PKG-INFO
+peer2peerchat.egg-info/SOURCES.txt
+peer2peerchat.egg-info/dependency_links.txt
+peer2peerchat.egg-info/entry_points.txt
+peer2peerchat.egg-info/top_level.txt
