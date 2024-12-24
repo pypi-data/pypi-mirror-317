@@ -1,0 +1,108 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Apparaat is al geconfigureerd",
+            "no_devices_found": "Geen apparaten gevonden op het netwerk"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "address": "Apparaat"
+                },
+                "description": "Kies een apparaat om in te stellen"
+            }
+        }
+    },
+    "entity": {
+        "number": {
+            "accel_sensitivity": {
+                "name": "Bewegingsgevoeligheid"
+            },
+            "boost_temp": {
+                "name": "Boost temperatuur"
+            },
+            "calibration_offset": {
+                "name": "Kalibratie-offset"
+            },
+            "display_brightness": {
+                "name": "Schermhelderheid"
+            },
+            "hall_sensitivity": {
+                "name": "Hall-effect gevoeligheid"
+            },
+            "keep_awake_pulse_delay": {
+                "name": "Keep-awake pulsvertraging"
+            },
+            "keep_awake_pulse_duration": {
+                "name": "Keep-awake pulsduur"
+            },
+            "keep_awake_pulse_power": {
+                "name": "Keep-awake pulsintensiteit"
+            },
+            "min_voltage_per_cell": {
+                "name": "Min. voltage per cel"
+            },
+            "pd_timeout": {
+                "name": "Power Delivery time-out"
+            },
+            "power_limit": {
+                "name": "Vermogenslimiet"
+            },
+            "qc_max_voltage": {
+                "name": "Quick Charge-spanning"
+            },
+            "shutdown_timeout": {
+                "name": "Time-out voor afsluiten"
+            },
+            "sleep_temperature": {
+                "name": "Slaapstand temperatuur"
+            },
+            "sleep_timeout": {
+                "name": "Time-out voor slaapstand"
+            },
+            "temp_increment_long": {
+                "name": "Temperatuurstap lang indrukken"
+            },
+            "temp_increment_short": {
+                "name": "Temperatuurstap kort indrukken"
+            },
+            "voltage_div": {
+                "name": "Spanningsregelaar"
+            }
+        },
+        "select": {
+            "logo_duration": {
+                "state": {
+                    "seconds_1": "1 seconde",
+                    "seconds_2": "2 seconden",
+                    "seconds_3": "3 seconden",
+                    "seconds_4": "4 seconden"
+                }
+            },
+            "orientation_mode": {
+                "state": {
+                    "left_handed": "Linkshandig",
+                    "right_handed": "Rechtshandig"
+                }
+            },
+            "temp_unit": {
+                "state": {
+                    "celsius": "Celsius (C\u00b0)",
+                    "fahrenheit": "Fahrenheit (F\u00b0)"
+                }
+            }
+        },
+        "sensor": {
+            "operating_mode": {
+                "state": {
+                    "idle": "Inactief"
+                }
+            },
+            "power_source": {
+                "state": {
+                    "dc": "DC input"
+                }
+            }
+        }
+    }
+}

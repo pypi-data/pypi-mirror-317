@@ -1,0 +1,20 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "name": "Namn"
+                },
+                "description": "Med trendhj\u00e4lpen kan du skapa en sensor som visar trenden f\u00f6r ett numeriskt tillst\u00e5nd eller ett tillst\u00e5ndsattribut fr\u00e5n en annan entitet.",
+                "title": "Trend-hj\u00e4lpare"
+            }
+        }
+    },
+    "services": {
+        "reload": {
+            "description": "Laddar om trendsensorer fr\u00e5n YAML-konfigurationen.",
+            "name": "Ladda om"
+        }
+    },
+    "title": "Trend"
+}

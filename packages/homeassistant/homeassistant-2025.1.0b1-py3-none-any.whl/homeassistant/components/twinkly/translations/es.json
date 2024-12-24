@@ -1,0 +1,20 @@
+{
+    "config": {
+        "error": {
+            "cannot_connect": "No se pudo conectar"
+        },
+        "step": {
+            "discovery_confirm": {
+                "description": "\u00bfQuieres configurar {name} - {model} ({host})?"
+            },
+            "user": {
+                "data": {
+                    "host": "Host"
+                },
+                "data_description": {
+                    "host": "Nombre de host o direcci\u00f3n IP de tu dispositivo Twinkly."
+                }
+            }
+        }
+    }
+}
