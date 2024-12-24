@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: vrt-lss-studio
+Version: 7.12.2609
+Summary: VRt.Studio [ST]
+Home-page: UNKNOWN
+Author: Veeroute Support Team
+Author-email: servicedesk@veeroute.com
+License: Proprietary
+Keywords: OpenAPI,VRt.Studio [ST]
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic (>=2)
+Requires-Dist: python-dateutil
+Requires-Dist: typing-extensions (>=4.7.1)
+Requires-Dist: urllib3 (<2.1.0,>=1.25.3)
+
+    Veeroute Studio API.  # Description  Server part of the Veeroute Studio.  ## Reserved attributes  These attribute keys are reserved for specific business logic:  | Attribute Key | Entity   | Purpose                                                                     | |:--------------|:---------|:----------------------------------------------------------------------------| | &#x60;ICON_NAME&#x60;   | Location | The attribute value is written to the web_location_geopoint.icon_name field |  ## Entity relationship diagram  ![erd](../uml/studio.svg) 
+    
+
