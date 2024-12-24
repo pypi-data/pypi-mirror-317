@@ -1,0 +1,10 @@
+jformat/__init__.py,sha256=0Q_BghojxUyqRWjbMfH4kUVNq3zceKmSW7FXLLxWi20,12
+jformat/cli.py,sha256=8jQDPP1xRY5NkZGVWMw8s_o7al2lV1B4MGAVw2lTwOM,634
+tests/__init__.py,sha256=0Q_BghojxUyqRWjbMfH4kUVNq3zceKmSW7FXLLxWi20,12
+tests/test_formatter.py,sha256=nIGuQC5ACMww82coZAtlcyM03YSfpKa19QW9eUK9n3E,407
+jformat-0.0.1.dist-info/LICENSE,sha256=dIbc2MY30eeV1NLzI2SiLfzANSvABreUG_abVBa4jY0,520
+jformat-0.0.1.dist-info/METADATA,sha256=eQ0wpKPeOENAHDuFRRD22vHC3dqHLdtaoxzIaz9BcyU,4365
+jformat-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jformat-0.0.1.dist-info/entry_points.txt,sha256=NqWQWfT8QAvkbsLRFFLBfyHKBsDDifCs6lB0kbCtk5s,45
+jformat-0.0.1.dist-info/top_level.txt,sha256=lxfikcdB-sqiviC8UyUpFp9xImUD4rYviaZyERw7RpM,14
+jformat-0.0.1.dist-info/RECORD,,
