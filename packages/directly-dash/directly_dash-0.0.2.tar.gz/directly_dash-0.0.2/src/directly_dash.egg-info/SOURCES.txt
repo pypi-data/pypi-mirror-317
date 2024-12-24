@@ -1,0 +1,12 @@
+.gitignore
+Makefile
+README.md
+pyproject.toml
+src/directly_dash/__init__.py
+src/directly_dash/_version.py
+src/directly_dash/main.py
+src/directly_dash.egg-info/PKG-INFO
+src/directly_dash.egg-info/SOURCES.txt
+src/directly_dash.egg-info/dependency_links.txt
+src/directly_dash.egg-info/requires.txt
+src/directly_dash.egg-info/top_level.txt
