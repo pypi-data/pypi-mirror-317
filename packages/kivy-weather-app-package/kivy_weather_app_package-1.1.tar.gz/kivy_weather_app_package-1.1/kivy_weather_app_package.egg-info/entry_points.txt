@@ -1,0 +1,3 @@
+[console_scripts]
+kivy_weather_app_package = kivy_weather_app_package.main:main
+
