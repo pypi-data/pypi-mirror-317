@@ -1,0 +1,2 @@
+[hatch]
+buildext = hatch_buildext.hooks

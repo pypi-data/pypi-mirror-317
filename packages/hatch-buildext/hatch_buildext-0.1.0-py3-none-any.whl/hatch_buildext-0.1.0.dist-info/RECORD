@@ -1,0 +1,15 @@
+hatch_buildext/__about__.py,sha256=DvyWiuViwDvFePAf_KWMl83Un8kfPCx-Aka3nbH7rJw,135
+hatch_buildext/__init__.py,sha256=YB__paP7XoAsfycuUJXbjO_kNFgm3avrHggR100roKo,353
+hatch_buildext/_compat.py,sha256=I7rknCP3K-0khvM-EfeyWNPLmfhvY8MErz3td6ihMXs,238
+hatch_buildext/_types.py,sha256=mLXCZgHmHzTtXnA-F88O1F_rdqk6MGamTDQ5vTdK3cs,197
+hatch_buildext/_utils.py,sha256=vyGg0VBPEmtT-7RrIXroIOsGZ0TS2iL0xrtUnZgNwxo,310
+hatch_buildext/hooks.py,sha256=p4nRXS7NcpibUMenZVP1OGGVYucIHanXMi4RuR4qc1U,166
+hatch_buildext/plugin.py,sha256=ckmmycQZL_9v4tUZgFiFN14tOHnPLdZI32SGcpGU5n8,5467
+hatch_buildext/core/__init__.py,sha256=5_oQjNMKokS8QP1cl_stC7Nlbi-uc-jxbSAEb0kL42U,139
+hatch_buildext/core/macro.py,sha256=dV6Fo7-JMeo2k92O09JBOeu4SVKMjbbc9RjGduumYt8,632
+hatch_buildext/core/resolver.py,sha256=JBKkcp6ew-1pulQ9TcYRP7AS6__KtwtjgGGAhNQUeBA,2482
+hatch_buildext-0.1.0.dist-info/METADATA,sha256=_ESlhtnNnaWdZLMn8JDKw1nHeKPBVWuDxxuGwgfiN40,4044
+hatch_buildext-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hatch_buildext-0.1.0.dist-info/entry_points.txt,sha256=wC_rKjLl_9pz_dBosdCdleRe8oAoejsJUs8cGWYLEkY,40
+hatch_buildext-0.1.0.dist-info/licenses/LICENSE.txt,sha256=B05uMshqTA74s-0ltyHKI6yoPfJ3zYgQbvcXfDVGFf8,10280
+hatch_buildext-0.1.0.dist-info/RECORD,,
