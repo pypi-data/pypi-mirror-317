@@ -1,0 +1,404 @@
+{
+  "apps": [
+    {
+      "app_name": "autotest_dde_file_manager",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_dde_file_manager",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": true,
+      "device": null,
+      "order": 1
+    },
+    {
+      "app_name": "autotest_deepin_screen_recorder",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_screen_recorder",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 2
+    },
+    {
+      "app_name": "autotest_deepin_music",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_music",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 3
+    },
+    {
+      "app_name": "autotest_deepin_draw",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_draw",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 4
+    },
+    {
+      "app_name": "autotest_deepin_movie",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_movie",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 5
+    },
+    {
+      "app_name": "autotest_deepin_album",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_album",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 6
+    },
+    {
+      "app_name": "autotest_deepin_image_viewer",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_image_viewer",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 7
+    },
+    {
+      "app_name": "autotest_deepin_camera",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_camera",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": "camera",
+      "order": 8
+    },
+    {
+      "app_name": "autotest_deepin_ai_assistant",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_ai_assistant",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 9
+    },
+    {
+      "app_name": "autotest_com_sogou_sogoupinyin_uos",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_com_sogou_sogoupinyin_uos",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 10
+    },
+    {
+      "app_name": "autotest_deepin_kwin",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_kwin",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": true,
+      "device": null,
+      "order": 11
+    },
+    {
+      "app_name": "autotest_deepin_app_store",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_app_store",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": true,
+      "device": null,
+      "order": 12
+    },
+    {
+      "app_name": "autotest_dde_introduction",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_dde_introduction",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 13
+    },
+    {
+      "app_name": "autotest_kernel",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_kernel",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 14
+    },
+    {
+      "app_name": "autotest_dde_calendar",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_dde_calendar",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 15
+    },
+    {
+      "app_name": "autotest_deepin_terminal",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_terminal",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 16
+    },
+    {
+      "app_name": "autotest_deepin_calculator",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_calculator",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 17
+    },
+    {
+      "app_name": "autotest_deepin_deb_installer",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_deb_installer",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 18
+    },
+    {
+      "app_name": "autotest_dde",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_dde",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": true,
+      "device": null,
+      "order": 19
+    },
+    {
+      "app_name": "autotest_system_safety",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_system_safety",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": "camera",
+      "order": 20
+    },
+    {
+      "app_name": "autotest_uos_system",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_uos_system",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 21
+    },
+    {
+      "app_name": "autotest_uos_remote_assistance",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_uos_remote_assistance",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 22
+    },
+    {
+      "app_name": "autotest_deepin_reader",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_reader",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 23
+    },
+    {
+      "app_name": "autotest_deepin_font_manager",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_font_manager",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 24
+    },
+    {
+      "app_name": "autotest_deepin_editor",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_editor",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 25
+    },
+    {
+      "app_name": "autotest_deepin_log_viewer",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_log_viewer",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 26
+    },
+    {
+      "app_name": "autotest_dde_grand_search",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_dde_grand_search",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 27
+    },
+    {
+      "app_name": "autotest_deepin_defender",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_defender",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 28
+    },
+    {
+      "app_name": "autotest_deepin_downloader",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_downloader",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 29
+    },
+    {
+      "app_name": "autotest_deepin_diskmanager",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_diskmanager",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 30
+    },
+    {
+      "app_name": "autotest_deepin_fcitx",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_fcitx",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 31
+    },
+    {
+      "app_name": "autotest_com_deepin_lianliankan",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_com_deepin_lianliankan",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 32
+    },
+    {
+      "app_name": "autotest_deepin_system_monitor",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_system_monitor",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 33
+    },
+    {
+      "app_name": "autotest_com_deepin_gomoku",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_com_deepin_gomoku",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 34
+    },
+    {
+      "app_name": "autotest_deepin_compressor",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_compressor",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 35
+    },
+    {
+      "app_name": "autotest_deepin_manual",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_manual",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 36
+    },
+    {
+      "app_name": "autotest_deepin_devicemanager",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_devicemanager",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 37
+    },
+    {
+      "app_name": "autotest_deepin_boot_maker",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_boot_maker",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 38
+    },
+    {
+      "app_name": "autotest_deepin_voice_note",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_deepin_voice_note",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 39
+    },
+    {
+      "app_name": "autotest_dde_printer",
+      "git_url": "ssh://ut001203@gerrit.uniontech.com:29418/autotest_dde_printer",
+      "git_branch": "at-release/1072",
+      "framework": "youqu2",
+      "split_run": false,
+      "device": null,
+      "order": 40
+    }
+  ],
+  "clients": [
+    {
+      "host": "uos@10.20.34.237:1",
+      "device": null
+    },
+    {
+      "host": "uos@10.20.34.229:1",
+      "device": null
+    },
+    {
+      "host": "uos@10.20.34.230:1",
+      "device": null
+    },
+    {
+      "host": "uos@10.20.34.231:1",
+      "device": null
+    },
+    {
+      "host": "uos@10.8.15.40:1",
+      "device": "camera"
+    },
+    {
+      "host": "uos@10.8.15.41:1",
+      "device": "camera"
+    },
+    {
+      "host": "uos@10.20.34.236:1",
+      "device": null
+    }
+  ],
+  "manages": [],
+  "tags": "CICD and L1",
+  "task_id": "d15655adb7ab43799abe79e79846732c",
+  "json_backfill_base_url": "http://10.7.60.15:8082/",
+  "json_backfill_user": "AT",
+  "json_backfill_password": "123456",
+  "pms_task_id": null,
+  "pms_user": "autotest",
+  "pms_password": "Deepin@123",
+  "other_args": null
+}
