@@ -1,0 +1,35 @@
+[project]
+authors = [
+  { name = "Phil Whybra" },
+]
+name = "slidec"
+version = "0.1.0"
+description = "A Terminal-based Markdown Slide Presenter."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["rich", "readchar"]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+keywords = ["terminal slides"]
+
+[project.scripts]
+slidec = "slidec:main"
+
+[project.urls]
+Source = "https://github.com/pwhybra/slidec"
+
+[build-system]
+# Minimum requirements for the build system to execute, defined by PEP 518.
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+src = ["src", "test"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"

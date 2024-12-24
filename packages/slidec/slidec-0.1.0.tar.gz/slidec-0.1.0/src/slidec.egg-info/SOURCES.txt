@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/slidec/__init__.py
+src/slidec/slidec.py
+src/slidec.egg-info/PKG-INFO
+src/slidec.egg-info/SOURCES.txt
+src/slidec.egg-info/dependency_links.txt
+src/slidec.egg-info/entry_points.txt
+src/slidec.egg-info/requires.txt
+src/slidec.egg-info/top_level.txt
