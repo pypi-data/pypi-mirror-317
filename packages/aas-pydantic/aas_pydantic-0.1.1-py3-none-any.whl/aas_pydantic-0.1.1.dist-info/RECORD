@@ -1,0 +1,12 @@
+aas_pydantic/__init__.py,sha256=Rg7ZTCa7la2KFz51USN3Y43_YH71cDoq1Il6hhwYCHs,745
+aas_pydantic/aas_model.py,sha256=C9wlvcCe5uU1uB7mDE25gBA7Op7SgXsmVhmWIa7jI6Y,7325
+aas_pydantic/convert_aas_instance.py,sha256=RcVzvwx5eg9CBtA0mVRmY12XoN6PUrSu_RuRj6T2Blw,16125
+aas_pydantic/convert_aas_template.py,sha256=7XEowenu8llTHg5oMuxmdc7womCWC3r39ZEHSIAwI8s,17330
+aas_pydantic/convert_pydantic_model.py,sha256=7daJmqemB79GAO7aZHjLJircQma7GXI4xPIg183XIhc,12769
+aas_pydantic/convert_pydantic_type.py,sha256=KmHfSHYQj-eI7qsBOD3Or3KXs4L-8vNmwjsM9gB9CDw,19559
+aas_pydantic/convert_util.py,sha256=i-ntlUPhcgLh1jZ-sfNudt2U5z3QLkFBvlIpkqCCxpc,25630
+aas_pydantic/util.py,sha256=xETEGVXVXxIwtEJR0kmEy4I-B5A2s3CVw8SSQGjANhk,6222
+aas_pydantic-0.1.1.dist-info/LICENSE,sha256=O3hEOU_s2_br9FytR_3F-bid6UH-2XBdmeku8gUm1aI,1096
+aas_pydantic-0.1.1.dist-info/METADATA,sha256=h7_wW8AaSPPbAUGetAHlovfXhjx5W7KlGwGG91U5nu4,8785
+aas_pydantic-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+aas_pydantic-0.1.1.dist-info/RECORD,,
