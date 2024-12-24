@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+higcps.egg-info/PKG-INFO
+higcps.egg-info/SOURCES.txt
+higcps.egg-info/dependency_links.txt
+higcps.egg-info/requires.txt
+higcps.egg-info/top_level.txt

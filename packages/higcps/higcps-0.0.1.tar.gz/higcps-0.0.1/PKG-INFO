@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: higcps
+Version: 0.0.1
+Summary: GCP Utilities for BigQuery
+Home-page: https://github.com/xileven
+Author: J L
+Author-email: jliu5277@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-cloud-bigquery
+Requires-Dist: google-cloud-storage
+Requires-Dist: pandas
+Requires-Dist: pandas-gbq
+Requires-Dist: pyarrow
+
+# hi-gcp
+
+A Python utility package for working with Google Cloud Platform (GCP) services, primarily focusing on BigQuery operations.
+
+## Installation
+
+```bash
+pip install higcps
+```
+
+## Features
+
+- Easy-to-use BigQuery client wrapper
+- Simplified query execution and data retrieval
+- Efficient data loading and export operations
+
+## Usage
+
+```python
+from hi_gcp import BigQueryClient
+
+# Initialize the client
+
+gg = BigQueryClient(
+    project_id = "project_id",
+    dataset_id = "dataset_id",
+    table_id = "table_id",
+    key_file='path/to/service_account_key.json'
+)
+
+# Execute a query
+df = gg.sql2df("SELECT * FROM `project_id.dataset_id.table_id` LIMIT 100")
+```
+
+## License
+
+MIT License
