@@ -1,0 +1,2 @@
+[console_scripts]
+otter-folder-builder = pykubegrader.build.build_folder:main
