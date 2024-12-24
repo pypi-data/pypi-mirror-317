@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: silk2.tools.profile
+Version: 1.1.2
+Summary: Profile using Performance logs.
+Home-page: https://github.com/sophgo
+Author: zhiju.huang
+Author-email: zhiju.huang@sophgo.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Requires-Dist: bs4
+Requires-Dist: numpy
+Requires-Dist: pyecharts
+
+
+Analyze performance bottlenecks using Performance logs.
+
+
