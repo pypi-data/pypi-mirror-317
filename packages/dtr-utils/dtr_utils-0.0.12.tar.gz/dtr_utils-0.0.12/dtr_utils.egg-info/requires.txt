@@ -1,0 +1,6 @@
+nltk==3.9.1
+anytree==2.12.1
+graphviz==0.20.3
+stanza==1.9.2
+lxml==5.3.0
+googlesearch-python==1.2.5
