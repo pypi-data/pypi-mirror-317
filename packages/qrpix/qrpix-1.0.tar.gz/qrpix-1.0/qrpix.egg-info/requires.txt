@@ -1,0 +1,2 @@
+crcmod
+qrcode[pil]

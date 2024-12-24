@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: qrpix
+Version: 1.0
+Summary: Pacote para gerar QR Codes de pagamento Pix
+Home-page: https://github.com/edcleyssonalves/qrpix
+Author: edalves
+Author-email: edcleyssonalves@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# qrpix
+
+Este pacote permite gerar QR Codes de pagamento Pix, com informaÃ§Ãµes personalizÃ¡veis como nome do recebedor, chave Pix, valor da transaÃ§Ã£o e cidade.
+
+## Como usar
+
+```python
+from payload import Payload
+
+# Inicializando com os dados
+payload = Payload(nome="Maria JosÃ©", chavepix="+5584994226558", valor="0.00", cidade="BRASIL", txtId="TesteQRPIX")
+
+# Gerando o QR Code
+codigo_pix = payload.gerarPayload()
+print(codigo_pix)  # Exibe o cÃ³digo gerado
