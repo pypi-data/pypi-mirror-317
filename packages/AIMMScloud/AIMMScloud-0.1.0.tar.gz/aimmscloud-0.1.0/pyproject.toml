@@ -1,0 +1,39 @@
+[project]
+name = "AIMMScloud"
+version = "0.1.0"
+description = "Official AIMMS Python library to work with the AIMMS cloud environment"
+authors = [
+    {name = "Vincent Stangenberger", email = "vincent.stangenberger@aimms.com"},
+]
+dependencies = [
+    "pydantic>=2.10.4",
+    "urllib3>=2.3.0",
+    "python-dateutil>=2.9.0.post0",
+    "typing-extensions>=4.12.2",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=8.3.4",
+    "python-dotenv>=1.0.1",
+]
+publish = [
+    "twine>=6.0.1",
+]
+
