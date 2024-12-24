@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tests/__init__.py
+tests/test_basic.py
+tests/test_from_untruncate.py
+untruncate_json/__init__.py
+untruncate_json/__main__.py
+untruncate_json/py.typed
+untruncate_json/untrunc.py
+untruncate_json/version.py
+untruncate_json.egg-info/PKG-INFO
+untruncate_json.egg-info/SOURCES.txt
+untruncate_json.egg-info/dependency_links.txt
+untruncate_json.egg-info/entry_points.txt
+untruncate_json.egg-info/top_level.txt
