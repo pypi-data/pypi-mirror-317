@@ -1,0 +1,12 @@
+click
+beautifulsoup4
+html5lib
+pdfplumber
+requests
+openpyxl
+pyopenssl
+retry
+selenium
+tenacity
+xlrd
+webdriver-manager
