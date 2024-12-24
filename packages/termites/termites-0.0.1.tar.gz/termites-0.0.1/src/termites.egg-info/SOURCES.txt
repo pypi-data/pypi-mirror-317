@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+src/termites.egg-info/PKG-INFO
+src/termites.egg-info/SOURCES.txt
+src/termites.egg-info/dependency_links.txt
+src/termites.egg-info/top_level.txt
