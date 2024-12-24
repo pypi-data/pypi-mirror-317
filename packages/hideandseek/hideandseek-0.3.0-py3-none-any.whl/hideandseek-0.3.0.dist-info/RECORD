@@ -1,0 +1,16 @@
+hideandseek/__init__.py,sha256=OqWCPxyy4Oz4sBlfsC1bgN-vdRoAFMxOYnSKZJZ9MAE,359
+hideandseek/dataset.py,sha256=RIISKTir4wGCtsmi0u2zjnjj6_g1CWsJMGrhBebVI30,2063
+hideandseek/eval.py,sha256=6EqqXS3oF1Vn1F5RufbSsVlUx4okN9PqOwwCgoDNkSg,16568
+hideandseek/evaluation.py,sha256=g4N3D5ccmzqGdZlOwDo5T0IkgRcb_6MTvxHAt_ft6BI,16569
+hideandseek/fv.py,sha256=j3o-tmNsZvPKVNrsN6woqZkqvzul4GHQql9SZzfPM5o,10482
+hideandseek/loss.py,sha256=uj04wuaNKicPnvVx5eYNeomgwpiCODbl1ofuzD3pbcg,2354
+hideandseek/model.py,sha256=vxpWIH_pv233PYuRTuqFlGbbcRo1tYAygedwkQHkC78,3280
+hideandseek/plot.py,sha256=_n90ahlA9q7QxyyEc7GbITha4bHMo6BEHZI3fYt1rGU,598
+hideandseek/trainer.py,sha256=kytC92KpERJHVVXrbolfBcajFR3VL-iQsBzpR8DM1O8,25103
+hideandseek/utils.py,sha256=-zUjvyIWKPnp7G1Wji-MK9e0cJBykOLZjyL5zZee5Qo,4621
+hideandseek/validation.py,sha256=WD-Xh001KpQ6rFz4ruMdn6KuyfWetLmcDKIkx2EefvM,11727
+hideandseek-0.3.0.dist-info/LICENSE,sha256=0xGqLeN-o2PpHW4Nmy7llWDZC9huwdFGpers3H34dio,1089
+hideandseek-0.3.0.dist-info/METADATA,sha256=Pvvu3BRvF7cBOZu4T63JiUAx6Cc9Kolaysk_Sy5iI8c,2251
+hideandseek-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+hideandseek-0.3.0.dist-info/top_level.txt,sha256=-SS7Y501IVfUGWtDg9Izllq_suS9CtHSm62_qJA4d3k,12
+hideandseek-0.3.0.dist-info/RECORD,,
