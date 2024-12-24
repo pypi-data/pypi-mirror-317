@@ -1,0 +1,10 @@
+sklcc_ssubmit/AppUI.py,sha256=p9Jvm8WwejhpVqN6P4OuVJjOmrvqThhQjRlrKgQAFSo,20043
+sklcc_ssubmit/__init__.py,sha256=iM_yOAeGVd09WBSDH245-tbNiJPDdtzvtSLMo4EbTm8,87
+sklcc_ssubmit/__main__.py,sha256=gXYeRyY7adoIvHqDvl5Lb4aUVbxcPnM2aT_uTzEFMEs,56
+sklcc_ssubmit/sklcc_ssubmit.py,sha256=7HqpocDiuIz257t6ImaMl0PFBjfe4PO4F_vJxXDqS9s,32467
+sklcc_ssubmit/sshClient.py,sha256=LYlj6qf5K_0QMXDB3FRGG9J_10QlHo3RgJONGMR2X6k,1414
+sklcc_ssubmit/thread_func.py,sha256=_Y7G0z678zcGNW7_MM2ELrTgnJYtdXLnMbOKBocgOyA,134
+sklcc_ssubmit-0.0.2.dist-info/METADATA,sha256=fHV1hEqMb3PwKH1WWp0Guld-IyrGSCQG3OYhYSuZhnw,345
+sklcc_ssubmit-0.0.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+sklcc_ssubmit-0.0.2.dist-info/top_level.txt,sha256=BHUpJsVt5mBh4eg4hR7hAb2BDlvP6x5Dbg6Z8As0w9c,14
+sklcc_ssubmit-0.0.2.dist-info/RECORD,,
