@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+wr_test/__init__.py
+wr_test/adfs_login.py
+wr_test/main.py
+wr_test/wr_test.py
+wr_test.egg-info/PKG-INFO
+wr_test.egg-info/SOURCES.txt
+wr_test.egg-info/dependency_links.txt
+wr_test.egg-info/top_level.txt
