@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pattern/__init__.py
+pattern/plot.py
+pattern.egg-info/PKG-INFO
+pattern.egg-info/SOURCES.txt
+pattern.egg-info/dependency_links.txt
+pattern.egg-info/requires.txt
+pattern.egg-info/top_level.txt
