@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "autojs-py"
+version = "0.1.1"
+description = "autojs python version"
+authors = ["angleyanalbedo <100198247+angleyanalbedo@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.2.1"
+opencv-python = "^4.10.0.84"
+pytest = "^8.3.4"
+pyautogui = "^0.9.54"
+pytesseract = "^0.3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
