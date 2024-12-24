@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xtce:SpaceSystem xmlns:xtce="http://www.omg.org/space/xtce" name="SWE">
+	<xtce:Header date="nan" version="nan" author="IMAP SDC" />
+	<xtce:TelemetryMetaData>
+		<xtce:ParameterTypeSet>
+			<xtce:IntegerParameterType name="VERSION" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="3" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="TYPE" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="1" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SEC_HDR_FLG" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="1" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="PKT_APID" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="11" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SEQ_FLGS" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="2" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SRC_SEQ_CTR" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="14" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="PKT_LEN" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.SHCOARSE" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="32" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.ACQ_START_COARSE" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="32" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.ACQ_START_FINE" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="20" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:EnumeratedParameterType name="SWE_SCIENCE.CEM_NOMINAL_ONLY" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="1" encoding="unsigned" />
+				<xtce:EnumerationList>
+					<xtce:Enumeration value="0" label="NOT_NOMINAL" />
+					<xtce:Enumeration value="1" label="NOMINAL" />
+				</xtce:EnumerationList>
+			</xtce:EnumeratedParameterType>
+			<xtce:EnumeratedParameterType name="SWE_SCIENCE.SPIN_PERIOD_VALIDITY" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="1" encoding="unsigned" />
+				<xtce:EnumerationList>
+					<xtce:Enumeration value="0" label="INVALID" />
+					<xtce:Enumeration value="1" label="VALID" />
+				</xtce:EnumerationList>
+			</xtce:EnumeratedParameterType>
+			<xtce:EnumeratedParameterType name="SWE_SCIENCE.SPIN_PHASE_VALIDITY" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="1" encoding="unsigned" />
+				<xtce:EnumerationList>
+					<xtce:Enumeration value="0" label="INVALID" />
+					<xtce:Enumeration value="1" label="VALID" />
+				</xtce:EnumerationList>
+			</xtce:EnumeratedParameterType>
+			<xtce:EnumeratedParameterType name="SWE_SCIENCE.SPIN_PERIOD_SOURCE" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="1" encoding="unsigned" />
+				<xtce:EnumerationList>
+					<xtce:Enumeration value="0" label="STAR_TRACKER" />
+					<xtce:Enumeration value="1" label="SUN_SENSOR" />
+				</xtce:EnumerationList>
+			</xtce:EnumeratedParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.SETTLE_DURATION" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="15" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.ACQ_DURATION" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="17" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.SPIN_PHASE" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="16" encoding="unsigned">
+					<xtce:DefaultCalibrator>
+						<xtce:PolynomialCalibrator>
+							<xtce:Term coefficient="0.005493" exponent="1" />
+						</xtce:PolynomialCalibrator>
+					</xtce:DefaultCalibrator>
+				</xtce:IntegerDataEncoding>
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.SPIN_PERIOD" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="16" encoding="unsigned">
+					<xtce:DefaultCalibrator>
+						<xtce:PolynomialCalibrator>
+							<xtce:Term coefficient="0.00032" exponent="1" />
+						</xtce:PolynomialCalibrator>
+					</xtce:DefaultCalibrator>
+				</xtce:IntegerDataEncoding>
+			</xtce:IntegerParameterType>
+			<xtce:EnumeratedParameterType name="SWE_SCIENCE.REPOINT_WARNING" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="1" encoding="unsigned" />
+				<xtce:EnumerationList>
+					<xtce:Enumeration value="0" label="NO" />
+					<xtce:Enumeration value="1" label="YES" />
+				</xtce:EnumerationList>
+			</xtce:EnumeratedParameterType>
+			<xtce:EnumeratedParameterType name="SWE_SCIENCE.HIGH_COUNT" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="1" encoding="unsigned" />
+				<xtce:EnumerationList>
+					<xtce:Enumeration value="0" label="NO" />
+					<xtce:Enumeration value="1" label="YES" />
+				</xtce:EnumerationList>
+			</xtce:EnumeratedParameterType>
+			<xtce:EnumeratedParameterType name="SWE_SCIENCE.STIM_ENABLED" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="1" encoding="unsigned" />
+				<xtce:EnumerationList>
+					<xtce:Enumeration value="0" label="DISABLED" />
+					<xtce:Enumeration value="1" label="ENABLED" />
+				</xtce:EnumerationList>
+			</xtce:EnumeratedParameterType>
+			<xtce:EnumeratedParameterType name="SWE_SCIENCE.QUARTER_CYCLE" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="5" encoding="unsigned" />
+				<xtce:EnumerationList>
+					<xtce:Enumeration value="0" label="FIRST" />
+					<xtce:Enumeration value="1" label="SECOND" />
+					<xtce:Enumeration value="2" label="THIRD" />
+					<xtce:Enumeration value="3" label="FORTH" />
+				</xtce:EnumerationList>
+			</xtce:EnumeratedParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.ESA_TABLE_NUM" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="8" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.ESA_ACQ_CFG" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="8" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.THRESHOLD_DAC" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="16" encoding="unsigned">
+					<xtce:DefaultCalibrator>
+						<xtce:PolynomialCalibrator>
+							<xtce:Term coefficient="0.001221" exponent="1" />
+						</xtce:PolynomialCalibrator>
+					</xtce:DefaultCalibrator>
+				</xtce:IntegerDataEncoding>
+			</xtce:IntegerParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.STIM_CFG_REG" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+			<xtce:BinaryParameterType name="SWE_SCIENCE.SCIENCE_DATA">
+				<xtce:BinaryDataEncoding bitOrder="mostSignificantBitFirst">
+					<xtce:SizeInBits>
+						<xtce:DynamicValue>
+							<xtce:ParameterInstanceRef parameterRef="PKT_LEN" />
+							<xtce:LinearAdjustment slope="8" intercept="-216" />
+						</xtce:DynamicValue>
+					</xtce:SizeInBits>
+				</xtce:BinaryDataEncoding>
+			</xtce:BinaryParameterType>
+			<xtce:IntegerParameterType name="SWE_SCIENCE.CKSUM" signed="false">
+				<xtce:IntegerDataEncoding sizeInBits="16" encoding="unsigned" />
+			</xtce:IntegerParameterType>
+		</xtce:ParameterTypeSet>
+		<xtce:ParameterSet>
+			<xtce:Parameter name="VERSION" parameterTypeRef="VERSION">
+				<xtce:LongDescription>CCSDS Packet Version Number (always 0)</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="TYPE" parameterTypeRef="TYPE">
+				<xtce:LongDescription>CCSDS Packet Type Indicator (0=telemetry)</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SEC_HDR_FLG" parameterTypeRef="SEC_HDR_FLG">
+				<xtce:LongDescription>CCSDS Packet Secondary Header Flag (always 1)</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="PKT_APID" parameterTypeRef="PKT_APID">
+				<xtce:LongDescription>CCSDS Packet Application Process ID</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SEQ_FLGS" parameterTypeRef="SEQ_FLGS">
+				<xtce:LongDescription>CCSDS Packet Grouping Flags (3=not part of group)</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SRC_SEQ_CTR" parameterTypeRef="SRC_SEQ_CTR">
+				<xtce:LongDescription>CCSDS Packet Sequence Count (increments with each new packet)</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="PKT_LEN" parameterTypeRef="PKT_LEN">
+				<xtce:LongDescription>CCSDS Packet Length (number of bytes after Packet length minus 1)</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.SHCOARSE" parameterTypeRef="SWE_SCIENCE.SHCOARSE">
+				<xtce:LongDescription>Mission elapsed time</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.ACQ_START_COARSE" parameterTypeRef="SWE_SCIENCE.ACQ_START_COARSE">
+				<xtce:LongDescription>Acquisition start time coarse in seconds</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.ACQ_START_FINE" parameterTypeRef="SWE_SCIENCE.ACQ_START_FINE">
+				<xtce:LongDescription>Acquisition start time fine in microseconds</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.CEM_NOMINAL_ONLY" parameterTypeRef="SWE_SCIENCE.CEM_NOMINAL_ONLY">
+				<xtce:LongDescription>CEM Nominal status bit
+'1' -- nominal
+'0' -- not nominal</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.SPIN_PERIOD_VALIDITY" parameterTypeRef="SWE_SCIENCE.SPIN_PERIOD_VALIDITY">
+				<xtce:LongDescription>Spin period valid bit
+'1' -- valid
+'0' -- invalid</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.SPIN_PHASE_VALIDITY" parameterTypeRef="SWE_SCIENCE.SPIN_PHASE_VALIDITY">
+				<xtce:LongDescription>Spin phase valid bit
+'1' -- valid
+'0' -- invalid</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.SPIN_PERIOD_SOURCE" parameterTypeRef="SWE_SCIENCE.SPIN_PERIOD_SOURCE">
+				<xtce:LongDescription>Spin period source bit
+'1' -- sun sensor (safing)
+'0' -- star tracker (nominal)</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.SETTLE_DURATION" parameterTypeRef="SWE_SCIENCE.SETTLE_DURATION">
+				<xtce:LongDescription>HVPS settling duration</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.ACQ_DURATION" parameterTypeRef="SWE_SCIENCE.ACQ_DURATION">
+				<xtce:LongDescription>Acquisition duration</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.SPIN_PHASE" parameterTypeRef="SWE_SCIENCE.SPIN_PHASE">
+				<xtce:LongDescription>Spin phase</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.SPIN_PERIOD" parameterTypeRef="SWE_SCIENCE.SPIN_PERIOD">
+				<xtce:LongDescription>Spin period</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.REPOINT_WARNING" parameterTypeRef="SWE_SCIENCE.REPOINT_WARNING">
+				<xtce:LongDescription>Thruster fired during this quarter cycle
+'1' -- yes, warning received
+'0' -- no, warning not received</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.HIGH_COUNT" parameterTypeRef="SWE_SCIENCE.HIGH_COUNT">
+				<xtce:LongDescription>High CEM count observed for at least one CEM during this quarter cycle
+'1' -- yes, high count occurred
+'0' -- no, no high count occurred</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.STIM_ENABLED" parameterTypeRef="SWE_SCIENCE.STIM_ENABLED">
+				<xtce:LongDescription>Stim state
+'1' -- enabled
+'0' -- disabled</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.QUARTER_CYCLE" parameterTypeRef="SWE_SCIENCE.QUARTER_CYCLE">
+				<xtce:LongDescription>Quarter cycle number</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.ESA_TABLE_NUM" parameterTypeRef="SWE_SCIENCE.ESA_TABLE_NUM">
+				<xtce:LongDescription>ESA table identifier</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.ESA_ACQ_CFG" parameterTypeRef="SWE_SCIENCE.ESA_ACQ_CFG">
+				<xtce:LongDescription>ESA acquisition configuration</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.THRESHOLD_DAC" parameterTypeRef="SWE_SCIENCE.THRESHOLD_DAC">
+				<xtce:LongDescription>Threshold DAC value</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.STIM_CFG_REG" parameterTypeRef="SWE_SCIENCE.STIM_CFG_REG">
+				<xtce:LongDescription>Stim pulse configuration register. Bits 0-3, period, 4-7, duration, 8-9 mode</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.SCIENCE_DATA" parameterTypeRef="SWE_SCIENCE.SCIENCE_DATA">
+				<xtce:LongDescription>Data for a science acquisiton quarter cycle.  (56 bit * 180 array)
+Seven consecutive bytes represent data for a single step:
+CEM1 - 8 bit counter
+CEM2 - 8 bit counter
+CEM3 - 8 bit counter
+CEM4 - 8 bit counter
+CEM5 - 8 bit counter
+CEM6 - 8 bit counter
+CEM7 - 8 bit counter
+180 steps are for the 180 ESA voltages used in a quarter cycle</xtce:LongDescription>
+			</xtce:Parameter>
+			<xtce:Parameter name="SWE_SCIENCE.CKSUM" parameterTypeRef="SWE_SCIENCE.CKSUM">
+				<xtce:LongDescription>Checksum</xtce:LongDescription>
+			</xtce:Parameter>
+		</xtce:ParameterSet>
+		<xtce:ContainerSet>
+			<xtce:SequenceContainer name="CCSDSPacket" abstract="true">
+				<xtce:EntryList>
+					<xtce:ParameterRefEntry parameterRef="VERSION" />
+					<xtce:ParameterRefEntry parameterRef="TYPE" />
+					<xtce:ParameterRefEntry parameterRef="SEC_HDR_FLG" />
+					<xtce:ParameterRefEntry parameterRef="PKT_APID" />
+					<xtce:ParameterRefEntry parameterRef="SEQ_FLGS" />
+					<xtce:ParameterRefEntry parameterRef="SRC_SEQ_CTR" />
+					<xtce:ParameterRefEntry parameterRef="PKT_LEN" />
+				</xtce:EntryList>
+			</xtce:SequenceContainer>
+			<xtce:SequenceContainer name="SWE_SCIENCE">
+				<xtce:BaseContainer containerRef="CCSDSPacket">
+					<xtce:RestrictionCriteria>
+						<xtce:Comparison parameterRef="PKT_APID" value="1344" useCalibratedValue="false" />
+					</xtce:RestrictionCriteria>
+				</xtce:BaseContainer>
+				<xtce:EntryList>
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.SHCOARSE" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.ACQ_START_COARSE" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.ACQ_START_FINE" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.CEM_NOMINAL_ONLY" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.SPIN_PERIOD_VALIDITY" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.SPIN_PHASE_VALIDITY" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.SPIN_PERIOD_SOURCE" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.SETTLE_DURATION" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.ACQ_DURATION" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.SPIN_PHASE" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.SPIN_PERIOD" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.REPOINT_WARNING" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.HIGH_COUNT" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.STIM_ENABLED" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.QUARTER_CYCLE" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.ESA_TABLE_NUM" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.ESA_ACQ_CFG" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.THRESHOLD_DAC" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.STIM_CFG_REG" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.SCIENCE_DATA" />
+					<xtce:ParameterRefEntry parameterRef="SWE_SCIENCE.CKSUM" />
+				</xtce:EntryList>
+			</xtce:SequenceContainer>
+		</xtce:ContainerSet>
+	</xtce:TelemetryMetaData>
+</xtce:SpaceSystem>
