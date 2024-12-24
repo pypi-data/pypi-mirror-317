@@ -1,0 +1,11 @@
+importlib-metadata
+torch
+numpy
+scikit-learn
+matplotlib
+torchvision
+
+[testing]
+setuptools
+pytest
+pytest-cov
