@@ -1,0 +1,17 @@
+shamboflow/__init__.py,sha256=hNh_7mVT5eNIjpV6aF9mcDLzqSHKzdyb1C5bkhb5VWI,1258
+shamboflow/callbacks.py,sha256=eVAFsTZ8vxuWDf7jUgwbdXs887HPaHf08bN7YGBMExQ,8501
+shamboflow/layers.py,sha256=yh3gVIlzwV5_z_ib9k6otpJnb8kfIYQ2rI23CSQsz4U,3097
+shamboflow/models.py,sha256=GyU2BpzPThQ40eSjDzNSV3Z-j81AoNxJuxS3IhMCwlQ,15483
+shamboflow/engine/__init__.py,sha256=p_ZihVMiveMu7C80rxnyNe_J7St9mHvwaCQPVmzNFUs,79
+shamboflow/engine/activations.py,sha256=9k2q2JRE8HBKKvN2llaO_YcyfXw7srrHKQT3EXo4x7E,4422
+shamboflow/engine/base_callback.py,sha256=3GmUt75mnxjjN9c3mRVpbrtJX79cZPjKL66hge7gQU4,565
+shamboflow/engine/base_layers.py,sha256=o6I-dN2qsgyIK4gOuzABC1rc-kELW2E6oGv9xFxc2Ds,2131
+shamboflow/engine/base_models.py,sha256=GaKIVY56AHhiKgLP7NOAdpp351DfpZfP0BdN17aVrTs,4231
+shamboflow/engine/d_activations.py,sha256=9eFThAksxtZXAGcflvuVjN-w6hmS-oiIoN27Xz5rfp0,2568
+shamboflow/engine/d_losses.py,sha256=0_BiVhkxCtz2qPLIk0QiKRmWyaKzDJQsu_mKk9UM79Q,916
+shamboflow/engine/losses.py,sha256=uT5UhXaUIerkbkKtjwRnTXuuJC9gkLs59WN-Jd2h83A,1424
+shamboflow-1.0.2.dist-info/LICENSE,sha256=VGfujo5n9IjtcWfauTZV3XBX6nf64XTudUmHq7zDdr4,1064
+shamboflow-1.0.2.dist-info/METADATA,sha256=22qGVjoZ6sRyAs4gntGh3Bg43ROQKENyIXvY3xSub8o,5865
+shamboflow-1.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+shamboflow-1.0.2.dist-info/top_level.txt,sha256=W10oVMFb_PN5fQlPzXVdg4P0xxyn_Lg3yliRX6QjjXY,11
+shamboflow-1.0.2.dist-info/RECORD,,
