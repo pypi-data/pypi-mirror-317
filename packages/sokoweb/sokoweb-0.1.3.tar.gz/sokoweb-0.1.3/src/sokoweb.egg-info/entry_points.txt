@@ -1,0 +1,3 @@
+[console_scripts]
+sokoweb-up = sokoweb.cli:main
+
