@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+varseek/__init__.py
+varseek.egg-info/PKG-INFO
+varseek.egg-info/SOURCES.txt
+varseek.egg-info/dependency_links.txt
+varseek.egg-info/entry_points.txt
+varseek.egg-info/requires.txt
+varseek.egg-info/top_level.txt

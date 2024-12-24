@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: varseek
+Version: 0.0.1
+Summary: Placeholder.
+Author-email: Joseph Rich <josephrich98@gmail.com>
+Maintainer-email: Joseph Rich <josephrich98@gmail.com>
+Project-URL: Homepage, https://github.com/pachterlab/varseek
+Keywords: varseek,bioinformatics,RNA-seq,DNA-seq
+Classifier: Environment :: Console
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy<2.0.0,>=1.26.4
+Requires-Dist: pandas<2.0.0,>=1.5.3
+Requires-Dist: matplotlib>=3.9.0
+Requires-Dist: tqdm>=4.66.4
+Requires-Dist: anndata>=0.8.0
+Requires-Dist: kb-python>=0.29.1
+Requires-Dist: gget>=0.29.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: black[jupyter]>=22.0.0; extra == "dev"
+Requires-Dist: toml>=0.10.2; extra == "dev"
+Requires-Dist: nbval>=7.6.7; extra == "dev"
+Requires-Dist: nbdime>=4.0.2; extra == "dev"
+Provides-Extra: analysis
+Requires-Dist: matplotlib-venn>=1.0.0; extra == "analysis"
+Requires-Dist: ipython>=8.0.0; extra == "analysis"
+Requires-Dist: dna_features_viewer>=3.1.3; extra == "analysis"
+Requires-Dist: goatools>=1.4.9; extra == "analysis"
+Requires-Dist: multiqc>=1.25.1; extra == "analysis"
+Requires-Dist: rich>=11.0.0; extra == "analysis"
+Requires-Dist: pysam>=0.22.1; extra == "analysis"
+Requires-Dist: leidenalg>=0.10.0; extra == "analysis"
+Requires-Dist: kneed>=0.8.0; extra == "analysis"
+
+placeholder
