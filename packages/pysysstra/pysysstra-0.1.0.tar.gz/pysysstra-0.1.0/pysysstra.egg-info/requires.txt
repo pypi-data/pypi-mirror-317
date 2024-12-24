@@ -1,0 +1,8 @@
+requests
+numpy
+pandas_ta
+redis
+json
+datetime
+itertools
+traceback
