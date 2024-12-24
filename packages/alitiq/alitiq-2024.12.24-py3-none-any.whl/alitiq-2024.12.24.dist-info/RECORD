@@ -1,0 +1,15 @@
+alitiq/__init__.py,sha256=UiXHR7ZucMkOVfwANcbRuaL-ysF26hVf4AA1vDKF7cA,364
+alitiq/base.py,sha256=_GdWCQTQ-8tMEpa4i0eMpxC3nxhmDSGMGSNpsB5H3FU,7797
+alitiq/demand_forecast.py,sha256=GUrxNOEZ_KH8qiqQ7UCRcY11ORF7i-SqM6Lm1TDIxso,5687
+alitiq/solar_power_forecast.py,sha256=UyjnhBiv3VHGPNpXrTCOyD_haoZuA-M9YSAbUSkxB80,9949
+alitiq/enumerations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alitiq/enumerations/forecast_models.py,sha256=4sDZo1vh8Wp5NCFz5wTLgDhGT8aXQck6ZXqZWVY8KXI,624
+alitiq/enumerations/services.py,sha256=0VFTU2HLhSW6zr1pAfRGGYlNlpQh11RHuI9vv2drLt0,270
+alitiq/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alitiq/models/demand_forecast.py,sha256=lCl4I-3cWWADq8j2Wqs12G2RVkcR7SNDLowCFM8MhsE,2261
+alitiq/models/solar_power_forecast.py,sha256=5HDzhb8roZLt7xr2XmUu_1PQualRGxhMnB68ek34qRE,5938
+alitiq-2024.12.24.dist-info/METADATA,sha256=IvVqXLoW5v_qxDUmVaz2BPmLOyT-xxNDOFoa2CeaOZA,6541
+alitiq-2024.12.24.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+alitiq-2024.12.24.dist-info/top_level.txt,sha256=7fHpkrlin6BZPtdgvMjVAC8UzwRVcMFBM5M1dxmkxh0,7
+alitiq-2024.12.24.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+alitiq-2024.12.24.dist-info/RECORD,,
