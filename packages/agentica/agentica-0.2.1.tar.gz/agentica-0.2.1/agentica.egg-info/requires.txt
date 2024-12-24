@@ -1,0 +1,10 @@
+loguru
+markdownify
+openai
+python-dotenv
+pydantic
+requests
+sqlalchemy
+scikit-learn
+tqdm
+rich
