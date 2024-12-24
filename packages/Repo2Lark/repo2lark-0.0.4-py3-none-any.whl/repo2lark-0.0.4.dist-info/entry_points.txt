@@ -1,0 +1,5 @@
+[console_scripts]
+repo2lark = repo2lark.__init__:run
+
+[gui_scripts]
+
