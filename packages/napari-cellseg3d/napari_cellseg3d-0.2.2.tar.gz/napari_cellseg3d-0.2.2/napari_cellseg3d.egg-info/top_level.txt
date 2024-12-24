@@ -1,0 +1,6 @@
+conda
+dist
+docs
+examples
+napari_cellseg3d
+notebooks
