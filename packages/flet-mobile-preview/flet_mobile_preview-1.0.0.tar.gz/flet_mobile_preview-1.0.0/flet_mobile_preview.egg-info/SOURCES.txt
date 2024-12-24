@@ -1,0 +1,15 @@
+README.md
+setup.py
+flet_mobile_preview/__init__.py
+flet_mobile_preview/iPhone.py
+flet_mobile_preview.egg-info/PKG-INFO
+flet_mobile_preview.egg-info/SOURCES.txt
+flet_mobile_preview.egg-info/dependency_links.txt
+flet_mobile_preview.egg-info/requires.txt
+flet_mobile_preview.egg-info/top_level.txt
+flet_mobile_preview/assets/icon.png
+flet_mobile_preview/assets/fonts/sf.otf
+flet_mobile_preview/assets/images/iphone13.png
+flet_mobile_preview/assets/images/iphone6.png
+flet_mobile_preview/assets/images/samsung.png
+flet_mobile_preview/assets/images/tablette.png
