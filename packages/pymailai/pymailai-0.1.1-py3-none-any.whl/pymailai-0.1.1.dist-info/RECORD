@@ -1,0 +1,10 @@
+pymailai/__init__.py,sha256=503zbafYXxTjiZ0Sm_a2w7Mtt1O4P6HRxVhtdGs77aI,255
+pymailai/agent.py,sha256=DBokBahU4miKfoZye5-dHk-Ui40PFOjQJsaf4eM2S0Y,4011
+pymailai/client.py,sha256=RISVfkDdqX1bHu2p5K5yzQzFtVuf1Se_k6hdwiWeCjM,6960
+pymailai/config.py,sha256=Ne6_6Jcg7Yvl-WO6Im4NU0-Z6n44l2OccAjRrkm2-24,943
+pymailai/gmail.py,sha256=bLt5qp-wjwTCUULeRt9pjLpp7ruLU6z8tgqSCvEDkGs,5381
+pymailai/message.py,sha256=fX5QTLvOiExP_a92S1n7m6e-xJCYSJ29Qdaf6sMYrlE,5534
+pymailai-0.1.1.dist-info/METADATA,sha256=0DtSJ-RnH-v62n9JkkvDJMCxGwVm4adUKjtpPTTFyJM,7140
+pymailai-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pymailai-0.1.1.dist-info/licenses/LICENSE,sha256=HiT3vysHv_a37ah47D0HWwhzoflPBvY4_jA2OLlsqGg,1055
+pymailai-0.1.1.dist-info/RECORD,,
