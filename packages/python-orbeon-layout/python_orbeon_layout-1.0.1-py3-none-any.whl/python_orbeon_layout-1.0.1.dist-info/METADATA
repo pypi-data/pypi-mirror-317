@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: python-orbeon-layout
+Version: 1.0.1
+Summary: Uma biblioteca simples e independente para geração de layouts padronizados em formatos PDF e imagem.
+Home-page: https://github.com/getorbeon/python-orbeon-layout
+Author: Edu Fontes
+Author-email: eduramofo@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+License-File: LICENSE
