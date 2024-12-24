@@ -1,0 +1,5 @@
+[console_scripts]
+datashare-python = datashare_python.__main__:main
+
+[gui_scripts]
+
