@@ -1,0 +1,13 @@
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/bulk.py,sha256=xXAksae2jz3xbnp_AhymSCtbYLTvZ2rYivHt9BsHb2s,1318
+remoteenv/__init__.py,sha256=o51WJnZH9_nYclCQFxf_gkxLvjgOQAu9WpBMudretTA,39
+remoteenv/env.py,sha256=j99kurG1sS1-64HLe_cdJbvmOKHcB-3U9n_65MKdpqs,1089
+remoteenv/backends/__init__.py,sha256=hLL998rRqN9aMzZ5bQQMy65QwrzoiXCwvXgHA8Siv7Q,1592
+remoteenv/backends/base.py,sha256=UBxFR8ZYOkl5CXxMHKp-3cve0uZz5WTzvhn34jbUxhk,908
+remoteenv/backends/zk.py,sha256=JA9RMzXH0kBzkKr5HY4UORE9LdOgCF9qv8HpU05-VP8,4880
+venv/bin/activate_this.py,sha256=PNUQt7XHpvnxwUEb7KHnUZl78kO29uWPxns2IvqPAd0,1336
+pyremoteenv-0.2.2.dist-info/LICENSE,sha256=0BcxXSwjt6KQRp16C_gTPqnaMNDvaaVhj6AHHpji3E8,1070
+pyremoteenv-0.2.2.dist-info/METADATA,sha256=mhz2iaVIU2Bww2YEJIzYE_o2peIOTUiLhwsVhkr9lks,4367
+pyremoteenv-0.2.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyremoteenv-0.2.2.dist-info/top_level.txt,sha256=z2RyXE59S47JCjboKkYFFEEf_ao75QnUNKDlhoTkobM,24
+pyremoteenv-0.2.2.dist-info/RECORD,,
