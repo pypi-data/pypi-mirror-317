@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ygclib
+Version: 0.1.19
+Summary: ygcグローバルチャットに簡単に参加できるようにするライブラリ
+Home-page: https://github.com/ysmservice/ygclib
+Author: ysmreg
+Author-email: support@ysmserv.com
+Keywords: discord chat global json websockets ujson aiohttp
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: discord.py >=2.0.0
+Requires-Dist: websockets >=10.0
+Requires-Dist: ujson >=5.0.0
+Requires-Dist: aiohttp >=3.7.4
+Requires-Dist: typing-extensions >=4.0.0
+
