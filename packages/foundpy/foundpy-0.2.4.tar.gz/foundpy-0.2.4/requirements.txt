@@ -1,0 +1,6 @@
+eth_abi==5.1.0
+hexbytes==1.2.1
+py_solc_x==2.0.3
+Requests==2.32.3
+tqdm==4.66.5
+web3==7.4.0
