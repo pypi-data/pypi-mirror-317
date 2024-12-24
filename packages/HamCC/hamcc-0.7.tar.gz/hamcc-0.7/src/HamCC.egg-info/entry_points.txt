@@ -1,0 +1,2 @@
+[console_scripts]
+hamcc = hamcc.__main__:main
