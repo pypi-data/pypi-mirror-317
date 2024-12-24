@@ -1,0 +1,10 @@
+README.md
+setup.py
+bs_drm_adapter/__init__.py
+bs_drm_adapter/adapters.py
+bs_drm_adapter/app.py
+bs_drm_adapter.egg-info/PKG-INFO
+bs_drm_adapter.egg-info/SOURCES.txt
+bs_drm_adapter.egg-info/dependency_links.txt
+bs_drm_adapter.egg-info/requires.txt
+bs_drm_adapter.egg-info/top_level.txt
