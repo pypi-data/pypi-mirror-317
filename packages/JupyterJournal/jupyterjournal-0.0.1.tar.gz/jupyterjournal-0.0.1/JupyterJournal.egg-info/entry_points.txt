@@ -1,0 +1,2 @@
+[nbdev]
+JupyterJournal = JupyterJournal._modidx:d

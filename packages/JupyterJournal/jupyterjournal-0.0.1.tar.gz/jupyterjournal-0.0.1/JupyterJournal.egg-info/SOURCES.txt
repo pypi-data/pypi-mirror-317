@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+JupyterJournal/__init__.py
+JupyterJournal/_modidx.py
+JupyterJournal/core.py
+JupyterJournal.egg-info/PKG-INFO
+JupyterJournal.egg-info/SOURCES.txt
+JupyterJournal.egg-info/dependency_links.txt
+JupyterJournal.egg-info/entry_points.txt
+JupyterJournal.egg-info/not-zip-safe
+JupyterJournal.egg-info/requires.txt
+JupyterJournal.egg-info/top_level.txt
