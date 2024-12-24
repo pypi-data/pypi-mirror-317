@@ -1,0 +1,10 @@
+gossip/__init__.py,sha256=Guss5yb7AIPsMSLTsXJnJqSAB0oMi2mZKXCSMMcI2_E,1746
+gossip/_gossip.cpython-310-x86_64-linux-gnu.so,sha256=Q80Pu2cUInjBAH_qy1CZHrtsOK0mN_zFVHz9MC9rC9c,50423496
+gossip/pss_manager.py,sha256=6oAl_uTcUlxytKbJ_sA62WRm7_9ZgDgM32mdOGCeJAc,2143
+gossip/simulation.py,sha256=PvWJjwmErSJ2cyiI9AUF56umAVcsohxET4OzzrKOKOQ,27156
+gossip/stats.py,sha256=8y7EbZKlCu3RWiPU16NkGK25NoyBp_skc-QV3mlE2Qk,9655
+gossipsampling-0.1.1.dist-info/LICENSE.txt,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+gossipsampling-0.1.1.dist-info/METADATA,sha256=2oh8AwvowWtGs5h7CjHvWyuFYStpQnChdtZ2XCvnFRI,15059
+gossipsampling-0.1.1.dist-info/WHEEL,sha256=FSAmCGbteYSgJLY7ns8O7AO28pnKdB2LG2_GPTfLhlw,103
+gossipsampling-0.1.1.dist-info/top_level.txt,sha256=j9Q8K1aUDAIEFfneZnSWdFtPk63lW6KOkmJeGAUI_6g,7
+gossipsampling-0.1.1.dist-info/RECORD,,
