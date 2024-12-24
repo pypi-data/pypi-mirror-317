@@ -1,0 +1,41 @@
+[project]
+name = "flax-utils"
+version = "0.0.1-alpha"
+readme = "README.md"
+description = """
+flax-utils is a Python package offering a suite of plotting functions to visualize machine learning models and data. It provides intuitive and customizable plots to aid in model evaluation and data analysis.
+
+**Key Features:**
+
+- **Model Evaluation Plots:** Visualize confusion matrices, ROC curves, and precision-recall curves.
+- **Data Visualization:** Generate heatmaps, pair plots, and feature importance plots.
+- **Compatibility:** Seamlessly integrates with popular machine learning libraries like scikit-learn and TensorFlow.
+
+**Ideal for:**
+
+- Data scientists and machine learning practitioners seeking efficient visualization tools.
+- Educators aiming to demonstrate model performance and data relationships.
+- Researchers requiring clear and customizable plots for publications.
+
+Enhance your machine learning workflow with flax-utils' comprehensive plotting capabilities.
+"""
+authors = [{ name = "Sane Punk", email = "punk00pp@gmail.com" }]
+license = { text = "MIT" }
+dependencies = ["seaborn>=0.10.0", "numpy>=1.26.4", "scikit-learn>=1.5.0", "matplotlib>=3.9.0"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+homepage = "https://lazy-punk.github.io/"
+Documentation = "https://github.com/lazy-punk/ml-utils"
