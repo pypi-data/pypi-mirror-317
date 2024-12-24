@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+num2rus/__init__.py
+num2rus/converter.py
+num2rus/main.py
+num2rus/tests.py
+num2rus.egg-info/PKG-INFO
+num2rus.egg-info/SOURCES.txt
+num2rus.egg-info/dependency_links.txt
+num2rus.egg-info/top_level.txt
