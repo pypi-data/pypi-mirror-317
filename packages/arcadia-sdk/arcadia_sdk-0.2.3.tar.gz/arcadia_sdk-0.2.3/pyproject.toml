@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "arcadia-sdk"
+version = "0.2.3"
+description = "arcadia is a platform for ml developers to host and get paid for their proprietary ml models."
+authors = ["timothy102 <cvetko.tim@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "arcadia", from = "src" }
+]
+
+[tool.poetry.scripts]
+arcadia = "arcadia.modules.login.cli:cli"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pytest = "^8.3.4"
+python-dotenv = "^1.0.1"
+loguru = "^0.7.3"
+logtail-python = "^0.3.2"
+pre-commit = "^4.0.1"
+black = "^24.10.0"
+supabase = "^2.10.0"
+click = "^8.1.8"
+rich = "^13.9.4"
+build = "^1.2.2.post1"
+twine = "^6.0.1"
+replicate = "^1.0.4"
+pydantic-settings = "^2.7.0"
+stripe = "^11.4.1"
+cryptography = "^44.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
