@@ -1,0 +1,16 @@
+gdocsync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdocsync/cli.py,sha256=yTX415iYElOEq73Jq09UdxVwLiVhzJbM-cToEyW5Az4,393
+gdocsync/constants.py,sha256=YtT9_Jq7eNdw-X_wjyX_zjX598dODeQhro9DKR6aEl8,68
+gdocsync/docs_importer.py,sha256=qeDtfEGAeUpZ_aBmv9WUvCGlUeEnh22JuzvOMXYBs9s,3935
+gdocsync/google_drive_client.py,sha256=_sUKF5mWU65H5tySZ4h57iX-rms0xqg-0aELwMinPNE,3774
+gdocsync/html_cleaner.py,sha256=9COsQQI1SlrJGSX_GYeOV4GjbXN-UL96AkD_S6qkCek,2435
+gdocsync/johnny_decimal.py,sha256=AXS6FLtLx2d1bpgZq0967DsMDeI6_G5_kKbkjN9lEYY,1477
+gdocsync/pandoc_client.py,sha256=0CU-54U5uup7Tp5jEQgVEnuGpTfuNO9GcfxD7mir3fk,762
+gdocsync/regexes.py,sha256=rn6MemG6XO3G07-n32BmX6vuRKKybpx7Df3HbOhNyV4,151
+gdocsync/shelve_cache.py,sha256=ZBrtv6VapbMQyDr8NRMT29mHbB3zDqYCh-7_35Tbhhc,824
+gdocsync-0.0.10.dist-info/LICENSE,sha256=2z8CRrH5J48VhFuZ_sR4uLUG63ZIeZNyL4xuJUKF-vg,1050
+gdocsync-0.0.10.dist-info/METADATA,sha256=eLQySXMa9kjX2ckKdN3R559dimo5jcnaZX6E6XCcyo0,1231
+gdocsync-0.0.10.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+gdocsync-0.0.10.dist-info/entry_points.txt,sha256=z0hN2doyv2GubKx_U4ArvUOyX2vRpJpXy_5EofY5VL0,46
+gdocsync-0.0.10.dist-info/top_level.txt,sha256=uXOCIX5BQrQhEtFpbjBbyw6eyaB6NUZbUQcKspKsDaM,9
+gdocsync-0.0.10.dist-info/RECORD,,
