@@ -1,0 +1,553 @@
+Metadata-Version: 2.1
+Name: femtodriver
+Version: 1.2.1
+Summary: Femtorun defines the runtime interface for Femtosense software
+Home-page: https://github.com/femtosense/femtodriver
+Author: Femtosense
+Author-email: info@femtosense.ai
+Project-URL: Source, https://github.com/femtosense/femtodriver
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.0.0,>=1.18.0
+Requires-Dist: femtorun==1.*,>=1.1.0
+Requires-Dist: femtocrux>=0.4.0
+Requires-Dist: redis>=4.0.0
+Requires-Dist: pyyaml
+Requires-Dist: scipy
+Requires-Dist: colorama
+
+# Femtosense Femtodriver
+
+Femtodriver compiles models for the SPU and can simulate inputs through the model to get outputs and give estimates for power usage and other metrics.
+
+Femtodriver can:
+* Generate program files from your models to run on the EVK SPU
+* Run simulations to get metrics like the estimated power consumption of your model
+* Pass inputs through your compiled model to test specific behaviour
+* Compare the simulation and hardware metrics/outputs for a specific input (Coming soon)
+
+There are 2 ways to use femtodriver:
+1) Using the CLI
+2) Using the Python API
+
+They both provide similar capabilities but using the python API may work with your existing model development workflow.
+
+There are other capabilities which are documented in the --help flag of the femtodriver cli.
+
+## License
+
+By using this software package, you agree to abide by the terms and conditions in the license agreement found [here.](https://femtosense.ai/legal/eula/)
+
+## Installation:
+
+Python 3.10 is required (Note: Only 3.10 is supported explicitly. YMMV with newer versions.). Femtocrux requires docker to be installed (see other instructions for femtocrux).
+
+From PyPI:
+
+```
+pip install femtodriver
+```
+
+This will install the `femtodrive` executable.
+
+## Docker Installation
+
+You will need to install docker to run our compiler and simulator. Please refer to the docker installation instructions to do this.
+
+## Docker Image Password Authentication
+
+Femtodriver relies on running a docker container (called femtocrux) which contains the compiler to compile your model for the EVK SPU. In order to download the docker container you will be prompted for a password on your first run on the commandline whether you use the CLI or the Python API.
+
+In order to do this before your first run, you can run:
+
+```
+python -c "exec(\"from femtocrux import ManagedCompilerClient\ndocker_kwargs = {'environment': {'FS_HW_CFG': 'spu1p3v1.dat'}}\nwith ManagedCompilerClient(docker_kwargs=docker_kwargs) as client:\n    pass\")"
+```
+
+This will trigger the password prompt and allow you to download the docker container. You only have to do this once per femtocrux version release. You may have to do it again if we update the version and you want to get a newer version of femtocrux.
+
+## CLI Usage:
+
+The main executable is called `femtodrive`. To show all options:
+
+```bash
+femtodrive --help
+```
+
+This document will cover the most common use cases for femtodriver but the full list of capabilities is listed in the help.
+
+### Generate program files from an FQIR pickle
+
+You can generate SD programming files from a previously saved FQIR pickle. You can pickle femtocrux's input, the FQIR graph, with `torch.save()` (In the pytorch femtocrux walkthroughs, this variable is called `fqir_graph`).
+
+This way, `femtodrive` can use femtocrux to compile the model and emit program binaries, as is done directly in the notebooks.
+
+Example:
+
+```bash
+femtodrive my_model.pt
+```
+
+As a "hello world" you can invoke:
+
+```bash
+femtodrive LOOPBACK
+```
+
+This will call femtodrive on an "identity" network that is installed with the package. As before, output will be put in `model_datas/<stem of pickle filename>/`. Notice the `images.zip` that appears and was unpacked to `docker_data/`. 
+
+(Pickles are notoriously unportable. Ideally, any pickling/unpickling is done on one machine, but failing that, try to ensure the pickle is unpacked using the same package versions it was generated with)
+
+### Generate program files from a memory image zip
+
+You can generate SD programming files from a previously generated Femtocrux memory image zip:
+
+```bash
+femtodrive <path-to-zipfile_from_femtocrux> # general example
+femtodrive bitfile.zip # specific example
+```
+
+This will create `model_datas/<stem of zipfile path>/`.
+Inside, along with other information, there will be a `io_records/apb_records`. This holds the `0PROG_A` and `0PROG_D` files which can be downloaded to the SD card. Note that future firmware might allow multiple models to coexist on the SD card. The leading '0' indicates that this is the first model. In some cases, with multiple models loaded, you may need to edit the number in the filename.
+
+Historical note: this replaces `sd_from_femtocrux.py` in `femtodriverpub`.
+
+### Simulation With Femtodriver via Femtocrux
+
+When the FQIR pickle is supplied, it is also possible to simulate the model using femtodriver. In this case, pass "fasmir" to the `--runners` argument.
+
+```bash
+femtodrive ../models/my_model.pt --runners="fasmir"
+```
+
+See `femtodrive --help` for the options related to passing inputs and retreiving outputs.
+
+### Run Audio Through Model
+
+You can also run audio through a model using the `--input_file` flag.
+
+```bash
+femtodrive my_model.pt --runners="fasmir" --input_file example_audio.wav --input-period 0.016
+```
+
+This will reshape the audio into the correct dimensions of (frames, features/samples) to run through the model for simulation. The `--input-period` is the input period time to process a single frame of audio. The more time, the lower
+the power consumption but there is tradeoff with latency.
+
+### Comparing Runners
+
+(Coming soon). In the future you will be able to compare the hw runner with the fqir runner to ensure the software simulator outputs match the outputs on the hardware.
+
+### Cleaning up Zombie Docker Containers
+
+If for some reason you exit the an invocation of femtodrive with a ctrl-c and femtodrive cannot clean up a docker container that it started, you can always clean up all the femtocrux docker containers with:
+
+```
+femtodrive --cleanup-docker
+```
+
+## Python API
+
+There is a python API to femtodriver that allows you to programmatically perform the same tasks as on the CLI. We assume that you have created a model using pytorch and have created the appropriate fqir_graph using fmot. Please refer to the fmot documentation for how to do this. Once you have the fqir_graph, the general python workflow is as follows:
+
+1. Create a Femtodriver object with a context manager
+2. Compile the model with fd.compile()
+3. Generate inputs for the model
+4. Run a simulation specifying the inputs we generated and an input period to get power estimates and outputs
+5. Run the model on real hardware with controlled inputs
+6. Run a comparison between the simulator and the hardware (Coming soon)
+
+In code, this looks like:
+
+```python
+from fmot.fqir import GraphProto
+
+model: GraphProto = fqir_graph # You should have generated this using the tools in fmot. Please refer to the fmot docs
+
+output_dir = "model_datas"
+
+with Femtodriver() as fd:
+    meta_dir, femtofile_path, femtofile_size = fd.compile(model,
+                                                          model_name="my_audio_model",
+                                                          output_dir=output_dir)
+    print(f"femtofile generated at: {femtofile_path} with size {femtofile_size}KB")
+
+    # Generate 4 frames of random inputs
+    # model_inputs = fd.generate_audio_inputs(n_frames=4)
+    
+    # Use first 4 frames from an input audio wav file
+    # model_inputs = fd.generate_audio_inputs(input="test_yes.wav", input_sample_indices=[0, 4])
+
+    input_arr = np.random.randint(-1024, 1024, size=(1000,))    
+    model_inputs = fd.generate_audio_inputs(input=input_arr, input_sample_indices=[0, 4]) 
+
+    # use first 4 frames of random input_arr = 4*32 samples
+    results, metrics = fd.simulate(model_inputs=model_inputs, input_period=0.0016)
+    print(metrics) # metrics are a stringified yaml
+
+    # Optionally debug information to send to femtosense if something goes wrong
+    docker_logs = fd.get_docker_logs()
+
+    # In the future you will be able to do:
+    fd.compare(runners_to_compare=["hw", "fqir"],
+               input_file="test.wav",
+               input_period=0.0016) # Currently not supported
+```
+
+In the following sections we will break down each of these steps and expand the possible arguments you can use to control how each of these steps works.
+
+### 1. The Context Manager
+
+We use a context manager by doing:
+```python
+with Femtodriver() as fd:
+```
+
+A context manager in python allows us to clean up once outside the scope of the context. This means that when we exit the indented block, we shut down the compiler docker container so that we don't use those resources on your computer anymore.
+
+If you use a debugger and exit the debugger midway through execution, the context manager cannot shut down the docker container so we provide a helper to clean up any previous docker containers that were running.
+
+```python
+    fd.cleanup_docker_containers()
+```
+
+### 2. Compiling a Model and Generating Program Files
+
+The line:
+
+```python
+    meta_dir, femtofile_path, femtofile_size = fd.compile(model, model_name="my_audio_model", output_dir="model_datas")
+```
+
+does the following:
+
+1. Compiles the model metadata (useful for Femtosense debugging)
+2. Compiles your model to a .femto file which can be put on an sd card and run on EVK2 (new method)
+3. Compiles your model to 0PROG_A and 0PROG_D program files which can be put on an sd card and run on EVK2 (old method)
+
+
+The generated files have the following structure where the top level dir 'model_datas' is the directory supplied to `output_dir`:
+
+```
+model_datas
+└── my_audio_model
+    ├── io_records
+    │   ├── apb_records
+    │   │   ├── 0PROG_A
+    │   │   └── 0PROG_D
+    │   ├── ...
+    |   └── my_audio_model.femto
+    └── meta_from_femtocrux
+        ├── metadata.yaml
+        ├── ...
+
+```
+Notice that the second level name is the stem `my_audio_model` from the name field passed into compile.
+
+The current firmware loads the 0PROG_A and 0PROG_D files that are generated. You will need to place these on the SD card in the EVK. However, we will be switching to the .femto file that was generated very shortly.
+
+The full options for compile are:
+
+```python
+    def compile(
+        self,
+        model: GraphProto | str,
+        model_name: str = "fqir",
+        model_options_file=None,
+        output_dir: str | Path = "model_datas",
+    ) -> tuple[str, str, str]:
+```
+
+Check the glossary at the end of this document for what each of these options does.
+
+### 3. Model Inputs For `fd.simulate()`, `fd.execute_runner()` and `fd.compare()`
+
+Before we can simulate or compare different types of runners we need to generate the inputs we will drive through the
+model to get our simulation metrics.
+
+The inputs are structured as a dictionary with the key being the name of the input and the value being an np.ndarray of
+integers in the correct shape that the model expects. As an example:
+
+```python
+    model_inputs = {
+                'inputname':
+                    np.ndarray([
+                        [100, 223, ... , 421],
+                        [-23, 155, ... , 654]
+                    ], dtype=np.int32, shape=(2, 32))
+    }
+```
+
+The shape of the np.ndarray is (streaming_sequence_dimension, features). As an example for audio it could be interpreted
+as (frames, samples_in_frame). For simulation or testing on real hardware frames can be sent at once but in the real
+world these would be streaming inputs.
+
+You can have more than one input for a model so that's why we use this dictionary format. However, in the case of audio
+inputs to models it will typically be a single input for the audio file.
+
+#### Audio Inputs
+
+We provide a special helper to create inputs for audio models as they are a common use case.
+A .wav file or audio input as an ndarray is a continuous list of inputs, but the models work on fixed-size audio frames.
+Since so many of our models take audio data as an input, Femtodriver provides a simple tool to inspect a model's input
+frame size, and reshape the data accordingly. 
+
+For example, if a .wav file contains 16K samples (e.g. 1 second of audio at 16KHz), and the model takes 128D input
+frames (8ms per hop), this tool would simply reshape the 16K element .wav file into a (125, 128) vector
+(125 8ms frames, 128 samples each).
+
+You have 4 options for generating inputs for audio models:
+
+1. Ignore the helper below and manually create the dictionary with the correct shapes as shown in the section above
+2. Use randomly generated inputs
+3. Use input audio from a wav file
+4. Use input from an np.ndarray of shape (N,) which will be automatically reshaped to (frames, samples)
+
+The signature is:
+
+```python
+    def generate_audio_inputs(
+        self,
+        input: str | np.ndarray | None = None,
+        spu_runner: SPURunner | None = None,
+        n_frames: int = 2,
+        input_sample_indices: list | None = None,
+    ) -> dict[str, np.ndarray]:
+```
+
+To generate a random input with 4 frames of data:
+
+```python
+    model_inputs = fd.generate_audio_inputs(n_frames=4)
+```
+
+To generate an input from a wav file on disk:
+
+```python
+    model_inputs = fd.generate_audio_inputs(input="test_yes.wav")
+```
+
+To generate an input from an np.ndarray with shape (N_samples,):
+
+```python
+    # Input randomly generated here but you can use any ndarray of ints
+    input_arr = np.random.randint(-1024, 1024, size=(1000,))
+    model_inputs = fd.generate_audio_inputs(input=input_arr)
+```
+
+In all these cases, the returned object will be the dict[str, np.ndarray] described above with the correct shape the
+model expects.
+
+You can restrict the frames to be a specific section by using the `input_sample_indices` parameter.
+
+```python
+    # Input randomly generated here but you can use any ndarray of ints
+    input_arr = np.random.randint(-1024, 1024, size=(1000,))
+    model_inputs = fd.generate_audio_inputs(input=input_arr, input_sample_indices=[0, 4])
+```
+
+This is useful to speed up simulation or runner execution.
+
+### 4. Model Simulation
+
+Our simulator allows us to gather metrics about power consumption based on the model, a given input to the model and the
+input_period. A typical invocation looks like: 
+
+```python
+    results, metrics = fd.simulate(model_inputs=model_inputs, input_period=0.0016)
+```
+
+The full list of arguments is:
+```python
+    def simulate(
+        self,
+        model_inputs: dict[str, np.ndarray],
+        input_period: float,
+    ) -> tuple[dict, str]:
+    """
+    @returns: A tuple with the first element as a dictionary of sim results and the second element
+              is string representation of the yaml sim metrics
+
+    element 1:
+        result = {
+            "compare_str": "Single Runner",
+            "pass": "No Comparisons",
+            "internals": internals,
+            "outputs": outputs,
+        }
+    element 2:
+        The sim metrics which are described in the e2e example document in femtocrux
+    """
+```
+
+The inputs must be generated as described above. The results object contains the internals and outputs of the model for
+the given input after simulation. The simulate call only works with FXRunner, the femtocrux simulation runner.
+
+
+### 5. Using `execute_runner()` to run inputs through cable-attached dev kit (not yet widely available)
+
+`fd.execute_runner()` is a more generic method than `fd.simulate()` and it allows us to run inputs through a
+cable-attached dev kit and control the process of getting outputs through this software. We will be rolling this feature
+out soon for evk2.
+
+A typical invocation would be:
+
+```python
+    result, runner = self.execute_runner(
+        requested_runner="hw",
+        model_inputs=model_inputs,
+        hardware="zynq",
+        zynq_host="192.168.1.145"
+    )
+```
+
+Where the model_inputs are described in the corresponding section on model_inputs above. The hardware specifies which
+EVK is to be controlled and the zynq_host is specific to zynq boards. In the future evk2 will be supported under
+`hardware` and we will give a full example of how to use it with this feature.
+
+The full signature looks like:
+
+```python
+    def execute_runner(
+        self,
+        requested_runner: str,
+        model_inputs: dict[str, np.ndarray],
+        noencrypt: bool = False,
+        hardware="fakezynq",
+        dummy_output_file: str | None = None,
+        debug_vars: str | None = None,
+        debug_vars_fname: str | None = None,
+        zynq_host: str | None = None,
+    ) -> tuple[dict, FemtoRunner]:
+    """
+    Runs an input through a given spu_runner. Runners could be hw, fasmir, fmir, fqir.
+    The input could be a fake autogenerated random input or an np.ndarray. Use the helper
+    function generate_audio_inputs() to turn wav files into the correct shape ndarray.
+
+    @param: requested_runner: a string runner out of set({"hw", "fasmir", "fmir", "fqir"})
+    @param: model_inputs: An ndarray that matches the shape required by the model
+    @param: input_period: the input period processing time for a frame in seconds
+
+    @returns: returns a tuple
+                element1: result: dictionary which contains the internals activations and outputs of a runner.
+                element2: femto_runner: the runner object
+    
+    
+    result = {
+        "compare_str": "Single Runner",
+        "pass": "No Comparisons",
+        "internals": internals,
+        "outputs": outputs,
+    }
+
+    femto_runner of type FXRunner for sim or SPURunner for hw
+    """
+```
+
+The result object is the same as the one in simulate and gives the internals and outputs of the model for a given input.
+
+### 6. Comparing Software Simulation to cable-attached dev kit
+
+Coming soon.
+
+### Running Inputs one at a time through cable-attached dev kit
+
+You may wish to perform per frame pre or post processing on the inputs or outputs of the models before each
+iteration. We provide a lower level API mechanism to do this using the `FemtoRunner` API. The recipe for this is:
+
+```python
+from femtodriver import Femtodriver
+
+model = "pious-snowball.zip"
+output_dir = "model_datas"
+
+with Femtodriver(force_femtocrux_compile=False) as fd:
+    meta_dir, femtofile, femtifile_size = fd.compile(model, output_dir=output_dir)
+    model_inputs = fd.generate_audio_inputs(n_frames=4)
+
+    femto_runner, runner_name = fd.create_runner(requested_runner="hw", hardware="zynq", zynq_host="192.168.1.145")
+
+    first_var_vals = next(iter(model_inputs.values()))
+    n_steps = first_var_vals.shape[0]
+    if not all(val.shape[0] == n_steps for val in model_inputs.values()):
+        raise ValueError("Input sequence lengths don't match for all variables")
+
+    femto_runner.reset()
+    for i in range(n_steps):
+        step_inputs = {
+            varname: values[i] for varname, values in model_inputs.items()
+        }
+
+        output_vals, internal_vals = femto_runner.step(step_inputs)
+        print(f"input # {i}: outputs {output_vals}, internals {internal_vals}")
+    femto_runner.finish()
+```
+
+In the above example the model is in the bitfile.zip format. You can also use your fqir.pt here instead if you are using
+your own model that you have the fqir for. Additionally, when creating the femto_runner object you will need to specify
+the `hardware="zynq"` and `zynq_host="192.168.1.145"` parameters to set the zynq cable-attached dev kit and the IP
+address where the cable-attached dev kit can be found.
+
+
+### List of Femtodriver Calls
+
+For reference here is a list of all the Python API calls without arguments for discoverability.
+
+```python
+    fd.compile()
+    fd.simulate()
+    fd.compare()
+    fd.execute_runner()
+    fd.generate_inputs()
+    fd.generate_program_files()
+    fd.write_metadata_to_disk()
+    fd.write_metrics_to_disk()
+    fd.cleanup_docker_containers()
+    fd.get_docker_logs()
+```
+
+### The Full list of arguments to run()
+
+The full list of arguments to run is shown below.
+
+```
+Required params:
+model:                          Model to run.
+
+Optional:
+model_options_file:             .yaml with run options for different models (e.g., compiler options). 
+                                Default is femtodriver/femtodriver/models/options.yaml
+output_dir:                     Directory where to write fasmir, fqir, programming images, 
+                                programming streams, etc.
+n_frames:                       Number of random sim inputs to drive in.
+input_file:                     File with inputs to drive in. Expects .npy from numpy.save.
+                                Expecting single 2D array of values, indices are (timestep, vector_dim)
+input_file_sample_indices:      lo, hi indices to run from input_file.
+force_femtocrux_compile:        Force femtocrux as the compiler, even if FS internal packages present.
+force_femtocrux_sim:            Force femtocrux as the simulator, even if FS internal packages present.
+hardware:                       Primary runner to use: (options: zynq, fakezynq, redis).
+runners:                        Which runners to execute. If there are multiple, compare each of them 
+                                to the first, comma-separated. Options: hw, fasmir, fqir, fmir, fakehw.
+debug_vars:                     Debug variables to collect and compare values for, comma-separated 
+                                (no spaces), or 'all'.
+debug_vars_fname:               File with a debug variable name on each line.
+debug:                          Set debug log level.
+noencrypt:                      Don't encrypt programming files.
+input_period:                   Simulator input period for energy estimation. No impact on runtime. 
+                                Floating point seconds.
+dummy_output_file:              For fakezynq, the values that the runner should reply with.
+                                Specify a .npy for a single variable.
+
+```
+
+
+### Misc
+
+Note that many `femtodrive` options pertain to running an attached SPU directly. As of 9/24, an EVK has not been made available that allows external use of these features.
