@@ -1,0 +1,2 @@
+[console_scripts]
+hlpj = hlpj.__main__:main

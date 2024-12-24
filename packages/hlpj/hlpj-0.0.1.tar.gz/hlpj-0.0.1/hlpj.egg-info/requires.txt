@@ -1,0 +1,12 @@
+python-dateutil
+questionary
+numpy
+pandas
+tabulate
+pdfkit
+openpyxl
+jinja2
+holidays
+pydantic
+blessed
+webdavclient3
