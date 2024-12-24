@@ -1,0 +1,8 @@
+mssqldbfacade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mssqldbfacade/facade.py,sha256=5KymZYNWKnOjYebl3v1heHVe0MIsx_iv6ICmWIkk1bQ,1094
+mssqldbfacade/singleton.py,sha256=7tQ9EPvMtK3PBR1Pu3ha5EYCBaMsJk6glm2awK8BPTI,2307
+mssqldbfacade-1.0.1.dist-info/LICENSE,sha256=gv6XIZGrGekO4kCHP9DQbaRPYw_dT66BbG8uZYgtfL8,1077
+mssqldbfacade-1.0.1.dist-info/METADATA,sha256=xnHcJFFF4-ELyNxSGj8ge-Fj0Mbh9FQrDs_PXZLDOyQ,2108
+mssqldbfacade-1.0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+mssqldbfacade-1.0.1.dist-info/top_level.txt,sha256=7mKRdr-ogaJ4YASCZRJiZNLX7wW6R9qQWoVdjvnP_0o,14
+mssqldbfacade-1.0.1.dist-info/RECORD,,
