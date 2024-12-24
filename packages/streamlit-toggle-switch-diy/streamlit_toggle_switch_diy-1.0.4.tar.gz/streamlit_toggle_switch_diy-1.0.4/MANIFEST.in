@@ -1,0 +1,3 @@
+recursive-include streamlit_toggle_diy/frontend/build *
+recursive-include streamlit_toggle_diy/frontend/src *
+recursive-include streamlit_toggle_diy/frontend/public *
