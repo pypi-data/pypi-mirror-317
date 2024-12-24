@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+jsme_notebook/__init__.py
+jsme_notebook/rdkit.py
+jsme_notebook.egg-info/PKG-INFO
+jsme_notebook.egg-info/SOURCES.txt
+jsme_notebook.egg-info/dependency_links.txt
+jsme_notebook.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: jsme-notebook
+Version: 0.1.4
+Summary: JSME molecular editor in a Jupyter or Colab notebook in a hacky way.
+Home-page: https://github.com/matteoferla/JSME_notebook_hack
+Author: Matteo Ferla
+Author-email: matteo.ferla@gmail.com
+License: MIT
+License-File: LICENSE
