@@ -1,0 +1,17 @@
+openmind_datasets/__init__.py,sha256=UWzJHqUto6xSw4bcRF1IRhTRJqk2syWoXLddnlXypew,120
+openmind_datasets/conf.py,sha256=trCHbpW8S47jvGoiMjSB9hYNBh4MXuszajKOHs5-hN0,433
+openmind_datasets/datasets_adaptor.py,sha256=PFjSOqJfQWdVOszqMHKLkr3Tu5K03MME3uKUQoA554Q,8816
+openmind_datasets/ms_adaptor.py,sha256=kWtqZv9HrJsZlEMbdEOVdORSNIT7tg10GZls2_fznm0,1292
+openmind_datasets/ms/__init__.py,sha256=qENznwKYtv4t4rGJAdY8hSc1SA1cnopwZjtZ4seP1QE,73
+openmind_datasets/ms/ms_ds_convertor.py,sha256=zCzB6IfTeInB-ZrwJRUjwp_Uhx1nbpzn-3t_enezZSo,9182
+openmind_datasets/ms/ms_formatter.py,sha256=R-NgI9vdL1G8dwI9wUl-yDE1MfKjTPxZPEk5o3NHaGQ,4428
+openmind_datasets/patches/__init__.py,sha256=qENznwKYtv4t4rGJAdY8hSc1SA1cnopwZjtZ4seP1QE,73
+openmind_datasets/patches/info.py,sha256=6UpoJNL6MMebyM-1Swfa_ufbuI6R__wctsQfo-2_KsA,441
+openmind_datasets/patches/streaming_download_manager.py,sha256=rvolq_U9OFpYXnEuRy0ny01IYToJkWNnlCwcNumacZQ,860
+openmind_datasets/utils/__init__.py,sha256=qENznwKYtv4t4rGJAdY8hSc1SA1cnopwZjtZ4seP1QE,73
+openmind_datasets/utils/logging.py,sha256=zTdB8jM_J6g1ydc7o0r4Ai_0DaTwzuXnFlH0YYEIG9M,4522
+openmind_datasets/utils/warning.py,sha256=k7zllLeL3OqXuqKua54Z-j4zwFn9x4sOAT0tETtWurQ,881
+openmind_datasets-0.7.1.dist-info/METADATA,sha256=N6cffi8jnRsFpFfgFTh8gLS3VwZ3moyQ6ZbPX6oI2pQ,17579
+openmind_datasets-0.7.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+openmind_datasets-0.7.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+openmind_datasets-0.7.1.dist-info/RECORD,,
