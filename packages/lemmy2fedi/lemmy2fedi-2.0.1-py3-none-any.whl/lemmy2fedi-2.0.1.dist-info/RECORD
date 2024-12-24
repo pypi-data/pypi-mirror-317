@@ -1,0 +1,10 @@
+lemmy2fedi/__init__.py,sha256=Y451R7PrBeMOmohV8CzuVgulYlrXZIc31Am5yB0_YVg,191
+lemmy2fedi/app.py,sha256=mJ53H2v4DEKbpfEpMBXfJLszDLBBTkSJH3-bBRpxF8k,6862
+lemmy2fedi/config.py,sha256=i-st_KVudap-nPnoBlQ3KksgY2RLpoYGx3OlgRPZi7o,2573
+lemmy2fedi/control.py,sha256=IaTBFmfeE4MBfXVhln3wWB_PL7QV2_n4J3JJOKv6iY8,4769
+lemmy2fedi/publish.py,sha256=vlpfGd2XYVk9EvnEdZNReSY2l2GwV2BvHzP-1VlLnHQ,4457
+lemmy2fedi-2.0.1.dist-info/METADATA,sha256=fGqhxVrd4TRKRczBieJ84HwyPXDJYhr9Ls752PRoZhs,4070
+lemmy2fedi-2.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lemmy2fedi-2.0.1.dist-info/entry_points.txt,sha256=wRFkqX8Xcm8-_2np9cxtfBg8OQwpwoyDYehupTF2zBg,57
+lemmy2fedi-2.0.1.dist-info/licenses/LICENSE.md,sha256=PQ0YeyTNKuWz9fwaRJVmGVIlvDVwygG6ZJydQv7HhO0,32118
+lemmy2fedi-2.0.1.dist-info/RECORD,,

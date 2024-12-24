@@ -1,0 +1,2 @@
+[console_scripts]
+lemmy2fedi = lemmy2fedi:app.typer_shim
