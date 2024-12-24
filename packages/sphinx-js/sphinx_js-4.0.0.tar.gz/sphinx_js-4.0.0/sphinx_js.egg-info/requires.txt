@@ -1,0 +1,4 @@
+Jinja2>2.0
+parsimonious<0.11.0,>=0.10.0
+Sphinx>=5.0.0
+markupsafe
