@@ -1,0 +1,2 @@
+[console_scripts]
+mistaker = mistaker.cli:main
