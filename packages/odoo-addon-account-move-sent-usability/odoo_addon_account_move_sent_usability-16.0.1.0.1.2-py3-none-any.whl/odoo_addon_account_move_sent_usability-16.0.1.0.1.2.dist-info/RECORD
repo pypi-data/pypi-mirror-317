@@ -1,0 +1,16 @@
+odoo/addons/account_move_sent_usability/README.rst,sha256=vJ_ql9p6nPXV005i40tZ4In-biaqhIy5qu7wlbPzJXw,3360
+odoo/addons/account_move_sent_usability/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/account_move_sent_usability/__manifest__.py,sha256=hZRQ9UIBJglC0vUsAqB6lLdNUuTQMlhC-sgHj6VOpuA,567
+odoo/addons/account_move_sent_usability/i18n/account_move_sent_usability.pot,sha256=BqqlYy8bhZvR6PQQIEe5pjhDtczRdoGkYRJwS227Yzc,772
+odoo/addons/account_move_sent_usability/i18n/it.po,sha256=U6vqZtizLkSHw9eyhctyevnQFmDRj29o1VsBht9eJVs,948
+odoo/addons/account_move_sent_usability/readme/CONTRIBUTORS.rst,sha256=rAz8ge5rbLN10J-H_Mdr4x8NZXieq4DOXnMMBanUMXc,81
+odoo/addons/account_move_sent_usability/readme/DESCRIPTION.rst,sha256=fIuQEExEysFKDyClMILOnqHw9cZHwabVjo_jexb5jdU,251
+odoo/addons/account_move_sent_usability/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/account_move_sent_usability/static/description/index.html,sha256=Zui1ZHPNEf_-qwUfH1RbD0gg7vI1AxFkgpe7pwhFXrs,12876
+odoo/addons/account_move_sent_usability/static/images/sent_filter.png,sha256=1uq5DN9oYZeburjj6hiCqmmOrIIJX3JSAmYNo8CSPgM,275106
+odoo/addons/account_move_sent_usability/static/images/sent_form.png,sha256=p4fduVzKFs4f6b-axoCZicMDpb79OUicanwOD2dwJ5w,63311
+odoo/addons/account_move_sent_usability/views/account_move.xml,sha256=j5cIHZmHNgwTqB-H9RIMMQvzhZV86H-h4zw-5ljXbqk,1554
+odoo_addon_account_move_sent_usability-16.0.1.0.1.2.dist-info/METADATA,sha256=44mWxmV3KzzJtd9_KkCwiX6cwOxS9ECUJjwi42JJHy4,3957
+odoo_addon_account_move_sent_usability-16.0.1.0.1.2.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+odoo_addon_account_move_sent_usability-16.0.1.0.1.2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo_addon_account_move_sent_usability-16.0.1.0.1.2.dist-info/RECORD,,
