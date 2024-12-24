@@ -1,0 +1,14 @@
+websockets<15,>=14.1
+
+[:python_version < "3.11"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
+pytest-asyncio
+pytest-mock
+pytest-aiohttp
+pytest-timeout
+mock
