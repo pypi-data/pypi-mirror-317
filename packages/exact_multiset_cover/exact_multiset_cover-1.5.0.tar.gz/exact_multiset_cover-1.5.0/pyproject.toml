@@ -1,0 +1,72 @@
+[tool.poetry]
+name = "exact_multiset_cover"
+version = "1.5.0"
+description = "Solve exact cover problems for multisets. Fork of exact_cover"
+readme = "README.md"
+authors = ["Moy Easwaran", "Niklas Zapatka"]
+maintainers = ["Jack Grahl <jack.grahl@gmail.com>"]
+homepage = "https://github.com/questforwisdom/exact_multiset_cover"
+repository = "https://github.com/questforwisdom/exact_multiset_cover"
+license = "GPL-2.0-only"
+include = [
+    {path = "src/*.c", format = "sdist"},
+    {path = "src/*.h", format = "sdist"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0"
+numpy = [
+    {version = ">=1.14", python = "==3.7"},
+    {version = ">=1.17", python = "==3.8"},
+    {version = ">=1.19", python = "==3.9"},
+    {version = ">=1.21", python = "==3.10"},
+    {version = ">=1.23", python = "==3.11"},
+    {version = ">=1.24", python = ">=3.12"},
+]
+setuptools = ">=51.1.2"
+
+# When we build wheels, we always do so with an explicit pinned numpy version
+#
+[tool.poetry.group.wheel_builder]
+optional = true
+
+[tool.poetry.group.wheel_builder.dependencies]
+python = ">=3.7,<4.0"
+numpy = [
+    {version = "==1.14.5", python = "==3.7"},
+    {version = "==1.17.3", python = "==3.8"},
+    {version = "==1.19.3", python = "==3.9"},
+    {version = "==1.21.6", python = "==3.10"},
+    {version = "==1.23.2", python = "==3.11"},
+    {version = ">=1.24.2", python = ">=3.12"},
+]
+setuptools = ">=51.1.2"
+
+[tool.poetry.dev-dependencies]
+hypothesis = ">=6.56.3"
+pytest = ">=6.1.2"
+flake8 = ">=4.0"
+black = ">=22.3.0"
+valgrindci = ">=0.2.0"
+pytest-fail-slow = ">=0.3.0"
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = true
+
+[tool.poetry.scripts]
+test = 'tools.run_tests:test'
+quicktest = 'tools.run_tests:quicktest'
+doctest = 'tools.run_tests:run_doctest'
+debug = 'tools.debug:run_debug'
+parse_valgrind = 'tools.debug:parse_valgrind_results'
+
+[build-system]
+requires = ["setuptools", "oldest-supported-numpy", "poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+exclude = "polyomino_data"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --doctest-glob='*.md'"
