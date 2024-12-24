@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: SDoc
+Version: 1.1.0
+Summary: A super format documentation document preparation system for SAAS and multi tenant applications
+Home-page: https://github.com/SDoc/SDoc
+License: MIT
+Keywords: Documentation,SAAS
+Author: P.R. Water
+Author-email: p.r.water@setbased.nl
+Requires-Python: >=3.11.0,<4.0.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Editors :: Documentation
+Requires-Dist: antlr4-python3-runtime (>=4.13.2,<5.0.0)
+Requires-Dist: cleo (>=2.1.0,<3.0.0)
+Requires-Dist: httplib2 (>=0.22.0,<0.23.0)
+Project-URL: Documentation, https://github.com/SDoc/SDoc
+Project-URL: Repository, https://github.com/SDoc/SDoc
+Description-Content-Type: text/markdown
+
+# SDoc
+
+A super format document preparation system for SAAS and multi-tenant applications.
+
+
+<table>
+<thead>
+<tr>
+<th>Legal</th>
+<th>Release</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://pypi.org/project/Super-SCAD/" target="_blank"><img alt="PyPI - License" src="https://img.shields.io/pypi/l/Super-SCAD"></a>
+</td>
+<td>
+<a href="https://badge.fury.io/py/sdoc" target="_blank"><img src="https://badge.fury.io/py/SDoc.svg" alt="Latest Stable Version"/></a><br/>
+</td>
+<td>
+<a href="https://codecov.io/gh/SDoc/SDoc" target="_blank"><img src="https://codecov.io/gh/SDoc/SDoc/graph/badge.svg" alt="Code Coverage"/></a>
+<a href="https://github.com/SDoc/SDoc/actions/workflows/unit.yml"><img src="https://github.com/SDoc/SDoc/actions/workflows/unit.yml/badge.svg" alt="unit Tests"/></a>
+</td>
+</tr>
+</tbody>
+</table>
+
+
