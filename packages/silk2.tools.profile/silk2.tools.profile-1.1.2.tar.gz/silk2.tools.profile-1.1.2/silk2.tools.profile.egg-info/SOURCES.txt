@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+SILK2/Tools/profile/__init__.py
+SILK2/Tools/profile/__main__.py
+SILK2/Tools/profile/log_profile.py
+silk2.tools.profile.egg-info/PKG-INFO
+silk2.tools.profile.egg-info/SOURCES.txt
+silk2.tools.profile.egg-info/dependency_links.txt
+silk2.tools.profile.egg-info/requires.txt
+silk2.tools.profile.egg-info/top_level.txt
