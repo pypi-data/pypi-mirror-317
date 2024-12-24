@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: Han-BackTest
+Version: 1.1.2
+Summary: A naive backtest framework for stock trading in Chinese market
+Home-page: https://www.linkedin.com/in/jiaheng-han-005464291
+Author: Jiaheng Han
+Author-email: hanjiaheng@stu.pku.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Han_BackTest
+
+**Han_BackTest** is a lightweight backtesting framework designed for the Chinese stock market. It allows users to quickly develop, test, and analyze quantitative investment strategies.
+
+---
+
+## Features
+
+- **Efficient Data Management**: Load and cache financial data seamlessly with `DataClass`.
+- **Flexible Factor Calculation**: Create custom factors with `FactorClass`.
+- **Modular Strategy Design**: Build strategies by extending the `StrategyClass`.
+- **Comprehensive Backtesting**: Use `BackTestClass` for visualizing performance and comparing strategies.
+
+---
+
+## Installation
+
+Install via pip:
+
+```bash
+pip install Han-BackTest
+```
+
+## Quick Start
+
+Here’s how to get started with Han_BackTest in just a few steps:
+
+```python
+from Han_BackTest.DataClass import DataClass
+from Han_BackTest.BackTestClass import BackTestClass
+
+from Strategies.ReversalStrategy import ReversalStrategy  # Import your strategy
+
+# Load data
+data_paths = {"daily": "path/to/data.feather"}
+data = DataClass(data_paths)
+data.generate_cache()
+
+# Define strategy
+strategy = ReversalStrategy(name="Reversal", n=5)
+
+# Run backtest
+backtest = BackTestClass(
+    strategy=strategy,
+    data_class=data,
+    start_date=20200101,
+    end_date=20231231,
+)
+
+# Plot results
+backtest.plot_nav()
+```
+
+## Documentation
+
+For detailed documentation and usage examples, please visit the [online documentation](https://disk.pku.edu.cn/link/AAEE32830117764DC79F93ACD9A6338CFA).
+
+## Data Requirements
+
+If you need sample data for testing, you can download it from [this link](https://disk.pku.edu.cn/link/AAEE32830117764DC79F93ACD9A6338CFA).
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues or pull requests :)
