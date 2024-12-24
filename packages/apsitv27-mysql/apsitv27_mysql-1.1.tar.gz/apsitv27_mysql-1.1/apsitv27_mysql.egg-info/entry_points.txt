@@ -1,0 +1,2 @@
+[console_scripts]
+apsitv27-mysql = apsitv27_mysql.main:build_and_run_mysql_container

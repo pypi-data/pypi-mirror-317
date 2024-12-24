@@ -1,0 +1,13 @@
+MANIFEST.in
+setup.py
+apsitv27_mysql/Dockerfile
+apsitv27_mysql/__init__.py
+apsitv27_mysql/dockerfile
+apsitv27_mysql/entrypoint.sh
+apsitv27_mysql/main.py
+apsitv27_mysql.egg-info/PKG-INFO
+apsitv27_mysql.egg-info/SOURCES.txt
+apsitv27_mysql.egg-info/dependency_links.txt
+apsitv27_mysql.egg-info/entry_points.txt
+apsitv27_mysql.egg-info/requires.txt
+apsitv27_mysql.egg-info/top_level.txt
