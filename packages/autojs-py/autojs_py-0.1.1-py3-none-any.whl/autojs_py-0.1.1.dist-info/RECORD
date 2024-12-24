@@ -1,0 +1,12 @@
+autojs_py/__init__.py,sha256=kBWIlnIfh6SOx9No0RzuVSTtgsIyVBUH10WkyWeG0SM,146
+autojs_py/capture.py,sha256=1MvzD8Ut16MywI2C01b7fvOQ_KJDZ97xWRLFdzyhs5M,709
+autojs_py/colors.py,sha256=hNbp_OX1eDaELSkQDgqoZR-j0AwXi0_PChWKkNmwOhA,8388
+autojs_py/Device.py,sha256=pVW7_iqTkvQkhaNGqqBhWY5gzJQAbH5h5dnWKn48hyw,176
+autojs_py/key.py,sha256=qL_EE8zfjnNG62m7yrEUX_2T1Oa8yzRnCuiynCzVgdg,371
+autojs_py/main.py,sha256=BJX2sPZEgkjtLywBlsbBVP3Dmi_s_lI88rCfenqE_wE,1833
+autojs_py/ocr.py,sha256=ZdLwsBrN3X_-WCvvwYi3q-G1gYoqzYJ9p_02OdJhzcM,847
+autojs_py/opearation.py,sha256=-G6eCyXWRUjpUqKh3ieM8KiARG35EmDW0BEI6wURu8w,3155
+autojs_py/reconginze.py,sha256=Am5gfZj2qjFix8yNxlMZ9zlkI5vBoYgnjaXAx7Zk_cA,1501
+autojs_py-0.1.1.dist-info/METADATA,sha256=rRmGVE31RMKHj_WETqRac8lnRT2zr7OwKZsWo747ysE,2484
+autojs_py-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+autojs_py-0.1.1.dist-info/RECORD,,
