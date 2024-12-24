@@ -1,0 +1,14 @@
+ufaas/__init__.py,sha256=uh5ceuvtCQSUiUN_m5Boi1oUpfrNLmvLyPkJDIfMzkU,72
+ufaas/schemas.py,sha256=vAC_SCiN4ME9ebJ0Wb-PWlNNnmyHcRPeL0wccC-Zs5A,3581
+ufaas/services.py,sha256=o-YC-2QCyIxS4noMcQRtG7eq0setzukOFlzj02irGFI,341
+ufaas/ufaas.py,sha256=6DyluDi5nfzb8vhPQ4uIvZO77ubSDHFjNLWytvk99wg,2366
+ufaas/apps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ufaas/apps/base_app.py,sha256=UcFGiDayUHjWGCrlNsqE1_Y5Fc5sYKoPGtl_0s5gah8,7339
+ufaas/apps/saas/__init__.py,sha256=d7469tJIPnfEP8Hv4jCoTMaySjjOPbsMLHGbh3YbXoQ,169
+ufaas/apps/saas/saas.py,sha256=G8TGHIBvbOVsAuFLjXs85pG7_k4Dx8ymeCyyfbFTsiw,5132
+ufaas/apps/saas/schemas.py,sha256=9okyKAO060Dt9ptHJ_0ule8iEGRfY_-bCr7s_isgR9I,1658
+ufaas-0.1.0.dist-info/LICENSE.txt,sha256=ceC9ZJOV9H6CtQDcYmHOS46NA3dHJ_WD4J9blH513pc,1081
+ufaas-0.1.0.dist-info/METADATA,sha256=5A5a_hAuSgBkTcutGlKP3fVrONdq6n5K1PJkETi5YYs,2917
+ufaas-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ufaas-0.1.0.dist-info/top_level.txt,sha256=yyXvUvXltSH_DQoTipfpPC9Cket9R3FqjDZXDHcj73g,6
+ufaas-0.1.0.dist-info/RECORD,,
