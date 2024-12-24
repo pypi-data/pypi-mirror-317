@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: nnthvn
+Version: 0.6.0
+Summary: Простая библиотека для работы с числами и строками.
+Home-page: https://github.com/NeonitTHeav3n/nnthvn
+Author: 
+Author-email: jaguar80605@gmail.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# nnthvn
+
+## Описание
+`nnthvn` — это простая библиотека для работы с числами и строками. 
+## Реализованные функции
+##
+
+(def sum_of_squares(a, b, c),
+##
+Вывод:,
+##
+a**2 + b**2 + c**2,
+##
+def diff_max_min(a, b, c):,
+##
+Вывод:,
+##
+max(a, b, c) - min(a, b, c), sep=" ")
+
+
+## Установка
+
+pip install nnthvn
+
+
