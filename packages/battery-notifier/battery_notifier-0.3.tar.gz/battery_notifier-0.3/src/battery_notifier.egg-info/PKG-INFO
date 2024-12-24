@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: battery_notifier
+Version: 0.3
+Summary: Sends desktop notifications for low and critical battery warnings, and optionally when charging/discharging state changes
+Author-email: Brenton Leighton <12228142+brenton-leighton@users.noreply.github.com>
+Maintainer-email: Brenton Leighton <12228142+brenton-leighton@users.noreply.github.com>
+License: MIT License
+        
+        Copyright (c) 2024 Brenton Leighton
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/brenton-leighton/battery_notifier
+Keywords: linux,battery,dbus,upower
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydbus
+Requires-Dist: PyGObject
+
+# battery_notifier
+
+Sends desktop notifications for low and critical battery warnings, and optionally when charging/discharging state
+changes
+
+## Installation
+
+battery_notifier has the following dependencies available on PyPI:
+
+- `pydbus`
+- `PyGObject`
+
+The package can be installed using [pipx](https://pipx.pypa.io/stable/installation/), e.g.:
+
+```bash
+pipx install battery_notifier
+```
+
+## Configuration
+
+battery_notifier can be configured with a file located at `~/.config/battery_notifier/config.ini`, e.g.
+
+```ini
+[low]
+expire_timeout = 0
+
+[critical]
+expire_timeout = 0
+
+[discharging]
+enable = true
+expire_timeout = 0
+
+[charging]
+enable = true
+expire_timeout = 5000
+```
+
+## Starting with systemd
+
+A systemd service file is included in this repository which can be enabled and started like so:
+
+```bash
+# Copy the service file
+cp battery_notifier.service ~/.local/share/systemd/user/
+
+# Enable the service
+systemctl --user enable battery_notifier
+
+# Start the service
+systemctl --user start battery_notifier
+```

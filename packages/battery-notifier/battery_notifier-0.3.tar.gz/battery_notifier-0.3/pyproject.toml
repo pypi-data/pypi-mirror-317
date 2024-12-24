@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "battery_notifier"
+version = "0.3"
+description = "Sends desktop notifications for low and critical battery warnings, and optionally when charging/discharging state changes"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+keywords = ["linux", "battery", "dbus", "upower" ]
+
+authors = [
+  {name = "Brenton Leighton", email = "12228142+brenton-leighton@users.noreply.github.com" }
+]
+
+maintainers = [
+  {name = "Brenton Leighton", email = "12228142+brenton-leighton@users.noreply.github.com" }
+]
+
+dependencies = [
+  "pydbus",
+  "PyGObject",
+]
+
+[project.urls]
+Homepage = "https://github.com/brenton-leighton/battery_notifier"
+
+[project.scripts]
+battery_notifier = "battery_notifier.battery_notifier:main"

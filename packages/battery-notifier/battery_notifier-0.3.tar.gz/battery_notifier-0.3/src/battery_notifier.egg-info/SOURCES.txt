@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/battery_notifier/__init__.py
+src/battery_notifier/battery_notifier.py
+src/battery_notifier/config.py
+src/battery_notifier.egg-info/PKG-INFO
+src/battery_notifier.egg-info/SOURCES.txt
+src/battery_notifier.egg-info/dependency_links.txt
+src/battery_notifier.egg-info/entry_points.txt
+src/battery_notifier.egg-info/requires.txt
+src/battery_notifier.egg-info/top_level.txt
