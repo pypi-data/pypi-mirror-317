@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+extract_listings = mkdocs_extract_listings_plugin:ListingsPlugin
