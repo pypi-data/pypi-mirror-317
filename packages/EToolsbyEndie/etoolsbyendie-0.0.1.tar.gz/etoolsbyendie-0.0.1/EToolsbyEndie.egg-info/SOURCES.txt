@@ -1,0 +1,10 @@
+README.md
+setup.py
+ETools/__init__.py
+ETools/main.py
+EToolsbyEndie.egg-info/PKG-INFO
+EToolsbyEndie.egg-info/SOURCES.txt
+EToolsbyEndie.egg-info/dependency_links.txt
+EToolsbyEndie.egg-info/entry_points.txt
+EToolsbyEndie.egg-info/requires.txt
+EToolsbyEndie.egg-info/top_level.txt
