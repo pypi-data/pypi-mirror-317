@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: praisonaiagents
+Version: 0.0.1
+Summary: Hierarchical AI agents for task execution
+Author: Mervin Praison
+Requires-Dist: pydantic
+Requires-Dist: rich
+Requires-Dist: openai
