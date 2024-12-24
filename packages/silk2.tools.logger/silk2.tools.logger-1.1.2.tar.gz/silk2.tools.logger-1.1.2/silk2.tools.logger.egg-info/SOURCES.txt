@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+SILK2/Tools/logger/__init__.py
+SILK2/Tools/logger/logger.py
+silk2.tools.logger.egg-info/PKG-INFO
+silk2.tools.logger.egg-info/SOURCES.txt
+silk2.tools.logger.egg-info/dependency_links.txt
+silk2.tools.logger.egg-info/requires.txt
+silk2.tools.logger.egg-info/top_level.txt
