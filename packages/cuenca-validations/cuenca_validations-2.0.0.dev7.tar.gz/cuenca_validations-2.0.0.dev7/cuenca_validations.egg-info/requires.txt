@@ -1,0 +1,7 @@
+clabe>=2.0.0.dev0
+pydantic[email]>=2.0
+pydantic-extra-types==2.10.1
+python-dateutil>=2.7.0
+
+[:python_version < "3.7"]
+dataclasses>=0.6
