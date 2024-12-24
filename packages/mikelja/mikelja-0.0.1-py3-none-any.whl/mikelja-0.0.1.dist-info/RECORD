@@ -1,0 +1,15 @@
+aggregator/__init__.py,sha256=IC8vEp6PNGdZfRl6VVew_XI5J3GrD_QlUiVYLM-KeZs,68
+aggregator/aggregator.py,sha256=BBysBSK6GrvIpQMd7gu6t9x8z7Ve7AyLn3iVfWjX71E,317
+apis/__init__.py,sha256=-zS6340WcLGPbQph2yiCgnbb8Ol69zxnbyeytnBzTcM,217
+apis/adzuna.py,sha256=8Jk8FXjn7YYFOvgDSdDLV7j5sxRgX5ctlWBBtsl2zHA,630
+apis/jooble.py,sha256=gnJv-FNgo8UHkETCrU_498R1_6hMbMeTDmoccmWbM_4,1156
+apis/linkedin.py,sha256=zsoFFgWTfwKJGBVBEopwZmky8YHND8vcQ58pBeB68tI,3693
+apis/remotive.py,sha256=5-s7ZHs-Vz55BLdQTWCKLsHg2j4Iq85UstqfkRbIAsw,386
+apis/usajobs.py,sha256=M55Yr3WqRwtHLROnsH3_J05912u5-7_-uKnTr0n7yFk,756
+config/__init__.py,sha256=n_W9_UYSZNF0B6HxpZMk1EfwxrspvMr_Nq3Hc40krZU,324
+config/config.py,sha256=lPO6xJSr084_dJoISM9pr40RwtRLle590NEtRXF0hfs,486
+mikelja-0.0.1.dist-info/LICENSE,sha256=BDq5JBycoR0wFWDr1c84yJzdv40OGNW0mJg8deL15fc,1087
+mikelja-0.0.1.dist-info/METADATA,sha256=zbjK8IK35go6CdzZDYRKupxzqWYwAXCY7ZmOCLF-pIo,4304
+mikelja-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mikelja-0.0.1.dist-info/top_level.txt,sha256=pipzVC5cWReRtMYtGPjz9M-W5g71Sv9Rpkb-5oSUSQQ,23
+mikelja-0.0.1.dist-info/RECORD,,
