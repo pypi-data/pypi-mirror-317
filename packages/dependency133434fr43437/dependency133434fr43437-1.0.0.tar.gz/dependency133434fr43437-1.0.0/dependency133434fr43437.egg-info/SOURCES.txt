@@ -1,0 +1,6 @@
+setup.py
+dependency133434fr43437.egg-info/PKG-INFO
+dependency133434fr43437.egg-info/SOURCES.txt
+dependency133434fr43437.egg-info/dependency_links.txt
+dependency133434fr43437.egg-info/not-zip-safe
+dependency133434fr43437.egg-info/top_level.txt
