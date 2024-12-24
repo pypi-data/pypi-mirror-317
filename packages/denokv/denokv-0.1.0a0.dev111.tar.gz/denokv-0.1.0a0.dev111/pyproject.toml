@@ -1,0 +1,106 @@
+[tool.poetry]
+name = "denokv"
+version = "0.1.0-alpha-dev111"
+description = "Connect to Deno KV databases from Python."
+authors = ["Hal Blackburn <hwtb2@cam.ac.uk>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "denokv", from = "src" }]
+homepage = "https://github.com/h4l/denokv-python"
+repository = "https://github.com/h4l/denokv-python"
+documentation = "https://github.com/h4l/denokv-python"
+classifiers = [
+  "Topic :: Database :: Front-Ends",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Framework :: AsyncIO",
+  "Development Status :: 2 - Pre-Alpha",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiohttp = "^3"
+yarl = "^1"
+protobuf = ">=4.22.0,<6"
+# We only use fdb.tuple from foundationdb, and the most-recent significant
+# change was in 6.2.4 (which is late 2019)
+# https://github.com/apple/foundationdb/commits/main/bindings/python/fdb/tuple.py
+foundationdb = ">=6.2.4,<8"
+v8serialize = "^0.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+ruff = "^0.8.4"
+isort = "^5.13.2"
+mypy = "^1.14.0"
+pytest-asyncio = "^0.25.0"
+pytest-aiohttp = "^1.0.5"
+types-protobuf = ">=4.22,<4.23" # should be pinned to match lower bound of non-dev protobuf dep
+typing-extensions = "^4.12.2"
+hypothesis = "^6.112.2"
+
+[tool.poetry.group.dev-extra.dependencies]
+jupyterlab = "^4.2.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 80
+extend-select = "B950"
+extend-ignore = "E203,E501,E701"
+
+[tool.isort]
+profile = "black"
+extra_standard_library = ["typing_extensions"]
+
+[tool.mypy]
+strict = true
+mypy_path = "./stubs"
+
+[[tool.mypy.overrides]]
+module = "denokv._datapath_pb2"
+# Generated protocol buffers stubs don't specify generic type params
+disallow_any_generics = false
+ignore_errors = true
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.ruff]
+exclude = [
+  # Generated protobuf files
+  "src/denokv/_datapath_pb2.py",
+  "src/denokv/_datapath_pb2.pyi",
+]
+
+[tool.ruff.lint]
+select = [
+  "B",   # flake8-bugbear
+  "D",   # pydocstyle
+  "E",
+  "F",
+  "FA",  # flake8-future-annotations
+  "PYI", # flake8-pyi
+  "I",
+]
+
+ignore = [
+  "D100", # "Missing docstring in public module" — not everything is documented yet
+  "D101", # "Missing docstring in public class" — not everything is documented yet
+  "D102", # "Missing docstring in public method" — not everything is documented yet
+  "D103", # "Missing docstring in public function" — not everything is documented yet
+  "D104", # "Missing docstring in public package" — not everything is documented yet
+  "D105", # "Missing docstring in magic method" — not everything is documented yet
+  # Allow annotating int | float (which is technically redundant, but IMO
+  # valuable as it communicates intent, given that int and float are not used
+  # interchangeably).
+  "PYI041",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.pytest.ini_options]
+addopts = ["--doctest-modules"]
+asyncio_default_fixture_loop_scope = "function"
