@@ -1,0 +1,10 @@
+ipregion/__init__.py,sha256=6Ac81Hrk8qxoSyHGtN6XamxV4Pf4Oae5FGf717e0FUw,7148
+ipregion/db.py,sha256=BtYTzH5xrs4CLolBsGOuBwRkLaQAkf--8F_0nm-e4G8,1127
+ipregion/ip2region.xdb,sha256=hnthm1Z_Ubud08OEpMv3wz5xoXiqWPEyAUmara8s944,11070083
+ipregion/ipcache.sample.db3,sha256=aum3jYKC4BIW9GQSq7wvXcVWt-IzBhBYQkcxN8xjw0o,16384
+ipregion/xdbSearcher.py,sha256=NPdiaeA88S1JJ9M-bvwm_RWA1jSPiWTS8SMR-xcAnGg,5865
+ip_region-1.0.2.dist-info/LICENSE,sha256=Ul9dvPi6XPvs3OMuoCQqpG8mL36sbbkeC8YfVeN_kYE,11342
+ip_region-1.0.2.dist-info/METADATA,sha256=mx6gFx6Fxis6_eV_38FcCNVDAfuwQNdqPGLHmUrpbO8,3926
+ip_region-1.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ip_region-1.0.2.dist-info/top_level.txt,sha256=r8Bf6ic53RNJbQwDSlwgsjhjVI51Tr2tZUe7iTqJn1M,9
+ip_region-1.0.2.dist-info/RECORD,,
