@@ -1,0 +1,49 @@
+# objconpython - Execute Objective-C Code from Python
+
+This Python package allows you to execute Objective-C code directly within Python using a simple function call.
+
+---
+
+## Features
+
+- Execute inline Objective-C code from Python using `objconpython.run()`.
+- Supports basic Objective-C expressions and code evaluation.
+- Handles Objective-C exceptions and returns error messages to Python.
+- Easy-to-use integration in Python projects.
+
+---
+
+## Requirements
+
+- **macOS** (required for Objective-C execution via `Foundation` framework).
+- **Python 3.x** or higher.
+- **pip** (for installing the package).
+
+---
+
+## Installation
+
+To install the package, run the following command:
+
+```bash
+pip install objconpython
+```
+```python
+import objconpython
+
+objc_code = """
+#import <Foundation/Foundation.h>
+int main() {
+    @autoreleasepool {
+        NSLog(@"Hello from Objective-C!");
+    }
+    return 0;
+}
+"""
+
+# Gọi hàm run trong module
+result = objconpython.run(objc_code)
+print(result)
+```
+Explanation: 
+objconpython.run("<objc_code>"): 
