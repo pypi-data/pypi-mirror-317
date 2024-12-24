@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: geometryhelper
+Version: 0.1.0
+Summary: Библиотека для работы с геометрическими фигурами и кв уравнением
+Author: Заур Гадаборшев
+Author-email: orlov.tigr@bk.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Zaur_helper
+ 
+РџСЂРѕСЃС‚Р°СЏ Р±РёР±Р»РёРѕС‚РµРєР° Python РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РіРµРѕРјРµС‚СЂРёС‡РµСЃРєРёРјРё С„РёРіСѓСЂР°РјРё Рё СЃ РєРІР°РґСЂР°С‚РёС‡РЅС‹РјРё СѓСЂР°РІРЅРµРЅРёСЏРјРё.
+ 
+## РЈСЃС‚Р°РЅРѕРІРєР°
+```bash
+pip install Zaur_helper

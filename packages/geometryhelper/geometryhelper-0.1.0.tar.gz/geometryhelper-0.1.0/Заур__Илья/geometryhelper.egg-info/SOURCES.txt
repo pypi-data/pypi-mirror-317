@@ -1,0 +1,11 @@
+setup.ru
+Заур__Илья/geometryhelper.egg-info/PKG-INFO
+Заур__Илья/geometryhelper.egg-info/SOURCES.txt
+Заур__Илья/geometryhelper.egg-info/dependency_links.txt
+Заур__Илья/geometryhelper.egg-info/top_level.txt
+Заур__Илья/tests/__init__.py
+Заур__Илья/tests/test_корни_кв_уравнения.py
+Заур__Илья/tests/test_радиус.py
+Заур__Илья/Заур__Илья/__init__.py
+Заур__Илья/Заур__Илья/корни_кв_уравнения.py
+Заур__Илья/Заур__Илья/радиус.py
