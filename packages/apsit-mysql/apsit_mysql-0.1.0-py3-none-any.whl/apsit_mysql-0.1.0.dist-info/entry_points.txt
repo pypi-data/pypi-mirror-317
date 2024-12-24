@@ -1,0 +1,2 @@
+[console_scripts]
+apsit-mysql = apsit_mysql.cli:main
