@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stay_online"
+version = "0.2.0"
+authors = [{ name="Chiaope" }]
+description = "Simulate fake mouse and keyboard actions to fake staying online"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyautogui",
+    "pynput"
+]
+
+[project.urls]
+Homepage = "https://github.com/Chiaope/stay_online"
+
+[project.scripts]
+stay-online = "stay_online.cli:cli_stay_online"
