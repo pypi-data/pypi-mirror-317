@@ -1,0 +1,12 @@
+include kivy_weather_app_package/main.py
+include kivy_weather_app_package/weather.kv
+include kivy_weather_app_package/APIK.json
+include kivy_weather_app_package/cloudy.jpg
+include kivy_weather_app_package/data.json
+include kivy_weather_app_package/default.jpg
+include kivy_weather_app_package/history.json
+include kivy_weather_app_package/night.jpg
+include kivy_weather_app_package/rain.jpg
+include kivy_weather_app_package/snow.jpg
+include kivy_weather_app_package/sunny.jpg
+include LICENSE
