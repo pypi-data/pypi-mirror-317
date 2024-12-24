@@ -1,0 +1,77 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/checkout@v4
+      - run: pip install pre-commit
+      - run: pre-commit run --show-diff-on-failure --all-files
+
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.9, "3.10", 3.11, 3.12] # 3.13 can be supported if lxml supports 3.13
+        django-version: [4.2, 5.0, 5.1, master]
+        exclude:
+            # Django 4.2
+            - python-version: 3.12
+              django-version: 4.2
+            - python-version: 3.13
+              django-version: 4.2
+
+            # Django 5.0
+            - python-version: 3.9
+              django-version: 5.0
+            - python-version: 3.13
+              django-version: 5.0
+
+            # Django 5.1
+            - python-version: 3.9
+              django-version: 5.1
+
+            # master
+            - python-version: 3.9
+              django-version: master
+
+    steps:
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4.2.0
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - run: python -m pip install Django==${{ matrix.django-version }}
+        if: matrix.django-version != 'master'
+      - run: python -m pip install https://github.com/django/django/archive/master.tar.gz
+        if: matrix.django-version == 'master'
+      - run: |
+          python -m pip install coverage
+          python -m pip install -r requirements/common.pip
+      - run: coverage run --source=django_tables2 manage.py test
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+            python-version: "3.11"
+            cache: 'pip'
+            cache-dependency-path: |
+              docs/requirements.txt
+              common/requirements.txt
+      - name: Install and build
+        run: |
+          cd docs
+          python -m pip install -r requirements.txt
+          make html
