@@ -1,0 +1,14 @@
+napari_update_checker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_update_checker/_version.py,sha256=IMl2Pr_Sy4LVRKy_Sm4CdwUl1Gryous6ncL96EMYsnM,411
+napari_update_checker/napari.yaml,sha256=Q0atZotnurufayli_fbgPRdug30cE70R2evouEXzEww,356
+napari_update_checker/qt_update_checker.py,sha256=3sZkQtP6Jdv7Nv6aE2jJldvzaRePYYNzGlns7gIsdYU,5006
+napari_update_checker/utils.py,sha256=pr5S1RzS29C6FUCRSMlOAF-OSXyIwzQJ6mZVFuu_434,2091
+napari_update_checker/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_update_checker/_tests/test_qt_update_checker.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_update_checker/_tests/test_utils.py,sha256=l1dp3a_sDMI-i17g2l2GcL4IrjUPKK0GYVivkAeQf40,1518
+napari_update_checker-0.1.0.dist-info/LICENSE.txt,sha256=8dAlKbOqTMYe9L-gL_kEx5Xr1Sd0AbaWQDUkpiOp3vI,1506
+napari_update_checker-0.1.0.dist-info/METADATA,sha256=qPHgAU8KGEjkBnmtRng0QfCk9Ph68q0XEAoNadO8lts,4147
+napari_update_checker-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+napari_update_checker-0.1.0.dist-info/entry_points.txt,sha256=2Mj3JgnwOUeGRvtSz6WcaAOGpniYxGbrGwCktdJ-t2M,76
+napari_update_checker-0.1.0.dist-info/top_level.txt,sha256=3eovMhrlAC9nGmlW5lhd1ueTL3BzmvBiFACTBr3a368,22
+napari_update_checker-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,11 @@
+name: napari-update-checker
+display_name: napari update-checker
+contributions:
+  commands:
+    - id: napari-update-checker.UpdateChecker
+      python_name: napari_update_checker.qt_update_checker:UpdateChecker
+      title: napari-update-checker.UpdateChecker
+
+  widgets:
+    - command: napari-update-checker.UpdateChecker
+      display_name: Check updates

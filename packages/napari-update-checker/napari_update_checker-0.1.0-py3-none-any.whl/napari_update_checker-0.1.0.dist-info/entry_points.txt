@@ -1,0 +1,2 @@
+[napari.manifest]
+napari_update_checker = napari_update_checker:napari.yaml
