@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pypidemo2050
+Version: 0.1.0
+Summary: A sample Python module
+Home-page: https://github.com/yourusername/my_project
+Author: Leo Wang
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: poetry-core
+Requires-Dist: poetry.core.masonry.api
