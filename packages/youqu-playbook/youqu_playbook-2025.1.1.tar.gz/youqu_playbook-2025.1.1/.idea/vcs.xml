@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/autotest_deepin_album/apps/autotest_deepin_album" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/autotest_deepin_draw/apps/autotest_deepin_draw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/autotest_deepin_image_viewer/apps/autotest_deepin_image_viewer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/autotest_deepin_movie/apps/autotest_deepin_movie" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/autotest_deepin_music/apps/autotest_deepin_music" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/autotest_deepin_screen_recorder/apps/autotest_deepin_screen_recorder" vcs="Git" />
+  </component>
+</project>
