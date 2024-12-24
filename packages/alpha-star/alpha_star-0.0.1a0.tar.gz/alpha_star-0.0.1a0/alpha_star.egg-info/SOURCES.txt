@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+alpha_star.egg-info/PKG-INFO
+alpha_star.egg-info/SOURCES.txt
+alpha_star.egg-info/dependency_links.txt
+alpha_star.egg-info/requires.txt
+alpha_star.egg-info/top_level.txt
+pattern/__init__.py
+pattern/plot.py
