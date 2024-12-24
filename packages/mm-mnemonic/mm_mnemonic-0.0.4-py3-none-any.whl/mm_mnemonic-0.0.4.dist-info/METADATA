@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: mm-mnemonic
+Version: 0.0.4
+Requires-Python: >=3.12
+Requires-Dist: base58==2.1.1
+Requires-Dist: ecdsa==0.19.0
+Requires-Dist: eth-account==0.13.4
+Requires-Dist: mnemonic==0.21
+Requires-Dist: typer==0.15.1
+Requires-Dist: typing-extensions==4.12.2
