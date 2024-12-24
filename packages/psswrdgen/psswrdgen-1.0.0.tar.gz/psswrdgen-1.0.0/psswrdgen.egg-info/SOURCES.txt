@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+psswrdgen.egg-info/PKG-INFO
+psswrdgen.egg-info/SOURCES.txt
+psswrdgen.egg-info/dependency_links.txt
+psswrdgen.egg-info/top_level.txt
