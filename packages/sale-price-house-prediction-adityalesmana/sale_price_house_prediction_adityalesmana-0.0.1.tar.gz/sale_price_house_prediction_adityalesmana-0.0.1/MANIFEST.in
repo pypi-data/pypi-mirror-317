@@ -1,0 +1,19 @@
+include *.txt
+include *.md
+include *.pkl
+recursive-include ./sale_price_house_prediction_model/*
+
+include sale_price_house_prediction_model/datasets/train.csv
+include sale_price_house_prediction_model/datasets/test.csv
+include sale_price_house_prediction_model/trained_models/*.pkl
+include sale_price_house_prediction_model/VERSION
+include sale_price_house_prediction_model/config.yml
+
+include ./requirements/requirements.txt
+include ./requirements/test_requirements.txt
+
+exclude *.log
+exclude *.cfg
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[col]

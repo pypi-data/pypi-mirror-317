@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: sale-price-house-prediction-adityalesmana
+Version: 0.0.1
+Home-page: https://github.com/adityale1711/Sale-Price-Houses-Prediction
+Author: adityale1711
+Author-email: a.lesmana1711@gmail.com
+License: BSD-3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic==1.10.19
+Requires-Dist: feature-engine==1.5.*
+Requires-Dist: scikit-learn==1.5.2
+Requires-Dist: numpy==1.24.4
+Requires-Dist: pandas==1.5.3
+Requires-Dist: strictyaml
+Requires-Dist: ruamel.yaml
+Requires-Dist: joblib
+
+Sale price house prediction model package using regression from Train in Data
