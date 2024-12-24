@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: binance-python
+Version: 0.1.0
+Summary: Python Binance Rest + User Data WS API client, with typings.
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/marciclabas/binance.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic
+Requires-Dist: httpx
+Requires-Dist: websockets
+Requires-Dist: haskellian
+Requires-Dist: orjson
+
+# Binance
