@@ -1,0 +1,6 @@
+numpy
+pykdtree
+
+[csf]
+cloth-simulation-filter
+numpy<2
