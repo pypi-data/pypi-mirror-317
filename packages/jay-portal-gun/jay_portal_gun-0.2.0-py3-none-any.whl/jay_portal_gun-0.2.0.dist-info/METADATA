@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: jay-portal-gun
+Version: 0.2.0
+Summary: 
+Author: Jmint
+Author-email: jeffreymintah737@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: typer (>=0.15.1,<0.16.0)
+Description-Content-Type: text/markdown
+
+# `jay-portal-gun`
+
+Jay&#x27;s Portal Gun CLI
+
+**Usage**:
+
+```console
+$ jay-portal-gun [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--install-completion`: Install completion for the current shell.
+* `--show-completion`: Show completion for the current shell, to copy it or customize the installation.
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `shoot`: Shoot the portal gun
+* `load`: Load the portal gun
+
+## `jay-portal-gun shoot`
+
+Shoot the portal gun
+
+**Usage**:
+
+```console
+$ jay-portal-gun shoot [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `jay-portal-gun load`
+
+Load the portal gun
+
+**Usage**:
+
+```console
+$ jay-portal-gun load [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
