@@ -1,0 +1,2 @@
+[console_scripts]
+simple-extract = simple_extract.simple_extract:main

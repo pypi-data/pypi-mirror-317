@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/simple_extract/__init__.py
+src/simple_extract/simple_extract.py
+src/simple_extract.egg-info/PKG-INFO
+src/simple_extract.egg-info/SOURCES.txt
+src/simple_extract.egg-info/dependency_links.txt
+src/simple_extract.egg-info/entry_points.txt
+src/simple_extract.egg-info/top_level.txt
