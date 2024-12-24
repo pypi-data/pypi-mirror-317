@@ -1,0 +1,9 @@
+numpy
+scipy
+jax
+jaxopt
+tqdm
+matplotlib
+pmlb
+joblib
+diffrax
