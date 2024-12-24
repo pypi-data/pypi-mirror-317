@@ -1,0 +1,548 @@
+import cupy as cp
+
+from stensor import Config
+from .cupy_kernel import CupyKernel
+from ._impl import sum_to, pair, logsumexp, softmax, get_deconv_outsize, im2col_array, col2im_array
+
+
+class Linear(CupyKernel):
+    def forward(self, x, W, b):
+        y = cp.matmul(x, W.T)
+        if b is not None:
+            y += b
+        return y
+
+    def backward(self, gy):
+        x, W, b = self.inputs[0]().data, self.inputs[1]().data.T, self.inputs[2]().data
+        gb = None if b is None else sum_to(gy, b.shape)
+        #only consider the dim of x or W less than 5.
+        gx = cp.matmul(gy, cp.swapaxes(W, -1, -2))
+        if gx.shape != x.shape:
+            gx = sum_to(gx, x.shape)
+
+        gW = cp.matmul(cp.swapaxes(x, -1, -2), gy)
+        if gW.shape != W.shape:
+            gW = sum_to(gW, W.shape)
+        return gx, gW.T, gb
+
+
+class BatchNorm(CupyKernel):
+    def __init__(self, mean, var, decay, eps):
+        self.avg_mean = mean
+        self.avg_var = var
+        self.decay = decay
+        self.eps = eps
+        self.inv_std = None
+
+    def forward(self, x, gamma, beta):
+        assert x.ndim == 2 or x.ndim == 4
+
+        x_ndim = x.ndim
+        if x_ndim == 4:
+            N, C, H, W = x.shape
+            # (N, C, H, W) -> (N*H*W, C)
+            x = x.transpose(0, 2, 3, 1).reshape(-1, C)
+
+        #xp = cuda.get_array_module(x)
+
+        if Config.train:
+            mean = x.mean(axis=0)
+            var = x.var(axis=0)
+            inv_std = 1 / cp.sqrt(var + self.eps)
+            xc = (x - mean) * inv_std
+
+            m = x.size // gamma.size
+            s = m - 1. if m - 1. > 1. else 1.
+            adjust = m / s  # unbiased estimation
+            self.avg_mean *= self.decay
+            self.avg_mean += (1 - self.decay) * mean
+            self.avg_var *= self.decay
+            self.avg_var += (1 - self.decay) * adjust * var
+            self.inv_std = inv_std
+        else:
+            inv_std = 1 / cp.sqrt(self.avg_var + self.eps)
+            xc = (x - self.avg_mean) * inv_std
+        y = gamma * xc + beta
+
+        if x_ndim == 4:
+            # (N*H*W, C) -> (N, C, H, W)
+            y = y.reshape(N, H, W, C).transpose(0, 3, 1, 2)
+        return y
+
+    def backward(self, gy):
+        gy_ndim = gy.ndim
+        if gy_ndim == 4:
+            N, C, H, W = gy.shape
+            gy = gy.transpose(0, 2, 3, 1).reshape(-1, C)
+
+        x, gamma, beta = self.inputs[0]().data, self.inputs[1]().data, self.inputs[2]().data
+        batch_size = len(gy)
+
+        if x.ndim == 4:
+            N, C, H, W = x.shape
+            x = x.transpose(0, 2, 3, 1).reshape(-1, C)
+        mean = x.sum(axis=0) / batch_size
+        xc = (x - mean) * self.inv_std
+
+        gbeta = gy.sum(axis=0)
+        ggamma = (xc * gy).sum( axis=0)
+        gx = gy - gbeta / batch_size - xc * ggamma / batch_size
+        gx *= gamma * self.inv_std
+
+        if gy_ndim == 4:
+            gx = gx.reshape(N, H, W, C).transpose(0, 3, 1, 2)
+        return gx, ggamma, gbeta
+
+
+class LayerNorm(CupyKernel):
+    def __init__(self, eps=1e-5):
+        self.eps = eps
+
+    def forward(self, x, gamma, beta):
+        self.x, self.gamma, self.beta = x, gamma, beta
+        # 计算均值和方差
+        self.mean = cp.mean(x, axis=-1, keepdims=True)
+        self.variance = cp.var(x, axis=-1, keepdims=True)
+        self.xmu = (x - self.mean)
+        self.xivar = cp.sqrt(self.variance + self.eps)
+        # 归一化
+        x_normalized = self.xmu / self.xivar
+        
+        # 缩放和平移
+        output = gamma * x_normalized + beta
+        return output
+
+
+    def backward(self, gy):
+        x = self.x
+        xmu = self.xmu
+        xivar = self.xivar
+        gamma = self.gamma
+        dout = gy
+
+        N, _, D= x.shape
+        
+        dgamma = (dout*xmu/xivar).sum(axis=0,keepdims=False)
+        dbeta = dout.sum(axis=0,keepdims=False)
+
+        dlxhat = dout*gamma
+        dxhatx = 1/xivar
+        dlvar = -0.5*((gamma*xmu*xivar**(-3)*dout).sum(axis=-1,keepdims=True))
+        dlvarx = 2*xmu/D
+        dlmu = -1.*((dlxhat/xivar).sum(axis=-1,keepdims=True))-2.*((dlvar*xmu).sum(axis=-1,keepdims=True)/D)
+
+
+        dx = dlxhat*dxhatx + dlvar*dlvarx + dlmu/D
+        return dx, dgamma, dbeta
+
+
+class RMSNorm(CupyKernel):
+    def __init__(self, eps=1e-5):
+        self.eps = eps
+
+    def forward(self, x, gamma):
+        #print(self.eps, self.eps, x.dtype)
+        self.inv_std = 1 / (cp.sqrt(cp.power(x, 2).mean(-1, keepdims=True) + self.eps))
+        output = x * self.inv_std
+        return output * gamma
+    
+    def backward(self, gy):
+        x, gamma = self.inputs[0]().data, self.inputs[1]().data
+        if Config.recomputer:
+            self.inv_std = 1 / (cp.sqrt(cp.power(x, 2).mean(-1, keepdims=True) + self.eps)).astype(x.dtype)
+        # 计算 grad_weight
+        grad_weight = (gy*x*self.inv_std).sum(axis=0,keepdims=False).sum(axis=0,keepdims=False)
+        # 计算 grad_x_norm
+        grad_x_norm = gy * gamma
+        # 计算 grad_inv_std
+        grad_inv_std = cp.sum(grad_x_norm * x, axis=-1, keepdims=True)
+        # 计算 grad_mean_sq
+        grad_mean_sq = -0.5 * cp.power(self.inv_std, 3) * grad_inv_std
+        # 计算 grad_x
+        grad_x = grad_x_norm * self.inv_std + grad_mean_sq * 2 * x / x.shape[-1]
+        return grad_x.astype(x.dtype), grad_weight
+    # # def forward(self, x, gamma):
+    # #     self.x, self.gamma = x, gamma
+    # #     self.variance = cp.var(x, axis=-1, keepdims=True)
+    # #     self.xivar = cp.sqrt(self.variance + self.eps)
+    # #     x_normalized = self.x / self.xivar
+    # #     output = gamma * x_normalized
+    # #     return output
+    
+    # def forward(self, x, gamma):
+    #     #print(self.eps, self.eps, x.dtype)
+    #     self.xivar = cp.sqrt(cp.power(x, 2).mean(-1, keepdims=True) + self.eps)
+    #     output = x / self.xivar
+    #     #print(cp.power(x, 2).max())
+    #     #print(cp.power(x, 2).mean(-1, keepdims=True).max())
+    #     #print(self.xivar.max())
+    #     #print((1/self.xivar).max())
+    #     #print(x.max())
+    #     #print((x/self.xivar).max())
+    #     return output * gamma
+
+    # def backward(self, gy):
+    #     x, gamma = self.inputs[0]().data, self.inputs[1]().data
+    #     if Config.recomputer:
+    #         self.xivar = cp.sqrt(cp.var(x, axis=-1, keepdims=True) + self.eps)
+    #     xivar = self.xivar  # 标准差
+    #     xivar_inv = 1 / xivar  # 预计算 xivar 的倒数
+    #     xivar_inv_cube = xivar_inv ** 3  # 预计算 xivar 倒数的三次方
+    #     dout = gy
+    #     N, _, D = x.shape
+    #     # 优化 dgamma 的计算，合并 sum 操作
+    #     dgamma = (dout * x * xivar_inv).sum(axis=(0, 1))
+    #     # 计算 dlxhat
+    #     dlxhat = dout * gamma
+    #     # 计算 dlvar，使用预计算的 xivar_inv_cube
+    #     dlvar = -0.5 * (dlxhat * x * xivar_inv_cube).sum(axis=-1, keepdims=True)
+    #     # 计算 dlmu，避免重复计算
+    #     dlxhat_xivar_inv = dlxhat * xivar_inv
+    #     dlvar_xmu = dlvar * x
+    #     dlmu = -dlxhat_xivar_inv.sum(axis=-1, keepdims=True) - 2 * (dlvar_xmu.sum(axis=-1, keepdims=True) / D)
+    #     # 计算 dx
+    #     dx = dlxhat_xivar_inv + dlvar * (2 * x / D) + dlmu / D
+    #     return dx, dgamma
+
+
+    # def backward(self, gy):
+    #     x, gamma = self.inputs[0]().data, self.inputs[1]().data
+    #     xmu = x
+    #     if Config.recomputer:
+    #         self.xivar = cp.sqrt(cp.var(x, axis=-1, keepdims=True) + self.eps)
+    #     xivar = self.xivar
+    #     dout = gy
+
+    #     N, _, D= x.shape
+        
+    #     dgamma = (dout*xmu/xivar).sum(axis=0,keepdims=False).sum(axis=0,keepdims=False)
+
+    #     dlxhat = dout*gamma
+    #     dxhatx = 1/xivar
+    #     dlvar = -0.5*((gamma*xmu*xivar**(-3)*dout).sum(axis=-1,keepdims=True))
+    #     dlvarx = 2*xmu/D
+    #     dlmu = -1.*((dlxhat/xivar).sum(axis=-1,keepdims=True))-2.*((dlvar*xmu).sum(axis=-1,keepdims=True)/D)
+
+
+    #     dx = dlxhat*dxhatx + dlvar*dlvarx + dlmu/D
+    #     return dx, dgamma
+
+
+class Dropout(CupyKernel):
+    def __init__(self, dropout_ratio):
+        self.dropout_ratio = dropout_ratio
+
+    def forward(self, x):
+        if Config.train:
+            mask = cp.random.rand(*x.shape) > self.dropout_ratio
+            self.mask = mask
+            scale = cp.array(1.0 - self.dropout_ratio).astype(x.dtype)
+            y = x * mask / scale
+            return y
+        else:
+            return (1-self.dropout_ratio) * x  / (1 - self.dropout_ratio)
+
+    def backward(self, gy):
+        if Config.recomputer:
+            self.mask = cp.random.rand(*self.inputs[0]().data.shape) > self.dropout_ratio
+        gx = cp.where(self.mask, gy, 0)
+        return gx
+
+
+
+class Conv2d(CupyKernel):
+    def __init__(self, stride=1, pad=0):
+        super().__init__()
+        self.stride = pair(stride)
+        self.pad = pair(pad)
+
+    def forward(self, x, W, b):
+        #xp = cuda.get_array_module(x)
+
+        KH, KW = W.shape[2:]
+        col = im2col_array(x, (KH, KW), self.stride, self.pad, to_matrix=False)
+
+        y = cp.tensordot(col, W, ((1, 2, 3), (1, 2, 3)))
+        if b is not None:
+            y += b
+        y = cp.rollaxis(y, 3, 1)
+        # y = cp.transpose(y, (0, 3, 1, 2))
+        return y
+
+    def backward(self, gy):
+        x, W, b = self.inputs[0]().data, self.inputs[1]().data, self.inputs[2]().data
+        # ==== gx ====
+        gx = Deconv2d(stride=self.stride, pad=self.pad,
+                      outsize=(x.shape[2], x.shape[3]))(gy, W, None)
+        # ==== gW ====
+        gW = Conv2DGradW(self)(x, gy)
+        # ==== gb ====
+        gb = None
+        if b is not None:
+            gb = gy.sum(axis=(0, 2, 3))
+        return gx, gW, gb
+
+
+
+class Deconv2d(CupyKernel):
+    def __init__(self, stride=1, pad=0, outsize=None):
+        super().__init__()
+        self.stride = pair(stride)
+        self.pad = pair(pad)
+        self.outsize = outsize
+
+    def forward(self, x, W, b):
+        #xp = cuda.get_array_module(x)
+
+        Weight = W
+        SH, SW = self.stride
+        PH, PW = self.pad
+        C, OC, KH, KW = Weight.shape
+        N, C, H, W = x.shape
+        if self.outsize is None:
+            out_h = get_deconv_outsize(H, KH, SH, PH)
+            out_w = get_deconv_outsize(W, KW, SW, PW)
+        else:
+            out_h, out_w = pair(self.outsize)
+        img_shape = (N, OC, out_h, out_w)
+
+        gcol = cp.tensordot(Weight, x, (0, 1))
+        gcol = cp.rollaxis(gcol, 3)
+        y = col2im_array(gcol, img_shape, (KH, KW), self.stride, self.pad,
+                         to_matrix=False)
+        # b, k, h, w
+        if b is not None:
+            self.no_bias = True
+            y += b.reshape((1, b.size, 1, 1))
+        return y
+
+    def backward(self, gy):
+        x, W, b = self.inputs[0]().data, self.inputs[1]().data, self.inputs[2]().data
+
+        # ==== gx ====
+        gx = Conv2d(stride=self.stride, pad=self.pad)(gy, W, None)
+        # ==== gW ====
+        f = Conv2DGradW(self)
+        gW = f(gy, x)
+        # ==== gb ====
+        gb = None
+        if b is not None:
+            gb = gy.sum(axis=(0, 2, 3))
+        return gx, gW, gb
+
+
+class Conv2DGradW(CupyKernel):
+    def __init__(self, conv2d):
+        W = conv2d.inputs[1]
+        kh, kw = W.shape[2:]
+        self.kernel_size = (kh, kw)
+        self.stride = conv2d.stride
+        self.pad = conv2d.pad
+
+    def forward(self, x, gy):
+        #xp = cuda.get_array_module(x)
+
+        col = im2col_array(x, self.kernel_size, self.stride, self.pad,
+                           to_matrix=False)
+        gW = cp.tensordot(gy, col, ((0, 2, 3), (0, 4, 5)))
+        return gW
+
+    def backward(self, gys):
+        x, gy = self.inputs[0]().data, self.inputs[1]().data
+        gW, = self.outputs[0]().data
+
+        xh, xw = x.shape[2:]
+        gx = Deconv2d(stride=self.stride, pad=self.pad,
+                      outsize=(xh, xw))(gy, gW)
+        ggy = Conv2d(stride=self.stride, pad=self.pad)(x, gW)
+        return gx, ggy
+
+
+class Pooling(CupyKernel):
+    def __init__(self, kernel_size, stride=1, pad=0):
+        super().__init__()
+        self.kernel_size = kernel_size
+        self.stride = stride
+        self.pad = pad
+
+    def forward(self, x):
+        col = im2col_array(x, self.kernel_size, self.stride, self.pad,
+                           to_matrix=False)
+
+        N, C, KH, KW, OH, OW = col.shape
+        col = col.reshape((N, C, KH * KW, OH, OW))
+        self.indexes = col.argmax(axis=2)
+        y = col.max(axis=2)
+        return y
+
+    def backward(self, gy):
+        return Pooling2DGrad(self)(gy)
+
+
+class Pooling2DGrad(CupyKernel):
+    def __init__(self, mpool2d):
+        self.mpool2d = mpool2d
+        self.kernel_size = mpool2d.kernel_size
+        self.stride = mpool2d.stride
+        self.pad = mpool2d.pad
+        self.input_shape = mpool2d.inputs[0].shape
+        self.dtype = mpool2d.inputs[0].dtype
+        self.indexes = mpool2d.indexes
+
+    def forward(self, gy):
+        #xp = cuda.get_array_module(gy)
+
+        N, C, OH, OW = gy.shape
+        N, C, H, W = self.input_shape
+        KH, KW = pair(self.kernel_size)
+
+        gcol = cp.zeros((N * C * OH * OW * KH * KW), dtype=self.dtype)
+
+        indexes = (self.indexes.ravel()
+                   + cp.arange(0, self.indexes.size * KH * KW, KH * KW))
+        
+        gcol[indexes] = gy.ravel()
+        gcol = gcol.reshape(N, C, OH, OW, KH, KW)
+        gcol = cp.swapaxes(gcol, 2, 4)
+        gcol = cp.swapaxes(gcol, 3, 5)
+
+        gx = col2im_array(gcol, (N, C, H, W), self.kernel_size, self.stride,
+                          self.pad, to_matrix=False)
+        return gx
+
+    def backward(self, ggx):
+        f = Pooling2DWithIndexes(self.mpool2d)
+        return f(ggx)
+
+
+class Pooling2DWithIndexes(CupyKernel):
+    def __init__(self, mpool2d):
+        self.kernel_size = mpool2d.kernel_size
+        self.stride = mpool2d.stride
+        self.pad = mpool2d.pad
+        self.input_shpae = mpool2d.inputs[0].shape
+        self.dtype = mpool2d.inputs[0].dtype
+        self.indexes = mpool2d.indexes
+
+    def forward(self, x):
+        col = im2col_array(x, self.kernel_size, self.stride, self.pad,
+                           to_matrix=False)
+        N, C, KH, KW, OH, OW = col.shape
+        col = col.reshape(N, C, KH * KW, OH, OW)
+        col = col.transpose(0, 1, 3, 4, 2).reshape(-1, KH * KW)
+        indexes = self.indexes.ravel()
+        col = col[cp.arange(len(indexes)), indexes]
+        return col.reshape(N, C, OH, OW)
+
+
+
+class AveragePooling(CupyKernel):
+    def __init__(self, kernel_size, stride=1, pad=0):
+        super().__init__()
+        self.kernel_size = kernel_size
+        self.stride = stride
+        self.pad = pad
+        self.input_shape = None
+
+    def forward(self, x):
+        self.input_shape = x.shape
+        col = im2col_array(x, self.kernel_size, self.stride, self.pad,
+                           to_matrix=False)
+        y = col.mean(axis=(2, 3))
+        return y
+
+    def backward(self, gy):
+        # TODO(Koki): This is simple implementation
+        N, C, OH, OW = gy.shape
+        KW, KH = pair(self.kernel_size)
+        gy /= (KW*KH)
+        gcol = cp.broadcast_to(gy.reshape(-1), (KH, KW, N*C*OH*OW))
+        gcol = gcol.reshape((KH, KW, N, C, OH, OW)).transpose((2, 3, 0, 1, 4, 5))
+        gx = Col2im(self.input_shape, self.kernel_size, self.stride,
+                    self.pad, False)(gcol)
+        return gx
+
+
+class Im2col(CupyKernel):
+    def __init__(self, kernel_size, stride, pad, to_matrix):
+        super().__init__()
+        self.input_shape = None
+        self.kernel_size = kernel_size
+        self.stride = stride
+        self.pad = pad
+        self.to_matrix = to_matrix
+
+    def forward(self, x):
+        self.input_shape = x.shape
+        y = im2col_array(x, self.kernel_size, self.stride, self.pad,
+                         self.to_matrix)
+        return y
+
+    def backward(self, gy):
+        gx = Col2im(self.input_shape, self.kernel_size, self.stride,
+                    self.pad, self.to_matrix)(gy)
+        return gx
+
+
+class Col2im(CupyKernel):
+    def __init__(self, input_shape, kernel_size, stride, pad, to_matrix):
+        super().__init__()
+        self.input_shape = input_shape
+        self.kernel_size = kernel_size
+        self.stride = stride
+        self.pad = pad
+        self.to_matrix = to_matrix
+
+    def forward(self, x):
+        y = col2im_array(x, self.input_shape, self.kernel_size, self.stride,
+                         self.pad, self.to_matrix)
+        return y
+
+    def backward(self, gy):
+        gx = Im2col(self.kernel_size, self.stride, self.pad,
+                    self.to_matrix)(gy)
+        return gx
+
+
+class MeanSquaredError(CupyKernel):
+    def forward(self, x0, x1):
+        diff = x0 - x1
+        y = (diff ** 2).sum() / len(diff)
+        return y
+
+    def backward(self, gy):
+        x0, x1 = self.inputs[0]().data, self.inputs[1]().data
+        diff = x0 - x1
+        gy = cp.broadcast_to(gy, diff.shape)
+        gx0 = gy * diff * (2. / len(diff))
+        gx1 = -gx0
+        return gx0, gx1
+
+
+class SoftmaxCrossEntropy(CupyKernel):
+    def __init__(self, reduction="mean"):
+        self.reduction = reduction
+        
+    def forward(self, x, t):
+        N = x.shape[0]
+        log_z = logsumexp(x, axis=1)
+        log_p = x - log_z
+        y = -log_p[cp.arange(N), t.ravel()]
+        if self.reduction == "mean":
+            y = y.mean()
+        elif self.reduction == "sum":
+            y = y.sum()
+        return y
+
+    def backward(self, gy):
+        x, t = self.inputs[0]().data, self.inputs[1]().data
+        N, CLS_NUM = x.shape
+        if self.reduction == "none":
+            gy = gy.reshape(N, 1)  # 确保gy的形状与x的批次维度一致
+        elif self.reduction == "mean":
+            gy *= 1/N
+        y = softmax(x, axis=-1)
+        # convert to one-hot with x-dtype
+        t_onehot = cp.eye(CLS_NUM, dtype=x.dtype)[t]
+        y = (y - t_onehot) * gy
+        return y
