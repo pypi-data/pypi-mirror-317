@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: jobv1
+Version: 0.0.1
+Summary: sdk in python for job-service
+Home-page: https://console.cloud.baidu-int.com/devops/icode/repos/baidu/themis/job-service/tree/master
+Requires-Python: >=3.9
+Requires-Dist: bce-internal-sdk
+
