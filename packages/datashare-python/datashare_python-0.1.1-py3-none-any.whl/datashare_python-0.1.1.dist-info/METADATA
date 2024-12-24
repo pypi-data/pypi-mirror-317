@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: datashare-python
+Version: 0.1.1
+Summary: Implement Datashare task in Python
+Author-Email: =?utf-8?q?Cl=C3=A9ment_Doumouro?= <cdoumouro@icij.org>, =?utf-8?q?Cl=C3=A9ment_Doumouro?= <clement.doumouro@gmail.com>
+Project-URL: Homepage, https://icij.github.io/datashare-python/
+Project-URL: Documentation, https://icij.github.io/datashare-python/
+Project-URL: Repository, https://github.com/ICIJ/datashare-python
+Project-URL: Issues, https://github.com/ICIJ/datashare-python/issues
+Requires-Python: ~=3.11
+Requires-Dist: aiostream~=0.6.4
+Requires-Dist: aiohttp~=3.11.9
+Requires-Dist: icij-common[elasticsearch]~=0.5.5
+Requires-Dist: icij-worker[amqp]~=0.12
+Requires-Dist: torch==2.6.0.dev20241101; sys_platform != "darwin"
+Requires-Dist: torch!=2.6.0.dev20241101+cpu,<=2.6.0.dev20241101; sys_platform == "darwin"
+Requires-Dist: transformers~=4.46.3
+Requires-Dist: pycountry>=24.6.1
+Requires-Dist: sentencepiece>=0.2.0
+Requires-Dist: typer>=0.13.1
+Requires-Dist: alive-progress>=3.2.0
+Description-Content-Type: text/markdown
+
+<div style="background-image: linear-gradient(45deg, #193d87, #fa4070);">
+  <br/>
+  <p align="center">
+    <a href="https://datashare.icij.org/">
+      <img align="center" src="docs/assets/datashare-logo.svg" alt="Datashare" style="max-width: 60%">
+    </a>
+  </p>
+  <p align="center">
+    <em>Better analyze information, in all its forms</em>  
+  </p>
+  <br/>
+</div>
+<br/>
+
+---
+
+**Documentation**: <a href="https://icij.github.io/datashare-python" target="_blank">https://icij.github.io/datashare-python</a>
+
+---
+
+# Implement **your own Datashare tasks**, written in Python
+
+Most AI, Machine Learning, Data Engineering happens in Python.
+[Datashare](https://icij.gitbook.io/datashare) now lets you extend its backend with your own tasks implemented in Python.
+
+Turning your own ML pipelines into Datashare tasks is **very simple**, learn about it inside [documentation](https://icij.github.io/datashare-python).
+
+Turning your own ML pipelines into Datashare tasks is **very simple**.
+
+Actually, it's *almost* as simple as cloning our [template repo](https://github.com/ICIJ/datashare-python):
+
+```
+$ git clone git@github.com:ICIJ/datashare-python.git
+```
+
+replacing existing [app](https://github.com/ICIJ/datashare-python/blob/main/datashare_python/app.py) tasks with your own:   
+```python
+from icij_worker import AsyncApp
+
+app = AsyncApp("app")
+
+
+@app.task
+def hello_world() -> str:
+    return "Hello world"
+```
+
+installing [`uv`](https://docs.astral.sh/uv/) to set up dependencies and running your async Datashare worker:
+```console
+$ cd datashare-python
+$ curl -LsSf https://astral.sh/uv/install.sh | sh
+$ uv run ./scripts/worker_entrypoint.sh
+[INFO][icij_worker.backend.backend]: Loading worker configuration from env...
+...
+}
+[INFO][icij_worker.backend.mp]: starting 1 worker for app datashare_python.app.app
+...
+```
+you'll then be able to execute task by starting using our [HTTP client]() (and soon using Datashare's UI).
+
+## Learn more reading our [documentation](https://icij.github.io/datashare-python) !
