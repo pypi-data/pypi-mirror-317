@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: datalakesdk
+Version: 0.0.6
+Summary: DataLake SDK
+Home-page: UNKNOWN
+Author: ivan
+Author-email: ivan.liu@anker-in.com
+License: MIT License
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: hachoir (==3.3.0)
+Requires-Dist: pydantic (==2.9.2)
+Requires-Dist: requests (==2.31.0)
+
+UNKNOWN
+
+
