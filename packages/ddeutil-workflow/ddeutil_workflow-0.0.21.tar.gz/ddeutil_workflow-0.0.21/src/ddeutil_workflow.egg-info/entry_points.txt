@@ -1,0 +1,2 @@
+[console_scripts]
+ddeutil-workflow = ddeutil.workflow.cli:cli
