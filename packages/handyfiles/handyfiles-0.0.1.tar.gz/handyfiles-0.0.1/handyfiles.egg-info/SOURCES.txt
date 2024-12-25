@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+example1.png
+example2.png
+pyproject.toml
+setup.py
+handyfiles/__init__.py
+handyfiles/compression.py
+handyfiles/directory_operations.py
+handyfiles/file_operations.py
+handyfiles/image_operations.py
+handyfiles/main.py
+handyfiles.egg-info/PKG-INFO
+handyfiles.egg-info/SOURCES.txt
+handyfiles.egg-info/dependency_links.txt
+handyfiles.egg-info/top_level.txt

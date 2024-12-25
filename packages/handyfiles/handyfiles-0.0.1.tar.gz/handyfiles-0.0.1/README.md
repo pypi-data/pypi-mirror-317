@@ -1,0 +1,96 @@
+# 📂 HandyFiles: Your All-in-One File Management Toolkit!  
+
+**HandyFiles** is a Python package designed to make working with files, directories, and images effortless. Whether you’re reading, writing, compressing, or manipulating images, handyfiles has got you covered!  
+
+---
+
+## ✨ Features  
+
+- **File Operations**:  
+  Effortlessly read, write, and append text to files.  
+
+- **Directory Management**:  
+  Quickly list files and subdirectories.  
+
+- **Compression**:  
+  Compress entire directories into a `.zip` archive or extract existing archives.  
+
+- **Image Processing**:  
+  - List all images in a directory.  
+  - Copy images to new locations.  
+  - Resize images with customizable dimensions.  
+
+---
+
+## 📦 Installation  
+
+### Using `pip`  
+Install the package directly from your local directory:  
+```bash
+pip install .
+```  
+
+---
+
+## 🚀 Quick Start  
+
+### **1. File Operations**  
+
+```python
+from handyfiles import read_file, write_file, append_to_file
+
+write_file("example.txt", "Hello, handyfiles!")
+append_to_file("example.txt", "\nAdding more content.")
+print(read_file("example.txt"))
+```  
+
+### **2. Directory Management**  
+
+```python
+from handyfiles import list_files, list_directories
+
+print("Files:", list_files("."))
+print("Directories:", list_directories("."))
+```  
+
+### **3. Compression & Extraction**  
+
+```python
+from handyfiles import compress_directory, extract_archive
+
+compress_directory("./data", "data.zip")
+extract_archive("data.zip", "./extracted_data")
+```  
+
+### **4. Image Processing**  
+
+```python
+from handyfiles import list_images, copy_images, resize_image
+
+print("Images:", list_images("./images"))
+copy_images("./images", "./backup_images")
+resize_image("example.png", "resized_example.png", 100, 100)
+```  
+
+---
+
+## 📄 License  
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  
+
+---
+
+## 🤝 Contributing  
+
+Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.  
+
+---
+
+## 🌟 Stay Connected  
+
+Feel free to connect and follow updates on:  
+- **GitHub**: [handyfiles Repository](https://github.com/username/handyfiles)  
+- **Twitter**: [@handyfiles](https://twitter.com/handyfiles)  
+
+Happy Coding! 🎉
+
