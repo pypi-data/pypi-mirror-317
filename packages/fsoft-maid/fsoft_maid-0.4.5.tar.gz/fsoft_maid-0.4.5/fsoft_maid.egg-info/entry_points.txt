@@ -1,0 +1,2 @@
+[console_scripts]
+maid = fsoft_maid:main
