@@ -1,0 +1,15 @@
+[project]
+name = "ym2"
+version = "0.1.5"
+dependencies = [
+    "pyyaml",
+    "omegaconf",
+]
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[tool.setuptools]
+packages = ["ym2"]
+
+[project.scripts]
+ym2="ym2.__main__:main"

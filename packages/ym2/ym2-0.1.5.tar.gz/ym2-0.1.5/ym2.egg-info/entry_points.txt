@@ -1,0 +1,2 @@
+[console_scripts]
+ym2 = ym2.__main__:main
