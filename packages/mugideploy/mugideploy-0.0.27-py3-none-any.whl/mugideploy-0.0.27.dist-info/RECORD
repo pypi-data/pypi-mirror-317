@@ -1,0 +1,10 @@
+mugideploy/__init__.py,sha256=SdQhivwk5Yw5h7BeIAT-JpgcEjv6PZsD8WT6Z_UfwlA,45655
+mugideploy/__main__.py,sha256=-rZqVdZ99EcZkv1890jeGmqvBuGmmxbq2rSKdtSUOr4,57
+mugideploy/cli.py,sha256=5oP3reL4NEB-2cbGr_kpSMcxAU8_WoRQQFvvFDe6Alc,116
+mugideploy/readme.py,sha256=k3e61SFPCjGQBLWLf0u4_pIOvvZD2lpK7sTtrr7n824,1145
+mugideploy-0.0.27.dist-info/LICENSE,sha256=2k01oPTqYAjDzc7z0FAGuJwqxaIipY-irKQTACzHGWc,1070
+mugideploy-0.0.27.dist-info/METADATA,sha256=DBTsNKAErBFORwnujEDbl56kZBz8Q-NfqFgq_dHD4ww,5359
+mugideploy-0.0.27.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mugideploy-0.0.27.dist-info/entry_points.txt,sha256=bRRflqIjSCUwnNyweovQMQRAU7tvVQoMCNXm7n-RzDo,47
+mugideploy-0.0.27.dist-info/top_level.txt,sha256=DCM_FzB0HYwlY1JNFJggHZp1XiW1aiNq8W9cU30qnPM,11
+mugideploy-0.0.27.dist-info/RECORD,,
