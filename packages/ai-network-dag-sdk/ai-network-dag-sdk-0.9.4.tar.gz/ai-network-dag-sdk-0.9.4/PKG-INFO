@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ai-network-dag-sdk
+Version: 0.9.4
+Summary: SDK for AINetwork DAG interactions
+Home-page: https://github.com/kmh4500/ai-network-dag-sdk
+Author: kmh4500
+Author-email: kimminhyun@comcom.ai
+License: UNKNOWN
+Description: # AI Network DAG SDK
+        
+        A Python SDK for interacting with AI Network's DAG-based storage and communication services.
+        
+        ## Installation
+        
+        ```bash
+        pip install ai-network-dag-sdk
+        
+        ```proto
+        python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. ./AINetworkDagSdk/proto/ai-network-dag.proto
+        
+        
+        ```publish
+        python setup.py sdist bdist_wheel
+        twine upload dist/*
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
