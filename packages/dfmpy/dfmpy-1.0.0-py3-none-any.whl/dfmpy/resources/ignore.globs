@@ -1,0 +1,80 @@
+################################################################################
+# This file contains a set of file/directory globs to ignore from the top level
+# dotfiles installation directory.  Typically this is `${HOME}`.  For example,
+# the glob ``.ssh/id_*`` will really match ``${HOME}/.ssh/id_*``, but again the
+# specifics are dependent on the installation directory.
+################################################################################
+
+# Ignore likely sensitive files.
+.pki/
+.ssh/id_*
+.ssh/known_hosts
+*.key
+
+# Ignore Version Control System directories.
+.git/
+.svn/
+.local/git/
+.local/svn/
+
+# Ignore common IDE directories.
+.AndroidStudio*/
+.CLion*/
+.IntelliJ*/
+.PyCharm*/
+.WebStorm*/
+.ghidra/
+.idea/
+
+# Ignore common browser directories.
+.config/chromium/
+.mozilla/firefox/
+
+# Ignore Java directories.
+.gradle/caches/
+.gradle/daemon/
+.gradle/native/
+.gradle/notifications/
+.gradle/workers/
+.gradle/wrapper/
+.java/
+.m2/
+
+# Ignore Node directories.
+.node-gyp/
+.npm/
+
+# Ignore Python directories.
+__pycache__/
+.ipython/profile_default/
+.local/lib/python*/
+
+# Ignore Android directories.
+.android/
+Android/
+
+# Ignore media applications directories.
+.config/spotify/
+.config/vlc/
+
+# Ignore typical virtual machine directories.
+.config/VirtualBox/
+VirtualBox VMs/
+
+# Ignore "office" kind of stuff.
+.config/libreoffice/
+Development/
+Downloads/
+Pictures/
+Templates/
+Videos/
+
+# Ignore other XDG base directory similiar directories.
+.cache/
+.local/cache/
+.local/lib/
+.local/share/
+
+# Ignore other miscellaneous directories, some even tend to be large.
+.config/pulse/
+.thumbnails/normal
