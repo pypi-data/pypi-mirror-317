@@ -1,0 +1,11 @@
+gtfs_canonical_validator/__init__.py,sha256=oA77yRY1wGS4smvjH8iTAE00RApHWRE5ZfuINZ6cjYc,1517
+gtfs_canonical_validator/constants.py,sha256=dSpj5Cc5GMhgafqcIT6PzDzpqkUPhk75qIqo6rqBgTg,349
+gtfs_canonical_validator/gtfs_validator.py,sha256=yAAjdE2RmK2FOyev4NhCf0fUjpywJ29bWXeGxXXm3l4,2040
+gtfs_canonical_validator/version.py,sha256=YQY-i8MemQTvHljd9BqOGgeJEu3FrzurE3TEKDwAax4,22
+gtfs_canonical_validator/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gtfs_canonical_validator/models/response.py,sha256=G7gS8ERS-9QV9RUHs5jdT6noRXGalbEFiOVlcgS8mNU,84
+gtfs_canonical_validator-0.0.8.dist-info/LICENSE,sha256=KXSpN2qzyPU7LuuGtJrQH4JsLkKmn077inwH99InLGw,1073
+gtfs_canonical_validator-0.0.8.dist-info/METADATA,sha256=i6DqcYEXdgn7dHcQWgTHpPTV0eImnFJ3L8iODrL6_xs,3967
+gtfs_canonical_validator-0.0.8.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+gtfs_canonical_validator-0.0.8.dist-info/top_level.txt,sha256=aQorvd_H1zuO-zX5Gs8_YC2HKcCkLAX9CpdaeAwjYzc,25
+gtfs_canonical_validator-0.0.8.dist-info/RECORD,,
