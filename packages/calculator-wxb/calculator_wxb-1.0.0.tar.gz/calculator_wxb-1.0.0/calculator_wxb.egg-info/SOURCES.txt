@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+calculator_wxb/__init__.py
+calculator_wxb/operations.py
+calculator_wxb.egg-info/PKG-INFO
+calculator_wxb.egg-info/SOURCES.txt
+calculator_wxb.egg-info/dependency_links.txt
+calculator_wxb.egg-info/entry_points.txt
+calculator_wxb.egg-info/requires.txt
+calculator_wxb.egg-info/top_level.txt
+tests/test_operations.py
