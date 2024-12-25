@@ -1,0 +1,10 @@
+commi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+commi/cmd.py,sha256=zFH7eGZk7yMpCVdUUq5dy1Y-R6lwSZzZfD7sIEky_7A,3096
+commi/commit_message.py,sha256=8Y5NNVrR4piL8DH2o7mHAcatK_vjvdFRxnyTSKyQ7cc,5341
+commi/logs.py,sha256=cXlAHe63p8d2DI-jP8FcRKXeu85fGvSz62naPvFAoM0,1175
+commi/run.py,sha256=Rhi3GT8Cl7XpaZd-VXsR8kyqBFZLZIsM80yS2mH9cm0,4672
+commi-2.1.0.dist-info/LICENSE,sha256=365KQpabqsE82w0iNbrVn4xmPxhvV3fgjzAwNZVhIdU,1064
+commi-2.1.0.dist-info/METADATA,sha256=bEXieZFZy9JDRgcZFW97fyvLRoueWdzTPGH5DWJEl1s,4984
+commi-2.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+commi-2.1.0.dist-info/entry_points.txt,sha256=2rYM-fMHIf404AGsjwu4eaaVteqentArX2aJhkJhJqY,99
+commi-2.1.0.dist-info/RECORD,,

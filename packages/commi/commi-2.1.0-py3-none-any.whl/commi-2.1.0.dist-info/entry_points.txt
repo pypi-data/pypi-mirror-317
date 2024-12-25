@@ -1,0 +1,6 @@
+[console_scripts]
+commi=commi.run:main
+
+[poetry.post-install]
+post-install=commi.post_install:run
+
