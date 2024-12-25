@@ -1,0 +1,17 @@
+frechet_music_distance/__init__.py,sha256=xBXtGIkdLvN0XOC1kcMjQQSZHD3yqk4FUVlsdu6blmY,38
+frechet_music_distance/__main__.py,sha256=P_2cmSgz0xJQGzkByYoODSM_tI6a8oI8UzKhV6g6Kw8,2134
+frechet_music_distance/fmd.py,sha256=z3GIqaeX8NUeO_pZNPlG4MN0Zm-D0cf2FJV7GF1ewo4,8729
+frechet_music_distance/utils.py,sha256=Si1LJgC_5UV6Gi8bSYP_N1ZYZ3Ui6SORadAMqqVeb5E,2306
+frechet_music_distance/models/__init__.py,sha256=xdI1GgUUBlWXb7J-YVX9WFyr494Gr4av91cSDRAMyuU,36
+frechet_music_distance/models/clamp2/__init__.py,sha256=LZ7RK64EZIvJxclCiwdn85YFSDs4yfvs_uWeYfu6Hbs,46
+frechet_music_distance/models/clamp2/clamp2_extractor.py,sha256=bw3WVOfdInhzYZMq9Zv1xTe_cxKQ8YWrKxWLkfvmACw,3756
+frechet_music_distance/models/clamp2/clamp2_model.py,sha256=2Es6ntuN3qGAPks7-egliJuui0m6u3CaeaqMOdsjCE0,2006
+frechet_music_distance/models/clamp2/config.py,sha256=WoA8uaYHridgR-Kl38TD_oPwCKApJIPHnCnREtrXjPM,1815
+frechet_music_distance/models/clamp2/m3_patch_encoder.py,sha256=hdfN6FdnAWBv4Y0GHr7xnaU4fvXtzHLZVycyY6FOvjM,1257
+frechet_music_distance/models/clamp2/m3_patchilizer.py,sha256=WCgTvB_YVPg3w6J_SMLpMuYVX0DcZonkGvVyTVvD0jI,3545
+frechet_music_distance-0.1.0.dist-info/LICENSE.txt,sha256=feZgAlQgE_CZCreID_tIAsNfhbaYXHMAsNy4tUfU4eU,1062
+frechet_music_distance-0.1.0.dist-info/METADATA,sha256=-q6RpEupaupeGPpk6hcEUyFVAdtE_xSow5Mf-Xlygv8,6909
+frechet_music_distance-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+frechet_music_distance-0.1.0.dist-info/entry_points.txt,sha256=-ouaZG1vPfqkKyCJrTX4hbZfFgbpOKvB5VqvMvKNyOI,61
+frechet_music_distance-0.1.0.dist-info/top_level.txt,sha256=N6VOD6PL-63evY08Sx5zBfvSz6bjJ1WbWaFf5q80SM0,23
+frechet_music_distance-0.1.0.dist-info/RECORD,,
