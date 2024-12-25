@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+colorsphere/__init__.py
+colorsphere/__main__.py
+colorsphere/colorsphere.py
+colorsphere/colorwidgets.py
+colorsphere/launcher.py
+colorsphere/windowmgr.py
+colorsphere.egg-info/PKG-INFO
+colorsphere.egg-info/SOURCES.txt
+colorsphere.egg-info/dependency_links.txt
+colorsphere.egg-info/requires.txt
+colorsphere.egg-info/top_level.txt
