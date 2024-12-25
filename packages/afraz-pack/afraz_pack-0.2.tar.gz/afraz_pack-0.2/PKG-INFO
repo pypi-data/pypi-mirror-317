@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: afraz_pack
+Version: 0.2
+Summary: Afraz Ahmed A is a Python developer working with QcodesInfotech. We will launch our package very soon.
+Home-page: https://github.com/Afraz/mypackage
+Author: Afraz Ahmed A
+Author-email: afraz@gmail.com
+Keywords: hello,world,example,simple,tutorial,python,beginner,learning,demo,QCoDes
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE

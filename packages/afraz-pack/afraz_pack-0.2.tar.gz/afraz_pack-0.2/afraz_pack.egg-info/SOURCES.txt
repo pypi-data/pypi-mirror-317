@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+afraz_pack.egg-info/PKG-INFO
+afraz_pack.egg-info/SOURCES.txt
+afraz_pack.egg-info/dependency_links.txt
+afraz_pack.egg-info/top_level.txt
+mypackage/__init__.py
+mypackage/mypackage.py
