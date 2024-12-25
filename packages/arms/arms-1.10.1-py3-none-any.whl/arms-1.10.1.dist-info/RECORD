@@ -1,0 +1,15 @@
+arms/__init__.py,sha256=_jMDNo1cSf8vqaA3A2-r5gaaGmUJnbBN8Hf9-SYrJNc,68
+arms/__main__.py,sha256=SHsn_Z4Hnw8O6I9roGLT-gxrv1mUGzDfwtXVrSzEfOU,63
+arms/codegen.py,sha256=ltqmsHEKKDBQFuGmDpr4Ozw-GkkFTGbQdQ1JF_gx8xQ,14149
+arms/designer.py,sha256=usN54nYlu90ZVnZ1kQr-aH5ks8gqtAN4DXHzko8i6Bs,12894
+arms/main.py,sha256=oBBOlpSBDB0Y7MDH0PYIjF7fA1UqgL1Nj9aA_v_VG0Q,15507
+arms/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arms/utils/common.py,sha256=8DMKdN-bLYhSHtPEj1cdyo3mcabzJHMIMKCeZwKoxfI,1430
+arms/utils/grammar.py,sha256=vkfSJndYIqu4bIy1VhCarMOwTS2ddAG-aGxsNMj-f1s,4498
+arms/utils/templates.py,sha256=ZrAcZuLmHjJNbfYNQj7O4-o86UmWSfJP5a3hOpVOSFM,12143
+arms/utils/wordstyle.py,sha256=HJwBlxUA_4zsYTjs4PDJG0yePoM4pC2CRtm_m4AHfVI,3147
+arms-1.10.1.dist-info/METADATA,sha256=bEuU4o0vuqScusskFsV1qXWAspSpmOwb3DWz109o-qA,2884
+arms-1.10.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+arms-1.10.1.dist-info/entry_points.txt,sha256=4gqzClyC_6NriuIYqP-9q1k-JefNlznYxiZslfwsw4k,40
+arms-1.10.1.dist-info/top_level.txt,sha256=dvgmgeTLFIPkOu9o9lBUuITWE1oimM3gibAnfJPz5gY,5
+arms-1.10.1.dist-info/RECORD,,
