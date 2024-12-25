@@ -1,0 +1,10 @@
+turbodl/__init__.py,sha256=8t-thLtALQKUxR-vfBboLv5kCOJ2Cgkqm-STz4fdlNc,290
+turbodl/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turbodl/cli/__main__.py,sha256=M7hwoGdc4hcG3eIyYiyYSV9xDRSwXUG1EgJuhGynATw,2685
+turbodl/downloader.py,sha256=eCLD9V_ZfCjOad7jNgRvJKZn5suqGqMVX3JDk_4roSE,17893
+turbodl/exceptions.py,sha256=fl0gENs7m-HqKAr7aHK0eyYaiuvyeHEmskUwRXNIILQ,482
+turbodl-0.1.1.dist-info/LICENSE,sha256=fcaXPaWRr45_ur4IqWdXDv-52NRnM5EGPv4KpjdJUOI,1065
+turbodl-0.1.1.dist-info/METADATA,sha256=Q-KTc5zqqF1ooSP1Fw2sViEFvySv8Nmx_gULuMXkU4U,10532
+turbodl-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+turbodl-0.1.1.dist-info/entry_points.txt,sha256=Xlt-CONZ1lq95tQW2934E5w_jOCsszrxuic8UBIQqWY,52
+turbodl-0.1.1.dist-info/RECORD,,
