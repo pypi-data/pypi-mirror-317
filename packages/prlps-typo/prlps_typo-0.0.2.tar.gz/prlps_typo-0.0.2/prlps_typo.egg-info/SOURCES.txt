@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+prlps_typo/__init__.py
+prlps_typo/typograf.js
+prlps_typo.egg-info/PKG-INFO
+prlps_typo.egg-info/SOURCES.txt
+prlps_typo.egg-info/dependency_links.txt
+prlps_typo.egg-info/requires.txt
+prlps_typo.egg-info/top_level.txt
