@@ -1,0 +1,349 @@
+Metadata-Version: 2.1
+Name: perspectivelearning
+Version: 0.1.3
+Summary: A dynamic framework for hypothesis-driven iterative machine learning.
+Author: Sai Pavan Velidandla
+Author-email: connectwithpavan@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
+# **Perspective Learning**
+
+This document provides a comprehensive overview of the **Perspective Learning** framework, including its key features, implementation details, and usage examples for both **regression** and **classification** tasks. The framework combines multiple "perspectives" (subsets of features, optional polynomial expansions, and meta-ensemble learning) to offer a flexible, high-level approach to supervised learning.
+
+---
+
+## **1. Introduction**
+
+**Perspective Learning (PL)** is designed to address scenarios where:
+- **Multiple feature subsets** (called *perspectives*) may capture different aspects of the data.
+- **Polynomial expansions** might be required for polynomial-like relationships (for regression).
+- **Auto-generation** of perspectives can discover interesting feature subsets automatically.
+- A **meta-learner** can optionally combine all perspectives into an ensemble prediction.
+
+PL is implemented to handle both **regression** (MSE loss) and **binary classification** (logistic loss). It supports:
+- **Multiple Optimizers** (SGD variants: RMSProp, Adam, AdamW).
+- **L2 Regularization** on weights (excluding bias).
+- **Mini-Batch Training** with early stopping.
+- **Cross-Validation** to pick the best perspective.
+- A final **refinement step** with extended epochs for the chosen perspective.
+- An optional **meta-ensemble** combining all perspectives.
+- A special `"PERFECT_PERSPECTIVE"` that uses all features (and polynomial expansion if relevant) to ensure at least one “full” perspective competes in CV.
+
+---
+
+## **2. Key Features**
+
+1. **Auto Perspective Generation**  
+   - Randomly selects subsets of features to form multiple perspectives.  
+   - Each perspective may or may not use **polynomial expansions** (for regression), depending on whether PL detects polynomial-like data.
+
+2. **`PERFECT_PERSPECTIVE`**  
+   - Always added to the perspective set; uses **all features**.  
+   - If `task_type="regression"` and `is_poly_data_=True`, it applies a polynomial transform to all features.
+
+3. **Cross-Validation Selection**  
+   - Each perspective is trained via \( K \)-Fold CV.  
+   - The perspective with the lowest CV loss is identified as the **best perspective**.
+
+4. **Refinement Step**  
+   - The best perspective is then **retrained** (with extended epochs, e.g., 1000) and early stopping on a holdout set.  
+   - Improves final performance on the chosen subset.
+
+5. **Meta-Ensemble**  
+   - If multiple perspectives exist, the framework can build a **meta-learner** (LinearRegression for regression or LogisticRegression for classification) on top of each perspective’s predictions.  
+   - If only one perspective is available or if all predictions collapse to a single class (for classification), the meta-learner is skipped.
+
+6. **Multiple Optimizers**  
+   - **adamw** (default)  
+   - **adam**  
+   - **rmsprop**  
+   - **sgd** (can be added manually if desired)
+
+7. **Early Stopping & Patience**  
+   - If validation loss does not improve over `patience` epochs, training stops.
+
+8. **Gradient Clipping**  
+   - Ensures stable updates by clipping gradient magnitudes to `gradient_clip_value`.
+
+---
+
+## **3. Installation & Requirements**
+
+PL is implemented in Python and depends on:
+- `numpy` for matrix operations
+- `pandas` for DataFrame handling
+- `sklearn` for cross-validation splits, standard models, and polynomial expansions
+
+**Example**:
+```bash
+pip install numpy pandas scikit-learn
+```
+
+---
+
+## **4. Class Reference: `PerspectiveLearning`**
+
+### **Constructor Signature**
+
+```python
+PerspectiveLearning(
+    dataset: pd.DataFrame,
+    features: list,
+    target: str,
+    learning_rate: float = 0.01,
+    epochs: int = 100,
+    batch_size: int = 16,
+    optimizer: str = "adamw",
+    lambda_reg: float = 0.001,
+    n_splits: int = 5,
+    patience: int = 10,
+    gradient_clip_value: float = 1.0,
+    max_auto_perspectives: int = 5,
+    do_polynomial_expansion: bool = True,
+    poly_degree: int = 2,
+    random_state: int = 42
+)
+```
+
+#### **Parameters**
+
+1. **`dataset`** (`pd.DataFrame`):  
+   - The dataset containing features and target columns.
+
+2. **`features`** (`list`):  
+   - List of feature column names.
+
+3. **`target`** (`str`):  
+   - Name of the target column.
+
+4. **`learning_rate`** (`float`, default=0.01):  
+   - Step size for gradient updates.
+
+5. **`epochs`** (`int`, default=100):  
+   - Number of epochs (max) for cross-validation training per perspective.
+
+6. **`batch_size`** (`int`, default=16):  
+   - Mini-batch size for gradient-based training.
+
+7. **`optimizer`** (`str`, default="adamw"):  
+   - One of ["adamw", "adam", "rmsprop", "sgd"]. Controls the weight update method.
+
+8. **`lambda_reg`** (`float`, default=0.001):  
+   - L2 regularization coefficient (excluded from bias).
+
+9. **`n_splits`** (`int`, default=5):  
+   - Number of folds for cross-validation.
+
+10. **`patience`** (`int`, default=10):  
+   - Early stopping patience in epochs, for both CV folds and final refinement.
+
+11. **`gradient_clip_value`** (`float`, default=1.0):  
+   - Clamps gradients between `[-clip_value, +clip_value]`.
+
+12. **`max_auto_perspectives`** (`int`, default=5):  
+   - Maximum number of automatically generated perspectives (excluding the PERFECT_PERSPECTIVE).
+
+13. **`do_polynomial_expansion`** (`bool`, default=True):  
+   - If `True` and the task is regression, PL attempts to detect polynomial-like data and may apply expansions in some perspectives.
+
+14. **`poly_degree`** (`int`, default=2):  
+   - Polynomial expansion degree if `do_polynomial_expansion=True`.
+
+15. **`random_state`** (`int`, default=42):  
+   - Seeds randomness for reproducibility.
+
+---
+
+### **Core Methods**
+
+#### **`train()`**
+1. Calls **`train_perspectives()`**:
+   - Auto-generated (and PERFECT_PERSPECTIVE) perspectives each do a cross-validation pass.
+   - Picks the best perspective by lowest CV loss.
+2. Calls **`refine_best_perspective()`**:
+   - Retrains the best perspective with extended epochs (default 1000) + early stopping.
+3. Calls **`build_meta_ensemble()`**:
+   - Optionally merges all perspective predictions with a final linear/logistic model if more than one perspective is present.
+
+**Usage**: 
+```python
+pl = PerspectiveLearning(...)
+pl.train()
+```
+
+#### **`predict(new_data: np.ndarray) -> np.ndarray`**
+- If the meta-learner is built, returns **ensemble** predictions.
+- Otherwise, returns predictions from the **refined best perspective**.
+
+**Usage**:
+```python
+preds = pl.predict(X_test)
+```
+
+---
+
+### **Training Workflow Details**
+
+1. **Auto Generation of Perspectives**  
+   - Creates up to `max_auto_perspectives` random subsets of features (with random polynomial expansions if `is_poly_data_` is True).  
+   - Adds a `"PERFECT_PERSPECTIVE"` spanning **all** features (and polynomial expansion if relevant).
+
+2. **Cross-Validation**  
+   - Each perspective is trained for `epochs` epochs using `n_splits`-fold CV.  
+   - Minimizes MSE for regression or logistic loss for classification.  
+   - Chooses the perspective with the lowest average CV loss as the **best perspective**.
+
+3. **Refinement**  
+   - The best perspective is re-initialized and trained up to 1000 epochs (or user-defined).  
+   - Early stopping if `val_loss` fails to improve for `patience` consecutive epochs.
+
+4. **Ensemble**  
+   - If multiple perspectives exist, a meta-learner is fitted on the predictions from each perspective over the entire dataset.  
+   - For regression: a `LinearRegression` is used; for classification: a `LogisticRegression` is used.
+
+---
+
+## **5. Usage Example**
+
+Below is a **simplified** snippet demonstrating usage for **both regression** and **classification** tasks on synthetic data. (This is similar to what you included in your main script.)
+
+```python
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, accuracy_score
+from PerspectiveLearning import PerspectiveLearning
+from PerspectiveLearning import (
+    generate_synthetic_data_linear,
+    generate_synthetic_data_poly,
+    generate_synthetic_data_sigmoid
+)
+
+# 1. Generate data (linear or poly or sigmoid)
+df = generate_synthetic_data_linear(n_samples=1000, random_state=42, noise=5.0)
+
+# 2. For Regression (target="OUTCOMES")
+features_reg = ["TEMPERATURE","CAPACITY","SPEED","DOOR_OPENING_TIME","p","q","r"]
+target_reg = "OUTCOMES"
+X_reg = df[features_reg].values
+y_reg = df[target_reg].values
+
+X_train_reg, X_test_reg, y_train_reg, y_test_reg = train_test_split(X_reg, y_reg, test_size=0.2, random_state=42)
+
+train_df_reg = pd.DataFrame(X_train_reg, columns=features_reg)
+train_df_reg[target_reg] = y_train_reg
+
+apl_reg = PerspectiveLearning(
+    dataset=train_df_reg,
+    features=features_reg,
+    target=target_reg,
+    learning_rate=0.01,
+    epochs=100,
+    do_polynomial_expansion=True,
+    poly_degree=2
+)
+apl_reg.train()
+
+preds_reg = apl_reg.predict(X_test_reg)
+print("Predictions: ",preds_reg[:2])
+mse_reg = mean_squared_error(y_test_reg, preds_reg)
+mae_reg = mean_absolute_error(y_test_reg, preds_reg)
+r2_reg  = r2_score(y_test_reg, preds_reg)
+print(f"Regression APL => MSE={mse_reg:.3f}, MAE={mae_reg:.3f}, R²={r2_reg:.3f}")
+
+
+# 3. For Classification (target="CLASS")
+features_clf = ["TEMPERATURE","CAPACITY","SPEED","DOOR_OPENING_TIME","p","q","r","OUTCOMES"]
+target_clf = "CLASS"
+X_clf = df[features_clf].values
+y_clf = df[target_clf].values
+
+X_train_clf, X_test_clf, y_train_clf, y_test_clf = train_test_split(X_clf, y_clf, test_size=0.2, random_state=42)
+
+train_df_clf = pd.DataFrame(X_train_clf, columns=features_clf)
+train_df_clf[target_clf] = y_train_clf
+
+apl_clf = PerspectiveLearning(
+    dataset=train_df_clf,
+    features=features_clf,
+    target=target_clf,
+    learning_rate=0.01,
+    epochs=100,
+    do_polynomial_expansion=False  # typically skip polynomial expansions in classification
+)
+apl_clf.train()
+
+probs_clf = apl_clf.predict(X_test_clf)  # returns probabilities
+print("Predictions: ",probs_clf[:2])
+preds_clf = (probs_clf >= 0.5).astype(int)
+acc_clf   = accuracy_score(y_test_clf, preds_clf)
+print(f"Classification APL => ACC={acc_clf:.3f}")
+```
+
+---
+
+## **6. Best Practices & Tips**
+
+1. **Tuning**  
+   - Adjust **`epochs`**, **`patience`**, **`batch_size`** based on data scale.  
+   - If the dataset is large or complex, consider a bigger `patience` or a larger `n_splits` for more robust CV.
+
+2. **Polynomial Expansions**  
+   - Only **enable** if you suspect polynomial relationships. For classification, expansions can be less helpful or produce overly large feature sets.
+
+3. **Refinement**  
+   - The extended training of the best perspective can significantly improve final performance. This helps especially if the CV process ended early in some folds.
+
+4. **Perfect Perspective**  
+   - The `"PERFECT_PERSPECTIVE"` ensures that using **all features** is always tested. If your dataset is high-dimensional, it might be expensive, but it often yields strong performance or a valuable baseline.
+
+5. **Meta-Ensemble**  
+   - If you have multiple perspectives and want to see if ensemble learning helps, ensure you have at least 2 different sets of features. If they produce almost identical predictions, the meta-learner might skip or provide minimal improvement.
+
+6. **Classification Warnings**  
+   - If your training split has only one class, the logistic-based approaches or meta-ensembles skip training. Adjust the split or ensure enough class diversity.
+
+7. **Hyperparameter Searches**  
+   - You can integrate the entire pipeline (including perspective generation) with an external search (GridSearch or RandomizedSearch) to tune **`learning_rate`**, **`lambda_reg`**, or the polynomial expansions further.
+
+---
+
+## **7. Frequently Asked Questions**
+
+1. **Q**: *“Why do I get negative or tiny R² for Sigmoid or small-range data?”*  
+   - **A**: If the target’s variance is extremely small, even small errors can overshadow it. This is a measurement artifact rather than a sign of poor performance.
+
+2. **Q**: *“My classification results are always 100% or near it. Is this overfitting?”*  
+   - **A**: Possibly. Synthetic tasks or trivially separable data can yield perfect training accuracy. Introduce more noise or real data to evaluate generalization.
+
+3. **Q**: *“Why does the meta-learner sometimes skip training?”*  
+   - **A**: If all predictions from the perspectives produce exactly one class or if only one perspective is generated, the meta-learner cannot train effectively.
+
+4. **Q**: *“How do I disable polynomial expansions entirely?”*  
+   - **A**: Set `do_polynomial_expansion=False` in the constructor.
+
+5. **Q**: *“How can I add a new optimizer or extension?”*  
+   - **A**: Extend `_update_weights()` or add new arguments in the constructor to handle additional logic.
+
+---
+
+## **8. Conclusion**
+
+**Perspective Learning** provides a flexible, multi-perspective approach that can handle polynomial expansions, random subsets, and a final meta-ensemble. It’s especially valuable for:
+- **Heterogeneous** data where different subsets of features might capture different signals.
+- **Potential polynomial relationships** for regression.
+- **Experiments** where you want an easy ensemble approach without manually constructing multiple specialized models.
+
+In simple synthetic tasks (strictly linear or trivial classification boundaries), specialized methods (e.g., direct `LinearRegression`, `RandomForest`, or logistic approaches) might meet or slightly surpass PL. However, as data complexity rises, **PL** can show significant advantages by exploring multiple subsets with optional expansions and refined ensembling.
+
+Feel free to adapt the code, explore new optimizers, or tune hyperparameters to suit your data. For real-world use, consider proper scaling, cross-validation folds, and enough training epochs to harness PL’s perspective-based learning fully.
+
+**Happy Perspective Learning!**
