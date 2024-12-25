@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: sjtools
+Version: 0.0.4a0
+Summary: My test package
+Home-page: https://t.me/sijeydev
+Author: DEV|SJ
+Author-email: sijeydev@gmail.com
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+
+Это тестовый модуль!
