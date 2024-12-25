@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/cli_commands.py
+src/db_utils.py
+src/main.py
+src/mcp_server.py
+src/sqlctx.egg-info/PKG-INFO
+src/sqlctx.egg-info/SOURCES.txt
+src/sqlctx.egg-info/dependency_links.txt
+src/sqlctx.egg-info/entry_points.txt
+src/sqlctx.egg-info/requires.txt
+src/sqlctx.egg-info/top_level.txt
