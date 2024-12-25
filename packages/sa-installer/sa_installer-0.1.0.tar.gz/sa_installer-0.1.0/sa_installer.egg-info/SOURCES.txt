@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+sa_installer/__init__.py
+sa_installer/cli.py
+sa_installer/sa_installer.py
+sa_installer.egg-info/PKG-INFO
+sa_installer.egg-info/SOURCES.txt
+sa_installer.egg-info/dependency_links.txt
+sa_installer.egg-info/top_level.txt
