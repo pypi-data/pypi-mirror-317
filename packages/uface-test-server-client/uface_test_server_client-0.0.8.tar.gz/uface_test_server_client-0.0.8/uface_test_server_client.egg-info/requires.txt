@@ -1,0 +1,5 @@
+betterproto>=1.2.5
+grpclib
+python-consul2
+cachetools
+syncer
