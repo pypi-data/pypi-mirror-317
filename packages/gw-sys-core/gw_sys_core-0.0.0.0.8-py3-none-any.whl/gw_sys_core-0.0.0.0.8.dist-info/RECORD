@@ -1,0 +1,9 @@
+gw_sys_core/__init__.py,sha256=ycZSaXXWfJd5yzDi2VtBuwcKl0y40ZjyYyJZh9iJESU,1492
+gw_sys_core/gwis/Exceptions.py,sha256=hIpiAFkda3fuBQf3y2yTbnEaAR6HcfihUIkeFHwQJ1I,562
+gw_sys_core/gwis/__init__.py,sha256=KOeT8Crcfsu5i5YmAO0i9FRHXfnquOmt26d7IEra6TE,1589
+gw_sys_core/gwis/ids.py,sha256=p1we7Rb9yW3TIAV0vNWJDAjqxIHdJRwz50sQDaUMFG0,5987
+gw_sys_core-0.0.0.0.8.dist-info/LICENSE,sha256=WH_t7dKZyWJ5Ld07eYIkUG4Tv6zZWXtAdsUqYAUesn0,1084
+gw_sys_core-0.0.0.0.8.dist-info/METADATA,sha256=1Io9lCmENb0E__oXIJoIq0dGqd6OA-OcNXnmBQJNG3I,443
+gw_sys_core-0.0.0.0.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gw_sys_core-0.0.0.0.8.dist-info/top_level.txt,sha256=Z2QZWy8dcamnWUCb1dC3ngJulOiOAd2V3F0LYBsdsKc,12
+gw_sys_core-0.0.0.0.8.dist-info/RECORD,,
