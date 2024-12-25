@@ -1,0 +1,2 @@
+[console_scripts]
+matrix_operations = matrix_operations.operations:main_function
