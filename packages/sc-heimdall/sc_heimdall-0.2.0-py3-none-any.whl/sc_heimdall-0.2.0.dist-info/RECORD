@@ -1,0 +1,16 @@
+Heimdall/__about__.py,sha256=GuRh9_2Wje5N4fryJNYRb5KGn8iRmtvEe1XfWu-PtWc,19
+Heimdall/cell_representations.py,sha256=ePUBfjpgkJSY55FZ7xEa15oYkvLIKtNDwKqeILlBXnQ,17786
+Heimdall/datasets.py,sha256=YNgB8qtToWBubEuLXVpXCKW5E3IFf6KejMMddfw3JT0,12210
+Heimdall/embedding.py,sha256=lkpZXt3SzH746JnpcdiZprqoO3wlts_yEjmOY2XXeGo,2597
+Heimdall/fc.py,sha256=SBXWsk3oFAv_5yQKq-X_RkeZccs61shTvDu_f996elY,9146
+Heimdall/fe.py,sha256=yXrMaE48iTjTNIKqBmkJul5xOK3ifHJoa4o-NOJKPQk,9803
+Heimdall/fg.py,sha256=g8MKOQ3EKYp66meb4dvTTlelur1X73DOC37Y06S9vbg,8826
+Heimdall/flash_attention_models.py,sha256=ORE2IYId5hx9OiQO-W7mR6YmFA4d2YhTMBEEdIdT0Rk,2768
+Heimdall/losses.py,sha256=ycQUQNWjeFxrOUssgOM19sznyQvMetoGbFkCQvxnzp4,1251
+Heimdall/models.py,sha256=jOchmaurV6YdS-iitsVKl3CW7VLNarJ-hjCrOgKmlOQ,14563
+Heimdall/trainer.py,sha256=MTij7XDTkyCXkhrmBgC6xWxFB1mpcZLknU2FqhdHswg,18730
+Heimdall/utils.py,sha256=ZKNGBIV_qwedOSaQRFUkATHWtEmL5J2k9nDAjg1WEAY,15338
+sc_heimdall-0.2.0.dist-info/METADATA,sha256=1EROP96UTTxrCmuE-cJ9C6fKH3OQpYjniY-7loGiELc,6317
+sc_heimdall-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sc_heimdall-0.2.0.dist-info/licenses/LICENSE,sha256=v6t1aDn6Yc8azrR23vlExSTblgDdSzbAC2zGbiEHy9g,1072
+sc_heimdall-0.2.0.dist-info/RECORD,,
