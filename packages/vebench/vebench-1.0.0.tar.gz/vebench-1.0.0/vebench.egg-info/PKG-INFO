@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: vebench
+Version: 1.0.0
+Summary: Evaluator for Text-driven Video Editing
+Author: Shangkun Sun
+Author-email: sunshk@stu.pku.edu.cn
+License: MIT Licence
+Requires-Python: >=3
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: decord
+Requires-Dist: einops
+Requires-Dist: fairscale
+Requires-Dist: numpy
+Requires-Dist: timm
+Requires-Dist: transformers
+Requires-Dist: sk-video
+
+Please refer to https://github.com/littlespray/VE-Bench

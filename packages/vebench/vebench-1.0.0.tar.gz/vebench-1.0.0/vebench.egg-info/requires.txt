@@ -1,0 +1,8 @@
+torch
+decord
+einops
+fairscale
+numpy
+timm
+transformers
+sk-video
