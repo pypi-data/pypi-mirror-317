@@ -1,0 +1,14 @@
+biofiles/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biofiles/common.py,sha256=Yi0i85FpD2wR3vqL645LTUAE6TybGDxxZQsUmEGHqu4,1126
+biofiles/fasta.py,sha256=ctIt5I_fcZx-xQN921zpmlZS7e9_ICf-3_i6mTs5qbs,2135
+biofiles/gff.py,sha256=8pDiMgKAemIubv7qwOi8Qi6KEXCJI98XJobRSlAeXAE,9824
+biofiles/repeatmasker.py,sha256=DqD1z1hUfCP4-qnfjF-oMF-ZpW_6XhOf_nzA8VHhQbw,3079
+biofiles/types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biofiles/types/feature.py,sha256=c9m_DU_EaUIWG6-xsiPxQIiGkfDs96nm5ls2T5SMeuA,826
+biofiles/types/repeat.py,sha256=63SqzAwEGIDIGP9pxC85RUdwXbbSm0S5WNL3lSiWlmc,641
+biofiles/types/sequence.py,sha256=EOw_oKuMR0THpCYJqVE__27z7qrRqcdIPrRWTL4OFMw,152
+biofiles-0.0.1.dist-info/LICENSE,sha256=CbR8ssdFyViKj25JAlMjIt1_FbiZ1tAC5t-uwUbxqak,1070
+biofiles-0.0.1.dist-info/METADATA,sha256=IaeNWqEr7JjfWdFp3kz2jYgJ6jq7Uca09s1QRWV9ZPE,2975
+biofiles-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+biofiles-0.0.1.dist-info/top_level.txt,sha256=laFaFv8hpkI4U-Pgs0yBaAJXN2_CJKl7jb-m3-tGfSc,9
+biofiles-0.0.1.dist-info/RECORD,,
