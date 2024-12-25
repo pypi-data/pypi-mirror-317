@@ -1,0 +1,2 @@
+[console_scripts]
+make-certs = make_certs.main:main
