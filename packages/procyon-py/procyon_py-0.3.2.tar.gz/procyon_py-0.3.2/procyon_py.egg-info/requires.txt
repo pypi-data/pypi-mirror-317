@@ -1,0 +1,6 @@
+
+[dev]
+pytest
+
+[windows]
+windows-curses
