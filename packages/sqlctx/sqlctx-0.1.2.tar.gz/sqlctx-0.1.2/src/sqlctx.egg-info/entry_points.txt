@@ -1,0 +1,2 @@
+[console_scripts]
+sqlctx = cli_commands:cli
