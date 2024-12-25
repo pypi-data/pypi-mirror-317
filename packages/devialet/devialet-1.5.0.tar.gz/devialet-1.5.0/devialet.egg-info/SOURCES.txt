@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+devialet/__init__.py
+devialet/const.py
+devialet/devialet_api.py
+devialet.egg-info/PKG-INFO
+devialet.egg-info/SOURCES.txt
+devialet.egg-info/dependency_links.txt
+devialet.egg-info/requires.txt
+devialet.egg-info/top_level.txt
