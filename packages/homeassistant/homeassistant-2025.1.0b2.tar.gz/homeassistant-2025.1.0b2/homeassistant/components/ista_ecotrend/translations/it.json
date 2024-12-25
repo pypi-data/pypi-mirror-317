@@ -1,0 +1,9 @@
+{
+    "entity": {
+        "sensor": {
+            "heating": {
+                "unit_of_measurement": "unit\u00e0"
+            }
+        }
+    }
+}

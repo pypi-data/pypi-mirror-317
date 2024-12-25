@@ -1,0 +1,19 @@
+{
+    "config": {
+        "error": {
+            "unknown": "Erro inesperado"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "bluetooth_confirm": {
+                "description": "Pretende configurar {name}?"
+            },
+            "user": {
+                "data": {
+                    "address": "Dispositivo"
+                },
+                "description": "Escolher um dispositivo para configurar"
+            }
+        }
+    }
+}
