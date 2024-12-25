@@ -1,0 +1,10 @@
+pymexc/__init__.py,sha256=ZnOvUHwLOuLdGOCLEFpKUOggGXRaMDco0vETuPE4kYo,1431
+pymexc/base.py,sha256=1vOjBQIH9zRxR-cXBPVn8hndLnvry2hCXLN6226quRI,6197
+pymexc/base_websocket.py,sha256=XoT3rYoRaOa-_g1iWUUvFyI500CeBm-DuUILMMrPNHc,18508
+pymexc/futures.py,sha256=YLSFyc4ACdI2YtrmJ99zYy4pqqqwjSgNO08LMLdX8pw,67737
+pymexc/spot.py,sha256=FLSaZ_iJ2GGpB2gXRALj1dksKQ3J8yhFOfGxzWE93iM,73065
+pymexc-1.0.12.dist-info/LICENSE,sha256=FsDiaP90sBP1pFbBuDNSLabJvGkcyHlSXcAwqActqBc,1088
+pymexc-1.0.12.dist-info/METADATA,sha256=QvBRfuC4pKJhcP6HYxR8r525Lpue3pbU0oodr1UGU8c,3933
+pymexc-1.0.12.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pymexc-1.0.12.dist-info/top_level.txt,sha256=iIMaiucCjHqhbKdEtXKqdyOlVkYvzcfdpcf89Ac2y58,7
+pymexc-1.0.12.dist-info/RECORD,,
