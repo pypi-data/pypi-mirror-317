@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: Tarea4
+Version: 1.0.0
+Summary: Gestión hotelera con soporte para reservas y administración de salones.
+Home-page: https://github.com/tu_usuario/Tarea4
+Author: Alvaro Gomez Tejada
+Author-email: cresnik17021983@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PySide6>=6.0.0
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pandas>=1.3.0
+
+# Tarea4
+
+Gestión hotelera con soporte para reservas y administración de salones.
+
+## Características
+
+- Sistema de reservas para salones de eventos.
+- Gestión de usuarios.
+- Interfaz gráfica construida con PySide6.
+
+## Instalación
+
+```bash
+pip install Tarea4
