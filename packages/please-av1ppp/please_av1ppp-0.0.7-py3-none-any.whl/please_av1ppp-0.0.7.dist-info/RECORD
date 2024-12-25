@@ -1,0 +1,15 @@
+please/__init__.py,sha256=e074McK-Lj7KLN2s9zs02fwC5Unbv-u_XEPB7uotR1c,235
+please/cli.py,sha256=T2nlA5zAtFVdTuBuuaoioiGkuCCpoMe9oZN9kadhyEo,2483
+please/internal/argument.py,sha256=HpYfzDgcHQgGfTqM7v-0vbPSeqm3-SoWo8aBjNJ-nZ0,594
+please/internal/env.py,sha256=fBpbgND--MKu4XP2ITpZfwvqw5Qt0OjNrcFAAqA_tHI,604
+please/internal/registertask.py,sha256=kEXorPJpyTbcnY4QhQxxswiXVt2AJYjBUus98hsYdSg,543
+please/internal/shexec.py,sha256=uYsKeEPaaOG0DBkauC8rNVhXtE0vrqE1EtVKXSVWDEk,1127
+please/internal/taskcontext.py,sha256=iAxATMQiwqEqpx3DBwka3HIm3Mkk0we6T0CJEtvfQ4g,2514
+please/internal/taskfunc.py,sha256=Tib_w935sc4aNouExU31jjDr-fFCStvtksMP8frTSC4,108
+please/internal/tasks.py,sha256=zS3knxNMy2BbmL5pYim7jKyrUsZtDakHzu5oI2q2eNE,89
+please/internal/zip.py,sha256=0ZtR7UAoKK7sR-UT0fJA2JP5uI7orOTW3GXIu61eEzo,1179
+please_av1ppp-0.0.7.dist-info/METADATA,sha256=xjGNOIS7xta5FmAaOOtF1upCz3nf6nLTyk0Aq_rixdQ,1608
+please_av1ppp-0.0.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+please_av1ppp-0.0.7.dist-info/entry_points.txt,sha256=Bz1gxuXEPialNS9U-xkmxraJkNwaFJdK5GxaMLappzU,40
+please_av1ppp-0.0.7.dist-info/licenses/LICENSE,sha256=Ru1X9WPSD1W-F-yAguil-VCtcEe_FnupH_kXhUkRXYk,1072
+please_av1ppp-0.0.7.dist-info/RECORD,,
