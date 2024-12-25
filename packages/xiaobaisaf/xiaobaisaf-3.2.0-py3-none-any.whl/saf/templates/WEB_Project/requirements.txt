@@ -1,0 +1,7 @@
+xiaobaisaf
+allure-pytest==2.13.5
+allure-python-commons==2.13.5
+pytest==8.3.3
+pytest-html==4.1.1
+pytest-metadata==3.1.1
+python-dotenv==1.0.1
