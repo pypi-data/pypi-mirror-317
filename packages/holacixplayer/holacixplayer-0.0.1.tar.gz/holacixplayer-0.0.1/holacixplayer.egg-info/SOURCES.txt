@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+holacixplayer/__init__.py
+holacixplayer/lala.py
+holacixplayer/player.py
+holacixplayer.egg-info/PKG-INFO
+holacixplayer.egg-info/SOURCES.txt
+holacixplayer.egg-info/dependency_links.txt
+holacixplayer.egg-info/top_level.txt
