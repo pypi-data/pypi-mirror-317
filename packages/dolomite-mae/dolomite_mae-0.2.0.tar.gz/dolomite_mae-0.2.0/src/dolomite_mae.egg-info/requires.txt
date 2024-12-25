@@ -1,0 +1,15 @@
+dolomite-base>=0.4.2
+dolomite_sce>=0.3.0
+dolomite_se>=0.3.0
+multiassayexperiment>=0.4.2
+biocutils
+pandas
+numpy
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
