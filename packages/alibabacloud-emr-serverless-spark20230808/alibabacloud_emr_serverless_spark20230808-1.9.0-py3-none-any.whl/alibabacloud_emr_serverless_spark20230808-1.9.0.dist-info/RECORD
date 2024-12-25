@@ -1,0 +1,8 @@
+alibabacloud_emr_serverless_spark20230808/__init__.py,sha256=WddBug1JDIVoyG0cVXLv1jzZiNT54lgulb9KP0Q3AnU,21
+alibabacloud_emr_serverless_spark20230808/client.py,sha256=Fg7WnkgIpiDOynIF9JExGpPbSI7zgsQfo3I4-by9PDg,115674
+alibabacloud_emr_serverless_spark20230808/models.py,sha256=3UoPQ5fyUjJswtqTeyNQ2pFGvCyKWE8O5wuBxHvHYTg,273245
+alibabacloud_emr_serverless_spark20230808-1.9.0.dist-info/LICENSE,sha256=0CFItL6bHvxqS44T6vlLoW2R4Zaic304OO3WxN0oXF0,600
+alibabacloud_emr_serverless_spark20230808-1.9.0.dist-info/METADATA,sha256=ZC9YruiDnrtVyhIsTPwWk2Sn-ibPkZomzHn2yNh9x4A,2431
+alibabacloud_emr_serverless_spark20230808-1.9.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+alibabacloud_emr_serverless_spark20230808-1.9.0.dist-info/top_level.txt,sha256=8b6upnqVMtrToMFachj1i07ccsHHbzRruHP9NynLR-A,42
+alibabacloud_emr_serverless_spark20230808-1.9.0.dist-info/RECORD,,
