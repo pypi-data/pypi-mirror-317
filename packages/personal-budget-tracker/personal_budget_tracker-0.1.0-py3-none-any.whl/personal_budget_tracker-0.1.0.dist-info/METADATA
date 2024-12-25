@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: personal_budget_tracker
+Version: 0.1.0
+Summary: Python library for tracking and analyzing personal expenses
+Home-page: https://github.com/LaMeru/python_bibl.git
+Author: Lamery
+Author-email: chigladze.maya@mail.ru
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Requires-Dist: matplotlib
