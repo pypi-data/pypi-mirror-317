@@ -1,0 +1,11 @@
+llm_project_summarizer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_project_summarizer/cli.py,sha256=qW00Sf8mFd0fS1-iVvpJhQDV--uyMXKTmlJ05GZYt4Q,2091
+llm_project_summarizer/parsers/base.py,sha256=7eDzRtxVqW3PHra9Br86M78qLcCyFpTFZst_eRoTglQ,1827
+llm_project_summarizer/parsers/go.py,sha256=SiFv81mW2DPxQg-jndRcKblN2HldAWFeSvOcwxRO3Bo,4761
+llm_project_summarizer/parsers/python.py,sha256=MZ4PhNx9Zi-Ji5lbqEOSfx30IsRmQBBmmR2sqDZWJcc,4542
+llm_project_summarizer/summarizer.py,sha256=x7KMaIEhTZrCDYkFlfI79XK3HeLdeX7HuN8yKGxIZ0k,6756
+llm_project_summarizer-0.0.4.dist-info/LICENSE,sha256=ozkLH0s3sEhXNuzspRE4JMolelLKk0-UsSNSOUGMfdk,1063
+llm_project_summarizer-0.0.4.dist-info/METADATA,sha256=iXnZNcUINQlJzdSopDCXTi8TMG6I9_XHhYiF-C3Af10,16254
+llm_project_summarizer-0.0.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+llm_project_summarizer-0.0.4.dist-info/entry_points.txt,sha256=wDDI2pGHvqmHMDOJRF5a2fkWJyjUzjZBprjZ4CcqrfU,74
+llm_project_summarizer-0.0.4.dist-info/RECORD,,
