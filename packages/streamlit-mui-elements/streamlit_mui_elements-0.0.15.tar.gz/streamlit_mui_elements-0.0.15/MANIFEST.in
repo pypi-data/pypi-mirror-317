@@ -1,0 +1,3 @@
+include streamlit_mui_elements/frontend/build/*
+include streamlit_mui_elements/frontend/build/**/*
+recursive-include streamlit_mui_elements/frontend/build *
