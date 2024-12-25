@@ -1,0 +1,30 @@
+name: Run tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "pypy@3.9", "pypy@3.10"]
+
+    name: Python ${{ matrix.python-version }} on ${{ matrix.os }}
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install rye
+      uses: eifinger/setup-rye@v4
+
+    - name: Sync dependencies
+      run: |
+        rye pin ${{ matrix.python-version }}
+        rye sync
+
+    - name: Run tests
+      run: |
+        rye test -v
+      timeout-minutes: 5
