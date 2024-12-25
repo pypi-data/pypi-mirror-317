@@ -1,0 +1,182 @@
+#!/usr/bin/env python3
+import os
+import time
+import shlex
+import argparse
+from subprocess import Popen, PIPE
+import requests
+import uuid
+from urllib.parse import urljoin
+
+
+class AutoHackWebScan:
+    api_source = os.getenv('AUTOHACK_API_SOURCE') or 'https://api.autohack.com'
+    api_key = os.getenv('AUTOHACK_API_KEY') or 'FREE'
+
+    def __init__(
+        self, url: str, wordlist: str, output_path: str, max_iterations: int, professional: bool,
+    ) -> None:
+        self.url = url
+        self.wordlist = wordlist
+        self.output_path = output_path
+        self.max_iterations = max_iterations
+        self.professional = professional
+        self.temp_file_path = f'/tmp/{str(uuid.uuid4())}.txt'
+
+    def run_command(self, command: str):
+        """
+        Executes a command
+        :param command:
+        :return:
+        """
+
+        process = Popen(command, shell=True, stdout=PIPE, stderr=PIPE)
+        stdout, stderr =process.communicate()
+        return stdout.decode(), stderr.decode()
+
+    def verify_requirements(self):
+        """
+        Verifies the proper program is installed
+        :return:
+        """
+        command = 'which gobuster'
+        _, error = self.run_command(command)
+        assert len(error) == 0, 'Gobuster not found'
+
+    def get_known_paths_statuses(self):
+        """
+        Extracts the known paths from file
+        :return:
+        """
+        output = []
+        f = open(self.temp_file_path, "r")
+        for line in f.readlines():
+            path_raw, status_raw = line.split('(Status: ')
+            path = path_raw.strip()
+            status = status_raw[:3]
+            output.append([path, status])
+        return output
+
+    def generate_new_commands_based_on_paths(
+        self,
+        path: str,
+        url_used_in_previous_command: str
+    ) -> list:
+        if not self.professional:
+            return []
+
+        headers = {
+            'API_KEY': self.api_key,
+            'path': path,
+            'wordlist': self.wordlist,
+            'output_path': self.temp_file_path,
+            'previous_url': url_used_in_previous_command,
+        }
+        url = f'{self.api_source}/get-webscan-commands'
+        response = requests.post(url, headers=headers)
+        response_data = response.json()
+        return response_data.get('commands', [])
+
+
+    def refresh_results_output_file(self, discovered_paths_statuses: dict):
+        """
+        Overwrites preexisting file and includes the latest version
+        of path statuses
+        :param discovered_paths_statuses:
+        :return:
+        """
+        with open(self.output_path, "w") as file:
+            for discovered_path in discovered_paths_statuses:
+                status = discovered_paths_statuses[discovered_path]
+                file.write(f'{discovered_path} {status}\n')
+
+    @staticmethod
+    def get_url_used_in_command(command):
+        command_split = shlex.split(command)
+        url_arg_key = command_split.index('-u')
+        url = command_split[url_arg_key+1]
+        return url
+
+    def run(self) -> None:
+        """
+        Whenever something is discovered, it is outputted into the output_path.
+        :return:
+        """
+        self.verify_requirements()
+        iterations = 0
+        discovered_paths_statuses = {}
+        first_command = f'gobuster dir -u "{self.url}" -w "{self.wordlist}" -o "{self.temp_file_path}"'
+        commands = [
+            first_command,
+        ]
+
+        while True:
+            if iterations > self.max_iterations:
+                # this has run too many times
+                break
+
+            if len(commands) == 0:
+                # there are no more commands to run
+                break
+
+            command = commands.pop()
+            self.run_command(command)
+
+            # analyze file
+            url_used = self.get_url_used_in_command(command)
+            known_paths_statuses = self.get_known_paths_statuses()
+            for path, status in known_paths_statuses:
+                if path in discovered_paths_statuses:
+                    continue
+
+                url_detected = url_used + path.lstrip('/')
+                discovered_paths_statuses[url_detected] = status
+
+                # create new command based on
+                new_commands_based_on_paths = self.generate_new_commands_based_on_paths(path, url_used)
+                commands.extend(new_commands_based_on_paths)
+
+                # write results to file
+                self.refresh_results_output_file(discovered_paths_statuses)
+
+            iterations += 1
+
+
+if __name__ == "__main__":
+    current_time = int(time.time())
+    parser = argparse.ArgumentParser(description='Recursively Brute Forces URL Target With GoBuster')
+    parser.add_argument(
+        '-u', '--url', action='store', type=str,
+        dest='url', help='The Target Url', required=True
+    )
+    parser.add_argument(
+        '-w', '--wordlist', action='store', type=str,
+        dest='wordlist', required=False, default='/usr/share/wordlists/dirb/common.txt',
+        help='Path to the wordlist'
+    )
+    parser.add_argument(
+        '-o', '--output_path', action='store', type=str,
+        dest='output_path', required=True,
+        help='Path to AutoHack Webscan output file'
+    )
+    parser.add_argument(
+        '-mi', '--max_iterations', action='store', type=int,
+        dest='max_iterations', required=False, default=5,
+        help='The maximum number of iterations tried'
+    )
+    parser.add_argument(
+        '-pro', '--professional',
+        action=argparse.BooleanOptionalAction, type=bool, dest='professional',
+        help="Uses AutoHack's API to Iteratively Generate and Run Commands "
+             "that Attack Target Machine Based on Previous Command-Output Files. "
+             "Only Use This If You Have Permission to Penetrate the Target Machine.",
+    )
+    args = parser.parse_args()
+    webscan = AutoHackWebScan(
+        url=args.url,
+        wordlist=args.wordlist,
+        output_path=args.output_path,
+        max_iterations=args.max_iterations,
+        professional=args.professional
+    )
+    webscan.run()
