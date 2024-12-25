@@ -1,0 +1,2 @@
+[console_scripts]
+confluent-kafka-config = confluent_kafka_config.src.confluent_kafka_config.cfc:entry
