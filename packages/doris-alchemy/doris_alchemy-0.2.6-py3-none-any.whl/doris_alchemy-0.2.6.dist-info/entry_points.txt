@@ -1,0 +1,4 @@
+[sqlalchemy.dialects]
+doris = doris_alchemy.dialect:DorisDialect
+doris.mysqldb = doris_alchemy.dialect:DorisDialect_mysqldb
+doris.pymysql = doris_alchemy.dialect:DorisDialect

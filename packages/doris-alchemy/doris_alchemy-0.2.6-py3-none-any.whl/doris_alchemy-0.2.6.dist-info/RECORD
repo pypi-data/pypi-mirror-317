@@ -1,0 +1,13 @@
+doris_alchemy/__init__.py,sha256=zptiWHW5pgmGLGM2_T4lGBLwcW_cI4p0rn8pxT64nRY,1201
+doris_alchemy/const.py,sha256=mOxPxhq_8PvU0VnBeZTwzN9cDZ_O59STxSwa6xXNzbw,631
+doris_alchemy/datatype.py,sha256=7ICH72bOBmiChNtNhMWgeB0hrfj7FWUXnJFUUWgHLGE,6397
+doris_alchemy/dialect.py,sha256=lvab-H_2USJ8rhy1cyZNy6C2_4KcAAhhmUni5usLmcg,14985
+doris_alchemy/orm_base.py,sha256=OzpXwi5Cv4GsbD2Rzv9QSF4OBFJMoR6s9gCEe4_T9vM,4401
+doris_alchemy/playground.py,sha256=QG29P69brIC3wb7-PTS2NGdqcMXaDdQZVsSBZbJSvH0,725
+doris_alchemy/util.py,sha256=PJvvlHJa3JIcNAt1WaniZBrE1IhMJCuZfwivRIzXHP4,580
+doris_alchemy-0.2.6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+doris_alchemy-0.2.6.dist-info/METADATA,sha256=lA91DnRauxaRAta3g1ETwe2AhwWxEpko5gHtb9DHCv0,4563
+doris_alchemy-0.2.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+doris_alchemy-0.2.6.dist-info/entry_points.txt,sha256=EM7qt6LDfiw86qmQH2y4B-hfIPywB3iOE7xBfG2aFKg,175
+doris_alchemy-0.2.6.dist-info/top_level.txt,sha256=Vv1ipOvzzd9ZHUyKv2uVum9e7IqgF9qbdNhRoeA2GYI,14
+doris_alchemy-0.2.6.dist-info/RECORD,,
