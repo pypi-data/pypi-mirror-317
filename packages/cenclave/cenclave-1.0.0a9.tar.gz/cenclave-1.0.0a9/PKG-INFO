@@ -1,0 +1,211 @@
+Metadata-Version: 2.1
+Name: cenclave
+Version: 1.0.0a9
+Summary: Command Line Interface for Cosmian Enclave
+Author-email: Cosmian Tech <tech@cosmian.com>
+License: MIT
+Project-URL: homepage, https://cosmian.com
+Project-URL: documentation, https://docs.cosmian.com
+Project-URL: repository, https://github.com/Cosmian/cosmian-enclave
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography<44.0.0,>=43.0.3
+Requires-Dist: docker<8.0.0,>=7.1.0
+Requires-Dist: intel-sgx-ra<3.0.0,>=2.3.2
+Requires-Dist: jinja2<3.2.0,>=3.1.4
+Requires-Dist: cenclave-lib-crypto<2.0.0,>=1.0.0
+Requires-Dist: pydantic<2.0.0,>=1.10.18
+Requires-Dist: pyjwt<3.0.0,>=2.9.0
+Requires-Dist: requests<2.33.0,>=2.32.3
+Requires-Dist: toml<0.11.0,>=0.10.2
+Requires-Dist: urllib3<3.0.0,>=2.2.3
+Requires-Dist: importlib-resources<7.0.0,>=6.4.5
+Provides-Extra: dev
+Requires-Dist: black<25.0.0,>=24.10.0; extra == "dev"
+Requires-Dist: isort<6.0.0,>=5.13.2; extra == "dev"
+Requires-Dist: pylint<4.0.0,>=3.3.1; extra == "dev"
+Requires-Dist: pycodestyle<3.0.0,>=2.12.1; extra == "dev"
+Requires-Dist: pydocstyle<7.0.0,>=6.3.0; extra == "dev"
+Requires-Dist: mypy<2.0.0,>=1.13.0; extra == "dev"
+Requires-Dist: pytest<9.0.0,>=8.3.3; extra == "dev"
+Requires-Dist: build<1.3.0,>=1.2.2; extra == "dev"
+Requires-Dist: wheel<0.50.0,>=0.45.0; extra == "dev"
+Requires-Dist: flask==3.1.0; extra == "dev"
+Requires-Dist: types-requests<2.33.0,>=2.32.0; extra == "dev"
+Requires-Dist: types-urllib3<1.27.0,>=1.26.0; extra == "dev"
+Requires-Dist: types-toml<0.11.0,>=0.10.0; extra == "dev"
+Requires-Dist: types-setuptools<76.0.0,>=75.0.0; extra == "dev"
+
+# Cosmian Enclave Command-Line Interface
+
+## Overview
+
+Cosmian Enclave allows to easily run confidential Python web applications based on [Intel® SGX](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html) and [Gramine](https://gramine.readthedocs.io/en/latest/).
+Its features include the ability to encrypt the code and the construction of a [RATLS](https://arxiv.org/pdf/1801.05863) channel with your enclave.
+
+Read [Cosmian Enclave documentation](https://docs.cosmian.com/compute/cosmian_enclave/overview/) for more details.
+
+## Install
+
+```console
+$ pip install cenclave
+```
+
+## Usage
+
+```console
+$ cenclave -h
+```
+
+Note: if you set the env variable `BACKTRACE=full`, a Python stacktrace will be printed in case of errors.
+
+### Scaffold your app
+
+__User__: the code provider
+
+```console
+$ cenclave scaffold example
+```
+
+### Test your app before ceating the enclave
+
+__User__: the code provider
+
+```console
+$ cenclave localtest --project example/
+```
+
+### Create the Cosmian Enclave package with the code and the docker image
+
+__User__: the code provider
+
+```console
+$ cenclave package --project example/ \
+                   --output workspace/code_provider 
+```
+
+The generated package can now be sent to the sgx operator.
+
+### Spawn the Cosmian Enclave docker
+
+__User__: the SGX operator
+
+```console
+$ cenclave spawn --host 127.0.0.1 \
+                 --port 9999 \
+                 --size 4096 \
+                 --package workspace/code_provider/package_cenclave_src_1683276327723953661.tar \
+                 --output workspace/sgx_operator/ \
+                 app_name
+```
+
+At this moment, evidences have been automatically collected and the web application is up.
+
+Evidences are essential for the code provider to verify the trustworthiness of the running application.
+
+The file `workspace/sgx_operator/evidence.json` can now be shared with the other participants.
+
+### Check the trustworthiness of the application
+
+__User__: the code provider
+
+The trustworthiness is established based on multiple information:
+
+- the full code package (tarball)
+- the arguments used to spawn the web app
+- evidences captured from the enclave
+
+Verification of the enclave information:
+
+```console
+$ cenclave verify --package workspace/code_provider/package_cenclave_src_1683276327723953661.tar \
+                  --evidence output/evidence.json \
+                  --output /tmp
+```
+
+If the verification succeeds, you get the RA-TLS certificate (written as a file named `ratls.pem`) and you can now seal
+the code key to share it with the SGX operator.
+
+### Seal your secrets
+
+__User__: the code provider
+
+```console
+$ cenclave seal --secrets example/secrets_to_seal.json \
+                --cert /tmp/ratls.pem \
+                --output workspace/code_provider/
+```
+
+### Finalize the configuration and run the application
+
+__User__: the SGX operator
+
+```console
+$ cenclave run --sealed-secrets workspace/code_provider/secrets_to_seal.json.sealed \
+               app_name
+```
+
+### Test the deployed application
+
+__User__: the SGX operator
+
+```console
+$ cenclave test --test workspace/sgx_operator/tests/ \
+                --config workspace/sgx_operator/config.toml \
+                app_name
+```
+
+### Decrypt the result
+
+__User__: the code provider
+
+Assume the SGX operator gets a result as follows: `curl https://localhost:7788/result --cacert /tmp/ratls.pem > 
+result.enc`
+
+Then, the code provider can decrypt the result as follows:
+
+```console
+$ cenclave decrypt --key key.txt \
+                   --output workspace/code_provider/result.plain \
+                   result.enc
+$ cat workspace/code_provider/result.plain
+```
+
+### Manage Cosmian Enclave's containers
+
+__User__: the SGX operator
+
+You can stop and remove the container as follows:
+
+```console
+$ cenclave stop [--remove] <app_name>
+```
+
+You can restart a stopped and not removed containers as follows:
+
+```console
+$ cenclave restart <app_name>
+```
+
+You can get the Cosmian Enclave container logs as follows:
+
+```console
+$ cenclave logs <app_name>
+```
+
+You can get the Cosmian Enclave docker status as follows:
+
+```console
+$ cenclave status <app_name>
+```
+
+You can get the list of running Cosmian Enclave containers:
+
+```console
+$ cenclave list
+```
