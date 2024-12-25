@@ -1,0 +1,17 @@
+fastmodels/__init__.py,sha256=8PUi-Vi1vK1TH9CYOwhuhRy0K8DdJqBvdXWVruz_9u0,28
+fastmodels/client.py,sha256=vJGo6MdIt3iN3rkBcQh3lD1B8sxcXlEGYiGigOJ2ts0,18023
+fastmodels/response_params.py,sha256=iaKKj_-9eHv6JSFZHeK7RlH_tV89tBtx99WgX2N2FZc,12414
+fastmodels/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastmodels/tests/agent_completion_test.py,sha256=fibe47WqRnDPKdFiuWUXRTij2Wt94A0OttMF6MrS9xc,1865
+fastmodels/tests/chat_completion_test.py,sha256=neAl5cwmQyo1zA6eR8Ep4Z9MYAx4cjDim27LQVf3sEU,642
+fastmodels/tests/code_review_test.py,sha256=p7ge4qWWKTnBB2s7Dy7he8oHsY9aPTYNyI4EzvOW0e4,25506
+fastmodels/tests/doc_parse_test.py,sha256=M0-ZBZ-zvtoPBi6sfjH2RCcT9a-Gu4Sn3NqBoLcrdWk,447
+fastmodels/tests/doc_summarizer_test.py,sha256=wyUcEFWybmO7C-xT3g3xqScoznPAo91oAyPzv7Iym1Y,2812
+fastmodels/tests/image_summarize_test.py,sha256=BvIZul_QET7EVVdMHi5YfJbuav8Us045Y4iRBPo6etk,535
+fastmodels/tests/meeting_minutes_test.py,sha256=RggdFAZPHRHgGzo9tMSNlZi1ae2A40CBq48fAlVpyN8,567
+fastmodels/tests/pota-anlyst_test.py,sha256=SHZ4x5zeOVDjhjXaVgHIHzHpm9qR4gMqAHNIRt_tu6I,564
+fastmodels/tests/speech_to_text_test.py,sha256=ZYkRslF7mpZ4K2MC11vxo-boTxKXN9ZgfnNL1i5sKrk,1320
+fastmodels_kit-0.1.6.dist-info/METADATA,sha256=qif-9RxWr4lTcaM87Mr8mq6gj547g1-gKEKTn2aENvI,523
+fastmodels_kit-0.1.6.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+fastmodels_kit-0.1.6.dist-info/top_level.txt,sha256=IJ6cZ1SI3N6O9856cSD5e059LO_Ict2FcwrmPtoJW8M,11
+fastmodels_kit-0.1.6.dist-info/RECORD,,
