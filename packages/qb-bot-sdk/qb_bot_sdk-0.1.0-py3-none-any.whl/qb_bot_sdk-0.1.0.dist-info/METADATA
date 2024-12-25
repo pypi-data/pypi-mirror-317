@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: qb_bot_sdk
+Version: 0.1.0
+Summary: SDK for interacting with the QB Bot API
+Author: Your Name
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests>=2.0.0
+
