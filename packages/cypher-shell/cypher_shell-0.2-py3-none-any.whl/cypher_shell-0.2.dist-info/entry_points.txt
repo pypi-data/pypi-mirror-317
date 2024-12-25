@@ -1,0 +1,3 @@
+[console_scripts]
+cypher_shell=cypher_shell.__main__:main_loop
+
