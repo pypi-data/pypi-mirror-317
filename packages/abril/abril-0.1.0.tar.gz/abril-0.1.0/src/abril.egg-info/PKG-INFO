@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: abril
+Version: 0.1.0
+Summary: Una breve descripción de tu librería
+Home-page: https://github.com/tuusuario/abril
+Author: Tu Nombre
+Author-email: tu.email@ejemplo.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Abril
+
+Descripción breve de tu librería y su propósito.
+
+## Instalación
+
+```bash
+pip install abril
+```
+
+## Uso
+
+```python
+from abril import mi_funcion
+
+resultado = mi_funcion()
+print(resultado)
+```
