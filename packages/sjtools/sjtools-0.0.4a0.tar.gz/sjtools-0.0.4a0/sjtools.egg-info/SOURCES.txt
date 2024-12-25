@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+sjtools/__init__.py
+sjtools/main.py
+sjtools.egg-info/PKG-INFO
+sjtools.egg-info/SOURCES.txt
+sjtools.egg-info/dependency_links.txt
+sjtools.egg-info/requires.txt
+sjtools.egg-info/top_level.txt
