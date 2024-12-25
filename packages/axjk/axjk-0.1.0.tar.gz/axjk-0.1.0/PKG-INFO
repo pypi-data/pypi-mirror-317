@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: axjk
+Version: 0.1.0
+Summary: A package for MetaAI interaction.
+Home-page: https://github.com/Sm7-git
+Author: Shubham
+Author-email: Shub76ham@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: huggingface-hub
