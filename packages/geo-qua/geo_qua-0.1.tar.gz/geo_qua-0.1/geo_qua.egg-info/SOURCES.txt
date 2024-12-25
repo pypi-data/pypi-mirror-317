@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+geo_qua/GeometricSequence.py
+geo_qua/QuadraticSolver.py
+geo_qua/__init__.py
+geo_qua.egg-info/PKG-INFO
+geo_qua.egg-info/SOURCES.txt
+geo_qua.egg-info/dependency_links.txt
+geo_qua.egg-info/not-zip-safe
+geo_qua.egg-info/top_level.txt
+tests/Test_GeometricSequence.py
+tests/Test_QuadraticSolver.py
