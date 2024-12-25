@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ogloji
+Version: 0.1.3
+Summary: A straightforward OG image-generating service that screenshots HTML on your website: point it at a div, get social preview images.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.6
+Requires-Dist: playwright>=1.49.1
+Requires-Dist: pydantic-settings>=2.7.0
+Requires-Dist: python-json-logger>=3.2.1
+Requires-Dist: uvicorn>=0.34.0
