@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: realerikrani-project
+Version: 1.0.0
+Summary: Add key-based project management API endpoints to your flask app.
+License: Apache-2.0
+Project-URL: Repository, https://github.com/realerikrani/project
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask==3.*
+Requires-Dist: pyjwt[crypto]==2.*
+Requires-Dist: realerikrani-sopenqlite==1.*
+Requires-Dist: realerikrani-flaskapierr==1.*
+Requires-Dist: realerikrani-base64token==1.*
+
+# project
+
+Add private and public key based project management API endpoints to your flask app.
+
+See the docs folder in the GitHub repository for specific info about endpoints.
+
+Set the location where the SQLite database `PROJECT_DATABASE_PATH` would be created.
+
+```bash
+export PROJECT_DATABASE_PATH=/path/to/your/db.sqlite
+```
+
+... and call the `register_project` function to set up the endpoints
+and general API error handling.
+
+```py
+from flask import Flask
+
+from realerikrani.project import register_project
+
+if __name__ == "__main__":
+    app = register_project(Flask("your_app_name"))
+    app.run(port=8080, debug=True)
+```
