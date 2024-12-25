@@ -1,0 +1,40 @@
+[console_scripts]
+runnable = runnable.cli:cli
+
+[catalog]
+do-nothing = runnable.catalog:DoNothingCatalog
+file-system = extensions.catalog.file_system:FileSystemCatalog
+
+[executor]
+argo = extensions.executor.argo:ArgoExecutor
+local = extensions.executor.local:LocalExecutor
+local-container = extensions.executor.local_container:LocalContainerExecutor
+mocked = extensions.executor.mocked:MockedExecutor
+retry = extensions.executor.retry:RetryExecutor
+
+[nodes]
+dag = extensions.nodes.nodes:DagNode
+fail = extensions.nodes.nodes:FailNode
+map = extensions.nodes.nodes:MapNode
+parallel = extensions.nodes.nodes:ParallelNode
+stub = extensions.nodes.nodes:StubNode
+success = extensions.nodes.nodes:SuccessNode
+task = extensions.nodes.nodes:TaskNode
+
+[pickler]
+pickle = runnable.pickler:NativePickler
+
+[run_log_store]
+buffered = runnable.datastore:BufferRunLogstore
+chunked-fs = extensions.run_log_store.chunked_fs:ChunkedFileSystemRunLogStore
+file-system = extensions.run_log_store.file_system:FileSystemRunLogstore
+
+[secrets]
+do-nothing = runnable.secrets:DoNothingSecretManager
+dotenv = extensions.secrets.dotenv:DotEnvSecrets
+env-secrets = runnable.secrets:EnvSecretsManager
+
+[tasks]
+notebook = runnable.tasks:NotebookTaskType
+python = runnable.tasks:PythonTaskType
+shell = runnable.tasks:ShellTaskType
