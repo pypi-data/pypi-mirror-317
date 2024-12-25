@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/depcon/__init__.py
+src/depcon/main.py
+src/depcon.egg-info/PKG-INFO
+src/depcon.egg-info/SOURCES.txt
+src/depcon.egg-info/dependency_links.txt
+src/depcon.egg-info/entry_points.txt
+src/depcon.egg-info/requires.txt
+src/depcon.egg-info/top_level.txt
