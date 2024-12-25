@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: package_afraz
+Version: 0.1
+Summary: Afraz Ahmed A is a Python developer working with QCoDes. We will launch our package very soon.
+Home-page: https://github.com/Afraz/mypackage
+Author: Afraz Ahmed A
+Author-email: afraz@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# mypackage
+
+This is a simple example package to demonstrate how to publish to PyPI.
