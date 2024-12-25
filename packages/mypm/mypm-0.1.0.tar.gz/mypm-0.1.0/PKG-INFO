@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: mypm
+Version: 0.1.0
+Summary: A simple lightweight password manager
+Author-email: Sai <ysaijagadeeshuh@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: argparse>=1.4.0
+Requires-Dist: hatch>=1.14.0
+Requires-Dist: pyperclip>=1.9.0
+Requires-Dist: twine>=6.0.1

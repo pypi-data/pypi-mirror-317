@@ -1,0 +1,19 @@
+# Hatch
+.hatch/
+.hatch_build/
+.lock.uv
+
+.vscode/  
+
+# Python
+*.pyc
+__pycache__/
+
+# Build
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+.env/
+
