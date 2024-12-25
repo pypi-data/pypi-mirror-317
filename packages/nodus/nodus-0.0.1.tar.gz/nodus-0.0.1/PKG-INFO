@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: nodus
+Version: 0.0.1
+Summary: Nodus - A lightweight and reusable job manager.
+Home-page: https://github.com/manuelblancovalentin/nodus
+Author: Manuel Blanco Valentin
+Author-email: manuel.blanco.valentin@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
