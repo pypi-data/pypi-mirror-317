@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: string-catalog
+Version: 0.3.0
+Summary: A CLI tool for translating Xcode string catalogs.
+Author: PanicByte
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/Sanster/string-catalog
+Project-URL: Changelog, https://github.com/Sanster/string-catalog/releases
+Project-URL: Issues, https://github.com/Sanster/string-catalog/issues
+Project-URL: CI, https://github.com/Sanster/string-catalog/actions
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: diskcache>=5.6.3
+Requires-Dist: httpx[socks]>=0.28.1
+Requires-Dist: openai>=1.58.1
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: rich>=13.9.4
+Requires-Dist: tenacity>=9.0.0
+Requires-Dist: typer>=0.15.1
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+# string-catalog
+
+[![PyPI](https://img.shields.io/pypi/v/string-catalog.svg)](https://pypi.org/project/string-catalog/)
+[![Changelog](https://img.shields.io/github/v/release/Sanster/string-catalog?include_prereleases&label=changelog)](https://github.com/Sanster/string-catalog/releases)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/Sanster/string-catalog/blob/master/LICENSE)
+
+A CLI tool for translating Xcode string catalogs.
+
+My apps using this tool:
+
+- [ByePhotos](https://apps.apple.com/us/app/byephotos-storage-cleanup/id6737446757): Find similar photos and compress large videos to free up space on your iPhone and iCloud.
+- [OptiClean](https://apps.apple.com/ca/app/opticlean-ai-object-remover/id6452387177): Removes unwanted objects from photos using AI, run model fully on device.
+
+## Installation
+
+Install this tool using `pip`:
+
+```bash
+pip install string-catalog
+```
+
+## Usage
+
+For help, run:
+
+```bash
+string-catalog --help
+```
+
+Translate a single xcstrings file or all xcstrings files in a directory
+
+```bash
+export OPENROUTER_API_KEY=sk-or-v1-xxxxx
+string-catalog translate /path_or_dir/to/xcstrings_file --model anthropic/claude-3.5-sonnet \
+--lang ru \
+--lang zh-Hant
+```
+
+- All API call results are cached in the `.translation_cache/` directory and will be used first for subsequent calls.
+
+The translation results have a default state of `needs_review`. If you need to update them to `translated` (for example, after reviewing all translations in Xcode and wanting to avoid manually clicking "Mark as Reviewed" for each one), you can use the following command:
+
+```bash
+string-catalog update-state /path_or_dir/to/xcstrings_file \
+--old needs_review \
+--new translated
+```
+
+## Development
+
+To contribute to this tool, first checkout the code. Then create a new virtual environment:
+
+```bash
+cd string-catalog
+python -m venv venv
+source venv/bin/activate
+```
+
+Now install the dependencies and test dependencies:
+
+```bash
+pip install -e '.[test]'
+```
+
+To run the tests:
+
+```bash
+python -m pytest
+```
+
+# Acknowledgments
+
+This project is inspired by [swift-translate](https://github.com/hidden-spectrum/swift-translate).
