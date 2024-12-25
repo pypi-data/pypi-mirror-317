@@ -1,0 +1,23 @@
+detective/__init__.py,sha256=9yg-7uokkNJZGoNbXpezUEzlgNo5qlQiWWlQY7Uus8I,280
+detective/communication/__init__.py,sha256=ZBJkbxzhtaV2V1MBzf7McnLlVG_KXK7k-p34pCaskxI,109
+detective/communication/client.py,sha256=qbAxhDCXJSrgivRSzABA9a4XyfTI_FhJ8PMc01PMCvA,1865
+detective/communication/mailbot.py,sha256=cn_HeP-D9fjK8g0Zcp5NuvhJ8kxoOkEwu8Wixjxcg-0,2856
+detective/communication/server.py,sha256=e5LqKxd6ly1OOuLipvZec6FN7nazZ7rqSPGd0FYSIY4,2830
+detective/modules/__init__.py,sha256=rJfMV-NT6cZVk_78dAVQ2ENoUErNNcLa_rBad8GbHmI,762
+detective/modules/common.py,sha256=OL0av5lYVx1cJXVgMqBbjaT8_yXjaWRf66bjBiPpGBs,24990
+detective/modules/detect_others.py,sha256=QRP-Xz965Q733-lRhw2mQ_2C_Jxl-l2hv-qubiSV2SI,10011
+detective/modules/gesture.py,sha256=8qLv33WRwYkAoWkxMzhpTIqWTgBVf6KvnpA9u7bZwYg,7050
+detective/modules/gpio_controller.py,sha256=AlkrwrCF1mzI2UWq6O9-CYJ1qOJo6qsT6RaD94yLQV0,310
+detective/modules/meditation_assistant - 副本.py,sha256=GiuV5VELCUEyI3AwjX1UWsED7weJtVB9RW81WjhBuFA,7891
+detective/modules/meditation_assistant.py,sha256=q0_EgMXWL0XAOFBR9dUf3697byxMaEG-iaMXv5jYuk0,7855
+detective/modules/music_player.py,sha256=fr2k0KsuuXwUdvmD-qZWOz5Cn8P4cSMAOFZvD6WSrQA,549
+detective/modules/utils.py,sha256=7GskBHAg7mkIuhMhrIvi9rkD5VyaHraIC2rVPwuBcOc,1006
+detective/runner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+detective/runner/music_engine.py,sha256=W4HDPPTP4foxFvEPJcgBz3-uL4QVvtmdriMvC7Edqtk,7223
+detective/runner/runner_engine.py,sha256=GdrjCjIZEYcuU3ghwjffhjyQKbhNkkX7tEmreraCqF0,5879
+detective/runner/state_machine.py,sha256=3ZupX98A16cL98KrzCMBX6D2S0dsUoK0BqKfUolsoLM,1845
+Thread_Everything-0.2.0.dist-info/LICENSE,sha256=jmB_4vfXLyjCmceEhsSQpyMuLzYlpzKsI-dzJ6qkOdw,11310
+Thread_Everything-0.2.0.dist-info/METADATA,sha256=gjgskZlcGm3_u7Zsz8zex3YirSZIK1LPAZq76gvfwEM,9499
+Thread_Everything-0.2.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+Thread_Everything-0.2.0.dist-info/top_level.txt,sha256=Q5_0AoYqGEHaXvJbAsAm0CZ0NPAiZgdhU539N4mj0-8,10
+Thread_Everything-0.2.0.dist-info/RECORD,,
