@@ -1,0 +1,20 @@
+{
+    "config": {
+        "error": {
+            "api_error": "Ocorreu um erro na API pyemoncms: {details}"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "Chave da API",
+                    "url": "URL"
+                }
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "api_error": "Ocorreu um erro na API pyemoncms: {details}"
+        }
+    }
+}

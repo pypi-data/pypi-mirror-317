@@ -1,0 +1,37 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Prietaisas jau sukonfig\u016bruotas",
+            "reconfigure_successful": "Pakartotinis konfig\u016bravimas buvo s\u0117kmingas",
+            "unique_id_mismatch": "\u012erenginio ( {mac} ) mac adresas nesutampa su ankstesniu mac adresu."
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_auth": "Neteisingas autentifikavimas",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "step": {
+            "reconfigure": {
+                "data": {
+                    "host": "Host",
+                    "password": "Slapta\u017eodis"
+                },
+                "description": "I\u0161 naujo sukonfig\u016bruokite \u201eSlide\u201c \u012frenginio informacij\u0105"
+            },
+            "user": {
+                "data": {
+                    "host": "Host",
+                    "password": "Slapta\u017eodis"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "calibration_error": {
+            "message": "Klaida siun\u010diant kalibravimo u\u017eklaus\u0105 \u012frenginiui."
+        },
+        "touchgo_error": {
+            "message": "Klaida siun\u010diant \u012f \u012frengin\u012f u\u017eklausos nustatym\u0105 Touch&Go to {state}."
+        }
+    }
+}
