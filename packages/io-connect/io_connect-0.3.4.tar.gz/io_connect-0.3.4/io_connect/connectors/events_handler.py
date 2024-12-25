@@ -1,0 +1,711 @@
+import json  # Import the 'json' module for JSON data handling
+import urllib3  # Import the 'urllib3' module for HTTP requests
+import requests  # Import the 'requests' module for making HTTP requests
+import io_connect.constants as c
+import pandas as pd  # Import the 'pandas' library for data manipulation
+from datetime import datetime, timezone
+import pytz
+from typeguard import typechecked
+from typing import Optional, Union
+import io_connect.utilities.logger as logger
+from dateutil import parser
+
+# Disable pandas' warning about chained assignment
+pd.options.mode.chained_assignment = None
+
+# Disable urllib3's warning about insecure requests
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+
+@typechecked
+class EventsHandler:
+    __version__ = "0.3.4"
+
+    def __init__(
+        self,
+        user_id: str,
+        data_url: str,
+        on_prem: Optional[bool] = False,
+        tz: Optional[Union[pytz.BaseTzInfo, timezone]] = c.UTC,
+    ):
+        """
+        A class to handle event-related operations.
+
+        Parameters:
+        ----------
+        user_id : str
+            The user ID used for authentication and identification in requests.
+
+        data_url : str
+            The URL or IP address of the third-party server from which event data is retrieved.
+
+        on_prem : Optional[bool], default=False
+            A flag indicating whether to use the on-premises server. If True, the on-premises server is used; otherwise, the cloud server is used.
+
+        tz : Optional[Union[pytz.BaseTzInfo, timezone]], default=c.UTC
+            The timezone to use for time-related operations. If not provided, defaults to UTC.
+
+        Example:
+        -------
+        >>> import pytz
+        >>> handler = EventsHandler(user_id="user123", data_url="https://api.example.com", on_prem=True, tz=pytz.timezone('America/New_York'))
+        >>> print(handler.user_id)
+        user123
+        >>> print(handler.data_url)
+        https://api.example.com
+        >>> print(handler.on_prem)
+        True
+        >>> print(handler.tz)
+        America/New_York
+        """
+        self.user_id = user_id
+        self.data_url = data_url
+        self.on_prem = on_prem
+        self.tz = tz
+
+    def __iso_utc_time(self, time: Optional[Union[str, datetime]] = None) -> str:
+        """
+        Converts a given time to an ISO 8601 formatted string in UTC.
+
+        If no time is provided, the current time in the specified timezone is used.
+
+        Parameters:
+        ----------
+        time : Optional[Union[str, datetime]]
+            The time to convert, which can be a string or a datetime object.
+            If a string is provided, it will be parsed into a datetime object.
+            If None is provided, the current time in the `self.tz` timezone will be used.
+
+        Returns:
+        -------
+        str
+            The time converted to an ISO 8601 formatted string in UTC.
+
+        Raises:
+        ------
+        ValueError
+            If there is a mismatch between the offset times of the provided time and `self.tz`.
+
+        Notes:
+        -----
+        - If the provided time is a string, it will be parsed assuming the year comes first, followed by month and then year.
+        - If the provided time does not have timezone information, it will be assumed to be in `self.tz` timezone.
+        - The method ensures the time is converted to UTC before returning the ISO 8601 string.
+        """
+        # If time is not provided, use the current time in the specified timezone
+        if time is None:
+            return datetime.now(c.UTC).isoformat()
+
+        if isinstance(time, str):
+            time = parser.parse(time, dayfirst=False, yearfirst=True)
+
+        # If the datetime object doesn't have timezone information, assume it's in self.tz timezone
+        if time.tzinfo is None:
+            if isinstance(self.tz, pytz.BaseTzInfo):
+                # If tz is a pytz timezone, localize the datetime
+                time = self.tz.localize(time)
+
+            else:
+                # If tz is a datetime.timezone object, replace tzinfo
+                time = time.replace(tzinfo=self.tz)
+
+        elif self.tz.utcoffset(time.replace(tzinfo=None)) != time.tzinfo.utcoffset(
+            time
+        ):
+            raise ValueError(
+                f"Mismatched offset times between time: ({time.tzinfo.utcoffset(time)}) and self.tz:({self.tz.utcoffset(time.replace(tzinfo=None))})"
+            )
+
+        # Return datetime object after converting to Unix timestamp
+        return time.astimezone(c.UTC).isoformat()
+
+    def publish_event(
+        self,
+        message: str,
+        meta_data: str,
+        hover_data: str,
+        created_on: Optional[str],
+        event_tags_list: Optional[list] = None,
+        event_names_list: Optional[list] = None,
+        title: Optional[str] = None,
+        on_prem: Optional[bool] = None,
+    ):
+        """
+        Publish an event with the given details to the server.
+
+        Parameters:
+        ----------
+        message : str
+            The main message or description of the event.
+
+        meta_data : str
+            Metadata associated with the event in string format.
+
+        hover_data : str
+            Data to be displayed when hovering over the event, in string format.
+
+        created_on : Optional[str]
+            The creation date of the event in string format. If not provided, the current date and time will be used.
+
+        event_tags_list : Optional[list], default=None
+            A list of pre-existing tags associated with the event. Either `event_tags_list` or `event_names_list` must be provided.
+
+        event_names_list : Optional[list], default=None
+            A list of human-readable names corresponding to event tags. These names are resolved into tag IDs using the `get_event_categories` method. Either `event_tags_list` or `event_names_list` must be provided.
+
+        title : Optional[str], default=None
+            The title of the event. If not provided, it will be set to None.
+
+        on_prem : Optional[bool], default=None
+            A flag indicating whether to publish the event to an on-premises server. If not provided, the default value from the class attribute (`self.on_prem`) will be used.
+
+        Returns:
+        -------
+        dict
+            The response data from the server in dictionary format.
+
+        Raises:
+        ------
+        ValueError
+            If any name in `event_names_list` does not have a corresponding tag ID.
+
+        requests.exceptions.RequestException
+            If there is an issue with the request to the server.
+
+        Exception
+            For other generic exceptions, such as missing tags when neither `event_tags_list` nor `event_names_list` is provided.
+
+        Notes:
+        -----
+        - The method constructs the appropriate URL based on whether the event is being published to an on-premises server or a cloud server.
+        - If `event_names_list` is provided, it resolves the names to tag IDs using the `get_event_categories` method.
+        - If both `event_tags_list` and `event_names_list` are provided, only `event_names_list` will be used.
+        - It prepares the request header and payload, then sends a POST request to the server.
+        - The server's response is checked for success, and the data is returned if the request is successful.
+
+        Example:
+        -------
+        >>> obj = EventsHandler(USER_ID, THIRD_PARTY_SERVER, ON_PREM, tz)
+        >>> response = obj.publish_event(
+        ...     message="System update completed",
+        ...     meta_data="{'version': '1.2.3', 'status': 'successful'}",
+        ...     hover_data="Update was applied successfully without any issues.",
+        ...     event_names_list=['System Update'],
+        ...     created_on="2023-06-14T12:00:00Z",
+        ...     title="System Update"
+        ... )
+        >>> print(response)
+        {'eventId': '12345', 'status': 'published'}
+        """
+        try:
+            # If on_prem is not provided, use the default value from the class attribute
+            if on_prem is None:
+                on_prem = self.on_prem
+
+            if event_names_list:
+                # Initialize event_tags_list as an empty list, as event_names_list will be used to populate it.
+                event_tags_list = []
+
+                # Fetch the available event categories from the server or a local method.
+                data = self.get_event_categories()
+
+                # Iterate through each name in event_names_list to find its corresponding tag ID.
+                for tag in event_names_list:
+                    matched = next(
+                        (item["_id"] for item in data if item["name"] == tag), None
+                    )
+                    # If no matching tag ID is found for the given name, raise an error.
+                    if not matched:
+                        raise ValueError(f"Tag '{tag}' not found in data.")
+                    # Add the resolved tag ID to the event_tags_list.
+                    event_tags_list.append(matched)
+
+            # Ensure that at least one tag is present in event_tags_list after processing.
+            if not event_tags_list:
+                raise Exception("No event tags found.")
+
+            # Construct the URL based on the on_prem flag
+            protocol = "http" if on_prem else "https"
+
+            url = c.PUBLISH_EVENT_URL.format(protocol=protocol, data_url=self.data_url)
+
+            header = {"userID": self.user_id}
+            payload = {
+                "title": title,
+                "message": message,
+                "metaData": meta_data,
+                "eventTags": event_tags_list,
+                "hoverData": hover_data,
+                "createdOn": created_on,
+            }
+
+            # Make the request
+            response = requests.post(url, headers=header, json=payload, verify=True)
+
+            # Check the response status code
+            response.raise_for_status()
+
+            response_data = response.json()
+            if "error" in response_data:
+                raise Exception(response_data["error"])
+
+            raw_data = json.loads(response.text)["data"]
+
+            return raw_data
+
+        except requests.exceptions.RequestException as e:
+            print(f"[EXCEPTION] RequestException: {e}")
+
+        except Exception as e:
+            print(f"[EXCEPTION] {e}")
+
+    def get_events_in_timeslot(
+        self,
+        start_time: Union[str, datetime],
+        end_time: Optional[Union[str, datetime]] = None,
+        on_prem: Optional[bool] = None,
+    ) -> list:
+        """
+        Retrieves events within a specified time slot.
+
+        This method fetches events that occurred between the given start and end times.
+        The times are converted to ISO 8601 formatted strings in UTC before making the request.
+        The method handles both on-premises and third-party servers based on the `on_prem` flag.
+
+        Parameters:
+        ----------
+        start_time : Union[str, datetime]
+            The start time for the event search, in string or datetime format.
+        end_time : Optional[Union[str, datetime]]
+            The end time for the event search, in string or datetime format.
+            If not provided, the current time is used.
+        on_prem : Optional[bool]
+            Flag indicating if the server is on-premises. If not provided,
+            the class attribute `self.on_prem` is used.
+
+        Returns:
+        -------
+        list
+            A list of events found within the specified time slot.
+
+        Raises:
+        ------
+        ValueError
+            If the `end_time` is before the `start_time`.
+
+        Notes:
+        -----
+        - The method constructs the request URL based on the `on_prem` flag.
+        - The request header includes the user ID.
+        - The response is checked for successful status, and the event data is extracted from the response.
+
+        Exceptions:
+        -----------
+        - Handles `requests.exceptions.RequestException` to catch request-related errors.
+        - Catches all other exceptions to prevent the program from crashing and prints the exception message.
+
+        Example:
+        -------
+        >>> obj = EventsHandler(USER_ID,THIRD_PARTY_SERVER,ON_PREM, tz)
+        >>> events = obj.get_events_in_timeslot(start_time="2023-06-14T12:00:00Z")
+        >>> print(events)
+        [{'event_id': 1, 'timestamp': '2023-06-14T11:59:59Z', ...}, ...]
+        """
+
+        try:
+            # Convert start_time and end_time to iso utc timestamps
+            start_time = self.__iso_utc_time(start_time)
+            end_time = self.__iso_utc_time(end_time)
+
+            # Raise an error if end_time is before start_time
+            if datetime.fromisoformat(end_time) < datetime.fromisoformat(start_time):
+                raise ValueError(
+                    f"Invalid time range: start_time({start_time}) should be before end_time({end_time})."
+                )
+
+            # If on_prem is not provided, use the default value from the class attribute
+            if on_prem is None:
+                on_prem = self.on_prem
+
+            # Construct the URL based on the on_prem flag
+            protocol = "http" if on_prem else "https"
+
+            url = c.GET_EVENTS_IN_TIMESLOT_URL.format(
+                protocol=protocol, data_url=self.data_url
+            )
+
+            header = {"userID": self.user_id}
+            payload = {"startTime": start_time, "endTime": end_time}
+            response = requests.put(url, headers=header, json=payload, verify=False)
+
+            # Check the response status code
+            response.raise_for_status()
+
+            raw_data = json.loads(response.text)["data"]
+            return raw_data
+
+        except requests.exceptions.RequestException as e:
+            print(f"[EXCEPTION] RequestException: {e}")
+            return []
+
+        except Exception as e:
+            print(f"[EXCEPTION] {e}")
+            return []
+
+    def get_event_data_count(
+        self,
+        end_time: Optional[Union[str, datetime]] = None,
+        count: Optional[int] = 10,
+        on_prem: Optional[bool] = None,
+    ) -> list:
+        """
+        Retrieve a specified number of event data records up to a given end time.
+
+        Parameters:
+        ----------
+        end_time : Optional[Union[str, datetime]]
+            The end time up to which event data records are retrieved. It can be a string in ISO 8601 format or a datetime object.
+            If None, the current time is used.
+
+        count : Optional[int]
+            The number of event data records to retrieve. The default value is 10. Must be less than 10,000.
+
+        on_prem : Optional[bool]
+            Flag indicating whether to use the on-premises server. If None, the default value from the class attribute self.on_prem is used.
+
+        Returns:
+        -------
+        list
+            A list of event data records.
+
+        Raises:
+        ------
+        Exception
+            If the count is greater than 10,000.
+        requests.exceptions.RequestException
+            If there is an error with the HTTP request.
+
+        Notes:
+        -----
+        - The method converts the provided `end_time` to an ISO 8601 UTC timestamp.
+        - If `on_prem` is not provided, the method uses the class attribute `self.on_prem`.
+        - The URL for the request is constructed based on the `on_prem` flag.
+        - The method sends a PUT request to the constructed URL with appropriate headers and payload.
+        - If the request is successful, the response is parsed from JSON to a list and returned.
+        - If there is an exception during the request or other processing, an empty list is returned and the exception is logged to the console.
+
+        Example:
+        -------
+        >>> obj = EventsHandler(USER_ID,THIRD_PARTY_SERVER,ON_PREM, tz)
+        >>> events = obj.get_event_data_count('2023-06-14T12:00:00Z', count=5)
+        >>> print(events)
+        [{'event_id': 1, 'timestamp': '2023-06-14T11:59:59Z', ...}, ...]
+
+        """
+        try:
+            if count > 10000:
+                raise Exception("Count should be less than or equal to 10000.")
+
+            # Convert end_time to iso utc timestamp
+            end_time = self.__iso_utc_time(end_time)
+
+            # If on_prem is not provided, use the default value from the class attribute
+            if on_prem is None:
+                on_prem = self.on_prem
+
+            # Construct the URL based on the on_prem flag
+            protocol = "http" if on_prem else "https"
+
+            url = c.GET_EVENT_DATA_COUNT_URL.format(
+                protocol=protocol, data_url=self.data_url
+            )
+
+            header = {"userID": self.user_id}
+            payload = {"endTime": str(end_time), "count": count}
+            response = requests.put(url, headers=header, json=payload, verify=False)
+
+            # Check the response status code
+            response.raise_for_status()
+
+            raw_data = json.loads(response.text)["data"]
+            return raw_data
+
+        except requests.exceptions.RequestException as e:
+            print(f"[EXCEPTION] RequestException: {e}")
+            return []
+
+        except Exception as e:
+            print(f"[EXCEPTION] {e}")
+            return []
+
+    def get_event_categories(
+        self,
+        on_prem: Optional[bool] = None,
+    ) -> list:
+        """
+        Retrieve a list of event categories from the server.
+
+        Parameters:
+        ----------
+        on_prem : Optional[bool]
+            Flag indicating whether to use the on-premises server. If None, the default value from the class attribute `self.on_prem` is used.
+
+        Returns:
+        -------
+        list
+            A list of event categories.
+
+        Raises:
+        ------
+        requests.exceptions.RequestException
+            If there is an error with the HTTP request.
+
+        Notes:
+        -----
+        - If `on_prem` is not provided, the method uses the class attribute `self.on_prem`.
+        - The URL for the request is constructed based on the `on_prem` flag.
+        - The method sends a GET request to the constructed URL with appropriate headers.
+        - If the request is successful, the response is parsed from JSON to a list and returned.
+        - If there is an exception during the request or other processing, an empty list is returned and the exception is logged to the console.
+
+        Example:
+        -------
+        >>> obj = EventsHandler(USER_ID,THIRD_PARTY_SERVER,ON_PREM, tz)
+        >>> categories = obj.get_event_categories()
+        >>> print(categories)
+        ['Category1', 'Category2', 'Category3', ...]
+        """
+        try:
+            # If on_prem is not provided, use the default value from the class attribute
+            if on_prem is None:
+                on_prem = self.on_prem
+
+            # Construct the URL based on the on_prem flag
+            protocol = "http" if on_prem else "https"
+
+            url = c.GET_EVENT_CATEGORIES_URL.format(
+                protocol=protocol, data_url=self.data_url
+            )
+
+            header = {"userID": self.user_id}
+            response = requests.get(url, headers=header, verify=False)
+
+            # Check the response status code
+            response.raise_for_status()
+
+            raw_data = json.loads(response.text)["data"]
+            return raw_data
+
+        except requests.exceptions.RequestException as e:
+            print(f"[EXCEPTION] RequestException: {e}")
+            return []
+
+        except Exception as e:
+            print(f"[EXCEPTION] {e}")
+            return []
+
+    def get_detailed_event(
+        self,
+        event_tags_list: Optional[list] = None,
+        start_time: Union[str, datetime] = None,
+        end_time: Optional[Union[str, datetime]] = None,
+        on_prem: Optional[bool] = None,
+    ) -> list:
+        """
+        Retrieve detailed event data for a specified time range and event tags.
+
+        Parameters:
+        ----------
+        event_tags_list : Optional[list]
+            A list of event tags to filter the events. If None, all event categories are considered.
+
+        start_time : Union[str, datetime]
+            The start time for fetching events. It can be a string in ISO 8601 format or a datetime object.
+
+        end_time : Optional[Union[str, datetime]]
+            The end time for fetching events. It can be a string in ISO 8601 format or a datetime object. If None, the current time is used.
+
+        on_prem : Optional[bool]
+            Flag indicating whether to use the on-premises server. If None, the default value from the class attribute `self.on_prem` is used.
+
+        Returns:
+        -------
+        list
+            A list of detailed event data records.
+
+        Raises:
+        ------
+        requests.exceptions.RequestException
+            If there is an error with the HTTP request.
+        ValueError
+            If the API response indicates a failure.
+
+        Notes:
+        -----
+        - The method converts the provided `start_time` and `end_time` to ISO 8601 UTC timestamps.
+        - If `on_prem` is not provided, the method uses the class attribute `self.on_prem`.
+        - The URL for the request is constructed based on the `on_prem` flag.
+        - The method sends a PUT request to the constructed URL with appropriate headers and payload to fetch event data in pages.
+        - If there are more pages of data, the method fetches subsequent pages until all data is retrieved.
+        - If there is an exception during the request or other processing, an empty list is returned and the exception is logged to the console.
+
+        Example:
+        -------
+        >>> obj = EventsHandler(USER_ID,THIRD_PARTY_SERVER,ON_PREM, tz)
+        >>> detailed_events = obj.get_detailed_event( event_tags_list=['tag1', 'tag2'], start_time = '2023-06-01T00:00:00Z')
+        >>> print(detailed_events)
+        [{'event_id': 1, 'timestamp': '2023-06-01T00:00:01Z', ...}, ...]
+
+        """
+        try:
+            # Convert start_time and end_time to iso utc timestamps
+            start_time = self.__iso_utc_time(start_time)
+            end_time = self.__iso_utc_time(end_time)
+
+            # If on_prem is not provided, use the default value from the class attribute
+            if on_prem is None:
+                on_prem = self.on_prem
+
+            # Construct the URL based on the on_prem flag
+            protocol = "http" if on_prem else "https"
+
+            # Construct the URL for fetching detailed event data
+            url = c.GET_DETAILED_EVENT_URL.format(
+                protocol=protocol, data_url=self.data_url
+            )
+
+            # Retrieve event categories based on whether it's on-premises or not
+            events = self.get_event_categories(on_prem=on_prem)
+
+            # Extract the IDs from the events
+            id_list = [item["_id"] for item in events]
+
+            # Check for event_tag
+            if event_tags_list is None:
+                tags = id_list
+            else:
+                # If event_tags_list is provided, find the intersection with id_list
+                tags = list(set(event_tags_list).intersection(id_list))
+
+            # Prepare the request header with user ID
+            header = {"userID": self.user_id}
+
+            # Prepare the payload for the request
+            payload = {
+                "startTime": start_time,
+                "endTime": end_time,
+                "eventTags": tags,
+                "count": 1000,
+            }
+
+            raw_data = []
+            page = 1
+
+            # Loop to fetch data until there is no more data to fetch
+            while True:
+                # Log the current page being fetched
+                logger.display_log(f"Fetching Data from page {page}")
+
+                # Send a PUT request to fetch data from the current page
+                response = requests.put(
+                    url + f"/{page}/1000", headers=header, json=payload, verify=False
+                )
+                # Check the response status code
+                response.raise_for_status()
+
+                data = json.loads(response.text)
+
+                # Check for errors in the API response
+                if data["success"] is False:
+                    raise ValueError(data)
+
+                response_data = data["data"]["data"]
+                raw_data.extend(response_data)
+
+                page += 1  # Move to the next page
+
+                if len(raw_data) >= data["data"]["totalCount"]:
+                    break  # Break the loop if no more data is available
+
+            return raw_data
+
+        except requests.exceptions.RequestException as e:
+            print(f"[EXCEPTION] RequestException: {e}")
+            return []
+
+        except Exception as e:
+            print(f"[EXCEPTION] {e}")
+            return []
+
+    def get_mongo_data(
+        self,
+        device_id: str,
+        end_time: str,
+        start_time: Optional[str] = None,
+        limit: Optional[int] = None,
+        on_prem: Optional[bool] = None,
+    ):
+        """
+        Fetches data from the MongoDB for custom table Dev type for given device within a specified time range
+
+        Parameters:
+        - device_id (str): The ID of the device.
+        - start_time (Optional[str]): The start time for data retrieval.
+        - end_time (str): The end time for data retrieval.
+        - limit (int): No of rows
+        - on_prem (Optional[bool]): Indicates if the operation is on-premise. Defaults to class attribute if not provided.
+
+        Returns:
+        - pd.DataFrame: The DataFrame containing the fetched and processed data.
+
+        Exceptions Handled:
+        - requests.exceptions.RequestException: Raised when there is an issue with the HTTP request.
+        - Exception: General exception handling for other errors
+        """
+        try:
+            # Determine the protocol based on the on_prem flag
+            protocol = "http" if on_prem else "https"
+
+            # Construct API URL for data retrieval
+            url = c.GET_MONGO_DATA.format(protocol=protocol, data_url=self.data_url)
+
+            # Prepare the payload based on the presence of start_time
+            if start_time is None:
+                payload = {
+                    "devID": device_id,
+                    "endTime": end_time,
+                    "rawData": True,
+                    "limit": limit,
+                }
+            else:
+                payload = {
+                    "devID": device_id,
+                    "startTime": start_time,
+                    "endTime": end_time,
+                    "rawData": True,
+                }
+
+            # Add the user ID to the request headers
+            header = {"userID": self.user_id}
+
+            # Parse the response JSON
+            response = requests.put(url, json=payload, headers=header, verify=False)
+            response.raise_for_status()
+
+            # Parse the response JSON
+            data = response.json()
+            if data.get("success"):
+                # Extract the "data" key and create a DataFrame from the rows
+                rows = data["data"]
+                df = pd.DataFrame([row["data"] for row in rows])
+                return df
+            else:
+                # Raise an exception if the "success" key is absent or False
+                raise Exception(data)
+        except requests.exceptions.RequestException as e:
+            print(f"[EXCEPTION] RequestException: {e}")
+            return pd.DataFrame()
+
+        except Exception as e:
+            print(f"[EXCEPTION] {e}")
+            return pd.DataFrame()

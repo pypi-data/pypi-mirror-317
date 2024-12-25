@@ -1,0 +1,11 @@
+wheel
+pandas
+numpy
+Requests
+pytz
+python_dateutil
+requests
+typing_extensions
+typeguard
+urllib3
+paho_mqtt==1.6.1
