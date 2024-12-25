@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Moral88/__init__.py
+Moral88/regression.py
+Moral88.egg-info/PKG-INFO
+Moral88.egg-info/SOURCES.txt
+Moral88.egg-info/dependency_links.txt
+Moral88.egg-info/requires.txt
+Moral88.egg-info/top_level.txt
