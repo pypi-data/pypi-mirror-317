@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+texplot
+matplotlib
+adjustText
+numba
+scikit-learn
+tqdm
+requests
