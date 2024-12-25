@@ -1,0 +1,2 @@
+[console_scripts]
+xfinder-run-example = xfinder.eval:main

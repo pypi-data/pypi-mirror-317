@@ -1,0 +1,670 @@
+Metadata-Version: 2.1
+Name: xfinder
+Version: 0.2.4
+Summary: An Robust and Pinpoint Answer Extractor for LLM Evaluation
+Author-email: Qingchen Yu <zhgqcyu@gmail.com>
+License: Attribution-NonCommercial-NoDerivatives 4.0 International
+        
+        =======================================================================
+        
+        Creative Commons Corporation ("Creative Commons") is not a law firm and
+        does not provide legal services or legal advice. Distribution of
+        Creative Commons public licenses does not create a lawyer-client or
+        other relationship. Creative Commons makes its licenses and related
+        information available on an "as-is" basis. Creative Commons gives no
+        warranties regarding its licenses, any material licensed under their
+        terms and conditions, or any related information. Creative Commons
+        disclaims all liability for damages resulting from their use to the
+        fullest extent possible.
+        
+        Using Creative Commons Public Licenses
+        
+        Creative Commons public licenses provide a standard set of terms and
+        conditions that creators and other rights holders may use to share
+        original works of authorship and other material subject to copyright
+        and certain other rights specified in the public license below. The
+        following considerations are for informational purposes only, are not
+        exhaustive, and do not form part of our licenses.
+        
+             Considerations for licensors: Our public licenses are
+             intended for use by those authorized to give the public
+             permission to use material in ways otherwise restricted by
+             copyright and certain other rights. Our licenses are
+             irrevocable. Licensors should read and understand the terms
+             and conditions of the license they choose before applying it.
+             Licensors should also secure all rights necessary before
+             applying our licenses so that the public can reuse the
+             material as expected. Licensors should clearly mark any
+             material not subject to the license. This includes other CC-
+             licensed material, or material used under an exception or
+             limitation to copyright. More considerations for licensors:
+            wiki.creativecommons.org/Considerations_for_licensors
+        
+             Considerations for the public: By using one of our public
+             licenses, a licensor grants the public permission to use the
+             licensed material under specified terms and conditions. If
+             the licensor's permission is not necessary for any reason--for
+             example, because of any applicable exception or limitation to
+             copyright--then that use is not regulated by the license. Our
+             licenses grant only permissions under copyright and certain
+             other rights that a licensor has authority to grant. Use of
+             the licensed material may still be restricted for other
+             reasons, including because others have copyright or other
+             rights in the material. A licensor may make special requests,
+             such as asking that all changes be marked or described.
+             Although not required by our licenses, you are encouraged to
+             respect those requests where reasonable. More considerations
+             for the public:
+            wiki.creativecommons.org/Considerations_for_licensees
+        
+        =======================================================================
+        
+        Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+        International Public License
+        
+        By exercising the Licensed Rights (defined below), You accept and agree
+        to be bound by the terms and conditions of this Creative Commons
+        Attribution-NonCommercial-NoDerivatives 4.0 International Public
+        License ("Public License"). To the extent this Public License may be
+        interpreted as a contract, You are granted the Licensed Rights in
+        consideration of Your acceptance of these terms and conditions, and the
+        Licensor grants You such rights in consideration of benefits the
+        Licensor receives from making the Licensed Material available under
+        these terms and conditions.
+        
+        
+        Section 1 -- Definitions.
+        
+          a. Adapted Material means material subject to Copyright and Similar
+             Rights that is derived from or based upon the Licensed Material
+             and in which the Licensed Material is translated, altered,
+             arranged, transformed, or otherwise modified in a manner requiring
+             permission under the Copyright and Similar Rights held by the
+             Licensor. For purposes of this Public License, where the Licensed
+             Material is a musical work, performance, or sound recording,
+             Adapted Material is always produced where the Licensed Material is
+             synched in timed relation with a moving image.
+        
+          b. Copyright and Similar Rights means copyright and/or similar rights
+             closely related to copyright including, without limitation,
+             performance, broadcast, sound recording, and Sui Generis Database
+             Rights, without regard to how the rights are labeled or
+             categorized. For purposes of this Public License, the rights
+             specified in Section 2(b)(1)-(2) are not Copyright and Similar
+             Rights.
+        
+          c. Effective Technological Measures means those measures that, in the
+             absence of proper authority, may not be circumvented under laws
+             fulfilling obligations under Article 11 of the WIPO Copyright
+             Treaty adopted on December 20, 1996, and/or similar international
+             agreements.
+        
+          d. Exceptions and Limitations means fair use, fair dealing, and/or
+             any other exception or limitation to Copyright and Similar Rights
+             that applies to Your use of the Licensed Material.
+        
+          e. Licensed Material means the artistic or literary work, database,
+             or other material to which the Licensor applied this Public
+             License.
+        
+          f. Licensed Rights means the rights granted to You subject to the
+             terms and conditions of this Public License, which are limited to
+             all Copyright and Similar Rights that apply to Your use of the
+             Licensed Material and that the Licensor has authority to license.
+        
+          g. Licensor means the individual(s) or entity(ies) granting rights
+             under this Public License.
+        
+          h. NonCommercial means not primarily intended for or directed towards
+             commercial advantage or monetary compensation. For purposes of
+             this Public License, the exchange of the Licensed Material for
+             other material subject to Copyright and Similar Rights by digital
+             file-sharing or similar means is NonCommercial provided there is
+             no payment of monetary compensation in connection with the
+             exchange.
+        
+          i. Share means to provide material to the public by any means or
+             process that requires permission under the Licensed Rights, such
+             as reproduction, public display, public performance, distribution,
+             dissemination, communication, or importation, and to make material
+             available to the public including in ways that members of the
+             public may access the material from a place and at a time
+             individually chosen by them.
+        
+          j. Sui Generis Database Rights means rights other than copyright
+             resulting from Directive 96/9/EC of the European Parliament and of
+             the Council of 11 March 1996 on the legal protection of databases,
+             as amended and/or succeeded, as well as other essentially
+             equivalent rights anywhere in the world.
+        
+          k. You means the individual or entity exercising the Licensed Rights
+             under this Public License. Your has a corresponding meaning.
+        
+        
+        Section 2 -- Scope.
+        
+          a. License grant.
+        
+               1. Subject to the terms and conditions of this Public License,
+                  the Licensor hereby grants You a worldwide, royalty-free,
+                  non-sublicensable, non-exclusive, irrevocable license to
+                  exercise the Licensed Rights in the Licensed Material to:
+        
+                    a. reproduce and Share the Licensed Material, in whole or
+                       in part, for NonCommercial purposes only; and
+        
+                    b. produce and reproduce, but not Share, Adapted Material
+                       for NonCommercial purposes only.
+        
+               2. Exceptions and Limitations. For the avoidance of doubt, where
+                  Exceptions and Limitations apply to Your use, this Public
+                  License does not apply, and You do not need to comply with
+                  its terms and conditions.
+        
+               3. Term. The term of this Public License is specified in Section
+                  6(a).
+        
+               4. Media and formats; technical modifications allowed. The
+                  Licensor authorizes You to exercise the Licensed Rights in
+                  all media and formats whether now known or hereafter created,
+                  and to make technical modifications necessary to do so. The
+                  Licensor waives and/or agrees not to assert any right or
+                  authority to forbid You from making technical modifications
+                  necessary to exercise the Licensed Rights, including
+                  technical modifications necessary to circumvent Effective
+                  Technological Measures. For purposes of this Public License,
+                  simply making modifications authorized by this Section 2(a)
+                  (4) never produces Adapted Material.
+        
+               5. Downstream recipients.
+        
+                    a. Offer from the Licensor -- Licensed Material. Every
+                       recipient of the Licensed Material automatically
+                       receives an offer from the Licensor to exercise the
+                       Licensed Rights under the terms and conditions of this
+                       Public License.
+        
+                    b. No downstream restrictions. You may not offer or impose
+                       any additional or different terms or conditions on, or
+                       apply any Effective Technological Measures to, the
+                       Licensed Material if doing so restricts exercise of the
+                       Licensed Rights by any recipient of the Licensed
+                       Material.
+        
+               6. No endorsement. Nothing in this Public License constitutes or
+                  may be construed as permission to assert or imply that You
+                  are, or that Your use of the Licensed Material is, connected
+                  with, or sponsored, endorsed, or granted official status by,
+                  the Licensor or others designated to receive attribution as
+                  provided in Section 3(a)(1)(A)(i).
+        
+          b. Other rights.
+        
+               1. Moral rights, such as the right of integrity, are not
+                  licensed under this Public License, nor are publicity,
+                  privacy, and/or other similar personality rights; however, to
+                  the extent possible, the Licensor waives and/or agrees not to
+                  assert any such rights held by the Licensor to the limited
+                  extent necessary to allow You to exercise the Licensed
+                  Rights, but not otherwise.
+        
+               2. Patent and trademark rights are not licensed under this
+                  Public License.
+        
+               3. To the extent possible, the Licensor waives any right to
+                  collect royalties from You for the exercise of the Licensed
+                  Rights, whether directly or through a collecting society
+                  under any voluntary or waivable statutory or compulsory
+                  licensing scheme. In all other cases the Licensor expressly
+                  reserves any right to collect such royalties, including when
+                  the Licensed Material is used other than for NonCommercial
+                  purposes.
+        
+        
+        Section 3 -- License Conditions.
+        
+        Your exercise of the Licensed Rights is expressly made subject to the
+        following conditions.
+        
+          a. Attribution.
+        
+               1. If You Share the Licensed Material, You must:
+        
+                    a. retain the following if it is supplied by the Licensor
+                       with the Licensed Material:
+        
+                         i. identification of the creator(s) of the Licensed
+                            Material and any others designated to receive
+                            attribution, in any reasonable manner requested by
+                            the Licensor (including by pseudonym if
+                            designated);
+        
+                        ii. a copyright notice;
+        
+                       iii. a notice that refers to this Public License;
+        
+                        iv. a notice that refers to the disclaimer of
+                            warranties;
+        
+                         v. a URI or hyperlink to the Licensed Material to the
+                            extent reasonably practicable;
+        
+                    b. indicate if You modified the Licensed Material and
+                       retain an indication of any previous modifications; and
+        
+                    c. indicate the Licensed Material is licensed under this
+                       Public License, and include the text of, or the URI or
+                       hyperlink to, this Public License.
+        
+                  For the avoidance of doubt, You do not have permission under
+                  this Public License to Share Adapted Material.
+        
+               2. You may satisfy the conditions in Section 3(a)(1) in any
+                  reasonable manner based on the medium, means, and context in
+                  which You Share the Licensed Material. For example, it may be
+                  reasonable to satisfy the conditions by providing a URI or
+                  hyperlink to a resource that includes the required
+                  information.
+        
+               3. If requested by the Licensor, You must remove any of the
+                  information required by Section 3(a)(1)(A) to the extent
+                  reasonably practicable.
+        
+        
+        Section 4 -- Sui Generis Database Rights.
+        
+        Where the Licensed Rights include Sui Generis Database Rights that
+        apply to Your use of the Licensed Material:
+        
+          a. for the avoidance of doubt, Section 2(a)(1) grants You the right
+             to extract, reuse, reproduce, and Share all or a substantial
+             portion of the contents of the database for NonCommercial purposes
+             only and provided You do not Share Adapted Material;
+        
+          b. if You include all or a substantial portion of the database
+             contents in a database in which You have Sui Generis Database
+             Rights, then the database in which You have Sui Generis Database
+             Rights (but not its individual contents) is Adapted Material; and
+        
+          c. You must comply with the conditions in Section 3(a) if You Share
+             all or a substantial portion of the contents of the database.
+        
+        For the avoidance of doubt, this Section 4 supplements and does not
+        replace Your obligations under this Public License where the Licensed
+        Rights include other Copyright and Similar Rights.
+        
+        
+        Section 5 -- Disclaimer of Warranties and Limitation of Liability.
+        
+          a. UNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE
+             EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS
+             AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF
+             ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS,
+             IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION,
+             WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR
+             PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS,
+             ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT
+             KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT
+             ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.
+        
+          b. TO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE
+             TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION,
+             NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT,
+             INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES,
+             COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR
+             USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN
+             ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR
+             DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR
+             IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.
+        
+          c. The disclaimer of warranties and limitation of liability provided
+             above shall be interpreted in a manner that, to the extent
+             possible, most closely approximates an absolute disclaimer and
+             waiver of all liability.
+        
+        
+        Section 6 -- Term and Termination.
+        
+          a. This Public License applies for the term of the Copyright and
+             Similar Rights licensed here. However, if You fail to comply with
+             this Public License, then Your rights under this Public License
+             terminate automatically.
+        
+          b. Where Your right to use the Licensed Material has terminated under
+             Section 6(a), it reinstates:
+        
+               1. automatically as of the date the violation is cured, provided
+                  it is cured within 30 days of Your discovery of the
+                  violation; or
+        
+               2. upon express reinstatement by the Licensor.
+        
+             For the avoidance of doubt, this Section 6(b) does not affect any
+             right the Licensor may have to seek remedies for Your violations
+             of this Public License.
+        
+          c. For the avoidance of doubt, the Licensor may also offer the
+             Licensed Material under separate terms or conditions or stop
+             distributing the Licensed Material at any time; however, doing so
+             will not terminate this Public License.
+        
+          d. Sections 1, 5, 6, 7, and 8 survive termination of this Public
+             License.
+        
+        
+        Section 7 -- Other Terms and Conditions.
+        
+          a. The Licensor shall not be bound by any additional or different
+             terms or conditions communicated by You unless expressly agreed.
+        
+          b. Any arrangements, understandings, or agreements regarding the
+             Licensed Material not stated herein are separate from and
+             independent of the terms and conditions of this Public License.
+        
+        
+        Section 8 -- Interpretation.
+        
+          a. For the avoidance of doubt, this Public License does not, and
+             shall not be interpreted to, reduce, limit, restrict, or impose
+             conditions on any use of the Licensed Material that could lawfully
+             be made without permission under this Public License.
+        
+          b. To the extent possible, if any provision of this Public License is
+             deemed unenforceable, it shall be automatically reformed to the
+             minimum extent necessary to make it enforceable. If the provision
+             cannot be reformed, it shall be severed from this Public License
+             without affecting the enforceability of the remaining terms and
+             conditions.
+        
+          c. No term or condition of this Public License will be waived and no
+             failure to comply consented to unless expressly agreed to by the
+             Licensor.
+        
+          d. Nothing in this Public License constitutes or may be interpreted
+             as a limitation upon, or waiver of, any privileges and immunities
+             that apply to the Licensor or You, including from the legal
+             processes of any jurisdiction or authority.
+        
+        =======================================================================
+        
+        Creative Commons is not a party to its public
+        licenses. Notwithstanding, Creative Commons may elect to apply one of
+        its public licenses to material it publishes and in those instances
+        will be considered the “Licensor.” The text of the Creative Commons
+        public licenses is dedicated to the public domain under the CC0 Public
+        Domain Dedication. Except for the limited purpose of indicating that
+        material is shared under a Creative Commons public license or as
+        otherwise permitted by the Creative Commons policies published at
+        creativecommons.org/policies, Creative Commons does not authorize the
+        use of the trademark "Creative Commons" or any other trademark or logo
+        of Creative Commons without its prior written consent including,
+        without limitation, in connection with any unauthorized modifications
+        to any of its public licenses or any other arrangements,
+        understandings, or agreements concerning use of licensed material. For
+        the avoidance of doubt, this paragraph does not form part of the
+        public licenses.
+        
+        Creative Commons may be contacted at creativecommons.org.
+        
+Project-URL: Repository, https://github.com/IAAR-Shanghai/xFinder
+Keywords: LLM,NLP,answer extraction,reliable evaluation
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch==2.3.1
+Requires-Dist: transformers>=4.39.0
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: huggingface_hub
+Requires-Dist: accelerate>=0.26.0
+Requires-Dist: tenacity
+
+<div align="center"><h2>
+<img src="https://raw.githubusercontent.com/IAAR-Shanghai/xFinder/main/assets/xfinder_logo.png" alt="xFinder_logo" width=23px>xFinder: Robust and Pinpoint Answer Extraction for Large Language Models</h2></div>
+
+<p align="center">
+    <!-- arXiv badge with a more vibrant academic red -->
+    <a href="https://arxiv.org/abs/2405.11874">
+        <img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?style=flat-square&logo=arxiv&logoColor=white">
+    </a>
+    <!-- Github badge with clean dark color -->
+    <a href="https://github.com/IAAR-Shanghai/xFinder">
+        <img src="https://img.shields.io/badge/Github-Code-181717?style=flat-square&logo=github&logoColor=white">
+    </a>
+    <!-- PyPI package badge with a slightly bolder color -->
+    <a href="https://pypi.org/project/xfinder/">
+        <img src="https://img.shields.io/badge/PyPI-Package-3775A9?style=flat-square&logo=pypi&logoColor=white">
+    </a>
+    <br>
+    <!-- Huggingface Collection badge with more dynamic orange -->
+    <a href="https://huggingface.co/collections/IAAR-Shanghai/xfinder-664b7b21e94e9a93f25a8412">
+        <img src="https://img.shields.io/badge/Huggingface-Collection-FF6F00?style=flat-square&logo=huggingface&logoColor=white">
+    </a>
+    <!-- KAF Dataset badge consistent with the above color scheme -->
+    <a href="https://huggingface.co/datasets/IAAR-Shanghai/KAF-Dataset">
+        <img src="https://img.shields.io/badge/Huggingface-KAF%20Dataset-FF6F00?style=flat-square&logo=huggingface&logoColor=white">
+    </a>
+    <!-- Model badges with a balanced but dynamic color scheme -->
+    <a href="https://huggingface.co/IAAR-Shanghai/xFinder-qwen1505">
+        <img src="https://img.shields.io/badge/Model-0.5B-FF6F00?style=flat-square&logo=huggingface&logoColor=white">
+    </a>
+    <a href="https://huggingface.co/IAAR-Shanghai/xFinder-llama38it">
+        <img src="https://img.shields.io/badge/Model-8B-FF6F00?style=flat-square&logo=huggingface&logoColor=white">
+    </a>
+</p>
+
+
+<div align="center">
+    <p>
+        <a href="https://github.com/Duguce">Qingchen Yu</a><sup>1,*</sup>, 
+        <a href="https://github.com/fan2goa1">Zifan Zheng</a><sup>1,*</sup>, 
+        <a href="https://github.com/Ki-Seki">Shichao Song</a><sup>2,*</sup>, 
+        Zhiyu Li<sup>1,†</sup>, Feiyu Xiong<sup>1</sup>, Bo Tang<sup>1</sup>, <a href="https://github.com/hush-cd">Ding Chen</a><sup>1</sup>
+    </p>
+    <p>
+        <sup>1</sup><a href="https://www.iaar.ac.cn/">Institute for Advanced Algorithms Research, Shanghai</a>, <sup>2</sup><a href="https://en.ruc.edu.cn/">Renmin University of China</a>
+    </p>
+</div>
+
+
+<div align="center"><h5>For business inquiries, please contact us at <a href="mailto:lizy@iaar.ac.cn">lizy@iaar.ac.cn</a>.</h5></div>
+
+
+**🎯 Who Should Pay Attention to Our Work?**
+
+- **If you are developing a Benchmark**, you can use our xFinder to replace traditional RegEx methods for extracting key answers from LLM responses. This will help you improve the accuracy of your evaluation results, enabling more reliable and meaningful comparisons and validation of model performance.
+- **If you are a designer of evaluation frameworks**, you can integrate our xFinder into your framework's answer extraction component to enhance the robustness and reliability of the evaluation process.
+
+> \[!IMPORTANT\]
+>
+> 🌟 **Star Us!** By starring our project on GitHub, you'll receive all release notifications instantly. We appreciate your support!
+
+## :loudspeaker: News
+- **[2024/10]** We have open-sourced the KAF-Dataset and released xFinder as a PyPI package.
+- **[2024/09]** xFinder has been successfully integrated into [OpenCompass](https://github.com/open-compass/opencompass/blob/645c5f3b2ce36dae761850c648d2d0a45250c9ba/opencompass/utils/postprocessors/xfinder/README.md)! 🔥🔥🔥
+- **[2024/08]** We updated xFinder: The [model](https://huggingface.co/collections/IAAR-Shanghai/xfinder-664b7b21e94e9a93f25a8412) now supports processing both English and Chinese.
+- **[2024/05]** We released xFinder: Robust and Pinpoint Answer Extraction for Large Language Models. Check out the [paper](https://arxiv.org/abs/2405.11874).
+
+## Overview
+<div align="center">
+    <img src="https://raw.githubusercontent.com/IAAR-Shanghai/xFinder/main/assets/framework.jpg" alt="xFinder" width="93%">
+</div>
+
+<details><summary>Abstract</summary>
+The continuous advancement of large language models (LLMs) has brought increasing attention to the critical issue of developing fair and reliable methods for evaluating their performance. Particularly, the emergence of subjective or non-subjective cheating phenomena, such as test set leakage and prompt format overfitting, poses significant challenges to the reliable evaluation of LLMs. Since evaluation frameworks often utilize Regular Expression (RegEx) for answer extraction, some models may adjust their responses to comply with specific formats that are easily extractable by RegEx. Nevertheless, the key answer extraction module based on RegEx frequently suffers from extraction errors. This paper conducts a comprehensive analysis of the entire LLM evaluation chain, demonstrating that optimizing the key answer extraction module can improve extraction accuracy, reduce LLMs' reliance on specific answer formats, and enhance the reliability of LLM evaluation. To address these issues, we propose xFinder, a model specifically designed for key answer extraction. As part of this process, we create a specialized dataset, the Key Answer Finder (KAF) dataset, to ensure effective model training and evaluation. Through generalization testing and evaluation in real-world scenarios, the results demonstrate that the smallest xFinder model with only 500 million parameters achieves an average answer extraction accuracy of 93.42%. In contrast, RegEx accuracy in the best evaluation framework is 74.38%. xFinder exhibits stronger robustness and higher accuracy compared to existing evaluation frameworks.
+</details>
+
+We summarize our primary contributions as follows:
+
+- We provide a comprehensive review of LLM evaluation processes in the industry, identifying critical factors that can lead to unreliable evaluation results.
+- We introduce xFinder, a model specifically designed for key answer extraction. The KAF dataset supports its effective training and evaluation.
+- In our extensive experiments, we demonstrate that RegEx-based evaluation methods are unreliable, while our xFinder model significantly improves reliability.
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/IAAR-Shanghai/xFinder/main/assets/example.jpg" alt="xFinder" width="93%">
+</div>
+
+> As shown in the figure, instances where evaluation frameworks such as LM Eval Harness and OpenCompass failed to extract key answers are illustrated. Specifically, A/T/C/M represent tasks with alphabet / short text / categorical label / math options, respectively.
+
+## Quick Start
+1. **Create Benchmark Dataset**: To streamline the evaluation process using xFinder, we have standardized various mainstream benchmark datasets into a unified JSON format. For implementation details, refer to [create_benchmark_dataset.py](./scripts/dataset_construction/create_benchmark_dataset.py). If you wish to evaluate your own datasets using xFinder, please refer to our provided script template [benchmark_dataset_template.py](./scripts/dataset_construction/benchmark_dataset_template.py) for format conversion guidance.
+
+2. **Prepare QA Pairs & LLM Outputs**: Gather the LLM outputs you wish to evaluate. Ensure your data includes the following elements:
+   - Original question
+   - Key answer type (options: alphabet, short_text, categorical_label, math)
+   - LLM output
+   - Standard answer range
+
+3. **Deploy the xFinder Model**: Select one of the following models for deployment:
+   - [xFinder-qwen1505](https://huggingface.co/IAAR-Shanghai/xFinder-qwen1505)
+   - [xFinder-llama38it](https://huggingface.co/IAAR-Shanghai/xFinder-llama38it)
+
+After deploying the xFinder model, follow these steps to run an evaluation:
+
+```bash
+# Install xfinder
+conda create -n xfinder_env python=3.10 -y
+conda activate xfinder_env
+pip install xfinder
+
+# Perform an evaluation with xFinder (a built-in example)
+CUDA_VISIBLE_DEVICES=0 python -m xfinder.eval --run-example --model-name xFinder-qwen1505 --inference-mode local --model-path-or-url /path/to/anonymized/model/xFinder-qwen1505
+```
+
+#### 📊 xFinder supports two forms of evaluation
+<details><summary>📚 Batch Evaluation of Summarized Experimental Results
+
+This method allows you to evaluate multiple examples stored in a JSON file.</summary>
+
+```python
+# Initialize Evaluator object
+evaluator = Evaluator(
+    model_name="xFinder-qwen1505",   # Model name
+    inference_mode="api",            # Inference mode, 'local' or 'api'
+    model_path_or_url="http://your-anonymized-url/generate",  # Anonymized model path or URL
+)
+# Perform batch evaluation
+data_path = "/path/to/your/data/example.json"  # User needs to provide their own data path
+accuracy = evaluator.evaluate(data_path)
+
+print(f"Batch evaluation accuracy: {accuracy}")
+```
+</details>
+
+<details><summary>📄 Single-Instance Evaluation Mode
+
+This method allows you to evaluate individual examples, which can be integrated into a LLM evaluation framework.</summary>
+
+```python
+# Initialize Evaluator object
+evaluator = Evaluator(
+    model_name="xFinder-qwen1505",   # Model name
+    inference_mode="local",            # Inference mode, 'local' or 'api'
+    model_path_or_url="IAAR-Shanghai/xFinder-qwen1505",  # Anonymized model path or URL
+)
+# Define input for a single evaluation
+question = "What is the capital of France?"
+llm_output = "The capital of France is Paris."
+standard_answer_range = "[\"Paris\", \"Lyon\", \"Marseille\"]"
+key_answer_type = "short_text"
+correct_answer = "Paris"
+# Perform single example evaluation
+result = evaluator.evaluate_single_example(
+    question,
+    llm_output,
+    standard_answer_range,
+    key_answer_type,
+    correct_answer
+)
+```
+</details>
+
+> \[!Tip\]
+> - Refer to [`demo.ipynb`](demo.ipynb) for more detailed examples.
+> - Run `export HF_ENDPOINT=https://hf-mirror.com` to use the Chinese mirror if you cannot connect to Hugging Face.
+> - xFinder currently supports loading via the API method deployed by [vllm](https://docs.vllm.ai/en/v0.6.0/getting_started/quickstart.html).
+> - We provide scripts for fine-tuning xFinder in [xfinder_training](./scripts/xfinder_training/).
+
+## Examples: RegEx vs. xFinder
+We demonstrate instances across four types of questions where RegEx fails to extract or frequently extracts incorrect answers, whereas xFinder accurately extracts the key answers.
+```json
+{
+    "key_answer_type": "alphabet option",
+    "question": "A man is seen playing guitar on a stage with others playing instruments behind him. The man grabs a guitar from the audience and begins playing both one after the other ...",
+    "llm_output": "Option A is the correct choice as it describes ...",
+    "standard_answer_range": "[['A', 'strums the guitar in the end, continues playing the guitar with the crowd following him as well as lining up next to him.'], ['B', 'continues playing the instruments and ends by waving to the crowd and walking off stage.'], ['C', 'then turns to the audience and gives a stuffed toy to the audience and continues playing.'], ['D', 'finally stops playing and moves his hands for the crowd to see.']]",
+    "gold_label": "A",
+    "xFinder_output": "A",
+},
+{
+    "key_answer_type": "short text",
+    "question": "If you really wanted a grape, where would you go to get it? Answer Choices: winery / fruit stand / field / kitchen / food",
+    "llm_output": "The answer is winery / fruit stand / field / kitchen / food ...",
+    "standard_answer_range": "[\"winery\", \"fruit stand\", \"field\", \"kitchen\", \"food\"]",
+    "gold_label": "[No valid answer]",
+    "xFinder_output": "[No valid answer]",
+},
+{
+    "key_answer_type": "categorical label",
+    "question": "How tall is the Sears Building ?",
+    "llm_output": "The Sears Building is a specific structure, so the answer would be a Location ...",
+    "standard_answer_range": "['Abbreviation', 'Entity', 'Description', 'Person', 'Location', 'Number']",
+    "gold_label": "Location",
+    "xFinder_output": "Location",
+},
+{
+    "key_answer_type": "math",
+    "question": " Mike made 69 dollars mowing lawns over the summer. If he spent 24 dollars buying new mower blades, how many 5 dollar games could he buy with the money he had left? ",
+    "llm_output": "To find out how many 5 dollar ... Let's calculate that:\n\n$45 / $5 = 9\n\nSo, Mike could buy 9 5 dollar games with the money he had left.",
+    "standard_answer_range": "a(n) number / set / vector / matrix / interval / expression / function / equation / inequality",
+    "gold_label": "9",
+    "xFinder_output": "9",
+}
+```
+## Results of Extraction Accuracy
+**Baseline**: OpenCompass, LM Eval Harness, UltraEval, GPT-4.
+**Our Method**: xFinder-qwen1505, xFinder-qwen1518, xFinder-gemma7, xFinder-chatglm36base, xFinder-llama38, xFinder-llama38it.
+
+We evaluated their accuracy in extracting key answers from both the KAF test set and generalization sets. The metric in the table is accuracy.
+<div align="center">
+    <img src="https://raw.githubusercontent.com/IAAR-Shanghai/xFinder/main/assets/test-result.png" alt="xFinder" width="93%">
+</div>
+<div align="center">
+    <img src="https://raw.githubusercontent.com/IAAR-Shanghai/xFinder/main/assets/generalization-result.png" alt="xFinder" width="93%">
+</div>
+
+## Citation
+```
+@article{xFinder,
+      title={xFinder: Robust and Pinpoint Answer Extraction for Large Language Models}, 
+      author={Qingchen Yu and Zifan Zheng and Shichao Song and Zhiyu Li and Feiyu Xiong and Bo Tang and Ding Chen},
+      journal={arXiv preprint arXiv:2405.11874},
+      year={2024},
+}
+```
+
+## TODOs
+<details><summary>Click me to show all TODOs</summary>
+
+- [ ] feat: support quick replacement of RegEx in OpenCompass. 
+- [ ] feat: add additional example datasets to the xfinder PyPI package.
+- [ ] feat: add model loading methods.
+- [ ] docs: extend dataset construction documents.
+- [ ] docs: add video tutorial.
+
+</details>
+
+## Star Trends
+
+<a href="https://star-history.com/#IAAR-Shanghai/xFinder&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=IAAR-Shanghai/xFinder&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=IAAR-Shanghai/xFinder&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=IAAR-Shanghai/xFinder&type=Date" />
+ </picture>
+</a>
+
+<p align="right"><a href="#top">🔝Back to top</a></p>
