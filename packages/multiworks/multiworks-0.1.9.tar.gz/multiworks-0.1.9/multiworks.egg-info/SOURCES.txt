@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+multiworks.egg-info/PKG-INFO
+multiworks.egg-info/SOURCES.txt
+multiworks.egg-info/dependency_links.txt
+multiworks.egg-info/top_level.txt
