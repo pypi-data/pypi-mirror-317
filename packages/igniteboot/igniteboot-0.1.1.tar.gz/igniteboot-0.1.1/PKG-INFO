@@ -1,0 +1,153 @@
+Metadata-Version: 2.1
+Name: igniteboot
+Version: 0.1.1
+Summary: A lightweight and modular Python backend framework
+Home-page: https://github.com/m3r0n9/igniteboot
+Author: m3r0n9
+Author-email: your-email@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: sqlalchemy
+Requires-Dist: jinja2
+Requires-Dist: pyyaml
+
+# IgniteBoot Framework Documentation
+
+IgniteBoot is a lightweight and modular Python backend framework designed to simplify web application development. It provides support for routing, database modeling, session management, authentication, and plugin-based extensibility.
+
+## Table of Contents
+
+1. [Installation](#installation)
+2. [Getting Started](#getting-started)
+3. [Core Features](#core-features)
+    - [Routing](#routing)
+    - [Database Modeling](#database-modeling)
+    - [Session Management](#session-management)
+    - [Authentication](#authentication)
+    - [Plugins](#plugins)
+    - [Events](#events)
+4. [Configuration](#configuration)
+5. [CLI Commands](#cli-commands)
+6. [License](#license)
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/m3r0n9/igniteboot.git
+   cd igniteboot
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+https://github.com/m3r0n9/igniteboot/blob/main/README.md
+## Getting Started
+
+### Initialize the Project
+
+Create a new project and generate a configuration file:
+
+```bash
+python -m ignite.cli init
+```
+
+This creates a default `ignite.yaml` configuration file in your project directory:
+
+```yaml
+DEBUG: true
+DATABASE_URL: "sqlite:///ignite.db"
+JWT_SECRET: "ignite-jwt-secret"
+plugins_folder: "plugins"
+```
+
+### Run the Server
+
+Start the server using the CLI:
+
+```bash
+python -m ignite.cli runserver
+```
+
+The server will start on `http://127.0.0.1:8000` by default.
+
+---
+
+## Core Features
+
+### Routing
+
+Define routes in your application using the `Router` class.
+
+### Database Modeling
+
+Define database models using the `Model` class.
+
+### Session Management
+
+Manage sessions with the `SessionManager`.
+
+### Authentication
+
+Handle JWT-based authentication.
+
+### Plugins
+
+Add custom functionality using the `PluginManager`.
+
+### Events
+
+Use the event-driven system for decoupled logic.
+
+---
+
+## Configuration
+
+Edit the `ignite.yaml` file to customize settings:
+
+```yaml
+DEBUG: true
+DATABASE_URL: "sqlite:///ignite.db"
+JWT_SECRET: "your-secret-key"
+PLUGINS_FOLDER: "plugins"
+```
+
+---
+
+## CLI Commands
+
+### Initialize Configuration
+
+```bash
+python -m ignite.cli init
+```
+
+### Start the Server
+
+```bash
+python -m ignite.cli runserver
+```
+
+### Database Management
+
+```bash
+python -m ignite.cli db sync
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
