@@ -1,0 +1,17 @@
+setup.py
+vuud2/__init__.py
+vuud2/auth.py
+vuud2/core.py
+vuud2/create.py
+vuud2/db.py
+vuud2/fr.py
+vuud2/frau.py
+vuud2/frshow.py
+vuud2/main.py
+vuud2/models.py
+vuud2/rout.py
+vuud2/schemas.py
+vuud2.egg-info/PKG-INFO
+vuud2.egg-info/SOURCES.txt
+vuud2.egg-info/dependency_links.txt
+vuud2.egg-info/top_level.txt
