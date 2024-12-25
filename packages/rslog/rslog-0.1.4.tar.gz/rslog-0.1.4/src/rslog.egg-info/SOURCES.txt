@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/rslog/__init__.py
+src/rslog/rslog.py
+src/rslog/special_strings.py
+src/rslog.egg-info/PKG-INFO
+src/rslog.egg-info/SOURCES.txt
+src/rslog.egg-info/dependency_links.txt
+src/rslog.egg-info/top_level.txt
+tests/test_rslog.py
