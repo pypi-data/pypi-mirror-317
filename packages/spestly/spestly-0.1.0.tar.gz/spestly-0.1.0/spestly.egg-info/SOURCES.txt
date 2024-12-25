@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+spestly/__init__.py
+spestly/odysseyxl.py
+spestly.egg-info/PKG-INFO
+spestly.egg-info/SOURCES.txt
+spestly.egg-info/dependency_links.txt
+spestly.egg-info/requires.txt
+spestly.egg-info/top_level.txt
