@@ -1,0 +1,7 @@
+{
+  "name": "Gallagher Odoo",
+  "domain": "gallagher_odoo",
+  "version": "0.1.0",
+  "description": "Plugin to push entry/exit events from Gallagher to Odoo",
+  "dependencies": ["gallagher_rest", "odoo"]
+}

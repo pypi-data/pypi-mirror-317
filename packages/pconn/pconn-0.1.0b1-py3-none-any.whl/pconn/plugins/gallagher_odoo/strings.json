@@ -1,0 +1,24 @@
+{
+  "config": {
+    "step": {
+      "init": {
+        "description": "To setup Gallagher Odoo plugin we need to step {platforms}."
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "gll_unique_pdf": "Gallagher unique personal field",
+          "odoo_unique_field": "Odoo unique field identifier",
+          "one_reader_doors": "Gallagher doors with entry reader only",
+          "two_reader_doors": "Gallagher doors with entry and exit readers"
+        }
+      }
+    }
+  },
+  "create_entry": {
+    "description": "Gallagher Odoo plugin has been successfully configured."
+  }
+}

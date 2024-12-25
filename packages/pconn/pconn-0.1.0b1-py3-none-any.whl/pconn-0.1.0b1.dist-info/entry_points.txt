@@ -1,0 +1,3 @@
+[console_scripts]
+pconn=pconn.__main__:run_server
+

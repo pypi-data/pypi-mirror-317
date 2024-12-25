@@ -1,0 +1,8 @@
+{
+  "name": "BACnet Emulator",
+  "domain": "bacnet_emulator",
+  "version": "0.1.0",
+  "description": "BACnet Emulator platform",
+  "interface_type": "platform",
+  "requirements": ["bac0==23.7.3"]
+}

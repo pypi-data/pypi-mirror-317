@@ -1,0 +1,7 @@
+{
+  "name": "Gallagher BACnet Emulator",
+  "domain": "gallagher_bacnet_emulator",
+  "version": "0.1.0",
+  "description": "Present Gallagher items as BACnet objects",
+  "dependencies": ["gallagher_rest", "bacnet_emulator"]
+}

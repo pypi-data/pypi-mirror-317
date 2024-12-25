@@ -1,0 +1,21 @@
+{
+  "config": {
+    "step": {
+      "init": {
+        "data": {
+          "protocol": "Protocol",
+          "host": "Host",
+          "port": "Port",
+          "db": "Database name",
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    }
+  },
+  "error": {
+    "auth_error": "Invalid username or password",
+    "db_error": "Invalid database name",
+    "cannot_connect": "Connection error. Check host and port"
+  }
+}

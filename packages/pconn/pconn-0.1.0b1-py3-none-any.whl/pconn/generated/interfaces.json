@@ -1,0 +1,50 @@
+{
+    "ai_analyzer": {
+        "description": "This is a platform for gemini ai",
+        "interface_type": "platform",
+        "name": "AI Analyzer",
+        "version": "0.1.0"
+    },
+    "bacnet_emulator": {
+        "description": "BACnet Emulator platform",
+        "interface_type": "platform",
+        "name": "BACnet Emulator",
+        "version": "0.1.0"
+    },
+    "gallagher_ai_analyzer": {
+        "description": "Analyze data extracted from Gallagher system.",
+        "interface_type": "plugin",
+        "name": "Gallagher AI Analyzer",
+        "version": "0.1.0"
+    },
+    "gallagher_bacnet_emulator": {
+        "description": "Present Gallagher items as BACnet objects",
+        "interface_type": "plugin",
+        "name": "Gallagher BACnet Emulator",
+        "version": "0.1.0"
+    },
+    "gallagher_demo": {
+        "description": "This is a demo plugin that displays cardholder personal fields",
+        "interface_type": "plugin",
+        "name": "Gallagher Demo",
+        "version": "0.1.0"
+    },
+    "gallagher_odoo": {
+        "description": "Plugin to push entry/exit events from Gallagher to Odoo",
+        "interface_type": "plugin",
+        "name": "Gallagher Odoo",
+        "version": "0.1.0"
+    },
+    "gallagher_rest": {
+        "description": "This is a platform for Gallagher REST api",
+        "interface_type": "platform",
+        "name": "Gallagher REST platform",
+        "version": "0.1.0"
+    },
+    "odoo": {
+        "description": "Odoo platform to connect to Odoo instance.",
+        "interface_type": "platform",
+        "name": "Odoo",
+        "version": "0.1.0"
+    }
+}

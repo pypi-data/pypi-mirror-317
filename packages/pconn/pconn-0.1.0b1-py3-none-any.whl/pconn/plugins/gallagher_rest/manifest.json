@@ -1,0 +1,8 @@
+{
+  "name": "Gallagher REST platform",
+  "domain": "gallagher_rest",
+  "version": "0.1.0",
+  "description": "This is a platform for Gallagher REST api",
+  "interface_type": "platform",
+  "requirements": ["gallagher-restapi==1.1.3"]
+}

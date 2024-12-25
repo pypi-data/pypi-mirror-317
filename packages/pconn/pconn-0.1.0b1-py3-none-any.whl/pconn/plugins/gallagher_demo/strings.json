@@ -1,0 +1,21 @@
+{
+  "config": {
+    "step": {
+      "init": {
+        "description": "To setup Gallagher Demo plugin we need to step {platforms}."
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "photo_pdf": "Select cardholder photo field"
+        }
+      }
+    }
+  },
+  "create_entry": {
+    "description": "Gallagher Demo plugin has been successfully configured."
+  }
+}

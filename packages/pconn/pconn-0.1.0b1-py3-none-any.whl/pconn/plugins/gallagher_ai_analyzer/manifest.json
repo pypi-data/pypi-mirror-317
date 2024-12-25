@@ -1,0 +1,7 @@
+{
+  "name": "Gallagher AI Analyzer",
+  "domain": "gallagher_ai_analyzer",
+  "version": "0.1.0",
+  "description": "Analyze data extracted from Gallagher system.",
+  "dependencies": ["gallagher_rest", "ai_analyzer"]
+}

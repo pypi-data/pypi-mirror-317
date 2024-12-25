@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "init": {
+        "description": "We need to step {platforms}."
+      },
+      "user": {
+        "data": {}
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "description": "Select the type of data that can be exposed to the AI.",
+        "data": {
+          "data_types": "Data types"
+        }
+      }
+    }
+  },
+  "create_entry": {
+    "description": "Gallagher AI Analyzer has been successfully configured."
+  }
+}

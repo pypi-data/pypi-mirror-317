@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "init": {
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "id": "BACnet device ID",
+          "bbmd_address": "BBMD address"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "controllers": "Expose controllers as bacnet points",
+          "inputs": "Expose inputs as bacnet points",
+          "outputs": "Expose outputs as bacnet points"
+        }
+      }
+    }
+  },
+  "error": {
+    "cannot_connect": "Connection error. Check host and port"
+  },
+  "abort": {
+    "gallagher_connection_error": "Unable to connect to Gallagher server to complete the setup",
+    "single_instance_allowed": "Already configured. Only a single configuration possible."
+  }
+}
