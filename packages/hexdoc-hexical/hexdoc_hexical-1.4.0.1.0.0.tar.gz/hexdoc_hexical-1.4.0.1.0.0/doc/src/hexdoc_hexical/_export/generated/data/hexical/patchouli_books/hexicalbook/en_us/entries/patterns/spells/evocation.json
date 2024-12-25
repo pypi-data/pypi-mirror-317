@@ -1,0 +1,38 @@
+{
+	"name": "hexical.page.evocation.title",
+	"icon": "minecraft:totem_of_undying",
+	"category": "hexcasting:patterns/spells",
+	"advancement": "hexcasting:enlightenment",
+	"entry_color": "54398a",
+	"sortnum": 30,
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "hexical.page.evocation.0"
+		}, {
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:internalize_hex",
+			"anchor": "hexical:internalize_hex",
+			"input": "list of patterns",
+			"output": "",
+			"text": "hexical.page.internalize_hex.summary"
+		}, {
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:is_evoking",
+			"anchor": "hexical:is_evoking",
+			"input": "",
+			"output": "number",
+			"text": "hexical.page.is_evoking.summary"
+		}, {
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:with_evocation",
+			"anchor": "hexical:with_evocation",
+			"input": "",
+			"output": "boolean",
+			"text": "hexical.page.with_evocation.summary"
+		}, {
+			"type": "patchouli:text",
+			"text": "hexical.page.evocation.1"
+		}
+	]
+}

@@ -1,0 +1,37 @@
+{
+	"name": "hexical.page.meshes.title",
+	"icon": "minecraft:cobweb",
+	"category": "hexcasting:patterns/great_spells",
+	"advancement": "hexcasting:root",
+	"sortnum": 17,
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "hexical.page.meshes.0"
+		}, {
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:conjure_mesh",
+			"anchor": "hexical:conjure_mesh",
+			"input": "vector",
+			"output": "entity",
+			"text": "hexical.page.conjure_mesh.summary"
+		}, {
+			"type": "patchouli:text",
+			"text": "hexical.page.meshes.1"
+		}, {
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:weave_mesh",
+			"anchor": "hexical:weave_mesh",
+			"input": "entity, list of vectors",
+			"output": "",
+			"text": "hexical.page.weave_mesh.summary"
+		}, {
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:read_mesh",
+			"anchor": "hexical:read_mesh",
+			"input": "entity",
+			"output": "list of vectors",
+			"text": "hexical.page.read_mesh.summary"
+		}
+	]
+}
