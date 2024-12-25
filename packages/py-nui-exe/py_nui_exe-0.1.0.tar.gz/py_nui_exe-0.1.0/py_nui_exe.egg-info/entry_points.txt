@@ -1,0 +1,2 @@
+[console_scripts]
+py-nui-exe = Build_Python_To_exe_for_Clung.app:main
