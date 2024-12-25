@@ -1,0 +1,2 @@
+[console_scripts]
+kompozit = kompozit.kompozit:main
