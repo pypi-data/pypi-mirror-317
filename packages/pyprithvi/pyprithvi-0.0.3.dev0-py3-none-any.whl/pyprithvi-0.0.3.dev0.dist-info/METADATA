@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyprithvi
+Version: 0.0.3.dev0
+Summary: PyPrithvi API
+Home-page: https://github.com/deepforestsci/chiron
+Maintainer: Deep Forest Sciences
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: requests-toolbelt
+
+UNKNOWN
+
