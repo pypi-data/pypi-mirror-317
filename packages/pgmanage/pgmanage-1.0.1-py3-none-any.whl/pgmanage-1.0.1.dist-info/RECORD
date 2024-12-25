@@ -1,0 +1,12 @@
+pgmanage/__init__.py,sha256=drdgO3JCw-1s_p2Wd2fVrOzSe0wIZjRss22ueODGUJI,176
+pgmanage/connect.py,sha256=5S78l0DkHoT2tflqd2JTpPA47f4FV32mtjbRiy1GMkA,1140
+pgmanage/connect_async.py,sha256=qvQJ_jsHUzDBepj4RiJ7bGNH61nQTN8U4rkF9qgesfI,3566
+pgmanage/dbtool.py,sha256=PYXtfmEvPbvnCRgSb7mhiJAghQcZzZ60UDJ_V3Syxns,12305
+pgmanage/test.py,sha256=SrFrrGX-GtjQGHpGuwUsw9IFlP9kM3gaIeQhetr6CqU,739
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/main.py,sha256=a44wZFd0Uh-dq07pTG8_5-JggxgRk7ENwR8XHN8mXM4,1444
+pgmanage-1.0.1.dist-info/LICENSE,sha256=XSvtcrKVUiuUFjMkfG9j3uejIjZQY17bVdkVb4Ztxlk,9441
+pgmanage-1.0.1.dist-info/METADATA,sha256=v3MHFMwPX960wFmP3lhm2jZnwcwlcrHOFkuOMGMXvvI,2359
+pgmanage-1.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pgmanage-1.0.1.dist-info/top_level.txt,sha256=o8ffae0lgPTE9rLN0uoCRerbh359DfdiEtOgC1sNWAg,14
+pgmanage-1.0.1.dist-info/RECORD,,
