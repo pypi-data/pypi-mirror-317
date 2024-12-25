@@ -1,0 +1,2 @@
+[console_scripts]
+metasnake = main:main
