@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: imglite
+Version: 0.0.5
+Summary: A SQLite-based multi-image storage specification and associated utilities.
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm>=4.67.1
+
+# imglite
+
+A SQLite-based multi-image storage specification and associated utilities.

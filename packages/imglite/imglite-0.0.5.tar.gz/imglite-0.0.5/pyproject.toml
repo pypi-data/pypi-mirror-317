@@ -1,0 +1,12 @@
+[project]
+name = "imglite"
+version = "0.0.5"
+description = "A SQLite-based multi-image storage specification and associated utilities."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "tqdm>=4.67.1",
+]
+
+[project.scripts]
+imglite = "imglite.cli:cli"
