@@ -1,0 +1,11 @@
+jira2py/__init__.py,sha256=sEVLWo1u3OgLF29zFe8NieVwJ8I8ES4ZcKRn2HpL2qo,23
+jira2py/fields.py,sha256=aPWHN_sgHvWLkKJ05ByexUmncQrG8kfppL6BCKOvsGs,197
+jira2py/issue.py,sha256=GWfifBQ9E1zOnuSkm6XjVqgHHOtZUk1syjgxXPRL2So,1302
+jira2py/jira.py,sha256=63IkHKhEtooCLF8ewkieXa_0I8MpQg_x19sWlhlgD-U,707
+jira2py/jirabase.py,sha256=Mr_uTYshuCR024CbvS_aV-RL5NWojxjMlNTJ-UcoZwE,1219
+jira2py/search.py,sha256=mKjm7SszAGcZwmgzzk6tpX15ovAulfiNzG2G_2rrgFU,649
+jira2py-0.1.0.dist-info/LICENSE,sha256=K7o8BNp8t38hcS7p4CZriBaJ_khv7xBRE1qTtnV8m1A,1062
+jira2py-0.1.0.dist-info/METADATA,sha256=gxFsm7txMSwfhRgKUhBmn8TJeamz2RKnC3s8QhurohA,1193
+jira2py-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jira2py-0.1.0.dist-info/top_level.txt,sha256=8nE25Fhd1IQGWrXoZHSKPI3CBRvY65m0MHNXYM08aJE,8
+jira2py-0.1.0.dist-info/RECORD,,
