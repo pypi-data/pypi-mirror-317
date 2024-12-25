@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+mynewlib1/__init__.py
+mynewlib1.egg-info/PKG-INFO
+mynewlib1.egg-info/SOURCES.txt
+mynewlib1.egg-info/dependency_links.txt
+mynewlib1.egg-info/top_level.txt
+mynewlib1/math/__init__.py
+mynewlib1/math/operations.py
+mynewlib1/str_op/__init__.py
+mynewlib1/str_op/strop.py
