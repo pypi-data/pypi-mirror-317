@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: whatsappchattodf
+Version: 0.1.0
+Summary: Convert WhatsApp chat logs (.txt) to a pandas DataFrame.
+Home-page: https://github.com/kartheekpnsn/whatsappchattodf
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=1.0.0
+
+# WhatsappChatToDF
+
+`WhatsappChatToDF` is a Python library that converts WhatsApp chat logs into a pandas DataFrame for analysis.
+
+## Installation
+
+```bash
+pip install whatsappchattodf
+```
+
+```python
+from whatsappchattodf import WhatsappChatToDF
+
+chat_to_df = WhatsappChatToDF("path_to_whatsapp_chat.txt")
+df = chat_to_df.run()
+print(df)
+```
