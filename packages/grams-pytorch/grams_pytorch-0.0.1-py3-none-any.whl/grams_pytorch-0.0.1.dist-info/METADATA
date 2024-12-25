@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: grams-pytorch
+Version: 0.0.1
+Summary: "Grams: Gradient Descent with Adaptive Momentum Scaling" implementation.
+Author-email: Yang Cao <gunale0926@hotmail.com>
+Project-URL: Homepage, https://github.com/Gunale0926/Grams/
+Project-URL: Issues, https://github.com/Gunale0926/Grams/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: torch>=1.8.0
