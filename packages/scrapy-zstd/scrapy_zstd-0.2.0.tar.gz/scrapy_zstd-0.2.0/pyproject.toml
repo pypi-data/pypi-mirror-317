@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scrapy-zstd"
+dynamic = ["version"]
+description = "A Scrapy plugin to compress feeds with Zstandard (zstd)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Shun Takebayashi" },
+]
+classifiers = [
+  "Framework :: Scrapy",
+]
+dependencies = [
+  "zstandard",
+]
+
+[project.urls]
+Homepage = "https://github.com/takebayashi/scrapy-zstd"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.envs.default]
+python = "3.9"
+dependencies = [
+  "black==24.2.0",
+  "docformatter[tomli]",
+  "isort==5.13.2",
+  "mypy==1.9.0",
+  "ruff==0.3.2",
+  "pytest==8.1.1",
+  "mkdocs==1.6.1",
+]
+
+[tool.hatch.envs.default.scripts]
+format = "black . && docformatter --in-place -r . && isort ."
+lint = "black --check . && isort --check . && mypy . && ruff check ."
+test = "pytest"
+
+[[tool.hatch.envs.ci.matrix]]
+python = ["3.9", "3.10", "3.11", "3.12", "3.13"]
+
+[tool.black]
+
+[tool.docformatter]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+strict = true
+disallow_untyped_calls = false
+ignore_missing_imports = true
+
+[tool.ruff.lint]
+select = ["F"]
