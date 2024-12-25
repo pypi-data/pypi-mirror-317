@@ -1,0 +1,9 @@
+cgcnn2/__init__.py,sha256=ulMt73_vDxCgLK_4Dax7_oECQaSk1UyivF3Eb-hoPLg,104
+cgcnn2/cgcnn_data.py,sha256=H_3kSN1_XUywj4SY2zDVEucIWEf7Vlhznbs_TlN2F0A,13433
+cgcnn2/cgcnn_ft.py,sha256=eQTDaYbO850woTl1lLjgNOaMAZgJVbP8zFKeCvGe4no,13432
+cgcnn2/cgcnn_model.py,sha256=rEPZpWsgkcWOmTPqxVqRa6zzhdqJrWAa8TTbKuuU9kQ,12260
+cgcnn2/cgcnn_utils.py,sha256=nVnTgt21bkkbWU21RnAp3vGgItH3avkYftNummQ0i98,15477
+cgcnn2-0.1.8.dist-info/METADATA,sha256=vx_boOQH89BbTgWSRjJIHtfzqUP4a0Kd-1ScHQbUOkY,2809
+cgcnn2-0.1.8.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+cgcnn2-0.1.8.dist-info/entry_points.txt,sha256=9Azjty1VijTrjkd7hzJNm6-rJSKNlyLxkBchngTnKow,49
+cgcnn2-0.1.8.dist-info/RECORD,,
