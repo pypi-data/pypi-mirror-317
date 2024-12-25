@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: form-validator
+Version: 1.1.0
+Summary: A Python package for validating forms.
+Home-page: https://github.com/your_username/form-validator
+Author: Your Name
+Author-email: your_email@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Form Validator
+
+A Python package for validating forms. It supports:
+- Email validation
+- Password strength check
+- Mobile number validation
+- Age validation (18+)
+
+## Installation
+
+```bash
+pip install form-validator
