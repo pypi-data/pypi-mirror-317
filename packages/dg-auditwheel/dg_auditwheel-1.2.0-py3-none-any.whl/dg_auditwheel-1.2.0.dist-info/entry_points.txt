@@ -1,0 +1,2 @@
+[console_scripts]
+dg_auditwheel = dg_auditwheel.main:main
