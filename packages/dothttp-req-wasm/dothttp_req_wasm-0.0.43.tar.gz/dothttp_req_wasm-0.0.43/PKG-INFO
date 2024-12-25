@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: dothttp-req-wasm
+Version: 0.0.43
+Summary: Dothttp is Simple http client for testing and development
+License: MIT
+Author: Prasanth
+Author-email: kesavarapu.siva@gmail.com
+Requires-Python: >=3.8,<3.14
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pyyaml (==6.0.2)
+Requires-Dist: requests (==2.32.3)
+Requires-Dist: textx (==4.1.0)
+Requires-Dist: toml (==0.10.2)
+Project-URL: Bug Tracker, https://github.com/cedric05/dothttp-wasm
+Description-Content-Type: text/markdown
+
+Please refer [dothttp](https://github.com/cedric05/dothttp-wasm) for more information.
+
