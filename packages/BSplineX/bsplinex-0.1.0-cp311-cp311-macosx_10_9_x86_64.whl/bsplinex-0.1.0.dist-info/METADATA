@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: BSplineX
+Version: 0.1.0
+Summary: The B-Spline library you have always dreamed of were performance and easy-to-use interfaces live in harmony.
+Author: Sebastiano Taddei, Gabriele Masina
+Requires-Python: >=3.7
+Provides-Extra: examples
+Requires-Dist: matplotlib; extra == "examples"
+Requires-Dist: numpy; extra == "examples"
+Description-Content-Type: text/markdown
+
+# BSplineX Python bindings
+
+You read it correctly, we also have Python bindings!
+
+Install
+
+```bash
+pip install -e .
+```
+
+Install with examples dependencies
+
+```bash
+pip install -e ".[examples]"
+```
+
