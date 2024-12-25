@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "zhenxun-db-client"
+version = "0.1.2"
+description = ""
+authors = ["HibiKier <775757368@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+nonebot2 = "^2.3.3"
+tortoise-orm = "^0.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
