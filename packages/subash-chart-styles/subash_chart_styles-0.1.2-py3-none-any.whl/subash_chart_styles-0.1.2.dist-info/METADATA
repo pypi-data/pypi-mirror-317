@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: subash_chart_styles
+Version: 0.1.2
+Summary: A Python package for generating styled market cap charts
+Home-page: https://github.com/yourusername/subash_chart_styles
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: psycopg2
+Requires-Dist: slugify
+
+# subash_chart_styles
+
+`subash_chart_styles` is a Python package that helps generate styled market capitalization charts. It simplifies the process of fetching stock data from PostgreSQL, formatting it, and displaying it as interactive charts with custom styling.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install subash_chart_styles
