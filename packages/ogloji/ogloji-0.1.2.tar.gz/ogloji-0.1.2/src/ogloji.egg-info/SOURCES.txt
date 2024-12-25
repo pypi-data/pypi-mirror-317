@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/ogloji/__init__.py
+src/ogloji.egg-info/PKG-INFO
+src/ogloji.egg-info/SOURCES.txt
+src/ogloji.egg-info/dependency_links.txt
+src/ogloji.egg-info/entry_points.txt
+src/ogloji.egg-info/requires.txt
+src/ogloji.egg-info/top_level.txt
+tests/test_e2e.py
+tests/test_eviction.py
