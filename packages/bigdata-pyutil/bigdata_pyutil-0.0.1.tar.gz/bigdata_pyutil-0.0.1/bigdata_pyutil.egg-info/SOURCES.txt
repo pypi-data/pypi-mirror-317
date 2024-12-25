@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+apollo_utils/__init__.py
+apollo_utils/apollo_utils.py
+bigdata_pyutil.egg-info/PKG-INFO
+bigdata_pyutil.egg-info/SOURCES.txt
+bigdata_pyutil.egg-info/dependency_links.txt
+bigdata_pyutil.egg-info/top_level.txt
