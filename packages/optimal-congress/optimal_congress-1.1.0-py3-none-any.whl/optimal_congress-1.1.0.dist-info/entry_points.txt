@@ -1,0 +1,3 @@
+[console_scripts]
+optimal-congress=optimal_congress.cli:app
+
