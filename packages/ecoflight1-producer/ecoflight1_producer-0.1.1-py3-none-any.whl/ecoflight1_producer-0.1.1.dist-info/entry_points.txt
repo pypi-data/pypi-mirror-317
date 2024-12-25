@@ -1,0 +1,4 @@
+[console_scripts]
+run-noise=refactor_app.noise_main:main
+run-record=refactor_app.audio_main:main
+
