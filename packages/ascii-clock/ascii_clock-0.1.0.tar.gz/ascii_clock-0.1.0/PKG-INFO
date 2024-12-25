@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ascii-clock
+Version: 0.1.0
+Summary: A simple ASCII art clock for the terminal
+Author: DynaDino
+Author-email: 1725356000@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+#以上代码实现了一个 ASCII 模拟时钟。它每秒钟更新一次，清晰地显示小时、分钟和秒针的位置，且可以动态刷新终端屏幕来显示时间的变化。运行该程序后，您将看到终端中的一个动态更新的模拟时钟，带有清晰的时间指示符，非常适合作为一个有趣的、实时的项目展示！
