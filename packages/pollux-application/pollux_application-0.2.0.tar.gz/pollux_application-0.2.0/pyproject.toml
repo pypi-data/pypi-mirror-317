@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "pollux-application"
+version = "0.2.0"
+description = "Core application library of the POLLUX Digital Twin"
+authors = ["Demetris Palochis <demetris.palochis@tno.nl>"]
+readme = "README.md"
+packages = [{include = "pollux_application"}]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+homepage = "https://tno.nl"
+documentation = "https://readthedocs.org"
+repository = "https://github.com/pollux-Digital-Twin/pollux-application"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^8.2.2"
+pytest-cov = "^5.0.0"
+flake8 = "^7.0.0"
+numpy = "^1.26.4"
+matplotlib = "^3.9.2"
+pollux_model = "^0.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
