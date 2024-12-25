@@ -1,0 +1,12 @@
+kiwisolver-1.4.8.dist-info/METADATA,sha256=0Pgo9P4TzYYWoJzpAHSJdRkx3deeeyJDAdTfu_jccW4,6187
+kiwisolver-1.4.8.dist-info/RECORD,,
+kiwisolver-1.4.8.dist-info/top_level.txt,sha256=xqwWj7oSHlpIjcw2QMJb8puTFPdjDBO78AZp9gjTh9c,11
+kiwisolver-1.4.8.dist-info/WHEEL,sha256=FGeG7sFo8M64IubbZGZzLj2sNeJ7CJOvchlvKlE2SQQ,111
+kiwisolver-1.4.8.dist-info/LICENSE,sha256=I45pkG1-UHqUgyuYMRMYYsQXbVjAArOI4umdtdg2d9I,3289
+kiwisolver/exceptions.py,sha256=haGECAifFjVqwT5esQ1sEiqsajW6Jydip16ieHPeL04,1242
+kiwisolver/_cext.cpython-312-s390x-linux-musl.so,sha256=uEoiejRBy2pmvh5BUeO2LvgLERhb24yYXYLHI_I8qmg,4049193
+kiwisolver/_cext.pyi,sha256=gVh6qcWL7gX5Ys-avWKPBOZKrnjC05JnQddCF4WLOAs,8659
+kiwisolver/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kiwisolver/__init__.py,sha256=tgrKeo2a6vloiqZn1GTGwUNe3YPpG6-cWzKxyDzFO1E,1013
+kiwisolver.libs/libgcc_s-cc682e25.so.1,sha256=MXAAFU4gRZS_a9ruTH0ST0Ur1tvuDyuWnsKOnuXaBqk,85209
+kiwisolver.libs/libstdc++-d6e52cb7.so.6.0.32,sha256=GBn1jRDeVuJegGVVC5Vi8bA_YqUPkiBaIarPswQFnrw,3907569
