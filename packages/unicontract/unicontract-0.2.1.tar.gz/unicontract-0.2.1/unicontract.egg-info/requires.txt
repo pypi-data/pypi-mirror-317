@@ -1,0 +1,7 @@
+antlr4-python3-runtime==4.13.2
+jsondiff>=2.2.1
+PyYAML>=6.0.2
+argparse>=1.4.0
+clr-loader>=0.2.6
+pythonnet>=3.0.4
+setuptools>=75.6.0
