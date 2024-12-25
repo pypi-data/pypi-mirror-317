@@ -1,0 +1,9 @@
+form_validator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+form_validator/validator.py,sha256=WkfaqyaOXFo3kV-AL8QIsLwzG2XE9I26WI5c7vrmnOQ,828
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_validator.py,sha256=bmUjEk_6ZBq-XeLvKIK-3ZkuOo2Tv4Lm7MYM8XAtDDE,795
+form_validator-1.2.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+form_validator-1.2.0.dist-info/METADATA,sha256=-u5Bw9EPXwav4VHy-115nfyFKTZF2bvk4LgLyOXqwgs,723
+form_validator-1.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+form_validator-1.2.0.dist-info/top_level.txt,sha256=fokDdl15bhCww0IxLoAlUB2DGYYqvBTisckzZuho8b8,21
+form_validator-1.2.0.dist-info/RECORD,,
