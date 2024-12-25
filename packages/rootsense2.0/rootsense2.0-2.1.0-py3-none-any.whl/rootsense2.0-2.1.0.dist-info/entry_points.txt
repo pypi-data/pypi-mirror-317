@@ -1,0 +1,2 @@
+[console_scripts]
+rootsense2 = rootsense2.threading:main
