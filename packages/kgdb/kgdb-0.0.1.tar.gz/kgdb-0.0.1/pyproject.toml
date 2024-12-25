@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "kgdb"
+version = "0.0.1"
+description = "linux kernel gdb tool"
+authors = ["luzhixing12345 <luzhixing12345@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+kgdb = 'kgdb.main:main'
