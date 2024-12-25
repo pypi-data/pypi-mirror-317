@@ -1,0 +1,2 @@
+[console_scripts]
+pipelineer = pipelineer.cli:main
