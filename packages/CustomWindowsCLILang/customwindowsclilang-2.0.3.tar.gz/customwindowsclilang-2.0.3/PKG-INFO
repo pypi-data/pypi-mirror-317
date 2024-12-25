@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: CustomWindowsCLILang
+Version: 2.0.3
+Summary: A custom CLI language for managing Windows tasks
+Author: vinit
+Author-email: vineetp6@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+License-File: LICENSE

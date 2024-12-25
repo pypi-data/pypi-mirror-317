@@ -1,0 +1,2 @@
+[console_scripts]
+open = core.cli_interpreter:main
