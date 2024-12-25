@@ -1,0 +1,12 @@
+quote_module/__init__.py,sha256=6at-UZbAryJ_BlfALW7d3J4vNggtDN3t3SiZXFeytY4,861
+quote_module/libquote_module.so,sha256=Txip7hX49-Ff_J2KpSnG1JPABcBwopm-TQUBFU3WZog,68664
+quote_module/pcap_file_offline_reader.c,sha256=up_32jBzltSjIq9FSTgeY59dELmwrImUS570fRNSC4s,13837
+quote_module/quote_module.py,sha256=oZiJYxM-7Mdwm8cRPfkIXwUOC1eXeilj63kMeUCxr44,12791
+quote_module/quote_parser.c,sha256=IoYb0XZnawEF9lyOhS562Tl4w3TywJq-pBi7Z85lcQ8,7264
+quote_module/test.py,sha256=2S8QKyPuq-pRA2pW__p6CAF3300kdVFPM0wF9suqFRo,1055
+quote_module/utils.c,sha256=oTp2Dlx_PWheWlnNbHLN9eINOgoSz6M5KjKD0m1KtSs,3170
+quote_module/utils.h,sha256=93XVUj90f1hKlUcrIFOmUdrFaC6kDmn-vTnWQpXBPec,1578
+quote_module-0.0.17.dist-info/METADATA,sha256=z5hXa7XJ4mwLmNaBPthgE4chMTiYUcg9imglBVoIoUI,790
+quote_module-0.0.17.dist-info/WHEEL,sha256=IQdXYDqlAke4DNoOlIOLClqL8yZff2phK1Xbp4xyBaw,113
+quote_module-0.0.17.dist-info/top_level.txt,sha256=5xZXdF5tzcOdcoPiOyh1Bl8vaasUX8_97uHtG0ZiTaE,23
+quote_module-0.0.17.dist-info/RECORD,,
