@@ -1,0 +1,9 @@
+lr_autotag/Foundation List 2.0.1.txt,sha256=2R1PBIlDpMfS9ZxGZWSu4GwzW0HUckCufE_RmY4Jzwk,21240
+lr_autotag/__init__.py,sha256=px8CU-8JYS8UESSe7YKVdPROEu-Ir9B7kMSSDomVAIQ,56
+lr_autotag/cli.py,sha256=islzXuJYkYda-bqzFF-H-3RFZ61-i_eCesyL-U7c3c0,1115
+lr_autotag/tagger.py,sha256=MdN_HrmnYlsepbaSPE1_Csbmv-Q0Q0wFhcewVecyrZQ,13567
+lr_autotag-0.1.0.dist-info/METADATA,sha256=4lt-04eCpgE5ZxiM2Gvd545tgS05lk6Cyc_BUhdiprE,4368
+lr_autotag-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lr_autotag-0.1.0.dist-info/entry_points.txt,sha256=T3Bl9240wpDbKQST3ag9YCy5ey5AxVR3vwlA7Xn7gZU,47
+lr_autotag-0.1.0.dist-info/licenses/LICENSE.txt,sha256=Up9H9GdRel-VDAqlH5-mzfTryAsyv4StXlGIqmTfz3k,1067
+lr_autotag-0.1.0.dist-info/RECORD,,

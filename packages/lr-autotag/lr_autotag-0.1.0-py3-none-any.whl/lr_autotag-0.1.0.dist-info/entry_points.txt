@@ -1,0 +1,2 @@
+[console_scripts]
+lr-autotag = lr_autotag:main
