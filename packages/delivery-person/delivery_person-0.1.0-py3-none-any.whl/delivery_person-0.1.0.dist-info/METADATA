@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: delivery-person
+Version: 0.1.0
+Summary: A package to detect delivery persons in images using a fine-tuned ResNet-50 model.
+Home-page: https://github.com/issakafadil/delivery-person
+Author: Faditech
+Author-email: issakafadil@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch >=1.7.1
+Requires-Dist: torchvision >=0.8.2
+Requires-Dist: Pillow >=8.0.1
+Requires-Dist: numpy >=1.19.2
+
+# Delivery Person Detection
+
+A Python package to detect whether an image contains a delivery person using a fine-tuned ResNet-50 model.
+
+## Installation
+
+You can install the package using `pip`:
+
+```bash
+pip install delivery-person
+```
+Note: Ensure that the delivery-person package is available on PyPI. If not, you can install it from the local directory as shown below.
+
+# Installing from Local Directory
+Clone the repository or download the package files.
+Navigate to the package directory.
+Run:
+
+```bash
+pip install .
+
+```
+
+# Usage
+```bash
+from delivery_person import DeliveryPersonDetector
+
+# Initialize the detector
+detector = DeliveryPersonDetector(
+    model_path='path/to/fine_tuned_resnet50_1.pth',
+    threshold=0.985,  # Optional: Set your desired threshold (default is 0.985)
+    device='cuda'  # Optional: 'cpu' or 'cuda' (default is auto-detected)
+)
+
+# Predict on an image
+image_path = 'path/to/image.jpg'
+predicted_label, predicted_prob = detector.predict_image(image_path)
+
+print(f"Predicted Label: {predicted_label}")
+print(f"Confidence: {predicted_prob:.2f}%")
+```
