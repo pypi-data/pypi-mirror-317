@@ -1,0 +1,10 @@
+screenrecord/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+screenrecord/__main__.py,sha256=8hDtWlaFZK24KhfNq_ZKgtXqYHsDQDetukOCMlsbW0Q,59
+screenrecord/cli.py,sha256=JXckY3_4BEUfySGHrIWD_Lgwq5GPPYUNiYaGOAn7ZEE,179
+screenrecord/srecord.py,sha256=-hD9guk5wGCJ_jCsEXrGBiQ9wHQJrbvmO2QE3-6WYUM,6269
+screenrecord-1.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+screenrecord-1.1.1.dist-info/METADATA,sha256=fOSalNh8kgjy0CCSVrmnnk-tG37K9W4f4VCZYvCQVQg,2735
+screenrecord-1.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+screenrecord-1.1.1.dist-info/entry_points.txt,sha256=NqsmgySXT4CzShei93qy0OOrPEpWa6VsYbor9MMowNk,48
+screenrecord-1.1.1.dist-info/top_level.txt,sha256=j7JDKitVm-qpAdNHCBVUQzKrKW2DmTbPX2qDHCtnjA8,13
+screenrecord-1.1.1.dist-info/RECORD,,
