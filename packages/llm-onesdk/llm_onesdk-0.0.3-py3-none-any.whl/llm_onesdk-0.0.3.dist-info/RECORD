@@ -1,0 +1,8 @@
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_api.py,sha256=UdDpgsoKztP82plcdO9SwyAasRO6NUFn68GX9mHgroI,6903
+test/test_onesdk.py,sha256=pPkmiewCYO5ilFyLpPSygUugGcbXfbgf20b19anKAI4,8246
+llm_onesdk-0.0.3.dist-info/LICENSE,sha256=jkKRt8UmHIVUzisvzm8J_zOptPbr_0asM0F7a3taRJY,1075
+llm_onesdk-0.0.3.dist-info/METADATA,sha256=GJNcVW7TWdDyMBS18AQegolTQ_atCSEPa91U1mDQ5bQ,6204
+llm_onesdk-0.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+llm_onesdk-0.0.3.dist-info/top_level.txt,sha256=8sobtsfpB9Btr-Roflefznazfk6Tt2BQItpS5szCb9I,5
+llm_onesdk-0.0.3.dist-info/RECORD,,
