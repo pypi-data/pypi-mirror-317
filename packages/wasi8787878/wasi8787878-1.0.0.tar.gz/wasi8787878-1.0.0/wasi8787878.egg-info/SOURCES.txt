@@ -1,0 +1,6 @@
+setup.py
+wasi8787878.egg-info/PKG-INFO
+wasi8787878.egg-info/SOURCES.txt
+wasi8787878.egg-info/dependency_links.txt
+wasi8787878.egg-info/not-zip-safe
+wasi8787878.egg-info/top_level.txt
