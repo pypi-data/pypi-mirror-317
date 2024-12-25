@@ -1,0 +1,10 @@
+mypackage/__init__.py,sha256=jO0X464iyYzP5F3cs9M-J6tuR4RcoH9gQbWMx2HHYto,100
+mypackage/__main__.py,sha256=dHjyrBllREWTGhR-DyMPDnL2B9eYuverEsYcBu3M5_I,72
+mypackage/decorators.py,sha256=4qr_zyRHQBTv_R3ANr8I9b_qIgjuoIpgz2nBn-7yg94,1394
+mypackage/descriptors.py,sha256=SMOb-hHtFNZfLSPCAXe5Julb-k51SVNTqWTVGN8wYJM,1110
+mypackage/generators.py,sha256=vv5sL57lZBzTE4yJwC8xRExFLObyRyMYYKs_41nOAtI,1427
+mypackage/iterators.py,sha256=aHEwOXNcW7-_AzBWstzFGKzfhTdau1-rr8LR2jZDP18,3326
+mypackage_manqust-0.1.dist-info/METADATA,sha256=3HVUbNJpPs_GQRj3_ANvBzTPbWo_HHDKjl7I1GZECiU,356
+mypackage_manqust-0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mypackage_manqust-0.1.dist-info/top_level.txt,sha256=ax2Dg5ulHxjedaMk72kLxMHSvJB80I9iLPYgNI4IQeA,10
+mypackage_manqust-0.1.dist-info/RECORD,,
