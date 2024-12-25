@@ -1,0 +1,8 @@
+requests
+tqdm
+ipywidgets
+appdirs
+urllib3
+civitai-py
+civitai
+typer
