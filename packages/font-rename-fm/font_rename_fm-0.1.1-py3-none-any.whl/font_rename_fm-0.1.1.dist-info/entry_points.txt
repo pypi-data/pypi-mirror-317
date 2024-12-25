@@ -1,0 +1,3 @@
+[console_scripts]
+font-rename=font_rename_fm.rename:main
+
