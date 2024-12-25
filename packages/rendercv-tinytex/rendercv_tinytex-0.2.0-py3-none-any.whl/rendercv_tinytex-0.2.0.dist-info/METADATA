@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: rendercv_tinytex
+Version: 0.2.0
+Summary: A TinyTeX distribution for RenderCV
+Project-URL: Source, https://github.com/rendercv/rendercv-tinytex
+Author-email: Sina Atalay <dev@atalay.biz>
+License: MIT
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# rendercv-tinytex
+
+A Python package with a TinyTeX release for the `rendercv` package.
