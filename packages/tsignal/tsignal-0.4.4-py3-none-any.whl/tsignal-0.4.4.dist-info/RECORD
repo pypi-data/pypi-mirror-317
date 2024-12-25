@@ -1,0 +1,12 @@
+tsignal/__init__.py,sha256=PoETU8FhV-QU3gwQbQiF27Uu_VYH4n-iMp04uUEJSRY,607
+tsignal/core.py,sha256=Le-Pid3TVTlQVaoyuLhIZx_LMl-46Dte9Lh3aqzntto,35876
+tsignal/utils.py,sha256=y4rreohLBLDjvDYctCNkr5A-eS-6IWN4z9jdKBYwqH8,900
+tsignal/contrib/extensions/__init__.py,sha256=LwJSXlUK1Gth6mOuxJ8qmKepenTpMO1dWjKf7-FpzbQ,108
+tsignal/contrib/extensions/property.py,sha256=6SZFwTIWywCjaAxCcLkbmvLKMNZnlvdPwKlvO4J8Ce4,6887
+tsignal/contrib/patterns/__init__.py,sha256=kg9kEQbkMP4EdNu3ykIU-VPeIxsyOx2nnVSxoEMFidM,44
+tsignal/contrib/patterns/worker/__init__.py,sha256=kg9kEQbkMP4EdNu3ykIU-VPeIxsyOx2nnVSxoEMFidM,44
+tsignal/contrib/patterns/worker/decorators.py,sha256=0IN6AeSc-dK1J9cf-BjZE_fsUFSotpXMsGoKDKE0dYc,12580
+tsignal-0.4.4.dist-info/METADATA,sha256=xtmT81RuaDJsKBxYejtVBo2ucu2ApEeYj7kbTR45JZc,9681
+tsignal-0.4.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+tsignal-0.4.4.dist-info/top_level.txt,sha256=FKZS-W5RfW9a3UM7vFeCw1Dx_h7t3ksVRhjSGgE3-3w,8
+tsignal-0.4.4.dist-info/RECORD,,
