@@ -1,0 +1,135 @@
+Metadata-Version: 2.1
+Name: C41811.Config
+Version: 0.1.3
+Summary: Simplifies config management with flexible API and formats.
+Author-email: C418____11 <553515788@qq.com>
+License: MIT License
+        
+        Copyright (c) 2024 C418____11
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Bug Tracker, https://github.com/C418-11/C41811_Config/issues
+Project-URL: Source Code, https://github.com/C418-11/C41811_Config
+Project-URL: Documentation, https://C41811Config.readthedocs.io
+Keywords: config,yaml,toml,json
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic~=2.10.3
+Requires-Dist: wrapt~=1.17.0
+Requires-Dist: pyrsistent~=0.20.0
+Provides-Extra: docs
+Requires-Dist: setuptools-scm==8.1.0; extra == "docs"
+Requires-Dist: sphinx~=8.1.3; extra == "docs"
+Requires-Dist: sphinx-autoapi~=3.4.0; extra == "docs"
+Requires-Dist: sphinx-copybutton~=0.5.2; extra == "docs"
+Requires-Dist: furo==2024.8.6; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: PyYAML~=6.0.2; extra == "dev"
+Requires-Dist: ruamel.yaml~=0.18.6; extra == "dev"
+Requires-Dist: toml~=0.10.2; extra == "dev"
+Provides-Extra: tox
+Requires-Dist: tox~=4.23.2; extra == "tox"
+Provides-Extra: test
+Requires-Dist: pytest~=8.3.4; extra == "test"
+Requires-Dist: pytest-html~=4.1.1; extra == "test"
+Provides-Extra: cov
+Requires-Dist: pytest~=8.3.4; extra == "cov"
+Requires-Dist: pytest-cov~=6.0.0; extra == "cov"
+Provides-Extra: pyyamlsl
+Requires-Dist: PyYAML~=6.0.2; extra == "pyyamlsl"
+Provides-Extra: ruamelyamlsl
+Requires-Dist: ruamel.yaml~=0.18.6; extra == "ruamelyamlsl"
+Provides-Extra: tomlsl
+Requires-Dist: toml~=0.10.2; extra == "tomlsl"
+
+# C41811.Config
+
+[English](README_EN.md) | 中文
+
+---
+
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/c41811.config.svg)](https://pypi.python.org/pypi/C41811.Config/)
+[![PyPI - License](https://img.shields.io/pypi/l/C41811.Config?color=blue)](https://github.com/C418-11/C41811_Config/blob/main/LICENSE)
+
+|  文档  |                                           [![Documentation Status](https://readthedocs.org/projects/c41811config/badge/?version=latest)](https://C41811Config.readthedocs.io) [![Common Usage](https://img.shields.io/badge/%E5%B8%B8%E8%A7%81-%E7%94%A8%E6%B3%95-green?logo=googledocs&logoColor=white)](https://c41811config.readthedocs.io/zh-cn/latest/CommonUsage.html)  [![made-with-sphinx-doc](https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg)](https://www.sphinx-doc.org/)                                           |
+|:----:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| PyPI |                                                                                           [![PyPI - Version](https://img.shields.io/pypi/v/C41811.Config)](https://pypi.python.org/pypi/C41811.Config/) [![PyPI - Wheel](https://img.shields.io/pypi/wheel/C41811.Config)](https://pypi.python.org/pypi/C41811.Config/) [![PyPI download month](https://img.shields.io/pypi/dm/c41811.config.svg)](https://pypi.python.org/pypi/C41811.Config/)                                                                                            |
+|  源码  | [![Github](https://img.shields.io/badge/Github-C41811.Config-green?logo=github)](https://github.com/C418-11/C41811_Config/) [![Python CI](https://github.com/C418-11/C41811_Config/actions/workflows/python-ci.yml/badge.svg?branch=develop)](https://github.com/C418-11/C41811_Config/actions/workflows/python-ci.yml) [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/C418-11/C41811_Config/python-publish.yml)](https://github.com/C418-11/C41811_Config/actions/workflows/python-publish.yml) |
+
+## 简介
+
+C41811.Config 旨在通过提供一套简洁的 API
+和灵活的配置处理机制，来简化配置文件的管理。无论是简单的键值对配置，还是复杂的嵌套结构，都能轻松应对。它不仅支持多种配置格式，还提供了丰富的错误处理和验证功能，确保配置数据的准确性和一致性。
+
+## 特性
+
+* 多格式支持：支持多种流行的配置格式，包括 JSON、YAML、TOML 和 Pickle，满足不同项目的需求。
+* 模块化设计：通过模块化的设计，提供了灵活的扩展机制，开发者可以根据需要添加自定义的配置处理器。
+* 验证功能：支持通过验证器来验证配置数据的合法性，确保配置数据的正确性。
+* 易于使用：提供了一套简洁的 API，开发者可以轻松地加载、修改和保存配置文件。
+
+## 安装
+
+```commandline
+pip install C41811.Config
+```
+
+## 一个简单的示例
+
+```python
+from C41811.Config import JsonSL
+from C41811.Config import requireConfig
+from C41811.Config import saveAll
+
+JsonSL().register_to()
+
+cfg = requireConfig(
+    '', "Hello World.json",
+    {
+        "Hello": "World",
+        "foo": dict,  # 包含foo下的所有键
+        "foo\\.bar": {  # foo.bar仅包含baz键
+            "baz": "qux"
+        }
+    }
+).check()
+saveAll()
+
+print(cfg)
+print()
+print(f"{cfg["Hello"]=}")
+print(cfg.foo)
+print(cfg["foo"]["bar"])
+print(cfg.foo.bar.baz)
+```
