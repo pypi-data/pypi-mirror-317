@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+fsdem/__init__.py
+fsdem/approx_func.py
+fsdem/fsdem.py
+fsdem/stability.py
+fsdem.egg-info/PKG-INFO
+fsdem.egg-info/SOURCES.txt
+fsdem.egg-info/dependency_links.txt
+fsdem.egg-info/requires.txt
+fsdem.egg-info/top_level.txt
