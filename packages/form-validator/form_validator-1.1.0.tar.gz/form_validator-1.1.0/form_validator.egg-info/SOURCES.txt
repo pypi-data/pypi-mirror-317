@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+form_validator/__init__.py
+form_validator/validator.py
+form_validator.egg-info/PKG-INFO
+form_validator.egg-info/SOURCES.txt
+form_validator.egg-info/dependency_links.txt
+form_validator.egg-info/top_level.txt
+tests/__init__.py
+tests/test_validator.py
