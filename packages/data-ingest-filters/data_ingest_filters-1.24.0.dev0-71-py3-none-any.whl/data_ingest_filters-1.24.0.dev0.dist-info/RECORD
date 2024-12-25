@@ -1,0 +1,8 @@
+data_ingest_filters/__init__.py,sha256=B9U8Tqo6sSksFvMTQSKu6z2cCv7FqhCIaNUpZM0BMkM,159
+data_ingest_filters/data_ingest_filter.py,sha256=47NX-_kDdvUsHoHHFp_PH38wG8PeDxihslGnXwXVjDM,10983
+data_ingest_filters/data_ingest_filter_wrapper.py,sha256=Cd5jkd31MTlx3SJw9aILoAYtaAAOiTLpBC_gLlr0RQQ,2513
+data_ingest_filters/utils.py,sha256=bLlSZ-kvOFyplqwD2Sywj8yrJuUbu1tas3TLwWQcGYY,1844
+data_ingest_filters-1.24.0.dev0.dist-info/METADATA,sha256=YTb4EAxc9IepZkaJrSxETeRW1faSU1wvmU7Jw9YzL_0,504
+data_ingest_filters-1.24.0.dev0.dist-info/WHEEL,sha256=KzHlwfgEkQj_ZGyfsenkVZNiY4cFg7ZDswWrlzga1UU,102
+data_ingest_filters-1.24.0.dev0.dist-info/top_level.txt,sha256=wEubJjvjcuerVUXBm7fygVPEI5xnDJHRZeHbE0SePOQ,20
+data_ingest_filters-1.24.0.dev0.dist-info/RECORD,,
