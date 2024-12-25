@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: pypaya-python-tools
+Version: 0.8.0
+Summary: Awesome Python code for Python developers to make working with Python easier.
+Author: PypayaTech
+License: MIT
+Project-URL: Homepage, https://github.com/PypayaTech/pypaya-python-tools
+Project-URL: Repository, https://github.com/PypayaTech/pypaya-python-tools.git
+Keywords: development,tools,utilities,productivity,ai
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: astor
+Provides-Extra: test
+Requires-Dist: pytest>=6.0; extra == "test"
+Requires-Dist: pytest-cov>=2.0; extra == "test"
+
+# pypaya-python-tools
+
+Awesome Python code for Python developers to make working with Python easier.
+
+## Features
+
+- Code generation and manipulation using AST
+- Extracting the most important information from the code (function headers, docstrings)
+- Dynamic code execution in isolated environments
+- Package management and virtual environment handling
+- Dynamic imports and module reloading
+- Object creation from configuration dictionaries
+- Useful decorators for common programming patterns
+
+## Installation
+
+You can install pypaya-python-tools using pip:
+
+```
+pip install pypaya-python-tools
+```
+
+## License
+This project is licensed under the MIT License.
