@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: pylcs-rs
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pytest >=6.0 ; extra == 'test'
+Provides-Extra: test
+License-File: LICENSE
+Summary: Fast LCS algorithms implemented in Rust
+Author-email: Kazuki Inamura <kzinmr109@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# pylcs-rs
+
+This is a Rust port of the [pylcs](https://github.com/Meteorix/pylcs) project.
+
+## benchmark
+
+on M4 MacOS
+
+```
+$ docker build -t lcsbench -f benchmark.dockerfile.aarch64 .
+$ docker run -it --rm lcsbench
+```
+
+```
+Input Sizes                    | pylcs_rs            | pylcs
+------------------------------------------------------------------------
+(3, 7)                         | 0.000001 ±0.000001 | 0.000001 ±0.000002
+(5, 3)                         | 0.000001 ±0.000001 | 0.000001 ±0.000000
+(1000, 1100)                   | 0.003899 ±0.000217 | 0.002706 ±0.000069
+(1500, 1500)                   | 0.008471 ±0.000209 | 0.005510 ±0.000138
+(1100, 1100)                   | 0.003577 ±0.000050 | 0.002596 ±0.000030
+(520, 520)                     | 0.000800 ±0.000047 | 0.000569 ±0.000013
+```
+
+## development
+
+Build and Test Rust Modules
+
+```
+cargo test
+```
+
+Install dev dependencies
+
+```
+uv sync
+```
+
+Build for editable package
+
+```
+uv run maturin develop --uv
+```
+
+Test Python Module
+
+```
+uv run pytest
+```
+
+build for release
+
+```
+uv run maturin build --release
+```
+
+The Artifact should be like: `./target/wheels/pylcs_rs-0.1.0-cp312-cp312-*.whl`
+
