@@ -1,0 +1,4 @@
+[console_scripts]
+smah=smah.smah:main
+smah-db=smah.smah_migrate:main
+
