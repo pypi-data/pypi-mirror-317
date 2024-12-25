@@ -1,0 +1,24 @@
+[build-system]
+requires = [
+   "wheel",
+   "setuptools",
+]
+
+[tool.mypy]
+# Must be present for mpypy to read this file.
+follow_imports = "normal"
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+# third-party untyped code
+module = [
+  "zope.*",
+  "persistent.*",
+  "perfmetrics.*",
+  "ZConfig.*",
+  "ZODB.*",
+  "nti.schema.*",
+  "nti.testing.*",
+  "nti.property.tunables"
+]
+ignore_missing_imports = true
