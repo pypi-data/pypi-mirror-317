@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Moral88
+Version: 0.2.0
+Summary: A library for regression evaluation metrics.
+Author: Morteza Alizadeh
+Author-email: alizadeh.c2m@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: numpy
+
