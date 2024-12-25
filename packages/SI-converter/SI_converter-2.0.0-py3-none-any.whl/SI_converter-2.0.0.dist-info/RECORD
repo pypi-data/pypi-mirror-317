@@ -1,0 +1,9 @@
+si_converter/__init__.py,sha256=Wz95Zps6ydtdpD0_IKbxVZ-wYOlhrigMZUVqUbByUhg,31
+si_converter/fromSI/__init__.py,sha256=XyKNwBeOlJdnNXiFpFPL47d_vVCtphBZGOa0jCNj0ig,42
+si_converter/fromSI/from_si_converter.py,sha256=dr3ISkLxlqVrsgDhVMYNhiPrF_IjOiiWrwFsmdw9PsE,1545
+si_converter/toSI/__init__.py,sha256=eFMBUGnJ8JGtviqRqyKMKBALK3xhXa6oYWbiesxLfVc,40
+si_converter/toSI/to_si_converter.py,sha256=o1vfDfGTv5Vms2WqwPbiGt2-N1L6ngT4m4CMpTClb3s,1549
+SI_converter-2.0.0.dist-info/METADATA,sha256=VLxSOpEIeDog_NDe-_2URS7bh1STMfVOeXQk8wJqhrU,1297
+SI_converter-2.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+SI_converter-2.0.0.dist-info/top_level.txt,sha256=-9UvYrsSWG8YDx3JIb4lGlMEmb3Ajo0_p0WDnx3B_oM,13
+SI_converter-2.0.0.dist-info/RECORD,,
