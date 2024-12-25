@@ -1,0 +1,5733 @@
+<!doctype html>
+<!-- Partially adapted from:
+    https://bl.ocks.org/heybignick/3faf257bbbbc7743bb72310d03b86ee8 -->
+
+<!-- TODO: Visually indicate nodes with exploration status other than
+    'explored'. Check htr_Peter.dcg DenseWires::westEntrance -->
+<html>
+  <head>
+    <title>Exploration Viewer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+body {
+  font-size: 18pt;
+  line-height: 20pt;
+  margin: 0pt;
+  padding: 0pt;
+  overflow: hidden;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 20vh 80vh;
+  grid-gap: 0pt;
+  margin: 0pt;
+  padding: 0pt;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 4pt;
+}
+
+#graphs {
+  height: calc(80vh - 12pt);
+  width: calc(66vw - 12pt);
+  border: 1.5pt solid black;
+  border-radius: 4pt;
+  box-sizing: border-box;
+  margin: 6pt;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
+
+  #content {
+    display: block;
+    /*grid-template-columns: 1fr;*/
+    height: auto;
+    padding-top: 2em;
+    overflow: auto;
+  }
+
+  #controls {
+    max-height: none !important;
+  }
+
+  #legend {
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  #graphs {
+    width: 95vw;
+    margin: auto;
+  }
+
+  #sidebar {
+    max-height: none !important;
+  }
+
+  #sidebar-controls {
+    height: auto !important;
+  }
+}
+
+.graph {
+  width: 100%;
+  height: 100%;
+  display: none; /* Hide all graphs */
+}
+
+#controls {
+  text-align: left;
+  box-sizing: border-box;
+  margin: 0pt;
+  padding: 6pt;
+  max-height: 20vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0pt;
+}
+
+#general_controls {
+  margin: 0pt;
+  padding: 0pt;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 50%;
+}
+
+#current-step {
+  font-family: monospace;
+}
+
+#step_slider {
+  width: 7em;
+}
+
+#size_slider {
+    width: 7em;
+}
+
+.graph_controls {
+  margin: 0pt;
+  padding: 0pt;
+  display: none;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.graph_label {
+  margin: 0pt;
+}
+
+#ov_controls {
+  display: block; /* show at start */
+}
+
+#legend {
+  box-sizing: border-box;
+  margin: 0pt;
+  max-height: 20vh;
+  padding: 6pt;
+  overflow: auto;
+}
+
+#legend_entries {
+  column-count: 2;
+}
+
+.swatch {
+  display: inline-block;
+  margin-right: 4pt;
+  width: 20px;
+  height: 20px;
+}
+
+#sidebar {
+  height: 80vh;
+  box-sizing: border-box;
+  margin: 0pt;
+  padding: 0pt;
+  overflow: auto;
+}
+
+#sidebar-controls {
+  margin: 0pt;
+  padding: 6pt;
+}
+
+#sidebar-controls > h1:first-child {
+  margin-top: 0pt;
+}
+
+#sidebar-controls > p {
+  margin: 6pt 0pt 6pt 0pt;
+}
+
+
+#listing {
+  margin: 0pt;
+  padding: 0pt 0pt 6pt 0pt;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: stretch;
+}
+
+a:link,a:visited {
+  text-decoration: none;
+  color: #005599;
+}
+
+.links line, .links path {
+  fill: transparent;
+  stroke: #555;
+  stroke-opacity: 0.4;
+}
+
+.link.unconfirmed line {
+  stroke-opacity: 0.2;
+}
+
+.link.complex line {
+  stroke: #228;
+  stroke-opacity: 0.6;
+}
+
+.nodes .symbol {
+  stroke: #fff;
+  stroke-width: 1.5pt;
+}
+
+.selected .symbol {
+  stroke: #000;
+}
+
+text.identity {
+  text-anchor: middle;
+  dominant-baseline: central;
+  /*font-size: 19px;*/
+  font-size: 25px;
+  cursor: crosshair;
+  fill: black;
+  stroke: white;
+  stroke-width: 1.5pt;
+  paint-order: stroke fill;
+}
+
+.backing {
+  fill: white;
+  stroke: gray;
+  rx: 4px;
+  ry: 4px;
+}
+
+.edge {
+  cursor: crosshair;
+}
+
+.directional-edge {
+  cursor: crosshair;
+}
+
+.diredge-line {
+  stroke: none;
+  fill: #999;
+}
+
+.diredge-bubble {
+  stroke: white;
+  fill: #999;
+  stroke-width: 1.5pt;
+}
+
+.diredge-label {
+  text-anchor: middle;
+  dominant-baseline: central;
+  font-size: 25px;
+  fill: black;
+  stroke: white;
+  stroke-width: 1.5pt;
+  paint-order: stroke fill;
+}
+
+.edge-label {
+  text-anchor: middle;
+  dominant-baseline: central;
+  font-size: 25px;
+  fill: black;
+  stroke: white;
+  stroke-width: 1.5pt;
+  paint-order: stroke fill;
+}
+
+rect.bar {
+  cursor: crosshair;
+}
+
+rect.bar.selected {
+  stroke: #000;
+  stroke-width: 2pt;
+}
+
+.listing.selected a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.listing {
+  display: contents;
+  border-bottom: 1pt dotted black;
+}
+
+.listing>a {
+  display: block;
+  white-space: nowrap;
+}
+
+.listing .stats {
+  justify-self: start;
+  align-self: center;
+  font-size: smaller;
+  white-space: nowrap;
+}
+
+text {
+  font-family: serif;
+  font-size: 18pt;
+}
+
+#opt_spinner {
+  display: none;
+}
+
+.nodes_diff.disabled {
+  color: #aaa;
+}
+
+#notices {
+  position: absolute;
+  top: calc(50% - 0.5ex);
+  left: calc(50% - 6em);
+  padding: 14pt;
+}
+
+.notice {
+  padding: 6pt;
+  font-size: 28pt;
+  outline: 4pt solid #fac;
+  background: #fff;
+  animation: loadingBorder 3s infinite;
+}
+
+
+@keyframes loadingBorder {
+  0% {
+    outline-width: 4pt;
+    outline-color: #fac;
+  }
+  25% {
+    outline-width: 6pt;
+  }
+  33% {
+    outline-color: #ffa;
+  }
+  50% {
+    outline-width: 4pt;
+  }
+  66% {
+    outline-color: #acf;
+  }
+  75% {
+    outline-width: 6pt;
+  }
+}
+
+a.help {
+  margin: 0pt 3pt 0pt 3pt;
+  padding: 0pt 0pt 2pt 0pt;
+  border: 1pt solid black;
+  border-radius: 3pt;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1.1em;
+  height: 1.1em;
+  text-align: center;
+}
+
+a.help.wide {
+  width: auto;
+  height: auto;
+  padding: 0pt 2pt 0pt 2pt;
+}
+
+#help {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  margin: 0pt;
+  box-sizing: border-box;
+  padding: 0pt;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#unhelp {
+  position: fixed;
+  top: 4pt;
+  left: 0pt;
+  margin: 0pt;
+  padding: 0pt;
+  padding-top: 0pt !important;
+  font-size: larger;
+  display: block;
+}
+
+#unhelp a {
+  background: white;
+}
+
+#help h1,h2,h3,h4,h5,h6 {
+  text-align: center;
+  \padding-top: 8pt;
+}
+
+#help_content {
+  margin: 0pt auto 0pt auto;
+  background: white;
+  box-sizing: border-box;
+  border-left: 2pt solid black;
+  border-right: 2pt solid black;
+  padding: 2.5em;
+  max-width: 45em;
+  text-align: justify;
+}
+
+#clear_filter {
+  margin-left: 4pt;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- notices div to hold loading messages -->
+    <div id="notices">
+        <!-- loading notice (shown while loading) -->
+        <div id="loading" class="notice">Loading...</div>
+        <!-- parsing notice (shown while analyzing) -->
+        <div id="parsing" class="notice">Parsing...</div>
+        <!-- analyzing notice (shown while analyzing) -->
+        <div id="analyzing" class="notice">Analyzing...</div>
+        <!-- setup notice (shown while setting up a new exploration) -->
+        <div id="setup" class="notice">Setting things up...</div>
+        <!-- layout notice (shown while computing a layout) -->
+        <div id="layout" class="notice">Computing layout...</div>
+    </div>
+    <!-- help text (hidden but shown on click) -->
+    <div id="help">
+      <h1 id="unhelp"><a class="help wide" href="#">close help</a></h1>
+      <!-- START OF HELP -->
+      <div id="help_content">
+<h1 id="help">Help</h1>
+<h2 id="help:about">About</h2>
+<p>This is a viewer for decision maps, which record decisions made and
+places discovered during an exploration process. It has multiple tools for
+visualizing the sequence of decision graphs that represents an exploration
+process, including:</p>
+<ul>
+<li><a href="#help:overview">Overview</a>: This view shows a single decision graph, representing one step of the exploration. You can select which step to view, with the last step being the default. You can zoom in and out and pan around. The graph layout is based on force simulation, with a fixed starting layout.</li>
+<li><a href="#help:focus">Focus</a>: This view shows information about a single decision, including all of its neighbors (but not the rest of the graph). Click on a neighbor to focus on that decision instead. All neighbors available at any point during the exploration are shown, with indicators for neighbors that were temporary.</li>
+<li><a href="#help:path">Path</a>: This view shows each decision reached during the exploration as a continuous path, with arrows backwards when nodes are revisited. Limited information about not-taken-at-that-step connections is shown, but the temporal structure is foregrounded over the spatial structure.</li>
+<li><a href="#help:histograms">Histograms</a>: This view provides a more abstract view of the exploration trace, showing histograms of one of several properties, like the number of transitions at each decision. It can also display two histograms simultaneously to compare them.</li>
+</ul>
+<p>At the top left, the controls area shows <a href="#help:controls">global controls</a> and view-specific controls (described in the help sections for each view).</p>
+<p>At the top right, there is a legend that shows the styles used for the current view. See the <a href="#help:legend">legend</a> section for more details.</p>
+<p>On the bottom left, the current view is displayed. In all views, you can click on nodes (or bars in the <a href="#help:histograms">histograms</a> view) to select them. Selections filter which edges are visible, and also control how the <a href="#help:focus">focus</a> and <a href="#help:path">path</a> views behave.</p>
+<p>On the bottom right, the <a href="#help:listing">listing</a> displays the name of each decision, along with its assigned symbol (if any), and a few other stats about that decision.</p>
+
+<h2 id="help:controls">Controls</h2>
+<p>The global controls are:</p>
+<ul>
+<li>The “show” drop-down menu controls which view is displayed.</li>
+<li>the “marker size” slider which controls how large each node is in the graph views.</li>
+<li>The “clear selection” button allows you to deselect all currently selected nodes.</li>
+<li>The “mark” menu controls which nodes are marked with a symbol in the current view and the <a href="#help:listing">listing</a>. The symbols can help you see which node is which without hovering over it, but can also be distracting.</li>
+<li>The “transparency” check box controls whether node symbols are displayed using solid or transparent colors. Transparency helps the labels stand out a bit more, especially if you are going to display a visualization in grayscale.</li>
+</ul>
+
+<h2 id="help:overview">Overview</h2>
+<p>The overview displays the connections among all nodes in the graph, using an automatic layout that tries to ensure most connections aren't too long but also that decisions don't get too close to each other.</p>
+<p>You can drag around the nodes to adjust their position, but when you do that, the rest of the nodes will be allowed to move according to their constraints. By hovering over a node or selecting nodes (by clicking on them), you can limit which edges are shown, and hovering on a node or edge for a moment will display information about it.</p>
+<p>The controls for this view are:</p>
+<ul>
+<li>The “layout” selector, which allows you to switch between the “strict,” “loose,” and “relaxed” layouts (see below).</li>
+<li>The “reset layout” button, which puts nodes back to their original positions for the selected layout.</li>
+<li>The “relax further” button, which allows the nodes to settle more under the physical simulation rules (see below).</li>
+</ul>
+<p>The position of the nodes is governed by two processes: the initial layout, and a physical simulation that includes several simulated forces.</p>
+
+<h3 id="initial-layout">Initial Layout</h3>
+TODO
+<p>The initial layout results can be viewed without running the physical simulation at all by selecting the “strict” layout option. This layout places nodes on a triangular grid. To produce this layout, the following algorithm is used:</p>
+<ol type="1">
+<li>At each step, select a single decision to place on the graph, based on the order in which decisions were observed during exploration, breaking ties alphabetically by decisions name.</li>
+<li>Next, place that node on the graph:
+<ul>
+<li>For the first step, place it at the origin (0, 0).</li>
+<li>For subsequent nodes, examine all empty grid locations that are adjacent to an already-placed node: <ul>
+    <li>At each location, compute the cost for that location as the sum of the link lengths of each link from this node to a node that’s already been placed.</li>
+    <li>Pick the location that has the lowest total cost, and put the node there. Ties are broken by choosing locations that are closer to the origin, and double-ties are broken by choosing the edge position that was added to the list of edge positions first.</li>
+</ul></li>
+<li>Finally, repeat steps 1 and 2 until all nodes have been placed (including nodes not connected to the original node).</li>
+</ol>
+<p>This algorithm normally results in a roughly hexagonal group of nodes, even when connections aren’t thick, because it breaks ties towards the origin. The default listing sort order for this view shows the order in which nodes were added, which can help understand the layout.</p>
+<p>Once the nodes are positioned in this grid, in the “loose” and “relaxed” layouts, relax those positions by simulating a few physical forces acting on the nodes in two dimensions.</p>
+
+<h3 id="physical-simulation">Physical Simulation</h3>
+<p>When the “relax” further button is clicked, when a node is dragged, or during layout construction for the “loose” and “relaxed” variants, physical forces are simulated to position the nodes. The two main forces are:</p>
+<ul>
+<li>A repulsion force that pushes all nodes away from each other when they get too close. This prevents nodes from piling up and obscuring each other, but it also is the primary source of distortion that causes nodes <em>not</em> to be positioned as close to their neighbors as they would naturally be.</li>
+<li>An attraction force along each link, that as long as the nodes aren’t overlapping, pulls them closer to each other, and gets stronger the farther the link is stretched.</li>
+</ul>
+<p>In addition to these two main forces, there is a gathering force that pulls all nodes towards the origin. This ensures that disconnected nodes do not drift away from the main part of the graph. This force is fairly weak, so it does not introduce very much distortion.</p>
+<p>The “loose” and “relaxed” layouts apply different amounts of simulation to relax the graph. The “relax further” button can always be used to see the consequences of more simulation updates, and dragging nodes also activates the simulation system. The “loose” layout is an intermediate between the rigid grid of the “strict” layout and the more relaxed positions of the “relaxed” layout.</p>
+
+<h2 id="help:focus">Focus</h2>
+<p>This view shows detailed information about all of the options at a single decision, as well as some info on how that decision changed over the course of the exploration. This focus node is in the center, and can be switched by picking from the listing on the right, or by clicking on another non-focus node (TODO: implement this). All nodes that are connected to the focus node are arrayed in a circle around the focus node, ordered by their order of appearance in the exploration, starting from 0 degrees on the right and proceeding clockwise.</p>
+<p>The control area for this view displays the ID of the focus decision.</p>
+
+<h2 id="help:path">Path</h2>
+<p>TODO The affinity plot shows the relative strength of relationship between one or more inner nodes and a set of at least two outer nodes. The outer nodes are arranged in a circle, and the inner nodes are placed within that circle according to the strength of connection they have with each outer node.</p>
+<p>In fact, the position of each inner node is just a weighted average of the positions of the outer nodes, where the weights are the total weight of the edges in both directions between the inner node and each outer node.</p>
+<p>In some cases this causes overlap issues, but the plots are most informative when you can see distinctions in how certain nodes are positioned within the plot. Decreasing the node size using the “marker size” slider may help in cases where there is a lot of overlap.</p>
+<p>The controls for this view are:</p>
+<ul>
+<li>The “label edges” check box allows you to hide the numbers that show the strength of each edge (the placement of numbers also indicates which end of an edge had the higher initiated vs. received weight, although the exact breakdown is only shown in the <a href="#help:focus_graph">focus graph</a> or by hovering over an edge. This can be useful when things get cluttered.</li>
+<li>The “update outside nodes” and “inside nodes” controls consist of four buttons that are normally disabled. When one or more nodes are selected, the first button in each group will be labeled with a ‘+’ followed by a number indicating how many nodes will be added to that group (outside or inside) when the button is clicked, and the second button will have a ‘-’, indicating how many nodes will be removed from the corresponding group. So for example, if you select a single node that’s at the edge of the graph (an outside node), the second “update outside nodes” button will display “-1”, and if you click it, that node will be removed from the outside nodes group. Because that node is already an outside node, the button to add outside notes will remain disabled, and the buttons for adding/removing inside nodes will also be unavailable (to make an outside node into an inside node, you must first remove it from the outside group and then add it to the inside group). To add nodes that aren’t already part of the plot, select them using the <a href="#help:listing">listing</a>. The “clear selection” button may be useful in this view, because even after removing nodes from the plot, they remain selected.</li>
+</ul>
+<p>In this view, the position of the outside node is fixed (they are sorted around the circle by total edge weight, with ties broken by initiated edge weight and then alphabetically by ID). The position of the inside nodes is determined by which outside nodes they are most strongly connected to, however, and the purpose of the affinity plot is to be able to compare these connection strengths. If there are more than three outside nodes, position on the interior is ambiguous: exactly which node on one edge of the circle pulled the node to that side should be inspected by looking at specific edges. So if two inside nodes are close to each other, that doesn’t necessarily mean that they have exactly the same pattern of relationships with the exterior nodes. However, if two nodes are placed differently, it <em>does</em> mean that they have different relationship patterns, and if there are only two or three outside nodes, then similar interior placement does imply similar relationships patterns.</p>
+<h2 id="help:histograms">Histograms</h2>
+<p>This view helps provide context for the edge weights used in the other views. By displaying a histogram of values (such as interactions, which is total initiated + received weight) this view gives a sense of how large or small a particular value is relative to all of the nodes in the graph. Each histogram displays a list of numbers along the x-axis, which are the distinct values present among all nodes, and for each value, there’s a bar indicating how many nodes had that much total edge weight, with a number on top indicating the precise count. So the x-axis is the combined edge weight (or # of neighbors) depending on which graph is selected, and the y-axis is the total number of nodes that have that combined edge weight (or # of neighbors).</p>
+<p>This view can plot a histogram of the initiated weight, the received weight or the initiated + received weight (interactions). It can also plot a histogram of the number of neighbors each node has. In addition, you can select two histograms at once and it will plot one above the x-axis and one below so you can compare them visually (this really only makes sense for comparing among initiated, received and initiated + received graphs).</p>
+<p>The width of each bar is determined by how many bars can fit in the graph area, but there is a minimum, and so if there are too many distinct values to display, you will have to scroll the graph horizontally to see them all. The height of the bars is determined such that the largest bar fills up the available vertical space, so only relative heights are relevant. When two graphs are shown, they are <em>not</em> scaled independently, so that the relative height of bars above and below the x-axis can be compared directly.</p>
+<p>The controls for this view are:</p>
+<ul>
+<li>The “graph” and “compare” selectors, along with a check box for “compare.” The check box can be used to disable or enable comparison, and the selectors let you decide which values to plot.</li>
+<li>The “collapse values” check box controls how the x-axis is laid out. If checked (the default) then the x-axis will be compressed and numbers for which there is no node that has that much total weight (or that many neighbors) are not shown. This view makes it easier to see all of the bars at once, but means that distance along the x-axis is an unreliable indicator of relative total weight. If this box is unchecked, every integer will be shown on the x-axis up to the number for the node with the largest total weight (or largest neighborhood), which will usually force the graph to be scrolled to view all bars. Numbers where there are no corresponding nodes will have no bar above them. In this view, scrolling is usually necessary, but horizontal comparisons of position are valid.</li>
+</ul>
+<p>In the histogram view, selection works a bit differently than in other views. You can still use the <a href="#help:listing">listing</a> to select individual nodes, and this will highlight the bar(s) that they belong to (hovering on a bar will also display the ID of all nodes associated with it, although in some cases the list may be too long to fit on the screen). However, clicking on a bar will select <em>all</em> nodes that belong to that bar, and any other bar(s) they belong to (in the comparison view). Whether all or only some nodes at a bar are selected (e.g., because they were selected using the listing), clicking on that bar deselects all of them. So if you want to know which nodes have a total outgoing weight of exactly 5, you can select the “initiated” histogram, and click on the bar above the number 5 on the x-axis.</p>
+
+<h2 id="help:legend">Legend</h2>
+<p>In the top-right of the window, there is a “Legend” panel which displays a legend for the current graph. In the <a href="#help:overview">overview</a>, <a href="#help:focus">focus</a>, and <a href="#help:path">path</a> views, this displays one style for each region, along with the name of that region. In the <a href="#help:histogram">histogram</a> view, it displays the different styles used for each different value that can be used to plot a histogram, which is useful when comparing histograms to distinguish which is which.</p>
+<p>The regions and their names are defined as part of the dataset (we use level-1 zones by default).</p>
+
+<h2 id="help:listing">Listing</h2>
+<p>The listing area is on the right of the screen, and contains a list of all decisions in the graph. It has controls for sorting or filtering decisions, and also displays key statistics for each decision.</p>
+<p>The stats displayed are the number of outgoing (→) and incoming (←) transitions.</p>
+<p>The controls for the listing area are:</p>
+<ul>
+<li>The “sort by” drop-down menu allows you to pick a property to sort by. Each property includes various fall-backs for breaking ties, usually in terms of whatever hasn’t been considered in the initial sort. The “default” sort order depends on the current view:
+<ul>
+<li>For the <a href="#help:overview">overview</a> and <a href="#help:path">path</a> views, it sorts according to the order nodes were discovered during exploration.</li>
+<li>For the <a href="#help:focus">focus</a> view, it sorts first by whether or not a decision is a neighbor of the current focus node, and then by step discovered.</li>
+<li>For the <a href="#help:histograms">histograms</a> view the graph is sorted by the property used in the currently selected primary histogram.</li>
+</ul></li>
+<li>The “find” text field allows you to type part of a decision name and the listing will be filtered as you type to show only nodes that contain the fragment you’ve typed as part of their ID (ignoring case). The clear button directly after the filter input just clears what you’ve typed and resets the filter; deleting everything in the text box also effectively resets the filter.</li>
+</ul>
+      </div>
+      <!-- END OF HELP -->
+    </div>
+    <div id="content">
+      <!-- controls div in upper left -->
+      <div id="controls">
+        <div id="general_controls">
+          show <select id="graph_select" onchange="selectGraph(this.value)">
+            <option selected="t" value="overview">overview</option>
+            <option value="focus">focus</option>
+            <option value="path">path</option>
+            <option value="histogram">histograms</option>
+          </select>
+
+          <a class="help wide" href="#help:about">help</a>
+          <br/>
+         
+          Step <span id="current-step">100</span>:
+          <input
+           type="button"
+           id="prevButton"
+           value="prev"
+           onclick="prevStep();">
+          0
+          <input
+           type="range"
+           min="0"
+           max="100"
+           step="1"
+           value="100"
+           id="step_slider"
+           onchange="setStep(this.value)"
+           >
+          <span id="max-step">100</span>
+          <input
+           type="button"
+           id="nextButton"
+           value="next"
+           onclick="nextStep();">
+          <br/>
+
+          <input
+           type="button"
+           value="clear selection"
+           onclick="clearSelection();">
+          |
+          markers
+          <input
+           type="range"
+           min="4"
+           max="20"
+           step="2"
+           value="14"
+           id="size_slider"
+           onchange="setNodeSize(this.value)"
+           >
+           <!-- Note: value here overrides NODE_RADIUS initial setting -->
+          |
+          <input
+           type="checkbox"
+           id="node_transparency"
+           onclick="toggleNodeTransparency(this.checked)">
+          transparency
+          <br/>
+         
+          Load new data:
+          <input
+           type="file"
+           id="file_picker"
+           onchange="loadData(this)"
+           onmouseup="loadData(this)">
+
+        </div>
+
+        <div id="ov_controls" class="graph_controls">
+          <h1 class="graph_label">
+            Overview
+            <a class="help" href="#help:overview">?</a>
+          </h1>
+
+          layout:
+          <select
+           id="relax_select"
+           onchange="imposeLayout(this.nextElementSibling.value, this.value)"
+           >
+            <option value="strict">strict</option>
+            <option selected="t" value="loose">loose</option>
+            <option value="relaxed">relaxed</option>
+          </select>
+          <select
+           id="layout_select"
+           onchange="imposeLayout(
+               this.value,
+               this.previousElementSibling.value
+           )"
+           >
+            <option value="hive">hive</option>
+            <option selected="t" value="final">final</option>
+            <option value="baryeccentric">baryeccentric</option>
+            <option value="path">path</option>
+          </select>
+          <br/>
+          <input
+           type="button"
+           value="reset layout"
+           onclick="imposeLayout(
+               document.getElementById('layout_select').value,
+               document.getElementById('relax_select').value
+           )"
+           >
+          |
+          <input
+           type="button"
+           value="relax further"
+           onclick="SIMULATION.alpha(HIGH_ENERGY).restart()">
+          |
+          <input
+           type="button"
+           value="rescale"
+           onclick="reZoomOverview()">
+          <br/>
+
+        </div>
+
+        <div id="hs_controls" class="graph_controls">
+          <h1 class="graph_label">
+            Histograms
+            <a class="help" href="#help:histograms">?</a>
+          </h1>
+
+          graph
+          <select
+           id="which_histogram"
+           onchange="setBars(OVERVIEW_NODES);">
+            <option selected="t" value="outgoing">outgoing</option>
+            <option value="incoming">incoming</option>
+            <option value="neighbors">neighbors</option>
+          </select>
+          |
+          <input
+           type="checkbox"
+           id="double_histogram"
+           checked="true"
+           onclick="setBars(OVERVIEW_NODES); document.getElementById('extra_histogram').disabled = !this.checked;">
+          compare
+          <select
+           id="extra_histogram"
+           onchange="setBars(OVERVIEW_NODES);">
+            <option value="outgoing">outgoing</option>
+            <option value="incoming">incoming</option>
+            <option value="neighbors">neighbors</option>
+          </select>
+          <br/>
+
+          <input
+           type="checkbox"
+           checked="true"
+           onclick="toggleHistCollapse(this.checked)">
+          collapse values
+          <br/>
+        </div>
+
+        <div id="fc_controls" class="graph_controls">
+          <h1 class="graph_label">
+            Focus
+            <a class="help" href="#help:focus">?</a>
+          </h1>
+
+          viewing <span id="fc_name"></span>
+          <!-- TODO: controls -->
+          <br/>
+
+        </div>
+
+        <div id="pt_controls" class="graph_controls">
+          <h1 class="graph_label">
+            Path
+            <a class="help" href="#help:path">?</a>
+          </h1>
+          <input
+           type="checkbox"
+           id="show_secondary_links"
+           checked="true"
+           onclick="toggleSecondaryLinks(this.checked);">
+          secondary links
+         |
+          <input
+           type="checkbox"
+           id="path_edge_labels"
+           checked="true"
+           onclick="togglePathEdgeLabels(this.checked);">
+          edge labels
+          <!-- TODO: controls -->
+
+        </div>
+
+      </div>
+      <div id="legend">
+        <h1>
+          Legend
+          <a class="help" href="#help:legend">?</a>
+        </h1>
+        <div id="legend_entries">
+        </div>
+      </div>
+      <div id="graphs">
+        <svg
+         id="overview"
+         class="graph"
+         viewBox="0 0 1 1"
+         preserveAspectRatio="xMidYMid meet"
+         onresize="resizeViewBox(this)"
+         data-focus-x="0"
+         data-focus-y="0"
+         data-focus-diameter="100"
+        ></svg>
+        <svg
+         id="histogram"
+         class="graph"
+         viewBox="0 0 1 1"
+         preserveAspectRatio="xMidYMid meet"
+         onresize="resizeViewBox(this)"
+         data-focus-x="0"
+         data-focus-y="0"
+         data-focus-diameter="100"
+        ></svg>
+        <svg
+         id="focus"
+         class="graph"
+         viewBox="0 0 1 1"
+         preserveAspectRatio="xMidYMid meet"
+         onresize="resizeViewBox(this)"
+         data-focus-x="0"
+         data-focus-y="0"
+         data-focus-diameter="100"
+        ></svg>
+        <svg
+         id="path"
+         class="graph"
+         viewBox="0 0 1 1"
+         preserveAspectRatio="xMidYMid meet"
+         onresize="resizeViewBox(this)"
+         data-focus-x="0"
+         data-focus-y="0"
+         data-focus-diameter="100"
+        ></svg>
+      </div>
+      <div id="sidebar">
+        <div id="sidebar-controls">
+          <h1>
+            Listing
+            <a class="help" href="#help:listing">?</a>
+          </h1>
+          <p>
+          sort by
+          <select id="listing_sort" onchange="updateListings(this.value)"/>
+            <option selected="t" value="default">default (by graph type)</option>
+            <option value="region">region (then name)</option>
+            <option value="name">name</option>
+            <option value="discovered">discovered</option>
+            <option value="visited">first visited</option>
+            <option value="visits">total visits</option>
+            <option value="neighbors">neighbors</option>
+            <option value="outgoing">outgoing links</option>
+            <option value="actions">actions</option>
+          </select>
+          <br/>
+          find
+          <input
+           type="text"
+           id="listing_filter"
+           oninput="filterListings(this.value)"/><input
+           type="button"
+           value="clear"
+           id="clear_filter"
+           onclick="this.previousSibling.value = ''; filterListings('')"/>
+          </p>
+        </div>
+        <div id="listing">
+        </div>
+      </div>
+    </div> <!-- content -->
+    <script src="d3.v7.min.js"></script>
+    <script src="pyodide/pyodide.js"></script>
+    <script defer type="text/javascript">
+
+// Alpha factors for resetting the simulation
+const EXTREME_ENERGY = 1;
+const HIGH_ENERGY = 0.5;
+const MEDIUM_ENERGY = 0.25;
+const LOW_ENERGY = 0.05;
+const VERY_LOW_ENERGY = 0.02;
+
+// ticks per period when cooling off the layout
+const COOLOFF_TICKS = 100;
+
+// Radius of nodes, adjusted by slider
+const BASE_RADIUS = 10;
+var NODE_RADIUS = 18;
+
+// Font size variables
+var BAR_TICKS_FONT_SIZE = 16;
+var BAR_FONT_SIZE = 14;
+var EDGE_LABEL_FONT_SIZE = 16;
+
+// Font size for identity
+const IDENTITY_FONT_BASE_SIZE = 18;
+
+// Radius of the charge force pushing nodes apart. Beyond this, it no
+// longer has any effect. Note that changing this does NOT update it
+// once the simulation has been created..
+const NODE_CHARGE_RADIUS = 500;
+
+// Strength of the charge force. Should be negative to push away.
+const NODE_CHARGE_STRENGTH = -300;
+
+// Distance at which nodes no longer attract each other. At shorter
+// distances, the link forces push them apart. We have larger & smaller
+// distances for within-zone vs. between-zone connections.
+var SMALL_NODE_SEPARATION = 50;
+var LARGE_NODE_SEPARATION = 80;
+
+// Max distance we want to scale up to in terms of overall graph
+// diameter.
+var MAX_LAYOUT_DIAMETER = 5000;
+
+// Minimum margin for graphs when framed. Changes to this will take
+// effect when the overview is set up again.
+var MIN_GRAPH_MARGIN = 70;
+
+// Which graph we're using now
+var GRAPH_TYPE = "overview";
+
+// Global handles for graphs:
+var OVERVIEW = d3.select("#overview");
+var OVERVIEW_CONTROLS = d3.select("#ov_controls");
+
+var HIST = d3.select("#histogram");
+var HIST_CONTROLS = d3.select("#hs_controls");
+
+var FOCUS = d3.select("#focus");
+var FOCUS_CONTROLS = d3.select("#fc_controls");
+
+var PATH = d3.select("#path");
+var PATH_CONTROLS = d3.select("#pt_controls");
+
+/*
+ * Resizes the viewbox of the given SVG element so that it matches the
+ * aspect ratio of the HTML space allotted to it, while maintaining a
+ * center at the data-focus-x/y coordinates and a smaller dimension of
+ * data-focus-diameter.
+ */
+function resizeViewBox(svgElem) {
+    let htmlBounds = svgElem.getBoundingClientRect()
+    let width = +htmlBounds.width;
+    let height = +htmlBounds.height;
+    let ar = width / height;
+    if (isNaN(ar)) { ar = 1; }
+    let smaller = parseFloat(svgElem.getAttribute("data-focus-diameter"));
+    let fx = parseFloat(svgElem.getAttribute("data-focus-x"));
+    let fy = parseFloat(svgElem.getAttribute("data-focus-y"));
+    if (isNaN(smaller)) { smaller = 100; }
+    if (isNaN(fx)) { fx = 0; }
+    if (isNaN(fy)) { fy = 0; }
+    let vbHeight, vbWidth;
+    if (ar > 1) { // width > height
+        vbHeight = smaller;
+        vbWidth = ar * vbHeight;
+    } else {
+        vbWidth = smaller;
+        vbHeight = vbWidth / ar;
+    }
+    let vbLeft = fx - vbWidth / 2;
+    let vbBot = fy - vbHeight / 2;
+    svgElem.setAttribute(
+        "viewBox",
+        "" + vbLeft + " " + vbBot + " " + vbWidth + " " + vbHeight
+    );
+    svgElem.viewboxDiameter = Math.min(vbWidth, vbHeight);
+}
+
+/*
+ * Sets the viewbox for the given SVG element to center on the given
+ * internal x/y coordinates and show at least everything within the given
+ * diameter of those coordinates. Use this only once at the start and let
+ * d3 zoom functionality handle further zooming & panning.
+ */
+function setView(svgElem, x, y, diameter) {
+    svgElem.setAttribute('data-focus-x', "" + x);
+    svgElem.setAttribute('data-focus-y', "" + y);
+    svgElem.setAttribute('data-focus-diameter', "" + diameter);
+    resizeViewBox(svgElem);
+}
+
+// Set up base viewboxes: center at 0, 0, and view at least 100 diameter
+setView(OVERVIEW.node(), 0, 0, 100);
+setView(HIST.node(), 0, 0, 100);
+setView(FOCUS.node(), 0, 0, 100);
+setView(PATH.node(), 0, 0, 100);
+
+
+// Category styles
+//var CAT_COLOR_VALUES = d3.schemeCategory10;
+/* Grayscale equivalents
+var CAT_COLOR_VALUES = [
+  "#cccccc",
+  "#b4b4b4",
+  "#949494",
+  "#949494",
+  "#686868",
+  "#444444",
+];
+*/
+var CAT_COLOR_VALUES = [
+  "#31ce52",
+  "#4a0573",
+  "#8e8fd3",
+  "#e6cb11",
+  "#17a3be",
+  "#eff485",
+  "#0c7571",
+  "#f3bce8",
+  "#09467e",
+  "#b01245",
+];
+
+var CAT_COLOR_SCALE = d3.scaleOrdinal(CAT_COLOR_VALUES)
+  .domain(CAT_COLOR_VALUES.map((x,i)=>i));
+
+var NODE_TRANSPARENCY = false;
+function CAT_COLORS(n) {
+  let cat_color = CAT_COLOR_SCALE(n);
+  let result = d3.rgb(cat_color);
+  if (NODE_TRANSPARENCY) {
+    result.opacity = 0.6;
+  }
+  return result;
+}
+
+function CAT_SHAPES(n) {
+  let shapes = [
+    "diamond",
+    "rounded",
+    "star_five",
+    "crown_special",
+    "shield",
+    "square",
+    "crown_one",
+    "octagon",
+    "star_four",
+    "crown_three",
+    "double_trapezoid",
+    "crown_two",
+  ];
+  n %= shapes.length;
+  if (n < 0) { n += shapes.length; }
+  return shapes[n];
+}
+
+// Histogram styles
+var HIST_COLORS = {
+  "outgoing": "#ffd8f0",
+  "incoming": "#e5c8ff",
+  "neighbors": "#c8e5ff",
+  "TODO": "#df60df"
+};
+
+var HIST_BG_COLORS = {
+  "outgoing": "#f455b3",
+  "incoming": "#8300f4",
+  "neighbors": "#0085f4",
+  "TODO": "#640064"
+};
+
+var HIST_SHADING = {
+  "outgoing": "fwd_diag",
+  "incoming": "back_diag",
+  "neighbors": "waves",
+  "TODO": "cross"
+}
+
+// Identity label variables
+var IDENTITY_LISTS = {
+  "Korean": "ㅁㄴㅇㅂㄷㅈㄱㅃㄸㅉㄲㅍㅌㅊㅋㅅㅎㅆㄹ",
+  "Greek": "αβξδεφγθικλμνοπψρστυωχηζ",
+  "English": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "Arabic": "بدفتكطقذزسثشظصضغعءخحهمنرليو",
+  "Devangari": "अइउऋऌएओकखगघङहचछजझञयशटठडढणरषतथदधनलसपफबभमव",
+  "Japanese": "一二三四五六七八九十上中下正日大年会人本月長国出生子分東行同今高金時手見市力米自前円合立内事社者地京間田体学目後新明方部心民対主代言小思山実入回場野開万全定家北問話文動度県水安氏和政保表道相意発不党",
+};
+var DEFAULT_IDENTITY_SET = "English";
+var REGION_MAP = {}
+var REGION_INDICES = {}
+var IDENTITY_MAP = {};
+
+function zhDigit(d) {
+  if (d == "0") {
+    return "〇";
+  } else if (d == "1") {
+    return "一";
+  } else if (d == "2") {
+    return "二";
+  } else if (d == "3") {
+    return "三";
+  } else if (d == "4") {
+    return "四";
+  } else if (d == "5") {
+    return "五";
+  } else if (d == "6") {
+    return "六";
+  } else if (d == "7") {
+    return "七";
+  } else if (d == "8") {
+    return "八";
+  } else if (d == "9") {
+    return "九";
+  }
+}
+
+const ZH_PLACES = [
+  "",
+  "十",
+  "百",
+  "千",
+  "万"
+];
+
+function zhNumeral(digits, place) {
+  // Note: doesn't work properly for just "0"
+  // Note: Just aborts awkwardly above 99999
+  if (place == undefined) {
+    place = 0;
+  }
+  let d = digits[digits.length - 1];
+  let rest = digits.slice(0, digits.length - 1);
+
+  if (d == "0") { return ""; }
+
+  if (digits.length > ZH_PLACES.length + 1) {
+    console.warn("Warning: translating large number awkwardly: " + digits);
+    let result = "";
+    for (let digit of digits) {
+      result += zhDigit(digit);
+    }
+    return result;
+  }
+
+  if (place >= ZH_PLACES.length) {
+    console.error("Error: zh_numeral called with huge place value: " + place);
+    let result = "";
+    for (let digit of digits) {
+      result += zhDigit(digit);
+    }
+    return result;
+  }
+
+  if (rest.length > 0) {
+    return zhNumeral(rest, place + 1) + zhDigit(d) + ZH_PLACES[place];
+  } else {
+    return zhDigit(d) + ZH_PLACES[place];
+  }
+}
+
+function nthIdentity(region, n) {
+  let ln = REGION_MAP[region];
+  if (ln == undefined) {
+    REGION_MAP[region] = DEFAULT_IDENTITY_SET;
+    ln = DEFAULT_IDENTITY_SET;
+  }
+  if (ln == "Numeric") {
+    return "" + (n+1);
+  } else if (ln == "Numeric中文") {
+    return zhNumeral("" + (n + 1));
+  } else {
+    let sl = IDENTITY_LISTS[ln];
+    let result = "";
+    while (n >= sl.length) {
+      let div = Math.floor(n / sl.length);
+      let mod = n % sl.length;
+      result = sl[mod] + result;
+      n = div-1;
+    }
+    result = sl[n] + result;
+    return result;
+  }
+}
+
+
+function setIdentities(showOnly) {
+    assignAuto(OVERVIEW_NODES, showOnly);
+    refreshIdentities();
+}
+
+function assignAuto(nodes, showOnly) {
+  if (showOnly == undefined) {
+    showOnly = "ALL";
+  }
+  if (showOnly == "ALL") {
+    assignIdentities(nodes);
+  } else if (showOnly == "NONE") {
+    assignIdentities(nodes, []); // empty tag list prevents matches
+  } else {
+    assignIdentities(nodes, [ showOnly ]);
+  }
+}
+
+function assignIdentities(data) {
+    // Assign identities to each data ID using per-region identity lists.
+    // Also assigns region indices.
+    // Identities are assigned based on discovery order, then name
+    let sorted = [...data].sort(
+        (a, b) => (
+            d3.ascending(a.stepDiscovered, b.stepDiscovered)
+         || d3.ascending(a.id, b.id)
+        )
+    );
+
+    // Currently assigned identity indexes for each identity set.
+    let current = {};
+
+    // Next region index to assign
+    let nextRegionIndex = 0;
+
+    for (let d of sorted) {
+        // First, assign region indices to fill the REGION_INDICES
+        let already = REGION_INDICES[d.region];
+        if (already == undefined) {
+            REGION_INDICES[d.region] = nextRegionIndex;
+            nextRegionIndex += 1;
+        }
+
+        // Now, assign an identity to each data ID to fill the IDENTITY_MAP
+        let key = REGION_MAP[d.region];
+        if (key == undefined) {
+            REGION_MAP[d.region] = DEFAULT_IDENTITY_SET;
+            key = DEFAULT_IDENTITY_SET;
+        }
+        let cur = current[key] || 0;
+        IDENTITY_MAP[d.id] = nthIdentity(d.region, cur);
+        current[key] = cur + 1;
+    }
+}
+
+/*
+ * Gets the numeric index for the region with the given name.
+ * `assignIdentities` will assign these indices.
+ */
+function regionIndex(groupName) {
+    return REGION_INDICES[groupName];
+}
+
+
+/*
+ * Gets the identity string for the given data object. `assignIdentities`
+ * must be run first.
+ */
+function identityFor(d) {
+  return IDENTITY_MAP[d.id]
+}
+
+
+/*
+ * Some functions for looking up shape properties based on region names.
+ */
+
+function colorForRegion(regionName) {
+    return CAT_COLORS(regionIndex(regionName));
+}
+
+function solidColorForRegion(regionName) {
+  return CAT_COLOR_SCALE(regionIndex(regionName));
+}
+
+function shapeForRegion(regionName) {
+  return CAT_SHAPES(regionIndex(regionName));
+}
+
+/*
+ * Based on an identity string, figures out the font size to ensure that
+ * string will fit onto a node.
+ */
+function fontSizeForIdentity(d) {
+  let id = identityFor(d);
+  let fs = IDENTITY_FONT_BASE_SIZE * (NODE_RADIUS / BASE_RADIUS);
+  return fontSizeForDigits(id, fs, 0.7);
+}
+
+
+/*
+ * Zoom handling functions
+ * TODO: Remove these eventually
+function updateView(svgElem, dx, dy, zoomFactor) {
+    // Scales/translates the current viewbox for the given SVG element,
+    // adding the given x/y values to the focus point and scaling the diameter
+    // by the given scale factor.
+    let diameter = parseFloat(svgElem.getAttribute("data-focus-diameter"));
+    let fx = parseFloat(svgElem.getAttribute("data-focus-x"));
+    let fy = parseFloat(svgElem.getAttribute("data-focus-y"));
+    if (isNaN(diameter)) { diameter = 100; }
+    if (isNaN(fx)) { fx = 0; }
+    if (isNaN(fy)) { fy = 0; }
+    let newDiam = diameter / zoomFactor;
+    svgElem.setAttribute('data-focus-x', "" + fx + dx);
+    svgElem.setAttribute('data-focus-y', "" + fy + dy);
+    svgElem.setAttribute('data-focus-diameter', "" + newDiam);
+    resizeViewBox(svgElem);
+}
+
+// Made-up fudge factors for line/page scrolling
+const PIXELS_PER_LINE = 20;
+const PIXELS_PER_PAGE = PIXELS_PER_LINE * 50;
+function handleWheel(evt) {
+    let dx = evt.deltaX;
+    if (evt.deltaMode == WheelEvent.DOM_DELTA_PIXEL) {
+        // leave dx alone as "pixels"
+    } else if (evt.deltaMode == WheelEvent.DOM_DELTA_LINE) {
+        dx *= PIXELS_PER_LINE;
+    } else if (evt.deltaMode == WheelEvent.DOM_DELTA_PAGE) {
+        dx *= PIXELS_PER_PAGE;
+    } else {
+        console.log("Unrecognized wheel event delta mode: " + evt.deltaMode);
+    }
+    // Now convert to a scaling factor and apply it
+    let sign = Math.sign(dx);
+    let factor = Math.pow(2, sign * Math.pow(Math.abs(dx), 0.25));
+    updateView(this, 0, 0, factor);
+}
+
+function handlePointerDown(evt) {
+    // Create record of this pointer event; that's it
+    findOrAddPointerRecord(this, evt);
+}
+
+function handlePointerMove(evt) {
+    // Get first record for this particular pointer
+    let firstRecord = findOrAddPointerRecord(this, evt);
+    if (this.activePointers.length == 1) {
+        // One pointer moving: scroll the viewbox, but ONLY if we're not
+        // dragging a graph node
+        // TODO: HERE
+    } else if (this.activePointers.length > 1) {
+        // Multiple pointers at once: movement towards/away from their
+        // centroid zooms in/out for pinch behavior
+        let cx = 0;
+        let cy = 0;
+        let count = 0;
+        for (let active of this.activePointers) {
+            cx += active.clientX;
+            cy += active.clientY;
+            count += 1;
+        }
+        cx /= count;
+        cy /= count;
+        // TODO: HERE
+    } else {
+        // Zero active pointers?!? Shouldn't be possible.
+        console.error("Zero active pointers in handlePointerMove.");
+    }
+}
+
+function handlePointerUp(evt) {
+    // Remove pointer from our pointers record
+    removePointerRecord(this, evt.PointerId);
+}
+
+function handlePointerCancel(evt) {
+    // Remove pointer from our pointers record
+    removePointerRecord(this, evt.PointerId);
+}
+
+function findOrAddPointerRecord(elt, evt) {
+    //
+    // Returns a pointer event for the first observed event of the given
+    // pointer Id. Creates one from the provided event if necessary, in
+    // which case it returns that event.
+    //
+    let existing = findPointerRecord(elt, evt.pointerId);
+    if (existing == null) {
+        addPointerRecord(elt, evt);
+        return evt;
+    } else {
+        return existing;
+    }
+}
+
+function findPointerRecord(elt, pointerId) {
+    //
+    // Returns the pointer event at which we first observed the pointer
+    // with the given ID, or null if there is no such event.
+    //
+    if (elt.hasOwnProperty("activePointers")) {
+        for (let index = 0; index < elt.activePointers.length; ++index) {
+            let evt = elt.activePointers[index];
+            if (evt.pointerId == pointerId) { return evt; }
+        }
+        // fell out of loop: no matches
+        return null;
+    } else {
+        // no active pointers info
+        return null;
+    }
+}
+
+function addPointerRecord(elt, evt) {
+    //
+    // Adds a pointer event record for the given event on the given
+    // element. Should be used only for the first observation of the
+    // given pointer.
+    //
+    if (!elt.hasOwnProperty("activePointers")) {
+        elt.activePointers = [];
+    }
+    elt.activePointers.push(evt);
+}
+
+function removePointerRecord(elt, pointerId) {
+    //
+    // Removes the pointer record for the pointer with the given ID from
+    // the recorded pointer list for the given element.
+    //
+    if (elt.hasOwnProperty("activePointers")) {
+        for (let index = 0; index < elt.activePointers.length; ++index) {
+            if (elt.activePointers[index].pointerId == evt.pointerId) {
+                break;
+            }
+        }
+        if (index < elt.activePointers.length) {
+            elt.activePointers.splice(index, 1);
+        }
+    }
+}
+*/
+
+/*
+ * Pops up the specified waiting message (one of 'loading', 'parsing', or
+ * 'analyzing').
+ */
+function notifyWait(waitType) {
+    document.getElementById(waitType).style.display = "block";
+}
+
+
+/*
+ * Hides the specified waiting message (one of 'loading', 'parsing', or
+ * 'analyzing').
+ */
+function notifyWaitDone(waitType) {
+    document.getElementById(waitType).style.display = "none";
+}
+
+
+function selectGraph(type) {
+    if (type == undefined) {
+        type = GRAPH_TYPE;
+    }
+    GRAPH_TYPE = type;
+
+    // Figure out target:
+    if (type == "overview") {
+        target = "overview";
+        controls = "ov_controls";
+    } else if (type.slice(0,9) == "histogram") {
+        target = "histogram";
+        controls = "hs_controls";
+    } else if (type == "focus") {
+        target = "focus";
+        controls = "fc_controls";
+    } else if (type == "path") {
+        target = "path";
+        controls = "pt_controls";
+    } else {
+        console.warn("Invalid graph type: '" + type + "'");
+        target = "overview";
+        controls = "ov_controls";
+    }
+
+    // Swap visibility:
+    d3.selectAll(".graph").style("display", "none");
+    d3.select("#" + target).style("display", "block");
+    d3.selectAll(".graph_controls").style("display", "none");
+    d3.select("#" + controls).style("display", "block");
+
+    // TODO: Something with these numbers?
+    let viewport = d3.select("#graphs").node();
+    let brect = viewport.getBoundingClientRect();
+    let vpWidth = +brect.width;
+    let vpHeight = +brect.height;
+
+    // Update NODE_RADIUS
+    setNodeSize(document.getElementById("size_slider").value);
+
+    // Use setStep to re-initialize things (TODO: is this necessary?)
+    setStep(CURRENT_STEP);
+
+    // Setup legend:
+    setLegend(type);
+
+    // Enforce link visibility
+    setLinkVisibility();
+}
+
+function setLegend(type) {
+    if (type == "overview" || type == "ego" || type == "affinity") {
+        let inUse = [];
+        for (let node of OVERVIEW_NODES) {
+            if (inUse.indexOf(node.region) < 0) {
+                inUse.push(node.region);
+            }
+        }
+     
+        var legend = d3.select("#legend_entries");
+        legend.selectAll("div").remove();
+        var legendEntry = legend.selectAll("div")
+            .data(inUse)
+            .enter().append("div");
+     
+        let legendSymbol = legendEntry.append("svg")
+            .classed("swatch", true)
+     
+        let symbolPath = legendSymbol.append("path")
+            .classed("symbol", true)
+            .attr(
+                "d",
+                d => symbolPathData([10, 10], 6, shapeForRegion(d))
+            )
+            .attr("fill", d => colorForRegion(d))
+            .attr("stroke", "white")
+            .style("stroke-width", Math.min(1.5, 1.5*(6/BASE_RADIUS)) + "pt")
+     
+        legendEntry.append("span").text(d => d || "N/A");
+ 
+    } else if (type == "histogram") {
+ 
+        let legend = d3.select("#legend_entries");
+        legend.selectAll("div").remove();
+        let legendEntry = legend.selectAll("div")
+            .data(Object.keys(HIST_COLORS))
+            .enter().append("div");
+  
+        let legendSymbol = legendEntry.append("svg")
+            .classed("swatch", true)
+  
+        addPatternDefs(legendSymbol)
+  
+        legendSymbol.append("rect")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", 20)
+            .attr("height", 20)
+            .attr("fill", d => "url(#" + d + "-pattern)")
+  
+        legendEntry.append("span").text(d => d);
+    } else {
+        console.warn("Invalid graph type: '" + type + "'");
+    }
+}
+
+// Custom bubble force to push marginal nodes out to the margins.
+// TODO: Remove this or repurpose it (push regions apart from each other?
+// Push nodes not in focus region away from center?
+function forceBubble(target, radius, strength) {
+    let nodes, targets, radii, strengths;
+ 
+    let force = function(alpha) {
+        let node, target, radius, strength;
+        for (let i = 0; i < nodes.length; ++i) {
+            node = nodes[i];
+            target = targets[i];
+            radius = radii[i];
+            strength = strengths[i];
+            let d = distance(node.x, node.y, target[0], target[1]);
+            if (d < radius) {
+                let fr = d/radius;
+                let str = strength * Math.pow(1 - fr, 1/3);
+                node.vx += (node.x - target[0]) * str * alpha;
+                node.vy += (node.y - target[1]) * str * alpha;
+            } else if (radius == 0) {
+                // special case radius = 0 will attract w/ constant force
+                node.vx += (target[0] - node.x) * strength * alpha;
+                node.vy += (target[1] - node.y) * strength * alpha;
+            } // otehrwise no effect
+        }
+    }
+ 
+    function initialize() {
+        if (!nodes) { return; }
+       
+        // populate local targets
+        targets = new Array(nodes.length);
+        for (let i = 0; i < nodes.length; i++) {
+            targets[i] = target(nodes[i], i, nodes);
+        }
+       
+        // populate local radii
+        radii = new Array(nodes.length);
+        for (let i = 0; i < nodes.length; i++) {
+            radii[i] = radius(nodes[i], i, nodes);
+        }
+       
+        // populate local strengths
+        strengths = new Array(nodes.length);
+        for (let i = 0; i < nodes.length; i++) {
+            strengths[i] = strength(nodes[i], i, nodes);
+        }
+    }
+ 
+    force.initialize = _ => {
+        nodes = _;
+        initialize();
+    }
+ 
+    force.target = _ => {
+        if (_ == null) { return target; } // no arg so return value
+        
+        // coerce to function
+        target = typeof _ === 'function' ? _ : () => _;
+      
+        // reinitialize
+        initialize();
+      
+        // allow chaining
+        return force;
+    };
+ 
+    force.radius = _ => {
+        if (_ == null) { return radius; } // no arg so return value
+        
+        // coerce to function
+        radius = typeof _ === 'function' ? _ : () => +_;
+       
+        // reinitialize
+        initialize();
+       
+        // allow chaining
+        return force;
+    };
+ 
+    force.strength = _ => {
+        if (_ == null) { return strength; } // no arg so return value
+        
+        // coerce to function
+        strength = typeof _ === 'function' ? _ : () => +_;
+       
+        // reinitialize
+        initialize();
+       
+        // allow chaining
+        return force;
+    };
+ 
+    if (!target) { target = [0, 0]; }
+    if (!radius) { radius = 80; }
+    if (!strength) { strength = 0.1; }
+ 
+    force.target(target);
+    force.radius(radius);
+    force.strength(strength);
+ 
+    return force;
+}
+
+function linkDistance(link) {
+    // Attraction between same-zone nodes is twice as strong
+    if (link.source.zone == link.target.zone) {
+        return SMALL_NODE_SEPARATION;
+    } else {
+        return LARGE_NODE_SEPARATION;
+    }
+}
+
+function linkStrength(link) {
+    let journeyTagValue = link.properties.tags.get("journey");
+    if (journeyTagValue != undefined) {
+        // 'journey' links are explicitly not adjacency indicators, but
+        // we still want them to factor into the equation a tiny bit
+        return 0.01;
+    } else {
+        // Attraction between same-zone nodes is twice as strong
+        if (link.source.zone == link.target.zone) {
+            return 1;
+        } else {
+            return 0.5;
+        }
+    }
+}
+
+linkForces = d3.forceLink()
+    .id(d => d.id)
+    .distance(linkDistance)
+    .strength(linkStrength);
+
+separationForce = d3.forceManyBody()
+    .strength(NODE_CHARGE_STRENGTH)
+    .distanceMax(NODE_CHARGE_RADIUS)
+    .theta(1.1); // we don't care that much about fidelity
+
+collisionForce = d3.forceCollide()
+    .radius(function(d) { return 1.2*NODE_RADIUS; })
+
+/*
+ * TODO: Remove this or repurpose it
+bubbleForce = forceBubble()
+    .target([LARGE_GRAPH_WIDTH/2, LARGE_GRAPH_HEIGHT/2])
+    .radius(d => groupHasTag(d.group, "fringe") ? 240 : 160)
+    .strength(d => groupHasAnyTag(d.group, [ "fringe", "outside" ]) ? 0.4 : 0);
+ */
+
+/*
+ * TODO: Remove this or repurpose it
+gatherForce = forceBubble()
+    .target([400, 400])
+    .radius(0)
+    .strength(0.025);
+*/
+
+var SIMULATION = d3.forceSimulation()
+    .force("link", linkForces)
+    .force("charge", separationForce)
+    .force("collision", collisionForce)
+    .force("center", d3.forceCenter(0, 0));  // center can be changed later
+    // .force("bubble", bubbleForce)  TODO: Remove or repourpose
+    // .force("gather", gatherForce);  TODO: Remove or repourpose
+
+function recenterSimulation(x, y) {
+    SIMULATION.force("center", null);
+    SIMULATION.force("center", d3.forceCenter(x, y));
+}
+
+function shuffle() {
+    SIMULATION.nodes().forEach(function (n) {
+        n.x = Math.random()*240;
+        n.y = Math.random()*240;
+    });
+    SIMULATION.alpha(1).restart();
+}
+
+function distance(x1, y1, x2, y2) {
+    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+}
+
+var BEST_ENERGIES = {};
+var BEST_POSITIONS = {};
+
+function computeVelEnergy(simulation, dontTrack) {
+    // Vel energy is simply computed by looking at the velocity of each node.
+    // Even when the simulation cools, the cooling is applied *after* velocities
+    // are computed, so this measure thoroughly accounts for all simulation
+    // forces.
+    e = 0;
+    for (let node of simulation.nodes()) {
+        e += Math.sqrt(
+            node.vx * node.vx
+          + node.vy * node.vy
+        ) / simulation.alpha();
+    }
+    // Track best energy
+    if (!dontTrack) {
+        let n = simulation.nodes().length;
+        if (BEST_ENERGIES[n] == undefined || e < BEST_ENERGIES[n]) {
+            BEST_ENERGIES[n] = e;
+            let bespan = document.getElementById("best_energy");
+            if (bespan != null) {
+                bespan.innerHTML = e.toExponential(3);
+            }
+            BEST_POSITIONS[n] = [];
+            for (let node of simulation.nodes()) {
+                BEST_POSITIONS[n].push([node.x, node.y]);
+            }
+        }
+    }
+    return e;
+}
+
+function computePullEnergy(simulation, dontTrack) {
+    // Pull energy attempts to account for both stretched links (but it doesn't
+    // penalize compressed links) and for the amount of charge force that's
+    // applied across all nodes (roughly a measure of crowding).
+    e = 0;
+    // Add energy from stretched (but not compressed) links
+    for (let link of simulation.force("link").links()) {
+        let x1 = link.source.x;
+        let y1 = link.source.y;
+        let x2 = link.target.x;
+        let y2 = link.target.y;
+        let d = distance(x1, y1, x2, y2);
+        let targetD = linkDistance(link);
+        if (d > targetD) {
+            // TODO: Account for linkStrength here?
+            e += Math.pow(targetD - d, 2);
+        }
+    }
+    // Add energy from charge force
+    for (node of simulation.nodes()) {
+        for (other of simulation.nodes()) {
+            if (node === other) {
+                continue;
+            }
+            let d = distance(node.x, node.y, other.x, other.y);
+            let md = separationForce.distanceMax();
+            if (d < md) {
+                e += -separationForce.strength()() * (1 - d/md);
+            }
+        }
+    }
+    // Track best energy
+    if (!dontTrack) {
+        let n = simulation.nodes().length;
+        if (BEST_ENERGIES[n] == undefined || e < BEST_ENERGIES[n]) {
+            BEST_ENERGIES[n] = e;
+            let bespan = document.getElementById("best_energy");
+            if (bespan != null) {
+                bespan.innerHTML = e.toExponential(3);
+            }
+            BEST_POSITIONS[n] = [];
+            for (let node of simulation.nodes()) {
+                BEST_POSITIONS[n].push([node.x, node.y]);
+            }
+        }
+    }
+    return e;
+}
+
+function computeStretchEnergy(simulation, dontTrack) {
+    // Stretch energy is simply proportional to the total length of each link,
+    // but weighted (linearly) according to the value of that link.
+    e = 0;
+    for (let link of simulation.force("link").links()) {
+        let x1 = link.source.x;
+        let y1 = link.source.y;
+        let x2 = link.target.x;
+        let y2 = link.target.y;
+        let d = distance(x1, y1, x2, y2);
+        e += d * link.value;
+    }
+    // Track best energy
+    if (!dontTrack) {
+        let n = simulation.nodes().length;
+        if (BEST_ENERGIES[n] == undefined || e < BEST_ENERGIES[n]) {
+            BEST_ENERGIES[n] = e;
+            let bespan = document.getElementById("best_energy");
+            if (bespan != null) {
+                bespan.innerHTML = e.toExponential(3);
+            }
+            BEST_POSITIONS[n] = [];
+            for (let node of simulation.nodes()) {
+                BEST_POSITIONS[n].push([node.x, node.y]);
+            }
+        }
+    }
+    return e;
+}
+
+// Select which energy implementation we're using:
+//var computeEnergy = computeVelEnergy;
+//var computeEnergy = computePullEnergy;
+var computeEnergy = computeStretchEnergy;
+
+function optimizePositions(simulation) {
+    i = 0
+    let n = simulation.nodes().length;
+    if (BEST_POSITIONS[n] == undefined) {
+        console.warn(
+            "Can't optimize before any best positions have been observed."
+        );
+        return;
+    }
+    for (let node of simulation.nodes()) {
+        node.x = BEST_POSITIONS[n][i][0];
+        node.y = BEST_POSITIONS[n][i][1];
+        i += 1;
+    }
+    simulation.alpha(1).restart();
+}
+
+function optimizeRandomly() {
+    // Calls megaShuffle, but also shows a spinner while that's going on.
+    // Reveal activity gif:
+    let spinner = document.getElementById("opt_spinner");
+    spinner.style.display = "inline";
+ 
+    // Fire in two frames to allow GIF to load:
+    window.requestAnimationFrame(
+        function() { window.requestAnimationFrame(megaShuffle); }
+    );
+}
+
+function megaShuffle() {
+    // Shuffles 50 times and records the best configuration found, setting the
+    // nodes into that configuration (approximately) at the end.
+ 
+    // Run simulations:
+    best = undefined;
+    bestStarts = undefined;
+    for (let i = 0; i < 50; ++i) { // 50 trials
+        SIMULATION.alpha(1); // reset alpha to 1
+        SIMULATION.nodes().forEach(function (n) {
+            n.x = Math.random()*20;
+            n.y = Math.random()*20;
+        });
+        for (let j = 0; j < 3; ++j) { // tick and relax in 3 waves:
+            for (let k = 0; k < 100; ++k) { // run 100 ticks
+                SIMULATION.tick();
+            }
+            SIMULATION.alpha(1); // reset alpha to 1
+        }
+        for (let k = 0; k < 300; ++k) { // run another 300 ticks
+            SIMULATION.tick();
+        }
+        computeEnergy(SIMULATION, false); // compute final energy and record it
+    }
+ 
+    // Set node positions to best positions found:
+    optimizePositions(SIMULATION);
+ 
+    // Restart simulation one more time:
+    SIMULATION.alpha(1).restart();
+ 
+    // Hide spinner
+    let spinner = document.getElementById("opt_spinner");
+    spinner.style.display = "none";
+}
+
+function pos__key(pos) { return "" + pos[0] + "," + pos[1]; }
+function key__pos(key) {
+    let a = key.split(',');
+    return [+a[0], +a[1]];
+}
+
+function simplexNeighbors(pos) {
+    // All six neighbors in a simplex grid (horizontal straights; skewed right)
+    return [
+        [ pos[0] - 1, pos[1]],
+        [ pos[0] - 1, pos[1] + 1],
+        [ pos[0], pos[1] + 1],
+        [ pos[0] + 1, pos[1]],
+        [ pos[0] + 1, pos[1] - 1],
+        [ pos[0], pos[1] - 1],
+    ];
+}
+
+// Size of simplex grid:
+const SIMPLEX_GRID_SIZE = 60;
+// skew x and y values:
+const SKX = Math.cos(Math.PI/3);
+const SKY = Math.sin(Math.PI/3);
+
+// Center of the simplex grid
+var SIMPLEX_GRID_CENTER = [0, 0];
+
+function simplexCoords(pos) {
+    // Converts integer simplex coords into absolute SVG coordinates
+    return [
+      SIMPLEX_GRID_CENTER[0] + (pos[0] + SKX * pos[1]) * SIMPLEX_GRID_SIZE,
+      SIMPLEX_GRID_CENTER[1] + SKY * pos[1] * SIMPLEX_GRID_SIZE
+    ];
+}
+
+function hiveLayout(nodes) {
+    // A layout maps nodes <-> positions and keeps track of an edge
+    let layout = {
+        "positions": new Map(), // position of each node (by ID)
+        "occupants": new Map(), // node at each position (by position key)
+        "edge": new Set(), // set of edge positions (keys)
+        "edgeOrder": [], // list of edge positions (positions)
+    };
+    // Add 0, 0 to edge:
+    layout.edge.add(pos__key([0, 0]));
+    layout.edgeOrder.push([0, 0]);
+ 
+    // find first node; prepare to track transits-to/from-placed-nodes
+    let transits = new Map();
+    // incremental max for picking first node:
+    let highest = undefined;
+    // next node for placement (by steps active; ties towards earliest):
+    let next = undefined;
+    for (let node of nodes) {
+        transits.set(node.id, 0);
+        if (highest == undefined || node.active > highest) {
+            highest = node.active;
+            next = node;
+        }
+    }
+    if (next == undefined) {
+        console.log("Failed to find first node among:");
+        console.log(nodes)
+        next = nodes[0];
+        console.log("Using:");
+        console.log(next);
+    }
+
+    // Function for updating layout:
+    function assignPos(node, pos) {
+        // Get position key:
+        let k = pos__key(pos);
+  
+        // Set position of node:
+        layout.positions.set(node.id, pos);
+  
+        // Set occupant of position:
+        if (layout.occupants.has(k)) {
+            console.error("Double-assignment at pos: " + pos);
+        }
+        layout.occupants.set(k, node);
+  
+        // Remove pos from edge set:
+        if (!layout.edge.has(k)) {
+            console.error("Assignment at non-edge: " + pos);
+        }
+        // And remove it from edge order:
+        layout.edge.delete(k);
+        let oidx = 0;
+        for (; oidx < layout.edgeOrder.length; ++oidx) {
+            let op = layout.edgeOrder[oidx];
+            if (op[0] == pos[0] && op[1] == pos[1]) {
+                break;
+            }
+        }
+        if (oidx == layout.edgeOrder.length) {
+            console.error("Failed to find pos in edge order: " + pos);
+        } else {
+            layout.edgeOrder.splice(oidx, 1);
+        }
+  
+        // Add unoccupied neighbors to edge:
+        for (let nb of simplexNeighbors(pos)) {
+            let nbk = pos__key(nb);
+            if (!layout.occupants.has(nbk) && !layout.edge.has(nbk)) {
+                layout.edge.add(nbk);
+                layout.edgeOrder.push(nb);
+            }
+        }
+
+        // Update transits of neighbors of placed node:
+        for (let nbid of node.neighbors) {
+            let links = lookupOverviewLinks(node.id, nbid);
+            for (let link of links) {
+                transits.set(
+                    nbid,
+                    transits.get(nbid) + link.strength
+                );
+            }
+        }
+    }
+
+    function pickNextNode() {
+        // Picks the next node to assign by looking for the node with the
+        // most transits to/from nodes that have already been placed.
+        // Ties are broken according to total steps active and then
+        // neighborhood size.
+        let best = undefined;
+        let bestAny = undefined;
+        let bestNeighbors = undefined;
+        let result = undefined;
+
+        function betterCandidate(node) {
+            // Favors nodes that have more transitions-from/to-placed-nodes,
+            // then breaks ties using total-interactions, # of neighbors,
+            // group values, and ID values in that order.
+            let trans = transits.get(node.id);
+            // TODO: Way of getting total transits?
+            let tot = node.active;
+            let nbs = node.neighbors.size;
+            return (
+                best == undefined
+             || (
+                    trans > best
+                 || trans == best && (
+                        tot > bestAny
+                     || tot == bestAny && (
+                            nbs > bestNeighbors
+                        ||  nbs == bestNeighbors && (
+                                node.id < result.id
+                            )
+                        )
+                    )
+                )
+            );
+        }
+        for (let nid of transits.keys()) {
+            // don't pick an already-assigned node:
+            if (layout.positions.has(nid)) { continue; }
+
+            // check for a new best-so-far:
+            let node = lookupOverviewNode(nid);
+            if (betterCandidate(node)) {
+                best = transits.get(nid);
+                bestAny = node.active;
+                bestNeighbors = node.neighbors;
+                result = node;
+            } // else move on to next node; this one isn't a new best-so-far
+        }
+
+        if (result == undefined) {
+            // iterate through all nodes, not just those touching nodes
+            // seen so far:
+            for (let node of nodes) {
+                // don't pick an already-assigned node:
+                if (layout.positions.has(node.id)) { continue; }
+
+                // check for a new best-so-far:
+                if (betterCandidate(node)) {
+                    best = transits.get(node.id);
+                    bestAny = node.active;
+                    bestNeighbors = node.neighbors;
+                    result = node;
+                }
+            }
+        }
+
+        return result; // undefined if we're out of nodes
+    }
+
+    function bestPositionFor(node) {
+        // Picks out the position among edge positions that minimizes the
+        // weighted link lengths between this node and already-positioned
+        // nodes.
+
+        // Gather all links with positioned nodes:
+        let strengths = [];
+        for (let nid of layout.positions.keys()) {
+            let linksBetween = lookupOverviewLinks(node.id, nid);
+            let str = 0;
+            for (let link of linksBetween) {
+                str += 0.2 + link.strength;
+            }
+            strengths.push([str, nid]);
+        }
+
+        // Iterate over edge positions:
+        let bestEnergy = undefined;
+        let nearestOrigin = undefined;
+        let candidate = undefined;
+        for (let pos of layout.edgeOrder) {
+            let energy = 0;
+            let abs = simplexCoords(pos);
+            for (let linkto of strengths) {
+                let strength = linkto[0];
+                let oid = linkto[1];
+                let oabs = simplexCoords(layout.positions.get(oid));
+                let v = [oabs[0] - abs[0], oabs[1] - abs[1]];
+                let d = Math.sqrt(v[0]*v[0] + v[1]*v[1]);
+                energy += d * strength;
+            }
+            let origin = simplexCoords([0, 0]);
+            let ov = [origin[0] - abs[0], origin[1] - abs[1]];
+            let od = Math.sqrt(ov[0]*ov[0] + ov[1]*ov[1]);
+            if (bestEnergy == undefined || energy < bestEnergy) {
+                bestEnergy = energy;
+                nearestOrigin = od;
+                candidate = pos;
+            } else if (energy == bestEnergy) { // break ties towards origin
+                if (nearestOrigin == undefined || od < nearestOrigin) {
+                    bestEnergy = energy;
+                    nearestOrigin = od;
+                    candidate = pos;
+                } // tie-break to earlier candidate by default
+            }
+        }
+        if (candidate == undefined) {
+            console.error("Failed to find best edge position:");
+            console.error(node, layout);
+        }
+
+        return candidate;
+    }
+
+    // Set up hive rank counter:
+    let rank = 0;
+
+    // Keep assigning nodes to positions until we run out:
+    // First value for `next` is picked out above
+    do {
+        next.__hive_rank__ = rank;
+        rank += 1;
+        let target = bestPositionFor(next);
+        assignPos(next, target);
+        next = pickNextNode();
+    } while (next != undefined);
+
+    // Return the final layout:
+    return layout;
+}
+
+// Rescales the focus x/y/diameter values to center + view the entire
+// layout of nodes in the overview graph.
+function reZoomOverview() {
+    let ovSVG = document.getElementById("overview");
+    let xMin = undefined;
+    let xMax = undefined;
+    let yMin = undefined;
+    let yMax = undefined;
+    for (let node of OVERVIEW_NODES) {
+        let x = node.x;
+        let y = node.y;
+        if (xMin == undefined || x < xMin) { xMin = x; }
+        if (xMax == undefined || x > xMax) { xMax = x; }
+        if (yMin == undefined || y < yMin) { yMin = y; }
+        if (yMax == undefined || y > yMax) { yMax = y; }
+    }
+    let cx = (xMin + xMax) / 2.0;
+    let cy = (yMin + yMax) / 2.0;
+    let diameter = Math.max(xMax - xMin, yMax - yMin);
+    diameter = Math.max(diameter + MIN_GRAPH_MARGIN, diameter * 1.05);
+    zoomTo(ovSVG, [cx, cy], diameter);
+}
+
+
+function imposeLayout(type, relaxation) {
+    // Imposes the chosen layout type with the given relaxation level.
+    notifyWait("layout");
+    let layout;
+    if (type == "hive") {
+        let hive = hiveLayout(SIMULATION.nodes());
+        layout = new Map();
+        for (let [nID, pos] of hive.positions.entries()) {
+            if (pos == undefined) {
+                console.warn(
+                    "Hive layout left node " + nID + " without position:"
+                );
+                console.warn(hive);
+                pos = [0, 0];
+            }
+            let abs = simplexCoords(pos);
+            layout.set(nID, abs);
+        }
+    } else {
+        let exp = pyodide.globals.get("EXPLORATION");
+        layout = getLayoutCopy(exp, type);
+        console.log("Got layout copy...");
+        rescaleLayout(layout);
+        console.log("Rescaled layout...");
+        exp.destroy();  // clean up proxy
+    }
+    if (relaxation == "strict") {
+        imposeRelaxedLayout(SIMULATION, layout, 0, 0);
+    } else if (relaxation == "loose") {
+        imposeRelaxedLayout(SIMULATION, layout, VERY_LOW_ENERGY, 3);
+    } else if (relaxation == "relaxed") {
+        imposeRelaxedLayout(SIMULATION, layout, MEDIUM_ENERGY, 5);
+    } else {
+        console.warn("Unknown relaxation level: '" + relaxation + "'");
+        imposeRelaxedLayout(SIMULATION, layout);
+    }
+    // Scale to view entire layout
+    reZoomOverview();
+    notifyWaitDone("layout");
+}
+
+function imposeRelaxedLayout(simulation, layout, cooloffAlpha, cooloffPeriods) {
+    // Imposes the given layout, and then relaxes it a controlled amount.
+    // The cooloffAlpha and cooloffPeriods arguments can be left out, if
+    // cooloffAlpha isn't given, then the simulation is fixed into the
+    // exact layout; if cooloffPeriods isn't given, then 3 cooloff
+    // periods are used.
+    if (cooloffPeriods == undefined) {
+        if (cooloffAlpha == undefined) {
+            cooloffPeriods = 0;
+        } else {
+            cooloffPeriods = 3;
+        }
+    }
+
+    let nodes = simulation.nodes();
+    let defaultPos = 20;
+    for (let node of nodes) {
+        let pos = layout.get(node.id);
+        if (pos == undefined) {
+            console.warn(
+                "Layout left node " + node.id + " without position:",
+            );
+            console.warn(node);
+            console.warn(layout);
+            // Assign un-positioned nodes along a quadratic arc so that
+            // they're not co-linear.
+            pos = [defaultPos, Math.pow(defaultPos, 1.1)];
+            console.warn("Used: " + pos);
+            defaultPos += 20;
+        }
+        node.x = pos[0];
+        node.y = pos[1];
+        node.vx = 0;
+        node.vy = 0;
+    }
+    let calpha = cooloffAlpha;
+    if (calpha == undefined) {
+        calpha = simulation.alphaMin()*2;
+    }
+
+    simulation.alpha(calpha).restart(); // restart w/ non-terminal alpha
+
+    if (cooloffPeriods == 0) {
+        simulation.tick(); // tick once to update SVG positions
+    } else {
+        for (let i = 0; i < cooloffPeriods; ++i) {
+            for (let j = 0; j < COOLOFF_TICKS; ++j) {
+                simulation.tick();
+            }
+        }
+        simulation.alpha(calpha); // keep up alpha
+    }
+    simulation.alpha(0); // prevent further updates
+}
+
+// Global d3 objects:
+var LINKS = null;
+var NODES = null;
+var BARS = null;
+var BARS_BELOW = null;
+var LISTINGS = null;
+var FOCUS_RANKING = null;
+var FOCUS_CURRENT = null;
+var FOCUS_NODES = null;
+var FOCUS_LINKS = null;
+var PATH_NODES = null;
+var PATH_LINKS = null;
+
+// Links groups before nodes groups here to get correct overlap:
+var OVERVIEW_ZOOM_GROUP = OVERVIEW.append("g").attr("class", "zoomFrame");
+var HIST_ZOOM_GROUP = HIST.append("g").attr("class", "zoomFrame");
+var FOCUS_ZOOM_GROUP = FOCUS.append("g").attr("class", "zoomFrame");
+var PATH_ZOOM_GROUP = PATH.append("g").attr("class", "zoomFrame");
+var LINKS_GROUP = OVERVIEW_ZOOM_GROUP.append("g").attr("class", "links");
+var NODES_GROUP = OVERVIEW_ZOOM_GROUP.append("g").attr("class", "nodes");
+var LABELS_GROUP = OVERVIEW_ZOOM_GROUP.append("g").attr("class", "labels");
+var BARS_GROUP = HIST_ZOOM_GROUP.append("g").attr("class", "bars");
+var FOCUS_LINKS_GROUP = FOCUS_ZOOM_GROUP.append("g").attr("class", "links");
+var FOCUS_NODES_GROUP = FOCUS_ZOOM_GROUP.append("g").attr("class", "nodes");
+var PATH_LINKS_GROUP = PATH_ZOOM_GROUP.append("g").attr("class", "links");
+var PATH_NODES_GROUP = PATH_ZOOM_GROUP.append("g").attr("class", "nodes");
+
+// List of nodes in sidebar:
+var LISTING = d3.select("#listing")
+
+function zoomer(toTransform) {
+    // Returns zoom handling function that will zoom/pan the specified
+    // target element.
+    return function (evt) {
+        // Updates transform of a specific target element
+        toTransform.attr("transform", evt.transform);
+    }
+}
+
+// Setup for zooming
+OVERVIEW.node().zoom = d3.zoom().on("zoom", zoomer(OVERVIEW_ZOOM_GROUP));
+OVERVIEW.call(OVERVIEW.node().zoom);
+HIST.node().zoom = d3.zoom().on("zoom", zoomer(HIST_ZOOM_GROUP));
+HIST.call(HIST.node().zoom);
+FOCUS.node().zoom = d3.zoom().on("zoom", zoomer(FOCUS_ZOOM_GROUP));
+FOCUS.call(FOCUS.node().zoom);
+PATH.node().zoom = d3.zoom().on("zoom", zoomer(PATH_ZOOM_GROUP));
+PATH.call(PATH.node().zoom);
+
+function refreshIdentities() {
+  // Updates identity symbols using the current identity assignment to update
+  // the necessary SVG elements.
+
+  // Force-directed graph
+  if (NODES) {
+    NODES.selectAll("text.identity").remove();
+    NODES.append("text")
+      .text(d => identityFor(d))
+      .style("font-size", d => fontSizeForIdentity(d))
+      .classed("identity", true)
+      .attr('x', 0)
+      .attr('y', 0)
+      .on("mouseover", hoverStarted)
+      .on("mouseout", hoverEnded)
+      .on("click", (e, d) => toggleSelect(d, !d.__selected__))
+      .call(d3.drag()
+        .on("start", dragStarted)
+        .on("drag", dragged)
+        .on("end", dragEnded));
+  }
+
+  // Focus graph
+  if (FOCUS_NODES) {
+    FOCUS_NODES.selectAll("text.identity").remove();
+    FOCUS_NODES.append("text")
+      .text(d => identityFor(d))
+      .style("font-size", d => fontSizeForIdentity(d))
+      .classed("identity", true)
+      .attr('x', 0)
+      .attr('y', 0)
+      .on("mouseover", hoverStarted)
+      .on("mouseout", hoverEnded)
+      .on("click", (e, d) => toggleSelect(d, !d.__selected__))
+  }
+
+  // Path graph
+  if (PATH_NODES) {
+    PATH_NODES.selectAll("text.identity").remove();
+    PATH_NODES.append("text")
+      .text(d => identityFor(d))
+      .style("font-size", d => fontSizeForIdentity(d))
+      .classed("identity", true)
+      .attr('x', 0)
+      .attr('y', 0)
+      .on("mouseover", hoverStarted)
+      .on("mouseout", hoverEnded)
+      .on("click", (e, d) => toggleSelect(d, !d.__selected__))
+  }
+
+  // Sidebar
+  LISTINGS.select("span.identity")
+    .text(function (d) { return identityFor(d); });
+}
+
+function createBacking() {
+    /*
+     *  Creates a backing rectangle for 'this' with the same size as the
+     * bounding box of 'this', and inserts it within 'this's' parent
+     * before 'this'.
+     */
+   let backing = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+   backing.classList.add("backing");
+   let mybb = this.getBBox();
+   backing.setAttribute('x', mybb.x - 4);
+   backing.setAttribute('y', mybb.y - 2);
+   backing.setAttribute('width', mybb.width + 8);
+   backing.setAttribute('height', mybb.height + 4);
+   this.parentNode.insertBefore(backing, this);
+}
+
+
+
+// TODO: Scrap this?
+function setNodesAndLinks(nodes, links) {
+    // Assign identity:
+    assignAuto(nodes);
+
+    // Note: order that we add things here doesn't matter because they all go
+    // into groups that are already ordered correctly for stacking.
+    // Nodes:
+    NODES_GROUP.selectAll("g").remove();
+    NODES = NODES_GROUP.selectAll("g")
+        .data(nodes)
+        .enter().append("g");
+
+    NODES
+        .each(function(d) { d.__node__ = this; })
+        .classed("selected", d => SELECTED_NODES.has(d.id));
+
+    var nodeTitles = NODES.append("title")
+        .text(function(d) {
+            return (
+                    d.id
+                    + "\nInitiated: " + d.initiated
+                    + "\nReceived: " + d.received
+                    + "\nNeighbors: " + d.neighbors
+                   );
+        });
+
+    // Add symbols last so they sit on top of edges:  
+    // TODO: Array bounds & wrapping!
+    var symbols = NODES.append("path")
+        .classed("symbol", true)
+        .attr(
+              "d",
+              d => symbolPathData([0, 0], NODE_RADIUS, shapeForRegion(d.region))
+             )
+        .attr("fill", d => colorForRegion(d.region))
+        .style(
+            "stroke-width",
+            Math.min(1.5, 1.5*(NODE_RADIUS/BASE_RADIUS)) + "pt"
+        )
+        .style("cursor", "crosshair")
+        .on("mouseover", hoverStarted)
+        .on("mouseout", hoverEnded)
+        .on("click", (e, d) => toggleSelect(d, !d.__selected__))
+        .call(d3.drag()
+              .on("start", dragStarted)
+              .on("drag", dragged)
+              .on("end", dragEnded));
+
+    LINKS_GROUP.selectAll("g").remove()
+    LINKS = LINKS_GROUP.selectAll("g")
+        .data(links)
+        .enter().append("g");
+
+    LINKS.each(function(d) { d.__edge__ = this; });
+
+    // Edges go first so that they end up at the back:
+    var edges = LINKS.append("line")
+        .classed("edge", true)
+        .attr(
+              "stroke-width",
+              function(d) { return d.value > 1 ? 0.5 + Math.sqrt(d.value) : 1; }
+             );
+
+    var edgeTitles = LINKS.append("title")
+        .text(
+              function(d) {
+                  return d.source.id + "—" + d.value + "—" + d.target.id;
+              }
+              // TODO: Include level-0 zone names in node IDs?
+             );
+
+    // Labels last so they're over everything else:
+    OVERVIEW.selectAll("g.label").remove();
+    var labels = OVERVIEW.selectAll("g.label")
+        .data(nodes)
+        .enter().append("g");
+
+    labels
+        .classed("label", true)
+        .attr(
+              'transform',
+              "translate("
+              // TODO: HERE
+              + (200 + 12) + ","
+              + (200 + 24) + ")"
+             )
+        .style('visibility', "hidden")
+        .each(function(d) { d.__label__ = this; });
+
+    // reposition labels if/when the graph is scrolled
+    d3.select("#graphs")
+        .on("scroll", function () {
+            let st = this.scrollTop;
+            let sl = this.scrollLeft;
+            let pos = "translate(" + (sl + 12) + "," + (st + 24) + ")";
+            labels.attr('transform', pos);
+        });
+
+    var ltext = labels.append("text")
+        .classed("label-text", true)
+        .attr('z', 20)
+        .text(function(d) {
+            return d.id;
+        })
+        .each(createBacking);
+
+    // Node divs on the sidebar:
+    setListingsNodes(nodes);
+
+    refreshIdentities();
+
+    function ticked() {
+        edges
+            .attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+
+        NODES
+            .attr("transform", function(d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            })
+
+        let e = computeEnergy(
+                              SIMULATION,
+                              SIMULATION.alpha() > SIMULATION.alphaMin()
+                             );
+
+        let espan = document.getElementById("energy");
+        if (espan != null) {
+            espan.innerHTML = e.toExponential(3);
+        }
+    }
+
+    SIMULATION
+        .nodes(nodes)
+        .on("tick", ticked);
+
+    // Note: this is where link source/target IDs are replaced with source/target
+    // node refs!
+    SIMULATION.force("link")
+        .links(links);
+
+    // TODO: Remove or repurpose
+    // SIMULATION.force("bubble").initialize(nodes);
+
+    // the hive layout takes care of this, but otherwise it would be needed
+    //SIMULATION.alpha(1).restart();
+
+    // Impose selected hive layout:
+    imposeLayout(
+        document.getElementById("layout_select").value,
+        document.getElementById("relax_select").value
+    );
+
+    // Re-sort after layout to pick up layout ordering:
+    updateListings();
+}
+
+BAR_TYPE = "initiated";
+
+function fontSizeForDigits(value, baseSize, scaleFactor) {
+  if (scaleFactor == undefined) {
+    scaleFactor = 0.92;
+  }
+  let llen = ("" + value).length;
+  result = baseSize * Math.pow(scaleFactor, Math.max(llen-1, 0));
+  if (result < 4) {
+    console.warn(
+      "Value '" + value + "' with base font size " + baseSize + " resulted in "
+    + "very small text (" + result + "pt)."
+    );
+  } else if (result < 2) {
+    console.error(
+      "Value '" + value + "' with base font size " + baseSize + " resulted in "
+    + "illegible text (" + result + "pt)."
+    );
+  }
+  return result + "px";
+}
+
+function setBars(data, above, below) {
+  if (above != undefined && below == undefined) {
+    plot = above;
+  } else if (above != undefined) {
+    plot = above + "+" + below;
+  } else {
+    if (document.getElementById("double_histogram").checked) {
+      plot = (
+        document.getElementById("which_histogram").value
+      + "+" + document.getElementById("extra_histogram").value
+      );
+    } else {
+      plot = document.getElementById("which_histogram").value;
+    }
+  }
+  // Assign identities:
+  assignAuto(data);
+
+  if (plot == undefined) {
+    plot = BAR_TYPE;
+  }
+  BAR_TYPE = plot;
+
+  // Figure out size of histogram:
+  let histWidth = +HIST.node().parentNode.getBoundingClientRect().width;
+  let histHeight = +HIST.node().parentNode.getBoundingClientRect().height;
+
+  // Compute selected bars:
+  let sel = {};
+  for (let prp of Object.keys(HIST_COLORS)) {
+    sel[prp] = new Set();
+  }
+  let selData = data.filter(d => SELECTED_NODES.has(d.id));
+  for (let d of selData) {
+    for (let prp of Object.keys(HIST_COLORS)) {
+      sel[prp].add(d[prp]);
+    }
+  }
+
+  // Build histograms:
+  let hist = [];
+
+  let combo = false;
+  let first, second;
+  if (plot.indexOf("+") >= 0) {
+    combo = true;
+    first = plot.slice(0, plot.indexOf("+"));
+    second = plot.slice(plot.indexOf("+") + 1);
+  }
+
+  for (let d of data) {
+    if (combo) {
+      let i = d[first];
+      let r = d[second];
+      if (hist[i]) {
+        hist[i][0] += 1;
+      } else {
+        hist[i] = [1, 0];
+      }
+      if (hist[r]) {
+        hist[r][1] += 1;
+      } else {
+        hist[r] = [0, 1];
+      }
+    } else {
+      let val = d[plot];
+      if (hist[val]) {
+        hist[val] += 1;
+      } else {
+        hist[val] = 1;
+      }
+    }
+  }
+
+  let hbars = [];
+  for (let i = 0; i < hist.length; ++i) {
+    if (hist[i] == undefined && COLLAPSE_HISTOGRAMS) {
+      continue; // don't add a bar
+    }
+    if (combo) {
+      hbars.push([i, hist[i] || [0, 0]]);
+    } else {
+      hbars.push([i, hist[i] || 0]);
+    }
+  }
+  let maxVal;
+  if (combo) {
+    maxVal = Math.max(...hbars.map(x => Math.max(...x[1])));
+  } else {
+    maxVal = Math.max(...hbars.map(x => x[1]));
+  }
+
+  let barWidth = Math.max(
+    24,
+    (histWidth - 30) / Math.min(20, hbars.length)
+  );
+
+  if (combo) {
+    function barHeight(d) {
+      return (d/maxVal) * (histHeight - 45)/2;
+    }
+    function barTop(d) {
+      return (histHeight - 30)/2 - barHeight(d[0]);
+    }
+    function barBot(d) {
+      return (histHeight - 30)/2 + 30 + barHeight(d[1]);
+    }
+  } else {
+    function barHeight(d) {
+      return (d/maxVal) * (histHeight - 45);
+    }
+    function barTop(d) {
+      return histHeight - 30 - barHeight(d);
+    }
+  }
+
+  BARS_GROUP.selectAll("rect").remove();
+  BARS = BARS_GROUP.selectAll("rect.bar.above")
+    .data(hbars)
+    .enter().append("rect");
+
+  BARS
+    .classed("bar", true)
+    .classed("above", true)
+    .attr('x', (d, i) => 15 + i*barWidth + barWidth/20)
+    .attr('y', d => barTop(d[1]))
+    .attr('width', barWidth - barWidth/10)
+    .on(
+      "click",
+      function (d) {
+        let nodes = LISTINGS.data();
+        let rectNode = this;
+        let wasSelected = rectNode.classList.contains("selected");
+        for (let nd of nodes) {
+          if (
+            (plot == "combined" && nd.initiated == d[0])
+         || nd[plot] == d[0]
+          ) {
+            toggleSelect(nd, !wasSelected);
+          }
+        }
+      }
+    );
+
+  if (combo) {
+    BARS
+      .classed(first, true)
+      .classed("selected", d => sel.initiated.has(d[0]))
+      .attr('fill', "url(#" + first + "-pattern)")
+      .attr('height', d => barHeight(d[1][0]));
+  } else {
+    BARS
+      .classed(plot, true)
+      .classed("selected", d => sel[plot].has(d[0]))
+      .attr('fill', "url(#" + plot + "-pattern)")
+      .attr('height', d => barHeight(d[1]));
+  }
+
+  BARS_GROUP.selectAll("text").remove();
+
+  let names = [];
+  let nd = [...data];
+  nd.sort((a, b) => d3.ascending(a.id, b.id));
+  if (combo) {
+    nd.forEach(
+      function(d) {
+        if (names[d[first]]) {
+          names[d[first]] += "\n" + d.id;
+        } else {
+          names[d[first]] = d.id;
+        }
+      }
+    )
+  } else {
+    nd.forEach(
+      function(d) {
+        if (names[d[plot]]) {
+          names[d[plot]] += "\n" + d.id;
+        } else {
+          names[d[plot]] = d.id;
+        }
+      }
+    )
+  }
+
+  let barTitles = BARS.append("title")
+    .text(d => names[d[0]]);
+
+  let ticks = BARS_GROUP.selectAll("text.tick")
+    .data(hbars)
+    .enter().append("text")
+      .classed("tick", true)
+      .text(d => d[0])
+      .style("text-anchor", "middle")
+      .style(
+        "font-size",
+        (d, i) => fontSizeForDigits(d[0], BAR_TICKS_FONT_SIZE)
+      )
+      .attr('x', (d, i) => 15 + i*barWidth + barWidth/2);
+
+  if (combo) {
+    ticks
+      .attr('y', (histHeight/2))
+      .style("dominant-baseline", "central");
+  } else {
+    ticks
+      .attr('y', histHeight - 20)
+      .style("dominant-baseline", "hanging");
+  }
+
+  let labels = BARS_GROUP.selectAll("text.label.above")
+    .data(hbars)
+    .enter().append("text")
+      .classed("label", true)
+      .classed("above", true)
+      .style("text-anchor", "middle")
+      .style("font-size", (d, i) => fontSizeForDigits(d[0], BAR_FONT_SIZE))
+      .attr('x', (d, i) => 15 + i*barWidth + barWidth/2);
+
+  let lp = 4;
+  let ll = 18;
+
+  if (combo) {
+    labels
+      .classed(first, true)
+      .text(d => d[1][0])
+      .style("visibility", d => d[1][0] > 0 ? "visible" : "hidden")
+      .attr('fill', d => barHeight(d[1][0]) > ll ? 'white': 'black')
+      .attr(
+        'y',
+        d => barHeight(d[1][0]) > ll ? barTop(d[1]) + lp: barTop(d[1]) - lp
+      )
+      .style(
+        "dominant-baseline",
+        d => barHeight(d[1][0]) > ll ? "hanging": "baseline"
+      );
+  } else {
+    labels
+      .classed(plot, true)
+      .text(d => d[1])
+      .style("visibility", d => d[1] > 0 ? "visible" : "hidden")
+      .attr('fill', d => barHeight(d[1]) > ll ? 'white': 'black')
+      .attr(
+        'y',
+        d => barHeight(d[1]) > ll ? barTop(d[1]) + lp: barTop(d[1]) - lp
+      )
+      .style(
+        "dominant-baseline",
+        d => barHeight(d[1]) > ll ? "hanging": "baseline"
+      );
+  }
+
+  // Extra bars going downwards:
+  if (combo) {
+    BARS_BELOW = BARS_GROUP.selectAll("rect.bar.below")
+      .data(hbars)
+      .enter().append("rect")
+      .classed("bar", true)
+      .classed("below", true)
+      .classed(second, true)
+      .classed("selected", d => sel[second].has(d[0]))
+      .attr('x', (d, i) => 15 + i*barWidth + barWidth/20)
+      .attr('width', barWidth - barWidth/10)
+      .attr('height', d => barHeight(d[1][1]))
+      .attr('y', (histHeight - 30)/2 + 30)
+      .attr('fill', "url(#" + second + "-pattern)")
+      .on(
+        "click",
+        function (d) {
+          let nodes = LISTINGS.data();
+          let rectNode = this;
+          let wasSelected = rectNode.classList.contains("selected");
+          for (let node of nodes) {
+            if (node[second] == d[0]) {
+              toggleSelect(node, !wasSelected);
+            }
+          }
+        }
+      );
+
+    let botNames = [];
+    let nd = [...data];
+    nd.sort((a, b) => d3.ascending(a.id, b.id));
+    nd.forEach(
+      function(d) {
+        if (botNames[d[second]]) {
+          botNames[d[second]] += "\n" + d.id;
+        } else {
+          botNames[d[second]] = d.id;
+        }
+      }
+    )
+
+    let botTitles = BARS_BELOW.append("title")
+      .text(d => botNames[d[0]]);
+
+    let botLabels = BARS_GROUP.selectAll("text.label.below")
+      .data(hbars)
+      .enter().append("text")
+        .classed("label", true)
+        .classed("below", true)
+        .text(d => d[1][1])
+        .style("visibility", d => d[1][1] > 0 ? "visible" : "hidden")
+        .style("text-anchor", "middle")
+        .style("font-size", (d, i) => fontSizeForDigits(d[0], BAR_FONT_SIZE))
+        .attr('x', (d, i) => 15 + i*barWidth + barWidth/2)
+        .attr('fill', d => barHeight(d[1][1]) > ll ? 'white': 'black')
+        .attr(
+          'y',
+          d => barHeight(d[1][1]) > ll ? barBot(d[1]) - lp: barBot(d[1]) + lp
+        )
+        .style(
+          "dominant-baseline",
+          d => barHeight(d[1][1]) > ll ? "baseline": "hanging"
+        );
+  }
+
+  // overflow-x on #graphs + this = scroll
+  d3.select("#histogram").style('width', (30 + barWidth * hbars.length)+"px");
+
+  // Update listings
+  setListingsNodes(data);
+}
+
+function lookupOverviewNode(id) {
+    // Looks up an overview node by its ID value.
+    for (let node of OVERVIEW_NODES) {
+        if (node.id == id) {
+            return node;
+        }
+    }
+}
+
+function lookupOverviewLinks(fromId, toId) {
+    // Looks up the list of links from the given from node to the given
+    // destination. The list might be empty or have more than one entry.
+    let result = [];
+    for (let link of OVERVIEW_LINKS) {
+        if (link.source.id == fromId && link.target.id == toId) {
+            result.push(link);
+        }
+    }
+    return result;
+}
+
+function ensureSingleSelected() {
+    // Ensures that exactly one node is selected. Selects the node with the
+    // most steps visited if none is already selected, breaking ties by
+    // ID, or the most-recently-selected node if multiple are selected.
+    if (SELECTED_NODES.size == 0) {
+        let sortedNodes = [...OVERVIEW_NODES].sort(
+            function(a, b) {
+                return (
+                    d3.descending(
+                        a.active,
+                        b.active
+                    )
+                 || d3.ascending(a.id, b.id)
+                );
+            }
+        );
+        toggleSelect(sortedNodes[0], true);
+    } else if (SELECTED_NODES.size > 1) {
+        // deselect all but the most-recently-selected node
+        let deselect = [];
+        for (let i = 0; i < SELECTION_ORDER.length - 1; ++i) {
+            deselect.push(SELECTION_ORDER[i]);
+        }
+        for (let i = 0; i < deselect.length; ++i) {
+            // TODO: Okay for this to be overview-specific?
+            toggleSelect(lookupOverviewNode(deselect[i]), false);
+        }
+    }
+}
+
+function ensureAtLeastTwoSelected() {
+    // Works like ensurePairSelected, but does not deselect nodes if more
+    // than two are selected.
+    if (SELECTED_NODES.size < 2) {
+        ensureSingleSelected();
+        let fromNode = lookupOverviewNode(SELECTION_ORDER[0]);
+        let linksTouching = [];
+        for (let link of OVERVIEW_LINKS) {
+            if (link.source === fromNode || link.target === fromNode) {
+                linksTouching.push(link);
+            }
+        }
+        let best = 0;
+        let chosen = undefined;
+        for (let other of OVERVIEW_NODES) {
+            let value = 0;
+            for (let link of linksTouching) {
+                if (
+                     (link.source == fromNode && link.target === other)
+                  || (link.target == fromNode && link.source === other)
+                ) {
+                    value += link.strength;
+                }
+            }
+            if (value > best) {
+                best = value;
+                chosen = other;
+            }
+        }
+        if (chosen == undefined) {
+            chosen = OVERVIEW_NODES[0];
+        }
+        // Select that node
+        toggleSelect(chosen, true);
+
+    } // don't do anything here...
+}
+
+function ensureAtLeastNSelected(n) {
+    // Works like ensureAtLeastTwoSelected, but works for any given
+    // number n. Fails if N is larger than the size of the graph, in
+    // which case it selects the entire graph. Just selects nodes based
+    // on how many steps they were active on.
+    while (SELECTED_NODES.size < n) {
+        let best = undefined;
+        let chosen = undefined;
+        for (let node of OVERVIEW_NODES) {
+            if (SELECTED_NODES.has(node.id)) {
+                continue; // already selected
+            }
+            if (best == undefined || node.active > best) {
+                best = node.active;
+                chosen = node;
+            }
+        }
+        // Select that node
+        toggleSelect(chosen, true);
+    }
+}
+
+function ensurePairSelected() {
+    // Ensures that exactly two nodes are selected. If more than two
+    // nodes are selected, it deselects all but the most recent pair.
+    // Otherwise, it first ensures that one node is selected (see
+    // ensureSingleSelected) and then adds the node that has the most
+    // interactions with that node (or just the first node in the graph
+    // if that node has no interactions at all).
+
+    if (SELECTED_NODES.size < 2) {
+        ensureAtLeastTwoSelected();
+    } else if (SELECTED_NODES.size > 2) { // too many selected
+        // deselect all but the two most-recently-selected nodes
+        let deselect = [];
+        for (let i = 0; i < SELECTION_ORDER.length - 2; ++i) {
+            deselect.push(SELECTION_ORDER[i]);
+        }
+        for (let i = 0; i < deselect.length; ++i) {
+            // TODO: Okay for this to be overview-specific?
+            toggleSelect(lookupOverviewNode(deselect[i]), false);
+        }
+    }
+}
+
+function nodeAffinity(from, to) {
+    // Returns an affinity value between the two nodes (the number of
+    // times any transition was taken between them). Returns zero for
+    // nodes where there's never been a direct transition between them,
+    // either because they aren't connected or because their connection
+    // was never traversed.
+    // TODO: make this more efficient?
+    let linksTo = lookupOverviewLinks(from.id, to.id);
+    let linksFro = lookupOverviewLinks(to.id, from.id);
+    let total = 0;
+    for (let link of linksTo) {
+        total += link.strength;
+    }
+    for (let link of linksFro) {
+        total += link.strength;
+    }
+    return total;
+}
+
+function focusLayoutPosition(focus, node, visibleNodes) {
+  // Returns an [x, y] array specifying the position for the given node in
+  // a focus layout that's focused on the given focus node. Returns
+  // undefined for nodes that aren't directly connected to the given focus
+  // node. Arranges nodes in a circle, starting with the
+  // earliest-discovered node on the right and continuing clockwise.
+  let sWidth = +FOCUS.node().getBoundingClientRect().width;
+  let sHeight = +FOCUS.node().getBoundingClientRect().height;
+  let dim = Math.max(1, Math.min(sWidth, sHeight));
+  let visibleRanks = visibleNodes
+    .filter(n => n.__focus_rank__ != undefined)
+    .map(n => n.__focus_rank__.rank);
+  visibleRanks.sort((a, b) => a - b);
+  if (node === focus) {
+    return [sWidth / 2, sHeight / 2];
+  } else if (node.__focus_rank__ != undefined) {
+    let thisVisibleRank = visibleRanks.indexOf(node.__focus_rank__.rank);
+    let theta = 0;
+    let incr = 2*Math.PI / (visibleNodes.length-1);
+    let aff = node.__focus_rank__.affinity;
+    let max = FOCUS_RANKING[0].affinity;
+    let r = (dim*.47) * (1 - (aff / max) / 2);
+    return [
+      sWidth / 2 + Math.cos(theta + incr * thisVisibleRank) * r,
+      sHeight / 2 + Math.sin(theta + incr * thisVisibleRank) * r
+    ];
+  } else {
+    // This node isn't ranked:
+    return undefined;
+  }
+}
+
+const MIN_LABEL_POS = 0.15; // limit for label positioning along links
+const UNPAIRED_LABEL_POS = 0.3; // where to put unreciprocated labels
+
+function edgeLabelPos(link, getElem) {
+    // Computes the position for an edge label along a link. The provided
+    // function must extract a d3 element from a node.
+    let srcElem = getElem(link.source);
+    let trgElem = getElem(link.target);
+    let srcTransform = srcElem.transform.baseVal.consolidate().matrix;
+    let trgTransform = trgElem.transform.baseVal.consolidate().matrix;
+    let srcPos = [srcTransform.e, srcTransform.f];
+    let trgPos = [trgTransform.e, trgTransform.f];
+ 
+    let vector = [trgPos[0] - srcPos[0], trgPos[1] - srcPos[1]];
+ 
+    let fr = 0.5; // position halfway along link
+    // TODO: Could change this if we wanted to?
+ 
+    let inPlay = 1 - 2*MIN_LABEL_POS;
+ 
+    // no gap because we've only got one number to display
+    let sc = MIN_LABEL_POS + inPlay * fr;
+ 
+    return [srcPos[0] + vector[0] * sc, srcPos[1] + vector[1] * sc];
+}
+
+// Constant that controls the gap between fragments of directional edges:
+const GAP_SIZE = 14;
+
+function dirEdgePoints(dlink, getElem) {
+    // Computes the edge points for a directional edge, given a function for
+    // extracting a d3 element from a node (the provided directional link is
+    // presumed to have node references as its source and target). The result
+    // includes properties that specify two positions:
+    //
+    //  xs, ys: the start position
+    //  xe, ye: the end position
+    let srcElem = getElem(dlink.source);
+    let trgElem = getElem(dlink.target);
+    let srcTransform = srcElem.transform.baseVal.consolidate().matrix;
+    let trgTransform = trgElem.transform.baseVal.consolidate().matrix;
+    let srcPos = [srcTransform.e, srcTransform.f];
+    let trgPos = [trgTransform.e, trgTransform.f];
+    if (srcElem === trgElem) {
+        return {
+            "xs": srcPos[0], "ys": srcPos[1],
+            "xe": srcPos[0], "ye": srcPos[1],
+        };
+    } else {
+        let vector = [trgPos[0] - srcPos[0], trgPos[1] - srcPos[1]];
+        let mag = Math.sqrt(vector[0]*vector[0] + vector[1]*vector[1]);
+        let ulinks = lookupOverviewLinks(dlink.source.id, dlink.target.id);
+        if (ulinks.length > 0) {
+            return {
+                "xs": srcPos[0], "ys": srcPos[1],
+                "xe": trgPos[0], "ye": trgPos[1],
+            };
+        } else {
+            let vector = [trgPos[0] - srcPos[0], trgPos[1] - srcPos[1]];
+            return {
+                "xs": srcPos[0], "ys": srcPos[1],
+                "xe": srcPos[0] + vector[0]/2, "ye": srcPos[1] + vector[1]/2
+            };
+        }
+    }
+}
+
+function focusSort(a, b) {
+    return (
+        d3.ascending(regionIndex(a.region), regionIndex(b.region))
+     || d3.descending(a.aff, b.aff)
+     || d3.ascending(
+            a.analyses.get("stepFirstVisited"),
+            b.analyses.get("stepFirstVisited")
+        )
+     || d3.descending(
+            a.node.active,
+            b.node.active
+        )
+     || d3.ascending(a.node.id, b.node.id)
+    );
+}
+
+function setFocus(nodes, dlinks) {
+    // Sets up the focus graph, resetting the selection to be a single
+    // node (the first one that was selected if several are now, or the
+    // start node if no node is selected).
+    ensureSingleSelected();
+
+    // Look up size of svg element:
+    var bounds = FOCUS.node().getBoundingClientRect();
+    var sWidth = +bounds.width;
+    var sHeight = +bounds.height;
+
+    // Assign identity:
+    assignAuto(nodes);
+
+    // Get selected node:
+    let focusNode = lookupOverviewNode(SELECTION_ORDER[0]);
+    FOCUS_CURRENT = focusNode.id;
+
+    // Set controls:
+    d3.select("#fc_name")
+        .text(focusNode.id)
+        .style("color", colorForRegion(focusNode.region));
+
+    // Get rid of old focus ranks:
+    for (let node of nodes) {
+        delete node.__focus_rank__;
+    }
+
+    // Rank nodes:
+    FOCUS_RANKING = [];
+    let visibleNodes = [focusNode];
+    for (let nbId of focusNode.neighbors) {
+        let node = lookupOverviewNode(nbId);
+        visibleNodes.push(node);
+        if (node !== focusNode) {
+            let aff = nodeAffinity(focusNode, node);
+            let totalOut = 0;
+            let totalIn = 0;
+            if (aff > 0) {
+                let olinks = lookupOverviewLinks(focusNode.id, node.id);
+                let ilinks = lookupOverviewLinks(node.id, focusNode.id);
+                for (let out of olinks) {
+                    totalOut += out.strength;
+                }
+                for (let inc of ilinks) {
+                    totalIn += inc.strength;
+                }
+            }
+            let rank = {
+                "affinity": totalOut + totalIn,
+                "region": node.region,
+                "discovered": node.analyses.get("stepFirstVisited"),
+                "departedTo": totalOut,
+                "arrivedFrom": totalIn,
+                "node": node,
+                "rank": 0
+            };
+            FOCUS_RANKING.push(rank);
+            node.__focus_rank__ = rank;
+        }
+    }
+
+    // Sort by is-neighbor/not and then by step-discovered
+    FOCUS_RANKING = FOCUS_RANKING.sort(focusSort);
+
+    let r = 0;
+    for (let ranked of FOCUS_RANKING) {
+        ranked.rank = r;
+        r += 1;
+    }
+
+    // Filter edges:
+    let relevantEdges = dlinks.filter(
+        function (l) {
+            if (l.source === focusNode) {
+                return focusNode.neighbors.has(l.target.id);
+            } else if (l.target === focusNode) {
+                return focusNode.neighbors.has(l.source.id);
+            } else {
+                return false;
+            }
+        }
+    );
+
+    // Assign node positions:
+    for (let node of visibleNodes) {
+        node.__focus_pos__ = focusLayoutPosition(focusNode, node, visibleNodes);
+    }
+
+    // Set up nodes:
+    FOCUS_NODES_GROUP.selectAll("g").remove();
+    FOCUS_NODES = FOCUS_NODES_GROUP.selectAll("g")
+        .data(visibleNodes)
+        .enter().append("g");
+
+    FOCUS_NODES.each(function(d) { d.__focus_node__ = this; });
+
+    FOCUS_NODES
+        .attr(
+            "transform",
+            function(d) {
+                return (
+                    "translate("
+                  + d.__focus_pos__[0] + "," +
+                    d.__focus_pos__[1] + ")"
+                );
+            }
+        )
+        .classed("selected", d => SELECTED_NODES.has(d.id));
+
+    var circles = FOCUS_NODES.append("path")
+        .classed("symbol", true)
+        .attr(
+            "d",
+            d => symbolPathData([0, 0], NODE_RADIUS, shapeForRegion(d.region))
+        )
+        .attr("fill", d => colorForRegion(d.region))
+        .style(
+            "stroke-width",
+            Math.min(1.5, 1.5*(NODE_RADIUS/BASE_RADIUS)) + "pt"
+        )
+        .style("cursor", "crosshair")
+        .on("mouseover", hoverStarted)
+        .on("mouseout", hoverEnded)
+        .on("click", (e, d) => toggleSelect(d, !d.__selected__))
+        .call(d3.drag()
+              .on("start", dragStarted)
+              .on("drag", dragged)
+              .on("end", dragEnded));
+
+    // Links
+    FOCUS_LINKS_GROUP.selectAll("g").remove()
+    FOCUS_LINKS = FOCUS_LINKS_GROUP.selectAll("g")
+        .data(relevantEdges)
+        .enter().append("g");
+
+    FOCUS_LINKS.each(function(d) { d.__focus_edge__ = this; });
+
+    var edges = FOCUS_LINKS.append("g")
+        .classed("directional-edge", true)
+
+    var edgeLines = edges.append("path")
+        .classed("diredge-line", true)
+        .attr("stroke-width", 1);
+
+    edgeLines
+        .attr(
+              "d",
+              function(d) {
+                  let points = dirEdgePoints(d, x => x.__ego_node__);
+                  return (
+                          "M " + points.xs + " " + points.ys
+                          + " L " + points.xe + " " + points.ye
+                         );
+              }
+             );
+
+    var edgeLabels = edges.append("text")
+        .classed("diredge-label", true)
+        .attr("x", d => dirEdgePoints(d, x => x.__focus_node__).xe)
+        .attr("y", d => dirEdgePoints(d, x => x.__focus_node__).ye)
+        .style(
+               "font-size",
+               d => fontSizeForDigits(d.value, EDGE_LABEL_FONT_SIZE, 1.0)
+              )
+        .text(d => d.value);
+
+    // node labels
+    FOCUS.selectAll("g.label").remove();
+    var labels = FOCUS.selectAll("g.label")
+        .data(visibleNodes)
+        .enter().append("g");
+
+    labels
+        .classed("label", true)
+        .attr('transform', "translate(12, 24)")
+        .style('visibility', "hidden")
+        .each(function(d) { d.__focus_label__ = this; });
+
+    // reposition labels if/when the graph is scrolled
+    d3.select("#graphs")
+        .on("scroll", function () {
+            let st = this.scrollTop;
+            let sl = this.scrollLeft;
+            let pos = "translate(" + (sl + 12) + "," + (st + 24) + ")";
+            labels.attr('transform', pos);
+        });
+
+    var ltext = labels.append("text")
+        .classed("label-text", true)
+        .attr('z', 20)
+        .text(function(d) {
+            return d.id;
+        })
+        .each(createBacking);
+
+
+    var nodeTitles = FOCUS_NODES.append("title")
+        .text(function(d) {
+            return (
+                d.name
+              + "\nId: " + d.id
+              + "\nRegion: " + d.region
+              + "\nNeighbors: " + d.neighbors.size
+              + "\nObserved on step: " + d.analyses.get("stepObserved")
+              + "\nFirst visisted on step: "
+              + d.analyses.get("stepFirstVisited")
+            );
+        });
+
+    var edgeTitles = FOCUS_LINKS.append("title")
+        .text(
+            function(d) {
+                return (
+                    d.source.name + "→" + d.name + "→" + d.target.name
+                  + "\nTraversed: " + d.strength
+                  + "\nObserved on step: "
+                  + d.analyses.get("stepObservedTransition")
+                  + "\nFirst taken on step: "
+                  + d.analyses.get("stepsTaken")[0]
+                );
+            }
+        );
+
+    // Node divs on the sidebar:
+    //setListingsNodes(visibleNodes);
+    setListingsNodes(nodes);
+
+    // Update identities
+    refreshIdentities();
+}
+
+function setListingsNodes(nodes) {
+    // Sets which nodes are displayed in the listings
+    LISTING.selectAll("div").remove()
+    LISTINGS = LISTING.selectAll("div")
+        .data(nodes)
+        .enter().append("div")
+    LISTINGS
+        .classed("listing", true)
+        .classed("selected", d => SELECTED_NODES.has(d.id))
+        .each(function(d) { d.__node__ = this; });
+ 
+    updateListings();
+}
+
+function setPath(nodes, links) {
+    // Sets up the path graph, which shows the sequence of decisions made,
+    // laying out nodes in a line based on which step they were first
+    // visited at.
+ 
+    // TODO: This is made-up...
+    let pathGraph = EXPLORATION.pathGraph();
+ 
+    // Assign identity:
+    assignAuto(pathGraph.nodes);
+ 
+    // Nodes:
+    PATH_NODES_GROUP.selectAll("g").remove();
+    PATH_NODES = PATH_NODES_GROUP.selectAll("g")
+        .data(pathGraph.nodes)
+        .enter().append("g");
+ 
+    PATH_NODES
+        .each(function(d) { d.__path_node__ = this; })
+        .classed("selected", d => SELECTED_NODES.has(d.id))
+        .attr(
+            "transform",
+            d => (
+                "translate("
+              + d.__path_pos__[0]
+              + ","
+              + d.__path_pos__[1]
+              + ")"
+            )
+        );
+ 
+    var nodeTitles = PATH_NODES.append("title")
+        .text(function(d) {
+            return (
+                d.id
+              + "\nStep: " + d.step
+              + "\nVisits: " + d.visits
+            );
+        });
+ 
+    // Add circles:
+    var circles = PATH_NODES.append("path")
+        .classed("symbol", true)
+        .attr(
+            "d",
+            d => symbolPathData([0, 0], NODE_RADIUS, shapeForRegion(d.region))
+        )
+        .attr("fill", d => colorForRegion(d.region))
+        .attr("stroke", "white")
+        .style(
+            "stroke-width",
+            Math.min(1.5, 1.5*(NODE_RADIUS/BASE_RADIUS)) + "pt"
+        )
+        .style("cursor", "crosshair")
+        .on("mouseover", hoverStarted)
+        .on("mouseout", hoverEnded)
+        .on("click", (e, d) => toggleSelect(d, !d.__selected__));
+ 
+    // Links
+    // TODO: Think about how to show links...
+    PATH_LINKS_GROUP.selectAll("g").remove()
+    PATH_LINKS = PATH_LINKS_GROUP.selectAll("g")
+        .data(pathGraph.edges)
+        .enter().append("g");
+ 
+    PATH_LINKS.each(function(d) { d.__path_edge__ = this; });
+ 
+    var edges = PATH_LINKS.append("g")
+        .classed("edge", true)
+ 
+    // TODO: Arcs instead of lines!
+    var edgeLines = edges.append("line")
+        .classed("line", true)
+        .attr(
+            "stroke-width",
+            d => d.value > 1 ? 0.5 + Math.sqrt(d.value) : 1
+        );
+ 
+    edgeLines
+        .attr("x1", d => d.source.__path_pos__[0])
+        .attr("y1", d => d.source.__path_pos__[1])
+        .attr("x2", d => d.target.__path_pos__[0])
+        .attr("y2", d => d.target.__path_pos__[1])
+ 
+    var edgeLabels = edges.append("text")
+        .classed("edge-label", true)
+        .attr("x", d => edgeLabelPos(d, x => x.__path_node__)[0])
+        .attr("y", d => edgeLabelPos(d, x => x.__path_node__)[1])
+        .style(
+            "font-size",
+            d => fontSizeForDigits(d.value, EDGE_LABEL_FONT_SIZE, 1.0)
+        )
+        .text(d => d.value);
+ 
+    // node labels
+    PATH.selectAll("g.label").remove();
+    var labels = PATH.selectAll("g.label")
+        .data(pathGraph.nodes)
+        .enter().append("g");
+ 
+    labels
+        .classed("label", true)
+        .attr('transform', "translate(12, 24)")
+        .style('visibility', "hidden")
+        .each(function(d) { d.__path_label__ = this; });
+ 
+    // reposition labels if/when the graph is scrolled
+    d3.select("#graphs")
+        .on("scroll", function () {
+            let st = this.scrollTop;
+            let sl = this.scrollLeft;
+            let pos = "translate(" + (sl + 12) + "," + (st + 24) + ")";
+            labels.attr('transform', pos);
+        });
+ 
+    var ltext = labels.append("text")
+        .classed("label-text", true)
+        .attr('z', 20)
+        .text(d => d.id)
+        .each(createBacking);
+ 
+    var edgeTitles = PATH_LINKS.append("title")
+        .text(
+            function (d) {
+                let s = d.strength != 1 ? "s" : ""
+                return (
+                    d.source.id + "→" + d.target.id + "\n"
+                  + d.strength + " traversal" + s
+                );
+            }
+        );
+ 
+    // Node divs on the sidebar:
+    setListingsNodes(nodes);
+ 
+    // Update identities
+    refreshIdentities();
+ 
+    // Update visibility from controls:
+    toggleOutsideLinks();
+    toggleInsideLinks();
+    toggleAffinityEdgeLabels();
+}
+
+var SHOW_SECONDARY_LINKS = false;
+var SHOW_PATH_LINK_LABELS = true;
+
+function toggleSecondaryLinks(on) {
+  if (on == undefined) {
+    on = !document.getElementById("show_secondary_links").checked;
+  }
+
+  SHOW_SECONDARY_LINKS = on;
+  setLinkVisibility();
+}
+
+function togglePathEdgeLabels(on) {
+  if (on == undefined) {
+    on = document.getElementById("path_edge_labels").checked;
+  }
+
+  SHOW_PATH_LINK_LABELS = on;
+  setLinkVisibility();
+}
+
+
+var DRAG_STARTED_AT = undefined;
+const DRAG_DELAY = 50; // milliseconds
+
+function dragStarted(event, d) {
+    if (!event.active) {
+        DRAG_STARTED_AT = performance.now();
+    }
+    d.fx = d.x;
+    d.fy = d.y;
+    d.x = d.x;
+    d.y = d.y;
+}
+
+function dragged(event, d) {
+    if (
+        DRAG_STARTED_AT != undefined
+     && performance.now() - DRAG_STARTED_AT > DRAG_DELAY
+    ) {
+        DRAG_STARTED_AT = undefined;
+        SIMULATION.alphaTarget(MEDIUM_ENERGY).restart();
+    }
+    d.fx = event.x;
+    d.fy = event.y;
+    d.x = event.x;
+    d.y = event.y;
+}
+
+function dragEnded(event, d) {
+    if (!event.active) {
+        SIMULATION.alphaTarget(0);
+    }
+    d.fx = null;
+    d.fy = null;
+}
+
+var SHOW_LINKS = {
+    "confirmed": true,
+    "unconfirmed": true
+};
+var COMPLETE_LEGEND = false;
+
+function linkTouches(link, node) {
+  return link.source === node || link.target === node;
+}
+
+function touchesSelected(link) {
+    return (
+        SELECTED_NODES.has(link.source.id)
+     || SELECTED_NODES.has(link.target.id)
+    );
+}
+
+function linkVisibility(link, focusNode) {
+  if (focusNode != undefined) {
+    return linkTouches(link, focusNode) ? "visible" : "hidden";
+  } else {
+    if (SELECTED_NODES.size > 0) { // selection overrules
+      return touchesSelected(link) ? "visible": "hidden";
+    } else { // settings value
+      return SHOW_LINKS[
+          link.unconfirmed ? "unconfirmed" : "confirmed"
+      ] ? "visible" : "hidden";
+    }
+  }
+}
+
+function egoLinkVisibility(link, focusNode) {
+  if (focusNode != undefined) {
+    return linkTouches(link, focusNode) ? "visible" : "hidden";
+  } else {
+    if (SELECTED_NODES.size > 0) { // selection takes precedence
+      if (SELECTED_NODES.size == 1 && SELECTED_NODES.has(FOCUS_CURRENT)) {
+        return "visible";
+      }
+      if (link.source.id == FOCUS_CURRENT) {
+        return SELECTED_NODES.has(link.target.id) ? "visible" : "hidden";
+      } else if (link.target.id == FOCUS_CURRENT) {
+        return SELECTED_NODES.has(link.source.id) ? "visible" : "hidden";
+      }
+    } else { // nothing selected
+      return "visible";
+    }
+  }
+}
+
+
+function setLinkVisibility(focusNode) {
+    if (LINKS) {
+        LINKS.style("visibility", d => linkVisibility(d, focusNode));
+    }
+    if (FOCUS_LINKS) {
+        FOCUS_LINKS.style("visibility", d => egoLinkVisibility(d, focusNode));
+    }
+    if (PATH_LINKS) {
+        PATH_LINKS.style("visibility", d => linkVisibility(d, focusNode));
+        PATH_LINKS.selectAll("text.edge-label")
+            .style(
+                 "visibility",
+                 d => (
+                     linkVisibility(d, focusNode) == "hidden"
+                     ? "hidden"
+                     : (SHOW_PATH_LINK_LABELS ? "visible" : "hidden")
+                 )
+            );
+    }
+}
+
+function hoverStarted(event, d) {
+    setLinkVisibility(d);
+    if (d.__label__ != undefined) {
+        d3.select(d.__label__).style("visibility", "visible");
+    }
+    if (d.__ego_label__ != undefined) {
+        d3.select(d.__ego_label__).style("visibility", "visible");
+    }
+    if (d.__aff_label__ != undefined) {
+        d3.select(d.__aff_label__).style("visibility", "visible");
+    }
+}
+function hoverEnded(event, d) {
+    setLinkVisibility();
+    if (d.__label__ != undefined) {
+        d3.select(d.__label__).style("visibility", "hidden");
+    }
+    if (d.__ego_label__ != undefined) {
+        d3.select(d.__ego_label__).style("visibility", "hidden");
+    }
+    if (d.__aff_label__ != undefined) {
+        d3.select(d.__aff_label__).style("visibility", "hidden");
+    }
+}
+
+var SELECTED_NODES = new Set();
+var SELECTION_ORDER = [];
+
+function removeArrayItem(arr, item) {
+  for (let i = 0; i < arr.length; ++i) {
+    if (arr[i] === item) {
+      arr.splice(i, 1);
+      i -= 1;
+    }
+  }
+}
+
+function clearSelection() {
+    let sel = [];
+    for (let id of SELECTED_NODES) {
+        sel.push(lookupOverviewNode(id));
+    }
+    for (let node of sel) {
+        toggleSelect(node, false);
+    }
+}
+
+function toggleSelect(node, on) {
+  if (on) {
+    removeArrayItem(SELECTION_ORDER, node.id); // just in case
+    node.__selected__ = true;
+    SELECTED_NODES.add(node.id);
+    SELECTION_ORDER.push(node.id);
+    if (NODES) {
+      NODES.classed("selected", d => SELECTED_NODES.has(d.id));
+    }
+    if (FOCUS_NODES) {
+      FOCUS_NODES.classed("selected", d => SELECTED_NODES.has(d.id));
+    }
+    if (PATH_NODES) {
+      PATH_NODES.classed("selected", d => SELECTED_NODES.has(d.id));
+    }
+    if (LISTINGS) {
+      LISTINGS.classed("selected", d => SELECTED_NODES.has(d.id));
+    }
+    if (LINKS) {
+      LINKS.style(
+        "visibility",
+        d => (
+          SELECTED_NODES.has(d.source.id)
+       || SELECTED_NODES.has(d.target.id)
+        ) ? "visible" : "hidden"
+      );
+    }
+  } else {
+    node.__selected__ = false;
+    SELECTED_NODES.delete(node.id);
+    removeArrayItem(SELECTION_ORDER, node.id);
+    if (NODES) {
+      NODES.classed("selected", d => SELECTED_NODES.has(d.id));
+    }
+    if (FOCUS_NODES) {
+      FOCUS_NODES.classed("selected", d => SELECTED_NODES.has(d.id));
+    }
+    if (PATH_NODES) {
+      PATH_NODES.classed("selected", d => SELECTED_NODES.has(d.id));
+    }
+    if (LISTINGS) {
+      LISTINGS.classed("selected", d => SELECTED_NODES.has(d.id));
+    }
+    if (LINKS) {
+      if (SELECTED_NODES.size == 0) {
+        LINKS.style("visibility", "visible");
+      } else {
+        LINKS.style(
+          "visibility",
+          d => (
+            SELECTED_NODES.has(d.source.id)
+         || SELECTED_NODES.has(d.target.id)
+          ) ? "visible" : "hidden"
+        );
+      }
+    }
+  }
+  let sel = {};
+  for (let prp of Object.keys(HIST_COLORS)) {
+    sel[prp] = new Set();
+  };
+  let selData = OVERVIEW_NODES.filter(d => SELECTED_NODES.has(d.id));
+  for (let d of selData) {
+    for (let prp of Object.keys(HIST_COLORS)) {
+      sel[prp].add(d[prp]);
+    };
+  }
+  if (BARS_GROUP) {
+    for (let prp of Object.keys(HIST_COLORS)) {
+      BARS_GROUP.selectAll("rect.bar." + prp)
+        .classed("selected", d => sel[prp].has(d[0]));
+    }
+  }
+  setLinkVisibility();
+}
+
+function setDifference(a, b) {
+  return new Set([...a].filter(x => !b.has(x)));
+}
+
+function setIntersection(a, b) {
+  return new Set([...a].filter(x => b.has(x)));
+}
+
+function toggleLegendNames(on) {
+  COMPLETE_LEGEND = on;
+  NODES.selectAll(".legend_label")
+    .style("visibility", on ? "visible" : "hidden");
+}
+
+function prevStep() {
+    // Sets the step slider to the step before the current step, and
+    // triggers setStep with the new value.
+    let stepper = document.getElementById("step_slider");
+    let step = parseInt(stepper.value);
+    if (step > parseInt(stepper.min)) {
+        stepper.value = step - 1;
+        setStep(step - 1);
+    }
+}
+
+function nextStep() {
+    // Same as prevStep but increases by 1 step.
+    let stepper = document.getElementById("step_slider");
+    let step = parseInt(stepper.value);
+    if (step < parseInt(stepper.max)) {
+        stepper.value = step + 1;
+        setStep(step + 1);
+    }
+}
+
+
+// Holds the current step value: where are we in the exploration?
+var CURRENT_STEP;
+
+
+function setStep(step) {
+    // Sets which step of the exploration we're interested in, and
+    // updates all graphs to that step.
+    CURRENT_STEP = step;
+
+    // Disable previous/next buttons if we're at an extreme
+    let pB = document.getElementById("prevButton");
+    let nB = document.getElementById("nextButton");
+    let sl = document.getElementById("step_slider");
+    pB.disabled = step == 0;
+    nB.disabled = '' + step == sl.max;
+    // Pad step number w/ non-breaking spaces until it's as wide as the
+    // max so that the slider doesn't jump around.
+    let width = sl.max.length;
+    let sText = '' + step;
+    while (sText.length < width) {
+        sText = ' ' + sText;
+    }
+    // Set current-step text
+    document.getElementById("current-step").innerText = sText;
+
+    // Set nodes for the overview
+    console.log("Setting up overview...");
+    setupOverview(step);
+
+    // Set coloring for the focus graph
+    console.log("Setting up focus graph...");
+    setupFocusGraph(step, FOCUS_CURRENT);
+
+    // Set highlight node for the path graph
+    console.log("Setting path highlight to " + step);
+    setPathHighlight(step);
+}
+
+
+// Special object to mark places where copying was impossible.
+var COPY_FAILED = {};
+
+// Stores current unique object ID
+var currentObjID = 0;
+
+// Map from objects to their IDs. As a WeakMap, it won't prevent things
+// from being garbage-collected.
+const objIDs = new WeakMap();
+
+// Primitive type names
+const PRIMITIVES = [
+    "string",
+    "number",
+    "bigint",
+    "boolean",
+    "undefined",
+    "symbol",
+    // null has type "object" when using typeof
+];
+
+function objID(anything) {
+    /*
+     * Assign and remember unique object IDs. Returns -1 for all primitive
+     * values.
+     * Based on this answer:
+     * https://stackoverflow.com/questions/1997661/unique-object-identifier-in-javascript
+     */
+    if (anything === null || PRIMITIVES.includes(typeof anything)) {
+        return -1;
+    }
+    if (!map.has(anything)) {
+        map.set(anything, ++currentObjID);
+    }
+    return map.get(anything);
+}
+
+function bestEffortJsCopy(proxy, memo) {
+    /*
+     * Makes a best-effort to recursively convert the given proxy into a
+     * Javascript copy, but where that's not possible, inserts a
+     * reference to COPY_FAILED instead of the uncopyable value. Returns
+     * COPY_FAILED when the top-level proxy is not copyable.
+     *
+     * Turns both lists and tuples into arrays.
+     *
+     * This keeps memo so that it can manage recursive structures.
+     * However, it is NOT guaranteed to correctly reflect sharing of
+     * things like lists that can be successfully converted using
+     * proxy.toJS alone.
+     */
+    if (proxy == undefined) {
+        // console.log("BEJC undef");
+        return undefined;
+    } else if (proxy == null) {
+        // console.log("BEJC null");
+        return null;
+    }
+    if (memo == undefined) {
+        memo = new Map();
+    }
+    const pyID = pyodide.globals.get("id");
+    let mKey = pyID(proxy);
+    // console.log("BEJC " + mKey + " " + typeof(proxy));
+    // console.log("BEJCP " + proxy);
+    pyID.destroy(); // clean up proxy
+    // console.log("BEJCP pyID destroyed...");
+    if (memo.has(mKey)) {
+        // console.log("BEJCP memo");
+        return memo.get(mKey);
+    }
+    let result;
+    // Note: I tried to try/catch a toJS call here but ran into pyodide
+    // errors in formatting a Python traceback without getting into the
+    // catch branch.
+    // console.log("BEJCP cases for " + proxy.type);
+    if (!proxy instanceof pyodide.ffi.PyProxy) {
+        result = proxy; // not actually a proxy
+        memo.set(mKey, result);
+        return result;
+    } else if (proxy.type == "list" || proxy.type == "tuple") {
+        // console.log("BEJCP case list/tuple");
+        result = new Array();
+        memo.set(mKey, result);
+        for (let val of proxy) {
+            if (val instanceof pyodide.ffi.PyProxy) {
+                result.push(bestEffortJsCopy(val, memo));
+                val.destroy();
+            } else {
+                result.push(val);
+            }
+        }
+    } else if (proxy.type == "dict") {
+        // console.log("BEJCP case dict");
+        result = new Map();
+        memo.set(mKey, result);
+        // console.log("BEJCP memoed map");
+        for (let key of proxy) {
+            // console.log("BEJCP key: " + key);
+            let val = proxy.get(key);
+            // console.log("BEJCP got value: " + val);
+            let ck, cv
+            // Copy & clean up proxies
+            if (key instanceof pyodide.ffi.PyProxy) {
+                // console.log("BEJCP copying key " + key);
+                ck = bestEffortJsCopy(key, memo);
+                // console.log("BEJCP key copy " + ck);
+                key.destroy()
+            } else {
+                // console.log("BEJCP native key.");
+                ck = key;
+            }
+            if (val instanceof pyodide.ffi.PyProxy) {
+                // console.log("BEJCP copying val...");
+                cv = bestEffortJsCopy(val, memo);
+                // console.log("BEJCP val copy: " + cv);
+                val.destroy()
+            } else {
+                // console.log("BEJCP native val.");
+                cv = val;
+            }
+            // console.log("Setting result key/value pair.");
+            result.set(ck, cv);
+        }
+    } else if (proxy.type == "set") {
+        // console.log("BEJCP case set");
+        result = new Set();
+        memo.set(mKey, result);
+        for (let item of proxy) {
+            if (item instanceof pyodide.ffi.PyProxy) {
+                result.add(bestEffortJsCopy(item, memo));
+                item.destroy()
+            } else {
+                result.add(item);
+            }
+        }
+    } else {  // unknown type; just use COPY_FAILED
+        // console.log("BEJCP case unknown");
+        memo.set(mKey, COPY_FAILED);
+        result = COPY_FAILED;
+    }
+    // console.log("Ready to return.");
+    return result;
+}
+
+// TODO: Reimplement in viewer.py
+function getLayoutCopy(explorationProxy, layoutName) {
+    /*
+     * Creates a new JS copy of the named layout from the given
+     * exploration proxy object, and cleans up the proxies it creates
+     * along the way. The result is a Map from node IDs to [x,  y]
+     * coordinate arrays.
+     */
+    let layoutsProxy = explorationProxy.layouts;  // proxy for all layouts
+    let layoutProxy = layoutsProxy.get(layoutName);  // requested layout
+    if (layoutProxy == undefined) {
+        console.warn("No layout named '" + layoutName + "' was available.");
+        return new Map();
+    }
+
+    // We'll return a map from decision IDs to *array*s of x, y numbers
+    let result = new Map();
+
+    for (let dID of layoutProxy.keys()) {  // integers are NOT proxied
+        // Get tuple which will be a proxy
+        let posProxy = layoutProxy.get(dID);
+        // create new array value in result; numbers are NOT proxied
+        result.set(dID, [posProxy.get(0), posProxy.get(1)]);
+        // Clean up proxy in this iteration
+        posProxy.destroy();
+    }
+
+    // Clean up proxies
+    layoutsProxy.destroy();
+    layoutProxy.destroy();
+
+    return result;
+}
+
+
+// TODO: Reimplement in viewer.py
+function extractDecisionInfo(exploration, dID, step) {
+    /*
+     * Copies & converts decision info for the given decision in the given
+     * step of the given exploration (which should be a proxy for a
+     * DiscreteExploration).
+     *
+     * Cleans up all of the proxies it creates along the way, returning a
+     * freshly cloned object w/ no connection to the original.
+     *
+     * Uses bestEffortJsCopy on tag values, so some may not make it.
+     *
+     * If step is omitted, will search backwards through the exploration
+     * until it finds a step with the given decision.
+     */
+    let situationProxy, graphProxy;
+    if (step == undefined) {
+        for (let step = exploration.length - 1; step > 0; step -= 1) {
+            situationProxy = exploration.get(step);
+            graphProxy = situationProxy.graph;
+            if (dID in graphProxy) {
+                break;  // final graph/situation proxies are NOT destroyed here
+            }
+            graphProxy.destroy();
+            situationProxy.destroy();
+        }
+    } else {
+        situationProxy = exploration.get(step);
+        graphProxy = situationProxy.graph;
+    }
+    let infoProxy = graphProxy.decisionInfo(dID);
+    let tagsProxy = infoProxy.get("tags");
+    let annotationsProxy = infoProxy.get("annotations");
+    
+    let result = {"tags": null, "annotations": []};
+    result.name = infoProxy.get("name");  // no proxy for a string
+    result.domain = infoProxy.get("domain");  // no proxy for a string
+    result.tags = bestEffortJsCopy(tagsProxy);
+    if (annotationsProxy != undefined) {
+        for (let ann of annotationsProxy) {  // strings not proxied
+            result.annotations.push(ann);
+        }
+        annotationsProxy.destroy();
+    }
+
+    // Clean up proxies
+    if (tagsProxy != undefined) {
+        tagsProxy.destroy();
+    }
+    infoProxy.destroy();
+    graphProxy.destroy();
+    situationProxy.destroy();
+
+    return result;
+}
+
+
+// TODO: Reimplement in viewer.py
+function extractTransitionProperties(exp, dID, name, step) {
+    /*
+     * Like extractDecisionInfo but for a transition.
+     */
+
+    let situationProxy, graphProxy;
+    if (step == undefined) {
+        for (let step = exp.length - 1; step > 0; step -= 1) {
+            situationProxy = exp.get(step);
+            graphProxy = situationProxy.graph;
+            if (
+                dID in graphProxy
+             && graphProxy.getDestination(dID, name) != undefined
+            ) {
+                // destination is a decision ID, so is NOT proxied
+                break;  // final graph/situation proxies are NOT destroyed here
+            }
+            graphProxy.destroy();
+            situationProxy.destroy();
+        }
+    } else {
+        situationProxy = exp.get(step);
+        graphProxy = situationProxy.graph;
+    }
+
+    // Create a ParseFormat object
+    let exploration = pyodide.globals.get("exploration");
+    let parsing = exploration.parsing;
+    let pf = parsing.ParseFormat();
+
+    // Proxies for the transition properties
+    let propsProxy = graphProxy.getTransitionProperties(dID, name);
+    let requirementProxy = propsProxy.get("requirement");
+
+    let consequenceProxy = propsProxy.get("consequence");
+    let tagsProxy = propsProxy.get("tags");
+    let annotationsProxy = propsProxy.get("annotations");
+
+    let result = {
+        "requirement": null,
+        "consequence": null,
+        "tags": null,
+        "annotations": []
+    };
+    result.requirement = requirementProxy.unparse();  // no proxy for a string
+    result.consequence = pf.unparseConsequence(consequenceProxy);  // string
+    result.tags = bestEffortJsCopy(tagsProxy);
+    for (let ann of annotationsProxy) {  // strings not proxied
+        result.annotations.push(ann);
+    }
+
+    // Clean up proxies
+    annotationsProxy.destroy();
+    tagsProxy.destroy();
+    consequenceProxy.destroy();
+    requirementProxy.destroy();
+    propsProxy.destroy();
+
+    graphProxy.destroy();
+    situationProxy.destroy();
+
+    pf.destroy();
+    parsing.destroy();
+    exploration.destroy();
+
+    return result;
+}
+
+
+// TODO: Reimplement in viewer.py
+function getDecisionAnalyses(exp, dID) {
+    /*
+     * Returns a best-effort copy of whole-exploration analysis results
+     * for the specified decision.
+     */
+    // Get reference to library
+    let exploration = pyodide.globals.get("exploration")
+    let analysis = exploration.analysis;
+
+    let analysesProxy = analysis.getDecisionAnalyses(exp, dID);
+    let analyses = bestEffortJsCopy(analysesProxy);
+
+    // Clean up proxies
+    analysesProxy.destroy();
+    analysis.destroy();
+    exploration.destroy();
+
+    return analyses;
+}
+
+
+// TODO: Reimplement in viewer.py
+function getStepDecisionAnalyses(exp, step, dID) {
+    /*
+     * Returns a best-effort copy of single-step analysis results for
+     * the specified decision at the specified step.
+     */
+    // Get reference to library
+    let exploration = pyodide.globals.get("exploration")
+    let analysis = exploration.analysis;
+
+    let stepAnalysesProxy = analysis.getStepDecisionAnalyses(
+        exp,
+        step,
+        dID
+    );
+    let stepAnalyses = bestEffortJsCopy(stepAnalysesProxy);
+
+    // Clean up proxies
+    stepAnalysesProxy.destroy();
+    analysis.destroy()
+    exploration.destroy();
+
+    return stepAnalyses;
+}
+
+
+// TODO: Reimplement in viewer.py
+function getTransitionAnalyses(exp, sourceID, name, destID) {
+    /*
+     * Returns a best-effort copy of whole-exploration analysis results
+     * for the specified transition.
+     */
+    // Get reference to library
+    let exploration = pyodide.globals.get("exploration")
+    let analysis = exploration.analysis;
+
+    let analysesProxy = analysis.getTransitionAnalyses(
+        exp,
+        sourceID,
+        name,
+        destID
+    );
+    let analyses = bestEffortJsCopy(analysesProxy);
+
+    // Clean up proxies
+    analysesProxy.destroy();
+    analysis.destroy();
+    exploration.destroy();
+
+    return analyses;
+}
+
+
+// TODO: Reimplement in viewer.py
+function getStepTransitionAnalyses(exp, step, sourceID, name, destID) {
+    /*
+     * Returns a best-effort copy of single-step analysis results for
+     * the specified transition at the specified step.
+     */
+    // Get reference to library
+    let exploration = pyodide.globals.get("exploration")
+    let analysis = exploration.analysis;
+
+    let stepAnalysesProxy = analysis.getStepTransitionAnalyses(
+        exp,
+        step,
+        sourceID,
+        name,
+        destID
+    );
+    let stepAnalyses = bestEffortJsCopy(stepAnalysesProxy);
+
+    // Clean up proxies
+    stepAnalysesProxy.destroy();
+    analysis.destroy()
+    exploration.destroy();
+
+    return stepAnalyses;
+}
+
+
+function distance(pos1, pos2) {
+    /*
+     * Returns the Euclidean distance between the two given [x, y]
+     * coordinate arrays.
+     */
+    let dx = pos2[0] - pos1[0];
+    let dy = pos2[1] - pos1[1];
+    return Math.sqrt(dx*dx + dy*dy);
+}
+
+
+function rescaleLayout(layout) {
+    /*
+     * Scales the layout by moving all nodes towards or away from the
+     * origin. Scales it up or down until the shortest non-zero
+     * inter-node distance is equal to the `SMALL_NODE_SEPARATION`.
+     * TODO: Also recenter here around origin first?
+     */
+    let shortest = undefined;
+    let longest = undefined;
+    let positions = [...layout.values()];
+    // Find shortest non-zero distance
+    for (let i = 0; i < positions.length; i += 1) {
+        let a = positions[i];
+        if (a != undefined) {
+            for (let j = i + 1; j < positions.length; j += 1) {
+                let b = positions[j];
+                if (b != undefined) {
+                    dist = distance(a, b);
+                    if (
+                        dist > 0
+                     && (shortest == undefined || dist < shortest)
+                    ) {
+                        shortest = dist;
+                    }
+                    if (
+                        dist > 0
+                     && (longest == undefined || dist > longest)
+                    ) {
+                        longest = dist;
+                    }
+                }
+            }
+        }
+    }
+    if (shortest == undefined) { return; }  // <= 1 defined positions
+    // Figure out scale factor
+    scaleFactor = SMALL_NODE_SEPARATION / shortest;
+    // Keep scale factor from making things too big even when some nodes
+    // are packed tightly together. Force-directed simulation can help
+    // those nodes come apart later.
+    scaleMax = MAX_LAYOUT_DIAMETER / longest;
+    if (scaleFactor > scaleMax) {
+        scaleFactor = scaleMax;
+    }
+    // Scale each position towards/away from origin
+    for (let pos of positions) {
+        pos[0] *= scaleFactor;
+        pos[1] *= scaleFactor;
+    }
+    console.log(
+        "Rescale: shortest/longest nonzero distances are "
+      + shortest + " / " + longest
+    );
+    console.log("Rescale: scaled by " + scaleFactor);
+}
+
+
+function layoutBounds(layout) {
+    /*
+     * Returns a 'bounds' object with top/bottom/left/right properties
+     * holding the edges of the given layout, with top being +y, bottom
+     * -y, left -x and right +x.
+     */
+    let result = {}
+    layout.forEach(function (pos) {
+        let [x,  y] = pos;
+        if (result.top == undefined || y > result.top) {
+            result.top = y;
+        }
+        if (result.bottom == undefined || y < result.bottom) {
+            result.bottom = y;
+        }
+        if (result.left == undefined || x < result.left) {
+            result.left = x;
+        }
+        if (result.right == undefined || x > result.right) {
+            result.right = x;
+        }
+    });
+    // Now 'bounds' holds the top/bottom/left/right edges of the layout.
+    // Top is +y, bottom is -y, left is -x, right is +x.
+    return result;
+}
+
+
+function frameNodes(svgElem, nodes) {
+    /*
+     * Resets the Zoom settings for the specified SVG element so that
+     * all of the given nodes are visible.
+     */
+    let left, right, top, bottom;
+    for (let node of nodes) {
+        if (left == undefined || node.x < left) { left = node.x; }
+        if (right == undefined || node.x > right) { right = node.x; }
+        if (top == undefined || node.y > top) { top = node.y; }
+        if (bottom == undefined || node.y < bottom) { bottom = node.y; }
+    }
+    let cx = (right + left) / 2;
+    let cy = (bottom + top) / 2;
+    let width = right - left;
+    let height = top - bottom;
+    // Add 5% margins or at least min fixed margin
+    width = Math.max(width * 1.05, width + MIN_GRAPH_MARGIN);
+    height = Math.max(height * 1.05, height + MIN_GRAPH_MARGIN);
+    console.log(
+        "Setting view: " + cx + ", " + cy + " : " + width + "x" + height
+    );
+    zoomTo(svgElem, [cx, cy], Math.max(width, height));
+}
+
+function zoomTo(svgElem, focus, diameter) {
+    /*
+     * Sets zoom info for the given SVG element so that it will center
+     * the given point and show at least the given diameter around that
+     * point.
+     */
+    let sel = d3.select(svgElem);
+    let scale = svgElem.viewboxDiameter / diameter;
+    svgElem.zoom.translateTo(sel, focus[0], focus[1]); // put focus in center
+    svgElem.zoom.scaleTo(sel, scale);
+}
+
+
+// Globals storing the overview nodes and links since we use those in
+// other places too.
+var OVERVIEW_NODES;
+var OVERVIEW_LINKS;
+
+
+function setupOverview(step) {
+    /*
+     * Sets up the overview graph, loading data from the specified step
+     * and creating new d3 node objects.
+     */
+    // Keep track of our proxies so we can delete them all at the end.
+    let proxies = [];
+
+    // Get reference to library
+    let exploration = pyodide.globals.get("exploration")
+    proxies.push(exploration);
+
+    // Sets up the layout structure for the overview graph, using nodes
+    // and links from the specified step of the exploration.
+    let exp = pyodide.globals.get("EXPLORATION");
+    proxies.push(exp);
+    console.log("Got exploration & module proxies.");
+
+    // Get final graph
+    let stepSituation = exp.getSituation(step);
+    proxies.push(stepSituation);
+    let graph = stepSituation.graph;
+    proxies.push(graph);
+    let nodes = graph.nodes();
+    proxies.push(nodes);
+    console.log("Got situation, graph, and nodes proxies.");
+    // TODO: Error handling here?
+
+    OVERVIEW_NODES = [];
+    OVERVIEW_LINKS = [];
+    console.log("Creating d3 nodes data.");
+    let ovLookup = new Map();
+    for (let id of nodes) {  // numbers are NOT proxied
+        let name, info, zone, region;
+        try {
+            name = graph.shortIdentity(id); // string is not proxied
+            info = extractDecisionInfo(exp, id, step);
+            // TODO: Controls for which levels to use here?
+            zone = graph.region(id, 0);
+            region = graph.region(id, 1);
+        } catch (error) {
+            // Node missing from final graph...
+            // TODO: Better here?
+            name = "unknown";
+            info = {};
+            zone = '';
+            region = '';
+        }
+        let node = {
+            "id": id,
+            "fx": null,  // don't pin position
+            "fy": null,
+            "x": 0,  // impose a layout later...
+            "y": 0,
+            "name": name,
+            "zone": zone,
+            "region": region,
+            "info": info,
+            "analyses": getDecisionAnalyses(exp, id),
+            "stepAnalyses": getStepDecisionAnalyses(exp, step, id),
+            "neighbors": new Set(),
+            "actions": 0
+        }
+        node.active = node.analyses.get("stepsActive") || 0;
+        OVERVIEW_NODES.push(node);
+        ovLookup.set(node.id, node);
+    }
+    console.log("Found " + OVERVIEW_NODES.length + " overview nodes.");
+    console.log("Creating d3 links data.");
+
+    // Scale the viewbox of the SVG to show the whole thing
+    frameNodes(document.getElementById("overview"), OVERVIEW_NODES);
+
+    // Iterate again because we need lookup object to be full
+    for (let id of nodes) {  // Numbers are NOT proxied
+        let sourceNode = ovLookup.get(id);
+        let dests = graph.destinationsFrom(id);
+        proxies.push(dests);
+        let outCount = 0;  // count of outgoing links
+        for (let outgoing of dests) {  // strings are NOT proxied
+            let target = dests.get(outgoing);  // number is NOT proxied
+            // Only add links that go to nodes which are actually in the
+            // specified step
+            if (ovLookup.get(target) != undefined) {
+                let targetNode = ovLookup.get(target);
+                let link = {
+                    "source": sourceNode,
+                    "target": targetNode,
+                    "name": outgoing,
+                    "confirmed": !(
+                        sourceNode.info.tags.has("unconfirmed")
+                     || targetNode.info.tags.has("unconfirmed")
+                    ),
+                    "properties": extractTransitionProperties(
+                        exp,
+                        sourceNode.id,
+                        outgoing,
+                        step
+                    ),
+                    "analyses": getTransitionAnalyses(
+                        exp,
+                        sourceNode.id,
+                        outgoing,
+                        targetNode.id,
+                    ),
+                    "stepAnalyses": getStepTransitionAnalyses(
+                        exp,
+                        step,
+                        sourceNode.id,
+                        outgoing,
+                        targetNode.id,
+                    )
+                };
+                link["strength"] = link.analyses.get("timesTaken");
+                OVERVIEW_LINKS.push(link);
+                // Add to 'incoming' property of target node
+                if (targetNode.hasOwnProperty("incoming")) {
+                    targetNode.incoming += 1;
+                } else {
+                    targetNode.incoming = 1;
+                }
+                // Count outgoing links
+                outCount += 1;
+                // Add to neighbor sets for both ends if it's not a
+                // self-link
+                if (targetNode == sourceNode) {
+                    sourceNode.actions += 1;
+                } else {
+                    targetNode.neighbors.add(id);
+                    sourceNode.neighbors.add(target);
+                }
+            }
+        }
+        // Set 'outgoing' property of this node
+        sourceNode["outgoing"] = outCount;
+    }
+
+
+    // Assign identity:
+    console.log("Assigning identities...");
+    assignAuto(OVERVIEW_NODES);
+
+    console.log("Loading data into d3...");
+    // Note: order that we add things here doesn't matter because they all go
+    // into groups that are already ordered correctly for stacking.
+    // Nodes:
+    NODES_GROUP.selectAll("g").remove();
+    NODES = NODES_GROUP.selectAll("g")
+        .data(OVERVIEW_NODES)
+        .enter().append("g");
+
+    NODES
+        .each(function(d) { d.__node__ = this; })
+        .classed("selected", d => SELECTED_NODES.has(d.id));
+
+    let nodeTitles = NODES.append("title")
+        .text(function(d) {
+            return (
+                d.name + " (" + d.id + ")"
+              + "\nNeighbors: " + d.neighbors.size
+              + "\nRegion: " + d.region
+            );
+            // TODO: More info here?
+        });
+
+    // Add symbols last so they sit on top of edges:  
+    // TODO: Array bounds & wrapping!
+    let symbols = NODES.append("path")
+        .classed("symbol", true)
+        .attr(
+          "d",
+          d => symbolPathData([0, 0], NODE_RADIUS, shapeForRegion(d.region))
+        )
+        .attr("fill", d => colorForRegion(d.region))
+        .style(
+            "stroke-width",
+             Math.min(1.5, 1.5*(NODE_RADIUS/BASE_RADIUS)) + "pt"
+        )
+        .style("cursor", "crosshair")
+        .on("mouseover", hoverStarted)
+        .on("mouseout", hoverEnded)
+        .on("click", (e, d) => toggleSelect(d, !d.__selected__))
+        .call(d3.drag()
+            .on("start", dragStarted)
+            .on("drag", dragged)
+            .on("end", dragEnded));
+ 
+    LINKS_GROUP.selectAll("g").remove()
+    LINKS = LINKS_GROUP.selectAll("g")
+      .data(OVERVIEW_LINKS)
+      .enter().append("g");
+ 
+    LINKS.each(function(d) { d.__edge__ = this; });
+
+    // Edges go first so that they end up at the back:
+    let edges = LINKS.append("line")
+        .classed("edge", true)
+        .attr("stroke-width", d => d.properties.requirement == 'O' ? 2 : 3.6)
+        // TODO: Change this if requirements don't get unparsed...
+        // TODO: Better ways to foreground transition info?
+        .attr("stroke-dasharray", d => d.confirmed ? "" : "3,2");
+ 
+    // After simulation links have been added
+    LINKS
+        .classed("link", true)
+        .classed("unconfirmed", d => !d.confirmed)
+        .classed("complex", d => d.properties.requirement != 'O')
+        // TODO: More classes here?
+        .style(
+            'visibility',
+            function (d) {
+                // TODO: What kind of visibility filtering do we want?
+                let cls = d.confirmed ? "confirmed" : "unconfirmed";
+                return ["hidden", "visible"][+SHOW_LINKS[cls]];
+            }
+        );
+
+    let edgeTitles = LINKS.append("title")
+        .text(
+            function(d) {
+                // TODO: Change this if requirements don't get unparsed
+                let reqSpec = d.properties.requirement;
+                if (reqSpec == 'O') {
+                    reqSpec = ''
+                } else {
+                    reqSpec = '\nRequires: ' + reqSpec;
+                }
+                // TODO: Change this if consequences don't get unparsed
+                let consSpec = d.properties.consequence;
+                if (consSpec == '{}') {
+                    consSpec = '';
+                } else {
+                    consSpec = '\nConsequence: ' + consSpec;
+                }
+                return (
+                    d.source.name + "—" + d.target.name
+                  + reqSpec
+                  + consSpec
+                );
+            }
+        );
+
+    // Labels last so they're over everything else:
+    OVERVIEW.selectAll("g.label").remove();
+    let labels = OVERVIEW.selectAll("g.label")
+        .data(OVERVIEW_NODES)
+        .enter().append("g");
+ 
+    labels
+        .classed("label", true)
+        .attr(
+            'transform',
+            "translate("
+              // TODO: HERE
+          + (200 + 12) + ","
+          + (2004 + 24) + ")"
+        )
+      .style('visibility', "hidden")
+      .each(function(d) { d.__label__ = this; });
+ 
+    // reposition labels if/when the graph is scrolled
+    d3.select("#graphs")
+        .on("scroll", function () {
+            let st = this.scrollTop;
+            let sl = this.scrollLeft;
+            let pos = "translate(" + (sl + 12) + "," + (st + 24) + ")";
+            labels.attr('transform', pos);
+        });
+
+    let ltext = labels.append("text")
+        .classed("label-text", true)
+        .attr('z', 20)
+        .text(function(d) {
+            return d.id;
+            // TODO: Really this?
+        })
+        .each(createBacking);
+
+    // Node divs on the sidebar:
+    console.log("Setting listings nodes...");
+    setListingsNodes(OVERVIEW_NODES);
+ 
+    console.log("Refreshing identities...");
+    refreshIdentities();
+ 
+    function ticked() {
+        edges
+            .attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+     
+        NODES
+            .attr("transform", function(d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            })
+     
+        let e = computeEnergy(
+            SIMULATION,
+            SIMULATION.alpha() > SIMULATION.alphaMin()
+        );
+     
+        let espan = document.getElementById("energy");
+        if (espan != null) {
+            espan.innerHTML = e.toExponential(3);
+        }
+    }
+
+    console.log("Setting tick callback for simulation...");
+    SIMULATION
+        .nodes(OVERVIEW_NODES)
+        .on("tick", ticked);
+ 
+    SIMULATION.force("link")
+        .links(OVERVIEW_LINKS);
+ 
+    // TODO: Remove or repurpose
+    // SIMULATION.force("bubble").initialize(OVERVIEW_NODES);
+ 
+    // the hive layout takes care of this, but otherwise it would be needed
+    //SIMULATION.alpha(1).restart();
+ 
+    // Impose selected layout:
+    let chosenLayout = document.getElementById("layout_select").value;
+    let relaxation = document.getElementById("relax_select").value;
+    console.log("Imposing " + relaxation + " " + chosenLayout + " layout...");
+    imposeLayout(chosenLayout, relaxation);
+ 
+    // Re-sort after layout to pick up layout ordering:
+    console.log("Updating listings...");
+    updateListings();
+
+    // Clean up proxies
+    console.log("Cleaning up proxies...");
+    for (let p of proxies) {
+        p.destroy();
+    }
+}
+
+function setupPathGraph() {
+    // Track proxies
+    let proxies = [];
+
+    // Get reference to library
+    let exploration = pyodide.globals.get("exploration")
+    proxies.push(exploration);
+    console.log("Got module proxy");
+
+    // Sets up the path graph nodes & links.
+    let exp = pyodide.globals.get("EXPLORATION");
+    proxies.push(exp);
+    console.log("Got exploration proxy");
+
+    // Final graph has info on most nodes...
+    let graph = exp.getSituation().graph;
+    proxies.push(graph);
+    console.log("Got graph proxy");
+
+    // Turn path layout into node/link stuff
+    console.log("Copying path layout...");
+    let pathLayout = getLayoutCopy(exp, "path");
+    console.log("Got path layout copy");
+
+    let pathNodes = [];
+    let pathLinks = [];
+    let pathLookup = new Map();
+    console.log("Creating d3 nodes...");
+    // Iterate once to create all nodes
+    for (let id of Object.keys(pathLayout)) {
+        let pos = pathLayout.get(id);
+        let node = {
+            "id": id,
+            "x": pos[0],
+            "y": pos[1],
+            "info": extractDecisionInfo(exp, id),
+            "analyses": getDecisionAnalyses(exp, id)
+        };
+        pathNodes.push(node);
+        pathLayout.set(id, node);
+    }
+    console.log("Creating d3 transitions...");
+    // Iterate again to figure out transitions
+    for (let id of Object.keys(pathLayout)) {
+        // Get graph for last step that contains the given node
+        let step = exp.latestStepWithDecision(id);  // number NOT proxied
+        let stepSituation = exp.getSituation(step);
+        proxies.push(stepSituation);
+        let stepGraph = stepSituation.graph;
+        proxies.push(stepGraph);
+
+        // Get outgoing transitions in that step
+        let dests = stepGraph.destinationsFrom(id);
+        proxies.push(dests);
+        for (let outgoing of dests) {  // string NOT proxied
+            let target = dests.get(outgoing);  // number NOT proxied
+            // Only add links that go to nodes which are actually in the
+            // layout.
+            // TODO: Figure out path routing stuff here, or later?
+            if (pathLayout.get(target) != undefined) {
+                pathLinks.push({
+                    "source": pathLookup.get(id),
+                    "target": pathLookup.get(target),
+                    "name": outgoing,
+                    "info": getTransitionProperties(exp, id, outgoing, target),
+                    "analyses": getTransitionAnalyses(
+                        exp,
+                        id,
+                        outgoing,
+                        target
+                    )
+                });
+            }
+        }
+    }
+
+    // Assign identity:
+    console.log("Assigning identities...");
+    assignAuto(pathNodes);
+
+    // Nodes:
+    console.log("Activating data in d3...");
+    PATH_NODES_GROUP.selectAll("g").remove();
+    PATH_NODES = PATH_NODES_GROUP.selectAll("g")
+        .data(pathNodes)
+        .enter().append("g");
+
+    PATH_NODES
+        .each(function(d) { d.__path_node__ = this; })
+        .classed("selected", d => SELECTED_NODES.has(d.id))
+        .attr(
+            "transform",
+            d => (
+                "translate(" + d.x + "," + d.y + ")"
+            )
+        );
+
+    let nodeTitles = PATH_NODES.append("title")
+        .text(function(d) {
+            return (
+                d.id
+              + "\nFirst visited: " + d.analyses.get("stepFirstVisited")
+              + "\nActive steps: " + d.active
+            );
+        });
+
+    // Add circles:
+    let circles = PATH_NODES.append("path")
+        .classed("symbol", true)
+        .attr(
+            "d",
+            d => symbolPathData([0, 0], NODE_RADIUS, shapeForRegion(d.region))
+        )
+        .attr("fill", d => colorForRegion(d.region))
+        .attr("stroke", "white")
+        .style(
+            "stroke-width",
+            Math.min(1.5, 1.5*(NODE_RADIUS/BASE_RADIUS)) + "pt"
+        )
+        .style("cursor", "crosshair")
+        .on("mouseover", hoverStarted)
+        .on("mouseout", hoverEnded)
+        .on("click", (e, d) => toggleSelect(d, !d.__selected__));
+
+    // Links
+    // TODO: Think about how to show links...
+    PATH_LINKS_GROUP.selectAll("g").remove()
+    PATH_LINKS = PATH_LINKS_GROUP.selectAll("g")
+        .data(pathLinks)
+        .enter().append("g");
+
+    PATH_LINKS.each(function(d) { d.__path_edge__ = this; });
+
+    let edges = PATH_LINKS.append("g")
+        .classed("edge", true)
+
+    // TODO: Arcs instead of lines!
+    let edgeLines = edges.append("line")
+        .classed("line", true)
+        .attr(
+            "stroke-width",
+            function(d) {
+                return d.value > 1 ? (
+                    0.5 + Math.sqrt(d.analyses.get("timesTaken"))
+                ): 1;
+            }
+      );
+
+    edgeLines
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y)
+
+    let edgeLabels = edges.append("text")
+        .classed("edge-label", true)
+        .attr("x", d => edgeLabelPos(d, x => x.__path_node__)[0])
+        .attr("y", d => edgeLabelPos(d, x => x.__path_node__)[1])
+        .style(
+            "font-size",
+            d => fontSizeForDigits(d.value, EDGE_LABEL_FONT_SIZE, 1.0)
+        )
+        .text(d => d.value);
+
+    // node labels
+    PATH.selectAll("g.label").remove();
+    let labels = PATH.selectAll("g.label")
+        .data(pathNodes)
+        .enter().append("g");
+
+    labels
+        .classed("label", true)
+        .attr('transform', "translate(12, 24)")
+        .style('visibility', "hidden")
+        .each(function(d) { d.__path_label__ = this; });
+
+    // reposition labels if/when the graph is scrolled
+    d3.select("#graphs")
+        .on("scroll", function () {
+            let st = this.scrollTop;
+            let sl = this.scrollLeft;
+            let pos = "translate(" + (sl + 12) + "," + (st + 24) + ")";
+            labels.attr('transform', pos);
+        });
+
+    let ltext = labels.append("text")
+        .classed("label-text", true)
+        .attr('z', 20)
+        .text(d => d.id)
+        .each(createBacking);
+
+    let edgeTitles = PATH_LINKS.append("title")
+        .text(
+            function (d) {
+                let s = d.strength != 1 ? "s" : ""
+                return d.strength + " traversal" + s;
+            }
+        );
+
+    // Node divs on the sidebar:
+    console.log("Setting listings nodes...");
+    setListingsNodes(pathNodes);
+
+    // Update identities
+    console.log("Updating identities...");
+    refreshIdentities();
+
+    console.log("Highlighting step " + CURRENT_STEP + "...");
+    setPathHighlight(CURRENT_STEP);
+
+    // Clean up proxies
+    console.log("Cleaning up proxies...");
+    for (let p of proxies) {
+        p.destroy();
+    }
+    console.log("Done with path graph setup.");
+}
+
+function setPathHighlight(step) {
+    // Sets which node in the path graph to highlight as the current
+    // node.
+    if (step == undefined) { step = CURRENT_STEP; }
+    if (step == undefined) { step = 0; }
+    PATH_NODES
+        .classed("current", d => d.analyses.get("stepFirstVisited") == step);
+    // TODO: What about revisits? Use "stepsVisited" exploration-level
+    // analysis dict...
+}
+
+function setupFocusGraph(step, focus) {
+    // Track proxies for eventual cleanup
+    let proxies = [];
+
+    // Sets up the focus graph nodes & links.
+    let exp = pyodide.globals.get("EXPLORATION");
+    proxies.push(exp);
+
+    // We only look at the graph for the specified step
+    let situation = exp.getSituation(step);
+    let graph = situation.graph;
+    proxies.push(situation);
+    proxies.push(graph);
+
+    // Get info for the target decision
+    let info, name;
+    try {
+        info = graph.decisionInfo(focus);
+        proxies.push(info);
+        name = graph.shortIdentity(focus); // no proxy for a string
+    } catch (error) {
+        console.log(
+            "Failed to get decision info for node " + focus + " in step "
+          + step + "."
+        );
+        // TODO: Set up 1-node graph here as default...
+    }
+    // TODO HERE
+
+    // Clean up proxies
+    for (let proxy of proxies) {
+        proxy.destroy();
+    }
+}
+
+function newExploration() {
+    // Called from Python when new data is received. The EXPLORATION
+    // Python global variable holds the new discrete exploration object,
+    // which we access using pyodide.globals.get.
+    notifyWait("setup");
+    let exp = pyodide.globals.get("EXPLORATION");
+    let maxStep = exp.length - 1;
+    console.log(
+        "New exploration: " + exp + " with " + (maxStep + 1) + " steps."
+    );
+    let slider = document.getElementById("step_slider")
+    slider.max = maxStep;
+    slider.value = maxStep;
+    document.getElementById("max-step").innerText = maxStep;
+
+    // Set nodes for the path graph
+    console.log("Setting up path graph...");
+    setupPathGraph()
+
+    // Set up focus on first node
+    console.log("Focusing first node...");
+    let situation = exp.getSituation();
+    let graph = situation.graph;
+    let nodes = graph.nodes;
+    FOCUS_CURRENT = nodes[0];
+    nodes.destroy()
+    graph.destroy()
+    situation.destroy()
+
+    // TODO: More here? 
+    // TODO: Set up histogram
+
+    // Sets up overview graph & focus; highlights path node
+    console.log("Setting step " + maxStep + " for overview...");
+    setStep(maxStep);
+
+    let which = document.getElementById("graph_select").value;
+    console.log("Reselecing " + which + " graph");
+    selectGraph(which);
+    console.log("Done with newExploration.");
+    notifyWaitDone("setup");
+}
+
+function toggleNodeTransparency(on) {
+  NODE_TRANSPARENCY = on;
+  // Update graph nodes:
+  let nodeGroups = d3.selectAll(".nodes")
+  nodeGroups.selectAll(".symbol")
+    .attr("fill", d => colorForRegion(d.region));
+  // Update legend entirely:
+  setLegend(GRAPH_TYPE);
+}
+
+COLLAPSE_HISTOGRAMS = true;
+
+function toggleHistCollapse(on) {
+  COLLAPSE_HISTOGRAMS = on;
+  setBars(OVERVIEW_NODES);
+}
+
+/*
+ * Returns the given value, or the string 'N/A' if that value was
+ * 'undefined'. Uses the specified default instead of 'N/A' if one is
+ * given.
+ */
+function orNA(val, ifNA) {
+    if (ifNA == undefined) {
+        ifNA = 'N/A';
+    }
+    if (val == undefined) {
+        return ifNA;
+    } else {
+        return val;
+    }
+}
+
+function updateListings(sortBy) {
+    if (sortBy == undefined) {
+        sortBy = document.getElementById("listing_sort").value;
+    }
+    let nodes = LISTING.selectAll("div").data();
+    let sortedNodes = [...nodes].sort(
+        function(a, b) {
+            if (sortBy == "default") {
+                if (GRAPH_TYPE == "overview") {
+                    // sort by hive order if present otherwise by x/y
+                    // dist from center
+                    if (a.__hive_rank__ != undefined) {
+                        return (
+                          d3.ascending(a.__hive_rank__, b.__hive_rank__)
+                       || d3.ascending(a.id, b.id)
+                        );
+                    } else {
+                        // TODO: HERE
+                        let avx = a.x - 400;
+                        let avy = a.y - 400;
+                        let ad = Math.sqrt(avx*avx + avy*avy);
+                        let bvx = b.x - 400;
+                        let bvy = b.y - 400;
+                        let bd = Math.sqrt(bvx*bvx + bvy*bvy);
+                        return (
+                          d3.ascending(ad, bd)
+                       || d3.ascending(a.id, b.id)
+                        );
+                    }
+                } else if (GRAPH_TYPE == "histogram") {
+                    // sort by histogram value
+                    let selector = document.getElementById("which_histogram");
+                    let subtype = selector.value;
+                    return (
+                        d3.descending(a[subtype], b[subtype])
+                     || d3.ascending(a.id, b.id)
+                    );
+                } else if (GRAPH_TYPE == "focus") {
+                    // sort by current focus order
+                    if (
+                        a.__focus_rank__ != undefined
+                     && b.__focus_rank__ != undefined
+                    ) {
+                        return d3.ascending(
+                            a.__focus_rank__.rank,
+                            b.__focus_rank__.rank
+                        );
+                    } else {
+                        return d3.ascending(a.id, b.id);
+                    }
+                } else { // default to sort-by-id
+                    return d3.ascending(a.id, b.id);
+                }
+            } else if (sortBy == "region") {
+                return (
+                    d3.descending(regionIndex(a.region), regionIndex(b.region))
+                 || d3.ascending(a.id, b.id)
+                );
+            } else if (sortBy == "name") {
+                return (
+                    d3.ascending(a.name, b.name)
+                 || d3.ascending(a.id, b.id)
+                );
+            } else if (sortBy == "discovered") {
+                return (
+                    d3.ascending(
+                        a.analyses.get("stepObserved"),
+                        b.analyses.get("stepObserved")
+                    )
+                 || d3.ascending(a.id, b.id)
+                );
+            } else if (sortBy == "visited") {
+                return (
+                    d3.ascending(
+                        a.analyses.get("stepFirstVisited") || Infinity,
+                        b.analyses.get("stepFirstVisited") || Infinity
+                    )
+                 || d3.ascending(a.id, b.id)
+                );
+            } else if (sortBy == "visits") {
+                return (
+                    d3.descending(a.active, b.active)
+                 || d3.ascending(a.id, b.id)
+                );
+            } else if (sortBy == "neighbors") {
+              return (
+                d3.descending(a.neighbors.size, b.neighbors.size)
+             || d3.ascending(a.id, b.id)
+              );
+            } else if (sortBy == "outgoing") {
+              return (
+                d3.descending(a.outgoing - a.actions, b.outgoing - b.actions)
+             || d3.ascending(a.id, b.id)
+              );
+            } else if (sortBy == "actions") {
+              return (
+                d3.descending(a.actions, b.actions)
+             || d3.ascending(a.id, b.id)
+              );
+            } else {
+                console.warn(
+                    "Invalid sort scheme: '" + sortBy
+                  + "'; defaulting to sort-by-ID."
+                );
+                return d3.ascending(a.id, b.id);
+            }
+        }
+    );
+    LISTING.selectAll("div").remove();
+    LISTINGS = LISTING.selectAll("div")
+        .data(sortedNodes)
+        .enter().append("div")
+ 
+    LISTINGS
+        .classed("listing", true)
+        .classed("selected", d => SELECTED_NODES.has(d.id));
+ 
+    var nodeIdentities = LISTINGS.append("span")
+        .classed("identity", true)
+        .text(function (d) { return identityFor(d); });
+    var labels = LISTINGS.append("a")
+        .text(function (d) { return "(" + d.id + ") " + d.name; })
+        .attr("href", "#")
+        .style("color", function(d) { return solidColorForRegion(d.region); })
+        // Note: color here ignores transparency
+        .on("click", (e, d) => toggleSelect(d, !d.__selected__));
+ 
+    // Add stats to listings:
+    // TODO: Add "step introduced" here...
+    var lstObserved = d => orNA(d.analyses.get("stepObserved"), '-');
+    var lstVisited = d => orNA(d.analyses.get("stepFirstVisited"), '-');
+    var lstVisits = d => d.active;
+    var lstActions = d => d.actions;
+    var lstNeighbors = d => d.neighbors.size;
+
+    LISTINGS.append("span")
+        .classed("stats", true)
+        // .text(d => "👁️" + lstObserved(d)) // eye emoji
+        .text(d => "🤔" + lstObserved(d)) // thinking emoji
+        .attr("title", d => "discovered access at step " + lstObserved(d));
+
+    LISTINGS.append("span")
+        .classed("stats", true)
+        .text(d => "👣" + lstVisited(d))
+        .attr("title", d => "first visited at step " + lstVisited(d));
+
+    LISTINGS.append("span")
+        .classed("stats", true)
+        .text(d => "👣×" + lstVisits(d))
+        .attr("title", d => "visited " + lstVisits(d) + " times");
+ 
+    LISTINGS.append("span")
+        .classed("stats", true)
+        .text(d => "🔗" + lstNeighbors(d))
+        .attr("title", d => lstNeighbors(d) + " neighbors");
+ 
+    LISTINGS.append("span")
+        .classed("stats", true)
+        .text(function (d) {
+            let actions = lstActions(d);
+            if (actions > 0) {
+                return "⭐" + lstActions(d);
+            } else {
+                return "  ";
+            }
+        })
+        .attr(
+            "title",
+            function(d) {
+                let actions = lstActions(d);
+                if (actions == 0) {
+                    return "no actions available";
+                } else if (actions == 1) {
+                    return "1 action available";
+                } else {
+                    return actions + " actions available";
+                }
+            }
+        );
+}
+ 
+function filterListings(string) {
+    LISTINGS.style("display", function (d) {
+        let ident = "(" + d.id + ") " + d.name;
+        if (ident.toLowerCase().includes(string.toLowerCase())) {
+            return "contents";
+        } else {
+            return "none";
+        }
+    });
+}
+
+function setNodeSize(val) {
+  NODE_RADIUS = val;
+  let nodeGroups = d3.selectAll(".nodes")
+  nodeGroups.selectAll(".symbol")
+    .attr("d", d => symbolPathData([0, 0], val, shapeForRegion(d.region)))
+    .style("stroke-width", Math.min(1.5, 1.5*(NODE_RADIUS/BASE_RADIUS)) + "pt");
+  nodeGroups.selectAll("text.identity").style(
+    "font-size", d => fontSizeForIdentity(d)
+  );
+}
+
+// Set up pattern defs in SVG elements
+function makePattern(pattern, type, stripeColor, backgroundColor) {
+  // Takes an empty 10x10 d3 pattern and appends elements to make a pattern.
+  // The type must be one of:
+  //   "horizontal": horizontal stripes
+  //   "vertical": vertical stripes
+  //   "squares": squares
+  //   "circles": circles
+  let strokeWidth = 1;
+  if (backgroundColor) {
+    // TODO: White background when there's no color specified?
+    pattern
+      .append("rect")
+      .attr('width', 10)
+      .attr('height', 10)
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('fill', backgroundColor)
+  }
+  if (type == "horizontal") {
+    pattern.append("rect")
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 10)
+      .attr('height', strokeWidth)
+      .attr('fill', stripeColor)
+  } else if (type == "vertical") {
+    pattern.append("rect")
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', strokeWidth)
+      .attr('height', 10)
+      .attr('fill', stripeColor)
+  } else if (type == "fwd_diag") {
+    pattern.append("path")
+      .attr(
+          'd',
+          'M-1,3 l3,-3 '
+        + 'M-1,8 l8,-8 '
+        + 'M1,11 l9,-9 '
+        + 'M6,11 l4,-4'
+      )
+      .attr('stroke', stripeColor)
+      .attr('stroke-width', strokeWidth)
+  } else if (type == "back_diag") {
+    pattern.append("path")
+      .attr(
+          'd',
+          'M11,3 l-3,-3 '
+        + 'M11,8 l-8,-8 '
+        + 'M9,11 l-9,-9 '
+        + 'M4,11 l-4,-4'
+      )
+      .attr('stroke', stripeColor)
+      .attr('stroke-width', strokeWidth)
+  } else if (type == "cross") {
+    pattern.append("path")
+      .attr(
+          'd',
+          'M-1,3 l3,-3 '
+        + 'M-1,8 l8,-8 '
+        + 'M1,11 l9,-9 '
+        + 'M6,11 l4,-4'
+      )
+      .attr('stroke', stripeColor)
+      .attr('stroke-width', strokeWidth)
+    pattern.append("path")
+      .attr(
+          'd',
+          'M11,3 l-3,-3 '
+        + 'M11,8 l-8,-8 '
+        + 'M9,11 l-9,-9 '
+        + 'M4,11 l-4,-4'
+      )
+      .attr('stroke', stripeColor)
+      .attr('stroke-width', strokeWidth)
+  } else if (type == "waves") {
+    pattern.append("path")
+      .attr(
+          'd',
+          'M0,3 q2.5,2.5,5,0 t5,0'
+        + 'M0,8 q2.5,2.5,5,0 t5,0'
+      )
+      .attr('stroke', stripeColor)
+      .attr('stroke-width', strokeWidth)
+      .attr('fill-opacity', 0)
+  } else if (type == "squares") {
+    pattern.append("rect")
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', 5)
+      .attr('height', 5)
+      .attr('stroke', stripeColor)
+      .attr('stroke-width', strokeWidth)
+      .attr('fill', "none")
+  } else if (type == "circles") {
+    pattern.append("circle")
+      .attr('cx', 3.5)
+      .attr('cy', 3.5)
+      .attr('r', 3.5)
+      .attr('stroke', stripeColor)
+      .attr('stroke-width', strokeWidth)
+      .attr('fill', "none")
+  } else {
+    console.log("Unknown pattern type: '" + type + "'");
+  }
+}
+
+function addPatternDefs(svg) {
+  /*
+   * Adds pattern definitions to the given SVG.
+   * Base patterns from:
+   *   http://iros.github.io/patternfills/
+   * Background idea from:
+   *   https://stackoverflow.com/questions/37429608/can-i-have-a-svg-pattern-with-background-color
+   */
+
+  let defs = svg.append("defs")
+
+  for (let key of Object.keys(HIST_COLORS)) {
+    let color = HIST_COLORS[key];
+    let bg = HIST_BG_COLORS[key];
+    let type = HIST_SHADING[key];
+    let pattern = defs
+      .append("pattern")
+      .attr("id", key + "-pattern")
+      .attr("patternUnits", "userSpaceOnUse")
+      .attr("width", 10)
+      .attr("height", 10)
+    makePattern(pattern, type, color, bg);
+  }
+}
+
+function symbolPathData(where, radius, shape) {
+  let path = undefined;
+  if (shape == "star_five") {
+    let bigR = radius*1.5;
+    let smallR = radius*0.9;
+    let angleShare = (2*Math.PI)/5.0;
+    path = "M" + where[0] + "," + (where[1] - bigR)
+    for (let point of [0, 1, 2, 3, 4]) {
+      let angle = 3*Math.PI/2 - ((point+1) * angleShare);
+      let halfAngle = 3*Math.PI/2 - ((point+0.5) * angleShare);
+      let p0 = [
+        where[0] + smallR * Math.cos(halfAngle),
+        where[1] + smallR * Math.sin(halfAngle)
+      ];
+      let p1 = [
+        where[0] + bigR * Math.cos(angle),
+        where[1] + bigR * Math.sin(angle)
+      ];
+      path += " L" + p0[0] + "," + p0[1] + " L" + p1[0] + "," + p1[1]
+    }
+
+  } else if (shape == "hexagon") {
+    let angle = 0;
+    let angleShare = Math.PI/3.0;
+    let fullR = radius*1.4;
+    path = "M" + (where[0] + fullR) + "," + where[1];
+    for (let point of [1, 2, 3, 4, 5]) {
+      angle += angleShare;
+      let p = [
+        where[0] + fullR * Math.cos(angle),
+        where[1] + fullR * Math.sin(angle)
+      ];
+      path += " L" + p[0] + "," + p[1];
+    }
+    path += " Z";
+
+  } else if (shape == "double_trapezoid") {
+    let width = radius*2.4;
+    let height = radius*2;
+    path = "M" + (where[0] + width/2) + "," + (where[1] - height/2);
+    path += " L" + (where[0] + radius) + "," + where[1];
+    path += " L" + (where[0] + width/2) + "," + (where[1] + height/2);
+    path += " L" + (where[0] - width/2) + "," + (where[1] + height/2);
+    path += " L" + (where[0] - radius) + "," + where[1];
+    path += " L" + (where[0] - width/2) + "," + (where[1] - height/2);
+    path += " Z";
+
+  } else if (shape == "star_four") {
+    let width = radius*2.6;
+    let height = radius*2.6;
+    path = "M" + (where[0] + width/2) + "," + (where[1] - height/2);
+    path += " L" + (where[0] + radius) + "," + where[1];
+    path += " L" + (where[0] + width/2) + "," + (where[1] + height/2);
+    path += " L" + where[0] + "," + (where[1] + radius);
+    path += " L" + (where[0] - width/2) + "," + (where[1] + height/2);
+    path += " L" + (where[0] - radius) + "," + where[1];
+    path += " L" + (where[0] - width/2) + "," + (where[1] - height/2);
+    path += " L" + where[0] + "," + (where[1] - radius);
+    path += " Z";
+
+  } else if (shape == "square") {
+    let bigR = radius*1.2;
+    path = "M" + (where[0] + bigR) + "," + (where[1] - bigR);
+    path += " L" + (where[0] + bigR) + "," + (where[1] + bigR);
+    path += " L" + (where[0] - bigR) + "," + (where[1] + bigR);
+    path += " L" + (where[0] - bigR) + "," + (where[1] - bigR);
+    path += " Z";
+
+  } else if (shape == "octagon") {
+    let bigR = radius*1.2;
+    let corner = radius*0.5;
+    let side = 2*(bigR - corner);
+    path = "M" + (where[0] + bigR - corner) + "," + (where[1] - bigR);
+    path += " l" + corner + "," + corner;
+    path += " l" + 0 + "," + side;
+    path += " l" + (-corner) + "," + corner;
+    path += " l" + (-side) + "," + 0;
+    path += " l" + (-corner) + "," + (-corner);
+    path += " l" + 0 + "," + (-side);
+    path += " l" + corner + "," + (-corner);
+    path += " Z";
+
+  } else if (shape == "diamond") {
+    let bigR = radius*1.4;
+    path = "M" + where[0] + "," + (where[1] - bigR);
+    path += " L" + (where[0] + bigR) + "," + where[1];
+    path += " L" + where[0] + "," + (where[1] + bigR);
+    path += " L" + (where[0] - bigR) + "," + where[1];
+    path += " Z";
+
+  } else if (shape == "rounded") {
+    let bigR = radius*1.2;
+    path = "M" + where[0] + "," + (where[1] - bigR);
+    path += " q " + bigR + "," + 0 + "," + bigR + "," + bigR;
+    path += " t" + (-bigR) + "," + bigR;
+    path += " t" + (-bigR) + "," + (-bigR);
+    path += " t" + bigR + "," + (-bigR);
+
+  } else if (shape == "shield") {
+    let bigR = radius*1.2;
+    path = "M" + (where[0] - bigR) + "," + (where[1] - bigR);
+    path += " l" + (2*bigR) + "," + 0;
+    path += " l" + 0 + "," + bigR;
+    path += " q" + 0 + "," + bigR + "," + (-bigR) + "," + bigR;
+    path += " t" + (-bigR) + "," + (-bigR);
+    path += "Z";
+
+  } else if (shape == "crown_one") {
+    let bigR = radius*1.2;
+    let cWidth = radius*1.4;
+    let sWidth = radius*0.5;
+    let cPart = cWidth/2 - sWidth/2;
+    let shoulder = bigR - cWidth/2;
+    path = "M" + (where[0] - cWidth/2) + "," + (where[1] - bigR);
+    path += "l" + cPart + "," + 0;
+    path += " q" + 0 + "," + (-sWidth) + "," + (sWidth/2) + "," + (-sWidth);
+    path += " t" + (sWidth/2) + "," + sWidth;
+    path += "l" + cPart + "," + 0;
+    path += " q" + shoulder + "," + 0 + "," + shoulder + "," + bigR;
+    path += " t" + (-bigR) + "," + bigR;
+    path += " t" + (-bigR) + "," + (-bigR);
+    path += " t" + shoulder + "," + (-bigR);
+
+  } else if (shape == "crown_two") {
+    let bigR = radius*1.2;
+    let cWidth = radius*1.5;
+    let sWidth = radius*0.5;
+    let cPart = cWidth/2 - sWidth;
+    let shoulder = bigR - cWidth/2;
+    path = "M" + (where[0] - cWidth/2) + "," + (where[1] - bigR);
+    path += "l" + cPart + "," + 0;
+    path += " q" + 0 + "," + (-sWidth) + "," + (sWidth/2) + "," + (-sWidth);
+    path += " t" + (sWidth/2) + "," + sWidth;
+    path += " q" + 0 + "," + (-sWidth) + "," + (sWidth/2) + "," + (-sWidth);
+    path += " t" + (sWidth/2) + "," + sWidth;
+    path += "l" + cPart + "," + 0;
+    path += " q" + shoulder + "," + 0 + "," + shoulder + "," + bigR;
+    path += " t" + (-bigR) + "," + bigR;
+    path += " t" + (-bigR) + "," + (-bigR);
+    path += " t" + shoulder + "," + (-bigR);
+
+  } else if (shape == "crown_three") {
+    let bigR = radius*1.2;
+    let cWidth = radius*1.4;
+    let sWidth = radius*0.5;
+    let cPart = cWidth/2 - (1.5*sWidth);
+    let shoulder = bigR - cWidth/2;
+    path = "M" + (where[0] - cWidth/2) + "," + (where[1] - bigR);
+    path += "l" + cPart + "," + 0;
+    path += " q" + 0 + "," + (-sWidth) + "," + (sWidth/2) + "," + (-sWidth);
+    path += " t" + (sWidth/2) + "," + sWidth;
+    path += " q" + 0 + "," + (-sWidth) + "," + (sWidth/2) + "," + (-sWidth);
+    path += " t" + (sWidth/2) + "," + sWidth;
+    path += " q" + 0 + "," + (-sWidth) + "," + (sWidth/2) + "," + (-sWidth);
+    path += " t" + (sWidth/2) + "," + sWidth;
+    path += "l" + cPart + "," + 0;
+    path += " q" + shoulder + "," + 0 + "," + shoulder + "," + bigR;
+    path += " t" + (-bigR) + "," + bigR;
+    path += " t" + (-bigR) + "," + (-bigR);
+    path += " t" + shoulder + "," + (-bigR);
+
+  } else if (shape == "crown_special") {
+    let bigR = radius*1.2;
+    let cWidth = radius*1.4;
+    let sWidth = radius*0.2;
+    let cPart = cWidth/2 - sWidth/2;
+    let shoulder = bigR - cWidth/2;
+    path = "M" + (where[0] - cWidth/2) + "," + (where[1] - bigR);
+    path += "l" + cPart + "," + 0;
+    path += " q" + 0 + "," + sWidth + "," + (sWidth/2) + "," + sWidth;
+    path += " t" + (sWidth/2) + "," + (-sWidth);
+    path += "l" + cPart + "," + 0;
+    path += " q" + shoulder + "," + 0 + "," + shoulder + "," + bigR;
+    path += " t" + (-bigR) + "," + bigR;
+    path += " t" + (-bigR) + "," + (-bigR);
+    path += " t" + shoulder + "," + (-bigR);
+
+  } else {
+    console.error("Unknown shape: '" + shape + "'");
+  }
+  return path;
+}
+
+// Actually attach pattern definitions to each SVG:
+d3.selectAll("svg.graph")
+  .each(
+      function () {
+        addPatternDefs(d3.select(this))
+      }
+  )
+
+
+// Global file reader object that will call the Python receiveData
+// function on files it reads.
+var READER = new FileReader();
+READER.addEventListener(
+    "load",
+    function () {
+        notifyWait("parsing");
+        pyodide.globals.get("receiveData")(READER.result);
+        notifyWaitDone("parsing");
+    }
+);
+
+// Callback for file upload button that reads the new data and triggers
+// receiveData on the Python side.
+function loadData(picker) {
+    let file = picker.files[0];
+    console.log("LD");
+    console.log(file);
+    if (file) {
+        READER.readAsText(file);
+    }
+}
+
+function setupHelp(helpHtml) {
+  // Set up help links to show help:
+  d3.selectAll("a.help")
+    .on(
+      "click",
+      function () {
+        d3.select("#help").style("visibility", "visible");
+      }
+    );
+  d3.select("#unhelp")
+    .on(
+      "click",
+      function () {
+        d3.select("#help").style("visibility", "hidden");
+      }
+    );
+
+  // Pipe in help content
+  if (helpHtml) {
+      d3.select("#help_content").html(helpHtml);
+  }
+
+  // Set up click handler on help itself so that if you hit the shaded area it
+  // also closes the help.
+  d3.select("#help")
+    .on(
+      "click",
+      function(event) {
+        if (event.target.getAttribute("id") == "help") {
+          d3.select("#help").style("visibility", "hidden");
+        }
+      }
+    )
+}
+
+// In-line help HTML
+inlineHelp = undefined;
+if (inlineHelp != undefined) {
+  setupHelp(inlineHelp);
+} else {
+  setupHelp(undefined);
+  let helpFile = "help.html"; // the default
+  let url = new URL(window.location.href);
+  let target = url.searchParams.get("h");
+  if (target) {
+    helpFile = target;
+  }
+  // TODO: Why doesn't this work?
+  d3.text(
+    helpFile,
+    function(error, html) {
+      if (error) { throw error; }
+      setupHelp(html);
+    }
+  );
+}
+
+// In-line graph data (as a *string*, not object)
+inlineData = undefined;
+
+ // global for pyodide access
+var pyodide = undefined;
+
+// Pyodide setup async function runs last to set things up
+async function setupPyodide() {
+  notifyWait("loading");
+  pyodide = await loadPyodide();
+  await pyodide.loadPackage("micropip");
+  // Load & run 'viewer.py' in this directory. It will call back into
+  // newExploration when the initial data is loaded.
+  console.log("Loaded Pyodide & Micropip, fetching setup code...");
+  viewerCode = await d3.text('viewer.py');
+  pyodide.runPython(viewerCode);
+  console.log("Setup code launched.");
+}
+
+// Let's go!
+console.log("Initializing Pyodide...")
+setupPyodide();
+    </script>
+  </body>
+</html>
