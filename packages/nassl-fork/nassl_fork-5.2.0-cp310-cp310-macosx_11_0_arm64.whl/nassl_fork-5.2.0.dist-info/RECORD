@@ -1,0 +1,17 @@
+nassl/ssl_client.py,sha256=SVTPhEu-2WDmdLRZisSmZ-pU3OyFiSaR5iKy496S4Xg,17094
+nassl/_nassl.pyi,sha256=_jmNXXlJuM1pCMM1QZik4Tz7BqyVdthGISEknUDIjkI,197
+nassl/__init__.py,sha256=YMRNe_HqL9SjrJ0qB-JyNdVtLnxMf3bATh40KnF8t-g,50
+nassl/ocsp_response.py,sha256=rvI4rwGr_yiooAgQ_6ARBRpHaOzDeZ4rgHxf5khS7mk,1159
+nassl/_nassl.cpython-310-darwin.so,sha256=1CNWjNexaAkRXuZZipgTw1pHigSlgnKUOlRbATh0DXE,2730096
+nassl/cert_chain_verifier.py,sha256=gKn0mi0MaqDHf9SSO9kMF0_g4zny2y4v6jGAQwqw67Y,3020
+nassl/_nassl_legacy.cpython-310-darwin.so,sha256=Sf57uM7UdcxBHaK2Yv__9xMqhtmE1vkKH0qPjpP_1AU,1819840
+nassl/ephemeral_key_info.py,sha256=8hntZuOQVJnvFWWvH_IzaWvGbvjHZ_Fr3KeD8DG9mk0,5916
+nassl/_nassl_legacy.pyi,sha256=_jmNXXlJuM1pCMM1QZik4Tz7BqyVdthGISEknUDIjkI,197
+nassl/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nassl/legacy_ssl_client.py,sha256=5Pyc-G_LqIqfkoqwi7HNpTiIYTGcYdWpWYCfx0AK6aw,6998
+tests/openssl_server/__init__.py,sha256=TAKsXAA_1IxcR7OABe7e5Voq3CePXbTPz06GYUSZ884,8567
+nassl_fork-5.2.0.dist-info/RECORD,,
+nassl_fork-5.2.0.dist-info/WHEEL,sha256=HYqjRdli_HnmdRYswLM91KP1v-KILRKMRXsFGStbfQs,109
+nassl_fork-5.2.0.dist-info/top_level.txt,sha256=w7juJEoI2dZL9ErP5Pwl1hFN_41aqQesyIE0ZhXS8Yo,12
+nassl_fork-5.2.0.dist-info/LICENSE.txt,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+nassl_fork-5.2.0.dist-info/METADATA,sha256=BhO3Ci9git5VvlF52rkew3N78EXTtj3KtZxrij4VHu0,992
