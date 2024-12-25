@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: scrapy-zstd
+Version: 0.2.0
+Summary: A Scrapy plugin to compress feeds with Zstandard (zstd).
+Project-URL: Homepage, https://github.com/takebayashi/scrapy-zstd
+Author: Shun Takebayashi
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Framework :: Scrapy
+Requires-Python: >=3.9
+Requires-Dist: zstandard
+Description-Content-Type: text/markdown
+
+# scrapy-zstd
+
+A Scrapy plugin to compress feeds with [Zstandard (zstd)](https://datatracker.ietf.org/doc/html/rfc8878).
+
+## Installation
+
+```
+pip install scrapy-zstd
+```
+
+## Usage
+
+Add `scrapy_zstd.postprocessing.ZstdPlugin` to the `postprocessing` list in the `FEEDS` configurations.
+
+```
+FEEDS = {
+    "/path/to/file.csv.zst": {
+        "format": "csv",
+        "postprocessing": ["scrapy_zstd.postprocessing.ZstdPlugin"],
+    }
+}
+```

@@ -1,0 +1,6 @@
+scrapy_zstd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapy_zstd/postprocessing.py,sha256=CnDWPHFEgkItEfjA4MucVabL6P4EsOy2ZjdCRVixW2w,388
+scrapy_zstd-0.2.0.dist-info/METADATA,sha256=7UlJ2EFCE-8YHA2w8TeXq3Nslj8L8SlJ9hQE9pg4k3Y,821
+scrapy_zstd-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+scrapy_zstd-0.2.0.dist-info/licenses/LICENSE.txt,sha256=TwsHlFgAkYiMTNzF7wjZDVlWZHsNdrWuznz1ZDqUcRo,1074
+scrapy_zstd-0.2.0.dist-info/RECORD,,
