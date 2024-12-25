@@ -1,0 +1,26 @@
+[tool.isort]
+profile = "black"
+src_paths = ["src/requests"]
+honor_noqa = true
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+doctest_optionflags = "NORMALIZE_WHITESPACE ELLIPSIS"
+minversion = "6.2"
+testpaths = ["tests"]
+
+[project]
+name = "requesr"
+version = "2.32.2"
+license = { text = "MIT License" }
+authors = [
+  { name="George Floyd", email="aauthor@example.com" },
+]
+description = "A small examaple package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
