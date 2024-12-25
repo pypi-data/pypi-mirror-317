@@ -1,0 +1,473 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools>=61.2",
+    "setuptools_scm",
+]
+
+[project]
+authors = [{name = "Common Partial Wave Analysis", email = "compwa-admin@ep1.rub.de"}]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+]
+dependencies = [
+    "ampform >=0.15.4", # aslatex with keyword arguments
+    "attrs >=20.1.0", # on_setattr and https://www.attrs.org/en/stable/api.html#next-gen
+    "cloudpickle",
+    "numpy",
+    "qrules >=0.10.0",
+    "sympy >=1.10", # module sympy.printing.numpy and array expressions with shape kwarg
+    "tensorwaves[jax]",
+    'typing-extensions; python_version <"3.11.0"',
+]
+description = "Symbolic expressions for Dalitz-Plot Decomposition"
+dynamic = ["version"]
+license = {file = "LICENSE"}
+name = "ampform-dpd"
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+numba = ["tensorwaves[numba]"]
+tf = ["tensorwaves[tf]"]
+
+[project.readme]
+content-type = "text/markdown"
+file = "README.md"
+
+[project.urls]
+Changelog = "https://github.com/ComPWA/ampform-dpd/releases"
+Documentation = "https://compwa.github.io/ampform-dpd"
+Source = "https://github.com/ComPWA/ampform-dpd"
+Tracker = "https://github.com/ComPWA/ampform-dpd/issues"
+
+[dependency-groups]
+dev = [
+    "nbmake",
+    "ruff",
+    "sphinx-autobuild",
+    {include-group = "doc"},
+    {include-group = "jupyter"},
+    {include-group = "style"},
+    {include-group = "test"},
+]
+doc = [
+    "myst-nb",
+    "sphinx-api-relink",
+    "sphinx-book-theme",
+    "sphinx-codeautolink[ipython]",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "sphinx-pybtex-etal-style",
+    "sphinx-togglebutton",
+    "sphinxcontrib-bibtex",
+    {include-group = "notebooks"},
+]
+jupyter = [
+    "jupyterlab",
+    "jupyterlab-code-formatter",
+    "jupyterlab-git",
+    "jupyterlab-lsp",
+    "jupyterlab-myst",
+    "python-lsp-ruff",
+    "python-lsp-server[rope]",
+    {include-group = "notebooks"},
+]
+notebooks = [
+    "graphviz",
+    "ipympl",
+    "ipywidgets",
+    "matplotlib",
+    "pandas",
+    "tensorwaves[phsp]",
+    "tqdm",
+]
+style = [
+    "mypy",
+    {include-group = "types"},
+]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-xdist",
+]
+types = [
+    "pytest",
+    "sphinx-api-relink",
+]
+
+[tool.setuptools]
+include-package-data = false
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+ampform_dpd = ["py.typed"]
+
+[tool.setuptools.packages.find]
+namespaces = false
+where = ["src"]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+version_scheme = "only-version"
+write_to = "src/ampform_dpd/version.py"
+
+[tool.mypy]
+exclude = "_build"
+show_error_codes = true
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = ["cloudpickle.*"]
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = ["sympy.*"]
+
+[[tool.mypy.overrides]]
+check_untyped_defs = true
+disallow_incomplete_defs = false
+disallow_untyped_defs = false
+module = ["tests.*"]
+
+[tool.pyright]
+exclude = ["**/.venv/"]
+reportArgumentType = false
+reportAssignmentType = false
+reportAttributeAccessIssue = false
+reportCallIssue = false
+reportGeneralTypeIssues = false
+reportImportCycles = false
+reportIncompatibleMethodOverride = false
+reportMissingParameterType = false
+reportMissingTypeArgument = false
+reportMissingTypeStubs = false
+reportOperatorIssue = false
+reportPrivateImportUsage = false
+reportReturnType = false
+reportUnknownArgumentType = false
+reportUnknownLambdaType = false
+reportUnknownMemberType = false
+reportUnknownParameterType = false
+reportUnknownVariableType = false
+reportUnnecessaryContains = false
+reportUnnecessaryIsInstance = false
+reportUnusedClass = true
+reportUnusedFunction = true
+reportUnusedImport = true
+reportUnusedVariable = true
+typeCheckingMode = "strict"
+venv = ".venv"
+venvPath = "."
+
+[tool.pytest.ini_options]
+addopts = [
+    "--color=yes",
+    "--doctest-continue-on-failure",
+    "--doctest-modules",
+    "--durations=3",
+    "--ignore=docs/conf.py",
+    "-m not slow",
+]
+doctest_optionflags = [
+    "IGNORE_EXCEPTION_DETAIL",
+]
+filterwarnings = [
+    "error",
+    "ignore::pytest.PytestUnraisableExceptionWarning",
+    "ignore:The `hash` argument is deprecated in favor of `unsafe_hash` and will be removed in or after August 2025.:DeprecationWarning",
+    "ignore:the imp module is deprecated in favour of importlib.*:DeprecationWarning",
+]
+markers = [
+    "slow: marks tests as slow (select with '-m slow')",
+]
+norecursedirs = [
+    ".ipynb_checkpoints",
+    "_build",
+]
+testpaths = [
+    "src",
+    "tests",
+]
+
+[tool.ruff]
+extend-exclude = ["typings"]
+extend-include = ["*.ipynb"]
+preview = true
+show-fixes = true
+src = [
+    "src",
+    "tests",
+]
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.ruff.lint]
+ignore = [
+    "ANN",
+    "ARG00",
+    "B028",
+    "C408",
+    "COM812",
+    "CPY001",
+    "D101",
+    "D102",
+    "D103",
+    "D105",
+    "D107",
+    "D203",
+    "D213",
+    "D407",
+    "D416",
+    "DOC",
+    "E501",
+    "FBT",
+    "FURB101",
+    "FURB103",
+    "FURB140",
+    "G004",
+    "ISC001",
+    "ISC003",
+    "PLC2401",
+    "PLR0913",
+    "PLW1514",
+    "PT001",
+    "PTH",
+    "S301",
+    "SIM108",
+]
+select = ["ALL"]
+task-tags = ["cspell"]
+
+[tool.ruff.lint.flake8-builtins]
+builtins-ignorelist = ["display"]
+
+[tool.ruff.lint.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
+
+[tool.ruff.lint.flake8-self]
+ignore-names = [
+    "_latex",
+    "_print",
+]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pep8-naming]
+ignore-names = [
+    "A",
+    "H",
+    "L",
+    "R",
+    "R_dec",
+    "R_prod",
+    "S",
+    "Γ*",
+    "λ*",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"*" = ["D"]
+"*.ipynb" = [
+    "B018",
+    "C90",
+    "D",
+    "E303",
+    "E402",
+    "E703",
+    "N806",
+    "N816",
+    "PLR09",
+    "PLR2004",
+    "PLW0602",
+    "PLW0603",
+    "PLW2901",
+    "S101",
+    "T20",
+    "TC00",
+]
+"docs/*" = [
+    "E402",
+    "INP001",
+    "PLR2004",
+    "S101",
+    "S113",
+    "T201",
+]
+"docs/conf.py" = ["D100"]
+"jpsi2ksp.ipynb" = ["PLC2701"]
+"serialization.ipynb" = [
+    "E741",
+    "N813",
+    "PLC2403",
+    "PLC2701",
+    "RUF100",
+]
+"setup.py" = ["D100"]
+"src/ampform_dpd/io/__init__.py" = ["S403"]
+"src/ampform_dpd/io/serialization/amplitude.py" = ["E741"]
+"src/ampform_dpd/io/serialization/format.py" = ["E741"]
+"tests/*" = [
+    "D",
+    "INP001",
+    "PGH001",
+    "PLC2701",
+    "PLR2004",
+    "PLR6301",
+    "S101",
+    "SLF001",
+    "T20",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.pylint]
+allow-dunder-method-names = ["_latex_repr_"]
+
+[tool.tomlsort]
+all = false
+ignore_case = true
+in_place = true
+sort_first = [
+    "build-system",
+    "project",
+    "tool.setuptools",
+    "tool.setuptools_scm",
+]
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist =
+    cov,
+    docnb-force,
+    linkcheck,
+    sty,
+skip_install = True
+skip_missing_interpreters = True
+skipsdist = True
+
+[testenv]
+allowlist_externals =
+    pytest
+commands =
+    pytest {posargs}
+description = Run all unit tests
+passenv = *
+
+[testenv:cov]
+allowlist_externals =
+    pytest
+commands =
+    pytest {posargs:src tests} \
+        --cov-fail-under=50 \
+        --cov-report=html \
+        --cov-report=xml \
+        --cov=ampform_dpd
+description = Compute test coverage
+
+[testenv:doc]
+allowlist_externals =
+    sphinx-build
+commands =
+    sphinx-build \
+        --builder=html \
+        --fail-on-warning \
+        --keep-going \
+        docs/ docs/_build/html
+description = Build documentation with Sphinx
+
+[testenv:docnb]
+base = doc
+description = {[testenv:doc]description} with cached notebook execution
+setenv =
+    {[testenv:doc]setenv}
+    EXECUTE_NB = yes
+
+[testenv:docnb-force]
+base = doc
+description = {[testenv:doc]description} with notebook execution (no cache)
+setenv =
+    {[testenv:doc]setenv}
+    FORCE_EXECUTE_NB = yes
+
+[testenv:doclive]
+allowlist_externals =
+    sphinx-autobuild
+commands =
+    sphinx-autobuild \
+        --ignore=docs/_build/ \
+        --ignore=docs/_images/ \
+        --ignore=docs/api/ \
+        --ignore=docs/export/ \
+        --open-browser \
+        --port=0 \
+        --re-ignore='.*/__pycache__/.*' \
+        --re-ignore='.*/.ipynb_checkpoints/.*' \
+        --re-ignore='.*/.virtual_documents/.*' \
+        --re-ignore='.*\\.pdf' \
+        --re-ignore='.*\\.pkl' \
+        --re-ignore='.*\\.png' \
+        --re-ignore='.*\\.svg' \
+        --re-ignore='.*\\.tmp' \
+        --watch=docs \
+        --watch=src \
+        docs/ docs/_build/html
+description = Set up a server to directly preview changes to the HTML pages
+
+[testenv:docnblive]
+base = doclive
+description = {[testenv:doclive]description} with cached notebook execution
+setenv =
+    {[testenv:doclive]setenv}
+    EXECUTE_NB = yes
+
+[testenv:linkcheck]
+allowlist_externals =
+    sphinx-build
+commands =
+    sphinx-build \
+        --builder=linkcheck \
+        --show-traceback \
+        docs/ docs/_build/linkcheck
+description = Check external links in the documentation (requires internet connection)
+setenv =
+    PYTHONWARNINGS =
+
+[testenv:nb]
+allowlist_externals =
+    pytest
+commands =
+    pytest --nbmake --nbmake-timeout=3600 {posargs:docs}
+description = Run all notebooks with pytest
+
+[testenv:sty]
+allowlist_externals =
+    pre-commit
+commands =
+    pre-commit run --all-files {posargs}
+description = Perform all linting, formatting, and spelling checks
+"""
+
+[tool.uv]
+constraint-dependencies = ["numpy~=1.0"]

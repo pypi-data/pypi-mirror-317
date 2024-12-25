@@ -1,0 +1,16 @@
+ampform>=0.15.4
+attrs>=20.1.0
+cloudpickle
+numpy
+qrules>=0.10.0
+sympy>=1.10
+tensorwaves[jax]
+
+[:python_version < "3.11.0"]
+typing-extensions
+
+[numba]
+tensorwaves[numba]
+
+[tf]
+tensorwaves[tf]
