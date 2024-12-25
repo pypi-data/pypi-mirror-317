@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "llm-project-summarizer"
+version = "0.0.4"
+description = "Generate LLM-friendly summaries of Python and Go codebases"
+authors = ["Yossry"]
+homepage = "https://github.com/MuhamadYossry/llm-project-summarizer"
+repository = "https://github.com/MuhamadYossry/llm-project-summarizer"
+keywords = ["llm"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    # Environment
+    "Environment :: Console",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Pre-processors",
+    "Topic :: Text Processing :: Markup",
+    "Topic :: Documentation",
+    # AI/ML related - new suggestions for LLM context
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.14"
+click = "^8.1.8"
+pyyaml = "^6.0.2"
+tqdm = "^4.67.1"
+
+[tool.poetry.scripts]
+llm-project-summarizer = "llm_project_summarizer.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+isort = "^5.13.2"
+mypy = "^1.14.0"
+pylint = "^3.3.2"
+pyyaml = "^6.0.2"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
