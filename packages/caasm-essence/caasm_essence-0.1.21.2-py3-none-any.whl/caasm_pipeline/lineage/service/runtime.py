@@ -1,0 +1,11 @@
+from caasm_pipeline.lineage.service.services.lineage import EntityTypeLineageStageService, EntityLineageFetchStageService, \
+    EntityLineageMergeStageService, EntityLineageConvertStageService, EntityLineageFabricStageService, \
+    ValueLineageFabricStageService
+
+entity_type_lineage_stage_service = EntityTypeLineageStageService()
+entity_lineage_fetch_stage_service = EntityLineageFetchStageService()
+entity_lineage_merge_stage_service = EntityLineageMergeStageService()
+entity_lineage_convert_stage_service = EntityLineageConvertStageService()
+entity_lineage_fabric_stage_service = EntityLineageFabricStageService()
+
+value_lineage_fabric_stage_service = ValueLineageFabricStageService()

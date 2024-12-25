@@ -1,0 +1,6 @@
+from caasm_pipeline.fabric.service.service.fabric_meta_model_config_service import FabricModelConfigService, FabricConfigService
+from caasm_pipeline.fabric.service.service.field_fabric_policy import FieldFabricPolicyService
+
+fabric_model_config_service = FabricModelConfigService()
+fabric_config_service = FabricConfigService()
+field_fabric_policy_service = FieldFabricPolicyService()
