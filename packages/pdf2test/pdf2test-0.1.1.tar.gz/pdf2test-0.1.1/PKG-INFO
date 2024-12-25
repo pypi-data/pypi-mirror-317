@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pdf2test
+Version: 0.1.1
+Summary: A simple package to demonstrate PDF to text conversion
+Home-page: https://github.com/yourusername/pdf2test
+Author: fetian20
+Author-email: fetian20@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pdf2test
+ 
+A simple Python package demonstrating PDF to text conversion (as a placeholder).
+ 
+## Installation
+ 
+You can install the package using pip:
+ 
+```bash
+pip install pdf2test
