@@ -1,0 +1,2 @@
+[console_scripts]
+string_utils_rjl = string_utils_rjl.utils:main_function

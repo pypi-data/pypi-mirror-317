@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: string_utils_rjl
+Version: 1.0.0
+Summary: A simple package for string operations
+Home-page: http://www.example.com
+Author: Ruan Jia Lu
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == "dev"
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+
+# String Utils Rjl
+
+A simple Python package for string operations including reversal, palindrome check, and character frequency.
+
+## Installation
+
+pip install string_utils_rjl
+
+
+## Usage
+
+```python
+from string_utils_rjl import reverse_string, is_palindrome, char_frequency
+
+# Reverse a string
+print(reverse_string("hello"))  # Output: "olleh"
+
+# Check if a string is a palindrome
+print(is_palindrome("racecar"))  # Output: True
+
+# Calculate character frequency
+print(char_frequency("moonshot"))  # Output: {'m': 1, 'o': 2, 'n': 1, 's': 1, 'h': 1, 't': 1}
