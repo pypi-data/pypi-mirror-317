@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fastmodels-kit
+Version: 0.1.6
+Summary: A fast model SDK for interacting with APIs
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
