@@ -1,0 +1,73 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ #  Copyright (c) 2024. Permission is hereby granted, free of charge, to any person obtaining a
+  ~ #  copy of this software and associated documentation files (the “Software”), to deal in the
+  ~ #  Software without restriction,
+  ~ #  including without limitation the rights to use, copy, modify, merge, publish, distribute,
+  ~ #  sublicense, and/or sell copies
+  ~ #  of the Software, and to permit persons to whom the Software is furnished to do so, subject to
+  ~ #  the following conditions:
+  ~ #
+  ~ #  The above copyright notice and this permission notice shall be included in all copies or
+  ~ #  substantial portions of the Software.
+  ~ #
+  ~ #  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+  ~ #  BUT NOT LIMITED TO THE
+  ~ #  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+  ~ #  EVENT SHALL THE AUTHORS OR
+  ~ #  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+  ~ #  CONTRACT, TORT OR
+  ~ #  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  ~ #  DEALINGS IN THE SOFTWARE.
+  ~ #
+  ~ #  This uses QT for some components which has the primary open-source license is the GNU Lesser General Public License v. 3 (“LGPL”).
+  ~ #  With the LGPL license option, you can use the essential libraries and some add-on libraries of Qt.
+  ~ #  See https://www.qt.io/licensing/open-source-lgpl-obligations for QT details.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <style>
+        /* Apply custom styles to all h3 tags */
+        h3 {
+            color: lightslategray;
+            font-weight: bold;
+        }
+
+        /* Expert section is hidden by default but changed to show-expert-section in expert mode */
+        .expert-section {
+            color: #323232;
+            font-size: 1px;
+        }
+    </style>
+</head>
+<body>
+<p>This tab manages advanced GDAL settings. You generally will not need to change these. See
+    GDAL Documentation for details - https://gdal.org/en/stable/programs/index.html.
+</p>
+<h3>gdal_warp settings</h3>
+<p>Used to create initial DEM elevation image used for other steps</p>
+<ul>
+    <li><b>CRS:</b> -t_srs Set coordinate reference system</li>
+    <li><b>gdalwarp:</b> general gdalwarp settings</li>
+    <li><b>Performance:</b> Performance settings</li>
+    <li><b>Resampling:</b> Type of resampling to use</li>
+</ul>
+<h3>gdaldem settings</h3>
+<p>Used for both hillshade and color</p>
+<ul>
+    <li><b>Edges:</b> -compute_edges</li>
+    <li><b>Output Type:</b> -of Short Format name such as GTiff</li>
+    <li><b>Nearest Color:</b> Blank or -nearest_color_entry.</li>
+</ul>
+<h3>gdal_calc settings</h3>
+<p>Used to merge hillshade and color for final image</p>
+<ul>
+    <li><b>gdal_calc:</b> General gdal_calc settings</li>
+    <li><b>Compress:</b> Compression type. NOTE: it is easy to misconfigure this!</li>
+</ul>
+</body>
+</html>
