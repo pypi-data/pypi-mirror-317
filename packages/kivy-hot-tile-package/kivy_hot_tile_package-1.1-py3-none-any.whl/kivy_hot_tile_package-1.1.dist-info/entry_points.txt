@@ -1,0 +1,3 @@
+[console_scripts]
+kivy_hot_tile_package = kivy_hot_tile_package.main:main
+

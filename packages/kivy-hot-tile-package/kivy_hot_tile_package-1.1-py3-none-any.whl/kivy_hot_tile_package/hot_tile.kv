@@ -1,0 +1,88 @@
+<MainGrid>
+    orientation: 'vertical'
+    gameGrid: []
+    hotTile: None
+    gridSize: 10
+    time: 0
+    numberOfMoves: root.gridSize * 2
+    timeClockEvent: None
+    movingTarget: True
+    padding: 10
+    Label:
+        id: title_label
+        text: 'Hot Tile'
+        font_size: 30
+        size_hint_y: None
+        size_hint: (1, 0.1)
+    GridLayout:
+        cols: 2
+        size_hint: (1, 0.1)
+        Label:
+            text: 'Time: 00:00'
+            font_size: 20
+            id: time_label
+        Label:
+            text: 'Moves Left: ' + str(root.numberOfMoves)
+            font_size: 20
+            id: moves_label
+    GridLayout:
+        id: game_grid
+        size_hint_y: None
+        size_hint: (1, 0.7)
+        padding: 10
+        on_kv_post: root.create_game()
+    GridLayout:
+        cols: 2
+        size_hint: (1, 0.1)
+        padding: 10
+        Button:
+            text: 'Settings'
+            on_press: root.settings()
+        Button:
+            text: 'Reset'
+            on_press: root.create_game()
+
+<Tile>
+    on_press: root.click()
+
+<SettingsPopup>
+    title: 'Settings'
+    size_hint: (0.5, 0.5)
+    auto_dismiss: False
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        Label:
+            text: 'Settings'
+            font_size: 30
+            size_hint_y: None
+            size_hint: (1, 0.2)
+        GridLayout:
+            cols: 2
+            size_hint_y: None
+            size_hint: (1, 0.5)
+            Label:
+                text: 'Grid Size (min 2, max 30)'
+            TextInput:
+                id: grid_size
+                input_filter: 'int'
+                font_size: 20
+                halign: 'right'
+                multiline: False
+            Label:
+                text: 'Moving target'
+            CheckBox:
+                id: moving_target
+                active: True
+        GridLayout:
+            cols: 2
+            size_hint_y: None
+            size_hint: (1, 0.2)
+            padding: 10
+            Button:
+                text: 'Cancel'
+                on_press: root.resume()
+            Button:
+                text: 'Save'
+                background_color: (0, 1, 0, 1)
+                on_press: root.save_settings()

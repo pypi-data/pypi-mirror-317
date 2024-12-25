@@ -1,0 +1,1 @@
+kivy_hot_tile_package
