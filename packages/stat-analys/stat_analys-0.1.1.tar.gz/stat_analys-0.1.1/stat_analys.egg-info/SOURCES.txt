@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+stat_analys/__init__.py
+stat_analys/configuration.py
+stat_analys/univariate_stat.py
+stat_analys/utils.py
+stat_analys/visualizations.py
+stat_analys.egg-info/PKG-INFO
+stat_analys.egg-info/SOURCES.txt
+stat_analys.egg-info/dependency_links.txt
+stat_analys.egg-info/requires.txt
+stat_analys.egg-info/top_level.txt
+test/__init__.py
+test/test_configuration.py
