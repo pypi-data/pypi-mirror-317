@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pykugram
+Version: 0.1.1
+Summary: Package under development
+Author: CortextDEV
+Requires-Python: >=3.11.9
+Description-Content-Type: text/markdown
+
+# Your Package Name
+
+This package is currently under development. More features will be added soon.
+
+## Installation
