@@ -1,0 +1,16 @@
+gepeto/__init__.py,sha256=mFQEHIlJdTmsVvUjQPX7huKgbX4-cgc9BclRBgQxhT4,149
+gepeto/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gepeto/client/client.py,sha256=QltbN-jeczL8R4Y1eCxNvkDqyewJe4n7ON-I9h3etfQ,1296
+gepeto/client/prompt.py,sha256=4jyBl84YBwxtSK1mrk_Gh4eSLzFaRJIVj-TV_f1yxC0,1458
+gepeto/client/schema.py,sha256=O3C-cU9UqJWZk9Ar4ElMtsTiSyCa2VS0QHYqxzKB4aE,347
+gepeto/client/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gepeto/repl/__init__.py,sha256=Xwwo05QjWS0AMYs9Wv9CrUD6cop5MqHW9zUkpd7p3lk,42
+gepeto/repl/repl.py,sha256=nffJnvlojK_LSpIBAVHvmP-AXrpg7q0N3JNgju9BXFQ,1405
+gepeto/team/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gepeto/team/schema.py,sha256=q24OhNotGooDLocuu0g5tznXL1cOzeoQLLcGQGTfHZU,891
+gepeto/team/team.py,sha256=nhBjkQP9Lwvw0wGgBPNV_RgjYxzZuqTkuuorP9v9kZA,6359
+gepeto/team/utils.py,sha256=X6aXReXBpNdR8MN05LCsh2v5z5J8ycVyS274YwVqMk0,1466
+gepeto-1.0.15.dist-info/METADATA,sha256=IUMrjKjlp9oFlAfvGYNGoKzsD8o6wjfNu3s_hCfyDaA,613
+gepeto-1.0.15.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gepeto-1.0.15.dist-info/top_level.txt,sha256=o7TEimysEFTb0EU0PP19KmH15NsIVXVyCxJTjAjqJT8,7
+gepeto-1.0.15.dist-info/RECORD,,
