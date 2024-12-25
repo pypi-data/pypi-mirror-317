@@ -1,0 +1,9 @@
+fastcraft/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastcraft/cli/create_dir.py,sha256=BfVsp4uhVT__8YLMX8s6dQozQDME4cK7ePuESloRTPM,380
+fastcraft/cli/main.py,sha256=qxUdw9WfTGLk8wAjQMio7fZHsq8WEl4LsMrXpPWSmuA,131
+fastcraft/main.py,sha256=uGnw_GI81lbsmAsi0yYldnMiCQ2h6KGE2ez5b8w7tk0,144
+fastcraft/utils/generate_file_struct.py,sha256=PCVrkjckpGaFNtY1xtUcbSnO5yifOJysRAa5MOKBnOY,1061
+fastcraft-0.0.1.dist-info/entry_points.txt,sha256=hGcX0G_pvBAK7Yv-Kc4ss-D4y_78blr8E_p-EKNpPnk,48
+fastcraft-0.0.1.dist-info/METADATA,sha256=-xPgY0AndoQUX06eI6eTKm87LKuRYeWv2b3B-jCt9eU,509
+fastcraft-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+fastcraft-0.0.1.dist-info/RECORD,,
