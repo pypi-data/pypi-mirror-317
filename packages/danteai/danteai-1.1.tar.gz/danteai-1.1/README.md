@@ -1,0 +1,51 @@
+# danteai
+
+Danteai is a convenient Python package for training your own text-based AI model and using it in practice to generate responses based on specified parameters. The package is fully tailored for the tasks of Dante (an application for article generation). If you need to modify the default settings, pay attention to the `minions.py`, `create_or_train.py`, and `get_generated_article.py` files.
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install danteai
+```
+
+## Example Usage
+
+```bash
+echo MODEL_STORE_DIR='./model' > .env
+export $(cat .env | xargs)
+```
+
+```python
+from danteai import (
+    create_or_train,
+    get_generated_article,
+)
+
+"""
+    data = [
+        {
+            'tags': [],
+            'text_example: '',
+            'short_news_description: '',
+            'response': ''
+        },
+        ...
+    ]
+"""
+
+create_or_train_response = create_or_train(
+    data=[],
+    create_new_model=True
+)
+print(create_or_train_response)
+# if only training, using False for 'create_new_model'
+
+generated_article = get_generated_article(
+    tags=[],
+    text_example='',
+    short_news_description=''
+)
+print(generated_article)
+```

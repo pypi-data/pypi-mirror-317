@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+danteai/__init__.py
+danteai/create_or_train.py
+danteai/get_generated_article.py
+danteai/minions.py
+danteai.egg-info/PKG-INFO
+danteai.egg-info/SOURCES.txt
+danteai.egg-info/dependency_links.txt
+danteai.egg-info/requires.txt
+danteai.egg-info/top_level.txt
