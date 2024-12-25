@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+wallet_fetcher/__init__.py
+wallet_fetcher/main.py
+wallet_fetcher.egg-info/PKG-INFO
+wallet_fetcher.egg-info/SOURCES.txt
+wallet_fetcher.egg-info/dependency_links.txt
+wallet_fetcher.egg-info/requires.txt
+wallet_fetcher.egg-info/top_level.txt
