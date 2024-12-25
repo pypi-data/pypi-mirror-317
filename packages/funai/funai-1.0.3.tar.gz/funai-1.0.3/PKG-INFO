@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: funai
+Version: 1.0.3
+Summary: funai
+Author-email: niuliangtao <farfarfun@qq.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: funsecret>=1.4.38
+Requires-Dist: funutil>=1.0.46
+
+# funllm
