@@ -1,0 +1,10 @@
+danteai/__init__.py,sha256=eqoY0HyvpnM4b0X-BLD4xspw_q7nCY-tXRhPmE59ios,102
+danteai/create_or_train.py,sha256=mtqMtjKHVRI1CuBGxJS-4rV8aPUrE0214KdJtSD84go,1365
+danteai/get_generated_article.py,sha256=nketxd-nSeoz8rNgs76rLSlCEnKfec0Nn1Z2eWpb7uo,555
+danteai/minions.py,sha256=E1hJn4qDWRLZqGd8iDNZ6QDPWNN50kjQRjJKczJvKdM,3119
+danteai/train.py,sha256=mG0lfuww8ktNX9y0hgRX_rGKujlP10P0tm_-1xlLSEY,1064
+danteai-1.1.1.dist-info/LICENSE,sha256=tmPvBULWoYHlMj2N00bAeL7UMmu3iFPwfREXxOhnPmQ,1067
+danteai-1.1.1.dist-info/METADATA,sha256=lMoLmOOriGXLdQYjXZCC6W4u_NbR-QqlbcEszyZassY,1450
+danteai-1.1.1.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+danteai-1.1.1.dist-info/top_level.txt,sha256=6h2AGMe-VOBgWqMrKNu5XjHoeogN5xO73S1zACDFyXA,8
+danteai-1.1.1.dist-info/RECORD,,
