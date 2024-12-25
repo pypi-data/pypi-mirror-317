@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: daggerml-cli
+Version: 0.0.5
+Project-URL: Documentation, https://github.com/daggerml/daggerml-cli#readme
+Project-URL: Issues, https://github.com/daggerml/daggerml-cli/issues
+Project-URL: Source, https://github.com/daggerml/daggerml-cli
+Author-email: Micha Niskin <micha.niskin@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
+Requires-Dist: asciidag
+Requires-Dist: click
+Requires-Dist: dataclasses; python_version < '3.7'
+Requires-Dist: importlib-metadata; python_version < '3.8'
+Requires-Dist: lmdb
+Requires-Dist: msgpack
+Requires-Dist: pyyaml
+Requires-Dist: tabulate
+Provides-Extra: test
+Requires-Dist: coverage[toml]>=6.5; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Description-Content-Type: text/markdown
+
+# daggerml-cli
+
+[![PyPI - Version](https://img.shields.io/pypi/v/daggerml-cli.svg)](https://pypi.org/project/daggerml-cli)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/daggerml-cli.svg)](https://pypi.org/project/daggerml-cli)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install daggerml-cli
+```
+
+For consistency with `python-lib`, to run the tests:
+
+```console
+hatch -e test run pytest .
+```
+
+## License
+
+`daggerml-cli` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.

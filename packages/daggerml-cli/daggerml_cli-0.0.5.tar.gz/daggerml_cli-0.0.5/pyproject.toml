@@ -1,0 +1,162 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "daggerml-cli"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.6"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Micha Niskin", email = "micha.niskin@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "click",
+  "lmdb",
+  "msgpack",
+  "tabulate",
+  "asciidag",
+  "pyyaml",
+  "dataclasses; python_version < '3.7'",
+  "importlib_metadata; python_version < '3.8'",
+]
+
+[project.optional-dependencies]
+test = [
+  "coverage[toml]>=6.5",
+  "pytest",
+  "pytest-cov",
+]
+
+[project.urls]
+Documentation = "https://github.com/daggerml/daggerml-cli#readme"
+Issues = "https://github.com/daggerml/daggerml-cli/issues"
+Source = "https://github.com/daggerml/daggerml-cli"
+
+[project.scripts]
+dml = "daggerml_cli.cli:cli"
+
+[tool.hatch.version]
+path = "daggerml_cli/__about__.py"
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.7", "3.8", "3.9", "3.10", "3.11"]
+
+[tool.hatch.envs.default]
+python = "3.10"
+
+[tool.hatch.envs.test]
+dependencies = [
+  "twine",
+  "coverage[toml]>=6.5",
+  "pytest",
+  "pytest-cov",
+]
+[tool.hatch.envs.test.scripts]
+dml-build = "hatch build && twine upload -r {args:tests} dist/*"
+
+[tool.ruff]
+target-version = "py37"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+  "ARG",
+  "B",
+  "DTZ",
+  "E",
+  "F",
+  "I",
+  "N",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
+  "RUF",
+  "S",
+  "TID",
+  "UP",
+  "W",
+  "YTT",
+]
+ignore = [
+  # allow asserts
+  "S101",
+  # Allow non-abstract empty methods in abstract base classes
+  "B027",
+  # Allow boolean positional values in function calls, like `dict.get(... True)`
+  "FBT003",
+  # Ignore checks for possible passwords
+  "S105", "S106", "S107",
+  # Ignore possibly unsafe crypto
+  "S324",
+  # Ignore complexity
+  "C901", "PLR0911", "PLR0912", "PLR0913", "PLR0915",
+  # Ignore magic numbers
+  "PLR2004",
+  # Ignore printf style string format
+  "UP031",
+  # Function names can be uppercase
+  "N802",
+  # Unused function args
+  "ARG001",
+  # Line too long
+  "E501",
+  # overwritten loop variable
+  "PLW2901"
+]
+unfixable = [
+  # Don't touch unused imports
+  "F401",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["daggerml_cli"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.per-file-ignores]
+# Tests can use magic values, assertions, and relative imports
+"tests/**/*" = ["PLR2004", "S101", "TID252"]
+
+[tool.coverage.run]
+source_pkgs = ["daggerml_cli"]
+branch = true
+parallel = true
+omit = [
+  "daggerml_cli/__about__.py",
+]
+
+[tool.coverage.paths]
+daggerml_cli = ["daggerml_cli", "*/daggerml-cli/daggerml_cli"]
+tests = ["tests", "*/daggerml-cli/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.pyright]
+typeCheckingMode = "basic"
+reportOptionalMemberAccess = false
+reportOptionalCall = false
+reportGeneralTypeIssues = false
