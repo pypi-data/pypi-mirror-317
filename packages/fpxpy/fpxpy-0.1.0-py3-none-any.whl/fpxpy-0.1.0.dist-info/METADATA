@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: fpxpy
+Version: 0.1.0
+Summary: Fiberplane studio integration with FastAPI
+Project-URL: Homepage, https://github.com/fiberplane/fpx
+Project-URL: Issues, https://github.com/fiberplane/fpx/issues
+Author-email: Fiberplane <support@fiberplane.com>, mellowagain <py@mari.zip>, flenter <flenter@users.noreply.github.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: fastapi>=0.115.6
+Requires-Dist: opentelemetry-api>=1.29.0
+Requires-Dist: opentelemetry-exporter-otlp>=1.29.0
+Requires-Dist: opentelemetry-instrumentation-fastapi>=0.50b0
+Requires-Dist: opentelemetry-sdk>=1.29.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: tracing>=0.1.3
+Description-Content-Type: text/markdown
+
+# fpx.py
+
+Provides instrumentation and route detection for FastAPI apps.
+
+### Usage
+
+After installing `fpxpy` either from source or from `pip`, simply add the second line
+referencing your `FastAPI` app.
+
+```python
+from fpxpy import setup
+
+app = FastAPI()
+setup(app)
+```
+
+### Running
+
+After that, when running your FastAPI server, be sure to set the `FPX_ENDPOINT` env variable
+pointing to your instance of Fiberplane Studio, e.g:
+
+```
+$ FPX_ENDPOINT=http://localhost:8788/v1/traces uv run fastapi dev main.py
+```
