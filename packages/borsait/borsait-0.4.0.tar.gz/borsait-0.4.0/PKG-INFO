@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: borsait
+Version: 0.4.0
+Summary: A simple scraper for the obligations published in the borsa italiana web page.
+Author: Carlos Davila
+Author-email: carlos.davila.luelmo@gmail.com
+Requires-Python: >3.9,<3.14
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: openpyxl (>=3.1.5,<4.0.0)
+Requires-Dist: playwright (>=1.46.0,<2.0.0)
+Requires-Dist: rich (>=13.8.0,<14.0.0)
+Description-Content-Type: text/markdown
+
+# borsait
+A simple scraper for borsa It.
+
