@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ProcyonCLS-SDK
+Version: 2.1.0
+Summary: SDK for ProcyonCLS applications
+Home-page: https://github.com/gauthamnair2005/procyoncls-sdk
+Author: Gautham Nair
+Author-email: gautham.nair.2005@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ProcyonCLS-SDK
+ Software Development Kit for ProcyonCLS
+
+## Usage
+
+```python
+from ProcyonCLSSDK import kernel
+from ProcyonCLSSDK import ekernel
+```
