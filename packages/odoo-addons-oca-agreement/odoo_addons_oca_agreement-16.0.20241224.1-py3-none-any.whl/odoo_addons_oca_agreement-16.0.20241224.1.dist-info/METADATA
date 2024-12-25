@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-agreement
+Version: 16.0.20241224.1
+Summary: Meta package for oca-agreement Odoo addons
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Requires-Dist: odoo-addon-agreement<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-agreement-legal<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-agreement-maintenance<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-agreement-rebate<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-agreement-sale<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-agreement-serviceprofile<16.1dev,>=16.0dev
+
+UNKNOWN
