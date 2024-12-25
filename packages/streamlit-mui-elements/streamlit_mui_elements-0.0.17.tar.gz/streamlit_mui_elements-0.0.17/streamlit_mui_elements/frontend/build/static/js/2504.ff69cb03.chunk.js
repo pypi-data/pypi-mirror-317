@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcustom_component_example=self.webpackChunkcustom_component_example||[]).push([[2504],{2504:function(e,n,t){t.r(n),t.d(n,{boxClasses:function(){return c.Z},default:function(){return u.Z}});var u=t(8652),c=t(4676)}}]);
