@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: pyjas
+Version: 0.2.1
+Summary: An implementation of the JSON:API Standard in Python.
+Home-page: https://kmbhm1.github.io/PyJAS
+License: MIT
+Keywords: json,jsonapi,api,rest,json:api specification,json:api,pydantic,flask,fastapi,sqlalchemy,django
+Author: K Boehm
+Author-email: kmbhm1@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: deepdiff (>=7.0.1,<8.0.0)
+Requires-Dist: jinja2 (>=3.1.5,<3.2.0)
+Requires-Dist: mkdocs (>=1.6.0,<2.0.0)
+Requires-Dist: mkdocs-click (>=0.8.1,<0.9.0)
+Requires-Dist: mkdocs-material (>=9.5.30,<10.0.0)
+Requires-Dist: mkdocs-redirects (>=1.2.1,<2.0.0)
+Requires-Dist: mkdocstrings[python] (>=0.25.1,<0.26.0)
+Requires-Dist: pydantic (>=2.6.3,<3.0.0)
+Requires-Dist: pymdown-extensions (>=10.8.1,<11.0.0)
+Project-URL: Repository, https://github.com/kmbhm1/PyJAS
+Description-Content-Type: text/markdown
+
+# Python JSON:API Standard (PyJAS)
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PyJAS)
+[![Pydantic v2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v2.json)](https://pydantic.dev)
+![GitHub License](https://img.shields.io/github/license/kmbhm1/PyJAS)
+[![codecov](https://codecov.io/github/kmbhm1/PyJAS/graph/badge.svg?token=PYOJPJTOLM)](https://codecov.io/github/kmbhm1/PyJAS)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/PyJAS)
+
+**PyJAS** is a Python library that provides seamless integration of the [JSON:API](https://jsonapi.org/) specification with Pydantic and FastAPI. It simplifies the process of building standards-compliant APIs, ensuring consistency and interoperability across your applications.
+
+## Features
+
+- **Standards Compliance:** Adheres strictly to the JSON:API specification.
+- **Pydantic Models:** Utilizes Pydantic for data validation and serialization.
+- **FastAPI Integration:** Easily integrates with FastAPI to build high-performance APIs.
+- **Flexible Configuration:** Customize behaviors to fit your project's requirements.
+- **Extensible:** Supports extensions and customizations for advanced use cases.
+
+## Installation
+
+You can install PyJAS via pip:
+
+```bash
+pip install pyjas
+```
+
+## Quick Start
+
+Here's a simple example of how to integrate PyJAS with Pydantic & FastAPI:
+
+```python
+from fastapi import FastAPI
+from pyjas.v1_1 import Document, ResourceObject
+
+app = FastAPI()
+
+class Article(ResourceObject):
+    type_: str = "articles"
+    id_: str
+    attributes: dict
+
+@app.get("/articles/{article_id}", response_model=Document)
+async def get_article(article_id: str):
+    article = Article(id_=article_id, attributes={"title": "PyJAS"})
+    return Document(data=article)
+```
+
+For a complete example, visit our [Documentation Site](https://kmbhm1.github.io/PyJAS/).
+
+## Documentation
+
+Comprehensive documentation is available on our [MkDocs site](https://kmbhm1.github.io/PyJAS/).
+
+## Contributing
+
+Contributions are welcome! Please see our [Contributing Guide](CONTRIBUTING.md) for more information.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For questions or support, please open an issue on [GitHub](https://github.com/kmbhm1/PyJAS/issues).
+
+
+## Acknowledgements
+
+- Inspired by the [JSON specification](https://jsonapi.org/).
+- Built using [Pydantic](https://pydantic-docs.helpmanual.io/) & [FastAPI](https://fastapi.tiangolo.com/).
+

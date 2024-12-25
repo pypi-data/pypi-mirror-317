@@ -1,0 +1,9 @@
+pyjas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyjas/v1_1/__init__.py,sha256=Xkz7o17l-Iju5t5PuumpjWvumglHPEQnEAozHOVnMBc,1605
+pyjas/v1_1/content_negotiation.py,sha256=QQRO9hmULtJ1MXI5maPerckjHqJkkeX-xhGKOoy4QWI,9136
+pyjas/v1_1/helper.py,sha256=oCmImDqnmZ_tTG3ZnCAwknfYGJ4exWZKjIbjWxsvYhs,646
+pyjas/v1_1/jsonapi_builder.py,sha256=BP9OttZG38vw5SkD8366irEyO0387Eeyve-1SSkI06c,27528
+pyjas-0.2.1.dist-info/LICENSE,sha256=g9rPCr17K92W0REltwT5fd2WkomgHFaGm73ztUj1rlw,1083
+pyjas-0.2.1.dist-info/METADATA,sha256=gpU9v0SwfpbmJqH8xRz3fhoBcFPUKViDAGJE0dDNvws,4034
+pyjas-0.2.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pyjas-0.2.1.dist-info/RECORD,,
