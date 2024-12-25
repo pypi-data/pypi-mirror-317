@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: qtmodern6
+Version: 0.1.0
+Summary: PySide6 Widgets Modern User Interface
+Home-page: https://www.github.com/hualayn/qtmodern6
+Author: hua Layn
+Author-email: layn@jinkuni.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: User Interfaces
+License-File: LICENSE
+Requires-Dist: PySide6>=6.0.0
+
+=========
+qtmodern6
+=========
+
+``qtmodern6`` is based on ``gmarull/qtmodern``
+
+the origin program supports ``PyQt``, ``PySide2``, but not ``PySide6``, and no more maintaining
+and i can not find an alternative one for my pyside6 program
+so considered to make a little modification to apply pyside6
+
+the theme looks like, maybe a little different
+
+.. image:: examples/mainwindow.png
+    :width: 450px
+    :align: center
+    :alt: Example
+
+usage is just like the origin
+
+Installation
+------------
+
+The recommended way to install is by using ``pip``, i.e::
+
+    pip install qtmodern6
+
+Usage
+-----
+
+In order to use ``qtmodern6``, simply apply the style you want to your
+application and then, create a ``ModernWindow`` enclosing the window you want to
+*modernize*::
+
+    import qtmodern6.styles
+    import qtmodern6.windows
+
+    ...
+
+    app = QApplication()
+    win = YourWindow()
+
+    qtmodern6.styles.dark(app)
+    mw = qtmodern6.windows.ModernWindow(win)
+    mw.show()
+
+    ...
