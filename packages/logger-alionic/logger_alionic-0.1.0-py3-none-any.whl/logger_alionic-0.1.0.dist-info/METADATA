@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: logger_alionic
+Version: 0.1.0
+Home-page: 
+Author: alionic
+Author-email: alionic@example.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: loguru
+Requires-Dist: psutil
+Requires-Dist: python-dotenv
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
