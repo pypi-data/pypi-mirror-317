@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+metasnake.egg-info/PKG-INFO
+metasnake.egg-info/SOURCES.txt
+metasnake.egg-info/dependency_links.txt
+metasnake.egg-info/entry_points.txt
+metasnake.egg-info/requires.txt
+metasnake.egg-info/top_level.txt
