@@ -1,0 +1,2 @@
+[console_scripts]
+imglite = imglite.cli:cli
