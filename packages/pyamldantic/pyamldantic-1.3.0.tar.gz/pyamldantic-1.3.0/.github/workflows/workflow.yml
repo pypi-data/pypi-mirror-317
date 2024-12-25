@@ -1,0 +1,60 @@
+name: CI/CD Pipeline
+on:
+  push:
+  pull_request:
+  release:
+    types:
+      - published
+permissions:
+  contents: read
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:
+          - 3.12
+          - 3.13
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: 0.5.6
+          enable-cache: true
+      - name: Install the project
+        run: uv sync --frozen --group=testing
+      - name: Run tests
+        run: uv run --frozen pytest
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5.1.2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+  publish-to-pypi:
+    if: github.event_name == 'release' && github.event.action == 'published'
+    needs: run-tests
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: pyproject.toml
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: 0.5.6
+          enable-cache: true
+      - name: Build package
+        run: uv build
+      - name: Publish package
+        run: uv publish
