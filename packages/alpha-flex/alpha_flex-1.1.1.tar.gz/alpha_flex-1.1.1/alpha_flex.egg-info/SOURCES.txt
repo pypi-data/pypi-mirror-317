@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+alpha_flex/__init__.py
+alpha_flex/backtest.py
+alpha_flex/portfolio.py
+alpha_flex/version.py
+alpha_flex.egg-info/PKG-INFO
+alpha_flex.egg-info/SOURCES.txt
+alpha_flex.egg-info/dependency_links.txt
+alpha_flex.egg-info/requires.txt
+alpha_flex.egg-info/top_level.txt
