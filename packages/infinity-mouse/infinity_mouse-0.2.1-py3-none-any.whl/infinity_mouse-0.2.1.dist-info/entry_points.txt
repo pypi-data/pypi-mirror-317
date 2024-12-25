@@ -1,0 +1,2 @@
+[console_scripts]
+infinity-mouse = run:infinity_movement
