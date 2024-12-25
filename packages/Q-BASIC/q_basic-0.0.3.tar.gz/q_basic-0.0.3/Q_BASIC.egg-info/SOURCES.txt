@@ -1,0 +1,12 @@
+README.md
+setup.py
+Q_BASIC.egg-info/PKG-INFO
+Q_BASIC.egg-info/SOURCES.txt
+Q_BASIC.egg-info/dependency_links.txt
+Q_BASIC.egg-info/requires.txt
+Q_BASIC.egg-info/top_level.txt
+qbasic/__init__.py
+qbasic/class_tijolo.py
+qbasic/estados.py
+qbasic/funçoes.py
+qbasic/operador.py
