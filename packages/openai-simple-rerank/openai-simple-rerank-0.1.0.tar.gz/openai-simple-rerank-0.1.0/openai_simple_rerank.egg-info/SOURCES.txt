@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+openai_simple_rerank/__init__.py
+openai_simple_rerank/base.py
+openai_simple_rerank/exceptions.py
+openai_simple_rerank/settings.py
+openai_simple_rerank/utils.py
+openai_simple_rerank.egg-info/PKG-INFO
+openai_simple_rerank.egg-info/SOURCES.txt
+openai_simple_rerank.egg-info/dependency_links.txt
+openai_simple_rerank.egg-info/not-zip-safe
+openai_simple_rerank.egg-info/requires.txt
+openai_simple_rerank.egg-info/top_level.txt
