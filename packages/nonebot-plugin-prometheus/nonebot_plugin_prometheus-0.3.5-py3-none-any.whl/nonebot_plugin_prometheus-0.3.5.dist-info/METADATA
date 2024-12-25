@@ -1,0 +1,128 @@
+Metadata-Version: 2.4
+Name: nonebot-plugin-prometheus
+Version: 0.3.5
+Summary: 为 NoneBot 和其他插件提供 Prometheus 监控支持
+Project-URL: Homepage, https://github.com/suyiiyii/nonebot-plugin-prometheus
+Project-URL: Repository, https://github.com/suyiiyii/nonebot-plugin-prometheus
+Project-URL: Bug Tracker, https://github.com/suyiiyii/nonebot-plugin-prometheus/issues
+Author-email: suyiiyii <suyiiyii@gmail.com>
+Maintainer-email: suyiiyii <suyiiyii@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 suyiiyii
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: nonebot,nonebot-plugin,nonebot2,prometheus
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: <4.0,>=3.9
+Requires-Dist: nonebot2>=2.2.1
+Requires-Dist: prometheus-client>=0.21.1
+Description-Content-Type: text/markdown
+
+<!-- markdownlint-disable MD033 MD036 MD041 -->
+
+<p align="center">
+  <a href="https://github.com/suyiiyii/nonebot-plugin-prometheus"><img src="https://github.com/suyiiyii/nonebot-plugin-prometheus/blob/main/nonebot-plugin-prometheus.png" width="200" height="200" alt="nonebot"></a>
+</p>
+
+<div align="center">
+
+# Nonebot Plugin Prometheus
+
+_✨ NoneBot Prometheus 监控插件 ✨_
+
+</div>
+
+
+<p align="center">
+  <a href="https://raw.githubusercontent.com/suyiiyii/nonebot-plugin-prometheus/main/LICENSE">
+    <img src="https://img.shields.io/github/license/suyiiyii/nonebot-plugin-prometheus.svg" alt="license">
+  </a>
+  <a href="https://pypi.python.org/pypi/nonebot-plugin-prometheus">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-prometheus.svg" alt="pypi">
+  </a>
+</p>
+
+## ✨功能
+
+* 自动挂载 `/metrics` 路径，提供 Prometheus 监控数据
+* 为其他插件提供统一的数据上报接口
+
+## 安装
+
+- 使用 pip
+
+```sh
+pip install nonebot-plugin-prometheus
+```
+
+## 接入方式
+
+先在插件代码最前面声明依赖
+
+```python
+from nonebot import require
+
+require("nonebot_plugin_prometheus")
+```
+
+然后可以从插件导入相关指标对象使用，详情请参考 [Prometheus Python Client 官方文档](https://prometheus.github.io/client_python/)
+
+```python
+from nonebot_plugin_prometheus import Gauge, Counter, Histogram, Summary
+
+# Request counter
+request_counter = Counter(
+    "request_counter", "The number of requests"
+)
+request_counter.inc()
+```
+
+## 配置
+
+```ini
+# 是否开启 Prometheus 插件
+prometheus_enable = True
+# Prometheus 挂载地址
+prometheus_metrics_path = "/metrics"
+```
+
+> **Note**
+>
+> 使用插件需要支持 ASGI 的驱动器，例如 `fastapi`
+
+## TODO
+
+* 监控 NoneBot 相关指标
+* 支持通过对话查询指标数据
+
+## 相关仓库
+
+* [NoneBot2](https://github.com/nonebot/nonebot2)
+* [Prometheus Python Client](https://github.com/prometheus/client_python)
