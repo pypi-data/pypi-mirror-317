@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "whitebox-plugin-adsb-gps"
+version = "0.1.0"
+description = "A plugin for whitebox to interface with stratux ADS-B and GPS data"
+authors = ["avilabss <contact@avilabs.net>", "WhiteBox <contact@whitebox.aero>"]
+license = "GNU Affero General Public License v3"
+readme = "README.md"
+include = [
+    { path = "whitebox_test_plugin_adsb_gps", format = "wheel" }
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10.0"
+websockets = "^14.1"
+aiohttp = "^3.11.11"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.2"
+coverage = "^7.6.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

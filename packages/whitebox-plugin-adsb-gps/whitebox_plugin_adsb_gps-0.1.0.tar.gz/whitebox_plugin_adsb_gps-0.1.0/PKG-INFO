@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: whitebox-plugin-adsb-gps
+Version: 0.1.0
+Summary: A plugin for whitebox to interface with stratux ADS-B and GPS data
+License: GNU Affero General Public License v3
+Author: avilabss
+Author-email: contact@avilabs.net
+Requires-Python: >=3.10.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.11.11,<4.0.0)
+Requires-Dist: websockets (>=14.1,<15.0)
+Description-Content-Type: text/markdown
+
+
