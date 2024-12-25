@@ -1,0 +1,9 @@
+imageio
+pillow
+imageio-ffmpeg
+
+[:sys_platform != "win32"]
+Quartz
+
+[test]
+pytest

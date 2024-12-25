@@ -1,0 +1,33 @@
+[project]
+name = "screenrecord"
+version = "1.1.1"
+description = "Record screen with python"
+readme = "README.md"
+authors = [{name = "Sukhbinder Singh"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "imageio",
+    "pillow",
+    "imageio-ffmpeg",
+    "Quartz ; sys_platform != 'win32'",
+]
+
+[project.urls]
+Homepage = "https://github.com/sukhbinder/screenrecord"
+Changelog = "https://github.com/sukhbinder/screenrecord/releases"
+Issues = "https://github.com/sukhbinder/screenrecord/issues"
+CI = "https://github.com/sukhbinder/screenrecord/actions"
+
+[project.scripts]
+record = "screenrecord.cli:cli"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

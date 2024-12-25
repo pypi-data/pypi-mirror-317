@@ -1,0 +1,2 @@
+[console_scripts]
+record = screenrecord.cli:cli

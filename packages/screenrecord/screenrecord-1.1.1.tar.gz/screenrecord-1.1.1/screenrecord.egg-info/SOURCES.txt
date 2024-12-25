@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+screenrecord/__init__.py
+screenrecord/__main__.py
+screenrecord/cli.py
+screenrecord/srecord.py
+screenrecord.egg-info/PKG-INFO
+screenrecord.egg-info/SOURCES.txt
+screenrecord.egg-info/dependency_links.txt
+screenrecord.egg-info/entry_points.txt
+screenrecord.egg-info/requires.txt
+screenrecord.egg-info/top_level.txt
+tests/test_screenrecord.py
