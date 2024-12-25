@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/mlops_package_mmtg.egg-info/PKG-INFO
+src/mlops_package_mmtg.egg-info/SOURCES.txt
+src/mlops_package_mmtg.egg-info/dependency_links.txt
+src/mlops_package_mmtg.egg-info/requires.txt
+src/mlops_package_mmtg.egg-info/top_level.txt
+src/mongodb_connect/__init__.py
+src/mongodb_connect/mongo_crud.py
