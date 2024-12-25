@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+djangocms_seo.egg-info/PKG-INFO
+djangocms_seo.egg-info/SOURCES.txt
+djangocms_seo.egg-info/dependency_links.txt
+djangocms_seo.egg-info/requires.txt
+djangocms_seo.egg-info/top_level.txt
+djangocms_seo/migrations/0001_initial.py
+djangocms_seo/migrations/0002_alter_metatag_name_alter_opengraphmeta_property_and_more.py
+djangocms_seo/migrations/__init__.py
+djangocms_seo/templatetags/__init__.py
+djangocms_seo/templatetags/seo_tags.py
