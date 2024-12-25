@@ -1,0 +1,7 @@
+loguru
+psutil
+python-dotenv
+
+[dev]
+pytest
+flake8

@@ -1,0 +1,9 @@
+setup.py
+logger_alionic/__init__.py
+logger_alionic/logger.py
+logger_alionic.egg-info/PKG-INFO
+logger_alionic.egg-info/SOURCES.txt
+logger_alionic.egg-info/dependency_links.txt
+logger_alionic.egg-info/not-zip-safe
+logger_alionic.egg-info/requires.txt
+logger_alionic.egg-info/top_level.txt
