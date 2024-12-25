@@ -1,0 +1,14 @@
+mcp_shell_server/__init__.py,sha256=Hvdph2WA4UkmIVw8jsTkugO0WrHS9Hv0xGB9Lqr1bTk,255
+mcp_shell_server/command_preprocessor.py,sha256=mQfTlO6yP2miee76AXL_w_xwlW-nVvG2k_bGYnopoSU,4290
+mcp_shell_server/command_validator.py,sha256=8GP3HY0cpSkh5xr5i2DYGMtcZwd5hijCbwJPcBvPito,3496
+mcp_shell_server/directory_manager.py,sha256=IbPzg-dUE5J-UINmsIoX0b9AFzK8ItXb3TOZTdvrSBI,1713
+mcp_shell_server/io_redirection_handler.py,sha256=K0Ttmx3n2u7RwBbyExGLF6opmue2wB0ecuEF3DkCw7I,5282
+mcp_shell_server/process_manager.py,sha256=buMVWQweh7T2_9eHPJFIKdBLpZ4loKdphQ_cpHGqjis,11332
+mcp_shell_server/server.py,sha256=u0seHZt0q0FqR8NknKojZn_WyrzzvNwYFXks5p9gL-g,5017
+mcp_shell_server/shell_executor.py,sha256=mm2tZyiPLeD1-Ux1Ee4FGxILRvZTJBboyMjSOWWsLg4,16088
+mcp_shell_server/version.py,sha256=3hmA1s3celq-uP6WT4cS3j14j53z0En24YecA_MzFyo,24
+mcp_shell_server-1.0.4b1.dist-info/METADATA,sha256=zQShecQ8zcLOcrtJW_tNCxEYAkg57TWWHG8FPdlS2fI,5625
+mcp_shell_server-1.0.4b1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_shell_server-1.0.4b1.dist-info/entry_points.txt,sha256=cliA1OUE6oGFNpFqxK39iVUAEYITAYn1JnufKxl5Kn8,59
+mcp_shell_server-1.0.4b1.dist-info/licenses/LICENSE,sha256=DXmYmHfGwgt-ulwpuq7kjPo3zC4DOYvTNg8GsaosmIc,1061
+mcp_shell_server-1.0.4b1.dist-info/RECORD,,
