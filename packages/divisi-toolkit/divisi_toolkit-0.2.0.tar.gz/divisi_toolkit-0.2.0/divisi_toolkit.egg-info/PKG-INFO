@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: divisi-toolkit
+Version: 0.2.0
+Summary: Interactive widget and toolkit for slice discovery
+Author-email: Venkatesh Sivaraman <venkats@cmu.edu>
+License: MIT License
+        
+        Copyright (c) 2024 CMU Data Interaction Group
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/cmudig/divisi-toolkit
+Keywords: AI,machine learning,notebook,jupyter,data science
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: ipywidgets
+Requires-Dist: anywidget
+Requires-Dist: torch
+Requires-Dist: tqdm
+
+# Divisi - Interactive Slice Finding
+
+## Demo Quickstart
+
+Optionally create a virtual environment with Python >3.7 to run the demo.
+
+Install the package:
+
+```bash
+pip install divisi-toolkit
+```
+
+Install Jupyter Notebook or Jupyter Lab if not already installed. Then start a
+Jupyter server. The `example_data/example_adult.ipynb` notebook shows how to use
+the slice finding widget.
+
+## Running in Development Mode
+
+To develop the frontend, make sure you have an up-to-date version of NodeJS in
+your terminal, then run:
+
+```bash
+cd client
+npm install
+vite
+```
+
+The `vite` command starts a live hot-reload server for the frontend. Then, when
+you initialize the `SliceFinderWidget`, pass the `dev=True` keyword argument to
+use the live server. (Make sure that you don't have anything else running on
+port 5173 while you do this.)

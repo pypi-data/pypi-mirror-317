@@ -1,0 +1,7 @@
+scipy
+scikit-learn
+numpy
+ipywidgets
+anywidget
+torch
+tqdm
