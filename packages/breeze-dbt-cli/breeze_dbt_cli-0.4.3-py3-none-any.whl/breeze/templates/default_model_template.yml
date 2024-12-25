@@ -1,0 +1,12 @@
+version: 2
+
+{{ resource_type }}:
+  - name: {{ model_name }}
+    description: {{ model_description }}
+    tags: []
+    columns:
+    {% for column in columns %}
+      - name: {{ column.name }}
+        data_type: {{ column.data_type }}
+        description: {{ column.description }}
+    {% endfor %}
