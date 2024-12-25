@@ -1,0 +1,15 @@
+lexi/__init__.py,sha256=ps8wbeGxP-uRVF7qdtmSSR-BA_070ng61jmoAY580Qw,1678
+lexi/__version__.py,sha256=D05t7WmFhUPLP7HOW7Avy3bOgLY7gVMDSzgVjSTm0vo,291
+lexi/lexi.py,sha256=f0hnwh4-2eWgqCZuLWD_RSHDPSRgjNMsBnZA9vwmCUA,97285
+lexi/.lexi_data/20241114_LEXIAngleData_20250302Landing_rad.csv,sha256=vyb1Zxq1OHMZhSnA7wNoXc_mPgtXgIiaoOVzm1AaiWY,667823
+lexi/.lexi_data/GMP1_MEAS_CBI-data-2024-11-07 16_20_24.csv,sha256=Thlgapji_al3NxE_Hk7p0u1GDtK8ySJEbd9BAj-XGTI,21321
+lexi/.lexi_data/LEXI_RA_DEC_J2000_rad-data-2024-11-07 16_20_24.csv,sha256=r9EacINJgDZ9ws6a0QS3yy1eerbhU8sJgSBRQYRqeek,14980
+lexi/.lexi_data/all_lexi_file_list.csv,sha256=5piLoEfSHcAZ-N4aSrrD44cEVVtXJ_LyCaQO5det-ys,114498
+lexi/.lexi_data/file_list.csv,sha256=vMpwoUmHH55edc1jPyy6-NPw2eZis1Bp26BsMRa0Fsw,114418
+lexi/.lexi_data/sample_lexi_pointing_ephem_edited.csv,sha256=kgdPbs62GIlCUS2NRQHD27WwM0zRZYAtWKLjAWh10xw,2823016
+lexi/.lexi_data/sample_xray_background.csv,sha256=Q7fVdWY0FYXkORqG0UXFrWTqNg-Ipj7F9l01V5UVgBI,196633
+lexi_bu-0.0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+lexi_bu-0.0.3.dist-info/METADATA,sha256=L2c2zQAX2GbJPetRzaAxJnxbayuoAYlSLmRXegb70bo,2993
+lexi_bu-0.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+lexi_bu-0.0.3.dist-info/top_level.txt,sha256=6nrpCIJuLLkMXz31dufuALmdTwJjtkFptuEomV1bU7c,5
+lexi_bu-0.0.3.dist-info/RECORD,,
