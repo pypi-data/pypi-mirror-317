@@ -1,0 +1,2 @@
+[console_scripts]
+ibd-parser = ibd_parser.cli:main
