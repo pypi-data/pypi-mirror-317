@@ -1,0 +1,11 @@
+htiger_excel2vcf.py,sha256=wVxgNQXBpqc5DpuyoxHKQ0TOgrCw77pRlJkDldS3Aw8,3733
+htiger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+htiger/app.ini,sha256=Bw6iKEwYdkA1vKHyzBmceXjdhRzruETJi9TSSWcv-EE,361
+htiger/excel2vcf.py,sha256=PAcAyg_pEHEVBzW1GmVOjT_vEA1hv05G7s2v02eJrFY,3817
+htiger/template.xlsx,sha256=xG-6Cp4KZnzUlVwUMYQo-dEXzrLom2odYIXZaZd0fbI,9632
+excel2vcf-1.0.1.dist-info/LICENSE,sha256=BYypUKVqmsF1VOoj9u_zg7FIJKSv0ymOcTszgIdLybw,1068
+excel2vcf-1.0.1.dist-info/METADATA,sha256=mHBCW6ksWFWC634E5z8K6oj_p6qCKnvj9sip7YBDTWQ,878
+excel2vcf-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+excel2vcf-1.0.1.dist-info/entry_points.txt,sha256=Coa3zdfuYGwj2NHni1Nx2tnHLPrAu0k05H3hBCg_urY,53
+excel2vcf-1.0.1.dist-info/top_level.txt,sha256=o39to6U-nsNm9p6wWycQ-bzLQzSsZZI-MeDgYp4LIQs,7
+excel2vcf-1.0.1.dist-info/RECORD,,
