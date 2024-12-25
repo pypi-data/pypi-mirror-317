@@ -1,0 +1,17 @@
+[project]
+authors = [
+  {email = 'mrbuche@sandia.gov'},
+  {name = 'Michael R. Buche'},
+]
+classifiers = [
+  'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+  'Development Status :: 5 - Production/Stable',
+  'Intended Audience :: Science/Research',
+  'Topic :: Scientific/Engineering',
+  'Programming Language :: Python',
+  'Programming Language :: Rust',
+]
+description = 'c o n s p i r e'
+license = {file = 'LICENSE'}
+name = 'conspire'
+version = '0.1.1'
