@@ -1,0 +1,11 @@
+abctoolkit
+accelerate
+joblib
+numpy
+tqdm
+scipy
+requests
+mido
+transformers
+torch
+unidecode
