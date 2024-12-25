@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: SECEdgar-Python
+Version: 0.0.1
+Summary: A simple to work with library to interact and get information from the SEC edgar Data
+Requires-Dist: os>=2.1.4
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: requests>=2.32.3
+Requires-Dist: bs4>=0.0.2
