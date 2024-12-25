@@ -1,0 +1,12 @@
+LICENCE
+MANIFEST.in
+README.md
+pyproject.toml
+src/assets/config_example.json
+src/assets/config_example.yaml
+src/confluent_kafka_config.egg-info/PKG-INFO
+src/confluent_kafka_config.egg-info/SOURCES.txt
+src/confluent_kafka_config.egg-info/dependency_links.txt
+src/confluent_kafka_config.egg-info/entry_points.txt
+src/confluent_kafka_config.egg-info/requires.txt
+src/confluent_kafka_config.egg-info/top_level.txt

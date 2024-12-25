@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: confluent-kafka-config
+Version: 1.0.2
+Summary: Load all your confluent-kafka clients from config file.
+Author: Lazar Jovanovic
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/Aragonski97/confluent-kafka-config
+Project-URL: Changelog, https://github.com/Aragonski97/confluent-kafka-config/releases
+Project-URL: Issues, https://github.com/Aragonski97/confluent-kafka-config/issues
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Framework :: Pydantic :: 2
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: Topic :: System :: Software Distribution
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: fastavro>=1.10.0
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: pydantic-settings>=2.7.0
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: confluent-kafka[avro]>=2.6.1
+
+# IN DEVELOPMENT, NOT YET READY
+
+# Confluent Kafka Config
+
+A thin wrapper around the [confluent-kafka-python](https://github.com/confluentinc/confluent-kafka-python) library. This wrapper allows for dynamic instantiation of Consumer, Producer, and Admin clients based on configurations provided in a config file in YAML or JSON formats.
+
+## Installation
+
+To install this package, run:
+
+```bash
+pip install confluent_kafka_config
+```
+
+
+
