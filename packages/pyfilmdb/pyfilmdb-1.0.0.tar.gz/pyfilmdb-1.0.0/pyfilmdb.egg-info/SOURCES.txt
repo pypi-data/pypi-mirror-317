@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+pyfilmdb.egg-info/PKG-INFO
+pyfilmdb.egg-info/SOURCES.txt
+pyfilmdb.egg-info/dependency_links.txt
+pyfilmdb.egg-info/requires.txt
+pyfilmdb.egg-info/top_level.txt
