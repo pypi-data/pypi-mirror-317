@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lscmf"
+description = "Performs large-scale CMF on flexible data layouts."
+dynamic = ["version"]
+authors = [{ name = "Felix Held", email = "felix.held@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "scikit-learn>=1.1.0",
+    "typing-extensions>=4.9.0; python_version < '3.11'",
+]
+
+[tool.hatch.version]
+path = "src/lscmf/__about__.py"
+
+[project.urls]
+"Documentation" = "https://cyianor.github.io/lscmf"
+"Source" = "https://github.com/cyianor/lscmf"
+"Bug Tracker" = "https://github.com/cyianor/lscmf/issues"
+
+[tool.hatch.envs.dev]
+dependencies = [
+    "ipykernel",
+    "nbconvert",
+    "matplotlib",
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 79
