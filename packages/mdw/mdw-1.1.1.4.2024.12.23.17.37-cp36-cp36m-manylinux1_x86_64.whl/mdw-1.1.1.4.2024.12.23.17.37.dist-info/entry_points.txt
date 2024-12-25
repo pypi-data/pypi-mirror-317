@@ -1,0 +1,13 @@
+[console_scripts]
+alignWorker = mdw.core.mdw_network:AlignWorkerRun
+alignWorkerStop = mdw.core.mdw_network:AlignWorkerStopRun
+alignWorkerStopAck = mdw.core.mdw_network:AlignWorkerStopRunAck
+bufferWorker = mdw.node.buffer.bufferWorker:main
+camonitorWorker = mdw.node.detector.camonitorWorker.camonitorWorker:main
+detectorWorker = mdw.node.detector.detectorWorker:main
+detectorWorker_autoroi = mdw.node.detector.detectorWorker_autoroi.detectorWorker:main
+detectorWorker_ba = mdw.node.detector.detectorWorker_ba:main
+detectorWorker_be = mdw.node.detector.detectorWorker_be.detectorWorker:main
+mdw_1pm = mdw.core.mdw_network:mdw_1pm_wrapper
+storageWorker = mdw.node.storage.storageWorker:main
+
