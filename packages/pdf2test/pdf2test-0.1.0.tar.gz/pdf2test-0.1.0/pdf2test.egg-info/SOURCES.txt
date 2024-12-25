@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pdf2test/__init__.py
+pdf2test/pdf2test.py
+pdf2test.egg-info/PKG-INFO
+pdf2test.egg-info/SOURCES.txt
+pdf2test.egg-info/dependency_links.txt
+pdf2test.egg-info/top_level.txt
+tests/__init__.py
