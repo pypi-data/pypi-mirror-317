@@ -1,0 +1,541 @@
+?start: statements_list
+
+statements_list: optional_explainable_statement* // even a single statement must be followed by a semicolon. However we now allow empty file.
+
+optional_explainable_statement: [[explain] statement] SEMI
+
+explain: EXPLAIN [QUERY PLAN]
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// statement
+
+
+?statement: transaction_control_statement // ? only when there is ALWAYS one child
+    | select_statement
+    | insert_statement
+    | delete_statement
+    | update_statement
+    | create_table_statement
+    | drop_table_statement
+    | alter_table_statement
+    | create_view_statement
+    | drop_view_statement
+    | create_index_statement
+    | drop_index_statement
+    | vacuum_statement
+    | pragma_statement
+    | create_trigger_statement
+    | drop_trigger_statement
+    | attach_database_statement
+    | detach_database_statement
+    | analyze_statement
+    | create_virtual_table_statement
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// statements
+
+
+?transaction_control_statement: begin_statement
+    | commit_statement
+    | rollback_statement
+    | savepoint_statement
+    | release_statement
+
+select_statement: [with_common_table_expressions] compound_select
+
+insert_statement: [with_common_table_expressions] insert_cmd INTO aliasable_name [LP comma_separated_name_list RP] ((select_statement upsert_returning) | (DEFAULT VALUES [returning]))
+delete_statement: [with_common_table_expressions] DELETE FROM aliasable_name [indexed_by] [WHERE expression] [RETURNING select_columns]
+update_statement: [with_common_table_expressions] UPDATE [or_conflict] aliasable_name [indexed_by] SET set_list [from_clause] [WHERE expression] [RETURNING select_columns]
+
+create_table_statement: CREATE [TEMP] TABLE [if_not_exists] two_parts_name create_table_args
+drop_table_statement: DROP TABLE [if_exists] two_parts_name
+alter_table_statement: ALTER TABLE two_parts_name alter_table_subcommand
+
+create_view_statement: CREATE [TEMP] VIEW [if_not_exists] two_parts_name [parenthesized_legacy_id_list] AS select_statement
+drop_view_statement: DROP VIEW [if_exists] two_parts_name
+
+create_index_statement: CREATE [UNIQUE] INDEX [if_not_exists] two_parts_name ON name LP sort_list RP [where_clause]
+drop_index_statement: DROP INDEX [if_exists] two_parts_name
+
+vacuum_statement: VACUUM [name] [INTO expression]
+
+pragma_statement: PRAGMA two_parts_name [(EQ pragma_value) | (LP pragma_value RP)]
+
+create_trigger_statement: CREATE [TEMP] TRIGGER [if_not_exists] two_parts_name [trigger_time] trigger_event ON two_parts_name [FOR EACH ROW] [WHEN expression] BEGIN trigger_actions END
+drop_trigger_statement: DROP TRIGGER [if_exists] two_parts_name
+
+attach_database_statement: ATTACH [DATABASE] expression AS expression [KEY expression]
+detach_database_statement: DETACH [DATABASE] expression
+
+analyze_statement: (ANALYZE | REINDEX) [two_parts_name]
+
+create_virtual_table_statement: CREATE VIRTUAL TABLE [if_not_exists] two_parts_name USING name [LP virtual_table_arguments RP]
+
+begin_statement: BEGIN [DEFERRED | IMMEDIATE | EXCLUSIVE] [TRANSACTION [name]]
+commit_statement: (COMMIT | END) [TRANSACTION [name]]
+rollback_statement: ROLLBACK [TRANSACTION [name]] [TO [SAVEPOINT] name]
+savepoint_statement: SAVEPOINT name
+release_statement: RELEASE [SAVEPOINT] name
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// expression related
+
+
+// https://sqlite.org/lang_expr.html#operators
+
+// ORDER MATTERS here. And grouping too.
+expression.0: term
+    | identifier
+    | INDEXED
+    | JOIN_KW
+    | two_parts_name DOT name
+    | VARIABLE
+// ---------------------------------------------------------------------
+    | _or_expression
+// ---------------------------------------------------------------------
+    | _and_expression
+// ---------------------------------------------------------------------
+    | NOT expression
+// ---------------------------------------------------------------------
+    | CAST LP expression AS type RP
+    | (identifier | INDEXED | JOIN_KW) LP [distinct] [comma_separated_expressions] [ORDER BY sort_list] RP filter_over
+    | (identifier | INDEXED | JOIN_KW) LP STAR RP filter_over
+    | LP comma_separated_expressions COMMA expression RP
+    | LP select_statement RP
+    | EXISTS LP select_statement RP
+    | CASE [expression] case_when_list [ELSE expression] END
+    | RAISE LP IGNORE RP
+    | RAISE LP raise_type COMMA expression RP
+//
+    | expression (ISNULL | NOTNULL)
+    | expression NOT NULL
+    | expression in_op LP select_statement RP
+    | expression in_op two_parts_name [LP [comma_separated_expressions] RP]
+    | expression in_op LP [comma_separated_expressions] RP
+
+    | _type_6_expression
+
+    // | expression (EQ | NE) expression
+    // | expression IS [NOT] [DISTINCT FROM] expression
+    // | expression between_op expression AND expression
+//
+    // | expression like_op expression
+    // | expression like_op expression ESCAPE expression
+//
+// ---------------------------------------------------------------------
+    | _type_5_expression
+// ---------------------------------------------------------------------
+// ESCAPE is not here for several reasons. Mainly, the precedence indicated on SQLite documentation doesn't correspond to SQLite behavior.
+// ---------------------------------------------------------------------
+    | _type_4_expression
+// ---------------------------------------------------------------------
+    | _type_3_expression
+// ---------------------------------------------------------------------
+    | _type_2_expression
+// ---------------------------------------------------------------------
+    | _type_1_expression
+// ---------------------------------------------------------------------
+    | expression COLLATE (identifier | STRING)
+// ---------------------------------------------------------------------
+    | (PLUS | MINUS) expression
+    | BITNOT expression
+// ---------------------------------------------------------------------
+    | LP expression RP
+
+
+//////////////////////////////////////////////
+
+
+_or_expression.1: (_or_expression | expression) OR expression
+
+_and_expression.1: (_and_expression | expression) AND expression
+
+_type_1_expression.1: (_type_1_expression | expression) (PTR | CONCAT) expression
+
+_type_2_expression.1: (_type_2_expression | expression) (STAR | SLASH | REM) expression
+
+_type_3_expression.1: (_type_3_expression | expression) (PLUS | MINUS) expression
+
+_type_4_expression.1: (_type_4_expression | expression) (BITAND | BITOR | LSHIFT | RSHIFT) expression
+
+_type_5_expression.1: (_type_5_expression | expression) (LT | GT | GE | LE) expression
+
+_type_6_expression.1: (_type_6_expression | expression) (\
+    (EQ | NE)\
+    | IS [NOT] [DISTINCT FROM]\
+    | between_op expression AND\
+    | like_op\
+    | like_op expression ESCAPE\
+    ) expression
+
+//////////////////////////////////////////////
+
+
+term: NULL
+    | FLOAT
+    | BLOB
+    | STRING
+    | INTEGER
+    | CTIME_KW
+    | QNUMBER
+
+like_op: [NOT] (LIKE_KW | MATCH)
+
+between_op: [NOT] BETWEEN
+
+in_op: [NOT] IN
+
+case_when_list: (WHEN expression THEN expression)+
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// select related
+
+
+with_common_table_expressions: WITH [RECURSIVE] (common_table_expression COMMA)* common_table_expression
+
+common_table_expression: name [parenthesized_legacy_id_list] AS [[NOT] MATERIALIZED] LP select_statement RP
+
+windows_definitions: (window_definition COMMA)* window_definition
+
+window_definition: name AS LP window RP
+
+window: [name] [PARTITION BY comma_separated_expressions] [ORDER BY sort_list] [range_or_rows (between_frame_bound | frame_bound_start) [EXCLUDE frame_exclude_target]]
+
+between_frame_bound: BETWEEN frame_bound_start AND frame_bound_end
+
+range_or_rows: RANGE
+    | ROWS
+    | GROUPS
+
+frame_bound_start: frame_bound
+    | UNBOUNDED PRECEDING
+
+frame_bound_end: frame_bound
+    | UNBOUNDED FOLLOWING
+
+frame_bound: expression (PRECEDING | FOLLOWING)
+    | CURRENT ROW
+
+frame_exclude_target: NO OTHERS
+    | CURRENT ROW
+    | GROUP
+    | TIES
+
+compound_select: (select_core multiselect_operator)* select_core
+
+multiselect_operator: UNION
+    | UNION ALL
+    | EXCEPT
+    | INTERSECT
+
+select_core: SELECT [distinct] select_columns [from_clause] [where_clause] [GROUP BY comma_separated_expressions] [HAVING expression] [WINDOW windows_definitions] [ORDER BY sort_list] [LIMIT expression [(OFFSET | COMMA) expression]]
+    | values_clause
+
+values_clause: VALUES one_or_multiple_values
+
+one_or_multiple_values: LP comma_separated_expressions RP (COMMA LP comma_separated_expressions RP)*
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// create table related
+
+
+create_table_args: LP columns_declarations [table_constraints] RP [table_option_set]
+    | AS select_statement
+
+table_option_set: (table_option COMMA)* table_option
+
+table_constraints: COMMA (table_constraint [COMMA])* table_constraint
+
+table_option: [WITHOUT] name
+
+columns_declarations: (column_declaration COMMA)* column_declaration
+
+table_constraint: CONSTRAINT name
+    | PRIMARY KEY LP sort_list [AUTOINCR] RP [constraint_conflict_clause]
+    | UNIQUE LP sort_list RP [constraint_conflict_clause]
+    | CHECK LP expression RP [constraint_conflict_clause]
+    | FOREIGN KEY LP legacy_id_list RP REFERENCES name [parenthesized_legacy_id_list] reference_arguments [defer_subclause]
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// create trigger related
+
+
+trigger_actions: (trigger_action SEMI)+
+
+trigger_action: UPDATE [or_conflict] two_parts_name forbidden_index_by SET set_list [from_clause] [where_clause]
+    | insert_cmd INTO two_parts_name [LP comma_separated_name_list RP] select_statement upsert_returning
+    | DELETE FROM two_parts_name forbidden_index_by [where_clause]
+    | select_statement
+
+trigger_time: BEFORE | AFTER | (INSTEAD OF)
+
+trigger_event: DELETE
+    | INSERT
+    | UPDATE [OF comma_separated_name_list]
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// from_clause related
+
+
+from_clause: FROM join_clause
+
+join_clause: (table_or_subquery_join_constraint join_operator)* table_or_subquery_join_constraint // includes (comma separated) table_or_subquery
+// "select "d" from t.c using (c);" is parse. Using not preceded by join xxx can be rejected post-parse.
+// same for "select "d" from t.c on t.c ;" that is parsed.
+// these will be parsed by this grammar too.
+
+table_or_subquery_join_constraint: table_or_subquery [on_clause | using_clause]
+
+table_or_subquery: two_parts_name [alias] [indexed_by]
+    | two_parts_name LP [comma_separated_expressions] RP [alias] // != syntax diagram. comma_separated_expressions is optional example : "select 1 from t();". table valued function ? with a virtual table without arguments ?
+    | LP (select_statement | join_clause) RP [alias]
+
+?join_operator: comma_join_operator
+    | explicit_join_operator
+
+explicit_join_operator: [JOIN_KW [[name] name]] JOIN // left as-is
+
+comma_join_operator: COMMA
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// column declaration
+
+
+column_declaration: name [type] column_constraints // == sqlite behavior, != diagram schema for create table.
+// It possible to on have several consecutive CONSTRAINT constraint_name
+// Like this : "CREATE table u(a constraint oui constraint non unique);" (executed without error in SQLite 3.46.0).
+
+column_constraints: column_constraint*
+
+// extract and inline ?
+column_constraint: CONSTRAINT name
+    | DEFAULT [PLUS | MINUS] term
+    | DEFAULT LP expression RP
+    | DEFAULT (identifier | INDEXED)
+    | PRIMARY KEY [sort_order] [constraint_conflict_clause] [AUTOINCR]
+    | UNIQUE [constraint_conflict_clause]
+    | CHECK LP expression RP
+    | REFERENCES name [parenthesized_legacy_id_list] reference_arguments
+    | defer_subclause
+    | COLLATE (identifier | STRING)
+    | [NOT] NULL [constraint_conflict_clause]
+    | [GENERATED ALWAYS] AS LP expression RP [identifier]
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// upsert_clause and upsert_returning
+
+
+// == sqlite behavior, != syntax diagram for upsert clause.
+// "on conflict do nothing on conflict do nothing". upsert without conflict target is always the last.
+
+upsert_returning: upsert_clause [returning]
+
+upsert_clause: targeted_on_conflicts [ON CONFLICT upsert_on_conflict_action]
+
+targeted_on_conflicts: targeted_on_conflict*
+
+targeted_on_conflict: ON CONFLICT conflict_target upsert_on_conflict_action
+
+conflict_target: LP sort_list RP [where_clause]
+
+upsert_on_conflict_action: DO NOTHING
+    | DO UPDATE SET set_list [where_clause]
+
+returning: RETURNING select_columns
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// constraints
+
+
+defer_subclause: [NOT] DEFERRABLE [INITIALLY (DEFERRED | IMMEDIATE)]
+
+reference_arguments: (reference_argument)*
+
+reference_argument: MATCH name
+    | ON (INSERT | DELETE | UPDATE) reference_action
+
+reference_action: SET NULL
+    | SET DEFAULT
+    | CASCADE
+    | RESTRICT
+    | NO ACTION
+
+constraint_conflict_clause: ON CONFLICT resolve_type
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// unsorted
+
+
+alter_table_subcommand: ADD [COLUMNKW] column_declaration
+    | DROP [COLUMNKW] name
+    | RENAME [[COLUMNKW] name] TO name
+// table constraints can't be changed
+
+if_not_exists: IF NOT EXISTS
+
+two_parts_name: [name DOT] name //I move the optional part to the first part of the rule, because it should be easier to use.
+
+aliasable_name: two_parts_name [AS name]
+
+or_conflict: OR resolve_type
+
+resolve_type: IGNORE
+    | REPLACE
+    | raise_type
+
+if_exists: IF EXISTS
+
+distinct: DISTINCT | ALL
+
+select_column: (expression [alias])
+    | ([name DOT] STAR)
+
+select_columns: (select_column COMMA)* select_column
+
+on_clause: ON expression
+
+using_clause: USING LP comma_separated_name_list RP
+
+indexed_by: INDEXED BY name
+    | NOT INDEXED
+
+sort_list: (sorted_nulls_placed_expression COMMA)* sorted_nulls_placed_expression
+
+sorted_nulls_placed_expression: expression [sort_order] [nulls_position]
+
+sort_order: ASC | DESC
+
+nulls_position: NULLS (FIRST | LAST)
+
+where_clause: WHERE expression
+
+set_list: (set COMMA)* set
+
+set: name EQ expression
+    | LP comma_separated_name_list RP EQ expression
+
+insert_cmd: INSERT [or_conflict]
+    | REPLACE
+
+comma_separated_name_list: (name COMMA)* name
+
+filter_over: [FILTER LP WHERE expression RP] [over_clause]
+
+over_clause: OVER LP window RP
+    | OVER name
+
+comma_separated_expressions: (expression COMMA)* expression
+
+parenthesized_legacy_id_list: LP legacy_id_list RP
+
+legacy_id_list: (legacy_id COMMA)* legacy_id // collate and sort order should be None
+
+legacy_id: name [COLLATE (identifier | STRING)] [sort_order]
+
+forbidden_index_by: INDEXED BY name
+    | NOT INDEXED
+    |
+
+raise_type: ROLLBACK
+    | ABORT
+    | FAIL
+
+pragma_value: negative_number
+    | positive_number
+    | name
+    | ON
+    | DELETE
+    | DEFAULT
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// small semantic reused components
+
+
+type: type_name [LP signed_number [COMMA signed_number] RP]
+
+type_name: (identifier | STRING)+
+
+alias: (AS name) | identifier | STRING // previously named "as"
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// small non semantic reused components
+
+
+name: identifier //names are the authorized table and column names, notably
+    | INDEXED
+    | JOIN_KW
+    | STRING
+
+?signed_number: positive_number
+    | negative_number
+
+positive_number: [PLUS] (INTEGER | FLOAT)
+
+negative_number: MINUS (INTEGER | FLOAT)
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// virtual table related
+
+
+virtual_table_arguments: (virtual_table_argument_component COMMA)* virtual_table_argument_component
+
+virtual_table_argument_component: anys (LP virtual_table_argument_component RP anys)*
+
+anys: any*
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+
+
+identifier.-1: fallback | ID
+
+fallback.-3: ABORT|ACTION|AFTER|ANALYZE|ASC|ATTACH|BEFORE|BEGIN|BY|CASCADE|CAST|COLUMNKW|CONFLICT|DATABASE|DEFERRED|DESC|DETACH|DO|EACH|END|EXCLUSIVE|EXPLAIN|FAIL|FOR|IGNORE|IMMEDIATE|INITIALLY|INSTEAD|LIKE_KW|MATCH|NO|PLAN|QUERY|KEY|OF|OFFSET|PRAGMA|RAISE|RECURSIVE|RELEASE|REPLACE|RESTRICT|ROW|ROWS|ROLLBACK|SAVEPOINT|TEMP|TRIGGER|VACUUM|VIEW|VIRTUAL|WITH|WITHOUT|NULLS|FIRST|LAST|CURRENT|FOLLOWING|PARTITION|PRECEDING|RANGE|UNBOUNDED|EXCLUDE|GROUPS|OTHERS|TIES|GENERATED|ALWAYS|MATERIALIZED|REINDEX|RENAME|CTIME_KW|IF
+
+
+any.-2: SEMI|EXPLAIN|QUERY|PLAN|BEGIN|TRANSACTION|DEFERRED|IMMEDIATE|EXCLUSIVE|COMMIT|END|ROLLBACK|SAVEPOINT|RELEASE|TO|TABLE|CREATE|IF|NOT|EXISTS|TEMP|AS|COMMA|WITHOUT|ABORT|ACTION|AFTER|ANALYZE|ASC|ATTACH|BEFORE|BY|CASCADE|CAST|CONFLICT|DATABASE|DESC|DETACH|EACH|FAIL|OR|AND|IS|MATCH|LIKE_KW|BETWEEN|IN|ISNULL|NOTNULL|NE|EQ|GT|LE|LT|GE|ESCAPE|ID|COLUMNKW|DO|FOR|IGNORE|INITIALLY|INSTEAD|NO|KEY|OF|OFFSET|PRAGMA|RAISE|RECURSIVE|REPLACE|RESTRICT|ROW|ROWS|TRIGGER|VACUUM|VIEW|VIRTUAL|WITH|NULLS|FIRST|LAST|CURRENT|FOLLOWING|PARTITION|PRECEDING|RANGE|UNBOUNDED|EXCLUDE|GROUPS|OTHERS|TIES|GENERATED|ALWAYS|MATERIALIZED|REINDEX|RENAME|CTIME_KW|BITAND|BITOR|LSHIFT|RSHIFT|PLUS|MINUS|STAR|SLASH|REM|CONCAT|PTR|COLLATE|BITNOT|ON|INDEXED|STRING|JOIN_KW|CONSTRAINT|DEFAULT|NULL|PRIMARY|UNIQUE|CHECK|REFERENCES|AUTOINCR|INSERT|DELETE|UPDATE|SET|DEFERRABLE|FOREIGN|DROP|UNION|ALL|EXCEPT|INTERSECT|SELECT|VALUES|DISTINCT|DOT|FROM|JOIN|USING|ORDER|GROUP|HAVING|LIMIT|WHERE|RETURNING|INTO|NOTHING|FLOAT|BLOB|INTEGER|VARIABLE|CASE|WHEN|THEN|ELSE|INDEX|ALTER|ADD|WINDOW|OVER|FILTER|COLUMN|AGG_FUNCTION|AGG_COLUMN|TRUEFALSE|ISNOT|FUNCTION|UPLUS|UMINUS|TRUTH|REGISTER|VECTOR|SELECT_COLUMN|IF_NULL_ROW|ASTERISK|SPAN|ERROR|QNUMBER
+
+
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+
+
+%declare SEMI EXPLAIN QUERY PLAN BEGIN TRANSACTION DEFERRED IMMEDIATE EXCLUSIVE COMMIT END ROLLBACK SAVEPOINT RELEASE TO TABLE CREATE IF NOT EXISTS TEMP LP RP AS COMMA WITHOUT ABORT ACTION AFTER ANALYZE ASC ATTACH BEFORE BY CASCADE CAST CONFLICT DATABASE DESC DETACH EACH FAIL OR AND IS MATCH LIKE_KW BETWEEN IN ISNULL NOTNULL NE EQ GT LE LT GE ESCAPE ID COLUMNKW DO FOR IGNORE INITIALLY INSTEAD NO KEY OF OFFSET PRAGMA RAISE RECURSIVE REPLACE RESTRICT ROW ROWS TRIGGER VACUUM VIEW VIRTUAL WITH NULLS FIRST LAST CURRENT FOLLOWING PARTITION PRECEDING RANGE UNBOUNDED EXCLUDE GROUPS OTHERS TIES GENERATED ALWAYS MATERIALIZED REINDEX RENAME CTIME_KW BITAND BITOR LSHIFT RSHIFT PLUS MINUS STAR SLASH REM CONCAT PTR COLLATE BITNOT ON INDEXED STRING JOIN_KW CONSTRAINT DEFAULT NULL PRIMARY UNIQUE CHECK REFERENCES AUTOINCR INSERT DELETE UPDATE SET DEFERRABLE FOREIGN DROP UNION ALL EXCEPT INTERSECT SELECT VALUES DISTINCT DOT FROM JOIN USING ORDER GROUP HAVING LIMIT WHERE RETURNING INTO NOTHING FLOAT BLOB INTEGER VARIABLE CASE WHEN THEN ELSE INDEX ALTER ADD WINDOW OVER FILTER COLUMN AGG_FUNCTION AGG_COLUMN TRUEFALSE ISNOT FUNCTION UPLUS UMINUS TRUTH REGISTER VECTOR SELECT_COLUMN IF_NULL_ROW ASTERISK SPAN ERROR QNUMBER ILLEGAL
+
+

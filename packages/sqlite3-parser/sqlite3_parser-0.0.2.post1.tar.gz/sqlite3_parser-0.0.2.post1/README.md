@@ -1,0 +1,179 @@
+## Example of usage :
+
+SQLite parsing :
+
+```python
+
+"""Showcase the SQLite parser."""
+from sqlite3_parser.parser_and_memoizer import SQLiteFullParseResultType, SQLiteParser
+from sqlite3_parser.sqlite_tree import SQLiteTree
+
+query: str = """--sql
+with recursive hierarchy (e_id, s_id, name, levels) as (
+    select employees.employee_id
+    , employees.reports_to
+    , employees.last_name || ' ' || employees.first_name
+    , 0
+    from employees
+union
+    select hierarchy.s_id, employees.reports_to
+    , hierarchy.name || ' > ' || employees.last_name || ' ' || employees.first_name
+    , hierarchy.levels + 1
+    from hierarchy
+    join employees
+    on employees.employee_id = hierarchy.s_id
+    where employees.employee_id is not null
+)
+select hierarchy.name as employee_and_hierarchy
+    , max(hierarchy.levels) over () + 1 - hierarchy.levels as hierarchical_level
+from hierarchy
+where s_id is null
+order by hierarchical_level desc;
+;
+
+"""
+
+parser: SQLiteParser  = SQLiteParser(None)  # no cache ; slower
+result: SQLiteFullParseResultType = parser.parse(query)
+sqlite_tree: SQLiteTree = result.rebuilt_parse_tree
+
+print(sqlite_tree[0, 1, 0, 2, 1].content)  # subtree
+# (e_id, s_id, name, levels)
+
+leaf = sqlite_tree[0, 1, 0, 2, 1, 1, 4, 0, 0, 0]
+print(f"{leaf.is_leaf=}, {leaf.element=}, {leaf.content=}")  # leaf
+# leaf.is_leaf=True, leaf.element=<TokenType.TK_ID: 'ID'>, leaf.content='name'
+
+```
+
+General use :
+
+```python
+from enum import Enum
+
+from parser import AutoCalculatingToken, Unordered, parse
+from parser.tree.classic_tree import ClassicTree
+
+grammar = """
+start: q r s
+q: AqA
+| A
+r: C*
+t: AtA
+| A A
+| B B
+| BtB
+s: (C t)+
+
+%declare A B C
+
+"""
+
+input = """
+    D
+    DAAAAACCDCCABABBBBABACBB
+    D
+"""
+# the first active token will therefore start at position 9 as
+# tokens will all have a single character as content.
+
+class Terminals(Enum):
+    A = "A"
+    B = "B"
+    C = "C"
+    D = "D"
+    S = " "
+    NL = "\n"
+
+class Rules(Enum):
+    start = "start"
+    q = "q"
+    r = "r"
+    s = "s"
+    t = "t"
+
+
+full_tokens_list: list[
+    AutoCalculatingToken[Terminals, None]] = []
+
+for i, c in enumerate(input):
+    full_tokens_list.append(AutoCalculatingToken(
+        content=c,
+        start_position=i,
+        stop_position=i+1,  # len(c) is always 1 here
+        token_type=Terminals(c),
+        previous=full_tokens_list[-1] if i else None,
+        data=None,
+    ))
+
+
+ignored_terminals = frozenset([
+    Terminals.D,
+    Terminals.S,
+    Terminals.NL,
+])
+
+tree: ClassicTree[Terminals, Rules, None, None, None] = parse(
+    full_tokens_list, ignored_terminals, Rules, grammar)
+
+print(tree.pretty(max_compensation=4, content_size=22))
+
+print("\n")
+
+for node in tree:
+    match node:
+        case ClassicTree(Rules.t, _, _, Unordered(Rules.t)):
+            print(f"Node starting at position {node.start_position} and ending at {node.stop_position} is a nested {Rules.t}.")
+```
+
+Output :
+```
+start                                   column   5 from    12 :   AAAAACCDCCABABBBBABACB   ->    35
+|*  q                                   column   5 from    12 :   AAAAA                    ->    17
+|*  |   A                               column   5 from    12 :   A                        ->    13
+|*  |   q                               column   6 from    13 :   AAA                      ->    16
+|*  |   |   A                           column   6 from    13 :   A                        ->    14
+|*  |   |   q                           column   7 from    14 :   A                        ->    15
+|*  |   |   |   A                       column   7 from    14 :   A                        ->    15
+|*  |   |   A                           column   8 from    15 :   A                        ->    16
+|*  |   A                               column   9 from    16 :   A                        ->    17
+|*  r                                   column  10 from    17 :   CCDC                     ->    21
+|*  |   C                               column  10 from    17 :   C                        ->    18
+|*  |   C                               column  11 from    18 :   C                        ->    19
+|*  |   C                               column  13 from    20 :   C                        ->    21
+|*  s                                   column  14 from    21 :   CABABBBBABACBB           ->    35
+|*  |   C                               column  14 from    21 :   C                        ->    22
+|*  |   t                               column  15 from    22 :   ABABBBBABA               ->    32
+|*  |   |   A                           column  15 from    22 :   A                        ->    23
+|*  |   |   t                           column  16 from    23 :   BABBBBAB                 ->    31
+|*  |   |   |   B                       column  16 from    23 :   B                        ->    24
+|*  |   |   |   t                       column  17 from    24 :   ABBBBA                   ->    30
+|*  |   |   |   |*  A                   column  17 from    24 :   A                        ->    25
+|*  |   |   |   |*  t                   column  18 from    25 :   BBBB                     ->    29
+|*  |   |   |   |*  |   B               column  18 from    25 :   B                        ->    26
+|*  |   |   |   |*  |   t               column  19 from    26 :   BB                       ->    28
+|*  |   |   |   |*  |   |   B           column  19 from    26 :   B                        ->    27
+|*  |   |   |   |*  |   |   B           column  20 from    27 :   B                        ->    28
+|*  |   |   |   |*  |   B               column  21 from    28 :   B                        ->    29
+|*  |   |   |   |*  A                   column  22 from    29 :   A                        ->    30
+|*  |   |   |   B                       column  23 from    30 :   B                        ->    31
+|*  |   |   A                           column  24 from    31 :   A                        ->    32
+|*  |   C                               column  25 from    32 :   C                        ->    33
+|*  |   t                               column  26 from    33 :   BB                       ->    35
+|*  |   |   B                           column  26 from    33 :   B                        ->    34
+|*  |   |   B                           column  27 from    34 :   B                        ->    35
+
+
+Node starting at position 23 and ending at 31 is a nested Rules.t.
+Node starting at position 24 and ending at 30 is a nested Rules.t.
+Node starting at position 25 and ending at 29 is a nested Rules.t.
+Node starting at position 26 and ending at 28 is a nested Rules.t.
+```
+
+## Installation :
+
+Create a virtual environment if desired, and do "pip install sqlite3_parser".
+If you don't use "uv" package manager ("pip install sqlite3_parser") you might need to make sure clang compiler is available and in the path.
+
+To make it available, pick the right "clang+llvm" for your platform at https://github.com/llvm/llvm-project/releases/tag/llvmorg-18.1.8 or other version, and extract it to a folder.
+Then add this folder (containing clang++ binary) to the path. You're up to go!
