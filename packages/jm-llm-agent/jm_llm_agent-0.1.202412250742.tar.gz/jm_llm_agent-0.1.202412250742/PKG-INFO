@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: jm-llm-agent
+Version: 0.1.202412250742
+Summary: A unified LLM agent interface
+Author-email: zhangjimin <zhangjimin795@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: bs4
+Requires-Dist: httpx
+Requires-Dist: numpy>1.24.4
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: playwright
+Requires-Dist: python-dotenv
+Requires-Dist: yfinance
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-asyncio; extra == 'test'
+Requires-Dist: ruff; extra == 'test'
