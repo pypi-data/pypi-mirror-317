@@ -1,0 +1,9 @@
+mypm/__init__.py,sha256=z-_p7JW-oNMZGO8vqFwOxK2QAfWTkeqRisB6RbIoGPA,162
+mypm/dbhandler.py,sha256=K8wbkeAzqQiHBspjSgL_BWhBv4iidbx_Knjq-CMQsKU,2192
+mypm/itemclass.py,sha256=aQ-wHLGVICxaePYpeFyiVts69BSvwdN42KDziPEaXpI,89
+mypm/optionhandler.py,sha256=vLKyEUvE3ScFk_ZrKFXS5BWGwUU1NbgAPMbjB1aRg6I,1127
+mypm/parserobj.py,sha256=OZZgBhPoN4sUJk17JukYA9Qv4c_tJEDq2gnsdC3S0d4,722
+mypm-0.1.0.dist-info/METADATA,sha256=DLKlYeT4fmyms_h2BaNcCct1fpPgxNylYRVr5DOx9gg,285
+mypm-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mypm-0.1.0.dist-info/entry_points.txt,sha256=dtncD4eeIYRR8TXte0Ku-f3OqDP9EntcaRZT2C21LiM,38
+mypm-0.1.0.dist-info/RECORD,,
