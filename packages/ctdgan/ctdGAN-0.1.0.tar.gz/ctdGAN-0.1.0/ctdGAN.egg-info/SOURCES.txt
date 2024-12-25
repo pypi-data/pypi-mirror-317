@@ -1,0 +1,7 @@
+README.md
+setup.py
+ctdGAN.egg-info/PKG-INFO
+ctdGAN.egg-info/SOURCES.txt
+ctdGAN.egg-info/dependency_links.txt
+ctdGAN.egg-info/requires.txt
+ctdGAN.egg-info/top_level.txt
