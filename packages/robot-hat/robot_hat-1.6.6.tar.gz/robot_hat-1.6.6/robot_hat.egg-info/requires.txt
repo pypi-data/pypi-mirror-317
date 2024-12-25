@@ -1,0 +1,9 @@
+pygame
+smbus2
+gpiozero
+RPi.GPIO
+
+[dev]
+black
+isort
+pre-commit
