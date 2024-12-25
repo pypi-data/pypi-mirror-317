@@ -1,0 +1,5 @@
+fire
+opencv-python
+numpy
+scikit-learn
+tqdm
