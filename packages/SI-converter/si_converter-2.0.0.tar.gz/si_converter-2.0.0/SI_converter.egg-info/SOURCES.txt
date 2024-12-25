@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+SI_converter.egg-info/PKG-INFO
+SI_converter.egg-info/SOURCES.txt
+SI_converter.egg-info/dependency_links.txt
+SI_converter.egg-info/top_level.txt
+si_converter/__init__.py
+si_converter/fromSI/__init__.py
+si_converter/fromSI/from_si_converter.py
+si_converter/toSI/__init__.py
+si_converter/toSI/to_si_converter.py
