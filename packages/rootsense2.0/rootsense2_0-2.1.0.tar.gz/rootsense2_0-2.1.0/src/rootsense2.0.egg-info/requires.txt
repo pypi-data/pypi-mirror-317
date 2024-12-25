@@ -1,0 +1,13 @@
+pymongo
+streamlit
+scipy
+sklearn
+pandas
+numpy
+psutil
+time
+datetime
+logging
+argparse
+plotly
+os
