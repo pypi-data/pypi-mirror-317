@@ -1,0 +1,6 @@
+colour
+manim
+networkx
+numpy
+
+[dev]

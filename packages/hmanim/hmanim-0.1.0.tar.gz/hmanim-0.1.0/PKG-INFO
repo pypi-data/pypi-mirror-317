@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: hmanim
+Version: 0.1.0
+Summary: The hyperbolic extension of manim!
+Author-email: Maximilian Katzmann <max.katzmann@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Maximilian Katzmann
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/maxkatzmann/hmanim
+Keywords: animation,visualization,hyperbolic,geometry,math
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colour
+Requires-Dist: manim
+Requires-Dist: networkx
+Requires-Dist: numpy
+Provides-Extra: dev
+
+# HManim
+
+The hyperbolic extension of [Manim](https://www.manim.community). This package
+allows for using Manim's drawing and animation framework to visualize objects
+in the hyperbolic plane.
+
+For a comprehensive description we refer to the [documentation](https://maxkatzmann.github.io/hmanim/).
+
+## Installation
+
+You can install the package by running
+
+``` bash
+pip install hmanim
+```
+
+Note that we recommend installing HManim in a virtual environment.
+
+## Usage
+
+Define a scene in a Python file (e.g., `scene.py`), define a class that derives
+from Manim's `Scene`, and override its `construct` method.
+
+``` python
+from hmanim import native
+from manim import Scene, PolarPlane
+
+class ExampleScene(Scene):
+    def construct(self):
+        plane = PolarPlane(size=5)
+
+        circle = native.Circle(
+            center=native.Point(),
+            radius=5.0,
+            plane=plane,
+        )
+
+        self.add(circle)
+        self.play(native.Translate(circle, 3.0))
+```
+
+Then you render the scene by running
+
+``` bash
+python -m manim -p scene.py ExampleScene
+```
+
+Note that `-p` is used to show a preview of the created video once it is
+rendered.
+
+The resulting files can then be found in the created `media` directory.
+
+For more examples, we refer to the
+[documentation](https://maxkatzmann.github.io/hmanim/).
+
+## Building the Documentation
+
+The documentation content is split into two directories.
+
+1. The `documentation` directory contains the source files that are used to
+   build the documentation.
+2. The `docs` directory contains the built documentation files that are served
+   as a website.
+
+To build the documentation, go to the `documentation` directory and run `make
+html`.
+
+## Known Issues
+
+Changing the center of projection of an `HArc` or `HClosedArc` may lead to
+graphical glitches, since the rendering is not optimized for projection changes yet.
+
+The Poincaré module is currently missing the functionality to draw hyperbolic circles.
