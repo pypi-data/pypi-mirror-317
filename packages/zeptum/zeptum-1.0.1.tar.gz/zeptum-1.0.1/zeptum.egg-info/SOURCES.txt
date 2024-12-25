@@ -1,0 +1,9 @@
+pyproject.toml
+setup.py
+tests/tests.py
+zeptum/__init__.py
+zeptum/core.py
+zeptum.egg-info/PKG-INFO
+zeptum.egg-info/SOURCES.txt
+zeptum.egg-info/dependency_links.txt
+zeptum.egg-info/top_level.txt

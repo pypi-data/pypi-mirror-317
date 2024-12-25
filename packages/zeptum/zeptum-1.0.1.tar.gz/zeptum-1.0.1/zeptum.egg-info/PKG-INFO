@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: zeptum
+Version: 1.0.1
+Summary: database package, simple and lightweight, without encryption, not recommended for use on servers with public access.
+Author: harttman
+Description-Content-Type: text/markdown
+
+
+# Zeptum
+
+A simple Python-based database library for managing hierarchical data with tables, where each table can have nested keys and values. This project allows you to create tables, input or update data, delete tables, and retrieve data based on a table and key.
+
+## Features
+
+- **Create Tables**: Easily create new tables.
+- **Insert/Update Data**: Input or update values at hierarchical keys.
+- **Retrieve Data**: Retrieve data by table and key.
+- **Delete Tables**: Delete a table and its contents.
+- **Clear Tables**: Clear all data in a table without deleting it.
+  
+## Installation
+
+There is no installation required if you are using the Python code directly. Simply clone or download the repository and use it in your Python project.
+
+1. Clone the repository or install from pypi.
+   ```bash
+   git clone https://github.com/yourusername/simple-database.git
+   ```
+2. Install from pypi:
+    ```bash
+    pip3 install zeptum
+    ```
+3. Use it in your Python project.
+
+## Usage
+
+To use the zeptum, import the `ClientBase` class and follow the examples below.
+
+### Example
+
+```python
+# Import the SimpleDatabase class
+from zeptum import ClientBase 
+
+# Initialize the database
+db = SimpleDatabase()
+
+# Create a table
+db.create_table("user")
+
+# Insert or update data
+db.input("user", "money.balance", 100)
+db.input("user", "money.count", 50)
+
+# Retrieve data
+balance = db.get_data("user", "money.balance")
+print(balance)  # Output: 100
+
+# Update existing data
+db.update("user", "money.balance", 200)
+
+# Retrieve updated data
+updated_balance = db.get_data("user", "money.balance")
+print(updated_balance)  # Output: 200
+
+# Delete a table
+db.delete_table("user")
+
+# Retrieve data after table deletion
+deleted_balance = db.get_data("user", "money.balance")
+print(deleted_balance)  # Output: None
+```
+
+### Methods
+
+1. **`create_table(table_name: str)`**:
+   - Creates a new table in the database if it doesn’t already exist.
+
+2. **`input(table_name: str, key: str, value: Union[str, int, float, Dict])`**:
+   - Inserts or updates the value at the specified key in the given table.
+   - Example key format: `"money.balance"`, `"user.name"`.
+
+3. **`get_data(table_name: str, key: str) -> Optional[Union[str, int, float, Dict]]`**:
+   - Retrieves the value at the specified key in the table.
+   - Returns `None` if the table or key does not exist.
+
+4. **`update(table_name: str, key: str, value: Union[str, int, float, Dict]) -> bool`**:
+   - Updates an existing value in the specified table and key.
+   - Returns `True` if the update was successful, `False` if the key doesn’t exist.
+
+5. **`delete_table(table_name: str) -> bool`**:
+   - Deletes the entire table from the database.
+   - Returns `True` if the table was deleted, `False` if the table does not exist.
+
+6. **`clear_table(table_name: str) -> bool`**:
+   - Clears all data in the specified table without deleting the table itself.
+   - Returns `True` if the table was cleared, `False` if the table does not exist.
+
+7. **`show()`**:
+   - Returns the entire database as a dictionary.
+
+1. Donwloads from pypi:
+```bash
+pip3 install zeptum
+```
+2. Run the code:
+   ```bash
+   python3 main_db.py
+   ```
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+## Contributing
+
+If you'd like to contribute to the development of this library, feel free to fork the repository and submit a pull request. Contributions are welcome!
+
+---
