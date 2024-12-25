@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+setup.py
+gw_sys_core/LICENSE
+gw_sys_core/mmbConfig.json
+gw_sys_core/gw_sys_core/__init__.py
+gw_sys_core/gw_sys_core.egg-info/PKG-INFO
+gw_sys_core/gw_sys_core.egg-info/SOURCES.txt
+gw_sys_core/gw_sys_core.egg-info/dependency_links.txt
+gw_sys_core/gw_sys_core.egg-info/top_level.txt
+gw_sys_core/gw_sys_core/gwis/Exceptions.py
+gw_sys_core/gw_sys_core/gwis/__init__.py
+gw_sys_core/gw_sys_core/gwis/ids.py
