@@ -1,0 +1,77 @@
+[project]
+name = "stringenum"
+version = "0.6.0"
+description = "A small, dependency-free library offering additional enum.StrEnum subclasses and a backport for older Python versions."
+authors = [{ name = "Ravencentric", email = "me@ravencentric.cc" }]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+keywords = ["enum", "strenum"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/Ravencentric/stringenum"
+
+[dependency-groups]
+dev = [
+    "coverage[toml]>=7.6.8",
+    "mypy>=1.13.0",
+    "nox>=2024.10.9",
+    "pytest>=8.3.3",
+    "ruff>=0.8.0",
+    "tomli>=2.1.0",
+    "typing-extensions>=4.12.2",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["I", "RUF", "UP", "N", "D4"]
+fixable = ["ALL"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/*" = ["D"]
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]
+
+[tool.mypy]
+strict = true
+pretty = true
+files = ["src/**/*.py", "tests/**/*.py", "noxfile.py"]
+enable_error_code = ["ignore-without-code"]
+
+[tool.pytest.ini_options]
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+filterwarnings = ["error"]
+log_cli_level = "info"
+testpaths = [
+  "tests",
+]
+
+[tool.coverage.run]
+branch = true
+source_pkgs = ["stringenum"]
+
+[tool.coverage.paths]
+source = ["src/stringenum/", ".nox/*/Lib/site-packages/stringenum/"]
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:", # Only used for type-hints
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
