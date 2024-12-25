@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: mosaic-it
+Version: 0.0.2
+Summary: A CLI tool to launch a OpenCV view to add a mosaic to the image.
+Project-URL: Homepage, https://github.com/OldVincent/MosaicIt
+Project-URL: Issues, https://github.com/OldVincent/MosaicIt/issues
+Author-email: OldVincent <jia@jsk.imi.i.u-tokyo.ac.jp>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: opencv-python
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+# Mosaic It
+A command line utility to add mosaic to a picture with OpenCV.
+
+## Installation
+
+### Install *mosaic-it*
+
+Use the following command to install *mosaic-it* from PyPI:
+```shell
+pip install mosaic-it
+```
+
+### Uninstall *mosaic-it*
+
+Using the following command to uninstall *mosaic-it*:
+```shell
+pip uninstall mosaic-it
+```
+
+## How It Works
+
+This tool first reduces the selected area (using linear interpolation)
+and then enlarges it to its original size (using nearest interpolation).
+
+## Usage
+
+```shell
+mosaic-it <INPUT_IMAGE_PATH> [-i <MOSAIC_INTENSITY>] [-o <OUTPUT_IMAGE_PATH>]
+```
+
+Use `mosaic-it --help` to see more commands.
+
+### Parameter Default Value
+
+- **Mosaic Intensity:** 10
+- **Output Image Path:** In the same directory as the input image, but with a "_mosaic" as a postfix in the name.
+
+### Preview
+
+![Preview](preview.png)
+
+This picture is processed with *mosaic-it*.
