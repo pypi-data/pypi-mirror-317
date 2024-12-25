@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+igniteboot.egg-info/PKG-INFO
+igniteboot.egg-info/SOURCES.txt
+igniteboot.egg-info/dependency_links.txt
+igniteboot.egg-info/entry_points.txt
+igniteboot.egg-info/requires.txt
+igniteboot.egg-info/top_level.txt
