@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kerttula"
+version = "0.0.7"
+description = "Juha's home automation application"
+readme = {file = "README.rst", content-type = "text/markdown"}
+requires-python = ">=3.8"
+license = {file = "LICENSE.rst", content-type = "text/markdown"}
+keywords = ["home", "automation", "juham", "masterpiece"]
+authors = [
+  {name = "J Meskanen", email = "juham.api@gmail.com" }
+]
+maintainers = [
+  {name = "J. Meskanen", email = "juham.api@gmail.com" }
+]
+
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development",
+  "License :: Public Domain",
+  "Programming Language :: Python :: 3.8",
+]
+
+dependencies = [
+  "masterpiece_influx >= 0.0.2",
+  "masterpiece_pahomqtt >= 0.0.3",
+  "juham >= 0.1.1",
+  "juham_visualcrossing >= 0.1.1",
+  "juham_openweathermap >= 0.1.1",
+  "requests >= 2.31",
+  "pytz >= 2024.1",
+  "importlib-metadata"
+]
+
+# Add kerttula to path so that it can be run as a script
+[project.scripts]
+kerttula = "kerttula.kerttula:main"
+
+[project.optional-dependencies]
+dev = ["check-manifest"]
+
+[project.entry-points."kerttula.plugins"]
+# none, yet
+
+[project.urls]
+"Homepage" = "https://meskanen.com"
+"Bug Reports" = "https://meskanen.com"
+"Funding" = "https://meskanen.com"
+"Say Thanks!" = "http://meskanen.com"
+"Source" = "https://meskanen.com"
+
+
+[tool.mypy]
+ignore_missing_imports = false
+python_version = "3.9"
+mypy_path = ["kerttula/*.py", "tests/*.py",
+    "c:/users/juham/masterpiece_influx",
+    "c:/users/juham/masterpiece_pahomqtt",
+    "c:/users/juham/masterpiece",
+    "c:/users/juham/juham",
+    "c:/users/juham/juham/core",
+    "c:/users/juham/juham/web",
+    "c:/users/juham/juham/ts",
+    "c:/users/juham/juham/automation",
+    "c:/users/juham/juham/shelly",
+    "c:/users/juham/masterpiece",
+    "c:/users/juham/masterpiece_plugin",
+    "c:/users/juham/masterpiece_xmlformat",
+    "c:/users/juham/juham_plugins/juham_visualcrossing",
+    "c:/users/juham/juham_plugins/juham_openweathermap",
+    "c:/users/juham/kerttu",
+    "D:/Python312/Lib/site-packages"
+]
+
+[tool.setuptools]
+packages = ["kerttula"]

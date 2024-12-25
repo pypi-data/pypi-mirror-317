@@ -1,0 +1,11 @@
+masterpiece_influx>=0.0.2
+masterpiece_pahomqtt>=0.0.3
+juham>=0.1.1
+juham_visualcrossing>=0.1.1
+juham_openweathermap>=0.1.1
+requests>=2.31
+pytz>=2024.1
+importlib-metadata
+
+[dev]
+check-manifest
