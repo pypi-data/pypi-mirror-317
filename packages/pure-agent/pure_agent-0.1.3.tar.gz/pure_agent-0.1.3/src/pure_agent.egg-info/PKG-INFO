@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: pure_agent
+Version: 0.1.3
+Summary: A brief description of the package.
+Home-page: https://github.com/yourusername/pbot
+Author: Your Name
+Author-email: your.email@example.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## Quickstart
+
+First install the packages:
+
+```bash
+
+pip install pure_agent 
+```
+
+setup your config.yaml
+```yaml
+env:
+  api_key: xxx
+infer_params:
+  model: gpt-4o-mini
+  temperature: 0.8
+  top_p: 0.8
+  max_tokens: 512
+```
+
+write your first agent based on pure\_agent!
+```python
+from pure_agent import BaseAgent, RoleCtx, append_msg
+
+class MyAgent(BaseAgent):
+    @append_msg()
+    def greeting(self, sys_name, prompt):
+        with RoleCtx('system'):
+            yield f"You are a helpful assistant, your name is {sys_name}."
+        with RoleCtx('user'):
+            yield prompt
+
+agent = MyAgent(client_config='config.yaml')
+response = agent.greeting('agent0', 'who are u?')
+print(response)
+```
+
+use multi-thread:
+```python
+from pure_agent import *
+
+class MyAgent(BaseAgent):
+    @append_msg(return_async_task=True)
+    def greeting(self, sys_name, prompt):
+        with RoleCtx('system'):
+            yield f"You are a helpful assistant, your name is {sys_name}."
+        with RoleCtx('user'):
+            yield prompt
+
+sys_names = ['pbot0', 'pbot1']
+prompts = ['who are u?', 'who are u?']
+with MultiThreadExecutor(10, '.cache') as pool:
+    for i in range(len(sys_names)):
+        agent = MyAgent(client_config='config.yaml')
+        task = agent.greeting(sys_names[i], prompts[i])
+        # print(pretty_print_nested(msgs))
+        pool.submit(task)
+```
