@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+sysstra/__init__.py
+sysstra/custom_indicators.py
+sysstra/utils.py
+sysstra.egg-info/PKG-INFO
+sysstra.egg-info/SOURCES.txt
+sysstra.egg-info/dependency_links.txt
+sysstra.egg-info/requires.txt
+sysstra.egg-info/top_level.txt
+sysstra/data/historical.py
+sysstra/data/live.py
+sysstra/orders/kite.py
+sysstra/orders/orders.py
