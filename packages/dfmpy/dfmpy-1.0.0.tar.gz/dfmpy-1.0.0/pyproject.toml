@@ -1,0 +1,11 @@
+[tool.black]
+verbose = 1
+color = 1
+include = '\.py$'
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--verbose -rA"
+testpaths = [
+    "dfmpy_test",
+]
