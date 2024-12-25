@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+airfoilpy/__init__.py
+airfoilpy.egg-info/PKG-INFO
+airfoilpy.egg-info/SOURCES.txt
+airfoilpy.egg-info/dependency_links.txt
+airfoilpy.egg-info/requires.txt
+airfoilpy.egg-info/top_level.txt
