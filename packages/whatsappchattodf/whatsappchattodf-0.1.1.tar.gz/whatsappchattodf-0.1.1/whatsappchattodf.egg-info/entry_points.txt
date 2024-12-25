@@ -1,0 +1,2 @@
+[console_scripts]
+whatsappchattodf = whatsappchattodf.whatsappchattodf:main
