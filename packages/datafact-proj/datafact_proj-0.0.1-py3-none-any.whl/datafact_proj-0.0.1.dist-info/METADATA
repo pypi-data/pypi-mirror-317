@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: datafact-proj
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/dataset-sh/datafact-proj#readme
+Project-URL: Issues, https://github.com/dataset-sh/datafact-proj/issues
+Project-URL: Source, https://github.com/dataset-sh/datafact-proj
+Author-email: Hao Wu <haowu@dataset.sh>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# datafact_proj
+
+[![PyPI - Version](https://img.shields.io/pypi/v/datafact-proj.svg)](https://pypi.org/project/datafact-proj)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/datafact-proj.svg)](https://pypi.org/project/datafact-proj)
+
+-----
+
+## Table of Contents
+
+
+This is a placeholder project for datafact.
+
+See more at [https://datafact.dataset.sh/](https://datafact.dataset.sh/)
