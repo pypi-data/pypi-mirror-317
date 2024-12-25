@@ -1,0 +1,16 @@
+ollamamia/__init__.py,sha256=-KeMASOBbNMoYQx6-PNAQm59bMX-ASKCl7F3RE7Ys9k,107
+ollamamia/ollamamia.py,sha256=GHLcz4CO3vttTWLeKXkuZb1hlArt1v3CsofAdF4wAXQ,1821
+ollamamia/core/__init__.py,sha256=5IHXamyep7ubNWpPZKpKPZvKPRKpmOztJwf-WX0DdwE,154
+ollamamia/core/instantiate_model.py,sha256=5ytafd_qxgsXMzy82t5hWXK8F-93jI1lhYvqOGS_mRo,2439
+ollamamia/core/model.py,sha256=6FLkGuFUwIhDJZ_x8BiEaO2_YJd0L8Xrp_pOzqHjIrI,4265
+ollamamia/core/model_config.py,sha256=quS2PHya6hnyuJOJ-NPBoGORlHbxIRJVF1TfPfg_BNI,2708
+ollamamia/core/models_control.py,sha256=syync9BC1FkC7FsigXa-XMYhbVmmegnDNC_9rUSlh-Y,602
+ollamamia/globals_dir/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ollamamia/globals_dir/globals.py,sha256=3vwwpWnZhIRaXVjQQ2-z69U0nyp1NU-I5oeobNRpuHI,298
+ollamamia/utils/__init__.py,sha256=5kwC9jEvscG_XzSbTC4vIxunBAaqU4NtOjDmQrIpGNg,30
+ollamamia/utils/chitchat.py,sha256=n6EVaj4qpyiZy80ymOhTsKKBUvJ3_kOf12oX95cI-6k,892
+ollamamia/utils/utils.py,sha256=DlR9nGnKq0a9SwtSdS6BVWGVP2zhjczNvMfwpeQZsAk,1869
+ollamamia-0.0.1.dist-info/METADATA,sha256=GXiZTGTlWJzM1EvU4c_tpDsJmLS9n2yn1AZGxp6FY98,213
+ollamamia-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ollamamia-0.0.1.dist-info/top_level.txt,sha256=tBOVYWFQsqPJm_FDHQggf0325Xsvn0HS7gIX65xcP_E,10
+ollamamia-0.0.1.dist-info/RECORD,,
