@@ -1,0 +1,106 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xor-cipher"
+version = "5.0.1"
+description = "Simple, reusable and optimized XOR ciphers in Python."
+readme = "README.md"
+requires-python = ">= 3.9"
+license.file = "LICENSE"
+keywords = ["python", "xor", "cipher"]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+
+dependencies = ["xor-cipher-core >= 1.1.2"]
+
+[project.urls]
+Homepage = "https://github.com/xor-cipher/xor-cipher"
+Documentation = "https://xor-cipher.github.io/xor-cipher"
+Issues = "https://github.com/xor-cipher/xor-cipher/issues"
+Repository = "https://github.com/xor-cipher/xor-cipher"
+
+[[project.authors]]
+name = "nekitdev"
+email = "nekit@nekit.dev"
+
+[tool.uv]
+dev-dependencies = [
+    # checks
+    "ruff >= 0.8.4",
+    "mypy >= 1.14.0",
+    # tests
+    "coverage >= 7.6.9",
+    "pytest >= 8.3.4",
+    "pytest-cov >= 6.0.0",
+    "hypothesis >= 6.123.1",
+    # docs
+    "mkdocs >= 1.6.1",
+    "mkdocs-material >= 9.5.49",
+    "mkdocstrings[python] >= 0.27.0",
+    # changelogs
+    "changelogging >= 2.7.0",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+ignore = [
+    # module level import not at top of file
+    "E402",
+]
+
+[tool.mypy]
+strict = true
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+ignore_errors = true
+exclude_lines = [
+    "pragma: never",
+    "pragma: no cover",
+    "if TYPE_CHECKING",
+    "@overload",
+    "@required",
+    "raise NotImplementedError",
+    "raise AssertionError",
+    "def __repr__",
+]
+
+[tool.coverage.html]
+directory = "coverage"
+
+[tool.pytest.ini_options]
+addopts = "--cov src"
+testpaths = ["tests"]
+
+[tool.changelogging.context]
+name = "xor-cipher"
+version = "5.0.1"
+url = "https://github.com/xor-cipher/xor-cipher"
+
+[tool.changelogging.formats]
+title = "[{{version}}]({{url}}/tree/v{{version}}) ({{date}})"
+fragment = "{{content}} ([#{{id}}]({{url}}/pull/{{id}}))"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
