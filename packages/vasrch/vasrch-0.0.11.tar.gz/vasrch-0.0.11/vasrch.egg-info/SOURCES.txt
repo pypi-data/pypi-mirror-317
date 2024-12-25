@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+vasrch/__init__.py
+vasrch/vasrch.py
+vasrch.egg-info/PKG-INFO
+vasrch.egg-info/SOURCES.txt
+vasrch.egg-info/dependency_links.txt
+vasrch.egg-info/requires.txt
+vasrch.egg-info/top_level.txt
