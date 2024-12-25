@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+tests/test_processor.py
+text_processor_zhangxin/__init__.py
+text_processor_zhangxin/processor.py
+text_processor_zhangxin.egg-info/PKG-INFO
+text_processor_zhangxin.egg-info/SOURCES.txt
+text_processor_zhangxin.egg-info/dependency_links.txt
+text_processor_zhangxin.egg-info/top_level.txt
