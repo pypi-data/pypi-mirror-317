@@ -1,0 +1,10 @@
+cli_commands.py,sha256=peZVt_emmOz89Jrj9tcilBftELLMakAHI7oldV81kkQ,3044
+db_utils.py,sha256=CHAxnBhAO-Kq0q4z9Hq5W1fzYfqPN-ayrTaIyoFPVzY,8958
+main.py,sha256=oWg9mBKOY9cam3iJ3xpiTiKLY99ueMUlvHDGQKhffus,726
+mcp_server.py,sha256=f4ALy_a2JVujA9DJs36YXVYvdnjmdoKtxOLhtJpe9eA,2073
+sqlctx-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sqlctx-0.1.2.dist-info/METADATA,sha256=uNWccuXhPNqGx97K5N-noBT-7jmTus15d8_Z8g4Bj1k,2860
+sqlctx-0.1.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+sqlctx-0.1.2.dist-info/entry_points.txt,sha256=1E_Ws9892NWMhl7tCSpwKAZnoH0n2BB6wbZLElw1L74,44
+sqlctx-0.1.2.dist-info/top_level.txt,sha256=fEKwMmm7bH1oRIt0BO8gXQLVJRtehGNdPdyx2gJZIck,38
+sqlctx-0.1.2.dist-info/RECORD,,
