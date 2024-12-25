@@ -1,0 +1,12 @@
+remoteenv/__init__.py,sha256=4sb4eKiTlStBAvUerpiYEfnHQsEX4bjK7DYahIFMDNQ,83
+remoteenv/env.py,sha256=FqRLa2gNyIhuDzrUSKQk9VwEgim6S_kuMSz7a0_il7Y,2197
+remoteenv/exceptions.py,sha256=euDFY_wSlC64BljdmZe4nnEGZh3jNH4NFPhMEgVVoak,46
+remoteenv/backends/__init__.py,sha256=hLL998rRqN9aMzZ5bQQMy65QwrzoiXCwvXgHA8Siv7Q,1592
+remoteenv/backends/base.py,sha256=UBxFR8ZYOkl5CXxMHKp-3cve0uZz5WTzvhn34jbUxhk,908
+remoteenv/backends/zk.py,sha256=4QchzlcB6TFWvwNq7hdsuirARnRHnQ4TdffSSU_V5nI,4833
+venv/bin/activate_this.py,sha256=PNUQt7XHpvnxwUEb7KHnUZl78kO29uWPxns2IvqPAd0,1336
+pyremoteenv-0.2.5.dist-info/LICENSE,sha256=0BcxXSwjt6KQRp16C_gTPqnaMNDvaaVhj6AHHpji3E8,1070
+pyremoteenv-0.2.5.dist-info/METADATA,sha256=g4eTz38Uhsstx08ufDq9L8iIaLQwDBJdn0wb_AW9X50,2931
+pyremoteenv-0.2.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyremoteenv-0.2.5.dist-info/top_level.txt,sha256=T_8xkx45sNw0XlCWeItq3w1SjUhiptBRG_wl730SzgQ,15
+pyremoteenv-0.2.5.dist-info/RECORD,,
