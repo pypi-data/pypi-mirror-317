@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+django_environment_settings.py
+requirements.txt
+setup.py
+django_environment_settings.egg-info/PKG-INFO
+django_environment_settings.egg-info/SOURCES.txt
+django_environment_settings.egg-info/dependency_links.txt
+django_environment_settings.egg-info/not-zip-safe
+django_environment_settings.egg-info/requires.txt
+django_environment_settings.egg-info/top_level.txt
