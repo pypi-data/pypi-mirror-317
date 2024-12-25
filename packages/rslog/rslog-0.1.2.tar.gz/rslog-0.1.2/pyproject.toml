@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rslog"
+version = "0.1.2"
+description = "An opinionated local logging library for Python"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Rich Stokes", email = "rich@rsmail.co" }]
+keywords = ["logging", "logger", "python"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/richstokes/rslog"
