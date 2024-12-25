@@ -1,0 +1,3 @@
+[console_scripts]
+rick-portal-gun=fastcraft.main:app
+
