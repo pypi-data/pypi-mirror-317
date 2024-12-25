@@ -1,0 +1,2 @@
+[console_scripts]
+ascii-clock = ascii_clock.clock:main
