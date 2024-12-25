@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/abril/__init__.py
+src/abril/clip_compare.py
+src/abril/core.py
+src/abril.egg-info/PKG-INFO
+src/abril.egg-info/SOURCES.txt
+src/abril.egg-info/dependency_links.txt
+src/abril.egg-info/requires.txt
+src/abril.egg-info/top_level.txt
