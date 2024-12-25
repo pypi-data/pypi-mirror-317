@@ -1,0 +1,44 @@
+{
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+    "ruff.lint.args": [
+        "--ignore=F401"
+    ],
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "files.exclude": {
+        "**/__pycache__ ": true
+    },
+    "python.languageServer": "Pylance",
+    "python.analysis.languageServerMode": "full",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.exclude": [
+        "**/.nox/**",
+        "**/.venv/**",
+        "**/site-packages/**",
+        "**/dist-packages/**"
+    ],
+    "python.analysis.ignore": [
+        "**/typing.py"
+    ],
+    "sonarlint.connectedMode.project": {
+        "connectionId": "helmut-hoffer-von-ankershoffen",
+        "projectKey": "helmut-hoffer-von-ankershoffen_starbridge"
+    },
+    "python.experiments.optOutFrom": [
+        "pythonTerminalEnvVarActivation"
+    ],
+    "terminal.integrated.scrollback": 100000
+}

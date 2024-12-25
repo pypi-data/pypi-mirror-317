@@ -1,0 +1,20 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "donjayamanne.python-environment-manager",
+        "kaih2o.python-resource-monitor",
+        "charliermarsh.ruff",
+        "tamasfe.even-better-toml",
+        "mikestead.dotenv",
+        "wayou.vscode-todo-highlight",
+        "gruntfuggly.todo-tree",
+        "github.vscode-github-actions",
+        "codecov.codecov",
+        "oderwat.indent-rainbow",
+        "ms-azuretools.vscode-docker",
+        "tomoki1207.pdf",
+        "sonarsource.sonarlint-vscode"
+    ]
+}
