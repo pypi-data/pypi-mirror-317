@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: tllab_common
+Version: 2024.12.2
+Summary: Common code for the Lenstra lab.
+Home-page: https://github.com/Lenstralab/tllab_common
+License: GPLv3
+Keywords: burst,transcription
+Author: Lenstra lab NKI
+Author-email: t.lenstra@nki.nl
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: test
+Requires-Dist: bidict
+Requires-Dist: cellpose (>=3.0)
+Requires-Dist: csbdeep
+Requires-Dist: dill
+Requires-Dist: ipython
+Requires-Dist: makefun
+Requires-Dist: ndbioimage (>=2024.7.0)
+Requires-Dist: numpy (>=1.20.0)
+Requires-Dist: pandas
+Requires-Dist: parfor
+Requires-Dist: polars
+Requires-Dist: pyimagej
+Requires-Dist: pyparsing
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: regex
+Requires-Dist: roifile
+Requires-Dist: ruamel.yaml
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Requires-Dist: scyjava
+Requires-Dist: stardist
+Requires-Dist: tensorflow
+Requires-Dist: tiffwrite (>=2024.10.6)
+Requires-Dist: tqdm
+Project-URL: Repository, https://github.com/Lenstralab/tllab_common
+Description-Content-Type: text/markdown
+
+# Common Code
+Code that both LiveCellAnalysis and smFISH (or others) use and doesn't get major changes goes here.
+
+# Installation (Ubuntu)
+
+    pip install tllab_common
+
+or editable:
+
+    git clone git@github.com:Lenstralab/tllab_common.git
+    pip install -e tllab_common/ --user
+
+### Installation of Maven and OpenJDK
+Running the livecell_track_movies pipeline with segmentation using trackmate requires
+[OpenJDK](https://en.wikipedia.org/wiki/OpenJDK) and [Maven](https://maven.apache.org/).
+If not installed already you will have to install them manually and make sure mvn is on the path.
