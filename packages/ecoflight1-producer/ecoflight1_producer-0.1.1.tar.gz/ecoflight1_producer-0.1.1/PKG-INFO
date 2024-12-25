@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: ecoflight1-producer
+Version: 0.1.1
+Summary: producers
+Author: Yaroslav
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: acoustics (>=0.2.6,<0.3.0)
+Requires-Dist: aiosqlite (>=0.20.0,<0.21.0)
+Requires-Dist: luma-core (==2.3.1)
+Requires-Dist: minio (==7.2.7)
+Requires-Dist: mypy (>=1.14.0,<2.0.0)
+Requires-Dist: numpy (==1.24.4)
+Requires-Dist: plotly (>=5.24.1,<6.0.0)
+Requires-Dist: pyaudio (==0.2.14)
+Requires-Dist: pydantic (==2.0.3)
+Requires-Dist: pydantic-settings (==2.0.3)
+Requires-Dist: pydub (==0.25.1)
+Requires-Dist: pytest (==8.3.4)
+Requires-Dist: pytz (==2021.3)
+Description-Content-Type: text/markdown
+
+## Запись строительного шума
+
+Данная программа производит расчёт необходимых метрик, детектирует шумовые события
+и производит звукозапись этих событий
+
+Для работы программы в `src/` необходимо добавить текстовый файл `config.txt`:
+
+```
+TIMEZONE_DELTA=0
+CALIBRATION_CORRECTION=61.1
+
+DAY_NORM=70
+NIGHT_NORM=60
+SIGNAL_BUFFER_LENGTH=5
+WAITING_TIME=5
+DURATION_LIMIT=60
+
+RABBITMQ_LOGIN=login
+RABBITMQ_PASSWORD=password
+RABBITMQ_HOST_OUTER=1.1.1.1
+RABBITMQ_PORT_OUTER=0
+RABBITMQ_EXCHANGE=exchange
+
+LATITUDE_EQUIP=00.00000
+LONGITUDE_EQUIP=00.00000
+ALTITUDE_EQUIP=0
+
+MINIO_BUCKET_NAME=any_bucket_name
+MINIO_URL=0.0.0.0:0000
+MINIO_ACCESS_KEY=any_access_key
+MINIO_SECRET_KEY=any_secret_key
+```
+
+________
+Для работы библиотеки ```pydub```, необходимой для конвертации
+wav-файла в mp3-файл, нужно установить программу ```ffmpeg```:
+```
+sudo apt-get install ffmpeg
+```
+
+
