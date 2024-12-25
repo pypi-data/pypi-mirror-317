@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: toothedsword
+Version: 0.1.3
+Summary: 代码工程化
+Requires-Python: >=3.6
+Requires-Dist: numpy>=1.12.0
