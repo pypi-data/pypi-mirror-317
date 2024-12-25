@@ -1,0 +1,10 @@
+gepeto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gepeto/core.py,sha256=qifY89qGhcCTPpn5eBVUZtyHp5fcFASR-JkOJKU_P4c,6361
+gepeto/schema.py,sha256=q24OhNotGooDLocuu0g5tznXL1cOzeoQLLcGQGTfHZU,891
+gepeto/utils.py,sha256=oXiIx_uFQAx2EyURsga8hi9Pw5VJDcyB4Wg_ecLCdn0,1465
+gepeto/repl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gepeto/repl/repl.py,sha256=oi-g274d9rSDaFwRHInFwqYEjkvXwy9gAB4nkVdgGjY,1413
+gepeto-1.0.3.dist-info/METADATA,sha256=0ADggXs3dvrmN-C2YDHjOsUtJC7Jh8us9Nfu5F545D8,524
+gepeto-1.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gepeto-1.0.3.dist-info/top_level.txt,sha256=o7TEimysEFTb0EU0PP19KmH15NsIVXVyCxJTjAjqJT8,7
+gepeto-1.0.3.dist-info/RECORD,,
