@@ -1,0 +1,6 @@
+declare_cloudinfra_standard_template_library/__init__.py,sha256=fZ6S-P5ayi5nztviHC7VZ_mvmhx8hynEy9BW8ELhu_s,376
+declare_cloudinfra_standard_template_library/hello_world.py,sha256=GogXmyYRJHKBlKpMM1oNmSob2l4itrJITtVIcjv2pCc,650
+declare_cloudinfra_standard_template_library-0.0.3rc61.post1.dist-info/LICENSE,sha256=0GZT_L6FcpqcEA-wah8o42h1FfKjycCTzC1PiBW8Vhc,1075
+declare_cloudinfra_standard_template_library-0.0.3rc61.post1.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+declare_cloudinfra_standard_template_library-0.0.3rc61.post1.dist-info/METADATA,sha256=2Mz3XFYQJ5gbpzLJLWih_POFSFF8tK_6iMog_BB_uz4,17019
+declare_cloudinfra_standard_template_library-0.0.3rc61.post1.dist-info/RECORD,,
