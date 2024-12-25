@@ -1,0 +1,2 @@
+[console_scripts]
+cryptobalancefinder = cryptobalancefinder.wallet_manager:main
