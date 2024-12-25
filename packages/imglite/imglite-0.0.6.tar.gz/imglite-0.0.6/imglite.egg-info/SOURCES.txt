@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+imglite/__init__.py
+imglite/cli.py
+imglite.egg-info/PKG-INFO
+imglite.egg-info/SOURCES.txt
+imglite.egg-info/dependency_links.txt
+imglite.egg-info/entry_points.txt
+imglite.egg-info/requires.txt
+imglite.egg-info/top_level.txt
