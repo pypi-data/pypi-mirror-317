@@ -1,0 +1,6 @@
+pymupdf
+docling
+transformers
+torch
+Pillow
+tqdm
