@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mypackage-manqust
+Version: 0.1
+Summary: mypackage for 11 lab
+Home-page: https://example.com/mypackage
+Author: Катя
+Author-email: eam49@tpu.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
