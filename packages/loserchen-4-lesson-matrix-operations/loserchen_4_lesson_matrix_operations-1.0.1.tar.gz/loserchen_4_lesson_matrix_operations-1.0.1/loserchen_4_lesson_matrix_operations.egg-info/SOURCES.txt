@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+loserchen_4_lesson_matrix_operations.egg-info/PKG-INFO
+loserchen_4_lesson_matrix_operations.egg-info/SOURCES.txt
+loserchen_4_lesson_matrix_operations.egg-info/dependency_links.txt
+loserchen_4_lesson_matrix_operations.egg-info/entry_points.txt
+loserchen_4_lesson_matrix_operations.egg-info/requires.txt
+loserchen_4_lesson_matrix_operations.egg-info/top_level.txt
+matrix_operations/__init__.py
+matrix_operations/operations.py
+test/test.py
