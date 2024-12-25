@@ -1,0 +1,10 @@
+duckdb
+pandas
+pyyaml
+psycopg2-binary
+mysql-connector-python
+fastmcp
+uvicorn
+toml>=0.10.2
+click>=8.1.8
+ruamel-yaml>=0.18.6
