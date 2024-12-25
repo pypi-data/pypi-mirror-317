@@ -1,0 +1,90 @@
+[project]
+name = "pyanilist"
+version = "0.6.2"
+description = "A Python wrapper for the AniList API"
+authors = [{ name = "Ravencentric", email = "me@ravencentric.cc" }]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+keywords = ["anilist", "anime", "python"]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+dependencies = [
+    "boltons>=24.1.0",
+    "httpx>=0.27.2",
+    "pycountry>=24.6.1",
+    "pydantic>=2.9.2",
+    "pydantic-extra-types>=2.10.0",
+    "stringenum>=0.6.0",
+    "typing-extensions>=4.12.2",
+]
+
+[project.urls]
+Homepage = "https://pyanilist.ravencentric.cc"
+Documentation = "https://pyanilist.ravencentric.cc"
+Repository = "https://github.com/Ravencentric/pyanilist"
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.7",
+    "docstring-parser>=0.16",
+    "mkdocs-autorefs>=1.2.0",
+    "mkdocs-material>=9.5.44",
+    "mkdocstrings[python]>=0.27.0",
+    "mypy>=1.13.0",
+    "pytest>=8.3.3",
+    "pytest-httpx>=0.33.0",
+    "pytest-recording>=0.13.2",
+    "ruff>=0.7.4",
+    "tomli>=2.1.0",
+    "types-boltons>=24.1.0.20241113",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["I", "DTZ", "RUF", "UP", "N", "D4"]
+fixable = ["ALL"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/*" = ["D"]
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]
+
+[tool.mypy]
+strict = true
+pretty = true
+enable_error_code = ["ignore-without-code"]
+exclude = "tests/"
+
+[tool.pytest.ini_options]
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+filterwarnings = ["error"]
+log_cli_level = "info"
+testpaths = [
+  "tests",
+]
+
+[tool.coverage.run]
+omit = [
+    "src/pyanilist/_version.py",
+    "src/pyanilist/_compat.py",
+    "tests/*"
+]
+
+[tool.coverage.report]
+exclude_also = [
+  "if TYPE_CHECKING:", # Only used for type-hints
+]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
