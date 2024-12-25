@@ -1,0 +1,2 @@
+[console_scripts]
+llamero = llamero:__main__.cli
