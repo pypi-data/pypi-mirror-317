@@ -1,0 +1,3 @@
+include kivy_hot_tile_package/main.py
+include kivy_hot_tile_package/hot_tile.kv
+include LICENSE

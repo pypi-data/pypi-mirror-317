@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+kivy_hot_tile_package/__init__.py
+kivy_hot_tile_package/hot_tile.kv
+kivy_hot_tile_package/main.py
+kivy_hot_tile_package.egg-info/PKG-INFO
+kivy_hot_tile_package.egg-info/SOURCES.txt
+kivy_hot_tile_package.egg-info/dependency_links.txt
+kivy_hot_tile_package.egg-info/entry_points.txt
+kivy_hot_tile_package.egg-info/requires.txt
+kivy_hot_tile_package.egg-info/top_level.txt
