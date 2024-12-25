@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+matrix-ops-helper/__init__.py
+matrix-ops-helper/operations.py
+matrix_ops_helper.egg-info/PKG-INFO
+matrix_ops_helper.egg-info/SOURCES.txt
+matrix_ops_helper.egg-info/dependency_links.txt
+matrix_ops_helper.egg-info/entry_points.txt
+matrix_ops_helper.egg-info/requires.txt
+matrix_ops_helper.egg-info/top_level.txt
+tests/test_operations.py
