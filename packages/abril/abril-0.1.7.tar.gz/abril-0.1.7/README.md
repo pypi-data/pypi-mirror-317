@@ -1,0 +1,63 @@
+# Abril - Text-Image Comparison using CLIP
+
+Abril is a Python library that makes it easy to compare text and images using OpenAI's CLIP model. It provides a simple interface for calculating similarity scores between text descriptions and images.
+
+## Installation
+
+```bash
+# Método recomendado de instalación:
+pip install abril[all]
+
+# Si encuentras problemas, puedes instalar las dependencias manualmente:
+pip install torch>=1.7.1 pillow>=7.1.2 numpy>=1.18.5
+pip install git+https://github.com/openai/CLIP.git
+pip install abril
+```
+
+## Usage
+
+```python
+from abril import ClipComparer
+from PIL import Image
+
+# Initialize the comparer
+comparer = ClipComparer()
+
+# Compare a single text with an image
+score = comparer.compare_text_with_image(
+    "a photo of a dog",
+    "path/to/image.jpg"
+)
+print(f"Similarity score: {score}")
+
+# Find the best matching text for an image
+texts = [
+    "a photo of a dog",
+    "a photo of a cat",
+    "a photo of a car"
+]
+best_text, score = comparer.find_best_match(texts, "path/to/image.jpg")
+print(f"Best match: {best_text} (score: {score})")
+```
+
+## Features
+
+- Easy-to-use interface for text-image comparison
+- Support for both single and multiple text comparisons
+- Uses CLIP's ViT-B/32 model by default (can be changed)
+- Automatically uses GPU if available for faster processing
+- Handles both file paths and PIL Images flexibly
+- Normalizes features for better comparison
+- Returns scores between 0 and 1 for easy interpretation
+- Built on OpenAI's CLIP model
+- GPU acceleration when available
+
+## Requirements
+
+- Python ≥ 3.7
+- PyTorch ≥ 1.7.1
+- Other dependencies are handled automatically during installation
+
+## License
+
+MIT License - see LICENSE file for details.
