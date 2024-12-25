@@ -1,0 +1,9 @@
+include LICENSE
+include *.md
+include *.rst
+
+global-exclude *.orig *.py[co] *.log *.swp *.pyc
+recursive-include opinionhub *.py
+recursive-include opinionhub *.so
+recursive-include opinionhub *.yml
+recursive-include opinionhub *.json
