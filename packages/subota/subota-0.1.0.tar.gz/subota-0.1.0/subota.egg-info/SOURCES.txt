@@ -1,0 +1,8 @@
+README.md
+hello.py
+pyproject.toml
+subota.egg-info/PKG-INFO
+subota.egg-info/SOURCES.txt
+subota.egg-info/dependency_links.txt
+subota.egg-info/requires.txt
+subota.egg-info/top_level.txt

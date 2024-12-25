@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: subota
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.6
+Requires-Dist: sqlalchemy>=2.0.36
