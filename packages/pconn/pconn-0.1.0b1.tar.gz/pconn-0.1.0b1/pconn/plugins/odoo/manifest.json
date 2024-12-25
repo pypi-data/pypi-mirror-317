@@ -1,0 +1,7 @@
+{
+  "name": "Odoo",
+  "domain": "odoo",
+  "version": "0.1.0",
+  "description": "Odoo platform to connect to Odoo instance.",
+  "interface_type": "platform"
+}

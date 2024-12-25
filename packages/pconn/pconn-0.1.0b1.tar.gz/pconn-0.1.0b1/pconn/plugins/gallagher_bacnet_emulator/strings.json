@@ -1,0 +1,23 @@
+{
+  "config": {
+    "step": {
+      "init": {
+        "description": "To setup Gallagher BACnet Emulator plugin we need to step {platforms}."
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "controllers": "Expose controllers as bacnet points",
+          "inputs": "Expose inputs as bacnet points",
+          "outputs": "Expose outputs as bacnet points"
+        }
+      }
+    }
+  },
+  "create_entry": {
+    "description": "Gallagher BACnet Emulator plugin has been successfully configured."
+  }
+}

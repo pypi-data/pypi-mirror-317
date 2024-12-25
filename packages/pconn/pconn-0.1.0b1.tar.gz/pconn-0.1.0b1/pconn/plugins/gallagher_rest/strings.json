@@ -1,0 +1,37 @@
+{
+  "config": {
+    "step": {
+      "init": {
+        "description": "Select the connection method",
+        "menu_options": {
+          "local": "Connect to the sever locally",
+          "cloud": "Connect using Gallagher Cloud gateway"
+        }
+      },
+      "local": {
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "api_key": "API key",
+          "api_token": "Integration Token (if required)",
+          "use_ssl": "Use client certificate"
+        }
+      },
+      "cloud": {
+        "data": {
+          "cloud_gateway": "Gallagher Cloud gateway",
+          "api_key": "API key",
+          "api_token": "Integration Token (if required)",
+          "use_ssl": "Use client certificate"
+        }
+      },
+      "ssl": {
+        "description": "Make sure to add the below thumbprint to the REST item then press Submit. {thumbprint}"
+      }
+    }
+  },
+  "error": {
+    "connection_error": "Unable to connect to Gallagher server to complete the setup.",
+    "unauthorized_error": "Unauthorized. Ensure the api key or certificate thumbprint are correct."
+  }
+}

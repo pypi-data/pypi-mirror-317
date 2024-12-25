@@ -1,0 +1,8 @@
+{
+  "name": "AI Analyzer",
+  "domain": "ai_analyzer",
+  "version": "0.1.0",
+  "description": "This is a platform for gemini ai",
+  "interface_type": "platform",
+  "requirements": ["google-generativeai==0.8.3"]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Gallagher Demo",
+  "domain": "gallagher_demo",
+  "version": "0.1.0",
+  "description": "This is a demo plugin that displays cardholder personal fields",
+  "dependencies": ["gallagher_rest"]
+}
