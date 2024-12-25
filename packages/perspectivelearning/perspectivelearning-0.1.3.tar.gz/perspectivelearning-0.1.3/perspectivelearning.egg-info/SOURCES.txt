@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+PerspectiveLearning/PerspectiveLearning.py
+PerspectiveLearning/__init__.py
+perspectivelearning.egg-info/PKG-INFO
+perspectivelearning.egg-info/SOURCES.txt
+perspectivelearning.egg-info/dependency_links.txt
+perspectivelearning.egg-info/requires.txt
+perspectivelearning.egg-info/top_level.txt
