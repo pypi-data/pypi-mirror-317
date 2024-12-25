@@ -1,0 +1,10 @@
+LICENSE
+README.md
+run.py
+setup.py
+infinity_mouse.egg-info/PKG-INFO
+infinity_mouse.egg-info/SOURCES.txt
+infinity_mouse.egg-info/dependency_links.txt
+infinity_mouse.egg-info/entry_points.txt
+infinity_mouse.egg-info/requires.txt
+infinity_mouse.egg-info/top_level.txt
