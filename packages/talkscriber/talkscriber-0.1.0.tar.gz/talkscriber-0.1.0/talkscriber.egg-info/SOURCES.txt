@@ -1,0 +1,8 @@
+LICENSE.md
+README.md
+setup.py
+talkscriber.egg-info/PKG-INFO
+talkscriber.egg-info/SOURCES.txt
+talkscriber.egg-info/dependency_links.txt
+talkscriber.egg-info/requires.txt
+talkscriber.egg-info/top_level.txt
