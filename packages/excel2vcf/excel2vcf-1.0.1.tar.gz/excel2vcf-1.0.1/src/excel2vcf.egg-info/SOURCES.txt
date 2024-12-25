@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/excel2vcf.egg-info/PKG-INFO
+src/excel2vcf.egg-info/SOURCES.txt
+src/excel2vcf.egg-info/dependency_links.txt
+src/excel2vcf.egg-info/entry_points.txt
+src/excel2vcf.egg-info/requires.txt
+src/excel2vcf.egg-info/top_level.txt
+src/htiger/__init__.py
+src/htiger/excel2vcf.py
