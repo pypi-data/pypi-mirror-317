@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+num2heb/__init__.py
+num2heb.egg-info/PKG-INFO
+num2heb.egg-info/SOURCES.txt
+num2heb.egg-info/dependency_links.txt
+num2heb.egg-info/top_level.txt
