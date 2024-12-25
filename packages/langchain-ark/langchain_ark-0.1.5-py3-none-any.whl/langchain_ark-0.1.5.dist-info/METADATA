@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: langchain-ark
+Version: 0.1.5
+Summary: 
+Author: zbmain
+Author-email: zbmaincn@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: langchain-core (>=0.3.17,<0.4.0)
+Requires-Dist: numpy (>=2.1.3,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: volcengine-python-sdk[ark] (>=1.0.109,<2.0.0)
+Description-Content-Type: text/markdown
+
+# langchain-ark
+
+## Welcome to Volcengine Ark
+
+
+[website](https://www.volcengine.com/product/ark)
+
+## Installation and Setup
+Install the integration package:
+```
+pip install langchain-ark
+
+
+```
+Request an API key and set it as an environment variable
+```
+export ARK_API_KEY=...
+export ARK_CHAT_MODEL=ep-...
+export ARK_EMBEDDING_MODEL=ep-...
+```
+
+ChatModel Example:
+```python
+import os
+from langchain_ark.chat_models import ChatArk
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+
+prompt_template = PromptTemplate.from_template("Hello {role}")
+llm = ChatArk(model=os.environ["ARK_CHAT_MODEL"])
+parser = StrOutputParser()
+chain = prompt_template | llm | parser
+print(chain.invoke({"role": "Doubao"}))
+```
+Embeddings Example:
+```python
+from langchain_ark.embeddings import ArkEmbeddings
+
+ArkEmbeddings().embed_query("Volcengine ARK Doubao")
+```
+
