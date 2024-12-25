@@ -1,0 +1,2 @@
+[console_scripts]
+jinyalan = jinyalan.operations:main_function
