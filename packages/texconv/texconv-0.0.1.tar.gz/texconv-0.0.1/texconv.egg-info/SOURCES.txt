@@ -1,0 +1,9 @@
+README.md
+setup.py
+parse/LATEXdefinitions.py
+parse/__init__.py
+texconv.egg-info/PKG-INFO
+texconv.egg-info/SOURCES.txt
+texconv.egg-info/dependency_links.txt
+texconv.egg-info/requires.txt
+texconv.egg-info/top_level.txt

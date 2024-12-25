@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: texconv
+Version: 0.0.1
+Summary: Converting python to LaTeX
+Home-page: UNKNOWN
+Author: Omkar Tasgaonkar
+Author-email: rakmot19@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
