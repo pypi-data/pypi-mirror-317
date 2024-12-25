@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "font-rename-fm"
+version = "0.1.0"
+description = "Renames fonts to their internal name and unpacks .ttc/.otc files."
+authors = ["Jay Soren <futuremotiondev@gmail.com>"]
+maintainers = ["Jay Soren <futuremotiondev@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/futuremotiondev/fm-font-rename/"
+readme = "README.md"
+keywords = ["font", "rename", "typeface", "unpack", "ttf", "otf", "ttc", "otc"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fonttools = "^4.55.3"
+faust-cchardet = "^2.1.19"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+font-rename = "font_rename_fm.rename:main"
