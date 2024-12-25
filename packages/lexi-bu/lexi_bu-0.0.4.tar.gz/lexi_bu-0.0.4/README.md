@@ -1,0 +1,107 @@
+
+# Lexi
+Main repository for all data analysis related to LEXI.
+
+## Installation Guide
+
+This guide will walk you through the installation process for `lexi`. 
+
+We strongly recommend using a virtual environment to install `lexi` to avoid conflicts with other Python packages on your system.
+
+### Creating a Virtual Environment
+A virtual environment is a self-contained directory tree that contains a specific Python installation and its associated packages.
+
+#### Using `python3`
+1. Navigate to the desired directory (e.g., `Documents/lexi`).
+2. Create a virtual environment named `lexi_venv`:
+```bash
+python3 -m venv lexi_venv
+```
+3. Activate the virtual environment:
+- **Linux/MacOS:**
+```bash
+source lexi_venv/bin/activate
+```
+- **Windows:**
+```bash
+.\lexi_venv\Scripts\activate
+```
+4. Deactivate the virtual environment (when done):
+```bash
+deactivate
+```
+
+### Installing Lexi
+
+#### Installing from Source
+1. After activating your virtual environment, install `lexi` from GitHub:
+```bash
+pip install git+https://github.com/Lexi-BU/lexi
+```
+
+#### Installing from a Local Copy
+1. Download the `lexi-version.tar.gz` file from [Download LEXI Software](https://lexi-bu.github.io/software/dist/lexi-0.0.1.tar.gz).
+2. Place the file in the desired directory (e.g., `Documents/lexi`).
+3. Install it:
+```bash
+pip install lexi-version.tar.gz
+```
+
+### Verifying the Installation
+1. Verify the installation using:
+```bash
+pip show lexi
+```
+Example output:
+```
+Name: lexi
+Version: 0.0.1
+Summary: Main repository for all data analysis related to LEXI
+Author: qudsiramiz
+Author-email: qudsiramiz@gmail.com
+License: GNU GPLv3
+Requires: cdflib, matplotlib, pandas, pytest, toml
+```
+
+2. Alternatively, check installed packages:
+```bash
+pip list
+```
+Example output:
+```bash
+Package         Version
+--------------- -------
+lexi            0.0.1
+matplotlib      3.8.2
+pandas          1.5.3
+```
+
+3. Verify functionality in Python:
+```python
+>>> import lexi
+>>> lexi.__version__
+'0.0.1'
+```
+
+---
+
+## Using LEXI Software
+
+### Example Jupyter Notebook
+1. Download the example folder from [Download LEXI Examples](https://lexi-bu.github.io/software/examples.zip) and extract it.
+2. Activate your virtual environment.
+3. Install Jupyter Notebook:
+```bash
+pip install jupyter
+```
+4. Open the tutorial notebook:
+```bash
+jupyter notebook lexi_tutorial.ipynb
+```
+5. Follow the steps in the notebook to learn how to use `lexi`.
+
+---
+
+## Notes
+- Ensure all dependencies are installed as listed in `requirements.txt`.
+- Additional tutorials and examples will be provided in future updates.

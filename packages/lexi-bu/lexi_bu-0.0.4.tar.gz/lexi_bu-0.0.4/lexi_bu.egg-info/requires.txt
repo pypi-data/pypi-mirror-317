@@ -1,0 +1,7 @@
+python
+toml
+pandas
+pytest
+cdflib
+matplotlib
+jupyter
