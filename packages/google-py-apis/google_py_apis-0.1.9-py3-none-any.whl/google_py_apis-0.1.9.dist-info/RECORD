@@ -1,0 +1,11 @@
+google_py_apis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google_py_apis/gmail_api.py,sha256=whLrjMu0W268UCw8z2SFiqf3ZfpfNsMwayZwEEQmCxA,4609
+google_py_apis/google_base_api.py,sha256=sNUJTkPJEa1CnAhfEckROA-aYg85yQABMbxcNXVRkgw,3493
+google_py_apis/google_drive_api.py,sha256=r8a0Nyu7fxBr6ublm72PagdVwMya_Hl8aixeCa8Be_E,3577
+google_py_apis/params.py,sha256=lwFL0-4ArhZ-xXEdT9hJ8cwOAhcy_O2zjHf6sr9tdcg,68
+google_py_apis/util.py,sha256=I_HGpuLkh5bQ21GwFTG6Smoi59DXRZ61pAngujPqvC0,1749
+google_py_apis-0.1.9.dist-info/LICENSE,sha256=sH5F9ongTO_TsR7-e-4n0geErovxqLuYkzXhFOS_Xbk,1060
+google_py_apis-0.1.9.dist-info/METADATA,sha256=5FrjUUbJfd-cyKLjw5_RZiz3Zwprk3iNqJjEijqDNQ4,687
+google_py_apis-0.1.9.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+google_py_apis-0.1.9.dist-info/top_level.txt,sha256=8MDDAmoGknENP6E8mkS0-r0NDhQOdYGH7-LEBzPCtFg,15
+google_py_apis-0.1.9.dist-info/RECORD,,
