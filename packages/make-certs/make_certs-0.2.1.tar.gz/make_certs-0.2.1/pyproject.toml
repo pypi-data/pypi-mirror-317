@@ -1,0 +1,32 @@
+[project]
+dynamic = [ 'dependencies', 'version' ]
+name = 'make-certs'
+requires-python = '>=3.10'
+description = 'Create simple hierarhy of x509 certificates'
+readme = 'README.md'
+classifiers = [
+  'Topic :: System :: Systems Administration',
+  'License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
+]
+
+[project.scripts]
+make-certs = 'make_certs.main:main'
+
+[metadata]
+url = 'https://dev.altlab.su/salt.box/make-certs'
+version = 'attr: package.__version__'
+
+[build-system]
+requires = ['setuptools>=57.4.0', 'setuptools-scm']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools.packages.find]
+include = ['make_certs', 'make_certs.*']
+
+[tool.setuptools.dynamic]
+dependencies = { file = ['requirements.txt'] }
+version = { attr = 'make_certs.__version__' }
+
+[tool.flake8]  # Requires Flake8-pyproject
+max-line-length = 120
+extend-ignore = [ ]

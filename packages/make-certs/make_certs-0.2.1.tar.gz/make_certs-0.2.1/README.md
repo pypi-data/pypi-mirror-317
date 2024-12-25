@@ -1,0 +1,29 @@
+# make-certs
+
+## Description
+
+make-certs is a Python script to easily create chains of X.509 certificates for
+SSL/TLS applications.
+
+## Installation
+
+```bash
+pip install .
+```
+
+## Usage
+
+```bash
+make-certs hier.yaml
+```
+
+Look at sample file [`hier.yaml`](./hier.yaml).
+
+To add new certificates it is able to extend hierarchy file and run command
+again. But avoid to edit entries of already created certificates: its will not
+be actually changed. Existing certificate and key files will be recreated with
+new options after deletion, but keep in mind possibly broken chain for issued
+certificates.
+
+Cetificates can be revoked with CRL. Also revokation will be undo with revoke
+record delition in a hier file.
