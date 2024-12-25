@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "GZQmy_package"
+authors = [{name = "Zq_G", email = "1653119108@qq.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://www.bing.com/search?q=flit%E7%AE%A1%E7%90%86python&form=ANNTH1&refig=676a9b293c9242a69be184491edbcdf5&pc=CNNDDB"
