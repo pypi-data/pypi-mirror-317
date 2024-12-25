@@ -1,0 +1,10 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_whatsappchattodf.py,sha256=jvs6XgXXlZUJ76PUWyNlhQhnInaDuL2a-eMP8o8zicI,695
+whatsappchattodf/__init__.py,sha256=E10Q3atAxPY_SdBr2Nm4RIEB6CEMsCSvpnDtEOjv0yc,48
+whatsappchattodf/whatsappchattodf.py,sha256=JzidUZRhbnDrdQAtv7UxoF7menrOwjUsDDsgIev5V7Q,8089
+whatsappchattodf-0.1.0.dist-info/LICENSE,sha256=16RUAhpQjtTgtdcwMz7IZeX2m7EgppvwFHYcRZfJ7gc,1091
+whatsappchattodf-0.1.0.dist-info/METADATA,sha256=LTinipjboF4_1WQzMxLnq8DB_a2Eh-tnaxciTxAjQo8,877
+whatsappchattodf-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+whatsappchattodf-0.1.0.dist-info/entry_points.txt,sha256=e3cMO6YV8hFRYMt9IM1e_bw3VOrz-CswUCPdw0mn3aY,76
+whatsappchattodf-0.1.0.dist-info/top_level.txt,sha256=XkpcpI-js2E2jKZ79tA21MuDlaWYnuakWWdcmuuc2a0,23
+whatsappchattodf-0.1.0.dist-info/RECORD,,
