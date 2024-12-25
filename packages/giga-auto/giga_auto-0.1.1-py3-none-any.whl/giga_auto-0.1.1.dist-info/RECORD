@@ -1,0 +1,16 @@
+giga_auto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+giga_auto/assert_utils.py,sha256=HkCZ3QXiy7q88bp3XlS5h8yCx6yhzECOiaYyZkn3bYA,1588
+giga_auto/base_class.py,sha256=h5pLjj88H4X_gRWDOOePwJSQnzuLLRuQnKL6cjnElhk,440
+giga_auto/constants.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+giga_auto/data_structure.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+giga_auto/db_utils.py,sha256=wdHLRaOqh8ZREIDTRLpZSXJ4a7fgxLkA0bYQMR9U-EA,1609
+giga_auto/excel_utils.py,sha256=s-NixzEBFq_eOk1k95gEPAvietlFzc-3lAobUqo-aCM,1740
+giga_auto/logger.py,sha256=sUhYueCl0y9TegIycsm5Up56QINS8Nkagh5pOX-P43M,4058
+giga_auto/request.py,sha256=l22VIEA8yvLWL5GT3fHxJhA5DfWamGzn27TxpZKYkmM,2396
+giga_auto/utils.py,sha256=0ad24553gAn40eVvjmTmtz_-JGOnnCl7s9D-30nH5Q8,8916
+giga_auto/yaml_utils.py,sha256=Ld3CQ9RUomGBBfkFsA24ATao5TrM6qPm0hoLt-bbED0,724
+giga_auto-0.1.1.dist-info/LICENSE,sha256=gaR7Zm-1AB3DiDBi33DwpYfQwLvJk-xemYR9_6JeVcg,1061
+giga_auto-0.1.1.dist-info/METADATA,sha256=NV4-Ws_ljQo66UPOcgyv8S35HswazshrlA1OHSCqsKU,454
+giga_auto-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+giga_auto-0.1.1.dist-info/top_level.txt,sha256=1DWuOa8dBdVjemXh1cVmWApS_IfAAaCjkVPURGivjeQ,10
+giga_auto-0.1.1.dist-info/RECORD,,
