@@ -1,0 +1,63 @@
+<img src="./hyper-connections.png" width="450px"></img>
+
+## Hyper Connections
+
+Attempt to make the multiple residual stream approach proposed by Hyper-Connections paper by Bytedance AI more accessible as a reusable library, and for following any new research in this direction.
+
+## Install
+
+```bash
+$ pip install hyper-connections
+```
+
+## Usage
+
+```python
+import torch
+from torch import nn
+
+# a single branch layer
+
+branch = nn.Linear(512, 512)
+
+# before
+
+residual = torch.randn(2, 1024, 512)
+
+residual = branch(residual) + residual
+
+# after, say 4 streams in paper
+
+from hyper_connections import HyperConnections
+
+expand_stream, reduce_stream = HyperConnections.get_expand_reduce_stream_functions(4)
+
+# 1. wrap your branch function
+
+hyper_conn_branch = HyperConnections(4, dim = 512, branch = branch)
+
+# 2. expand to 4 streams, this must be done before your trunk, typically a for-loop with many branch functions
+
+residual = expand_stream(residual)
+
+# 3. forward your residual as usual into the wrapped branch function(s)
+
+residual = hyper_conn_branch(residual) 
+
+# 4. reduce 4 streams with a summation, this has to be done after your for-loop trunk. for transformer, unsure whether to do before or after final norm
+
+residual = reduce_stream(residual)
+```
+
+## Citation
+
+```bibtex
+@article{Zhu2024HyperConnections,
+    title   = {Hyper-Connections},
+    author  = {Defa Zhu and Hongzhi Huang and Zihao Huang and Yutao Zeng and Yunyao Mao and Banggu Wu and Qiyang Min and Xun Zhou},
+    journal = {ArXiv},
+    year    = {2024},
+    volume  = {abs/2409.19606},
+    url     = {https://api.semanticscholar.org/CorpusID:272987528}
+}
+```
