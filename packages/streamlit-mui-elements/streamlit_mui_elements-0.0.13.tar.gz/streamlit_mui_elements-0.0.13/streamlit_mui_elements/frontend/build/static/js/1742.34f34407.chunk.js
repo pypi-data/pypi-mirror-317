@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcustom_component_example=self.webpackChunkcustom_component_example||[]).push([[1742],{1742:function(e,o,n){n.r(o),n.d(o,{default:function(){return i}});var t=n(1413),r=n(2791),a=n(6694),m=n(184),u=!1,i=r.forwardRef((function(e,o){return u||(console.warn(["MUI: The Rating component was moved from the lab to the core.","","You should use `import { Rating } from '@mui/material'`","or `import Rating from '@mui/material/Rating'`"].join("\n")),u=!0),(0,m.jsx)(a.Z,(0,t.Z)({ref:o},e))}))}}]);
+//# sourceMappingURL=1742.34f34407.chunk.js.map
