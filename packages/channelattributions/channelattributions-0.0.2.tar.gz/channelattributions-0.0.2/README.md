@@ -1,0 +1,122 @@
+**Author: Dhivya Nagasubramanian**
+
+**Purpose:**
+The channel attribution package This versatile package provides a robust solution for handling various attribution models, giving you the flexibility to analyze and assign credit to touchpoints across the customer journey. It’s designed to cater to businesses looking to understand and optimize their marketing strategies, with powerful support for multiple attribution models.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------<br>
+**Key Features:**
+**Last Touch Attribution**
+Assigns full credit to the last interaction before conversion, offering insights into the final trigger event in the customer journey.
+
+**First Touch Attribution**
+Focuses on the first point of contact, helping businesses understand which marketing efforts are driving initial awareness and engagement.
+
+**Linear Attribution**
+Distributes credit equally across all touchpoints, allowing for a holistic view of how each interaction contributes to conversions.
+
+**Time-Decay Attribution**
+Gives more credit to touchpoints that occurred closer to the conversion, effectively capturing the influence of recent interactions.
+
+vPosition-Based (U-Shaped) Attribution**
+Applies the majority of the credit to the first and last touchpoints, with the remaining credit spread across the middle interactions, emphasizing the key roles of initial engagement and conversion.
+
+**Custom Attribution (Business Rules-Based)**
+Lets you define your own attribution rules based on specific business goals, providing the flexibility to tailor the model to unique marketing strategies.
+
+**W-Shaped Attribution**
+Offers a more granular approach by assigning credit to three key touchpoints—first, middle, and last—highlighting the importance of each stage in the funnel.
+
+**Last-Non-Direct Click Attribution**
+Assigns credit to the last non-direct touchpoint before conversion, ideal for understanding how indirect channels influence final decisions.
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+
+**Requirements packages:**
+
+**NumPy** - Adds support for large, multi-dimensional arrays, matrices and high-level mathematical functions to operate on these arrays. <br>
+**python-dateutil** - Provides powerful extensions to the standard datetime module. <br>
+**dask**    - Dask is a flexible parallel computing library for analytics. See documentation for more information. <br>                        
+**random**  - generate random numbers with in the set limits.  <br>
+**pandas**  -  Dataframe utility. <br>
+**journey-orchestrate** - Journey orchestration package for building customer marketing touch point journey.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+**Installation Instructions:**
+
+pip install channelattributions
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+**Example**
+
+|   ID | Timestamp           | Channel     | <br>
+|-----:|:--------------------|:------------| <br>
+|    1 | 2024-11-18 08:00:00 | email       | <br>
+|    1 | 2024-11-18 09:00:00 | sms         | <br>
+|    3 | 2024-11-18 10:00:00 | app         | <br>
+|    3 | 2024-11-18 11:00:00 | email       | <br>
+|    5 | 2024-11-18 12:00:00 | sms         | <br>
+|    5 | 2024-11-18 15:00:00 | direct mail | <br>
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------<br>
+**How to use it :**
+
+
+**0. generate_random_data(n,nc,startdt, enddt,channel_lst,random_seed)**
+
+- This would generate sample dataset to test the customer journey orchestrate function
+
+   1st parameter - Number of rows to generate. <br>
+   2nd parameter - Number of unique IDs you want in the dataset
+   3rd parameter - Start date. <br>
+   4th parameter - End date. <br>
+   5th parameter - Unique Channel list : eg:['EM','SMC','PD','PS']. <br>
+   6th parameter - random_seed. <br>
+
+**1. last_touch(df,id_column,timestamp_column , n_partition)** . <br>
+**2. first_touch(df, id_column, timestamp_column, n_partition)**. <br>
+**3. linear_attribution(df, id_column,timestamp_column, n_partitions, value)**. <br>
+**4. time_decay_attribution(df, id_column, timestamp_column, channel, n_partitions, decay_factor)**. <br>
+**5. position_u_shaped_attribution_dask(df, id_column, timestamp_column, channel, n_partitions , decay_factor )**. <br>
+**6. w_shaped_attribution_dask(df, id_column,timestamp_column, channel, n_partitions, decay_factor)**. <br>
+**7. last_nondirect_click_attribution(df, id_column,timestamp_column, channel,direct_channel_name, n_partitions)**. <br>
+
+df               -  Dataframe that contains the the customer journey along with timestamp (as provided in the example above)
+id_column        -  Customer unique ID
+timestamp_column -  Timestamp of the touch point
+channel          -  Channel (For example : Paid Display, Direct Mail, Email)
+n_partitions     -  Number of partitions the data should run (for dask implementation)
+decay_factor     -  Decay Factor
+attrib_value     -  Attribution value to be used for linear attribution
+decay_factor     -  Decay factor
+direct_channel_name -  Channel name (for eg: Direct Mail) that are part of direct marketing.
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+
+**How to test the package without data ?** 
+
+**Step1** - Run with  "generate_random_data" by passing appropriate values 
+
+eg: df_example = generate_random_data(1000,30,"2023-01-01','2024-10-01',['EM','Direct Mail','Paid Display','Search'],230).
+
+**Step2** - Run the respective attribution models discussed above

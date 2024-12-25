@@ -1,0 +1,8 @@
+README.md
+setup.py
+channelattributions/__init__.py
+channelattributions/main.py
+channelattributions.egg-info/PKG-INFO
+channelattributions.egg-info/SOURCES.txt
+channelattributions.egg-info/dependency_links.txt
+channelattributions.egg-info/top_level.txt
