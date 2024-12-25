@@ -1,0 +1,3 @@
+[console_scripts]
+llmux=llmux.interfaces.tui:main
+
