@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: daggerml
+Version: 0.0.16
+Summary: DaggerML
+Project-URL: Homepage, https://daggerml.com
+Project-URL: Documentation, https://daggerml.com/docs
+Project-URL: Issues, https://github.com/daggerml/python-lib/issues
+Author-email: DaggerML <engineering@daggerml.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+Requires-Dist: dataclasses; python_version < '3.7'
+Requires-Dist: importlib-metadata; python_version < '3.8'
+Provides-Extra: all
+Requires-Dist: boto3; extra == 'all'
+Requires-Dist: daggerml-cli; extra == 'all'
+Provides-Extra: aws
+Requires-Dist: boto3; extra == 'aws'
+Provides-Extra: cli
+Requires-Dist: daggerml-cli; extra == 'cli'
+Provides-Extra: test
+Requires-Dist: boto3; extra == 'test'
+Requires-Dist: moto[all,server]; extra == 'test'
+Requires-Dist: numpy<2.0.0; extra == 'test'
+Requires-Dist: pandas==2.0.1; extra == 'test'
+Requires-Dist: polars==1; extra == 'test'
+Requires-Dist: pyarrow; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Description-Content-Type: text/markdown
+
+# Dagger-ML Python Library
+
+## Prerequisites
+
+- [pipx](https://pypa.github.io/pipx/installation/)
+- [hatch](https://hatch.pypa.io/latest/install/#pipx) (via `pipx`)
+
+## Setup
+
+install hatch however you want and clone the repo with submodules.
+
+## Usage
+
+See unit tests (or example) for usage.
+
+## How to run tests:
+
+```bash
+hatch -e test run pytest .
+```
+
+To build:
+
+```console
+hatch -e test run dml-build pypi
+```
+
+Note: You might have to reinstall the cli with the editable flag set (e.g. `pip uninstall daggerml-cli; pip install -e ./submodules/daggerml_cli/`)
