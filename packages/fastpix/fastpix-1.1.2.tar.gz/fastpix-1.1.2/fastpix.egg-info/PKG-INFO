@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: fastpix
+Version: 1.1.2
+Summary: FastPix SDK with both sync and async support
+Home-page: 
+Author: Subbaraju Chekuri
+Author-email: subbaraju.c@fastpix.io
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Requires-Dist: requests>=2.25.0
+Provides-Extra: async
+Requires-Dist: aiohttp>=3.8.0; extra == "async"
