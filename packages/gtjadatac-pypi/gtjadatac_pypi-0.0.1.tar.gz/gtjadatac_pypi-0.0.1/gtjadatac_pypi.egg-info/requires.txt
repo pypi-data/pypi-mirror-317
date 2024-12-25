@@ -1,0 +1,4 @@
+dolphindb==3.0.1.0
+holidays==0.53
+numpy==1.26.3
+pandas==2.2.0

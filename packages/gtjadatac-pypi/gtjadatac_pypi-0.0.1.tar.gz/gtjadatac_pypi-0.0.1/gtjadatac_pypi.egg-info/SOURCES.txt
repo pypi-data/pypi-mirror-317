@@ -1,0 +1,10 @@
+setup.py
+gjdatac_api/__init__.py
+gjdatac_api/data_api_class.py
+gjdatac_api/dict_data.py
+gjdatac_api/dolphin_db_info.py
+gtjadatac_pypi.egg-info/PKG-INFO
+gtjadatac_pypi.egg-info/SOURCES.txt
+gtjadatac_pypi.egg-info/dependency_links.txt
+gtjadatac_pypi.egg-info/requires.txt
+gtjadatac_pypi.egg-info/top_level.txt

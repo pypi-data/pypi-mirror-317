@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gtjadatac_pypi
+Version: 0.0.1
+Summary: vwap,twap接口数据，接入tick_l2数据，新增实时订阅接口
+Author: zhao
+Author-email: 2018209921@qq.com
+Requires-Python: >3.6
+Description-Content-Type: text/markdown
+Requires-Dist: dolphindb==3.0.1.0
+Requires-Dist: holidays==0.53
+Requires-Dist: numpy==1.26.3
+Requires-Dist: pandas==2.2.0
+
+更新，内容如下：
+vwap,twap接口数据，接入tick_l2数据，新增实时订阅接口
