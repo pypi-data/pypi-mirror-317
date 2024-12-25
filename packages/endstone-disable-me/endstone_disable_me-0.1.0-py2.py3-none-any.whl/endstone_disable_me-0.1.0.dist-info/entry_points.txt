@@ -1,0 +1,2 @@
+[endstone]
+disable-me = endstone_disable_me:DisableMe

@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: endstone-disable-me
+Version: 0.1.0
+Summary: A simple plugin to prevent /me command from execution
+Project-URL: Homepage, https://github.com/endstone-essentials/disable-me
+Author-email: Vincent Wu <magicdroidx@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Endstone
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: endstone,plugin
+Description-Content-Type: text/markdown
+
+# Endstone DisableMe Plugin
+
+A simple plugin that disabled `/me` command from execution.
+
+## Features
+
+- Disable `/me` command from execution.
+- Kick players if they use `@` selectors excessively (to prevent Horion crasher).
+
+## Usages
+
+Download the `whl` file from the release page and drop it into the `plugins` folder.
