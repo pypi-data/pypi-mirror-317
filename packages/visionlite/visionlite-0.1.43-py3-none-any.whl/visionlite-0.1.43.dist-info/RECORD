@@ -1,0 +1,13 @@
+vision_gui.py,sha256=hepbFtklOtgwxTUy5hz2hI2BKaW2mpgzkWJ0MvAp4V8,314
+vision_run.py,sha256=xGaHiSoNsoQEeaJ7LaSigy7o-Oo6NgKzqCiguXySEfI,73
+visionlite/__init__.py,sha256=rY5z71Nbcym1pK7LcOf8K5W2uaIzlZ-67pY9xK0sChs,213
+visionlite/_st_app.py,sha256=JdhxTXBxvjAMuTvaqnpu6MTysT5uUEmwThcn6zxi5d4,5893
+visionlite/_tree_variations.py,sha256=GJU0fROI_a2D2TVu1eji0rxPKCxIX_5ZI-mbyMWTFr0,15549
+visionlite/_vision_ai.py,sha256=-apnr3ZRux0cLYiAZJcAboh-DYwcqdIsDrLEG5GKPl4,14043
+visionlite/latest_st_app.py,sha256=HUnSTz1NnVKAnm3Jdg_gTfqyI3hWPgCewgs-ehnAauA,3267
+visionlite/main.py,sha256=9lhkpPRJxuacsSv_XHKtdRf7uuzO7oKoU_vZYfY2SiQ,2365
+visionlite-0.1.43.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+visionlite-0.1.43.dist-info/METADATA,sha256=_eLqIuIwblZMWAVLcSVnfJZAjGjgvwGHbtHKQbURfMM,4449
+visionlite-0.1.43.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+visionlite-0.1.43.dist-info/entry_points.txt,sha256=TIShlmnRVhdSrqmMvgI8BDJ9AEMmyp0r--3ri-Xz87s,49
+visionlite-0.1.43.dist-info/RECORD,,
