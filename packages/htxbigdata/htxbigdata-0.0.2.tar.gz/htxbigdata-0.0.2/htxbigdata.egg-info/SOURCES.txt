@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+htxbigdata/__init__.py
+htxbigdata/apollo_utils.py
+htxbigdata.egg-info/PKG-INFO
+htxbigdata.egg-info/SOURCES.txt
+htxbigdata.egg-info/dependency_links.txt
+htxbigdata.egg-info/top_level.txt
