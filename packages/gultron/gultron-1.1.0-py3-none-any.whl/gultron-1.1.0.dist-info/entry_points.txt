@@ -1,0 +1,6 @@
+[console_scripts]
+gultron=gultron.main:run
+
+[poetry.post-install]
+post-install=gultron.post_install:run
+
