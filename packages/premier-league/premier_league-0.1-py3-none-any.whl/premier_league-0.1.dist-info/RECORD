@@ -1,0 +1,15 @@
+premier_league/__init__.py,sha256=Izza6JNMKqiwkiTBUUZnhcZ8fOSImcvbNiPWwyobZIY,189
+premier_league/base.py,sha256=ytxsE0iN_VC2_bpszNxvht3wHK1GxoY2NtKCqwJ6xMU,7302
+premier_league/players/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+premier_league/players/season_leaders.py,sha256=jRfDYCnzVUMr_Da3H0PJVmfjAIYbnUJjt6Muje6WXUk,6998
+premier_league/ranking/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+premier_league/ranking/ranking_table.py,sha256=Kv594cHtvHtROyjDH7FAa2K9S7rJCYpBTGxERWBlUBM,14786
+premier_league/transfers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+premier_league/transfers/transfers.py,sha256=3faHnCCysbSjLs1gYBbV2vDXTmJpEDzocUV3GXyS1aU,8180
+premier_league/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+premier_league/utils/methods.py,sha256=23N_-357TVXTjEFBipbcrpWyZbT72QdHXbHbrPu98Yc,2613
+premier_league/utils/xpath.py,sha256=JiXHAHtexlPeg33GwT6nMqNdzQtwwjx9tiMH_Kkc5os,632
+premier_league-0.1.dist-info/METADATA,sha256=VRD18QRDudhW_nd30u9IsVuf-Xq6O-VAoSFtNQaHn3o,310
+premier_league-0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+premier_league-0.1.dist-info/top_level.txt,sha256=p5lDh1ckekbJY4Cof9Pu09lo4BtqvmOOcCOJUdgpt2c,15
+premier_league-0.1.dist-info/RECORD,,
