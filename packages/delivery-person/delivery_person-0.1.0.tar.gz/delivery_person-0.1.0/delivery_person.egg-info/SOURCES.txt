@@ -1,0 +1,9 @@
+README.md
+setup.py
+delivery_person/__init__.py
+delivery_person/detector.py
+delivery_person.egg-info/PKG-INFO
+delivery_person.egg-info/SOURCES.txt
+delivery_person.egg-info/dependency_links.txt
+delivery_person.egg-info/requires.txt
+delivery_person.egg-info/top_level.txt
