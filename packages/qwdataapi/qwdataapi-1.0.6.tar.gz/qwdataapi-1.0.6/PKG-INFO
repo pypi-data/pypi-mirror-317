@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: qwdataapi
+Version: 1.0.6
+Summary: Quantweb3 Data API for quants
+Author-email: Scott Zhang <scott2011@qq.com>
+License: MIT License
+        
+        Copyright (c) 2024 quantweb3
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://quantweb3.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-snappy>=0.7.2
+Requires-Dist: grpcio>=1.64.1
+Requires-Dist: pandas>=1.5.3
+Requires-Dist: protobuf>=4.25.3
+Requires-Dist: tqdm>=4.65.0
+
+# qwdataapi 
+
+v1.0.6
+
+
+
+## Introduction
+
+qwdataapi is a data service API provided by [quantweb.ai](https://quantweb3.ai), used for fetching historical data from various cryptocurrency exchanges and a variety of alternative data.
+
+
+
+## Installation Instructions
+
+Installation can be done using pip:
+
+```bash
+pip install qwdataapi
+```
+
+
+
+## Usage Instructions
+
+Three steps to obtain minute-level market data:
+
+```python
+from qwdataapi import *
+
+auth('Your username', 'Your token')
+df = fetch_data(symbol='BTCUSDT', start='2023-07-01 00:00:00')
+print(df.head())
+```
+
+Replace **'Your username'** and **'Your token'** with your actual username and token, which could be obtained from [quantweb.ai subscribe](https://www.quantweb3.ai/subscribe). After the subscription, these authentication will be sent to your email. It is **free** for the first 7 days. 
+
+
+
+## Function Description
+
+
+
+### ***fetch_data:***
+
+- #### Function Purpose
+
+The `fetch_data` function is used to retrieve specific asset type and data type information from a designated exchange. The data can include candlestick (k-line) data, among others.
+
+
+
+- #### Function Parameters
+  - `exchange` (str): The name of the exchange, defaults to `'binance'`.
+
+  - `symbol` (str): The trading pair, for example `'BTCUSDT'`, defaults to `'BTCUSDT'`.
+
+  - `asset_type` (str): The type of asset, defaults to `'spot'`, representing spot trading. `'coinm'` means coin based future trading, `'usdm'` means USD based future trading.
+
+  - `data_type` (str): The type of data, defaults to `'klines'`, representing candlestick data.
+
+  - `start` (str): The start time of the data, formatted as `'YYYY-MM-DD HH:MM:SS'`, defaults to `'2023-08-01 00:00:00'`.
+
+  - `end` (str): The end time of the data, formatted the same as the start time, defaults to `'2024-07-17 00:00:00'`.
+
+  - `batch_size` (int): The size of the data batch for each request, a number between 40 and 100, defaults to `50`.
+
+    
+
+
