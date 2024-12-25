@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: igniteboot
+Version: 0.1.0
+Summary: A lightweight and modular Python backend framework
+Author: m3r0n9
+Author-email: your-email@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: sqlalchemy
