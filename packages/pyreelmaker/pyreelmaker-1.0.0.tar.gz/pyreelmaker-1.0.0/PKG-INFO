@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: pyreelmaker
+Version: 1.0.0
+Summary: A Python package for creating short video reels.
+Home-page: UNKNOWN
+Author: Jaswanth Krishna Perla
+Author-email: perlajaswanthkrishna@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
