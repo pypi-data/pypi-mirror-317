@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+biofiles/__init__.py
+biofiles/common.py
+biofiles/fasta.py
+biofiles/gff.py
+biofiles/repeatmasker.py
+biofiles.egg-info/PKG-INFO
+biofiles.egg-info/SOURCES.txt
+biofiles.egg-info/dependency_links.txt
+biofiles.egg-info/top_level.txt
+biofiles/types/__init__.py
+biofiles/types/feature.py
+biofiles/types/repeat.py
+biofiles/types/sequence.py
