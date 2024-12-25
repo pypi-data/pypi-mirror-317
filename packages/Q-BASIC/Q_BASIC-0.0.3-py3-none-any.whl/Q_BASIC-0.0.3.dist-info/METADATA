@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: Q-BASIC
+Version: 0.0.3
+Summary: Q-BASIC (Quantum Brazilian Algorithms, Simulations, and Computational tools)
+Home-page: https://github.com/GubioGL/Q-Basic
+Author: Gubio Gomes de lima
+Author-email: gubiofisikal@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10.16
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: sympy==1.13.1
+Requires-Dist: torch==2.5.1+cu118
+Requires-Dist: scipy==1.14.1
+
+# Simulador_quantico
+
+Simulador  Brasileiro para tecnologias quanticas (SBT-Quantum) : 
+    Sistema QuÃ¢ntico, ComputaÃ§Ã£o QuÃ¢ntico, Algoritmos QuÃ¢ntico e Redes Neurais QuÃ¢ntico:
+
+Q-BASIC (Quantum Brazilian Algorithms, Simulations, and Computational tools)
+
+Biblioteca :
+Este Ã© um simples simulador de um computador quÃ¢ntico.
+
+*    Unico qubits.
+*    Feico apenas com numpy.
+
+
+
+
+TODO:
+    *   ImplementaÃ§Ã£o do pytorch como backend (Proximo passso). 
+    
+    *   ImplementaÃ§ao de solve para matrizes esparsas.
+    *   ImplementaÃ§Ã£o do cupy como backend. 
+    *   ImplementaÃ§Ã£o do Numba como backend. 
+
