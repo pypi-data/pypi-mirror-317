@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: alib_lib
+Version: 0.1.0
+Summary: It is my first time creating a library, I hope it will be helpful for you.
+Author-email: Alina <minoriiko@mail.ru>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## Описание
+
+Это моя первая библиотека Python. 
+(TextAnalyzer): Содержит функции для анализа текста:
+  •  Подсчет частоты слов.
+  •  Определение среднего размера слов в предложении.
+  •  Определение количества предложений.
+  •  Поиск наиболее длинных слов в тексте.
+(TextManipulator): Содержит функции для манипуляции текстом:
+  •  Переворачивание слов в предложении.
+  •  Извлечение n-го по счету предложения.
+
+
+## Установка
+
+Вы можете установить библиотеку с помощью pip:
+
+
+pip install alib_lib
+
+## Использование
+from alib_lib.module1 import module1
+from alib_lib.module2 import module2
