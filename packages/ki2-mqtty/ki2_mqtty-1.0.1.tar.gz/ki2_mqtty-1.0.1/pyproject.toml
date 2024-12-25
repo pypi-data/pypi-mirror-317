@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "ki2-mqtty"
+version = "1.0.1"
+description = "mqtty is a flexible Python package that bridges MQTT communication with serial devices. It provides an agnostic approach to MQTT client libraries, supporting both paho-mqtt and aiomqtt through helper functions, while allowing developers to manage multiple serial devices seamlessly."
+authors = ["Adrien KERFOURN <ak.sitecontact@gmail.com>"]
+readme = "README.md"
+packages = [{include = "mqtty"}]
+license = "MIT"
+repository = "https://gitlab.com/ki2-open/python/mqtty"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typing-extensions = "^4.12.2"
+ki2-python-utils = "^0.3.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pyserial = "^3.5"
+paho-mqtt = "^2.1.0"
+aiomqtt = "^2.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
