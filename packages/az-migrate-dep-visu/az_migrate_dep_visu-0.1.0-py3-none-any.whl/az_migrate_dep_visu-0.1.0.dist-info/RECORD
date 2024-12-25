@@ -1,0 +1,14 @@
+az_migrate_dep_visu/__init__.py,sha256=8G-rLhbTJsxt8QMNfYPDILcn9K1Psojh3Vq-lntPyS4,21
+az_migrate_dep_visu/app.py,sha256=-gEChud47p_fjsM7W4Tz9dTH7Jjkw7V43L8fln27sfg,7679
+az_migrate_dep_visu/static/icon.png,sha256=jWel1ughDJRrOqIVMXXOsLFWlfDnMlxf5HnJiRKWCVU,102914
+az_migrate_dep_visu/static/icon_simplified.png,sha256=6bmbKHgBJmr4rSuEM-FNR4ffwPU9K-5qTH9gUwzz58g,12433
+az_migrate_dep_visu/static/scripts.js,sha256=-MJmCZv2raDtJz4Rg8_6iBZGajVHnwnbS4Vcw-Z1KNU,6685
+az_migrate_dep_visu/static/styles.css,sha256=rEOnoU7PGGYa95GBUjXZzVS6z68sRbt2-_U7Hs6R_RU,1444
+az_migrate_dep_visu/templates/base.html,sha256=Jdp6jyLkSPm77OLEv4FeLUCY6bnvqp37-4QcewVMcPw,1800
+az_migrate_dep_visu/templates/result.html,sha256=r4w28QdhJzc58SWZyYHCepVg0RCdb-TLdazfTDgGfrQ,5571
+az_migrate_dep_visu/templates/upload.html,sha256=Lo_-ZMEhVxHs12YIhyB1A6XK5XnqZtGxl3BG9ucNeLg,1667
+az_migrate_dep_visu-0.1.0.dist-info/METADATA,sha256=SWu5HSpluOeUydeC8w3XTr7gv3pZUQdDsCjMuYbWyNo,3320
+az_migrate_dep_visu-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+az_migrate_dep_visu-0.1.0.dist-info/entry_points.txt,sha256=OnCgOY9tIpEBegbu_hasn3WJwNhpN1cEOYUB38Jggzg,72
+az_migrate_dep_visu-0.1.0.dist-info/top_level.txt,sha256=ZJ6MyeGnAyGCR7d6h6umeOAeDU0Qv-lmOeoRko0tsEI,20
+az_migrate_dep_visu-0.1.0.dist-info/RECORD,,
