@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+discord/ext/localization/__init__.py
+discord/ext/localization/errors.py
+discord/ext/localization/localization.py
+discord_localization.egg-info/PKG-INFO
+discord_localization.egg-info/SOURCES.txt
+discord_localization.egg-info/dependency_links.txt
+discord_localization.egg-info/requires.txt
+discord_localization.egg-info/top_level.txt
+tests/test.py
