@@ -1,0 +1,21 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load netbox_themes_template_filters %}
+
+{% block head %}
+   {{ block.super }}
+   <style>
+     {{ '' | return_custom_css  }}
+   </style>
+{% endblock %}
+{% block javascript %}
+   {{ block.super }}
+   <script>
+     const themeName = "{{ '' | theme_name }}";
+     const baseThemeName = "{{ '' | return_base_theme }}";
+     if (themeName != 'default') { 
+       localStorage.setItem("netbox-color-mode", baseThemeName);
+       console.log(`Active theme: ${themeName}, base theme ${baseThemeName}`);
+     };
+   </script>
+{% endblock %}
