@@ -1,0 +1,37 @@
+# Temp files
+.DS_Store
+*~
+buck-out/
+
+# Compiled files
+.venv/
+__pycache__/
+.*cache/
+
+# Distribution / packaging
+/dist/
+
+# Tests and coverage
+/data/
+/node_modules/
+
+# docs
+/docs/api/generated/
+/docs/_build/
+*.zip
+
+# Downloaded data
+/data/
+docs/*data/*
+docs/*params/*
+/params/
+
+# Plots
+/plots/
+docs/*plots*
+
+# ipynb checkpoints if generated anywhere
+*ipynb_checkpoints*
+
+# Model params if generated
+*.pth
