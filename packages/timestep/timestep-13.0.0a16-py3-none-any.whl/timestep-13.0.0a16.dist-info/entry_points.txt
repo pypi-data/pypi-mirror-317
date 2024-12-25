@@ -1,0 +1,3 @@
+[console_scripts]
+timestep=timestep.main:typer_app
+
