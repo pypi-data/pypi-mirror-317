@@ -1,0 +1,6 @@
+numpy
+scipy
+faiss-cpu
+networkx
+datasketch
+statsmodels
