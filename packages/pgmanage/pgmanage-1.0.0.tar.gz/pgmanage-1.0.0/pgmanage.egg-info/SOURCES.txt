@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+package/__init__.py
+package/connect.py
+package/connect_async.py
+package/dbtool.py
+package/test.py
+pgmanage.egg-info/PKG-INFO
+pgmanage.egg-info/SOURCES.txt
+pgmanage.egg-info/dependency_links.txt
+pgmanage.egg-info/requires.txt
+pgmanage.egg-info/top_level.txt
+test/__init__.py
+test/main.py
