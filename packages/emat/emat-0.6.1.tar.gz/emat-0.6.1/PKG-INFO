@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: emat
+Version: 0.6.1
+Summary: Add a short description here
+Author-email: Jeff Newman <jeff@driftless.xyz>
+Requires-Python: ==3.10.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2,>=1.23
+Requires-Dist: pandas<2,>=1.5
+Requires-Dist: scipy<1.12,>=1.9
+Requires-Dist: scikit-learn<1.2,>=1.1.2
+Requires-Dist: appdirs>=1.4.3
+Requires-Dist: matplotlib>=3.0.1
+Requires-Dist: seaborn>=0.12
+Requires-Dist: pydot
+Requires-Dist: graphviz
+Requires-Dist: plotly>=4.14
+Requires-Dist: kaleido==0.2.1
+Requires-Dist: ipywidgets>=8.0.2
+Requires-Dist: joblib>=1.2
+Requires-Dist: dask[dataframe]>=1.0
+Requires-Dist: distributed>=1.25
+Requires-Dist: cloudpickle>=0.6.1
+Requires-Dist: ipykernel>=5.1
+Requires-Dist: jupyter_contrib_nbextensions>=0.4.0
+Requires-Dist: jupyter
+Requires-Dist: notebook
+Requires-Dist: pytest>=4.0.1
+Requires-Dist: pytest-regressions
+Requires-Dist: pyscaffold
+Requires-Dist: ipyparallel
+Requires-Dist: pyzmq
+Requires-Dist: platypus-opt<1.3
+Requires-Dist: altair
+Requires-Dist: salib
+Requires-Dist: sqlalchemy
+Requires-Dist: webcolors
+Requires-Dist: datashader
+Requires-Dist: boto3
+Requires-Dist: addicty
+Requires-Dist: yamllint
+Requires-Dist: sphinx
+Requires-Dist: pygments>=2.2.0
+Requires-Dist: docutils>=0.14
+Requires-Dist: sphinx_rtd_theme
+Requires-Dist: sphinxcontrib-restbuilder
+Requires-Dist: nbsphinx
+Requires-Dist: jupyter_sphinx
+Requires-Dist: packaging
+Requires-Dist: jupytext
+Requires-Dist: statsmodels
+Provides-Extra: dev
+Requires-Dist: pytest>=4.0.1; extra == "dev"
+Requires-Dist: pytest-regressions; extra == "dev"
+
+# TMIP-EMAT: Exploratory Modeling and Analysis Tool
+
+TMIP-EMAT is a *methodological approach* to exploratory modeling and analysis.
+It provides a window to rigorous analytical methods for handling uncertainty
+and making well informed decisions using travel forecasting models of all
+types. It is designed to integrate with an existing transportation model or
+tool to perform exploratory analysis of a range of possible scenarios.
+
+The methodologies demonstrated in this toolset build on and extend the
+capabilities of the [EMA Workbench](https://github.com/quaquel/EMAworkbench).
+
+Documentation for this tool is published at 
+[http://tmip-emat.github.io](http://tmip-emat.github.io).
