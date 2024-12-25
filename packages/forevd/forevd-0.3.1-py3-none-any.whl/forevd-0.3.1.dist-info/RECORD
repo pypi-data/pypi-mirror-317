@@ -1,0 +1,13 @@
+forevd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forevd/__main__.py,sha256=jwCLjP08tWFOCCeK4Sh2aG5fzqFC-59tB3RhYdtaA-o,6748
+forevd/apache/__init__.py,sha256=suVkPAVeJvqpETDn_AlWhC1_TFiGT2m5B-arsOaNhys,1544
+forevd/apache/httpd.conf,sha256=uzTrYuzsW8F1TxUQMcufiJSSt_On38jnxn2YRMtTZRk,5388
+forevd/app.py,sha256=fXwiA2dlVym5wAB-QXSvFkC4dEcC3o5BxrZ9CDFBg4Y,216
+forevd/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forevd/resources/logging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forevd/resources/logging/cli.conf,sha256=FKSmbDtYcBH7wupwYf2PNAhAmwLi-1rN2eh8pyCaHms,387
+forevd-0.3.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+forevd-0.3.1.dist-info/METADATA,sha256=KFXm7LxNatZOGrvVsluA8S_x35djnuIoMGWkFptIcrg,6398
+forevd-0.3.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+forevd-0.3.1.dist-info/entry_points.txt,sha256=3NtBV6gqTWHZT9rODm5TLAq5xEgUG9r8DRL6hcJvKfE,47
+forevd-0.3.1.dist-info/RECORD,,
