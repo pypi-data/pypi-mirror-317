@@ -1,0 +1,8 @@
+Django>=4.2
+djangorestframework>=3.14.0
+
+[test]
+bandit>=1.7.5
+black>=23.10.1
+flake8>=6.1.0
+isort>=5.12.0
