@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hmxlabs.hplx"
+version = "0.1.0"
+authors = [
+  { name="HMx Labs", email="comms@hmxlabs.uk" }
+]
+description = "This project is a collection of tools to help use the HPL benchmark. See https://github.com/hmxlabs/hplx/blob/main/README.md for more information."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Intended Audience :: Developers"
+]
+dependencies = [
+    "psutil ~= 5.9",
+    "py-cpuinfo == 9.0.0"
+]
+[project.scripts]
+sysinfo = "hplx:main"
+
+[project.entry-points."hmxlabs.hplx"]
+sysinfo = "hmxlabs.hplx.hplx:main"
+
+[project.urls]
+"Homepage" = "https://github.com/hmxlabs/hplx/"
+"HMxLabs" = "http://hmxlabs.io"
