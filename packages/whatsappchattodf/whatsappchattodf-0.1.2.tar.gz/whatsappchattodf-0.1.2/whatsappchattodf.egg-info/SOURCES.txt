@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tests/__init__.py
+tests/test_whatsappchattodf.py
+whatsappchattodf/__init__.py
+whatsappchattodf/whatsappchattodf.py
+whatsappchattodf.egg-info/PKG-INFO
+whatsappchattodf.egg-info/SOURCES.txt
+whatsappchattodf.egg-info/dependency_links.txt
+whatsappchattodf.egg-info/entry_points.txt
+whatsappchattodf.egg-info/requires.txt
+whatsappchattodf.egg-info/top_level.txt
