@@ -1,0 +1,5 @@
+setup.py
+myfetian20.egg-info/PKG-INFO
+myfetian20.egg-info/SOURCES.txt
+myfetian20.egg-info/dependency_links.txt
+myfetian20.egg-info/top_level.txt
