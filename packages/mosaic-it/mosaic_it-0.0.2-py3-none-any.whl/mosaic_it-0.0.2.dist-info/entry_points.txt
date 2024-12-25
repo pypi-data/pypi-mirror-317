@@ -1,0 +1,2 @@
+[console_scripts]
+mosaic-it = mosaic_it:app
