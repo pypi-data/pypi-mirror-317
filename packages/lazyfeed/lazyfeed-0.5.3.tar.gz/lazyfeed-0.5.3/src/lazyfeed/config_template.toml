@@ -1,0 +1,46 @@
+# Welcome! This is the configuration file for lazyfeed.
+
+# Available themes include:
+# - "dracula"
+# - "textual-dark"
+# - "textual-light"
+# - "nord"
+# - "gruvbox"
+# - "catppuccin-mocha"
+# - "textual-ansi"
+# - "tokyo-night"
+# - "monokai"
+# - "flexoki"
+# - "catppuccin-latte"
+# - "solarized-light"
+theme = "dracula"
+
+# If set to true, all items will be marked as read when quitting the application.
+auto_read = false
+
+# If set to true, items will be fetched at start.
+auto_load = false
+
+# If set to false, items will be marked as read without asking for confirmation.
+confirm_before_read = true
+
+# Specifies by which attribute the items will be sorted.
+sort_by = "published_at" # "title", "is_read", "published_at"
+
+# Specifies the sort order.
+sort_order = "ascending" # "descending", "ascending"
+
+[client]
+# Maximum times (in seconds) to wait for all request operations.
+timeout = 300
+
+# Timeout for establishing a connection.
+connect_timeout = 10
+
+[client.headers]
+# This section defines the HTTP headers that will be sent with
+# each request.
+# User-Agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+# Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8"
+# Accept-Language = "en-US,en;q=0.6"
+# Accept-Encoding = "gzip,deflate,br,zstd"
