@@ -1,0 +1,8 @@
+README.md
+setup.py
+gitbi/__init__.py
+gitbi/git_bisector.py
+gitbi.egg-info/PKG-INFO
+gitbi.egg-info/SOURCES.txt
+gitbi.egg-info/dependency_links.txt
+gitbi.egg-info/top_level.txt
