@@ -1,0 +1,2 @@
+[hexdoc]
+hexical = hexdoc_hexical._hooks:HexicalPlugin

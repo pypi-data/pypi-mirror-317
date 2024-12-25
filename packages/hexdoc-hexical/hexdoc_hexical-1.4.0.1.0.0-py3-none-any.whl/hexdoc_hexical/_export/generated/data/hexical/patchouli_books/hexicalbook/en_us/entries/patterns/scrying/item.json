@@ -1,0 +1,37 @@
+{
+	"name": "hexical.page.item.title",
+	"icon": "minecraft:glow_berries",
+	"category": "hexical:scrying",
+	"advancement": "hexcasting:root",
+	"pages": [
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:count_stack",
+			"anchor": "hexical:count_stack",
+			"input": "item entity",
+			"output": "number",
+			"text": "hexical.page.count_stack.summary"
+		}, {
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:count_max_stack",
+			"anchor": "hexical:count_max_stack",
+			"input": "identifier",
+			"output": "number",
+			"text": "hexical.page.count_max_stack.summary"
+		}, {
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:damage_stack",
+			"anchor": "hexical:damage_stack",
+			"input": "item entity",
+			"output": "number",
+			"text": "hexical.page.damage_stack.summary"
+		}, {
+			"type": "hexcasting:pattern",
+			"op_id": "hexical:damage_max_stack",
+			"anchor": "hexical:damage_max_stack",
+			"input": "identifier",
+			"output": "number",
+			"text": "hexical.page.damage_max_stack.summary"
+		}
+	]
+}

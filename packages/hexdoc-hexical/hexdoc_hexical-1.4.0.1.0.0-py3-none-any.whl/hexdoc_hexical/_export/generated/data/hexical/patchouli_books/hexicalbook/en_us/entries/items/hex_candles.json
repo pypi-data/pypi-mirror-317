@@ -1,0 +1,16 @@
+{
+	"name": "hexical.page.hex_candle.title",
+	"icon": "hexical:hex_candle",
+	"advancement": "hexcasting:root",
+	"category": "hexcasting:items",
+	"sortnum": 4,
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "hexical.page.hex_candle.0"
+		}, {
+			"type": "patchouli:crafting",
+			"recipe": "hexical:hex_candle"
+		}
+	]
+}
