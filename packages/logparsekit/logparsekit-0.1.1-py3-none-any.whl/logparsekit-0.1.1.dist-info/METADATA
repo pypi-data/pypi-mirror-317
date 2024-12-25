@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: logparsekit
+Version: 0.1.1
+Summary: sdk log parse kits
+Project-URL: Homepage, https://bitbucket.agoralab.co/users/lidapeng_agora.io/repos/logparsekit/browse
+Project-URL: Issues, https://bitbucket.agoralab.co/users/lidapeng_agora.io/repos/logparsekit/browse
+Author-email: lidapeng <lidapeng@shengwan.cn>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pandas
+Requires-Dist: tabulate
+Description-Content-Type: text/markdown
+
+# logparsekit
+
+todo:.....
