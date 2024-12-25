@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: Pycodz
+Version: 3.3
+Summary: - Simple Library with Python 3
+Home-page: https://github.com/A-X-1/test-lib
+Author: AlEx
+Author-email: alexcrow221@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<div align="center"> <img src="https://www2.0zz0.com/2024/12/04/20/801153888.png" alt="Pycodz" width="128"> <h1>Pycodz</h1> <b>A library for Python developers.</b> <b> <a href="https://z44o.github.io"> <br> <li> MY </li> </br> </a> </div>
+
+<br>
+
+<div align="center"> <a href="https://pypi.org/project/Pycodz/"> <img src="https://img.shields.io/pypi/v/tgram.svg?logo=python&logoColor=%23959DA5&label=pypi&labelColor=%23282f37" alt="PyPI"> </a> <a href="https://t.me/Pycodz"> <img src="https://img.shields.io/badge/Telegram-Channel-blue.svg?logo=telegram" alt="Telegram Channel"> </a> <a href="https://t.me/PyChTz"> <img src="https://img.shields.io/badge/Telegram-Group-blue.svg?logo=telegram" alt="Telegram Group"> </a> <a href="https://t.me/DevZ44d"> <img src="https://img.shields.io/badge/Telegram-Owner-red.svg?logo=telegram" alt="Telegram Owner"> </a> </div>
+
+
+##  Installation 🚀
+
+### Via PyPI (Recommended)
+```sh
+pip install Pycodz -U
+```
+
+
+## 🚀 Quick Start
+
+## blaclboxai 🤖
+- This Method for **[BlackBoxai](https://blackboxai.com)**.
+<details>
+    <summary>
+     Modules BlackBox >_< .
+    </summary>
+
+<li> Languages Programming .
+<li> GitHub .
+
+</details>
+
+```python
+from Pycodz.ai import blackboxai
+bot = blackboxai()
+request = input(" - Type Your request : ")
+response = bot.chat(
+    message = request ,
+    module = ""
+)
+print(response)
+```
+
+## Image Generation 🎨
+- This Method for Generation Images .
+
+```python
+from Pycodz.imager import Imager
+img = Imager()
+request = input(" - Type Your request : ")
+get_img = img.generate(
+    prompt = request,
+    amount = 1,
+    stream = True
+)
+img.save(get_img)
+```
+
+## CodeConvert ai 🎯
+- This Method For ai . response from **[CodeConvert ai](https://codeconvert.ai)**
+<details>
+    <summary>
+     Modules CodeConvert >_< .
+    </summary>
+
+<li> Languages Programming .
+</details>
+
+- u can know Modules from **[Here](https://codeconvert.ai)**
+```python
+from Pycodz.ai import CodeConvert
+bot = CodeConvert()
+request = input(" - Type Your request : ")
+response = bot.Convert(
+    message = request ,
+    module = ""
+)
+print(response)
+```
+
+- [x] [Python 3](https://python.org)
+
+## 💬 Help & Support
+- For general questions and help, join our **[Telegram chat](https://t.me/PyChTz)**.
+- Follow updates via the **[Telegram Channel](https://t.me/PyQZe)**.
