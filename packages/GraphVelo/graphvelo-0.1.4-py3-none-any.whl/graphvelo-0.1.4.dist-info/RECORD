@@ -1,0 +1,17 @@
+graphvelo/.DS_Store,sha256=Cz0BssdQfwrJsStv2gJwyGFVGTVPGf73U5Ki5KvYFeo,6148
+graphvelo/__init__.py,sha256=agNNeQRnCX_q7PzFFzvXMXrQVL9gaPQXLHs_aYhkP18,198
+graphvelo/gam.py,sha256=IiRm_-XLLpXCI8MYJ5vn7axBu0XR1iKrx2vR5veaA7M,8920
+graphvelo/graph_velocity.py,sha256=UBE-pH_zIY1W0ii-l3Gi6zgGhNc7M_q4xy0CFWSpgFY,14952
+graphvelo/kernel_density_smooth.py,sha256=n8HwR-iqnGs8E5RlBEUn3617utPmFJX33NKkQwv3bYI,23903
+graphvelo/metrics.py,sha256=nSmA_bCiGkwx577hN-L810xK8p29rUcySL61a2W2iSQ,4287
+graphvelo/mo.py,sha256=-zijUInt8AYGCoI5J-LHrmfixPxdJJkBDnwDCdJvock,25552
+graphvelo/plot.py,sha256=PDE0xBwxVSOOqZ8BVrApos0QMhQCLAi3YUvsO7OKyZU,20568
+graphvelo/tangent_space.py,sha256=Psy_ZIp_KzLEtRGx6uxCF_sNWrZuSaKU_mKBl46UEeU,4276
+graphvelo/utils.py,sha256=y15pCaem4lUD-i3nHT2bf430oITcAmXsRAe0mdWLlwQ,17233
+graphvelo/datasets/__init__.py,sha256=rYNQ3v61umUPU4Z8HC6xwo0Ef6wqQiZuYHV8jBEQgN4,93
+graphvelo/datasets/_datasets.py,sha256=xRl2RAbJtM6b3SDmcLKgTMNN2otQ2Y5HVFYwfh9sF8A,1631
+graphvelo-0.1.4.dist-info/entry_points.txt,sha256=Zfde0xY5K2hT07SzLpJBfiyuu_hv3Hapx99gAJijzQg,51
+graphvelo-0.1.4.dist-info/LICENSE,sha256=2ydx328wmzOrUR9kicXkKxv0EOFCbysKGPuKdHQpmfw,1507
+graphvelo-0.1.4.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+graphvelo-0.1.4.dist-info/METADATA,sha256=15kPCO2hOeTRI7BrpXuFmoNn6W5Lamx9fO4cA1gl-B0,1826
+graphvelo-0.1.4.dist-info/RECORD,,
