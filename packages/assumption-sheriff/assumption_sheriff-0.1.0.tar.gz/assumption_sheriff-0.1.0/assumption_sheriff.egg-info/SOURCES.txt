@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+assumption_sheriff/__init__.py
+assumption_sheriff/assumption_sheriff.py
+assumption_sheriff.egg-info/PKG-INFO
+assumption_sheriff.egg-info/SOURCES.txt
+assumption_sheriff.egg-info/dependency_links.txt
+assumption_sheriff.egg-info/requires.txt
+assumption_sheriff.egg-info/top_level.txt
