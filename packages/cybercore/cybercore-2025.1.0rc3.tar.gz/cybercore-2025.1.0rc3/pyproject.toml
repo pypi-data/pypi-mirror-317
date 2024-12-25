@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "seversion"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["cyberCore", "cyberCore.templates"]  # Packages to include
+exclude = []  # Exclude specific files or dirs
+
+[project]
+name = "cybercore"
+dynamic = ["version"]
+description = "High-performance secure core framework for scalable, reliable applications"
+readme = "ReadMe.md"
+requires-python = ">=3.10"
+license = {file = "License.md"}
+authors = [
+    { name = "Cybernetic Innovations", email = "github@cyberneticinnovations.com" }
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "PyYAML~=6.0",
+    "cryptography~=44.0.0",
+    "loguru~=0.7.3",
+    "pydantic~=1.10.7",
+    "requests~=2.32.3",
+    "urllib3~=2.3.0",
+    "beautifulsoup4~=4.13.0b2"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "cyberCore.__version__"}
