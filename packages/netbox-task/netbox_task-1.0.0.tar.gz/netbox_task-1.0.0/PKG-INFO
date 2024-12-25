@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: netbox-task
+Version: 1.0.0
+Summary: Plugin to Excute AWX Task from Netbox
+Author-email: huytm <manhhuy173@gmail.com>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/hocchudong/netbox-task
+Project-URL: Bug Tracker, https://github.com/hocchudong/netbox-task/issues
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.10.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: build
+Requires-Dist: build==1.2.1; extra == "build"
+Requires-Dist: setuptools==70.3.0; extra == "build"
+Requires-Dist: twine==5.1.1; extra == "build"
+Provides-Extra: tools
+Requires-Dist: ruff==0.5.1; extra == "tools"
+
+# netbox-task
+Plugin dùng netbox để thực thi các nhiệm vụ/yêu cầu cần thiết qua ansible playbook hoặc script..
+
+## Prerequisite
+
+Netbox >= 4.0
+
+## Description
+
+Lets say i want to run some task for update infomation from VirtualMachine that be in our Hypervisor to the Netbox
+or leverage exist ansible playbook to perform some simple action such as install package, reboot server ...
+
+![Flow](images/flow.png)
+
+## How to install 
+
+Install this plugin from pypi
+
+```
+cd /opt/netbox
+source venv/bin/activate
+pip install netbox-task
+```
+
+Enable the plugin in `/opt/netbox/netbox/netbox/configuration.py`
+
+```
+PLUGINS = [
+   'netbox_task'
+]
+```
+
+Migrate the model to create newly databases
+
+```
+python netbox/manage.py migrate netbox_task
+systemctl restart netbox
+```
+
+## Known Isssues
+- The current version only support with Netbox VirtualMachine and only some default parameter will be passed into the request.
+- There is no asynchronous processing, because task status that depend on AWX runtime. 

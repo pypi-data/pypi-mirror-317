@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+netbox_task/__init__.py
+netbox_task/navigation.py
+netbox_task/template_content.py
+netbox_task/urls.py
+netbox_task.egg-info/PKG-INFO
+netbox_task.egg-info/SOURCES.txt
+netbox_task.egg-info/dependency_links.txt
+netbox_task.egg-info/requires.txt
+netbox_task.egg-info/top_level.txt
