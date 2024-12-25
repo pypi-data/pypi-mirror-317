@@ -1,0 +1,2 @@
+[console_scripts]
+lheplot = lheplot.lheplot:main
