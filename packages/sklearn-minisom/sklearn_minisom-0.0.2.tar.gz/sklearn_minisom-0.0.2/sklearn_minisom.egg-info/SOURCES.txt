@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+sklearn_minisom.py
+sklearn_minisom.egg-info/PKG-INFO
+sklearn_minisom.egg-info/SOURCES.txt
+sklearn_minisom.egg-info/dependency_links.txt
+sklearn_minisom.egg-info/requires.txt
+sklearn_minisom.egg-info/top_level.txt
