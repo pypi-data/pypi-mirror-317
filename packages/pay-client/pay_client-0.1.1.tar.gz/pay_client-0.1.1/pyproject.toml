@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pay-client"
+version = "0.1.1"
+description = ""
+authors = ["NGYF <1605146531@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = ">=2.0,<3.0.0"
+alipay-sdk-python = "^3.7.345"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-mock = "^3.14.0"
+coverage = "^7.6.9"
+pytest-randomly = "^3.16.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
