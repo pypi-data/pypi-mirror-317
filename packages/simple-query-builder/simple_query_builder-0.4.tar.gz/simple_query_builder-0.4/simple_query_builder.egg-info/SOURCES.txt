@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+simple_query_builder/__init__.py
+simple_query_builder/database.py
+simple_query_builder/example.py
+simple_query_builder/querybuilder.py
+simple_query_builder.egg-info/PKG-INFO
+simple_query_builder.egg-info/SOURCES.txt
+simple_query_builder.egg-info/dependency_links.txt
+simple_query_builder.egg-info/top_level.txt
