@@ -1,0 +1,14 @@
+.gitignore
+MANIFEST.in
+README.md
+ompl_benchmark_plotter.py
+pytest.ini
+requirements.txt
+setup.py
+config/cmr10.ttf
+config/default.json
+src/ompl_benchmark_plotter.egg-info/PKG-INFO
+src/ompl_benchmark_plotter.egg-info/SOURCES.txt
+src/ompl_benchmark_plotter.egg-info/dependency_links.txt
+src/ompl_benchmark_plotter.egg-info/requires.txt
+src/ompl_benchmark_plotter.egg-info/top_level.txt
