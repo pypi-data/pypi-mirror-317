@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: mm-btc
+Version: 0.2.0
+Requires-Python: >=3.12
+Requires-Dist: bitcoinlib~=0.7.1
+Requires-Dist: bit~=0.8.0
+Requires-Dist: hdwallet~=3.2.0
+Requires-Dist: mm-std~=0.1.9
+Requires-Dist: mnemonic>=0.21
