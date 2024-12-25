@@ -1,0 +1,2 @@
+[console_scripts]
+jira-field-sync = jira_field_sync.updater:main
