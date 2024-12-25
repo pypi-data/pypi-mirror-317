@@ -1,0 +1,10 @@
+pyicu_wheels-2.14rc1.dist-info/RECORD,,
+pyicu_wheels-2.14rc1.dist-info/WHEEL,sha256=5kVy0KFNJFuAb22T9TBLonGMv_FJuVf1LObbqFr0Elc,103
+pyicu_wheels-2.14rc1.dist-info/METADATA,sha256=pPPzL4XxFiTO0kVl4-uV3X4DMTre_6BiYjL0Z8gmWm0,1663
+pyicu_wheels-2.14rc1.dist-info/licenses/LICENSE.txt,sha256=B05uMshqTA74s-0ltyHKI6yoPfJ3zYgQbvcXfDVGFf8,10280
+icu/__init__.py,sha256=NWwSqUo-rXGl7BpS8x80YmVw8kh1pfhjqRiwMsPZPc8,1589
+icu/_icu_.cpython-38-darwin.so,sha256=E2nc50B744AoBQFD25MKKGuVfwL-t_2_lIKqj-8LKd0,1602016
+icu/__about__.py,sha256=o0j-nOS66GBB9JTflBWzxB0XUegVoXRfSq5fTla3A0A,137
+icu/.dylibs/libicuuc.76.1.dylib,sha256=XBw-91xQJANNZCvM6CVoNQy0Jjb67xeVMQIBYk9n3c8,1838240
+icu/.dylibs/libicudata.76.1.dylib,sha256=1xAtA4KyF_M_l4po03zGPUrs4F-o5ww3VAUSG1yXz5g,32134224
+icu/.dylibs/libicui18n.76.1.dylib,sha256=-rUWSIm1XS569r0pEty9ynpc4TQ1RypJ6PwxmITxIAY,3146032
