@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: xled_plus
+Version: 0.1.37
+Summary: Addons to the XLED package for controling Twinkly LED lights
+Home-page: https://github.com/Anders-Holst/xled_plus
+Author: Anders Holst
+Author-email: anders.holst@ri.se
+License: MIT
+Keywords: xled,twinkly,light-effects
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+License-File: LICENSE
+Requires-Dist: xled
+
+
+XLED Plus provides addons to the XLED package. Whereas XLED provides a
+python interface to Twinkly led lights, XLED Plus provides classes and
+functions to make it easier to produce various effects on the lights
+entirely from python: still or animated, simple or advanced,
+prerecorded or created in real time.
