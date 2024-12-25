@@ -1,0 +1,6 @@
+setup.py
+subsys_client/__init__.py
+subsys_client.egg-info/PKG-INFO
+subsys_client.egg-info/SOURCES.txt
+subsys_client.egg-info/dependency_links.txt
+subsys_client.egg-info/top_level.txt

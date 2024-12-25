@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: subsys_client
+Version: 0.2
+Summary: The subsys_client Python library facilitates communication and management of subsystems or APIs through a client interface, typically for distributed systems.
+Home-page: UNKNOWN
+Author: patschu200
+Author-email: patschu@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
+UNKNOWN
+
