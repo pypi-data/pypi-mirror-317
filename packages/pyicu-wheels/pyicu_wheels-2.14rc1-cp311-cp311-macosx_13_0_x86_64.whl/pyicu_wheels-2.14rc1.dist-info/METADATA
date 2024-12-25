@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: pyicu-wheels
+Version: 2.14rc1
+Summary: Wheels for PyICU
+Project-URL: Documentation, https://github.com/xoudini/pyicu#readme
+Project-URL: Issues, https://github.com/xoudini/pyicu/issues
+Project-URL: Source, https://github.com/xoudini/pyicu
+License-Expression: Apache-2.0
+License-File: LICENSE.txt
+Keywords: i18n,icu,wheel
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Internationalization
+Classifier: Topic :: Software Development :: Localization
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# pyicu-wheels
+
+[![PyPI - Version](https://img.shields.io/pypi/v/pyicu-wheels.svg)](https://pypi.org/project/pyicu-wheels)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyicu-wheels.svg)](https://pypi.org/project/pyicu-wheels)
+
+---
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install pyicu-wheels
+```
+
+## License
+
+`pyicu-wheels` is distributed under the terms of the [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) license.
+
+See the [licenses](./licenses/README.md) directory for third-party licenses.
