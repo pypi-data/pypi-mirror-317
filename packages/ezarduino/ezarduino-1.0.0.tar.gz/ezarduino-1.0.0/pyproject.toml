@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=75.6"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic=["license"]
+name = "ezarduino"
+version = "1.0.0"
+authors = [
+  { name="Crate", email="crate.arg@proton.me" },
+]
+description = "A library designed to facilitate communication between Python and Arduino devices."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyserial>=3.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/cr4t3/ezarduino"
+Issues = "https://github.com/cr4t3/ezarduino/issues"

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ezarduino/__init__.py
+ezarduino/errors.py
+ezarduino/serial.py
+ezarduino.egg-info/PKG-INFO
+ezarduino.egg-info/SOURCES.txt
+ezarduino.egg-info/dependency_links.txt
+ezarduino.egg-info/requires.txt
+ezarduino.egg-info/top_level.txt
