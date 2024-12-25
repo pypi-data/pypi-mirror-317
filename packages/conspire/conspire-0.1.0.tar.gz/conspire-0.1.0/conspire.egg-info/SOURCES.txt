@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+conspire/__init__.py
+conspire.egg-info/PKG-INFO
+conspire.egg-info/SOURCES.txt
+conspire.egg-info/dependency_links.txt
+conspire.egg-info/top_level.txt

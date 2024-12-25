@@ -1,0 +1,9 @@
+[project]
+authors = [
+  {email = 'mrbuche@sandia.gov'},
+  {name = 'Michael R. Buche'},
+]
+description = 'c o n s p i r e'
+license = {file = 'LICENSE'}
+name = 'conspire'
+version = '0.1.0'
