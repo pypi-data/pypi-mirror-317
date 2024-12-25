@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: repo-reasoner
+Version: 0.0.3
+Summary: Command-line filter for GitHub repositories that contain "samples", instead of real project or framework or library
+Home-page: https://github.com/dzhovi/repositories-reasoner
+Author: Vakhidov Dzhovidon
+Author-email: asunabestwaifu1@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Repositories Reasoner
+
+[![CI](https://github.com/dzhovi/repositories-reasoner/actions/workflows/ci.yml/badge.svg)](https://github.com/dzhovi/repositories-reasoner/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/dzhovi/repositories-reasoner/badge.svg?branch=main)](https://coveralls.io/github/dzhovi/repositories-reasoner?branch=main)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/dzhovi/repositories-reasoner/blob/main/LICENSE.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/dzhovi/repositories-reasoner/badge.svg)](https://snyk.io/test/github/dzhovi/repositories-reasoner)
