@@ -1,0 +1,9 @@
+kivy_find_recipe_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kivy_find_recipe_package/findmeals.kv,sha256=kg0LCooG3l6lytsYBSHte7DnZ4M2oIPcUTxNne1LXBY,4102
+kivy_find_recipe_package/main.py,sha256=AXnrloXnstEPRFYEhqow1OpimUEa1k3LAC4ex1r_u5M,3740
+kivy_find_recipe_package-1.1.dist-info/LICENSE,sha256=CUu0y5oBBHvNj4cirMYPDQ5ew0YHxc_ndchH4gz85UI,1070
+kivy_find_recipe_package-1.1.dist-info/METADATA,sha256=ZsraMgALalyj31s8Rt_5oh-mH3ghiVvvgwNV4-9rbko,208
+kivy_find_recipe_package-1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kivy_find_recipe_package-1.1.dist-info/entry_points.txt,sha256=LqhNh4grL1Z-OFCMfQqoN4mT7YEhE-L8UCQ51sBWH10,81
+kivy_find_recipe_package-1.1.dist-info/top_level.txt,sha256=tqrekgEwSAVulg9KBBV7ne7xzDjEKixv3qJB4eAMuLc,25
+kivy_find_recipe_package-1.1.dist-info/RECORD,,
