@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: model_measure
+Version: 0.0.1
+Summary: Machine learning model measurement
+Author: Dhivya Nagasubramanian
+Author-email: nagas021@alumni.umn.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+**Author: Dhivya Nagasubramanian**
+
+**Purpose:**
+
+The purpose of this package is to provide an efficient method for calculating and analyzing cumulative event rates, cumulative non-event rates, and the Kolmogorov-Smirnov (KS) statistic in datasets. It is particularly useful for evaluating the performance of predictive models in fields like credit scoring, risk analysis, and marketing campaigns, where distinguishing between "events" (e.g., defaults, purchases, etc.) and "non-events" is essential.
+
+This package automates the following key calculations:
+
+**Cumulative Event and Non-Event Rates:** It computes cumulative event and non-event rates over time or samples. These rates are critical for evaluating the predictive model's ability to distinguish between events and non-events.
+
+**Cumulative Random Rate:** It tracks the cumulative rate of random events, allowing for comparison between actual events and a random baseline.
+
+**Kolmogorov-Smirnov (KS) Statistic:** The package computes the KS statistic, which measures the maximum difference between the cumulative event rate and the cumulative non-event rate. This statistic is a key indicator of model discrimination, with higher values indicating better model performance.
+
+**Lift:**  The Lift metric measures the improvement in predictive accuracy over random selection. It quantifies how much more likely an event is to occur in a given segment of a population compared to the average likelihood across the entire population. Lift is crucial for evaluating the effectiveness of predictive models in targeting high-probability events.
+
+**Population Stability Index (PSI):**  PSI is a tool to monitor the stability of model distributions over time or between different segments. It quantifies shifts in the distribution of a target variable (e.g., predicted probabilities) between different time periods or groups, helping analysts assess whether the model remains relevant or if recalibration is necessary.
+
+---------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+**Requirements packages:**
+
+**NumPy** - Adds support for large, multi-dimensional arrays, matrices and high-level mathematical functions to operate on these arrays. <br>
+**random**  - generate random numbers with in the set limits.  <br>
+**pandas**  -  Dataframe utility. <br>
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+**Installation Instructions:**
+
+pip install model-measure
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------<br>
+**How to use it :**
+
+There are two main functions of this framework.
+
+**1. generate_propensity_score_dataset()**
+
+**2. marketing_measure(data,prob,ID,target, i_percent,bins)**
+
+ 
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------<br>
+
+**How to test the package with out data ?** 
+
+**Step1** - Run with  "generate_propensity_score_dataset"  
+
+eg: df_example = generate_random_data().
+
+**Step2** - Run marketing_measure(data,prob,ID,target, i_percent,bins)
+
+eg: dfresult =  marketing_measure(data,propensity_score,customer_id,target, 0.1,10)
+   
