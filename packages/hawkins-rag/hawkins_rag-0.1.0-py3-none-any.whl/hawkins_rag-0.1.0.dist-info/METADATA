@@ -1,0 +1,127 @@
+Metadata-Version: 2.4
+Name: hawkins_rag
+Version: 0.1.0
+Summary: A Python package for building RAG systems with HawkinsDB and multiple data source integrations
+Project-URL: Documentation, https://github.com/harishsg993010/HawkinsRAG/docs
+Project-URL: Source, https://github.com/harishsg993010/HawkinsRAG
+Author: HawkinsRAG Team
+License: MIT
+License-File: LICENSE
+Keywords: ai,embeddings,hawkinsdb,llm,rag,search
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Requires-Dist: atlassian-python-api>=3.41.16
+Requires-Dist: beautifulsoup4>=4.12.3
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: deepgram-sdk>=3.7.7
+Requires-Dist: discord-py>=2.4.0
+Requires-Dist: docx2txt>=0.8
+Requires-Dist: dropbox>=12.0.2
+Requires-Dist: feedparser>=6.0.11
+Requires-Dist: flask-login>=0.6.3
+Requires-Dist: google-api-python-client>=2.156.0
+Requires-Dist: google-auth-httplib2>=0.2.0
+Requires-Dist: google-auth-oauthlib>=1.2.1
+Requires-Dist: google-auth>=2.37.0
+Requires-Dist: hatchling>=1.27.0
+Requires-Dist: hawkinsdb>=1.0.1
+Requires-Dist: lxml>=5.3.0
+Requires-Dist: mysql-connector-python>=9.1.0
+Requires-Dist: notion-client>=2.3.0
+Requires-Dist: oauthlib>=3.2.2
+Requires-Dist: openai>=1.0.0
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: psycopg2-binary>=2.9.10
+Requires-Dist: pygithub>=2.5.0
+Requires-Dist: pypdf2>=3.0.1
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: reportlab>=4.2.5
+Requires-Dist: requests>=2.32.3
+Requires-Dist: slack-sdk>=3.34.0
+Requires-Dist: tenacity>=9.0.0
+Requires-Dist: trafilatura>=2.0.0
+Requires-Dist: twine>=6.0.1
+Requires-Dist: unstructured[md]>=0.16.11
+Requires-Dist: validators>=0.34.0
+Requires-Dist: xlrd>=2.0.1
+Requires-Dist: youtube-transcript-api>=0.6.3
+Description-Content-Type: text/markdown
+
+# HawkinsRAG
+
+A Python package for building Retrieval-Augmented Generation (RAG) systems with HawkinsDB and multiple data source integrations.
+
+## Features
+- Multiple data source support through specialized loaders
+- Efficient text chunking and embedding
+- Seamless integration with HawkinsDB
+- Flexible configuration options
+- Comprehensive error handling
+
+## Installation
+
+```bash
+pip install hawkins-rag
+```
+
+## Quick Start
+
+```python
+from hawkins_rag import HawkinsRAG
+
+# Initialize RAG system
+rag = HawkinsRAG()
+
+# Load document
+result = rag.load_document("document.txt", source_type="text")
+
+# Query content
+response = rag.query("What is this document about?")
+print(response)
+```
+
+## Supported Data Sources
+
+HawkinsRAG supports multiple data sources through specialized loaders:
+
+- Text files (txt, pdf, docx)
+- Web content (YouTube, webpages)
+- Structured data (JSON, CSV)
+- APIs (GitHub, Gmail, Slack)
+- Databases (MySQL, PostgreSQL)
+- And many more!
+
+## Configuration
+
+```python
+config = {
+    "storage_type": "sqlite",  # or "postgres"
+    "db_path": "hawkins_rag.db",
+    "chunk_size": 500,
+    "loader_config": {
+        "youtube": {
+            "api_key": "YOUR_YOUTUBE_API_KEY"
+        },
+        "github": {
+            "token": "YOUR_GITHUB_TOKEN"
+        }
+    }
+}
+
+rag = HawkinsRAG(config=config)
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Documentation
+
+For detailed documentation, visit [HawkinsRAG Documentation](https://github.com/harishsg993010/HawkinsRAG/docs).
