@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pongjun-notes
+Version: 1.0.1
+Summary: A Django app for managing notes
+Home-page: https://yourwebsite.com
+Author: Your Name
+Author-email: your-email@example.com
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: Django>=3.2
