@@ -1,0 +1,3 @@
+[console_scripts]
+kivy_find_recipe_package = kivy_find_recipe_package.main:main
+

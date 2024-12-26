@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+kivy_find_recipe_package/__init__.py
+kivy_find_recipe_package/findmeals.kv
+kivy_find_recipe_package/main.py
+kivy_find_recipe_package.egg-info/PKG-INFO
+kivy_find_recipe_package.egg-info/SOURCES.txt
+kivy_find_recipe_package.egg-info/dependency_links.txt
+kivy_find_recipe_package.egg-info/entry_points.txt
+kivy_find_recipe_package.egg-info/requires.txt
+kivy_find_recipe_package.egg-info/top_level.txt

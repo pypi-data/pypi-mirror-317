@@ -1,0 +1,3 @@
+include kivy_find_recipe_package/main.py
+include kivy_find_recipe_package/findmeals.kv
+include LICENSE
