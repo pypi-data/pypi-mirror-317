@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dj-polyglot
+Version: 0.11.0
+Home-page: https://github.com/Yeoki-ERP/dj_polyglot
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
+Requires-Dist: Django>=3.2
+Requires-Dist: polib>=1.2.0
+
