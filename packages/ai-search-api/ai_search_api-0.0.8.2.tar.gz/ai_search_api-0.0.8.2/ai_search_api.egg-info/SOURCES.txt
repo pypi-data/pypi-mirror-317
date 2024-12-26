@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+ai_search_api/__init__.py
+ai_search_api/ai_search.py
+ai_search_api/database.py
+ai_search_api/local.py
+ai_search_api/update.py
+ai_search_api/update_database.py
+ai_search_api.egg-info/PKG-INFO
+ai_search_api.egg-info/SOURCES.txt
+ai_search_api.egg-info/dependency_links.txt
+ai_search_api.egg-info/top_level.txt
