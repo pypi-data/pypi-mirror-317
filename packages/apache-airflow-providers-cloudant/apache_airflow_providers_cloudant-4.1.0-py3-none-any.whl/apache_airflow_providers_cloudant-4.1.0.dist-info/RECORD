@@ -1,0 +1,10 @@
+airflow/providers/cloudant/LICENSE,sha256=FFb4jd2AXnOOf7XLP04pQW6jbdhG49TxlGY6fFpCV1Y,13609
+airflow/providers/cloudant/__init__.py,sha256=F7ZU_Vkoi2uUnWIVLu1ojb-cfaHtf4MHkyGvk_--Blo,1495
+airflow/providers/cloudant/cloudant_fake.py,sha256=4hZEYRM4fyJGY2K_Gzpd_5GOAOpsz4I35TVM-GADzHs,1197
+airflow/providers/cloudant/get_provider_info.py,sha256=R6JOd9SzMy400pdNyOzNDajs8LQOzvzrBNO2CQQmtFM,2695
+airflow/providers/cloudant/hooks/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/cloudant/hooks/cloudant.py,sha256=aT8YAAVcQo7gpJRfTngxTZsr2BF_qPqMO9mmRmUIZvA,3458
+apache_airflow_providers_cloudant-4.1.0.dist-info/entry_points.txt,sha256=0ZiPO-0SPpW6mRjQvpTSI-S6mheib727luwfPvEYXbk,104
+apache_airflow_providers_cloudant-4.1.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+apache_airflow_providers_cloudant-4.1.0.dist-info/METADATA,sha256=GCuNw4eGTxivvEGg8owJe-P2pnxp05W425o8GGtkgS0,4771
+apache_airflow_providers_cloudant-4.1.0.dist-info/RECORD,,
