@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: abx-spec-abx-pkg
+Version: 0.1.1
+Summary: The ABX plugin specification for Binaries and BinProviders
+Requires-Python: >=3.10
+Requires-Dist: abx-pkg>=0.6.0
+Requires-Dist: abx>=0.1.0
