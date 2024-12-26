@@ -1,0 +1,12 @@
+bin_packer/__init__.py,sha256=s58GmfxNxsnmS1Bqa4-lECXdGYZeP6dzEhiVXrWpNXM,108
+bin_packer/bin.py,sha256=0lLoE2x90GnRkMRnKQqo4kMmy1xum2QtzJNltTVlRlM,3502
+bin_packer/box.py,sha256=m0Ov6TE5fPYh3nGRa_isanF1Pfcw4Iiih6gvU7cGD68,1140
+bin_packer/item.py,sha256=iRLLQzRkBE9y82Yg5s9Z6imAktQWkMc-5oCNvHlTKmU,4897
+bin_packer/log.py,sha256=Tamat9AeYIW962anLwcvDzOB-yzxRECFKQJ6r-dGoBI,547
+bin_packer/packer.py,sha256=YBS_Z5FocVuOcY8PEDGoqIrpd5xrpGDhhZlf7DJHIrc,5087
+bin_packer/utils.py,sha256=sw0YZLlJrh8Yeyu28CCEr1HQozGCeEluX2NmQDGGm7s,557
+3d_bin_packer-0.0.5.dist-info/LICENSE,sha256=jeNGfADBO7bPV33mKeG7EgCRMcb0SnUnemguVUPpWHI,1077
+3d_bin_packer-0.0.5.dist-info/METADATA,sha256=xmFmV-wxufcUEh3bCxK3KCoROTwZ-IL5CXz-VnhyRWk,2684
+3d_bin_packer-0.0.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+3d_bin_packer-0.0.5.dist-info/top_level.txt,sha256=MJRa021-CJ5o5VSLCYx2by0LpYVjw69hjRVVgJLaWcw,11
+3d_bin_packer-0.0.5.dist-info/RECORD,,
