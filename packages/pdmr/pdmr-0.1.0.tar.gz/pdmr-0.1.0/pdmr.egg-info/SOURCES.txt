@@ -1,0 +1,12 @@
+README.md
+setup.py
+pdmr/__init__.py
+pdmr/core.py
+pdmr/exceptions.py
+pdmr/utils.py
+pdmr.egg-info/PKG-INFO
+pdmr.egg-info/SOURCES.txt
+pdmr.egg-info/dependency_links.txt
+pdmr.egg-info/requires.txt
+pdmr.egg-info/top_level.txt
+tests/test_core.py
