@@ -1,0 +1,9 @@
+hbrowser/__init__.py,sha256=2eXmfv4caafLEbEdS5CnDnk713YAu6Q8tn-vySvBFrI,141
+hbrowser/browser.py,sha256=JnIMbflv4x2lbJh3-pmzAQZGbWi0-7QUhV2nS0GCXmg,45409
+hbrowser/exceptions.py,sha256=XrDfIpITRAwW7sXnKNiHa3Zwj4oLi68LLj2_AeC7K6Q,494
+hbrowser/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hbrowser-0.0.8.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+hbrowser-0.0.8.dist-info/METADATA,sha256=QA1wBgOj-RVEEzwwg8jbGbopKa6b8fOW2Ud4QMPCCM0,1306
+hbrowser-0.0.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+hbrowser-0.0.8.dist-info/top_level.txt,sha256=dcbFQyTq1WRg3RNTfEMy0ZLMveA0jQ-5bf2kyzfepSo,9
+hbrowser-0.0.8.dist-info/RECORD,,
