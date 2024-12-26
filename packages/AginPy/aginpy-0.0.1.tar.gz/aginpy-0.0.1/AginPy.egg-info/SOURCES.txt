@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+AginPy.egg-info/PKG-INFO
+AginPy.egg-info/SOURCES.txt
+AginPy.egg-info/dependency_links.txt
+AginPy.egg-info/requires.txt
+AginPy.egg-info/top_level.txt
+agin/__init__.py
+agin/regression/__init__.py
+agin/regression/linear_regression.py
+agin/utils/__init__.py
+agin/utils/health.py
