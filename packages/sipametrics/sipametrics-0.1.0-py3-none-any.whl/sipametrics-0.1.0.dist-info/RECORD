@@ -1,0 +1,15 @@
+sipaMetrics/__init__.py,sha256=uobucEXCsoMdRS5BRLtAZrpN7IcuPuUAo6E-MY4Lx5w,40
+sipaMetrics/base_client.py,sha256=pEyYVPZvuFU1Y5FqDokzMK2dOgo1YjFSRuuYfoEZnn4,2887
+sipaMetrics/endpoints.py,sha256=LOtIePsr-FXWxUd6FjM17HAwvKjgSLerI-2xF2Or_yg,1024
+sipaMetrics/services.py,sha256=3kS3mSuGCo1LnwXwTCWBbsZANUvLOD0SdjQ8-6jjNj8,9759
+sipaMetrics/internal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sipaMetrics/internal/constants.py,sha256=MvrHKi5WY6EcmjCIRi5Kh6cQeguc3xIofqWu0-20PDk,7648
+sipaMetrics/internal/enums.py,sha256=vYtm9WjEszEXbt8SuUl3fgk_7nejqh2QdCzXNdldfSA,383
+sipaMetrics/internal/translators.py,sha256=tazKJEBr6YAKPHSK42GLq9mYN7H6iXVsVFKn0SjfxjY,16504
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_services.py,sha256=V1qeEniMB5ZLwFYYljhIsOCa9e-JqHHgJav13rVUPgM,9819
+sipametrics-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sipametrics-0.1.0.dist-info/METADATA,sha256=70Pmnch-q7q2CqrjUxeYq8Fv6L00Mgae5RvJGUhq44o,2352
+sipametrics-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+sipametrics-0.1.0.dist-info/top_level.txt,sha256=vy6rV_bu_KvOeekOEhveMGILZCFL9zlHY-OQi_GLOiw,18
+sipametrics-0.1.0.dist-info/RECORD,,
