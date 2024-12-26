@@ -1,0 +1,38 @@
+[project]
+name = "solana-tx-parser"
+version = "0.0.4"
+description = "Python bindings for Solana Transaction Parser (tx-parser), enabling Python developers to easily parse and analyze Solana blockchain transactions. This package provides a high-performance C-API wrapper around the original Rust implementation, making blockchain data interpretation accessible in Python while maintaining native-like performance."
+authors = [
+    { name = "mkdir700", email = "mkdir700@gmail.com" },
+]
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+classifiers = [
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=8.3.3",
+]
+
+[tool.pdm.build]
+package-dir = "src"
+includes = [
+    "src/solana_tx_parser/**/*.py",
+    "src/solana_tx_parser/lib/*.so",
+    "src/solana_tx_parser/lib/*.dylib",
+    "src/solana_tx_parser/lib/*.dll",
+]
