@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: Ankush-project
+Version: 1.0.2
+Summary: Ankush_project
+Keywords: Ankush,Ankus_project
+Requires-Dist: requests

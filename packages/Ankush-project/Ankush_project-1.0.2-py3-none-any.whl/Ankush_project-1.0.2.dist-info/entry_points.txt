@@ -1,0 +1,2 @@
+[console_scripts]
+say_hello = python_package.say_hello:main
