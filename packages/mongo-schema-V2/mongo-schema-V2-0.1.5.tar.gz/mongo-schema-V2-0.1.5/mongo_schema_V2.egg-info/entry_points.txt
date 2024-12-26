@@ -1,0 +1,3 @@
+[console_scripts]
+mongo-schema-V2 = mongo_schema.cli:main
+
