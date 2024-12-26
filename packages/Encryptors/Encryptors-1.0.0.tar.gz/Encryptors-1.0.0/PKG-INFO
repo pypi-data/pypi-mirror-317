@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: Encryptors
+Version: 1.0.0
+Summary: Una librería de ejemplo en Python
+Home-page: UNKNOWN
+Author: Anderson
+Author-email: andersito0016@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Mi Librería
+
+Una librería de ejemplo para encriptacion con AES y Cifrado y verificacion de password con Sha512.
+## Instalación
+```bash
+pip install encryptors
+
+
