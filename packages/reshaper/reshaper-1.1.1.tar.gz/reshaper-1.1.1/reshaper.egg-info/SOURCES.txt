@@ -1,0 +1,9 @@
+README.md
+reshaper.py
+setup.py
+reshaper.egg-info/PKG-INFO
+reshaper.egg-info/SOURCES.txt
+reshaper.egg-info/dependency_links.txt
+reshaper.egg-info/entry_points.txt
+reshaper.egg-info/requires.txt
+reshaper.egg-info/top_level.txt
