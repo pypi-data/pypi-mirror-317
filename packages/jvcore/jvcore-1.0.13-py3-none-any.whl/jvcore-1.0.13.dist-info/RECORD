@@ -1,0 +1,13 @@
+jvcore/__init__.py,sha256=phqutkNk-vw4QaQZBnCFBRRR-ck2aFI8KN3l99cd500,290
+jvcore/config.py,sha256=lcQtu3GBPZduZraiBwoM_ZFCl5m7CgaJCjoB-9uQWQc,511
+jvcore/reasoner_base.py,sha256=83ImFF3VNHavkm8rUL3airrQevZ-eHFz1vqqlQtMdks,777
+jvcore/singleton.py,sha256=VKTjFItcF0gq5oJqZbBFnuc7v-8vic8HVAxVR3VVnGM,242
+jvcore/skill_base.py,sha256=L4zFZOwoVtUex2zIlhZgegcs_M5z2MBUZZfUlffk2nI,499
+jvcore/speech_to_text_base.py,sha256=pUQ8etuPnJe4vGNg_KNqoTO6tS34wfmZKfn6mwzukM8,153
+jvcore/text_to_speech_base.py,sha256=b3h32XHb586BgHrCCvzo4MPGczErRYgjosEBN9ODk88,101
+jvcore/wakeword_base.py,sha256=37H7eA3i9slz-2yINDopUR-hhoAh950sLvIJl_ye2sA,128
+jvcore-1.0.13.dist-info/LICENSE,sha256=vVkxh2BKFUwfT7xiJJ-Fo_vcqjWhIxNPeDkRR44s8Tg,12
+jvcore-1.0.13.dist-info/METADATA,sha256=RGwnqm6ktIZ0dBvjO78BVHhN2EPMRZh_2SctgLodTcw,497
+jvcore-1.0.13.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jvcore-1.0.13.dist-info/top_level.txt,sha256=yAS-n9KMx0QU6emabdETx6VVSVsUr33oWzXw2Unh29Y,7
+jvcore-1.0.13.dist-info/RECORD,,
