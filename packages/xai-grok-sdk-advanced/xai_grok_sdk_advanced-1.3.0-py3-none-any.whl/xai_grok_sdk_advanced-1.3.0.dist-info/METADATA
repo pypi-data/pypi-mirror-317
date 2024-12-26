@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: xai-grok-sdk-advanced
+Version: 1.3.0
+Summary: Advanced SDK for xAI Grok API with analytics and rate-limit handling
+Home-page: https://github.com/wealth0000110/xai_grok_sdk
+Author: Einstein Nsekele
+Author-email: einkap1@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/wealth0000110/xai_grok_sdk/issues
+Project-URL: Source Code, https://github.com/wealth0000110/xai_grok_sdk
+Project-URL: Documentation, https://github.com/wealth0000110/xai_grok_sdk/wiki
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests<3,>=2.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: requests-mock; extra == "dev"
+
+### Rate-Limit Monitoring
+
+The SDK provides unlimited API calls but will warn users when nearing the provider's rate limit. Example:
+
+```python
+sdk = XaiGrokSDK(api_key="your-api-key")
+
+# Make a request
+response = sdk._request("GET", "/models")
+
+# Check rate limit analytics
+sdk.analytics()
+
+# Example Output
+# Warning: 3/100 API requests remaining. Rate limit resets at 1700000000.
+# Total API calls made this session: 5
+
+
+### Usage Examples
+
+#### Retrieve Analytics
+```python
+sdk.analytics()
+# Output:
+# Total API requests: 10
+# Cache hits: 2
+# Retry attempts: 1
+
+
