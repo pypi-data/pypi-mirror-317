@@ -1,0 +1,14 @@
+README.md
+setup.py
+mongodb_schema/__init__.py
+mongodb_schema/cli.py
+mongodb_schema/config.py
+mongodb_schema/exceptions.py
+mongodb_schema/exporter.py
+mongodb_schema/utils.py
+mongodb_schema.egg-info/PKG-INFO
+mongodb_schema.egg-info/SOURCES.txt
+mongodb_schema.egg-info/dependency_links.txt
+mongodb_schema.egg-info/entry_points.txt
+mongodb_schema.egg-info/requires.txt
+mongodb_schema.egg-info/top_level.txt
