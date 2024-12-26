@@ -1,0 +1,9 @@
+webStreamViewer/__init__.py,sha256=7NttyArYZ6Gy4MTXwM5r1n3jb3Zw5RDmyOwM0NwSqpA,36
+webStreamViewer/webViewer.py,sha256=CR5iCdPZTImTGhLG_th0didz06KfS0A8jq-_vVuCRGs,5500
+webStreamViewer/templates/home.html,sha256=QQG5NOhJIxvd3uAOKhN_6_z8g-QonjQTGjw2Uod5DiA,2484
+webStreamViewer/templates/subpage.html,sha256=tX4vUp_E6jMb4ic8VWllyXw6bRjLSfN6SQBzigKDink,1378
+webStreamViewer-1.0.0.dist-info/METADATA,sha256=ev2Yxv6JI6ccLQmRDKXw00u4modxq4f67KSrOC5dO2k,3291
+webStreamViewer-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+webStreamViewer-1.0.0.dist-info/license.txt,sha256=oEHnAgc5m8CuMP09vZo2dVVcUKPozPO8d97hr6KG3Yo,1064
+webStreamViewer-1.0.0.dist-info/top_level.txt,sha256=d4TJFz_guWiYVmSzjDQIZ6bxycBvb26AF-GmBBAegOg,16
+webStreamViewer-1.0.0.dist-info/RECORD,,
