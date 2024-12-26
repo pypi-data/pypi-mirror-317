@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+matrix_operations/__init__.py
+matrix_operations/operations.py
+matrix_operations_amber.egg-info/PKG-INFO
+matrix_operations_amber.egg-info/SOURCES.txt
+matrix_operations_amber.egg-info/dependency_links.txt
+matrix_operations_amber.egg-info/top_level.txt
+test/test_operations.py
