@@ -1,0 +1,8 @@
+assets
+dist
+docs
+htmlcov
+nucs
+scripts
+tests
+venv
