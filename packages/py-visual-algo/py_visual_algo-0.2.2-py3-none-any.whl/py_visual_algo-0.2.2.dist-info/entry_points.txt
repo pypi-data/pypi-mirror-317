@@ -1,0 +1,2 @@
+[console_scripts]
+py-visual-algo = py_visual_algo.ui.cli:cli
