@@ -1,0 +1,8 @@
+pathspec
+pyperclip
+tiktoken
+
+[dev]
+build
+bump2version
+twine
