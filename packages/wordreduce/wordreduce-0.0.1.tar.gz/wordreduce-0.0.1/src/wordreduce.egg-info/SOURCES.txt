@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/wordreduce/__init__.py
+src/wordreduce/natural_text_tokenizer.py
+src/wordreduce/util.py
+src/wordreduce/wordreduce.py
+src/wordreduce.egg-info/PKG-INFO
+src/wordreduce.egg-info/SOURCES.txt
+src/wordreduce.egg-info/dependency_links.txt
+src/wordreduce.egg-info/requires.txt
+src/wordreduce.egg-info/top_level.txt
