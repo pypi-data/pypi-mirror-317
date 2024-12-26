@@ -1,0 +1,129 @@
+Metadata-Version: 2.1
+Name: fxdb
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# fxdb - Fast Execute in Database
+
+**fxdb** - A lightweight, single-file library for easy and efficient database interactions.
+
+## Features
+
+- Single file, no external dependencies.
+- Streamlined operations for inserting, updating, and querying data.
+- Simple integration with dictionaries and dataframes.
+- Built-in **backup functionality** for data security.
+- Focused on core database operations (CRUD).
+
+## Installation
+
+Install **fxdb** via pip:
+
+```bash
+pip install fxdb
+```
+
+## Quick Start
+
+### 1. Initialize a Database Instance
+
+You can initialize the database by specifying the file path. If the file does not exist, it will be automatically created:
+
+```python
+from fxdb import fxdb
+
+# Example 1: Default database file
+db = fxdb('data')
+
+# Example 2: Custom database file
+db = fxdb('data.sqlite3')
+
+# Example 3: Database in a specific directory
+db = fxdb('path/to/data/demo.db')
+```
+
+### 2. Backup Functionality
+
+Ensure your data is secure with automatic backups:
+
+```python
+db.backup(backup_dir="database_backup", keep_num=5)
+```
+
+- **backup_dir**: Directory to store backups.
+- **keep_num**: Maximum number of backups to retain.
+
+### 3. Table Operations
+
+Interact with tables seamlessly. Use `db['table_name']` to access or create a table:
+
+```python
+table = db['test_table']
+```
+
+##### Automatic Table Creation
+- When inserting data, fxdb automatically creates the table based on the full set of keys provided in your data.
+- All keys across your dataset are analyzed to define the table structure, ensuring consistency and avoiding key mismatches.
+
+### 4.Insert Data
+
+Insert records into the table:
+
+```python
+# Insert a single record
+table.insert(name="Jack", age=25)
+
+# Insert multiple records from a dictionary
+table.insert_from_dict([
+    {"name": "Bob", "age": 25, "city": "Los Angeles"},
+    {"name": "Charlie", "age": 35, "city": "Chicago"}
+])
+
+# Insert data from a DataFrame
+table.insert_from_df(data)
+```
+
+### 5.Upsert Data
+
+Update or insert records if they already exist:
+
+```python
+# Upsert from a dictionary
+table.upsert_from_dict(data, keys=["name"])
+
+# Upsert from a DataFrame
+table.upsert_from_df(data, keys=["name","gender"])
+```
+
+### 6.Query Data
+
+Retrieve data with minimal effort:
+
+```python
+# Fetch all records
+records = table.all()
+
+# Select records matching specific criteria
+jack = table.select(name="Jack")
+```
+
+### 7.Delete Data
+
+Remove data from the table:
+
+```python
+# Delete records matching specific criteria
+table.delete(name="Jack")
+
+# Truncate all data in the table
+table.truncate()
+
+# Drop the entire table
+table.drop()
+```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

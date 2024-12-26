@@ -1,0 +1,7 @@
+README.md
+fxdb.py
+pyproject.toml
+fxdb.egg-info/PKG-INFO
+fxdb.egg-info/SOURCES.txt
+fxdb.egg-info/dependency_links.txt
+fxdb.egg-info/top_level.txt
