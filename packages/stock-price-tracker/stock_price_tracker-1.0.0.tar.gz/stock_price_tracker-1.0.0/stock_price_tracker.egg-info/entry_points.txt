@@ -1,0 +1,2 @@
+[console_scripts]
+stock-price-tracker = stock_price_tracker.tracker:StockPriceTracker
