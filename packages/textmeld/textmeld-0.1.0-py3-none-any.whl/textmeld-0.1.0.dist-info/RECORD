@@ -1,0 +1,8 @@
+textmeld/__init__.py,sha256=dJ5ju-v-Xb0X3Sn2ZUmjETvVtlVnvvIN6O4wIfRk78w,197
+textmeld/constants.py,sha256=oTIdwKlYG9Jaht6KTQjz6lOnWHFSq-dU-Tg66iZUlp0,338
+textmeld/core.py,sha256=lHFmPhtvo0eIexgODGu9FjW-HOgI0wLKOlEdf_38oWM,9860
+textmeld/types.py,sha256=dZ5LmQT0DZcsa-lgs1tYY_Xg8fRgb8W-RXmGqvVTXV0,237
+textmeld-0.1.0.dist-info/METADATA,sha256=o_6I1hJgXYVcZKp8axFpEsbjXp6ABJLh8pYN9hsksBA,1341
+textmeld-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+textmeld-0.1.0.dist-info/entry_points.txt,sha256=ecpzvO2b8IzjQ1JtFGdRfFXZdN4UDNLbAcYDoLa5gNU,42
+textmeld-0.1.0.dist-info/RECORD,,
