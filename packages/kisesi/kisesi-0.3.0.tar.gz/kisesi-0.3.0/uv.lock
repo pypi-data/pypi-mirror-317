@@ -1,0 +1,7 @@
+version = 1
+requires-python = ">=3.6"
+
+[[package]]
+name = "kisesi"
+version = "0.1.7"
+source = { editable = "." }
