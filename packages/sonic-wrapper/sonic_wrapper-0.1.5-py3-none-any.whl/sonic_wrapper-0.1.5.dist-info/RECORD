@@ -1,0 +1,8 @@
+sonic_wrapper/__init__.py,sha256=hKXnFYmeHEuROFMFE-vzlGLSHg71bei5ZYwyYZphWNk,2
+sonic_wrapper/__main__.py,sha256=lZu7ss3qK5Hp2s6gSdOukrmKil7ZNUVjuoOobhr3nxg,64
+sonic_wrapper/cli.py,sha256=sazkzuRSFRNuqtbAmymo4CErTRVp5p-xFUo4JMQl52k,7893
+sonic_wrapper/sonic_api_wrapper.py,sha256=iG4uafgYlY5qhjk-xEDkE4aygw9i0WncToCipWrcleM,29525
+sonic_wrapper/sonic_wrapper.py,sha256=iG4uafgYlY5qhjk-xEDkE4aygw9i0WncToCipWrcleM,29525
+sonic_wrapper-0.1.5.dist-info/METADATA,sha256=yJVUS2516gO_82CuVcSEVgsYF3jEdLWXmtjCKbpkeyQ,9806
+sonic_wrapper-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sonic_wrapper-0.1.5.dist-info/RECORD,,
