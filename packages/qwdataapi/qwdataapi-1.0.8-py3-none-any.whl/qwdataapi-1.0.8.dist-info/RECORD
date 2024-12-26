@@ -1,0 +1,9 @@
+qwdataapi/__init__.py,sha256=SoShCE1T_JOyPGjlfcKV_jd_BuKqKqekqVAzuveNCgY,61
+qwdataapi/client.py,sha256=cyMAyp5Ugd6Eldmo48136OOVu1mAvFum_KFuj9G4sP4,5872
+qwdataapi/proto/qwdata_pb2.py,sha256=hkCoPWlJXDQq_Ld7lSIEILJXQXEMs-rAxZz43irjPDs,3754
+qwdataapi/proto/qwdata_pb2_grpc.py,sha256=1PGCmL8avo7kX9ruPTaerbcgEqiT7BiZIBMEyEhKiag,5521
+qwdataapi-1.0.8.dist-info/LICENSE,sha256=1kqzLvbZqZsCAikPS5ZR42VkKwdAFCW69oaHImKr5Zc,1087
+qwdataapi-1.0.8.dist-info/METADATA,sha256=aKqpO_owxUOGhm54Bjk7CocBQ-4djtttRqf4e2eTQWk,7067
+qwdataapi-1.0.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+qwdataapi-1.0.8.dist-info/top_level.txt,sha256=vLH3RjZi3FEanLhXYl3EFNPaNYQaJV6fvfLIoVp-X3A,10
+qwdataapi-1.0.8.dist-info/RECORD,,
