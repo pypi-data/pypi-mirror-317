@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/turbocollective/__init__.py
+src/turbocollective/__main__.py
+src/turbocollective.egg-info/PKG-INFO
+src/turbocollective.egg-info/SOURCES.txt
+src/turbocollective.egg-info/dependency_links.txt
+src/turbocollective.egg-info/requires.txt
+src/turbocollective.egg-info/top_level.txt
