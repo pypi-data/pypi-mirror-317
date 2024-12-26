@@ -1,0 +1,9 @@
+hydra_plugins/hydra_ray_jobs_launcher/__init__.py,sha256=TDdxmtoB6aOZyWOiRLTds48Z0FeTVl3Y3wNW6-qiMiY,99
+hydra_plugins/hydra_ray_jobs_launcher/_core.py,sha256=sG5gdFiiqT1_BHerck1tUZcaJg5VP3zWqTYqwzlKhFg,7743
+hydra_plugins/hydra_ray_jobs_launcher/config.py,sha256=H4bvdyqOWYwvjGZSyYJJ9rCItRHJjyVAFwmvnY5l4HE,891
+hydra_plugins/hydra_ray_jobs_launcher/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydra_plugins/hydra_ray_jobs_launcher/ray_jobs_launcher.py,sha256=zexsDZ47tREPFUy0wQL9TtULMq_2wmxik_hS7qJzemo,1678
+hydra_ray_jobs_launcher-1.0.1.dev1.dist-info/METADATA,sha256=q6R6_UHfLm7RsGz81KhXnyHMYiQpvqyEv1D7V15gCL4,875
+hydra_ray_jobs_launcher-1.0.1.dev1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+hydra_ray_jobs_launcher-1.0.1.dev1.dist-info/top_level.txt,sha256=0-LcYpEmzatUy2K5F7jmqcMfBL2RdB7k9nM_8zGFzhI,14
+hydra_ray_jobs_launcher-1.0.1.dev1.dist-info/RECORD,,
