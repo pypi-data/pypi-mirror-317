@@ -1,0 +1,15 @@
+{
+    "dockerfile_lines": [],
+    "graphs": {
+      "perplexity_search_agent": "./langgraph_agents/agents/search_agent_graph.py:graph",
+      "perplexity_search_agent2": "./langgraph_agents/agents/search_agent_graph.py:graph2",
+      "custom_search_researcher": "./langgraph_agents/agents/ai_researcher/agent/agent.py:graph",
+      "langgraph_react_agent": "./langgraph_agents/agents/langgraph_react_agent.py:graph",
+      "research_rabbit": "./langgraph_agents/agents/research_rabbit/research_rabbit.py:graph"
+    },
+    "env": "./.env",
+    "python_version": "3.11",
+    "dependencies": [
+      "."
+    ]
+  }
