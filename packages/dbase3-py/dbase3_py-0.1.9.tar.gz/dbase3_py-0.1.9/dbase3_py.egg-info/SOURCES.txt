@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+dbase3.py
+setup.py
+dbase3_py.egg-info/PKG-INFO
+dbase3_py.egg-info/SOURCES.txt
+dbase3_py.egg-info/dependency_links.txt
+dbase3_py.egg-info/top_level.txt
