@@ -1,0 +1,9 @@
+README.md
+setup.py
+plc_module/__init__.py
+plc_module/pyPLC_connected.py
+plc_testmain_inline_mapping.egg-info/PKG-INFO
+plc_testmain_inline_mapping.egg-info/SOURCES.txt
+plc_testmain_inline_mapping.egg-info/dependency_links.txt
+plc_testmain_inline_mapping.egg-info/requires.txt
+plc_testmain_inline_mapping.egg-info/top_level.txt

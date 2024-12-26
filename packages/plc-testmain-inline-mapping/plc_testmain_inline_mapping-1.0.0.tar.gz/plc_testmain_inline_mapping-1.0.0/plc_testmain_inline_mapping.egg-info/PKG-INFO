@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: plc_testmain_inline_mapping
+Version: 1.0.0
+Summary: Communication with PLC via serial connections
+Keywords: communicates with PLC
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+Requires-Dist: pywin32>=306
+Requires-Dist: pyserial>=3
+
+plc_testmain_inline_mapping
+===========================
+
+A simple Python package that does asynchronous communication with PLC over serial connection.
+
+Installation
+------------
+
+Install using pip:
+
+.. code-block:: console
+
+    py -m pip install plc_testmain_inline_mapping
+
+Example
+-------
+
+Here is an example usage:
+
+.. code-block:: python
+
+    from plc_module import pyPLC_connected
+    import asyncio
+
+    # Set auto mode:
+    async def main():
+        plc = pyPLC_connected.PLCConnection("COM4")
+        await plc.initiaize_connection
+        await plc.set_auto_mode()
+        await plc.close_connection()
+
+    asyncio.run(main())  # Output: Initializes serial connection with PLC asynchronously
