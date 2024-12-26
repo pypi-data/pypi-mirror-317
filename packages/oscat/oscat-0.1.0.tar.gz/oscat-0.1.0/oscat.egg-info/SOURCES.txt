@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+./oscat/__init__.py
+./oscat/cat_os.py
+./oscat/cat_tree.py
+./oscat/note_files.py
+./oscat/setting.py
+oscat.egg-info/PKG-INFO
+oscat.egg-info/SOURCES.txt
+oscat.egg-info/dependency_links.txt
+oscat.egg-info/requires.txt
+oscat.egg-info/top_level.txt
