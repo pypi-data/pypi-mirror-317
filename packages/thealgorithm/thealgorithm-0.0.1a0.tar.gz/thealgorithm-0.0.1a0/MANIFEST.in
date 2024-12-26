@@ -1,0 +1,3 @@
+recursive-include thealgorithm *.py
+
+include README.md LICENSE
