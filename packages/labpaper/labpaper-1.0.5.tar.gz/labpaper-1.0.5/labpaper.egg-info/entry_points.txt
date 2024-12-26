@@ -1,0 +1,9 @@
+[nbconvert.exporters]
+nature = labpaper.exporters:SpringerNaturePDF
+
+[nbconvert.preprocessors]
+pygmentize-code = labpaper.preprocessors.PygmentizePreprocessor
+python-markdown = labpaper.preprocessors.PythonMarkdownPreprocessor
+
+[nbconvert.templates]
+naturePDF = labpaper.templates.nature:NatureTemplate
