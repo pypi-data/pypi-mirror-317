@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+src/example_package_erfan_k.egg-info/PKG-INFO
+src/example_package_erfan_k.egg-info/SOURCES.txt
+src/example_package_erfan_k.egg-info/dependency_links.txt
+src/example_package_erfan_k.egg-info/top_level.txt
