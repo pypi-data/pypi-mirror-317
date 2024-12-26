@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: conciliation_models
+Version: 0.1.1
+Summary: Modelos y daos de la base de datos, para los proyectos de Servicios Adhoc y Airflow Conciliaciones
+Author: Conciliaciones - Kuantik
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: fastapi>=0.110.2
+Requires-Dist: pydantic>=2.7.1
+Requires-Dist: pymongo>=4.7.0
+Requires-Dist: inflect>=7.2.1
+Requires-Dist: boto3>=1.34.99
+Requires-Dist: boto3-stubs[s3]>=1.34.99
+Requires-Dist: loggerk>=0.0.5
+Requires-Dist: pandas>=2.2.2
+
+# Models Airflow Conciliaciones
+
+Este repositorio contiene la extracción de modelos del proyecto de servicios adhoc y conciliaciones de Airflow de Kuantik Data Jump. Aquí se gestionan y automatizan los flujos de trabajo para la conciliación de datos utilizando Apache Airflow.
+
+## Uso
+
+1. Configurar las variables de entorno necesarias para Airflow.
+2. Ejecutar los DAGs de Airflow para iniciar los procesos de conciliación.
+3. Poder manejar los Endpoints necesarios en Servicion Adhoc
+
+## Licencia
+
+Este proyecto está licenciado bajo los términos de la licencia MIT.
