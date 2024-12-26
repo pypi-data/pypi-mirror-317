@@ -1,0 +1,55 @@
+[tool.poetry]
+authors = ["top-on <top-on@posteo.de>"]
+description = "CLI to find an optimal, personal schedule for the 38c3 congress."
+homepage = "https://github.com/top-on/optimal-congress"
+name = "optimal-congress"
+packages = [{include = "optimal_congress"}]
+readme = "README.md"
+version = "1.1.1"
+
+[tool.poetry.dependencies]
+pandas = "^2.2.3"
+pandera = "^0.21.1"
+pulp = "^2.9.0"
+pydantic = "^2.10.3"
+python = "^3.11"
+pytz = "^2024.2"
+requests = "^2.32.3"
+typer = {extras = ["all"], version = "^0.15.1"}# extras include rich
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+notebook = "^7.0.7"
+# linting
+mypy = "1.13.0" # keep in sync with .pre-commit-config.yaml
+pre-commit = "^4.0.1"
+ruff = "0.8.3" # keep in sync with .pre-commit-config.yaml
+# testing
+pytest = "^7.4.3"
+tox = "^4.11.4"
+# stubs
+types-pytz = "^2024.2"
+types-requests = "^2.32"
+
+[tool.poetry.scripts]
+optimal-congress = "optimal_congress.cli:app"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.ruff]
+fix = true
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+  # Pyflakes
+  "F", # Pycodestyle
+  "E",
+  "W", # isort
+  "I",
+]
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
