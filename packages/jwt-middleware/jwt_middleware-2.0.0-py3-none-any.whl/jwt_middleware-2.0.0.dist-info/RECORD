@@ -1,0 +1,8 @@
+jwt_middleware/__init__.py,sha256=cWRACz10PkeCZRzzqH8a2nOF9fdLQVCy1Nrn2SFsaxQ,37
+jwt_middleware/middleware.py,sha256=Cwn3qUu5Qs4JD9RYtcjLwEug8t12PWWJA-XykgoaojU,1821
+jwt_middleware/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jwt_middleware-2.0.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jwt_middleware-2.0.0.dist-info/METADATA,sha256=Ik5JiW1M8VkVf7_RFF80uWo4rOvuMOKe_FIs5P-4Nfg,1328
+jwt_middleware-2.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jwt_middleware-2.0.0.dist-info/top_level.txt,sha256=tr8MevY6IG9Q9rI-SvzzNJQESdMLM7fXxxrXgcj-V0g,15
+jwt_middleware-2.0.0.dist-info/RECORD,,
