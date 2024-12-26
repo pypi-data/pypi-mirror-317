@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+aioshutdown/__init__.py
+aioshutdown/_common.py
+aioshutdown/_shutdown.py
+aioshutdown/_types.py
+aioshutdown/py.typed
+aioshutdown.egg-info/PKG-INFO
+aioshutdown.egg-info/SOURCES.txt
+aioshutdown.egg-info/dependency_links.txt
+aioshutdown.egg-info/requires.txt
+aioshutdown.egg-info/top_level.txt
+tests/test_signals.py
