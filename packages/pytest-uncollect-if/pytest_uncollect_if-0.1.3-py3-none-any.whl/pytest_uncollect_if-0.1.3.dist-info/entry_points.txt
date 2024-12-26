@@ -1,0 +1,2 @@
+[pytest11]
+pytest_uncollect_if = pytest_uncollect_if.plugin
