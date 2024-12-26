@@ -1,0 +1,10 @@
+LICENSE
+README.md
+jqdatahttp.py
+setup.py
+jqdatahttp.egg-info/PKG-INFO
+jqdatahttp.egg-info/SOURCES.txt
+jqdatahttp.egg-info/dependency_links.txt
+jqdatahttp.egg-info/not-zip-safe
+jqdatahttp.egg-info/requires.txt
+jqdatahttp.egg-info/top_level.txt
