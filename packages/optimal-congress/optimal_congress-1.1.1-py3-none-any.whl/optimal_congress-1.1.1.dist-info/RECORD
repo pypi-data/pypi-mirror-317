@@ -1,0 +1,13 @@
+optimal_congress/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optimal_congress/cli.py,sha256=xoY3LHu9wUz8Y6wd_Oov67mFLflT6Rh4KM6AdKdpXik,12416
+optimal_congress/config.py,sha256=8xWNDbUs1qQzcoWj9J5wl5c0FHci1FI-jIvcfx8pNjE,492
+optimal_congress/io/api.py,sha256=aG3_scgYn93kCvbOZqp3A80iL5ffl0GQ6uSR44utxNg,802
+optimal_congress/io/cache.py,sha256=osAKS02XbvdznIBYXXwRttX2aLF4t4oosfkghO4SxQQ,3917
+optimal_congress/optimize.py,sha256=uY6LpQDr6AR4deMXZq94jA9ml3M7F3xcS2OiRVFq2Rs,2567
+optimal_congress/ratings.py,sha256=6Wx4LKoO-uDrgxwK32rgOVgzVaP7HD-4BKkIhGbqwZ4,3077
+optimal_congress/schema.py,sha256=9Vdfu1x6852Pm8o_jMULZO9Zr6SkmuUC25U88SnPcb0,3177
+optimal_congress-1.1.1.dist-info/LICENSE,sha256=a0qhcfDUb8jG5_nK4sqN5v1b2rjGV6cDANyusD4JLT8,1063
+optimal_congress-1.1.1.dist-info/METADATA,sha256=OBZ-UrNBOaL7ue4-YKnZs2dFD7_SEHPBktB-5JgIC24,6547
+optimal_congress-1.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+optimal_congress-1.1.1.dist-info/entry_points.txt,sha256=bZy909R1BomxIbDZu2ymr9qo6nAK-YAmzqwLbEaF--w,61
+optimal_congress-1.1.1.dist-info/RECORD,,
