@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+migrations/0001_initial.py
+migrations/__init__.py
+pongjun_notes.egg-info/PKG-INFO
+pongjun_notes.egg-info/SOURCES.txt
+pongjun_notes.egg-info/dependency_links.txt
+pongjun_notes.egg-info/requires.txt
+pongjun_notes.egg-info/top_level.txt
