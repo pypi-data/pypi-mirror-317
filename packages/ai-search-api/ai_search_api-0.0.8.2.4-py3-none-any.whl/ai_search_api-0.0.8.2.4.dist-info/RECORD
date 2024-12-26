@@ -1,0 +1,14 @@
+ai_search_api/__init__.py,sha256=_lkiiSslUlctwFNftmOjqgalDYOxCEY_t_4l8He3L7c,350
+ai_search_api/ai_search.py,sha256=zq4i2b0xbOJgIhfGOkos3mGl08IqtCEJEFQVagD041c,3320
+ai_search_api/database.py,sha256=jU33gHpRWcdm8xcXj_-i41WBQe1yszK418OQ37I8nHw,40255
+ai_search_api/local.py,sha256=DlZNEL_6SHqcQiM8bfgSp3ArSrc3oU5-bdElTWjtQIM,18552
+ai_search_api/test.py,sha256=u1zG6QGMFbqPws_tQN15wvpBoNX8msWDlQe6LMWsnI4,122
+ai_search_api/update.py,sha256=Ys2RsSZ9H4gEuWrhU2OuILtuQHBIqp_EA3cYF6evwwA,2552
+ai_search_api/update_database.py,sha256=o1QTGLf6V28xB__OTKuyuKVJuuRu8iYxPzzCgNhfOLo,870
+ai_search_api/withUI.py,sha256=k3fyR6DfRg4Wi4VTLlTLeD3s341cZq38Ii3Szb4oYnw,18354
+ai_search_api/withui.py,sha256=RcGjqv7lr2Q90AJ71Uv_iCRTZrC6SvysULQyOM-Y3iQ,18363
+ai_search_api-0.0.8.2.4.dist-info/LICENSE,sha256=sFjAHaL8BuLKlUoutjU0uN6uXXGnNVvo2MLlQSwPnI8,1076
+ai_search_api-0.0.8.2.4.dist-info/METADATA,sha256=FG2IDB0Xh9U1mZZoBHOOxMQl0tZQZfmUR54kFltA8Sc,3547
+ai_search_api-0.0.8.2.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+ai_search_api-0.0.8.2.4.dist-info/top_level.txt,sha256=rEGIw-blAVPuaANUVcz-PhCol75hgoLBmQ3DI8GVjEc,14
+ai_search_api-0.0.8.2.4.dist-info/RECORD,,
