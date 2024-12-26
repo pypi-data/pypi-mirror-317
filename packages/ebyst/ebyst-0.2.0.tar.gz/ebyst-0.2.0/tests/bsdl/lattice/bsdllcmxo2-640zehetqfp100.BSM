@@ -1,0 +1,555 @@
+-- ********************************************************************
+-- * LCMXO2_640ZE BSDL Model                                              *
+-- *                                                                  *
+-- * File Version:      1.03                                          *
+-- * File Date:         11/22/2012                                    *
+-- *                                                                  *
+-- * Standard Test Access Port and Boundary-Scan Architecture         *
+-- * VHDL Description File                                            *
+-- *                                                                  *
+-- * This BSDL file is created by genBSDL V2.1 according to:          *
+-- * - IEEE Standard 1149.1-2001                                      *
+-- *                                                                  *
+-- * Generated with:                                                  *
+-- * - PKT Rev:  1.35                                                 *
+-- * - BSR Rev:  1.9                                                 *
+-- * - OPCODE Rev:  1.6                                               *
+-- *                                                                  *
+-- * This BSDL has been validated for syntax and semantics            *
+-- * compliance to IEEE 1149.1 using:                                 *
+-- * - Lattice BSDL Syntax Checker                                    *
+-- * - Goepel BSDL Syntax Checker V3.1.2                              *
+-- * - ASSET/Agilent BSDL Validation Service                          *
+-- * - Intellitech BSDL Syntax Checker                                *
+-- *                                                                  *
+-- *  Copyright 2000 - 2012                                           *
+-- *  Lattice Semiconductor Corporation                               *
+-- *  5555 NE Moore Ct.                                               *
+-- *  Hillsboro, OR 97124                                             *
+-- *                                                                  *
+-- *  All rights reserved.  No part of this program or publication    *
+-- *  may be reproduced, transmitted, transcribed, stored in a        *
+-- *  retrieval system, or translated into any language or            *
+-- *  computer language, in any form or by any means without this     *
+-- *  notice appearing within.                                        *
+-- ********************************************************************
+-- *                                                                  *
+-- *                           IMPORTANT                              *
+-- *                                                                  *
+-- * The following is a BSDL file that tests all of the I/O pins      *
+-- * as bi-directional pins. The functionality of the BSCAN register  *
+-- * for this device is dependent of the pattern programmed into the  *
+-- * device. If the device is configured to use LVDS pairs or VREF    *
+-- * signals, an application specific BSDL file is required.          *
+-- * If any IOs are configured as output only, the device needs to be *
+-- * erase and re-program to bi-directional pin or use power cycle to *
+-- * reset to default state. Otherwise an application specific BSDL   *
+-- * file is required.                                                *
+-- *                                                                  *
+-- * For Further assistance, please contact Tech Support at           *
+-- *       1-800-LATTICE or techsupport@latticesemi.com               *
+-- ********************************************************************
+-- *                                                                  *
+-- *                          REVISION HISTORY                        *
+-- * Rev 1.01: 11/22/2012                                             *
+-- *  - final version.                                          *
+-- *                                                                  *
+-- ********************************************************************
+entity LCMXO2_640ZE_XXTG100 is 
+
+	generic (PHYSICAL_PIN_MAP : string := "tqfp100");
+		port (
+	                PL2A  :  inout bit;
+	                PL2B  :  inout bit;
+	                PL2C  :  inout bit;
+	                PL2D  :  inout bit;
+	                PL3A  :  inout bit;
+	                PL3B  :  inout bit;
+	                PL3C  :  inout bit;
+	                PL3D  :  inout bit;
+	                PL5A  :  inout bit;
+	                PL5B  :  inout bit;
+	                PL5C  :  inout bit;
+	                PL5D  :  inout bit;
+	                PL6A  :  inout bit;
+	                PL6B  :  inout bit;
+	                PL6C  :  inout bit;
+	                PL6D  :  inout bit;
+	                PL7A  :  inout bit;
+	                PL7B  :  inout bit;
+	                PL7C  :  inout bit;
+	                PL7D  :  inout bit;
+	                PB4A  :  inout bit;
+	                PB4B  :  inout bit;
+	                PB4C  :  inout bit;
+	                PB4D  :  inout bit;
+	                PB6A  :  inout bit;
+	                PB6B  :  inout bit;
+	                PB6C  :  inout bit;
+	                PB6D  :  inout bit;
+	               PB10A  :  inout bit;
+	               PB10B  :  inout bit;
+	               PB10C  :  inout bit;
+	               PB10D  :  inout bit;
+	               PB12A  :  inout bit;
+	               PB12B  :  inout bit;
+	               PB12C  :  inout bit;
+	               PB12D  :  inout bit;
+	               PB14A  :  inout bit;
+	               PB14B  :  inout bit;
+	               PB14C  :  inout bit;
+	               PB14D  :  inout bit;
+	                PR7D  :  inout bit;
+	                PR7C  :  inout bit;
+	                PR7B  :  inout bit;
+	                PR7A  :  inout bit;
+	                PR6D  :  inout bit;
+	                PR6C  :  inout bit;
+	                PR6B  :  inout bit;
+	                PR6A  :  inout bit;
+	                PR5D  :  inout bit;
+	                PR5C  :  inout bit;
+	                PR5B  :  inout bit;
+	                PR5A  :  inout bit;
+	                PR3D  :  inout bit;
+	                PR3C  :  inout bit;
+	                PR3B  :  inout bit;
+	                PR3A  :  inout bit;
+	                PR2D  :  inout bit;
+	                PR2C  :  inout bit;
+	                PR2B  :  inout bit;
+	                PR2A  :  inout bit;
+	               PT11D  :  inout bit;
+	               PT11C  :  inout bit;
+	               PT11A  :  inout bit;
+	               PT10D  :  inout bit;
+	               PT10C  :  inout bit;
+	               PT10B  :  inout bit;
+	               PT10A  :  inout bit;
+	                PT9D  :  inout bit;
+	                PT9C  :  inout bit;
+	                PT9B  :  inout bit;
+	                PT9A  :  inout bit;
+	                 TMS  :  in bit;
+	                 TCK  :  in bit;
+	                 TDI  :  in bit;
+	                 TDO  :  out bit;
+	                PT6D  :  inout bit;
+	                PT6C  :  inout bit;
+	                PT6B  :  inout bit;
+	                PT6A  :  inout bit;
+	                 GND  :  linkage bit_vector (1 to 8);
+	                  NC  :  linkage bit_vector (1 to 3);
+	                 VCC  :  linkage bit_vector (1 to 2);
+	              VCCIO0  :  linkage bit_vector (1 to 2);
+	              VCCIO1  :  linkage bit_vector (1 to 2);
+	              VCCIO2  :  linkage bit_vector (1 to 2);
+	              VCCIO3  :  linkage bit_vector (1 to 2));
+-- Version Control
+	use STD_1149_1_2001.all;	-- 1149.1-2001 attributes
+
+-- Component Conformance Statement
+	attribute COMPONENT_CONFORMANCE of LCMXO2_640ZE_XXTG100 : entity is "STD_1149_1_2001";
+
+-- Device Package Pin Mapping
+	attribute PIN_MAP of LCMXO2_640ZE_XXTG100 : entity is PHYSICAL_PIN_MAP;
+
+	constant tqfp100 : PIN_MAP_STRING :=
+		"        PL2A:    1, " &
+		"        PL2B:    2, " &
+		"        PL2C:    3, " & --secfnc PCLKT3_2 
+		"        PL2D:    4, " & --secfnc PCLKC3_2 
+		"        PL3A:    7, " &
+		"        PL3B:    8, " &
+		"        PL3C:    9, " &
+		"        PL3D:   10, " &
+		"        PL5A:   12, " & --secfnc PCLKT3_1 
+		"        PL5B:   13, " & --secfnc PCLKC3_1 
+		"        PL5C:   14, " &
+		"        PL5D:   15, " &
+		"        PL6A:   16, " &
+		"        PL6B:   17, " &
+		"        PL6C:   18, " &
+		"        PL6D:   19, " &
+		"        PL7A:   20, " & --secfnc PCLKT3_0 
+		"        PL7B:   21, " & --secfnc PCLKC3_0 
+		"        PL7C:   24, " &
+		"        PL7D:   25, " &
+		"        PB4A:   27, " & --secfnc CSSPIN_MD4_TDOB 
+		"        PB4B:   28, " &
+		"        PB4C:   29, " &
+		"        PB4D:   30, " &
+		"        PB6A:   31, " & --secfnc MCLK_CCLK 
+		"        PB6B:   32, " & --secfnc SO_SPISO_IO1_MD1_TDIL 
+		"        PB6C:   34, " & --secfnc PCLKT2_0_INTEST_OVER 
+		"        PB6D:   35, " & --secfnc PCLKC2_0 
+		"       PB10A:   36, " &
+		"       PB10B:   37, " &
+		"       PB10C:   38, " & --secfnc PCLKT2_1_INTEST_OVER 
+		"       PB10D:   39, " & --secfnc PCLKC2_1 
+		"       PB12A:   40, " &
+		"       PB12B:   41, " &
+		"       PB12C:   42, " &
+		"       PB12D:   43, " &
+		"       PB14A:   45, " &
+		"       PB14B:   47, " &
+		"       PB14C:   48, " & --secfnc SN_MD5_SCAN_SHFT_ENB_TDIB 
+		"       PB14D:   49, " & --secfnc SI_SISPI_IO0_MD0_TDOR 
+		"        PR7D:   51, " &
+		"        PR7C:   52, " &
+		"        PR7B:   53, " &
+		"        PR7A:   54, " &
+		"        PR6D:   57, " &
+		"        PR6C:   58, " &
+		"        PR6B:   59, " &
+		"        PR6A:   60, " &
+		"        PR5D:   62, " & --secfnc PCLKC1_0 
+		"        PR5C:   63, " & --secfnc PCLKT1_0 
+		"        PR5B:   64, " &
+		"        PR5A:   65, " &
+		"        PR3D:   66, " &
+		"        PR3C:   67, " &
+		"        PR3B:   68, " &
+		"        PR3A:   69, " &
+		"        PR2D:   70, " &
+		"        PR2C:   71, " &
+		"        PR2B:   74, " &
+		"        PR2A:   75, " &
+		"       PT11D:   76, " & --secfnc DONE 
+		"       PT11C:   77, " & --secfnc INITN 
+		"       PT11A:   78, " &
+		"       PT10D:   81, " & --secfnc PROGRAMN 
+		"       PT10C:   82, " & --secfnc JTAGENB_MD6_TDIR 
+		"       PT10B:   83, " &
+		"       PT10A:   84, " &
+		"        PT9D:   85, " & --secfnc SDA_IO3_MD3_ATB_FORCE_PCLKC0_0_TDOT 
+		"        PT9C:   86, " & --secfnc SCL_IO2_MD2_ATB_SENSE_PCLKT0_0 
+		"        PT9B:   87, " & --secfnc PCLKC0_1 
+		"        PT9A:   88, " & --secfnc PCLKT0_1 
+		"         TMS:   90, " & --secfnc TMS 
+		"         TCK:   91, " & --secfnc TCK_TEST_CLK 
+		"         TDI:   94, " & --secfnc TDI_MD7 
+		"         TDO:   95, " & --secfnc TDO 
+		"        PT6D:   96, " &
+		"        PT6C:   97, " &
+		"        PT6B:   98, " &
+		"        PT6A:   99, " &
+		"         GND: (   6, " & 
+		"                22, " & 
+		"                33, " & 
+		"                44, " & 
+		"                56, " & 
+		"                72, " & 
+		"                79, " & 
+		"                92), " & 
+		"          NC: (  11, " & 
+		"                61, " & 
+		"                89), " & 
+		"         VCC: (  50, " & 
+		"               100), " & 
+		"      VCCIO0: (  80, " & 
+		"                93), " & 
+		"      VCCIO1: (  55, " & 
+		"                73), " & 
+		"      VCCIO2: (  26, " & 
+		"                46), " & 
+		"      VCCIO3: (   5, " & 
+		"                23)";
+
+-- End of pin mapping
+
+-- Grouped port mapping and definition
+--	attribute PORT_GROUPING of LCMXO2_640ZE_XXTG100 : entity is
+--		"DIFFERENTIAL_CURRENT ( " &
+--		"(PB10A, PB10B)," &
+--		"(PB10C, PB10D)," &
+--		"(PB12A, PB12B)," &
+--		"(PB12C, PB12D)," &
+--		"(PB14A, PB14B)," &
+--		"(PB14C, PB14D)," &
+--		"(PB4A, PB4B)," &
+--		"(PB4C, PB4D)," &
+--		"(PB6A, PB6B)," &
+--		"(PB6C, PB6D)," &
+--		"(PL2A, PL2B)," &
+--		"(PL2C, PL2D)," &
+--		"(PL3A, PL3B)," &
+--		"(PL3C, PL3D)," &
+--		"(PL5A, PL5B)," &
+--		"(PL5C, PL5D)," &
+--		"(PL6A, PL6B)," &
+--		"(PL6C, PL6D)," &
+--		"(PL7A, PL7B)," &
+--		"(PL7C, PL7D)," &
+--		"(PR2A, PR2B)," &
+--		"(PR2C, PR2D)," &
+--		"(PR3A, PR3B)," &
+--		"(PR3C, PR3D)," &
+--		"(PR5A, PR5B)," &
+--		"(PR5C, PR5D)," &
+--		"(PR6A, PR6B)," &
+--		"(PR6C, PR6D)," &
+--		"(PR7A, PR7B)," &
+--		"(PR7C, PR7D)," &
+--		"(PT10A, PT10B)," &
+--		"(PT10C, PT10D)," &
+--		"(PT11C, PT11D)," &
+--		"(PT6A, PT6B)," &
+--		"(PT6C, PT6D)," &
+--		"(PT7A, TDI)," &
+--		"(PT7C, TMS)," &
+--		"(PT9A, PT9B)," &
+--		"(PT9C, PT9D)," &
+-- End of grouped port mapping
+
+-- TAP definition and characteristics
+	attribute TAP_SCAN_IN   of TDI : signal is true;
+	attribute TAP_SCAN_MODE of TMS : signal is true;
+	attribute TAP_SCAN_OUT  of TDO : signal is true;
+	attribute TAP_SCAN_CLOCK of TCK : signal is (25.0e6, BOTH);
+
+-- Instruction register description
+	attribute INSTRUCTION_LENGTH of LCMXO2_640ZE_XXTG100 : entity is 8;
+	attribute INSTRUCTION_OPCODE of LCMXO2_640ZE_XXTG100 : entity is
+		"              IDCODE		(11100000)," &
+		"          ISC_ENABLE		(11000110)," &
+		"    ISC_PROGRAM_DONE		(01011110)," &
+		" LSC_PROGRAM_SECPLUS		(11001111)," &
+		"ISC_PROGRAM_USERCODE		(11000010)," &
+		"ISC_PROGRAM_SECURITY		(11001110)," &
+		"         ISC_PROGRAM		(01100111)," &
+		"        LSC_ENABLE_X		(01110100)," &
+		"              BYPASS		(11111111)," &
+		"      ISC_DATA_SHIFT		(00001010)," &
+		"       ISC_DISCHARGE		(00010100)," &
+		"            USERCODE		(11000000)," &
+		"      ISC_ERASE_DONE		(00100100)," &
+		"               CLAMP		(01111000)," &
+		"   ISC_ADDRESS_SHIFT		(01000010)," &
+		"             PRELOAD		(00011100)," &
+		"            ISC_READ		(10000000)," &
+		"         ISC_DISABLE		(00100110)," &
+		"           ISC_ERASE		(00001110)," &
+		"            ISC_NOOP		(00110000)," &
+		"              SAMPLE		(00011100)," &
+		"               HIGHZ		(00011000)," &
+		"              EXTEST		(00010101)," &
+		"PRIVATE	(00000010, 00111010, 00110010, 10111010, " &
+			"11011100, 11110001, 00101100, 11010000, " &
+			"11110110, 11110100, 10010110, 10110010, " &
+			"01000110, 11011000, 10111000, 10011101, " &
+			"10100010, 11111010, 01110010, 10001111, " &
+			"01110000, 11110111, 00101110, 11010110, " &
+			"00111011, 00010110, 11110011, 10011100, " &
+			"11101000, 01101010, 00111110, 01111101, " &
+			"10010000, 11010001, 11010111, 00101101, " &
+			"11011101, 11001010, 00111000, 01100000, " &
+			"11110010, 11111000, 10000010, 00111001, " &
+			"00100010, 11011110, 00111100, 11010100, " &
+			"11110000, 10011111, 00010001, 11010101, " &
+			"01101001, 01110011, 11100111, 10100100, " &
+			"11011111, 00011001, 11011010, 00110011, " &
+			"11111001, 10110100, 10110000, 01111010, " &
+			"10110110, 11001011, 01111001, 11100100, " &
+			"00100000, 10111100, 11001001, 10011110, " &
+			"11111011, 11010011, 01000111)";
+
+  attribute INSTRUCTION_CAPTURE of LCMXO2_640ZE_XXTG100 : entity is 
+                                  "XXXXXX01";
+  attribute INSTRUCTION_PRIVATE of LCMXO2_640ZE_XXTG100 : entity is 
+                                  "PRIVATE";
+
+--IDCODE and USERCODE register definition
+	attribute IDCODE_REGISTER of LCMXO2_640ZE_XXTG100 : entity is
+		"0000" &	--Version number
+		"0001001010110001" &	--Device specific number
+		"000001000011";	--Company code
+
+	attribute USERCODE_REGISTER of LCMXO2_640ZE_XXTG100 : entity is
+		"11111111111111111111111111111111";
+
+	attribute REGISTER_ACCESS of LCMXO2_640ZE_XXTG100 : entity is
+		"ISC_ADDRESS[215]		(ISC_ADDRESS_SHIFT), " &
+		"ISC_SECTOR[8]		(ISC_ERASE), " &
+		"ISC_DEFAULT[1]		(ISC_DISABLE, " &
+		"			 ISC_NOOP, " &
+		"			 ISC_DISCHARGE, " &
+		"			 ISC_PROGRAM_DONE, " &
+		"			 ISC_ERASE_DONE, " &
+		"			 ISC_PROGRAM_SECURITY, " &
+		"			 LSC_PROGRAM_SECPLUS), " &
+		"BYPASS		(CLAMP, " &
+		"			 HIGHZ, " &
+		"			 BYPASS), " &
+		"ISC_DATA[888]		(ISC_DATA_SHIFT), " &
+		"ISC_CONFIG[8]		(ISC_ENABLE, " &
+		"			 LSC_ENABLE_X), " &
+		"ISC_PDATA[888]		(ISC_PROGRAM, " &
+		"			 ISC_READ), " &
+		"BOUNDARY		(EXTEST, " &
+		"			 PRELOAD, " &
+		"			 SAMPLE), " &
+		"DEVICE_ID		(IDCODE, " &
+		"			 USERCODE, " &
+		"			 ISC_PROGRAM_USERCODE)"; 
+
+-- *****************************************************************
+-- Boundary Scan Register Description, Cell 0 is the closest to TDO 
+-- *****************************************************************
+	attribute BOUNDARY_LENGTH of LCMXO2_640ZE_XXTG100 : entity is 152;
+	attribute BOUNDARY_REGISTER of LCMXO2_640ZE_XXTG100 : entity is
+
+		"151 (BC_7, PT6A, bidir, X, 150, 1, Z), " &
+		"150 (BC_2, *, control, 1), " &
+		"149 (BC_7, PT6B, bidir, X, 148, 1, Z), " &
+		"148 (BC_2, *, control, 1), " &
+		"147 (BC_7, PT6C, bidir, X, 146, 1, Z), " &
+		"146 (BC_2, *, control, 1), " &
+		"145 (BC_7, PT6D, bidir, X, 144, 1, Z), " &
+		"144 (BC_2, *, control, 1), " &
+		"143 (BC_7, PT9A, bidir, X, 142, 1, Z), " &
+		"142 (BC_2, *, control, 1), " &
+		"141 (BC_7, PT9B, bidir, X, 140, 1, Z), " &
+		"140 (BC_2, *, control, 1), " &
+		"139 (BC_7, PT9C, bidir, X, 138, 1, Z), " &
+		"138 (BC_2, *, control, 1), " &
+		"137 (BC_7, PT9D, bidir, X, 136, 1, Z), " &
+		"136 (BC_2, *, control, 1), " &
+		"135 (BC_7, PT10A, bidir, X, 134, 1, Z), " &
+		"134 (BC_2, *, control, 1), " &
+		"133 (BC_7, PT10B, bidir, X, 132, 1, Z), " &
+		"132 (BC_2, *, control, 1), " &
+		"131 (BC_7, PT10C, bidir, X, 130, 1, Z), " &
+		"130 (BC_2, *, control, 1), " &
+		"129 (BC_7, PT10D, bidir, X, 128, 1, Z), " &
+		"128 (BC_2, *, control, 1), " &
+		"127 (BC_7, PT11A, bidir, X, 126, 1, Z), " &
+		"126 (BC_2, *, control, 1), " &
+		"125 (BC_1, *, internal, X), " &
+		"124 (BC_1, *, internal, 1), " &
+		"123 (BC_7, PT11C, bidir, X, 122, 1, Z), " &
+		"122 (BC_2, *, control, 1), " &
+		"121 (BC_7, PT11D, bidir, X, 120, 1, Z), " &
+		"120 (BC_2, *, control, 1), " &
+		"119 (BC_7, PR2A, bidir, X, 118, 1, Z), " &
+		"118 (BC_2, *, control, 1), " &
+		"117 (BC_7, PR2B, bidir, X, 116, 1, Z), " &
+		"116 (BC_2, *, control, 1), " &
+		"115 (BC_7, PR2C, bidir, X, 114, 1, Z), " &
+		"114 (BC_2, *, control, 1), " &
+		"113 (BC_7, PR2D, bidir, X, 112, 1, Z), " &
+		"112 (BC_2, *, control, 1), " &
+		"111 (BC_7, PR3A, bidir, X, 110, 1, Z), " &
+		"110 (BC_2, *, control, 1), " &
+		"109 (BC_7, PR3B, bidir, X, 108, 1, Z), " &
+		"108 (BC_2, *, control, 1), " &
+		"107 (BC_7, PR3C, bidir, X, 106, 1, Z), " &
+		"106 (BC_2, *, control, 1), " &
+		"105 (BC_7, PR3D, bidir, X, 104, 1, Z), " &
+		"104 (BC_2, *, control, 1), " &
+		"103 (BC_7, PR5A, bidir, X, 102, 1, Z), " &
+		"102 (BC_2, *, control, 1), " &
+		"101 (BC_7, PR5B, bidir, X, 100, 1, Z), " &
+		"100 (BC_2, *, control, 1), " &
+		"99 (BC_7, PR5C, bidir, X, 98, 1, Z), " &
+		"98 (BC_2, *, control, 1), " &
+		"97 (BC_7, PR5D, bidir, X, 96, 1, Z), " &
+		"96 (BC_2, *, control, 1), " &
+		"95 (BC_7, PR6A, bidir, X, 94, 1, Z), " &
+		"94 (BC_2, *, control, 1), " &
+		"93 (BC_7, PR6B, bidir, X, 92, 1, Z), " &
+		"92 (BC_2, *, control, 1), " &
+		"91 (BC_7, PR6C, bidir, X, 90, 1, Z), " &
+		"90 (BC_2, *, control, 1), " &
+		"89 (BC_7, PR6D, bidir, X, 88, 1, Z), " &
+		"88 (BC_2, *, control, 1), " &
+		"87 (BC_7, PR7A, bidir, X, 86, 1, Z), " &
+		"86 (BC_2, *, control, 1), " &
+		"85 (BC_7, PR7B, bidir, X, 84, 1, Z), " &
+		"84 (BC_2, *, control, 1), " &
+		"83 (BC_7, PR7C, bidir, X, 82, 1, Z), " &
+		"82 (BC_2, *, control, 1), " &
+		"81 (BC_7, PR7D, bidir, X, 80, 1, Z), " &
+		"80 (BC_2, *, control, 1), " &
+		"79 (BC_7, PB14D, bidir, X, 78, 1, Z), " &
+		"78 (BC_2, *, control, 1), " &
+		"77 (BC_7, PB14C, bidir, X, 76, 1, Z), " &
+		"76 (BC_2, *, control, 1), " &
+		"75 (BC_7, PB14B, bidir, X, 74, 1, Z), " &
+		"74 (BC_2, *, control, 1), " &
+		"73 (BC_7, PB14A, bidir, X, 72, 1, Z), " &
+		"72 (BC_2, *, control, 1), " &
+		"71 (BC_7, PB12D, bidir, X, 70, 1, Z), " &
+		"70 (BC_2, *, control, 1), " &
+		"69 (BC_7, PB12C, bidir, X, 68, 1, Z), " &
+		"68 (BC_2, *, control, 1), " &
+		"67 (BC_7, PB12B, bidir, X, 66, 1, Z), " &
+		"66 (BC_2, *, control, 1), " &
+		"65 (BC_7, PB12A, bidir, X, 64, 1, Z), " &
+		"64 (BC_2, *, control, 1), " &
+		"63 (BC_7, PB10D, bidir, X, 62, 1, Z), " &
+		"62 (BC_2, *, control, 1), " &
+		"61 (BC_7, PB10C, bidir, X, 60, 1, Z), " &
+		"60 (BC_2, *, control, 1), " &
+		"59 (BC_7, PB10B, bidir, X, 58, 1, Z), " &
+		"58 (BC_2, *, control, 1), " &
+		"57 (BC_7, PB10A, bidir, X, 56, 1, Z), " &
+		"56 (BC_2, *, control, 1), " &
+		"55 (BC_7, PB6D, bidir, X, 54, 1, Z), " &
+		"54 (BC_2, *, control, 1), " &
+		"53 (BC_7, PB6C, bidir, X, 52, 1, Z), " &
+		"52 (BC_2, *, control, 1), " &
+		"51 (BC_7, PB6B, bidir, X, 50, 1, Z), " &
+		"50 (BC_2, *, control, 1), " &
+		"49 (BC_7, PB6A, bidir, X, 48, 1, Z), " &
+		"48 (BC_2, *, control, 1), " &
+		"47 (BC_7, PB4D, bidir, X, 46, 1, Z), " &
+		"46 (BC_2, *, control, 1), " &
+		"45 (BC_7, PB4C, bidir, X, 44, 1, Z), " &
+		"44 (BC_2, *, control, 1), " &
+		"43 (BC_7, PB4B, bidir, X, 42, 1, Z), " &
+		"42 (BC_2, *, control, 1), " &
+		"41 (BC_7, PB4A, bidir, X, 40, 1, Z), " &
+		"40 (BC_2, *, control, 1), " &
+		"39 (BC_7, PL7D, bidir, X, 38, 1, Z), " &
+		"38 (BC_2, *, control, 1), " &
+		"37 (BC_7, PL7C, bidir, X, 36, 1, Z), " &
+		"36 (BC_2, *, control, 1), " &
+		"35 (BC_7, PL7B, bidir, X, 34, 1, Z), " &
+		"34 (BC_2, *, control, 1), " &
+		"33 (BC_7, PL7A, bidir, X, 32, 1, Z), " &
+		"32 (BC_2, *, control, 1), " &
+		"31 (BC_7, PL6D, bidir, X, 30, 1, Z), " &
+		"30 (BC_2, *, control, 1), " &
+		"29 (BC_7, PL6C, bidir, X, 28, 1, Z), " &
+		"28 (BC_2, *, control, 1), " &
+		"27 (BC_7, PL6B, bidir, X, 26, 1, Z), " &
+		"26 (BC_2, *, control, 1), " &
+		"25 (BC_7, PL6A, bidir, X, 24, 1, Z), " &
+		"24 (BC_2, *, control, 1), " &
+		"23 (BC_7, PL5D, bidir, X, 22, 1, Z), " &
+		"22 (BC_2, *, control, 1), " &
+		"21 (BC_7, PL5C, bidir, X, 20, 1, Z), " &
+		"20 (BC_2, *, control, 1), " &
+		"19 (BC_7, PL5B, bidir, X, 18, 1, Z), " &
+		"18 (BC_2, *, control, 1), " &
+		"17 (BC_7, PL5A, bidir, X, 16, 1, Z), " &
+		"16 (BC_2, *, control, 1), " &
+		"15 (BC_7, PL3D, bidir, X, 14, 1, Z), " &
+		"14 (BC_2, *, control, 1), " &
+		"13 (BC_7, PL3C, bidir, X, 12, 1, Z), " &
+		"12 (BC_2, *, control, 1), " &
+		"11 (BC_7, PL3B, bidir, X, 10, 1, Z), " &
+		"10 (BC_2, *, control, 1), " &
+		"9 (BC_7, PL3A, bidir, X, 8, 1, Z), " &
+		"8 (BC_2, *, control, 1), " &
+		"7 (BC_7, PL2D, bidir, X, 6, 1, Z), " &
+		"6 (BC_2, *, control, 1), " &
+		"5 (BC_7, PL2C, bidir, X, 4, 1, Z), " &
+		"4 (BC_2, *, control, 1), " &
+		"3 (BC_7, PL2B, bidir, X, 2, 1, Z), " &
+		"2 (BC_2, *, control, 1), " &
+		"1 (BC_7, PL2A, bidir, X, 0, 1, Z), " &
+		"0 (BC_2, *, control, 1)";
+
+end LCMXO2_640ZE_XXTG100;
