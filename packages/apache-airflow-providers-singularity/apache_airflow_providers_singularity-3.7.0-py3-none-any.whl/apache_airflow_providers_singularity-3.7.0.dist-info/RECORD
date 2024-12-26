@@ -1,0 +1,9 @@
+airflow/providers/singularity/LICENSE,sha256=FFb4jd2AXnOOf7XLP04pQW6jbdhG49TxlGY6fFpCV1Y,13609
+airflow/providers/singularity/__init__.py,sha256=u1bdOcObw7oWxirUAp4p3DPBeVsFDuPeMFIGid4wX-o,1498
+airflow/providers/singularity/get_provider_info.py,sha256=jRFpsWt9TosREeZ_PodQ84nNyRjIQ11XtCofVwNkIus,2365
+airflow/providers/singularity/operators/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/singularity/operators/singularity.py,sha256=BwjzF4i2nSfpLDC5XbJJ97XQiVNUNY0VM1UQfF6VL-k,6867
+apache_airflow_providers_singularity-3.7.0.dist-info/entry_points.txt,sha256=sqYFeDhtijEiWeB-T9p0FN2nm7fpU9CZRdEN0C1W7zA,107
+apache_airflow_providers_singularity-3.7.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+apache_airflow_providers_singularity-3.7.0.dist-info/METADATA,sha256=16pJ42zwDvEpt_-nb6-xzKpQgQFNvV483rg6u7Y7bbQ,4754
+apache_airflow_providers_singularity-3.7.0.dist-info/RECORD,,
