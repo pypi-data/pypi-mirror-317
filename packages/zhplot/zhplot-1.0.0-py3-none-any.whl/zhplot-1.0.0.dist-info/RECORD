@@ -1,0 +1,13 @@
+zhplot/__init__.py,sha256=WqVf6eKcH7QwDixQq96Ia65czHGdqvHHQnfJ40Ou5rs,162
+zhplot/matplotlib.py,sha256=pGXbLfI9vyu7LDNPbkkeAxV9tpb9M15aWQYu8z7KRXU,790
+zhplot/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zhplot/wordcloud.py,sha256=dhPPRdr1ntTBAdOxXbRUFmQ7dvduMI29zKznFfu8jQA,209
+zhplot/fonts/NotoSansSC-Regular.ttf,sha256=XPiyoFdtVoAoSrA6eoIZSZ1Zu-mBp5uz3AAx8lHDlzY,10560616
+zhplot/fonts/OFL.txt,sha256=ify3w73Pr7SL6aRCj06fT9u5FLjUkdw1RRIXFao9IRs,4387
+zhplot/fonts/README.txt,sha256=rbfNbPpQOTMAEQF1QmV7Z5kNRNPc4SAEVVEqV0M35Uo,2326
+zhplot-1.0.0.dist-info/LICENSE,sha256=ue0gAkSEjNg8O88FIc4ZaCa0wXPhTYTY2oS3jA5NqmY,1068
+zhplot-1.0.0.dist-info/METADATA,sha256=97Lb1WvS9MCJW3XraxFuUQdQ3S-tV4LIPYk0XUwvlVk,4904
+zhplot-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+zhplot-1.0.0.dist-info/top_level.txt,sha256=IePjtqSGp-YmRd5zgVDADltqd7ksCYjCfP6JRq0kKLs,7
+zhplot-1.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+zhplot-1.0.0.dist-info/RECORD,,
