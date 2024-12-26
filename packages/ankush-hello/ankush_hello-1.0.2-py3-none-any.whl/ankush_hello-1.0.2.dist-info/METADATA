@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: ankush_hello
+Version: 1.0.2
+Summary: ankush_hello
+Keywords: ankush,ankush_hello
+Requires-Dist: requests
