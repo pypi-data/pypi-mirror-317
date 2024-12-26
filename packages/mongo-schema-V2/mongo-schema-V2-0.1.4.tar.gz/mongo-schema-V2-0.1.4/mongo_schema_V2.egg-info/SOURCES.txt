@@ -1,0 +1,14 @@
+README.md
+setup.py
+mongo_schema/__init__.py
+mongo_schema/cli.py
+mongo_schema/config.py
+mongo_schema/exceptions.py
+mongo_schema/exporter.py
+mongo_schema/utils.py
+mongo_schema_V2.egg-info/PKG-INFO
+mongo_schema_V2.egg-info/SOURCES.txt
+mongo_schema_V2.egg-info/dependency_links.txt
+mongo_schema_V2.egg-info/entry_points.txt
+mongo_schema_V2.egg-info/requires.txt
+mongo_schema_V2.egg-info/top_level.txt
