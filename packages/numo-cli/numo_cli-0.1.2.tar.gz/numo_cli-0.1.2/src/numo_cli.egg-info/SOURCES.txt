@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/numo_cli/__init__.py
+src/numo_cli/__main__.py
+src/numo_cli/main.py
+src/numo_cli.egg-info/PKG-INFO
+src/numo_cli.egg-info/SOURCES.txt
+src/numo_cli.egg-info/dependency_links.txt
+src/numo_cli.egg-info/entry_points.txt
+src/numo_cli.egg-info/requires.txt
+src/numo_cli.egg-info/top_level.txt
