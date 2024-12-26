@@ -1,0 +1,2 @@
+[console_scripts]
+GDV_feature_shows = GDV_feature_shows.main:main
