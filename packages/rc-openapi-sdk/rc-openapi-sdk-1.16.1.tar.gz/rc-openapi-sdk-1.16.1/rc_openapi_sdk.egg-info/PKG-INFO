@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rc-openapi-sdk
+Version: 1.16.1
+Summary: OpenAPI SDK for Python ~ 融创API开放平台所用
+Home-page: https://github.com/Haoke98/openapi-sdk
+Author: Sadam·Sadik
+Author-email: Haoke98@outlook.com
+License: UNKNOWN
+Description: # OpenAPI-SDK
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

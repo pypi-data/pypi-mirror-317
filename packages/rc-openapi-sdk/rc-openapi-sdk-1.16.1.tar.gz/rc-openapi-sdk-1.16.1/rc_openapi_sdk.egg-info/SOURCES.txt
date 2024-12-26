@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+rc_openapi_sdk/__init__.py
+rc_openapi_sdk/core.py
+rc_openapi_sdk.egg-info/PKG-INFO
+rc_openapi_sdk.egg-info/SOURCES.txt
+rc_openapi_sdk.egg-info/dependency_links.txt
+rc_openapi_sdk.egg-info/requires.txt
+rc_openapi_sdk.egg-info/top_level.txt
