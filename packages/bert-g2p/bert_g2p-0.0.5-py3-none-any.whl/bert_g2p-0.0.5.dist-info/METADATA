@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: bert-g2p
+Version: 0.0.5
+Summary: BERT with G2P
+Home-page: https://github.com/pengzhendong/bert-g2p
+Author: Zhendong Peng
+Author-email: pzd17@tsinghua.org.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: g2p-mix
+Requires-Dist: modelscope
+Requires-Dist: torch
+Requires-Dist: transformers
+
+# bert-g2p
