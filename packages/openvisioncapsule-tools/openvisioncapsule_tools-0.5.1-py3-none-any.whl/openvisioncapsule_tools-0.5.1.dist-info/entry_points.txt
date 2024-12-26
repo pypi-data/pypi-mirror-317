@@ -1,0 +1,3 @@
+[console_scripts]
+openvisioncapsule-tools=openvisioncapsule_tools.cli:cli_main
+
