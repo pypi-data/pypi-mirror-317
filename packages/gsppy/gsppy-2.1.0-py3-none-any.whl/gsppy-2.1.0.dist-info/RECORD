@@ -1,0 +1,14 @@
+gsppy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gsppy/cli.py,sha256=3G20xK79LeIq3jA_UnajEjcuVAebBuZwzefNRnW1o9Q,6090
+gsppy/gsp.py,sha256=wTsVPziYqYuGP0tkeUBwV-nIo1OF83tzv7WF_VVAbZM,13641
+gsppy/utils.py,sha256=K-oIwE6XDi-dsIlFzBlVPa1f2A_2DrUZW4hMiThRPAo,3350
+gsppy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gsppy/tests/test_cli.py,sha256=HpzCiESyIA_wsCQh7NMlHbT4k3GQ72TU9J7rEdllP5I,11425
+gsppy/tests/test_gsp.py,sha256=SnWw4hlp-F453zJGnWUHW3A9iqhPyUTYHrmGPH5fTm4,8794
+gsppy/tests/test_utils.py,sha256=Z27IefPYSVKg-dGOmnUO9tvAcd5OQMDyKVq3HAy3XtQ,3697
+gsppy-2.1.0.dist-info/LICENSE,sha256=co1jy5VZd1wXOPdUC2uk1hn7zsBm6aJNgVmhPOZ47g8,1086
+gsppy-2.1.0.dist-info/METADATA,sha256=icNi2oENwovji0hXCbYq0jMc-FmgzQGGGipOw1LncnY,10028
+gsppy-2.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gsppy-2.1.0.dist-info/entry_points.txt,sha256=smvmcIWk424ARIGKOC_BM42hpT_SptKPcIeqs-8u8lM,41
+gsppy-2.1.0.dist-info/top_level.txt,sha256=sovAgdiFF0V3Dz2pPAwAdIkHeR-ShUchyrH3q8qU120,6
+gsppy-2.1.0.dist-info/RECORD,,
