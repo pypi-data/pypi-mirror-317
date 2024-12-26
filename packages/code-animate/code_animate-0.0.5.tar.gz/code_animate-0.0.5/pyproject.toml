@@ -1,0 +1,28 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "code_animate"
+version = "0.0.5"
+authors = [
+    { name="Liu Zuo Lin", email="zlliu246@gmail.com" },
+]
+description = "A package to animate your code step by step in temrinal"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "unprint",
+    "colorama",
+    "default_deepcopy",
+]
+
+[project.urls]
+Homepage = "https://github.com/zlliu246/code_animate"
+Issues = "https://github.com/zlliu246/code_animate/issues"
