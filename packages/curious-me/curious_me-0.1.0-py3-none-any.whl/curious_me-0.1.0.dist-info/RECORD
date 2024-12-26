@@ -1,0 +1,10 @@
+curious_me/__init__.py,sha256=Ufw4BaVO1T9KbSA-Fa_qcCkN_2-16KXh5eRZCpd4uPI,29
+curious_me/curious.py,sha256=o4ROPi_u3TE9ZY_dnuQi8RYDqE-U5rCwwuUlWO3TgeI,8221
+curious_me/rag.py,sha256=1tm84c22ZicX3mvc5qUb28VbvllRrhv-TuvCXDNLRPo,10984
+curious_me/research_papers/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+curious_me/searcher.py,sha256=v4bJs0QE_kUIxn9IRv_Cq2BB3FROHCwCI7xC4rjS90Y,3864
+curious_me/vector_store.py,sha256=UghKYBsoV8_fnamqygqnTwHOWEMUg1Urh0lFzpem33o,7285
+curious_me-0.1.0.dist-info/LICENSE,sha256=_gwqCK4hGsnuhyKUEFRJlkTyWN6M8Sq1EHg3WwTQ7I0,1096
+curious_me-0.1.0.dist-info/METADATA,sha256=rBzjzVCVAQXYzwxox9A6C2I3z4Hcnn3TlpTNAaAPPyo,2239
+curious_me-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+curious_me-0.1.0.dist-info/RECORD,,
