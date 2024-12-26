@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "YTSage"
+version = "2.0.0"
+description = "A simple GUI for yt-dlp"
+authors = [
+    {name = "oop7", email = "oop7_support@proton.me"}, # Replace with your email
+]
+dependencies = [
+    "yt-dlp",
+    "PyQt6",
+    "requests",
+    "Pillow",
+    "packaging",
+]
+requires-python = ">=3.7"
+readme = "README.md"
+license = {text = "MIT License"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/oop7/YTSage"
+
+[project.scripts]
+YTSage = "YTSage.YTSage:main"

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+YTSage/YTSage.py
+YTSage.egg-info/PKG-INFO
+YTSage.egg-info/SOURCES.txt
+YTSage.egg-info/dependency_links.txt
+YTSage.egg-info/entry_points.txt
+YTSage.egg-info/requires.txt
+YTSage.egg-info/top_level.txt
