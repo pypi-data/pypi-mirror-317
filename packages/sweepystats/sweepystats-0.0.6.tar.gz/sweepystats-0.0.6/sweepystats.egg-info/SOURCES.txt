@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+sweepystats/__init__.py
+sweepystats/anova.py
+sweepystats/linreg.py
+sweepystats/sweep_matrix.py
+sweepystats.egg-info/PKG-INFO
+sweepystats.egg-info/SOURCES.txt
+sweepystats.egg-info/dependency_links.txt
+sweepystats.egg-info/requires.txt
+sweepystats.egg-info/top_level.txt
+tests/test_anova.py
+tests/test_linreg.py
+tests/test_matrix.py
