@@ -1,0 +1,12 @@
+flatmatter/__init__.py,sha256=dio9c-nFsSfw_ysXfHXPv-5NnxvI1HY7VKRser5zmpM,148
+flatmatter/compute_action.py,sha256=f-CGSpdPyyf7xzAyplf8TG6TxvJaoATAS2vMDBNeTAU,166
+flatmatter/flatmatter.py,sha256=JlkGH6qj1Y8Yn2lHj2n1kgRGrF-3bietx-lfDFGn_ko,8015
+flatmatter/function.py,sha256=pAJyTFKpoGxa34YqCBRfjqp2whN8V416nSz72aJR6Ao,188
+flatmatter/function_name.py,sha256=u4UMxgRrvdoyMyNjG8iaPAmePi09HGZ7fVcRH2Gdx9c,122
+flatmatter/parsed_value.py,sha256=gzR58pLLOLKistpjz2T4R38p7NJ9dIr_YfMe0Slp8rQ,322
+flatmatter/test_flatmatter.py,sha256=ltUZXKt5SyouBC-wqcv3f_vdvI3eO6b03A6tUY1B0BE,449
+flatmatter-0.2.0.dist-info/LICENSE.txt,sha256=9kHf6SuWHdYbb3ERSfgWuvQE2TunAG8byhb9-XQt_Ec,1065
+flatmatter-0.2.0.dist-info/METADATA,sha256=GGvNCzDp4ZCr3UwOr3olz9y_0_8Cwrbw4FgbBoDbK8Q,569
+flatmatter-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+flatmatter-0.2.0.dist-info/top_level.txt,sha256=AUYd2sX3pdLjQ30QqmWxVLG7S29a0DOgUTRsC0LzgSs,11
+flatmatter-0.2.0.dist-info/RECORD,,
