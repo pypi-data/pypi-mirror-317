@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+mysqlchain/__init__.py
+mysqlchain/mysqlchain.py
+mysqlchain/utils.py
+mysqlchain.egg-info/PKG-INFO
+mysqlchain.egg-info/SOURCES.txt
+mysqlchain.egg-info/dependency_links.txt
+mysqlchain.egg-info/requires.txt
+mysqlchain.egg-info/top_level.txt
