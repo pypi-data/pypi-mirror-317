@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: ai-search-api
+Version: 0.0.8.2.8
+Summary: search the future [test version]
+Home-page: https://github.com/neopad/ai-search
+Author: NeopadAI
+Author-email: neopad.azienda@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# AI-Search
+
+## What is it?
+
+AI-Search is a powerful tool that allows you to perform intelligent searches on local files and services within the books folder. It uses artificial intelligence to select files and answers with greater ease and precision. It can also better understand your queries with a rich database of information.
+
+## What can it do?
+
+search with artificial intelligence all your files or services inside the books folder.
+
+It is able to understand and select files and responses much more easily and precisely thanks to its new database full of information to use at any time.
+
+By writing the URL of a web page you will see the text contained in it.
+
+New API feature. Every data of our AI is loaded from an API in seconds, it also works offline.
+
+## How to run the AI?
+
+Running our application is very simple, you just need to run the main.py file 
+or write the following code in the main folder of the project
+
+### Using the PyPi library
+
+> Install the library
+
+```bash
+pip3 install ai-search-api
+```
+
+> Import the library in your code
+
+```python
+import ai_search_api as ai
+```
+
+> Update the library
+
+```python
+ai.update()
+```
+
+> Ask a question
+
+```python
+while True:
+	question = input("you: ")
+	print("ai-search: " + str(ai.request(question)))
+```
+
+### Using the repository
+
+> First import these two libraries that are needed to run the code
+
+```python
+    import update
+    import ai_search.main as ai
+```
+> Now write this code that allows you to send questions and receive information from Ai-search
+```python
+    #infinite questions
+    while True:
+        # set the request
+        ai.req = input('ai-search: ')
+        ai.run()
+        results = ai.result
+
+        # print the results
+        print('results: ')
+        for result in results:
+            print(result)
+            print()
+```
+
+## Code Structure
+main.py
+> This is the entry point for the application. It handles user input and displays the results from the AI-powered search.
+
+> ai_search/main.py
+This module contains the core logic for the AI engine. It processes the search queries and retrieves the results based on local files or web scraping.
+
+> update.py (Optional)
+If the project includes an update mechanism, this file will manage it. If not needed, you can ignore it.
+
+---
+
+### Contributing
+We welcome contributions to improve AI-Search! If you'd like to help, you can:
+
+> Fork the repository
+
+>Create a new branch for your changes
+
+>Submit a pull request with a description of your modifications
+
+>Please make sure to follow the project guidelines and write tests for any new features you add.
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+### Installation requirements
+
+Make sure you have Python 3.x installed on your system.
+```bash
+Flask==3.0.0
+requests==2.31.0
+```
+
+---
+### Install Dependencies
+Ensure that all necessary Python dependencies are installed. If a requirements.txt file is provided, you can install the dependencies using pip:
+
+```bash
+pip install -r requirements.txt
+```
+---
+
+By @neopadAI
+follow us on Twitter(X) [@neopadai__](https://www.x.com/neopadai__)
