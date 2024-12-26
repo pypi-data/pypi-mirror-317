@@ -1,0 +1,13 @@
+numpy
+scipy
+tiktoken
+transformers
+accelerate
+huggingface_hub
+PyPDF2
+graphing
+hnswlib
+
+[dev]
+pytest
+twine
