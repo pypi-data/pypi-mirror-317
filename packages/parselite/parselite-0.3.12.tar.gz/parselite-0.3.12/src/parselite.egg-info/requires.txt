@@ -1,0 +1,6 @@
+selenium==4.25.0
+beautifulsoup4
+requests
+aiohttp
+trafilatura
+youtube-transcript-api
