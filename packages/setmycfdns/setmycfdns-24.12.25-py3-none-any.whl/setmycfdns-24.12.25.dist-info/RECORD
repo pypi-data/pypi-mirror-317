@@ -1,0 +1,12 @@
+cfdns/__init__.py,sha256=KAuu3jBaNU5mzir1YbIp7edkdyU1Z7aPjuiunm9YQa0,60
+cfdns/cf_dns.py,sha256=Bg_3Q7fBrB97CyS0YD4fR6rv4CYU7cuqmwCrmm7_Q0M,5256
+getmyip/__init__.py,sha256=F9_thOcilTAS0dtIcvJjy7d6QLAEHQUpgExZGJN06Ts,60
+getmyip/getmyip.py,sha256=pJIgUdGZkYVseCCsNmRyxJNlQBydnO2ZdXSnV4hk0yo,1149
+setmycfdns/__init__.py,sha256=2bhEtG2yAEHyYAW8f-fH3mVBgjLIXkJFrU_ihV-F0og,41
+setmycfdns/set_my_cf_dns.py,sha256=WGRqE42nQdCtf6eJ_ykwsgBSHxjXZsxYZIvNJqD_D0A,3731
+setmycfdns-24.12.25.data/scripts/setmycfdns,sha256=2flGBnQtaes8s9ZzoBRENV2AjdIu8qXnOF5M2s4F2o0,95
+setmycfdns-24.12.25.dist-info/LICENSE.txt,sha256=IsKhNAExnuxGLWUOpUYTEH0JttGV2QexZXW-ttXs0YE,1067
+setmycfdns-24.12.25.dist-info/METADATA,sha256=an1OfqhYRAbRlusiy5qs7IWqP013M8W-VBRsm289FN4,6818
+setmycfdns-24.12.25.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+setmycfdns-24.12.25.dist-info/top_level.txt,sha256=_WYFpaV7dzV7tTjSZ_iOWGQJA79TLfGOqKbclG-JvJ8,25
+setmycfdns-24.12.25.dist-info/RECORD,,
