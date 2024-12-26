@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+commandkit/EventManager.py
+commandkit/__init__.py
+commandkit/_parser.py
+commandkit/commander.py
+commandkit/core.py
+commandkit/parser.py
+commandkit.egg-info/PKG-INFO
+commandkit.egg-info/SOURCES.txt
+commandkit.egg-info/dependency_links.txt
+commandkit.egg-info/requires.txt
+commandkit.egg-info/top_level.txt
