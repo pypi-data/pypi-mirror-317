@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+superfsmon/__init__.py
+superfsmon/superfsmon.py
+superfsmon.egg-info/PKG-INFO
+superfsmon.egg-info/SOURCES.txt
+superfsmon.egg-info/dependency_links.txt
+superfsmon.egg-info/entry_points.txt
+superfsmon.egg-info/requires.txt
+superfsmon.egg-info/top_level.txt

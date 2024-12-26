@@ -1,0 +1,7 @@
+watchdog
+
+[:sys_platform != "win32"]
+supervisor>=4.0.0
+
+[:sys_platform == "win32"]
+supervisor-win>=4.0.0
