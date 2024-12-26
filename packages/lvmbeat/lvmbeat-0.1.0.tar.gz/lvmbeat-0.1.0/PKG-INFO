@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: lvmbeat
+Version: 0.1.0
+Summary: LVM heartbeat monitor
+Author-email: José Sánchez-Gallego <gallegoj@uw.edu>
+License-File: LICENSE.md
+Requires-Python: >=3.13
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: lvmopstools[slack]>=0.5.2
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: python3-nmap>=1.9.1
+Requires-Dist: sdss-clu>=2.4.3
+Requires-Dist: sdsstools>=1.9.1
+Provides-Extra: lco-monitor
+Requires-Dist: fastapi-utils>=0.8.0; extra == 'lco-monitor'
+Requires-Dist: fastapi[standard]>=0.115.6; extra == 'lco-monitor'
+Requires-Dist: typing-inspect>=0.9.0; extra == 'lco-monitor'
+Description-Content-Type: text/markdown
+
+# lvmbeat
+
+Middleware that monitors various heartbeats from different sources (Overwatcher, `lvmecp`, etc.) and sets the dome heartbeat.
+
+It also emits an external heartbeat every 5 seconds to inform the outside world that the internet connection to LCO is active.
