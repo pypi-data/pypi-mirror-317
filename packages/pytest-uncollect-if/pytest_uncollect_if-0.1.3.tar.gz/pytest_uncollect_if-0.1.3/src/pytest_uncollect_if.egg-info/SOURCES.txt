@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+pyproject.toml
+src/pytest_uncollect_if/__init__.py
+src/pytest_uncollect_if/plugin.py
+src/pytest_uncollect_if/py.typed
+src/pytest_uncollect_if.egg-info/PKG-INFO
+src/pytest_uncollect_if.egg-info/SOURCES.txt
+src/pytest_uncollect_if.egg-info/dependency_links.txt
+src/pytest_uncollect_if.egg-info/entry_points.txt
+src/pytest_uncollect_if.egg-info/requires.txt
+src/pytest_uncollect_if.egg-info/top_level.txt
+tests/test_uncollect_if.py
