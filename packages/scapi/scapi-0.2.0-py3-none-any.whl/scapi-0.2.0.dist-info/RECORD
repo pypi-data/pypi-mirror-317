@@ -1,0 +1,17 @@
+scapi/__init__.py,sha256=9TAS7i23_wYRkYaD6ryDOHK7LENsssaruSc_pvqu4Tc,1164
+scapi/others/common.py,sha256=4RXt-k2NsInv3vDf8QaPt5oJU6dZUAus6ZjV8QNpBAc,8294
+scapi/others/error.py,sha256=Lf1AksenUO8gAjWgJL_gUN69Jp-A_UZmjT_6xO2qwEc,3302
+scapi/others/other_api.py,sha256=LHlURPEzA3_AgD4v-nVPcNJ_2H2_V9NWpnrl36Mv_tU,637
+scapi/sites/activity.py,sha256=TRN08k6sbfuukYDlBcBog37D9Eyrn8J-xej-AgCdCC0,10867
+scapi/sites/base.py,sha256=saaQn6Kjz_g7HMtxw3tyQbKpXmkB3zT7m9LzBFiHw8A,5279
+scapi/sites/comment.py,sha256=tveGY634A0udZrHRGT73QzP5d0Xbnw6vyglTF4GYeik,8600
+scapi/sites/forum.py,sha256=D1Kof11oExCeIqOWQMxpzeY0HtKGL6YpB0W3B6a5ETM,1208
+scapi/sites/project.py,sha256=liGs55WW49wqKtmNsbY5vM1GzqCDINU20a3KIeY2WOs,8248
+scapi/sites/session.py,sha256=f3zNvyUdnqYazhLEYflIvSV0-Fzh9ITW859rSSL45aY,7211
+scapi/sites/studio.py,sha256=2OEG73UGq2NGN_5zGnNhEFLkmla-4RD993HXRrjccks,5699
+scapi/sites/user.py,sha256=lQd_qiquC8_1QixLYcrXQJJ0tg3iPjpk1iQWMl85l7M,13092
+scapi-0.2.0.dist-info/LICENSE,sha256=7KJDa0V4_yxDLMVKiJwITK5fxS5t4OGrbKKji2hXczg,1069
+scapi-0.2.0.dist-info/METADATA,sha256=65KoBhofdfVxoBgFue2iPjXyyy8QMQqXTBqYobaRpsA,1174
+scapi-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+scapi-0.2.0.dist-info/top_level.txt,sha256=C0GtPiXv6EyyltpArj4hMfQFwv7i7UxB6AUyQhVW-k8,6
+scapi-0.2.0.dist-info/RECORD,,
