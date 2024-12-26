@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: plural.py
+Version: 0.1.0
+Summary: Python wrapper for the /plu/ral API
+Author-email: tyrantlink <38902185+tyrantlink@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: bson>=0.5.10
+Requires-Dist: hatch>=1.14.0
+Requires-Dist: pydantic>=2.10.4
