@@ -1,0 +1,52 @@
+[project]
+name = "llama-cpp-server-py-core"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Fangyin Cheng", email = "staneyffer@gmail.com" }
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[build-system]
+requires = ["scikit-build-core[pyproject]"]
+build-backend = "scikit_build_core.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "jupyter>=1.1.1",
+    "numpy>=2.2.1",
+    "torch>=2.5.1",
+    "gguf>=0.13.0",
+    "safetensors>=0.4.5",
+    "transformers>=4.47.1",
+]
+
+[tool.scikit-build]
+wheel.packages = ["llama_cpp_server_py_core"]
+
+wheel.exclude = [
+    "include/*",
+    "lib/*",
+    "bin/*",
+]
+# Set the wheel tags
+cmake.verbose = true
+cmake.minimum-version = "3.21"
+cmake.build-type = "Release"
+cmake.args = [
+    # "-DGGML_STATIC=ON",
+    "-DLLAMA_CURL=OFF",
+]
+minimum-version = "0.5.1"
+sdist.include = [
+    "llama.cpp/*",
+    "bin/convert_hf_to_gguf.py"  # Make sure this file is included in the source distribution
+]
+sdist.exclude = ["llama.cpp/.git"]
+
+[tool.rye.scripts]
+hf2gguf = "llama_cpp_server_py_core/convert_hf_to_gguf.py"
+quantize = { cmd = "llama_cpp_server_py_core/lib/llama-quantize" }

@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: llama-cpp-server-py-core
+Version: 0.1.0
+Summary: Add your description here
+Author-Email: Fangyin Cheng <staneyffer@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# llama-cpp-server-py-core
+
+Describe your project here.
