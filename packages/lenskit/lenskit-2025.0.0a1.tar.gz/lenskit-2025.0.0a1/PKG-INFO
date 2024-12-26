@@ -1,0 +1,108 @@
+Metadata-Version: 2.4
+Name: lenskit
+Version: 2025.0.0a1
+Summary: Toolkit for recommender systems research, teaching, and more.
+Project-URL: homepage, https://lenskit.org
+Project-URL: documentation, https://lkpy.lenskit.org
+Project-URL: source, https://github.com/lenskit/lkpy
+Author-email: Michael Ekstrand <mdekstrand@drexel.edu>
+License: Copyright (c) 2018–2023 Boise State University
+        Copyright (c) 2023-2024 Drexel University and contributors
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        > The above copyright notice and this permission notice shall be included in
+        > all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE.md
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.11
+Requires-Dist: more-itertools>=9.0
+Requires-Dist: numpy>=1.25
+Requires-Dist: pandas~=2.0
+Requires-Dist: pyarrow>=15
+Requires-Dist: pydantic~=2.7
+Requires-Dist: pyzmq>=24
+Requires-Dist: rich~=13.5
+Requires-Dist: scipy>=1.11
+Requires-Dist: structlog>=23.2
+Requires-Dist: threadpoolctl>=3.0
+Requires-Dist: torch~=2.1
+Provides-Extra: sklearn
+Requires-Dist: scikit-learn>=1.1; extra == 'sklearn'
+Provides-Extra: test
+Requires-Dist: hypothesis>=6.16; extra == 'test'
+Requires-Dist: pyprojroot==0.3.*; extra == 'test'
+Requires-Dist: pytest-benchmark==4.*; extra == 'test'
+Requires-Dist: pytest-cov>=2.12; extra == 'test'
+Requires-Dist: pytest-doctestplus<2,>=1.2.1; extra == 'test'
+Requires-Dist: pytest-repeat>=0.9; extra == 'test'
+Requires-Dist: pytest<9,>=8.2; extra == 'test'
+Description-Content-Type: text/markdown
+
+# Python recommendation tools
+
+![Test Suite](https://github.com/lenskit/lkpy/workflows/Test%20Suite/badge.svg)
+[![codecov](https://codecov.io/gh/lenskit/lkpy/branch/master/graph/badge.svg)](https://codecov.io/gh/lenskit/lkpy)
+
+LensKit is a set of Python tools for experimenting with and studying recommender
+systems.  It provides support for training, running, and evaluating recommender
+algorithms in a flexible fashion suitable for research and education.
+
+LensKit for Python (LKPY) is the successor to the Java-based LensKit project.
+
+> [!IMPORTANT]
+> If you use LensKit for Python in published research, please cite:
+>
+> > Michael D. Ekstrand. 2020.
+> > LensKit for Python: Next-Generation Software for Recommender Systems Experiments.
+> > In <cite>Proceedings of the 29th ACM International Conference on Information and Knowledge Management</cite> (CIKM '20).
+> > DOI:[10.1145/3340531.3412778](https://dx.doi.org/10.1145/3340531.3412778).
+> > arXiv:[1809.03125](https://arxiv.org/abs/1809.03125) [cs.IR].
+
+> [!WARNING]
+> This is the `main` branch of LensKit, following new development in preparation
+> for the 2024 release.  It will be changing frequently and incompatibly. You
+> probably want to use a [stable release][release].
+
+[release]: https://lkpy.lenskit.org/en/stable/
+
+## Installing
+
+To install the current release with Anaconda (recommended):
+
+    conda install -c conda-forge lenskit
+
+Or you can use `pip`:
+
+    pip install lenskit
+
+To use the latest development version, install directly from GitHub:
+
+    pip install -U git+https://github.com/lenskit/lkpy
+
+Then see [Getting Started](https://lkpy.lenskit.org/en/latest/GettingStarted.html)
+
+## Acknowledgements
+
+This material is based upon work supported by the National Science Foundation
+under Grant No. IIS 17-51278. Any opinions, findings, and conclusions or
+recommendations expressed in this material are those of the author(s) and do not
+necessarily reflect the views of the National Science Foundation.
