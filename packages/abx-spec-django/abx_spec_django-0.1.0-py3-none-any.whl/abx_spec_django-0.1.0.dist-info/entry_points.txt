@@ -1,0 +1,2 @@
+[abx]
+abx_spec_django = abx_spec_django
