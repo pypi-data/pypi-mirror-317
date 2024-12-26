@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: splitme-ai
+Version: 0.1.0
+Summary: Break down docs, build up knowledge.
+Project-URL: Homepage, https://github.com/eli64s/splitme-ai
+Author-email: Eli Salamie <egsalamie@gmail.com>
+License-Expression: MIT
+Keywords: documentation,markdown,mkdocs,static-site
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Requires-Dist: pydantic-settings>=2.6.1
+Requires-Dist: pydantic>=2.10.3
+Requires-Dist: pyyaml>=6.0.2
+Provides-Extra: ai
+Requires-Dist: pydantic-ai>=0.0.15; extra == 'ai'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material>=9.5.47; extra == 'docs'
+Requires-Dist: mkdocs>=1.6.1; extra == 'docs'

@@ -1,0 +1,2 @@
+[console_scripts]
+splitme-ai = splitme_ai.core:main
