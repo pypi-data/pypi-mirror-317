@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+tests/integration/test_integration.py
+vitesy/__init__.py
+vitesy/client.py
+vitesy/exceptions.py
+vitesy_python_unofficial.egg-info/PKG-INFO
+vitesy_python_unofficial.egg-info/SOURCES.txt
+vitesy_python_unofficial.egg-info/dependency_links.txt
+vitesy_python_unofficial.egg-info/requires.txt
+vitesy_python_unofficial.egg-info/top_level.txt
