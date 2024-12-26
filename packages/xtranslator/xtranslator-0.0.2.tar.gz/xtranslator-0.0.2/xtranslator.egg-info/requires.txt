@@ -1,0 +1,16 @@
+langdetect
+lingua-language-detector
+langid
+stanza
+fasttext-langdetect
+simplemma
+py-googletrans
+transformers
+torch
+pandas
+numpy
+boto3
+deepl
+sentencepiece
+fasttext
+huggingface_hub
