@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+instacapture/InstaPost.py
+instacapture/InstaStory.py
+instacapture/__init__.py
+instacapture.egg-info/PKG-INFO
+instacapture.egg-info/SOURCES.txt
+instacapture.egg-info/dependency_links.txt
+instacapture.egg-info/requires.txt
+instacapture.egg-info/top_level.txt
+tests/__init__.py
+tests/test_simple.py
