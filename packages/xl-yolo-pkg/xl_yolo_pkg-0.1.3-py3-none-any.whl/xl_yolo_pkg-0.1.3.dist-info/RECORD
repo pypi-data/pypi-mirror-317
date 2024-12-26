@@ -1,0 +1,17 @@
+modules/__init__.py,sha256=p6pwvF3-l9gJGVMx11vmzqvNqCJdDrQxgHp8D2hG_y0,2673
+modules/activation.py,sha256=chhn469wnRHEs5BMGNBYXwPYZc_7-urspTT8fnBd-xA,895
+modules/block.py,sha256=thcIPcnGRRxDDDswywJsfzbewr9XfTrzl_UvSl-bJ3c,41832
+modules/conv.py,sha256=vOeHZ6Z4sc6-9PrDmRGT1hFkxSBbbWkQm2jRbGGjpqQ,12705
+modules/custom_layers.py,sha256=t91OrmC-VRSf7I-cQJH5WlLohZTQhP3syRE70MyaYIQ,970
+modules/head.py,sha256=uLqmmEAF4z2xsjAAYw3WtFtw1tcWHnFNWLgmNDSvcss,26730
+modules/transformer.py,sha256=tGiK8NmPfswwW1rbF21r5ILUkkZQ6Nk4s8j16vFBmps,18069
+modules/utils.py,sha256=a88cKl2wz1nMVSEBiajtvaCbDBQIkESWOKTZ_WAJy90,3195
+my_modules/HRAMI.py,sha256=aOzoUJJ_xTw19Z91KCLMwccaSwI4mPOCRnW6h1N1s8o,3438
+my_modules/SPDConv.py,sha256=sGStG40-YUkZA8WShW4Y2L7829JdJ_wt4RX0vuW_G8c,1543
+my_modules/WTConv.py,sha256=KwRilbZm7pWzK8lrNJQcvHmneMGxnQwbNx4tY5XbGDc,8608
+my_modules/__init__.py,sha256=WvhSzMDcPjEQDK69DNdsXLGmS1VSYQoKjYTUL5u5JJY,45
+xl_yolo_pkg-0.1.3.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+xl_yolo_pkg-0.1.3.dist-info/METADATA,sha256=clIyHslEwDbqmluT56n78WOF6YIx9SBqZd3vXZdA11Y,1452
+xl_yolo_pkg-0.1.3.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+xl_yolo_pkg-0.1.3.dist-info/top_level.txt,sha256=YKfIP3h8M2NpXebj9aakBgycn8x5iMSWRdEa4ZN9ApY,19
+xl_yolo_pkg-0.1.3.dist-info/RECORD,,
