@@ -1,0 +1,14 @@
+fpilot/__init__.py,sha256=8XwaBx3Aof9UiehcYG8-OLZl6Jqy804-j8ic01cD3MY,82
+fpilot/training/__init__.py,sha256=X7JbOm3x6R8qb5_bUko2DME_mjZq9EMeBIepkXiTY9g,43
+fpilot/training/trainer.py,sha256=Vziu2cn-myQnmyK8FwsIcXbjVQj6I8O5bxGugvLwOjI,19798
+fpilot/utils/__init__.py,sha256=rrAdwtXIPe9PZqkvcMHrWmHkUxK3bHqW_60YT8xd1YY,105
+fpilot/utils/checkpoint_utils.py,sha256=QF39deBY6J1CrMIlzyxEnGYzzVvtmUeGJBCALz8um5I,817
+fpilot/utils/common_utils.py,sha256=7PUl2RbBS7lWPeLmaCrGXEvHR218B3GfajCEyB4V85s,469
+fpilot/utils/opt_utils.py,sha256=JO6LljlyZhGdw_NmrzH8jy4S4A_DQhR8BGS51utMNVQ,1200
+fpilot/utils/tracker_utils.py,sha256=Qbk-pHg7x8EbOwgRgSN8Y0PMs6J8CGnWwEyzmAILLJ0,5530
+fpilot/utils/trainer_utils.py,sha256=JwuWr5PO39htCfkG3azLXrnIEOUg6qn1VtXnCVIY5SI,459
+flax_pilot-0.2.2.dist-info/LICENSE,sha256=d-cFhq0g53th2fafGXk1VOzQDWqpGlyWiPutuKqgLas,1087
+flax_pilot-0.2.2.dist-info/METADATA,sha256=pXLJmombxoq5yjFEgOwWnEyZxi5CjqrcU0WgqL7bZaU,4321
+flax_pilot-0.2.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+flax_pilot-0.2.2.dist-info/top_level.txt,sha256=91_HUIwm9IWyY-mJMNVYpMCmSdQkDrPkBwahOwBGAZQ,7
+flax_pilot-0.2.2.dist-info/RECORD,,
