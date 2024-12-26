@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: rc-openapi-sdk
+Version: 1.16.3
+Summary: OpenAPI SDK for Python ~ 融创API开放平台所用
+Home-page: https://github.com/Haoke98/openapi-sdk
+Author: Sadam·Sadik
+Author-email: Haoke98@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: pycryptodome (>=3.9.0)
+Requires-Dist: python-dateutil (>=2.8.1)
+Requires-Dist: urllib3 (>=1.26.0)
+Requires-Dist: certifi (>=2020.12.5)
+
+# RC-OpenAPI-SDK
+
+融创开放API平台接口调用SDK
+
+## 安装&使用
+安装:
+```shell
+pip install rc-openapi-sdk
+```
+使用案例:
+```python
+from rc_openapi_sdk import OpenAPI
+
+if __name__ == '__main__':
+    rc_api = OpenAPI(ssl_verify=False)
+    # data = rc_api.investment_promotion_regional("650000", "mcxfhy38160")
+    data = rc_api.investment_promotion_ranking("440000", "mccy778")
+    print(data)
+```
+
