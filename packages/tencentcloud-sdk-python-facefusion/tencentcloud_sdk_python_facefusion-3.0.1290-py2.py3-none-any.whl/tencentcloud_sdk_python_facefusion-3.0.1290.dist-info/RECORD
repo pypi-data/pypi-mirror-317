@@ -1,0 +1,14 @@
+tencentcloud/__init__.py,sha256=FK7JBC_Md_VLvOIZl0yhvS8xjLpU1ON9WYB5dDZeI-s,631
+tencentcloud/facefusion/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/facefusion/v20181201/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/facefusion/v20181201/errorcodes.py,sha256=v269JghsRzIpaQbiHgyqn8wKNfvjYkVM7SjaPBRQYPs,5731
+tencentcloud/facefusion/v20181201/facefusion_client.py,sha256=6lj-cPJeAqRdz5nk-4mzp4RH33xB1Se8nIhO-6rkgCk,4715
+tencentcloud/facefusion/v20181201/models.py,sha256=Pq3rMfWk0o-WLdZHHgt0ImLkX_eQX7u5yKu-pK5wvDM,43346
+tencentcloud/facefusion/v20220927/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/facefusion/v20220927/errorcodes.py,sha256=seMwFIZW1ZQWCVvmD-gGO29I6oN66CcHFg1sRWQG1rU,4646
+tencentcloud/facefusion/v20220927/facefusion_client.py,sha256=PAi3IlPfVf80w-wTRDlSUnNrFpDiDaTEbxrbXczTLLo,4528
+tencentcloud/facefusion/v20220927/models.py,sha256=WlIsNRGSS0FmYpPDnIdP5DQ62SWrdHC2W8dj5s2ksxY,50386
+tencentcloud_sdk_python_facefusion-3.0.1290.dist-info/METADATA,sha256=Vgvh1kfptA4IxkLKRcg1qOaKDLxOW9VKm9t2ZKEO6mU,1531
+tencentcloud_sdk_python_facefusion-3.0.1290.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_facefusion-3.0.1290.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_facefusion-3.0.1290.dist-info/RECORD,,
