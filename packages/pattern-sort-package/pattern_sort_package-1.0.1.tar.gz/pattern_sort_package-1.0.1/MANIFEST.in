@@ -1,0 +1,14 @@
+include README.rst
+include LICENSE
+include setup.py
+include pyproject.toml
+
+# Include all files in the tests directory
+recursive-include tests *
+
+# Include all Python source files
+recursive-include pattern_sort *.py
+
+# Exclude compiled Python files
+global-exclude *.pyc
+global-exclude __pycache__/

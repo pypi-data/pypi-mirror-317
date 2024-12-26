@@ -1,0 +1,200 @@
+Metadata-Version: 2.1
+Name: pattern_sort_package
+Version: 1.0.1
+Summary: A Python package for pattern generation and sorting algorithms.
+Home-page: https://github.com/abuawaish/awaish_pkg
+Author: Abu Awaish
+Author-email: abuawaish7@gmail.com
+License: MIT
+Keywords: funny
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+
+========================================
+Pattern and Sort Package
+========================================
+
+Badges
+------
+
+.. image:: https://img.shields.io/pypi/v/awaish_pkg.svg
+    :target: https://pypi.org/project/awaish_pkg/
+
+.. image:: https://img.shields.io/pypi/pyversions/awaish_pkg.svg
+    :target: https://pypi.org/project/awaish_pkg/
+
+.. image:: https://github.com/abuawaish/awaish_pkg/actions/workflows/tests.yml/badge.svg
+    :target: https://github.com/abuawaish/awaish_pkg/actions
+
+A Python package providing utilities for creating various patterns and performing sorting algorithms.
+
+This package is designed to assist developers in generating different types of patterns for visualization and performing efficient sorting operations on datasets.
+
+Features
+--------
+
+- **Pattern Generation**:
+  - Triangle patterns (normal, reverse, hollow, and more).
+  - Square patterns (normal, hollow, and checkerboard).
+  - Pyramid and diamond patterns.
+  - Custom pattern options.
+
+- **Sorting Algorithms**:
+  - Bubble Sort
+  - Merge Sort
+  - Quick Sort
+  - Selection Sort
+  - Insertion Sort
+  - Heap Sort
+  - Shell Sort
+  - Counting Sort
+  - Radix Sort
+  - Bucket Sort
+
+Installation
+------------
+
+Install the package using pip:
+
+.. code-block:: bash
+
+   pip install pattern-sort-package
+
+Usage
+-----
+
+1. **Import the package**:
+   Import the `Pattern` and `Sort` classes from the package.
+
+   .. code-block:: python
+
+      from pattern_sort import Pattern, Sort
+
+2. **Pattern Examples**:
+
+   Generate a triangle pattern:
+
+   .. code-block:: python
+
+      pattern = Pattern()
+      pattern.print_triangle(5)
+
+      # Output:
+      # *
+      # **
+      # ***
+      # ****
+      # *****
+
+   Generate a pyramid pattern:
+
+   .. code-block:: python
+
+      pattern.print_pyramid(5)
+
+      # Output:
+      #     *
+      #    ***
+      #   *****
+      #  *******
+      # *********
+
+3. **Sorting Examples**:
+
+   Sort a list using Bubble Sort:
+
+   .. code-block:: python
+
+      sort = Sort()
+      sorted_list = sort.bubble_sort([3, 2, 1])
+      print(sorted_list)
+
+      # Output:
+      # [1, 2, 3]
+
+   Sort a list using Merge Sort:
+
+   .. code-block:: python
+
+      sorted_list = sort.merge_sort([5, 3, 8, 6, 2])
+      print(sorted_list)
+
+      # Output:
+      # [2, 3, 5, 6, 8]
+
+Project Structure
+-----------------
+
+The directory structure of the package is as follows:
+
+.. code-block:: text
+
+   pattern_sort_package/
+   â”œâ”€â”€ pattern_sort/
+   â”‚   â”œâ”€â”€ __init__.py
+   â”‚   â”œâ”€â”€ pattern.py
+   â”‚   â”œâ”€â”€ sort.py
+   â”œâ”€â”€ tests/
+   â”‚   â”œâ”€â”€ test_pattern.py
+   â”‚   â”œâ”€â”€ test_sort.py
+   â”œâ”€â”€ README.rst
+   â”œâ”€â”€ setup.py
+   â”œâ”€â”€ pyproject.toml
+   â”œâ”€â”€ LICENSE
+   â””â”€â”€ MANIFEST.in
+
+Documentation
+-------------
+
+The `Pattern` and `Sort` classes contain the following methods:
+
+1. **Pattern Class**:
+
+   - `print_triangle(rows)`: Prints a triangle pattern with the given number of rows.
+   - `print_reverse_triangle(rows)`: Prints a reverse triangle pattern.
+   - `print_pyramid(rows)`: Prints a pyramid pattern.
+   - `print_diamond(rows)`: Prints a diamond pattern.
+   - `print_square(size)`: Prints a square pattern.
+   - `print_hollow_square(size)`: Prints a hollow square pattern.
+   - `print_right_triangle(rows)`: Prints a right-aligned triangle pattern.
+   - `print_hollow_triangle(rows)`: Prints a hollow triangle pattern.
+   - `print_checkerboard(rows, cols)`: Prints a checkerboard pattern.
+   - `print_zigzag(rows, cols)`: Prints a zigzag pattern.
+
+2. **Sort Class**:
+
+   - `bubble_sort(arr)`: Sorts a list using the Bubble Sort algorithm.
+   - `selection_sort(arr)`: Sorts a list using the Selection Sort algorithm.
+   - `insertion_sort(arr)`: Sorts a list using the Insertion Sort algorithm.
+   - `merge_sort(arr)`: Sorts a list using the Merge Sort algorithm.
+   - `quick_sort(arr)`: Sorts a list using the Quick Sort algorithm.
+   - `heap_sort(arr)`: Sorts a list using the Heap Sort algorithm.
+   - `shell_sort(arr)`: Sorts a list using the Shell Sort algorithm.
+   - `counting_sort(arr)`: Sorts a list using the Counting Sort algorithm.
+   - `radix_sort(arr)`: Sorts a list using the Radix Sort algorithm.
+   - `bucket_sort(arr)`: Sorts a list using the Bucket Sort algorithm.
+
+Testing
+-------
+
+The package includes unit tests to validate its functionality. You can run the tests using the following command:
+
+.. code-block:: bash
+
+   python -m unittest discover tests
+
+License
+-------
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Contact
+-------
+
+- **Author**: Abu Awaish
+- **Email**: abuawaish7@gmail.com
+- **GitHub**: https://github.com/abuawaish/awaish_pkg
