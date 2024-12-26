@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+pyproject.toml
+code2clipboard/__init__.py
+code2clipboard/code2clipboard.py
+code2clipboard.egg-info/PKG-INFO
+code2clipboard.egg-info/SOURCES.txt
+code2clipboard.egg-info/dependency_links.txt
+code2clipboard.egg-info/entry_points.txt
+code2clipboard.egg-info/requires.txt
+code2clipboard.egg-info/top_level.txt
