@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lilliepy-head
+Version: 0.1
+Summary: helps with head related stuff in the lilliepy framework
+Home-page: https://github.com/websitedeb/lilliepy-head
+Author: Sarthak Ghoshal
+Author-email: sarthak22.ghoshal@gmail.com
+License: MIT
+Keywords: lilliepy,lilliepy-head,reactpy
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: reactpy
