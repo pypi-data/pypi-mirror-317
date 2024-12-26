@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "zhplot"
+version = "1.0.0"
+description = " 一行代码搞定Python图表中文展示(Show Chinese in Figures with one line code)"
+authors = [
+    {name = "Xiangzhuang Shen", email = "datahonor@gmail.com"},
+]
+license = {text = "MIT"}
+readme = "README.md"
+
+
+classifiers=[
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: Matplotlib",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+requires-python = ">= 3.9"
+dependencies = [
+    "matplotlib>=3.9.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "ipython",
+    "black",
+    "flake8",
+    "mypy",
+    "isort",
+    "ruff",
+    "pytest",
+    "pytest-cov",
+    "pytest-sugar",
+    "hypothesis>=6.112.0",
+    "commitizen",
+]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocs-material-extensions",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "mkdocs-autorefs",
+    "mkdocs-git-committers-plugin-2",
+    "mkdocs-git-revision-date-localized-plugin",
+]
+
+
+[project.urls]
+"Homepage" = "https://shenxiangzhuang.github.io/zhplot"
+"Bug Tracker" = "https://shenxiangzhuang.github.io/zhplot/issues"
+"Documentation" = "https://shenxiangzhuang.github.io/zhplot"
+"Source Code" = "https://github.com/shenxiangzhuang/zhplot"
+"Release Notes" = "https://shenxiangzhuang.github.io/zhplot/changelog/"
+
+[tool.setuptools]
+zip-safe = true
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["zhplot*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+zhplot = ["./fonts/*.ttf", "./fonts/*.txt"]
+
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+# Allow lines to be as long as 120.
+line-length = 120
+
+[tool.uv]
+extra-index-url = ["https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"]
