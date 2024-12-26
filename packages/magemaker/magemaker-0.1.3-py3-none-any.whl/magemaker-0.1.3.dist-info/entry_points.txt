@@ -1,0 +1,5 @@
+[console_scripts]
+magemaker = magemaker.runner:runner
+
+[gui_scripts]
+
