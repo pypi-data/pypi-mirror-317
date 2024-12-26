@@ -1,0 +1,12 @@
+deploy_remote/__init__.py,sha256=GUW6r-FS7EUQQuhXYnchjjdi6MkL8bba8Yyh4YJma4E,155
+deploy_remote/__main__.py,sha256=p23SHoboD9isWYZXMhn9OFmCB7FZypfN44U1LpTWm0w,74
+deploy_remote/__version__.py,sha256=NQ9m-EmhPJMIzfDaUZGgtMCxsGy3sBQrwY9FKYmrj04,220
+deploy_remote/deploy_macos_amd64,sha256=C6d-kAMZglM7HYPuWsxuFDGr57qYFkjSyT1MSy2lyxk,6438080
+deploy_remote/deploy_macos_arm64,sha256=287dwiXrkPhJlSO9rIIoBW_-GspSXabcWZOmizZvklU,6224386
+deploy_remote/main.py,sha256=OQXj1fV8_atsByap-o_AS7CZlsVFNyAkyUFcLerY3Gg,3973
+deploy_remote-0.0.3.dist-info/LICENSE,sha256=5mGKT-8JivLkYytFwVxN4KGDFE_yBq8WU3VdjGwRQ7k,1060
+deploy_remote-0.0.3.dist-info/METADATA,sha256=HJnqB5rcSftIaDJ3lsMm_O_5wBl-oKKrjS5WH5eL1IY,2332
+deploy_remote-0.0.3.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+deploy_remote-0.0.3.dist-info/entry_points.txt,sha256=tmTHhNntEZIO2N0Kfgyao7V3VncpYlz6m8uRXfWqcgU,57
+deploy_remote-0.0.3.dist-info/top_level.txt,sha256=kjQAjOdQaTo_YvOfplcEp7UlvECv4uAqHRg258PmGW8,14
+deploy_remote-0.0.3.dist-info/RECORD,,
