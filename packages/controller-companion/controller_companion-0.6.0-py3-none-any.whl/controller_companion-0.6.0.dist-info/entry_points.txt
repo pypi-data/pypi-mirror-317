@@ -1,0 +1,3 @@
+[console_scripts]
+controller_companion=controller_companion.launch:cli
+
