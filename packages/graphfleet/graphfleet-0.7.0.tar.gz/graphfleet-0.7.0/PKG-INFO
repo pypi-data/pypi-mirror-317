@@ -1,0 +1,153 @@
+Metadata-Version: 2.4
+Name: graphfleet
+Version: 0.7.0
+Summary: A graph-based knowledge management and query system
+Author-email: Zachary BENSALEM <contact@qreddence.ai>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: graph,knowledge,search,semantic
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Requires-Dist: faiss-cpu>=1.7.4
+Requires-Dist: fastapi>=0.100.0
+Requires-Dist: ipykernel>=6.0.0
+Requires-Dist: jupyter>=1.0.0
+Requires-Dist: networkx>=3.4.2
+Requires-Dist: notebook>=7.0.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: sentence-transformers>=2.2.2
+Requires-Dist: uvicorn>=0.22.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: jupyterlab>=4.0.0; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: nbconvert>=7.0.0; extra == 'dev'
+Requires-Dist: nbformat>=5.0.0; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.21.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.1.0; extra == 'dev'
+Requires-Dist: types-networkx>=3.4.2; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# GraphFleet
+
+A powerful graph-based knowledge management and query system.
+
+## Features
+
+- Project initialization and management
+- Advanced document indexing
+- Semantic search capabilities
+- Custom query pipelines
+- Knowledge graph analytics
+- Concept drift analysis
+- Batch processing support
+
+## Project Structure
+
+```
+graphfleet/
+├── backend/                 # Backend service
+│   ├── app/                # Main application code
+│   │   ├── api/           # API endpoints
+│   │   ├── core/          # Core business logic
+│   │   ├── models/        # Data models
+│   │   └── utils/         # Utility functions
+│   ├── graphfleet/        # GraphFleet core library
+│   ├── tests/             # Backend tests
+│   └── templates/         # Template files
+├── frontend/              # Frontend application
+│   ├── src/              # Source code
+│   │   ├── components/   # React components
+│   │   ├── pages/        # Page components
+│   │   └── utils/        # Utility functions
+│   └── public/           # Static assets
+├── shared/               # Shared utilities
+├── scripts/              # Development scripts
+└── examples/             # Example code and notebooks
+```
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/graphfleet.git
+cd graphfleet
+```
+
+2. Set up the backend:
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+3. Set up the frontend:
+```bash
+cd frontend
+npm install
+```
+
+4. Configure environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your settings
+```
+
+## Development
+
+### Backend Development
+
+```bash
+cd backend
+uvicorn app.main:app --reload
+```
+
+### Frontend Development
+
+```bash
+cd frontend
+npm run dev
+```
+
+### Docker Development
+
+```bash
+docker-compose up
+```
+
+## API Documentation
+
+The API documentation is available at `/docs` when running the backend server.
+
+Key endpoints:
+- `/v1/init` - Initialize a new project
+- `/v1/index` - Create document index
+- `/v1/query` - Process queries
+- `/v1/semantic-search` - Perform semantic search
+- `/v1/custom-pipeline` - Run custom query pipelines
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Security
+
+For security concerns, please refer to our [Security Policy](SECURITY.md).
