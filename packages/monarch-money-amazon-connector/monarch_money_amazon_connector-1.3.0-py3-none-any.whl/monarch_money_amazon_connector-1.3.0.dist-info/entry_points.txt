@@ -1,0 +1,2 @@
+[console_scripts]
+mmac = src.main:main
