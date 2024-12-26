@@ -1,0 +1,10 @@
+build/*
+*.egg-info/
+**/__pycache__/**
+**/logs/**
+**/CRITICAL_ERROR.txt
+dist/*
+logs
+mods
+.venv/
+/run_*.py

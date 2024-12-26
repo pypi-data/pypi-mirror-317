@@ -1,0 +1,82 @@
+[project]
+name = "pyMHF"
+description = "python Modding and Hooking Framework"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE.md"}
+keywords = ["hooking", "games", "hacking", "modding"]
+authors = [
+  {name = "monkeyman192"}
+]
+maintainers = [
+  {name = "monkeyman192"}
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Win32 (MS Windows)",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+  "cyminhook>=0.1.4",
+  "psutil~=5.9.5",
+  "pymem[speed]~=1.12.0",
+  "keyboard",
+  "pywin32",
+  "questionary",
+  "pywinctl",
+  "packaging",
+  "tomlkit",
+  "pefile",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+gui = [
+  "dearpygui~=1.11.0",
+]
+
+[tool.setuptools.package-dir]
+pymhf = "pymhf"
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+
+[tool.uv]
+dev-dependencies = [
+  "pytest",
+  "ruff",
+  "setuptools_scm",
+  "twine",
+]
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+preview = true
+ignore = [
+  "D100",  # Missing docstring in public module
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.extend-per-file-ignores]
+"cpptypes.py" = ["E501"]
+
+[project.urls]
+Homepage = "https://github.com/monkeyman192/pyMHF"
+Repository = "https://github.com/monkeyman192/pyMHF.git"
+
+[project.scripts]
+pymhf = "pymhf:run"
+
+[build-system]
+requires = ["setuptools>=64", "wheel", "setuptools-scm>=8", "setuptools_scm_git_semver"]
+build-backend = "setuptools.build_meta"
