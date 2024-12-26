@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: yo_fluq_ds
+Version: 2.0.5
+Summary: LINQ port to Python and some smaller useful functional things
+Author-email: Yuri Okulovsky <yuri.okulovsky@gmail.com>
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: seaborn
+Requires-Dist: pyaml
+Requires-Dist: jsonpickle
+Requires-Dist: ipython
+Requires-Dist: ipywidgets
+Requires-Dist: scikit-learn
+Requires-Dist: toml
+
