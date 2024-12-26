@@ -1,0 +1,5 @@
+pytorch-lightning>=2.5.0
+pynndescent>=0.5.13
+umap-learn>=0.5.7
+dill>=0.3.9
+grease-embeddings>=0.1.1
