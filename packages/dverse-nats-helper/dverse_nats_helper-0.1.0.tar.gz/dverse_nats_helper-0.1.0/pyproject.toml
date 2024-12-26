@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dverse-nats-helper"
+version = "0.1.0"
+authors = [
+  { name="aniakowalewska", email="466069@student.fontys.nl" },
+]
+description = "A Python library for NATS server connection, publishing, creation, and validation of events."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/fuas-dverse/dverse-nats-helper"
+Issues = "https://github.com/fuas-dverse/dverse-nats-helper/issues"

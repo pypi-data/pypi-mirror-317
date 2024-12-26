@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: dverse-nats-helper
+Version: 0.1.0
+Summary: A Python library for NATS server connection, publishing, creation, and validation of events.
+Project-URL: Homepage, https://github.com/fuas-dverse/dverse-nats-helper
+Project-URL: Issues, https://github.com/fuas-dverse/dverse-nats-helper/issues
+Author-email: aniakowalewska <466069@student.fontys.nl>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# dverse-nats-helper
+
+dverse-nats-helper is a Python library for dealing nats server connection, publishng, creation and validation of the events
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install dverse-nats-helper.
+
+```bash
+pip install dverse-nats-helper
+```
+
+## Usage
+
+```python
+import dverse-nats-helper
+
+# Establishes a connection to the NATS server.
+await connect_nats("nats://nats:4222")
+
+# Constructs an event message conforming to a predefined schema.
+# The object must implement a to_event_object() method.
+system = { "platform": "example", "service": "example_svc", "event_type": "created"},
+new_event = build_event(product,actor={"actor_id": str(seller.id), "username": seller.username}, system)
+
+# Publishes an event to the specified NATS subject
+# after validating the data against a predefined schema.
+await publish_event("example.subject", new_event)
+
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
