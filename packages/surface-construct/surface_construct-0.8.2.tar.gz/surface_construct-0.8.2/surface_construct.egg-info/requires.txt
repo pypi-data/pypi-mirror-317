@@ -1,0 +1,10 @@
+ase
+networkx
+numpy
+spglib
+pandas
+tqdm
+matplotlib
+scipy
+scikit-learn
+scikit-image
