@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: fast-trie-set
+Version: 0.1.0
+Summary: A fast and efficient trie-based collection for storing and searching millions of strings.
+Home-page: https://github.com/YashrajSinghRawat/fast_trie
+Author: Yashraj Singh Rawat
+Author-email: yashraj22august@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# fast_trie
+A fast and efficient trie-based set for storing and searching millions of short strings.
+
+## Features
+- Add strings to the set quickly.
+- Search for strings in constant time complexity.
+- Iterate through stored strings in lexicographical order.
+
+## Installation
+```bash
+pip install fast_trie
+```
+
+
