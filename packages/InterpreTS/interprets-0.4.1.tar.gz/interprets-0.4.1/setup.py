@@ -1,0 +1,46 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="InterpreTS",
+    version="0.4.1",
+    packages=find_packages(),
+    install_requires=[
+        "pandas>=1.1.0",
+        "numpy>=1.18.0",
+        "statsmodels>=0.12.0",
+        "langchain_community",
+        "langchain",
+        "openai",
+        "scikit-learn",
+        "joblib",
+        "tqdm",
+        "dask",
+        "nbsphinx",
+        "myst-parser",
+        "scipy"
+    ],
+    description="Feature extraction from time series to support the creation of interpretable and explainable predictive models.",
+    long_description=open("docs/README.md").read(),
+    long_description_content_type="text/markdown",
+    author=["Sławomir Put", "Martyna Żur", "Weronika Wołowczyk", "Jarosław Strzelczyk", "Piotr Krupiński", "Martyna Kramarz", "Łukasz Wróbel"],
+    url="https://github.com/ruleminer/InterpreTS",
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "License :: OSI Approved :: GNU Affero General Public License v3",
+        "Programming Language :: Python :: 3",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: Unix",
+        "Topic :: Scientific/Engineering",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
+    ],
+    python_requires=">=3.8",
+    test_suite="tests",
+    keywords="time series feature extraction interpretability explainability machine learning",
+    project_urls={
+        "Documentation": "https://github.com/ruleminer/InterpreTS/docs",
+        "Source": "https://github.com/ruleminer/InterpreTS",
+        "Tracker": "https://github.com/ruleminer/InterpreTS/issues",
+    },
+)
