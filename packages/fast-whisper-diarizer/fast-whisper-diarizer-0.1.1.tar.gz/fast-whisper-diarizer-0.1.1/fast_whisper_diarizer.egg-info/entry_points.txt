@@ -1,0 +1,2 @@
+[console_scripts]
+whisper-diarize = main:main

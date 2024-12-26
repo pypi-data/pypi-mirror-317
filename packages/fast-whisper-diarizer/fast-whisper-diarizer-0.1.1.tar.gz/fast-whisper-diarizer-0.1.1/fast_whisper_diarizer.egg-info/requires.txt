@@ -1,0 +1,9 @@
+faster-whisper>=1.1.0
+ctranslate2==4.4.0
+nemo-toolkit[asr]>=2.dev
+torch
+torchaudio
+omegaconf
+nltk
+wget
+deepmultilingualpunctuation

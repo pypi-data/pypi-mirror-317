@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: fast-whisper-diarizer
+Version: 0.1.1
+Summary: A package for audio transcription and speaker diarization using Whisper and NeMo toolkit
+Home-page: https://github.com/salimkt/fast-whisper-diarizer
+Author: Salim
+Author-email: salimkt25@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Fast Whisper Diarizer
+
+Fast Whisper Diarizer is a Python package for audio transcription and speaker diarization using the Whisper model and NeMo toolkit.
+
+## Installation
+
+To install the package, run:
+
+```sh
+pip install fast-whisper-diarizer
+```
+
