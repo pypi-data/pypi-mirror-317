@@ -1,0 +1,11 @@
+table_partitionare/__init__.py,sha256=mZNHx_gw82iuAZjsVEZMOoQtVBZRY2G-nuTVZN5Qstc,46
+table_partitionare/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+table_partitionare/src/funcs.py,sha256=w2sm-pDeietTixilL92nZ1W9BlJD6HnHG04txsjBBGQ,3656
+table_partitionare/src/help_funcs.py,sha256=HBNqTpKFGIeZpNItJZCDyOQ_8C40s3oYZlGQH3zr_78,2299
+table_partitionare/src/partition_db.py,sha256=hAIdJfb4tNr4mOsCEVJSo-fZmQ89183UdEMQm1PLDrU,2303
+table_partitionare/src/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+table_partitionare-1.0.0.dist-info/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+table_partitionare-1.0.0.dist-info/METADATA,sha256=SgrexQRKmkygGja2AZbLudyr09bCvY98O0a3QpbIjNg,5351
+table_partitionare-1.0.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+table_partitionare-1.0.0.dist-info/top_level.txt,sha256=Hv6ocpImwLlzlAzevHB-Ulrg7zC16Uqik_CjjA-z2vA,19
+table_partitionare-1.0.0.dist-info/RECORD,,
