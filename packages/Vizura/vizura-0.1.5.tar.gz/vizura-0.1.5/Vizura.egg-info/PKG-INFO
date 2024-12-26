@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: Vizura
+Version: 0.1.5
+Summary: Tool for Data Analysis
+Home-page: https://github.com/ash-sha/vizura
+Author: Aswath Shakthi
+Author-email: aswathshakthi@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: scikit_learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: setuptools
+Requires-Dist: streamlit
+Requires-Dist: openpyxl
+
+# Vizura
+
+Welcome to **Vizura** package, a tool for analysing basic stats.
+
+![Vizura Logo](https://raw.githubusercontent.com/ash-sha/vizura/refs/heads/main/logo.png)
+
+
+
+Vizura is a data analysis and visualization tool built with Python and Streamlit. It provides insights into datasets through summary statistics and interactive visualizations.
+
+## Installation
+
+To install vizura, run the following command:
+
+```bash
+pip install git+https://github.com/ash-sha/vizura.git
+(or)
+pip install vizura
+```
+
+A model can be visualised in https://vizura.streamlit.app
