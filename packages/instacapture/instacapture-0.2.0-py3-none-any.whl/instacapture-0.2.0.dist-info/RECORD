@@ -1,0 +1,10 @@
+instacapture/InstaPost.py,sha256=rPx1YkgXdRvybOb6ckLmARD39-Qqkbp5vEgXQo-uswU,18361
+instacapture/InstaStory.py,sha256=LS7bBzzoMXbNkWuyJrM2qOzV7mkYEwJa9KhTXmTisB4,13372
+instacapture/__init__.py,sha256=kKN6I84Fyu83wjK6JCMrP0MsY6AszemDKFp7nrYdNfw,70
+tests/__init__.py,sha256=6awlRdQqPMZ3gW5UC8YGnNfkw2RwAjjc7BXii-_ZTjc,99
+tests/test_simple.py,sha256=92M8EaUgy6AH9KOe8uOOFxaFtJM7EvuJLTzGkEK56OY,2775
+instacapture-0.2.0.dist-info/LICENSE,sha256=jfrY5MITUL8NpCOy-yPTbMudEEiZ16oY5QX444c5tt0,1092
+instacapture-0.2.0.dist-info/METADATA,sha256=c2utzHJyrVs5C_DryBpaP1LaFpFe9NAsRbZZo24HolU,4882
+instacapture-0.2.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+instacapture-0.2.0.dist-info/top_level.txt,sha256=osIAdBH2iggbLKSGns3M1BidjSLwtW3F8XicvpsNhyk,19
+instacapture-0.2.0.dist-info/RECORD,,
