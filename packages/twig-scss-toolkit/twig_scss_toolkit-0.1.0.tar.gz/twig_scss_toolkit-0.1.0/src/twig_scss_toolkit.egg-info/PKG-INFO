@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: twig-scss-toolkit
+Version: 0.1.0
+Summary: A tool to convert HTML to Twig and CSS to SCSS
+Home-page: https://github.com/akshayram1/twig-scss-toolkit
+Author: Akshay Chame
+Author-email: akshaychame2@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4>=4.9.3
+Requires-Dist: click>=8.0.0
