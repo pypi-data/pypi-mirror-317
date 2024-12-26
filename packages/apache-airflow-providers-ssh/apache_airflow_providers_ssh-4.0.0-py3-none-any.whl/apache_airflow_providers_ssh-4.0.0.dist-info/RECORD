@@ -1,0 +1,11 @@
+airflow/providers/ssh/LICENSE,sha256=FFb4jd2AXnOOf7XLP04pQW6jbdhG49TxlGY6fFpCV1Y,13609
+airflow/providers/ssh/__init__.py,sha256=ezqBXTgv1cVjVbRvfF3T95AG3OHk3EsOGHsU-OvqatE,1490
+airflow/providers/ssh/get_provider_info.py,sha256=8NMeh-GObeAdfw_0932Zy31lOv7y_PTr5JuKeDECpPU,3032
+airflow/providers/ssh/hooks/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/ssh/hooks/ssh.py,sha256=hj5_on3rpeYJxv1jdnwA_3PDVz9TkBo7BKZqwOkB2jw,20798
+airflow/providers/ssh/operators/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/ssh/operators/ssh.py,sha256=2C3PbC7bcBOEMaqJosR5m0PoM4xpmUuEJGIzI8Mbjeo,8214
+apache_airflow_providers_ssh-4.0.0.dist-info/entry_points.txt,sha256=KQVBLiAqneyTQ4SNGORxCFN3DRTJZuki_jKP13LF1Wg,99
+apache_airflow_providers_ssh-4.0.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+apache_airflow_providers_ssh-4.0.0.dist-info/METADATA,sha256=HWEP1Oy3t_vwxeKqPPgyj45-W86E387AjXO12kMGLbo,4728
+apache_airflow_providers_ssh-4.0.0.dist-info/RECORD,,
