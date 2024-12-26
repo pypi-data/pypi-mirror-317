@@ -1,0 +1,22 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h2 class="h5">All Notes</h2>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            {% for note in notes %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{{ note.id }}/" class="text-decoration-none">{{ note.title }}</a>
+                    <div>
+                        <a href="{{ note.id }}/update/" class="btn btn-sm btn-outline-primary">Edit</a>
+                        <a href="{{ note.id }}/delete/" class="btn btn-sm btn-outline-danger">Delete</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

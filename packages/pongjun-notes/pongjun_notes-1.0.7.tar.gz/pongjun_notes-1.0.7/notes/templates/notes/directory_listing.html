@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Listing</title>
+</head>
+<body>
+    <h1>Directory Listing</h1>
+    
+    <p><strong>Server Date & Time:</strong> {{ current_time }}</p> <!-- Display server time -->
+
+    <p>Current Directory: {{ directory }}</p>
+
+    {% if parent %}
+    <p><a href="?dir={{ parent }}">⬆ Up to Parent Directory</a></p>
+    {% endif %}
+
+    <ul>
+        {% for item in items %}
+        <li>
+            {% if item.is_dir %}
+            📁 <a href="?dir={{ item.path }}">{{ item.name }}</a>
+            {% else %}
+            📄 <a href="?dir={{ item.path }}">{{ item.name }}</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
