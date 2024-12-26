@@ -1,0 +1,7 @@
+setup.py
+peazip_wrapper/__init__.py
+peazip_wrapper/peazip_wrapper.py
+pzarchivator.egg-info/PKG-INFO
+pzarchivator.egg-info/SOURCES.txt
+pzarchivator.egg-info/dependency_links.txt
+pzarchivator.egg-info/top_level.txt
