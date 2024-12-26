@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "adaptyper"
+version = "0.4.2"
+description = "Старается конвертировать один тип данных в другой."
+authors = ["max40in <mc92mc@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
