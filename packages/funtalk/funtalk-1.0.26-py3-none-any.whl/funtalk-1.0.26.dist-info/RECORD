@@ -1,0 +1,12 @@
+funtalk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funtalk/asr/__init__.py,sha256=bZtp0gcNnF5kHCmEW7RR_uepYu1asZy9GLgUaIxYya4,96
+funtalk/asr/_whisper.py,sha256=NJ-irdxLRWjjW7u2j-Qfk4A0MzRmzwtrNUkpLCyEBJk,681
+funtalk/asr/base.py,sha256=UiHT0_rrK8wJI6hnKWlKJmBDgtm34Gn9jykIkDoJsPA,226
+funtalk/tts/__init__.py,sha256=uyq-EgygckvkeRkzFkrbdNFMFmHQ_sn10tB2VgZxQsw,134
+funtalk/tts/_azure.py,sha256=ou2EA7o2qdtQCdle9y5WfF3YxcFn8yD7S1GmYS5xJKM,27298
+funtalk/tts/_edge.py,sha256=i3wSbtv0RRkPCxxFFg8eKho2pUwa47LlTqljxspHzrQ,2338
+funtalk/tts/base.py,sha256=_UPWKMoNSfAiWrqgTshW29ipxQ_8pZDq2-qng0LzSvA,5012
+funtalk-1.0.26.dist-info/METADATA,sha256=zfg6xxzbd7TiM34UeAxdAN3J5H9FsSriWX0c0R0hirI,187
+funtalk-1.0.26.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+funtalk-1.0.26.dist-info/top_level.txt,sha256=aV7pLWzE8gZxbLNWQx-luH9bcKd0tvnKRkEcgNznsiY,8
+funtalk-1.0.26.dist-info/RECORD,,
