@@ -1,0 +1,15 @@
+[build-system]
+requires = [ "setuptools", "wheel",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yo_fluq"
+description = "LINQ port to Python and some smaller useful functional things"
+version = "2.0.5"
+dependencies = []
+[[project.authors]]
+name = "Yuri Okulovsky"
+email = "yuri.okulovsky@gmail.com"
+
+[tool.setuptools.packages.find]
+where = [ ".",]
