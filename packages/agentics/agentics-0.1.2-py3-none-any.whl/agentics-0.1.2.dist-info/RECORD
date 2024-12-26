@@ -1,0 +1,8 @@
+agentics/__init__.py,sha256=djGXMRY-y1FgeyAICrHmdxQBej2CS19Hi1lQ4qJ_K5Y,410
+agentics/groups.py,sha256=uBvMnMlkh7-hjd3fW1iB9pe6eE0XPYx3MnzQsPBL0G4,11135
+agentics/llm.py,sha256=aFtIgVx_20P_uJxZvl1BIovR2fdrbtf7Z_9S3u0ON1A,4900
+agentics/utils.py,sha256=dqSUDzZ2vC7oJWrLMUumXAFkdffPjMTsE6ycVkaaeKc,4509
+agentics-0.1.2.dist-info/LICENSE,sha256=ANvLI-ap_lk0ODIdXvORW2zmNHKgs9MUTa6g1ys_lAw,1068
+agentics-0.1.2.dist-info/METADATA,sha256=bF_cW1xAfb7TD-CNqoj4CfhUL_j008TD5Bm4430YqbM,859
+agentics-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+agentics-0.1.2.dist-info/RECORD,,
