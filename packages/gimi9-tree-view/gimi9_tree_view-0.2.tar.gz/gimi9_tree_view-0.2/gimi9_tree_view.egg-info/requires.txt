@@ -1,0 +1,5 @@
+build==1.2.2.post1
+packaging==24.2
+pyproject_hooks==1.2.0
+tomli==2.2.1
+wcwidth==0.2.13
