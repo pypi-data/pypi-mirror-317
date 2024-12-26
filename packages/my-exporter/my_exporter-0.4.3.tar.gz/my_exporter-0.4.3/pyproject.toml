@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "my-exporter"
+version = "0.4.3"
+description = ""
+authors = ["Ryota Kobayashi <s.woods.m.29@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pathspec = "^0.12.1"
+pytest = "^8.3.4"
+sphinx-rtd-theme = "^3.0.2"
+
+[tool.poetry.scripts]
+my-exporter = "my_exporter.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
