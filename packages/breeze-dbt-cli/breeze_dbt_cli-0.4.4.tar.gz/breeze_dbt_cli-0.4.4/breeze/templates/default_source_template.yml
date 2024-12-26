@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: {{ schema_name }}
+    description: This is the default template for sources.
+    database: {{ database }}
+    schema: {{ schema_name }}
+    tables:
+      - name: {{ source_name }}
+        description: {{ source_description }}
+        tags: []
+        columns:
+        {% for column in columns %}
+          - name: {{ column.name }}
+            data_type: {{ column.data_type }}
+            description: {{ column.description }}
+        {% endfor %}
