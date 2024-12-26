@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+flax_pilot.egg-info/PKG-INFO
+flax_pilot.egg-info/SOURCES.txt
+flax_pilot.egg-info/dependency_links.txt
+flax_pilot.egg-info/requires.txt
+flax_pilot.egg-info/top_level.txt
+fpilot/__init__.py
+fpilot/training/__init__.py
+fpilot/training/trainer.py
+fpilot/utils/__init__.py
+fpilot/utils/checkpoint_utils.py
+fpilot/utils/common_utils.py
+fpilot/utils/opt_utils.py
+fpilot/utils/tracker_utils.py
+fpilot/utils/trainer_utils.py
