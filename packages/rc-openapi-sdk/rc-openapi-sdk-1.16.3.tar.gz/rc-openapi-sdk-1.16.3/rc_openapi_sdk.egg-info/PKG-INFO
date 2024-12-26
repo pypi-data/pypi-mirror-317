@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: rc-openapi-sdk
+Version: 1.16.3
+Summary: OpenAPI SDK for Python ~ 融创API开放平台所用
+Home-page: https://github.com/Haoke98/openapi-sdk
+Author: Sadam·Sadik
+Author-email: Haoke98@outlook.com
+License: UNKNOWN
+Description: # RC-OpenAPI-SDK
+        
+        融创开放API平台接口调用SDK
+        
+        ## 安装&使用
+        安装:
+        ```shell
+        pip install rc-openapi-sdk
+        ```
+        使用案例:
+        ```python
+        from rc_openapi_sdk import OpenAPI
+        
+        if __name__ == '__main__':
+            rc_api = OpenAPI(ssl_verify=False)
+            # data = rc_api.investment_promotion_regional("650000", "mcxfhy38160")
+            data = rc_api.investment_promotion_ranking("440000", "mccy778")
+            print(data)
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
