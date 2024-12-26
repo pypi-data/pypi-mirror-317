@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+gbinder.c
+pyproject.toml
+setup.py
+gbinder.egg-info/PKG-INFO
+gbinder.egg-info/SOURCES.txt
+gbinder.egg-info/dependency_links.txt
+gbinder.egg-info/requires.txt
+gbinder.egg-info/top_level.txt
