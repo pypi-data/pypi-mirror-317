@@ -1,0 +1,15 @@
+codejournal/__init__.py,sha256=wNpLx374DFepHAi8ejtMe6I4YFmoVXI74HRlvh78cTo,46
+codejournal/apply_func.py,sha256=AT1wReEsA5h4cHqnGufm6CtPMCCzU0I7CBPn_O2p7fo,11640
+codejournal/config.py,sha256=DqhJcjcy9COcups2hvYrxdpnJyYWzTmKAsy3Y87iwGs,1988
+codejournal/data.py,sha256=ugAMAqgAvzeI-zE9bbGtxK5Ekdyu5iW22e8g7liskqE,1842
+codejournal/hacks.py,sha256=p0R_q4uPs4jDF4E0c7AOzfFpTHgxefZWXAuZxEoC3pw,1111
+codejournal/imports.py,sha256=DY_Z780cX5YsXATMIrwjITdsPyStNIb3EwaFbtE2x9I,1253
+codejournal/modeling.py,sha256=NMVMQGjDaaDoyubsOng1XE18cK93dV10uSY5_MRTRzA,4731
+codejournal/slack.py,sha256=CAet9CGsoyqwoIcSf0JBhYc7IOysWk3XKKK8Q7l_zAo,1615
+codejournal/trainer.py,sha256=39w4vyUodnRk_Lz88M_v5t6BRUPabspXJn1qxM-3tco,16721
+codejournal/utils.py,sha256=j5J5qaxqv3oLHL0NBqVBBYnbuU86ciBt8xPFcWeDxSI,2936
+codejournal-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+codejournal-0.1.1.dist-info/METADATA,sha256=hP81-qCsbBGKdLncxmH1U4DDk4HCn1WqjxUYcBk-teA,4384
+codejournal-0.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+codejournal-0.1.1.dist-info/top_level.txt,sha256=733PznjrNTcSMaVDqJMwwsHojDR3z3-b_cuMlOsxaj0,12
+codejournal-0.1.1.dist-info/RECORD,,
