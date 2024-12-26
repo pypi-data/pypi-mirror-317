@@ -1,0 +1,3 @@
+[console_scripts]
+BlueSkySight-Stream=blueskysight.stream:main
+
