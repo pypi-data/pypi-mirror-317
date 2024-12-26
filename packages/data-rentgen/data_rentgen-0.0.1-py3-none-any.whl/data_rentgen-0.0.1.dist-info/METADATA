@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: data-rentgen
+Version: 0.0.1
+Summary: Data.Rentgen REST API + Kafka consumer
+License: Apache-2.0
+Keywords: Lineage,FastAPI,REST,FastStream
+Author: DataOps.ETL
+Author-email: onetools@mts.ru
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Pydantic
+Classifier: Framework :: Pydantic :: 2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Provides-Extra: consumer
+Provides-Extra: postgres
+Provides-Extra: server
+Requires-Dist: alembic (>=1.14.0,<2.0.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: asgi-correlation-id (>=4.3.4,<5.0.0) ; extra == "server"
+Requires-Dist: asyncpg (>=0.30.0,<0.31.0) ; extra == "postgres"
+Requires-Dist: coloredlogs (>=15.0.1,<16.0.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: cramjam (>=2.9.1,<3.0.0) ; extra == "consumer"
+Requires-Dist: fastapi (>=0.115.6,<0.116.0) ; extra == "server"
+Requires-Dist: faststream[cli,kafka] (>=0.5.33,<0.6.0) ; extra == "consumer"
+Requires-Dist: greenlet (>=3.1.1,<4.0.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: itsdangerous (>=2.2.0,<3.0.0) ; extra == "server"
+Requires-Dist: packaging (>=24.2,<25.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: pydantic (>=2.8.2,<2.9.0)
+Requires-Dist: pydantic-settings (>=2.7.0,<3.0.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: pyjwt (>=2.10.1,<3.0.0) ; extra == "server"
+Requires-Dist: python-dateutil (>=2.9.0.post0,<3.0.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: python-json-logger (>=3.2.1,<4.0.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: python-keycloak (>=5.1.1,<6.0.0) ; extra == "server"
+Requires-Dist: python-multipart (>=0.0.20,<0.0.21) ; extra == "server"
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: sqlalchemy (>=2.0.35,<3.0.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: sqlalchemy-utils (>=0.41.2,<0.42.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: starlette (>=0.41.2,<0.42.0) ; extra == "server"
+Requires-Dist: starlette-exporter (>=0.23.0,<0.24.0) ; extra == "server"
+Requires-Dist: typing-extensions (>=4.12.2,<5.0.0)
+Requires-Dist: uuid6 (>=2024.7.10,<2025.0.0) ; extra == "server" or extra == "consumer"
+Requires-Dist: uvicorn (>=0.34.0,<0.35.0) ; extra == "server"
+Project-URL: CI/CD, https://github.com/MobileTeleSystems/data-rentgen/actions
+Project-URL: Documentation, https://data-rentgen.readthedocs.io/
+Project-URL: Homepage, https://github.com/MobileTeleSystems/data-rentgen
+Project-URL: Source, https://github.com/MobileTeleSystems/data-rentgen
+Project-URL: Tracker, https://github.com/MobileTeleSystems/data-rentgen/issues
+Description-Content-Type: text/x-rst
+
+.. _readme:
+
+|Logo|
+
+.. |Logo| image:: https://raw.githubusercontent.com/MobileTeleSystems/data-rentgen/498a98b75b2929a100f87ce4a88fc33038cad23e/docs/_static/logo_wide_white_text.svg
+    :alt: Data.Rentgen logo
+    :target: https://github.com/MobileTeleSystems/data-rentgen
+
+|Repo Status| |PyPI| |PyPI License| |PyPI Python Version| |Docker image| |Documentation|
+|Build Status| |Coverage| |pre-commit.ci|
+
+.. |Repo Status| image:: https://www.repostatus.org/badges/latest/concept.svg
+    :target: https://www.repostatus.org/#concept
+.. |PyPI| image:: https://img.shields.io/pypi/v/data-rentgen
+    :target: https://pypi.org/project/data-rentgen/
+.. |PyPI License| image:: https://img.shields.io/pypi/l/data-rentgen.svg
+    :target: https://github.com/MobileTeleSystems/data-rentgen/blob/develop/LICENSE.txt
+.. |PyPI Python Version| image:: https://img.shields.io/pypi/pyversions/data-rentgen.svg
+    :target: https://badge.fury.io/py/data-rentgen
+.. |Docker image| image:: https://img.shields.io/docker/v/mtsrus/data-rentgen?sort=semver&label=docker
+    :target: https://hub.docker.com/r/mtsrus/data-rentgen
+.. |Documentation| image:: https://readthedocs.org/projects/data-rentgen/badge/?version=stable
+    :target: https://data-rentgen.readthedocs.io/
+.. |Build Status| image:: https://github.com/MobileTeleSystems/data-rentgen/workflows/Tests/badge.svg
+    :target: https://github.com/MobileTeleSystems/data-rentgen/actions
+.. |Coverage| image:: https://codecov.io/github/MobileTeleSystems/data-rentgen/graph/badge.svg?token=s0JztGZbq3
+    :target: https://codecov.io/github/MobileTeleSystems/data-rentgen
+.. |pre-commit.ci| image:: https://results.pre-commit.ci/badge/github/MobileTeleSystems/data-rentgen/develop.svg
+    :target: https://results.pre-commit.ci/latest/github/MobileTeleSystems/data-rentgen/develop
+
+What is Data.Rentgen?
+---------------------
+
+Data.Rentgen is a Data Motion Lineage service, compatible with `OpenLineage <https://openlineage.io/>`_ specification.
+
+**Note**: service is under active development, and is not ready to use yet.
+
+Goals
+-----
+
+* Collect lineage events produced by OpenLineage clients & integrations (Spark, Airflow).
+* Support consuming large amounts of lineage events, by using Kafka as event buffer and storing data in tables partitioned by event timestamp.
+* Store operation-grained events (instead of job grained `Marquez <https://marquezproject.ai/>`_), for better detalization.
+* Provide API for building run ↔ dataset lineage, as well as parent run → children run lineage.
+* Ability to build lineage graph with specific time boundaries (unlike Marquez there lineage is build only for last job run).
+* Ability to build lineage graph with different granularity. e.g. merge all individual Spark operations into Spark applicationId or Spark applicationName.
+
+Non-goals
+---------
+
+* This is **not** a Data Catalog. Use `Datahub <https://datahubproject.io/>`_ or `OpenMetadata <https://open-metadata.org/>`_ instead.
+* Static Data Lineage like view → table is not supported.
+* Currently column-level lineage is collected by OpenLineage, but not yet consumed by Data.Rentgen.
+
+.. documentation
+
+Documentation
+-------------
+
+See https://data-rentgen.readthedocs.io/
+
