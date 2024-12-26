@@ -1,0 +1,2 @@
+[console_scripts]
+easy_smr = easy_smr.__main__:cli
