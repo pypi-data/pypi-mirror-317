@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+ovos_phal_plugin_mac.egg-info/PKG-INFO
+ovos_phal_plugin_mac.egg-info/SOURCES.txt
+ovos_phal_plugin_mac.egg-info/dependency_links.txt
+ovos_phal_plugin_mac.egg-info/entry_points.txt
+ovos_phal_plugin_mac.egg-info/requires.txt
+ovos_phal_plugin_mac.egg-info/top_level.txt
+phal_plugin_mac/__init__.py
+phal_plugin_mac/version.py
+requirements/requirements-dev.txt
+requirements/requirements.txt
+test/test_plugin.py
