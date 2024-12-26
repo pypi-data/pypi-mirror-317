@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+flatmatter/__init__.py
+flatmatter/compute_action.py
+flatmatter/flatmatter.py
+flatmatter/function.py
+flatmatter/function_name.py
+flatmatter/parsed_value.py
+flatmatter/test_flatmatter.py
+flatmatter.egg-info/PKG-INFO
+flatmatter.egg-info/SOURCES.txt
+flatmatter.egg-info/dependency_links.txt
+flatmatter.egg-info/top_level.txt
