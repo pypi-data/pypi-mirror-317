@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: nice-droplets
+Version: 0.1.0
+Summary: A collection of helpful extensions for NiceGUI.
+Home-page: https://github.com/alyxion/nice-droplets
+License: MIT
+Keywords: nicegui,extensions,python,ui,web
+Author: Michael Ikemann
+Author-email: michael.ikemann@gmail.com
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: nicegui
+Project-URL: Repository, https://github.com/alyxion/nice-droplets
+Description-Content-Type: text/markdown
+
+# NiceDroplets
+
+![](./media/ndlogo.svg)
+
+A collection of helpful extensions for [NiceGUI](https://nicegui.io/).
+
+[![PyPI](https://img.shields.io/pypi/v/nicegui?color=dark-green)](https://pypi.org/project/nicegui/)
+[![Python versions](https://img.shields.io/badge/python-3.12%20|%203.13-blue.svg)](https://www.python.org/downloads/release/python-3106/)
+
+## Placeholder
+
+This is a placeholder project, which will be filled with useful extensions to the NiceGUI framework.
+
+## Installation
+
+```bash
+pip install nice-droplets
+```
+
