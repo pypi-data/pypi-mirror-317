@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: micropython-om2m-client
+Version: 0.1.0a6
+Summary: A MicroPython client for interacting with OM2M CSE (Work in Progress).
+Home-page: https://github.com/SCRCE/micropython-om2m-client
+Author: Ahmad Hammad
+Author-email: ahmadhammad.uca@gmail.com
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: Implementation :: MicroPython
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: urequests >=0.9.0
+Requires-Dist: ujson >=1.35
+Requires-Dist: umqtt.robust >=1.0.0
+Requires-Dist: microcoapy >=0.3.0
+
+# MicroPython OM2M Client
+
+**Work in Progress**: This package is in the early stages of development and may contain bugs and missing features.
+
+A lightweight OM2M client for MicroPython to interact with a CSE server.
+### NOTE: DESIGNED TO ONLY WORK WITH MIDDLE NODES.
+
+## Features
+- Register an Application Entity (AE)
+- Create Containers under the AE
+- Send sensor data to OM2M CSE servers
+
+## Installation
+Install via `upip`:
+upip.install("micropython-om2m-client")
+## Usage
+```python
+from om2m_client import OM2MClient
+
+
+
+client = OM2MClient(
+    cse_ip="180.27.251.7"
+    cse_port="8282"
+    cse_type="mn"
+    cred="admin:admin"
+    device_name="MyDevice",
+    container_name="MyContainer"
+)
+
+client.register_ae()
+client.create_descriptor()
+client.create_container()
+client.send_data({"key": "value"})
+```
