@@ -1,0 +1,9 @@
+sweepystats/__init__.py,sha256=btXya10Zx7THTWCa9ZgT7xB3Xu4ZlJXLaS5lBp3TUxg,179
+sweepystats/anova.py,sha256=nUrmBeDOt7GFj8fVeX1VMtJ9F5UFMZQpTqNmqvs4gGM,1928
+sweepystats/linreg.py,sha256=Q6U8nZZ0k7O8BjRQ1UZVNYOXesAZufLFASVTGTyUJF4,3438
+sweepystats/sweep_matrix.py,sha256=Go4BXDMlHMTBxEmR6BbrN7wv0YNLdrrMkNEGCP-eUKE,5070
+sweepystats-0.0.6.dist-info/LICENSE,sha256=QaYcdcaoKgzRyAutcSOA-8F5w-xdXRUzBRVgZuH9hrI,1108
+sweepystats-0.0.6.dist-info/METADATA,sha256=qp2TEPpFl4Kdz9iYl8LM_NkbX3Ia0lQO7idB5I5js-I,5225
+sweepystats-0.0.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+sweepystats-0.0.6.dist-info/top_level.txt,sha256=lduwwLJ3tgMUviV0tE0z8I_j6Py-Bj70rKCnRy6zNWQ,12
+sweepystats-0.0.6.dist-info/RECORD,,
