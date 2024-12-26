@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: safe-pfl-plotter
+Version: 0.1.1
+Summary: safe-pfl plotter
+Home-page: https://github.com/safe-pfl/plotters
+Author: MohammadMojtaba Roshani
+Author-email: mohammadmojtabaroshani@outlook.com
+License: Apache Software License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+License-File: LICENSE
+Requires-Dist: matplotlib ==3.6.3
+Requires-Dist: numpy >=2.0
+Requires-Dist: distinctipy >=1.3
+
