@@ -1,0 +1,7 @@
+lxml>=2.0
+
+[docs]
+Sphinx~=8.1.3
+
+[syntax]
+Pygments>=2.0
