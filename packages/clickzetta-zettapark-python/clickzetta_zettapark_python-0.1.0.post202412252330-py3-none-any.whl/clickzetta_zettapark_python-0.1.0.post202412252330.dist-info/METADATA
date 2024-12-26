@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: clickzetta-zettapark-python
+Version: 0.1.0.post202412252330
+Summary: Clickzetta Zettapark for Python
+Home-page: https://www.yunqi.tech/
+Author: Clickzetta, Inc
+Author-email: support@yunqi.tech
+License: Apache License, Version 2.0
+Project-URL: Documentation, https://yunqi.tech/documents
+Project-URL: Source, https://github.com/clickzetta/zettapark
+Project-URL: Issues, https://github.com/clickzetta/zettapark/issues
+Project-URL: Changelog, https://github.com/clickzetta/zettapark/blob/main/CHANGELOG.md
+Keywords: Clickzetta db database cloud analytics warehouse
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: SQL
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.8, <3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE.txt
+Requires-Dist: setuptools >=40.6.0
+Requires-Dist: wheel
+Requires-Dist: typing-extensions <5.0.0,>=4.1.0
+Requires-Dist: pyyaml
+Requires-Dist: clickzetta-connector-python >=0.8.78.13
+Requires-Dist: cloudpickle !=2.1.0,!=2.2.0,<=2.2.1,>=1.6.0 ; python_version < "3.11"
+Requires-Dist: cloudpickle ==2.2.1 ; python_version ~= "3.11"
+Provides-Extra: development
+Requires-Dist: pytest <8.0.0 ; extra == 'development'
+Requires-Dist: pytest-cov ; extra == 'development'
+Requires-Dist: coverage ; extra == 'development'
+Requires-Dist: sphinx ==5.0.2 ; extra == 'development'
+Requires-Dist: cachetools ; extra == 'development'
+Requires-Dist: pytest-timeout ; extra == 'development'
+Provides-Extra: localtest
+Requires-Dist: pandas ; extra == 'localtest'
+Requires-Dist: pyarrow ; extra == 'localtest'
+
+# Zettapark
