@@ -1,0 +1,6 @@
+__version__ = "0.1.1"
+__author__ = "Domingo E. Savoretti"
+__email__ = "esavoretti@gmail.com"
+__license__ = "MIT"
+__url__ = "https://github.com/sandy98/excel_97"
+__description__ = "A simple library to read and write Excel 97/2003 files."
