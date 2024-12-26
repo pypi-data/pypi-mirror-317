@@ -1,0 +1,8 @@
+[report]
+omit =
+    *tests*
+    *__main__.py
+exclude_lines =
+    pragma: no cover
+    pragma: no cov_4_nix
+
