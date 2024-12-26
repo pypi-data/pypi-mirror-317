@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include dbase3_py *.py
+
