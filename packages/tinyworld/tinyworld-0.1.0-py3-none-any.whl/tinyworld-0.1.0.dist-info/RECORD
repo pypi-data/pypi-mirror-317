@@ -1,0 +1,13 @@
+tinyworld/__init__.py,sha256=rYQ70fatuSpb_9QlTQjp43Dc6hymtVHZdP5-Su3X0aA,413
+tinyworld/audio.py,sha256=13lDKuv6qETtTFz_C8zt4-0jBoFNjxD3VH1L8fjKrbY,677
+tinyworld/cli.py,sha256=BcJOg2p1i714x0fBqezn3Vr78WPA1f3DuWqEKRccHWo,4939
+tinyworld/config.py,sha256=v-Nq0g8TSrszQehOpNdNDy19Rlk9vdu9nn1EZOEdEvY,533
+tinyworld/core.py,sha256=6Sv8Q8mmS3gdEdUuB3bLi2pgY0sX8w0ZArrSjyxN4OA,7559
+tinyworld/effects.py,sha256=S0miIPcclnD65LKnaHvqVhhl9KW3cD8IX8IvwFloQmM,565
+tinyworld/shapes.py,sha256=gSwFbGmbmhhksjl_4BqgDg2LQd_DIUUBEcNWW_BbOJA,757
+tinyworld/transitions.py,sha256=FIPqefVRoiwFhYKqUZINb-eSR4M6FRrORWQBpzPK-UI,1185
+tinyworld/video.py,sha256=gMN8mhHVfMbTuOSugIetnigsTSzzyfo1BVkaOI1GMbw,2493
+tinyworld-0.1.0.dist-info/METADATA,sha256=0YrUEW3pwaf9yrs-PP7ajPibSdrjo_RWVMwlUenxdls,3234
+tinyworld-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+tinyworld-0.1.0.dist-info/top_level.txt,sha256=j0mV7fH5S5rpM5YT6gYVSIcMTToVs9nST7i83ZGU0L4,10
+tinyworld-0.1.0.dist-info/RECORD,,
