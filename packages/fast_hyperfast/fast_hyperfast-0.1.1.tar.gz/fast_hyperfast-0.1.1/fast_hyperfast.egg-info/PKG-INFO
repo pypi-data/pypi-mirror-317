@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: fast_hyperfast
+Version: 0.1.1
+Summary: HyperFast (https://github.com/AI-sandbox/HyperFast) but customizable (and in some cases faster too!)
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: scikit-learn==1.5.2
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: xlrd>=2.0.1
