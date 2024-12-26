@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: funorm
+Version: 1.0.2
+Summary: funddb
+Author-email: niuliangtao <farfarfun@qq.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: sqlalchemy>=2.0.36
+
+# darkdb
