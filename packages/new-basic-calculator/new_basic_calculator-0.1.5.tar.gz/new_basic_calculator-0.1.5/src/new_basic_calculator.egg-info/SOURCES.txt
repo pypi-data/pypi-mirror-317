@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+./src/new_basic_calculator.egg-info/PKG-INFO
+./src/new_basic_calculator.egg-info/SOURCES.txt
+./src/new_basic_calculator.egg-info/dependency_links.txt
+./src/new_basic_calculator.egg-info/requires.txt
+./src/new_basic_calculator.egg-info/top_level.txt
+src/new_basic_calculator/__init__.py
+src/new_basic_calculator/example.py
+src/new_basic_calculator.egg-info/PKG-INFO
+src/new_basic_calculator.egg-info/SOURCES.txt
+src/new_basic_calculator.egg-info/dependency_links.txt
+src/new_basic_calculator.egg-info/requires.txt
+src/new_basic_calculator.egg-info/top_level.txt
