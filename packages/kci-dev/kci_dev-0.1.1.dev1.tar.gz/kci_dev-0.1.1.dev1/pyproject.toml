@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "kci-dev"
+version = "0.1.1.dev1"
+description = "Stand alone tool for Linux Kernel developers and maintainers that can test local Linux Kernel changes on a enabled KernelCI server"
+authors = ["Arisu Tachibana <arisu.tachibana@miraclelinux.com>"]
+license = "LGPL-2.1-or-later"
+readme = "README.md"
+packages = [
+{include = "kcidev"},
+{include = "subcommands", from="kcidev"},
+{include = "libs", from="kcidev"},
+{include = ".kci-dev.toml.example", to="kcidev"},
+]
+repository = "https://github.com/kernelci/kci-dev"
+classifiers = [
+        'Development Status :: 4 - Beta',
+        'Environment :: Console',
+        'Intended Audience :: Developers',
+        'Operating System :: OS Independent',
+        'Topic :: Software Development',
+        'Topic :: Software Development :: Libraries',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: PyPy'
+    ]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+requests = "^2.32.3"
+toml = "^0.10.2"
+gitpython = "^3.1.43"
+
+[tool.poetry.scripts]
+kci-dev = 'kcidev.main:run'
+
+[tool.poetry.urls]
+"Issue Tracker" = "https://github.com/kernelci/kci-dev/issues"
+
+[tool.poetry.group.ci.dependencies]
+black = "^24.8.0"
+isort = "^5.13.2"
+pytest = "^8.3.3"
+poethepoet = "^0.29.0"
+
+[tool.poe.tasks]
+check = "./scripts/check.sh"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

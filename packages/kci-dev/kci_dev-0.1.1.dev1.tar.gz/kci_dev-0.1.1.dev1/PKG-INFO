@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: kci-dev
+Version: 0.1.1.dev1
+Summary: Stand alone tool for Linux Kernel developers and maintainers that can test local Linux Kernel changes on a enabled KernelCI server
+Home-page: https://github.com/kernelci/kci-dev
+License: LGPL-2.1-or-later
+Author: Arisu Tachibana
+Author-email: arisu.tachibana@miraclelinux.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: gitpython (>=3.1.43,<4.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Project-URL: Issue Tracker, https://github.com/kernelci/kci-dev/issues
+Project-URL: Repository, https://github.com/kernelci/kci-dev
+Description-Content-Type: text/markdown
+
+# kci-dev
+
+<p align="center">
+  <a href="https://pypi.org/project/kci-dev"><img alt="PyPI Version" src="https://img.shields.io/pypi/v/kci-dev.svg?maxAge=86400" /></a>
+  <a href="https://pypi.org/project/kci-dev"><img alt="Python Versions" src="https://img.shields.io/pypi/pyversions/kci-dev.svg?maxAge=86400" /></a>
+  <a href="https://www.bestpractices.dev/projects/9829"><img src="https://www.bestpractices.dev/projects/9829/badge"></a>
+</p>
+
+> *cmdline tool for interact with KernelCI*
+
+Stand alone tool for Linux Kernel developers and maintainers to interact with KernelCI services.
+
+## Quickstart
+
+Using [PyPI](https://pypi.org/project/kci-dev/) and virtualenv
+```sh
+virtualenv .venv
+source .venv/bin/activate
+pip install kci-dev
+```
+
+## Configuration
+
+You can see a example configuration file [here](docs/_index.md#configuration).  
+Without a auth token kci-dev can be used in results view only mode.
+
+## Contributing to kci-dev
+
+The kci-dev project welcomes, and depends on, contribution from developers and users in the open source community.  
+The [Contributor Guide](CONTRIBUTING.md) should guide you on how to contribute to kci-dev project.
+
+
+## License
+
+[LGPL-2.1](https://github.com/kernelci/kci-dev/blob/main/LICENSE)
+
