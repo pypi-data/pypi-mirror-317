@@ -1,0 +1,9 @@
+subtitlecore/__init__.py,sha256=NEMODpR9w5lDTeYScu-UErqSn5fRo5PMXkRcCGCNjUU,1274
+subtitlecore/constants.py,sha256=72wdooljhpyjzyD3Dv9J5pmEs_4Nu5OisEaYd6GpbPs,224
+subtitlecore/entry.py,sha256=37d_yr_V3kat1na4jSWUB2u8T_48a3pTbT9kZRdko04,1186
+subtitlecore/sentencizer.py,sha256=FYWn4LWhrD5xvQZGHT98P3eI7D2s1hbM7ElBBaXxRlU,677
+subtitlecore/subtitle.py,sha256=HKwNkUavljNJWSNAviaus7pBchsjW1LU5hOZnOIH2BU,1930
+subtitlecore-0.1.16.dist-info/METADATA,sha256=q08u49C-BSim1NFoZNh-gwwMIt5F59bNg2V8syMHr4I,3002
+subtitlecore-0.1.16.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+subtitlecore-0.1.16.dist-info/entry_points.txt,sha256=HY1M-Vkelkm9-HWmNikMOhf8Y2QKqYkOMbtYiSTbyO4,188
+subtitlecore-0.1.16.dist-info/RECORD,,
