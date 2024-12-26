@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+ter_ver_bb/BayesCalculator.py
+ter_ver_bb/BernoulliCalculator.py
+ter_ver_bb/__init__.py
+ter_ver_bb.egg-info/PKG-INFO
+ter_ver_bb.egg-info/SOURCES.txt
+ter_ver_bb.egg-info/dependency_links.txt
+ter_ver_bb.egg-info/not-zip-safe
+ter_ver_bb.egg-info/top_level.txt
