@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/dev_tools/__init__.py
+src/dev_tools/create_package.py
+src/dev_tools.egg-info/PKG-INFO
+src/dev_tools.egg-info/SOURCES.txt
+src/dev_tools.egg-info/dependency_links.txt
+src/dev_tools.egg-info/entry_points.txt
+src/dev_tools.egg-info/requires.txt
+src/dev_tools.egg-info/top_level.txt
+src/dev_tools.egg-info/zip-safe
