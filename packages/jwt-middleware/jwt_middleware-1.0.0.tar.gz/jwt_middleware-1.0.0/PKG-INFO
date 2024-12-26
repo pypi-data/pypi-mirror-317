@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: jwt-middleware
+Version: 1.0.0
+Summary: JWT Middleware for FastAPI
+Home-page: https://gitlab.com/soberly/backend/modules/jwt_middleware
+Author: Isa
+Author-email: isa@soberly.io
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi>=0.70.0
+Requires-Dist: PyJWT>=2.0.0
+
+# jwt_middleware
+
+A module for a middleware for our JWT token decryption. 
+
+Will throw a HTTP exception code 401 in case of missing token, token expiration or invalid token. 
+
+## Installation 
+`pip3 install jwt-middleware`
+
+## Usage
+```
+from fastapi import FastAPI
+from jwt_middleware import JWTMiddleware
+
+app = FastAPI()
+
+# Add the JWT middleware
+app.middleware("http")(JWTMiddleware(secret_key="your-secret-key"))
+
+@app.get("/")
+async def root():
+    return {"message": "Welcome, authorized user!"}
+```
+
+## Publish a new version 
+Pre-requisites: 
+```
+pip3 install setuptools
+pip3 install wheel
+pip3 install twine
+```
+
+1. Update the version number in setup.py 
+2. Build the package: 
+```
+python3 setup.py sdist bdist_wheel
+```
+3. Verify the package: 
+```
+twine check dist/*
+```
+4. Publish the package: 
+```
+twine upload dist/*
+```
