@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+CHADs_calculator.egg-info/PKG-INFO
+CHADs_calculator.egg-info/SOURCES.txt
+CHADs_calculator.egg-info/dependency_links.txt
+CHADs_calculator.egg-info/top_level.txt
+chads_calculator.egg-info/PKG-INFO
+chads_calculator.egg-info/SOURCES.txt
+chads_calculator.egg-info/dependency_links.txt
+chads_calculator.egg-info/top_level.txt
+math_calculator/__init__.py
+math_calculator/core.py
+tests/test_calculator.py

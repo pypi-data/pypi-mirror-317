@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: chads_calculator
+Version: 0.1
+Summary: A simple calculator library for basic arithmetic operations.
+Author: Vlad_Chad
+Author-email: 3336096509@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Math Calculator
+
+A simple calculator library to perform basic arithmetic operations.
+
+## Features
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Square root
+- Exponentiation
