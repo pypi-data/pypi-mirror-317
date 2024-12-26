@@ -1,0 +1,4 @@
+include README.md
+include notes *.py
+recursive-include notes/templates *
+recursive-include notes/migrations *

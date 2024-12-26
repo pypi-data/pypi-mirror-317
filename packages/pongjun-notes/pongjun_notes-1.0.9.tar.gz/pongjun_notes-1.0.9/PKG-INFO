@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: pongjun-notes
+Version: 1.0.9
+Summary: A Django app for managing notes
+Home-page: https://github.com/i2x/notes
+Author: i2x
+Author-email: s6601012610067@kmutnb.ac.com
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: Django>=4.2
+
+# Pongjun Notes
+
+**pongjun-notes** is a reusable Django app for managing notes.
+
+---
+
+## Installation
+
+1. Install the package:
+   ```bash
+   pip install pongjun-notes
+   ```
+
+2. Add `'notes'` to `INSTALLED_APPS` in your `settings.py`:
+
+   ```python
+   INSTALLED_APPS = [
+       'notes',
+   ]
+   ```
+
+3. Include the `notes` URLs in your project's `urls.py`:
+
+   ```python
+   from django.urls import path, include
+
+   urlpatterns = [
+       path('notes/', include('notes.urls')),
+   ]
+   ```
+
+4. Apply migrations:
+
+   ```bash
+   python manage.py migrate
+   
