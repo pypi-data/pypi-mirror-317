@@ -1,0 +1,9 @@
+README.md
+setup.py
+heuristic-client/__init__.py
+heuristic-client/client.py
+heuristic_client.egg-info/PKG-INFO
+heuristic_client.egg-info/SOURCES.txt
+heuristic_client.egg-info/dependency_links.txt
+heuristic_client.egg-info/requires.txt
+heuristic_client.egg-info/top_level.txt
