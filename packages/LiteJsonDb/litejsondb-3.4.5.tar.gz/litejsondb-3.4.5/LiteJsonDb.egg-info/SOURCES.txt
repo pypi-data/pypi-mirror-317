@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+LiteJsonDb/LiteJsonDb.py
+LiteJsonDb/__init__.py
+LiteJsonDb.egg-info/PKG-INFO
+LiteJsonDb.egg-info/SOURCES.txt
+LiteJsonDb.egg-info/dependency_links.txt
+LiteJsonDb.egg-info/requires.txt
+LiteJsonDb.egg-info/top_level.txt
