@@ -1,0 +1,9 @@
+cli_tasker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli_tasker/cli.py,sha256=1MoSSGha2mKUZXPuAYJeZ9P8O5GQ-cJ3gG05UB9O-10,2706
+cli_tasker/utils.py,sha256=mDBCZXleJ-M4-fgAbBVk6VLjwDGf0DPwCuq2ObzlYMs,5052
+cli_tasker-1.0.0.dist-info/LICENSE,sha256=6P0jaCPsBu4Hf1viOdYOjG7wCDGKV2RD9XKcbejxJ8U,1062
+cli_tasker-1.0.0.dist-info/METADATA,sha256=u97BX9J-L22ailcAcgJMg9SbLKyZoQDD91FXtmI71I8,1414
+cli_tasker-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cli_tasker-1.0.0.dist-info/entry_points.txt,sha256=nGRI_TWrvoW3Ux4kTTgFtskQ6yArrJFWmsqoZUkgGpM,51
+cli_tasker-1.0.0.dist-info/top_level.txt,sha256=HobxnHv3_DmtS91hOxc3CMnNJAfl9pFprJ7ugc8MueI,11
+cli_tasker-1.0.0.dist-info/RECORD,,
