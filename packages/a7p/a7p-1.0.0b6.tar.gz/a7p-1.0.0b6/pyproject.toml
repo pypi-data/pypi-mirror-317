@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "a7p"
+authors = [
+    { name="o-murphy" },
+]
+
+description = "Simple python3 wrapper for .a7p files"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["protobuf", "archer", "a7p"]
+license = {file = "LICENSE"}
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = ["google", "protobuf==4.25.2", "cel-python", "tqdm"]
+dynamic = ["version"]
+
+
+[project.urls]
+"Homepage" = "https://github.com/o-murphy/a7p"
+"Bug Reports" = "https://github.com/o-murphy/a7p/issues"
+"Source" = "https://github.com/o-murphy/a7p"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["a7p*"]
+
+[project.optional-dependencies]
+dev = ["build", "protovalidate"]
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+
+[project.scripts]
+a7p = "a7p.__main__:main"
