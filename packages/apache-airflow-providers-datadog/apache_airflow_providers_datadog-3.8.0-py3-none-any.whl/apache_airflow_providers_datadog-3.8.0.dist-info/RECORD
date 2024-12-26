@@ -1,0 +1,11 @@
+airflow/providers/datadog/LICENSE,sha256=FFb4jd2AXnOOf7XLP04pQW6jbdhG49TxlGY6fFpCV1Y,13609
+airflow/providers/datadog/__init__.py,sha256=AP7g5IPyIOMP5rSLvg4lcPzfzUzv-k0rEaH9BuEgXLk,1494
+airflow/providers/datadog/get_provider_info.py,sha256=Vbc2DGhUmX83e4LCLBwl7UL5oOV7MRefkqd_XsVST7I,2627
+airflow/providers/datadog/hooks/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/datadog/hooks/datadog.py,sha256=4YH4qLzJver_xqgHCsgP9_qOCuEmFdq5lsVbTtxSc-Y,7292
+airflow/providers/datadog/sensors/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/datadog/sensors/datadog.py,sha256=LVJovtppsVioJb_zrAv7Cstc9kzPXsr6IhNpZiWOSRA,4079
+apache_airflow_providers_datadog-3.8.0.dist-info/entry_points.txt,sha256=cw1jVTfLvZPFLj5VUkm-gx4sjxm_SRQXaHVUhZ6qQiI,103
+apache_airflow_providers_datadog-3.8.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+apache_airflow_providers_datadog-3.8.0.dist-info/METADATA,sha256=5nZI_5u5Xso_OQ_BjC0WUaRYRh7R5TD634BLLE3xJ74,4689
+apache_airflow_providers_datadog-3.8.0.dist-info/RECORD,,
