@@ -1,0 +1,2 @@
+[ovos.plugin.phal]
+ovos-phal-plugin-mac = ovos_phal_plugin_mac:MacOSPlugin
