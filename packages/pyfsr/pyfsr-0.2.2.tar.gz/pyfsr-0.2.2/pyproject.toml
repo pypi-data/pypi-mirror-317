@@ -1,0 +1,57 @@
+[project]
+name = "pyfsr"
+version = "0.2.2"
+description = "Python implementation of the FortiSOAR REST API"
+readme = "README.md"
+authors = [
+    { name = "Dylan Spille", email = "dspille@fortinet.com" }
+]
+license = { text = "MIT" }
+keywords = ["fortinet", "fortisoar", "api", "rest"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+]
+
+docs = [
+    "sphinx>=7.0.0",
+    "sphinx-rtd-theme>=1.3.0",
+    "sphinx-autodoc-typehints>=1.25.2",
+    "sphinx-autoapi>=3.0.0",
+    "pydata-sphinx-theme"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pyfsr"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+#filterwarnings = [
+#    "ignore::DeprecationWarning"
+#]
+
+[project.urls]
+"Homepage" = "https://github.com/ftnt-dspille/pyfsr"
+"Bug Tracker" = "https://github.com/ftnt-dspille/pyfsr/issues"
+"Docmentation" = "https://ftnt-dspille.github.io/pyfsr/"
