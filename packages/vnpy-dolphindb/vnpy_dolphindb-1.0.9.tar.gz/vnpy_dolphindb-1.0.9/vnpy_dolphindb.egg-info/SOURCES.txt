@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+vnpy_dolphindb/__init__.py
+vnpy_dolphindb/dolphindb_database.py
+vnpy_dolphindb/dolphindb_script.py
+vnpy_dolphindb.egg-info/PKG-INFO
+vnpy_dolphindb.egg-info/SOURCES.txt
+vnpy_dolphindb.egg-info/dependency_links.txt
+vnpy_dolphindb.egg-info/not-zip-safe
+vnpy_dolphindb.egg-info/requires.txt
+vnpy_dolphindb.egg-info/top_level.txt
