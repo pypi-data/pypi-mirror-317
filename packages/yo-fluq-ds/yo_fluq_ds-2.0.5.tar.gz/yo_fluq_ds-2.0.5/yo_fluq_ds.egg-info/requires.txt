@@ -1,0 +1,11 @@
+pandas
+matplotlib
+numpy
+tqdm
+seaborn
+pyaml
+jsonpickle
+ipython
+ipywidgets
+scikit-learn
+toml
