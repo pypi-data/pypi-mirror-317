@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+vedro_spec_validator/__init__.py
+vedro_spec_validator/_spec_validator.py
+vedro_spec_validator/_spec_validator_plugin.py
+vedro_spec_validator.egg-info/PKG-INFO
+vedro_spec_validator.egg-info/SOURCES.txt
+vedro_spec_validator.egg-info/dependency_links.txt
+vedro_spec_validator.egg-info/requires.txt
+vedro_spec_validator.egg-info/top_level.txt

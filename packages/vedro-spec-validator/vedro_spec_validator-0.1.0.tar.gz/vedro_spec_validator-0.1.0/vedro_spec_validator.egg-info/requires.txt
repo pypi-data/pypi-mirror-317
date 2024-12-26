@@ -1,0 +1,2 @@
+jj-spec-validator<2.0.0,>=1.0.0
+vedro<2.0,>=1.10
