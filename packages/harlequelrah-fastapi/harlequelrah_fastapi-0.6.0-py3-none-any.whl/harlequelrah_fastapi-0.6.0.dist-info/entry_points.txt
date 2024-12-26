@@ -1,0 +1,2 @@
+[console_scripts]
+harlequelrah_fastapi = harlequelrah_fastapi.__main__:main
