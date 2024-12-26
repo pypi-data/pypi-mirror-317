@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: cosbot
+Version: 0.0.4
+Summary: An application that simplifies the life of an application developer for the Aurora OS.
+Home-page: https://aurora-bot.keygenqt.com/
+Author: Vitaliy Zarubin
+Author-email: keygenqt@gmail.com
+Requires-Python: >=3.8.10
+Description-Content-Type: text/markdown
+Requires-Dist: Telethon>=1.38.1
+Requires-Dist: setuptools>=75.6.0
+Requires-Dist: websocket-client>=1.8.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: aurora-cli>=3.2.10
+Requires-Dist: beautifulsoup4>=4.12.3
+
+
+**Cosbot** предназначено для взаимодействия с [Aurora Bot](https://aurora-bot.keygenqt.com/).
+
+> Приложение в разработке!
+
+### Feature
+
+- Позволяет реализовать в Telegram режим команд.
+- Отвечать на вопросы.
+
+### Roadmap
+
+- Режим умных команд.
+- Фреймворк click.
+- Другие улучшения.
