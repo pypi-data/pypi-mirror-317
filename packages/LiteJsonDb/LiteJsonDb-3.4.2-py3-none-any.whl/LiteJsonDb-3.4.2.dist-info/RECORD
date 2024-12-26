@@ -1,0 +1,12 @@
+LiteJsonDb/LiteJsonDb.py,sha256=WCMJttGO3LvhsIuGrmA-cL2ebrrT2T57Fyf2Ee63K_s,32897
+LiteJsonDb/__init__.py,sha256=8DgNhQIkO59wgCVKQ0KoABwCMGR7h5jhNhm802ynTQk,838
+LiteJsonDb/test.py,sha256=M_sd0QR6qK0pUnYNfGehSMi4HzGpWJLTytZJKplKhJA,2260
+LiteJsonDb/utils.py,sha256=YITF-u5HvVg3-SuBW6_IbN05xfU_lpgls5JkcqZMGgw,4477
+LiteJsonDb/modules/__init__.py,sha256=406s5R9mDiL2gJP7np_Aabd2q22OsVTs-Xmt-d2_tUI,838
+LiteJsonDb/modules/csv.py,sha256=L8BY5wW1egC-2cMTnqokL6AVFGINUwGyltMFvg9ZRuM,1350
+LiteJsonDb/modules/search.py,sha256=aHTLwCnYatgCDTf0-okZk83RPPdOh6BUAnNtUefvOZE,2929
+LiteJsonDb/modules/tgbot.py,sha256=y9psWbRXGq1E013NIt9r83fUXukWT0jRFKQtDESdduU,4423
+LiteJsonDb-3.4.2.dist-info/METADATA,sha256=U6dsPchgqz0Cwf4Of_i7FjtdM_gksjIh5d8paPU6SGM,1138
+LiteJsonDb-3.4.2.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+LiteJsonDb-3.4.2.dist-info/top_level.txt,sha256=NQ-qjshz00_obtTcdRdpYMCc-zNHlMB0d1L-CAiI4dM,11
+LiteJsonDb-3.4.2.dist-info/RECORD,,
