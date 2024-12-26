@@ -1,0 +1,96 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ #  Copyright (c) 2024. Permission is hereby granted, free of charge, to any person obtaining a
+  ~ #  copy of this software and associated documentation files (the “Software”), to deal in the
+  ~ #  Software without restriction,
+  ~ #  including without limitation the rights to use, copy, modify, merge, publish, distribute,
+  ~ #  sublicense, and/or sell copies
+  ~ #  of the Software, and to permit persons to whom the Software is furnished to do so, subject to
+  ~ #  the following conditions:
+  ~ #
+  ~ #  The above copyright notice and this permission notice shall be included in all copies or
+  ~ #  substantial portions of the Software.
+  ~ #
+  ~ #  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+  ~ #  BUT NOT LIMITED TO THE
+  ~ #  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+  ~ #  EVENT SHALL THE AUTHORS OR
+  ~ #  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+  ~ #  CONTRACT, TORT OR
+  ~ #  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  ~ #  DEALINGS IN THE SOFTWARE.
+  ~ #
+  ~ #  This uses QT for some components which has the primary open-source license is the GNU Lesser General Public License v. 3 (“LGPL”).
+  ~ #  With the LGPL license option, you can use the essential libraries and some add-on libraries of Qt.
+  ~ #  See https://www.qt.io/licensing/open-source-lgpl-obligations for QT details.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Settings</title>
+    <style>
+        /* Apply custom styles to all h3 tags */
+        h3 {
+            color: lightslategray;
+            font-weight: bold;
+        }
+
+        /* Expert section is hidden by default but displayed in expert mode */
+        .expert-section {
+            color: #323232;
+            font-size: 1px;
+        }
+    </style>
+</head>
+<body>
+
+<p>This tab manages the Digital Elevation file(s) for the relief image. </p>
+
+<h3>Instructions</h3>
+<ol>
+    <li>Click on a <i>Download</i> button to bring you to a website for downloading Digital Elevation files. Follow the
+        instructions under <i>Download Buttons</i> below for the site.
+    </li>
+    <li>Once the files are downloaded, drag and drop them into the blue box.
+    </li>
+</ol>
+<h3>Download Buttons</h3>
+<p><b>Download Elevation</b> (EarthExplorer) - Log in, select <i>Digital Elevation</i> under the <i>Data Sets</i> tab
+    and
+    choose <b>GMTED2010.</b> Use the <i>gmted_mea</i> file.</p>
+<ul>
+    <li><b>Resolutions:</b></li>
+    <li>30 arc sec - 1000m</li>
+    <li>15 arc sec - 500m</li>
+    <li>7.5 arc sec - 250m</li>
+</ul>
+<p><b>Download US High Res</b> (US National Map) - Log in, select <i>Elevation Products</i>, GeoTIFF format</p>
+<ul>
+    <li><b>Resolutions:</b></li>
+    <li>1 arc sec - 30m</li>
+    <li>1/3 arc sec - 10m</li>
+    <li>1 meter - 1m</li>
+</ul>
+<p>There are numerous other Digital Elevation sources</p>
+
+<!-- Expert Settings section is shown or hidden depending on the app mode -->
+<div class="expert-section">
+    <p>Expert Settings</p>
+    <p>In expert mode, you can have multiple layers. A layer has a name and a set of elevation files.</p>
+    <p>The layers in a project all share the same project settings (color ramp, hillshade settings, etc.)</p>
+    <p>The elevation files for a layer should be contiguous and have the same resolution.</p>
+    <p>Running Preview or Create will only build the Active Layer</p>
+    <p>To create a new layer: just switch Active Layer and type a Layer Name, then add elevation files.</p>
+    <ul>
+        <li><b>Active Layer:</b> Select the layer to use.</li>
+        <li><b>Layer Name:</b> Specify the name for this layer.</li>
+        <li><b>Source:</b> (Optional) Provide the source of the elevation files.</li>
+        <li><b>License:</b> (Optional) Specify licensing information for the elevation files.</li>
+    </ul>
+    <p>To change the Coordinate Reference System, switch to expert mode and use the Misc
+        tab.</p>
+</div>
+</body>
+</html>

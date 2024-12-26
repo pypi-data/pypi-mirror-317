@@ -1,0 +1,92 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ #  Copyright (c) 2024. Permission is hereby granted, free of charge, to any person obtaining a
+  ~ #  copy of this software and associated documentation files (the “Software”), to deal in the
+  ~ #  Software without restriction,
+  ~ #  including without limitation the rights to use, copy, modify, merge, publish, distribute,
+  ~ #  sublicense, and/or sell copies
+  ~ #  of the Software, and to permit persons to whom the Software is furnished to do so, subject to
+  ~ #  the following conditions:
+  ~ #
+  ~ #  The above copyright notice and this permission notice shall be included in all copies or
+  ~ #  substantial portions of the Software.
+  ~ #
+  ~ #  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+  ~ #  BUT NOT LIMITED TO THE
+  ~ #  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+  ~ #  EVENT SHALL THE AUTHORS OR
+  ~ #  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+  ~ #  CONTRACT, TORT OR
+  ~ #  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  ~ #  DEALINGS IN THE SOFTWARE.
+  ~ #
+  ~ #  This uses QT for some components which has the primary open-source license is the GNU Lesser General Public License v. 3 (“LGPL”).
+  ~ #  With the LGPL license option, you can use the essential libraries and some add-on libraries of Qt.
+  ~ #  See https://www.qt.io/licensing/open-source-lgpl-obligations for QT details.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <style>
+        /* Apply custom styles to all h3 tags */
+        h3 {
+            color: lightslategray;
+            font-weight: bold;
+        }
+
+        /* Expert section is hidden by default but changed to show-expert-section in expert mode */
+        .expert-section {
+            color: #323232;
+            font-size: 1px;
+        }
+    </style>
+</head>
+<body>
+<p>This tab creates and opens Color Relief projects. A project stores all the hillshade and color settings needed to create a relief image</p>
+<h3>Create a Project</h3>
+<ol>
+<li>Click <i>New</i>. A dialog will appear to create and then open the project folder. A sample color ramp and
+    settings file will be copied to this folder.</li>
+</ol>
+<h3>Create an image</h3>
+<p>Follow these steps to generate your relief image:</p>
+            <ol>
+                <li>Select the <strong>Elevation</strong> tab to download and configure Digital Elevation files.</li>
+                <li>Adjust and preview hillshade and color settings in the <strong>Hillshade</strong> and <strong>Color</strong> tabs.</li>
+                <li>Finally, use the <strong>Create</strong> tab to produce a full-sized merged image, combining the hillshade and color relief.</li>
+            </ol>
+
+<h3>Modes</h3>
+<b>Basic Mode:</b>
+<ul>
+    <li>A simplified interface for common settings.</li>
+</ul>
+<b>Expert Mode:</b>
+<ul>
+    <li>Offers control over all settings</li>
+    <li>Supports the use of multiple layers, each with its own elevation files but sharing hillshade and color relief
+        settings.
+    </li>
+</ul>
+<!-- Expert Settings section is shown or hidden depending on app mode -->
+<div class="expert-section">
+    <p>Optionally provides two additional tabs for access to every setting by setting "Tabs" to Extended in the Project
+        window:
+    </p>
+    <p><b>Misc:</b> Rarely changed GDAL settings.(Only in expert/extended mode)</p>
+    <p><b>Settings:</b> Update general application settings.(Only in expert/extended mode)</p>
+
+<b>What is a Project?</b>
+<p>A project defines the style for the  relief image including all color settings, hillshade
+<b>What is a Layer?</b>
+<p>A layer is a set of contiguous elevation files with the same
+    resolution.  In basic mode, a project just has one layer.  In expert mode, a project can have multiple layers all
+    using the same project style.  One use for layers is to have higher resolution images with the same style, such as a layer for US,
+    and a higher resolution layer for Washington, and a higher resolution layer for Mt Rainier.  Another is to have separate,
+discontinuous layers such as a layer for Mt Rainier and a layer for Mt Saint Helens.</p>
+</div>
+</body>
+</html>
