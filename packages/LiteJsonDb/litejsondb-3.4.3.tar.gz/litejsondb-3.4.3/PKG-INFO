@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: LiteJsonDb
+Version: 3.4.3
+Summary: A lightweight JSON-based database system. It's designed for simplicity and ease of use.
+Home-page: https://github.com/codingtuto/LiteJsonDb/
+Author: Coding Team
+Author-email: codingteamgroup@gmail.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Setuptools Plugin
+Classifier: Environment :: Console
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography
+
+Docs available here: https://github.com/codingtuto/LiteJsonDb/
