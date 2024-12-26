@@ -1,0 +1,4 @@
+[console_scripts]
+build_controller_companion_exe=pyinstaller:install
+controller_companion=controller_companion.launch:cli
+
