@@ -1,0 +1,8 @@
+dsqlenv
+langchain_core>=0.3.10
+langchain_openai>=0.2.2
+rich>=13.8.0
+pydantic>=2.10.2
+pydantic_core>=2.27.1
+pymysql>=1.0.2
+pycryptodome>=3.10.0
