@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ftracer/__init__.py
+ftracer.egg-info/PKG-INFO
+ftracer.egg-info/SOURCES.txt
+ftracer.egg-info/dependency_links.txt
+ftracer.egg-info/requires.txt
+ftracer.egg-info/top_level.txt
