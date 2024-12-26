@@ -1,0 +1,8 @@
+schemax_openapi/__init__.py,sha256=6SHiLfFLBr5pcWhdFHdfLVbF6s0hcBHb5371kpgeu7E,110
+schemax_openapi/_data_collector.py,sha256=C_UVNrvLaiGHjKfQP87ziI9sTCOvczxYJYsXnYhQbpM,7314
+schemax_openapi/_openapi_normalizer.py,sha256=b-Db6pp0gBdNYwDJ8ZNmjDnSw_CfiMcvT4Q_TNJG0y4,785
+schemax_openapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+schemax_openapi-0.0.6.dist-info/METADATA,sha256=Aa4zsK3uU2NxSH2F1ag-io45u3Vkl9vl_XaKuuKD0bs,2134
+schemax_openapi-0.0.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+schemax_openapi-0.0.6.dist-info/top_level.txt,sha256=KTYTbUepjyCJDhMd1qx6Zpk9Uwli3umch3RKYX5m0f8,16
+schemax_openapi-0.0.6.dist-info/RECORD,,
