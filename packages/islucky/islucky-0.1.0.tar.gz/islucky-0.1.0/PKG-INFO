@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: islucky
+Version: 0.1.0
+Summary: Today is lucky or not?
+Author: yuanze31
+Author-email: yuanze31@yuanze31.com
+Requires-Python: >=3.6

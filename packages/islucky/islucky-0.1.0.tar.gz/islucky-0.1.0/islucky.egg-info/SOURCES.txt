@@ -1,0 +1,9 @@
+README.md
+setup.py
+islucky/__init__.py
+islucky/is_equal.py
+islucky.egg-info/PKG-INFO
+islucky.egg-info/SOURCES.txt
+islucky.egg-info/dependency_links.txt
+islucky.egg-info/top_level.txt
+test/test.py
