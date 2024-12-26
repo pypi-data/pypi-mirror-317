@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+cli_tasker/__init__.py
+cli_tasker/cli.py
+cli_tasker/utils.py
+cli_tasker.egg-info/PKG-INFO
+cli_tasker.egg-info/SOURCES.txt
+cli_tasker.egg-info/dependency_links.txt
+cli_tasker.egg-info/entry_points.txt
+cli_tasker.egg-info/requires.txt
+cli_tasker.egg-info/top_level.txt
