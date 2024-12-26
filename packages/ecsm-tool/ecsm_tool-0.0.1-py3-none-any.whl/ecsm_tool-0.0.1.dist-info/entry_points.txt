@@ -1,0 +1,2 @@
+[console_scripts]
+ecsm-tool = main:main
