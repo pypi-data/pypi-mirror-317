@@ -1,0 +1,14 @@
+torch
+
+[all]
+
+[dev]
+pre-commit
+pytest<8.0.0,>=7.0.0
+expecttest
+transformers
+diffusers
+accelerate
+peft
+protobuf
+sentencepiece
