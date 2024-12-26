@@ -1,0 +1,10 @@
+mykurve/__init__.py,sha256=wGRolfbao7pPUbn50gkSwAIGv_iB7J1hm5bUqHnI9Z8,610
+mykurve/const.py,sha256=hQF83GYYpz-l7igfmYkJiayG4EDHWWxqcrwX6x9hemA,794
+mykurve/data_classes.py,sha256=gRthObDV7uffVQgXKM7mEuX0AnsbgsukxVK9dxYesB8,3374
+mykurve/exceptions.py,sha256=HGQusyxe3PJvuqQrLw0-N-JhHlluh8b5Un4A5zHGiTw,333
+mykurve/mykurve_api.py,sha256=NHR4_tmDKTD5VY3oT5jBHRq6amgCo4tI3OMVNWfmAbk,10554
+mykurve/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mykurve-0.0.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+mykurve-0.0.4.dist-info/METADATA,sha256=I9V3q-095pkr19oOn7yV8qgr0TBoPei8Fn5nRm5EQEQ,2311
+mykurve-0.0.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+mykurve-0.0.4.dist-info/RECORD,,
