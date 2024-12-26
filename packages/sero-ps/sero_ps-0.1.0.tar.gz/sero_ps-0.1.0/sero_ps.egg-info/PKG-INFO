@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: sero-ps
+Version: 0.1.0
+Summary: A Python module for finding prime numbers using the Sieve of Eratosthenes
+Author: Thirupathi
+Author-email: suryathirupks@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Sero
+
+**Sero** is a simple Python package that contains useful functions for prime number generation and feature scaling.
+
+## Features
+
+- `soe`: Sieve of Eratosthenes for finding prime numbers up to a given number.
+- `scale_feature`: Scales numerical data using Z-score normalization or Min-Max scaling.
+
+## Installation
+
+To install the package, you can clone the repository or use pip if available.
+
+### Using pip:
+
+pip install sero
