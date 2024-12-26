@@ -1,0 +1,642 @@
+/* Global Styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+}
+
+/* Ensuring dt-table-container uses the full height available */
+.dt-table-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden; /* Hides overflow while JavaScript handles scroll behavior */
+}
+
+.navbar-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 22px;
+    padding: 4px 10px;
+  }
+
+  .header-logo {
+    width: 40px;
+  }
+
+  .navbar-container {
+    padding: 10px 0;
+  }
+}
+
+/* Ensure the header spans the full width */
+#_dash-app-content > div > nav {
+  height: 60px; /* Decrease the height */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background: linear-gradient(90deg, #4a90e2, #1464f6); /* Same gradient */
+  padding: 10px 0; /* Less padding */
+}
+
+/* Header container adjustments */
+#_dash-app-content > div > nav {
+  height: auto; /* Let it adjust automatically */
+  padding: 10px 0; /* Padding reduction */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #4a90e2, #1464f6);
+}
+
+/* Optional Logo for header */
+.header-logo {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.linter-header span {
+  display: inline-block;
+  vertical-align: middle; /* Align text with logo */
+}
+
+.sidebar-hidden {
+  display: none;
+}
+
+.content-wrapper-expanded {
+  margin-left: 0 !important;
+}
+
+/* Sidebar and content-wrapper styling */
+.content-wrapper {
+  margin-left: 220px;
+  min-height: 100vh;
+  width: calc(100% - 220px);
+  box-sizing: border-box;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: #2e3c4a;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .content-wrapper {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+  }
+  .sidebar {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+
+.sidebar-title {
+  font-size: 22px; /* Adjusted size */
+  font-weight: bold;
+  color: #00bfa5;
+  text-align: center;
+  padding: 10px;
+  word-wrap: break-word;
+  width: 100%;
+  margin: 0;
+}
+
+.logo-container {
+  margin-top: 50px; /* Increase margin to push the logo further down */
+  padding-top: 20px; /* Additional padding for separation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Footer styling */
+.footer-container {
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  font-size: 14px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal styling */
+.modal-dialog {
+  max-width: 60%;
+  margin: 30px auto;
+}
+
+.modal-content-wrapper {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%;
+    margin: 15px auto;
+  }
+}
+
+/* Resource section styling */
+.modal-resource {
+  font-weight: bold;
+  padding: 6px 12px;
+  background-color: #d0e8ff; /* Softer blue */
+  color: #1a73e8; /* Darker text for contrast */
+  border-radius: 4px;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+/* Description section styling */
+.modal-description {
+  font-weight: bold;
+  color: #333; /* Darker color for readability */
+  font-size: 18px;
+  margin: 12px 0; /* Consistent spacing */
+}
+
+/* Context styling */
+.modal-context {
+  color: #666; /* Slightly darker gray */
+  font-style: italic;
+  margin: 8px 0 12px;
+  line-height: 1.5; /* Improved readability */
+}
+
+/* Links section styling */
+.modal-links a {
+  display: block;
+  margin: 6px 0;
+  padding: 5px 0;
+  color: #1a73e8; /* Unified link color */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.modal-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Button styling */
+.modal-footer .btn-close {
+  background-color: #1a73e8; /* Match link color */
+  color: white;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-close:hover {
+  background-color: #0c47a1;
+  color: #fff;
+}
+
+/* Additional styling for the close button container */
+.modal-footer {
+  padding-top: 15px;
+  text-align: right;
+}
+
+#cell-table {
+  width: 100%;
+  max-height: 60vh; /* Set a maximum height based on viewport */
+  overflow-y: auto;
+  border: 1px solid var(--border); /* Optional border styling */
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 30%; /* Make the logo smaller on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    width: 25%; /* Even smaller for very small devices */
+  }
+}
+
+/* Unified link styling */
+a,
+.nav-link,
+.modal-links a {
+  color: #3399f3;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover,
+.nav-link:hover,
+.modal-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.nav-link {
+  font-size: 16px;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 6px;
+  color: #b0bec5;
+}
+
+.nav-link.active {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Home Icon Styling */
+/* Styling for the home icon button */
+.home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px; /* Adjust padding for a rounded shape */
+  border-radius: 20px; /* Increase border-radius for softer corners */
+  background-color: #2e3c4a; /* Background color */
+  color: #b0bec5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-link:hover,
+.home-link.active {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+/* Sidebar nav link styling for rounded edges */
+.nav-link {
+  padding: 10px 20px;
+  border-radius: 20px; /* More rounded corners */
+  color: #b0bec5;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+/* Logo, icon, and card responsiveness */
+.logo {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.home-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 30%;
+  }
+  .card-body {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    width: 25%;
+  }
+  .home-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .card-body {
+    padding: 0.25rem;
+  }
+}
+
+/* Active state for the home icon */
+.nav-link.active .home-icon {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Table styling */
+.styled-table,
+#linting-table {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  overflow-x: auto;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.styled-table td {
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/* Specific column width adjustments */
+.styled-table td:nth-child(3),
+.dash-cell.column-2 {
+  width: 120px;
+  text-align: center;
+}
+
+.styled-table td:nth-child(7),
+.dash-cell.column-4 {
+  width: 400px;
+}
+
+.dash-cell.column-3 {
+  width: 400px;
+}
+
+/* Data cell styling */
+.dash-cell {
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Styling for table rows on hover */
+.styled-table tr:hover {
+  background-color: #f1f1f1; /* Light background on row hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Center align specific table columns if needed */
+.styled-table td:nth-child(3),  /* Example: Severity column */
+.styled-table td:nth-child(2) {
+  /* Example: Line column */
+  text-align: center; /* Center text alignment for these columns */
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .content-wrapper {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar-wrapper {
+    display: none;
+  }
+
+  .content-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Sidebar Adjustments for Smaller Screens */
+@media (max-width: 576px) {
+  .sidebar-wrapper {
+    width: 150px;
+  }
+
+  .logo {
+    width: 35px;
+  }
+
+  .home-icon {
+    width: 20px;
+  }
+
+  .sidebar-title {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+/* Table Hover and Other Styling */
+.dash-table-container .dash-spreadsheet-container .dash-cell:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Center Pie Chart title */
+.infolayer .g-gtitle {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #343a40;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Enhanced Modal Header styling */
+.modal-header {
+  font-weight: bold; /* Bold for emphasis */
+  font-size: 20px; /* Slightly larger for prominence */
+  color: #333; /* Standard dark color for readability */
+  padding: 15px 20px; /* Added padding for spacing */
+  background-color: #f0f4f8; /* Soft background color */
+  border-bottom: 2px solid #e0e0e0; /* Subtle bottom border for separation */
+  border-radius: 8px 8px 0 0; /* Rounded corners on top */
+  text-align: center; /* Centered text for focus */
+}
+
+/* Refined Description styling */
+.modal-description {
+  font-weight: 600; /* Bold for emphasis */
+  color: #333;
+  font-size: 17px;
+  padding: 8px 12px;
+  background-color: #f7f9fc; /* Very subtle background */
+  border-radius: 5px;
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+/* Simplified Resource styling */
+.modal-resource {
+  font-weight: bold;
+  color: #333; /* Black color for consistency */
+  background-color: #f7f9fc; /* Very subtle background */
+  font-size: 16px; /* Adjust font size as needed */
+  margin-top: 10px;
+}
+
+/* Optional section title for description, to improve structure */
+.modal-section-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0; /* Underline to separate sections */
+}
+
+.modal-divider {
+  border-top: 1px solid #e0e0e0;
+  margin: 15px 0;
+}
+
+.modal-content-wrapper {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Sidebar font size adjustment for smaller screens */
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    padding: 8px 16px; /* Adjust padding for smaller touch targets */
+  }
+
+  .sidebar-title {
+    font-size: 20px; /* Reduce the sidebar title font size */
+  }
+
+  .logo {
+    width: 30%; /* Make the logo smaller */
+  }
+
+  .sidebar {
+    width: 180px; /* Reduce the width of the sidebar */
+  }
+}
+
+/* Sidebar font and icon size adjustment for extra small screens */
+@media (max-width: 576px) {
+  .nav-link {
+    font-size: 12px; /* Further reduce the font size for smaller devices */
+    padding: 6px 12px; /* Adjust padding for mobile */
+  }
+
+  .logo {
+    width: 25%; /* Further reduce logo size */
+  }
+
+  .sidebar-title {
+    font-size: 18px; /* Further reduce sidebar title font size */
+  }
+
+  .home-icon {
+    width: 20px; /* Reduce icon size */
+    height: 20px;
+  }
+
+  .sidebar {
+    width: 150px; /* Make the sidebar narrower for very small screens */
+  }
+}
+
+/* Increase the size of the pie chart on small screens */
+@media (max-width: 768px) {
+  .pie-chart-container {
+    width: 60% !important; /* Increase pie chart size */
+  }
+}
+
+@media (max-width: 576px) {
+  .pie-chart-container {
+    width: 70% !important; /* Increase pie chart size for very small screens */
+  }
+}
+
+/* Table container with horizontal scrolling on smaller screens */
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.dash-table {
+  min-width: 100%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Ensure chart stays within the container */
+.chart-container {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Prevent page content from overflowing */
+#page-content {
+  max-width: 100%;
+  padding: 10px;
+  overflow-x: hidden;
+}
