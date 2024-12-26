@@ -1,0 +1,8 @@
+README.md
+setup.py
+fast_whisper_diarizer.egg-info/PKG-INFO
+fast_whisper_diarizer.egg-info/SOURCES.txt
+fast_whisper_diarizer.egg-info/dependency_links.txt
+fast_whisper_diarizer.egg-info/entry_points.txt
+fast_whisper_diarizer.egg-info/requires.txt
+fast_whisper_diarizer.egg-info/top_level.txt
