@@ -1,0 +1,10 @@
+.DS_Store,sha256=R4-tzGcSk8XcCOKD9bUohzgKhhitu1B8NzLWOJ-3oew,6148
+om2m_client/__init__.py,sha256=vfCG-LU5vYmgExlPv2rpaR7pNOCsT8QBmg5JnjW04JQ,131
+om2m_client/client.py,sha256=h6__vsKz469eCfr5IysED2x7B-HE1W-NvImGpSsGNAY,9439
+om2m_client/exceptions.py,sha256=Q0yjmojIBmGW68QqRzCoMVzsCj28Mq3E07kEPT9Ob58,122
+om2m_client/test.py,sha256=mwTaObnohMBSkZ_KBCdtyPsDMwJaPN34z1oyqkxLXlk,1117
+micropython_om2m_client-0.1.0a5.dist-info/LICENSE,sha256=4ZLtTvP_RA_PGtv0bg9kliFyN0rVbC6nwDLfBOItlGc,494
+micropython_om2m_client-0.1.0a5.dist-info/METADATA,sha256=9zXmKhyA4Q8OZ642IR2RlIRmE0wnF9MxyHcpsnMu2S4,1357
+micropython_om2m_client-0.1.0a5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+micropython_om2m_client-0.1.0a5.dist-info/top_level.txt,sha256=xmtb9_tZxcVR0nmpuSpj3laAZzXfp9gbx8kCHuY83Ww,12
+micropython_om2m_client-0.1.0a5.dist-info/RECORD,,
