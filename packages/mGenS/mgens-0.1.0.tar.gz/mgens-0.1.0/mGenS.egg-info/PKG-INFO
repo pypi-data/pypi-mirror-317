@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: mGenS
+Version: 0.1.0
+Summary: Support functions
+Home-page: https://github.com/hathaaaway/mgen
+Author: Hathaway Zhang
+Author-email: hathawayzhang@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Mgen
+
+## Description
+
+Your package provides a set of functions for creating PowerBI master data. It is designed to help users boost the process of data pre-processing.
+
+## Features
+
+- **Function 1**: Brief description of what it does.
+- **Function 2**: Brief description of what it does.
+- **Function 3**: Brief description of what it does.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install mgen

@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+mGenS.egg-info/PKG-INFO
+mGenS.egg-info/SOURCES.txt
+mGenS.egg-info/dependency_links.txt
+mGenS.egg-info/top_level.txt
