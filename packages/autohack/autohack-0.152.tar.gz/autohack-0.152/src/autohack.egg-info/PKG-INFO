@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: autohack
+Version: 0.152
+Summary: This package does automated vulnerability enumeration and recommends exploits.
+Home-page: https://github.com/sudouser2010/autohack
+Author: "Hadron Davinci"
+Project-URL: Bug Tracker, https://github.com/sudouser2010/autohack/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Auto Hack
+* note the professional version is being beta tested.
+
+## This does automated vulnerability enumeration and recommends exploits.<br><br>
+
+### How to Run
+
+* [Install Docker](https://docs.docker.com/engine/install/)
+
+
+* Create AutoHack Docker container
+  ```
+  docker run -it --net=host -v ${PWD}/portal:/root/portal hdizzle/autohack 
+  ```
+  Command above does the following:
+  * creates Docker container based on the [AutoHack image](https://registry.hub.docker.com/r/hdizzle/autohack)
+  * mounts a folder named `portal` in current directory
+    * this allows us to persist the AutoHack results once the <br>container is destroyed
+  * allows us to access the terminal of the AutoHack container
+
+
+* Run AutoHack
+  ```
+  autohack -i <some ip address>
+  ```

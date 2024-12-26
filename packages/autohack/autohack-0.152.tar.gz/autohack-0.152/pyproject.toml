@@ -1,0 +1,22 @@
+[project]
+dynamic = ["readme", "requires-python", "authors", "classifiers", "urls"]
+
+name = "autohack"
+version = "0.152"
+dependencies = [
+  "beautifulsoup4==4.12.3",
+  "lxml==5.3.0",
+  "requests==2.32.3",
+  "toml==0.10.2"
+]
+description = "This package does automated vulnerability enumeration and recommends exploits."
+
+[build-system]
+requires = ["setuptools==65"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+autohack_config = ["*.toml"]
