@@ -1,0 +1,9 @@
+pydantic==1.10.2
+python-dotenv>=1.0.0
+
+[dev]
+pytest>=8.0.0
+black
+flake8
+mypy
+pre-commit
