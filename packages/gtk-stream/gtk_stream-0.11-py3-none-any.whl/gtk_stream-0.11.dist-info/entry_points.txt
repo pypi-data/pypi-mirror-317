@@ -1,0 +1,2 @@
+[console_scripts]
+gtk-stream = gtk_stream.command_line:main
