@@ -1,0 +1,9 @@
+wordreduce/__init__.py,sha256=PVxkN9lI3EDOkLuJ9my6vNIVwVPlnqlX0d3V_TgnbPc,99
+wordreduce/natural_text_tokenizer.py,sha256=OEtnZj85CFbbNewaZQ1uZxuywBxFXkwFkTnoa_FZIZ8,292
+wordreduce/util.py,sha256=NyWtFAaChaFxyCUfWuJ5cimEJIhs_9nouColb1BT1_w,378
+wordreduce/wordreduce.py,sha256=QL1a-HMy_ha3d097NySUchYbr3EQJesh0D2PtS7pch4,6001
+wordreduce-0.0.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wordreduce-0.0.1.dist-info/METADATA,sha256=Z3x4Rx6cR9yCLTFc7dC4_UqfynN9R6qE-UlkM4mw_JI,5910
+wordreduce-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wordreduce-0.0.1.dist-info/top_level.txt,sha256=eo3n-2UJN0K-YsRyoWzR01p9-mxiUikbvuILCV5yado,11
+wordreduce-0.0.1.dist-info/RECORD,,
