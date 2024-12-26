@@ -1,0 +1,5 @@
+raphson-music-server (2.1.0-1) any; urgency=medium
+
+  * First Debian package release
+
+ -- Robin Slot <robin@rslot.nl>  Fri, 13 Dec 2024 23:04:22 +0100
