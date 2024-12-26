@@ -1,0 +1,14 @@
+airflow/providers/apache/beam/LICENSE,sha256=FFb4jd2AXnOOf7XLP04pQW6jbdhG49TxlGY6fFpCV1Y,13609
+airflow/providers/apache/beam/README.md,sha256=Y6g3rD7jOWRDK-SAgKU2QJmA_1HyJkwotnbe_rmNZss,3615
+airflow/providers/apache/beam/__init__.py,sha256=JP2BCIdlIWLfHGsgQqMcfm3W8Uop-YAVGOPyYVbTlUU,1498
+airflow/providers/apache/beam/get_provider_info.py,sha256=q2zPtjqt8jj2_WX8IxHo4_TVMyii5AvXex6EA785wdw,3259
+airflow/providers/apache/beam/hooks/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/apache/beam/hooks/beam.py,sha256=okT6klBo1QMcIsb8mZkbLaA2H90cA-yQc8SpPUub8Hg,23672
+airflow/providers/apache/beam/operators/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/apache/beam/operators/beam.py,sha256=DMvo3uQ12ClHfN-gteSnvClGK0s2gdBZSQ34S3zR5sE,39579
+airflow/providers/apache/beam/triggers/__init__.py,sha256=9hdXHABrVpkbpjZgUft39kOFL2xSGeG4GEua0Hmelus,785
+airflow/providers/apache/beam/triggers/beam.py,sha256=wG48PdxIH5THc9aZ4mIqzI5SbbJv_jZiheC6ff4aAD8,13598
+apache_airflow_providers_apache_beam-6.0.0.dist-info/entry_points.txt,sha256=QKNByLRmr-a03wCTW-0LmAaaEshGG2TYQ0_ejUNF0mY,107
+apache_airflow_providers_apache_beam-6.0.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+apache_airflow_providers_apache_beam-6.0.0.dist-info/METADATA,sha256=S7tgj6QbXPL59y6jJCNsU5VHMK9GiN2ucXfgzspcOnk,6210
+apache_airflow_providers_apache_beam-6.0.0.dist-info/RECORD,,
