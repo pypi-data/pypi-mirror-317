@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+ctdgan.egg-info/PKG-INFO
+ctdgan.egg-info/SOURCES.txt
+ctdgan.egg-info/dependency_links.txt
+ctdgan.egg-info/requires.txt
+ctdgan.egg-info/top_level.txt
