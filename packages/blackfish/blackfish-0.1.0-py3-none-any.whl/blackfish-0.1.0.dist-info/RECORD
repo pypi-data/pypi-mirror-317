@@ -1,0 +1,8 @@
+blackfish/parsing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+blackfish/parsing/roots.py,sha256=yvngbYEWVzhyxiOXrcbx8yH3AXVyBb4VyyWiFjaOJek,3152
+blackfish/parsing/soc_absorption_spectrum.py,sha256=KEN0O9__b6eofVXORsCIZmBOr6NtmmC4FWcokrVUFVs,1505
+blackfish/parsing/soc_states.py,sha256=SdZdFqDXINm_aN4LcqObB9wcB1MtQ4UTvBHOAGEoCVs,2769
+blackfish-0.1.0.dist-info/METADATA,sha256=t3wxDRD59E3hBz3awmXZdCEhgM5xYhsB5hvKsuw1AnE,147
+blackfish-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+blackfish-0.1.0.dist-info/top_level.txt,sha256=f6gJ7D3JZrOatkUlbzMn5wGPkVaYAjcJHmQ71QRZIVk,10
+blackfish-0.1.0.dist-info/RECORD,,
