@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+pattern_sort/__init__.py
+pattern_sort/pattern.py
+pattern_sort/sort.py
+pattern_sort_package.egg-info/PKG-INFO
+pattern_sort_package.egg-info/SOURCES.txt
+pattern_sort_package.egg-info/dependency_links.txt
+pattern_sort_package.egg-info/top_level.txt
+tests/test_pattern.py
+tests/test_sort.py
