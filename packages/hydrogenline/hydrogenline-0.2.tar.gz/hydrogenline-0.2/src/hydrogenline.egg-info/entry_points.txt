@@ -1,0 +1,3 @@
+[console_scripts]
+capture = scripts.capture:main
+waterfall = scripts.waterfall:main
