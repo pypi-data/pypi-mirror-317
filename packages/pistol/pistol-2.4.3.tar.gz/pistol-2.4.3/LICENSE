@@ -1,0 +1,136 @@
+Makoschin Free Software License (MFSL)
+
+Version 2.0
+
+1. Definitions
+
+"Owner(s)": The original creator(s) or legal custodian(s) of the software licensed under MFSL.
+
+"User": Any individual or entity using the software governed by the MFSL.
+
+"Redistributor": Any User distributing or sharing the software under the terms of the MFSL.
+
+"MFSD": Makoschin Free Software Distributions, including its Security Policy (MFSD-SP) and Ownership and Distribution Guidelines (MFSD-ODG).
+
+
+
+---
+
+2. Permissions
+
+Use and Redistribution: The software may be freely used and redistributed in its original form.
+
+Modification: Modifications to the software may only be made with explicit permission from the Owner(s).
+
+If permission is granted, any derivative works must default to being licensed under the MFSL unless a special exemption is explicitly approved by the Owner(s).
+
+Redistribution of modified works under alternative licenses is contingent on Owner(s)’ permission.
+
+
+
+
+---
+
+3. Commercial Use
+
+Commercial use of the software is permitted only under the following conditions:
+
+1. The product must be made available free of immediate payments, recurring payments, or any form of payment that restricts user experience.
+
+
+2. No features of the software may be locked behind payment.
+
+
+
+
+
+---
+
+4. Attribution
+
+Credit Requirement: Users and Redistributors must acknowledge "Makoschin" for the licensing terms and distribution rights of the software.
+
+This credit must be present in a visible location such as README.md, info.html, CREDITS.md, or equivalent documentation files included with the product.
+
+
+
+
+---
+
+5. Patent Restrictions
+
+Users are prohibited from patenting software licensed under the MFSL unless explicitly authorized by the Owner(s).
+
+
+
+---
+
+6. Liability and Warranty Disclaimer
+
+The software is provided "as-is", with no guarantee of quality, functionality, or suitability for a specific purpose.
+
+The Owner(s) are not liable for any damages or losses arising from the use of the software.
+
+
+
+---
+
+7. Security Compliance (MFSD-SP)
+
+Licensed products must adhere to the Makoschin Free Software Distributions—Security Policy (MFSD-SP).
+
+Products found to contain unresolved security breaches will have their MFSL license terminated until the issue is rectified.
+
+Repeat offenses, or prolonged periods of unresolved security issues, may result in permanent license revocation and termination of support from Makoschin.
+
+
+
+
+---
+
+8. License Compatibility
+
+Combining MFSL-licensed software with software under other licenses is allowed only if the other license:
+
+Does not conflict with or attempt to override the terms of the MFSL.
+
+Is compatible with the MFSD Ownership and Distribution Guidelines (MFSD-ODG).
+
+
+Breaches of compatibility terms may result in license termination and escalation to the Makoschin Trust Department.
+
+
+
+---
+
+9. License Enforcement
+
+Violations of the MFSL may result in the following actions:
+
+1. Resolution between the Redistributor and the infringer.
+
+
+2. License termination for the infringing product.
+
+
+3. Suspension or permanent ban of the infringer from the MFSD network.
+
+
+
+Serious breaches, especially those violating the MFSD-ODG, may result in permanent penalties.
+
+
+
+---
+
+10. Final Terms
+
+The Makoschin Trust Department reserves the right to mediate disputes related to the MFSL.
+
+By using, modifying, or distributing software under this license, you agree to comply with all its terms.
+
+
+
+---
+
+This license document ensures protection for software creators and provides clear terms for collaboration, distribution, and use while upholding the principles of free software. For further inquiries, contact Makoschin or the Makoschin Trust Department.
