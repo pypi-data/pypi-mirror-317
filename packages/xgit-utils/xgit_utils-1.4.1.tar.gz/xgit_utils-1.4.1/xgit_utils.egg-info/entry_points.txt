@@ -1,0 +1,5 @@
+[console_scripts]
+xclone = gitutils.gitclone:cli_clone
+xgit = gitutils.cmdline:cli
+xgithub = gitutils.githubs:cli_github
+xsync = gitutils.gitsync:cli_sync
