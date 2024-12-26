@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: mm-solana-cli
+Version: 0.1.1
+Requires-Python: >=3.12
+Requires-Dist: mm-solana~=0.2.0
+Requires-Dist: typer>=0.15.1
