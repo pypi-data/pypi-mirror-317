@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/corny_commons/__init__.py
+src/corny_commons/console_graphics.py
+src/corny_commons/file_manager.py
+src/corny_commons.egg-info/PKG-INFO
+src/corny_commons.egg-info/SOURCES.txt
+src/corny_commons.egg-info/dependency_links.txt
+src/corny_commons.egg-info/requires.txt
+src/corny_commons.egg-info/top_level.txt
+src/corny_commons/util/__init__.py
+src/corny_commons/util/currency.py
+src/corny_commons/util/polish.py
+src/corny_commons/util/web.py
