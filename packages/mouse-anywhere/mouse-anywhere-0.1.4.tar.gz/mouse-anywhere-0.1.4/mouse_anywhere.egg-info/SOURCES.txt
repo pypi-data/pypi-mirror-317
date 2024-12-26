@@ -1,0 +1,10 @@
+README.md
+setup.py
+mouse_anywhere/__init__.py
+mouse_anywhere/wrapper.py
+mouse_anywhere.egg-info/PKG-INFO
+mouse_anywhere.egg-info/SOURCES.txt
+mouse_anywhere.egg-info/dependency_links.txt
+mouse_anywhere.egg-info/entry_points.txt
+mouse_anywhere.egg-info/requires.txt
+mouse_anywhere.egg-info/top_level.txt
