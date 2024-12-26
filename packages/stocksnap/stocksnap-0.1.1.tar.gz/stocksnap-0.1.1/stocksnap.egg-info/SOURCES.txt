@@ -1,0 +1,11 @@
+README.md
+setup.py
+stocksnap/__init__.py
+stocksnap/stocksnap.py
+stocksnap.egg-info/PKG-INFO
+stocksnap.egg-info/SOURCES.txt
+stocksnap.egg-info/dependency_links.txt
+stocksnap.egg-info/requires.txt
+stocksnap.egg-info/top_level.txt
+stocksnap/util/__init__.py
+stocksnap/util/google_finance_extraction.py
