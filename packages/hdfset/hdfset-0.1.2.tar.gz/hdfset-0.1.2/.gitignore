@@ -1,0 +1,9 @@
+*.so
+.coverage
+.venv/
+/target
+Cargo.lock
+__pycache__/
+dist/
+lcov.info
+uv.lock
