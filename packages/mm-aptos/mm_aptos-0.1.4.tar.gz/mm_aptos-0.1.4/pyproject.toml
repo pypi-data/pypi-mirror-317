@@ -1,0 +1,57 @@
+[project]
+name = "mm-aptos"
+version = "0.1.4"
+description = ""
+requires-python = ">=3.12"
+dependencies = [
+    "mm-std~=0.1.9",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest~=8.3.4",
+    "pytest-xdist~=3.6.1",
+    "ruff~=0.8.4",
+    "pip-audit~=2.7.3",
+    "bandit~=1.8.0",
+    "mypy~=1.14.0",
+    "types-PyYAML~=6.0.12.20241221",
+]
+
+[tool.mypy]
+python_version = "3.13"
+warn_no_return = false
+strict = true
+exclude = ["^tests/", "^tmp/"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py313"
+lint.select = [
+    "F", # Pyflakes
+    "E", "W", # pycodestyle
+    "B", # flake8-bugbear
+    "A", # flake8-builtins
+    "COM", # flake8-commas
+    "C40", # flake8-comprehensions
+    "G", # flake8-logging-format
+    "PIE", # flake8-pie
+    "T20", # flake8-print
+    "RUF", # Ruff-specific rules
+]
+lint.ignore = [
+    "A003", # builtin-attribute-shadowing
+    "COM812"
+]
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = ["B311"]
