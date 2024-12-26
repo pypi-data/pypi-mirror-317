@@ -1,0 +1,4 @@
+[console_scripts]
+open = cli_interpreter:main
+run = cli_interpreter:main
+search = cli_interpreter:main
