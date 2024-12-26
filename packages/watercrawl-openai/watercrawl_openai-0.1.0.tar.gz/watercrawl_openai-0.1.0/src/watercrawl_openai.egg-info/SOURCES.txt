@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/watercrawl_openai/__init__.py
+src/watercrawl_openai/plugins.py
+src/watercrawl_openai/settings.py
+src/watercrawl_openai.egg-info/PKG-INFO
+src/watercrawl_openai.egg-info/SOURCES.txt
+src/watercrawl_openai.egg-info/dependency_links.txt
+src/watercrawl_openai.egg-info/requires.txt
+src/watercrawl_openai.egg-info/top_level.txt
