@@ -1,0 +1,10 @@
+hydrotopo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydrotopo/cli.py,sha256=GtN_aCCWWLBvKqieL1EkgHzzRTxESWuguwv3QIVAR28,1536
+hydrotopo/ig_path.py,sha256=ETxRezhpWIcyyZ2MasZzbgZYB9tNmRlUjCA4ppGXnlM,10312
+hydrotopo/ig_path_test.py,sha256=kPax857IoIDVHtdQZPTTp_LjRf0P3aYrE-cnR_R7Ym4,1022
+hydrotopo-0.0.8.dist-info/LICENSE,sha256=8IsEnBSgpnxotylEDOpsHUmD-k9sgSJfozH2o7tq4zU,1091
+hydrotopo-0.0.8.dist-info/METADATA,sha256=-pn5c9GpIstJ1V6IEbbRz85v7sjInVv6UDsl6pQmG_k,1069
+hydrotopo-0.0.8.dist-info/WHEEL,sha256=pxeNX5JdtCe58PUSYP9upmc7jdRPgvT0Gm9kb1SHlVw,109
+hydrotopo-0.0.8.dist-info/entry_points.txt,sha256=AV68rhpXEGRlozNwqp36wUeCTTu5vSeggGWOsAkw8NI,50
+hydrotopo-0.0.8.dist-info/top_level.txt,sha256=dy5tMObbgkgSeGYxmboyZZKPieh8-vK-Y97YYcdOnoU,10
+hydrotopo-0.0.8.dist-info/RECORD,,

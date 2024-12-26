@@ -1,0 +1,2 @@
+[console_scripts]
+calcstream = hydrotopo.cli:main
