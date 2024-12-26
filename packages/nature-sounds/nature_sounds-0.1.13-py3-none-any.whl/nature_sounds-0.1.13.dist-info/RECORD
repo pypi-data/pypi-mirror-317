@@ -1,0 +1,8 @@
+go.mod,sha256=KHlc3xjGiohKSM--KjkOU_7ywM31sTSxrM99JF6a2f4,716
+go.sum,sha256=rM2FYu2IIo8c9szhUrgTD9muhbvW9tWqrJ5iSbqvZ88,6378
+main.go,sha256=Ci3i-wFlpQfpLP_xSVLY2M6LKZuV92_s2YXSIG55MLc,11318
+nature-sounds,sha256=k01gxKlUfioxQnvPcJlfYYmtrFyUC6IQAevop4SfuU8,6247408
+nature_sounds-0.1.13.dist-info/METADATA,sha256=VsdUhMq-ivqZgDKAFp69dkk12a5GBQtZDs3NjJ9r1gA,4165
+nature_sounds-0.1.13.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+nature_sounds-0.1.13.dist-info/licenses/LICENSE,sha256=P_te03YIieIzk4EnP3-blVrdJGbhityi_YcHwxaL7gk,1071
+nature_sounds-0.1.13.dist-info/RECORD,,
