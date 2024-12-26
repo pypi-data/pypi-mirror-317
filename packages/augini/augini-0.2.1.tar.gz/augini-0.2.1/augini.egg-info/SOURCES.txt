@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+augini/__init__.py
+augini/core.py
+augini/exceptions.py
+augini/utils.py
+augini.egg-info/PKG-INFO
+augini.egg-info/SOURCES.txt
+augini.egg-info/dependency_links.txt
+augini.egg-info/requires.txt
+augini.egg-info/top_level.txt
