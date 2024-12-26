@@ -1,0 +1,16 @@
+langgraph
+langchain-core
+langchain-community
+langchain-openai
+langchain-anthropic
+langchain-google-genai
+chainlit
+copilotkit
+wikipedia
+litellm
+pdfminer-six
+google-auth
+google-cloud-storage
+google-cloud-firestore
+google-cloud-discoveryengine
+tavily-python
