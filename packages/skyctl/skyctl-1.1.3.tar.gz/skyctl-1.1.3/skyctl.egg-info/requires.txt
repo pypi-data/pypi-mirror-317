@@ -1,0 +1,8 @@
+pypinyin
+opencv-python
+requests
+configparser
+Click
+tabulate
+kubernetes
+pyyaml
