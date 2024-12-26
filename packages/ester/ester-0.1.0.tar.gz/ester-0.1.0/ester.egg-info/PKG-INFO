@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ester
+Version: 0.1.0
+Summary: A voice assistant package similar to Jarvis
+Home-page: https://github.com/yourusername/ester
+Author: Your Name
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## JARVIS AI
+
+### Steps to run on your system.
+Run following commands on terminal
+- git clone https://github.com/Dhruv58/Jarvis-AI.git
+- `conda create --name myenv`
+- Activate Virtual Environment
+  - Windows
+    - conda activate myenv
+  - Linux
+    - source activate myenv
+- pip install -r requirements.txt
+- python main.py
+include README.md
+include LICENSE
