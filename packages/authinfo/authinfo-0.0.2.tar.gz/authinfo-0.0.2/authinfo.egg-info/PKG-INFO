@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: authinfo
+Version: 0.0.2
+Summary: Parse credentials in ~/.authinfo files, either plain text or GPG-encrypted.
