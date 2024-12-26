@@ -1,0 +1,9 @@
+opentelemetry/instrumentation/arq/__init__.py,sha256=Ok3JQDohA0xQmsX47VsaFOIdCJP1HufjLG4ZYM_77EA,4435
+opentelemetry/instrumentation/arq/package.py,sha256=wHt5Chcz9to70jL5fg75UYxOujLOlPRumc4i6qCuLYY,30
+opentelemetry/instrumentation/arq/version.py,sha256=DbuPrPdadDybRUDJAk3AW8SXmf4_d_GUk_OU0Rqm9nQ,23
+opentelemetry_instrumentation_arq-0.50b0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+opentelemetry_instrumentation_arq-0.50b0.dist-info/METADATA,sha256=g_nWX1ljCva6btRahEf8eKEqvv-PKRfFePCHZ702XcU,1611
+opentelemetry_instrumentation_arq-0.50b0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+opentelemetry_instrumentation_arq-0.50b0.dist-info/entry_points.txt,sha256=folLgWnnbjQfvrm6exCiUSq5wxu7_CdAdMfI36gkHP0,85
+opentelemetry_instrumentation_arq-0.50b0.dist-info/top_level.txt,sha256=5p97iTMneNm1LAKDalzEVpYhvPZsaqJZzdLuD_upSaQ,14
+opentelemetry_instrumentation_arq-0.50b0.dist-info/RECORD,,
