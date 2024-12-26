@@ -1,0 +1,60 @@
+# django-vectorstore-indexed-model
+
+基于RedisStack向量数据库的Django数据模型应用。
+
+## 安装
+
+```shell
+pip install django-vectorstore-indexed-model
+```
+
+## 依赖说明
+
+- 数据模型对于向量数据库的操作深度依赖`openai-redis-vectorstore`。相关配置详见该项目文档。
+
+## 使用
+
+*app/models.py*
+
+```python
+from typing import List
+from django.db import models
+from django_vectorstore_indexed_model.models import WithVectorStoreIndex
+from django_model_helper.models import WithEnabledStatusFields
+from django_model_helper.models import WithDeletedStatusFields
+
+
+class QA(WithEnabledStatusFields, WithDeletedStatusFields, WithVectorStoreIndex):
+    enable_auto_vectorstore_index = False
+
+    kb = models.CharField(max_length=64)
+    question = models.CharField(max_length=128)
+    answer = models.TextField()
+
+    def get_enable_vectorstore_index_flag(self) -> bool:
+        """判断是否需要创建索引"""
+        # 一般来说数据记录中应该有enabled或deleted等字段
+        # 表示是否启用索引
+        if not self.enabled:
+            return False
+        if self.deleted:
+            return False
+        return True
+
+    def get_vectorstore_index_names(self):
+        # 如果有多个index_name表示：
+        # 本数据记录需要在多个向量数据库中建立索引
+        return self.kb
+
+    def get_vectorstore_index_contents(self) -> List[str]:
+        # 向量数据库有索引长度的限制
+        # 所以一般文档内容需要分片后进行索引
+        # 这里返回分片列表
+        return [f"问题：{self.question}\n参考答案：{self.answer}"]
+```
+
+## 版本记录
+
+### v0.1.0
+
+- 版本首发。
