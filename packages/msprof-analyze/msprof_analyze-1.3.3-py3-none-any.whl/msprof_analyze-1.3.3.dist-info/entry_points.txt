@@ -1,0 +1,2 @@
+[console_scripts]
+msprof-analyze = profiler.cli.entrance:msprof_analyze_cli
