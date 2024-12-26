@@ -1,0 +1,85 @@
+[project]
+name = "empdens"
+version = "1.4.0"
+description = "Empirical density estimation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "lightgbm >=2.2.3",
+    "matplotlib >=3.0.3",
+    "pandas >=0.24.2",
+    "psutil>=6.1.0",
+    "scikit-learn >=0.20.3",
+    "shmistogram>=0.6.2",
+    "typing-extensions>=4.12.2",
+    "pandahandler>=0.1.0",
+]
+
+[dependency-groups]
+dev = [
+  "pre-commit >=3.8.0",
+  "pyright >=1.1.378",
+  "ruff >=0.7.4",
+  "pytest >=8.3.2",
+  "jupyter>=1.1.1",
+  "ipykernel>=6.29.5",
+]
+extras = [
+    "astropy>=6.1.7",
+    "fastkde>=2.1.3",
+    "xgboost>=2.1.3",
+]
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+ignore-vcs = true
+include = [
+  "empdens/resources/data/*",
+  "empdens/**/*.py",
+]
+
+[tool.hatch.build.targets.wheel]
+ignore-vcs = true
+packages = ["empdens"]
+include = [
+  "empdens/resources/data/*",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests",]
+
+[tool.pyright]
+include = ["empdens", "tests"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+  # ruff defaults:
+  "E4", "E7", "E9", "F",
+  "I", # flake8-import-order
+  "TID", # flake8-tidy-imports
+  "D", # google-style docstrings
+]
+ignore = [
+  "D202", # would require one blank line after the last section of a multi-line docstring
+  "D203", # would require one blank line at start of class docstring
+  "D213", # would require multi-line docstring to start with a hard return
+  "D401", # would require imperative mood in docstring
+  "D413", # would put blank line at end of each multiline docstring
+]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["D104"] # would require module-level documentation
+"test_*.py" = ["D"]
+"*.ipynb" = ["D"]
