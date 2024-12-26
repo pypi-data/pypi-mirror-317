@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+scripts/setmycfdns
+src/cfdns/__init__.py
+src/cfdns/cf_dns.py
+src/getmyip/__init__.py
+src/getmyip/getmyip.py
+src/setmycfdns/__init__.py
+src/setmycfdns/set_my_cf_dns.py
+src/setmycfdns.egg-info/PKG-INFO
+src/setmycfdns.egg-info/SOURCES.txt
+src/setmycfdns.egg-info/dependency_links.txt
+src/setmycfdns.egg-info/requires.txt
+src/setmycfdns.egg-info/top_level.txt
