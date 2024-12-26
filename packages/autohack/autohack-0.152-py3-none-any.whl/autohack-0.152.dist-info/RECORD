@@ -1,0 +1,10 @@
+autohack-0.152.data/scripts/autohack,sha256=CToa4MAS1XD0wawsvulgOQaCfWdEjxl0dDkQ9RJ_rsw,45372
+autohack-0.152.data/scripts/autohack_webscan,sha256=DwPFctIDBRjT_5etTzuUQcHUIej0ROVbwsThQ1Rx2T8,6069
+autohack_config/port-scans.toml,sha256=j2zENZA-0i70xGwrWl-qHnteGIpVekUDJ8_xI8--yhY,1699
+autohack_config/service-scans.toml,sha256=XoAf-1l1xpG5vJO7g_AXEnDZcxqX6E93z_XH6QsL3MI,25749
+autohack_config/universal-patterns.toml,sha256=a1S351ugDLt4X83iRGcPEQlnVAtfERcC4YmUd05c7Pg,6314
+autohack-0.152.dist-info/LICENSE,sha256=FHzs1lOGoyEVmxa-xRPdY8ZHfBz388k2vcaqCePGG10,1069
+autohack-0.152.dist-info/METADATA,sha256=weRxe4joF9R815IP8XAgIyEHBmDlEbqiB8UJUHntou4,1416
+autohack-0.152.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+autohack-0.152.dist-info/top_level.txt,sha256=MviArcDTVPNTz5OZSk5ynYF2avvI15_OJpxzGNoRlvM,16
+autohack-0.152.dist-info/RECORD,,
