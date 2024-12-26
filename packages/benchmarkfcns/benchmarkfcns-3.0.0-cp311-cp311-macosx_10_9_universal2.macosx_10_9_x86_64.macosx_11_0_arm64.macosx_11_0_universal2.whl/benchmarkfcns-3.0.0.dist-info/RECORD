@@ -1,0 +1,8 @@
+benchmarkfcns-3.0.0.dist-info/RECORD,,
+benchmarkfcns-3.0.0.dist-info/WHEEL,sha256=D1QlSiHz-JfeMbaSe_z5eZArN59maF75tSeLYlUyBPE,230
+benchmarkfcns-3.0.0.dist-info/METADATA,sha256=m9_bbftvcf9EOuXYL9WR3FHSG9zI7yjt2SimffdCFKA,8102
+benchmarkfcns-3.0.0.dist-info/licenses/LICENSE,sha256=bEDqsvRAJKumHWJHDJMPRVlMSWH9HBR9ExvQX5LPCms,1086
+benchmarkfcns/plotting.py,sha256=KZZdIClvBWOUMum-m3I28xjEQS5fP1FqVEwzYDyQICI,2097
+benchmarkfcns/__init__.py,sha256=yimWCFj_KtZIITsJCQqFazVwi8U6xZcbDLW0oyfoEZU,3198
+benchmarkfcns/_core.cpython-311-darwin.so,sha256=CGFj4Pw708DKS-5VIC-s33Y7urVcq-jyY2v82U2KGIE,944616
+benchmarkfcns/multifidelity/__init__.py,sha256=9RnZ1YxaN9AxZmBf1fDE9Tapy-UlNfoKPq675OMh8gM,186
