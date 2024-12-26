@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: pppc
+Version: 0.1.6
+Summary: Create Minecraft Paper plugins using Python
+Home-page: https://github.com/retrotee/pppc
+Author: retrotee
+Project-URL: Bug Tracker, https://github.com/retrotee/pppc/issues
+Project-URL: Documentation, https://github.com/retrotee/pppc#readme
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Games/Entertainment
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jinja2>=3.0.0
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: typing-extensions>=4.0.0
+Requires-Dist: dataclasses>=0.6; python_version < "3.7"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: mypy>=0.950; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: tox>=3.24.0; extra == "dev"
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+
+# PPPC (PythonPaperPluginCompiler)
+
+> ⚠️ **BETA WARNING**: This project is currently in active development and beta phase. APIs may change without notice, and some features might be incomplete or unstable. Use in production environments at your own risk.
+
+PPPC is a Python module that allows you to create Minecraft Paper plugins using Python syntax. It's designed to be beginner-friendly while providing powerful functionality for creating Minecraft server plugins.
+
+## Development Status
+
+- 🚧 **Beta Phase**
+- ⚠️ Breaking changes may occur
+- 📝 Documentation is being actively developed
+- 🐛 Bug reports and feedback are welcome
+- 🤝 Contributions are encouraged
+
+## Features
+
+- Python-like syntax for creating Minecraft Paper plugins
+- No Java knowledge required
+- Support for multiple Bukkit API versions
+- Easy event handling and command creation
+- Automatic compilation to JAR files
+
+## Quick Start
+
+```python
+from pppc import Plugin, Event, event_handler, command
+
+# Create a plugin
+plugin = Plugin(
+    name="MyPlugin",
+    version="1.0.0",
+    description="My first plugin",
+    author="YourName"
+)
+
+# Handle events
+@event_handler("PlayerJoinEvent")
+def on_player_join(event):
+    player = event.data["player"]
+    player.send_message("Welcome!")
+
+# Create commands
+@command(name="hello", description="Says hello")
+def hello_command(sender, args):
+    sender.send_message("Hello!")
+
+# Compile the plugin
+from pppc import compile_plugin
+jar_path = compile_plugin(plugin)
+```
+
+## Supported Versions
+
+- 1.21.3 (default)
+- 1.20.4
+- 1.19.4
+- 1.18.2
+- 1.17.1
+- 1.16.5
+
+## Installation
+
+```bash
+pip install pppc
+```
+
+## Known Limitations
+
+During the beta phase, please be aware of the following limitations:
+
+- Some advanced Paper API features might not be fully implemented
+- Performance optimizations are ongoing
+- Error messages and debugging tools are being improved
+- Documentation is being expanded
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. During the beta phase, we especially appreciate:
+
+- Bug reports
+- Feature requests
+- Documentation improvements
+- Test coverage improvements
+- Code quality enhancements
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
