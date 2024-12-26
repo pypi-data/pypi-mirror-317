@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+sheds_wrapper/__init__.py
+sheds_wrapper/main.py
+shreds_wrapper.egg-info/PKG-INFO
+shreds_wrapper.egg-info/SOURCES.txt
+shreds_wrapper.egg-info/dependency_links.txt
+shreds_wrapper.egg-info/top_level.txt

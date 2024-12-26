@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: shreds_wrapper
+Version: 0.1.0
+Summary:  a sample pypi package.please do not install
+Home-page: https://github.com/njeru-codes/hello-pip
+Author: shed skins
+Author-email: newerbandit@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# hello_pip
+
+this is a sample pyhton package to test writing python packages and publishing 
+to pypi repository
+
+Please do not install this dummy package
+## installation
+```
+    pip install
+```
+
+## usage
+```python
+
+    from hello_pip import hello_pip
+
+    #call sample function
+    hello_pip()
+```
+
