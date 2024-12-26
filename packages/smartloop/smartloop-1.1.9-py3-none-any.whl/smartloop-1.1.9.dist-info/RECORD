@@ -1,0 +1,16 @@
+main.py,sha256=etUb7TrjW7TqZM5SrKE_XiLBnVXHuoDCmkdaP1w2OaM,349
+smartloop/__init__.py,sha256=715__xCkUc2DCKpY0ebX2Ziu-_kFiVz32OQ4wZ8XIbA,1124
+smartloop/app.py,sha256=tgYPEmCez4b0j4_7-_7Z5Qbm48R_rKGfs_8O34iN9hI,4423
+smartloop/constants.py,sha256=NVXy53q0D0zY-wt9dWvEVj2-OjkQQvHNZLsKT9cA4og,140
+smartloop/cmd/__init__.py,sha256=I8Jk-src6HFbCxNziDBfEIIvRwFLbidijwSg8yGrM7I,29
+smartloop/cmd/project.py,sha256=m7b7qkvYSPvjfA_EdkY76OnaRGt30Yyw0YFN4XUD3O0,8638
+smartloop/services/__init__.py,sha256=SH2q_5MbWCaRzgM9dQYxW5MbUW089GaJhJfRKS3wjX0,30
+smartloop/services/projects.py,sha256=GJ3YSgtCKpzWIiKCw96MtF73MvH8X81QY23Z71v6G48,1049
+smartloop/utils/__init__.py,sha256=gM4fhrdr35KUpJWAN80BJVmXn3WoquHzBJ6ujcOr16c,37
+smartloop/utils/user_profile.py,sha256=Uc59BXKQFhAd36eSVg_S7J9_fmdO2bt590LbyQvE4Ag,836
+smartloop-1.1.9.dist-info/LICENSE.txt,sha256=3iWYQ0p0uEM906pL-HmxFO7LD7K9F1ZzVZpAvIeFRpY,1065
+smartloop-1.1.9.dist-info/METADATA,sha256=PxhCGzzJ32RU3q66O9DXANqFHHHtXeyTIXxqd1u_KaQ,4837
+smartloop-1.1.9.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+smartloop-1.1.9.dist-info/entry_points.txt,sha256=AyBFyviXVIbS9rUDSuF4rE0Z-Nmu2KVYeLcq73OC15g,45
+smartloop-1.1.9.dist-info/top_level.txt,sha256=fEh7XUjT_ERZrxFzPcRT0S6Qv4-R6osmRhvItq43PTY,25
+smartloop-1.1.9.dist-info/RECORD,,
