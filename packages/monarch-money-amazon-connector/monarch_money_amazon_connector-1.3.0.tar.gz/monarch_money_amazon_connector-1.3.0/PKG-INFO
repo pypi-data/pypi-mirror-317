@@ -1,0 +1,144 @@
+Metadata-Version: 2.4
+Name: monarch-money-amazon-connector
+Version: 1.3.0
+Summary: A simple package to automate the annotation of Amazon order transactions within Monarch Money with the purchased items.
+Project-URL: Homepage, https://github.com/elsell/monarch-money-amazon-connector
+Project-URL: Issues, https://github.com/elsell/monarch-money-amazon-connector/issues
+Author-email: elsell <35787503+elsell@users.noreply.github.com>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Hatch
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: loguru
+Requires-Dist: monarchmoney
+Requires-Dist: openai
+Requires-Dist: pydantic-settings
+Requires-Dist: pydantic==2.9.2
+Requires-Dist: python-statemachine
+Requires-Dist: selenium==4.25.0
+Requires-Dist: toml
+Requires-Dist: webdriver-manager
+Provides-Extra: build
+Requires-Dist: twine; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Monarch Money Amazon Connector (MMAC)
+
+Monarch Money Amazon Connector automatically adds
+a note to each Amazon transaction in Monarch Money containing
+the list of items ordered.
+
+Why?
+
+To make it easier to categorize Amazon transactions, eliminating
+the need to go order-by-order to find the matching transaction
+in your Amazon Account.
+
+Under the hood, MMAC uses the [`monarchmoney`](https://github.com/hammem/monarchmoney) python package.
+
+> [!Warning]
+>
+> **⚠️ MMAC IS IN ALPHA**
+>
+> I'm making this repo public early to solicit feedback on the functionality,
+> and to provide opportunities for collaboration.
+>
+> No warranty is provided, and the documentation is incomplete at this point.
+>
+> **If you're just looking for something that works, check back in a few months :)**
+
+
+## Quick Start
+
+### Install MMAC using pip:
+
+```bash
+pip install monarch-money-amazon-connector
+```
+
+### Create Configuration File
+
+Create a file called `mmac.toml`. This file
+will contain configuration values needed to run MMAC.
+
+```toml
+# mmac.toml
+
+# Replace with your Monarch account credentials.
+monarch_account.email = "example@example.com"
+monarch_account.password = "password"
+
+
+# Your amazon account credentials
+[[amazon_accounts]]
+email = "test@example.com"
+password = "password"
+
+# (Optional): If you have multiple amazon accounts,
+# you can define them by duplicating the first section
+# with the additional credentials.
+# [[amazon_accounts]]
+# email = "test2@example.com"
+# password = "password"
+
+# (Optional): Use the OpenAI API to *attempt* to
+# auto solve captcha images. This is NOT very reliable,
+# but may work with simpler captchas.
+[llm]
+# Whether to use the LLM captcha solver
+enable_llm_captcha_solver = true
+# Your OpenAI API Key
+api_key = "sk-********"
+# (Optional): The OpenAI Project ID
+# project = "proj_**********"
+
+# (Optional): Specify whether to show the browser
+# window while scraping, or now (headless).
+# headless = true
+```
+
+### Run MMAC
+
+```bash
+mmac
+```
+
+## A Note About SemVer
+
+MMAC is committed to using [Semantic Versioning](https://semver.org/) for its codebase.
+This means we are going to reach v1.0.0 very quickly, as strictly adhering to SemVer requires
+a major version increment for every breaking change.
+
+There is a lot of discussion about whether, for this reason, SemVer is "bad". In my opinion,
+SemVer *is* bad, but only for user-facing application versions.
+
+Why?
+
+Technical breaking changes (changes that break backwards compatibility in the codebase, but do not
+change the user experience/release a feature) are essential to track for the developer. However,
+the user of an application would be forgiven if they were confused when their app bumped from
+v1.0.0 to v2.0.0 without any notable changes.
+
+So, what's the solution?
+
+I don't know. Maintaining two versions is messy and complication, a hybrid concatenation
+of SemVer and AppVer is also messy and potentially confusing to the user, and choosing one or
+the other is an imperfect solution. Please - let me know if you've figured this out!
+
+As for MMAC, we're going to stick to SemVer. Let's face it: If you're popping open your terminal
+to `pip install` this package, you can handle reading the release notes to figure out what's new
+between v1.0.0 and v2.0.0.
+
+You're smart, I'm lazy. Let's just use SemVer.
+
+## Thanks!
+
+This project wouldn't be possible without the community [`Monarch Money Library`](https://github.com/hammem/monarchmoney)!
+Head over there and give that project some love!

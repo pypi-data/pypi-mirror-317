@@ -1,0 +1,12 @@
+mmac.toml
+venv
+*.csv
+.mm
+.env
+*.pyc
+.DS_Store
+build/
+dist/
+*.key
+__pycache__/
+.mmac
