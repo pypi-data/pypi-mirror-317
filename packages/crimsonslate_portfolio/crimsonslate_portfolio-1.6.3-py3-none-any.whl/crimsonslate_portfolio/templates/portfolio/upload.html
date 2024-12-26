@@ -1,0 +1,42 @@
+{% extends "portfolio/layout.html" %}
+{% load portfolio_display %}
+{% block content %}
+<div class="-mb-2 flex flex-col text-black dark:text-white">
+    <h2 class="mx-auto mt-2 text-2xl font-extrabold tracking-wider">upload form</h2>
+    <form class="flex flex-col" action="{% url 'portfolio upload' %}" method="post" enctype="multipart/form-data">
+        {% if form.non_field_errors %}
+        <ul class="m-8 list-inside list-none rounded bg-red-100 p-8 text-red-500 drop-shadow">
+            {% for err in form.non_field_errors %}<li>{{ err }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% csrf_token %}
+        <div class="m-4 flex flex-col gap-4 rounded bg-gray-300/75 p-4 dark:bg-gray-600/75">
+            <h2 class="text-xl font-bold tracking-wide text-gray-900 dark:text-gray-100">pick some files</h2>
+            <label class="font-semibold text-gray-800 dark:text-gray-200">source (required)</label>
+            {{ form.source }}
+            <label class="text-gray-800 dark:text-gray-200">thumbnail</label>
+            {{ form.thumb }}
+        </div>
+        <div class="m-4 flex flex-col gap-4 rounded bg-gray-300/75 p-4 dark:bg-gray-600/75">
+            <h2 class="text-xl font-bold tracking-wide text-gray-900 dark:text-gray-100">write some stuff</h2>
+            <label class="font-semibold text-gray-800 dark:text-gray-200">title (required)</label>
+            {{ form.title }}
+            <label class="text-gray-800 dark:text-gray-200">subtitle</label>
+            {{ form.subtitle }}
+            <label class="text-gray-800 dark:text-gray-200">description</label>
+            {{ form.desc }}
+        </div>
+        <div class="m-4 flex flex-col gap-4 rounded bg-gray-300/75 p-4 dark:bg-gray-600/75">
+            <h2 class="text-xl font-bold tracking-wide text-gray-900 dark:text-gray-100">click some buttons</h2>
+            <label class="text-gray-800 dark:text-gray-100">set as hidden?</label>
+            {{ form.is_hidden }}
+            <label class="text-gray-800 dark:text-gray-100">categories</label>
+            {{ form.categories }}
+        </div>
+        <div class="flex flex-col font-bold text-white">
+            <button class="bg-green-500 p-6 hover:bg-green-300" type="submit">done</button>
+            <a href="{% url 'portfolio gallery' %}" class="bg-red-500 p-6 text-center hover:bg-red-300">never mind</a>
+        </div>
+    </form>
+</div>
+{% endblock content %}
