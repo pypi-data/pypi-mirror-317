@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+biathlonresults/__init__.py
+biathlonresults/api.py
+biathlonresults/consts.py
+biathlonresults.egg-info/PKG-INFO
+biathlonresults.egg-info/SOURCES.txt
+biathlonresults.egg-info/dependency_links.txt
+biathlonresults.egg-info/requires.txt
+biathlonresults.egg-info/top_level.txt
+tests/test_api.py
