@@ -1,0 +1,13 @@
+jformat/__init__.py,sha256=0Q_BghojxUyqRWjbMfH4kUVNq3zceKmSW7FXLLxWi20,12
+jformat/cli.py,sha256=9hFvPkNqC5jGuwV9cfFLgebTW8oMsyYOIp8JfzDInr8,4012
+jformat/cli2.py,sha256=8cTdRr8KRIwqDku4wOXMKp2cr5HchlUemfOgfnlTTaA,1000
+jformat/cli_org.py,sha256=8jQDPP1xRY5NkZGVWMw8s_o7al2lV1B4MGAVw2lTwOM,634
+tests/__init__.py,sha256=0Q_BghojxUyqRWjbMfH4kUVNq3zceKmSW7FXLLxWi20,12
+tests/test_formatter.py,sha256=nIGuQC5ACMww82coZAtlcyM03YSfpKa19QW9eUK9n3E,407
+tests/test_jformat.py,sha256=FVk6Tuw9LIbbLF8h3RcvQ7Ye8JpdPsaSFxILMlNXty4,4521
+jformat-0.0.2.dist-info/LICENSE,sha256=dIbc2MY30eeV1NLzI2SiLfzANSvABreUG_abVBa4jY0,520
+jformat-0.0.2.dist-info/METADATA,sha256=KMbQz5JhcWPKGyQEF3CEZ2I0fsQuayIIBH9kk_FNtOc,4365
+jformat-0.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jformat-0.0.2.dist-info/entry_points.txt,sha256=NqWQWfT8QAvkbsLRFFLBfyHKBsDDifCs6lB0kbCtk5s,45
+jformat-0.0.2.dist-info/top_level.txt,sha256=lxfikcdB-sqiviC8UyUpFp9xImUD4rYviaZyERw7RpM,14
+jformat-0.0.2.dist-info/RECORD,,
