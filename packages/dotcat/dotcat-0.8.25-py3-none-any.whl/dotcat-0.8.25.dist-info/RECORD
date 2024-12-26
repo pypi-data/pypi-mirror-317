@@ -1,0 +1,10 @@
+LICENSE,sha256=IzlWICtLMMxePUTVuO1Q9BRWSMX53iy7uJMTuNVOGr0,1086
+README.md,sha256=L5JEilnDebCwwAUi7ILryn9dgdFfxtaRW1Zg9aCt-Xo,1423
+dotcat/__init__.py,sha256=VOPsJ-EwvFj9WjcFkqqhN4CDvbsyqjuX5RUam3Duk-g,29
+dotcat/__version__.py,sha256=8uzZ25fOFPl5xgWXU8atcRV9C46VYxS8J-TWrHU3dzA,68
+dotcat/dotcat.py,sha256=8TDYbjEXor3V6ex9A4jdqr7Z21LzOf7lbOPEypYMEx4,10120
+dotcat-0.8.25.dist-info/LICENSE,sha256=IzlWICtLMMxePUTVuO1Q9BRWSMX53iy7uJMTuNVOGr0,1086
+dotcat-0.8.25.dist-info/METADATA,sha256=ISg77kDyYryvMcgamg2lUwnywcnlRw9qjEB0sX_EJEg,2027
+dotcat-0.8.25.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+dotcat-0.8.25.dist-info/entry_points.txt,sha256=xGy2QgnQV16cWMwh9fIpag2KlZpoXE9yMApPSHZWr8I,38
+dotcat-0.8.25.dist-info/RECORD,,
