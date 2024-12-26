@@ -1,0 +1,3 @@
+[console_scripts]
+pistol = pistol.ep:ep
+pistol.verbose = pistol.verbose:ep
