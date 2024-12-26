@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+scripts/setmy53dns
+src/getmyip/__init__.py
+src/getmyip/getmyip.py
+src/r53dns/__init__.py
+src/r53dns/r53_dns.py
+src/setmy53dns/__init__.py
+src/setmy53dns/set_my_rt53_dns.py
+src/setmy53dns.egg-info/PKG-INFO
+src/setmy53dns.egg-info/SOURCES.txt
+src/setmy53dns.egg-info/dependency_links.txt
+src/setmy53dns.egg-info/requires.txt
+src/setmy53dns.egg-info/top_level.txt
