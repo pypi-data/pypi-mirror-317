@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pyyaml
+python-jose
+pymysql
+dbutils
+apscheduler
