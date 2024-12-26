@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pongjun-notes
+Version: 1.0.2
+Summary: A Django app for managing notes
+Home-page: https://github.com/i2x/notes
+Author: i2x
+Author-email: s6601012610067@kmutnb.ac.com
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: Django>=4.2
