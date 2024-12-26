@@ -1,0 +1,11 @@
+setup.py
+PDB_score.egg-info/PKG-INFO
+PDB_score.egg-info/SOURCES.txt
+PDB_score.egg-info/dependency_links.txt
+PDB_score.egg-info/entry_points.txt
+PDB_score.egg-info/requires.txt
+PDB_score.egg-info/top_level.txt
+pdb_score/ProteinStructure.py
+pdb_score/__init__.py
+pdb_score/core.py
+pdb_score/main.py
