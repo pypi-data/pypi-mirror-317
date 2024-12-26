@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: authinfo
+Version: 0.0.1
+Summary: This reads authentication information from a .authinfo file, which
