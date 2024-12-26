@@ -1,0 +1,2 @@
+[console_scripts]
+xnode = xnode.xnode:main
