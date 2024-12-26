@@ -1,0 +1,12 @@
+scroll_renderer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scroll_renderer/finalize_mesh.py,sha256=wwSyMBxDqtWAUYyPGABpt6-ON2EOlf0pQmpK7MnA6jc,9515
+scroll_renderer/large_mesh_to_surface.py,sha256=ZNBgmWDvX-20Ox5JXAj8yGk1VqAu9tpVMxqnIGHdV9A,2840
+scroll_renderer/mesh_to_surface.py,sha256=wF5w9ELSLCFfmI1_F2BvgjQXAYJpugly5I6EKEKKS_8,47514
+scroll_renderer/slim_uv.py,sha256=v2UWjHYTR3XJhhseIYwT98BpGbi0a1Awkx5AyxrN4eM,22539
+scroll_renderer/rendering_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scroll_renderer/rendering_utils/interpolate_image_3d.py,sha256=FeSmRCHT9CzyTexKHnkMMHIQz9OYKz5tMIZWjKA6CeI,8085
+scroll_renderer-0.0.2.dist-info/METADATA,sha256=kgB5Km_5hNmnqIICPg8Qid1Pu4oTMBtThARVIrRJcc4,3848
+scroll_renderer-0.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+scroll_renderer-0.0.2.dist-info/entry_points.txt,sha256=djl7804aqtY54rEJhGGi9Gy43TG5C4gUi-RGAPl1IfY,230
+scroll_renderer-0.0.2.dist-info/top_level.txt,sha256=qBZC3OlPHN1C4PQty5ilj1UES4bDQ0zcCzKr9Bx7yQY,16
+scroll_renderer-0.0.2.dist-info/RECORD,,
