@@ -1,0 +1,2 @@
+[console_scripts]
+cruft = cruft._cli:app
