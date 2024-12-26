@@ -1,0 +1,32 @@
+# Python Projekt "develop-tools
+
+Das Projekt beinhaltet das Package **`dev_tools`** mit seinem Script **`create_package`**. In diesem, Script befindet sich die benötigte Funktion **`generate_structure`**.
+Es generiert am gewünschten Ort die komplette Ordnerstruktur für ein Python-Package und legt alle benötigten Dateien an.
+
+## Inhalt
+
+- **`create_package.py`**: Ein Script, das die Ordnerstruktur für ein Python-Package erstellt und alle erforderlichen Dateien anlegt.
+
+## Installation
+
+Um das Paket zu installieren, erstelle idealerweise eine venv und führe den folgenden Befehl aus:
+
+```bash
+pip install develop-tools
+```
+
+### Verwendung
+
+Über den Entry-Point "new_package" und den Parameter-Angaben kann über die Konsole (cmd, wsl, bash usw.) lokal eine Ordnerstruktur für die Entwicklung eines neuen Packages angelegt werden.
+Parameter:
+
+- **`path_target`**: Pfad an dem die Package-Struktur gebaut werden soll
+- **`project_name`**: Name des Projekts
+- **`package_name`**: Name des Packages
+- **`your_name`**: Name des Entwicklers
+
+Beispiel:
+
+```bash
+new_package <pfad_zu_Projekt> <Mein_Projekt> <Mein_Package> <Mein_Name>
+```

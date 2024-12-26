@@ -1,0 +1,2 @@
+[console_scripts]
+new_package = dev_tools.create_package:main
