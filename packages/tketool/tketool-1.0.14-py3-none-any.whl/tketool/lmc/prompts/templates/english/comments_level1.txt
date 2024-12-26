@@ -1,0 +1,9 @@
+version 1.0
+generic a level 1 comment
+content: code content
+main_obj: main object name
+start:
+Your task is to provide the comment section for {main_obj} based on the Python code (could be a class or a function) I give you.
+It must start and end with """ and must follow the Google style function comments.
+Code: 
+{content}

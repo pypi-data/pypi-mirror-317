@@ -1,0 +1,17 @@
+<prompts>
+
+<model name="result_class">
+    <field name="translate_result" type="str" des="translate_result" />
+</model>
+
+<prompt name="default" output="result_class">
+你的任务是把下面的内容翻译成{to_lang}:
+
+------
+{content}
+------
+
+</prompt>
+
+
+</prompts>

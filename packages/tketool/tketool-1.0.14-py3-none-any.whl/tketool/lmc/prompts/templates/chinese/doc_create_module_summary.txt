@@ -1,0 +1,8 @@
+<prompts>
+<prompt name="default">
+你的任务是根据我给你的一个python模块的各种成员,包括成员的信息,归纳概括成一句话,说明该模块的主要用途.
+注释内容:
+{content}
+请概括成100字内并返回,重点描述该模块的用途.
+</prompt>
+</prompts>

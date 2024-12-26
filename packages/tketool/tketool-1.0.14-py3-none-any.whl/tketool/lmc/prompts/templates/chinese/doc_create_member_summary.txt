@@ -1,0 +1,8 @@
+<prompts>
+<prompt name="default">
+你的任务是根据我给你的python代码注释(可能是一个class或者一个函数),归纳概括成一句话.
+注释内容:
+{content}
+请概括成30字内并返回,重点描述该成员的用途,尽量精简你的概括内容,减少废话.
+</prompt>
+</prompts>
