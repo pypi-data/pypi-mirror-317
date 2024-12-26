@@ -1,0 +1,16 @@
+CHANGES.md,sha256=N4MrGvoYCzfUZoU1kGwny0iZgQQrJvq0MVX_qZi_I5Q,1053
+LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+README.md,sha256=Kw4Q2EJCvvPTSsQlLEGaB7iKiXVrC1Fg_B-aCtkHsnY,2069
+python_google_speak/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_google_speak/cli.py,sha256=X_Y5tqVbPA3ZH0X7J6MwQBmmrfe-CK7YQHTMDimXfV8,1252
+python_google_speak/speech_generator.py,sha256=rxd77TLtbyAA_pBDFwpZ0Gys0m_XnAgSQStpFMNibN8,1204
+python_google_speak/speech_output.py,sha256=vJiBtf_eccjXXEnyvyUHo5N_DPE9QY9Y08H6yHMNYQU,335
+python_google_speak/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_google_speak/test/data/hallo.mp3,sha256=kMKSNanzu1lt3Ye76lYT4T25fi7zUurqy_LaYcvNaqI,6528
+python_google_speak/test/data/hello.mp3,sha256=vNrx3P5NZssUjRqDtYq4xZoJfUKqMN_HxZf0vLkQPRs,6912
+python_google_speak/test/test_python_google_speak.py,sha256=al829_2VFLX56DLb2VA3Nn7GoKkMljJvkV3uBktejl8,2233
+python_google_speak-0.2.2.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+python_google_speak-0.2.2.dist-info/METADATA,sha256=4jg5SfDb68cQeauPUsaRNimPW6g4CwXrKGyiekY8TSY,699
+python_google_speak-0.2.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+python_google_speak-0.2.2.dist-info/entry_points.txt,sha256=oCu6Ycbmdy3fxigNxLjZ1ycnX55Byt8XQKGzQyC9Rdg,61
+python_google_speak-0.2.2.dist-info/RECORD,,
