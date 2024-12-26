@@ -1,0 +1,25 @@
+[build-system]
+requires = [ "poetry-core",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "browserlite"
+version = "0.0.31"
+description = "automated browsing"
+authors = [ "Kammari Santhosh",]
+readme = "README.md"
+license = "MIT License"
+repository = "https://github.com/santhosh/"
+keywords = [ "",]
+include = []
+[[tool.poetry.packages]]
+include = "browserlite"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyperclip = "^1.9.0"
+pyautogui = "^0.9.52"
+loguru = "^0.7.3"
+gmaillite = "^0.2.4"
+
+[tool.poetry.dev-dependencies]
