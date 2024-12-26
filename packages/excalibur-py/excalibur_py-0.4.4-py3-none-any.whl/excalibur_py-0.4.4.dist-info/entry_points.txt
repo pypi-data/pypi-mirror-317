@@ -1,0 +1,2 @@
+[console_scripts]
+excalibur = excalibur.cli:cli
