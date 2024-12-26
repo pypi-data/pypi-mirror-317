@@ -1,0 +1,253 @@
+2024-11-26 19:58:21.564 | DEBUG    | aria2p.interface:run:522 - Created new screen <tests.test_interface.MockedScreen object at 0x7864eca05e50>
+2024-11-26 19:58:21.564 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:21.564 | DEBUG    | aria2p.interface:run:553 - Tick! Updating data and rows
+2024-11-26 19:58:21.570 | DEBUG    | aria2p.interface:run:560 - Refresh! Printing text
+2024-11-26 19:58:21.575 | DEBUG    | aria2p.interface:run:537 - Got event KeyboardEvent: -102
+2024-11-26 19:58:21.575 | DEBUG    | aria2p.interface:process_keyboard_event_main:693 - Triggered removal
+2024-11-26 19:58:21.576 | DEBUG    | aria2p.interface:process_keyboard_event_main:694 - self.focused = 0
+2024-11-26 19:58:21.576 | DEBUG    | aria2p.interface:process_keyboard_event_main:695 - len(self.data) = 2
+2024-11-26 19:58:21.576 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: -206
+2024-11-26 19:58:21.576 | DEBUG    | aria2p.interface:process_keyboard_event_remove_ask:852 - Moving side focus down: 1
+2024-11-26 19:58:21.576 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: 10
+2024-11-26 19:58:21.576 | DEBUG    | aria2p.interface:process_keyboard_event_remove_ask:830 - Validate removal
+2024-11-26 19:58:21.576 | DEBUG    | aria2p.api:remove:439 - Try to remove download 0000000000000001
+2024-11-26 19:58:21.578 | SUCCESS  | aria2p.api:remove:446 - Removed download 0000000000000001
+2024-11-26 19:58:21.580 | DEBUG    | aria2p.api:remove:451 - Failed to remove download result 0000000000000001
+2024-11-26 19:58:21.581 | TRACE    | aria2p.api:remove:452 - GID 0000000000000001 is not found
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+    import sys;exec(eval(sys.stdin.readline()))
+  File "<string>", line 8, in <module>
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 1806, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 1273, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 389, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 411, in _perform_spawn
+    reply.run()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 341, in run
+    self._result = func(*args, **kwargs)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 1291, in executetask
+    exec(co, loc)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/xdist/remote.py", line 393, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/xdist/remote.py", line 174, in pytest_runtestloop
+    self.run_one_test()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/xdist/remote.py", line 195, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pytest_rerunfailures.py", line 566, in pytest_runtest_protocol
+    reports = runtestprotocol(item, nextitem=nextitem, log=False)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+
+  File "/media/data/dev/aria2p/tests/test_interface.py", line 386, in test_remember_last_remove
+    interface = run_interface(
+
+  File "/media/data/dev/aria2p/tests/test_interface.py", line 124, in run_interface
+    interface.run()
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 541, in run
+    self.process_event(event)
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 604, in process_event
+    self.process_keyboard_event(event)
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 610, in process_keyboard_event
+    self.state_mapping[self.state]["process_keyboard_event"](event)
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 832, in process_keyboard_event_remove_ask
+    self.remove_ask_rows[self.side_focused][1](self.follow)
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 444, in <lambda>
+    ("Remove with files", lambda d: d.remove(force=False, files=True)),
+
+  File "/media/data/dev/aria2p/src/aria2p/downloads.py", line 956, in remove
+    result = self.api.remove([self], force=force, files=files)[0]
+
+> File "/media/data/dev/aria2p/src/aria2p/api.py", line 449, in remove
+    self.client.remove_download_result(download.gid)
+
+  File "/media/data/dev/aria2p/src/aria2p/client.py", line 1489, in remove_download_result
+    return self.call(self.REMOVE_DOWNLOAD_RESULT, [gid])  # type: ignore
+
+  File "/media/data/dev/aria2p/src/aria2p/client.py", line 258, in call
+    return self.res_or_raise(self.post(payload))
+
+  File "/media/data/dev/aria2p/src/aria2p/client.py", line 380, in res_or_raise
+    raise Client.response_as_exception(response)
+
+aria2p.client.ClientException: GID 0000000000000001 is not found
+2024-11-26 19:58:21.588 | DEBUG    | aria2p.api:remove:465 - Removed control file /tmp/pytest-of-pawamoy/pytest-29/popen-gw1/test_remember_last_remove0/5m.aria2
+2024-11-26 19:58:21.588 | WARNING  | aria2p.downloads:root_files_paths:330 - Can't determine file path '.' relative to '/tmp/pytest-of-pawamoy/pytest-29/popen-gw1/test_remember_last_remove0'
+2024-11-26 19:58:21.588 | TRACE    | aria2p.downloads:root_files_paths:331 - '.' is not in the subpath of '/tmp/pytest-of-pawamoy/pytest-29/popen-gw1/test_remember_last_remove0'
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+    import sys;exec(eval(sys.stdin.readline()))
+  File "<string>", line 8, in <module>
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 1806, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 1273, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 389, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 411, in _perform_spawn
+    reply.run()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 341, in run
+    self._result = func(*args, **kwargs)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 1291, in executetask
+    exec(co, loc)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/xdist/remote.py", line 393, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/xdist/remote.py", line 174, in pytest_runtestloop
+    self.run_one_test()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/xdist/remote.py", line 195, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pytest_rerunfailures.py", line 566, in pytest_runtest_protocol
+    reports = runtestprotocol(item, nextitem=nextitem, log=False)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+
+  File "/media/data/dev/aria2p/tests/test_interface.py", line 386, in test_remember_last_remove
+    interface = run_interface(
+
+  File "/media/data/dev/aria2p/tests/test_interface.py", line 124, in run_interface
+    interface.run()
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 541, in run
+    self.process_event(event)
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 604, in process_event
+    self.process_keyboard_event(event)
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 610, in process_keyboard_event
+    self.state_mapping[self.state]["process_keyboard_event"](event)
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 832, in process_keyboard_event_remove_ask
+    self.remove_ask_rows[self.side_focused][1](self.follow)
+
+  File "/media/data/dev/aria2p/src/aria2p/interface.py", line 444, in <lambda>
+    ("Remove with files", lambda d: d.remove(force=False, files=True)),
+
+  File "/media/data/dev/aria2p/src/aria2p/downloads.py", line 956, in remove
+    result = self.api.remove([self], force=force, files=files)[0]
+
+  File "/media/data/dev/aria2p/src/aria2p/api.py", line 468, in remove
+    self.remove_files([download], force=True)
+
+  File "/media/data/dev/aria2p/src/aria2p/api.py", line 654, in remove_files
+    for path in download.root_files_paths:
+
+> File "/media/data/dev/aria2p/src/aria2p/downloads.py", line 328, in root_files_paths
+    relative_path = file.path.relative_to(self.dir)
+
+  File "/home/pawamoy/.local/share/uv/python/cpython-3.13.0rc3-linux-x86_64-gnu/lib/python3.13/pathlib/_local.py", line 385, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+
+ValueError: '.' is not in the subpath of '/tmp/pytest-of-pawamoy/pytest-29/popen-gw1/test_remember_last_remove0'
+2024-11-26 19:58:21.595 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: -102
+2024-11-26 19:58:21.595 | DEBUG    | aria2p.interface:process_keyboard_event_main:693 - Triggered removal
+2024-11-26 19:58:21.595 | DEBUG    | aria2p.interface:process_keyboard_event_main:694 - self.focused = 0
+2024-11-26 19:58:21.595 | DEBUG    | aria2p.interface:process_keyboard_event_main:695 - len(self.data) = 2
+2024-11-26 19:58:21.595 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: -1
+2024-11-26 19:58:21.595 | DEBUG    | aria2p.interface:process_keyboard_event_remove_ask:824 - Canceling removal
+2024-11-26 19:58:21.595 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: 113
+2024-11-26 19:58:21.595 | DEBUG    | aria2p.interface:run:543 - Received exit command

@@ -1,0 +1,170 @@
+2024-11-26 19:58:22.298 | DEBUG    | aria2p.interface:run:522 - Created new screen <tests.test_interface.MockedScreen object at 0x700381c5e060>
+2024-11-26 19:58:22.298 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.299 | DEBUG    | aria2p.interface:run:553 - Tick! Updating data and rows
+2024-11-26 19:58:22.304 | DEBUG    | aria2p.interface:run:560 - Refresh! Printing text
+2024-11-26 19:58:22.309 | DEBUG    | aria2p.interface:run:537 - Got event KeyboardEvent: 97
+2024-11-26 19:58:22.315 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: -1
+2024-11-26 19:58:22.315 | DEBUG    | aria2p.interface:run:549 - Got event None
+2024-11-26 19:58:22.315 | DEBUG    | aria2p.interface:run:560 - Refresh! Printing text
+2024-11-26 19:58:22.321 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.326 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.331 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.336 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.342 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.347 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.352 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.357 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.363 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.368 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.373 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.378 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.383 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.389 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.394 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.399 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.404 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.410 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.415 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.415 | DEBUG    | aria2p.interface:run:553 - Tick! Updating data and rows
+2024-11-26 19:58:22.421 | DEBUG    | aria2p.interface:run:560 - Refresh! Printing text
+2024-11-26 19:58:22.427 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.432 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.437 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.442 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.448 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.453 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.458 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.463 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.469 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.474 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.479 | DEBUG    | aria2p.interface:run:537 - Got event KeyboardEvent: 97
+2024-11-26 19:58:22.486 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: -206
+2024-11-26 19:58:22.486 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: -204
+2024-11-26 19:58:22.486 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: 10
+2024-11-26 19:58:22.498 | DEBUG    | aria2p.interface:run:549 - Got event KeyboardEvent: 10
+2024-11-26 19:58:22.503 | DEBUG    | aria2p.interface:run:549 - Got event None
+2024-11-26 19:58:22.503 | DEBUG    | aria2p.interface:run:560 - Refresh! Printing text
+2024-11-26 19:58:22.509 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.514 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.519 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.524 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.530 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.535 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.540 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.545 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.551 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.551 | DEBUG    | aria2p.interface:run:553 - Tick! Updating data and rows
+2024-11-26 19:58:22.557 | DEBUG    | aria2p.interface:run:560 - Refresh! Printing text
+2024-11-26 19:58:22.563 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.568 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.573 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.578 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.583 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.589 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.594 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.599 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.604 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.610 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.615 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.620 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.625 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.631 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.636 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.641 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.646 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.651 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.657 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.662 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:22.662 | DEBUG    | aria2p.interface:run:553 - Tick! Updating data and rows
+2024-11-26 19:58:22.669 | DEBUG    | aria2p.interface:run:560 - Refresh! Printing text
+2024-11-26 19:58:22.674 | DEBUG    | aria2p.interface:run:537 - Got event KeyboardEvent: 113
+2024-11-26 19:58:22.674 | ERROR    | aria2p.interface:run:577 - pop from empty list
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+    import sys;exec(eval(sys.stdin.readline()))
+  File "<string>", line 8, in <module>
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 1806, in serve
+    WorkerGateway(io=io, id=id, _startcount=2).serve()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 1273, in serve
+    self._execpool.integrate_as_primary_thread()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 389, in integrate_as_primary_thread
+    self._perform_spawn(reply)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 411, in _perform_spawn
+    reply.run()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 341, in run
+    self._result = func(*args, **kwargs)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/execnet/gateway_base.py", line 1291, in executetask
+    exec(co, loc)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/xdist/remote.py", line 393, in <module>
+    config.hook.pytest_cmdline_main(config=config)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/xdist/remote.py", line 174, in pytest_runtestloop
+    self.run_one_test()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/xdist/remote.py", line 195, in run_one_test
+    self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pytest_rerunfailures.py", line 566, in pytest_runtest_protocol
+    reports = runtestprotocol(item, nextitem=nextitem, log=False)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/media/data/dev/aria2p/.venvs/3.13/lib/python3.13/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+
+  File "/media/data/dev/aria2p/tests/test_interface.py", line 521, in test_add_downloads_torrents_and_metalinks
+    interface = run_interface(
+
+  File "/media/data/dev/aria2p/tests/test_interface.py", line 124, in run_interface
+    interface.run()
+
+> File "/media/data/dev/aria2p/src/aria2p/interface.py", line 548, in run
+    event = screen.get_event()
+
+  File "/media/data/dev/aria2p/tests/test_interface.py", line 159, in get_event
+    event = self.events.pop(0)
+
+IndexError: pop from empty list

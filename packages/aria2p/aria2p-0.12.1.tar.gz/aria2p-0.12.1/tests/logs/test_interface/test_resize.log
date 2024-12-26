@@ -1,0 +1,10 @@
+2024-11-26 19:58:21.345 | DEBUG    | aria2p.interface:run:522 - Created new screen <tests.test_interface.MockedScreen object at 0x7dd1488c42f0>
+2024-11-26 19:58:21.345 | DEBUG    | aria2p.interface:run:537 - Got event None
+2024-11-26 19:58:21.345 | DEBUG    | aria2p.interface:run:553 - Tick! Updating data and rows
+2024-11-26 19:58:21.351 | DEBUG    | aria2p.interface:run:560 - Refresh! Printing text
+2024-11-26 19:58:21.356 | DEBUG    | aria2p.interface:run:574 - Screen has resized
+2024-11-26 19:58:21.356 | DEBUG    | aria2p.interface:post_resize:581 - Running post-resize function
+2024-11-26 19:58:21.356 | DEBUG    | aria2p.interface:post_resize:582 - Trying to re-apply pywal color theme
+2024-11-26 19:58:21.356 | DEBUG    | aria2p.interface:run:522 - Created new screen <tests.test_interface.MockedScreen object at 0x7dd148879590>
+2024-11-26 19:58:21.357 | DEBUG    | aria2p.interface:run:537 - Got event KeyboardEvent: 113
+2024-11-26 19:58:21.357 | DEBUG    | aria2p.interface:run:543 - Received exit command

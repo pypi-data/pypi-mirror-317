@@ -1,0 +1,6 @@
+2024-11-26 19:58:13.487 | DEBUG    | aria2p.cli.main:main:82 - Checking arguments
+2024-11-26 19:58:13.488 | DEBUG    | aria2p.cli.main:main:85 - Instantiating API
+2024-11-26 19:58:13.488 | INFO     | aria2p.cli.main:main:95 - API instantiated: API(Client(host='http://localhost', port=15814, secret='********'))
+2024-11-26 19:58:13.488 | DEBUG    | aria2p.cli.main:main:98 - Testing connection
+2024-11-26 19:58:13.490 | DEBUG    | aria2p.cli.main:main:113 - Running subcommand autopurge
+2024-11-26 19:58:13.490 | WARNING  | aria2p.api:autopurge:570 - Deprecation warning: API method 'autopurge' is deprecated, use 'purge' instead.

@@ -1,0 +1,3 @@
+2024-11-26 19:58:20.420 | DEBUG    | aria2p.api:remove:429 - Try to remove download result 0000000000000001
+2024-11-26 19:58:20.422 | SUCCESS  | aria2p.api:remove:436 - Removed download result 0000000000000001
+2024-11-26 19:58:20.422 | DEBUG    | aria2p.api:remove:465 - Removed control file /tmp/pytest-of-pawamoy/pytest-29/popen-gw5/test_remove_files_method0/100.aria2
