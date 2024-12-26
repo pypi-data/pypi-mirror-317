@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+s_area/GeometryCircle.py
+s_area/GeometryParallelepiped.py
+s_area/GeometryTriangle.py
+s_area/__init__.py
+s_area.egg-info/PKG-INFO
+s_area.egg-info/SOURCES.txt
+s_area.egg-info/dependency_links.txt
+s_area.egg-info/not-zip-safe
+s_area.egg-info/top_level.txt
