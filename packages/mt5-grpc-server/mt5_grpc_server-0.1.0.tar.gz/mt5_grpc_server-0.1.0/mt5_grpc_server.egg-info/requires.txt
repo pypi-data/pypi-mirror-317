@@ -1,0 +1,15 @@
+grpcio>=1.68.1
+grpcio-tools>=1.68.1
+protobuf>=5.29.2
+pytz>=2024.2
+MetaTrader5>=5.0.33
+mt5_grpc_proto>=0.1.0
+
+[dev]
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=23.0.0
+isort>=5.0.0
+mypy>=1.0.0
+build>=1.0.0
+twine>=4.0.0
