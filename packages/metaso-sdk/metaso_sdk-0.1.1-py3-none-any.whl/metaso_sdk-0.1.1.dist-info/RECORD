@@ -1,0 +1,14 @@
+metaso_sdk-0.1.1.dist-info/METADATA,sha256=jIgauQfuMcfubvUJA09YbUEoLVcjWnaB6trQmfczAXY,3270
+metaso_sdk-0.1.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+metaso_sdk-0.1.1.dist-info/entry_points.txt,sha256=VqvzYeWOYZKCpogIumetYL8h5UZsI93oLI15kJjbwj4,63
+metaso_sdk-0.1.1.dist-info/licenses/LICENSE,sha256=7nWd1jm_pniRaOJtzgZnzECn_eeGLoPMvPTjCyRpj1A,1065
+metaso_sdk/__init__.py,sha256=wP088gdhNJt1byFsSYest-ucQJdwosorwaG7FqCyqwE,510
+metaso_sdk/__main__.py,sha256=WCRS7Ehbf26-NWDSnt-Zmy0eP63paf67q9eYV4V_Q3g,345
+metaso_sdk/cli.py,sha256=Z7I54ojBpWxQ_Pce7-XM7gucneDIpC21yAqRGkYrm9I,1734
+metaso_sdk/client.py,sha256=j2hC1NBbxsRFHC4hOSD06YrfV5JLffgrA-H5iGNBPq4,204
+metaso_sdk/debug.py,sha256=K3ypLgs78a8bhiAHE_5fZZAL-U622fuKPyEdL7M1UW8,2831
+metaso_sdk/model.py,sha256=1QapIO4tEp2DfZ0bLL-GE6cwxXKK_XrQuINWltG8IQM,702
+metaso_sdk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metaso_sdk/search.py,sha256=3iA9lIncpAcbPHPby0XnTYaYvhM2983bEOBa40Nu_kY,1082
+metaso_sdk/subject.py,sha256=0CsDo1PRZlagR4GKLDbJXvK2Q6qFAd4_3VV8NTNYPeE,2877
+metaso_sdk-0.1.1.dist-info/RECORD,,
