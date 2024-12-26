@@ -1,0 +1,10 @@
+agin/__init__.py,sha256=W6WEtuT_SpKNy1pmgFiTKJaONE9oLn9ItdL8DqYapGg,249
+agin/regression/__init__.py,sha256=A66neLdvWPgZZZ2iZ5-xNZgmXiM6jxz9xS7BWhwXvsM,47
+agin/regression/linear_regression.py,sha256=xxd98Lgw9UwJMZbxJUV-y3U4I6BbjO7clvVqY8b4Wys,2231
+agin/utils/__init__.py,sha256=-Yz_YEGwYH33hnW8NjxJbhkkVtq6bo08aARihHyiXGM,27
+agin/utils/health.py,sha256=mcPQW210JIdTYSC40sAPD9lm6WM-pH5GkxCx9q4iYRk,352
+AginPy-0.0.1.dist-info/LICENSE,sha256=X2MD0wCA7H09WSJ161GB8Z59ktkyqrrBTyIWecdUcZo,35143
+AginPy-0.0.1.dist-info/METADATA,sha256=gFV1f_bVZGn7uLlpj2oGMTcFzSRV1Ykx6tv7s-CZwVk,2394
+AginPy-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+AginPy-0.0.1.dist-info/top_level.txt,sha256=bmqOf9zPIlzQsOqMUOyAWOAYRvjoV8mgBaCrhetwLOI,5
+AginPy-0.0.1.dist-info/RECORD,,
