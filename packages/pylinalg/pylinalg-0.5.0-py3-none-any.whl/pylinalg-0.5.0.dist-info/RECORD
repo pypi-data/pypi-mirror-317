@@ -1,0 +1,9 @@
+pylinalg/__init__.py,sha256=dRHjkYkM1wIHBNKwpyOZpYX3NM3o9xFNFCcepEJvZHY,391
+pylinalg/matrix.py,sha256=W7iJ8RCYRRHqW9PjEtbhJMLfLEH55_IQ_X2KlaTALsw,21352
+pylinalg/misc.py,sha256=S0XYI5nodhq5xerIx0-jmtqlvntwACrkHF2BAT4EJkM,4728
+pylinalg/quaternion.py,sha256=j5fIlslF-AY9DSRn6_sucNEDkxad2G3RfkORYnYZZmY,9279
+pylinalg/vector.py,sha256=Wfd8FG5Effm5x096yEgHGPZG8f7TYYo89BitgaRlXlY,17298
+pylinalg-0.5.0.dist-info/LICENSE,sha256=IB44UPIz0Mh-exTxrrCp6eLo77tGDVwlWIUOaGArHi4,1077
+pylinalg-0.5.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+pylinalg-0.5.0.dist-info/METADATA,sha256=vUQkRpAwXF0liytdG7z6HTS2LAVBvyHiNeThmZgYDzo,1788
+pylinalg-0.5.0.dist-info/RECORD,,
