@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+scroll_renderer/__init__.py
+scroll_renderer/finalize_mesh.py
+scroll_renderer/large_mesh_to_surface.py
+scroll_renderer/mesh_to_surface.py
+scroll_renderer/slim_uv.py
+scroll_renderer.egg-info/PKG-INFO
+scroll_renderer.egg-info/SOURCES.txt
+scroll_renderer.egg-info/dependency_links.txt
+scroll_renderer.egg-info/entry_points.txt
+scroll_renderer.egg-info/requires.txt
+scroll_renderer.egg-info/top_level.txt
+scroll_renderer/rendering_utils/__init__.py
+scroll_renderer/rendering_utils/interpolate_image_3d.py
