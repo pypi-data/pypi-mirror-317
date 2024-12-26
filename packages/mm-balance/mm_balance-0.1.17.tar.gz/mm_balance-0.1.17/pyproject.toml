@@ -1,0 +1,61 @@
+[project]
+name = "mm-balance"
+version = "0.1.17"
+description = ""
+requires-python = ">=3.12"
+dependencies = [
+    "mm-btc==0.2.0",
+    "mm-eth==0.2.0",
+    "mm-solana==0.2.0",
+    "mm-aptos==0.1.4",
+    "typer>=0.15.1",
+]
+[project.scripts]
+mm-balance = "mm_balance.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest~=8.3.4",
+    "pytest-xdist~=3.6.1",
+    "ruff~=0.8.4",
+    "pip-audit~=2.7.3",
+    "bandit~=1.8.0",
+    "mypy~=1.14.0",
+    "types-PyYAML~=6.0.12.20241221",
+]
+
+[tool.mypy]
+python_version = "3.13"
+warn_no_return = false
+strict = true
+exclude = ["^tests/", "^tmp/"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py313"
+lint.select = [
+    "F", # Pyflakes
+    "E", "W", # pycodestyle
+    "UP", # pyupgrade
+    "B", # flake8-bugbear
+    "A", # flake8-builtins
+    "COM", # flake8-commas
+    "C40", # flake8-comprehensions
+    "G", # flake8-logging-format
+    "PIE", # flake8-pie
+    "T20", # flake8-print
+    "RUF", # Ruff-specific rules
+]
+lint.ignore = [
+    "A003", # builtin-attribute-shadowing
+    "COM812",
+    "RUF012"
+]
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = ["B311"]
