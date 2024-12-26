@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: file_scan_dd
+Version: 1.1
+Summary: A simple library to scan files using Metadefender
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: requests==2.26.0
+Requires-Dist: requests-toolbelt==0.9.1

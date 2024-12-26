@@ -1,0 +1,9 @@
+README.md
+setup.py
+file_scan_dd/__init__.py
+file_scan_dd/file_scan_dd.py
+file_scan_dd.egg-info/PKG-INFO
+file_scan_dd.egg-info/SOURCES.txt
+file_scan_dd.egg-info/dependency_links.txt
+file_scan_dd.egg-info/requires.txt
+file_scan_dd.egg-info/top_level.txt
