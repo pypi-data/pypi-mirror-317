@@ -1,0 +1,8 @@
+README.md
+setup.py
+marketing_measure/__init__.py
+marketing_measure/main.py
+marketing_measure.egg-info/PKG-INFO
+marketing_measure.egg-info/SOURCES.txt
+marketing_measure.egg-info/dependency_links.txt
+marketing_measure.egg-info/top_level.txt
