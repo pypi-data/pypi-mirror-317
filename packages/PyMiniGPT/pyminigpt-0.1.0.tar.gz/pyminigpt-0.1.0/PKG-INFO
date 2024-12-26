@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: PyMiniGPT
+Version: 0.1.0
+Summary: A small GPT model
+Keywords: gpt,mini,ai
+Author-email: SPARK <sparkisbackbro@gmail.com>
+Description-Content-Type: text/markdown
+
+# MiniGPT
+
+MiniGPT is a simple Python library for answering questions using AI-like behavior. 4 type of AI
+# Installation
+
+```bash
+pip install MiniGPT
+```
+# Usage
+
+import MiniGPT
+print(MiniGPT.duckduck("What is AI?"))

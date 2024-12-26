@@ -1,0 +1,18 @@
+[build-system]
+requires = ["flit_core >=3.10.1"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "PyMiniGPT"
+version = "0.1.0"
+description = "A small GPT model"
+authors = [{name = "SPARK", email = "sparkisbackbro@gmail.com"}]
+license = {text = "MIT"}
+dependencies = []
+readme = "README.md"
+homepage = "https://github.com/Sak0r/MiniGPT"
+keywords = ["gpt", "mini", "ai"]
+python = ">=3.6"
+
+[tool.flit]
+module = "MiniGPT"
