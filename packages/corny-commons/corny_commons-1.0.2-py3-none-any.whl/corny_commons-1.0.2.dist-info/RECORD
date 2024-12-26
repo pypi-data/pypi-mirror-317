@@ -1,0 +1,12 @@
+corny_commons/__init__.py,sha256=V6gYzB6mCmri3wToNJpVbnMfX82SK_fOQyN5WYYxR-c,94
+corny_commons/console_graphics.py,sha256=j3fhgl8q0TVdQr-JD-1pYQ8zSjLDcG1E6RlAxWQ5jJc,2082
+corny_commons/file_manager.py,sha256=jfxs6bUqHDwZF5SRf_NT89-5oqnxole6piY4HpxCxXs,6912
+corny_commons/util/__init__.py,sha256=8sUhKXcTjbgBk8h_H0lepP5SzedueGtLB_Tm6SJ0vHc,1027
+corny_commons/util/currency.py,sha256=tEefnsXIn_6uT11tUGubJl9lL8I7PtJ0uWn5oAxw_fI,2561
+corny_commons/util/polish.py,sha256=GV2KDew3mUgAAxgDpdCByGp92kyVPO8ZM0mgbLf_ULs,899
+corny_commons/util/web.py,sha256=0HQQz9Uob2n07qnU7a5kSlPyB_MkbtTpIG_nUaYwy2U,3464
+corny_commons-1.0.2.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+corny_commons-1.0.2.dist-info/METADATA,sha256=SiQi4ERGRpEEPW7G0GfXp_Xe8PyFgLfidPIUmO4cP18,44127
+corny_commons-1.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+corny_commons-1.0.2.dist-info/top_level.txt,sha256=RfRaTl12ZtMYHIO2CoIXJn-P00EeemAB0d8V1dS_66E,14
+corny_commons-1.0.2.dist-info/RECORD,,
