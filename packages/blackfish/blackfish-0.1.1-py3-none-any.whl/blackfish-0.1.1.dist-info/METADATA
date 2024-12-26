@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: blackfish
+Version: 0.1.1
+Summary: Various ORCA 6 tools
+Project-URL: repository, https://codeberg.org/crabby/blackfish
+Author-email: Frederik Scherz <frederik.scherz@gmail.de>
+License: Apache-2.0
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: polars>=1.18.0
