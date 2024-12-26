@@ -1,0 +1,10 @@
+markdrop/__init__.py,sha256=0mnimT5Ts3x4eQQUtoGGFfJ7FzBcZL1lKHsO2E0LK3A,423
+markdrop/helper.py,sha256=Jx4i0MwUe6oaKVjbbqYFijgs0b2Mux8yGaGHSYyL1Hk,1620
+markdrop/ignore_warnings.py,sha256=IXCrlX5E0EpX_7-bDMv6bgLGnXQZEyPsEUhL6H-uiRM,509
+markdrop/main.py,sha256=BasIlcbc0Cma3odVOnA9d6DcHc8JYTqfFo2_aC6SlN0,1394
+markdrop/utils.py,sha256=ff_8pMZ68M4yut8v6iilauMshhRxTgN8bycmcpOD_wo,15102
+markdrop-0.2.0.dist-info/LICENSE,sha256=0kQbVIfsUZ8w7EvLihwdPLkSOYLp_px_TMtcJf2gJ3A,1089
+markdrop-0.2.0.dist-info/METADATA,sha256=mM2DXBWHx4vdLkie9ZIMTkcskEHtS1VFqfjFTx3Efwo,6718
+markdrop-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+markdrop-0.2.0.dist-info/top_level.txt,sha256=bsqUSSUl9p-YwNBefMalbdlvrs9nlucRsD5FXFJniLI,9
+markdrop-0.2.0.dist-info/RECORD,,
