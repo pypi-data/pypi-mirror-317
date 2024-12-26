@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: com-chery-user-util
+Version: 0.0.4
+Summary: temp package, will be deleted later 2024-12-24
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+Requires-Dist: python-dotenv
