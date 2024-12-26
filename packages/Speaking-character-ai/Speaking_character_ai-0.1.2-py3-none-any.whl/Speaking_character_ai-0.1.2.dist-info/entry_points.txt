@@ -1,0 +1,2 @@
+[console_scripts]
+speaking-character-ai = speaking_character_ai.app:run_app
