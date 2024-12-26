@@ -1,0 +1,17 @@
+kblite/__init__.py,sha256=iYeAydvAsRXmEXF0n9spYHbEIPYJp3r-12_ymHMHb6A,263
+kblite/base.py,sha256=gNVWxs1G7z5f7yICag030AA4vQv8qQJBlzDwKRb8vbE,6348
+kblite/loader.py,sha256=xixwv0BRtVLnh7bjyBVRBNed5KC02LhS8pDCHTV_gg4,883
+kblite/models.py,sha256=5XDs3GQsYvrVvQQmCw8xyx7ev3DXlPDUX9j05G8ZrN4,8933
+kblite/triplet.py,sha256=zgFemF-kfBoszaqFqKsYgrOT2_rNlfjnWPFYy3OIDX8,9236
+kblite/vocab.py,sha256=MeVHP-l-YyVy2Tv-R92uoymNRDa4qX-zvXN01Mx3Dzk,7763
+kblite/conceptnet/__init__.py,sha256=TybDl_971VJrvNGVoUlMxe1AP-smGnpH1H-oVI92qJI,207
+kblite/conceptnet/base.py,sha256=NEywWKyh99HViBIP-Tv7YOnl7K-11zRZL7rcNgPMoUw,3793
+kblite/conceptnet/concept.py,sha256=nLw2RdHuiDH0ORXEgaG3S7BFP9q7DRClJ3EZYLQnKYQ,8182
+kblite/conceptnet/csv.py,sha256=8APr8SLFVYie13JZtKDdWy4YAZsBXbs4iPMfttvqubM,1012
+kblite/conceptnet/namepsace.py,sha256=QfNTDAS5GrCM45NZJC3_-ybl40X84GuBEJDl3i5SsLU,945
+kblite/conceptnet/relation.py,sha256=Szjxh6HUHuxCFicSnI_dCuC2nwuwTGxJhHIRioLXHBA,5201
+kblite/conceptnet/uri.py,sha256=87DPiPLdnWRK_87yUUQaqavj0JMJzTln1HIfkTQJDUU,14237
+kblite-0.0.1.dist-info/METADATA,sha256=xBk5aWNsXcqfCWnPswUoFjSXxe7fSvSfkT3rCWVN9NE,3069
+kblite-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+kblite-0.0.1.dist-info/licenses/LICENSE,sha256=R2xHei2LCOHrGTOUKYZwKN6feGbXqZSXoe760wloBQc,1066
+kblite-0.0.1.dist-info/RECORD,,
