@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: tts-evaluate-yue
+Version: 1.0.0
+Summary: Add your description here
+Author-email: sagewe <sagewe@fastmail.com>
+Requires-Dist: ctranslate2>=4.5.0
+Requires-Dist: evaluate
+Requires-Dist: faster-whisper
+Requires-Dist: gtts>=2.5.4
+Requires-Dist: jiwer
+Requires-Dist: soundfile>=0.12.1
+Requires-Dist: torchaudio>=2.5.1
+Requires-Dist: transformers[torch]
+Requires-Dist: yue-normalizer
