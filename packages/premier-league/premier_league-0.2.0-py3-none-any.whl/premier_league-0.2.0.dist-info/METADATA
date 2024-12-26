@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: premier_league
+Version: 0.2.0
+Summary: Premier League data Scrapping package
+Author: Michael Li
+Requires-Python: >=3.11
+Requires-Dist: reportlab==4.0.4
+Requires-Dist: requests==2.28.1
+Requires-Dist: lxml==4.9.1
+Requires-Dist: beautifulsoup4>=4.11.0
+Requires-Dist: prettytable==3.11.0
+Requires-Dist: flask==3.0.0
+Requires-Dist: flask-caching==2.3.0
+Requires-Dist: flask-cors==5.0.0
+Requires-Dist: flask-limiter==1.4.0
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: gunicorn==23.0.0
