@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/promptcore/__init__.py
+src/promptcore.egg-info/PKG-INFO
+src/promptcore.egg-info/SOURCES.txt
+src/promptcore.egg-info/dependency_links.txt
+src/promptcore.egg-info/top_level.txt
