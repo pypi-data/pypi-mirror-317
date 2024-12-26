@@ -1,0 +1,2 @@
+[console_scripts]
+numo-cli = numo_cli.main:main
