@@ -1,0 +1,4 @@
+include src/py_diff_pdf2/libs/*
+include src/py_diff_pdf2/libs/fonts/*
+
+exclude scr/py_diff_pdf2/*.pdf
