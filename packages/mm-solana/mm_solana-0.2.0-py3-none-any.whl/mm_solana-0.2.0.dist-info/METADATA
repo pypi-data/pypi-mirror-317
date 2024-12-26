@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: mm-solana
+Version: 0.2.0
+Requires-Python: >=3.12
+Requires-Dist: base58~=2.1.1
+Requires-Dist: jinja2~=3.1.5
+Requires-Dist: mm-std~=0.1.9
+Requires-Dist: solana~=0.36.1
