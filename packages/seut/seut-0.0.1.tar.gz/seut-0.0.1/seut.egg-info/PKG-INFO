@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: seut
+Version: 0.0.1
+Summary: Seut is Socicaly Network For System.
+Home-page: https://github.com/SugiSaku8/Seut
+Author: Carnation Studio
+Author-email: carnation.scr.offical@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
