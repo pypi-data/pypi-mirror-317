@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "agentics"
+version = "0.1.2"
+description = "A minimal LLM agent library"
+authors = ["Facundo Goiriz <facundogoiriz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+openai = ">=1.58.1"
+pydantic = ">=2.10.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+pytest-cov = "^4.0.0"
