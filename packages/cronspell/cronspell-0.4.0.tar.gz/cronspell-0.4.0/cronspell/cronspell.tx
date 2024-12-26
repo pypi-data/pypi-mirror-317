@@ -1,0 +1,154 @@
+DateMaths:
+  anchor=Anchor? formula=Formula?
+;
+
+Formula:
+    DateMath | DateMatSet
+;
+
+DateMatSet:
+    SetOpening set*=DateMath[','] SetClosing
+;
+
+SetOpening:
+    /\{(?=[^\{\}]*\})/
+;
+
+SetClosing:
+   '}'
+;
+
+
+DateMath:
+    date_math_term*=DateMathTerm
+;
+
+Anchor:
+    tznow=TimezoneNow | NaiveNow | isodate=ISODate
+;
+
+ISODate:
+    /\d+\S+/
+;
+
+DateMathTerm:
+    statement=Statement
+;
+
+NaiveNow:
+  'now'
+;
+
+TimezoneNow:
+  NaiveNow '[' tz=/\s*([^\]]+)\s*/ ']'
+;
+
+
+Statement:
+    Floor |  Plus | Minus | CwModulo | YModulo
+;
+
+
+CwModulo:
+   CalendarWeekModuloMarker value=INT?
+;
+
+YModulo:
+   YearModuloMarker value=INT?
+;
+
+CalendarWeekModuloMarker:
+    /[%,@]\s*\b(CW|Cw|cw)/
+;
+
+YearModuloMarker:
+    /[%,@]\s*\b(Y|y)(ears?)?/
+;
+
+Floor:
+  '/' res=Clampable
+;
+
+Plus:
+  '+' steps=INT? res=TimeUnitShort
+;
+
+Minus:
+  '-' steps=INT? res=TimeUnitShort
+;
+
+Clampable:
+    WeekDay | TimeUnitShort | VariableTimeUnit
+;
+
+TimeUnitShort:
+    W=W | d=d | M=M | H=H | S=S
+;
+
+VariableTimeUnit:
+    Y=Y | m=m
+;
+
+WeekDay:
+    Mon=Mon | Tue=Tue | Wed=Wed | Thu=Thu | Fri=Fri | Sat=Sat | Sun=Sun
+;
+
+Y:
+    /([Yy]ears?|Y\b)/
+;
+
+m:
+    /(?!mon\b)([mM]onths?|m\b)/
+;
+
+W:
+    /\b([wW]eeks?|W)\b/
+;
+
+d:
+    /([dD]ays?|d\b)/
+;
+
+M:
+    /([mM]inutes?|M\b|[mM]in\b)/
+;
+
+H:
+    /([hH]ours?|H\b|[Hh]rs)/
+;
+
+S:
+    /(?!sat$)([sS]econds?|S\b|[sS]ec\b)/
+;
+
+Mon:
+    /\bmon\b/
+;
+
+Tue:
+    /\btue\b/
+;
+
+Wed:
+    /\bwed\b/
+;
+
+Thu:
+    /\bthu\b/
+;
+
+Fri:
+    /\bfri\b/
+;
+
+Sat:
+    /\bsat\b/
+;
+
+Sun:
+    /\bsun\b/
+;
+
+Comment:
+    /\/\*(.|\n)*?\*\// | /\/\/.*?$/
+;
