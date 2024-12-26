@@ -1,0 +1,17 @@
+my_package/__init__.py,sha256=THwsEGW1wBBQ5toKHcKsNx6PtENCWw8OhckHC8NnYXU,37
+my_package/evaluation.py,sha256=ku-fy5TwbazmhkApcFu9ETFaYRaQs1rfqBHiwqoLZvY,966
+my_package/evaluation_upscaling.py,sha256=uHn_gihy2_JyNeMh_bXWl2I_PfaWTpY0Rkkzq80BnGk,3610
+my_package/fix_prediction.py,sha256=QSPZNshQbvWkAHySm80gyguE3Jsn7sQeHbKiujBY_L0,738
+my_package/gois_inference.py,sha256=kynkdkv8jSvx99YxiGWSw1TSE3fs0CsCOCnjgw7I5SQ,4360
+my_package/inference.py,sha256=Z9_Ka2lnMIwFR3JxkvdVTDvqxiTTCWdrky45hZlzYZM,3367
+my_package/preprocessing.py,sha256=JNMUaBNAukndDzoqZ4aHXeUdHx_gtiPABGVPcTWIDQw,2691
+my_package/data_processing/__init__.py,sha256=ZKzCkrXoO3OXkJstLsn--T3cXiTnxflfi-TPQCx_Zko,44
+my_package/data_processing/image_loader.py,sha256=bXuwfSQ26xlD0HPCYhdEFd0Ohbl2uXmAWTEML6jwkOM,168
+my_package/models/__init__.py,sha256=f73rfGcOvTRWAtqItaUj40yeDL5HSiBdIHoxpZEqcBs,35
+my_package/models/model_utils.py,sha256=Dc3ilz3FbF0f2ZEBeuZhtLtk1qb4uAtJjGFgLpGeDXo,163
+gois1-0.1.dist-info/LICENSE,sha256=gu7iXzfJ-t9HyuzIYll_0DnLdDsPSerQaC6wLyu59C0,1868
+gois1-0.1.dist-info/METADATA,sha256=umXuK-BK6H37QP_EZOA_y8n9xqZpG6-EPKkL1ScqkTA,605
+gois1-0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+gois1-0.1.dist-info/entry_points.txt,sha256=kpSURKKWzAVJJhKXxUxDGykj6Hu4Wd_Lsyy5m7y15O4,390
+gois1-0.1.dist-info/top_level.txt,sha256=4OyEe7aVmevjXrMpt_mY6srrUUjZGHyUPvlu5sUpLn4,11
+gois1-0.1.dist-info/RECORD,,
