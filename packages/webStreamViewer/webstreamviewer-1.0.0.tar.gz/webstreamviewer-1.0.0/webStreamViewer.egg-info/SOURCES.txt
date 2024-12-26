@@ -1,0 +1,12 @@
+README.md
+license.txt
+setup.py
+webStreamViewer/__init__.py
+webStreamViewer/webViewer.py
+webStreamViewer.egg-info/PKG-INFO
+webStreamViewer.egg-info/SOURCES.txt
+webStreamViewer.egg-info/dependency_links.txt
+webStreamViewer.egg-info/requires.txt
+webStreamViewer.egg-info/top_level.txt
+webStreamViewer/templates/home.html
+webStreamViewer/templates/subpage.html
