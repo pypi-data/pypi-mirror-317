@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: meter_detection
+Version: 0.2.0
+Summary: a library for meter detection
+Author-Email: svtter <svtter@qq.com>
+License: MIT
+Requires-Python: !=3.9.7,<3.10.0,>3.9
+Requires-Dist: numpy<2.0
+Requires-Dist: opencv-python==4.10.0.84
+Requires-Dist: meterviewer>=1.3.1
+Requires-Dist: pydantic>2.0
+Requires-Dist: imgaug>=0.4.0
+Description-Content-Type: text/markdown
+
+# Detection model for Reading Area Detection
+
+Detection models for meter reading area.
+
+We use stanford-extra dataset as the basic dataset.
+
+## Install
+
+`pip install meter_detection`
+
+Install keras and torch by yourself.
+
+## Features
+
+- [x] To train with stanford-extra dataset, using `examples/notebooks/keypoint_detection.ipynb`.
+- [x] train with meter dataset, just run `examples/notebooks/meter_detection.ipynb`.
+- [x] I want to use keras as the deep learning framework to build the detection model.
+The detection model is planed to be based on `mobilenetv2` with pretrained weights.
