@@ -1,0 +1,1 @@
+This library creates the ability to use a new hash function for stronger data protection.
