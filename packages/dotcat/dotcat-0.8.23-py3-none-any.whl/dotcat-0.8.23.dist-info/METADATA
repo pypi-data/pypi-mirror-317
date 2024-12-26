@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: dotcat
+Version: 0.8.23
+Summary: Cat structured data , in style
+Author: Arthur Debert
+Author-email: arthur@debert.xzy
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: homebrew-pypi-poet (>=0.10.0,<0.11.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: twine (>=6.0.1,<7.0.0)
+Description-Content-Type: text/markdown
+
+# dotcat: Cat Structured Data, in Style
+
+Dealing with structured data in shell scripts is all but impossible.
+`dotcat` gives you the ability to fetch structured data as easily as using cat it.
+
+```bash
+# Access data by attribute path
+dotcat data.json person.name.first
+# John
+dotcat data.json person.name.last
+# Doe
+
+# Controle your output format
+dotcat data.json person.name --output=yaml
+# name:
+#   first: John
+#   last: Doe
+dotcat data.json person.name --output=json
+# {"first": "John", "last": "Doe"}
+
+# List access
+dotcat data.json person.friends@0
+# {"name":{"first": "Alice", "last": "Smith"}, "age": 25} -> item access
+dotcat data.json person.friends@2:4
+# [{"name":{"first": "Alice", "last": "Smith"}, "age": 25}, {"name":{"first": "Bob", "last": "Johnson"}, "age": 30}]  -> slice access
+dotcat data.json person.friends@4:-1
+# ... from 5th to last item
+```
+
+## The good times are here
+
+Easily read values from **JSON, YAML, TOML, and INI** files without complex scripting or manual parsing.
+
+Access deeply **nested values** using intuitive dot-separated paths (e.g., **`person.first.name`**) while controlling the **output format** with `--output` flag.
+
+Dotcat is a good **unix citizen** with well structured **exit codes** so it can take part of your command pipeline like cat or grep would.
+
+## Installation
+
+If you have a global pip install, this will install dotcat globally:
+
+```bash
+pip install dotcat
+```
+
