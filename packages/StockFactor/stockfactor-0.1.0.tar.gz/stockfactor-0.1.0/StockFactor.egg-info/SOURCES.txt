@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+StockFactor/Risk_factor.py
+StockFactor/__init__.py
+StockFactor.egg-info/PKG-INFO
+StockFactor.egg-info/SOURCES.txt
+StockFactor.egg-info/dependency_links.txt
+StockFactor.egg-info/top_level.txt
