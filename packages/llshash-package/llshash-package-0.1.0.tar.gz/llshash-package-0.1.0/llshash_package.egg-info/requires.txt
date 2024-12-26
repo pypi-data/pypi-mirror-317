@@ -1,0 +1,8 @@
+numpy>=1.18.0
+ray>=1.0.0
+
+[dev]
+pytest
+black
+twine
+wheel

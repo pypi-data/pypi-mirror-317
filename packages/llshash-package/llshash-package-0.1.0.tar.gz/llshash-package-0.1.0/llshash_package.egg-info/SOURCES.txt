@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+examples/examples.py
+llshash/__init__.py
+llshash/llshash.py
+llshash_package.egg-info/PKG-INFO
+llshash_package.egg-info/SOURCES.txt
+llshash_package.egg-info/dependency_links.txt
+llshash_package.egg-info/requires.txt
+llshash_package.egg-info/top_level.txt
+tests/test_llshash.py
