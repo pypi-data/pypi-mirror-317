@@ -1,0 +1,13 @@
+.DS_Store
+.python-version
+**__pycache__/
+**/*.pyc
+**/*.pyo
+**/project/
+**/app/
+django_cli_tool/
+**.egg-info/
+djnago_cli_venv
+dist
+tests
+.env
