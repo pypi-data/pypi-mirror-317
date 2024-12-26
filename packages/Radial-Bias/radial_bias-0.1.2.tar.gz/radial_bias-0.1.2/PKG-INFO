@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: Radial-Bias
+Version: 0.1.2
+Summary: A simple Python project library.
+Author: Raunak
+Author-email: Raunak <raunakgola9082@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/raunakgola/Radial-Bias
+Project-URL: Source, https://github.com/raunakgola/Radial-Bias
+Project-URL: Issues, https://github.com/raunakgola/Radial-Bias/issues
+Project-URL: Docs, https://github.com/raunakgola/Radial-Bias/blob/main/README.md
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.20.0
+
+# Radial-Bias
+trial for making python library
+
+### How to use this library
+
+1.  Install the library:
+
+    ```
+    pip install Radial-Bias
+    ```
+    
+3.  import the library
+
+    ```
+    from Radial_bias_Raunak_gola import module
+    module.add(4,5)
+    ```

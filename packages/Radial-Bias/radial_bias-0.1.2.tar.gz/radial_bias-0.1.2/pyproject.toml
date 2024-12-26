@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools >=61.0","wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["Radial_bias_Raunak_gola"]
+
+[project]
+name = "Radial-Bias"
+version = "0.1.2"
+description = "A simple Python project library."
+authors = [{name = "Raunak", email = "raunakgola9082@gmail.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests >=2.25.1",
+    "numpy >=1.20.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/raunakgola/Radial-Bias"
+Source = "https://github.com/raunakgola/Radial-Bias"
+Issues = "https://github.com/raunakgola/Radial-Bias/issues"
+Docs = "https://github.com/raunakgola/Radial-Bias/blob/main/README.md"
