@@ -1,0 +1,2 @@
+[console_scripts]
+mongodb-schema = mongodb_schema.cli:main
