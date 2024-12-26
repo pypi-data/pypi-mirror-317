@@ -1,0 +1,6 @@
+README.md
+setup.py
+datasets_ais.egg-info/PKG-INFO
+datasets_ais.egg-info/SOURCES.txt
+datasets_ais.egg-info/dependency_links.txt
+datasets_ais.egg-info/top_level.txt
