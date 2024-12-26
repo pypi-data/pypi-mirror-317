@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: yolo-overlay
+Version: 0.1.0
+Summary: A Python package to overlay YOLO detections on displays using a custom DLL.
+Home-page: https://github.com/wuhplaptop/yolo_overlay
+Author: wuhp
+Author-email: your.email@example.com
+License: UNKNOWN
+Keywords: yolo overlay detection computer-vision
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# yolo_overlay
+uses to overlay yolo detection over displays
+
+

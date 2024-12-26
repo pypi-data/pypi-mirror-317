@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+yolo_overlay/__init__.py
+yolo_overlay/detection.py
+yolo_overlay/overlay.py
+yolo_overlay/utils.py
+yolo_overlay.egg-info/PKG-INFO
+yolo_overlay.egg-info/SOURCES.txt
+yolo_overlay.egg-info/dependency_links.txt
+yolo_overlay.egg-info/entry_points.txt
+yolo_overlay.egg-info/requires.txt
+yolo_overlay.egg-info/top_level.txt
+yolo_overlay/resources/overlay-yolo.dll
+yolo_overlay/resources/writing50e11n.pt
+yolo_overlay/tests/__init__.py
+yolo_overlay/tests/test_overlay.py
