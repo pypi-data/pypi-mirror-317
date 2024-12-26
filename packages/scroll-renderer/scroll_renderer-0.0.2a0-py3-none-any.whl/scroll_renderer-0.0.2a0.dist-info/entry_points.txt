@@ -1,0 +1,5 @@
+[console_scripts]
+finalize_mesh = scroll_renderer.finalize_mesh:main
+large_mesh_to_surface = scroll_renderer.large_mesh_to_surface:main
+mesh_to_surface = scroll_renderer.mesh_to_surface:main
+slim_uv = scroll_renderer.slim_uv:main
