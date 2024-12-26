@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+fast_hyperfast.egg-info/PKG-INFO
+fast_hyperfast.egg-info/SOURCES.txt
+fast_hyperfast.egg-info/dependency_links.txt
+fast_hyperfast.egg-info/requires.txt
+fast_hyperfast.egg-info/top_level.txt
+hyperfast/__init__.py
