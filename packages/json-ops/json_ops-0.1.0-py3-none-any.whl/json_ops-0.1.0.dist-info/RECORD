@@ -1,0 +1,7 @@
+json_converter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+json_converter/csv_to_json.py,sha256=IOPVIKdiYhGszurle49wvD15oqP0YuijCBup3fUbPmE,4380
+json_converter/excel_to_json.py,sha256=x1EMp438-TZpbZBU6D3dljvkex2jqzS6dvQjv-o3bzY,2898
+json_ops-0.1.0.dist-info/METADATA,sha256=KfOHbjjcvKwz-GdHl7JsWYxds29MpChc-UNSowEMDuM,4270
+json_ops-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+json_ops-0.1.0.dist-info/top_level.txt,sha256=WGVJEqoXDia0hhbG0V9r8mf8oEWq1nkgxYeAsYqjVBs,15
+json_ops-0.1.0.dist-info/RECORD,,

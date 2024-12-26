@@ -1,0 +1,144 @@
+Metadata-Version: 2.1
+Name: json-ops
+Version: 0.1.0
+Summary: This is the `json-ops` package, intended to provide a collection of utilities for working with JSON data.
+Author-email: Vineet Tiwari <vineettiwari863@gmail.com>
+License: Non-commercial use only. Commercial use requires explicit permission.
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Office/Business :: Financial :: Spreadsheet
+Classifier: Topic :: Text Processing :: General
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pytest>=8.3.4
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: openpyxl>=3.1.5
+
+# json-ops
+
+This is the `json-ops` package, intended to provide a collection of utilities for working with JSON data. Currently, it includes functionality to convert CSV and Excel files and strings to JSON format. More features will be added in the future.
+
+## Modules
+
+### csv_to_json.py
+
+This script provides functionality to convert CSV (Comma Separated Values) files and strings to JSON (JavaScript Object Notation) format.
+
+#### Features
+
+- Converts CSV files to JSON files.
+- Converts CSV strings to JSON strings.
+- Handles basic data type conversions (integer, float, boolean).
+
+#### Usage
+
+##### Converting a CSV file to JSON
+
+```python
+from json_converter.csv_to_json import convert_csv_file
+
+input_file = 'path/to/your/input.csv'
+output_file = 'path/to/your/output.json'
+
+success = convert_csv_file(input_file, output_file)
+
+if success:
+    print(f"Successfully converted {input_file} to {output_file}")
+else:
+    print(f"Failed to convert {input_file}")
+```
+
+##### Converting a CSV string to JSON
+
+```python
+from json_converter.csv_to_json import convert_csv_string
+
+csv_string = "Name,Age,City\\nAlice,30,New York\\nBob,25,London"
+json_string = convert_csv_string(csv_string)
+
+if json_string:
+    print(json_string)
+else:
+    print("Failed to convert CSV string")
+```
+
+#### Limitations
+
+- **No support for nested input files:** This converter is designed to work with flat CSV files. It does not support CSV files with nested structures or hierarchical data.
+
+### excel_to_json.py
+
+This script provides functionality to convert Excel files and strings to nested JSON format based on column names.
+
+#### Features
+
+- Converts Excel files to nested JSON files.
+- Converts Excel file content (bytes) to nested JSON strings.
+- Uses column names with dot notation (e.g., `address.city`) to create nested JSON structures.
+
+#### Usage
+
+##### Converting an Excel file to nested JSON
+
+```python
+from json_converter.excel_to_json import convert_excel_file
+
+input_file = 'path/to/your/input.xlsx'
+output_file = 'path/to/your/output.json'
+
+success = convert_excel_file(input_file, output_file)
+
+if success:
+    print(f"Successfully converted {input_file} to {output_file}")
+else:
+    print(f"Failed to convert {input_file}")
+```
+
+##### Converting Excel file content (bytes) to nested JSON
+
+```python
+from json_converter.excel_to_json import convert_excel_string
+import pandas as pd
+import io
+
+data = {'address.city': ['New York', 'London'], 'name': ['Alice', 'Bob']}
+df = pd.DataFrame(data)
+buffer = io.BytesIO()
+df.to_excel(buffer, index=False)
+excel_content_bytes = buffer.getvalue()
+
+json_string = convert_excel_string(excel_content_bytes)
+
+if json_string:
+    print(json_string)
+else:
+    print("Failed to convert Excel content")
+```
+
+#### Limitations
+
+- Requires column names to follow a dot notation convention for creating nested structures.
+- Handles basic data types as inferred by pandas.
+
+## Installation
+
+No specific installation is required. Ensure you have Python and the `pandas` library installed. If you intend to run the tests, you will also need `pytest` and `openpyxl`:
+
+```bash
+pip install pandas openpyxl pytest
+```
+
+## Running Tests
+
+To run the tests for the modules:
+
+```bash
+pytest tests/test_csv_to_json.py
+pytest tests/test_excel_to_json.py
+```
+
+## License
+
+This software is for individual, non-commercial use only. Commercial use requires explicit permission from the author. Please contact vineettiwari863@gmail.com for inquiries regarding commercial licensing.
