@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ai4one
+Version: 0.0.3a1
+Summary: A small machine learning package
+Author-email: bestenevoy <bestenevoy@outlook.com>
+Project-URL: Homepage, https://github.com/bestenevoy/ai4one
+Project-URL: Issues, https://github.com/bestenevoy/ai4one/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: typer
+
+# AI4One
+
+This is a small package for machine learning.
