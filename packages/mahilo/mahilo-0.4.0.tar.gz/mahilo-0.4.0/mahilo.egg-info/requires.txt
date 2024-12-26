@@ -1,0 +1,9 @@
+openai
+fastapi
+uvicorn
+websockets
+python-dotenv
+pydantic
+rich
+langgraph==0.2.60
+pydantic-ai==0.0.15
