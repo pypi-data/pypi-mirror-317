@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: astropy-samp-ds9
+Version: 0.1.5
+Summary: Launch and interact with SAOImageDS9 using Astropy SAMP
+Home-page: https://github.com/mdcb/astropy-samp-ds9
+Author: Matthieu Bec
+Author-email: mdcb808@gmail.com
+License: GPL-3.0
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: astropy
+
+Launch and interact with SAOImageDS9 using Astropy SAMP
