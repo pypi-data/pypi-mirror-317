@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Eratosthenes.egg-info/PKG-INFO
+Eratosthenes.egg-info/SOURCES.txt
+Eratosthenes.egg-info/dependency_links.txt
+Eratosthenes.egg-info/requires.txt
+Eratosthenes.egg-info/top_level.txt
+src/dispatchqueue.cpp
+src/prime_gen.cpp
+src/include/config.h
+src/include/dispatchqueue.hpp
