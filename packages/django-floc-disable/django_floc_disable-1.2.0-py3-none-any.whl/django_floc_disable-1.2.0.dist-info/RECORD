@@ -1,0 +1,13 @@
+django_floc_disable/__init__.py,sha256=_yCFDgiqvPeGCcg-wVnbSgOXIKwLOb6MMGreNm0aLNA,53
+django_floc_disable/_version.py,sha256=MpAT5hgNoHnTtG1XRD_GV_A7QrHVU6vJjGSw_8qMGA4,22
+django_floc_disable/apps.py,sha256=hdk2F4C3Gq_A_0_hiCQ76kH5J_cUafst1VGsuay3cD8,98
+django_floc_disable/middleware.py,sha256=C4L1D351GJDtTocJ5GXcseDnFZ8I_VS4RyetRJFrGRs,420
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_settings.py,sha256=VJABg-rFjimkCZ_pK0e-S2mq0ZJaigwkp92VEqFRO_o,335
+tests/test_urls.py,sha256=24lCENMterh62QfXbLW_otoN7hjc9R5-TvdTHG4JEJ8,309
+tests/tests.py,sha256=L8x3eES7qnsz-__6ydME5oSzwXYcf7Dir2K_x6VD6kg,415
+django_floc_disable-1.2.0.dist-info/LICENSE.txt,sha256=z7-FrTDhK4o_M64U4Fzy0J3Qqq_KHJMfI5kXiZGorQk,1067
+django_floc_disable-1.2.0.dist-info/METADATA,sha256=wd5Xnk0a41cchcuBT-aD593rQusixtXd-oGq4XGkyQE,2185
+django_floc_disable-1.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_floc_disable-1.2.0.dist-info/top_level.txt,sha256=Yiq0zwSFTLetd8OljZV2IHuhuZBo-KY2KjRb8T8bZTI,26
+django_floc_disable-1.2.0.dist-info/RECORD,,
