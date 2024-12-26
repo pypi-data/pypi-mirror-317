@@ -1,0 +1,8 @@
+setup.py
+lilliepy_statics/__init__.py
+lilliepy_statics/main.py
+lilliepy_statics.egg-info/PKG-INFO
+lilliepy_statics.egg-info/SOURCES.txt
+lilliepy_statics.egg-info/dependency_links.txt
+lilliepy_statics.egg-info/requires.txt
+lilliepy_statics.egg-info/top_level.txt
