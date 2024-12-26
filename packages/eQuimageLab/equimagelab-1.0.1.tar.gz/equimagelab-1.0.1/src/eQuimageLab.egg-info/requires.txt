@@ -1,0 +1,17 @@
+pandas
+numpy
+scipy
+pywavelets
+pillow
+tifffile
+imagecodecs
+astropy
+scikit-image
+dask
+jupyterlab
+plotly
+dash>=2.18
+dash-bootstrap-components
+dash_bootstrap_templates
+dash_extensions
+tk

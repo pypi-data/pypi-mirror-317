@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eQuimageLab"
+version = "1.0.1"
+authors = [
+  { name = "Yann-Michel Niquet", email = "contact@ymniquet.fr" },
+]
+description = "eQuimageLab is a tool to postprocess astronomical images with JupyterLab notebooks"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "pandas",
+    "numpy",
+    "scipy",
+    "pywavelets",
+    "pillow",
+    "tifffile",
+    "imagecodecs",
+    "astropy",
+    "scikit-image",
+    "dask",
+    "jupyterlab",
+    "plotly",
+    "dash >= 2.18",
+    "dash-bootstrap-components",
+    "dash_bootstrap_templates",
+    "dash_extensions",
+    "tk"
+]
+
+[project.urls]
+homepage = "https://astro.ymniquet.fr/"
+documentation = "https://astro.ymniquet.fr/codes/equimagelab/docs/"
+repository = "https://github.com/ymniquet/eQuimageLab"
+
+[project.gui-scripts]
+eQuimageLab = "equimagelab.launcher:run"
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["src"]
+exclude = ["equimagelab.docs*"]
+
+[tool.setuptools.package-data]
+"equimagelab.icons" = ["icon.png", "icon.ico"]
+"equimagelab.images" = ["splash.png"]
+"equimagelab.examples" = ["*.ipynb"]
+"equimagelab.launcher" = ["*.ipynb"]
+"equimagelab.jupyter" = ["assets/*"]
+
