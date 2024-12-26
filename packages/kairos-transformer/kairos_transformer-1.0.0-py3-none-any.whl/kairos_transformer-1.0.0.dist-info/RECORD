@@ -1,0 +1,11 @@
+Transformer/__init__.py,sha256=W1LlXgUdfPfK1ZdKpgdzGDtK0UueVYeTT5oWYqf2HT0,372
+Transformer/controllers.py,sha256=8KVjKS-eY9joMrQFkCUOFU2utexd9kwI3cLerVi_KO8,149
+Transformer/exceptions.py,sha256=-KYlwfpRlolNId-N500a_UZOgQLNXMHBnOcans-bmRk,199
+Transformer/proxy.py,sha256=nJgwfnC75VBGO6enKVDNWvwFzsCnV-nuqb3O8wLOuHY,15991
+Transformer/transformer.py,sha256=DLxdb8onMbxU-lE6z5vwuSHHaER3rMDuTPn4mjjIYZs,9883
+Transformer/wrappers.py,sha256=1QWBIesOE7d2vEesuf-kDqbf7OG2NiIc0qMfMteXX0o,679
+kairos_transformer-1.0.0.dist-info/LICENSE,sha256=j6A8_XbNcQrEuL8wxoEOvtV4RXx_XL5g_wL5xhrEiGw,1063
+kairos_transformer-1.0.0.dist-info/METADATA,sha256=XA0_WwhLYLh1HTetppLhfqQUK-o_2CDNJUbECX2RDII,509
+kairos_transformer-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+kairos_transformer-1.0.0.dist-info/top_level.txt,sha256=vlSdpmrhsn9rrUPGswj3l_SutR0bzZE0AuOSFTOiuZY,12
+kairos_transformer-1.0.0.dist-info/RECORD,,
