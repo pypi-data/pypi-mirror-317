@@ -1,0 +1,9 @@
+airflow/providers/apache/iceberg/LICENSE,sha256=FFb4jd2AXnOOf7XLP04pQW6jbdhG49TxlGY6fFpCV1Y,13609
+airflow/providers/apache/iceberg/__init__.py,sha256=cpHXSSai2GUVqKZCqKj_2zIAffsYfuVJ8ZpyAiojZug,1501
+airflow/providers/apache/iceberg/get_provider_info.py,sha256=GJv-keSpFbXbCcMiZqHHCfDz3QZpe0hI1Qa83hGxbf8,2172
+airflow/providers/apache/iceberg/hooks/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/apache/iceberg/hooks/iceberg.py,sha256=BzZk7qPHLiC0nh2ATFzMd7reCwXsAV0JzaqCb_v7PQI,3208
+apache_airflow_providers_apache_iceberg-1.2.0.dist-info/entry_points.txt,sha256=25_TfVvYWpjbnCuT44nDM9DeDKZ3P_qps12i2j4MkSk,110
+apache_airflow_providers_apache_iceberg-1.2.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+apache_airflow_providers_apache_iceberg-1.2.0.dist-info/METADATA,sha256=2YM0M2HzyMa5iI6uGGEQo1XEERTM7Z8RwXLCKlQzFmg,4703
+apache_airflow_providers_apache_iceberg-1.2.0.dist-info/RECORD,,
