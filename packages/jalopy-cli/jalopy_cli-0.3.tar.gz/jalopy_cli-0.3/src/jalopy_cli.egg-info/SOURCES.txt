@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/jalopy_cli/__init__.py
+src/jalopy_cli/__main__.py
+src/jalopy_cli/jalopy.py
+src/jalopy_cli.egg-info/PKG-INFO
+src/jalopy_cli.egg-info/SOURCES.txt
+src/jalopy_cli.egg-info/dependency_links.txt
+src/jalopy_cli.egg-info/entry_points.txt
+src/jalopy_cli.egg-info/requires.txt
+src/jalopy_cli.egg-info/top_level.txt
