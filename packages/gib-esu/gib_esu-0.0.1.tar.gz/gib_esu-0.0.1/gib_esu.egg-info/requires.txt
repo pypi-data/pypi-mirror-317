@@ -1,0 +1,10 @@
+requests<3.0.0,>=2.32.3
+pydantic<3.0.0,>=2.9.2
+python-dotenv>=1.0.0
+
+[dev]
+pytest>=8.0.0
+black
+flake8
+mypy
+pre-commit
