@@ -1,0 +1,8 @@
+README.rst
+__init__.py
+setup.py
+./__init__.py
+authinfo.egg-info/PKG-INFO
+authinfo.egg-info/SOURCES.txt
+authinfo.egg-info/dependency_links.txt
+authinfo.egg-info/top_level.txt

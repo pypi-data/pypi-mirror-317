@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: authinfo
+Version: 0.0.3
+Summary: Parse credentials in ~/.authinfo files, either plain text or GPG-encrypted.
+Description-Content-Type: text/x-rst
+
+########
+authinfo
+########
+
+
+Introduction
+############
+
+This module provides access to authentication credentials stored in
+``.authinfo`` files.
+
+``.authinfo`` files are based on ``.netrc`` files, and allow a bit more
+flexibility, but losing macro support.
+
+They contain entries, formated as plain text, with ``key=${value}``
+format fields.
+
+``.authinfo`` files are multiprotocol and allow to do advanced matching.
+
+``.authinfo`` files are typically encrypted using GPG, and this
+library will invoke GPG to decrypt ``.authinfo.gpg`` files.
+
+
+References:
+
+- ``.netrc`` stuff:
+
+  - ``import netrc``: https://docs.python.org/3/library/netrc.html
+  - https://linux.die.net/man/5/netrc
+  - https://www.gnu.org/software/inetutils/manual/html_node/The-_002enetrc-file.html
+
+- ``.authinfo`` stuff:
+
+  - https://www.emacswiki.org/emacs/GnusAuthinfo
+
+  - https://www.gnu.org/software/emacs/manual/html_node/gnus/NNTP.html#index-nntp_002dauthinfo_002dfunction
+
+  - emacs's `auth-source.el`, function `auth-source-netrc-parse`.
+
+
+Usage
+#####
+
+TL;DR: Here's an example, and for now refer to the tests and code for more.
+
+.. code:: python
+
+   import authinfo
+
+   ...
+
+   entry = get_entry(
+    machine='smtp.example.org',
+   )
+
+
