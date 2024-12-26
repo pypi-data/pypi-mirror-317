@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: easy_smr
+Version: 0.1.1
+Summary: Easy Sagemaker Ops for R projects
+Author: Prateek
+Author-email: prteek@icloud.com
+Requires-Python: >=3.11
+License-File: LICENSE
+
+This package makes it easier to work with Sagemaker by enabling rapid prototyping with local training, processing and deployment.
+And correspondingly training, processing and deployment on cloud.
+This is very much an experimental package and API is likely to evolve and may break.
+Recommended to validate before updating.
+    
