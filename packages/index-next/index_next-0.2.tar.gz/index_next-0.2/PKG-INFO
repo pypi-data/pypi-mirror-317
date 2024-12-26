@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: index_next
+Version: 0.2
+Summary: usage: from index_next import get_next_index
+Author: Artie Dins
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/artiedins/index_next
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# index_next
+
+One simple python function to save used indices to a locked temp file and return the next unused one
+
+## Usage
+
+```python
+from index_next import get_next_index
+idx = get_next_index()
+```

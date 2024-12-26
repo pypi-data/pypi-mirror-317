@@ -1,0 +1,11 @@
+[project]
+name = "index_next"
+version = "0.2"
+description = "usage: from index_next import get_next_index"
+readme = "README.md"
+
+authors = [{name = "Artie Dins"}]
+license = {text = "Apache-2.0"}
+
+[project.urls]
+Homepage = "https://github.com/artiedins/index_next"

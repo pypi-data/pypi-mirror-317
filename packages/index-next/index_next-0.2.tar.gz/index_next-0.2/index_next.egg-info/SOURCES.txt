@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+index_next/__init__.py
+index_next.egg-info/PKG-INFO
+index_next.egg-info/SOURCES.txt
+index_next.egg-info/dependency_links.txt
+index_next.egg-info/top_level.txt
