@@ -1,0 +1,15 @@
+LICENSE.txt
+pyproject.toml
+setup.py
+app/table_partitionare/__init__.py
+app/table_partitionare.egg-info/PKG-INFO
+app/table_partitionare.egg-info/SOURCES.txt
+app/table_partitionare.egg-info/dependency_links.txt
+app/table_partitionare.egg-info/not-zip-safe
+app/table_partitionare.egg-info/requires.txt
+app/table_partitionare.egg-info/top_level.txt
+app/table_partitionare/src/__init__.py
+app/table_partitionare/src/funcs.py
+app/table_partitionare/src/help_funcs.py
+app/table_partitionare/src/partition_db.py
+app/table_partitionare/src/utils.py

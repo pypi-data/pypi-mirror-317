@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "table_partitionare"
+version = "1.0.0"
+description = "A library for partitioning PostgreSQL tables"
+authors = [{ name = "Ehsan S. Mohammadi", email = "ehsannsam@gmail.com" }]
+license = { text = "MIT" }
+dependencies = [
+    "greenlet==3.1.1",
+    "psycopg2-binary",
+    "python-dotenv",
+    "SQLAlchemy",
+]
