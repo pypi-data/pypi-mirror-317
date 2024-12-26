@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/qwdataapi/__init__.py
+src/qwdataapi/client.py
+src/qwdataapi.egg-info/PKG-INFO
+src/qwdataapi.egg-info/SOURCES.txt
+src/qwdataapi.egg-info/dependency_links.txt
+src/qwdataapi.egg-info/requires.txt
+src/qwdataapi.egg-info/top_level.txt
+src/qwdataapi/proto/qwdata_pb2.py
+src/qwdataapi/proto/qwdata_pb2_grpc.py
