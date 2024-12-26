@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: matrix_operations_amber
+Version: 0.2.0
+Summary: A simple package for matrix operations
+Author: Amber Hou
+Author-email: 1471147972@qq.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+#  Matrix Operations of Amber Hou
+
+[![PyPI version](https://badge.fury.io/py/matrix_operations.svg)](https://badge.fury.io/py/matrix_operations)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+A simple Python package for matrix operations including addition and multiplication.
+
+## Installation
+
+To install the `matrix_operations_amber` package, run the following command in your terminal:
+
+```bash
+pip install matrix_operations_amber
+```
+## Usage
+### Matrix Addition
+````bash
+from matrix_operations_amber import add_matrices
+
+matrix1 = [[1, 2], [3, 4]]
+matrix2 = [[5, 6], [7, 8]]
+
+result_add = add_matrices(matrix1, matrix2)
+print("Matrix Addition Result:", result_add)
+````
+### Matrix Multiplication
+``````bash
+from matrix_operations_amber import multiply_matrices
+
+matrix1 = [[1, 2], [3, 4]]
+matrix2 = [[5, 6], [7, 8]]
+
+result_multiply = multiply_matrices(matrix1, matrix2)
+print("Matrix Multiplication Result:", result_multiply)
+``````
+## Features
+
+    Matrix Addition: Adds two matrices of the same dimensions.
+    Matrix Multiplication: Multiplies two matrices if the number of columns in the first matrix is equal to the number of rows in the second.
+## CONTRIBUTING
+Contributions are welcome! Please read CONTRIBUTING.md for details on how to contribute.
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+## Contact
+For any questions or suggestions, please contact me at 1471147972@qq.com.
