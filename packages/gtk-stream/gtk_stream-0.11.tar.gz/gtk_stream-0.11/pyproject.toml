@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gtk-stream"
+dynamic = [ "version" ]
+description = "A simple stream-oriented GUI protocol"
+authors = [
+ { name = "Marc Coiffier", email = "marc.coiffier@univ-grenoble-alpes.fr" }
+]
+readme = "README.md"
+
+dependencies = [ "pygobject" ]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Environment :: X11 Applications :: GTK",
+  "Topic :: Software Development :: User Interfaces",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  ]
+
+[tool.setuptools_scm]
+root = ".."
+version_file = "gtk_stream/_version.py"
+
+[project.urls]
+Homepage = "https://coiffier.net/projects/gtk-stream/"
+Source = "https://coiffier.net/projects/gtk-stream/code/"
+
+[project.scripts]
+gtk-stream = "gtk_stream.command_line:main"

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gtk-stream
+Version: 0.11
+Summary: A simple stream-oriented GUI protocol
+Author-email: Marc Coiffier <marc.coiffier@univ-grenoble-alpes.fr>
+Project-URL: Homepage, https://coiffier.net/projects/gtk-stream/
+Project-URL: Source, https://coiffier.net/projects/gtk-stream/code/
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+Requires-Dist: pygobject
+
+GTK-Stream
+==========
+
+  - Pretty documentation : [link](https://coiffier.net/projects/gtk-stream/)
+  - Same documentation, but less pretty : [link](doc/index.md)
