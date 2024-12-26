@@ -1,0 +1,11 @@
+typed_macro/__init__.py,sha256=QeDPBW9pNLF0eBAm5HpuuYLejbg3Vgo-AmUEsLmlHeQ,3051
+typed_macro/constants.py,sha256=J6yWbVx98k4_reXToIdllWmmeuwtgzDLc0zSc41l698,184
+typed_macro/file_writers.py,sha256=aijwDHGfreD1qF1t624r82DLMznZl1nGwj4Q1U0XkOo,2304
+typed_macro/inline_codegen.py,sha256=Lzi3W-Pgtrfmncua2ukxyVF4LClbLTFZ2OkOcIl66gM,4083
+typed_macro/macro_codegen.py,sha256=uSw-F0g5Z39P1inJswFQPwzJJHjNDT42J4RFbBHVnIA,3946
+typed_macro/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+typed_macro/util.py,sha256=32r7wOKPeyMXVu1mCuSwoHROtva8ezQoj-4zGKEV7R4,1804
+typed_macro-0.1.3.dist-info/METADATA,sha256=lH9xrIYr1E0Cyt4W84BFimggdmSP6Hn3iNFNo4csGYk,2646
+typed_macro-0.1.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+typed_macro-0.1.3.dist-info/top_level.txt,sha256=hFZdaHFu32h6VawxNPxlnJYZmjdcrGi3WQUPxk-1Rpk,12
+typed_macro-0.1.3.dist-info/RECORD,,
