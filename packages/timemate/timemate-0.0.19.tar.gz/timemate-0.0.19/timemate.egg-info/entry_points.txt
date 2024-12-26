@@ -1,0 +1,2 @@
+[console_scripts]
+timemate = modules.__main__:main
