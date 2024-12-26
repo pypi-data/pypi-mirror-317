@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: trent
+Version: 0.2.9
+Author-email: Vasyl Tsiura <morfey.rulit@gmail.com>
+Maintainer-email: Vasyl Tsiura <morfey.rulit@gmail.com>
+License: Apache Software License
+Project-URL: Homepage, https://github.com/VasilevsVV/trent
+Project-URL: Issues, https://github.com/VasilevsVV/trent/issues
+Keywords: Sequence,Collection,mapping,stream,functional,iteration,concurrency,group,by
+Requires-Python: >=3.10.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: funcy
+Requires-Dist: psutil
+
+# trent
+Convenient Collection/Sequence/Iterable processing for python.
+
+Inspired by Clojure mapping.

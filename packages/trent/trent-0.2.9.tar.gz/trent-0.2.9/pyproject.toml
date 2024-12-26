@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "trent"
+version = "0.2.9"
+
+authors = [
+    {name = "Vasyl Tsiura", email = "morfey.rulit@gmail.com"}
+]
+maintainers = [
+    {name = "Vasyl Tsiura", email = "morfey.rulit@gmail.com"}
+]
+
+readme = "README.md"
+requires-python = ">=3.10.12"
+keywords = [
+    "Sequence", "Collection", "mapping", "stream",
+    "functional", "iteration", "concurrency", "group", "by"]
+license = {text = "Apache Software License"}
+
+
+dependencies = [
+    "funcy",
+    "psutil"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/VasilevsVV/trent"
+Issues = "https://github.com/VasilevsVV/trent/issues"
+
+
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+python_files = [
+    'test_*.py', 
+    '*_test.py'
+]
+python_functions = [
+    'test_*',
+    '*_test'
+    ]
+testpaths = [
+    "test"
+]
+
+
+
+[tool.pyright]
+
+typeCheckingMode = "standard"
