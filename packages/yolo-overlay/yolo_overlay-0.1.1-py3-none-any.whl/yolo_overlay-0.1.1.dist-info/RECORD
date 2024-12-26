@@ -1,0 +1,13 @@
+yolo_overlay/__init__.py,sha256=Noq5N8SuJBH_whrOymVObl0P1NDtvqAPpTdwTbqHric,63
+yolo_overlay/detection.py,sha256=OQDp7Rb_Ths2y2c_mKRKi1mh64FRJMRp7GSDHqJbzJo,4343
+yolo_overlay/overlay.py,sha256=DwLi8s4VVEk1LQ3Y1wYbbyEDIIfrEhUa7WhWarfecu8,5780
+yolo_overlay/utils.py,sha256=pybvI-wE3TSU0DRTWorIV2zz_MjnSlnY1Esi0t6Du8s,1155
+yolo_overlay/resources/overlay-yolo.dll,sha256=HPxzsKPv6l-pDv8L_GrTtyl4Kt8rn-bFiOA1IsG0QWc,143872
+yolo_overlay/resources/writing50e11n.pt,sha256=MPRH7DXuF8ErZ9txJ1t0LdQzb-DQTELeQ4Sm-CWRZdU,5470867
+yolo_overlay/tests/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+yolo_overlay/tests/test_overlay.py,sha256=TqTfLEd4RH-SY6NBB-FlW6bWdOfB0yf9dwcVDdJHcH4,2005
+yolo_overlay-0.1.1.dist-info/METADATA,sha256=uhwYvyIKyyFZwe8P8FKQawY4B8_RbBbbsXbGttGBL4g,4814
+yolo_overlay-0.1.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+yolo_overlay-0.1.1.dist-info/entry_points.txt,sha256=3lRL5In1JNH7dzgKiBnWk5_qXdU3wJDw5dnYz-rXfR0,56
+yolo_overlay-0.1.1.dist-info/top_level.txt,sha256=eM8nv1DhFH_m7W6FUtcmmu3v33pjhI3Q3Y2lgg4g16k,13
+yolo_overlay-0.1.1.dist-info/RECORD,,
