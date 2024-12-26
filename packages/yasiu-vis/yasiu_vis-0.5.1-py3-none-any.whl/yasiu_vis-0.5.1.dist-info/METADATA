@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: yasiu-vis
+Version: 0.5.1
+Summary: High level, simple data visualisation
+Author: Grzegorz Krug
+Author-email: kruggrzegorz@gmail.com
+Maintainer: Grzegorz Krug
+Maintainer-email: kruggrzegorz@gmail.com
+License: MIT
+Project-URL: 1. Native Package, https://pypi.org/project/yasiu-native/
+Project-URL: 2. Math Package, https://pypi.org/project/yasiu-math/
+Project-URL: 3. Image Package, https://pypi.org/project/yasiu-image/
+Project-URL: 4. Visualisation Package, https://pypi.org/project/yasiu-vis/
+Project-URL: 5. Source Code, https://github.com/GrzegorzKrug/yasiu-vis
+Keywords: numpy,pandas,matplotlib,pyplot,visualisation,dataframe,keras
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Framework :: Matplotlib
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: yasiu-math
+Requires-Dist: numpy
+
+# Readme of `yasiu-vis`
+
+High level functions, to quickly visualise data frames.
+
+# Installation
+
+```shell
+pip install yasiu-vis
+```
+# Package Contains
+- **ykeras**: Visualisation made for keras.Model
+- **ypandas**: Visualisation made for pandas.DataFrame
+
+# Examples
+
+## Pandas - Drawing data frame
+
+```py
+from yasiu_vis.ypandas import summary_plot
+
+
+# df: pandas.DataFrame
+
+summary_plot(df)
+summary_plot(df, group="column-name")
+summary_plot(
+    df, group_key='petal width (cm)', max_groups=4,
+    plot_params=dict(alpha=0.7), legend_place='subplot'
+)
+```
+![Summary Plot](./pics/summaryPlot.png)
+
+## Keras - Ploting Neural Network layers
+```py
+from yasiu_vis.ykeras import plotLayersWeights
+from matpotlib import pyplot as plt
+import keras
+
+model : keras.models.Sequential # Keras compiled model
+
+plotLayersWeights(model.layers, innerCanvas=1, figsize=(20, 15), dpi=70, scaleWeights=1000)
+plt.subplots_adjuts(wspace=0.1, top=0.95)
+# Adjust values per model and plot size
+plt.tight_layout()
+# use all space in figure
+plt.show()
+```
+
+![Keras Weights](./pics/kerasLayers.png)
+
+# All packages
+
+[1. Native Package](https://pypi.org/project/yasiu-native/)
+
+[2. Math Package](https://pypi.org/project/yasiu-math/)
+
+[3. Image Package](https://pypi.org/project/yasiu-image/)
+
+[4. Visualisation Package](https://pypi.org/project/yasiu-vis/)
+
