@@ -1,0 +1,11 @@
+openai>=1.33.0
+pydantic
+
+[dev]
+jinja
+numpy
+pytest
+requests
+tqdm
+pre-commit
+instructor
