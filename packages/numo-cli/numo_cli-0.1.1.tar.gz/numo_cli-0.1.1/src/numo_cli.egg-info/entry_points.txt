@@ -1,0 +1,3 @@
+[console_scripts]
+numo = cli.main:main
+numo-cli = cli.main:main
