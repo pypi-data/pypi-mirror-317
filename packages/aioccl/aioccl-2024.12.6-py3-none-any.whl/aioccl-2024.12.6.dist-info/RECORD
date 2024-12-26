@@ -1,0 +1,9 @@
+aioccl/__init__.py,sha256=XnegKtbvHvUTwVuuWNLb4LB9ZuGGar0xrZYOqk7scyg,133
+aioccl/device.py,sha256=uNavxCAu1ULuk6xEOGC4URuqckw14vDXM6i-mGwN6nY,5462
+aioccl/sensor.py,sha256=tX07jxkE2I8VdfCH3vzBINMtg5kI5ke8oOLE3pXRUeE,16920
+aioccl/server.py,sha256=a4Mjo2KNSOuCcna1YEv6SYzJx-h0a_Qq_EbyCogTHr4,3209
+aioccl-2024.12.6.dist-info/LICENSE,sha256=PBRsTHchx7o0TQ2R2ktEAfFmn1iNHTxcOP_xaeuSAuo,11349
+aioccl-2024.12.6.dist-info/METADATA,sha256=JgQI_OeeX_wPM4CArB02kqQdDqT6QgebURbAbmy2n9E,768
+aioccl-2024.12.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+aioccl-2024.12.6.dist-info/top_level.txt,sha256=-xIJfyfXTaW_EH7XCIHyxjSSSwjLmawa2qhsrHZH1vA,7
+aioccl-2024.12.6.dist-info/RECORD,,
