@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: orkestr8-sdk
+Version: 0.0.189
+Summary: SDK to easily interact with Orkestr8 ML entities
+Author: Antsthebul
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv
+Requires-Dist: boto3
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: notebook; extra == "dev"
+
+# orkestr8-sdk
+
+Python SDK to simplify resource accumulation and model training. This SDK is used by Orkestr8-ML.
+
+## Testing
+
+The venv needs to be manually invoked. Poetry is only used as a dep resolver
+1. `venv/scripts/activate`: Active local venv
+2. `make test`
+
+## Development
+
+Run this command to automatically create a new version
+
+```
+make tag version=v0.0.178 message="'your message. Notice the double quotes'"
+```
