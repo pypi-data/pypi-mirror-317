@@ -1,0 +1,7 @@
+cvmcore/__init__.py,sha256=66p-Hw2LB004k10bMYKes92wJ4Bf8eIBM_6hB19Zh4w,343
+cvmcore/cvmcore.py,sha256=BYZaVCjF5aQ9qeryeO4usZaRyxeBBo1rVxrChoxIoQ8,56094
+cvmcore/test.py,sha256=YGPu3c2nZ5IraZIKzmYlA1kqRokDVHjhagPDhvGji1M,73
+cvmcore-0.2.0.dist-info/METADATA,sha256=rUnEMc7oLq8qx05JPsPm4i-yMMmULVrO8MrgV1jgot4,20891
+cvmcore-0.2.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cvmcore-0.2.0.dist-info/top_level.txt,sha256=uITaC3b1yS_4wIiQ1xciWUvqFGPI0gtXM_DGkPWvOGA,8
+cvmcore-0.2.0.dist-info/RECORD,,
