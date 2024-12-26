@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/result.py
+src/tonkinese_grid.py
+src/tonkinese_grid.egg-info/PKG-INFO
+src/tonkinese_grid.egg-info/SOURCES.txt
+src/tonkinese_grid.egg-info/dependency_links.txt
+src/tonkinese_grid.egg-info/top_level.txt
+tests/test_textgrid.py
