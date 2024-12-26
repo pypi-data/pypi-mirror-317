@@ -1,0 +1,110 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    if: "!contains(github.event.head_commit.message, 'ci:skip')"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: 'pip'
+
+      - name: "Install Dependencies"
+        run: pip install -r requirements.dev.txt
+
+      - name: "Build"
+        run: make
+
+  publish-dev:
+    if: "contains(github.event.head_commit.message, 'ci:publish:dev')"
+    needs: build
+
+    runs-on: ubuntu-latest
+    environment: testpypi
+
+    permissions:
+      id-token: write  # mandatory for trusted publishing in pypi
+      contents: write  # allows committing to the repository
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: 'pip'
+
+      - name: "Install Dependencies"
+        run: pip install -r requirements.publish.txt
+
+      - name: "Build dev revision version and publish to PyPI"
+        run: |
+          export VERSION=$(./script/bump-version.sh revision pyproject.toml)
+          make build
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -a -m "Bump development version to $VERSION"
+          git push
+
+      - name: "Publish package distributions to PyPI"
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+
+  publish-release:
+    if: "contains(github.event.head_commit.message, 'ci:publish:release')"
+    needs: build
+
+    runs-on: ubuntu-latest
+    environment: pypi
+
+    permissions:
+      id-token: write  # mandatory for trusted publishing in pypi
+      contents: write  # allows committing to the repository
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: 'pip'
+
+      - name: "Install Dependencies"
+        run: pip install -r requirements.publish.txt
+
+      - name: "Build package and bump version"
+        run: |
+          export VERSION=$(./script/release-version.sh pyproject.toml)
+          make build
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -a -m "Release version $VERSION"
+          git tag $VERSION
+          git push
+          git push --tags
+
+      - name: "Publish package distributions to PyPI"
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+      - name: "Bump to the next patch development version"
+        run: |
+          export VERSION=$(./script/bump-version.sh patch pyproject.toml)
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -a -m "Bump to the next patch development version $VERSION"
+          git push
