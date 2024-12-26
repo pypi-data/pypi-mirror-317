@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+joker/stream/__init__.py
+joker/stream/base.py
+joker/stream/shell.py
+joker_stream.egg-info/PKG-INFO
+joker_stream.egg-info/SOURCES.txt
+joker_stream.egg-info/dependency_links.txt
+joker_stream.egg-info/not-zip-safe
+joker_stream.egg-info/requires.txt
+joker_stream.egg-info/top_level.txt
