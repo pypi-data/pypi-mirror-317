@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.cfg
+tinyworld/__init__.py
+tinyworld/audio.py
+tinyworld/cli.py
+tinyworld/config.py
+tinyworld/core.py
+tinyworld/effects.py
+tinyworld/shapes.py
+tinyworld/transitions.py
+tinyworld/video.py
+tinyworld.egg-info/PKG-INFO
+tinyworld.egg-info/SOURCES.txt
+tinyworld.egg-info/dependency_links.txt
+tinyworld.egg-info/requires.txt
+tinyworld.egg-info/top_level.txt
