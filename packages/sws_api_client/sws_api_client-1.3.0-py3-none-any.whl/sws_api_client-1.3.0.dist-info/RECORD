@@ -1,0 +1,16 @@
+sws_api_client/__init__.py,sha256=EmVBCUDSjqSu5SXMDahwKmhQqmG0n6UkPhCPu8LNcEY,358
+sws_api_client/auth.py,sha256=hWQXFIP-fngcrM9lxynyFGgB_50bMQ9vXPVAQt9waDo,149
+sws_api_client/codelist.py,sha256=474xE8e3RZxCQVWgSufIteeNqWgg-FcEcmvQZgv1990,863
+sws_api_client/datasets.py,sha256=UigwjbQYU6PmVmEHD6tNOaNdI8o6or6tB_pljK-ilKQ,11236
+sws_api_client/datatable.py,sha256=FgEinV39dg8u87zJXYONpT2VRlCbfw0qRyDTg_bN520,2307
+sws_api_client/discover.py,sha256=1EsGQ9LrS6FUPdwNp4nuFLFeAnLVGwQP0c2SMkGBNw8,4197
+sws_api_client/generic_models.py,sha256=FprVrXr5zxuSHPh-sZ_F3odXGEu-PNYaFyh7WE6RSz4,370
+sws_api_client/plugins.py,sha256=CXcjnzPRKeVg-K_067wA19ODJEB1fJ3XnzubmyUQHng,4917
+sws_api_client/sws_api_client.py,sha256=gS1MWolylZlybCABwHKCUbgEs-CdzpuZ6W7p9SzLe2U,9671
+sws_api_client/tags.py,sha256=GwwE7_aTaMy_vC6p8xyB_7d4cYQJ-WVjHb8njWdT-9A,10208
+sws_api_client/tasks.py,sha256=BaPd4FZtDB65EGiRIEL7dHzd81Z_EixKOO9b_0J9K94,7625
+sws_api_client/token.py,sha256=XzZX76w_GbgNEdRBv6y7_pRcA-0_iGRYnRcDIP0Fmts,1352
+sws_api_client-1.3.0.dist-info/LICENSE,sha256=zFzeb_j_6pXEHwH8Z0OpIkKFJk7vmhZjdem-K0d4zU4,1073
+sws_api_client-1.3.0.dist-info/METADATA,sha256=mXZZInKf8aFuQIubDd_cf9xxsE7PsCl4U708_qu7LME,5667
+sws_api_client-1.3.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+sws_api_client-1.3.0.dist-info/RECORD,,
