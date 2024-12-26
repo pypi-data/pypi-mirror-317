@@ -1,0 +1,2 @@
+[console_scripts]
+versioalueet = versioalueet.cli:main
