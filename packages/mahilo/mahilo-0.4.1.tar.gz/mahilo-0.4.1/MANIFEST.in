@@ -1,0 +1,11 @@
+exclude examples/*
+exclude mahilo/frontend.py
+exclude mahilo/orchestrator.py
+exclude mahilo/orchestrator_re.py
+exclude Dockerfile
+exclude frontend.Dockerfile
+exclude test_orchestrator.py
+exclude test.ipynb
+exclude test.md
+exclude game_app/*
+exclude assets/* 
