@@ -1,0 +1,10 @@
+keepassxc_run/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+keepassxc_run/__main__.py,sha256=5jJg_JaIEERcyB_qxTSjD7cMlR4iBwlkLHBaWJbBd6U,65
+keepassxc_run/cli.py,sha256=rKsuSt-9OMI3EAPI41QksHXEYBVxVwyBz3taj8KWkcM,2875
+keepassxc_run/process.py,sha256=CN5QxViWStd0lnuNyZOZKev0bnnY1IQYDGkU9RIXrq8,1963
+keepassxc_run/secret.py,sha256=WA0i06yff6QJcEggni0a-Pi3GfCouak25a0x1m9AV5o,2994
+keepassxc_run-0.1.0.dist-info/METADATA,sha256=rla1SbFdYn8iAKz07GfD_f8moCVo8cRei0jqoCCOzmg,4814
+keepassxc_run-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+keepassxc_run-0.1.0.dist-info/entry_points.txt,sha256=enPVgDriwC0cjsKJBSNE3EyE8XTTvrEN0ULrVLu8RM0,57
+keepassxc_run-0.1.0.dist-info/licenses/LICENSE,sha256=cON9wNIf23vxQXOJgfIfphnt2gdfr1nubM9OS0QzKRc,1070
+keepassxc_run-0.1.0.dist-info/RECORD,,
