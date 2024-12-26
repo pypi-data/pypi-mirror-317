@@ -1,0 +1,3 @@
+getmyip
+r53dns
+setmy53dns
