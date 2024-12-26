@@ -1,0 +1,12 @@
+airflow/providers/salesforce/LICENSE,sha256=FFb4jd2AXnOOf7XLP04pQW6jbdhG49TxlGY6fFpCV1Y,13609
+airflow/providers/salesforce/__init__.py,sha256=i_xfisP0RbvCkd55702dysfCw4dQ_BdfUDuRnIQFClA,1497
+airflow/providers/salesforce/get_provider_info.py,sha256=EAXMH0PLz0Jj6yfhxUs4GrO6t4OLn_Tq8j9ZLm7MfQk,3514
+airflow/providers/salesforce/hooks/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/salesforce/hooks/salesforce.py,sha256=3zuI9BPvXV3MBnhmdqDn379QfN37SwAVZeqYj4EM0b4,18247
+airflow/providers/salesforce/operators/__init__.py,sha256=9hdXHABrVpkbpjZgUft39kOFL2xSGeG4GEua0Hmelus,785
+airflow/providers/salesforce/operators/bulk.py,sha256=b2E7SCywl5MN4Y2FyubQuxmVWEiXrykNbkgT9SurEM0,4921
+airflow/providers/salesforce/operators/salesforce_apex_rest.py,sha256=qY8gZW654gRvohcCDU7x9MJfN2R-xVJerK1kdeh0kaU,2554
+apache_airflow_providers_salesforce-5.9.0.dist-info/entry_points.txt,sha256=r2VnqH6q_j-DrI0ks0yDjIMHN9sHv_tUVYMZ2MVmViQ,106
+apache_airflow_providers_salesforce-5.9.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+apache_airflow_providers_salesforce-5.9.0.dist-info/METADATA,sha256=LQvip_WffvDz5Dig0sDMpR-OyayEgW0JQGJbNnjUqUc,5061
+apache_airflow_providers_salesforce-5.9.0.dist-info/RECORD,,
