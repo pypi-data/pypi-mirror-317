@@ -1,0 +1,16 @@
+code_animate/__init__.py,sha256=CuzU7pK8Wm1vbH4KIvMc2iolc5Qb4FTvECdf_nltTEk,68
+code_animate/animate.py,sha256=WBuaXbf4fWwESzgS6lXzt7Ic5MwHBuBa1uNy3zmU960,2698
+code_animate/framify.py,sha256=6KMlMPAOpjsBB4zxAcr9hfAjjya6iN2gyUwJq4cenx8,1395
+code_animate/main.py,sha256=phn5ucVRbDQ4vQHhx1LxwL878Ernjc128cDv0SrTLfo,91
+code_animate/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+code_animate/helpers/classes.py,sha256=3gmWBCDs6KPQ3Z01sWJGIVWZSJ6JWNFABBeEaI-oDb0,681
+code_animate/helpers/draw_helper.py,sha256=M6HQsR82SN5orkizXgozCM-B3-JRiukU0je6z8ee3EY,1339
+code_animate/helpers/exceptions.py,sha256=QCPc6RTXSpREvO2caQw7CCmgok08Z1AvkZgyu7iwxHA,101
+code_animate/helpers/frame_helper.py,sha256=uR7NSa04cWPaRo5YKib4gvJ6ip9qSZcsZxYJkOhBdws,2064
+code_animate/helpers/func_helper.py,sha256=FKKHa9BLMJF9GmTV5rWCFQjWKfL-az2PS_O5nLj1sL0,1598
+code_animate/helpers/main_helper.py,sha256=7Y7ne6qKDULSW6oZzNc37J6JV1SJT5Le0eoHQXqDMxY,3000
+code_animate/helpers/string_helper.py,sha256=_psAneN8LLhuWPSFCZb2t3K4-LUqnLBIsXimsHeRCAw,1848
+code_animate-0.0.5.dist-info/METADATA,sha256=AWsXQB0Y_6S86_jEBBgM0_YlQ0-c7uLkCm19skNQazA,1507
+code_animate-0.0.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+code_animate-0.0.5.dist-info/licenses/LICENSE,sha256=jCWdze2olLbjt4A6VX2rE9ESCf9cMcKVWFQ84E9EKKw,17
+code_animate-0.0.5.dist-info/RECORD,,

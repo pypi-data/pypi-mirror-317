@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: code_animate
+Version: 0.0.5
+Summary: A package to animate your code step by step in temrinal
+Project-URL: Homepage, https://github.com/zlliu246/code_animate
+Project-URL: Issues, https://github.com/zlliu246/code_animate/issues
+Author-email: Liu Zuo Lin <zlliu246@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: colorama
+Requires-Dist: default-deepcopy
+Requires-Dist: unprint
+Description-Content-Type: text/markdown
+
+
+# code_animate
+Allows you to animate your code step by step. 
+
+Note - press Enter to conitnue to next step
+
+# Installation
+```
+pip install code_animate
+```
+
+# Quickstart
+```python
+from code_animate import animate
+
+@animate
+def triangle(height: int) -> str:
+    output: str = ""
+
+    for i in range(height):
+        num_stars: int = i + 1
+        stars_str: str = "*" * num_stars
+        output += stars_str + "\n"
+
+    return output
+
+print(triangle(4))
+
+"""
+def triangle(height: int) -> str:         
+                                          
+    output: str = ""                      {'height': 4, 'output': ''}
+    for i in range(height):               
+        num_stars: int = i + 1            {'i': 3, 'num_stars': 4}
+        stars_str: str = "*" * num_stars  {'stars_str': '****'}
+        output += stars_str + "\n"        {'output': '*\n**\n***\n****\n'}
+    return output     
+"""
+```
