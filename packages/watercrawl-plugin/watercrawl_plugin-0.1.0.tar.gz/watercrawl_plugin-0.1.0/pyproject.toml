@@ -1,0 +1,21 @@
+[project]
+name = "watercrawl-plugin"
+version = "0.1.0"
+dependencies = [
+    'jsonschema==4.23.0'
+]
+authors = [
+  { name="AmirMohsen Asaran", email="info@watercrawl.ai" },
+]
+description = "This project used for writing WaterCrawl plugins"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/watercrawl/watercrawl-plugin"
+Issues = "https://github.com/watercrawl/watercrawl/issues"
