@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Ankush_project"
+version = "1.0.0"
+description = "Ankush_project"
+keywords = ["Ankush","Ankus_project"]
+dependencies = [
+         "requests"
+]
+
+[project.scripts]
+say_hello = "python_package.say_hello:main"
+
+[tool.setuptools.packages.find]
+include = ["python_package","python_package."]
+
+[tools.setuptools.package-data]
+"python_package" = ["**/*.py"]
+
