@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+json_converter/__init__.py
+json_converter/csv_to_json.py
+json_converter/excel_to_json.py
+json_ops.egg-info/PKG-INFO
+json_ops.egg-info/SOURCES.txt
+json_ops.egg-info/dependency_links.txt
+json_ops.egg-info/requires.txt
+json_ops.egg-info/top_level.txt
+tests/test_csv_to_json.py
+tests/test_excel_to_json.py
