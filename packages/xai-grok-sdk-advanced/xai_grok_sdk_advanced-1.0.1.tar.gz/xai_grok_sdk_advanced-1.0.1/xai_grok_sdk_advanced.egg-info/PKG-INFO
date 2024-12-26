@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: xai-grok-sdk-advanced
+Version: 1.0.1
+Summary: Advanced SDK for interacting with xAI Grok API
+Home-page: https://github.com/wealth0000110/xai_grok_sdk
+Author: Einstein Nsekele
+Author-email: einkap1@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/yourusername/xai_grok_sdk/issues
+Project-URL: Source Code, https://github.com/yourusername/xai_grok_sdk
+Project-URL: Documentation, https://github.com/yourusername/xai_grok_sdk/wiki
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
