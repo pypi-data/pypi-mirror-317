@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: FatmaBouzgarrou-DATALIB
+Version: 0.1.0
+Summary: A simple data manipulation and analysis library
+Author: Fatma Bouzgarrou
+Author-email: fatmabouzgarrou6@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+
+# DataLib
+
+**DataLib** est une bibliothÃ¨que Python simple pour la manipulation, l'analyse et la visualisation des donnÃ©es. Elle fournit des outils pratiques pour normaliser des donnÃ©es, gÃ©rer les valeurs manquantes, calculer des statistiques descriptives et crÃ©er des visualisations courantes.
+
+## FonctionnalitÃ©s
+
+- **Chargement et traitement des donnÃ©es** :
+  - Chargement de fichiers CSV.
+  - Normalisation des colonnes numÃ©riques.
+  - Gestion des valeurs manquantes (remplissage ou suppression).
+  
+- **Statistiques descriptives** :
+  - Calcul de la moyenne, mÃ©diane et Ã©cart-type.
+  - Analyse des corrÃ©lations entre colonnes.
+
+- **Visualisation** :
+  - Histogrammes.
+  - Matrices de corrÃ©lation.
+
+## Installation
+
+Vous pouvez installer la bibliothÃ¨que directement via pip aprÃ¨s publication sur PyPI :
+
+```bash
+pip install datalib
+```
+
+
+## Exemples  d'utilisation
+
+### 1. Chargement et traitement des donnÃ©es
+
+**Charger un fichier CSV :**
+
+```python
+import DataLib
+
+data = DataLib.load_csv("path_to_file.csv")
+```
+
+**Normaliser les colonnes numÃ©riques :**
+
+```python
+normalized_data = DataLib.normalize(data)
+```
+
+**GÃ©rer les valeurs manquantes (remplissage avec la moyenne) :**
+
+```python
+clean_data = DataLib.fill_missing_values(normalized_data, method='mean')
+```
+
+### 2. Statistiques descriptives
+
+**Calculer la moyenne, la mÃ©diane et l'Ã©cart-type :**
+
+```python
+mean = DataLib.mean(data)
+median = DataLib.median(data)
+std_dev = DataLib.std(data)
+```
+
+**Analyser les corrÃ©lations entre les colonnes :**
+
+```python
+correlation_matrix = DataLib.correlation(data)
+```
+
+### 3. Visualisation des donnÃ©es
+
+**CrÃ©er un histogramme pour une colonne spÃ©cifique :**
+
+```python
+DataLib.plot_histogram(data, column='age')
+```
+
+**CrÃ©er une matrice de corrÃ©lation :**
+
+```python
+DataLib.plot_correlation_matrix(data)
+```
+```
