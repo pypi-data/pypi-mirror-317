@@ -1,0 +1,3 @@
+matplotlib
+scipy
+exchange_calendars>=4.1.1
