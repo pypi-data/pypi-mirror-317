@@ -1,0 +1,16 @@
+README.md
+setup.py
+syncv/__init__.py
+syncv/cli.py
+syncv/clipboard.py
+syncv/core.py
+syncv/keyboard_shortcuts.py
+syncv/network.py
+syncv/storage.py
+syncv.egg-info/PKG-INFO
+syncv.egg-info/SOURCES.txt
+syncv.egg-info/dependency_links.txt
+syncv.egg-info/entry_points.txt
+syncv.egg-info/requires.txt
+syncv.egg-info/top_level.txt
+test/test_syncv.py
