@@ -1,0 +1,9 @@
+apsitv27_mysql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apsitv27_mysql/dockerfile,sha256=lc5q9cBkLfaSXjtGq08AWAGJULZrlJs_6KDnN5d-BSQ,262
+apsitv27_mysql/entrypoint.sh,sha256=A7I242nOllnwzeF0ShtXDDhhr6smkqP3pH7Xc0hOTDk,1444
+apsitv27_mysql/main.py,sha256=tybqywDbwZnR1-G0tW4ZJT-Z168MmuZ3A76rjU4N9Rw,3133
+apsitv27_mysql-1.1.1.dist-info/METADATA,sha256=EXp0c0379UBMmPPEZTvnkd7aIfqIsgDEhARyd_pGm_o,119
+apsitv27_mysql-1.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+apsitv27_mysql-1.1.1.dist-info/entry_points.txt,sha256=F9dljlvNp968G3NO3mx41BGQGfEDth15zjLR_rmdUjI,85
+apsitv27_mysql-1.1.1.dist-info/top_level.txt,sha256=0YoXNSKdjWk4P445sGE5DAn1wFdkh_nXPZYFu_w70tc,15
+apsitv27_mysql-1.1.1.dist-info/RECORD,,
