@@ -1,0 +1,375 @@
+[project]
+name = "archivebox"
+version = "0.8.6rc3"
+requires-python = ">=3.10"
+description = "Self-hosted internet archiving solution."
+authors = [
+    { name = "Nick Sweeting", email = "pyproject.toml@archivebox.io" },
+]
+readme = "README.md"
+keywords = [
+    "internet archiving",
+    "web archiving",
+    "digipres",
+    "warc",
+    "preservation",
+    "backups",
+    "archiving",
+    "web",
+    "bookmarks",
+    "puppeteer",
+    "browser",
+    "download",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Legal Industry",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+    "Topic :: Sociology :: History",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Archiving",
+    "Topic :: System :: Archiving :: Backup",
+    "Topic :: System :: Recovery Tools",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "setuptools>=74.1.0",
+    "django>=5.1.4,<6.0",
+    "channels[daphne]>=4.1.0",
+    "django-ninja>=1.3.0",
+    "django-extensions>=3.2.3",
+    "django-huey>=1.2.1",
+    "django-huey-monitor>=0.9.0",
+    "django-signal-webhooks>=0.3.0",
+    "django-admin-data-views>=0.4.1",
+    "django-object-actions>=4.3.0",
+    "django-charid-field>=0.4",
+    "django-taggit==6.1.0",
+    "pluggy>=1.5.0",
+    "python-statemachine>=2.3.6",
+    "click>=8.1.7",
+    "rich>=13.8.0",
+    "rich-click>=1.8.4",
+    "ipython>=8.27.0",
+    "abx-pkg>=0.6.0",
+    "supervisor>=4.2.5",
+    "psutil>=6.0.0",
+    "platformdirs>=4.3.6",
+    "py-machineid>=0.6.0",
+    "atomicwrites==1.4.1",
+    "python-crontab>=3.2.0",
+    "croniter>=3.0.3",
+    "pydantic>=2.8.0",
+    "pydantic-settings>=2.5.2",
+    "python-benedict[io,parse]>=0.33.2",
+    "ulid-py>=1.1.0",
+    "typeid-python>=0.3.1",
+    "base32-crockford==0.3.0",
+    "blake3>=1.0.0",
+    "mypy-extensions>=1.0.0",
+    "django-stubs>=5.0.4",
+    "requests>=2.32.3",
+    "sonic-client>=1.0.0",
+    "pocket>=0.3.6",
+    "feedparser>=6.0.11",
+    "dateparser>=1.2.0",
+    "tzdata>=2024.2",
+    "w3lib>=2.2.1",
+    "abx>=0.1.0",
+    "abx-spec-abx-pkg>=0.1.1",
+    "abx-spec-config>=0.1.0",
+    "abx-spec-archivebox>=0.1.0",
+    "abx-spec-django>=0.1.0",
+    "abx-spec-extractor>=0.1.0",
+    "abx-spec-searchbackend>=0.1.0",
+    "abx-plugin-default-binproviders>=2024.10.24",
+    "abx-plugin-pip>=2024.10.24",
+    "abx-plugin-npm>=2024.10.24",
+    "abx-plugin-playwright>=2024.10.24",
+    "abx-plugin-puppeteer>=2024.10.28",
+    "abx-plugin-ripgrep-search>=2024.10.28",
+    "abx-plugin-sqlitefts-search>=2024.10.28",
+    "abx-plugin-sonic-search>=2024.10.28",
+    "abx-plugin-ldap-auth>=2024.10.28",
+    "abx-plugin-curl>=2024.10.27",
+    "abx-plugin-wget>=2024.10.28",
+    "abx-plugin-git>=2024.10.28",
+    "abx-plugin-chrome>=2024.10.28",
+    "abx-plugin-ytdlp>=2024.10.28",
+    "abx-plugin-title>=2024.10.27",
+    "abx-plugin-favicon>=2024.10.27",
+    "abx-plugin-archivedotorg>=2024.10.28",
+    "abx-plugin-singlefile>=2024.10.28",
+    "abx-plugin-readability>=2024.10.28",
+    "abx-plugin-mercury>=2024.10.28",
+    "abx-plugin-htmltotext>=2024.10.28",
+]
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+sonic = []
+ldap = [
+    "python-ldap>=3.4.3",
+    "django-auth-ldap>=4.1.0",
+]
+debug = [
+    "django-debug-toolbar>=4.4.6",
+    "djdt_flamegraph>=0.2.13",
+    "ipdb>=0.13.13",
+    "requests-tracker>=0.3.3",
+    "django-autotyping>=0.5.1",
+]
+all = [
+    "archivebox[sonic,ldap,debug]",
+]
+
+[project.scripts]
+archivebox = "archivebox.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ArchiveBox/ArchiveBox"
+Source = "https://github.com/ArchiveBox/ArchiveBox"
+Documentation = "https://github.com/ArchiveBox/ArchiveBox/wiki"
+"Bug Tracker" = "https://github.com/ArchiveBox/ArchiveBox/issues"
+Changelog = "https://github.com/ArchiveBox/ArchiveBox/releases"
+Roadmap = "https://github.com/ArchiveBox/ArchiveBox/wiki/Roadmap"
+Community = "https://github.com/ArchiveBox/ArchiveBox/wiki/Web-Archiving-Community"
+Demo = "https://demo.archivebox.io"
+Donate = "https://github.com/ArchiveBox/ArchiveBox/wiki/Donations"
+
+[tool.uv]
+environments = [
+    "sys_platform == 'darwin'",
+    "sys_platform == 'linux'",
+]
+package = true
+dev-dependencies = [
+    "uv>=0.4.26",
+    "pip>=24.2",
+    "setuptools>=75.1.0",
+    "wheel>=0.44.0",
+    "bumpver>=2023.1129",
+    "recommonmark>=0.7.1",
+    "sphinx>=8.1.3",
+    "sphinx-rtd-theme>=2.0.0",
+    "myst-parser>=4.0.0",
+    "sphinx-autodoc2>=0.5.0",
+    "linkify-it-py>=2.0.3",
+    "django-debug-toolbar>=4.4.6",
+    "requests-tracker>=0.3.3",
+    "djdt_flamegraph>=0.2.13",
+    "ipdb>=0.13.13",
+    "logfire[django]>=0.51.0",
+    "opentelemetry-instrumentation-django>=0.47b0",
+    "opentelemetry-instrumentation-sqlite3>=0.47b0",
+    "viztracer>=0.17.0",
+    "pytest>=8.3.3",
+    "bottle>=0.13.1",
+    "ruff>=0.6.6",
+    "flake8>=7.1.1",
+    "mypy>=1.11.2",
+]
+
+[tool.uv.sources.abx]
+workspace = true
+
+[tool.uv.sources.abx-spec-abx-pkg]
+workspace = true
+
+[tool.uv.sources.abx-spec-config]
+workspace = true
+
+[tool.uv.sources.abx-spec-archivebox]
+workspace = true
+
+[tool.uv.sources.abx-spec-django]
+workspace = true
+
+[tool.uv.sources.abx-spec-extractor]
+workspace = true
+
+[tool.uv.sources.abx-spec-searchbackend]
+workspace = true
+
+[tool.uv.sources.abx-plugin-default-binproviders]
+workspace = true
+
+[tool.uv.sources.abx-plugin-pip]
+workspace = true
+
+[tool.uv.sources.abx-plugin-npm]
+workspace = true
+
+[tool.uv.sources.abx-plugin-playwright]
+workspace = true
+
+[tool.uv.sources.abx-plugin-puppeteer]
+workspace = true
+
+[tool.uv.sources.abx-plugin-ripgrep-search]
+workspace = true
+
+[tool.uv.sources.abx-plugin-sqlitefts-search]
+workspace = true
+
+[tool.uv.sources.abx-plugin-sonic-search]
+workspace = true
+
+[tool.uv.sources.abx-plugin-ldap-auth]
+workspace = true
+
+[tool.uv.sources.abx-plugin-curl]
+workspace = true
+
+[tool.uv.sources.abx-plugin-wget]
+workspace = true
+
+[tool.uv.sources.abx-plugin-git]
+workspace = true
+
+[tool.uv.sources.abx-plugin-chrome]
+workspace = true
+
+[tool.uv.sources.abx-plugin-ytdlp]
+workspace = true
+
+[tool.uv.sources.abx-plugin-title]
+workspace = true
+
+[tool.uv.sources.abx-plugin-favicon]
+workspace = true
+
+[tool.uv.sources.abx-plugin-archivedotorg]
+workspace = true
+
+[tool.uv.sources.abx-plugin-singlefile]
+workspace = true
+
+[tool.uv.sources.abx-plugin-readability]
+workspace = true
+
+[tool.uv.sources.abx-plugin-mercury]
+workspace = true
+
+[tool.uv.sources.abx-plugin-htmltotext]
+workspace = true
+
+[tool.uv.workspace]
+members = [
+    "archivebox/pkgs/*",
+]
+exclude = [
+    "archivebox/pkgs/__pycache__",
+]
+
+[tool.uv.pip]
+python-version = "3.11"
+
+[tool.setuptools]
+packages = [
+    "archivebox",
+]
+
+[tool.setuptools.package-dir]
+archivebox = "archivebox"
+
+[tool.ruff]
+line-length = 140
+target-version = "py310"
+src = [
+    "archivebox",
+]
+exclude = [
+    "*.pyi",
+    "typings/",
+    "migrations/",
+]
+
+[tool.ruff.lint]
+ignore = [
+    "E731",
+    "E303",
+    "E266",
+    "E241",
+    "E222",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+
+[tool.mypy]
+mypy_path = "archivebox,archivebox/typings"
+namespace_packages = true
+explicit_package_bases = true
+plugins = [
+    "mypy_django_plugin.main",
+]
+
+[tool.django-stubs]
+django_settings_module = "core.settings"
+
+[tool.pyright]
+include = [
+    "archivebox",
+]
+exclude = [
+    ".venv",
+    "**/*.pyi",
+    "**/__init__.pyi",
+    "**/node_modules",
+    "**/__pycache__",
+    "**/migrations",
+]
+stubPath = "./archivebox/typings"
+venvPath = "."
+venv = ".venv"
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "3.10"
+pythonPlatform = "Linux"
+
+[tool.bumpver]
+current_version = "v0.8.5rc53"
+version_pattern = "vMAJOR.MINOR.PATCH[PYTAGNUM]"
+commit_message = "bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+pre_commit_hook = ""
+post_commit_hook = ""
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    "current_version = \"{version}\"",
+    "version = \"{pep440_version}\"",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
