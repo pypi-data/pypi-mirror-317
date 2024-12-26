@@ -1,0 +1,2 @@
+funutil>=1.0.19
+sqlalchemy>=2.0.36
