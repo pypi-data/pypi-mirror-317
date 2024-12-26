@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+py_utils3.egg-info/PKG-INFO
+py_utils3.egg-info/SOURCES.txt
+py_utils3.egg-info/dependency_links.txt
+py_utils3.egg-info/requires.txt
+py_utils3.egg-info/top_level.txt
+pyutils3/__init__.py
+pyutils3/pyutils3.py
