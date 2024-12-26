@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/blackfish.egg-info/PKG-INFO
+src/blackfish.egg-info/SOURCES.txt
+src/blackfish.egg-info/dependency_links.txt
+src/blackfish.egg-info/top_level.txt
+src/blackfish/parsing/__init__.py
+src/blackfish/parsing/roots.py
+src/blackfish/parsing/soc_absorption_spectrum.py
+src/blackfish/parsing/soc_states.py
