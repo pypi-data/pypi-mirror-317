@@ -1,0 +1,25 @@
+[project]
+name = "json-ops"
+authors = [
+    {name = "Vineet Tiwari", email = "vineettiwari863@gmail.com"}
+]
+version = "0.1.0"
+description = "This is the `json-ops` package, intended to provide a collection of utilities for working with JSON data."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=8.3.4",
+    "pandas>=2.2.3",
+    "openpyxl>=3.1.5",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Office/Business :: Financial :: Spreadsheet",
+    "Topic :: Text Processing :: General",
+]
+
+[project.license]
+text = "Non-commercial use only. Commercial use requires explicit permission."
