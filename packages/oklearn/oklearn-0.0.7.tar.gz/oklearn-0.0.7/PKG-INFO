@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: oklearn
+Version: 0.0.7
+Summary: machine learning library for the python programming language
+Home-page: 
+Author: 
+Author-email: 
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: imbalanced-learn
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: xgboost
+Requires-Dist: lightgbm
