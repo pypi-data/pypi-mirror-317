@@ -1,0 +1,9 @@
+asyncio
+websockets
+requests
+websocket
+loguru
+json
+ssl
+websocket
+websocket-client
