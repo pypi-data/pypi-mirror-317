@@ -1,0 +1,11 @@
+_pymimir.cpython-38-x86_64-linux-gnu.so,sha256=54QqKSUuRfHIlBnjSan6dXzMhAjAq1sRcYjojQVRQqA,9146449
+pymimir.libs/libstdc++-0d31ccbe.so.6.0.32,sha256=QyUTnI2umnGgPmNJ-6F_BVIAJnq6-70cNoEWpma6EFQ,3494521
+pymimir.libs/libgcc_s-a0b57c20.so.1,sha256=XPAr2giQZFaQKDEig3i_sQM7zfbaGkuhwmZ9ryvu-Vk,148041
+pymimir/__init__.py,sha256=U8CmFJMBWr-_joMl47mlwkU7rfo7LVl6yEbummMrhGU,5357
+pymimir/hints.py,sha256=ZbRaRYNXnRL0YTwtv6kUvO0HGhMeizwfJ4VuB7n6jtw,969
+pymimir/__init__.pyi,sha256=uohvZwj72dY9azmNiE_upim8o1mwrYafwHe4zoWfA8k,179606
+pymimir-0.2.0.dist-info/top_level.txt,sha256=UBXk9m4OBSUdu2Npa83LNdck4m-ExzFvnzmxRMvR018,17
+pymimir-0.2.0.dist-info/RECORD,,
+pymimir-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pymimir-0.2.0.dist-info/METADATA,sha256=2SiWmnX8tk3m_fBY4Lm7c8c8kkjwEn-JE0zL7kpFEpM,350
+pymimir-0.2.0.dist-info/WHEEL,sha256=JMCHihuaOwyE4j7UN3MRJaa_mm3Hn9L3awlgWmPJIX8,110
