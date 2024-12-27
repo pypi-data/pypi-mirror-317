@@ -1,0 +1,3 @@
+[console_scripts]
+uvicorn33=uvicorn33.main:main
+
