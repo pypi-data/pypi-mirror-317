@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "pyrolink"
+version = "3.0.0"  # Replace this with the actual version if dynamically determined
+description = "Elegant, modern and asynchronous Telegram MTProto API framework in Python for users and bots"
+authors = ["venombolteop <venombolteop@gmail.com>"]
+readme = "README.md"
+license = "LGPLv3"
+homepage = "https://github.com/venombolteop"
+repository = "https://github.com/venombolteop/pyrolink"
+documentation = "https://docs.pyrogram.org"
+packages = [{include = "pyrogram"}]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0"
+pyaes = "1.6.1"
+pysocks = "1.7.1"
+docutils = ">=0.20,<0.21"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+twine = "*"
+
+[tool.poetry.scripts]
+pyrolink = "pyrogram.cli:main"  # Adjust the entry point based on your project structure
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
