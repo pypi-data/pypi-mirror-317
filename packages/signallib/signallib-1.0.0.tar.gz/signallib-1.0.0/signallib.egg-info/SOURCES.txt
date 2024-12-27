@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+signallib.egg-info/PKG-INFO
+signallib.egg-info/SOURCES.txt
+signallib.egg-info/dependency_links.txt
+signallib.egg-info/top_level.txt
