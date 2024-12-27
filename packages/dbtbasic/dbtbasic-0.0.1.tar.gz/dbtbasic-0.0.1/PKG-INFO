@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: dbtbasic
+Version: 0.0.1
+Summary: A simple version of dbt using postgres, implemented in Python. It loads the sql files in a folder and "realizes" them in the correct order and adds indices as well.
+Project-URL: Homepage, https://github.com/casper-voltgoed/logbasic
+Project-URL: Issues, https://github.com/casper-voltgoed/logbasic/issues
+Author-email: Casper Kole <casper@voltgoed.nl>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: numpy>=2.2.1
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: postgreasy>=1.1.0
+Description-Content-Type: text/markdown
+
+# dbtbasic
+
+This is the ReadMe.
