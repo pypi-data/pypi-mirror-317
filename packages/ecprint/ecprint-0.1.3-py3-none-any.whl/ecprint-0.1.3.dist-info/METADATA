@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ecprint
+Version: 0.1.3
+Summary: A easy module for colorful print in Python.
+Home-page: https://github.com/dotmet/cprint.git
+Author: Even Wong
+Author-email: wdyphy@zju.edu.cn
+Requires-Python: >=3.0
+License-File: LICENSE
