@@ -1,0 +1,9 @@
+nonebot_plugin_qbittorrent_manager/__init__.py,sha256=u2K3piTAKpynf3RRMyBXM0_rg_W007qkvnOIX8kiBKU,4007
+nonebot_plugin_qbittorrent_manager/command.py,sha256=S-ZUS3BgVpqCZRMn_E7oN_9osgmhKavOdenI7tFnQfY,7927
+nonebot_plugin_qbittorrent_manager/config.py,sha256=j7SwL-1JpFegR0P9gxlbNpS3hM95VKEfRJWkNRC_1ow,3282
+nonebot_plugin_qbittorrent_manager/qb_api.py,sha256=ZCe3-LNCzQ2jQ2QgAfHt4Yr97_T5PrMn3gOOej5uCrk,4044
+nonebot_plugin_qbittorrent_manager/tools.py,sha256=V4TTgJ0AoWekBJulm1AucnDFdwiiIkHmY33HtemEe3M,23574
+nonebot_plugin_qbittorrent_manager-0.1.9.1.dist-info/LICENSE,sha256=4QwosCUBWhxPzvBqBKkegYlm-APuqbMaNBTOAYjrt7E,1068
+nonebot_plugin_qbittorrent_manager-0.1.9.1.dist-info/METADATA,sha256=MfmASgJafGXQM3CCdb6qZN3DWahs6T0Kw9O-_R6fMYg,4547
+nonebot_plugin_qbittorrent_manager-0.1.9.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+nonebot_plugin_qbittorrent_manager-0.1.9.1.dist-info/RECORD,,
