@@ -1,0 +1,8 @@
+setup.py
+cocoman/__init__.py
+cocoman.egg-info/PKG-INFO
+cocoman.egg-info/SOURCES.txt
+cocoman.egg-info/dependency_links.txt
+cocoman.egg-info/top_level.txt
+cocoman/core/__init__.py
+cocoman/core/spiders.py

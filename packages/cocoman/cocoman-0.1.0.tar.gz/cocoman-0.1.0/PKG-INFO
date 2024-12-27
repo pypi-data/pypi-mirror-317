@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: cocoman
+Version: 0.1.0
+Summary: Spider
+Author: wauo
+Author-email: markadc@126.com
+Requires-Python: >=3.10

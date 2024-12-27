@@ -1,0 +1,1 @@
+from cocoman.core.spiders import Spider
