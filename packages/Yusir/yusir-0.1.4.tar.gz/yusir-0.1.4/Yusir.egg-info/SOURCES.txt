@@ -1,0 +1,6 @@
+setup.py
+Yusir/__init__.py
+Yusir.egg-info/PKG-INFO
+Yusir.egg-info/SOURCES.txt
+Yusir.egg-info/dependency_links.txt
+Yusir.egg-info/top_level.txt
