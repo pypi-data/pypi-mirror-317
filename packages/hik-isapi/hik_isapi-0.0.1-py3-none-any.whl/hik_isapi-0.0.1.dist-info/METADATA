@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: hik-isapi
+Version: 0.0.1
+Summary: A simple CLI program for hikvison Cam
+Home-page: https://github.com/rfooox/isapi
+Author: rfooox
+Author-email: rfooox@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: xmltodict
+Requires-Dist: typer
+
+# isapi
+`isapi`海康ISAPI是海康的一套HTTP通信协议，自2013年创建以来，内容已扩展至智能设备管理、车辆识别、停车场管理、人脸智能、门禁权限管理、录播管控等，这些功能配合海康提供的智能硬件设备（例如AI智能前后端产品、通用前后端产品、门禁产品、交通产品、对讲产品、报警产品、热成像产品等多种网络硬件设备），被广泛应用于交通、消防、安检、教育、建筑等多种行业。
+
+本项目使用该名称即是通过python对海康开源API调用，来使用摄像机、硬盘录像机、人脸门禁机等设备功能。
+
+
+## 功能简述
+
+## 安装与运行
+
+### 安装项目依赖
+```shell
+pip install requests
+
+```
+
+### 使用指南
+
+## 功能规划
+### 短期目标（1个月，2024年11月28日-2024年12月28日）
+- [ ] 实现`海康摄像机`信息读取功能
+- [ ] 提供CLI 输入用户名密码 查询摄像机 型号、版本功能
+- [ ] CLI 输入设备IP与对应操作，如果数据库有用户密码直接尝试操作，如果无则提示输入
+- [ ] 提供表格导入设备，批查询摄像机型号、版本功能
+- [ ] 
+
+
+## 版本说明
+
+### v0.0.1 (2024-11-28)
+    初始版本发布，支持调用API功能
+

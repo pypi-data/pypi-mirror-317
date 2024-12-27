@@ -1,0 +1,3 @@
+[console_scripts]
+hikapi = hikDriver.cli:main
+isapi = hikDriver.cli:main
