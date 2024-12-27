@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Yusir
+Version: 0.1.1
+Summary: some function for self-using 
+Author: clever Yusir
+Author-email: linxing_1@163.com
+Keywords: python,menu,dumb_menu,windows,mac,linux
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+function for self ying_dao applications
