@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/iptv_spider/__init__.py
+src/iptv_spider/__main__.py
+src/iptv_spider/channel.py
+src/iptv_spider/logger.py
+src/iptv_spider/m3u.py
+src/iptv_spider/main.py
+src/iptv_spider.egg-info/PKG-INFO
+src/iptv_spider.egg-info/SOURCES.txt
+src/iptv_spider.egg-info/dependency_links.txt
+src/iptv_spider.egg-info/entry_points.txt
+src/iptv_spider.egg-info/requires.txt
+src/iptv_spider.egg-info/top_level.txt
+tests/test_iptv_spider.py
