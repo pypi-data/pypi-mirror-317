@@ -1,0 +1,430 @@
+# drawing_types.yaml – Specifications for all Assets and Presentations for all defined Diagram Types
+
+# Pattern, where <> indicates some attribute from the Tablet class model (see project wiki)
+# --
+# <Drawing Type.Name>:
+#   <Presentation.Name>:
+#     <Asset.Form>:
+#       <Asset.Name>:
+# --
+# Then depending on the Asset.Form value, shape or text
+# -- shape --
+#           line style: <Line Style.Name>
+# -- text --
+#           text style: <Test Style.Name>
+#           underlay: <Test Style.underlay>  // true or false
+#
+
+Grid Diagnostic: # Drawing type name
+  default: # Presentation name
+    shape: # Asset form
+      column boundary: # Asset name
+        line style: grid
+      row boundary:
+        line style: grid
+      grid boundary:
+        line style: diagram
+    text:
+      grid label: # Asset name
+        text style: coordinate
+        underlay: false
+
+Model Integration Diagram Large Frame:
+  default:
+    text:
+      # free field assets
+      title:
+        text style: free title large
+        underlay: false
+      copyright notice:
+        text style: boilerplate
+        underlay: false
+      # Title block assets
+      main:
+        text style: block title large
+        underlay: false
+      bottom:
+        text style: block body large
+        underlay: false
+      rtop:
+        text style: block body large
+        underlay: false
+      rbottom:
+        text style: block body large
+        underlay: false
+    shape:
+      block border:
+        line style: double
+        fill: white
+
+Model Integration Diagram Medium Frame:
+  default:
+    # free field assets
+    title:
+      text style: free title medium
+      underlay: false
+    copyright notice:
+      text style: boilerplate
+      underlay: False
+    # Title block assets
+    block title:
+      text style: block title medium
+      underlay: false
+    Block body:
+      text style: block body medium
+      underlay: false
+    shape:
+      block border:
+        line style: normal
+        fill: white
+
+Model Integration Diagram Small Frame:
+  default:
+    text:
+      # free field assets
+      title:
+        text style: block title small
+        underlay: false
+      copyright notice:
+        text style: boilerplate
+        underlay: false
+      author:
+        text style: Block body small
+        underlay: false
+      modification date:
+        text style: Block body small
+        underlay: false
+      document id:
+        text style: Block body small
+        underlay: false
+      version:
+        text style: Block body small
+        underlay: false
+
+TRI MBSE large:
+  default:
+    text:
+      # free field assets
+      title:
+        text style: free title large
+        underlay: false
+      copyright notice:
+        text style: footer central
+        underlay: false
+      # Title block assets
+      block title:
+        text style: block title large
+        underlay: false
+      block body:
+        text style: block body large
+        underlay: false
+    shape:
+      block border:
+        line style: double
+        fill: white
+
+TRI MBSE medium:
+  default:
+    text:
+      # free field assets
+      title:
+        text style: free title large
+        underlay: false
+      copyright notice:
+        text style: footer central
+        underlay: false
+      # Title block assets
+      title:
+        text style: block title large
+        underlay: false
+      block body:
+        text style: block body large
+        underlay: false
+    shape:
+      block border:
+        line style: normal
+        fill: white
+
+OS TRI MBSE small:
+  default:
+    text:
+      # free field assets
+      title:
+        text style: block title small
+        underlay: false
+      copyright notice:
+        text style: boilerplate
+        underlay: false
+      # Title block assets
+      author:
+        text style: Block body small
+        underlay: false
+      modification date:
+        text style: Block body small
+        underlay: false
+      document id:
+        text style: Block body small
+        underlay: false
+      version:
+        text style: Block body small
+        underlay: false
+
+# xUML class diagram}
+xUML class diagram:
+  default:
+    shape:
+      class name compartment:
+        line style: normal
+        fill: white
+      class attribute compartment:
+        line style: normal
+        fill: white
+      class method compartment:
+        line style: normal
+        fill: white
+      binary association connector:
+        line style: normal
+      generalization connector:
+        line style: normal
+      association stem:
+        line style: dashed
+      grid:
+        line style: grid
+      margin:
+        line style: margin
+      imported class compartment:
+        line style: dashed
+        fill: white
+    text:
+      label:
+        text style: p9body
+        underlay: false
+      binary association name:
+        text style: p9body
+        underlay: false
+      generalization name:
+        text style: p9body
+        underlay: false
+      class face name:
+        text style: p9body
+        underlay: false
+      see also:
+        text style: p9italic
+        underlay: false
+      class name:
+        text style: p12title
+        underlay: false
+      attributes:
+        text style: p9body
+        underlay: false
+      methods:
+        text style: p9body
+        underlay: false
+
+Shlaer-Mellor Class Diagram:
+  default:
+    shape:
+      class name compartment:
+        line style: normal
+        fill: white
+      class attribute compartment:
+        line style: normal
+        fill: white
+      class method compartment:
+        line style: normal
+        fill: white
+      binary association connector:
+        line style: normal
+      generalization connector:
+        line style: normal
+      association stem:
+        line style: normal
+      grid:
+        line style: grid
+      margin:
+        line style: margin
+      imported class compartment:
+        line style: dashed
+        fill: white
+    text:
+      label:
+        text style: p9body
+        underlay: false
+      binary association name:
+        text style: p9body
+        underlay: false
+      generalization name:
+        text style: p9body
+        underlay: false
+      class face name:
+        text style: p9body
+        underlay: false
+      see also:
+        text style: p9italic
+        underlay: false
+      class name:
+        text style: p12title
+        underlay: false
+      attributes:
+        text style: p9body
+        underlay: false
+      methods:
+        text style: p9body
+        underlay: false
+
+Starr Class Diagram:
+  default:
+    shape:
+      class name compartment:
+        line style: normal
+        fill: white
+      class attribute compartment:
+        line style: normal
+        fill: white
+      class method compartment:
+        line style: normal
+        fill: white
+      binary association connector:
+        line style: normal
+      generalization connector:
+        line style: normal
+      association stem:
+        line style: normal
+      grid:
+        line style: hide
+      margin:
+        line style: hide
+      imported class name compartment:
+        line style: dashed
+        fill: white
+      imported class attribute compartment:
+        line style: dashed
+        fill: white
+      # For diagnostics only
+      shoot:
+        line style: dashed
+      # Symbols
+      solid arrow:
+        line style: normal
+        fill: black
+      hollow arrow:
+        line style: normal
+        fill: white
+      gen arrow:
+        line style: normal
+        fill: white
+    text:
+      label:
+        text style: p9body
+        underlay: false
+      binary association name:
+        text style: p9body
+        underlay: false
+      generalization name:
+        text style: p9body
+        underlay: false
+      class face name:
+        text style: p9body
+        underlay: false
+      see also:
+        text style: p9italic
+        underlay: false
+      class name:
+        text style: p12title
+        underlay: false
+      class attribute:
+        text style: p9body
+        underlay: false
+      class method:
+        text style: p9body
+        underlay: false
+      imported class name:
+        text style: p12title
+        underlay: false
+      imported class attribute:
+        text style: p9body
+        underlay: false
+
+xUML State Machine Diagram:
+  default:
+    shape:
+      transition connector:
+        line style: normal
+      initial transition connector:
+        line style: normal
+      deletion transition connector:
+        line style: normal
+      state name compartment:
+        line style: normal
+        fill: white
+        corner spec:
+          radius: 4
+          top: true
+          bottom: false
+      state name only compartment:
+        line style: normal
+        fill: white
+        corner spec:
+          radius: 4
+          top: true
+          bottom: true
+      state activity compartment:
+        line style: normal
+        fill: white
+        corner spec:
+          radius: 4
+          top: false
+          bottom: true
+      # Symbols
+      solid arrow:
+        line style: normal
+        fill: black
+      hollow large circle:
+        line style: normal
+        fill: white
+      solid small dot:
+        line style: normal
+        fill: black
+    text:
+      transition name:
+        text style: p9body
+        underlay: true
+      initial transition name:
+        text style: p9body
+        underlay: false
+      state activity:
+        text style: p9body
+        underlay: false
+      state name:
+        text style: p12title
+        underlay: false
+      state name only:
+        text style: p12title
+        underlay: false
+
+# Not supported yet
+#Starr domain diagram:
+#  shape:
+#    - domain node
+#    - bridge
+#
+#xUML domain diagram:
+#  shape:
+#    - domain node
+#    - bridge
+#
+#Starr collaboration diagram:
+#  shape:
+#    - overview class
+#    - collaboration
+#    - sync arrow
+#  text:
+#    - message
+#
+#xUML collaboration diagram:
+#  shape:
+#    - overview class
+#    - collaboration
+#    - sync arrow
+#  text:
+#    - message
