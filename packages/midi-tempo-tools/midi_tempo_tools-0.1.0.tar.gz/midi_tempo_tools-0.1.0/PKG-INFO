@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: midi-tempo-tools
+Version: 0.1.0
+Summary: A tool for handling MIDI file tempo operations
+Home-page: https://github.com/zhaoyu010/midiv
+Author: Your Name
+Author-email: your.email@example.com
+Keywords: midi,tempo,music,bpm
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Multimedia :: Sound/Audio :: MIDI
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mido>=1.2.0
+
+# MIDI Tempo Tools
+
+一个用于处理MIDI文件速度的Python工具包。
+
+## 功能
+
+- 获取MIDI文件的BPM
+- 获取MIDI文件中所有的速度变化
+- 统一设置MIDI文件的速度
+- 使用外部JAR工具处理MIDI速度
+
+## 安装
