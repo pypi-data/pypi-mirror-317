@@ -1,0 +1,2 @@
+[console_scripts]
+ddownloader = ddownloader.main:main
