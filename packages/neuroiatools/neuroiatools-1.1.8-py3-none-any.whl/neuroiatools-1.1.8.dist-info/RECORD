@@ -1,0 +1,13 @@
+neuroiatools/__init__.py,sha256=3SKI_Qd0oYAjyoXr3ut6rtOaghd5e5Nn0OpHBuv6fkY,40
+neuroiatools/version.py,sha256=0ctLghGR35DHE7HblASLdFnophzkYWPboeWXF8oG0gM,40
+neuroiatools/EEGManager/TrialsHandler.py,sha256=_44u4kQ7VBZXWVDgKZPDXnB9bEtvMP4x2jfhWba8R3c,6272
+neuroiatools/EEGManager/__init__.py,sha256=HunHiR-HO05gLFQgE8vSJGZxjQjIYPmXxiG-iXok4k0,15
+neuroiatools/SignalProcessor/Filter.py,sha256=r7kBCUpDrTjhKYI4JyFW-GIbTwE6J0UWLrqKfccIxSo,2919
+neuroiatools/SignalProcessor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neuroiatools/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neuroiatools/utils/datasetManager.py,sha256=0fGvJnII6zvNrzL7EOReAOF0daeYyI8YXUZhcZG6LC0,2335
+neuroiatools-1.1.8.dist-info/METADATA,sha256=6YiWNcOvrLJ6xnyas4kiY1588EMW2P07Vl5GKVfimQE,2017
+neuroiatools-1.1.8.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+neuroiatools-1.1.8.dist-info/license.txt,sha256=7cIOtPHaEtbK1VJlC2zZx-6D5y_asvJnkVjlPC_Urg8,1112
+neuroiatools-1.1.8.dist-info/top_level.txt,sha256=YoQZkoDid0werK792NXi1Dem2Clq2-A2oD1eEkDPylY,13
+neuroiatools-1.1.8.dist-info/RECORD,,
