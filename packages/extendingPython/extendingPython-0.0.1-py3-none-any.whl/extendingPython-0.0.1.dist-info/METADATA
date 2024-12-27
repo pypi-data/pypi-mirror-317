@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: extendingPython
+Version: 0.0.1
+Summary: A short description of the package
+Home-page: https://github.com/Mryan2005/extendingPython
+Author: Mryan2005
+Author-email: zhizhongyan@qq.com
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools~=68.2.0
+Requires-Dist: pyhttpx~=2.10.12
+Requires-Dist: requests~=2.32.3
+
+# extendingPython

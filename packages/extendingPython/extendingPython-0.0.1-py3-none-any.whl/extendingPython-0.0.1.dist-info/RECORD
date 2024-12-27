@@ -1,0 +1,10 @@
+extendingPython/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extendingPython/cloudflareDDNS/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extendingPython/cloudflareDDNS/cfddns.py,sha256=wwKn9-eI93DBV0_Yzn2KH57OiCCQ-rUGCupMw8igs4Y,2286
+extendingPython/getYourIP/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extendingPython/getYourIP/getIP.py,sha256=iKTpmYtYmTjWzHzaZoNbTD5sraJByLb5eotxeYzdJ_E,330
+extendingPython-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+extendingPython-0.0.1.dist-info/METADATA,sha256=s-d3q9XORfghbVcageUb6EaxEYS365ovhtWg3tTy9VY,480
+extendingPython-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+extendingPython-0.0.1.dist-info/top_level.txt,sha256=Xw3tJ1VTjAaMQuYh7gYyINHykDw2ZdQE_jDsfVpCzKQ,16
+extendingPython-0.0.1.dist-info/RECORD,,
