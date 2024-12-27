@@ -1,0 +1,24 @@
+# Include documentation files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include requirements.txt
+include requirements-dev.txt
+
+# Include all example JSON files
+include examples/*.json
+
+# Include test data but exclude cache
+recursive-include tests *.json
+global-exclude __pycache__
+global-exclude *.py[cod]
+
+# Include documentation
+recursive-include docs *.rst *.txt *.py
+
+# Exclude development and build files
+exclude .gitignore
+exclude .travis.yml
+prune .git
+prune build
+prune dist
