@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: fixpoint-common
+Version: 0.27.0
+Summary: Fixpoint common code - an AI that can research the web
+Home-page: https://fixpoint.co/
+License: License :: OSI Approved :: Apache Software License
+Author: Fixpoint
+Author-email: team@fixpoint.co
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: diskcache (>=5.6.3,<6.0.0)
+Requires-Dist: httpx (>=0.27.2,<0.28.0)
+Requires-Dist: openai (>=1.42.0,<2.0.0)
+Requires-Dist: pydantic (>=2)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: typing-extensions (>=4.7.1)
+Project-URL: Repository, https://github.com/gofixpoint/fixpoint
+Description-Content-Type: text/markdown
+
+# Fixpoint common code
+
+Code shared across Fixpoint client and server packages.
+
