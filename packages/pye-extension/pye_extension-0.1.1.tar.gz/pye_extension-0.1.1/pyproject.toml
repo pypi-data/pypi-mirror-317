@@ -1,0 +1,30 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "Cython>=3.0.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pye-extension"
+version = "0.1.1"
+authors = [
+    {name = "oha", email = "aaronoh2003@hotmail.com"},
+]
+description = "Advanced Python code protection beyond pyc files"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "Proprietary"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+]
+dependencies = [
+    "cryptography>=41.0.0",
+    "Cython>=3.0.0"
+]
+[project.scripts]
+pyehandler = "pyehandler.cli:main"
