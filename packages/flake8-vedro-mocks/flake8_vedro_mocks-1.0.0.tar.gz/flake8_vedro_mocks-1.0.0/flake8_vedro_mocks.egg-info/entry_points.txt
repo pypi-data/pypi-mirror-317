@@ -1,0 +1,2 @@
+[flake8.extension]
+MCS = flake8_vedro_mocks.plugins:VedroMocksPlugin
