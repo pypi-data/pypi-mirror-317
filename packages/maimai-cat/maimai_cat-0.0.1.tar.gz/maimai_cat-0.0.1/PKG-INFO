@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: maimai_cat
+Version: 0.0.1
+Summary: maimai api tool
+Home-page: https://www.linkedin.com/in/chandlersong/
+Author: chandler song
+Author-email: 275737875@qq.com
+License: MIT
+Keywords: maimai api tool
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: colorama
+
+
+# Introduction
+## Install package
+```shell
+pip install maimai_cat
+```
+## Preparation
+
+- create file `maimai_cookies.json`
+
+- please use Chrome Extension `EditThisCookie` to export maimai cookies to `maimai_cookies.json`
+
+
+
+##  Example Usage:
+
+## - Basic
+
+```python
+# 第一步: 实例化
+from maimai.api import MaimaiAPI
+
+api = MaimaiAPI().connect()
+
+# 获取用户组
+api.pretty_print(api.group.read())
+
+# 搜索keyword,指定页码，page从0开始，最多到30 
+api.pretty_print(api.search.keyword("Google", page=0))
+
+# 获取用户信息,参数为用户id
+api.pretty_print(api.user.read(41962985))
+
+# 把用户id加入到用户组,参数为用户id和用户组id
+api.pretty_print(api.group.add_user_to_group(41962985, 1323029))
+
+# 星标用户，参数为用户id
+api.pretty_print(api.group.unstar(41962985))
+```
+
