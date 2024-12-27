@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyemon"
+version = "0.2.1"
+authors = [{name = "mskz-3110", email = "mskz.saito@gmail.com"}]
+description = "Python auxiliary tools"
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "pyyaml",
+  "inflection",
+]
+
+[project.scripts]
+pyemon = "pyemon.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/mskz-3110/pyemon"
+Issues = "https://github.com/mskz-3110/pyemon/issues"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+testpaths = ["tests"]

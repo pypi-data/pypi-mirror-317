@@ -1,0 +1,2 @@
+[console_scripts]
+pyemon = pyemon.cli:main

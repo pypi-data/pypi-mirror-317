@@ -1,0 +1,7 @@
+recursive-exclude tests *.py
+include src/pyemon/scripts/tests/test.py
+include src/pyemon/scripts/.gitignore
+include src/pyemon/scripts/MANIFEST.in
+include src/pyemon/scripts/pyproject.toml
+include src/pyemon/scripts/README.md
+include src/pyemon/scripts/setup.py
