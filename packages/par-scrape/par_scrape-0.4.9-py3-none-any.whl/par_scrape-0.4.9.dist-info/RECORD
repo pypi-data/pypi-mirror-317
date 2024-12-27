@@ -1,0 +1,13 @@
+par_scrape/__init__.py,sha256=ML__V9I9ID5jTnMDSQH7u6ASqYiiZ2UY-AB5efCLDSA,675
+par_scrape/__main__.py,sha256=Gpfc3AuiRu7TWf9LHpfDYk8ayLajvNtvXNfPCvh1gZE,13390
+par_scrape/enums.py,sha256=9ZHaISgn0tCQn6USZwo9m-YVLfBIRIkRAoZpfZs-tDU,517
+par_scrape/extraction_prompt.md,sha256=_Xx2bvMc6bPuxTpBi3MDJw8wNvPrBeEKk6jbCfnjOdQ,374
+par_scrape/fetch_html.py,sha256=4c90wzY9aaIedMWgXlEamYcWMD66OH9u42bBafLGRUs,9077
+par_scrape/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+par_scrape/scrape_data.py,sha256=QsWfR5wXBnKHSGBZpodNyGLzRv2kY1wpk-PwB1YGIuk,7754
+par_scrape/utils.py,sha256=Pd4j6kyMWT9P8NImgD1J4isJQVeLrS9Apl8oinxjKgw,1150
+par_scrape-0.4.9.dist-info/METADATA,sha256=P8naZI9n-m-KwjcVaR8niTXubSpvBjtjMooRLg0IxLY,13597
+par_scrape-0.4.9.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+par_scrape-0.4.9.dist-info/entry_points.txt,sha256=2tCGtiLIfK_SVJtO45aQ4OcYX3XHdYcfCAlWjKUCrRg,55
+par_scrape-0.4.9.dist-info/licenses/LICENSE,sha256=mM7wR5vvvL5avX6RGqhwhOGjxyojbty3pmJSEHOqeFM,1069
+par_scrape-0.4.9.dist-info/RECORD,,
