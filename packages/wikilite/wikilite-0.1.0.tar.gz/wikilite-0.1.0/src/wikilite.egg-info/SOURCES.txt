@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/wikilite/__init__.py
+src/wikilite/__main__.py
+src/wikilite.egg-info/PKG-INFO
+src/wikilite.egg-info/SOURCES.txt
+src/wikilite.egg-info/dependency_links.txt
+src/wikilite.egg-info/entry_points.txt
+src/wikilite.egg-info/requires.txt
+src/wikilite.egg-info/top_level.txt
