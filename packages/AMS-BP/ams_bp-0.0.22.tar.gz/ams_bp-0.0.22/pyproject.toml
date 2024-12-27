@@ -1,0 +1,63 @@
+[project]
+name = "AMS_BP"
+
+dynamic = ["version"]
+
+description = "Advanced Microscopy Simulations developed for the Weber Lab by Baljyot Singh Parmar"
+
+readme = "README.md"
+
+requires-python = ">=3.10"
+
+
+keywords = ["SMS"]
+
+authors = [
+  { name = "Baljyot Singh Parmar", email = "baljyotparmar@hotmail.com" },
+]
+
+maintainers = [
+  { name = "Baljyot Singh Parmar", email = "baljyotparmar@hotmail.com" },
+]
+
+dependencies = [
+  "numpy>=1.21.2",
+  "matplotlib>=3.6.0",
+  "scipy>=1.7.1",
+  "scikit-image>=0.18.3",
+  "typer>=0.12.5",
+  "jsonschema>=4.23.0",
+  "pydantic>=2.9.2",
+  "tomli>=2.0.2",
+]
+
+[project.urls]
+Documentation = "https://joemans3.github.io/AMS_BP/"
+"Source code" = "https://github.com/joemans3/AMS_BP"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.uv]
+dev-dependencies = [
+  "mkdocs-material==9.5.40",
+  "mkdocstrings-python>=1.12.2",
+  "pymdown-extensions>=10.11",
+  "pyright>=1.1.384",
+  "pytest>=8.3.3",
+  "ruff>=0.6.9",
+]
+
+[tool.uv.sources]
+sms-bp-adv = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/AMS_BP/__init__.py"
+
+[project.scripts]
+run_AMS_BP = "AMS_BP.run_cell_simulation:typer_app_asms_bp"
