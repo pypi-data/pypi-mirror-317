@@ -1,0 +1,3 @@
+[console_scripts]
+pystrano = pystrano.deploy:main
+pystrano-setup = pystrano.deploy:setup
