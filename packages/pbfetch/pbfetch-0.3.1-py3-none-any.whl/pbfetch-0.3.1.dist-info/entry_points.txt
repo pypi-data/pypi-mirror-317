@@ -1,0 +1,2 @@
+[console_scripts]
+pbfetch = pbfetch:main
