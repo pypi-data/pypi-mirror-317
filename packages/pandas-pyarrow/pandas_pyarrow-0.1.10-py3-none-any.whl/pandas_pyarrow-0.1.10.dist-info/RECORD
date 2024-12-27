@@ -1,0 +1,12 @@
+pandas_pyarrow/__init__.py,sha256=bFe1e7FmYmqsZ8JUalmEMzomG-qNX2okVd2EUb89aUI,299
+pandas_pyarrow/mappers/__init__.py,sha256=x_gSZHpdR9sM4fMTlZENWELoQ93vhUtXUMgEFLqdUWc,1613
+pandas_pyarrow/mappers/datetime_mapper.py,sha256=hnCxxThwIPnaiExbaWZlfVo004tOdocEmPjV3gU7xe0,1147
+pandas_pyarrow/mappers/db_types.py,sha256=bZtW0qM8xycUkevYnxsFqi8G6gPOSqiprQlLaiywKqg,133
+pandas_pyarrow/mappers/dtype_mapper.py,sha256=jKAtruftJMeENGKSgvQcMgcqH7xe5zmW7EtiniXi1ho,1111
+pandas_pyarrow/mappers/numeric_mapper.py,sha256=7VocveMB-xALxgN8pnZgR5BTRHEm7gVuhHv9C6xNr_Q,1612
+pandas_pyarrow/pda_converter.py,sha256=qxk1x6erpZ8WfCUxqmVJTHfMLM-jvmc0LgKFBT4JG9I,2034
+pandas_pyarrow/reverse_converter.py,sha256=hVXih3FUoqQY8kWjG2MitffDgHxv5CvOz_GGuFI6Ejo,620
+pandas_pyarrow-0.1.10.dist-info/LICENSE,sha256=nQAjWnm3nqnfzyO4GrFPwZX58y12PDZw5AOOOrJiabI,1069
+pandas_pyarrow-0.1.10.dist-info/METADATA,sha256=Irh4qpcozA5kPjTME1MuG2QXtrqYYFtyLspP_-5ZES4,8336
+pandas_pyarrow-0.1.10.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pandas_pyarrow-0.1.10.dist-info/RECORD,,
