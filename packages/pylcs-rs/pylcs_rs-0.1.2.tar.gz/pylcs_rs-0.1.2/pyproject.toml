@@ -1,0 +1,36 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "pylcs-rs"
+description = "Fast LCS algorithms implemented in Rust"
+authors = [{ name = "Kazuki Inamura", email = "kzinmr109@gmail.com" }]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dynamic = ["version"]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
+
+[tool.cibuildwheel]
+# Skip musllinux builds
+skip = ["*-musllinux_*"]
+test-requires = ["pytest>=6.0"]
+test-command = "pytest {project}/tests"
