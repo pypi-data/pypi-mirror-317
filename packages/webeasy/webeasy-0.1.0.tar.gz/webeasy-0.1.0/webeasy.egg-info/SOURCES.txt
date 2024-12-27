@@ -1,0 +1,12 @@
+pyproject.toml
+setup.cfg
+webeasy/__init__.py
+webeasy/cli.py
+webeasy/css_converter.py
+webeasy/html_converter.py
+webeasy.egg-info/PKG-INFO
+webeasy.egg-info/SOURCES.txt
+webeasy.egg-info/dependency_links.txt
+webeasy.egg-info/entry_points.txt
+webeasy.egg-info/requires.txt
+webeasy.egg-info/top_level.txt

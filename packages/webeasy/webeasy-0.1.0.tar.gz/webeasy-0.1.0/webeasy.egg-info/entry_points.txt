@@ -1,0 +1,2 @@
+[console_scripts]
+webeasy = webeasy.cli:main
