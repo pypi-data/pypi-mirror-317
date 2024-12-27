@@ -1,0 +1,11 @@
+prefect_datahub/__init__.py,sha256=rFqMyKGNCLHNRDI9WfeTG-WMDkQLiKEDAE_QxooKBiQ,549
+prefect_datahub/datahub_emitter.py,sha256=m0mCt_JPis-cifJUXDqYS-tRzclQ_h_RyOQpKM5ZRuc,22105
+prefect_datahub/entities.py,sha256=M1ZZ6W2qw60nK3evjY1O1EwIhwSUD3Lxcq4iExvgdwM,1143
+prefect_datahub/example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prefect_datahub/example/flow.py,sha256=u6cAERvbCQBzfqzFBI8Aws0KvP4jzqlj7Ny0O1O4CnI,1418
+prefect_datahub/example/save_block.py,sha256=lplkwE4OXJnZ_gx_ctqF9jIXoknw6KDzFpUN4pjaplY,354
+prefect_datahub-0.15.0.1rc10.dist-info/METADATA,sha256=SPcjTB0nbbp9jlopM2u2EmPBloPDjj3WPhSA_R9K8GE,8330
+prefect_datahub-0.15.0.1rc10.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+prefect_datahub-0.15.0.1rc10.dist-info/entry_points.txt,sha256=QOKvv7NySQMsYTMMpgzDS3YA0q7X6jArI3nSwegkcMQ,81
+prefect_datahub-0.15.0.1rc10.dist-info/top_level.txt,sha256=v8BHn7s1ZYqtHdNsgh6TCZ2g-7ZQ1X9BHdGVlPF_EwA,16
+prefect_datahub-0.15.0.1rc10.dist-info/RECORD,,
