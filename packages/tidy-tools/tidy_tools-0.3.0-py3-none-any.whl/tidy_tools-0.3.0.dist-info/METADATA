@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: tidy-tools
+Version: 0.3.0
+Summary: Declarative programming for PySpark workflows.
+Requires-Python: >=3.10
+Requires-Dist: attrs>=24.2.0
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: pyspark>=3.5
+Description-Content-Type: text/markdown
+
+# Tidy Tools
+
+Declarative programming for PySpark workflows.
