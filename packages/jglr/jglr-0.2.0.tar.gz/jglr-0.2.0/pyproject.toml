@@ -1,0 +1,22 @@
+[project]
+name = "jglr"
+version = "0.2.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sai", email = "ysaijagadeeshuh@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "datetime>=5.5",
+    "hatch>=1.14.0",
+    "pyautogui>=0.9.54",
+    "twine>=6.0.1",
+]
+
+[project.scripts]
+jglr = "jglr:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
