@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: CypherPilot
+Version: 0.1.0
+Summary: Python Library for Database Interaction with Neo4j
+Author: Yaki Naftali
+Author-email: yaki.naftali@accenture.com
+Description-Content-Type: text/markdown
+Requires-Dist: neo4j>=4.4.0
