@@ -1,0 +1,17 @@
+{
+	"/": [],
+	"/api/download": [
+		"src/routes/api/download/+server.ts"
+	],
+	"/api/history": [
+		"src/routes/api/history/+server.ts"
+	],
+	"/api/tts": [
+		"src/routes/api/tts/+server.ts"
+	],
+	"/api/voices": [
+		"src/routes/api/voices/+server.ts"
+	],
+	"/history": [],
+	"/script": []
+}
