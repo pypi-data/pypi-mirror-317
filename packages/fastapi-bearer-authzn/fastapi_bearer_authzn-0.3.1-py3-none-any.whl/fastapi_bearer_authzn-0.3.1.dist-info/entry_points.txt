@@ -1,0 +1,3 @@
+[console_scripts]
+cli = fastapi_bearer_authzn.__main__:cli
+fastapi-bearer-authzn = fastapi_bearer_authzn.__main__:cli

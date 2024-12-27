@@ -1,0 +1,10 @@
+fastapi_bearer_authzn/__init__.py,sha256=BGQweXFfhD7eIzjp6yeyyTA7X0YBWmAK1eUF69971VM,363
+fastapi_bearer_authzn/__main__.py,sha256=CsxE8GKc4IOB52ZwXJ13MsvHSRZu0cGYoSBDOefVQo4,91
+fastapi_bearer_authzn/core.py,sha256=EPxwbL9A3skaDnRVDOWR0NQkYErEKeSewFT-xQdNn2c,6097
+fastapi_bearer_authzn/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_bearer_authzn/cli/__init__.py,sha256=gOibmZvnK3NzC4Wi72jK8kRrYoPIRuGRAVTRSAdXziE,1598
+fastapi_bearer_authzn-0.3.1.dist-info/METADATA,sha256=vxFRcUUlNMY4zSA2XrKDlba6bkwIZz0RtO_tH0xG9fU,4668
+fastapi_bearer_authzn-0.3.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastapi_bearer_authzn-0.3.1.dist-info/entry_points.txt,sha256=9_DkdPtG2NBrYnaOYmACBgM8G5c2bVyOVp1ZZPcTaRE,118
+fastapi_bearer_authzn-0.3.1.dist-info/licenses/LICENSE,sha256=LkAqxyZb7qSHCAE7tib4wFWgwkTRuvYa8LMJ4XCDD5k,1108
+fastapi_bearer_authzn-0.3.1.dist-info/RECORD,,
