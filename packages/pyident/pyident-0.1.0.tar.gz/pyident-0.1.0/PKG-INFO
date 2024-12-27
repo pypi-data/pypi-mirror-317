@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pyident
+Version: 0.1.0
+Summary: A Library to help you identify you users using Zibal API
+License: MIT
+Author: Fateme Fouladkar
+Author-email: fatemefuoladkar@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# pyident
+A Library to help you identify you users using Zibal API
+
+## Usage
+
+```python
+from zibal import ZibalClient
+
+# Initialize the client
+client = ZibalClient(api_token="your-token-here")
+
+# Check if user is identified
+is_identified = client.is_user_identified(
+    mobile="1234567890",
+    national_code="1234567890"
+)
+
+# Get user identity
+identity, status_code = client.get_user_identity(
+    birthday="1990/01/01",
+    national_code="1234567890"
+)
+```
+
