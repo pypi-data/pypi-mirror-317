@@ -1,0 +1,12 @@
+features:
+  cli:
+    - package:
+      prefix:
+  web:
+    - package:
+      prefix:
+args:
+  cli:
+    - rule:
+      default:
+      coercion:
