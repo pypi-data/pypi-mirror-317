@@ -1,0 +1,3 @@
+[pytest11]
+flexmock=flexmock._pytest_plugin
+
