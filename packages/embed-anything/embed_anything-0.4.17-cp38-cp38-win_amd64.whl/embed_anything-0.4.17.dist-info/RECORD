@@ -1,0 +1,10 @@
+embed_anything-0.4.17.dist-info/METADATA,sha256=xsciMC27sfvnW2YA2Qwe1WnmPeacSAp3AFcr-u0MEq4,13893
+embed_anything-0.4.17.dist-info/WHEEL,sha256=KoGRszcCSNqg6HlKuT3_zxv27FK_x7uxG0MA_QTwnHY,94
+embed_anything-0.4.17.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+embed_anything/libiomp5md.dll,sha256=CtcfRm0RXTU9zpS6MrY-KI9IGY6J9VHUbczkYf7b0ZU,2047000
+embed_anything/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+embed_anything/vectordb.py,sha256=UUkkC4Guv6xlkzJg-DERbwzWtpdWYdjanSovNmUgrKE,633
+embed_anything/_embed_anything.pyi,sha256=9Qf8_jycXQ-wJR4kKuDKeyKDNB7D7HbsEt1fznooJUo,20315
+embed_anything/__init__.py,sha256=Uns7mIDYxse_jbTbPplJReKX8Tq_874TkQwddUZkRgs,4318
+embed_anything/_embed_anything.cp38-win_amd64.pyd,sha256=nTn5cxRP7svECeNOQjVmS-P2h19pUZFl0owU_SOvFKI,52146176
+embed_anything-0.4.17.dist-info/RECORD,,
