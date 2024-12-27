@@ -1,0 +1,10 @@
+README.md
+setup.py
+torcheasy/__init__.py
+torcheasy/config.py
+torcheasy/trainable.py
+torcheasy.egg-info/PKG-INFO
+torcheasy.egg-info/SOURCES.txt
+torcheasy.egg-info/dependency_links.txt
+torcheasy.egg-info/requires.txt
+torcheasy.egg-info/top_level.txt
