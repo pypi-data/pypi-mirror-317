@@ -1,0 +1,6 @@
+README.md
+setup.py
+shopee_hf_datasets.egg-info/PKG-INFO
+shopee_hf_datasets.egg-info/SOURCES.txt
+shopee_hf_datasets.egg-info/dependency_links.txt
+shopee_hf_datasets.egg-info/top_level.txt
