@@ -1,0 +1,23 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="GrokAiChat",
+    version="0.1.0",
+    author="Vibhek Soni",
+    author_email="vibheksoni@engineer.com",
+    description="A Python library for interacting with Grok AI through X's user account API.",
+    long_description=open("README.md", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/vibheksoni/GrokAiChat",
+    packages=find_packages(),
+    install_requires=[
+        "requests",
+        "python-dotenv"
+    ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.8',
+)

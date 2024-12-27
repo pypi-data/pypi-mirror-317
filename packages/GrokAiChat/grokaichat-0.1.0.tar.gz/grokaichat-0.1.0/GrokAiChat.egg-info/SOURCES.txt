@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+GrokAiChat.egg-info/PKG-INFO
+GrokAiChat.egg-info/SOURCES.txt
+GrokAiChat.egg-info/dependency_links.txt
+GrokAiChat.egg-info/requires.txt
+GrokAiChat.egg-info/top_level.txt
