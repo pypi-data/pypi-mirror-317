@@ -1,0 +1,2 @@
+[nbdev]
+trouver = trouver._modidx:d
