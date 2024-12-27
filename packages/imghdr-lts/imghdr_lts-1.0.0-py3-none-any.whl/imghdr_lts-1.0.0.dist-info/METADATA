@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: imghdr-lts
+Version: 1.0.0
+Summary: LTS Port of Python imghdr
+Maintainer-email: Michael Hall <michael@michaelhall.tech>
+License: PSF-2.0
+Project-URL: Homepage, https://github.com/mikeshardmind/imghdr-lts
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+### A totally "temporary" solution
+
+python3.13 removed a bunch of modules, this one was
+low-cost to keep but guess it's worth breaking people
+to remove less than 200 lines of python code that
+were extremely stable.
