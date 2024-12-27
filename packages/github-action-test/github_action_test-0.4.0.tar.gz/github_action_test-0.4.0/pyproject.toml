@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "github-action-test"
+version = "0.4.0"
+description = ""
+authors = ["colyerdeng <shawndeng1109@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.4"
+nox = "^2024.10.9"
+pytest = "^8.3.4"
+pytest-mock = "^3.14.0"
+pytest-cov = "^6.0.0"
+
+[tool.ruff]
+line-length = 120
+include = ["pyproject.toml", "github-action-test/*.py","tests/*.py"]
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # pyflakes
+    "I", # isort
+    "B", # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "D"  # pydocstyle
+]
+
+ignore = [
+    "W191", # indentation contains tabs
+    "D401"  # imperative mood
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+lines-after-imports = 2
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver2"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
