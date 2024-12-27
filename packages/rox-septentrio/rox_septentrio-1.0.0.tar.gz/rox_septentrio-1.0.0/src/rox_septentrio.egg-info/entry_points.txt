@@ -1,0 +1,3 @@
+[console_scripts]
+gps_mock = rox_septentrio.mock:main
+gps_node = rox_septentrio.__main__:main
