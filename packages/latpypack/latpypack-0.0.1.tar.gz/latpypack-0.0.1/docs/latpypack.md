@@ -1,0 +1,4 @@
+ 
+# latpypack module
+
+::: latpypack.latpypack

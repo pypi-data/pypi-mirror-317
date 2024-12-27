@@ -1,0 +1,7 @@
+numpy
+
+[all]
+latpypack[extra]
+
+[extra]
+pandas
