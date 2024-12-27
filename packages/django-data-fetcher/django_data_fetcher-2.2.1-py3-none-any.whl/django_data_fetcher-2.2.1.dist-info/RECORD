@@ -1,0 +1,11 @@
+data_fetcher/__init__.py,sha256=2h8siknEe1g8VKHCOUVbmyeFFxXbAb-qu0KuJ-YvIe8,333
+data_fetcher/core.py,sha256=nfclGtnnAyYFvYecUsn2U9BswUdcbCzkv4COrj_LBew,3196
+data_fetcher/extras.py,sha256=cWA4BvlIwm-mF9zW-TYfG-FJXveQ8AmV-CREWGg5vUI,3093
+data_fetcher/global_request_context.py,sha256=kbDMRAkuNYr8Y_0n91Qs5N9IpP9xsOv7qRQRhDJr98k,588
+data_fetcher/middleware.py,sha256=p3kIu1dIL-8h2S4hdAruhcSzTrsbkicbaCukRNeLlVY,288
+data_fetcher/shorthand_fetcher_classes.py,sha256=e0LHYVPzP_qaKcJhdvZ0dgySPl0r4_s7VxHhpDKf4i4,1975
+data_fetcher/util.py,sha256=Y75MvCuV_Ez7dp46C_7tN4zijnWC3pINbGZL1tvubqA,1070
+django_data_fetcher-2.2.1.dist-info/METADATA,sha256=JoWogieWFY3UQ2FIjqvYhPpgStFyD-B19P1gCYTQHE4,14188
+django_data_fetcher-2.2.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_data_fetcher-2.2.1.dist-info/top_level.txt,sha256=TBKXQtxl87JxtHau5Dqv7OIrrkNEvUBV1C6q28QEqOg,13
+django_data_fetcher-2.2.1.dist-info/RECORD,,
