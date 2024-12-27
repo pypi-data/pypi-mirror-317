@@ -1,0 +1,82 @@
+{
+    "volt": {
+        "id": "V",
+        "phrases": ["volt", "volts", "V"],
+        "unit": 1
+    },
+    "kilovolt": {
+        "id": "kV",
+        "phrases": ["kilovolt", "kilovolts", "kV"],
+        "unit": 1000
+    },
+    "millivolt": {
+        "id": "mV",
+        "phrases": ["millivolt", "millivolts", "mV"],
+        "unit": 0.001
+    },
+    "microvolt": {
+        "id": "µV",
+        "phrases": ["microvolt", "microvolts", "µV", "uV"],
+        "unit": 0.000001
+    },
+    "ampere": {
+        "id": "A",
+        "phrases": ["ampere", "amperes", "amp", "amps", "A"],
+        "unit": 1
+    },
+    "kiloampere": {
+        "id": "kA",
+        "phrases": ["kiloampere", "kiloamperes", "kA"],
+        "unit": 1000
+    },
+    "milliampere": {
+        "id": "mA",
+        "phrases": ["milliampere", "milliamperes", "mA"],
+        "unit": 0.001
+    },
+    "microampere": {
+        "id": "µA",
+        "phrases": ["microampere", "microamperes", "µA", "uA"],
+        "unit": 0.000001
+    },
+    "watt": {
+        "id": "W",
+        "phrases": ["watt", "watts", "W"],
+        "unit": 1
+    },
+    "kilowatt": {
+        "id": "kW",
+        "phrases": ["kilowatt", "kilowatts", "kW"],
+        "unit": 1000
+    },
+    "megawatt": {
+        "id": "MW",
+        "phrases": ["megawatt", "megawatts", "MW"],
+        "unit": 1000000
+    },
+    "milliwatt": {
+        "id": "mW",
+        "phrases": ["milliwatt", "milliwatts", "mW"],
+        "unit": 0.001
+    },
+    "ohm": {
+        "id": "Ω",
+        "phrases": ["ohm", "ohms", "Ω"],
+        "unit": 1
+    },
+    "kiloohm": {
+        "id": "kΩ",
+        "phrases": ["kiloohm", "kiloohms", "kΩ", "kohm"],
+        "unit": 1000
+    },
+    "megaohm": {
+        "id": "MΩ",
+        "phrases": ["megaohm", "megaohms", "MΩ", "Mohm"],
+        "unit": 1000000
+    },
+    "milliohm": {
+        "id": "mΩ",
+        "phrases": ["milliohm", "milliohms", "mΩ"],
+        "unit": 0.001
+    }
+} 
