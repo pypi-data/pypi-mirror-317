@@ -1,0 +1,4 @@
+[console_scripts]
+driink=driink.cli:main
+driink-applet=driink.applet:main
+
