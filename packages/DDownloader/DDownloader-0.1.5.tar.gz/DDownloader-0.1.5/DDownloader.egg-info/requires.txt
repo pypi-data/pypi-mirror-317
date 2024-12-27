@@ -1,0 +1,4 @@
+requests
+coloredlogs
+loguru
+argparse
