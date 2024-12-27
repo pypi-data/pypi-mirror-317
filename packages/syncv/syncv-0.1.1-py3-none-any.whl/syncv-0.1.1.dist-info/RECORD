@@ -1,0 +1,12 @@
+syncv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+syncv/cli.py,sha256=SXEifXndqOBF_Miij9taCO-XRM40VGk9JWR02tWW0Uo,1206
+syncv/clipboard.py,sha256=NIB85ZFrVYAL17Fyeokx8tzbmvMwcPInsvqmQPWkgAA,891
+syncv/core.py,sha256=Ziv-NEfi5_17QO3tXIB-0-b1bYMJlrhxDhue194WTNU,1687
+syncv/keyboard_shortcuts.py,sha256=CqFak93vwW2fs0bZbEI-5fbMz8dTSbviSAlzkS394KY,2701
+syncv/network.py,sha256=hef-mOp58y8NKpBc7vzZahR3ZlYAQ0iynDfUq7utR8g,1794
+syncv/storage.py,sha256=d6g4LRLmuNVmjskGSHYZhkaaerFIfd3gaHS29YUp3-I,1083
+syncv-0.1.1.dist-info/METADATA,sha256=-MStUnViDzz0sR71e2qlsk_RDmPupzJaAp-Ht5ucQJU,436
+syncv-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+syncv-0.1.1.dist-info/entry_points.txt,sha256=vRZXTfAMh_9cler9fGr_GjfYx7k9pIXyiWwjY3rn-C4,41
+syncv-0.1.1.dist-info/top_level.txt,sha256=usOkPs3yxEZpdHG_d6fpVPUuzl7pRO3K5cX_biDVDbY,6
+syncv-0.1.1.dist-info/RECORD,,
