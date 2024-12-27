@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: custom_print
+Version: 0.0.3
+Summary: Print a list type as a table style
+Home-page: https://github.com/acma82/Custom_Print
+Author: Miguel Angel Aguilar Cuesta
+Author-email: acma.mex@gmail.com
+License: EveryOneCanUseIt
+Keywords: custom_print
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+
+
+Custom_Print Module requires **Python 3.12** or greater.
+
+Find the **README.md** file at https://github.com/acma82/custom_print
+
+
+
+## <p style="text-align:center;"><span style="color:red"><strong> Friday  December 27, 2024 </strong></span></p>
+
+
+
+
+
