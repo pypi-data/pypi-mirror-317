@@ -1,0 +1,14 @@
+pycodata/__init__.py,sha256=ZpOa1oKdCITbB8NnsZ8HRmRDV13LMNN3ChmxHCVBuFk,475
+pycodata/constants_2010.cp39-win_amd64.pyd,sha256=fIK8S1srrcQafb0Z7a5aIQw-zFQGoJAOgSIdLQfvNPc,81408
+pycodata/constants_2014.cp39-win_amd64.pyd,sha256=BlOKThywIqJmxhdRJMsZ2oqkIT9t6I2l7fXoH8kZ6Y4,81408
+pycodata/constants_2018.cp39-win_amd64.pyd,sha256=JMdpv8Ixhm4Em_5dPpaU3Tp8C8mAoDBc6xMjIX4Of3A,85504
+pycodata/constants_2022.cp39-win_amd64.pyd,sha256=IeOU4tYPgPUm8mYFjI2lTytjN8CEKXN-4C44XI8gHi4,82432
+pycodata/libcodata.a,sha256=nD-Ky23OXKjFRLc9bGYeTXBQkCM10eeJnK0iYch4H8k,872086
+pycodata/libcodata.dll,sha256=od0D__ILbNvfacNfYHGtUlMA7EtMBZmJ_5oiUejz7ME,1689490
+pycodata/libcodata.dll.a,sha256=O7hbxWFZqfXBx1cFUoLdsrPOeuRn0pZK-FDjj0f07cw,2650730
+pycodata/version.cp39-win_amd64.pyd,sha256=O1qbdoQKdTs6U-3Hq3Og3d8e7yiTNuwEGlI4TYIYZuo,10752
+pycodata-2.1.1.dist-info/LICENSE,sha256=L89ZlAU1h12hV7se2OZ1DmQ58zzcsJBcukggeWbeQTI,1086
+pycodata-2.1.1.dist-info/METADATA,sha256=fdk-tfa5tN3qMwWGi1L20ip3DRpBmLVoTpIj8ZK0-mU,1423
+pycodata-2.1.1.dist-info/WHEEL,sha256=EfPXSsrLwp9clrn29v9vbmPfEm-IfFzseSJd0ZtI9XA,99
+pycodata-2.1.1.dist-info/top_level.txt,sha256=2a1LaR8nqhf7ws8R-8fYwctq4kHd-jFd2edMIUHLeRQ,9
+pycodata-2.1.1.dist-info/RECORD,,
