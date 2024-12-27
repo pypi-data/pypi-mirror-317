@@ -1,0 +1,100 @@
+Metadata-Version: 2.4
+Name: craft-ls
+Version: 0.1.1
+Summary: A Language Server Protocol implementation for *craft files.
+Project-URL: Repository, https://github.com/batalex/craft-ls
+Project-URL: Releases, https://github.com/batalex/craft-ls/releases
+Author-email: Alex Batisse <alex.batisse@canonical.com>
+License-File: LICENSE
+Keywords: charmcraft,lsp,rockcraft,snapcraft
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: jsonschema>=4.23.0
+Requires-Dist: lsprotocol>=2023.0.0
+Requires-Dist: pygls>=1.1.0
+Requires-Dist: pyyaml>=6.0.2
+Description-Content-Type: text/markdown
+
+# craft-ls
+
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/batalex/craft-ls/ci.yaml)
+
+Get on  
+[![PyPI - Version](https://img.shields.io/pypi/v/craft-ls)](https://pypi.org/project/craft-ls/)
+[![FlakeHub](https://img.shields.io/badge/FlakeHub-5277C3)](https://flakehub.com/flake/Batalex/craft-ls)
+
+
+`craft-ls` is a [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) implementation for *craft[^1] tools.
+
+`craft-ls` enables editors that support the LSP to get quality of life improvements while working on *craft configuration files.
+
+## Features
+
+- Diagnostics
+
+## Usage
+
+### Installation
+
+Using `uv` or `pipx`
+
+```shell
+uv tool install craft-ls
+
+pipx install craft-ls
+```
+
+### Setup
+
+#### Helix
+
+```toml
+# languages.toml
+[[language]]
+name = "yaml"
+language-servers = ["craft-ls"]
+
+[language-server.craft-ls]
+command = "craft-ls"
+```
+
+TBD: neovim, VSCode
+
+## Roadmap
+
+Project availability:
+
+- Python package
+- Snap
+- Nix flake
+- VSCode extension
+
+Features:
+
+- Diagnostics
+- Autocompletion **on typing**
+- Symbol documentation
+
+Ecosystem:
+
+- Encourage *craft tools to refine their JSONSchemas even further
+
+## Contributing
+
+TBD
+
+```bash
+# .envrc
+use flake  # if you are using nix
+source .venv/bin/activate
+export CRAFT_LS_DEV=true
+```
+
+[^1]: only snapcraft and rockcraft so far
