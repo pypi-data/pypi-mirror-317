@@ -1,0 +1,10 @@
+elevenlabs_mcp/__init__.py,sha256=C1ggHTICW7CMfiD5ukEZUd7uxut8RpAECQ2RUVJxves,279
+elevenlabs_mcp/database.py,sha256=1yBZyNtHoIx8C9RODQ_i1dQh1twQXp-lS13YStaJ6pE,9702
+elevenlabs_mcp/elevenlabs_api.py,sha256=UUHWjtovgslX1YmdUPKuy4d-3r58BnCWWn9OlAVnj9c,11698
+elevenlabs_mcp/models.py,sha256=qv83TpbS6LHfoldZan7gQLPaWHmBExXfcmQ-qAFrRbY,1730
+elevenlabs_mcp/server.py,sha256=Na1VIoOIBPd6sY56sw_YY4OuWsU7VEyQgHBhAvOkk_A,29457
+elevenlabs_mcp_server-0.1.1.dist-info/METADATA,sha256=TQGzvZF0Nv66LKZl2GCK-fUip4IX-acxzNtjheCcjPM,4995
+elevenlabs_mcp_server-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+elevenlabs_mcp_server-0.1.1.dist-info/entry_points.txt,sha256=8sc55LDAQ53g6et4WOrWBldRG5E7KLPGYRTtD0pll0g,69
+elevenlabs_mcp_server-0.1.1.dist-info/licenses/LICENSE,sha256=Z0SiIECB19QLdMlvhMND5YYvtuGthIPMWADg0f284CA,1085
+elevenlabs_mcp_server-0.1.1.dist-info/RECORD,,

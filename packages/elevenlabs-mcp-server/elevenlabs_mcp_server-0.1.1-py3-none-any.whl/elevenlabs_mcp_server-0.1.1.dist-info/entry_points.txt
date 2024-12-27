@@ -1,0 +1,2 @@
+[console_scripts]
+elevenlabs-mcp-server = elevenlabs_mcp.server:main
