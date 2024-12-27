@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+TkScenes.egg-info/PKG-INFO
+TkScenes.egg-info/SOURCES.txt
+TkScenes.egg-info/dependency_links.txt
+TkScenes.egg-info/top_level.txt
+tkscenes/__init__.py
+tkscenes/child.py
+tkscenes/errors.py
+tkscenes/scene.py
