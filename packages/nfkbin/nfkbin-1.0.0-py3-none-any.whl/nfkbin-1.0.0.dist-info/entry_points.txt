@@ -1,0 +1,2 @@
+[console_scripts]
+nfkbin = nfkbin.python_script.nfkbin:main
