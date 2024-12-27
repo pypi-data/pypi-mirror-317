@@ -1,0 +1,750 @@
+# tortoise3
+
+tortoise-orm的国产化替代版本, 用于操作数据库
+
+## 01.快速入门案例
+
+安装:
+
+```shell
+pip install tortoise3
+```
+
+创建模型:
+
+```python
+from tortoise3 import Tortoise, fields, run_async
+from tortoise3.models import Model
+
+
+class Event(Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    datetime = fields.DatetimeField(null=True)
+
+    class Meta:
+        table = "event"
+
+    def __str__(self):
+        return self.name
+```
+
+初始化数据库:
+
+```python
+await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+```
+
+创建表:
+
+```shell
+await Tortoise.generate_schemas()
+```
+
+新增数据:
+
+```python
+event = await Event.create(name="Test")
+```
+
+更新数据:
+
+```python
+await Event.filter(id=event.id).update(name="Updated name")
+```
+
+查询单条数据:
+
+```python
+ print(await Event.filter(name="Updated name").first())
+```
+
+通过save保存数据:
+
+```python
+await Event(name="Test 2").save()
+```
+
+查询某一列数据, 比如查询所有的id:
+
+```python
+print(await Event.all().values_list("id", flat=True))
+```
+
+查询某几列数据, 比如id和name:
+
+```python
+print(await Event.all().values("id", "name"))
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, run_async
+from tortoise3.models import Model
+
+
+class Event(Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    datetime = fields.DatetimeField(null=True)
+
+    class Meta:
+        table = "event"
+
+    def __str__(self):
+        return self.name
+
+
+async def run():
+    # 初始化数据库
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    # 创建表
+    await Tortoise.generate_schemas()
+
+    event = await Event.create(name="Test")
+    await Event.filter(id=event.id).update(name="Updated name")
+
+    print(await Event.filter(name="Updated name").first())
+    # >>> Updated name
+
+    await Event(name="Test 2").save()
+    print(await Event.all().values_list("id", flat=True))
+    # >>> [1, 2]
+    print(await Event.all().values("id", "name"))
+    # >>> [{'id': 1, 'name': 'Updated name'}, {'id': 2, 'name': 'Test 2'}]
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 02.创建用户模型
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+```
+
+## 03.初始化用户表
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 04.新增用户
+
+张三, 李四, 王五
+
+核心代码:
+
+```python
+await User.create(name="张三", age=23)
+await User.create(name="李四", age=24)
+await User.create(name="王五", age=35)
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 05.查询所有用户
+
+核心代码:
+
+```python
+users = await User.all()
+print(users, type(users))
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+    # 查询所有用户
+    users = await User.all()
+    print(users, type(users))
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 06.根据id查询用户
+
+核心代码:
+
+```python
+user = await User.get(id=1)
+print(user)
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+    # 查询所有用户
+    users = await User.all()
+    print(users, type(users))
+
+    # 根据id查询用户
+    user = await User.get(id=1)
+    print(user)
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 07.根据姓名用户
+
+核心代码:
+
+```python
+users = await User.filter(name="张三")
+print(users, type(users))
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+    # 查询所有用户
+    users = await User.all()
+    print(users, type(users))
+
+    # 根据id查询用户
+    user = await User.get(id=1)
+    print(user)
+
+    # 根据姓名查询用户
+    users = await User.filter(name="张三")
+    print(users, type(users))
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 08.提取查询的第一个用户
+
+核心代码:
+
+```python
+user = await User.filter(id=1).first()
+print(user)
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+    # 查询所有用户
+    users = await User.all()
+    print(users, type(users))
+
+    # 根据id查询用户
+    user = await User.get(id=1)
+    print(user)
+
+    # 根据姓名查询用户
+    users = await User.filter(name="张三")
+    print(users, type(users))
+
+    # 提取查询的第一个用户
+    user = await User.filter(id=1).first()
+    print(user)
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 09.修改用户姓名
+
+核心代码:
+
+```python
+await User.filter(id=1).update(name="张三333")
+user = await User.filter(id=1).first()
+print(user)
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+    # 查询所有用户
+    users = await User.all()
+    print(users, type(users))
+
+    # 根据id查询用户
+    user = await User.get(id=1)
+    print(user)
+
+    # 根据姓名查询用户
+    users = await User.filter(name="张三")
+    print(users, type(users))
+
+    # 提取查询的第一个用户
+    user = await User.filter(id=1).first()
+    print(user)
+
+    # 更新用户姓名
+    await User.filter(id=1).update(name="张三333")
+    user = await User.filter(id=1).first()
+    print(user)
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 10.查询所有的用户id
+
+核心代码:
+
+```python
+ids = await User.all().values_list("id", flat=True)
+print(ids)
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+    # 查询所有用户
+    users = await User.all()
+    print(users, type(users))
+
+    # 根据id查询用户
+    user = await User.get(id=1)
+    print(user)
+
+    # 根据姓名查询用户
+    users = await User.filter(name="张三")
+    print(users, type(users))
+
+    # 提取查询的第一个用户
+    user = await User.filter(id=1).first()
+    print(user)
+
+    # 更新用户姓名
+    await User.filter(id=1).update(name="张三333")
+    user = await User.filter(id=1).first()
+    print(user)
+
+    # 查询所有的用户id
+    ids = await User.all().values_list("id", flat=True)
+    print(ids)
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 11.查询所有用户的姓名和年龄
+
+核心代码:
+
+```python
+users = await User.all().values_list("name", "age")
+print(users)
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+    # 查询所有用户
+    users = await User.all()
+    print(users, type(users))
+
+    # 根据id查询用户
+    user = await User.get(id=1)
+    print(user)
+
+    # 根据姓名查询用户
+    users = await User.filter(name="张三")
+    print(users, type(users))
+
+    # 提取查询的第一个用户
+    user = await User.filter(id=1).first()
+    print(user)
+
+    # 更新用户姓名
+    await User.filter(id=1).update(name="张三333")
+    user = await User.filter(id=1).first()
+    print(user)
+
+    # 查询所有的用户id
+    ids = await User.all().values_list("id", flat=True)
+    print(ids)
+
+    # 查询所有用户的姓名和年龄
+    users = await User.all().values_list("name", "age")
+    print(users)
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 12.根据id删除用户
+
+核心代码:
+
+```python
+user = await User.get(id=1)
+await user.delete()
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+    # 根据id删除用户
+    user = await User.get(id=1)
+    await user.delete()
+
+    # 查询所有用户
+    users = await User.all()
+    print(users, type(users))
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
+## 13.根据姓名删除用户
+
+核心代码:
+
+```python
+await User.filter(name="张三").delete()
+```
+
+完整代码:
+
+```python
+from tortoise3 import Tortoise, fields, models, run_async
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    name = fields.TextField()
+    age = fields.IntField()
+
+    class Meta:
+        table = "user"
+
+    def __str__(self):
+        return f"<User id={self.id}, name={self.name}, age={self.age}>"
+
+    def __repr__(self):
+        return self.__str__()
+
+
+async def run():
+    # 创建表
+    await Tortoise.init(db_url="sqlite://:memory:", modules={"models": ["__main__"]})
+    await Tortoise.generate_schemas()
+
+    # 新增用户
+    await User.create(name="张三", age=23)
+    await User.create(name="李四", age=24)
+    await User.create(name="王五", age=35)
+
+    # 根据姓名删除用户
+    await User.filter(name="张三").delete()
+
+    # 查询所有用户
+    users = await User.all()
+    print(users, type(users))
+
+
+if __name__ == "__main__":
+    run_async(run())
+```
+
