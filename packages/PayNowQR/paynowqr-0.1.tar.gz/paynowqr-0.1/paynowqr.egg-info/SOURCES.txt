@@ -1,0 +1,6 @@
+setup.py
+paynowqr.egg-info/PKG-INFO
+paynowqr.egg-info/SOURCES.txt
+paynowqr.egg-info/dependency_links.txt
+paynowqr.egg-info/requires.txt
+paynowqr.egg-info/top_level.txt

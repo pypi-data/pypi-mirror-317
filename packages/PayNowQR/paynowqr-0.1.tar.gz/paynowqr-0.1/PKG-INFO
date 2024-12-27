@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: paynowqr
+Version: 0.1
+Summary: A simple python library to generate PayNow QR codes
+Home-page: 
+Author: Evan Khee
+Author-email: evankhee@ymail.com
+Requires-Dist: qrcode[pil]
