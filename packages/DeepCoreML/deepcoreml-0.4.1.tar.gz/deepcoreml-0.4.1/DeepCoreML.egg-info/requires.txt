@@ -1,0 +1,16 @@
+numpy
+pandas
+nltk
+matplotlib
+seaborn
+gensim
+bs4
+joblib
+sdv
+torch>=2.0.0
+transformers>=4.29.0
+scikit-learn>=1.4.0
+xgboost
+imblearn>=0.0
+rdt<2.0,>=1.3.0
+tqdm
