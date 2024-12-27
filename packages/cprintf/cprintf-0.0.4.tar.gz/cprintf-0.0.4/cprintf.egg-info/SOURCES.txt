@@ -1,0 +1,8 @@
+README.md
+setup.py
+cprintf/__init__.py
+cprintf/color_print.py
+cprintf.egg-info/PKG-INFO
+cprintf.egg-info/SOURCES.txt
+cprintf.egg-info/dependency_links.txt
+cprintf.egg-info/top_level.txt
