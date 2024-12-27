@@ -1,0 +1,11 @@
+langfarm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langfarm/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langfarm/hooks/dashscope/__init__.py,sha256=rSNLeUkPliKZ6c3w2ZtMm3z9z7YZLz77MekCBikkXGA,59
+langfarm/hooks/dashscope/generation.py,sha256=QfcGvo1bGFEoLpqzOhq05Az8QzWQ6AzYqNeYH6apAaE,3618
+langfarm/hooks/langfuse/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langfarm/hooks/langfuse/callback/__init__.py,sha256=KyZEJxACM-Z8xwvSYfbOGPCs6LO9ZhO4yk2hROYvAuQ,144
+langfarm/hooks/langfuse/callback/langchain.py,sha256=E0BMU1D8unSYepgMQYDY_-6q9jlPmsDajmCtTq5Huw0,2096
+langfarm-0.1.2.dist-info/LICENSE,sha256=TwcZV3WqcczmGdwl0MKI2ryfhcLZ0Ikf2EsFpmH4ysk,1065
+langfarm-0.1.2.dist-info/METADATA,sha256=c2R9T1hEeniUPkE409NYXLiblRqcboRxmmeRGxB_h2Y,3417
+langfarm-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+langfarm-0.1.2.dist-info/RECORD,,
