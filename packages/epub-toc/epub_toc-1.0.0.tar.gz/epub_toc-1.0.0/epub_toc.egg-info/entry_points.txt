@@ -1,0 +1,2 @@
+[console_scripts]
+epub_toc = epub_toc.cli:main

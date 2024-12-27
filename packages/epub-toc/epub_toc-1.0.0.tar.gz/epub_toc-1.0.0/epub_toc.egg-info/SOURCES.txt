@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+epub_toc/__init__.py
+epub_toc/__main__.py
+epub_toc/exceptions.py
+epub_toc/parser.py
+epub_toc.egg-info/PKG-INFO
+epub_toc.egg-info/SOURCES.txt
+epub_toc.egg-info/dependency_links.txt
+epub_toc.egg-info/entry_points.txt
+epub_toc.egg-info/requires.txt
+epub_toc.egg-info/top_level.txt
