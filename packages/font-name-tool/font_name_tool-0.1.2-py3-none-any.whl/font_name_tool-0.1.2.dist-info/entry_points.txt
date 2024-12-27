@@ -1,0 +1,3 @@
+[console_scripts]
+font-name-tool=font_name_tool.cli:main
+

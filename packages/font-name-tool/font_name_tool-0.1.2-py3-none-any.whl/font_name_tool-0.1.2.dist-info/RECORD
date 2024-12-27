@@ -1,0 +1,8 @@
+font_name_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+font_name_tool/cli.py,sha256=y7aUqoZKlm08hPm8KKC3cLAmaAfd6_4bpGk078OpjUU,31419
+font_name_tool/dump_codes.py,sha256=zODl8t7xXZpEgaCi6wttfshoowThUK7ZQX0W9dC5YoI,799
+font_name_tool-0.1.2.dist-info/LICENSE,sha256=fFIrvrLwlT7W5KVmBSE0IADd90ZIYWI6RNh-7jYVbC4,1069
+font_name_tool-0.1.2.dist-info/METADATA,sha256=JaZf9azxTwDmbeePcGLkrjlC4yzrhuI1lWlF4jl_7I8,6484
+font_name_tool-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+font_name_tool-0.1.2.dist-info/entry_points.txt,sha256=5l5oLhLWK-Qj81w9wQF0khfg2u2x5j_y2xtabbwLCNI,58
+font_name_tool-0.1.2.dist-info/RECORD,,
