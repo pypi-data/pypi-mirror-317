@@ -1,0 +1,78 @@
+# Add active_cell reset when closing the modal
+Output('linting-table', 'active_cell')
+
+
+2.	Set active_cell to None when closing the modal:
+
+In the part of your callback where you handle the close button (n_clicks_close), set the active_cell to None:
+if ctx.triggered and ctx.triggered[0]['prop_id'] == 'close-modal.n_clicks':
+    return False, "", "", None  # Close modal and reset active cell
+
+    @app.callback(
+    [Output('context-modal', 'is_open'),
+     Output('modal-description', 'children'),
+     Output('modal-links', 'children'),
+     Output('linting-table', 'active_cell')],  # Reset active cell
+    [Input('linting-table', 'active_cell'),
+     Input('close-modal', 'n_clicks')],
+    [State('linting-table', 'data'),
+     State('context-modal', 'is_open')],
+    prevent_initial_call=True
+)
+def toggle_modal(active_cell, n_clicks_close, table_data, is_open):
+    """
+    Handles opening and closing of the modal when a row is clicked.
+    """
+    ctx = dash.callback_context
+
+    # Handle modal close button click
+    if ctx.triggered and ctx.triggered[0]['prop_id'] == 'close-modal.n_clicks':
+        return False, "", "", None  # Close modal and reset active cell
+
+    # If a row is clicked, open the modal and display content
+    if active_cell:
+        row_index = active_cell['row']  # Get the row index from the active cell
+
+        # Ensure row_index is valid within the table data range
+        if row_index < len(table_data):
+            linter_entry = table_data[row_index]
+
+            # Extract details for the modal
+            description = linter_entry.get('Description', 'No details available.')
+            links = linter_entry.get('Links', [])
+            
+            # Handle guidelines/links
+            if isinstance(links, list) and links:
+                link_elements = [html.A(href=link, children=link, target="_blank") for link in links]
+                guideline_message = html.Div(link_elements)
+            else:
+                guideline_message = "No additional guidelines available."
+
+            # Open the modal and pass in the description and links
+            return True, description, guideline_message, active_cell
+        
+    return is_open, "", "", active_cell  # Close modal if no row is clicked
+
+
+    Hide Radio button Fix
+
+table = dash_table.DataTable(
+    id='linting-table',
+    columns=columns,
+    data=df.to_dict('records'),
+    filter_action="native",
+    sort_action="native",
+    # Removed row_selectable to avoid radio button circles
+    # row_selectable="single",  
+    style_cell={
+        'whiteSpace': 'normal',
+        'height': 'auto',
+        'textAlign': 'left',
+        'padding': '12px',
+        'maxWidth': '220px',
+        'overflow': 'hidden',
+        'textOverflow': 'ellipsis',
+    },
+
+
+    
