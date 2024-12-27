@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+I4_0_Client_PY.egg-info/PKG-INFO
+I4_0_Client_PY.egg-info/SOURCES.txt
+I4_0_Client_PY.egg-info/dependency_links.txt
+I4_0_Client_PY.egg-info/requires.txt
+I4_0_Client_PY.egg-info/top_level.txt
