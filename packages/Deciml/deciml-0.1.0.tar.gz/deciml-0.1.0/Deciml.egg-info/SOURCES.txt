@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Deciml.egg-info/PKG-INFO
+Deciml.egg-info/SOURCES.txt
+Deciml.egg-info/dependency_links.txt
+Deciml.egg-info/top_level.txt
