@@ -1,0 +1,14 @@
+espai/__init__.py,sha256=Fs3qoZiR_yMzgtVH7p07VeKmoPv2v7ws_WQ-G-5E-8k,108
+espai/cli.py,sha256=BrenB3dFaTpG3rA3iKMwNOersYg1arxBIMLDeM_x3aY,16091
+espai/gemini_client.py,sha256=nyxZGEJY3mfqmubFZ_xCHyrDVSAa4K4vOzrL4c4s53s,6527
+espai/models.py,sha256=JywFuWlrNrTAVuSfZaJPANXSGAXdyeIaRBGO3vuLpAk,535
+espai/rate_limiter.py,sha256=u2njlciGo-xGuoU186a6kJCRTmASzT0OQU5dAXG_dP4,1978
+espai/scraper.py,sha256=f3a3yAXRPv-0A9MXx0QhhMBdp60vNf_WZ8gTO3al4Vc,4340
+espai/search_providers/__init__.py,sha256=Bxjd7CLs7o31aYs4kwv4E2oScgHoWw2UQGkNd3pKCU4,795
+espai/search_providers/exa.py,sha256=MuDFuMMDcKX0atXBriNmrg2mk-_PnD8yY-EnyW-O-z4,3119
+espai/search_providers/google.py,sha256=ASzx6cHVvF31hmeGaWmQb43Tg0_hwcTT2MwNb5VajWA,2974
+espai-0.1.1.dist-info/LICENSE,sha256=tN4wg2fNAWW2yvR5S5uCGEiAfobpaiU9QUYLsajpF_s,1074
+espai-0.1.1.dist-info/METADATA,sha256=fq7ICAxdII6oCG4bAnVGzLEYZvYcndhMHahKijcvaEU,4623
+espai-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+espai-0.1.1.dist-info/entry_points.txt,sha256=vZvJobOThCO3Ed5-JAG90tjukCXZTfb_AwULfnnKWAE,40
+espai-0.1.1.dist-info/RECORD,,
