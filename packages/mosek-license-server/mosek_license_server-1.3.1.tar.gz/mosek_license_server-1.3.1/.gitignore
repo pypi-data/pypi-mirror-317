@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.task
+
+__pycache__
+.venv
+.ruff_cache
+
+.coverage
+htmlcov
