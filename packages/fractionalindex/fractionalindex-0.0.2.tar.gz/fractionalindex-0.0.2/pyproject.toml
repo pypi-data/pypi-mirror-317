@@ -1,0 +1,26 @@
+[project]
+name = "fractionalindex"
+version = "0.0.2"
+requires-python = ">=3.9"
+readme = "README.md"
+description = "Fractional index library with multiple backends"
+authors = [{name="Jeremy Howard"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "sortedcontainers",
+  "fractional_indexing"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
