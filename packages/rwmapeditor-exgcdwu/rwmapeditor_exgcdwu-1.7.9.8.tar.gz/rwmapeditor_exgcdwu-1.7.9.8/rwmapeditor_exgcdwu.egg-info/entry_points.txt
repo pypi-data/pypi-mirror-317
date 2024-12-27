@@ -1,0 +1,8 @@
+[console_scripts]
+idrearrange = command:idrearrange
+layerauto = command:layerauto
+layerobauto = command:layerobauto
+objectgroupauto = command:objectgroupauto
+resizeauto = command:resizeauto
+tilesetauto = command:tilesetauto
+tsindep = command:tsindep
