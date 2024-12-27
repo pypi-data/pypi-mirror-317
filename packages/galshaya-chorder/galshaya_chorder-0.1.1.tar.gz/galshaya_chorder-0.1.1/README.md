@@ -1,0 +1,137 @@
+# Chorder
+
+A command-line tool for creating, formatting, and transposing chord charts. This tool helps musicians format their chord charts with proper chord alignment above lyrics and provides useful features like transposition and file handling.
+
+## Features
+
+- Format chord charts with chords properly aligned above lyrics
+- Transpose entire songs to different keys
+- Support for complex chord notations (e.g., Am7, G/B, F#dim)
+- Handle both sharp (#) and flat (b) notations
+- Convert between sharp and flat notations
+- Read from files or interactive input
+- Save formatted output to files
+
+## Installation
+
+Install from PyPI using pip:
+
+```bash
+pip install galshaya-chorder
+```
+
+Or install the development version directly from GitHub:
+
+```bash
+git clone https://github.com/galshaya/chorder.git
+cd chorder
+pip install -e .
+```
+
+## Usage
+
+After installation, you can use the `chorder` command directly from your terminal:
+
+### Basic Command Format
+```bash
+chorder [-i INPUT_FILE] [-o OUTPUT_FILE] [-t SEMITONES] [-f]
+```
+
+### Command Line Options
+- `-i, --input`: Input file path (optional)
+- `-o, --output`: Output file path (optional)
+- `-t, --transpose`: Number of semitones to transpose (optional, can be negative)
+- `-f, --use-flats`: Use flat notation instead of sharps (optional)
+
+### Interactive Mode
+Simply run `chorder` without any arguments to enter interactive mode:
+```bash
+chorder
+```
+Type your chord chart with chords enclosed in pipe symbols (`|`), press Enter after each line, and Ctrl+D (Unix) or Ctrl+Z (Windows) when done.
+
+### Input Format
+Write your chord chart with chords enclosed in pipe symbols (`|`) where they should appear above the lyrics:
+```
+|D|I don't want to |A|close my eyes|Em|
+I don't want to fall asleep
+'Cause I'd |G|miss you baby
+```
+
+### Examples
+
+1. **Process a File**:
+```bash
+chorder -i song.txt
+```
+
+2. **Save Output to File**:
+```bash
+chorder -i song.txt -o formatted_song.txt
+```
+
+3. **Transpose Up by 2 Semitones**:
+```bash
+chorder -i song.txt -t 2
+```
+
+4. **Transpose Down by 3 Semitones and Save**:
+```bash
+chorder -i song.txt -t -3 -o transposed_song.txt
+```
+
+5. **Use Flat Notation**:
+```bash
+chorder -i song.txt -f
+```
+
+### Example Input and Output
+
+Input:
+```
+|D|I don't want to |A|close my eyes|Em|
+```
+
+Output with default sharp notation:
+```
+D               A            Em
+I don't want to close my eyes
+```
+
+Output with flat notation (1 semitone transposed) (-f):
+```
+Eb              Bb           Fm
+I don't want to close my eyes
+```
+
+## Tips
+
+1. Place chord markers (`|C|`) exactly where you want the chord to appear above the lyrics
+2. For complex chords, just write them normally: `|Cmaj7|`, `|F#m7b5|`
+3. When transposing, the tool automatically handles both sharp and flat notations
+4. Use the `-f` flag if you prefer flat notation (e.g., Bb instead of A#)
+5. Empty lines are preserved in the output for formatting
+6. You can pipe input/output to/from other commands using standard UNIX pipes
+7. Chords can be placed anywhere in the line, including at the very end (no need for trailing spaces)
+8. Multiple chords can be placed next to each other: `|C|Hello |G|there|Am|`
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+If you encounter any issues or have questions, please:
+1. Check the [GitHub Issues](https://github.com/galshaya/chorder/issues) page
+2. Open a new issue if your problem hasn't been reported
+3. Include example input and expected output when reporting issues 
