@@ -1,0 +1,229 @@
+{
+  "policy_id": "20241024",
+  "base": {
+    "value_added_tax_rate": 0.1,
+    "fuel_cost_pass_through_adjustment_rate": 0.032
+  },
+  "contract_types": [
+    {
+      "contract_type": "일반용(을)고압A",
+      "rate_options": {
+        "1": {
+          "demand_charge": 7220,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 92.8,
+              "mid_load": 115.3,
+              "peak_load": 146.0
+            },
+            "summer": {
+              "off_peak_load": 92.8,
+              "mid_load": 145.7,
+              "peak_load": 227.8
+            },
+            "winter": {
+              "off_peak_load": 99.8,
+              "mid_load": 145.9,
+              "peak_load": 203.4
+            }
+          }
+        },
+        "2": {
+          "demand_charge": 8320,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 87.3,
+              "mid_load": 109.8,
+              "peak_load": 140.5
+            },
+            "summer": {
+              "off_peak_load": 87.3,
+              "mid_load": 140.2,
+              "peak_load": 222.3
+            },
+            "winter": {
+              "off_peak_load": 94.3,
+              "mid_load": 140.4,
+              "peak_load": 197.9
+            }
+          }
+        },
+        "3": {
+          "demand_charge": 9810,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 86.4,
+              "mid_load": 108.5,
+              "peak_load": 132.2
+            },
+            "summer": {
+              "off_peak_load": 86.4,
+              "mid_load": 139.6,
+              "peak_load": 209.9
+            },
+            "winter": {
+              "off_peak_load": 93.7,
+              "mid_load": 139.8,
+              "peak_load": 186.7
+            }
+          }
+        }
+      }
+    },
+    {
+      "contract_type": "일반용(을)고압B",
+      "rate_options": {
+        "1": {
+          "demand_charge": 6630,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 95.9,
+              "mid_load": 118.2,
+              "peak_load": 148.5
+            },
+            "summer": {
+              "off_peak_load": 95.9,
+              "mid_load": 148.2,
+              "peak_load": 229.4
+            },
+            "winter": {
+              "off_peak_load": 102.9,
+              "mid_load": 148.2,
+              "peak_load": 204.4
+            }
+          }
+        },
+        "2": {
+          "demand_charge": 7380,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 92.1,
+              "mid_load": 114.4,
+              "peak_load": 144.7
+            },
+            "summer": {
+              "off_peak_load": 92.1,
+              "mid_load": 144.4,
+              "peak_load": 225.6
+            },
+            "winter": {
+              "off_peak_load": 99.1,
+              "mid_load": 144.4,
+              "peak_load": 200.6
+            }
+          }
+        },
+        "3": {
+          "demand_charge": 8190,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 90.4,
+              "mid_load": 112.8,
+              "peak_load": 143.1
+            },
+            "summer": {
+              "off_peak_load": 90.4,
+              "mid_load": 142.7,
+              "peak_load": 224.0
+            },
+            "winter": {
+              "off_peak_load": 97.5,
+              "mid_load": 142.7,
+              "peak_load": 198.9
+            }
+          }
+        }
+      }
+    },
+    {
+      "contract_type": "산업용(갑)II고압A",
+      "rate_options": {
+        "1": {
+          "demand_charge": 6490,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 95.7,
+              "mid_load": 100.5,
+              "peak_load": 119.7
+            },
+            "summer": {
+              "off_peak_load": 95.7,
+              "mid_load": 121.5,
+              "peak_load": 155.0
+            },
+            "winter": {
+              "off_peak_load": 103.1,
+              "mid_load": 120.0,
+              "peak_load": 149.4
+            }
+          }
+        },
+        "2": {
+          "demand_charge": 7470,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 90.8,
+              "mid_load": 95.6,
+              "peak_load": 114.8
+            },
+            "summer": {
+              "off_peak_load": 90.8,
+              "mid_load": 116.6,
+              "peak_load": 150.1
+            },
+            "winter": {
+              "off_peak_load": 98.2,
+              "mid_load": 115.1,
+              "peak_load": 144.5
+            }
+          }
+        }
+      }
+    },
+    {
+      "contract_type": "산업용(갑)II고압B",
+      "rate_options": {
+        "1": {
+          "demand_charge": 6000,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 92.5,
+              "mid_load": 99.1,
+              "peak_load": 117.9
+            },
+            "summer": {
+              "off_peak_load": 92.5,
+              "mid_load": 120.1,
+              "peak_load": 153.9
+            },
+            "winter": {
+              "off_peak_load": 99.7,
+              "mid_load": 117.7,
+              "peak_load": 146.4
+            }
+          }
+        },
+        "2": {
+          "demand_charge": 6900,
+          "energy_charge": {
+            "spring_fall": {
+              "off_peak_load": 88.0,
+              "mid_load": 94.6,
+              "peak_load": 113.4
+            },
+            "summer": {
+              "off_peak_load": 88.0,
+              "mid_load": 115.6,
+              "peak_load": 149.4
+            },
+            "winter": {
+              "off_peak_load": 95.2,
+              "mid_load": 113.2,
+              "peak_load": 141.9
+            }
+          }
+        }
+      }
+    }
+  ]
+}
