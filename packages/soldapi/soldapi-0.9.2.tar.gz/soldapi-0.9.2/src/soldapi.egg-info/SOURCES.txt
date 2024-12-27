@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/soldapi/__init__.py
+src/soldapi.egg-info/PKG-INFO
+src/soldapi.egg-info/SOURCES.txt
+src/soldapi.egg-info/dependency_links.txt
+src/soldapi.egg-info/top_level.txt

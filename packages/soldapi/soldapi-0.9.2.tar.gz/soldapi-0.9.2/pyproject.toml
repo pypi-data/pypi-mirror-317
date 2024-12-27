@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soldapi"
+version = "0.9.2"
+description = "Solid Operational Long-term Dynamics API"
+requires-python = ">=3.10"
+readme = "README.md"
+authors = [{name = "nphard001", email = "nphard001@gmail.com"}]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = []
+
+[tool.setuptools]
+packages = ["soldapi"]  # 確保正確包含 src/soldapi 目錄
+package-dir = {"" = "src"}
+include-package-data = true
