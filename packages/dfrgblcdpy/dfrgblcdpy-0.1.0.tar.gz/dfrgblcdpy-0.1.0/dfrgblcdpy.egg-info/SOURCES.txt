@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+dfrgblcdpy/__init__.py
+dfrgblcdpy.egg-info/PKG-INFO
+dfrgblcdpy.egg-info/SOURCES.txt
+dfrgblcdpy.egg-info/dependency_links.txt
+dfrgblcdpy.egg-info/requires.txt
+dfrgblcdpy.egg-info/top_level.txt

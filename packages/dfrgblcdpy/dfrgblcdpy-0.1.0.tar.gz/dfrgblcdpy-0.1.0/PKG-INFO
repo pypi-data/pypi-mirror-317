@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dfrgblcdpy
+Version: 0.1.0
+Summary: Python library to control DFRobot Gravity I2C LCD1602 with RGB Backlight Display
+Home-page: https://github.com/tomplus/DFRGBLCDpy
+Author: Tomasz Prus
+Author-email: tomasz.prus@gmail.com
+License: MIT License
+Keywords: Raspberry,LCD,RGB,DFRobot
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: smbus
