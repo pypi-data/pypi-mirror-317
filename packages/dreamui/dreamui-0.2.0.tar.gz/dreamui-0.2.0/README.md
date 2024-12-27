@@ -1,0 +1,54 @@
+---
+
+# DreamUI
+
+DreamUI is a Python library designed to clone a webpage into a structured folder format effortlessly. With DreamUI, you can easily download and save a webpage with its resources like images, CSS, and JavaScript files, organized in a folder structure.
+
+## Installation
+
+To install DreamUI, use pip:
+
+```bash
+pip install dreamui
+```
+
+## Usage
+
+### Basic Example
+
+Here is how you can use DreamUI to clone a webpage:
+
+```python
+from dreamui import DreamUI
+
+# Provide the URL of the webpage you want to clone
+url = "https://example.com"
+
+# Download and save the webpage in a structured folder format
+DreamUI.download_webpage(url)
+```
+
+### Functionality
+
+1. **Cloning a webpage**: This function downloads the webpage and all its resources, organizing them into a folder structure that replicates the page’s elements.
+2. **URL Support**: You can use any valid URL to clone the webpage.
+
+## How It Works
+
+DreamUI downloads the HTML, CSS, JavaScript, and image files associated with the webpage. It then organizes these resources into a folder structure, making it easy to view and access them locally.
+
+- The HTML content is saved in the main folder.
+- CSS, JavaScript, and image files are placed in respective subdirectories.
+- All resources are linked correctly to match the structure of the original webpage.
+
+## Contributing
+
+We welcome contributions! If you'd like to help improve DreamUI, feel free to submit a pull request or open an issue with any suggestions or bug reports.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to modify the content according to your needs or add any additional instructions for advanced usage or installation.
