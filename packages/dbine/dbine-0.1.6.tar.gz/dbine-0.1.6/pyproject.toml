@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dbine"
+version = "0.1.6"
+authors = [{name = "mskz-3110", email = "mskz.saito@gmail.com"}]
+description = "Auxiliary tools related to databases"
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "psycopg",
+  "mysql-connector-python",
+  "graspgraph",
+]
+
+[project.scripts]
+dbine = "dbine.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/mskz-3110/dbine"
+Issues = "https://github.com/mskz-3110/dbine/issues"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+testpaths = ["tests"]

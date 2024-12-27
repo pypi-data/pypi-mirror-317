@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/dbine/__init__.py
+src/dbine/cli.py
+src/dbine/connection.py
+src/dbine.egg-info/PKG-INFO
+src/dbine.egg-info/SOURCES.txt
+src/dbine.egg-info/dependency_links.txt
+src/dbine.egg-info/entry_points.txt
+src/dbine.egg-info/requires.txt
+src/dbine.egg-info/top_level.txt
