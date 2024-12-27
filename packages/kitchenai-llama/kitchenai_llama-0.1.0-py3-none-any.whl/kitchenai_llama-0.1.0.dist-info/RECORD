@@ -1,0 +1,6 @@
+storage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+storage/llama_parser.py,sha256=CMz7kLwYgkMA7NbGKBCz_eCcLvcd_qBCAE_LBQAyHFE,4643
+kitchenai_llama-0.1.0.dist-info/METADATA,sha256=PIu4V3i4NCzW_qWL4GsHFHIGyi9RoC-JIcUNPMANeg8,337
+kitchenai_llama-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+kitchenai_llama-0.1.0.dist-info/top_level.txt,sha256=yphqphSuwRzNyEfTnt0xnNv02quslUAR1yj7mKZ_KxI,8
+kitchenai_llama-0.1.0.dist-info/RECORD,,
