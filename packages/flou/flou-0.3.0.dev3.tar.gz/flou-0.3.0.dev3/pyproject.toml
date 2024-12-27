@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flou"
+version = "0.3.0.dev3"
+description = "The framework for LLM-powered apps"
+authors = [
+    { name = "Iván Raskovsky", email = "raskovsky+flou@gmail.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+
+dependencies = [
+    "fastapi[standard]",
+    "uvicorn",
+    "pydantic-settings",
+    "celery",
+    "python-dotenv",
+    "pytest",
+    "jsonpatch",
+    "redis",
+    "typer",
+    "websockets",
+    "broadcaster[redis]",
+    "parse",
+    "watchdog",
+    "sqlalchemy[asyncio]",
+    "alembic",
+    "alembic_utils",
+    "psycopg",
+]
+
+scripts = { flou = "flou.cli:app" }
+
+[project.urls]
+Homepage = "https://flou.ai"
+Documentation = "https://flou.ai/"
+Repository = "https://github.com/flou-ai/flou.git"
+Issues = "https://github.com/flou-ai/flou/issues"
+Changelog = "https://flou.ai/documentation/changelog"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
