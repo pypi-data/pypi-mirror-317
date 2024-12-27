@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dtx-apis-prompts-utils"
+version = "0.1.0"
+description = "Detoxio APIs Prompts parsing and processing utils"
+authors = ["jchauhan <jitendra@detoxio.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+pydantic = "^2.10.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
