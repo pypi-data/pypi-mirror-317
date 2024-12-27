@@ -1,0 +1,13 @@
+core/__init__.py,sha256=iZAOBGi2zhrLe0DgQkpoMQiEb9kE640t5YOeXuZaUbM,809
+core/_registry.py,sha256=QAOxR4jtbNCKdFgDJX-CCiEOgqb4bKXjwIWAB2E_DVM,86
+core/forms.py,sha256=tX2DI8TxgSKT9-H-ETNKpG4FV2C_YOimKbKGMfY4hv0,827
+core/model_registry.py,sha256=bAMzP7jPP5NG0UP8X_ARW6U3ggusD_oG9nfSmgeNUa0,1138
+core/url_registry.py,sha256=XIHZZxx_N_E7DDKa9v2iwz0lgGm_xqGEJfdCY6R5_So,2631
+core/views.py,sha256=ZVHjO_Ah7P3srwXegko5SbyJAKfx4T8uzO5y-kyrWrE,4282
+migrations/0001_initial.py,sha256=23qVyNY7cmMj2dAijnH_vBUTIbsLYFf8YWxOUFO_28w,519
+migrations/0002_book_post_question_poll.py,sha256=kD0YvKPYXUQTPSxukEda4lyMr9_cb2ov4B_z-sSHgi0,2581
+migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+octopus_dash-0.0.1.dist-info/METADATA,sha256=56l6Ajcd_iGUsIpkgCAuww0NUS2ayp_cXeCiBqwO-H0,6163
+octopus_dash-0.0.1.dist-info/WHEEL,sha256=pxeNX5JdtCe58PUSYP9upmc7jdRPgvT0Gm9kb1SHlVw,109
+octopus_dash-0.0.1.dist-info/top_level.txt,sha256=6JFeyo5XFo9jSFqyKkW3S3i9JkmqLugXX73wh--y4qQ,16
+octopus_dash-0.0.1.dist-info/RECORD,,
