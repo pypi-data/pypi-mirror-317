@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+Fkillerb/__init__.py
+Fkillerb/operations.py
+Fkillerb.egg-info/PKG-INFO
+Fkillerb.egg-info/SOURCES.txt
+Fkillerb.egg-info/dependency_links.txt
+Fkillerb.egg-info/entry_points.txt
+Fkillerb.egg-info/requires.txt
+Fkillerb.egg-info/top_level.txt

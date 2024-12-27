@@ -1,0 +1,2 @@
+[console_scripts]
+Fkillerb = Fkillerb.operations:main_function
