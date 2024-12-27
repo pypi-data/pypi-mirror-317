@@ -1,0 +1,12 @@
+[build-system]
+requires = [
+    "setuptools>=40",
+    "wheel"
+
+]
+build-backend = "setuptools.build_meta"
+
+
+[pypi]
+name = '__token__'
+value = 'pypi-AgEIcHlwaS5vcmcCJDFkMmY2ZTdhLTExMWEtNDc3Ny04NDgzLTA2OWY2N2QzODY2YQACKlszLCJjZDU1NGM2OC03Y2Q1LTRlNTUtOTE0Mi1hNDJjM2I1NGFiMDQiXQAABiAnI0l3G3dr3D6_pB6W_4bQ9njJcjhpSYc2o22j3P0Y0Q'
