@@ -1,0 +1,33 @@
+[project]
+name = "fastapi-bearer-authzn"
+version = "0.3.1"
+description = "A robust bearer token authentication and authorization middleware for FastAPI applications."
+authors = [{"name" = "SysEleven GmbH"}]
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ["fastapi", "authn", "authz", "bearer", "token", "authentication", "authorization", "middleware"]
+dependencies = [
+    "typing-extensions>=4.12.2",
+]
+
+[project.urls]
+Homepage = "https://www.syseleven.de/"
+Repository = "https://github.com/syseleven/fastapi-bearer-authzn"
+Changelog = "https://github.com/syseleven/fastapi-bearer-authzn/blob/main/CHANGELOG.md"
+
+[project.scripts]
+cli = "fastapi_bearer_authzn.__main__:cli"
+fastapi-bearer-authzn = "fastapi_bearer_authzn.__main__:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "fastapi>=0.115.6",
+    "httpx>=0.28.1",
+    "pytest>=8.3.4",
+    "ruff>=0.8.4",
+]

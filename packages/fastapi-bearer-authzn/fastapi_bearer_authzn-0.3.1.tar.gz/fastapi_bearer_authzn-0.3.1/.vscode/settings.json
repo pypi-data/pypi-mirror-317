@@ -1,0 +1,8 @@
+{
+	"mypy.enabled": false,
+	"python.analysis.diagnosticMode": "workspace",
+	"editor.defaultFormatter": "charliermarsh.ruff",
+	"editor.formatOnSave": true,
+	"python.analysis.autoFormatStrings": true,
+	"python.analysis.completeFunctionParens": true
+}
