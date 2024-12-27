@@ -1,0 +1,11 @@
+include LICENSE
+include README.md
+include pyehandler/*.pyx.template
+include pyehandler/*.pyx        
+
+global-exclude *.py
+global-exclude *.c
+global-exclude *.h
+global-exclude *.pxd
+
+include setup.py
