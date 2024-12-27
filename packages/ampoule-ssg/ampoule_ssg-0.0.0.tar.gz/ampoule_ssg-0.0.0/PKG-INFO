@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ampoule-ssg
+Version: 0.0.0
+Summary: A simple yet flexible static site generator based on Jinja2
+Home-page: https://roundabout-host.com/roundabout/ampoule
+Author: Roundabout developers
+Author-email: root@roundabout-host.com
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE.md
+Requires-Dist: Jinja2
+Requires-Dist: ruamel.yaml
+Requires-Dist: beautifulsoup4
+Requires-Dist: colorama
+
+Ampoule
+=======
+
+Ampoule is a lightweight, simple yet flexible, static site generator written in Python.
+It uses Jinja2 for templating.
