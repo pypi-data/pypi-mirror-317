@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: glaciers
+Version: 0.1.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: maturin >=1.7.8
+Requires-Dist: polars >=1.17.1
+Requires-Dist: pyarrow >=18.1.0
+Summary: Glaciers is a rust python bindings to decode raw EVM logs into decoded events.
+Home-Page: https://github.com/yulesa/glaciers
+License: MIT OR Apache-2.0
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/yulesa/glaciers
+
+# Glaciers for python
+
+see full [README](https://github.com/yulesa/glaciers) for details
