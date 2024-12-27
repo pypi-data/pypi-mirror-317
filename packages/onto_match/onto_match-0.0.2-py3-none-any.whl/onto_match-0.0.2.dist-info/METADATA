@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: onto_match
+Version: 0.0.2
+Summary: Check if RDF data aligns with an ontology.
+Home-page: https://github.com/atomobianco/onto-match
+Author: Tommaso Bianco
+Author-email: tommaso.bianco@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: rdflib (>=7.0.0,<8.0.0)
+Project-URL: Documentation, https://atomobianco.github.io/onto-match/
+Project-URL: Repository, https://github.com/atomobianco/onto-match
+Description-Content-Type: text/markdown
+
+# onto-match
+
+[![Release](https://img.shields.io/github/v/release/atomobianco/onto-match)](https://img.shields.io/github/v/release/atomobianco/onto-match)
+[![Build status](https://img.shields.io/github/actions/workflow/status/atomobianco/onto-match/main.yml?branch=main)](https://github.com/atomobianco/onto-match/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/atomobianco/onto-match/branch/main/graph/badge.svg)](https://codecov.io/gh/atomobianco/onto-match)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/atomobianco/onto-match)](https://img.shields.io/github/commit-activity/m/atomobianco/onto-match)
+[![License](https://img.shields.io/github/license/atomobianco/onto-match)](https://img.shields.io/github/license/atomobianco/onto-match)
+
+A Python library for validating RDF data alignment with ontologies without requiring SHACL definitions.
+
+- **Github repository**: <https://github.com/atomobianco/onto-match/>
+- **Documentation** <https://atomobianco.github.io/onto-match/>
+
+## Why onto-match?
+
+When working with Large Language Models (LLMs) to extract RDF data based on ontologies, it's crucial to verify that the extracted data aligns correctly with the target ontology.
+While tools like [pySHACL](https://github.com/RDFLib/pySHACL) exist for RDF validation, they:
+
+- Require explicit SHACL shape definitions, which are not always available
+- May fail on certain validation checks
+
+This library provides a programmatic approach to verify ontology alignment, making it particularly suitable for:
+
+- Validating LLM-extracted RDF data
+- Working with ontologies that lack SHACL definitions
+- Getting detailed violation reports for debugging and improvement
+
+## Features
+
+- Validate RDF data against ontology definitions without SHACL
+- Detect undefined classes and properties
+- Verify property domain and range constraints
+- Provide detailed violation reports
+
+## Installation
+
+```bash
+pip install onto-match
+```
+
+## Quick Start
+
+```python
+from rdflib import Graph
+from onto_match import validate
+
+# Load your ontology and data graphs
+data = Graph().parse("your_data.ttl")
+ontology = Graph().parse("your_ontology.ttl")
+
+# Validate the data
+is_valid, violations, report = validate(data, ontology)
+
+if not is_valid:
+    print(report)
+```
+
