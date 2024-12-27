@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+text_games/__init__.py
+text_games/hangman.py
+text_games/number_guesser.py
+text_games/riddle_game.py
+text_games/rock_paper_scissor.py
+text_games/snake_game.py
+text_games/tic_tac_toe.py
+text_games/word_scrambler.py
+text_games.egg-info/PKG-INFO
+text_games.egg-info/SOURCES.txt
+text_games.egg-info/dependency_links.txt
+text_games.egg-info/requires.txt
+text_games.egg-info/top_level.txt
