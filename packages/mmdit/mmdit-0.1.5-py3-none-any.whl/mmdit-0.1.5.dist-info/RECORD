@@ -1,0 +1,8 @@
+mmdit/__init__.py,sha256=CdZ9x5pEOvr5viBgqyLa4hFcjEgMVfZWwYOqsC_RMRc,82
+mmdit/adaptive_attention.py,sha256=kMThpD6gl4n23qk0lKBKyFA8ZoXd_o-J-RUZL6uJTXE,3569
+mmdit/mmdit_generalized_pytorch.py,sha256=Ko3YSqSGVmscXBvUzM7XemV1TUAbWAmhF5pa5lKljGU,6490
+mmdit/mmdit_pytorch.py,sha256=sN7zWZdVMmA1-LdoOPDGxss7mzu2zclcfKEhB4w8V4E,11072
+mmdit-0.1.5.dist-info/METADATA,sha256=LetJJcPcf3iRrYCa4BGzR5k_S63FmwqHGwXMroqfdhw,4821
+mmdit-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mmdit-0.1.5.dist-info/licenses/LICENSE,sha256=E7RGS7kpJIStk5za_-4DVhWEAamf65EU0CNML25mq4c,1066
+mmdit-0.1.5.dist-info/RECORD,,
