@@ -1,0 +1,8 @@
+beautifulsoup4>=4.9.3
+click>=8.0.0
+pathlib>=1.0.1
+
+[dev]
+pytest
+flake8
+black

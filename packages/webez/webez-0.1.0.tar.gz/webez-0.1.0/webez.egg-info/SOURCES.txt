@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+webez/__init__.py
+webez/cli.py
+webez/css_converter.py
+webez/html_converter.py
+webez.egg-info/PKG-INFO
+webez.egg-info/SOURCES.txt
+webez.egg-info/dependency_links.txt
+webez.egg-info/entry_points.txt
+webez.egg-info/requires.txt
+webez.egg-info/top_level.txt
