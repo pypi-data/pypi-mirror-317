@@ -1,0 +1,17 @@
+tenantflow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tenantflow/middleware.py,sha256=n98IZjQ3c1KOcRjtqg070joyAmjyOKsXXXVqdKhnVss,3068
+tenantflow/utils.py,sha256=6KmIQopHpUCxyGFZRZWuCb98_4Po6O-WdwocLjEDr0I,1295
+tenantflow/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tenantflow/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tenantflow/management/commands/create_tenant.py,sha256=WKwqbIc4EL7khX4NKG_u7bwni3k-QVbo6Rotl5Qh0po,1472
+tenantflow/management/commands/create_tenant_superuser.py,sha256=kpDpWcvSWJ4QyuONhdtyMqX9o6Rx8EeUZqbZWMQWg80,2055
+tenantflow/management/commands/delete_tenant.py,sha256=Kt9eUct1XB0bEgrTNVhv0KDaNdtr95YEEM0Qo309xB0,1187
+tenantflow/management/commands/migrate_schemas.py,sha256=62Y5r5NOByjfxA6aBJwJtjIxvUx4e5Z-MX3HLl35uPA,1404
+tenantflow/models/__init__.py,sha256=VgbfqJF2Bue9_nTa-fN-qOWBsRejKvu5lwd4dJF1hnk,155
+tenantflow/models/account.py,sha256=LTn4wZrPP0_ygHQ_QIxLyxL6XqspN0U_R4WNCh0G_70,835
+tenantflow/models/user_account.py,sha256=TOwO0K2t-A_7V6xF6vRfBH5Yuncv07aZaorr0ViT5lg,1044
+django_tenantflow-1.0.3.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tenantflow-1.0.3.dist-info/METADATA,sha256=AxYPoMh2W0zCm5qRx0Iy2SmlignVZUt1fieZ0VA3rVA,1909
+django_tenantflow-1.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_tenantflow-1.0.3.dist-info/top_level.txt,sha256=hb7r-1o9_vAaW7z5tFkHKoWYoHe6saWIx5s98C7aSbI,11
+django_tenantflow-1.0.3.dist-info/RECORD,,
