@@ -1,0 +1,31 @@
+[project]
+name = "pbfetch"
+version = "0.3.4"
+description = "An unbelievably customizable hardware/software fetch."
+authors = [{ name = "pennybelle", email = "contact@pennybelle.dev" }]
+dependencies = ["psutil"]
+readme = "README.md"
+requires-python = ">= 3.8"
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+
+[project.urls]
+Homepage = "https://github.com/pennybelle/pbfetch/"
+Repository = "https://github.com/pennybelle/pbfetch.git"
+Issues = "https://github.com/pennybelle/pbfetch/issues"
+
+[build-system]
+requires = ["hatchling==1.26.3"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pbfetch"]
+
+[project.scripts]
+pbfetch = "pbfetch:main"
