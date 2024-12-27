@@ -1,0 +1,2 @@
+[console_scripts]
+dio = joker.studio.__main__:registry
