@@ -1,0 +1,5 @@
+[console_scripts]
+vizura-calculate_correlations = vizura.vizura:calculate_correlations
+vizura-categorical = vizura.vizura:categorical
+vizura-numerical = vizura.vizura:numerical
+vizura-plot_correlation = vizura.vizura:plot_correlation

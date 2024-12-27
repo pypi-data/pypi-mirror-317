@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+vizura.egg-info/PKG-INFO
+vizura.egg-info/SOURCES.txt
+vizura.egg-info/dependency_links.txt
+vizura.egg-info/entry_points.txt
+vizura.egg-info/requires.txt
+vizura.egg-info/top_level.txt
