@@ -1,0 +1,12 @@
+
+
+# Include all text files in the root of the project
+# include *.txt
+include CHECKSUM.SHA3-256 CHECKSUM.SHA3-256.asc manjpfb.1 manjpfb.1.gz 
+
+# Include all markdown files in the docs directory
+# recursive-include docs *.md
+
+# Exclude specific files or directories
+# exclude secret_file.txt
+# recursive-exclude temp *
