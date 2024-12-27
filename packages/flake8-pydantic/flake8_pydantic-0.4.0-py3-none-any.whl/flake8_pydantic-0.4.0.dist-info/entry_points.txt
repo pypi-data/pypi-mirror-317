@@ -1,0 +1,2 @@
+[flake8.extension]
+PYD = flake8_pydantic:Plugin

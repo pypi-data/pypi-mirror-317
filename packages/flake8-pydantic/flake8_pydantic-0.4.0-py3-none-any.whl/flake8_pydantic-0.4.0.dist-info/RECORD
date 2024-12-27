@@ -1,0 +1,13 @@
+flake8_pydantic/__init__.py,sha256=v4tdSLlq6sat8A2yKEPnjjEY_hZAeG_lKC00gwvyxk4,50
+flake8_pydantic/_compat.py,sha256=1rLJA_hu9hHW0tsPzakMkhPvbwyYNahZjtKfsAHBhIc,172
+flake8_pydantic/_utils.py,sha256=fXku-hI1RfeIcLMn27nSKyWo0vlLiB_iYiigkm942ak,6468
+flake8_pydantic/errors.py,sha256=j-3yb42_ef5FYI2vuKWj0xpKaJZoFXhTdu47n36636E,1271
+flake8_pydantic/plugin.py,sha256=H0N7tgq_X76J2WLpaWmd4TrDLdZD7ELrWnA2PonhtFg,542
+flake8_pydantic/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flake8_pydantic/visitor.py,sha256=kECW75SYrZRat8WRAecq0YGp6Q0sKWf8rjXfzurOi4U,5533
+flake8_pydantic-0.4.0.dist-info/LICENSE,sha256=cGnQOUm-AAczPXYnwo5VlDRBtQFzSaD072MADdujUXE,1066
+flake8_pydantic-0.4.0.dist-info/METADATA,sha256=cfaOKgTQnsmPdJQngGxFW5IzMLQDCUUNc6u6BQhW4WQ,7471
+flake8_pydantic-0.4.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+flake8_pydantic-0.4.0.dist-info/entry_points.txt,sha256=Vz4vlkc0DuqULktXCxTjkkVw4ddzzcu472cYGbhg12Y,48
+flake8_pydantic-0.4.0.dist-info/top_level.txt,sha256=Zp8CWPm1wV4wxbh84j0CWta3Y5_lmLF4tPxKmFt-8yk,16
+flake8_pydantic-0.4.0.dist-info/RECORD,,
