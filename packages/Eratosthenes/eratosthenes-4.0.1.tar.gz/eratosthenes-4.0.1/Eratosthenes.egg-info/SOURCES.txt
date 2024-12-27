@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Eratosthenes/__init__.py
+Eratosthenes/_eratosthenes.cpp
+Eratosthenes/dispatchqueue.cpp
+Eratosthenes/eratosthenes.py
+Eratosthenes.egg-info/PKG-INFO
+Eratosthenes.egg-info/SOURCES.txt
+Eratosthenes.egg-info/dependency_links.txt
+Eratosthenes.egg-info/requires.txt
+Eratosthenes.egg-info/top_level.txt
+Eratosthenes/include/dispatchqueue.hpp
