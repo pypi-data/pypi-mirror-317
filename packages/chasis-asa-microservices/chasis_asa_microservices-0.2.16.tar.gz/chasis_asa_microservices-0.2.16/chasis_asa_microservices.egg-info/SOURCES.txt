@@ -1,0 +1,7 @@
+setup.py
+chasis_asa_micorservices/__init__.py
+chasis_asa_micorservices/logger.py
+chasis_asa_microservices.egg-info/PKG-INFO
+chasis_asa_microservices.egg-info/SOURCES.txt
+chasis_asa_microservices.egg-info/dependency_links.txt
+chasis_asa_microservices.egg-info/top_level.txt
