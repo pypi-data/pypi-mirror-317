@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "botrun_litellm"
+version = "0.2.4"
+description = "A wrapper for litellm with TAIDE configuration support"
+authors = ["sebastian-hsu <sebastian.hsu@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "botrun_litellm", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+litellm = ">=1.55.4"
+python-dotenv = "*"
+
+[tool.poetry.dev-dependencies]
+build = "^1.2.2.post1"
+twine = "^5.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

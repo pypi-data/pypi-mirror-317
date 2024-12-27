@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: botrun_litellm
+Version: 0.2.4
+Summary: A wrapper for litellm with TAIDE configuration support
+Author: sebastian-hsu
+Author-email: sebastian.hsu@gmail.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: litellm (>=1.55.4)
+Requires-Dist: python-dotenv
+Description-Content-Type: text/markdown
+
+# README.md
+# botrun_litellm
+
+A wrapper for litellm with TAIDE configuration support.
+
+## Installation
+
+```bash
+pip install botrun_litellm
+```
+
+## Usage
+
+```python
+from botrun_litellm import botrun_litellm_completion
+
+response = botrun_litellm_completion(
+    messages=[{"role": "user", "content": "Hello!"}],
+    model="openai/gpt-4"
+)
+```
+## Usage 2
+```python
+from botrun_litellm import botrun_litellm_completion
+
+response = botrun_litellm_completion(
+    messages=[{"role": "user", "content": "Hello!"}],
+    model="taide/openai/Llama3-TAIDE-LX-70B-Chat",
+    api_base: "base_url",
+    api_key: "api_key"
+
+)
+```
+
+
+## Environment Variables
+
+The following environment variables are required:
+
+- `TAIDE_BASE_URL`: Base URL for TAIDE API
+- `TAIDE_API_KEY`: API key for TAIDE
+
+## Supported models
+- "taide/openai/Llama-3.1-405B-Instruct-FP8",
+- "taide/openai/Llama-3.1-70B",
+- "taide/openai/Llama-3.1-Nemotron-70B-Instruct",
+- "taide/openai/Llama3-TAIDE-LX-70B-Chat",
+- "taide/openai/TAIDE-LX-70B-Chat"
+
+
+## License
+
+MIT License
+
+# export requirements.txt
+```bash
+poetry export -f requirements.txt --output requirements.txt --without-hashes --without-urls
+```
