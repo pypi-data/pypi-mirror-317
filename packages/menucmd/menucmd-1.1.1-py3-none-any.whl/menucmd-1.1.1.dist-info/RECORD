@@ -1,0 +1,14 @@
+menucmd/__init__.py,sha256=4K1a9EY4t7UpBaClqmfDsB6FGA4_cNFxsVkhz-bT8Jg,55
+menucmd/dsl/__init__.py,sha256=QBDHIZlnjseC7uPPnA7FsCNCNFZ2cOot5oU9WG0vgaM,31
+menucmd/dsl/lines_to_dict.py,sha256=N7GhGKRsVPmUTItqwXkSTa2ogv9wimm2zX8ur11FdNE,3339
+menucmd/dsl/parser.py,sha256=xGnwe97ZdWb2OW_kDCKCuiwit4u9vbnJGUHZMoX5Dc4,5163
+menucmd/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+menucmd/src/builtins.py,sha256=benONcMQEpalHvAS86X9kfVdLpzgrhsSdbYVgb3hVII,4480
+menucmd/src/menucmd.py,sha256=_bF1Bw8sG9t3nR5qzJ1KmEh03FnB31JyK8rKyyG-Nbw,13780
+menucmd/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+menucmd/tests/menutesting.py,sha256=ubyokvY64riHGlkzvmA29SewHQ0rhT7sk2vxI52EiUU,5433
+menucmd/tests/notebook_test.py,sha256=SqKIuRizSuZF84ST4be9r7mC97ckczElkc3j7KZp8yo,1025
+menucmd-1.1.1.dist-info/METADATA,sha256=f_684ZLe8Kx_fXkM0DQOi0613mttmpf0FSMCzBTCdEc,33832
+menucmd-1.1.1.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+menucmd-1.1.1.dist-info/top_level.txt,sha256=epH4yRdYjGBgZW-MD8dzzU5amm-4y01mqbSg4unRdOE,8
+menucmd-1.1.1.dist-info/RECORD,,
