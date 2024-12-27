@@ -1,0 +1,3 @@
+[console_scripts]
+llm-flow = llm_req.llm_flow.main:main
+mroy = llm_req.cmd:main
