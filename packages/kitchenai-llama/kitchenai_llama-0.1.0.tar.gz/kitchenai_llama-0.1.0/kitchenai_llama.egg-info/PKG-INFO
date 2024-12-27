@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: kitchenai-llama
+Version: 0.1.0
+Summary: A library for KitchenAI to use LlamaIndex
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: llama-index>=0.12.8
+
+# KitchenAI-LLAMA
+
+A helper library for KitchenAI to use LlamaIndex.
+
+## Installation
+
+```bash
+pip install kitchenai-llama
+```
