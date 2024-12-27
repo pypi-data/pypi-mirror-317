@@ -1,0 +1,5 @@
+pypdf>=3.4.0
+papersize>=1.2.0
+
+[pymupdf]
+PyMuPDF>=1.23.6
