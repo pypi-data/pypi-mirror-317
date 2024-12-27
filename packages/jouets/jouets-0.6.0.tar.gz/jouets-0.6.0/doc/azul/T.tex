@@ -1,0 +1,31 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{etoolbox}
+\usetikzlibrary{azul}
+
+\begin{document}
+  \begin{tikzpicture}
+    \fill (0, 0) rectangle (5, 5);
+  \end{tikzpicture}
+\foreach \i in {0, ..., 8}{
+  \begin{tikzpicture}
+    \fill (0, 0) rectangle (5, 5);
+    \foreach[count=\j] \couleur/\x/\y in {
+      tuileR/1/4,
+      tuileN/2/4,
+      tuileJ/0/4,
+      tuileN/1/3,
+      tuileB/1/2,
+      tuileA/1/1,
+      tuileB/3/4,
+      tuileJ/1/0,
+      tuileA/4/4,
+    }{
+      \csuse{\couleur}{\x, \y}
+      \ifnum\i<\j
+      \breakforeach
+      \fi
+    }
+  \end{tikzpicture}
+}
+\end{document}
