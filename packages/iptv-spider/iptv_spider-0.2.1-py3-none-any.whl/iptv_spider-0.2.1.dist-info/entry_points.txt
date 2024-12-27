@@ -1,0 +1,2 @@
+[console_scripts]
+iptv-spider = iptv_spider.main:entrypoint
