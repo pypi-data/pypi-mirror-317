@@ -1,0 +1,6 @@
+image: paternal/pythons
+
+tox:
+  script:
+    - python3 -m tox
+  coverage: '/^TOTAL.*\s(\d+)\%$/'

@@ -1,0 +1,10 @@
+[VARIABLES]
+dummy-variables-rgx=_|dummy
+
+[TYPECHECK]
+ignored-modules=dbus
+
+[MESSAGES CONTROL]
+disable =
+    logging-format-interpolation,
+    duplicate-code,
