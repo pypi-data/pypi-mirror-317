@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+hmmCDR/__init__.py
+hmmCDR/bed_parser.py
+hmmCDR/calculate_matrices.py
+hmmCDR/hmmCDR.py
+hmmCDR.egg-info/PKG-INFO
+hmmCDR.egg-info/SOURCES.txt
+hmmCDR.egg-info/dependency_links.txt
+hmmCDR.egg-info/entry_points.txt
+hmmCDR.egg-info/requires.txt
+hmmCDR.egg-info/top_level.txt
+tests/test_calculate_matrix.py
+tests/test_hmmcdr.py
+tests/test_parser.py

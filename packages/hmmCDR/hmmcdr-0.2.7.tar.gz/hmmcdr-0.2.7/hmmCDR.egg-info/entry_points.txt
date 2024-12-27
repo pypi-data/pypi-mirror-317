@@ -1,0 +1,3 @@
+[console_scripts]
+calculate_matrices = hmmCDR.calculate_matrices:main
+hmmcdr = hmmCDR.hmmCDR:main
