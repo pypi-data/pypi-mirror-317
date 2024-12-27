@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+twjqt/__init__.py
+twjqt/test1.py
+twjqt.egg-info/PKG-INFO
+twjqt.egg-info/SOURCES.txt
+twjqt.egg-info/dependency_links.txt
+twjqt.egg-info/top_level.txt
