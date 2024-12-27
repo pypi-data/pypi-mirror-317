@@ -1,0 +1,2 @@
+[console_scripts]
+django-quik = django_quik.cli:handle_cli
