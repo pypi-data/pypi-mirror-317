@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+fractionalindex/__init__.py
+fractionalindex/fractionalindex.py
+fractionalindex.egg-info/PKG-INFO
+fractionalindex.egg-info/SOURCES.txt
+fractionalindex.egg-info/dependency_links.txt
+fractionalindex.egg-info/requires.txt
+fractionalindex.egg-info/top_level.txt
+tests/test_fractionalindex.py
