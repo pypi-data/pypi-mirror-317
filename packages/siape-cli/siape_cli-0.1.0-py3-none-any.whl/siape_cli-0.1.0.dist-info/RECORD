@@ -1,0 +1,14 @@
+siape_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+siape_tool/cli.py,sha256=IdHwnDdtAV8bB1dImutwLbdvomwfmQp3OHr7pnlnhCA,4650
+siape_tool/main.py,sha256=f3UxBQlO1plCeB8lcnSiX9Xg0a67ADx9NPHHZwxtkiQ,130
+siape_tool/scraper.py,sha256=maejOZv-4T8K4D4UoeLnnVkZN25793G72elZXSrx1Es,5769
+siape_tool/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+siape_tool/utils/api_calls_dicts.py,sha256=hdIC2NOO_2XXNC5uCyVXi1sAvQu9HfUKF6CkRU8MTtQ,7875
+siape_tool/utils/constants.py,sha256=5uXcvfZ_MftwQn_3VBOcsiIlgRX8evoD8Y7Gpxlhr98,10756
+siape_tool/utils/errors.py,sha256=MaPoeWvBw9hLF3fPzs2y0N8OCqkcmYgXpPRDldw637c,145
+siape_tool/utils/paths.py,sha256=bXpyNfAL9pIeh2WIMvB9mElxHG3s7h2mgS_LKwUDhTE,397
+siape_cli-0.1.0.dist-info/LICENSE,sha256=BpXDxmTv8bc3NXWDHePOaAPLoxLTmb5iig0wIOrF044,1071
+siape_cli-0.1.0.dist-info/METADATA,sha256=yeER5PaW5xM3ZcDpASzcOjm6lxI_Mfqsqa87zqWS5VY,3980
+siape_cli-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+siape_cli-0.1.0.dist-info/entry_points.txt,sha256=tzKNCsim0OdkRPA75dbbB2339q1db1GB0lL0Vuvt5fo,50
+siape_cli-0.1.0.dist-info/RECORD,,
