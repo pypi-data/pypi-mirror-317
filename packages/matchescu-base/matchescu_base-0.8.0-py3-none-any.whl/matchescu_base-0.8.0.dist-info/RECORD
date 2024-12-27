@@ -1,0 +1,15 @@
+matchescu/adt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matchescu/adt/entity_resolution_result.py,sha256=V0pCUa0OBemc2jvjnMqzsGb74RslJzTvSlDijJDN7M8,2534
+matchescu/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matchescu/common/partitioning.py,sha256=0Pf34ds_t5dS4Nmx4V3UrfpUyml1vuy87M5xSW_ONrQ,2131
+matchescu/data/__init__.py,sha256=SeNn4Hl-Bt2M9gL6LbXPOr5VtK-ghjAlXVz2fyI_MIY,107
+matchescu/data/_extraction.py,sha256=ydgLuynHTQQR7GIPLgaFX_Du29FazF571uN-keNcpcs,1289
+matchescu/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matchescu/typing/__init__.py,sha256=jbJ8ikJxphlm3Vb5-5Y4dODsB6BdDhDd4GRe0c_XO7w,341
+matchescu/typing/_callable.py,sha256=YBgLceE40e2371UJpKasCrkPys-LJYLCOx1LSVouW9o,65
+matchescu/typing/_data.py,sha256=dbfPzChEvtwWlTcJzfg-ukOVYn43YlltVf4PMbqvpcU,1067
+matchescu/typing/_entity_resolution.py,sha256=XL4RIonIXNkAcO89SmQM0FCHdOuvw6N-bZmvbFK0LgM,601
+matchescu_base-0.8.0.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+matchescu_base-0.8.0.dist-info/METADATA,sha256=b69kFRKcSM6In1Sgxy3oYtYqRA9aKJJV-AP9AZ7JztQ,942
+matchescu_base-0.8.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+matchescu_base-0.8.0.dist-info/RECORD,,
