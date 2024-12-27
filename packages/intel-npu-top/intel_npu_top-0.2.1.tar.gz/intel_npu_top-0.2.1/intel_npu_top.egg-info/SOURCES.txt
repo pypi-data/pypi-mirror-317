@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+intel_npu_top.egg-info/PKG-INFO
+intel_npu_top.egg-info/SOURCES.txt
+intel_npu_top.egg-info/dependency_links.txt
+intel_npu_top.egg-info/entry_points.txt
+intel_npu_top.egg-info/requires.txt
+intel_npu_top.egg-info/top_level.txt
