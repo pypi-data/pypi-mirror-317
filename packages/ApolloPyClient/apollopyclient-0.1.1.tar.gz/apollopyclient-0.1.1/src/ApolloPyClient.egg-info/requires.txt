@@ -1,0 +1,7 @@
+loguru
+PyYAML
+xmltodict
+
+[dev]
+pytest
+ruff
