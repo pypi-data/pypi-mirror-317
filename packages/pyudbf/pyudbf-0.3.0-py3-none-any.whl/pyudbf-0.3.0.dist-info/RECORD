@@ -1,0 +1,10 @@
+pyudbf/UDBFBytesReader.py,sha256=a_D8-n9nG_Erl8LvaQClsUtoZ9R3_UlCCPdODlQqVYc,522
+pyudbf/UDBFData.py,sha256=aebblm-6vHpnaTEwOZOSgUMOxDcu2DeEe78P43jUWEc,4970
+pyudbf/UDBFFileReader.py,sha256=u-sdePYcCYP4df86M8_nhpnZ9e4TQUgbKi8Pq3THccU,617
+pyudbf/UDBFParser.py,sha256=b1oG1Wi36NJfjP_g5ZUETu7HADMT3RPvpo6csVb87Y8,11633
+pyudbf/__init__.py,sha256=eb6FZGPQL54zbQ5h_QcOylr2MVfm6ZvpVE4cCVprUMk,207
+pyudbf-0.3.0.dist-info/LICENSE,sha256=5b9hhu33bZ8u5kMhA3M1tAIP52ZtZ0JqjGyPD0_vdNg,1072
+pyudbf-0.3.0.dist-info/METADATA,sha256=8GkIT7t7bHoMMXnb5QGEmzROxSlRFQSYMiWvjGJDgeA,1958
+pyudbf-0.3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyudbf-0.3.0.dist-info/top_level.txt,sha256=EvA3dSQ8sO4XfgbV2CqECR-qGC8PuWMn1AtWwVbQr28,7
+pyudbf-0.3.0.dist-info/RECORD,,
