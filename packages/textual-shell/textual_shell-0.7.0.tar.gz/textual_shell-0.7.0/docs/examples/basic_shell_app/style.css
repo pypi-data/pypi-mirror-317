@@ -1,0 +1,99 @@
+Screen {
+    layers: shell popup;
+    layout: horizontal;
+}
+
+#prompt-input {
+    border: none;
+    background: transparent;
+    margin-left: 0;
+    margin-top:1;
+    padding-left: 0;
+}
+
+#prompt-label{
+    margin-top: 1;
+    padding: 0;
+    padding-left: 1;
+}
+
+Prompt {
+    border: round white;
+    margin: 0;
+    padding: 0;
+    height: 4;
+    width: 100;
+    layout: horizontal
+}
+
+CommandList {
+    background: transparent;
+    border: round white;
+    height: auto;
+    width: 20;
+    layout: vertical;
+}
+
+#cmd-label {
+    text-align: center;
+}
+
+CommandList Rule {
+    color: white;
+    margin: 0;
+}
+
+#cmd-list {
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+
+#auto-complete {
+    layer: popup;
+    offset: 20 8;
+    height: auto;
+    width: 20;
+    box-sizing: border-box;
+    border: round white;
+}
+
+Shell {
+    layout: horizontal;
+}
+
+HelpScreen {
+    align: center middle;
+    height: 50;
+}
+
+#help-dialog {
+    grid-size: 3;
+    grid-rows: 2 40;
+    grid-columns: 1fr 1fr 4;
+    width: 80;
+    height: auto;
+    background: $surface;
+    border: solid white;
+}
+
+#help-close {
+    column-span: 1;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#help-label {
+    column-span: 2;
+    content-align: center middle;
+    width: 1fr;
+    offset: 1 0;
+}
+
+#help-display {
+    column-span: 3;
+    row-span: 2;
+    content-align: center middle;
+    border-top: solid white;
+}
