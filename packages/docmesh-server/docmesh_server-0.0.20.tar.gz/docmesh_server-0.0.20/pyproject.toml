@@ -1,0 +1,29 @@
+[build-system]
+requires = ["flit_core>=3.2"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "docmesh_server"
+description = "Server of docmesh."
+authors = [
+    {name="Zhengkai Yang", email="kyle.yang1995@gmail.com"},
+]
+readme = "README.md"
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "docmesh-core>=0.0.16",
+    "docmesh-agent>=0.0.13",
+    "fastapi==0.111.0",
+    "uvicorn==0.29.0",
+    "gunicorn==19.3.0",
+]
+
+[tool.flake8]
+max-line-length = 120
