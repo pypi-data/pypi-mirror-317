@@ -1,0 +1,10 @@
+ratser/__init__.py,sha256=P-F3IOmwq7mZx38zlF0-QRvFq4Fsp9tIWYSijs3Sb-k,4931
+ratser/cli.py,sha256=9jVA843cJlJlarwv1Ge2J3_zqee7Mtu3XD96UlhhqaA,641
+ratser/intmap.py,sha256=a-hNpmsWuyVtVBA9bVQXANIN71JCUGdhFHMeZvP0S4k,896
+ratser/trick.py,sha256=g7HIjgUkdCF2Mj8UhI8FUwHDB2cFvSe3ZqRomTK31ks,915
+ratser/walimp.py,sha256=7r2EOSkb8kbYcY94wTw-SxR7eSk1trc_fAx4lb5k6oM,1378
+ratser-0.3.dist-info/METADATA,sha256=xL4F81st0BqTx5PxLEx2JHLU7qgXWx3uc-d_C5GMHpQ,1359
+ratser-0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ratser-0.3.dist-info/entry_points.txt,sha256=ohg2RLyJO-2383opxezxF7Uff_UdTnKktgB4fHCNhKs,52
+ratser-0.3.dist-info/top_level.txt,sha256=BHLmtU1_eRE4_JC2T7e3wKd040ubTBiVoAJwBnsrSUA,7
+ratser-0.3.dist-info/RECORD,,
