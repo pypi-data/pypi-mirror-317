@@ -1,0 +1,7 @@
+django
+django-safe-fields
+django-model-helper
+django-environment-settings
+zenutils
+null-object
+PyYAML
