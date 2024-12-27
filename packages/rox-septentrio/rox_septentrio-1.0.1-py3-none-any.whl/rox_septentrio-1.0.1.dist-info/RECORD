@@ -1,0 +1,16 @@
+rox_septentrio/__init__.py,sha256=ZseHjVu9IfEQsz8q4KJ5pKyBoHnPLcFkx5vGvm2h_nM,194
+rox_septentrio/__main__.py,sha256=yY8Wh3Hgddzm9Mv5zHINEa-9AAOQVX-WvDinXGNBif4,612
+rox_septentrio/config.py,sha256=a9oRgJMur3GLFmGriveOANe4XxwHXPI5Xf9kKyRdbZ4,977
+rox_septentrio/converters.py,sha256=pc6OO8oPwrtoR-wKhUflF5QDhCbWNjono79TkMILCqY,2165
+rox_septentrio/gps_node_ip.py,sha256=gxCOyVetBCszZyWVuJ_Wgc74kYRzjxPP5-UFkJL7tdw,4464
+rox_septentrio/gps_node_serial.py,sha256=njXBhz2GxtCKDsdKEwF3SbCEcg1C_5JotHe57iQN4Ds,2430
+rox_septentrio/mock.py,sha256=rQcxPJXV9Ja5AXCpdh4o-bAmpCA3IXJzRF9Tt7z3Aww,10814
+rox_septentrio/nmea.py,sha256=ImZZSq4xGJGbvZz8BN7igX9GU_CecTC83sTWNJlmeOc,2508
+rox_septentrio/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rox_septentrio/runners.py,sha256=LELRMxfFkzWnt9oSBZufOtQaZFiBRcgT1qD4ax9LEjg,2773
+rox_septentrio-1.0.1.dist-info/LICENCE,sha256=shbykIl7BmIkk5LkkS1KWChB2em6aQMVQmzigCT4-3s,1106
+rox_septentrio-1.0.1.dist-info/METADATA,sha256=4bZNoLWHBbLRgDc1HaGXCKTYyjw5MGjNABZR1_xDFg4,3275
+rox_septentrio-1.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+rox_septentrio-1.0.1.dist-info/entry_points.txt,sha256=s1DbTkV_KuifbSyOqUy2hGU2RsN92QHxG2CxZKtBlKM,94
+rox_septentrio-1.0.1.dist-info/top_level.txt,sha256=cmuf0fEnT01Fh6WxrGNxCK90jIgq_pJt1_2uqhO8n-8,15
+rox_septentrio-1.0.1.dist-info/RECORD,,
