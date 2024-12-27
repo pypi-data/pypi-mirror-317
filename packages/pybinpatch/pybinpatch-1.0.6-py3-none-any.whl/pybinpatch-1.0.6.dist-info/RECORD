@@ -1,0 +1,12 @@
+binpatch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+binpatch/__main__.py,sha256=Eoiid-da5iRKigqLzLdolA15GJuuDD_yBeRukCJskQA,1074
+binpatch/diff.py,sha256=QIetiK4d6s-ZVRiIlQUzasSxkA3rWNMLGzVyOeQsq4M,2440
+binpatch/errors.py,sha256=h3NuGenBO07NpUlTSJ-7GS9yQPbs_KdU4WKmdepnRn8,124
+binpatch/find.py,sha256=eqFEG6jin4H-Mbe3w0LO30WVVP7asRC82aQhxg6j4ag,1811
+binpatch/io.py,sha256=MbCoV_uqaHJix3gE8G8E1KhcWxfXGkWSZ-BKCJyCmAI,1387
+binpatch/patch.py,sha256=TPMRGBlIqgvXQpb25rNkddyqhRhlcLOA3joOUGjDg9Y,668
+binpatch/types.py,sha256=_BmzRHDDOgJDwdcF7xA8cXOMI2prx_YAiMuga-jmatQ,457
+binpatch/utils.py,sha256=YS2KfhDcQvpBBzyhQyB3TTUezQor-EK-qbRUW7fbevU,2398
+pybinpatch-1.0.6.dist-info/METADATA,sha256=0-dinsciljarKZIRlM8QCBEw_vl75XbMpvBt-SxG_hs,614
+pybinpatch-1.0.6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pybinpatch-1.0.6.dist-info/RECORD,,
