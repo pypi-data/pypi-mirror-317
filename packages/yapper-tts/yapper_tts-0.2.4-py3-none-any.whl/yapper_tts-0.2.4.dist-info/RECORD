@@ -1,0 +1,12 @@
+yapper/__init__.py,sha256=vrYZu3snqU2ONlW_P0azbcdGkmIwXr0UymGw1BxL90k,623
+yapper/constants.py,sha256=2G2shuJStv_iZfSapIEcmi5M0aR6BgXlV0fvM-iRGbU,1425
+yapper/core.py,sha256=hLhDVqcn5SD686BL90pbJffe-2vz2wMyNkMI0L9aNek,4195
+yapper/enhancer.py,sha256=1g2DiIxg7CGXTIxLUSARABHufcNTO56NFzT74WgKUjQ,9195
+yapper/enums.py,sha256=kZPksxdYBG59DTfW0hYamfUxDR-V-qPHizFYSS6rMro,2661
+yapper/meta.py,sha256=8xEzr66iTUoeFCuCgM-KpNQAmVRowmF9GrsDqQXEW9A,84
+yapper/speaker.py,sha256=CgCKUXLpbSiPtTi8f_aKscyoHf875NPRjjVWxHXNNog,5818
+yapper/utils.py,sha256=iymXHkNKMFYbjcLnh0wMdAAVHvdI559KRUs8cXzhHdQ,5152
+yapper_tts-0.2.4.dist-info/METADATA,sha256=Q2IrUv__L1hr-Zti9ty18hGZObj2KIWmVhBamIc5Pw4,6507
+yapper_tts-0.2.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+yapper_tts-0.2.4.dist-info/top_level.txt,sha256=GgW0DZpc8bz7eMORwMFS8U8ScRDQdpY3XqpY5F6fob8,7
+yapper_tts-0.2.4.dist-info/RECORD,,
