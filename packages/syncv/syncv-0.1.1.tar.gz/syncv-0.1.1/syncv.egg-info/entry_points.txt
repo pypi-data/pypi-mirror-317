@@ -1,0 +1,2 @@
+[console_scripts]
+syncv = syncv.cli:main

@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: syncv
+Version: 0.1.1
+Summary: A cross-platform clipboard synchronization tool
+Home-page: https://github.com/Wooonster/syncv
+Author: wonster
+Author-email: wooonster@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: click
+Requires-Dist: pyperclip
+Requires-Dist: keyboard
+Requires-Dist: requests
+Requires-Dist: flask
+Requires-Dist: pynput

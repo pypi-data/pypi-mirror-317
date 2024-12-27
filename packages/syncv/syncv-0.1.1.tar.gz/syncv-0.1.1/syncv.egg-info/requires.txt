@@ -1,0 +1,6 @@
+click
+pyperclip
+keyboard
+requests
+flask
+pynput
