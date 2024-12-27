@@ -1,0 +1,2 @@
+[console_scripts]
+image_processing_toolkit = image_processing_toolkit.operations:main
