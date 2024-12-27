@@ -1,0 +1,8 @@
+requests
+numpy
+zmq
+numpy
+lz4
+setuptools
+websockets==12.0
+opencv-python==4.10.0.84
