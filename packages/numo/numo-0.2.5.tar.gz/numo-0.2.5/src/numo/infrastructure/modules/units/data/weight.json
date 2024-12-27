@@ -1,0 +1,52 @@
+{
+  "kilogram": {
+    "id": "kg",
+    "phrases": ["kilogram", "kilograms", "kg", "kgs"],
+    "unit": 1
+  },
+  "gram": {
+    "id": "g",
+    "phrases": ["gram", "grams", "g"],
+    "unit": 0.001
+  },
+  "pound": {
+    "id": "lb",
+    "phrases": ["pound", "pounds", "lb", "lbs"],
+    "unit": 0.45359237
+  },
+  "ounce": {
+    "id": "oz",
+    "phrases": ["ounce", "ounces", "oz"],
+    "unit": 0.028349523125
+  },
+  "milligram": {
+    "id": "mg",
+    "phrases": ["milligram", "milligrams", "mg"],
+    "unit": 1e-6
+  },
+  "microgram": {
+    "id": "μg",
+    "phrases": ["microgram", "micrograms", "μg", "ug"],
+    "unit": 1e-9
+  },
+  "metric_ton": {
+    "id": "t",
+    "phrases": ["metric ton", "metric tons", "tonne", "tonnes", "t"],
+    "unit": 1000
+  },
+  "stone": {
+    "id": "st",
+    "phrases": ["stone", "stones", "st"],
+    "unit": 6.35029318
+  },
+  "carat": {
+    "id": "ct",
+    "phrases": ["carat", "carats", "ct"],
+    "unit": 0.0002
+  },
+  "grain": {
+    "id": "gr",
+    "phrases": ["grain", "grains", "gr"],
+    "unit": 0.00006479891
+  }
+}  

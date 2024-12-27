@@ -1,0 +1,37 @@
+{
+    "horsepower": {
+        "id": "hp",
+        "phrases": ["horsepower", "hp", "HP"],
+        "unit": 1
+    },
+    "mechanical_horsepower": {
+        "id": "hp(I)",
+        "phrases": ["mechanical horsepower", "hp(I)", "imperial horsepower"],
+        "unit": 1.0139
+    },
+    "metric_horsepower": {
+        "id": "PS",
+        "phrases": ["metric horsepower", "PS", "cv", "pferdestärke"],
+        "unit": 1.0139
+    },
+    "kilowatt": {
+        "id": "kW",
+        "phrases": ["kilowatt", "kilowatts", "kW"],
+        "unit": 0.7457
+    },
+    "watt": {
+        "id": "W",
+        "phrases": ["watt", "watts", "W"],
+        "unit": 0.0007457
+    },
+    "btu_per_hour": {
+        "id": "BTU/h",
+        "phrases": ["BTU per hour", "BTU/h", "BTU/hr"],
+        "unit": 0.0002931
+    },
+    "foot_pound_per_second": {
+        "id": "ft⋅lbf/s",
+        "phrases": ["foot pound per second", "ft⋅lbf/s", "ft-lb/s"],
+        "unit": 0.0018182
+    }
+} 
