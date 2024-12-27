@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+rocket-revise/__init__.py
+rocket-revise/rocket.py
+rocket_revise.egg-info/PKG-INFO
+rocket_revise.egg-info/SOURCES.txt
+rocket_revise.egg-info/dependency_links.txt
+rocket_revise.egg-info/top_level.txt
