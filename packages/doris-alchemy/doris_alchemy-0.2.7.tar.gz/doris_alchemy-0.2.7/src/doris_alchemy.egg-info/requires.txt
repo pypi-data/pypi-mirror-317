@@ -1,0 +1,7 @@
+sqlalchemy>=2.0
+
+[mysqldb]
+mysqlclient>=2.1.0
+
+[pymysql]
+pymysql
