@@ -1,0 +1,3 @@
+[console_scripts]
+smart_reboot = smart_reboot.__main__:main
+
