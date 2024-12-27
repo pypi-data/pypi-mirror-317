@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: arcane-googleads
+Version: 3.15.2
+Summary: Un package pour interagir avec l'API Google Ads
+Author: Arcane
+Author-email: product@arcane.run
+Requires-Python: >=3.8,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: arcane-core (>=1.7.0,<2.0.0)
+Requires-Dist: arcane-credentials (>=0.1.0,<0.2.0)
+Requires-Dist: arcane-datastore (>=1.0,<2.0)
+Requires-Dist: arcane-requests (>=0,<1)
+Requires-Dist: backoff (==1.10.0)
+Requires-Dist: google-ads (==25.0.0)
+Requires-Dist: pyyaml (>=5.1,<7.0)
+Description-Content-Type: text/markdown
+
+# Arcane google-ads
+
+Utility package to interact with Google Ads
+
