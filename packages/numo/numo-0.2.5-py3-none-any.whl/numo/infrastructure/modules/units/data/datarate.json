@@ -1,0 +1,92 @@
+{
+    "bps": {
+        "id": "bps",
+        "phrases": ["bits per second", "bps", "bit/s"],
+        "unit": 0.000001
+    },
+    "Bps": {
+        "id": "Bps",
+        "phrases": ["bytes per second", "Bps", "B/s"],
+        "unit": 0.000008
+    },
+    "Kbps": {
+        "id": "Kbps",
+        "phrases": ["kilobits per second", "Kbps", "kbps", "Kb/s"],
+        "unit": 0.001
+    },
+    "KBps": {
+        "id": "KBps",
+        "phrases": ["kilobytes per second", "KBps", "KB/s"],
+        "unit": 0.008
+    },
+    "Mbps": {
+        "id": "Mbps",
+        "phrases": ["megabits per second", "Mbps", "mbps", "Mb/s"],
+        "unit": 1
+    },
+    "MBps": {
+        "id": "MBps",
+        "phrases": ["megabytes per second", "MBps", "MB/s"],
+        "unit": 8
+    },
+    "Gbps": {
+        "id": "Gbps",
+        "phrases": ["gigabits per second", "Gbps", "gbps", "Gb/s"],
+        "unit": 1000
+    },
+    "GBps": {
+        "id": "GBps",
+        "phrases": ["gigabytes per second", "GBps", "GB/s"],
+        "unit": 8000
+    },
+    "Tbps": {
+        "id": "Tbps",
+        "phrases": ["terabits per second", "Tbps", "tbps", "Tb/s"],
+        "unit": 1000000
+    },
+    "TBps": {
+        "id": "TBps",
+        "phrases": ["terabytes per second", "TBps", "TB/s"],
+        "unit": 8000000
+    },
+    "Kibps": {
+        "id": "Kibps",
+        "phrases": ["kibibits per second", "Kibps", "Kib/s"],
+        "unit": 0.001024
+    },
+    "KiBps": {
+        "id": "KiBps",
+        "phrases": ["kibibytes per second", "KiBps", "KiB/s"],
+        "unit": 0.008192
+    },
+    "Mibps": {
+        "id": "Mibps",
+        "phrases": ["mebibits per second", "Mibps", "Mib/s"],
+        "unit": 1.048576
+    },
+    "MiBps": {
+        "id": "MiBps",
+        "phrases": ["mebibytes per second", "MiBps", "MiB/s"],
+        "unit": 8.388608
+    },
+    "Gibps": {
+        "id": "Gibps",
+        "phrases": ["gibibits per second", "Gibps", "Gib/s"],
+        "unit": 1073.741824
+    },
+    "GiBps": {
+        "id": "GiBps",
+        "phrases": ["gibibytes per second", "GiBps", "GiB/s"],
+        "unit": 8589.934592
+    },
+    "Tibps": {
+        "id": "Tibps",
+        "phrases": ["tebibits per second", "Tibps", "Tib/s"],
+        "unit": 1099511.627776
+    },
+    "TiBps": {
+        "id": "TiBps",
+        "phrases": ["tebibytes per second", "TiBps", "TiB/s"],
+        "unit": 8796093.022208
+    }
+} 

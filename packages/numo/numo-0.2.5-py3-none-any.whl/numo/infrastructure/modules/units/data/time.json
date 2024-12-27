@@ -1,0 +1,67 @@
+{
+    "second": {
+      "id": "s",
+      "phrases": ["second", "seconds", "s", "sec", "secs"],
+      "unit": 1
+    },
+    "minute": {
+      "id": "min",
+      "phrases": ["minute", "minutes", "min", "mins"],
+      "unit": 60
+    },
+    "hour": {
+      "id": "h",
+      "phrases": ["hour", "hours", "h", "hr", "hrs"],
+      "unit": 3600
+    },
+    "day": {
+      "id": "d",
+      "phrases": ["day", "days", "d"],
+      "unit": 86400
+    },
+    "week": {
+      "id": "w",
+      "phrases": ["week", "weeks", "w", "wk", "wks"],
+      "unit": 604800
+    },
+    "month": {
+      "id": "mo",
+      "phrases": ["month", "months", "mo"],
+      "unit": 2592000
+    },
+    "year": {
+      "id": "y",
+      "phrases": ["year", "years", "y", "yr", "yrs"],
+      "unit": 31536000
+    },
+    "millisecond": {
+      "id": "ms",
+      "phrases": ["millisecond", "milliseconds", "ms", "msec"],
+      "unit": 0.001
+    },
+    "microsecond": {
+      "id": "μs",
+      "phrases": ["microsecond", "microseconds", "μs", "usec"],
+      "unit": 0.000001
+    },
+    "nanosecond": {
+      "id": "ns",
+      "phrases": ["nanosecond", "nanoseconds", "ns", "nsec"],
+      "unit": 1e-9
+    },
+    "decade": {
+      "id": "decade",
+      "phrases": ["decade", "decades"],
+      "unit": 315360000
+    },
+    "century": {
+      "id": "century",
+      "phrases": ["century", "centuries"],
+      "unit": 3153600000
+    },
+    "millennium": {
+      "id": "millennium",
+      "phrases": ["millennium", "millennia"],
+      "unit": 31536000000
+    }
+}  

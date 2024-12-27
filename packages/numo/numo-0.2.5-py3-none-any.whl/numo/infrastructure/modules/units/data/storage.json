@@ -1,0 +1,52 @@
+{
+  "bit": {
+    "id": "bit",
+    "phrases": ["bit", "bits"],
+    "unit": 0.000000119209290
+  },
+  "byte": {
+    "id": "B",
+    "phrases": ["byte", "bytes", "B"],
+    "unit": 0.000000953674316
+  },
+  "kibibyte": {
+    "id": "KiB",
+    "phrases": ["kibibyte", "kibibytes", "KiB", "kiB", "KB", "kb", "kilobyte", "kilobytes"],
+    "unit": 0.000976562500
+  },
+  "mebibyte": {
+    "id": "MiB",
+    "phrases": ["mebibyte", "mebibytes", "MiB", "miB", "MB", "mb", "megabyte", "megabytes"],
+    "unit": 1
+  },
+  "gibibyte": {
+    "id": "GiB",
+    "phrases": ["gibibyte", "gibibytes", "GiB", "giB", "GB", "gb", "gigabyte", "gigabytes"],
+    "unit": 1024
+  },
+  "tebibyte": {
+    "id": "TiB",
+    "phrases": ["tebibyte", "tebibytes", "TiB", "tiB", "TB", "tb", "terabyte", "terabytes"],
+    "unit": 1048576
+  },
+  "pebibyte": {
+    "id": "PiB",
+    "phrases": ["pebibyte", "pebibytes", "PiB", "piB", "PB", "pb", "petabyte", "petabytes"],
+    "unit": 1073741824
+  },
+  "exbibyte": {
+    "id": "EiB",
+    "phrases": ["exbibyte", "exbibytes", "EiB", "eiB", "EB", "eb", "exabyte", "exabytes"],
+    "unit": 1099511627776
+  },
+  "zebibyte": {
+    "id": "ZiB",
+    "phrases": ["zebibyte", "zebibytes", "ZiB", "ziB", "ZB", "zb", "zettabyte", "zettabytes"],
+    "unit": 1125899906842624
+  },
+  "yobibyte": {
+    "id": "YiB",
+    "phrases": ["yobibyte", "yobibytes", "YiB", "yiB", "YB", "yb", "yottabyte", "yottabytes"],
+    "unit": 1152921504606847000
+  }
+}  
