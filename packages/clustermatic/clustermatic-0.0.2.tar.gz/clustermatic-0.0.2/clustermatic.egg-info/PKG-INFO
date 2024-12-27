@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: clustermatic
+Version: 0.0.2
+Summary: Python AutoML library for clustering tasks
+Home-page: https://github.com/AKapich/clustermatic
+Author: Aleks Kapich
+Author-email: aleks.kapich@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn~=1.6.0
+Requires-Dist: numpy~=1.26.4
+Requires-Dist: pandas~=2.0.0
+Requires-Dist: scikit-optimize~=0.10.2
+Requires-Dist: matplotlib~=3.10.0
+Requires-Dist: seaborn~=0.13.2
+Requires-Dist: jinja2~=3.1.5
+Requires-Dist: pyamg~=5.2.1
+
+![clustermatic](https://raw.githubusercontent.com/AKapich/clustermatic/refs/heads/main/clustermatic/auxiliary/clustermatic.png)
+
+# clustermatic
+
+`clustermatic` is a Python library designed to accelerate clustering tasks using `scikit-learn`. It serves as a quick tool for selecting the optimal clustering algorithm and its hyperparameters, providing visualizations and metrics for comparison.
+
+## Features
+
+- **Clustering Algorithms**: Analyzes six clustering algorithms from `scikit-learn`:
+    - `KMeans`
+    - `DBSCAN`
+    - `MiniBatchKMeans`
+    - `AgglomerativeClustering`
+    - `OPTICS`
+    - `SpectralClustering`
+- **Optimization Methods**: Includes Bayesian optimization and random search for hyperparameter tuning.
+- **Flexible Preprocessing**: Allows users to customize how the data is meant to be preprocessed, adjusting methods such as scaling, normalization, and dimensionality reduction.
+- **Evaluation Metrics**: Supports evaluation with `silhouette`, `calinski_harabasz`, and `davies_bouldin` scores.
+- **Report Generation**: Generates reports in HTML format after optimization.
+
+## Installation
+
+To install `clustermatic`, use pip:
+
+```bash
+pip install clustermatic
+```
+
+
+
