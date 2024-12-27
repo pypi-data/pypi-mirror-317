@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "jupyter-jchannel"
+version = "0.2.0"
+description = "Simple asynchronous RPC framework for Jupyter Notebooks. Facilitates calling JavaScript frontend code from Python kernel code and vice-versa."
+authors = [
+    "Marcelo Hashimoto <marcelo.hashimoto@gmail.com>"
+]
+readme = "README.md"
+repository = "https://github.com/hashiprobr/jupyter-jchannel"
+packages = [
+    { include = "jchannel" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.11.11"
+
+[tool.poetry.group.dev.dependencies]
+nbclassic = "^1.1.0"
+notebook = "^7.3.2"
+jupyterlab = "^4.3.4"
+ipywidgets = "^8.1.5"
+autopep8 = "^2.3.1"
+pytest = "^8.3.4"
+pytest-asyncio = "~0.25.0"
+pytest-mock = "^3.14.0"
+pytest-cov = "^6.0.0"
+sphinx = "^8.1.3"
+
+[tool.poetry.scripts]
+nbclassic = 'scripts:nbclassic'
+notebook = 'scripts:notebook'
+lab = 'scripts:lab'
+tests = 'scripts:tests'
+docs = 'scripts:docs'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
