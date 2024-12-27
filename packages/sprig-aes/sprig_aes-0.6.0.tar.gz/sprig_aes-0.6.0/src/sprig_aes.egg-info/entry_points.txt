@@ -1,0 +1,2 @@
+[console_scripts]
+sprig-aes = sprig_aes.cli:cli
