@@ -1,0 +1,13 @@
+cmg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cmg/cli.py,sha256=UArg79prEUeTLq1mSYXbPcJdoRwRDkcHwT9sUkIgFZU,794
+cmg/generator.py,sha256=Fx5PAtiBMYNQWo0rbNSG48iyfd5NMVWWcf32ZqcD6O4,1710
+cmg/schema.py,sha256=iLpJBu9-A0DMG8eV41-9nphXH5jtpxH3WgtiLMZcpDc,15032
+cmg/templates/cmakelists_txt_j2.py,sha256=rfFL6xZHB-c0gbBu8HpIqXumvqzCn6-d2OzyWqUEl8g,987
+cmg/templates/klass_cpp_j2.py,sha256=yJV7PmDkhVXnQgMJiU4LZgXq15ZWIgHVp-YZhHGgeUk,6938
+cmg/templates/klass_hpp_j2.py,sha256=kdcwQ2bizlLswzMWSCmb44jDOi1saRYIm3ermB0JaB0,4061
+cmg/templates/test_cpp_j2.py,sha256=vheesj-9ckK2BAr3XPRs7rU_2QSil40uo22xHpAmbDY,5785
+cmg-0.1.2.dist-info/LICENSE,sha256=lhYOd9KPtLBt4JdRjhI2K__u8XEEB_GK3lmBsf7Zemw,1079
+cmg-0.1.2.dist-info/METADATA,sha256=UCfxZGlU9NNPFShMehiTiiOCXD_XNDtX61-4g_bsHq0,1652
+cmg-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+cmg-0.1.2.dist-info/entry_points.txt,sha256=0nRZxSqvV65bF-CQwhKLJoH7PqNvMEF7Eao1WbUKKVU,36
+cmg-0.1.2.dist-info/RECORD,,
