@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+xspline==0.0.7
+msca
+jax
+jaxlib
+
+[test]
+pytest
