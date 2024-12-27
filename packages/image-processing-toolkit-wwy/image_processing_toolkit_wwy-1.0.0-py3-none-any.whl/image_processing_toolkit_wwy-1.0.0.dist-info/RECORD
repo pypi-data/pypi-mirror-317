@@ -1,0 +1,10 @@
+image_processing_toolkit_wwy/__init__.py,sha256=WC1a3UaAresAplx6S0-IVdfLlCyMkTg2NdzABbKVrLo,231
+image_processing_toolkit_wwy/analyze.py,sha256=7kUT0UKavOWQfAu6w9oKI-bxJLtUH_rnOnksa9TJhL4,315
+image_processing_toolkit_wwy/convert.py,sha256=GXAUxgRZGsanLSCz_pNDj1aR0kBXyF-oNF-IixrezBI,262
+image_processing_toolkit_wwy/filters.py,sha256=qczzv7D-aG5zfqtzT3EkwNZ4Wh8cfUcN6UUtBTwJvas,484
+image_processing_toolkit_wwy-1.0.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+image_processing_toolkit_wwy-1.0.0.dist-info/METADATA,sha256=UrS9NR7NO_2_ax4NeWYKPxRqfJcVRLvjiVbb3VgnNew,1233
+image_processing_toolkit_wwy-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+image_processing_toolkit_wwy-1.0.0.dist-info/entry_points.txt,sha256=ZBMG4t3ojYYjEfSds08cLfJd-CCAGSUJe3WbkP5sA3k,86
+image_processing_toolkit_wwy-1.0.0.dist-info/top_level.txt,sha256=WYGp7qsSglgHGm_F21ZUerL3MbSXxgWeJRcywXLIu68,29
+image_processing_toolkit_wwy-1.0.0.dist-info/RECORD,,
