@@ -1,0 +1,15 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.testing.pytestArgs": [
+        "tests",
+         "--capture=no"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "lldb.launch.env": {
+        "LD_LIBRARY_PATH": "${workspaceFolder}/target/debug",
+        "DYLD_LIBRARY_PATH": "${workspaceFolder}/target/debug"
+    },
+    "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.check.command": "clippy",
+}
