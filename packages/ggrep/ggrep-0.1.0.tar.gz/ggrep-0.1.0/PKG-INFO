@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: ggrep
+Version: 0.1.0
+Summary: Grid grep - search rectangular 'gridded' files, such as Excel, TSV, and CSV.
+Author-email: terrycojones <tcj25@cam.ac.uk>
+Requires-Python: >=3.13
