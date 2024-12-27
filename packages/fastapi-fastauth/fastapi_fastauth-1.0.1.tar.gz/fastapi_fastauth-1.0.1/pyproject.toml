@@ -1,0 +1,163 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fastapi-fastauth"
+dynamic = ["version"]
+description = 'Ready-to-use customizable solution for FastAPI with Authentication, Authorization(RBAC) and OAuth2 support'
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "FastAPI",
+    "Authentication",
+    "Authorization",
+    "OAuth2",
+    "RBAC",
+    "JWTHelper",
+    "Cookie",
+    "Session"]
+authors = [
+  { name = "Vladyslav Chaliuk", email = "chaliukvladyslav@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Framework :: Pydantic :: 2",
+  "Framework :: FastAPI",
+  "Topic :: Security",
+  "Topic :: Internet :: WWW/HTTP :: Session"
+]
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic-settings >= 2.6.1",
+  "fastapi >= 0.115.6",
+  "pyjwt >= 2.10.1",
+  "makefun >= 1.15.6",
+  "python-multipart >= 0.0.20",
+  "pwdlib[argon2,bcrypt] >= 0.2.1",
+]
+
+[project.urls]
+Documentation = "https://astralmortem.github.io/fastauth/"
+Source = "https://github.com/AstralMortem/fastauth"
+
+[tool.hatch.version]
+path = "fastauth/__init__.py"
+
+[project.optional-dependencies]
+sqlalchemy = [
+    "sqlalchemy >= 2.0.36",
+    "greenlet"
+]
+oauth = [
+    "httpx-oauth >=0.13",
+    "httpx >=0.18"
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/README.md",
+  "/fastauth"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["fastauth"]
+
+[tool.uv]
+dev-dependencies = [
+    "mypy",
+    "ruff",
+    "pre-commit",
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "coverage",
+    "httpx",
+    "httpx-oauth",
+    "uvicorn",
+    "sqlalchemy",
+    "greenlet",
+    "aiosqlite",
+]
+
+
+[tool.ruff]
+exclude = [
+    "tests",
+    "examples",
+    "docs",
+    ".venv",
+    ".github",
+    ".git",
+    "dist"
+]
+
+[tool.ruff.lint]
+mccabe = { max-complexity = 14 }
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B018",  # Found useless expression.
+    "B008", #  Funtion call in args
+]
+[tool.coverage.run]
+source = ["fastauth"]
+branch = true
+
+[tool.coverage.report]
+precision = 2
+exclude_lines = [
+    'pragma: no cover',
+    'raise NotImplementedError',
+    'if TYPE_CHECKING:',
+    '@overload',
+    'if CASUAL_UT',
+    "@declared_attr"
+]
+
+[tool.mypy]
+strict = true
+warn_return_any = false
+no_implicit_optional = false
+
+[dependency-groups]
+docs = [
+    "mkdocs-material>=9.5.49",
+    "mkdocs>=1.6.1",
+    "mkdocstrings-python>=1.12.2",
+]
+
+
+# ========= TESTS =================
+
+[tool.hatch.envs.hatch-test]
+extra-dependencies = [
+    "pytest-asyncio",
+    "pytest-cov",
+    "httpx",
+    "httpx_oauth",
+    "sqlalchemy",
+    "greenlet",
+    "aiosqlite",
+]
+
+[tool.hatch.envs.hatch-test.scripts]
+run = "pytest{env:HATCH_TEST_ARGS:} {args}"
+run-cov = "coverage run -m pytest{env:HATCH_TEST_ARGS:} {args} --junitxml=junit.xml"
+cov-combine = "coverage combine"
+cov-report = "coverage report && coverage xml"
+
+[tool.pytests.ini_options]
+asyncio_mode="auto"
+asyncio_default_fixture_loop_scope = "session"
