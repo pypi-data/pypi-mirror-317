@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/paircorr/__init__.py
+src/paircorr/log.py
+src/paircorr/pair_plot.py
+src/paircorr/reg_plot.py
+src/paircorr/scatter_with_reg.py
+src/paircorr.egg-info/PKG-INFO
+src/paircorr.egg-info/SOURCES.txt
+src/paircorr.egg-info/dependency_links.txt
+src/paircorr.egg-info/requires.txt
+src/paircorr.egg-info/top_level.txt
