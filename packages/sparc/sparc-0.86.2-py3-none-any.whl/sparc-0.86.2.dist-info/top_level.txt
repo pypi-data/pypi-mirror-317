@@ -1,0 +1,3 @@
+console
+text
+tools
