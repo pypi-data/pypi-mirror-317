@@ -1,0 +1,4 @@
+[console_scripts]
+tpass = tpass:main
+tpass-edit = tpass.edit:main
+tpass-setup = tpass.setup:main
