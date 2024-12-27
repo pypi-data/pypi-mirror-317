@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: python_decorators_utils
+Version: 0.1.0
+Summary: A collection of useful Python decorators including timing and caching
+Author-email: Udit Anand <getuditanand@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Python Decorators Utils
+
+A collection of useful Python decorators including:
+- Timing decorator: Measures function execution time
+- Cache decorator: Implements function result caching
+
+## Installation
+```bash
+pip install python-decorators-utils
+```
+
+## Usage
+```python
+from python_decorators_utils import timing_decorator, cache_decorator
+
+@timing_decorator
+def slow_function():
+    time.sleep(1)
+    return "done"
+
+@cache_decorator
+def fibonacci(n):
+    if n < 2: return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
