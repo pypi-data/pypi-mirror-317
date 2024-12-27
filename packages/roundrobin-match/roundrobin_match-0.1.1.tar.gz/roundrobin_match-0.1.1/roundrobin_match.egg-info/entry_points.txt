@@ -1,0 +1,2 @@
+[console_scripts]
+roundrobin_match = roundrobin_match.cli:main

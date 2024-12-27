@@ -1,0 +1,26 @@
+[project]
+name = "roundrobin-match"
+version = "0.1.1"
+license = {text = "MIT License"}
+description = "A CLI library for creating 1on1 and game match schedules"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["algorithm", "cli"]
+
+authors = [
+  {name = "kyoto7250", email = "50972773+kyoto7250@users.noreply.github.com"},
+]
+maintainers = [
+  {name = "kyoto7250", email = "50972773+kyoto7250@users.noreply.github.com"},
+]
+
+[project.urls]
+Homepage = "https://github.com/kyoto7250/roundrobin_match"
+Documentation = "https://github.com/kyoto7250/roundrobin_match"
+Repository = "https://github.com/kyoto7250/roundrobin_match"
+Issues = "https://github.com/kyoto7250/roundrobin_match/issues"
+
+
+[project.scripts]
+roundrobin_match = "roundrobin_match.cli:main"
