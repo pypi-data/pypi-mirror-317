@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyclicker
+Version: 1.0.0
+Summary: Just a simple mouse autoclicker in python.
+Author-email: Giovanni Bronzini <g.bronzini@gmail.com>
+Project-URL: Repository, https://github.com/GigiusB/pyclicker.git
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.8
+Requires-Dist: pyautogui>=0.9.54
+Requires-Dist: pynput>=1.7.7
+Requires-Dist: rich>=13.9.4
+
+# Usage
+
+Just install it and run `pyclicker --help` and follow help.
+
+#

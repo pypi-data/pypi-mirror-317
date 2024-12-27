@@ -1,0 +1,37 @@
+[project]
+name = "pyclicker"
+version = "1.0.0"
+description = "Just a simple mouse autoclicker in python."
+authors = [
+    {name = "Giovanni Bronzini", email = "g.bronzini@gmail.com"},
+]
+
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1.8",
+    "pyautogui>=0.9.54",
+    "pynput>=1.7.7",
+    "rich>=13.9.4",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Repository = "https://github.com/GigiusB/pyclicker.git"
+
+[project.scripts]
+pyclicker = "pyclicker.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.0.1",
+]

@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/pyclicker/__init__.py
+src/pyclicker/cli.py
+src/pyclicker.egg-info/PKG-INFO
+src/pyclicker.egg-info/SOURCES.txt
+src/pyclicker.egg-info/dependency_links.txt
+src/pyclicker.egg-info/entry_points.txt
+src/pyclicker.egg-info/requires.txt
+src/pyclicker.egg-info/top_level.txt
