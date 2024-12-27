@@ -1,0 +1,17 @@
+fastapi[standard]
+uvicorn
+pydantic-settings
+celery
+python-dotenv
+pytest
+jsonpatch
+redis
+typer
+websockets
+broadcaster[redis]
+parse
+watchdog
+sqlalchemy[asyncio]
+alembic
+alembic_utils
+psycopg
