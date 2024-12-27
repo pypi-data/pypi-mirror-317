@@ -1,0 +1,3 @@
+[console_scripts]
+search-file-lint=search_query.linter:main
+
