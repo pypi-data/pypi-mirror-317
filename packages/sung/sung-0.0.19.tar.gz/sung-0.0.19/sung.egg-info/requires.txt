@@ -1,0 +1,7 @@
+spotipy
+tabled
+glom
+i2
+pydantic
+pandas
+requests
