@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: flou
+Version: 0.3.0.dev1
+Summary: The framework for LLM-powered apps
+Author-email: Iván Raskovsky <raskovsky+flou@gmail.com>
+Project-URL: Homepage, https://flou.ai
+Project-URL: Documentation, https://flou.ai/
+Project-URL: Repository, https://github.com/flou-ai/flou.git
+Project-URL: Issues, https://github.com/flou-ai/flou/issues
+Project-URL: Changelog, https://flou.ai/documentation/changelog
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi[standard]
+Requires-Dist: uvicorn
+Requires-Dist: pydantic-settings
+Requires-Dist: celery
+Requires-Dist: python-dotenv
+Requires-Dist: pytest
+Requires-Dist: jsonpatch
+Requires-Dist: redis
+Requires-Dist: typer
+Requires-Dist: websockets
+Requires-Dist: broadcaster[redis]
+Requires-Dist: parse
+Requires-Dist: watchdog
+Requires-Dist: sqlalchemy[asyncio]
+Requires-Dist: alembic
+Requires-Dist: alembic_utils
+Requires-Dist: psycopg
+
+# Flou AI
+
+Flou is the framework for building **LLM-powered apps**. It introduces a
+structured development approach that enables you to prototype, iterate and
+optimize your app efficiently to achieve the **best performance**.
+
+**This is the python package.**
+
+> [!WARNING]
+> Flou is under heavy development and the API is evolving fast. Things may
+> change.
+
+Check out [our documentation](https://flou.ai/) to learn more.
+
+## Getting Started with Flou
+
+Reefer to our [Getting Started docs](https://flou.ai/getting-started/) to
+install and create your first project.
