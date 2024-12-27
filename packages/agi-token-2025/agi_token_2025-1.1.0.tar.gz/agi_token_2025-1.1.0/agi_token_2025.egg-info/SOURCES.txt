@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+agi_token_2025.egg-info/PKG-INFO
+agi_token_2025.egg-info/SOURCES.txt
+agi_token_2025.egg-info/dependency_links.txt
+agi_token_2025.egg-info/requires.txt
+agi_token_2025.egg-info/top_level.txt
