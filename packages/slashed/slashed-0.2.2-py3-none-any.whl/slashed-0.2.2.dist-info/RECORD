@@ -1,0 +1,16 @@
+slashed/__init__.py,sha256=8AnPfvOT4qzyQiPjBbdQJvCZ6NOZ1gG_zUeUWlQm0K4,1167
+slashed/base.py,sha256=vTSk1mp3i5vRLrV_H2E3ZNijwuPAjtDxr6IN_Qib3BE,4984
+slashed/completers.py,sha256=NTOYdlCJiHU3FdT77YPrTEH1iQZz_PZC1aAr7K-KN2g,9967
+slashed/completion.py,sha256=VniPcWBwyP9geZM9BNXQOD1Z3ST6fFvJ3GPR5DVA380,4995
+slashed/exceptions.py,sha256=2hhU2okx5zLTjymKgXbFLsNbNpc5CBIS7JHh85dRsyA,218
+slashed/log.py,sha256=BvIMO_OSRLqgBm9h1ZSza6lgmmp6QQfi5NfmDo76TXI,1346
+slashed/output.py,sha256=Sk6jwSX7nKSUIaC9ISNgTy7Kg_2RKxpTeOz46UwmPQs,879
+slashed/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slashed/store.py,sha256=eoePx9_keCeVNOz1JJxy5tid6AErVq4zxO6DGZsgUGM,6682
+slashed/utils.py,sha256=SUhBLz2ZZU_R7rC4-_tdT6JHXc85kqPaQi6JsGHa0Y4,1206
+slashed/builtin/__init__.py,sha256=qVI2rgBtVN5NSNsTKyZa_z7S475IqzyTm2FXx781t_I,291
+slashed/builtin/help_cmd.py,sha256=FxdySepeiaLfvUUldeRtt-1fe526g9iLIf1z9Pfe0Yk,3017
+slashed-0.2.2.dist-info/METADATA,sha256=_Gm98MXnrLUrmgQKhLa4fKOHtd3WdWc7KBIqLynMVWg,8638
+slashed-0.2.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+slashed-0.2.2.dist-info/licenses/LICENSE,sha256=AteGCH9r177TxxrOFEiOARrastASsf7yW6MQxlAHdwA,1078
+slashed-0.2.2.dist-info/RECORD,,
