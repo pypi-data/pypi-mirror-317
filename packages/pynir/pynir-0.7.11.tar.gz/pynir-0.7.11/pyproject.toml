@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pynir"
+version = "0.7.11"
+authors = [{ name = "J Zhang", email = "jzhang@chemoinfolab.com" }]
+description = "NIR calibration toolbox in python"
+readme = "README.md"
+requires-python = ">=3.7"
+
+dependencies = [
+  "numpy",
+  "scipy",
+  "scikit-learn",
+  "PyWavelets",
+  "matplotlib",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/JinZhangLab/pynir"
+"Bug Tracker" = "https://github.com/JinZhangLab/pynir/issues"
+"Documentation" = "https://pynir.readthedocs.io/en/latest/"
