@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+image/__init__.py
+image_oc.egg-info/PKG-INFO
+image_oc.egg-info/SOURCES.txt
+image_oc.egg-info/dependency_links.txt
+image_oc.egg-info/requires.txt
+image_oc.egg-info/top_level.txt
+image_oc.egg-info/zip-safe
