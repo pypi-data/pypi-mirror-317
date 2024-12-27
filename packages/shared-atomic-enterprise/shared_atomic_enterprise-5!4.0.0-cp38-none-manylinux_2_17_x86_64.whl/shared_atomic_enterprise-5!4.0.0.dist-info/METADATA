@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: shared_atomic_enterprise
+Version: 5!4.0.0
+Summary: Concurrent Python utils and data types
+Home-page: https://sharedatomic.top/
+Author: Xiquan Ren
+Author-email: xiquanren@yandex.com
+Requires-Python: >=3.7, <3.13
+Requires-Dist: urwid
+Requires-Dist: windows-curses ; platform_system == "Windows"
+
+This package provided a second way to access those shared data types with atomic operations.
+can be used on
+
+ - macOS x86_64 Ventura and above,
+
+ - Microsoft Windows 10 x64, Windows Server 2019 x64
+
+ - Centos/RHEL9 x86_64 for all functions, Centos/RHEL7 for all other functions except shared_dict
+
+ - Suse Linux Enterprise Server 15 x86_84 for all functions, Suse Linux Enterprise Server 12 for all other functions except shared_dict
+
+ - Ubuntu Linux 18, 22 x86_64
+
+
+This is copyright software, you should buy it at http://sharedatomic.top/enterprise/payment to get a licence to use it. For the price and details, please check
+http://sharedatomic.top/enterprise/payment.
+
+Included Datatypes
+
+ - atomic_int
+
+ - atomic_uint
+
+ - atomic_float
+
+ - atomic_bool
+
+ - atomic_bytearray
+
+ - atomic_shared_memory
+
+ - shared_dict
+
+LINUX/macOS
+
+ - CPython 3.7 - 3.12
+
+ - The package requires libgomp installed on the Linux platforms
+
+ - urwid>=2.1.2 to activate the package
+
+Windows
+
+ - CPython 3.7 - 3.12
+
+ - Microsoft Visual C++ 2019 Redistributable(X64)
+
+ - for CPython, windows-curses>=2.3.1 and urwid>=2.1.2 to activate the package on windows
+
+
+Installation
+
+To install shared_atomic, use pip:
+
+The binary distribution of the software is compiled and delivered in epoch 5.
+    shared-atomic-enterprise == 5!4.0.0
+
+On Linux, you need assistance from the root user,
+
+    If you are a root user, it is ok, then only root can run this package.
+    If you are not root user, in the activation process you will need assistance from the root user.
+
+    cd (the directory where the package is installed )
+    chown root shared_atomic/atomic_python_suid
+    chmod u+s shared_atomic/atomic_python_suid
+
+    then the user who installed the package can run the package.
+
+For documentation, please go to:
+
+ http://sharedatomic.top/
