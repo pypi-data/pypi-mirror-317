@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/indicators.hpp
+cmath
+-
+vector
+-
+optional
+-
+stdexcept
+-
+
+/home/jailop/tmp/projects/tssl/pybottrader/pybottrader/indicators/src/bindings.cpp
+pybind11/pybind11.h
+-
+pybind11/stl.h
+-
+indicators.hpp
+/home/jailop/tmp/projects/tssl/pybottrader/pybottrader/indicators/src/indicators.hpp
+

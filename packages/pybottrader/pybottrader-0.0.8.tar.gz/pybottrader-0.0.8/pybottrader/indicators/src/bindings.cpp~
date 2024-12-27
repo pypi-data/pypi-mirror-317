@@ -1,0 +1,50 @@
+// bindings.cpp
+#include <pybind11/pybind11.h>
+#include <pybind11/stl.h>
+#include "indicators.hpp"
+
+namespace py = pybind11;
+using namespace indicators;
+
+PYBIND11_MODULE(_indicators, m) {
+    m.doc() = "Financial indicators for streaming data implemented in C++";
+
+    py::class_<Indicator>(m, "Indicator")
+        .def(py::init<size_t>(), py::arg("mem_size") = 1)
+        .def("__getitem__", &Indicator::operator[])
+        .def("get", &Indicator::get, py::arg("key") = 0);
+
+    py::class_<MA, Indicator>(m, "MA")
+        .def(py::init<size_t, size_t>(), py::arg("period"), py::arg("mem_size") = 1)
+        .def("update", &MA::update);
+
+    py::class_<EMA, Indicator>(m, "EMA")
+        .def(py::init<size_t, double, size_t>(), 
+             py::arg("period"), py::arg("alpha") = 2.0, py::arg("mem_size") = 1)
+        .def("update", &EMA::update);
+
+    py::class_<ROI, Indicator>(m, "ROI")
+        .def(py::init<size_t>(), py::arg("mem_size") = 1)
+        .def("update", &ROI::update);
+
+    py::class_<MACDResult>(m, "MACDResult")
+        .def_readwrite("macd", &MACDResult::macd)
+        .def_readwrite("signal", &MACDResult::signal)
+        .def_readwrite("hist", &MACDResult::hist);
+
+    py::class_<MACD, Indicator>(m, "MACD")
+        .def(py::init<size_t, size_t, size_t, size_t>(),
+             py::arg("short_period"),
+             py::arg("long_period"),
+             py::arg("diff_period"),
+             py::arg("mem_size") = 1)
+        .def("update", &MACD::update);
+
+    py::class_<ATR, Indicator>(m, "ATR")
+        .def(py::init<size_t, size_t>(),
+            py::arg("period"),
+            py::arg("mem_size") = 1)
+        .def("update", &ATR::update);
+
+    m.def("roi", &calculate_roi, "Calculate return on investment");
+}

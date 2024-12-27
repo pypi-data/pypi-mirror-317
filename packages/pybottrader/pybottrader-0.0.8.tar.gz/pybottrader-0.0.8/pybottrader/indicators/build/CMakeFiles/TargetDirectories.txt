@@ -1,0 +1,7 @@
+/home/jailop/tmp/projects/tssl/pybottrader/pybottrader/indicators/build/CMakeFiles/install/strip.dir
+/home/jailop/tmp/projects/tssl/pybottrader/pybottrader/indicators/build/CMakeFiles/install/local.dir
+/home/jailop/tmp/projects/tssl/pybottrader/pybottrader/indicators/build/CMakeFiles/install.dir
+/home/jailop/tmp/projects/tssl/pybottrader/pybottrader/indicators/build/CMakeFiles/list_install_components.dir
+/home/jailop/tmp/projects/tssl/pybottrader/pybottrader/indicators/build/CMakeFiles/rebuild_cache.dir
+/home/jailop/tmp/projects/tssl/pybottrader/pybottrader/indicators/build/CMakeFiles/edit_cache.dir
+/home/jailop/tmp/projects/tssl/pybottrader/pybottrader/indicators/build/CMakeFiles/_indicators.dir
