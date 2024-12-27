@@ -1,0 +1,4 @@
+httpx
+pydantic>=2.0.0
+tenacity
+tobiko-cloud-helpers==202452.2.0
