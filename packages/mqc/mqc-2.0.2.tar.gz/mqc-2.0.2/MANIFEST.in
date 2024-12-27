@@ -1,0 +1,7 @@
+recursive-include mqc/control/ *         # 包含 my_directory 目录下的所有文件
+recursive-include mqc/ *.py    # 包含 my_directory 目录下的所有 .py 文件
+recursive-include mqc/summary/ *
+
+prune __pycache__  # 忽略所有 __pycache__ 目录
+recursive-exclude mqc/mqc.egg-info/*
+# exclude /home/dengxiao/mqc/mqc/__init__.py
