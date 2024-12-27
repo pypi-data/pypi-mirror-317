@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+pyproject.toml
+src/pytest_deselect_if/__init__.py
+src/pytest_deselect_if/plugin.py
+src/pytest_deselect_if/py.typed
+src/pytest_deselect_if.egg-info/PKG-INFO
+src/pytest_deselect_if.egg-info/SOURCES.txt
+src/pytest_deselect_if.egg-info/dependency_links.txt
+src/pytest_deselect_if.egg-info/entry_points.txt
+src/pytest_deselect_if.egg-info/requires.txt
+src/pytest_deselect_if.egg-info/top_level.txt
+tests/test_deselect_if.py
