@@ -1,0 +1,14 @@
+cuenca-validations===2.0.0.dev7
+
+[chalice_support]
+chalice<1.25.1,>=1.16.0
+blinker<1.5,>=1.4
+mongoengine<0.23.0,>=0.20.0
+dnspython<2.2.0,>=2.0.0
+
+[fast_support]
+aiobotocore<2.2.0,>=2.0.0
+types-aiobotocore-sqs<3.0.0,>=2.1.0.post1
+fastapi<0.120.0,>=0.115.0
+mongoengine-plus<1.0.0,>=0.0.2
+starlette-context<0.4.0,>=0.3.2
