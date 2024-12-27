@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: amangee
+Version: 0.1
+Summary: A Python library for GEE, AI, and hydrology applications.
+Author: Chakapp
+Author-email: chakapp2424@example.com
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: earthengine-api
