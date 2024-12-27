@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/basic_engine/__init__.py
+src/basic_engine/basic_engine_min.py
+src/basic_engine.egg-info/PKG-INFO
+src/basic_engine.egg-info/SOURCES.txt
+src/basic_engine.egg-info/dependency_links.txt
+src/basic_engine.egg-info/requires.txt
+src/basic_engine.egg-info/top_level.txt
