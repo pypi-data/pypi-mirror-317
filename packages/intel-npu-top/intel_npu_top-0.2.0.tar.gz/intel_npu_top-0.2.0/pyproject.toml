@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intel-npu-top"
+version = "0.2.0"
+description = "A monitoring tool for Intel Meteor Lake NPU usage in real-time"
+readme = "README.md"
+authors = [{name = "David Montgomery"}]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: System :: Monitoring",
+]
+keywords = ["intel", "npu", "monitoring", "top", "meteor-lake"]
+dependencies = [
+    "curses; platform_system=='Windows'"  # curses comes with Python on Linux/Mac
+]
+requires-python = ">=3.6"
+
+[project.scripts]
+intel-npu-top = "intel_npu_top.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/DMontgomery40/intel-npu-top"
+"Bug Tracker" = "https://github.com/DMontgomery40/intel-npu-top/issues"
