@@ -1,0 +1,16 @@
+pypimonitor/__init__.py,sha256=zFellWLB8Mz7fIUw_Uxe0IM0xKZK3hIMjF3BSCOtlyA,9233
+pypimonitor/__main__.py,sha256=dC4vropzwOXa9JxiHPA_qfAjHMpcy46slUhR1RTGbow,3012
+pypimonitor/cell/__init__.py,sha256=eVKWzuGWmrRbKR_GBcKsUcmIY50KDXJx0PA6IKQ6otc,5757
+pypimonitor/cell/base.py,sha256=RLKL3Z9qBTLnnp1bl-MTUyrlfHB6gkLL2qmW419gsaE,1686
+pypimonitor/cell/gitlab.py,sha256=SWzjsGAiiufYpNwcOky2G1njK9gBHS4uxf8tw3t5uso,1349
+pypimonitor/cell/pypi.py,sha256=WOzAzQQ5hnlqd7Ze5WPv0asOrme_MId0nr-0YNScKNI,966
+pypimonitor/cell/readthedocs.py,sha256=Ink-JKnP1er4CAvEmOuFxii9Zf3Dw0L8hDwbB00CqrI,998
+pypimonitor/cell/shields.py,sha256=1LdSRUBj48vAo5Of4-nCnF9h--cczoymR8dhHEE5dDI,1594
+pypimonitor/cell/travis.py,sha256=WtM32B-YlXNmYO0ca6Y_nHxoK3ueqzGzve_ZS7ZuZLo,953
+pypimonitor-0.6.0.dist-info/AUTHORS,sha256=X7TYIj4k0AjeEe6iTOp7-KDz32OoVuzW8P8msPZQ9mI,17
+pypimonitor-0.6.0.dist-info/LICENSE,sha256=V8j_M8nAz8PvAOZQocyRDX7keai8UJ9skgmnwqETmdY,34520
+pypimonitor-0.6.0.dist-info/METADATA,sha256=mxFjbP71OF7Gpg54RJmWYJs5IKW--I5n3tduShIF3KQ,4239
+pypimonitor-0.6.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pypimonitor-0.6.0.dist-info/entry_points.txt,sha256=PeNsSOcdPpKpy8cNc3h0OuolMmvv_J8RpY5jKLcshac,110
+pypimonitor-0.6.0.dist-info/top_level.txt,sha256=maIkkhu4QeR3UIYyaeKsW1adkHz9KiEtoy3F_SkyPA8,12
+pypimonitor-0.6.0.dist-info/RECORD,,
