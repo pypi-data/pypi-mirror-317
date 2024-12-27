@@ -1,0 +1,5 @@
+pathspec>=0.12.1
+
+[test]
+pytest>=7.0
+pytest-cov>=4.0

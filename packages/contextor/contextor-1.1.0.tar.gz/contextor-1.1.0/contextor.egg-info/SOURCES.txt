@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+contextor/__init__.py
+contextor/main.py
+contextor.egg-info/PKG-INFO
+contextor.egg-info/SOURCES.txt
+contextor.egg-info/dependency_links.txt
+contextor.egg-info/entry_points.txt
+contextor.egg-info/requires.txt
+contextor.egg-info/top_level.txt
+tests/test_main.py
