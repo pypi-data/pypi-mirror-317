@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "squad-ds-utils"
+version = "1.0.1"
+description = ""
+authors = ["Ayush Shanker <ayush+pypi@squadstack.com>"]
+readme = "README.md"
+packages = [
+    {include = "squad_ds_utils"},
+    {include = "database_connector"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "^1.35"
+requests = "^2.32.0"
+snowflake-connector-python = "^3.12"
+SQLAlchemy = "^1.3.19"
+psycopg2-binary = "^2.8.6"
+keyring = "^23.11.0"
+cachetools = "^5.3.1"
+cryptography = "^43.0"
+zipp = "3.19.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
