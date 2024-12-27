@@ -1,0 +1,3 @@
+pynvml
+psutil
+click
