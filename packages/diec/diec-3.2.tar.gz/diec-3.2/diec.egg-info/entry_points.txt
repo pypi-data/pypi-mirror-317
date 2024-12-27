@@ -1,0 +1,5 @@
+[console_scripts]
+diec-cli = diec.cli:cli
+
+[distutils.commands]
+diec = diec.cli:main
