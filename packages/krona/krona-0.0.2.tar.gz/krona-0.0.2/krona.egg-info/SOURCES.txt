@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+krona.egg-info/PKG-INFO
+krona.egg-info/SOURCES.txt
+krona.egg-info/dependency_links.txt
+krona.egg-info/requires.txt
+krona.egg-info/top_level.txt
+tests/test_avanza_parser.py
