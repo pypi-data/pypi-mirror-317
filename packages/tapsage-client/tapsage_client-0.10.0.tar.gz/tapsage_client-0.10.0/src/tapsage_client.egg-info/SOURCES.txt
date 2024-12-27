@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/tapsage/__init__.py
+src/tapsage/tapsagebot.py
+src/tapsage/taptypes.py
+src/tapsage/tapuser.py
+src/tapsage/async_tapsage/__init__.py
+src/tapsage/async_tapsage/asynctapbot.py
+src/tapsage/async_tapsage/asynctapuser.py
+src/tapsage_client.egg-info/PKG-INFO
+src/tapsage_client.egg-info/SOURCES.txt
+src/tapsage_client.egg-info/dependency_links.txt
+src/tapsage_client.egg-info/requires.txt
+src/tapsage_client.egg-info/top_level.txt
