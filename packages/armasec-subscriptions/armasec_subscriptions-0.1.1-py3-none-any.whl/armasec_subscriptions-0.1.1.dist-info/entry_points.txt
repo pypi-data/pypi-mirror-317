@@ -1,0 +1,3 @@
+[armasec]
+armasec-subscriptions=plugin.main
+
