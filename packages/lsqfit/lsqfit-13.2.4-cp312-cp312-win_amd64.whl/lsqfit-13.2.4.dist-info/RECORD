@@ -1,0 +1,10 @@
+lsqfit/__init__.py,sha256=JRV144X2XiFmDnwtJ9m2qChTiumRw7nJP_i0M-pDfyI,91019
+lsqfit/_extras.py,sha256=LzlEaZ51EF-4VKA0-GljQWd7qfVyDYFFs43xybf_Tj8,106261
+lsqfit/_scipy.py,sha256=HPmCI-ZI9XxbXQWLhN1gET_BLRnvjcQUYaR7kHS7r_w,8917
+lsqfit/_utilities.cp312-win_amd64.pyd,sha256=NRnfZwtWW3W6M2a4XhHESygsQBqES1F-Od4QDA1MfYY,197120
+lsqfit/_version.py,sha256=_G34JtNRy2mleEm-mMHiHwtNBa4ioU93Et_YxefueHA,24
+lsqfit-13.2.4.dist-info/LICENSE.txt,sha256=SffL3Z2yLgIZmbJvF_bGtpv4LN7Pl8Hc2DD0KcL6kUI,32541
+lsqfit-13.2.4.dist-info/METADATA,sha256=dl54zT6Cg4u0igo8tstEHXczRmYav-s9FaiTPXWqEYM,2307
+lsqfit-13.2.4.dist-info/WHEEL,sha256=pWXrJbnZSH-J-PhYmKs2XNn4DHCPNBYq965vsBJBFvA,101
+lsqfit-13.2.4.dist-info/top_level.txt,sha256=U-3j3CfHyUFnKQUjfePLQyXb_W3_Yg_0C4TDj5eyvAs,7
+lsqfit-13.2.4.dist-info/RECORD,,
