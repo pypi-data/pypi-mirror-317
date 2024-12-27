@@ -1,0 +1,14 @@
+django_notes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_notes/admin.py,sha256=p6xop1PuuDG2Uwv3G_aRfldxOfBzTRfMaoZmORVkqyU,66
+django_notes/apps.py,sha256=IMvzAqisTK8atPf-UkiBiSdz7-9RUCTm2m-YDbKdn_c,174
+django_notes/models.py,sha256=6YeCrqFvu_ciEC_spKPuo99pcy4dhtHs16T1ZsQaAB0,463
+django_notes/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+django_notes/urls.py,sha256=r7SXTT9ayWp6wBBIbbQ5aTtvi2zuv08yZVofVpG-VFI,213
+django_notes/views.py,sha256=ypH-5Om5ehW5RtgFgJPf-JZvnLo6apnWZm2iIg2qMy8,485
+django_notes/migrations/0001_initial.py,sha256=jf8pOlQhwTJRs75FD7sSEc0vvOUHh9g68qJJwnVBMak,658
+django_notes/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_notes/templates/note/index.html,sha256=j4trtd6hHuibzMl57yTpd7Grb0Qk1C3MF21JTaJxAmE,273
+krid_notes-0.2.dist-info/METADATA,sha256=bRnMk58cE0BaefOglaB_QVZAPtMsv-cwdT__9rP-fcg,1748
+krid_notes-0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+krid_notes-0.2.dist-info/top_level.txt,sha256=-g-eUUAvcxTXiimOhuxZoErqBhDu_H8iTZ8giDKL17w,13
+krid_notes-0.2.dist-info/RECORD,,
