@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/awspacha/__init__.py
+src/awspacha/awsglue.py
+src/awspacha/main.py
+src/awspacha.egg-info/PKG-INFO
+src/awspacha.egg-info/SOURCES.txt
+src/awspacha.egg-info/dependency_links.txt
+src/awspacha.egg-info/requires.txt
+src/awspacha.egg-info/top_level.txt
