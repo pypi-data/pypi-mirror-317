@@ -1,0 +1,38 @@
+language: python
+os:
+  - linux
+#  - osx
+#  - windows
+
+branches:
+  only:
+    - master
+
+jobs:
+  include:
+    - python: 3.6
+      dist: xenial
+      env: TOXENV=py36
+    - python: 3.7
+      dist: xenial
+      env: TOXENV=py37
+    - python: 3.8
+      dist: xenial
+      env: TOXENV=py38
+    - python: 3.8
+      dist: xenial
+      env: TOXENV=readme
+    - python: 3.8
+      dist: xenial
+      env: TOXENV=linters
+  fast_finish: true
+  allow_failures:
+    # - python: 3.6
+    #   env: TOXENV=linters
+
+# install: pip install tox codecov
+install: pip install tox coverage
+script: tox
+after_success:
+  - coverage report -m
+
