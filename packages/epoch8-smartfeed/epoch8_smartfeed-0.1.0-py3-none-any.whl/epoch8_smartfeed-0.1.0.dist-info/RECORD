@@ -1,0 +1,9 @@
+smartfeed/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+smartfeed/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+smartfeed/examples/example_client.py,sha256=9xlQ7u12rgnn67gTY7KIva6odmTdxp0RxRPuzx3Bc1o,5084
+smartfeed/manager.py,sha256=rVlVhpLTA9Cg_h0GEjUnT0jIoTtn2es7AnjtJs6EfcA,1973
+smartfeed/schemas.py,sha256=fqDkiu9eWEz9UuNCTzVinh8xBsPspYKs_hzgCz693BI,45986
+epoch8_smartfeed-0.1.0.dist-info/LICENSE,sha256=ImhDDTMEHNiNF8RAnFwxyqxrDicl6DuSHYhCGFSQi1Y,11336
+epoch8_smartfeed-0.1.0.dist-info/METADATA,sha256=xVTRUlDYeEn3_ditT2b2bhWJyDjmbZId6bJgEbIR400,4474
+epoch8_smartfeed-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+epoch8_smartfeed-0.1.0.dist-info/RECORD,,
