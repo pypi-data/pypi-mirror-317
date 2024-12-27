@@ -1,0 +1,82 @@
+[project]
+name = "db-backup-runner"
+version = "0.1.2"
+description = "Run any db backups (and others) from inside its own docker container"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "click>=8.1.7",
+  "docker>=7.1.0",
+  "loguru>=0.7.3",
+  "python-cron",
+  "python-dotenv>=1.0.1",
+  "requests>=2.32.3",
+  "tqdm>=4.67.1",
+]
+
+[tool.docker]
+registry = "ghcr.io/burgdev"
+
+[dependency-groups]
+dev = [
+  "black>=24.10.0",
+  "bump2version>=1.0.1",
+  "deptry>=0.21.1",
+  "environs>=11.2.1",
+  "git-cliff>=2.7.0",
+  "humanize>=4.11.0",
+  "invoke>=2.2.0",
+  "mkdocs-click>=0.8.1",
+  "mkdocs-gen-files>=0.5.0",
+  "mkdocs-literate-nav>=0.6.1",
+  "mkdocs-material>=9.5.49",
+  "mkdocs-open-in-new-tab>=1.0.8",
+  "mkdocs-section-index>=0.3.9",
+  "mkdocstrings[python]>=0.27.0",
+  "pre-commit>=4.0.1",
+  "pyright>=1.1",
+  "pytest>=8.3.4",
+  "python-on-whales>=0.74.0",
+  "rich>=13.9.4",
+  "rooster-blue>=0.0.8",
+  "ruff>=0.8.2",
+  "toml>=0.10.2",
+  "types-requests>=2.32.0.20241016",
+]
+
+
+[tool.uv.sources]
+# Use an unreleased version to support non-async jobs
+# https://github.com/whdev1/pycron/pull/1
+python-cron = { git = "https://github.com/whdev1/pycron", rev = "e40f465940f1632b753b75c819364b20ed85e1ca" }
+
+
+[project.scripts]
+db-backup-runner = "db_backup_runner:cli"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+known-third-party = ["db_backup_runner"]
+
+[tool.deptry]
+extend_exclude = ["tasks/__init__.py"]
+
+[tool.deptry.per_rule_ignores]
+DEP004 = [
+  "toml",
+  "rich",
+  "icecream",
+  "invoke",
+  "environs",
+  "humanize",
+  "python_on_whales",
+  "mkdocs_gen_files",
+] # only in dev
+DEP003 = ["db_backup_runner"] # transitive dependencies
+#DEP002 = ["types-xmltodict", "types-python-slugify"] # not used
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
