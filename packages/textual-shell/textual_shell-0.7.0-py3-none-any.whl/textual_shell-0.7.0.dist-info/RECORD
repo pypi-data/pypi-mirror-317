@@ -1,0 +1,9 @@
+textual_shell/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textual_shell/command.py,sha256=2Sy6hUCX9hxiGmBicg3uXeA5Zt4_h98345UXrn48CMU,5831
+textual_shell/configure.py,sha256=b7EPsY2ZBsywdbaH9dNUC2_BQsSkQ34t3R27pcFmj9g,1760
+textual_shell/screen.py,sha256=KxpTuK8RMXC8dNj-mWnU2gt6V3CPemhRia2zfEpHqsc,1368
+textual_shell/widgets.py,sha256=pZ9RYWIYsjVIBsABzOv1O96P3W-wm65KJ9pdm0PiL9s,13640
+textual_shell-0.7.0.dist-info/METADATA,sha256=mT4QcCdtLrF4MdKVhhszPT81rM12reaVctq3Gd8EptY,1952
+textual_shell-0.7.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+textual_shell-0.7.0.dist-info/licenses/LICENSE,sha256=6jJZJkHZqTDVUHz_5x58n-iEMWYpCLKCG1OHTQbansk,1071
+textual_shell-0.7.0.dist-info/RECORD,,
