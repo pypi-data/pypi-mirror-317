@@ -1,0 +1,2 @@
+[djp]
+bento = kitchenai_rag_simple_bento
