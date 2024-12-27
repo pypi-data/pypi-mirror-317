@@ -1,0 +1,13 @@
+# Env
+.direnv/
+.envrc
+
+# Rust
+Cargo.lock
+
+# Builds
+target/
+python/**/*.so
+
+## Python
+**/__pycache__/
