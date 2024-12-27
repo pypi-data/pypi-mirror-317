@@ -1,0 +1,2 @@
+[console_scripts]
+haaaash = haaaash.__main__:main
