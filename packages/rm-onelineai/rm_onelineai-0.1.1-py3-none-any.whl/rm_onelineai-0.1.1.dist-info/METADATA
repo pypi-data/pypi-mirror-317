@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: rm_onelineai
+Version: 0.1.1
+Summary: A Python module for interacting with various AI models
+Home-page: https://github.com/yourusername/rm_onelineai
+Author: Rohit Mane
+Author-email: rohitmane2001@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: openai
+Requires-Dist: google-generativeai
+Requires-Dist: anthropic
+
+# rm_onelineai
+
+A Python module for interacting with various AI models including OpenAI, Google's Gemini, and Anthropic's Claude.
+
+## Installation
+
+```bash
+pip install rm_onelineai
+```
+
+## Usage
+
+```python
+from rm_onelineai import openai_module, gemini_module, claude_module
+
+# Use OpenAI
+response = openai_module.generate_text("Your prompt here")
+
+# Use Gemini
+response = gemini_module.generate_text("Your prompt here")
+
+# Use Claude
+response = claude_module.generate_text("Your prompt here")
+```
+
+## License
+
+MIT License
