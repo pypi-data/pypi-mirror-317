@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/kelian/__init__.py
+src/kelian/encryption.py
+src/kelian/loading_bar.py
+src/kelian/system.py
+src/kelian/utils.py
+src/kelian.egg-info/PKG-INFO
+src/kelian.egg-info/SOURCES.txt
+src/kelian.egg-info/dependency_links.txt
+src/kelian.egg-info/requires.txt
+src/kelian.egg-info/top_level.txt
+src/kelian/data/__init__.py
+src/kelian/data/encryption/__init__.py
+src/kelian/data/encryption/manga.py
