@@ -1,0 +1,8 @@
+numpy
+matplotlib
+Pillow
+rasterio
+torch
+scipy
+scikit-learn
+segment-geospatial
