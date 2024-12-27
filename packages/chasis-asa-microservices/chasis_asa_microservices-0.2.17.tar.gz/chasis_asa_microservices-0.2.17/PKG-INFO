@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: chasis_asa_microservices
+Version: 0.2.17
+Summary: Librería de funciones genéricas en Python para microservicios
+Home-page: https://gitlab.com/asa-microservicios
+Author: Mikel
+Author-email: mikel.fernandezdelab@alumni.mondragon.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
+UNKNOWN
+
