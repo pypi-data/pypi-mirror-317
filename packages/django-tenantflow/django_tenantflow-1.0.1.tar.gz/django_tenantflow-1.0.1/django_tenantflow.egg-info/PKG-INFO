@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: django-tenantflow
+Version: 1.0.1
+Summary: A Django library to enable semi-isolated multitenancy in your project with users outside the tenant.
+Home-page: https://github.com/ConspiraciXn/django-tenantflow
+Author: Jared Soto
+Author-email: jared.sl@icloud.com
+License: MIT
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django>=5.0
+Requires-Dist: psycopg2-binary
+
+# ConfiguraciÃ³n de Django Multitenant
+
+
+1. InstalaciÃ³n de Django y creaciÃ³n de proyecto y app.
+
+```bash 
+pip install django
+django-admin startproject myproject
+python manage.py startapp baseapp
+cd myproject
+```
+
+2. InstalaciÃ³n de django-tenantflow.
+
+```bash
+pip install django-tenantflow
+``` 
+
+3. ConfiguraciÃ³n de la aplicaciÃ³n.
+
+```python
+INSTALLED_APPS = [
+    ...
+    'tenantflow',
+    'baseapp',
+    ...
+]
+```
+
+4. Agregar el middleware de tenantflow.
+
+```python
+MIDDLEWARE = [
+    ...
+    'tenantflow.middleware.TenantMiddleware',
+    ...
+]
+```
+
+5. Configuraciones de la librerÃ­a.
+
+```python
+
+TENANTFLOW_DEFAULT_SCHEMA = 'public'  # Esquema predeterminado
+TENANTFLOW_VALIDATION = True         # Habilitar validaciÃ³n de acceso al tenant
+TENANTFLOW_SWITCH_METHOD = 'session' # MÃ©todos disponibles: session, subdomain, header
+```
+
+6. Crear modelos para cuentas y usuarios.
+
+```python
+from tenantflow.models import AbstractAccount, AbstractUserAccount
+
+class Account(AbstractAccount):
+    extra_info = models.CharField(max_length=255)
+
+class UserAccount(AbstractUserAccount):
+    extra_info = models.CharField(max_length=255)
+```
+
+7. Aplicar migraciones al esquema pÃºblico.
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
