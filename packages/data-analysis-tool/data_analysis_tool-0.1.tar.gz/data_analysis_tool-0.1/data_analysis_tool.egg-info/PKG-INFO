@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: data-analysis-tool
+Version: 0.1
+Summary: A tool for data analysis and visualization
+Home-page: https://github.com/your_username/data_analysis_tool
+Author: Your Name
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Data Analysis Tool
+
+This is a Python package for reading, analyzing, and visualizing data from CSV files.
+
+## Installation
+
+You can install this package using pip:pip install data_analysis_tool
+
+
+## Usage
+
+1. **Reading Data**
+   ```python
+   from data_analysis_tool import DataReader
+   reader = DataReader("your_data.csv")
+   data = reader.read_csv()
+
