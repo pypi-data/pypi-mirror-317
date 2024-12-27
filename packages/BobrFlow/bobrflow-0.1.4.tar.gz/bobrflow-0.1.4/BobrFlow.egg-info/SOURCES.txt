@@ -1,0 +1,11 @@
+README.md
+setup.py
+BobrFlow.egg-info/PKG-INFO
+BobrFlow.egg-info/SOURCES.txt
+BobrFlow.egg-info/dependency_links.txt
+BobrFlow.egg-info/requires.txt
+BobrFlow.egg-info/top_level.txt
+bobrFlow/__init__.py
+bobrFlow/db_connectors.py
+bobrFlow/google_docs.py
+bobrFlow/helpers.py
