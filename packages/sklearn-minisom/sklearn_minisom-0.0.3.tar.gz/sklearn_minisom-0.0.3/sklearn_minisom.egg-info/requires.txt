@@ -1,0 +1,4 @@
+scikit-learn
+minisom>=2.3.3
+numpy
+scipy
