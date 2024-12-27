@@ -1,0 +1,27 @@
+{% template singular %}s{% endtemplate %}
+
+{% template url %}http://example.com/{% endtemplate %}
+
+{% template predicate_term %}say{% singular %}{% endtemplate %}
+
+{% template predicate prefix %}<{{ prefix }}{% predicate_term %}>{% endtemplate %}
+
+{% template format_output person sent %}
+    {{ person }} {% predicate_term %} {{sent}}
+{% endtemplate %}
+
+{% template query_with_args %}
+    {% for p in ["<http://example.com/says>", "<http://example.com/feels>"] %}
+        {% query "kb1", datastore="rdflib", isfilepath=False as all_triples %}
+            SELECT ?s ?o
+            WHERE {
+                ?s {{ p }} ?o
+            }
+            ORDER BY ?s ?o
+        {% endquery %}
+
+        {% for _, row in all_triples.iterrows() -%}
+            {{ row["s"] }} -- {{ p }} --> {{ row["o"] }}
+        {% endfor %}
+    {%- endfor %}
+{% endtemplate %}
