@@ -1,0 +1,2 @@
+[console_scripts]
+spips = spips.cli:main
