@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: metatorch
+Version: 0.0.1
+Summary: This is a meta package to install PyTorch for different accelerator versions
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
