@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: tengen
+Version: 0.1.6
+Summary: Generate string using template
+Author-email: mskz-3110 <mskz.saito@gmail.com>
+Project-URL: Homepage, https://github.com/mskz-3110/tengen
+Project-URL: Issues, https://github.com/mskz-3110/tengen/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyemon
+
+# tengen
+Generate string using template
+
+## Concept
+Use templates to simplify string replacement
+
+**[done.tngn]**
+```
+{0} is done.
+```
+
+## What is possible
+1. String replacement using templates
+
+## Reason for development
+- I want to make string replacement easier using templates
+
+## Versions
+
+|Version|Summary|
+|:--|:--|
+|0.1.6|Release tengen|
+
+## Installation
+### tengen
+`pip install tengen`
+
+## CLI
+### render
+Rendering using templates
+
+#### 1. Prepare template file(done.tngn)
+**[done.tngn]**
+```
+{0} is done.
+```
+
+#### 2. Rendering templates by CLI execution
+
+```
+render # <template name> <args>
+  [With value]
+    -o|--output  # Output file path
+```
+`tengen render done TENGEN`
+```
+TENGEN is done.
+```
