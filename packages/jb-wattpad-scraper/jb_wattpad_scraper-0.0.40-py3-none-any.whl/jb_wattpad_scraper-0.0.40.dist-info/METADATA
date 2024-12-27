@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: jb-wattpad-scraper
+Version: 0.0.40
+Summary: Get wattpad stories and chapters, and download them as ebook
+Home-page: https://github.com/josyelbuenos/jb-wattpad-scraper
+Author: Josyel Buenos
+Author-email: josyelbuenos@gmail.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bs4==0.0.1
+Requires-Dist: EbookLib==0.17.1
+Requires-Dist: fake-headers==1.0.2
+Requires-Dist: httpx==0.23.3
+
+Extraia histÃ³rias do Wattpad com facilidade! Com este pacote, vocÃª pode buscar histÃ³rias, baixÃ¡-las diretamente e atÃ© convertÃª-las para formatos de eBook como EPUB e PDF (em desenvolvimento).
+
+Importante: Este Ã© um cÃ³digo baseado em no cÃ³digo oficial do Ayobamidele, pois como nÃ£o havia uma biblioteca hospedada, eu resolvi hospedar. 
+- [GitHub do Projeto original](https://github.com/Ayobamidele/wattpad-scraper)
+
+## Funcionalidades Principais
+- Pesquisar histÃ³rias no Wattpad.
+- Baixar histÃ³rias utilizando a URL.
+- Converter histÃ³rias para o formato EPUB.
+- Login para acessar conteÃºdos exclusivos.
+
+### Links Importantes
+- [GitHub do Projeto](https://github.com/josyelbuenos/jb-wattpad-scraper)
+
+## InstalaÃ§Ã£o
+
+Para instalar o pacote, basta usar o comando abaixo no terminal:
+
+```bash
+pip install jb-wattpad-scraper
+```
+
+## Como Usar
+
+### Baixar HistÃ³ria por URL
+```python
+from wattpad_scraper import Wattpad
+
+wattpad = Wattpad()
+url_historia = "https://www.wattpad.com/story/162756571-bending-the-rules-the-rules-1"
+historia = wattpad.get_book_by_url(url_historia)
+
+print(historia.title)  # TÃ­tulo da histÃ³ria
+print(historia.author.name, historia.author.url)  # Autor e link do perfil
+print(historia.description)  # DescriÃ§Ã£o
+print(historia.chapters[0].title, historia.chapters[0].content)  # Primeiro capÃ­tulo e conteÃºdo
+```
+
+### Pesquisar HistÃ³rias
+```python
+from wattpad_scraper import Wattpad
+
+wattpad = Wattpad()
+resultados = wattpad.search_books('romance histÃ³rico', completed=True, mature=True, free=True, paid=False, limit=5)
+
+for historia in resultados:
+    print(historia.title)  # Exibe os tÃ­tulos encontrados
+```
+
+### Converter HistÃ³ria para EPUB
+```python
+from wattpad_scraper import Wattpad
+
+wattpad = Wattpad()
+historia = wattpad.search_books('fantasia mÃ¡gica')[0]
+historia.convert_to_epub()  # Converte e salva no diretÃ³rio atual
+```
+
+### AutenticaÃ§Ã£o (Beta)
+```python
+from wattpad_scraper import Wattpad
+
+wattpad = Wattpad("seu_usuario", "sua_senha")
+historia = wattpad.search_books("aventura Ã©pica")[0]
+print(historia.chapters[2].content)  # ConteÃºdo do terceiro capÃ­tulo
+```
+
+#### Usando Arquivo de Cookies
+1. Instale a extensÃ£o "Cookie - Editor" no navegador.
+2. Exporte os cookies e salve como um arquivo `.json`.
+3. Utilize no cÃ³digo conforme o exemplo abaixo:
+
+```python
+from wattpad_scraper import Wattpad
+
+wattpad = Wattpad(cookie_file='/caminho/para/cookies.json')
+resultados = wattpad.search_books("histÃ³rias exclusivas")
+```
+
+## Contribua
+ContribuiÃ§Ãµes sÃ£o sempre bem-vindas! Sinta-se Ã  vontade para abrir issues ou enviar pull requests.
+
+---
+
+Desenvolvido com ðŸ’– para todos os fÃ£s de leitura.
+
+

@@ -1,0 +1,16 @@
+wattpad_scraper/__init__.py,sha256=6n3aynB1cf7AICh_uwt3-1TEBYUv9GxGGa6mPEs474Q,46
+wattpad_scraper/wattpad_downloader.py,sha256=Eit32VqPH-KQQBlysiEqiVjZIWPOvOwimdMexYxEODo,7708
+wattpad_scraper/models/__init__.py,sha256=1lMmOnULaht1YGVXgp6ZLusV02XtOw_ziaLYQFtIGPo,10044
+wattpad_scraper/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wattpad_scraper/test/test_download.py,sha256=0Ees_BsaI2Rdos5iBK_SWt98XVS6fUgGO8kAQPw98Lc,379
+wattpad_scraper/test/test_wattpad_downloader.py,sha256=SGFnMGvfPWfLHfl4dPWEsW2QZKBox0HzgFxLqJ-7zyo,629
+wattpad_scraper/utils/__init__.py,sha256=-Q0A3kKMPU-adLv855oOECwZis44rfIai86gOlOXBgU,45
+wattpad_scraper/utils/convert_to_epub.py,sha256=Izxuqwt-E525xNUmBR5ttWLW4OjiMUKxcdj7CvwZgqY,4521
+wattpad_scraper/utils/log.py,sha256=w-UhmyBirEuUt81slbuWeNwQh2b_AZgzu9E-YfQ8-D0,4163
+wattpad_scraper/utils/parse_content.py,sha256=dyUoIILwK0GH9aevh6k3PH-xe46LA3y2DJOXnpxVrDg,1637
+wattpad_scraper/utils/request.py,sha256=yZNbtg6EFJxZli5_NYLEe3FwMZxrZIBfp0Lncc_pCF4,3126
+jb_wattpad_scraper-0.0.40.dist-info/LICENSE,sha256=cVmf7yALIZZM7rjpym6N7E-GoV_jFewujP-Zyz91hkc,1062
+jb_wattpad_scraper-0.0.40.dist-info/METADATA,sha256=dFM5PMOvlkh4GuWw3mzstqatNKwt_LkzzH_IyrKamAw,3708
+jb_wattpad_scraper-0.0.40.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jb_wattpad_scraper-0.0.40.dist-info/top_level.txt,sha256=vuzPWgrKaKUfB72VfxY18MEG2Mtj43tlej-o28cB-yw,16
+jb_wattpad_scraper-0.0.40.dist-info/RECORD,,
