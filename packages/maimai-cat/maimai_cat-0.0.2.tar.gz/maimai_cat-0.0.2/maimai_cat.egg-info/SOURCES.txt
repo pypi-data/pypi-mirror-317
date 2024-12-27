@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+maimai/__init__.py
+maimai/api.py
+maimai_cat.egg-info/PKG-INFO
+maimai_cat.egg-info/SOURCES.txt
+maimai_cat.egg-info/dependency_links.txt
+maimai_cat.egg-info/requires.txt
+maimai_cat.egg-info/top_level.txt
