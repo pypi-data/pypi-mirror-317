@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core>=3.2"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "docmesh_core"
+description = "Core components for docmesh."
+authors = [
+    {name="Zhengkai Yang", email="kyle.yang1995@gmail.com"},
+]
+readme = "README.md"
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "retry>=0.9.2",
+    "numpy>=1.26.4",
+    "pandas>=2.2.2",
+    "neomodel>=5.3.0",
+    "pymysql>=0.9.3",
+    "sqlalchemy>=2",
+    "pillow>=11.0.0",
+    "cos-python-sdk-v5>=1.9.33",    
+]
+
+[tool.flake8]
+max-line-length = 120
