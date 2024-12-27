@@ -1,0 +1,20 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "dumbbots"
+version = "0.0.1"
+description = "Universal package for all the dumb things which we bots do"
+readme = "README.md"
+authors = [{ name = "Dead Developers Society", email = "deaddevelopersociety@gmail.com" }]
+
+
+[project.optional-dependencies]
+dev = ["pygame"]
+
+[project.urls]
+Homepage = "https://github.com/DDSociety/DumbBots"
