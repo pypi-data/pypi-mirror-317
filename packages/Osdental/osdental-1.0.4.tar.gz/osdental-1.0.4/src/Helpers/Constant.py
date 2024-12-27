@@ -1,0 +1,2 @@
+STATUS_ERROR = 500
+CHARSET = 'utf-8'
