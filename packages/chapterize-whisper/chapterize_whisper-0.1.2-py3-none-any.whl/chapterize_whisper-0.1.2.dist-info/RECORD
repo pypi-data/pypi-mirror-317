@@ -1,0 +1,9 @@
+chapterize/audiobookshelf.py,sha256=riN5sOXQSstY9IAVOjrqviDyjmKIH0dYNfsBEAPPVhA,1698
+chapterize/main.py,sha256=_rqpwxrTmlpytcjiinLSM6uRaa9R6fxTnuGeNVb9GTI,2616
+chapterize/metadata.py,sha256=3z1tevNHcF0QvmuIJUsnndV9FUlWcGIB3fPybQx9we4,1730
+chapterize/transcribe.py,sha256=EJUP2JohXTFMV44jqKkC18sTZscH-upqzbD5VPlHVGU,8983
+chapterize/utils.py,sha256=rT0IJ_CWFpcpfLCKBLEtdoEXY0PSpvkWloqqLTynFVU,2708
+chapterize_whisper-0.1.2.dist-info/METADATA,sha256=WxKrlPNr1HGVSjlHLbmzksEYKmjFFrolBdp7lqY8UBc,5814
+chapterize_whisper-0.1.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+chapterize_whisper-0.1.2.dist-info/entry_points.txt,sha256=PnVL84jtqrAmUwQ_HkpIaoV2bNrf2jI1uuKyp9EQjn0,50
+chapterize_whisper-0.1.2.dist-info/RECORD,,

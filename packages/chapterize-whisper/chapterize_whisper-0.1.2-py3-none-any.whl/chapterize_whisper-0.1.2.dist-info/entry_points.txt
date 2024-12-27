@@ -1,0 +1,3 @@
+[console_scripts]
+chapterize=chapterize.main:cli
+
