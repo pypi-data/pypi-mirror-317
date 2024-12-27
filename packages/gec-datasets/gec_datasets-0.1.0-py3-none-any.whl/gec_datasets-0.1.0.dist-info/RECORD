@@ -1,0 +1,7 @@
+gec_datasets/__init__.py,sha256=ITaP9FWTRxx5QLhYesdVKB4NSH67AG3ID1GX0AXUsqE,61
+gec_datasets/datasets.py,sha256=kk63VN3ojVba84x9EA7xfVIks_5mJmtA3MqBIOy2Uy0,11976
+gec_datasets/datasets_test.py,sha256=1arOUgb3HHGDRwDHcJ3qptokPWXaPgqoVYivHHnkB6Y,901
+gec_datasets-0.1.0.dist-info/METADATA,sha256=4KLrKCB4EVnH8qotI3GThxp3-cqrweY9w1uDdFBgVFs,3727
+gec_datasets-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gec_datasets-0.1.0.dist-info/licenses/LICENSE,sha256=UKXL4U17Wpg_ZYaZAiJV8ByNqFZIFTapseX4qr_FljI,1066
+gec_datasets-0.1.0.dist-info/RECORD,,
