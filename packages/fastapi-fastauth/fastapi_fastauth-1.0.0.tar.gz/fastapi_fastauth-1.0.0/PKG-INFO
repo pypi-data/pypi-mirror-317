@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: fastapi-fastauth
+Version: 1.0.0
+Summary: Ready-to-use customizable solution for FastAPI with Authentication, Authorization(RBAC) and OAuth2 support
+Project-URL: Documentation, https://astralmortem.github.io/fastauth/
+Project-URL: Source, https://github.com/AstralMortem/fastauth
+Author-email: Vladyslav Chaliuk <chaliukvladyslav@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: Authentication,Authorization,Cookie,FastAPI,JWTHelper,OAuth2,RBAC,Session
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Pydantic :: 2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP :: Session
+Classifier: Topic :: Security
+Requires-Python: >=3.10
+Requires-Dist: fastapi>=0.115.6
+Requires-Dist: makefun>=1.15.6
+Requires-Dist: pwdlib[argon2,bcrypt]>=0.2.1
+Requires-Dist: pydantic-settings>=2.6.1
+Requires-Dist: pyjwt>=2.10.1
+Requires-Dist: python-multipart>=0.0.20
+Provides-Extra: oauth
+Requires-Dist: httpx-oauth>=0.13; extra == 'oauth'
+Provides-Extra: sqlalchemy
+Requires-Dist: sqlalchemy>=2.0.36; extra == 'sqlalchemy'
+Description-Content-Type: text/markdown
+
+# FastAuth
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AstralMortem/fastauth/master/logo.png?sanitize=true" alt="FastAuth">
+</p>
+
+<p align="center">
+    <em>Ready-to-use customizable solution for FastAPI with Authentication, Authorization(RBAC) and OAuth2 support</em>
+</p>
+
+---
+## About
+
+[![CI](https://github.com/AstralMortem/fastauth/actions/workflows/ci.yaml/badge.svg)](https://github.com/AstralMortem/fastauth/actions/workflows/ci.yaml)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/AstralMortem/fastauth/docs.yaml?label=Docs)](https://astralmortem.github.io/fastauth/)
+[![codecov](https://codecov.io/github/AstralMortem/fastauth/graph/badge.svg?token=SI6ND9SIPU)](https://codecov.io/github/AstralMortem/fastauth)
+[![PyPI - Version](https://img.shields.io/pypi/v/fastapi-fastauth)](https://pypi.org/project/fastapi-fastauth/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/fastapi-fastauth)](https://pypi.org/project/fastapi-fastauth/)
+
+
+Here’s a ready-to-use, customizable solution for FastAPI with Authentication, Authorization (RBAC), and OAuth2 support.
+This solution provides token based authentication(JWTHelper, Redis, DB), role-based access control, and OAuth2 integration.
+Highly inspired by [FastAPI Users](https://github.com/fastapi-users/fastapi-users) and [AuthX](https://github.com/yezz123/authx/tree/main):
+
+* **Documentation**: <https://astralmortem.github.io/fastauth/>
+* **Source Code**: <https://github.com/AstralMortem/fastauth>
+---
+
+## Features
+
+* [x] Authentication Support:
+    * [x] Access and Refresh Token Dependencies
+    * [x] Different Token Strategy(JWTHelper, Redis, Session)
+    * [x] Different Token locations(Header, Cookie, Query, etc.)
+* [x] Authorization Support:
+    * [x] "Role and Permission required" Dependency
+    * [x] OAuth2 support
+* [x] User Management:
+    * [x] User Model protocol
+    * [x] Service-Repository pattern for flexible customization
+    * [x] Popular ORM support:
+        * [x] SQLAlchemy support
+        * [ ] Beanie
+        * [ ] Tortoise ORM
