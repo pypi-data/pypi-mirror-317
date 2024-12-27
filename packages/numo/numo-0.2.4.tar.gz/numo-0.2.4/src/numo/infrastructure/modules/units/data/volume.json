@@ -1,0 +1,72 @@
+{
+  "liter": {
+    "id": "l",
+    "phrases": ["liter", "liters", "l", "litre", "litres"],
+    "unit": 1
+  },
+  "milliliter": {
+    "id": "ml",
+    "phrases": ["milliliter", "milliliters", "ml", "millilitre", "millilitres"],
+    "unit": 0.001
+  },
+  "gallon": {
+    "id": "gal",
+    "phrases": ["gallon", "gallons", "gal"],
+    "unit": 3.78541
+  },
+  "quart": {
+    "id": "qt",
+    "phrases": ["quart", "quarts", "qt"],
+    "unit": 0.946353
+  },
+  "pint": {
+    "id": "pt",
+    "phrases": ["pint", "pints", "pt"],
+    "unit": 0.473176
+  },
+  "cup": {
+    "id": "cup",
+    "phrases": ["cup", "cups"],
+    "unit": 0.236588
+  },
+  "fluid_ounce": {
+    "id": "fl_oz",
+    "phrases": ["fluid ounce", "fluid ounces", "fl oz", "fl_oz"],
+    "unit": 0.0295735
+  },
+  "tablespoon": {
+    "id": "tbsp",
+    "phrases": ["tablespoon", "tablespoons", "tbsp", "tbs"],
+    "unit": 0.0147868
+  },
+  "teaspoon": {
+    "id": "tsp",
+    "phrases": ["teaspoon", "teaspoons", "tsp"],
+    "unit": 0.00492892
+  },
+  "cubic_meter": {
+    "id": "m³",
+    "phrases": ["cubic meter", "cubic meters", "m³", "m3"],
+    "unit": 1000
+  },
+  "cubic_centimeter": {
+    "id": "cm³",
+    "phrases": ["cubic centimeter", "cubic centimeters", "cm³", "cc", "cm3"],
+    "unit": 0.001
+  },
+  "cubic_foot": {
+    "id": "ft³",
+    "phrases": ["cubic foot", "cubic feet", "ft³", "cu ft", "ft3"],
+    "unit": 28.3168
+  },
+  "cubic_inch": {
+    "id": "in³",
+    "phrases": ["cubic inch", "cubic inches", "in³", "cu in", "in3"],
+    "unit": 0.0163871
+  },
+  "barrel": {
+    "id": "bbl",
+    "phrases": ["barrel", "barrels", "bbl"],
+    "unit": 158.987
+  }
+}
