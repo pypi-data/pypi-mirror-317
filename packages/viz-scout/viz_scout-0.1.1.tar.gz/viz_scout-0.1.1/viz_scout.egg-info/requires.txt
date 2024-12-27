@@ -1,0 +1,8 @@
+opencv-python
+numpy
+tqdm
+pillow
+boto3
+minio
+imagededup
+icecream
