@@ -1,0 +1,47 @@
+{
+    "meters_per_second": {
+      "id": "m/s",
+      "phrases": ["meters per second", "m/s", "mps", "metre per second", "metres per second"],
+      "unit": 1
+    },
+    "kilometers_per_hour": {
+      "id": "km/h",
+      "phrases": ["kilometers per hour", "km/h", "kph", "kilometre per hour", "kilometres per hour"],
+      "unit": 0.277778
+    },
+    "miles_per_hour": {
+      "id": "mph",
+      "phrases": ["miles per hour", "mph", "mile per hour"],
+      "unit": 0.44704
+    },
+    "knot": {
+      "id": "kn",
+      "phrases": ["knot", "knots", "kn", "kt"],
+      "unit": 0.514444
+    },
+    "feet_per_second": {
+      "id": "ft/s",
+      "phrases": ["feet per second", "ft/s", "fps", "foot per second"],
+      "unit": 0.3048
+    },
+    "mach": {
+      "id": "M",
+      "phrases": ["mach", "mach number", "M"],
+      "unit": 340.29
+    },
+    "speed_of_light": {
+      "id": "c",
+      "phrases": ["speed of light", "c"],
+      "unit": 299792458
+    },
+    "kilometers_per_second": {
+      "id": "km/s",
+      "phrases": ["kilometers per second", "km/s", "kilometre per second", "kilometres per second"],
+      "unit": 1000
+    },
+    "miles_per_second": {
+      "id": "mi/s",
+      "phrases": ["miles per second", "mi/s", "mile per second"],
+      "unit": 1609.344
+    }
+}  

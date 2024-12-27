@@ -1,0 +1,62 @@
+{
+    "square_meter": {
+      "id": "m²",
+      "phrases": ["square meter", "square meters", "m²", "sq m", "m2"],
+      "unit": 1
+    },
+    "square_kilometer": {
+      "id": "km²",
+      "phrases": ["square kilometer", "square kilometers", "km²", "sq km", "km2"],
+      "unit": 1000000
+    },
+    "square_centimeter": {
+      "id": "cm²",
+      "phrases": ["square centimeter", "square centimeters", "cm²", "sq cm", "cm2"],
+      "unit": 0.0001
+    },
+    "square_millimeter": {
+      "id": "mm²",
+      "phrases": ["square millimeter", "square millimeters", "mm²", "sq mm", "mm2"],
+      "unit": 0.000001
+    },
+    "square_foot": {
+      "id": "ft²",
+      "phrases": ["square foot", "square feet", "ft²", "sq ft", "ft2"],
+      "unit": 0.092903
+    },
+    "square_inch": {
+      "id": "in²",
+      "phrases": ["square inch", "square inches", "in²", "sq in", "in2"],
+      "unit": 0.00064516
+    },
+    "square_yard": {
+      "id": "yd²",
+      "phrases": ["square yard", "square yards", "yd²", "sq yd", "yd2"],
+      "unit": 0.836127
+    },
+    "square_mile": {
+      "id": "mi²",
+      "phrases": ["square mile", "square miles", "mi²", "sq mi", "mi2"],
+      "unit": 2589988.11
+    },
+    "hectare": {
+      "id": "ha",
+      "phrases": ["hectare", "hectares", "ha"],
+      "unit": 10000
+    },
+    "acre": {
+      "id": "ac",
+      "phrases": ["acre", "acres", "ac"],
+      "unit": 4046.86
+    },
+    "are": {
+      "id": "a",
+      "phrases": ["are", "ares"],
+      "unit": 100
+    },
+    "decare": {
+      "id": "daa",
+      "phrases": ["decare", "decares", "daa"],
+      "unit": 1000
+    }
+}  

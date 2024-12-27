@@ -1,0 +1,52 @@
+{
+    "pixel": {
+        "id": "px",
+        "phrases": ["pixel", "pixels", "px"],
+        "unit": 1
+    },
+    "point": {
+        "id": "pt",
+        "phrases": ["point", "points", "pt"],
+        "unit": 1.333333
+    },
+    "pica": {
+        "id": "pc",
+        "phrases": ["pica", "picas", "pc"],
+        "unit": 16
+    },
+    "em": {
+        "id": "em",
+        "phrases": ["em", "ems"],
+        "unit": 16
+    },
+    "rem": {
+        "id": "rem",
+        "phrases": ["rem", "rems"],
+        "unit": 16
+    },
+    "inch": {
+        "id": "in",
+        "phrases": ["inch", "inches", "in"],
+        "unit": 96
+    },
+    "centimeter": {
+        "id": "cm",
+        "phrases": ["centimeter", "centimeters", "cm"],
+        "unit": 37.795276
+    },
+    "millimeter": {
+        "id": "mm",
+        "phrases": ["millimeter", "millimeters", "mm"],
+        "unit": 3.7795276
+    },
+    "dpi": {
+        "id": "dpi",
+        "phrases": ["dots per inch", "dpi"],
+        "unit": 1
+    },
+    "ppi": {
+        "id": "ppi",
+        "phrases": ["pixels per inch", "ppi"],
+        "unit": 1
+    }
+} 

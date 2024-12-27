@@ -1,0 +1,42 @@
+{
+    "bar": {
+        "id": "bar",
+        "phrases": ["bar", "bars"],
+        "unit": 1
+    },
+    "pascal": {
+        "id": "Pa",
+        "phrases": ["pascal", "pascals", "Pa"],
+        "unit": 0.00001
+    },
+    "kilopascal": {
+        "id": "kPa",
+        "phrases": ["kilopascal", "kilopascals", "kPa"],
+        "unit": 0.01
+    },
+    "megapascal": {
+        "id": "MPa",
+        "phrases": ["megapascal", "megapascals", "MPa"],
+        "unit": 10
+    },
+    "atmosphere": {
+        "id": "atm",
+        "phrases": ["atmosphere", "atmospheres", "atm", "standard atmosphere"],
+        "unit": 1.01325
+    },
+    "mmHg": {
+        "id": "mmHg",
+        "phrases": ["mmHg", "millimeter of mercury", "millimeters of mercury"],
+        "unit": 0.001333
+    },
+    "psi": {
+        "id": "psi",
+        "phrases": ["psi", "pound per square inch", "pounds per square inch"],
+        "unit": 0.06895
+    },
+    "torr": {
+        "id": "torr",
+        "phrases": ["torr", "Torr"],
+        "unit": 0.001333
+    }
+} 
