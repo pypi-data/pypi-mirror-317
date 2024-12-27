@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: django-tenantflow
+Version: 1.0.0
+Summary: A Django library to enable semi-isolated multitenancy in your project with users outside the tenant.
+Home-page: https://github.com/ConspiraciXn/django-tenantflow
+Author: Jared Soto
+Author-email: jared.sl@icloud.com
+License: MIT
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django>=5.0
+Requires-Dist: psycopg2-binary
+
+# ConfiguraciÃ³n de Django Multitenant
+MULTITENANT_DEFAULT_SCHEMA = 'public'  # Esquema predeterminado
+MULTITENANT_VALIDATION = True         # Habilitar validaciÃ³n de acceso al tenant
+MULTITENANT_SWITCH_METHOD = 'session' # MÃ©todos disponibles: session, subdomain, header
+
+
+MIDDLEWARE = [
+    ...
+    'multitenant.middleware.TenantMiddleware',
+    ...
+]
+
+from tenantflow.models import AbstractAccount
+
+class Account(AbstractAccount):
+    """
+    Extended model for tenant account
+    """
+    plan = models.CharField(max_length=50, help_text="Plan contratado por el tenant")
+
+
+from tenantflow.models import AbstractUserAccount
+
+class UserAccount(AbstractUserAccount):
+    """
+    RelaciÃ³n extendida entre usuarios y tenants con datos adicionales.
+    """
+    extra_field = models.CharField(max_length=50, help_text="Campo adicional", blank=True)
+
+from tenantflow.models import AbstractUserRole
+
+class UserRole(AbstractUserRole):
+    """
+    Rol extendido con configuraciones especÃ­ficas del proyecto.
+    """
+    additional_config = models.JSONField(blank=True, null=True, help_text="Configuraciones extra")
+
+
+from tenantflow.models import AbstractUserPrivilege
+
+class UserPrivilege(AbstractUserPrivilege):
+    """
+    Privilegios extendidos para casos de uso especÃ­ficos.
+    """
+    restricted = models.BooleanField(default=False, help_text="Indica si este privilegio estÃ¡ restringido")
+
