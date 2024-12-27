@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: mistune-telegram-plugin
+Version: 0.1.0
+Summary: Plugin mistune for converting markdown into Telegram format.
+Home-page: https://github.com/impocode/mistune-telegram-plugin
+License: MIT
+Keywords: markdown,telegram,markdown-parser
+Author: impocode
+Author-email: impocode@impocode.one
+Maintainer: impocode
+Maintainer-email: impocode@impocode.one
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: mistune (>=3.0.2,<4.0.0)
+Project-URL: Documentation, https://github.com/impocode/mistune-telegram-plugin
+Project-URL: Repository, https://github.com/impocode/mistune-telegram-plugin
+Description-Content-Type: text/markdown
+
+# Mistune Telegram plugin
+
