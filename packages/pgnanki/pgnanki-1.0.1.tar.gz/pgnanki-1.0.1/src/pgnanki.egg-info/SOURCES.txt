@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/pgnanki.py
+src/pgnanki.egg-info/PKG-INFO
+src/pgnanki.egg-info/SOURCES.txt
+src/pgnanki.egg-info/dependency_links.txt
+src/pgnanki.egg-info/requires.txt
+src/pgnanki.egg-info/top_level.txt
