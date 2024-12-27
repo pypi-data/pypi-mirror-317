@@ -1,0 +1,4 @@
+websockets
+requests
+loguru
+websocket-client
