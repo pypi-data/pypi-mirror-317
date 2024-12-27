@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+ratser/__init__.py
+ratser/cli.py
+ratser/intmap.py
+ratser/trick.py
+ratser/walimp.py
+ratser.egg-info/PKG-INFO
+ratser.egg-info/SOURCES.txt
+ratser.egg-info/dependency_links.txt
+ratser.egg-info/entry_points.txt
+ratser.egg-info/requires.txt
+ratser.egg-info/top_level.txt

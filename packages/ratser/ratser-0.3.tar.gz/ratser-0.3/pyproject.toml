@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ratser"
+version = "0.3"
+description = "Quick and dirty library for linear representation of rational series and semigroup trick computation. Includes Walnut import/export."
+readme = "README.md"
+requires-python = ">=3.9"
+maintainers = [{ name = "Nicolas Ollinger", email = "nopid@free.fr" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = ["python-flint"]
+
+[project.scripts]
+semitrick = "ratser.cli:main_trick"
+
+[project.urls]
+Repository = "https://github.com/nopid/ratser.git"
+Issues = "https://github.com/nopid/ratser/issues"

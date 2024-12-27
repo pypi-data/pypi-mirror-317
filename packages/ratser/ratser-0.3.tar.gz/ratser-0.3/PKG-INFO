@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ratser
+Version: 0.3
+Summary: Quick and dirty library for linear representation of rational series and semigroup trick computation. Includes Walnut import/export.
+Maintainer-email: Nicolas Ollinger <nopid@free.fr>
+Project-URL: Repository, https://github.com/nopid/ratser.git
+Project-URL: Issues, https://github.com/nopid/ratser/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: python-flint
+
+# ratser
+
+Quick and dirty library for linear representation of rational series and semigroup trick computation. Includes Walnut import/export.
+
+This is a simple library to manipulate linear representations as described in Walnut book sections 4.10 (Formal series and linear representations) and 4.11 (The semigroup trick).
