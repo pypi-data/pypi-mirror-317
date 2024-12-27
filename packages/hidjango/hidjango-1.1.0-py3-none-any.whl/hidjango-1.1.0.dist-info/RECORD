@@ -1,0 +1,10 @@
+hidjango/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hidjango/main.py,sha256=EfgudZYzHssMQmX55Qadu6hSxRu4-ifh8JFKzlGvRiA,9017
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_main.py,sha256=FfXpL5F1nfIV3-NiTXm5J4neng3ZNmkJ0Kho6gDzaNE,2554
+hidjango-1.1.0.dist-info/LICENSE,sha256=ScPqjNbgQzsbOgh3C0LcBYEb72BOIVWXecUACatCd70,1069
+hidjango-1.1.0.dist-info/METADATA,sha256=JuXTDVqGOTrfP-QDwaJDpLatEr4hQI3nIjxAHihG64I,3935
+hidjango-1.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+hidjango-1.1.0.dist-info/entry_points.txt,sha256=sIck9y40MYGQiRKbqKkoNBv2Ik32nP8LeNItj1xj0YI,49
+hidjango-1.1.0.dist-info/top_level.txt,sha256=bH2xl-W-E0rl0HuB9yYB_2JVorkBDzrBxJWooIarevg,15
+hidjango-1.1.0.dist-info/RECORD,,
