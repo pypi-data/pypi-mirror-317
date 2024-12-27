@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+chatgpt_on_wechat.egg-info/PKG-INFO
+chatgpt_on_wechat.egg-info/SOURCES.txt
+chatgpt_on_wechat.egg-info/dependency_links.txt
+chatgpt_on_wechat.egg-info/requires.txt
+chatgpt_on_wechat.egg-info/top_level.txt
