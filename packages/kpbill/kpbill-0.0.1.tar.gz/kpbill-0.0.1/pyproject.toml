@@ -1,0 +1,34 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+packages = [
+  { include = "kpbill" }
+]
+
+[tool.poetry]
+name = "kpbill"
+version = "0.0.1"
+description = "전기요금 계산 라이브러리"
+authors = ["Wibaek Park <wibaek@ninewatt.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+dacite = "^1.8.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+ruff = "^0.8.4"
+mypy = "^1.14.0"
+
+[tool.black]
+line-length = 120
+
+[tool.mypy]
+files = "."
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
