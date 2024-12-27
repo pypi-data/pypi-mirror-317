@@ -1,0 +1,10 @@
+setup.py
+amangee/__init__.py
+amangee/ai.py
+amangee/gee.py
+amangee/hydrology.py
+amangee.egg-info/PKG-INFO
+amangee.egg-info/SOURCES.txt
+amangee.egg-info/dependency_links.txt
+amangee.egg-info/requires.txt
+amangee.egg-info/top_level.txt
