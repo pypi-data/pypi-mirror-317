@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/caluxPy_bc/CalculoPosicion.py
+src/caluxPy_bc/CalculoPosicion2.py
+src/caluxPy_bc/ExtPosMid.py
+src/caluxPy_bc/ExtraccionBGD.py
+src/caluxPy_bc/ExtraccionBGD2.py
+src/caluxPy_bc/ExtraccionBGD3.py
+src/caluxPy_bc/__initi__.py
+src/caluxPy_bc.egg-info/PKG-INFO
+src/caluxPy_bc.egg-info/SOURCES.txt
+src/caluxPy_bc.egg-info/dependency_links.txt
+src/caluxPy_bc.egg-info/requires.txt
+src/caluxPy_bc.egg-info/top_level.txt
