@@ -1,0 +1,67 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-sokoweb_db}
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - kademlia_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 60s
+      timeout: 5s
+      retries: 5
+
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+    # This is important: we rely on .env for every other variable
+    env_file:
+      - .env
+    environment:
+      # Provide defaults for only the ones you absolutely want
+      # This also ensures Docker doesn't complain "not set" if .env is blank
+      NODE_PORT: ${NODE_PORT:-8000}
+      NODE_TCP_PORT: ${NODE_TCP_PORT:-8500}
+      ADVERTISE_IP: ${ADVERTISE_IP:-localhost}
+    ports:
+      - "${NODE_PORT}:${NODE_PORT}/tcp"
+      - "${NODE_PORT}:${NODE_PORT}/udp"
+      - "${NODE_TCP_PORT}:${NODE_TCP_PORT}/tcp"
+      - "${NODE_TCP_PORT}:${NODE_TCP_PORT}/udp"
+    expose:
+      - "${NODE_PORT}"
+      - "${NODE_TCP_PORT}"
+    networks:
+      - kademlia_network
+    volumes:
+      - node_data:/app/storage_chunks
+    command: >
+      bash -c "
+        python -m sokoweb.sokoweb.wait_for_postgres &&
+        python -m sokoweb.sokoweb.create_tables &&
+        uvicorn sokoweb.sokoweb.api:app --host 0.0.0.0 --port ${NODE_PORT} --timeout-keep-alive 120
+      "
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${NODE_PORT}/health"]
+      interval: 60s
+      timeout: 5s
+      retries: 5
+
+networks:
+  kademlia_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  node_data:
