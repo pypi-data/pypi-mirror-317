@@ -1,0 +1,8 @@
+setup.py
+Snowflake-SessionManager/__init__.py
+Snowflake-SessionManager/main.py
+snowflake_session_manager.egg-info/PKG-INFO
+snowflake_session_manager.egg-info/SOURCES.txt
+snowflake_session_manager.egg-info/dependency_links.txt
+snowflake_session_manager.egg-info/requires.txt
+snowflake_session_manager.egg-info/top_level.txt
