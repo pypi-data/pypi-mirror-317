@@ -1,0 +1,9 @@
+basic_engine/__init__.py,sha256=uXdMK1HBVkki-jn6PIVXMvRS6GhHaDXL24RAGeXVX1E,99
+basic_engine/basic_engine_min.py,sha256=VzDNEn-xH9FF_EmS2-4V1GwE7aRLBQoL4ubhbtDp-Jk,63842
+src/__init__.py,sha256=x1UZX4fYGn7wOjZZNYjiC3tqWYIP8wvo-bOBPxPs-9g,93
+src/basic_engine.py,sha256=vGsIX22nT_DovjuzUFsmITJ8fJMwdKP44KciOLqHX80,219537
+src/basic_engine_min.py,sha256=d5O8L6oRSUvce4PJp0e4G-hqtDn463Bu9y42Repmmw8,89830
+basic_engine-0.0.3.dist-info/METADATA,sha256=9wUXR8oyAeRM4z5ivb9JIMOFydtHx7dAw8NeEUWGpJ8,497
+basic_engine-0.0.3.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+basic_engine-0.0.3.dist-info/top_level.txt,sha256=1AtPfH0KlboU6JAVbu5tYkOEjRjWP1GDmAjlr_W1TfI,13
+basic_engine-0.0.3.dist-info/RECORD,,
