@@ -1,0 +1,9 @@
+# {# pkglts, reqs
+
+jinja2
+requests
+semver
+unidecode
+url-normalize
+
+# #}
