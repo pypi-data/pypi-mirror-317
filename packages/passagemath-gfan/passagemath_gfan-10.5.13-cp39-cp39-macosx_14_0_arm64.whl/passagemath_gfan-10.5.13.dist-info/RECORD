@@ -1,0 +1,14 @@
+sage_wheels/bin/gfan,sha256=XdjElnZSVXXDG5ihAKnGdmNJYIvZkynT3Zuy0bS72nI,4903408
+passagemath_gfan-10.5.13.dist-info/RECORD,,
+passagemath_gfan-10.5.13.dist-info/WHEEL,sha256=33SGCmbFP4YHkyNsWyCYGV8gvnkzQJiN4HbqX52K1iQ,107
+passagemath_gfan-10.5.13.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_gfan-10.5.13.dist-info/METADATA,sha256=JWH7vsy-qYDj1GEpS8Rh76kzAJqUu53TAb_qJpxd6QI,2676
+passagemath_gfan.dylibs/libcddgmp.0.dylib,sha256=qTYRznoxcoJcRPpTm7WbWqu4bUujEOtB9RzalNsR6xk,316256
+passagemath_gfan.dylibs/libgmp.10.dylib,sha256=ObLTTMD71HpmXK45k0l50GWNSfgotmaCW_hq_4H7B3E,606176
+sage/all__sagemath_gfan.py,sha256=-3lK0TJRx8kxCNrWxbuMRMo5aHDl-K2MfRJZTkmUtUY,87
+sage/libs/all__sagemath_gfan.py,sha256=NQrbAZYhanka6mlj7yi5oOcCtnUslYiEDnS-wB-XkOE,43
+sage/libs/gfan.cpython-39-darwin.so,sha256=NYSHbTXxAmmajUOQF-79rsF1HM6kqzIbiD1009l2X0g,55384
+sage/rings/all__sagemath_gfan.py,sha256=NQrbAZYhanka6mlj7yi5oOcCtnUslYiEDnS-wB-XkOE,43
+sage/rings/polynomial/all__sagemath_gfan.py,sha256=NQrbAZYhanka6mlj7yi5oOcCtnUslYiEDnS-wB-XkOE,43
+sage/rings/polynomial/groebner_fan.py,sha256=qYUeA21j8gDyoguUpAM31UQiVT3-VWz_ZDd6Hytfly8,68780
+sage/interfaces/all__sagemath_gfan.py,sha256=NQrbAZYhanka6mlj7yi5oOcCtnUslYiEDnS-wB-XkOE,43
