@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: reflex-wordcloud
+Version: 0.0.4
+Summary: Reflex custom component wordcloud
+Author-email: Pal-ette <contact@pal-ette.org>
+License: Apache-2.0
+Project-URL: homepage, https://github.com/pal-ette/reflex-wordcloud
+Project-URL: source, https://github.com/pal-ette/reflex-wordcloud
+Keywords: reflex,reflex-custom-components,reflex-wordcloud,wordcloud
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: reflex>=0.5.10
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# wordcloud
+
+A Reflex custom component wordcloud.
+
+## Installation
+
+```bash
+pip install reflex-wordcloud
+```
