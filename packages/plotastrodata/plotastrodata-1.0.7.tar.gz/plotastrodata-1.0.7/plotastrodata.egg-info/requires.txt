@@ -1,0 +1,12 @@
+astropy
+corner
+dynesty
+matplotlib
+multiprocess
+numpy
+pillow
+plotly
+ptemcee
+scikit-image
+scipy
+tqdm
