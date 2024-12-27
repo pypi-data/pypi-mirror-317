@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: dictim
+Version: 0.2.1
+Summary: case insensitive dict for modern python
+Home-page: https://github.com/jamesabel/dictim
+Download-URL: https://github.com/jamesabel/dictim
+Author: abel
+Author-email: j@abel.co
+License: MIT License
+Keywords: dict,case,insensitive
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE.txt
+
+
+# dictim
+
+case insensitive dict for modern Python (Python 3)
+
+## Usage
+
+    pip install dictim
+
+# Example
+
+    from dictim import dictim
+
+    favorites = dictim({"Hamm": "bass", "Skolnick": "guitar", "Björk": "vocal", "MOTÖRHEAD": "band"})
+
+    # access values with case insensitivity, including unicode
+    print(favorites["hamm"])  # bass
+    print(favorites["skolnick"])  # guitar
+    print(favorites["björk"])  # vocal
+    print(favorites["Motörhead"])  # band
