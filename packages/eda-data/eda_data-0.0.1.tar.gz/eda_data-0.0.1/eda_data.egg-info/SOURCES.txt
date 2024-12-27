@@ -1,0 +1,10 @@
+README.md
+setup.py
+eda/CSI.py
+eda/IV.py
+eda/__init__.py
+eda_data.egg-info/PKG-INFO
+eda_data.egg-info/SOURCES.txt
+eda_data.egg-info/dependency_links.txt
+eda_data.egg-info/requires.txt
+eda_data.egg-info/top_level.txt

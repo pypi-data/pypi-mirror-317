@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: eda-data
+Version: 0.0.1
+Summary: EDA Package
+Author: Gaurav Tyagi
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: tqdm
+
+# This is Python Project
+
+This is the package for EDA.
