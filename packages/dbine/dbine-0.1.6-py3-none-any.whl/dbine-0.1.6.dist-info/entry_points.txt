@@ -1,0 +1,2 @@
+[console_scripts]
+dbine = dbine.cli:main
