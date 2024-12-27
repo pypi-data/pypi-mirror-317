@@ -1,0 +1,11 @@
+<h1>KRID SANGUANCHAT</h1>
+
+{% if latest_question_list %}
+    <ul>
+    {% for note in latest_question_list %}
+        <li><a href="/notes/{{ note.id }}/">{{ note.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
