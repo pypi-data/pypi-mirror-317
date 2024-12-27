@@ -1,0 +1,14 @@
+hueforge/__init__.py,sha256=8ar2vbT-8GDNckzyRWE33mBlXMWkA1M_l_TMWP-cwQA,31
+hueforge/utility.py,sha256=6WKdW-kO159Qwtt71TvO6_L-BBs57t3b_2ipFMGUQm8,266
+hueforge/algorithms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hueforge/algorithms/colorblindness.py,sha256=ilw103shIMKfMddiDwOnp3dX7NRqDSMMjcqfWoW2xr4,1478
+hueforge/algorithms/other.py,sha256=M9KEY11quAzEiPNfCDTuXltaDQ85quazzlv0yaOKBcA,2235
+hueforge/algorithms/property_adjustment.py,sha256=u1mqQYjYMuphPUbomHE_if9bW8mpM0cn7ggZ-giRkgc,1211
+hueforge/color/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hueforge/color/color.py,sha256=uCPhwBR16Y6invbNXgxfv1hWhnqaFbzVucVbVzWmn9g,6302
+hueforge/color/convertor.py,sha256=LnzapIa2baSyN0tKObgrffQTwKMNge2gxT7fGoySd-Y,7907
+hueforge/color/detection.py,sha256=v4sd4kdhWrdcJnWKw4liv_nq81c4rVuHWoe_Su2TesE,840
+hueforge-1.32.dist-info/METADATA,sha256=bW3P9bd8pgHJQ2jD_R8z5e6N41BCjufie2k9aXZFfSs,5028
+hueforge-1.32.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+hueforge-1.32.dist-info/top_level.txt,sha256=JRCEJktxMh2FU0qIxm3-7R-RE1Jh7FfcDJGOZ4p_YCo,9
+hueforge-1.32.dist-info/RECORD,,
