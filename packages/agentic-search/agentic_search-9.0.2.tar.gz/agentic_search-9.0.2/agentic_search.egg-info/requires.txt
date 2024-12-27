@@ -1,0 +1,17 @@
+aiocache
+arxiv
+asyncio
+beautifulsoup4
+duckduckgo-search
+langchain-community
+langchain-core
+langchain-openai
+langgraph
+nltk
+pydantic
+pypdf
+python-dotenv
+redis
+selenium
+yollama
+ypostgres_lib
