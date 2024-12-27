@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "json-schema-to-pydantic"
+version = "0.1.0"
+description = "A Python library for automatically generating Pydantic v2 models from JSON Schema definitions"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic[email]>=2.10.4",
+]
+
+[tool.uv]
+prerelease = "allow"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+     "src"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/json_schema_to_pydantic"]
