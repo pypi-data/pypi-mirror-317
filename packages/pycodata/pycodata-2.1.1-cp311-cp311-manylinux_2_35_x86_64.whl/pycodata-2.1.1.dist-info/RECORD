@@ -1,0 +1,15 @@
+pycodata-2.1.1.dist-info/top_level.txt,sha256=2a1LaR8nqhf7ws8R-8fYwctq4kHd-jFd2edMIUHLeRQ,9
+pycodata-2.1.1.dist-info/RECORD,,
+pycodata-2.1.1.dist-info/LICENSE,sha256=rPuuWRMCUNHTwM4-8LwcNyw9xUWFQTYN6-Tl0QcqCiI,1064
+pycodata-2.1.1.dist-info/METADATA,sha256=7Z_53su3nNHwV9Ig4tpTGGPnMHrNL_dZsVGMaDHR4vQ,1379
+pycodata-2.1.1.dist-info/WHEEL,sha256=9xjo9fRnwhq4U4Pby60nqyCkOnD3fDD2aodf2wAlc_s,113
+pycodata.libs/libquadmath-1c3f8ec4.so.0.0.0,sha256=5-c9rqC4LKY4KgYXoasOhJJ3nho2vU5T5NYbFZ11aOg,292976
+pycodata.libs/libgfortran-df5d6f8d.so.5.0.0,sha256=Rrmt09n6gWGtUR6YXh9Dv1om0g5NFRwtGGaMyj2SlYQ,3082712
+pycodata/libcodata.so,sha256=qhTA1CzfaCo82PBfQTlRJiKOlS5hL2XbjO-8gAZqHzk,1230488
+pycodata/constants_2010.cpython-311-x86_64-linux-gnu.so,sha256=YkvTAsBsWDud46ZXCwKdgHDxwkGypSY9YHiJXZyidjY,265696
+pycodata/constants_2022.cpython-311-x86_64-linux-gnu.so,sha256=klxHmSamW7a6nw7CGF9P8CZznm0Y0CJ2DtmANBRaDZM,273296
+pycodata/__init__.py,sha256=jUpNidq_yB2Zgeyl5PJp5iojliOBcUsGUN2xKrI9rIg,461
+pycodata/version.cpython-311-x86_64-linux-gnu.so,sha256=kFXqQVmEgXM6pnkba0f3l4tdXyuIkAkEjtrZCkpuNto,25680
+pycodata/constants_2018.cpython-311-x86_64-linux-gnu.so,sha256=kwL4q97ccNOGN0JGT-vsVId944b5PtcsPARbIvDN_NM,283112
+pycodata/constants_2014.cpython-311-x86_64-linux-gnu.so,sha256=izxncTLEyFb0ykxGkE4eGVdEYDx4BdoF97PkiS82c1Y,265696
+pycodata/libcodata.a,sha256=wDT5LCaO5f-tstVt54Ju6cO22Yy0rSw4DMiTrWXuRbs,941692
