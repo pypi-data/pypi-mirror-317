@@ -1,0 +1,3 @@
+[console_scripts]
+ramusic = main:main
+replaceapplemusic = main:main

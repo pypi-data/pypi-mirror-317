@@ -1,0 +1,11 @@
+README.md
+bridge.py
+file_reader.py
+main.py
+setup.py
+replaceapplemusic.egg-info/PKG-INFO
+replaceapplemusic.egg-info/SOURCES.txt
+replaceapplemusic.egg-info/dependency_links.txt
+replaceapplemusic.egg-info/entry_points.txt
+replaceapplemusic.egg-info/requires.txt
+replaceapplemusic.egg-info/top_level.txt
