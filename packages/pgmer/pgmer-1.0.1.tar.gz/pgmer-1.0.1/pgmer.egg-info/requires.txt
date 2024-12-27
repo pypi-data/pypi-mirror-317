@@ -1,0 +1,12 @@
+asyncio
+websockets
+requests
+websocket
+Union
+time
+loguru
+json
+ssl
+typing
+websocket
+websocket-client
