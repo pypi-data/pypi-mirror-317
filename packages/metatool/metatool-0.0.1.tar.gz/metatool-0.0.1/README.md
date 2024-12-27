@@ -1,0 +1,49 @@
+# Metatool
+
+A Python package that provides a simple interface to metatool functionality.
+
+## Installation
+
+```bash
+pip install metatool
+```
+
+## Usage
+
+```python
+from metatool import MetaTool
+
+# Initialize with configuration
+metatool = MetaTool(
+    openai_api_key="your-api-key",  # Optional: can also use environment variable
+    model_name="gpt-4o-mini",     # Optional: defaults to gpt-4o-mini
+    temperature=0.0,                  # Optional: defaults to 0.0
+)
+
+# Process instructions
+response = metatool.run("Your instructions here")
+print(response)
+```
+
+## Configuration Options
+
+The `MetaToolConfig` class, which inherits from `BaseModel`, defines the following configuration options for MetaTool:
+
+- `openai_api_key`: Optional[str] - Your OpenAI API key (default: None)
+- `model_name`: str - The model to use (default: "gpt-4o-mini")
+- `temperature`: float - Model temperature setting (default: 0.0)
+- `verbose`: bool - Enable verbose output (default: False)
+- `root_dir`: str - Root directory for MetaTool files (default: "./metatool_tmp")
+- `api_key`: Optional[str] - API key for storage service (default: None)
+- `database_path`: str - SQLite database path relative to root_dir (default: "metatool.db")
+
+## Features
+
+- Class-based interface with configuration options
+- Simple method for processing instructions
+- Customizable model and tool settings
+
+## Requirements
+
+- Python 3.9+
+- Dependencies listed in setup.py

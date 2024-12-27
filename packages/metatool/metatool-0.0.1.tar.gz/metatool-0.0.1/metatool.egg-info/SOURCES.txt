@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+metatool/__init__.py
+metatool/config.py
+metatool/core.py
+metatool/schemas.py
+metatool.egg-info/PKG-INFO
+metatool.egg-info/SOURCES.txt
+metatool.egg-info/dependency_links.txt
+metatool.egg-info/requires.txt
+metatool.egg-info/top_level.txt
+metatool/storage/__init__.py
+metatool/storage/api_storage.py
+metatool/storage/base.py
+metatool/storage/sqlite_storage.py
