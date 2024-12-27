@@ -1,0 +1,17 @@
+COPYING
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/etoolkit/__init__.py
+src/etoolkit/__main__.py
+src/etoolkit/etoolkit.py
+src/etoolkit.egg-info/PKG-INFO
+src/etoolkit.egg-info/SOURCES.txt
+src/etoolkit.egg-info/dependency_links.txt
+src/etoolkit.egg-info/entry_points.txt
+src/etoolkit.egg-info/requires.txt
+src/etoolkit.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_envtoolkit_instance.py
+tests/test_envtoolkit_instance_static.py
