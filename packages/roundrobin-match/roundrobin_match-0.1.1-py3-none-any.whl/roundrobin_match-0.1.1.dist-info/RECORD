@@ -1,0 +1,10 @@
+roundrobin_match/__init__.py,sha256=4-yN2YjTjqbJUtr-4QMFkcMf0S_eRuIBqoEEjogNmYY,158
+roundrobin_match/cli.py,sha256=kjW7ELfIPIVRIGQcB2HN9Wsw65u_ACisFtShZBc_IrA,78
+roundrobin_match/main.py,sha256=d0vZwEm_oNZNLc4Njli8ZFGZnb2s3C2qmy0hpwXiEvs,4089
+roundrobin_match/version.py,sha256=K4bqp4JdOs9KHYMltFboNleHcCgvR1V7uAJwB8wlYQw,18
+roundrobin_match-0.1.1.dist-info/LICENSE,sha256=WJPijDIA7--BxIWIXTDBrhL2enncC4OuhBRqrb6Hszg,1066
+roundrobin_match-0.1.1.dist-info/METADATA,sha256=tnXb58WEXovSS3O3dEJFa7oxIiHIodxm-nbG9EXxEoE,1306
+roundrobin_match-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+roundrobin_match-0.1.1.dist-info/entry_points.txt,sha256=sBSCRs3dWMg9cKvg8C8vzAEGG58q12NfoTegHo-SCMU,63
+roundrobin_match-0.1.1.dist-info/top_level.txt,sha256=A21Ea9z2BgVEUNaa1Nwr9lxIMztAbOJGY6J3oIrj7eI,17
+roundrobin_match-0.1.1.dist-info/RECORD,,
