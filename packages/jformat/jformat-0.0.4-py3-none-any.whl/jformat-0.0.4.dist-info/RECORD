@@ -1,0 +1,12 @@
+jformat/__init__.py,sha256=0Q_BghojxUyqRWjbMfH4kUVNq3zceKmSW7FXLLxWi20,12
+jformat/cli.py,sha256=SYGAGu_PAYFFD28HaKAxbbfcS0Fv4e0WJmh0DKFnNw8,3871
+jformat/cli_0.0.1.py,sha256=ySHO6eLeJDu24D83p2YkQoKMFkmKW9HAzzqC5Ot-1yw,617
+tests/__init__.py,sha256=0Q_BghojxUyqRWjbMfH4kUVNq3zceKmSW7FXLLxWi20,12
+tests/test_formatter.py,sha256=BxyCpsorFslUxp3mebRfkXNPGGE9vMXSj1pfh8rQeK8,397
+tests/test_jformat.py,sha256=wW6ZWYqMrzSmAWTZ67WtTIfl7qc1AmwiLx5eApt-C5Q,4386
+jformat-0.0.4.dist-info/LICENSE,sha256=iBKvZGNYhzuYO59Gzz5FIo3HXkAuZI3OoikM-A501mc,509
+jformat-0.0.4.dist-info/METADATA,sha256=HZSvWaSbDRkD9sE1rxfLsyvmt84IDlnVYxDgqUcw_sM,4193
+jformat-0.0.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jformat-0.0.4.dist-info/entry_points.txt,sha256=NqWQWfT8QAvkbsLRFFLBfyHKBsDDifCs6lB0kbCtk5s,45
+jformat-0.0.4.dist-info/top_level.txt,sha256=lxfikcdB-sqiviC8UyUpFp9xImUD4rYviaZyERw7RpM,14
+jformat-0.0.4.dist-info/RECORD,,
