@@ -1,0 +1,12 @@
+cwtch-0.10.1.dist-info/RECORD,,
+cwtch-0.10.1.dist-info/LICENSE,sha256=Wk7uAQHNzNZYbZ8BVvJKMepby7UdoiTBc00DPle6qB0,1068
+cwtch-0.10.1.dist-info/WHEEL,sha256=MXJJ0F8jKJHeo3gqIKHGj-OCEmv0SmzrqL2y5h0WyCk,106
+cwtch-0.10.1.dist-info/METADATA,sha256=bywdW9w0be5BvHUWwhf3M9Sp-FV5ERC-FMv30TYRVeg,1933
+ext/core.pyx,sha256=SRhG_RlbnPP5vM_9Vacuq9hcNyYKoG0jadpwNEGr4hA,43934
+cwtch/config.py,sha256=Ofy-lgvFxlrmsBfoyVyUPJHPhNHneKB4K-zT-ZsRsew,335
+cwtch/metadata.py,sha256=8cq6F7iQ-V-LTD9_KFVRs5O1b5-HqJBO6kYhPcarr8g,6087
+cwtch/cwtch.py,sha256=t2O76Netis41GVXlIIUwaUcSF8JW18fj9wtMOBTlUAw,53805
+cwtch/__init__.py,sha256=L0V0VUYEmx4eF60ZUpcmi9Z_zbaPhMfov3uZxFmlKu8,447
+cwtch/types.py,sha256=6WjWGE46wwalZOHpQB_ax87bh_Qt0AEHndnsKu7ScDs,7462
+cwtch/core.cpython-311-darwin.so,sha256=7nb5npuouKIouMj_WP8M9AXksLeFIt-Z2LcQM-bltXk,571192
+cwtch/errors.py,sha256=bYtf7P2_5uolXL6kKj51Ydp6pZ6mZYH7SwwBKVPw2tQ,3419
