@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyudbf"
+authors = [
+  { name="Gerrit Spengler"},
+]
+description = "A python implementation of the UDBF (Universal Data bin File) format."
+
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy >= 2.0.0",
+    "datetime"
+]
+version = "0.3.0"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/dvnll/pyudbf"
+Issues = "https://github.com/dvnll/pyudbf/issues"

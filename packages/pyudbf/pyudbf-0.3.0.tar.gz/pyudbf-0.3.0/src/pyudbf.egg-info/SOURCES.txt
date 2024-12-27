@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyudbf/UDBFBytesReader.py
+src/pyudbf/UDBFData.py
+src/pyudbf/UDBFFileReader.py
+src/pyudbf/UDBFParser.py
+src/pyudbf/__init__.py
+src/pyudbf.egg-info/PKG-INFO
+src/pyudbf.egg-info/SOURCES.txt
+src/pyudbf.egg-info/dependency_links.txt
+src/pyudbf.egg-info/requires.txt
+src/pyudbf.egg-info/top_level.txt
+tests/test_read.py
