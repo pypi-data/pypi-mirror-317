@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: howtomathdummythisisatest
+Version: 0.1.0
+Summary: this is desp
+License: this is open to any one
+Author: deekshith
+Requires-Python: >=3.12,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+
