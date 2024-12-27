@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+soburpdf/__init__.py
+soburpdf/pdf2image.py
+soburpdf/pdf2text.py
+soburpdf.egg-info/PKG-INFO
+soburpdf.egg-info/SOURCES.txt
+soburpdf.egg-info/dependency_links.txt
+soburpdf.egg-info/top_level.txt
