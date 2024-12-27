@@ -1,0 +1,10 @@
+pymysql
+dash_mantine_components
+dash_tabulator
+PyPDF2
+pywinrm
+sqlalchemy
+fastapi
+aiofiles
+reportlab
+pandas
