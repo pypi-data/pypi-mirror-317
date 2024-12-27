@@ -1,0 +1,4 @@
+[console_scripts]
+ovpn-portal=ovpn_portal.wsgi:run_wsgi
+ovpn-portal-local=ovpn_portal.run:main
+
