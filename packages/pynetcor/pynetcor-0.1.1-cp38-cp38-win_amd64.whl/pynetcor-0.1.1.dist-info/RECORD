@@ -1,0 +1,15 @@
+pynetcor/cluster.py,sha256=otbZ38VNRfU87ukfh-bZhOnj6n57g2a4ao4HMzN-B9E,4959
+pynetcor/cor.py,sha256=Y0E4hgCy4ffghL7mfTFQ7mW1fhVK1-mkFQeoZ_f207Y,17829
+pynetcor/_core.cp38-win_amd64.pyd,sha256=5G1WGaHdVhEp-i-eJ4gUzdHOgGGOVOM-kvaXb9skCfk,241664
+pynetcor/__init__.py,sha256=VeFkfQ6FHg6ggSRaT0g98ZG6z1iUUpjm_eBO7r6-yPU,1651
+pynetcor-0.1.1.dist-info/DELVEWHEEL,sha256=EIjYPTb38BJ1CjxL2mXkDA7ku1NlGCNGFujPLJgCtO8,421
+pynetcor-0.1.1.dist-info/METADATA,sha256=4QOwKsBVAu_ndiLe0QPoyOkTWlXdn2LvLoksgr1Z5Pk,5505
+pynetcor-0.1.1.dist-info/RECORD,,
+pynetcor-0.1.1.dist-info/top_level.txt,sha256=Wtb8XaxcZJ81eg48RXoxQ3WlD2Cx9NX1xuADdH3OwQ0,9
+pynetcor-0.1.1.dist-info/WHEEL,sha256=Wb4yjwIXVKEpht4JWFUZNCzpG7JLBNZnqtK2YNdqLkI,100
+pynetcor.libs/.load-order-pynetcor-0.1.1,sha256=FRkkKJvB6iMOZlhzIfqwI2Q_oBiiqMhE6kz32fS0fGg,234
+pynetcor.libs/msvcp140-3a896538a89087f2c20e9f8bfde34d88.dll,sha256=89Ub5KONdmJXRdwKb4x1tQM4nwwGqzbc8B6o8lAd0NY,555008
+pynetcor.libs/netcor-04c8dbbd3b21784d036bed7926274bd0.dll,sha256=XsWRjWftr78KTYpx1UbpnMVKGhrk7uYfjwYcPQtoN2w,324096
+pynetcor.libs/openblas-8f94a7aff39368c3783c182a3c158f60.dll,sha256=21Sl8qMbq3NGi8aME593wjWxf1RDoN82hZ_iZX85RoQ,27924480
+pynetcor.libs/vcomp140-a902e8d63345fbcd62c1419f09820050.dll,sha256=A2ubP37Ojf1IrszXcRNyHFMFBDqqnGTR5ygSJScnqnw,192104
+pynetcor.libs/vcruntime140_1-dbfe66cb8225a8a5e7d715e0f335f42b.dll,sha256=JuRwspvtPYc-DDKBhuU_lentv-Cw_QzaRHQ6CxoEqCg,49744
