@@ -1,0 +1,27 @@
+[project]
+name = "tts-evaluate-yue"
+version = "1.0.2"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "sagewe", email = "sagewe@fastmail.com" }
+]
+dependencies = [
+    "evaluate",
+    "jiwer",
+    "faster_whisper",
+    "yue_normalizer",
+    "transformers[torch]",
+    "soundfile",
+    "torchaudio",
+    "gtts",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+]
