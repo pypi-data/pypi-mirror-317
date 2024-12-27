@@ -1,0 +1,3 @@
+[console_scripts]
+solovision=solovision.cli:main
+
