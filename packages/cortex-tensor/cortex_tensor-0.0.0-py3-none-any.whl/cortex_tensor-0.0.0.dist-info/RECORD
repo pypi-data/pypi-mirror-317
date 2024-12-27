@@ -1,0 +1,10 @@
+cortex/__init__.py,sha256=gROCPxf30AXL8CDr0g8613-gspcyeUjNp2jRtvYwYn0,137
+cortex/autograd.py,sha256=EB91ErLFtT5hmYcounombLGppdXzriJt7VRmjPFBRLc,7089
+cortex/device.py,sha256=POo8jjEzqkbPlhsQ58omC3ntDKQ5_6qtNA7HYik8ol8,3392
+cortex/operations.py,sha256=0g0QwtPMTb2IrpVh14VmQ3HT7CDUkZF80MPLtFwsnp8,4934
+cortex/tensor.py,sha256=KsYCO1l5Me9p1aesGNSKL-b4thFAgQnChttBmpydzA0,2408
+cortex/__pycache__/tensor.cpython-310.pyc,sha256=Wt4s94SuTv5wHRu93PWJyxvOWlom2jIJGPPYg3g3P68,3444
+cortex_tensor-0.0.0.dist-info/METADATA,sha256=7fntXOCamA2x5Ezhq7ipfFZN8V_jNJBRWSykr2vArkg,1028
+cortex_tensor-0.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cortex_tensor-0.0.0.dist-info/top_level.txt,sha256=79LAeTJJ_pMIBy3mkF7uNaN0mdBRt5tGrnne5N_iAio,7
+cortex_tensor-0.0.0.dist-info/RECORD,,
