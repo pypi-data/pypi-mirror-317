@@ -1,0 +1,154 @@
+{
+  "type": "record",
+  "Aspect": {
+    "name": "mlModelGroupProperties"
+  },
+  "name": "MLModelGroupProperties",
+  "namespace": "com.linkedin.pegasus2avro.ml.metadata",
+  "fields": [
+    {
+      "Searchable": {
+        "/*": {
+          "fieldType": "TEXT",
+          "queryByDefault": true
+        }
+      },
+      "type": {
+        "type": "map",
+        "values": "string"
+      },
+      "name": "customProperties",
+      "default": {},
+      "doc": "Custom property bag."
+    },
+    {
+      "Searchable": {
+        "boostScore": 10.0,
+        "enableAutocomplete": true,
+        "fieldType": "WORD_GRAM",
+        "queryByDefault": true
+      },
+      "type": [
+        "null",
+        "string"
+      ],
+      "name": "name",
+      "default": null,
+      "doc": "Display name of the MLModelGroup"
+    },
+    {
+      "Searchable": {
+        "fieldType": "TEXT",
+        "hasValuesFieldName": "hasDescription"
+      },
+      "type": [
+        "null",
+        "string"
+      ],
+      "name": "description",
+      "default": null,
+      "doc": "Documentation of the MLModelGroup"
+    },
+    {
+      "deprecated": true,
+      "type": [
+        "null",
+        "long"
+      ],
+      "name": "createdAt",
+      "default": null,
+      "doc": "Date when the MLModelGroup was developed"
+    },
+    {
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "TimeStamp",
+          "namespace": "com.linkedin.pegasus2avro.common",
+          "fields": [
+            {
+              "type": "long",
+              "name": "time",
+              "doc": "When did the event occur"
+            },
+            {
+              "java": {
+                "class": "com.linkedin.pegasus2avro.common.urn.Urn"
+              },
+              "type": [
+                "null",
+                "string"
+              ],
+              "name": "actor",
+              "default": null,
+              "doc": "Optional: The actor urn involved in the event.",
+              "Urn": "Urn"
+            }
+          ],
+          "doc": "A standard event timestamp"
+        }
+      ],
+      "name": "created",
+      "default": null,
+      "doc": "Time and Actor who created the MLModelGroup"
+    },
+    {
+      "type": [
+        "null",
+        "com.linkedin.pegasus2avro.common.TimeStamp"
+      ],
+      "name": "lastModified",
+      "default": null,
+      "doc": "Date when the MLModelGroup was last modified"
+    },
+    {
+      "Relationship": {
+        "/*": {
+          "entityTypes": [
+            "dataJob"
+          ],
+          "isLineage": true,
+          "name": "TrainedBy"
+        }
+      },
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ],
+      "name": "trainingJobs",
+      "default": null,
+      "doc": "List of jobs (if any) used to train the model group. Visible in Lineage.",
+      "Urn": "Urn",
+      "urn_is_array": true
+    },
+    {
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "VersionTag",
+          "namespace": "com.linkedin.pegasus2avro.common",
+          "fields": [
+            {
+              "type": [
+                "null",
+                "string"
+              ],
+              "name": "versionTag",
+              "default": null
+            }
+          ],
+          "doc": "A resource-defined string representing the resource state for the purpose of concurrency control"
+        }
+      ],
+      "name": "version",
+      "default": null,
+      "doc": "Version of the MLModelGroup"
+    }
+  ],
+  "doc": "Properties associated with an ML Model Group"
+}
