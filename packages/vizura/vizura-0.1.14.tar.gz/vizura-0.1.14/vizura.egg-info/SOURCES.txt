@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+vizura/Vizura.py
+vizura/__init__.py
+vizura/streamlit_app.py
+vizura.egg-info/PKG-INFO
+vizura.egg-info/SOURCES.txt
+vizura.egg-info/dependency_links.txt
+vizura.egg-info/requires.txt
+vizura.egg-info/top_level.txt
