@@ -1,0 +1,12 @@
+twine
+setuptools
+wheel
+flake8
+black
+pytest
+pip-upgrader
+httpx
+beautifulsoup4
+pypandoc
+playwright
+langchain-core
