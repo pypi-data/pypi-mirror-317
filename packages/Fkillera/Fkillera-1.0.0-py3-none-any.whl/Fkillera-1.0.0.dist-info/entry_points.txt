@@ -1,0 +1,2 @@
+[console_scripts]
+Fkillera = Fkillera.operations:main_function
