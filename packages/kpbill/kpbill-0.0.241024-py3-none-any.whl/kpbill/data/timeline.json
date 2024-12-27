@@ -1,0 +1,70 @@
+{
+  "policies": [
+    {
+      "policy_id": "20210101",
+      "start_date": "2021-01-01",
+      "end_date": "2022-03-31",
+      "file_path": "20210101.json"
+    },
+    {
+      "policy_id": "20220401",
+      "start_date": "2022-04-01",
+      "end_date": "2022-06-30",
+      "file_path": "20220401.json"
+    },
+    {
+      "policy_id": "20220701",
+      "start_date": "2022-07-01",
+      "end_date": "2022-09-30",
+      "file_path": "20220701.json"
+    },
+    {
+      "policy_id": "20221001",
+      "start_date": "2022-10-01",
+      "end_date": "2022-12-31",
+      "file_path": "20221001.json"
+    },
+    {
+      "policy_id": "20230101",
+      "start_date": "2023-01-01",
+      "end_date": "2023-05-15",
+      "file_path": "20230101.json"
+    },
+    {
+      "policy_id": "20230516",
+      "start_date": "2023-05-16",
+      "end_date": "2023-11-08",
+      "file_path": "20230516.json"
+    },
+    {
+      "policy_id": "20231109",
+      "start_date": "2023-11-09",
+      "end_date": "2023-12-31",
+      "file_path": "20231109.json"
+    },
+    {
+      "policy_id": "20240101",
+      "start_date": "2024-01-01",
+      "end_date": "2024-03-31",
+      "file_path": "20240101.json"
+    },
+    {
+      "policy_id": "20240401",
+      "start_date": "2024-04-01",
+      "end_date": "2024-06-30",
+      "file_path": "20240401.json"
+    },
+    {
+      "policy_id": "20240701",
+      "start_date": "2024-07-01",
+      "end_date": "2024-10-23",
+      "file_path": "20240701.json"
+    },
+    {
+      "policy_id": "20241024",
+      "start_date": "2024-10-24",
+      "end_date": null,
+      "file_path": "20241024.json"
+    }
+  ]
+}
