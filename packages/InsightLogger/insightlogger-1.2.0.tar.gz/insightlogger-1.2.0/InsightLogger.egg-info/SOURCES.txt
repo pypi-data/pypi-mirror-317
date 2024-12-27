@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+InsightLogger.egg-info/PKG-INFO
+InsightLogger.egg-info/SOURCES.txt
+InsightLogger.egg-info/dependency_links.txt
+InsightLogger.egg-info/requires.txt
+InsightLogger.egg-info/top_level.txt
+insightlog/__init__.py
+insightlog/main.py
