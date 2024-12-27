@@ -1,0 +1,145 @@
+Metadata-Version: 2.1
+Name: cleantweet
+Version: 2.0.2
+Summary: a python library to clean textual data fetched from API's
+Home-page: https://cleantweet.org/
+Author: Lare Adeola
+Author-email: lare@cleantweet.org
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: nltk
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: wordcloud
+
+CleanTweet version 2.0.2
+
+
+
+CleanTweet is a python library created for cleaning textual data fetched from API. In the second version of the cleantweet library, there are 6 new classes that have been introduced. They include the DiagramTweet
+
+PredictionTweet, SaveTweet, SentimentTweet, StatsTweet, and SyntheticTweet. Each of these classes have different methods specific
+
+to each class and most of them inherit the clean() method from the CleanTweet class which was the only class present in the version
+
+0.1.1. 
+
+
+
+You can find more detailed documentation about the various classes, their implementation and their various methods (close to 50) in
+
+cleantweet's permanent home: https://cleantweet.org/
+
+
+
+### Installation
+
+pip install cleantweet <br/>
+
+Get Started <br/>
+
+How to clean your Twitter Object:
+
+
+
+Example 1: If the text file containing the Twitter/X JSON Data is in the same directory as project files.
+
+
+
+!pip install cleantweet <br/>
+
+import cleantweet as clt <br/>
+
+
+
+### Instantiate the CleanTwitter Object
+
+data = clt.CleanTweet('sample_text.txt')
+
+
+
+### Call the clean method
+
+data = data.clean())
+
+
+
+### Print the data object
+
+print(data)
+
+
+
+## Various Implementations for the new classes
+
+
+
+### Draw a Wordcloud from your textual data
+
+
+
+import cleantweet as clt
+
+
+
+diagram = clt.DiagramTweet('sample_text.txt')
+
+diagram.word_cloud()
+
+
+
+### Amount of Plural Proper Nouns in your text
+
+
+
+import cleantweet as clt
+
+
+
+text = clt.StatsTweet('sample_text.txt')
+
+text = text.amount_of_proper_nouns(plural=True)
+
+print(text)
+
+
+
+### Sentiment Analysis
+
+
+
+import cleantweet as clt
+
+
+
+sentiments = clt.SentimentTweet('sample_text.txt')
+
+sentiments = sentiments.vader()
+
+print(sentiments)
+
+
+
+### Synthetic Data
+
+
+
+import cleantweet as clt
+
+
+
+synths = clt.SyntheticTweet('sample_text.txt')
+
+synths = synths.rule_based()
+
+print(synths)
