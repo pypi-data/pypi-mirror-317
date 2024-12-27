@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: email-sender-verifier
+Version: 2.3.4
+Summary: Email Sender is a python library designed for sending One-Time-Passwords (OTP) and performing code verification via email.
+Home-page: https://github.com/christiangarcia0311/email-sender-verifier
+Author: Christian Garcia
+Author-email: iyaniyan03112003@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Full Documentation [Github](https://github.com/christiangarcia0311/email-sender-verifier)
