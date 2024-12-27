@@ -1,0 +1,145 @@
+import re
+import shlex
+from contextlib import contextmanager
+from functools import partial
+from os import environ as env, rename, getcwd
+from os.path import basename, join, exists
+from tempfile import TemporaryDirectory
+from typing import Generator, Callable, Optional, Tuple
+
+from click import command, option, argument
+from utz import process, err
+
+from bmdf.utils import amend_opt, amend_check, amend_run, inplace_opt, no_cwd_tmpdir_opt
+
+RGX = re.compile(r'<!-- `(?P<cmd>[^`]+)` -->')
+Write = Callable[[str], None]
+
+DEFAULT_FILE_ENV_VAR = 'MDCMD_DEFAULT_PATH'
+DEFAULT_FILE = 'README.md'
+
+def process_path(
+    path: str,
+    dry_run: bool,
+    include_rgxs: Tuple[str, ...],
+    exclude_rgxs: Tuple[str, ...],
+    write: Write,
+):
+    with open(path, 'r') as fd:
+        lines = map(lambda line: line.rstrip('\n'), fd)
+        for line in lines:
+            write(line)
+            if not (m := RGX.match(line)):
+                continue
+
+            cmd_str = m.group('cmd')
+            if include_rgxs:
+                if not any(re.search(rgx, cmd_str) for rgx in include_rgxs):
+                    continue
+            if exclude_rgxs:
+                if any(re.search(rgx, cmd_str) for rgx in exclude_rgxs):
+                    continue
+
+            if dry_run:
+                err(f"Would run: {cmd_str}")
+                continue
+
+            cmd = shlex.split(cmd_str)
+            try:
+                line = next(lines)
+                if line.startswith("<details>"):
+                    close_lines = ["</details>"]
+                elif line.startswith("```"):
+                    if cmd[0] == "bmdff":
+                        close_lines = ["```", re.compile("```\w+"), "```"]  # Skip two fences
+                    else:
+                        close_lines = ["```"]
+                elif not line:
+                    close_lines = None
+                else:
+                    raise ValueError(f'Unexpected block start line under cmd {cmd}: {line}')
+            except StopIteration:
+                close_lines = None
+
+            while close_lines:
+                close, *close_lines = close_lines
+                line = next(lines)
+                while close.fullmatch(line) if isinstance(close, re.Pattern) else line != close:
+                    line = next(lines)
+
+            output = process.output(cmd).decode().rstrip('\n')
+            write(output)
+            if close_lines is None:
+                write("")
+
+
+@contextmanager
+def out_fd(
+    inplace: bool,
+    path: str,
+    out_path: Optional[str],
+    dir: Optional[str] = None,
+) -> Generator[Write, None, None]:
+    if inplace:
+        if out_path:
+            raise ValueError('Cannot specify both --inplace and an output path')
+        with TemporaryDirectory(dir=dir) as tmpdir:
+            tmp_path = join(tmpdir, basename(path))
+            with open(tmp_path, 'w') as f:
+                yield partial(print, file=f)
+            rename(tmp_path, path)
+    else:
+        if not out_path or out_path == '-':
+            yield print
+        else:
+            with open(out_path, 'w') as f:
+                yield partial(print, file=f)
+
+
+@command('mdcmd')
+@amend_opt
+@inplace_opt
+@option('-n', '--dry-run', is_flag=True, help="Print the commands that would be run, but don't execute them")
+@no_cwd_tmpdir_opt
+@option('-x', '--execute', 'include_rgxs', multiple=True, help='Only execute commands that match these regular expressions')
+@option('-X', '--exclude', 'exclude_rgxs', multiple=True, help="Only execute commands that don't match these regular expressions")
+@argument('path', required=False)
+@argument('out_path', required=False)
+def main(
+    amend: bool,
+    inplace: Optional[bool],
+    dry_run: bool,
+    no_cwd_tmpdir: bool,
+    include_rgxs: Tuple[str, ...],
+    exclude_rgxs: Tuple[str, ...],
+    path: str,
+    out_path: Optional[str],
+):
+    """Parse a Markdown file, updating blocks preceded by <!-- `[cmd...]` --> delimiters.
+
+    If no paths are provided, will look for a README.md, and operate "in-place" (same as ``mdcmd -i README.md``).
+    """
+    if not path:
+        path = env.get(DEFAULT_FILE_ENV_VAR, DEFAULT_FILE)
+        if not exists(path):
+            raise ValueError(f'{path} not found')
+        if inplace is None:
+            inplace = True
+
+    amend_check(amend)
+
+    tmpdir = None if no_cwd_tmpdir else getcwd()
+    with out_fd(inplace, path, out_path, dir=tmpdir) as write:
+        process_path(
+            path=path,
+            dry_run=dry_run,
+            include_rgxs=include_rgxs,
+            exclude_rgxs=exclude_rgxs,
+            write=write,
+        )
+
+    amend_run(amend)
+
+
+if __name__ == '__main__':
+    main()
