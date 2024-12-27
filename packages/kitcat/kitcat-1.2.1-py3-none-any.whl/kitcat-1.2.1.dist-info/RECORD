@@ -1,0 +1,8 @@
+src/kitcat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/kitcat/backend.py,sha256=FGig-Re1rrdHpZvYDdnpVwCm83dNq0JvqvAj2ull1cM,3426
+src/kitcat/utils.py,sha256=N-y8rZqB_eR6FaarJPSvqwdeopYrYJKgpkr4Ab2Y2oc,582
+kitcat-1.2.1.dist-info/METADATA,sha256=FP14X3txEkiG9dVjhQaGD6GOmL1lwFHSIvXuDmxKQXs,4142
+kitcat-1.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+kitcat-1.2.1.dist-info/entry_points.txt,sha256=qRlvfG73WYxKqp1lp7kJ-vsHpBeGzKDu6zuX-i21kZE,49
+kitcat-1.2.1.dist-info/licenses/LICENSE,sha256=W7wTwDxlV0NqWZzJjrM9I8fGb9Kazc8k3rtQURskiyI,1071
+kitcat-1.2.1.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[matplotlib.backend]
+kitcat = src.kitcat.backend
