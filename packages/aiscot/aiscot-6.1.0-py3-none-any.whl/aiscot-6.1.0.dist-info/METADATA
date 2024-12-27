@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: aiscot
+Version: 6.1.0
+Summary: Software for monitoring and analyzing AIS in TAK.
+Home-page: https://github.com/snstac/aiscot
+Maintainer: Greg Albrecht <oss@undef.net>
+Maintainer-email: oss@undef.net
+License: Apache 2.0
+Project-URL: CI: GitHub Actions, https://github.com/snstac/aiscot/actions
+Project-URL: GitHub: issues, https://github.com/snstac/aiscot/issues
+Project-URL: GitHub: repo, https://github.com/snstac/aiscot
+Keywords: Cursor on Target,Cursor-on-Target,CoT,ATAK,TAK,WinTAK,TAK,TAK Server,iTAK,AIS,Boats,Marine,Sailing,Ships,Shipping
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS Independent
+Requires-Python: <4,>=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytak>=5.4.0
+Requires-Dist: aiohttp<4.0.0
+Provides-Extra: with-pymodes
+Requires-Dist: pymodes>=2.8; extra == "with-pymodes"
+Provides-Extra: with-takproto
+Requires-Dist: takproto>=2.0.0; extra == "with-takproto"
+Provides-Extra: test
+Requires-Dist: pytest-asyncio; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pylint; extra == "test"
+Requires-Dist: flake8; extra == "test"
+Requires-Dist: black; extra == "test"
+
+![Screenshot of ships in ATAK, via AISCOT.](https://aiscot.readthedocs.io/en/latest/media/aiscot_screenshot_tak_logo.png)
+
+# Display Ships in TAK - AIS to TAK Gateway 
+
+## Features
+
+- Real-time AIS data capture and reporting
+- Integration with TAK products using native protocols
+- Compatibility with ATAK, WinTAK, iTAK, TAK Server & TAKX
+- Support for RF AIS transmissions, local NMEA, and Internet AIS aggregators
+- Display of AIS data with icons, attitude, type, track, bearing, speed, callsign, and more
+
+## Use Case
+
+Originally developed to support an [open ocean boat race in the Northern Pacific Ocean](http://ampledata.org/boat_race_support.html).
+
+## Documentation
+
+[AISCOT documentation is available here.](https://aiscot.rtfd.io)
+
+## License & Copyright
+
+Copyright Sensors & Signals LLC https://www.snstac.com
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+* pyAISm.py is licensed under the MIT License. See aiscot/pyAISm.py for details.
