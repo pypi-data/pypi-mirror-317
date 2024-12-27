@@ -1,0 +1,10 @@
+gentrade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gentrade/market_data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gentrade/market_data/core.py,sha256=7NWx-Q6ED8ltFGDxUJuN_tXwox35-XyOYNy30V9UY_4,12981
+gentrade/market_data/crypto.py,sha256=YB5rJfmxwlgQ7ML5irGYZwmmMbAAyHDPSQL2UGXM3x0,7648
+gentrade/market_data/stock_us.py,sha256=nvtAZh1-m9_veOl4DwpgkGgMq-N-l4NZdSU4kJW_SvQ,6951
+gentrade/market_data/timeframe.py,sha256=mKpxi-Fi2dnQE-SqePIe9-BZ71wlhl91hyTw2u3muh8,9042
+gentrade/strategy/basic.py,sha256=CF5NFQK6wxErwYntoA9KwxvC4koL1U2iCakMIeVrtxI,6603
+gentrade-0.0.14.dist-info/METADATA,sha256=xIERKOa1RAky9yQyuq_AcMMfh7vDaWZgGJeM_XFu0bs,4718
+gentrade-0.0.14.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gentrade-0.0.14.dist-info/RECORD,,
