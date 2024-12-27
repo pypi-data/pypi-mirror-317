@@ -1,0 +1,2 @@
+[console_scripts]
+geist = geist.__main__:cli
