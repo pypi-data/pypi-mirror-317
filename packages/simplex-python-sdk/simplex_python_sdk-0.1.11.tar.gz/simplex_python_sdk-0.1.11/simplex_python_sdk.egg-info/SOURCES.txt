@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+simplex/__init__.py
+simplex/browserActor.py
+simplex/enums.py
+simplex/prompts.py
+simplex/simplex.py
+simplex/utils.py
+simplex_python_sdk.egg-info/PKG-INFO
+simplex_python_sdk.egg-info/SOURCES.txt
+simplex_python_sdk.egg-info/dependency_links.txt
+simplex_python_sdk.egg-info/entry_points.txt
+simplex_python_sdk.egg-info/requires.txt
+simplex_python_sdk.egg-info/top_level.txt
+tests/test_local.py
