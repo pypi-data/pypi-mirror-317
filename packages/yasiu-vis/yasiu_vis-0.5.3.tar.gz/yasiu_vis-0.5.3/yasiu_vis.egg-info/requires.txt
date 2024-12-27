@@ -1,0 +1,4 @@
+pandas
+matplotlib
+yasiu-math
+numpy
