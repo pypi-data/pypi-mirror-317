@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: tortoise3
+Version: 0.1.0
+Summary: tortoise-orm的国产化替代版本
+Home-page: https://gitee.com/zhangdapeng520/tortoise3
+License: Apache-2.0
+Author: 张大鹏
+Author-email: 1156956636@qq.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiomysql
+Requires-Dist: aiosqlite (>=0.16.0,<0.18.0)
+Requires-Dist: asyncmy (>=0.2.8,<0.3.0)
+Requires-Dist: asyncodbc (>=0.1.1,<0.2.0)
+Requires-Dist: asyncpg
+Requires-Dist: ciso8601 ; sys_platform != "win32" and implementation_name == "cpython"
+Requires-Dist: iso8601 (>=1.0.2,<2.0.0)
+Requires-Dist: orjson
+Requires-Dist: psycopg[binary,pool] (>=3.0.12,<4.0.0)
+Requires-Dist: pydantic (>=2.0,<3.0,!=2.7.0)
+Requires-Dist: pypika-tortoise (>=0.1.6,<0.2.0)
+Requires-Dist: pytz
+Requires-Dist: uvloop ; sys_platform != "win32" and implementation_name == "cpython"
+Project-URL: Repository, https://gitee.com/zhangdapeng520/tortoise3.git
+Description-Content-Type: text/plain
+
+# tortoise3
+
+#### 介绍
+tortoise-orm的国产化替代版本, 用于操作数据库
+
+#### 软件架构
+软件架构说明
+
+
+#### 安装教程
+
+1.  xxxx
+2.  xxxx
+3.  xxxx
+
+#### 使用说明
+
+1.  xxxx
+2.  xxxx
+3.  xxxx
+
+#### 参与贡献
+
+1.  Fork 本仓库
+2.  新建 Feat_xxx 分支
+3.  提交代码
+4.  新建 Pull Request
+
+
+#### 特技
+
+1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
+3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
+4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
+5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
+6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+
