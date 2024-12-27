@@ -1,0 +1,17 @@
+django_session_switcher/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_session_switcher/admin.py,sha256=dVOKsZkSTmHXpAW9TOsWFEVa6E9S9ToJJ-MnzqisA4c,243
+django_session_switcher/apps.py,sha256=xDaDDGEyg1szR7cgxTskAjd6aka5ORVxy9LwsRpFuWM,170
+django_session_switcher/middleware.py,sha256=ZT7DVYePRXTtyrKbhaTStWeOl-Yv7dEPuMcWb6ZOb1s,1500
+django_session_switcher/models.py,sha256=hZEA-M3Guzof9JLsjz03oiUGKyz76YjQwGlqTEB_KhU,392
+django_session_switcher/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+django_session_switcher/urls.py,sha256=AJsAnzGfFA9J37hPNx3rnTy7bxKwLAkrr-4besNW9NA,134
+django_session_switcher/views.py,sha256=dUkuxyP8hZvCp95LtwXEH65vIfn4cgw35SRSHBLWE4M,462
+django_session_switcher/migrations/0001_initial.py,sha256=89p_9QqQVOnzDdxEFviaVkKaa1zGnd8iTrjO6od4fVE,748
+django_session_switcher/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_session_switcher/static/sessionswitcher/main.css,sha256=8_vttASr43N8qfqQX33ddEoJaccT6hjtTb-xvk4Y7co,1418
+django_session_switcher/static/sessionswitcher/output.css,sha256=4JziJ8-7WPhw06icc41g5Y6PJJyDhNpAJP8fB1npFnM,22712
+django_session_switcher/templates/toolbar.html,sha256=NyxhTgLVyT-CVzw1U0SKfUME3SnJKG1_Z7paTAnFDOg,2475
+django_session_switcher-0.2.1.dist-info/METADATA,sha256=YI52zrvjFNu1loksBm3rczEmiVniRBJrPtYQkd9-E1g,2062
+django_session_switcher-0.2.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_session_switcher-0.2.1.dist-info/top_level.txt,sha256=BOQmhi6KjnAwcfoMUiebdvP_ebnUXc2b36tjN4hdRIM,24
+django_session_switcher-0.2.1.dist-info/RECORD,,

@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Toolbar</title>
+<link rel="stylesheet" href="{% static 'sessionswitcher/output.css' %}">
+
+<div class="dss">
+  <div class="fixed -right-72 w-64 p-4 bottom-16 transition-all duration-300 ease-linear toolbar bg-gray-100">
+    <!-- Toolbar content goes here -->
+
+    {%  if users %}
+    <form method="POST" action="{% url 'switch-user' %}" class="m-0">
+      {% csrf_token %}
+      <div>
+        <label for="username" class="block text-sm/6 font-medium text-gray-900">Select User</label>
+        <select id="username" name="username" onchange="updatePassword()" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-stone-600">
+          {% for user in users %}
+            <option value="{{ user.username }}" data-password="{{ user.password }}">{{ user.username }}</option>
+          {% endfor %}
+
+        </select>
+
+        <!-- Hidden password input field -->
+        <input type="hidden" name="password" id="password" />
+      </div>
+
+      <button type="submit" class="w-full rounded bg-stone-600 px-2 py-2 my-2 text-sm font-semibold text-white shadow-sm hover:bg-stone-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-600 border-0">Switch</button>
+    </form>
+    {% else %}
+    <div>
+      Go to django admin, and set switchable users.
+    </div>
+    {% endif %}
+  </div>
+
+  <button type="submit" class="fixed right-2 bottom-2 rounded bg-stone-600 px-2 py-2 my-2 text-sm font-semibold text-white shadow-sm hover:bg-stone-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-600 border-0" onclick="toggleToolbar()">DSS</button>
+</div>
+
+<script>
+ function toggleToolbar() {
+     const toolbar = document.querySelector('.toolbar');
+     toolbar.classList.toggle('toolbar-open');
+ }
+
+ function updatePassword() {
+     const selectBox = document.getElementById("username");
+     const selectedOption = selectBox.options[selectBox.selectedIndex];
+     const password = selectedOption.getAttribute("data-password");
+
+     // Set the hidden password field to the selected user's password
+     document.getElementById("password").value = password;
+ }
+
+ // Call updatePassword when the page loads to set the initial password
+ document.addEventListener("DOMContentLoaded", function() {
+     updatePassword();
+ });
+</script>
