@@ -1,0 +1,13 @@
+pynetcor/cluster.py,sha256=otbZ38VNRfU87ukfh-bZhOnj6n57g2a4ao4HMzN-B9E,4959
+pynetcor/cor.py,sha256=Y0E4hgCy4ffghL7mfTFQ7mW1fhVK1-mkFQeoZ_f207Y,17829
+pynetcor/_core.cp310-win_amd64.pyd,sha256=35PnvszYXaw74rllkyuZlSS1Wa0Od9gmRr7mOY_supI,241664
+pynetcor/__init__.py,sha256=zpYscAfI0pamW8TQ-HqqLFD8PdnawKSw1rROx70AOwg,409
+pynetcor-0.1.1.dist-info/DELVEWHEEL,sha256=bfDFfJTD-jQ4tl1fVtCFHvEaKxvEz3CAizfpwOEO0rA,426
+pynetcor-0.1.1.dist-info/METADATA,sha256=4QOwKsBVAu_ndiLe0QPoyOkTWlXdn2LvLoksgr1Z5Pk,5505
+pynetcor-0.1.1.dist-info/RECORD,,
+pynetcor-0.1.1.dist-info/top_level.txt,sha256=Wtb8XaxcZJ81eg48RXoxQ3WlD2Cx9NX1xuADdH3OwQ0,9
+pynetcor-0.1.1.dist-info/WHEEL,sha256=lO6CqtLHCAi38X3Es1a4R1lAjZFvN010IMRCFo2S7Mc,102
+pynetcor.libs/msvcp140-3a896538a89087f2c20e9f8bfde34d88.dll,sha256=kFfTmza2x9BUhl7iv5zeekkP47AexOglFGh-JPV2Jp8,575592
+pynetcor.libs/netcor-ca261bd88f3e40adae8f8ecb6c4ce235.dll,sha256=jYj0BLoiKtlYHy0sQtgKR1IDQ3qKYniawtBRu8LjmnQ,324096
+pynetcor.libs/openblas-8f94a7aff39368c3783c182a3c158f60.dll,sha256=21Sl8qMbq3NGi8aME593wjWxf1RDoN82hZ_iZX85RoQ,27924480
+pynetcor.libs/vcomp140-a902e8d63345fbcd62c1419f09820050.dll,sha256=A2ubP37Ojf1IrszXcRNyHFMFBDqqnGTR5ygSJScnqnw,192104
