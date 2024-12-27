@@ -1,0 +1,2 @@
+[console_scripts]
+viessmann = viessmann_gridbox_connector.cli:main

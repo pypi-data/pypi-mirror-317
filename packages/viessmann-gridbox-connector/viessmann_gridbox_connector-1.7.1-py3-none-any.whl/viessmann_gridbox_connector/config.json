@@ -1,0 +1,18 @@
+{
+  "urls": {
+    "login": "https://gridx.eu.auth0.com/oauth/token",
+    "gateways": "https://api.gridx.de/gateways",
+    "live": "https://api.gridx.de/systems/{}/live",
+    "historical": "https://api.gridx.de/systems/{}/historical?interval={}&resolution={}"
+  },
+  "login": {
+    "grant_type": "http://auth0.com/oauth/grant-type/password-realm",
+    "username": "username",
+    "password": "password!",
+    "audience": "my.gridx",
+    "client_id": "oZpr934Ikn8OZOHTJEcrgXkjio0I0Q7b",
+    "scope": "email openid",
+    "realm": "viessmann-authentication-db",
+    "client_secret": ""
+  }
+}
