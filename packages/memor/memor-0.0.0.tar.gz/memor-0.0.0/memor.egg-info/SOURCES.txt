@@ -1,0 +1,6 @@
+memor_setup.py
+memor/__init__.py
+memor.egg-info/PKG-INFO
+memor.egg-info/SOURCES.txt
+memor.egg-info/dependency_links.txt
+memor.egg-info/top_level.txt
