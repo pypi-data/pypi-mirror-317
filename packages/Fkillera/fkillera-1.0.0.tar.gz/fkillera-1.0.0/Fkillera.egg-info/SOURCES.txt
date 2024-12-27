@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+Fkillera/__init__.py
+Fkillera/operations.py
+Fkillera.egg-info/PKG-INFO
+Fkillera.egg-info/SOURCES.txt
+Fkillera.egg-info/dependency_links.txt
+Fkillera.egg-info/entry_points.txt
+Fkillera.egg-info/requires.txt
+Fkillera.egg-info/top_level.txt
+test/test_operations.py
