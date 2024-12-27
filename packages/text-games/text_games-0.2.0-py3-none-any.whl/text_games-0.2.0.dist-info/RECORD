@@ -1,0 +1,13 @@
+text_games/__init__.py,sha256=jh4jfMPvATpEuq3zM5w11qjrSlonM8nQlu45jAxLSr4,507
+text_games/hangman.py,sha256=0q1isDBQ7IEWFdr56mCBMGMVSLzWvDuxPMtvNeQrmjQ,1026
+text_games/number_guesser.py,sha256=-rlAf-VBFRIdhDh-fHQYDqOUjqaNjGCtiSjq-6ajrHg,596
+text_games/riddle_game.py,sha256=OMxpnJEQfiPsgdLOctWHNMme4CLy7wcvDeIFv_nmm6o,645
+text_games/rock_paper_scissor.py,sha256=dCeB8sEAg6KA238vaTZM1_W9CChK1jQAqorGncG3zXI,929
+text_games/snake_game.py,sha256=QVt_4Tcd6kLKwQ53yznGzW3AC1j9TOfbaCp-ZEpH9Ak,3317
+text_games/tic_tac_toe.py,sha256=ggCTLBw5_z2_r5bZ9xCHaNAXxUbN1SZVmbUVIgPxhQk,1447
+text_games/word_scrambler.py,sha256=YQ0nJQmMU1mq_8NweQ84ktHvOowyHhxMkY7wznhdeqs,486
+text_games-0.2.0.dist-info/LICENSE,sha256=bEbeGbIOGQAM-r1hyGm8udyfLg36M73_YC5Am9x1pc0,1091
+text_games-0.2.0.dist-info/METADATA,sha256=OSA49A6BeB9_PiT6m1qIOUYJ_-YjySEeHRYvMKeeR5I,2380
+text_games-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+text_games-0.2.0.dist-info/top_level.txt,sha256=GwGY-wqjcQZA7KXQqtaRY9wKv2aY4MpjkAsNfrHeYhg,11
+text_games-0.2.0.dist-info/RECORD,,
