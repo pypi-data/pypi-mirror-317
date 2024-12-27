@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Toolbar</title>
+<link rel="stylesheet" href="{% static 'sessionswitcher/output.css' %}">
+
+<div class="dss">
+  <div class="myext-fixed myext--right-72 myext-w-64 myext-p-4 myext-bottom-16 myext-transition-all myext-duration-300 myext-ease-linear myext-toolbar myext-bg-gray-100">
+    <!-- Toolbar content goes here -->
+
+    {%  if users %}
+    <form method="POST" action="{% url 'switch-user' %}" class="m-0">
+      {% csrf_token %}
+      <div>
+        <label for="username" class="myext-block myext-text-sm/6 myext-font-medium myext-text-gray-900">Select User</label>
+        <select id="username" name="username" onchange="updatePassword()" class="myext-mt-2 myext-block myext-w-full myext-rounded-md myext-border-0 myext-py-1.5 myext-pl-3 myext-pr-10 myext-text-gray-900 myext-ring-1 myext-ring-inset myext-ring-gray-300 myext-focus:ring-2 myext-focus:ring-stone-600">
+          {% for user in users %}
+            <option value="{{ user.username }}" data-password="{{ user.password }}">{{ user.username }}</option>
+          {% endfor %}
+
+        </select>
+
+        <!-- Hidden password input field -->
+        <input type="hidden" name="password" id="password" />
+      </div>
+
+      <button type="submit" class="myext-w-full myext-rounded myext-bg-stone-600 myext-px-2 myext-py-2 myext-my-2 myext-text-sm myext-font-semibold myext-text-white myext-shadow-sm myext-hover:bg-stone-500 myext-focus-visible:outline myext-focus-visible:outline-2 myext-focus-visible:outline-offset-2 myext-focus-visible:outline-stone-600 myext-border-0">Switch</button>
+    </form>
+    {% else %}
+    <div>
+      Go to django admin, and set switchable users.
+    </div>
+    {% endif %}
+  </div>
+
+  <button type="submit" class="myext-fixed myext-right-2 myext-bottom-2 myext-rounded myext-bg-stone-600 myext-px-2 myext-py-2 myext-my-2 myext-text-sm myext-font-semibold myext-text-white myext-shadow-sm myext-hover:bg-stone-500 myext-focus-visible:outline myext-focus-visible:outline-2 myext-focus-visible:outline-offset-2 myext-focus-visible:outline-stone-600 myext-border-0" onclick="toggleToolbar()">DSS</button>
+</div>
+
+<script>
+ function toggleToolbar() {
+     const toolbar = document.querySelector('.myext-toolbar');
+     toolbar.classList.toggle('myext-toolbar-open');
+ }
+
+ function updatePassword() {
+     const selectBox = document.getElementById("username");
+     const selectedOption = selectBox.options[selectBox.selectedIndex];
+     const password = selectedOption.getAttribute("data-password");
+
+     // Set the hidden password field to the selected user's password
+     document.getElementById("password").value = password;
+ }
+
+ // Call updatePassword when the page loads to set the initial password
+ document.addEventListener("DOMContentLoaded", function() {
+     updatePassword();
+ });
+</script>
