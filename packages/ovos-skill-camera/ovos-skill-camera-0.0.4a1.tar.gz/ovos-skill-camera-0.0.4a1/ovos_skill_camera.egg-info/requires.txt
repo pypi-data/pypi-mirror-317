@@ -1,0 +1,6 @@
+imutils
+ovos_workshop>=0.0.12
+opencv-python
+
+[:sys_platform == "linux" and platform_machine == "armv7l" or platform_machine == "aarch64"]
+picamera2
