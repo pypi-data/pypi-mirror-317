@@ -1,0 +1,13 @@
+bs_roformer/__init__.py,sha256=X-70mE0BqEp-nQXVVDsSWyo7AnnK9BN1K3mLZtpvB3U,105
+bs_roformer/__main__.py,sha256=DmNgyjiq3T3t1A5aA1BpZlpZqjwPG2xW-q0CQfac4e4,96
+bs_roformer/attend.py,sha256=qoi44J77T-rS5bCNEmEgi91b0WBbIN_L8FIxtAHW8-A,3315
+bs_roformer/bs_roformer.py,sha256=UkNZe-uIGj164oHY06elsuWQ3aToNcbY6HAndlWV6T8,17415
+bs_roformer/config_bs_roformer_384_8_2_485100.yaml,sha256=YHdM4ixfw0aNmnBYqtbi7pFqTugTg5CfgWqk35DV278,4305
+bs_roformer/inference.py,sha256=Tk5MQx9jkjJ0jFbpDiQCZVSxgBnSc5fUfMihTvjDDz0,11415
+bs_roformer/mel_band_roformer.py,sha256=pGzoele4hphPVnY2rpxww4UuhejfXNGTDsggUVfi7MM,18645
+bs_roformer/utils.py,sha256=ZYP5nvKhsiK6JTIP9KQhT7lv8D5jS-JnM3L8TEgFH7U,27085
+Lossless_BS_RoFormer-1.0.0.dist-info/LICENSE,sha256=JCo3d2HvOFPGYvaXfnYX4-qjRyQvVElop5ZRITXMg-U,1066
+Lossless_BS_RoFormer-1.0.0.dist-info/METADATA,sha256=7DqJbBuHv_SKdu0wEQUXwNc864U3cdOAqRzmUKsDi8A,1008
+Lossless_BS_RoFormer-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+Lossless_BS_RoFormer-1.0.0.dist-info/top_level.txt,sha256=r2_5vCUJmRYjev6XPVKQFw3cA1mfR1NSIrVEIa9vmWo,12
+Lossless_BS_RoFormer-1.0.0.dist-info/RECORD,,

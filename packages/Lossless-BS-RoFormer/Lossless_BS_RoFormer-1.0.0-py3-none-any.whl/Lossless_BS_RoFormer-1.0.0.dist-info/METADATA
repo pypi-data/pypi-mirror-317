@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: Lossless-BS-RoFormer
+Version: 1.0.0
+Summary: Lossless BS-RoFormer - Band-Split Rotary Transformer for SOTA Music Source Separation
+Home-page: https://github.com/axeldelafosse/BS-RoFormer
+Author: Axel Delafosse
+Author-email: axeldelafosse@gmail.com
+License: MIT
+Keywords: artificial intelligence,deep learning,transformers,attention mechanism,music source separation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beartype
+Requires-Dist: einops>=0.6.1
+Requires-Dist: librosa
+Requires-Dist: rotary-embedding-torch>=0.3.6
+Requires-Dist: torch>=2.0
+Requires-Dist: packaging
+Requires-Dist: tqdm
+Requires-Dist: soundfile
+Requires-Dist: pyyaml
+Requires-Dist: ml_collections
+Requires-Dist: requests
