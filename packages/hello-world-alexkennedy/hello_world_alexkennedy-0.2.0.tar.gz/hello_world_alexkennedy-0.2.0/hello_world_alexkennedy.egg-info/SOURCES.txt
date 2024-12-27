@@ -1,0 +1,7 @@
+hello.py
+pyproject.toml
+hello_world_alexkennedy.egg-info/PKG-INFO
+hello_world_alexkennedy.egg-info/SOURCES.txt
+hello_world_alexkennedy.egg-info/dependency_links.txt
+hello_world_alexkennedy.egg-info/entry_points.txt
+hello_world_alexkennedy.egg-info/top_level.txt

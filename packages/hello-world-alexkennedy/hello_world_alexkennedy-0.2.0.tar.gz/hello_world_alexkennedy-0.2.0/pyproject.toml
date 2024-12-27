@@ -1,0 +1,10 @@
+[project]
+name = "hello-world-alexkennedy"
+version = "0.2.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+my-client = "hello:main"
