@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: adaletTextCleaner
+Version: 0.1.0
+Summary: Veri temizleme işlemleri içeren kütüphane
+Author: Murat Tekdemir
+Requires-Python: >=3.6
