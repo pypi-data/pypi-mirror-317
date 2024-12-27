@@ -1,0 +1,1 @@
+{"argv": ["python3", "-m", "goal_jupyter_kernel", "-f", "{connection_file}"], "display_name": "Goal", "language": "text"}

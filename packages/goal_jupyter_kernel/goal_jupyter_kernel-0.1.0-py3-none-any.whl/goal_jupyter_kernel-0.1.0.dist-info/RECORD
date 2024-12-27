@@ -1,0 +1,8 @@
+goal_jupyter_kernel/__init__.py,sha256=NSwfe2IiAm308wc06Ko-ALJzpgue7-qhbUBMdhBO67k,130
+goal_jupyter_kernel/__main__.py,sha256=27w_9Oi-GBGazrbASMJfSgiocw7m9eL6bJw1vlnJEn4,124
+goal_jupyter_kernel/kernel.py,sha256=eKPzj0AIgiSIpl6k0q--675KGwMA8SCoJa-bTCOtBiI,2362
+goal_jupyter_kernel-0.1.0.data/data/share/jupyter/kernels/goal/kernel.json,sha256=RMNtcYmNrJoZwNvQ8eaoxpeNQ8Smrkvp-x_SBtAWnuw,121
+goal_jupyter_kernel-0.1.0.dist-info/METADATA,sha256=RyBAf6WkFRNgml3rNccLth3iRWtaub7p0cug7QHPqmU,4191
+goal_jupyter_kernel-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+goal_jupyter_kernel-0.1.0.dist-info/licenses/LICENSE,sha256=o3Xsl5ScwQ4VOoyuAISgJbfSNLdZUp-zUDpvLvI__YM,1063
+goal_jupyter_kernel-0.1.0.dist-info/RECORD,,
