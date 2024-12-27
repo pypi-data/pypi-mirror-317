@@ -1,0 +1,25 @@
+[project]
+name = "ttask_manager"
+version = "1.0.7"
+authors = [
+  { name="Taha Yasser Adnan", email="tahadnan.101@gmail.com" },
+]
+description = "A simple task management package."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "rich"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/tahadnan/ttask-manager"
+"Bug Tracker" = "https://github.com/tahadnan/ttask-manager/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"   
