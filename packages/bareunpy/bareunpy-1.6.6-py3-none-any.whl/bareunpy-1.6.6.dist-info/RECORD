@@ -1,0 +1,12 @@
+bareunpy/__init__.py,sha256=jSLElW44YCTd-mRzQ6y0IYsyF_SdWdD4FnXTMDhosLM,1474
+bareunpy/_corrector.py,sha256=4ZK2_cXLqxwPS5BVe87DTf4rTqKJExpkQUhvC96d1vM,8697
+bareunpy/_custom_dict.py,sha256=IBprUg67juSapTNtcWVRvRX865bJJCKjyaciIcy2mP8,7475
+bareunpy/_custom_dict_client.py,sha256=hTRBAmDL_n_cN0bjRNGeyRcxLzp2BBbS5e3I_zgV_IM,6006
+bareunpy/_lang_service_client.py,sha256=rAzjKDM7t2VC4jr0fF_IqTM8p7NvTv8Rucc0YbPhyPk,6420
+bareunpy/_revision_service_client.py,sha256=WaLvayNFy684euJkyjni-MU-ilS0KGqLHKnzBRYKB6w,2442
+bareunpy/_tagger.py,sha256=Ne8sDf8ojqdFu_zRThkjFvSQFmKhVab4yb8t5vVtrik,11384
+bareunpy/_tokenizer.py,sha256=XwytpFJ3caxWOYPOnflglW_UHCQCn7R6L7Y3JPw5vN4,10630
+bareunpy-1.6.6.dist-info/LICENSE,sha256=_Rm2ROBvSZZYrcanWE_pj_9Ww9lwC74mh01dLAJzCS0,1547
+bareunpy-1.6.6.dist-info/METADATA,sha256=c1I0giABzgXxegCK4SBs5yEpQKWxNBQ1Xg2Kx3XM0BE,7867
+bareunpy-1.6.6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+bareunpy-1.6.6.dist-info/RECORD,,
