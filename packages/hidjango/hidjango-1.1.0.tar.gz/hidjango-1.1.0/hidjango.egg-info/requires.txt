@@ -1,0 +1,4 @@
+django>=3.2
+pytest>=7.0.0
+python-dotenv
+textwrap3>=0.9.2

@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+hidjango/__init__.py
+hidjango/main.py
+hidjango.egg-info/PKG-INFO
+hidjango.egg-info/SOURCES.txt
+hidjango.egg-info/dependency_links.txt
+hidjango.egg-info/entry_points.txt
+hidjango.egg-info/not-zip-safe
+hidjango.egg-info/requires.txt
+hidjango.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py

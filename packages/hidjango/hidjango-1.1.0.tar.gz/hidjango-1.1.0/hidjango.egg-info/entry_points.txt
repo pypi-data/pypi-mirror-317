@@ -1,0 +1,3 @@
+[console_scripts]
+hidjango = hidjango.main:main
+
