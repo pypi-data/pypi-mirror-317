@@ -1,0 +1,17 @@
+clustermatic/__init__.py,sha256=mpaqmH2awpAWuxUNL1VEJjc47sKWtLK1R9_uBIWTnww,72
+clustermatic/auto_clusterizer.py,sha256=RjpzyzNoAHiZujPEIB9WlX3GZlcgpM3Fj-pMwWqyvig,3248
+clustermatic/bayes_search.py,sha256=0gPpOprF4kUrp5Qftf86OOuWuQD9TSzIXTQZ2feE4bQ,1850
+clustermatic/evaluation.py,sha256=9LSlo3WoLajXXdqay5zZCIPBViphf_mJA5HdOT-JRjE,6132
+clustermatic/model_saver.py,sha256=Em-LZyiKr94cpMjdJVcxDWje_h-RcPfRUoSP6MLCeuQ,308
+clustermatic/optimization.py,sha256=K0Np4hdONOYh0H_cNRMoqCyHlDoaqCpYbwHzjKfMOhQ,3566
+clustermatic/preprocessing.py,sha256=cnXji9wST7wu5OuV69E9RMYu7vVuViibFjpnkj4YPW0,3785
+clustermatic/random_search.py,sha256=CQCQJTFqLISDdtjn9cTjZZvTqj4xZuR-onoC9cC4PSs,2713
+clustermatic/scoring.py,sha256=i5klIznWv4DXuTLY8AiZjatDGI9hzCUsXYKFCVarHEQ,930
+clustermatic/utils.py,sha256=w8wDX_hERuM2YHVEDkR26whlmU401fHCHHURlePekzE,3433
+clustermatic/auxiliary/clustermatic.png,sha256=D7osxdmhqdScnAZ3D081KeM-DjTlcix0v8tTZWjRJ-A,24758
+clustermatic/auxiliary/header.png,sha256=BXDo3UBh2LPFhD0i7EAiacEgOocZiW3OtvVRXMnr8k0,16516
+clustermatic/auxiliary/report_template.html,sha256=rHBW43ieKD4xPFOboJoq-wx1ke5X4InmWjbjeADVZYg,2650
+clustermatic-0.0.1.dist-info/METADATA,sha256=MadHWv4o8lmkmuJCZwhAB8U2SW3LY6BoDxELlzTW3mE,1792
+clustermatic-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+clustermatic-0.0.1.dist-info/top_level.txt,sha256=SQtPMzrxHiGJigc0pPvh9MhIWKeOepBSVngphq0I3Ik,13
+clustermatic-0.0.1.dist-info/RECORD,,
