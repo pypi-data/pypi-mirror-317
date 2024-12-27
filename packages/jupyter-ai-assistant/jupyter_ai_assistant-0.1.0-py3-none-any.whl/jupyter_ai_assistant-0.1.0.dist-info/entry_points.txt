@@ -1,0 +1,4 @@
+[console_scripts]
+jaa = jupyter_ai_assistant.app:main
+jupyter-ai-assistant = jupyter_ai_assistant.app:main
+jupyter-ai-assistant-console = jupyter_ai_assistant.consoleapp:main
