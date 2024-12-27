@@ -1,0 +1,59 @@
+
+*.hex
+*.map
+*.lst
+*.scvd
+*.uvoptx
+*.uvguix.*
+*.emProject
+*.emSession
+.vscode
+.vs
+*.o
+*.d
+*.exe
+
+# Forder
+Objects
+build
+DebugConfig
+Listings
+Output
+Debug
+Exe
+Obj
+cmake-build-debug
+CubeMx
+
+# File
+JLinkLog.txt
+setting.ini
+.sconsign.dblite
+kconfig-mconf
+
+test.py
+xfconfig
+xfconfig.old
+
+
+# vscode
+.vscode
+*.code-workspace
+
+# 存放垃圾代码
+temp
+
+# python 缓存
+__pycache__
+xf.egg-info
+xf_build.egg-info
+dist
+
+# 测试代码
+test
+
+# 虚拟环境
+venv
+
+
+xf_build-0.3.5-py3-none-any
