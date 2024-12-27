@@ -1,0 +1,17 @@
+backgroundremover/__init__.py,sha256=I4TLgEfAuqsLCtpgq8eFP-X10L6M7hVWXlpPra5HmN8,175
+backgroundremover/bg.py,sha256=coTWtpTGDJ6i2veqmJe-Brl68I0_pWRgGTFQ1fEXCio,7160
+backgroundremover/github.py,sha256=nrZ8e5pXP0yILcvpnmM6zejTbbumwvrO7o8NfLj6I5I,1750
+backgroundremover/utilities.py,sha256=A38NqeDdPnK5YOmkzSDrIxYFx54IB5VRLyTBTCMwl64,10868
+backgroundremover/cmd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backgroundremover/cmd/cli.py,sha256=2brRHDJs8-Hv75z-6UYoLRnv8-TeGE_MNd8zkR1digk,8314
+backgroundremover/cmd/server.py,sha256=TXDwy13WJeFFUyIQ-V__5sUu8oqFzVh_4m-3BkD72Ro,2717
+backgroundremover/u2net/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backgroundremover/u2net/data_loader.py,sha256=rNk4QhjEO6RouH0b9hlexth7PCYLyl9bNuqKUV-NIm4,11553
+backgroundremover/u2net/detect.py,sha256=U-bd4S9ErktBbl_PZHtTEa_avlST10WI_44MOBi8yg8,4422
+backgroundremover/u2net/u2net.py,sha256=BV55ZQxAhoVQa1xLPwl5RUgqWmssNqq5JXjGznfwG3k,15477
+backgroundremover-0.2.9.dist-info/LICENSE.txt,sha256=MQ7yHr1oxAlTKbM-Jp_cSDG3okaL64q26ev4tBvCHLE,1171
+backgroundremover-0.2.9.dist-info/METADATA,sha256=JgVDX0wwOIAXGqJNAoqoZZK-Nkk8kU_aMWfZiYMP3F4,8229
+backgroundremover-0.2.9.dist-info/WHEEL,sha256=pxeNX5JdtCe58PUSYP9upmc7jdRPgvT0Gm9kb1SHlVw,109
+backgroundremover-0.2.9.dist-info/entry_points.txt,sha256=O-Zx__VJQvJIHyv-q6ew2_DWz68ZaQ1Xgk0A1npVoeI,69
+backgroundremover-0.2.9.dist-info/top_level.txt,sha256=h7zT_DwsKKsRgl25vzZVnPWKxIclixkNIVnLQFyaRAY,18
+backgroundremover-0.2.9.dist-info/RECORD,,
