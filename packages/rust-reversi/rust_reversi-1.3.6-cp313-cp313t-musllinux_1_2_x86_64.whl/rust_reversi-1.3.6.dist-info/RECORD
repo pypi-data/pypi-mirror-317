@@ -1,0 +1,9 @@
+rust_reversi-1.3.6.dist-info/METADATA,sha256=nWxHM5lI7f3hUzXkftpVLIgeKLOw5ZGUHbXyRFcr1MU,14207
+rust_reversi-1.3.6.dist-info/WHEEL,sha256=gas4LQium_OjVxIbNWFDlt01FhBH-KoxJVyUQ2IpSC8,108
+rust_reversi-1.3.6.dist-info/licenses/LICENSE.txt,sha256=BeK8i1w8jGduRnxPVja5Ps93jX038VqCezSBSWOeMus,1058
+rust_reversi.libs/libgcc_s-1e52349c.so.1,sha256=Ani0u_W_tB8ESsFePO4D2mn2lrgWLhyFdw6RETxBTYM,437537
+rust_reversi/__init__.py,sha256=0oFpnotSldsAVKICDCJls69l_1GMp1rnX8b5Pl6tyTc,131
+rust_reversi/__init__.pyi,sha256=E_6Q40sMiy-GmFLwZoWga2L06uqecoXAUVpWNgp4jR4,3271
+rust_reversi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rust_reversi/rust_reversi.cpython-313t-x86_64-linux-musl.so,sha256=m3-Z43CedaGmXqoJHNZt_tmmVP-bP7jRwaRaQMXTlfk,1351337
+rust_reversi-1.3.6.dist-info/RECORD,,
