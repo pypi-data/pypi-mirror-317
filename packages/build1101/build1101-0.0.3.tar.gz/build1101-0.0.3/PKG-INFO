@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: build1101
+Version: 0.0.3
+Summary: Build python package from a in-layout package folder.
+Author-email: Tom <huqh1101@gmail.com>
+Maintainer-email: Tom <huqh1101@gmail.com>
+License: MIT License
+Keywords: click,build
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: build
+Provides-Extra: test
+Requires-Dist: unittest; extra == "test"
+
+```shell
+$ build <path> # Generate a random string of lenth 10.
+```
