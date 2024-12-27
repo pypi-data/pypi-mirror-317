@@ -1,0 +1,5 @@
+[console_scripts]
+sysinfo = hplx:main
+
+[hmxlabs.hplx]
+sysinfo = hmxlabs.hplx.hplx:main
