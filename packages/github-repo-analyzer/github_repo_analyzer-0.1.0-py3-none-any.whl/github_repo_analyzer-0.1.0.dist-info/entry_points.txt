@@ -1,0 +1,2 @@
+[console_scripts]
+repo-analyzer = github_repo_analyzer.cli:main
