@@ -1,0 +1,2 @@
+[console_scripts]
+dummypdf = dummypdf.__main__:main
