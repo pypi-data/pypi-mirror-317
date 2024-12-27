@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "asycnapixui"
+version = "0.0.3"
+authors = [
+  { name="qrustik", email="rusteamplay@gmail.com" },
+]
+description = "Asynchronous api module for 3x-ui"
+dependencies = [
+    "aiohttp",
+    "pydantic"
+]
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/qrustik/asyncapixui"
+Issues = "https://github.com/qrustik/asyncapixui/issues"
