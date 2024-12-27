@@ -1,0 +1,8 @@
+prettytable
+requests
+setuptools
+chardet
+bidict~=0.23.1
+pyyaml==6.0.1
+jsonschema
+colorama==0.4.6
