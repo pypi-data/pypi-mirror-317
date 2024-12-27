@@ -1,0 +1,10 @@
+pbr>=5.7.0
+
+[docs]
+docutils
+
+[streams]
+testtools
+
+[test]
+testtools
