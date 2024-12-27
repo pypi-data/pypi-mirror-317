@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: datamule
+Version: 0.411
+Summary: Making it easier to use SEC filings.
+Home-page: https://github.com/john-friedman/datamule-python
+Author: John Friedman
+License: MIT License
+        
+        Copyright (c) 2024 John Friedman
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Description-Content-Type: text/x-rst
+Requires-Dist: aiohttp
+Requires-Dist: aiolimiter
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: nest-asyncio
+Requires-Dist: aiofiles
+Requires-Dist: polars
+Requires-Dist: setuptools
+Requires-Dist: selectolax
+Requires-Dist: pytz
+Requires-Dist: zstandard
+Provides-Extra: all
+Requires-Dist: pandas; extra == "all"
+Requires-Dist: google-generativeai; extra == "all"
+Requires-Dist: openai; extra == "all"
+Requires-Dist: flask; extra == "all"
+Requires-Dist: psutil; extra == "all"
+Provides-Extra: dataset_builder
+Requires-Dist: pandas; extra == "dataset-builder"
+Requires-Dist: google-generativeai; extra == "dataset-builder"
+Requires-Dist: psutil; extra == "dataset-builder"
+Provides-Extra: mulebot
+Requires-Dist: openai; extra == "mulebot"
+Provides-Extra: mulebot_server
+Requires-Dist: flask; extra == "mulebot-server"
+
+Datamule
+========
+
+Major Update
+------------
+**Datamule has undergone a significant rework and is no longer backwards compatible. If this has affected your workflow please post on the github issues megathread. Sorry for the inconvenience.**
+
+.. image:: https://static.pepy.tech/badge/datamule
+   :target: https://pepy.tech/project/datamule
+   :alt: Downloads
+
+.. image:: https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjohn-friedman%2Fdatamule-python&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false
+   :target: https://hits.seeyoufarm.com
+   :alt: Hits
+
+.. image:: https://img.shields.io/github/stars/john-friedman/datamule-python
+   :alt: GitHub Stars
+
+A Python package for working with SEC filings at scale. 
+`Full Documentation <https://john-friedman.github.io/datamule-python/>`_ | 
+`Website <https://datamule.xyz/>`_
+
+Features
+--------
+
+* `Download SEC filings quickly and efficiently <https://john-friedman.github.io/datamule-python/usage/downloader.html>`_
+* `Monitor EDGAR for new filings in real-time <https://john-friedman.github.io/datamule-python/usage/monitor.html>`_
+* `Parse filings at scale <https://john-friedman.github.io/datamule-python/usage/parsing.html>`_
+* `Access comprehensive datasets (10-Ks, SIC codes, etc.) <https://john-friedman.github.io/datamule-python/usage/datasets.html>`_
+* `Build datasets directly from unstructured text <https://john-friedman.github.io/datamule-python/usage/dataset_builder.html>`_
+* `Interact with SEC data using MuleBot <https://john-friedman.github.io/datamule-python/usage/mulebot.html>`_
+
+Quick Start
+-----------
+
+Basic Installation
+~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    pip install datamule
+
+Installation with all extras
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    pip install datamule[all]
+
+Download submissions example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    from datamule import Downloader
+
+    downloader = Downloader()
+    downloader.download_submissions(form='10-K', ticker='AAPL')
+
+Articles
+--------
+* `How to host the SEC Archive for $20/month <https://medium.com/@jgfriedman99/how-to-host-the-sec-archive-for-20-month-da374cc3c3fb>`_
+* `Creating Structured Datasets from SEC filings <https://medium.com/@jgfriedman99/how-to-create-alternative-datasets-using-datamule-d3a0192da8f6>`_
+* `Deploy a Financial Chatbot in 5 Minutes <https://medium.com/@jgfriedman99/how-to-deploy-a-financial-chatbot-in-5-minutes-ef5eec973d4c>`_
+
+Contributing
+------------
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+License
+-------
+
+`MIT License <LICENSE>`_
+
+----
+
+For detailed usage examples, API reference, and advanced features, please visit our `documentation <https://john-friedman.github.io/datamule-python/>`_.
