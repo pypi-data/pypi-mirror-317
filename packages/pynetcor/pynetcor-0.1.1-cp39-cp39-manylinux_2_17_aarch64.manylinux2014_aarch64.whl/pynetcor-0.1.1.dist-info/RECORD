@@ -1,0 +1,13 @@
+pynetcor/_core.cpython-39-aarch64-linux-gnu.so,sha256=kjYHgd2ZzfCs-zz6YAW4feTewrnUu_pE_j4SzME-jvw,471929
+pynetcor/cluster.py,sha256=kMLLzbagc0KPNFaYph_IR0mfNp3K72L6UpX5voTx1yM,4814
+pynetcor/__init__.py,sha256=ynCh_Bv2lHzYucfTKescD6D8_lOFER_WYHJzfkxT1Kw,78
+pynetcor/libnetcor.so,sha256=KaYFSiCA_Q98t0qoTsc7qIyYdvddOFeouQcGpRa7e7M,762033
+pynetcor/cor.py,sha256=DOvQMmSVl5NP-t4cVl73boff5dkVTrRaYpIjMoFPXUw,17306
+pynetcor-0.1.1.dist-info/METADATA,sha256=6K9uqlS2dnO2GBQJQwZj92DnIcBGJrlpzAJFF8bm7Vs,5342
+pynetcor-0.1.1.dist-info/RECORD,,
+pynetcor-0.1.1.dist-info/top_level.txt,sha256=Wtb8XaxcZJ81eg48RXoxQ3WlD2Cx9NX1xuADdH3OwQ0,9
+pynetcor-0.1.1.dist-info/WHEEL,sha256=iPTY0kiUgsIQ8RgTKKmTNHcTilFGetvFWd3_QTb8vUA,150
+pynetcor.libs/libgfortran-daac5196.so.5.0.0,sha256=c7Btx9EsXU43_oumeqmrRAu3lOea3_WK6JSz1FfnG9c,1484449
+pynetcor.libs/libopenblasp-r0-1c847283.3.28.so,sha256=hf6W8RYXBoSGy49NPOHuBTGMcLhTt6SXI8yXCL7rMaU,25275305
+pynetcor.libs/libgomp-d22c30c5.so.1.0.0,sha256=BTGH6is2VDtn03gF_z6BiPXVdnSzH2mP6Hz-IiGkPtk,274665
+pynetcor.libs/libnetcor-c9a08e39.so,sha256=FTpnyKLmQgesxUoT0TvwxTREKURQt7wfYkR3IubxxGQ,826969
