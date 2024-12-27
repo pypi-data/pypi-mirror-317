@@ -1,0 +1,2 @@
+[console_scripts]
+gecommon-m2-to-raw = gecommon.cli.m2_to_raw:main
