@@ -1,0 +1,13 @@
+metatool/__init__.py,sha256=P77AgLHgppO3thHMh6E1X2AJxiAwYikUQrpnoaj8X_U,73
+metatool/config.py,sha256=CVBpbBvq2PyV49G3ltYQJESMJQZAcT-M0r-OODg_AdM,450
+metatool/core.py,sha256=JtwuhaPtMZN1nDuBUZRCpFbdIZLvAEHbIHr1zR6JDQA,11161
+metatool/schemas.py,sha256=UAU5f0_S9rSIIPytkf6ZTPgyzZpwFtqbTkJXDPlbf6k,1517
+metatool/storage/__init__.py,sha256=OmJtDl985cXOhpoi8eHzqjA6CPzRbWciddEJ2KaaNkI,1672
+metatool/storage/api_storage.py,sha256=bfJBai3IfQ6QTHeQRL69-Tr9fSFOXc0JNZekcc_r8ss,1737
+metatool/storage/base.py,sha256=GDEcHXadjDlx7lTf6quNugnxCGcNkAfRgcZsbJuUvzY,939
+metatool/storage/sqlite_storage.py,sha256=U-VyToDId9bnq5-Bbx7IngK7awoDOV7z-0nXZ4hBMSs,4086
+metatool-0.0.1.dist-info/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+metatool-0.0.1.dist-info/METADATA,sha256=ikV4Ds4W0Oktqy5LDChXKI1l8hHKFcV1e0YTGoXiJis,1839
+metatool-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+metatool-0.0.1.dist-info/top_level.txt,sha256=aTNww8c0246SNPR1yX-PWjEeD611iQyBY6MQHc2hRcY,9
+metatool-0.0.1.dist-info/RECORD,,
