@@ -1,0 +1,11 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contextor"
+version = "0.0.1"
+description = "Create context files for AI conversations"
+authors = [{name = "Salih Ergüt", email = "salih.ergut@gmail.com"}]
+readme = "README.md"
