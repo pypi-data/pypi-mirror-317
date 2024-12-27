@@ -1,0 +1,1 @@
+from ppco.core.spiders import Spider

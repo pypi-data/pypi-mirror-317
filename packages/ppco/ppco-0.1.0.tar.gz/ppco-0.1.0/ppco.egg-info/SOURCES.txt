@@ -1,0 +1,8 @@
+setup.py
+ppco/__init__.py
+ppco.egg-info/PKG-INFO
+ppco.egg-info/SOURCES.txt
+ppco.egg-info/dependency_links.txt
+ppco.egg-info/top_level.txt
+ppco/core/__init__.py
+ppco/core/spiders.py
