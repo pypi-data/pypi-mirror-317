@@ -1,0 +1,2 @@
+[console_scripts]
+wikilite = wikilite.__main__:main
