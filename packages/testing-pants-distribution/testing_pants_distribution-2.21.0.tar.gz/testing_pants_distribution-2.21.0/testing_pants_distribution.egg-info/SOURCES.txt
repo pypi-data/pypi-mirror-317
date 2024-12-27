@@ -1,0 +1,8 @@
+MANIFEST.in
+backend_shim.py
+setup.py
+testing_pants_distribution.egg-info/PKG-INFO
+testing_pants_distribution.egg-info/SOURCES.txt
+testing_pants_distribution.egg-info/dependency_links.txt
+testing_pants_distribution.egg-info/namespace_packages.txt
+testing_pants_distribution.egg-info/top_level.txt
