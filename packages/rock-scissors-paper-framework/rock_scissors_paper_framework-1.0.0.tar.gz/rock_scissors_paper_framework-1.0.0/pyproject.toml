@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "rock_scissors_paper_framework"
+version = "1.0.0"
+description = "A modular framework for Rock-Paper-Scissors game."
+authors = ["JamzTyson <151654652+JamzTyson@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/JamzTyson/Rock_Scissors_Paper"
+repository = "https://github.com/JamzTyson/Rock_Scissors_Paper"
+keywords = ["rock", "scissors", "paper", "python", "game"]
+packages = [
+    { include = "rock_scissors_paper_framework" },
+]
+exclude = ["rock_scissors_paper_framework/tests"]
+
+[tool.poetry.scripts]
+rsp = "rock_scissors_paper_framework.rsp:main"
+
+
+[tool.poetry.dependencies]
+python = "^3.10.11"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.3.1"
+flake8 = "^7.1.1"
+flake8-docstrings = "^1.7.0"
+pytest = "^8.3.3"
+mypy = "^1.13.0"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint]
+max-line-length = 88
+disable = "W1203"
