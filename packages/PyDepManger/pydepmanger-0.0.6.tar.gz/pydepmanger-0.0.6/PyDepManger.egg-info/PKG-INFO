@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: PyDepManger
+Version: 0.0.6
+Summary: A small example package
+Home-page: https://github.com/abuawadd/PyDepManger
+Author: Example Author1, Another Author2
+Author-email: author2@example.com, another2@example.com
+Maintainer: John, Jane
+Maintainer-email: john@example.com, jane@example.com
+Project-URL: Documentation, https://github.com/abuawadd/PyDepManger/wiki
+Project-URL: Source, https://github.com/abuawadd/PyDepManger
+Project-URL: Changelog, https://github.com/abuawadd/PyDepManger/blob/main/CHANGELOG.md
+Keywords: f5432
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: C
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy==2.2.0
+Requires-Dist: pandas==2.2.3
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2024.2
+Requires-Dist: scipy==1.14.1
+Requires-Dist: six==1.17.0
+Requires-Dist: tzdata==2024.2
+
+# PyDepManager
+
+![Static Badge](https://img.shields.io/badge/bioinformatics-PyHLicorn-green?link=https://academic.oup.com/bioinformatics)
+![GitHub Repo stars](https://img.shields.io/github/stars/AbuAwadM/PyDepManager?style=social)
+![Documentation Status](https://readthedocs.org/projects/pydepmanager/badge/?version=latest)
+![GitHub Repo stars](https://img.shields.io/github/stars/awad/PyDepManager?style=social)
+![Documentation Status](https://readthedocs.org/projects/pydepmanager/badge/?version=latest)
+
+
+PyDepManager is a powerful and easy-to-use dependency management tool for Python projects. It helps you manage your project's dependencies efficiently, ensuring compatibility and stability across different environments.
+
+## Features
+
+- **Automatic Dependency Resolution**: Automatically resolves and installs the required dependencies for your project.
+- **Environment Management**: Create and manage virtual environments effortlessly.
+- **Compatibility Checks**: Ensures that all dependencies are compatible with each other.
+- **Easy Configuration**: Simple configuration files to specify your project's dependencies.
+
+## Installation
+
+You can install PyDepManager using pip:
+
+```bash
+pip install pydepmanager
+```
+
+## Usage
+
+To get started with PyDepManager, follow these steps:
+
+1. Initialize a new project:
+
+    ```bash
+    pydepmanager init
+    ```
+
+2. Add dependencies to your project:
+
+    ```bash
+    pydepmanager add <package_name>
+    ```
+
+3. Install all dependencies:
+
+    ```bash
+    pydepmanager install
+    ```
+
+## Contributing
+
+We welcome contributions to PyDepManager! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request on our [GitHub repository](https://github.com/awad/PyDepManager).
+
+## License
+
+PyDepManager is licensed under the MIT License. See the [LICENSE](https://github.com/awad/PyDepManager/blob/main/LICENSE) file for more details.
+
+
+
+
+
+

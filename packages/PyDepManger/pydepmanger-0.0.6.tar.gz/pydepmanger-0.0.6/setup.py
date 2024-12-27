@@ -1,0 +1,43 @@
+import setuptools
+
+setuptools.setup(
+    name="PyDepManger",
+    author="Example Author1, Another Author2",
+    author_email="author2@example.com, another2@example.com",
+    description="A small example package",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    keywords="f5432",
+    maintainer="John, Jane",
+    maintainer_email="john@example.com, jane@example.com",
+    url="https://github.com/abuawadd/PyDepManger",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+        "Intended Audience :: Education",
+        "Intended Audience :: Healthcare Industry",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: C",
+        "Topic :: Scientific/Engineering :: Bio-Informatics",
+    ],
+    project_urls={
+        "Documentation": "https://github.com/abuawadd/PyDepManger/wiki",
+        "Source": "https://github.com/abuawadd/PyDepManger",
+        "Changelog": "https://github.com/abuawadd/PyDepManger/blob/main/CHANGELOG.md",
+    },
+    python_requires=">=3.8",
+    install_requires=[
+        "numpy==2.2.0",
+        "pandas==2.2.3",
+        "python-dateutil==2.9.0.post0",
+        "pytz==2024.2",
+        "scipy==1.14.1",
+        "six==1.17.0",
+        "tzdata==2024.2",
+    ],
+    packages=setuptools.find_packages(),
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],
+)
