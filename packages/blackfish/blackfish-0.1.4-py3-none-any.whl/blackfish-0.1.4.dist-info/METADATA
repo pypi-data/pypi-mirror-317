@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: blackfish
+Version: 0.1.4
+Summary: Various ORCA 6 tools
+Project-URL: repository, https://codeberg.org/crabby/blackfish
+Author-email: Frederik Scherz <frederik.scherz@gmail.de>
+License: Apache-2.0
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: numpy>=2.2.1
+Requires-Dist: plotly>=5.24.1
+Requires-Dist: polars>=1.18.0
+Requires-Dist: pytest>=8.3.4
+Requires-Dist: scipy>=1.14.1
+Description-Content-Type: text/markdown
+
+blackfish
+=========
+
+Collection of various tools for analyzing ORCA 6 calculation output files.
+
+Installation
+------------
+
+```bash
+pip install blackfish
+```
+
+`marimo`
+--------
+
+It is strongly recommended to use [`marimo`](https://marimo.io/).
+
+Usage
+-----
+
+```python
+from blackfish import ORCA
+
+orca = ORCA('path/to/orca/output')
+```
+
+Access table data as `polars` DataFrames or plot them with `plotly`.
+
+Available dataframes:
+
+| *Attribute* | *Description* |
+|-----------|-------------|
+| `ir_spectrum` | IR Spectrum |
+| `roots` | TDDFT roots |
+| `soc_states` | SOC-TDDFT states |
+| `soc_absorption_spectrum` | SOC-TDDFT absorption spectrum |
+
+Available plots:
+
+| *Attribute* | *Description* |
+|-----------|-------------|
+| `soc_absorption_spectrum_plot` | Plot SOC-TDDFT absorption spectrum |
