@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pgmer
+Version: 1.7.6
+Summary: est tools for front-end engineering
+Author: 小鱼程序员
+Author-email: 732355054@qq.com
+Keywords: python,computer vision,pyzjr,windows,mac,linux
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asyncio
+Requires-Dist: websockets
+Requires-Dist: requests
+Requires-Dist: websocket
+Requires-Dist: loguru
+Requires-Dist: ssl
+Requires-Dist: websocket
+Requires-Dist: websocket-client
+
+
+### Pgmer介绍  ###
+test tools for front-end engineering
+`版本介绍`:
+测试版本
+### 安装 ###
+`pip install pgmer -g` 
