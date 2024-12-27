@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: amangee
+Version: 0.2.1
+Summary: A Python library for GEE, AI, and hydrology applications.
+Home-page: https://github.com/yourusername/amangee
+Author: Chakapp
+Author-email: chakapp2424@example.com
+License: MIT
+Description: Amangee is a comprehensive Python library designed for hydrology, AI integration, and Google Earth Engine applications. It provides tools for watershed delineation, river network extraction, and advanced geospatial visualization.
+Keywords: hydrology gee ai watershed python geospatial
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
