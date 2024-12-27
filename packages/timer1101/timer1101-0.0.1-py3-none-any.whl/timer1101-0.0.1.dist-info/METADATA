@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: timer1101
+Version: 0.0.1
+Summary: A timer for python code
+Author-email: Tom <huqh1101@gmail.com>
+Maintainer-email: Tom <huqh1101@gmail.com>
+License: MIT License
+Keywords: timer
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: unittest; extra == "test"
+
+```python
+import timer1101 as timer
+
+if __name__ == "__main__":
+    timer.starte("test")
+    # some codes
+    timer.stope("test")
+
+```
+
+```python
+import timer1101 as timer
+import logging
+import coloredlogs
+import verboselogs
+
+
+verboselogs.install()
+coloredlogs.install(level=logging.INFO)
+logger = logging.getLogger("timeLogger")
+timer.rootTimer.outputfunc = logger.info
+
+if __name__ == "__main__":
+    timer.starte("test")
+    # some codes
+    timer.stope("test")
+
+```
