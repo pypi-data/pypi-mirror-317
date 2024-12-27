@@ -1,0 +1,9 @@
+README.md
+setup.py
+cloneui/__init__.py
+cloneui/cloneui.py
+cloneui.egg-info/PKG-INFO
+cloneui.egg-info/SOURCES.txt
+cloneui.egg-info/dependency_links.txt
+cloneui.egg-info/requires.txt
+cloneui.egg-info/top_level.txt
