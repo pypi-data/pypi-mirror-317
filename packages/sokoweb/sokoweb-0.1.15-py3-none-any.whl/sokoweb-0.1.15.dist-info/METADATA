@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: sokoweb
+Version: 0.1.15
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Requires-Dist: SQLAlchemy>=1.4.0
+Requires-Dist: aiofiles
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: asgi-lifespan>=2.1.0
+Requires-Dist: asyncpg>=0.25.0
+Requires-Dist: bcrypt==3.2.0
+Requires-Dist: cryptography>=43.0.3
+Requires-Dist: email-validator
+Requires-Dist: fastapi>=0.115.5
+Requires-Dist: passlib==1.7.4
+Requires-Dist: psycopg2-binary>=2.9.0
+Requires-Dist: pydantic[email]
+Requires-Dist: python-jose>=3.3.0
+Requires-Dist: python-multipart>=0.0.17
+Requires-Dist: uvicorn[standard]>=0.32.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: mypy>=1.5.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+
+UNKNOWN
+
