@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pycodata
+Version: 2.1.1
+Summary: pycodata: CODATA constants for python.
+Author-email: Milan Skocic <milan.skocic@icloud.com>
+License: License :: OSI Approved :: MIT License
+Project-URL: Documentation, https://milanskocic.github.io/codata/index.html
+Project-URL: Source, https://github.com/MilanSkocic/codata
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Introduction
+
+Python wrapper around the
+[Fortran codata library](https://milanskocic.github.io/codata/ ).
+The Fortran library does not need to be installed, the python wrapper embeds all needed fortran dependencies
+for Windows and MacOS.
+On linux, you might have to install `libgfortran` if it is not distributed by default with your linux distribution. 
+
+# Installation
+
+In a terminal, enter:
+
+```python
+pip install pycodata
+```
+
+# License
+
+MIT
+
+
+# Usage
+
+The latest values (2022) do not have the year as a suffix in their name. Older values can be used and they feature the year as a suffix in their name.
+
+The latest values are available at the top level and older values are available in dedicated modules.
+
+[Example in python](https://milanskocic.github.io/codata/page/examples.html#python).
