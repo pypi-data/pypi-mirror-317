@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            .section {
+                margin-bottom: 40px;
+            }
+            .title {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .centered-image {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                font-size: 16px;
+                text-align: left;
+            }
+            table th {
+                background-color: #f4f4f4;
+                font-weight: bold;
+                text-align: left;
+                vertical-align: top;
+                width: 30%;
+            }
+            table td {
+                text-align: left;
+                vertical-align: top;
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section">
+            <img src="data:image/png;base64,{{ logo }}" alt="Logo" class="centered-image">
+        </div>
+        <div class="section">
+            <div class="title">Results</div>
+            <table>
+                <tr>
+                    {% for column in report.columns %}
+                    <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+                {% for row in report.itertuples(index=False) %}
+                <tr>
+                    {% for cell in row %}
+                    <td>{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="section">
+            <div class="title">Performance for each algorithm</div>
+            <img src="data:image/png;base64,{{ boxplot }}" alt="Boxplot">
+        </div>
+        <div class="section">
+            <div class="title">Best results over time</div>
+            <img src="data:image/png;base64,{{ cumulative }}" alt="Cumulative Plot">
+        </div>
+        <div class="section">
+            <div class="title">Clusters</div>
+            <img src="data:image/png;base64,{{ cluster }}" alt="Cluster Plot">
+        </div>
+    </body>
+    </html>
