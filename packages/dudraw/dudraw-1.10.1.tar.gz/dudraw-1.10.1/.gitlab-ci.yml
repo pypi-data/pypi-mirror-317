@@ -1,0 +1,10 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - rsync -ravP docs/* intropython@linux.cs.du.edu:~/public_html/dudraw
+  only:
+    changes:
+      - docs/**/*
