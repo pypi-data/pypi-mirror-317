@@ -1,0 +1,3 @@
+[console_scripts]
+rsp=rock_scissors_paper_framework.rsp:main
+
