@@ -1,0 +1,9 @@
+luigino/__init__.py,sha256=PbNuav81k4-jiKpxW4k5nGjJGVxLi5xb0PJcmTYqFWk,167
+luigino/cleanup.py,sha256=E7gfWzvlO9pFpiGQ-BBtjKUbDxvrAfdv4Qw407ZbF9g,1082
+luigino/common_task.py,sha256=3pNpK2c3vm_ZzEz3rrAJlxFlxTzxlCoOkOqrCiMwMhs,1322
+luigino/errorlog.py,sha256=vzrSDnjCY7NsVQSWnXjN4L_bRCQ_FA1pNg1NrKz6S-4,841
+luigino/execute.py,sha256=4gQN6SKvN7d8_BFa4W8FhCD0kHC717WPZObaRlDzK00,1321
+luigino-0.1.4.dist-info/METADATA,sha256=r5xxgYUoa9Qa9Vz-ylNf9npCbR6Oc-bbYMIe05sf3JI,4471
+luigino-0.1.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+luigino-0.1.4.dist-info/top_level.txt,sha256=BfOTPEkAlc3jxYd_2jC6o3fYqHcirnp78EVof148TfQ,8
+luigino-0.1.4.dist-info/RECORD,,
