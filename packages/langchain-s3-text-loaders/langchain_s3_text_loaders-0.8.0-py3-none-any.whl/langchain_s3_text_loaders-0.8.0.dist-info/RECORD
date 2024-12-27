@@ -1,0 +1,7 @@
+langchain_s3_text_loaders/__init__.py,sha256=fV1dPt4alqCqFdBZXuGg_vsCBjr_Za4ZJLl5415spB8,113
+langchain_s3_text_loaders/s3_text_directory_loader.py,sha256=f2X-3OprNgLc0f70y7K1t79Pz6J_2O7t-i0jfmX5R9c,6898
+langchain_s3_text_loaders/s3_text_file_loader.py,sha256=BzSpRomCgNeljQyER4BbTPfSVeDTMhsupvqiYpDRZBs,5204
+langchain_s3_text_loaders-0.8.0.dist-info/METADATA,sha256=ohCQRmWygUtcITPojyUePilR9EgMqPNQPsjPTAutevQ,1556
+langchain_s3_text_loaders-0.8.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+langchain_s3_text_loaders-0.8.0.dist-info/top_level.txt,sha256=2BagyR0fdw_J5AWN3a5iPpKfcq6RlSZoqc0x3CzgSNE,26
+langchain_s3_text_loaders-0.8.0.dist-info/RECORD,,
