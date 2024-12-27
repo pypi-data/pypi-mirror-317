@@ -1,0 +1,3 @@
+[console_scripts]
+siape-cli=siape_tool.main:main
+
