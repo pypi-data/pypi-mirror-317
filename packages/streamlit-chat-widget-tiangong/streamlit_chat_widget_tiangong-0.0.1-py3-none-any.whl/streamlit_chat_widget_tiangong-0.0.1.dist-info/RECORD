@@ -1,0 +1,14 @@
+streamlit_chat_widget/__init__.py,sha256=DsAozkWfAZy6mpnNHuL8ew5Fi2Yv7qYNViXKQLjeWMw,547
+streamlit_chat_widget/frontend/build/asset-manifest.json,sha256=aeDruRiPl1zHWPYv5nhSxeA6GPKr94F-vs7FGz5Dmuc,374
+streamlit_chat_widget/frontend/build/bootstrap.min.css,sha256=hTwg6axJ8dAPmGVJmYTrsQS3JhKWA0skJ-td54UbEOk,197459
+streamlit_chat_widget/frontend/build/index.html,sha256=EFh5_6Gki1KrHSCBVC5NNATUwTLYbZwo7r5QpjpWNEU,553
+streamlit_chat_widget/frontend/build/static/css/main.be80bdc5.css,sha256=niRkeQdKPwDFiEf4jFd-Z4xAWpK9T1Dv5AXJLTt-FcY,1961
+streamlit_chat_widget/frontend/build/static/css/main.be80bdc5.css.map,sha256=_bewJs-FRGa0ftwASWi-CitubspVxeH5JOmlfAZwspI,4578
+streamlit_chat_widget/frontend/build/static/js/main.71c90e0b.js,sha256=MWG8VM1ItNcwba_yOUgE-AgPkhaN8c7gX5Hwz3x6DE0,578389
+streamlit_chat_widget/frontend/build/static/js/main.71c90e0b.js.LICENSE.txt,sha256=6ThxEzR_DN8XPgcPtrE6eqtHysku9jqdNjn5Il9qRHI,1842
+streamlit_chat_widget/frontend/build/static/js/main.71c90e0b.js.map,sha256=O2435PIiV7B6NzKwwZTNio8mPyCtl-yMSUti5mHyQDY,2662269
+streamlit_chat_widget_tiangong-0.0.1.dist-info/LICENSE,sha256=-LJcvnuFGgDBMgNd1XxYSyzsQt-u04Hlj6Dc-vXDtr4,1062
+streamlit_chat_widget_tiangong-0.0.1.dist-info/METADATA,sha256=GFKu-geAXDo5QfhpXwaasTiFC7SJHU7EER-HpJktpwU,5160
+streamlit_chat_widget_tiangong-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+streamlit_chat_widget_tiangong-0.0.1.dist-info/top_level.txt,sha256=uWn-QCO8bb22FndSvKIi0JqJjHEXTFP3LSpGRfajFTs,22
+streamlit_chat_widget_tiangong-0.0.1.dist-info/RECORD,,
