@@ -1,0 +1,11 @@
+LLMsWebScraper/VERSION,sha256=k2LjVtxw3rXjDj3oysoiDYXXA0vgobcIucnxmB3jYTU,7
+LLMsWebScraper/__init__.py,sha256=TjHfHEyPw1FVrbkSMMOIL4gSmfbzZZqOfTkYG3rkoa8,36
+LLMsWebScraper/scraper.py,sha256=nNXPLbKpxNTNtdWld5APP6hgynNanfmDdwZSRLX1BVc,4990
+LLMsWebScraper/version.py,sha256=rpALuCmRjYFW59vWDMLvmsq8WPP4aisZkpUO8JkzsYU,279
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_scraper.py,sha256=fx3lrRa-6w2hkEpK0Xnx1av8QeSbZCaaQcItEXR9QfE,330
+LLMsWebScraper-1.0.2.dist-info/LICENSE,sha256=HVvc0Tz57f05zwOAVNN_7ghbWZ-Qx8B5Kuli6N_pljU,7839
+LLMsWebScraper-1.0.2.dist-info/METADATA,sha256=9qcaBIcPrXhdZBbPDW_STG6a0FhSLBnqt1zIkhP_vK0,3281
+LLMsWebScraper-1.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+LLMsWebScraper-1.0.2.dist-info/top_level.txt,sha256=csmk8KRwpaEKlZT1eOtiIlzlZ8nXjPF0XmZvworWHwQ,21
+LLMsWebScraper-1.0.2.dist-info/RECORD,,
