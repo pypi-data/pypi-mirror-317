@@ -1,0 +1,11 @@
+passagemath_sirocco.dylibs/libsirocco.0.dylib,sha256=aJJKPipfdpEMuM8niMcV9vJ8qvakuo4Zq9nfOXWA7Ns,268336
+passagemath_sirocco.dylibs/libgmp.10.dylib,sha256=CsO1k-uBWJFZPesQfSJLysqI6lChZeiWL4Sss821nC8,724176
+passagemath_sirocco.dylibs/libmpfr.6.dylib,sha256=Oh1i1W770mpDI0CqT9SlAEfO7lvcIgibEnTJeaCjTpo,598704
+passagemath_sirocco-10.5.13.dist-info/RECORD,,
+passagemath_sirocco-10.5.13.dist-info/WHEEL,sha256=te1-8Xhnu3DodWmHvZ3Kz27BbK0S8AxwLhMPcjS_OmU,110
+passagemath_sirocco-10.5.13.dist-info/top_level.txt,sha256=Kmzulf9WsphADFQuqgvdy5mvTLDj_V2zkFHU2s3UXos,6
+passagemath_sirocco-10.5.13.dist-info/METADATA,sha256=Y4QBQh1DmVPip5MkLaSLHO9DpdvGIBEKrLz6zQz_xmY,3652
+sage/all__sagemath_sirocco.py,sha256=dOSZkVBlAvSafx2IYY1n7lipWwoLMj0vLAY1glC7x2s,168
+sage/libs/sirocco.pyx,sha256=DZ7s-2kOwAtUPOVfIgvp7719ZXz1sSHXmDlOTMr7pg4,11170
+sage/libs/sirocco.cpython-311-darwin.so,sha256=fausdA8g63Iffc5FFHv3j3w5fl9T1miTO7lTfZnR2Lc,145168
+sage/libs/all__sagemath_sirocco.py,sha256=BnLb9I-8oMsUKI5uRle_hxp92wdAAez3PgwDyMK-KRc,46
