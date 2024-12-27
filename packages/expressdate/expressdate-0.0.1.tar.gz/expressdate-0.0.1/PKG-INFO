@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: expressdate
+Version: 0.0.1
+Summary: Express-fast and flexible to express dates.
+Home-page: https://github.com/DuelitDev/expressdate
+License: MIT
+Keywords: date,datetime,util,utility,utilities,dateutil,expressdate
+Author: DuelitDev
+Author-email: jyoon07dev@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Project-URL: Repository, https://github.com/DuelitDev/expressdate
+Project-URL: changelog, https://github.com/DuelitDev/expressdate/releases
+Project-URL: download, https://github.com/DuelitDev/expressdate/tarball/master
+Project-URL: documentation, https://github.com/DuelitDev/expressdate/wiki
+Project-URL: homepage, https://github.com/DuelitDev/expressdate
+Project-URL: issues, https://github.com/DuelitDev/expressdate/issues
+Description-Content-Type: text/markdown
+
+# expressdate
+
+![](https://github.com/DuelitDev/expressdate/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/github/DuelitDev/expressdate/graph/badge.svg?token=794OKQP8KS)](https://codecov.io/github/DuelitDev/expressdate)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/expressdate)](https://pypistats.org/packages/expressdate/)
+
+---
+
+# Install
+```shell
+pip install -U expressdate
+```
+
+# Key Features
+- TODO
+
+---
+# Getting Started
+```python
+```
+
+---
+
+# Documentation
+https://github.com/DueltiDev/expressdate/wiki
+
+---
+
+# Requirements
+- python 3.10 or higher
+
+---
+
+# License
+`expressdate` is offered under the MIT license.
+
+
+

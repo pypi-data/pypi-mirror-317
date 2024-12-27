@@ -1,0 +1,49 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "expressdate"
+version = "0.0.1"
+description = "Express-fast and flexible to express dates."
+authors = ["DuelitDev <jyoon07dev@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [
+    { include = "expressdate" },
+]
+repository = "https://github.com/DuelitDev/expressdate"
+keywords = [
+    "date", "datetime", "util", "utility",
+    "utilities", "dateutil", "expressdate"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.urls]
+homepage = "https://github.com/DuelitDev/expressdate"
+download = "https://github.com/DuelitDev/expressdate/tarball/master"
+changelog = "https://github.com/DuelitDev/expressdate/releases"
+documentation = "https://github.com/DuelitDev/expressdate/wiki"
+issues = "https://github.com/DuelitDev/expressdate/issues"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+[tool.poetry.group.style.dependencies]
+black = "^24.10.0"
+
+[tool.poetry.group.typing.dependencies]
+pyright = "^1.1.391"
+mypy = "^1.14.0"
