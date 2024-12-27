@@ -1,0 +1,133 @@
+[tool.poetry]
+name = "flexmock"
+version = "0.12.2"
+description = "flexmock is a testing library for Python that makes it easy to create mocks, stubs and fakes."
+authors = ["Slavek Kabrda", "Herman Sheremetyev"]
+maintainers = [
+    "Adarsh Krishnan <adarshk7@gmail.com>",
+    "Christophe Riolo Uusivaara <riolo.christophe@gmail.com>",
+    "Olli Paakkunainen <olli@paakkunainen.fi>",
+]
+license = "BSD-2-Clause"
+repository = "https://github.com/flexmock/flexmock"
+documentation = "https://flexmock.readthedocs.io"
+readme = "README.md"
+keywords = ["mock", "testing", "test", "unittest", "pytest"]
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Testing :: Mocking",
+    "Topic :: Software Development :: Testing :: Unit",
+    "Typing :: Typed",
+]
+include = [
+    { path = "CHANGELOG.md", format = "sdist" },
+    { path = "docs/**/*.md", format = "sdist" },
+    { path = "LICENSE", format = "sdist" },
+    { path = "README.md", format = "sdist" },
+    { path = "tox.ini", format = "sdist" },
+    { path = "tests/**/*.py", format = "sdist" },
+    { path = "docs/conf.py", format = "sdist" },
+    { path = "docs/toctree.rst", format = "sdist" },
+]
+packages = [{ include = "flexmock", from = "src" }]
+
+[tool.poetry.urls]
+"Changes" = "https://flexmock.readthedocs.io/en/latest/changelog/"
+"Source Code" = "https://github.com/flexmock/flexmock"
+"Issue Tracker" = "https://github.com/flexmock/flexmock/issues"
+
+[tool.poetry.plugins.pytest11]
+flexmock = "flexmock._pytest_plugin"
+
+[tool.poetry.dependencies]
+python = "^3.8.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+mypy = "*"
+pylint = "*"
+black = "*"
+isort = "*"
+tox = "*"
+Twisted = "*"
+pytest-cov = "*"
+mkdocs-material = "*"
+markdown-include = "*"
+mkdocstrings = { extras = ["python-legacy"], version = "*" }
+testtools = "*"
+myst-parser = "*"
+"zope.testrunner" = "*"
+python-subunit = "*"
+teamcity-messages = "*"
+# Sphinx v7 drops setuptools support.
+sphinx = "<7.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.MASTER]
+load-plugins = ["pylint.extensions.docstyle", "pylint.extensions.typing"]
+
+[tool.pylint.main]
+py-version = "3.8.0"
+
+[tool.pylint.messages_control]
+disable = [
+    "too-many-instance-attributes",
+    "too-few-public-methods",
+    "too-many-function-args",
+    "too-many-arguments",
+    "too-many-locals",
+    "too-many-branches",
+    "too-many-statements",
+    "too-many-public-methods",
+    "protected-access",
+    "broad-except",
+    "fixme",
+    "too-many-ancestors",
+]
+
+[tool.pylint.format]
+max-line-length = "100"
+
+[tool.isort]
+line_length = 100
+profile = "black"
+
+[tool.black]
+line_length = 100
+
+[tool.mypy]
+warn_redundant_casts = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+
+warn_return_any = true
+no_implicit_optional = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_errors = true
+
+[tool.pytest.ini_options]
+python_files = ["test_pytest.py"]
+xfail_strict = true
