@@ -1,0 +1,11 @@
+code_animate/__init__.py,sha256=udqOA5RrJVbxGHbm68s-HM0gAoNrU68nexZ-9E52aqA,52
+code_animate/animate.py,sha256=7XdG0UyWlSM5iFQ-rh0KrBFic0iajEvrFFYOULiGQPo,1013
+code_animate/helpers/animate_helper.py,sha256=FdcxqwjRKnFhYbz0T9UitEpKxYmPEy2qoWm3sAweum8,1945
+code_animate/helpers/frame_helper.py,sha256=V5WrGUdHm7_lQg_v7-XJVc6GdKPSNgdE5QFAECMD9m8,402
+code_animate/helpers/func_helper.py,sha256=xkP2F2EFPEMhlXg4QXSyBEtDnS7wNbRSjxdEd9N_QhA,2185
+code_animate/helpers/models.py,sha256=GU9OyNQ3YTU5TxSx3zmv2IEe9aBb1X0JzIBI57qBgxQ,247
+code_animate/helpers/string_helper.py,sha256=Fl-K6Xq37eABd4WF04wDhOBPxn0UOyK_APu_rYBiFtM,921
+code_animate-0.0.10.dist-info/METADATA,sha256=I4NfxYXqb7OgfJPuKQUDL3JltTo7f0OkTeeqzXmxahY,1517
+code_animate-0.0.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+code_animate-0.0.10.dist-info/licenses/LICENSE,sha256=jCWdze2olLbjt4A6VX2rE9ESCf9cMcKVWFQ84E9EKKw,17
+code_animate-0.0.10.dist-info/RECORD,,
