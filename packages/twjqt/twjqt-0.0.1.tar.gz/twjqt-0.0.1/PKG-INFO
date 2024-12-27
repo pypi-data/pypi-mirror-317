@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: twjqt
+Version: 0.0.1
+Summary: this is a qt process
+Author: twj
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+这是一个qt
