@@ -1,0 +1,13 @@
+image: paternal/pythons
+
+
+before_script:
+  - apt update && apt install --yes --force-yes --no-install-recommends ghostscript libmagickwand-dev
+  - sed -i
+    's/policy *domain="coder" *rights="none" *pattern="PDF"/policy domain="coder" rights="read|write" pattern="PDF"/'
+    /etc/ImageMagick-6/policy.xml
+
+tox:
+  script:
+    - tox
+  coverage: '/^TOTAL.*\s(\d+)\%$/'

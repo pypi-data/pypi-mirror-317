@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: dummypdf
+Version: 2.1.0
+Summary: Generate dummy pdf files with configurable paper size and number of pages.
+Home-page: http://framagit.org/spalax/dummypdf
+Author: Louis Paternault
+Author-email: spalax@gresille.org
+License: GPLv3 or any later version
+Project-URL: Documentation, http://dummypdf.readthedocs.io
+Project-URL: Source, https://framagit.org/spalax/dummypdf
+Project-URL: Tracker, https://framagit.org/spalax/dummypdf/issues
+Keywords: pdf dummy test
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Utilities
+Requires-Python: <4,>=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: papersize
+Requires-Dist: reportlab
+
+dummypdf 🥼 Generate dummy pdf files
+====================================
+
+*Check out my other PDF tools:* `pdfautonup <https://framagit.org/spalax/pdfautonup>`__ | `pdfimpose <https://framagit.org/spalax/pdfimpose>`__.
+
+Paper size and number of pages are configurable. Files can be used to test pdf
+manipulation tools.
+
+Examples :
+
+- One page A4 paper: `example1.pdf <https://framagit.org/spalax/dummypdf/-/raw/main/doc/examples/example1.pdf?inline=false>`__:
+
+      dummypdf A4
+
+- Six pages, a third of an A4 paper: `example2.pdf <https://framagit.org/spalax/dummypdf/-/raw/main/doc/examples/example2.pdf?inline=false>`__:
+
+      dummypdf -n 6 -p 21cmx99mm
+
+  or:
+
+      dummypdf 21cmx99mm:6
+
+- A pdf with different page formats: `different.pdf <https://framagit.org/spalax/dummypdf/-/raw/main/doc/examples/different.pdf?inline=false>`__:
+
+      dummypdf A4 A5:landscapewest
+
+But why?
+--------
+
+To develop or test PDF manipulating tools, I sometimes need to have files with a very specific size or number of pages. I can generate those files with this tool.
+
+What's new?
+-----------
+
+See `changelog <https://framagit.org/spalax/dummypdf/blob/main/CHANGELOG.md>`_.
+
+Download and install
+--------------------
+
+See the end of list for a (quick and dirty) Debian package.
+
+* From sources:
+
+  * Download: https://pypi.python.org/pypi/dummypdf
+  * Install (in a `virtualenv`, if you do not want to mess with your distribution installation system)::
+
+        python3 setup.py install
+
+* From pip::
+
+    pip install dummypdf
+
+* Quick and dirty Debian (and Ubuntu?) package
+
+  This requires `stdeb <https://github.com/astraw/stdeb>`_ to be installed::
+
+      python3 setup.py --command-packages=stdeb.command bdist_deb
+      sudo dpkg -i deb_dist/dummypdf-<VERSION>_all.deb
+
+Documentation
+-------------
+
+* The compiled documentation is available on `readthedocs <http://dummypdf.readthedocs.io>`_
+
+* To compile it from source, download and run::
+
+    cd doc && make html
