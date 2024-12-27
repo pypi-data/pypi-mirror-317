@@ -1,0 +1,16 @@
+snapshell/__init__.py,sha256=ySGg7Ty-pOZ8z8wowJ0-EL8Ekhk6PB1eHdOipRrqJWk,480
+snapshell/cli.py,sha256=3yLUau_gfLLPUONY-MWbPpcqcRtzwuTncovQxZdfrR4,3131
+snapshell/llm_api.py,sha256=17YeBBluPpaETxSog5_gijaa2oaL_RR2aKP0B3OpH_4,7881
+snapshell/utils.py,sha256=yszBkUp0ygI0RTmXqMSfKOJbxmt5i7leHA-CJsL02V8,4309
+snapshell/package_managers/__init__.py,sha256=tH-ButIjs__v2PhZ3hlx4WwC-voP7SJDC9XrueDHqFA,955
+snapshell/package_managers/apt_package_manager.py,sha256=EeoaIxCUNJdo7f3u4NP0JarobOuuDQRo-wW4j9f9wqk,1457
+snapshell/package_managers/base_package_manager.py,sha256=VJPGAfDrjDQBm20s-ehdrFc8kF_9FeugHvihi6lc4ng,138
+snapshell/package_managers/dpkg_package_manager.py,sha256=AIb1qJp-0JXdDzZ_wOOlbd6WrBclPs_6mD2cJbZ39y4,1164
+snapshell/package_managers/pacman_package_manager.py,sha256=6sSHij9epnmR-lv6U97a-WMRpAJDGtFhWj-nnfBpOh8,1425
+snapshell/package_managers/pamac_package_manager.py,sha256=-LTJcUxv7D_FslQYjTk4QYbT3IX9MdL9-yblwoogaEQ,1460
+snapshell-1.1.1.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+snapshell-1.1.1.dist-info/METADATA,sha256=j7bfOMFLpsmeVQJFjhNe9g_g02MJJGLxFDWW09pNHPU,5887
+snapshell-1.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+snapshell-1.1.1.dist-info/entry_points.txt,sha256=4L2wNZut6nHiEEAF9zHGbHmS1PzaR8CiTiJThoyABVA,49
+snapshell-1.1.1.dist-info/top_level.txt,sha256=LxpAk0Oluzk0Yk6YWhhN7RWTdYfYBfjbQqePSyFoEwI,10
+snapshell-1.1.1.dist-info/RECORD,,
