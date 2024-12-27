@@ -1,0 +1,10 @@
+pystrano/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pystrano/config.py,sha256=Kh33h_c9f-5AO_TILCPTfF5SaekmkUWqeOB98Kfz39g,3735
+pystrano/core.py,sha256=wZG008eethJ03yLoZ3jFTNyuBXqVBZRPP4R9k5PaUqA,6442
+pystrano/deploy.py,sha256=GElWW1EZcqnZVClrWBdx0mIUH7O0FpV_AwS4UQZF8JA,4545
+pystrano-1.0.0.dist-info/LICENSE,sha256=l6v4VVqOnAz93I_4Bb9HiAV7JXqtvvCTWPuGlLy2pE0,1064
+pystrano-1.0.0.dist-info/METADATA,sha256=CfsYtxjWuf1FnBj7OoPDbeC1iX_sfe6QfYnp46cRVx8,4647
+pystrano-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pystrano-1.0.0.dist-info/entry_points.txt,sha256=5ajtKw_Tra0lLniOJPusScU-snuASzHShg17XVGLcnc,89
+pystrano-1.0.0.dist-info/top_level.txt,sha256=ib6v34d04Rjf5KOe0anUVg0ZhAvbcCMV8hrYWKm5jiE,9
+pystrano-1.0.0.dist-info/RECORD,,
