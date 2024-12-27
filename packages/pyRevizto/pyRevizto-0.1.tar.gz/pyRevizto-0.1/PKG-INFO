@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pyRevizto
+Version: 0.1
+Summary: pyRevizto is a library designed specifically for Python developers who work with Revizto, a popular platform for BIM collaboration and issue tracking. By leveraging pyRevizto, developers can streamline their workflows and significantly enhance the capabilities of Revizto through automation.
+Author: Umar Khalid
+Keywords: Revizto
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# pyRevizto
+ pyRevizto is a library designed specifically for Python developers who work with Revizto, a popular platform for BIM collaboration and issue tracking. By leveraging pyRevizto, developers can streamline their workflows and significantly enhance the capabilities of Revizto through automation.
