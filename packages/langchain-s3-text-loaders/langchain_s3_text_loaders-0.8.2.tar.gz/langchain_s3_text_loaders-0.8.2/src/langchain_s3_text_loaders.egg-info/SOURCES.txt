@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/langchain_s3_text_loaders/__init__.py
+src/langchain_s3_text_loaders/s3_text_directory_loader.py
+src/langchain_s3_text_loaders/s3_text_file_loader.py
+src/langchain_s3_text_loaders.egg-info/PKG-INFO
+src/langchain_s3_text_loaders.egg-info/SOURCES.txt
+src/langchain_s3_text_loaders.egg-info/dependency_links.txt
+src/langchain_s3_text_loaders.egg-info/requires.txt
+src/langchain_s3_text_loaders.egg-info/top_level.txt
