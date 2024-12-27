@@ -1,0 +1,5 @@
+[console_scripts]
+pydbapimagic = pydbapi.api.pydbapimagic:register_magic
+
+[ipython.extensions]
+pydbapi = pydbapi.api.pydbapimagic:load_ipython_extension
