@@ -1,0 +1,9 @@
+soldapi/__init__.py,sha256=sXdf_2HmVxDitpgdzm_2N3d9t_yyaojvJ-cwiESDOmA,408
+soldapi/core/__init__.py,sha256=ATobHKurxPZmh3XO3Jjzc3rhlRfO_7gyoXXoiPtZ3Dc,7
+soldapi/core/qwork/__init__.py,sha256=Vjf_p6MYmr5bUPm0GYnR9LkebukpsuO4UQKcbrRxPyY,102
+soldapi/core/qwork/misc.py,sha256=xgTSnECfqDHNpH5YrJ7GHOFufsieVkPSlO0i_iVXiF4,3087
+soldapi-0.9.3.dist-info/LICENSE,sha256=SaThTw3hgkfNxZ2NERw5A3clM8OLnBHFj4RoqB_idlc,1087
+soldapi-0.9.3.dist-info/METADATA,sha256=Hm0PxsIBUScwW0WEl3NkNcpS46KB0B-AifrXqiIVJXI,495
+soldapi-0.9.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+soldapi-0.9.3.dist-info/top_level.txt,sha256=vDgcK7_J_bXETtT88e-41FA19uNcZHIV1uGuGYN2JBA,8
+soldapi-0.9.3.dist-info/RECORD,,
