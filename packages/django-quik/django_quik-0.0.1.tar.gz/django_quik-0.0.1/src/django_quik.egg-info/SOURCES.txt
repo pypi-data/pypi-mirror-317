@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/django_quik/__init__.py
+src/django_quik/cli.py
+src/django_quik/config.py
+src/django_quik/loader.py
+src/django_quik.egg-info/PKG-INFO
+src/django_quik.egg-info/SOURCES.txt
+src/django_quik.egg-info/dependency_links.txt
+src/django_quik.egg-info/entry_points.txt
+src/django_quik.egg-info/requires.txt
+src/django_quik.egg-info/top_level.txt
+src/django_quik/server/__init__.py
+src/django_quik/server/http.py
+tests/test_http.py
