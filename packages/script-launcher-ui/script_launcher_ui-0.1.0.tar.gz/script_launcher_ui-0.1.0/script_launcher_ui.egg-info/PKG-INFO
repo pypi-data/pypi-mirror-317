@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: script_launcher_ui
+Version: 0.1.0
+Summary: A simple script launcher UI for configuration selection
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyQt6
+
+# Script Launcher UI
+
+A simple PyQt6 based UI for script configuration and launching.
+
+## Installation
+
+```bash
+pip install script-launcher-ui
+```
+
+## Usage
+
+```python
+from script_launcher_ui import ScriptLauncherUI
+
+def on_submit():
+    print("Configuration submitted")
+
+ui = ScriptLauncherUI(style='light')
+ui.add_label('Welcome to Script Launcher')
+ui.add_text_input_module('script_path', 'Script Path', 'Enter script path')
+ui.add_button("Submit", on_submit)
+ui.start()
+```
+
+## Features
+
+- Simple and intuitive UI
+- Customizable styles
+- Configuration saving and loading
+- Easy integration with existing scripts
+
+## License
+
+MIT
