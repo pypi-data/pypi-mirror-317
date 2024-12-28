@@ -1,0 +1,9 @@
+setup.py
+api/__init__.py
+api/api_client.py
+api/parse_for_apis.py
+taler_shared.egg-info/PKG-INFO
+taler_shared.egg-info/SOURCES.txt
+taler_shared.egg-info/dependency_links.txt
+taler_shared.egg-info/requires.txt
+taler_shared.egg-info/top_level.txt
