@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: codeorite
+Version: 0.2.1
+Summary: A tool to package a repository into a single text file while respecting .gitignore.
+Author-email: Brad Edwards <brad@keplerops.com>
+License: MIT
+Keywords: pack,repository,gitignore,language includes,tree
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pathspec>=0.9.0
+Requires-Dist: PyYAML>=6.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pathspec>=0.9.0; extra == "dev"
+Requires-Dist: pyyaml>=6.0; extra == "dev"
+
+# Codeorite
+
+A CLI tool to package repository code into a single text file, respecting .gitignore rules.
+
+## Installation
+
+```bash
+pip install codeorite
+```
+
+## Usage
+
+Basic usage:
+```bash
+codeorite --root /path/to/repo --output-file output.txt
+```
+
+### Options
+
+- `--root`: Repository root directory (default: current directory)
+- `--output-file`: Output file path
+- `--config`: Path to config file (default: codeorite_config.yaml)
+- `--languages-included`: Languages to include (e.g., python rust javascript)
+- `--languages-excluded`: Languages to exclude
+- `--includes`: Additional file extensions to include (e.g., .md .txt)
+- `--excludes`: File extensions to exclude (e.g., .pyc .log)
+- `--custom-instructions`: Lines to prepend as instructions
+
+### Examples
+
+Package only Python files:
+```bash
+codeorite --root . --output-file output.txt --languages-included python
+```
+
+Package multiple languages, exclude web assets:
+```bash
+codeorite --root . --output-file multi.txt \
+    --languages-included python rust typescript javascript \
+    --excludes .json .html .css
+```
+
+Include markdown files, exclude Python:
+```bash
+codeorite --root . --output-file docs.txt \
+    --includes .md \
+    --excludes .py .pyc
+```
+
+### Configuration File
+
+Create `codeorite_config.yaml` in your repository:
+
+```yaml
+languages_included:
+  - python
+  - rust
+languages_excluded:
+  - javascript
+includes:
+  - .md
+excludes:
+  - .pyc
+custom_instructions:
+  - "# Project: MyRepo"
+  - "# Author: Dev Team"
+```
+
+## Output Format
+
+The output file contains:
+1. Custom instructions (if provided)
+2. Directory tree of included files
+3. Contents of each included file
+
+## Notes
+
+- Respects .gitignore rules
+- CLI arguments override config file settings
+- Cannot include and exclude the same language/extension

@@ -1,0 +1,12 @@
+codeorite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codeorite/__main__.py,sha256=koL5-AOWGAlmfchIAkvaRwP5YDZoALJ4QV2OUOI7zK4,70
+codeorite/cli.py,sha256=eK8KXKJkX3MvHnUtpyB1JZtwgXMd6noZqZQyIXFLiMg,11999
+codeorite/config.py,sha256=W_3b0xxjLoV33W6n3cYnadY75QP5W6-SMNDVMY8Vgqc,7246
+codeorite/logging.py,sha256=NvHZKZJBFF0eSykJgWnBGA6FSC-yeq5aHQvD_gvYDt4,4711
+codeorite/main.py,sha256=y9MgY_x4QMFahjxCzpMHhrdQn-zH9T1MYnES_gMTVoQ,7110
+codeorite-0.2.1.dist-info/LICENSE,sha256=aT1plrEG-uEBvUuICEnhtFyNcYUCqTyL4MJ0UkuY_mA,1066
+codeorite-0.2.1.dist-info/METADATA,sha256=WGjiu2kyfbmI7ejlhmv3JXEyIm3hb_1dxXimCdL7ElE,2439
+codeorite-0.2.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+codeorite-0.2.1.dist-info/entry_points.txt,sha256=xKg7l-2rDEam6JE4la6iwWzgERbq91H6PSXQ220Ji0A,49
+codeorite-0.2.1.dist-info/top_level.txt,sha256=VzWfTwya-ZMjsj0dGo6RocKk6-xBCzNyHl_dqn_pVrY,10
+codeorite-0.2.1.dist-info/RECORD,,
