@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: agave
+Version: 1.1.0.dev4
+Summary: Rest_api
+Home-page: https://github.com/cuenca-mx/agave
+Author: Cuenca
+Author-email: dev@cuenca.com
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cuenca-validations===2.0.0.dev7
+Provides-Extra: chalice-support
+Requires-Dist: chalice<1.25.1,>=1.16.0; extra == "chalice-support"
+Requires-Dist: blinker<1.5,>=1.4; extra == "chalice-support"
+Requires-Dist: mongoengine<0.23.0,>=0.20.0; extra == "chalice-support"
+Requires-Dist: dnspython<2.2.0,>=2.0.0; extra == "chalice-support"
+Provides-Extra: fast-support
+Requires-Dist: aiobotocore<2.2.0,>=2.0.0; extra == "fast-support"
+Requires-Dist: types-aiobotocore-sqs<3.0.0,>=2.1.0.post1; extra == "fast-support"
+Requires-Dist: fastapi<0.120.0,>=0.115.0; extra == "fast-support"
+Requires-Dist: mongoengine-plus<1.0.0,>=0.0.2; extra == "fast-support"
+Requires-Dist: starlette-context<0.4.0,>=0.3.2; extra == "fast-support"
+
+# agave
+[![test](https://github.com/cuenca-mx/agave/workflows/test/badge.svg)](https://github.com/cuenca-mx/agave/actions?query=workflow%3Atest)
+[![codecov](https://codecov.io/gh/cuenca-mx/agave/branch/main/graph/badge.svg)](https://codecov.io/gh/cuenca-mx/agave)
+[![PyPI](https://img.shields.io/pypi/v/agave.svg)](https://pypi.org/project/agave/)
+
+Agave is a library that implement rest_api across the use of Blueprints based on Chalice Aws.
+
+this library allow send and receive JSON data to these endpoints to query, modify and create content.
+
+Install agave using pip:
+
+```bash
+pip install agave==0.0.2.dev0
+```
+
+You can use agave for blueprint like this:
+```python
+
+from agave.blueprints.rest_api import RestApiBlueprint
+
+```
+
+agave include helpers for mongoengine, for example:
+```python
+
+from agave.models.helpers import (uuid_field, mongo_to_dict, EnumField, updated_at, list_field_to_dict)
+
+```
+
+Correr tests
+```bash
+make test
+```
