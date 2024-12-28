@@ -1,0 +1,4 @@
+bceidaas==0.0.1.dev2
+openai==1.55.0
+pyrate-limiter~=2.10.0
+tenacity==8.2.2
