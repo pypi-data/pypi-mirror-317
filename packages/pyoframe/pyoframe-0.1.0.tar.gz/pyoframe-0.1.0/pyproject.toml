@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyoframe"
+version = "0.1.0"
+authors = [{ name = "Bravos Power", email = "dev@bravospower.com" }]
+description = "Blazing fast linear program interface"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+]
+dependencies = [
+    "polars>=0.20,<2",
+    "numpy",
+    "pyarrow",
+    "pandas",
+    "packaging",
+    "pyoptinterface~=0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black[jupyter]",
+    "bumpver",
+    "isort",
+    "pip-tools",
+    "pytest",
+    "pytest-cov",
+    "pre-commit",
+    "gurobipy",
+    "highsbox",
+    "pre-commit"
+]
+docs = [
+    "mkdocs-material==9.*",
+    "mkdocstrings[python]",
+    "mkdocs-git-revision-date-localized-plugin",
+    "mkdocs-git-committers-plugin-2",
+    "mkdocs-gen-files",
+    "mkdocs-section-index",
+    "mkdocs-literate-nav",
+    "mkdocs-table-reader-plugin"
+]
+highs = ["highsbox"]
+
+[tool.isort]
+profile = "black"
+
+[tool.coverage.run]
+include = ["src/pyoframe/*"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --ignore=scripts"
+
+[project.urls]
+Homepage = "https://bravos-power.github.io/pyoframe/"
+documentation = "https://bravos-power.github.io/pyoframe/"
+repository = "https://github.com/Bravos-Power/pyoframe/"
+Issues = "https://github.com/Bravos-Power/pyoframe/issues"
