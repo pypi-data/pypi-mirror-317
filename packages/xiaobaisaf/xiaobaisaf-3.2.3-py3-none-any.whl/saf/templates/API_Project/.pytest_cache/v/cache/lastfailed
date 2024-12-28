@@ -1,0 +1,8 @@
+{
+  "api_project/case_scripts/test_demo.py::test_接口名称[GET-/login-{'content-type': 'application/json'}-{'id': 1}]": true,
+  "api_project/case_scripts/test_demo.py::test_接口名称[GET-/login-{'content-type': 'application/json'}-{'id': 2}]": true,
+  "api_project/case_scripts/test_demo.py::test_接口名称[GET-/login-{'content-type': 'application/json'}-{'id': 3}]": true,
+  "api_project/case_scripts/test_demo.py::test_接口名称[GET-/login-{'content-type': 'application/json'}-{'id': 4}]": true,
+  "api_project/case_scripts/test_demo.py::test_接口名称[GET-/login-{'content-type': 'application/json'}-{'id': 5}]": true,
+  "api_project/case_scripts/test_demo.py::test_接口名称[POST-/apitts-{'content-type': 'application/x-www-form-urlencoded'}-'voice=cn_xiaohui.wav&text=%E5%90%83%E9%A5%AD%E4%BA%86%E5%90%97%EF%BC%9F%E6%88%91%E6%98%AF%E5%B0%8F%E8%BE%89%E7%9A%84%E5%88%86%E8%BA%AB&language=zh-cn']": true
+}

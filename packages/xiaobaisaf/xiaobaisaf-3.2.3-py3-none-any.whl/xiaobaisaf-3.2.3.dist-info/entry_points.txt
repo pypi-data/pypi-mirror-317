@@ -1,0 +1,7 @@
+[console_scripts]
+xiaobaicmd = saf.utils.xiaobaicmd:main
+xiaobaidevice = saf.utils.DeviceGUI:main
+xiaobaidevice2 = saf.utils.DeviceGUI2:main
+xiaobaifinder = saf.utils.finder:main
+xiaobaimanager = saf.utils.SoftwareManager:main
+xiaobaipom = saf.utils.POMGenerator:main
