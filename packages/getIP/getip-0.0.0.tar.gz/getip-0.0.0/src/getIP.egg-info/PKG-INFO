@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: getIP
+Version: 0.0.0
+Summary: A small Package to allow you to get your Local IP
+Author-email: AlphaO4 <AlphaO4@protonmail.com>
+Project-URL: Homepage, https://github.com/alphaO4/getIP/
+Project-URL: Issues, https://github.com/alphaO4/getIP/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+[![Upload Python Package](https://github.com/alphaO4/getIP/actions/workflows/python-publish.yml/badge.svg?branch=main)](https://github.com/alphaO4/getIP/actions/workflows/python-publish.yml)
+# getIP
+The Home of the getIP python package.
+---
+# The idea
+The idea to getIP came, when I again needed a easy way to get my current local IP in a python enviroment.\n
+Since this isnt natively possible, I decided to write this quick library.

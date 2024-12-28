@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "getIP"
+dynamic = ["version"]
+authors = [
+  { name="AlphaO4", email="AlphaO4@protonmail.com" },
+]
+description = "A small Package to allow you to get your Local IP"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "requests"
+]
+
+[project.urls]
+Homepage = "https://github.com/alphaO4/getIP/"
+Issues = "https://github.com/alphaO4/getIP/issues"
