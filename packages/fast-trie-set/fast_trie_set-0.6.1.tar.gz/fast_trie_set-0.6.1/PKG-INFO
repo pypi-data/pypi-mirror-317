@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: fast_trie_set
+Version: 0.6.1
+Summary: A fast and efficient trie-based collection for storing and searching millions of strings.
+Home-page: https://github.com/YashrajSinghRawat/fast_trie
+Author: Yashraj Singh Rawat
+Author-email: yashraj22august@gmail.com
+License: MIT
+Description: # TRIE Module
+        
+        A fast and efficient trie-based set for storing and searching millions of short strings.
+        
+        ## Features
+        
+        - Add strings to the set quickly.
+        - Search for strings in constant time complexity.
+        - Iterate through stored strings in lexicographical order.
+        - Support for prefix matching.
+        - Case-insensitive search.
+        - Export and import trie data to/from JSON.
+        - Supports word deletion.
+        
+        ## Installation
+        
+        ```bash
+        pip install fast_trie_set
+        ```
+        
+        ## Usage
+        
+        ```python
+        from fast_trie import TRIE
+        
+        # Initialize the Trie with a list of words
+        trie = TRIE(['hello', 'world', '!', ',', 'hen', 'hell'], case_insensitive=True)
+        
+        # Add a word
+        trie.add('Help')
+        
+        # Extend trie with a list of words
+        trie.extend(['HeLLo', 'WoRlD'])
+        
+        # Check if a word exists
+        print('hello' in trie)  # True
+        print('unknown' not in trie)  # True
+        
+        # Find index of a word
+        print(trie.find('hell'))  # Index of 'hell'
+        
+        # Match words with a given prefix
+        print(list(trie.prefix_match('he')))  # ['hello', 'hen', 'hell', 'help']
+        
+        # Delete a word
+        trie.delete('hell')
+        print(list(trie))  # ['hello', 'world', '!', ',', 'hen', 'help']
+        
+        # Export the trie to a JSON file
+        trie.export("trie.json")
+        
+        # Import a trie from a JSON file
+        imported_trie = TRIE.import_trie("trie.json", case_insensitive=True)
+        print(list(imported_trie))  # ['hello', 'world', '!', ',', 'hen', 'help']
+        ```
+        
+        ## License
+        
+        MIT License. See LICENSE file for more details.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

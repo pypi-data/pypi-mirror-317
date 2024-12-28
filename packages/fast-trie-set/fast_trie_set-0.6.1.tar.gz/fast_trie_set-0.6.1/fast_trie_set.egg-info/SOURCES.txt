@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+fast_trie/__init__.py
+fast_trie/fast_trie.py
+fast_trie_set.egg-info/PKG-INFO
+fast_trie_set.egg-info/SOURCES.txt
+fast_trie_set.egg-info/dependency_links.txt
+fast_trie_set.egg-info/top_level.txt
