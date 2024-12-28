@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/pytest_atstack/__init__.py
+src/pytest_atstack/plugin.py
+src/pytest_atstack.egg-info/PKG-INFO
+src/pytest_atstack.egg-info/SOURCES.txt
+src/pytest_atstack.egg-info/dependency_links.txt
+src/pytest_atstack.egg-info/entry_points.txt
+src/pytest_atstack.egg-info/requires.txt
+src/pytest_atstack.egg-info/top_level.txt
+tests/test_atstack.py
