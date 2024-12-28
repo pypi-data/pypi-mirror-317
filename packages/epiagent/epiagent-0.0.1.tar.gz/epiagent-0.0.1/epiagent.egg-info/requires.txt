@@ -1,0 +1,13 @@
+numpy
+pandas
+scipy
+scikit-learn
+scanpy
+torch>=2.0.0
+transformers
+anndata
+flash-attn>=2.5.7
+
+[gpu]
+torch>=2.0.0
+flash-attn>=2.5.7
