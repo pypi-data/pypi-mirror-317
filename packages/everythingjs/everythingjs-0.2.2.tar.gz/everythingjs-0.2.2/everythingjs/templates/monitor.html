@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
+</head>
+<body>
+    <h1>Monitor</h1>
+    <div id="messages"></div>
+    <script>
+        const socket = io();
+        const messagesDiv = document.getElementById('messages');
+
+        socket.on('new_message', (data) => {
+            const message = document.createElement('p');
+            message.textContent = data.message;
+            messagesDiv.prepend(message);
+        });
+    </script>
+</body>
+</html>
