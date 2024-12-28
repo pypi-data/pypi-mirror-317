@@ -1,0 +1,102 @@
+algorithms:
+  - name: "pagerank"
+    func: "networkx.pagerank"
+    params:
+      alpha: 0.9
+      tol: 1.0e-6
+    requires_directed: false
+    groups: ["centrality", "random_walk"]
+
+  - name: "eigenvector_centrality"
+    func: "networkx.eigenvector_centrality"
+    params:
+      max_iter: 500
+      tol: 1e-06
+    requires_directed: false
+    groups: ["centrality", "path_based"]
+    validate_result: "nxbench.validation.validate_node_scores"
+
+datasets:
+  # - name: "08blocks"
+  #   source: "networkrepository"
+  #   params: {}
+
+  # - name: "karate"
+  #   source: "networkrepository"
+  #   params: {}
+
+  # - name: "jazz"
+  #   source: "networkrepository"
+  #   params: {}
+
+  - name: "erdos_renyi_small"
+    source: "generator"
+    params:
+      generator: "networkx.erdos_renyi_graph"
+      n: 1000
+      p: 0.01
+    metadata:
+      directed: false
+      weighted: false
+
+  # - name: "watts_strogatz_medium"
+  #   source: "generator"
+  #   params:
+  #     generator: "networkx.watts_strogatz_graph"
+  #     n: 10000
+  #     k: 6
+  #     p: 0.1
+  #   metadata:
+  #     directed: false
+  #     weighted: false
+
+  - name: "barabasi_albert_small"
+    source: "generator"
+    params:
+      generator: "networkx.barabasi_albert_graph"
+      n: 1000
+      m: 3
+    metadata:
+      directed: false
+      weighted: false
+
+  # - name: "barabasi_albert_large"
+  #   source: "generator"
+  #   params:
+  #     generator: "networkx.barabasi_albert_graph"
+  #     n: 100000
+  #     m: 3
+  #   metadata:
+  #     directed: false
+  #     weighted: false
+
+  - name: "powerlaw_cluster"
+    source: "generator"
+    params:
+      generator: "networkx.powerlaw_cluster_graph"
+      n: 1000
+      m: 2
+      p: 0.1
+    metadata:
+      directed: false
+      weighted: false
+
+validation:
+  skip_slow: false
+  validate_all: true
+  error_on_fail: true
+  report_memory: true
+
+environ:
+  backend:
+    networkx:
+      - "networkx==3.4.1"
+    graphblas:
+      - "graphblas_algorithms==2023.10.0"
+  num_threads:
+    - "1"
+    - "4"
+    - "8"
+  pythons:
+    - "3.10"
+    # - "3.11"
