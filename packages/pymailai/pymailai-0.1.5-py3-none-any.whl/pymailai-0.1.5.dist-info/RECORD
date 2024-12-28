@@ -1,0 +1,13 @@
+pymailai/__init__.py,sha256=-N_g3lLmE7DvZ3xS6IRCz8johRVU65WDccWS32B3zmc,333
+pymailai/agent.py,sha256=0zfizbaLK5HuVu5k9qi9CO0j215XRDILphCivmmhjJ8,4655
+pymailai/base_client.py,sha256=lUms_V7TPx9w7trqtWBa6DYmase5ys3w72XMojOwHrw,1271
+pymailai/client.py,sha256=7iQ59l7Kf-uxeYxPmgadDeb8yQv49PIj4sZrdB5DIv4,7026
+pymailai/config.py,sha256=Ne6_6Jcg7Yvl-WO6Im4NU0-Z6n44l2OccAjRrkm2-24,943
+pymailai/gmail.py,sha256=ttwAi4i2Gj6A5s3eLbsrWuQWR_MNANHqO8wryuzxVYI,12707
+pymailai/gmail_client.py,sha256=Bv7F_1pyDq1E4MhHSgwustakoVO0RTh9zC_Z7weF24o,7398
+pymailai/markdown_converter.py,sha256=50X2Dz3X8uYvR6A-iDerENX-fccN-OOK-G4hIZLlzj4,1318
+pymailai/message.py,sha256=QzEMxe21dzx3KekFqNw9X1S3iCRJsUNUUqRbVptu3ts,10950
+pymailai-0.1.5.dist-info/METADATA,sha256=7mRu-vD-1kiNq2pXv-vra-TOjuJa8mpsLGWWyK4b1lE,8803
+pymailai-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pymailai-0.1.5.dist-info/licenses/LICENSE,sha256=HiT3vysHv_a37ah47D0HWwhzoflPBvY4_jA2OLlsqGg,1055
+pymailai-0.1.5.dist-info/RECORD,,
