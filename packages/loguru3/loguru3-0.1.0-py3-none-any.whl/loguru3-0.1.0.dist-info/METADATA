@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: loguru3
+Version: 0.1.0
+Summary: 
+Author: zhangdapeng
+Author-email: 1156956636@qq.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiocontextvars (>=0.2.0) ; python_version < "3.7"
+Requires-Dist: colorama (>=0.3.4) ; sys_platform == "win32"
+Requires-Dist: win32-setctime (>=1.0.0) ; sys_platform == "win32"
+Description-Content-Type: text/markdown
+
+
