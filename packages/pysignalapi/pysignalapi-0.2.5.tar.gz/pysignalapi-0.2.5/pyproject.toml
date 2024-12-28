@@ -1,0 +1,35 @@
+
+[tool.poetry]
+authors = ["poterba"]
+version = "0.2.5"
+description = "Python client for `signal-cli-rest-api`"
+license = "MIT"
+maintainers = ["poterba"]
+name = "pysignalapi"
+readme = "README.md"
+repository = "https://github.com/poterba/pysignalapi"
+
+[tool.poetry.dependencies]
+python = "^3.9,<3.13"
+websockets = "*"
+asyncio = "*"
+requests = "*"
+dataclass-wizard = "*"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.4"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+pytest-asyncio = "^0.23.8"
+pillow = "^11.0.0"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+style = "semver"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
