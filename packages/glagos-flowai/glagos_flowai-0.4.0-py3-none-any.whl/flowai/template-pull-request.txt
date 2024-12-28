@@ -1,0 +1,21 @@
+The following is a template for a pull request description. Output everything inside the __TEMPLATE_START__ and __TEMPLATE_END__ tags.
+Follow the instructions within the braces {}.
+Please use it to write a pull request description for your changes.
+Follow the instructions exactly.
+Make sure to include all the sections.
+Include all newlines.
+DO NOT INCLUDE THE TAGS __TEMPLATE_START__ and __TEMPLATE_END__ in your pull request description.
+
+__TEMPLATE_START__
+# {{ Add a PR title that is a summary of the changes made. This must not exceed 50 characters. }}
+
+{{ Try and summarize all of the changes made in the PR in a single paragraph. }}
+
+# Description
+{{ For each commit message, make a new line with a detailed description of the change. }}
+
+# Story Time
+{{ Also add a paragraph to the end describing the changes in the form of an episode from Band of Brothers WW2 show. 
+Be creative and make the story exciting and dramatic. Use the PR description as a guide but do not reference FlowAI directly. Include exciting battle scenes and action.
+feel free to add gore and violence to the story if you want to. }}
+__TEMPLATE_END__
