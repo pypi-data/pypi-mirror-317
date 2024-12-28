@@ -1,0 +1,2 @@
+[console_scripts]
+pydeserver = deapi.simulated_server.initialize_server:main
