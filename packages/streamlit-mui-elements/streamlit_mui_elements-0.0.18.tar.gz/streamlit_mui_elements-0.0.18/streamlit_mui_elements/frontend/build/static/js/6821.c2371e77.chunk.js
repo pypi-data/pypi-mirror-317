@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcustom_component_example=self.webpackChunkcustom_component_example||[]).push([[6821],{6821:function(e,o,r){r.r(o),r.d(o,{default:function(){return l}});var t=r(1413),n=r(2791),m=r(7390),u=r(184),a=!1,l=n.forwardRef((function(e,o){return a||(console.warn(["MUI: The Alert component was moved from the lab to the core.","","You should use `import { Alert } from '@mui/material'`","or `import Alert from '@mui/material/Alert'`"].join("\n")),a=!0),(0,u.jsx)(m.Z,(0,t.Z)({ref:o},e))}))}}]);
+//# sourceMappingURL=6821.c2371e77.chunk.js.map

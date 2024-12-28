@@ -1,0 +1,4 @@
+recursive-include streamlit_mui_elements/frontend/build *
+recursive-include streamlit_mui_elements/frontend/build/static *
+include streamlit_mui_elements/frontend/build/index.html
+include streamlit_mui_elements/frontend/build/asset-manifest.json
