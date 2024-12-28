@@ -1,0 +1,3 @@
+[console_scripts]
+bw_helper=tg_bw_helper.__main__:run
+

@@ -1,0 +1,17 @@
+tg_bw_helper/__init__.py,sha256=OVRlVSKMZpfelmLxlGBdu2OLxQzT9EwZYBiSFX00g7A,33
+tg_bw_helper/__main__.py,sha256=mdQrm834uCrqU1yPqc4hjIEeqPn28pxCnI1L2jJSN_E,1905
+tg_bw_helper/bw_client.py,sha256=QRdPdtmCm4KDFzfYsfLr7FuVNmuMwMoeAkd5WSh0nGA,3742
+tg_bw_helper/tests/conftest.py,sha256=9UGWM6PCTxvSUkB6zv2dwLyvw_6m9tK-U9MHhYj4Ljg,1760
+tg_bw_helper/tests/fake-bw-failing-master-password.py,sha256=M96IMCswbZdzBJzLxKfTXYuh0l5OxqjkEci0Hk3Oc9o,98
+tg_bw_helper/tests/fake-bw-not-logged-in.py,sha256=b3ykpYDnjTu1rmNzvq_KF7wbzmesDcXyHybIuv1_x_M,88
+tg_bw_helper/tests/fake-bw-unknown-error.py,sha256=xsyv34TshfQp41LBk-mUOCoVevN7n-QhE43-Tfzw3hs,87
+tg_bw_helper/tests/fake-bw.py,sha256=urTeoqQu6gq9cAHC6N-XT3o4IkaQsuNhA5U7Nu5Y1Jo,1865
+tg_bw_helper/tests/fake-which.py,sha256=iz55A5z1HCmkfXmnteL8dwA-VvG6O1v_qMi3iVD1-MQ,218
+tg_bw_helper/tests/test_arguments.py,sha256=XM2MSoTvEESoZ--llPlgL5N_FzMf08W23VB5oRFhY_s,2460
+tg_bw_helper/tests/test_bw_cli_fails.py,sha256=MySwEGT9Z1sWpz4Fd4dbHcCuAoEk85pNwx5JzKxTouI,3724
+tg_bw_helper/tests/test_get_password.py,sha256=cphdQUywHX_2iB29Mcpr7-6Yxt9AFr_eyN8KhmSBb8M,1936
+tg_bw_helper/tests/test_session_from_environment.py,sha256=_aniRox4rcNkcN9I8KcA89Izxg7JNqS2_sg97UzSxbo,636
+tg_bw_helper-1.1.0.dev1.dist-info/METADATA,sha256=j3dQ7PtMp0Nc2mnxaWr1HQ0UvveRr_x_TWTncg5-4BU,6961
+tg_bw_helper-1.1.0.dev1.dist-info/WHEEL,sha256=YxM3tSmuuzPARtqHgFjwYakaXJ7nMa2TMsK_1H5JEok,93
+tg_bw_helper-1.1.0.dev1.dist-info/entry_points.txt,sha256=m7XUKmRapzOm6DcZdUMtcdl2b4ICLV7N8tjVPccgavI,55
+tg_bw_helper-1.1.0.dev1.dist-info/RECORD,,
