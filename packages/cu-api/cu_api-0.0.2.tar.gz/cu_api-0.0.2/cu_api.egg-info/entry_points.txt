@@ -1,0 +1,2 @@
+[nbdev]
+cu_api = cu_api._modidx:d
