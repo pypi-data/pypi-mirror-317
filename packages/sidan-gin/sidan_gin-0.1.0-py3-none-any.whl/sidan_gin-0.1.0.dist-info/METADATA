@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: sidan-gin
+Version: 0.1.0
+Summary: A python library for Cardano development, compatible with Mesh and Whisky types.
+Home-page: https://github.com/sidan-lab/gin
+License: Apache-2.0
+Keywords: cardano
+Author: HinsonSIDAN
+Author-email: wongkahinhinson@gmail.com
+Requires-Python: >3.11
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: requests (>=2.25,<3.0)
+Project-URL: Documentation, https://github.com/sidan-lab/gin
+Description-Content-Type: text/markdown
+
+# gin
+
+A python library for Cardano development, compatible with Mesh and Whisky types.
+
+## Installation
+
+```sh
+pip install sidan_gin
+```
+
