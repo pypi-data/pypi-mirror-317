@@ -1,0 +1,11 @@
+.gitattributes
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+dynamic_pydantic/__init__.py
+dynamic_pydantic.egg-info/PKG-INFO
+dynamic_pydantic.egg-info/SOURCES.txt
+dynamic_pydantic.egg-info/dependency_links.txt
+dynamic_pydantic.egg-info/requires.txt
+dynamic_pydantic.egg-info/top_level.txt
