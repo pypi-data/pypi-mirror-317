@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+fashion_recommenders.egg-info/PKG-INFO
+fashion_recommenders.egg-info/SOURCES.txt
+fashion_recommenders.egg-info/dependency_links.txt
+fashion_recommenders.egg-info/requires.txt
+fashion_recommenders.egg-info/top_level.txt
