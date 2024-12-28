@@ -1,0 +1,3 @@
+[swarmauri.agents]
+example_agent=swm_example_package:ExampleAgent
+
