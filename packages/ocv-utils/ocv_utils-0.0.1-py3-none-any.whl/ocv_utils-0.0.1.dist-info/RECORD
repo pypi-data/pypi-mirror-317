@@ -1,0 +1,10 @@
+ocv_utils/__init__.py,sha256=TNZOL8r2LUNg9vgNMagDc9NgD7vqVJTn5UlhhqS0hWY,127
+ocv_utils/image_io.py,sha256=2HVRq5bxr7Vz4ctLMpbo_Xzqjc_DN9nnzJx8hOfDbJU,1055
+ocv_utils/video_reader.py,sha256=4ZRHGKyhpXEVTJYzpE7yyTg4n5hj2CQXsE7xk7Lz9xM,2669
+ocv_utils/video_writer.py,sha256=gBGxfBZIHpH9PvnJXF6Hfkab2LOR8JtzDEMF1vYxzr0,1077
+ocv_utils/window.py,sha256=qxfCt5mm92afZuqIRgaT1aWQd0eVvELY1C3XIbchql4,2175
+ocv_utils-0.0.1.dist-info/LICENSE,sha256=DYxwh9enzEwmaFLHbnkKPnuAh1y0WB-fhGyc_ac4MuE,1065
+ocv_utils-0.0.1.dist-info/METADATA,sha256=3zNNsKi2MyFrXWpj-LpS2DzHghcSKwRCEyD4h063js4,1422
+ocv_utils-0.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+ocv_utils-0.0.1.dist-info/top_level.txt,sha256=kry3X1T33pfGJEHFzcP1b6Qjmr-83aCoSRs-9d9ISjU,10
+ocv_utils-0.0.1.dist-info/RECORD,,
