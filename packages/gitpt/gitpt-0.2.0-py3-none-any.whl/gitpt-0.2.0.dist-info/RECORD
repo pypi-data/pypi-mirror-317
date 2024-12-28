@@ -1,0 +1,14 @@
+gitpt/cli.py,sha256=yuKlhsvRLJHwjFTXs0srLsu1FFxbsgOGVHIXkL6jf7o,7846
+gitpt/generators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitpt/generators/comments.py,sha256=28cGzl9WejDoz7g9m258F-75yVbxM4KE8pcYMRxQUkM,4471
+gitpt/prompts/prompt_message.md,sha256=kG5NfwCGW2mg6XhK7eMW_sYw-3q9WuC36DZNmKktYWI,1039
+gitpt/prompts/prompt_summary.md,sha256=9G1nAunyhkd9UDdAlxRLi_FJEsoVtm8_vNvIjxRASKE,651
+gitpt/prompts/small_prompt.md,sha256=nTys-9jwUWA5eBwmgWFIR6rg46zURtjEN5V46D1zOao,646
+gitpt/prompts/verbose_prompt.md,sha256=0bQwVblZHb1PPKNadj0rs4wItja2NWkOS3S54lD85QQ,696
+gitpt/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitpt/utils/config.py,sha256=8MF8rHpAfetwasV4zqZfW8oa52dOdToL_7wVb1taXYE,1023
+gitpt/utils/spinner.py,sha256=Mc-FVisrzLCOMKlhBq1JrSbc1dCoZ2TLrNtkRgH_uYY,611
+gitpt-0.2.0.dist-info/METADATA,sha256=9KpBVwvay3lsSMxBgOG23WQat-uDvhvw9xZKDkb5Xn8,4571
+gitpt-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+gitpt-0.2.0.dist-info/entry_points.txt,sha256=ixzdLD542KviYvSh_lFU4Q9bZqybjeSJirJQmhApBzk,40
+gitpt-0.2.0.dist-info/RECORD,,

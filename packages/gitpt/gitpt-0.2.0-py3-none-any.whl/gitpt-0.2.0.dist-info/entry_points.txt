@@ -1,0 +1,3 @@
+[console_scripts]
+gitpt=gitpt.cli:main
+
