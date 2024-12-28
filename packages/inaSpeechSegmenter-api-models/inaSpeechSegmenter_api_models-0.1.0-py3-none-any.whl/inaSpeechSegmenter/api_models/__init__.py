@@ -1,0 +1,5 @@
+from inaSpeechSegmenter.api_models.get_segments_request import GetSegmentsRequest
+from inaSpeechSegmenter.api_models.get_segments_response import GetSegmentsResponse
+from inaSpeechSegmenter.api_models.segment_item import SegmentItem
+
+VERSION="0.1.0"

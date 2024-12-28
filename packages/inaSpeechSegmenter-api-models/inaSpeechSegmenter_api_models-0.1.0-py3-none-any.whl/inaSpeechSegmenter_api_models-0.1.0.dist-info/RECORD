@@ -1,0 +1,10 @@
+inaSpeechSegmenter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inaSpeechSegmenter/api_models/__init__.py,sha256=YRFVziP0-r3HmydXd8pQ8XKmRWuXL2-i1T5MDU7PpM8,250
+inaSpeechSegmenter/api_models/get_segments_request.py,sha256=QSXxB7ZcU1Rh9xYOBz_CyzfpwNMJOOLjsG_cohxLRZE,115
+inaSpeechSegmenter/api_models/get_segments_response.py,sha256=8wSXrPLWBuqvsO23_ZLiXQZwpEzEUc_zWndHsEU2Hhc,195
+inaSpeechSegmenter/api_models/segment_item.py,sha256=K9lbavoJX1TsDdcKDPGeXnrHIp6S8tgs6AKJeJIzJmA,119
+inaSpeechSegmenter_api_models-0.1.0.dist-info/LICENSE,sha256=K9RIMe_BJqPpWHZVBSiDtq_1WoMPEzxESqwiXe97HgU,1071
+inaSpeechSegmenter_api_models-0.1.0.dist-info/METADATA,sha256=GKB4JfcAG8OT2wv2KzEXRB4fpuyAM7YiVH_4KIN82F8,4313
+inaSpeechSegmenter_api_models-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+inaSpeechSegmenter_api_models-0.1.0.dist-info/top_level.txt,sha256=nbBBzx5tRB_2-fJLwTnF4JCn0PSiNu_j49ImqX8nX48,19
+inaSpeechSegmenter_api_models-0.1.0.dist-info/RECORD,,
