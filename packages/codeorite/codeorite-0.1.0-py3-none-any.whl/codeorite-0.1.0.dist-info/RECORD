@@ -1,0 +1,10 @@
+codeorite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codeorite/cli.py,sha256=dyMXiScfD1QD6-cl3FnFoKFzznR4eNl2lW00rfTFHfs,11993
+codeorite/config.py,sha256=W_3b0xxjLoV33W6n3cYnadY75QP5W6-SMNDVMY8Vgqc,7246
+codeorite/logging.py,sha256=exV9DgOP-jpJdPFkt2rjJ5MVsxmq-TlcCRsEhw_-CCs,4717
+codeorite/main.py,sha256=y9MgY_x4QMFahjxCzpMHhrdQn-zH9T1MYnES_gMTVoQ,7110
+codeorite-0.1.0.dist-info/LICENSE,sha256=aT1plrEG-uEBvUuICEnhtFyNcYUCqTyL4MJ0UkuY_mA,1066
+codeorite-0.1.0.dist-info/METADATA,sha256=ewuAAOVIEJUv9xEwVN-83ahIB2Bm_Gdn-37UGd9TcXM,2439
+codeorite-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+codeorite-0.1.0.dist-info/top_level.txt,sha256=VzWfTwya-ZMjsj0dGo6RocKk6-xBCzNyHl_dqn_pVrY,10
+codeorite-0.1.0.dist-info/RECORD,,
