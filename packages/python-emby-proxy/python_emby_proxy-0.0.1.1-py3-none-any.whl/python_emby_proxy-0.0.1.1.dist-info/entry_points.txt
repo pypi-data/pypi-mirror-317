@@ -1,0 +1,4 @@
+[console_scripts]
+emby-proxy=emby_proxy.__main__:main
+python-emby-proxy=emby_proxy.__main__:main
+
