@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: paves
+Version: 0.1
+Project-URL: Documentation, https://github.com/dhdaines/paves#readme
+Project-URL: Issues, https://github.com/dhdaines/paves/issues
+Project-URL: Source, https://github.com/dhdaines/paves
+Author-email: David Huggins-Daines <dhd@ecolingui.ca>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: playa-pdf<0.3,>=0.2.5
+Description-Content-Type: text/markdown
+
+# PAVÉS: Bajo los adoquines, la PLAYA 🏖️
+
+The goal with **PLAYA** is just to get objects out of PDF, with no
+dependencies or further analysis.  So, over top of **PLAYA** there is
+**PAVÉS**: "**P**DF, **A**nalyse et **V**isualisation ... plus
+**É**laborée**s**", I guess?
+
+Anything that deviates from the core mission of "getting objects out
+of PDF" goes here, so, hopefully, more interesting analysis and
+extraction that may be useful for all of you AI Bros doing
+"Partitioning" and "Retrieval-Assisted-Generation" and suchlike
+things.  But specifically, visualization stuff inspired by the "visual
+debugging" features of `pdfplumber` but not specifically tied to its
+data structures and algorithms.
+
+There will be dependencies.  Oh, there will be dependencies.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install paves
+```
+
+## License
+
+`PAVÉS` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
