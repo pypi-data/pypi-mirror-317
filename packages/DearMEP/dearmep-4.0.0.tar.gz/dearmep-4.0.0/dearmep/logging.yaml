@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: © 2022 Tim Weber
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+version: 1
+
+disable_existing_loggers: false
+
+formatters:
+  standard:
+    format: "%(asctime)s [%(name)s] %(levelname)s  %(message)s"
+  uvicorn:
+    format: "%(asctime)s %(levelprefix)s [%(name)s]  %(message)s"
+    class: uvicorn.logging.DefaultFormatter
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    stream: ext://sys.stdout
+    formatter: uvicorn
+
+loggers:
+  markdown-it:
+    level: WARNING  # DEBUG is too verbose
+  sqlalchemy.engine:
+    level: WARNING  # set to INFO to log queries; DEBUG to also log results
+
+root:
+  level: INFO
+  handlers: [console]
