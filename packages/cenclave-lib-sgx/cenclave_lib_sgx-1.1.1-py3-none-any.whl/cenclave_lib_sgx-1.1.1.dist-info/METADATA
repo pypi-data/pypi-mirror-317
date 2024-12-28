@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: cenclave-lib-sgx
+Version: 1.1.1
+Summary: Library to bootstrap WSGI/ASGI application for Gramine
+Author-email: Cosmian Tech <tech@cosmian.com>
+License: MIT
+Classifier: Development Status :: 6 - Mature
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography<44.0.0,>=43.0.3
+Requires-Dist: intel-sgx-ra<2.4.0,>=2.3.1
+Requires-Dist: hypercorn[uvloop]<0.18.0,>=0.17.3
+Requires-Dist: h2<4.2.0,>=4.1.0
+Requires-Dist: uvicorn[standard]<1.0.0,>=0.34.0
+Requires-Dist: cenclave-lib-crypto<1.1.0,>=1.0.0
+Provides-Extra: dev
+Requires-Dist: black<25.0.0,>=24.10.0; extra == "dev"
+Requires-Dist: isort<6.0.0,>=5.13.2; extra == "dev"
+Requires-Dist: pylint<4.0.0,>=3.3.1; extra == "dev"
+Requires-Dist: pycodestyle<3.0.0,>=2.12.1; extra == "dev"
+Requires-Dist: pydocstyle<7.0.0,>=6.3.0; extra == "dev"
+Requires-Dist: mypy<2.0.0,>=1.13.0; extra == "dev"
+Requires-Dist: pytest<9.0.0,>=8.3.3; extra == "dev"
+Requires-Dist: build<1.3.0,>=1.2.2; extra == "dev"
+Requires-Dist: wheel<0.50.0,>=0.45.0; extra == "dev"
+
+# Cosmian Enclave Lib SGX
+
+## Overview
+
+Cosmian Enclave lib SGX bootstraps the execution of an encrypted ASGI/WSGI Python web application for [Gramine](https://gramine.readthedocs.io/).
+
+The library is responsible for:
+
+- Configuring the SSL certificates with either:
+  - *RA-TLS*, a self-signed certificate including the Intel SGX quote in an X.509 v3 extension
+  - *Custom*, the private key and full keychain is provided by the application owner
+  - *No SSL*, the secure channel may be managed elsewhere by an SSL proxy
+- Decrypting Python modules encrypted with XSala20-Poly1305 AE
+- Running the ASGI/WSGI Python web application with [hypercorn](https://pgjones.gitlab.io/hypercorn/)
+
+## Technical details
+
+The flow to run an encrypted Python web application is the following:
+
+1. A first self-signed HTTPS server using RA-TLS is launched waiting to receive a JSON payload with:
+   - UUID, a unique application identifier provided to `cenclave-bootstrap` as an argument
+   - the decryption key of the code
+   - Optionally the private key corresponding to the certificate provided to `cenclave-bootstrap` (for *Custom* certificate)
+2. If the UUID and decryption key are the expected one, the configuration server is stopped, the code is decrypted and finally run as a new server
+
+
+## Installation 
+
+```console
+$ pip install cenclave-lib-sgx
+```
+
+## Usage
+
+```console
+$ cenclave-bootstrap --help
+usage: cenclave-bootstrap [-h] [--host HOST] [--client-certificate CLIENT_CERTIFICATE] [--port PORT]
+                          [--subject SUBJECT] [--san SAN] --app-dir APP_DIR --id ID [--timeout TIMEOUT]
+                          [--version] [--debug]
+                          (--ratls EXPIRATION_DATE | --no-ssl | --certificate CERTIFICATE_PATH)
+                          application
+
+Bootstrap ASGI/WSGI Python web application for Gramine
+
+positional arguments:
+  application           ASGI application path (as module:app)
+
+options:
+  -h, --help            show this help message and exit
+  --host HOST           hostname of the server
+  --client-certificate CLIENT_CERTIFICATE
+                        For client certificate authentication (PEM encoded)
+  --port PORT           port of the server
+  --subject SUBJECT     Subject as RFC 4514 string for the RA-TLS certificate
+  --san SAN             Subject Alternative Name in the RA-TLS certificate
+  --app-dir APP_DIR     path of the python web application
+  --id ID               identifier of the application as UUID in RFC 4122
+  --timeout TIMEOUT     seconds before closing the configuration server
+  --version             show program's version number and exit
+  --debug               debug mode with more logging
+  --ratls EXPIRATION_DATE
+                        generate a self-signed certificate for RA-TLS with a specific expiration date (Unix time)
+  --no-ssl              use HTTP without SSL
+  --certificate CERTIFICATE_PATH
+                        custom certificate used for the SSL connection, private key must be sent through the
+                        configuration server
+```
