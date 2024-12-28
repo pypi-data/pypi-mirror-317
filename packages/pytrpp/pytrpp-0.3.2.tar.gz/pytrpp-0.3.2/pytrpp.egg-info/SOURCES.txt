@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pytrpp/__init__.py
+pytrpp/__main__.py
+pytrpp/api.py
+pytrpp/conv.py
+pytrpp/main.py
+pytrpp/trdl.py
+pytrpp.egg-info/PKG-INFO
+pytrpp.egg-info/SOURCES.txt
+pytrpp.egg-info/dependency_links.txt
+pytrpp.egg-info/entry_points.txt
+pytrpp.egg-info/requires.txt
+pytrpp.egg-info/top_level.txt
+pytrpp.egg-info/zip-safe
