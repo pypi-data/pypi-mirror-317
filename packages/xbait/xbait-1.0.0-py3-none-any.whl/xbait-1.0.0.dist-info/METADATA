@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: xbait
+Version: 1.0.0
+Summary: A script to gather system information and send reports via Telegram
+Home-page: https://github.com/yourusername/iscout
+Author: Christlieb Dela
+Author-email: ilovenyxx@gmail.com
+License: MIT
+Keywords: system info cyber security telegram
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: psutil
+Requires-Dist: pyautogui
+Requires-Dist: pyperclip
+Requires-Dist: pywin32
+Requires-Dist: json
+Requires-Dist: base64
+Requires-Dist: tqdm
+Requires-Dist: zipfile
+Requires-Dist: subprocess
+Requires-Dist: logging
+Requires-Dist: importlib
+Requires-Dist: os
+Requires-Dist: sys
+Requires-Dist: datetime
+Requires-Dist: pycryptodome
