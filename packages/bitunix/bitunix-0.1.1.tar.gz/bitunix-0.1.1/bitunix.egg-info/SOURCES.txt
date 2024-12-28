@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+bitunix/__init__.py
+bitunix/client.py
+bitunix.egg-info/PKG-INFO
+bitunix.egg-info/SOURCES.txt
+bitunix.egg-info/dependency_links.txt
+bitunix.egg-info/requires.txt
+bitunix.egg-info/top_level.txt
