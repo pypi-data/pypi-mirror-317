@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GDV_feature_shows"
+dynamic = ["version"]
+authors = [
+  { name="The220th", email="The220th@gmail.com" },
+]
+description = "Interface for GDV feature show. "
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pillow",
+    "argparse",
+    "ksupk",
+    "matplotlib",
+    "numpy",
+    "opencv-python",
+    "tqdm",
+    "gradio",
+]
+
+[project.scripts]
+GDV_feature_shows = "GDV_feature_shows.main:main"
+
+[project.urls]
+Homepage = "https://github.com/The220th/GDV_feature_shows"
+Issues = "https://github.com/The220th/GDV_feature_shows/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.dynamic]
+version = {attr = "GDV_feature_shows.__version__"}
+
+[tool.setuptools.package-data]
+GDV_feature_shows = ["assets/*.png"]
+
+[tool.setuptools]
+include-package-data = true
