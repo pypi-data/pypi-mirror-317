@@ -1,0 +1,22 @@
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
+
+[project]
+name = "ariston"
+readme = "README.md"
+authors = [
+    { name = "Tamás Füstös", email = "fustom@gmail.com" }
+]
+dependencies = [
+    "aiohttp",
+    "requests"
+]
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+version = "0.19.7"
+dynamic = ['description']
+
+[project.urls]
+Repository = "https://github.com/fustom/python-ariston-api.git"
+Issues = "https://github.com/fustom/python-ariston-api/issues"
