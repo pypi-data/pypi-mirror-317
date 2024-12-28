@@ -1,0 +1,16 @@
+pyrevizto/__init__.py,sha256=l2NjcpsEpGQNJFcYhD9g-L8Mip322SyKdYuFfe3F6_g,34
+pyrevizto/comments.py,sha256=bWsO8t7_klBhKElR2ZspSGitRqasyb3b8gCjrdT64Ts,4024
+pyrevizto/issues.py,sha256=QH87usTZpbkPU3qvuIiz-jFkaPN4G67YmaFd55IIM-Q,6774
+pyrevizto/licenses.py,sha256=bwOOhr-E4ys_QGxacn6zow4aLJle6OS-UKI-yhwBehc,6622
+pyrevizto/project_roles.py,sha256=OMQ5Wia9omX1jb187S0H4mzXBQi9xVzODGsJO_QXB2w,2183
+pyrevizto/projects.py,sha256=uEvlwnEXcjAPyDPGBhQl3MuXYRZhlG6G8L9lcf5mOLs,5235
+pyrevizto/pyrevizto.py,sha256=H6hW9mAysPNS4d-pqJ2TK1xjFHXGZmSJHWsJZXLqnDY,14545
+pyrevizto/reports.py,sha256=_Mqo34ctKTJhJPYhV7r6JxcUBOncxVIXb_f0q3_mqxk,1092
+pyrevizto/sheets.py,sha256=F-I-MtLWo_JiuC_mxSoCBW-pfWDdRoAq3faOl4re6mc,2535
+pyrevizto/stamps.py,sha256=c5owXyop-GXgV0I26lXq_OQoHCkZrpIXE5Ac2Yom1H4,996
+pyrevizto/users.py,sha256=EaoLsYoQHxpbOAflNeePs6-5-WgVRyHOfmSfATggylI,736
+pyrevizto-0.6.dist-info/LICENSE,sha256=aFLFZg6LEJFpTlNQ8su3__jw4GfV-xWBmC1cePkKZVw,35802
+pyrevizto-0.6.dist-info/METADATA,sha256=Z19vETf2jJ7Yc-YFghpcruJM4XDaoGO0tub_Cq-AGkY,5060
+pyrevizto-0.6.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+pyrevizto-0.6.dist-info/top_level.txt,sha256=ESEOs5eTaDUqmHvYyNDG15adp8qd-uVGFgDYz0rZde0,10
+pyrevizto-0.6.dist-info/RECORD,,
