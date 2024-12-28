@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: COSQL
+Version: 0.0.2
+Summary: 비동기 SQLite3 (aiosqlite 포크 추가버전)
+Home-page: https://github.com/cwmet/COSQL
+Author: c0met
+Author-email: support@c0met.kr
+Keywords: aiosqlite,sqlite3,database
+Requires-Python: >=3.6
+Requires-Dist: asyncio
