@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+README_es.md
+README_it.md
+setup.py
+dbase3_py/__init__.py
+dbase3_py/dbase3.py
+dbase3_py/dbfview.py
+dbase3_py.egg-info/PKG-INFO
+dbase3_py.egg-info/SOURCES.txt
+dbase3_py.egg-info/dependency_links.txt
+dbase3_py.egg-info/top_level.txt
