@@ -1,0 +1,11 @@
+omdev==0.0.0.dev194
+omlish==0.0.0.dev194
+omserv==0.0.0.dev194
+
+[all]
+paramiko~=3.5
+asyncssh~=2.18
+
+[ssh]
+paramiko~=3.5
+asyncssh~=2.18
