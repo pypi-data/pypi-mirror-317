@@ -1,0 +1,115 @@
+\documentclass[a4paper,oneside,titlepage]{article}
+
+\usepackage[pdftex]{graphicx}
+\usepackage[pdftex,colorlinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{gitinfo2}
+
+\newcommand{\GraphvizIT}[7][scale=1]{
+  \newwrite\dotfile
+  \immediate\openout\dotfile=#4.dot
+  \immediate\write\dotfile{#3 #4 {\string#5}}
+  \immediate\closeout\dotfile
+  \immediate\write18{bash -c "#2 -Gimagepath="./data" -Gcharset=UTF-8 -Tpdf -o#4.pdf #4.dot"} %$
+  \immediate\write18{bash -c "#2 -Gimagepath="./data" -Gcharset=UTF-8 -Tpng -o#4.png #4.dot"} %$
+  \IfFileExists{#4.pdf}
+  % the pdf exists: include it
+  {%
+    % \begin{figure}[htbp]
+    %     % \fbox{
+    %     \centering
+    %     \begin{minipage}[c]{\linewidth}
+    %         \centering
+            \includegraphics[#1]{#4.pdf}
+    %         \caption{#6}
+    %         \label{#7}
+    %     \end{minipage}
+    %     % }
+    % \end{figure}
+  }
+  % the pdf was not created - show a hint
+  {%
+    \fbox{%
+      \begin{tabular}{l}
+        The file \texttt{#4.pdf} hasn't been created from
+        \texttt{#4.dot} yet. \\
+        We attempted to create it with:\\
+        `\texttt{#2 -Tpdf -o#4.pdf #4.dot}' \\
+        but that seems not to have worked. You need to execute `\texttt{pdflatex}' with \\
+        the `\texttt{-shell-escape}' option. You need graphviz to be compiled with \\
+        the cairo lib.
+      \end{tabular}}
+  }
+}
+\newcommand{\digraph}[6][scale=1]{
+    \GraphvizIT[#1]{#2}{digraph}{#3}{#4}{#5}{#6}
+}
+
+\title{Chainsaw's audio pipeline}
+\author{Grégory \textsc{David}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\resizebox{\textwidth}{!}{
+    \digraph{dot}{pipeline}{%
+      splines=true;
+      fontname="monospace";
+      fontsize=10;
+      labeljust="l";
+      node [shape="none", fontname="monospace", fontsize=12];
+      monoInput [label="mono Input", shape="doublecircle"];
+      liveBuffer [label="", image="liveBuffer.png"];
+      rotNorm [label="Rotation + Normalization", shape="invhouse"];
+      fixedBuffer [label="", image="fixedBuffer.png"];
+      instrumentMix [label="Mixer", shape="invhouse"];
+      monoOutput [label="mono Output", shape="circle", fillcolor="black"];
+      subgraph clusterLegend {
+        label="Legend";
+        edge [arrowhead="box", arrowtail="curve", dir="both", fontname="monospace", fontcolor="red3", color="red3"];
+        audioSource -> audioTarget [label="audio flow"];
+        edge [arrowhead="normal", arrowtail="dot", dir="both", fontname="monospace", fontcolor="green4", color="green4"];
+        dataSource -> dataTarget [label="data flow", arrowhead="normal", arrowtail="dot", dir="both"];
+        computation [shape="invhouse"];
+        edge [style="dashed", arrowhead="none", arrowtail="none", dir="both", fontname="monospace", fontcolor="indigo", color="indigo"];
+        sourceElement -> targetElement [label="information"]
+      }
+      subgraph cluster_Looper {
+        label="LooperTrack";
+        subgraph clusterLooperFX {
+          label="LooperTrack Chain Effects";
+          looperFXDisto [label="Disto", shape="invhouse"];
+          looperFXFreeverb [label="Freeverb", shape="invhouse"];
+          looperFXFreqShift [label="FreqShift", shape="invhouse"];
+          looperFXWaveGuide [label="WaveGuide", shape="invhouse"];
+        }
+        looperBuffer [label="", image="looperBuffer.png"];
+        looperMix [label="Mixer", shape="invhouse"];
+      }
+      subgraph cluster_Particle {
+        label="ParticleTrack";
+        subgraph cluster_particleFX {
+          label="ParticleTrack Chain Effects";
+          particleFXDisto [label="Disto", shape="invhouse"];
+          particleFXFreeverb [label="Freeverb", shape="invhouse"];
+          particleFXFreqShift [label="FreqShift", shape="invhouse"];
+          particleFXWaveGuide [label="WaveGuide", shape="invhouse"];
+        }
+        particleBuffer [label="", image="particleBuffer.png"];
+        particleMix [label="Mixer", shape="invhouse"];
+      }
+      edge [arrowhead="box", arrowtail="curve", dir="both", fontname="monospace", fontcolor="red3", color="red3"];
+      monoInput -> liveBuffer;
+      looperBuffer -> looperFXDisto -> looperFXFreeverb -> looperFXFreqShift -> looperFXWaveGuide -> looperMix;
+      particleBuffer -> particleFXDisto -> particleFXFreeverb -> particleFXFreqShift -> particleFXWaveGuide -> particleMix;
+      looperBuffer -> looperMix [label="Dry"];
+      particleBuffer -> particleMix [label="Dry"];
+      {looperMix particleMix} -> instrumentMix -> monoOutput;
+      edge [arrowhead="normal", arrowtail="dot", dir="both", fontname="monospace", fontcolor="green4", color="green4"];
+      liveBuffer -> rotNorm -> fixedBuffer;
+      edge [style="dashed", arrowhead="none", arrowtail="normal", dir="both", fontname="monospace", fontcolor="indigo", color="indigo"];
+      fixedBuffer -> {looperBuffer particleBuffer} [label="reference"];
+    }{Chainsaw audio pipeline}{dot:pipeline}
+}
+\end{document}

@@ -1,0 +1,53 @@
+[project]
+name = "chainsaw-audio"
+description = "Audio time-sampler and snapshot looper/granulator"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.7, <4"
+license = {file = "LICENSE", content-type = "text/plain"}
+keywords = ["audio", "sampler", "looper", "granulator"]
+authors = [
+  {name = "Grégory David", email = "dev@groolot.net"},
+  {name = "Jean-Emmanuel Doucet", email = "jean-emmanuel.doucet@groolot.net"}
+]
+maintainers = [
+  {name = "Grégory David", email = "dev@groolot.net" },
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Artistic Software",
+  "Topic :: Multimedia :: Sound/Audio",
+  "Topic :: Multimedia :: Sound/Audio :: Capture/Recording",
+  "Topic :: Multimedia :: Sound/Audio :: MIDI",
+]
+dependencies = [
+  "pyo >= 1.0.4",
+  "mididings >= 20230114"
+]
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://framagit.org/groolot-association/chainsaw"
+"Bug Reports" = "https://framagit.org/groolot-association/chainsaw/-/issues"
+"Source" = "https://framagit.org/groolot-association/chainsaw"
+
+[project.scripts]
+chainsaw = "chainsaw:main"
+midi_chainsaw = "midi_chainsaw:main"
+
+[build-system]
+requires = ["setuptools>=43.0.0", "setuptools-scm>=8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["chainsaw", "midi_chainsaw"]
+
+[tool.setuptools_scm]

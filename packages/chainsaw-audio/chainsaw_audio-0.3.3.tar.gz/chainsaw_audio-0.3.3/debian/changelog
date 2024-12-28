@@ -1,0 +1,303 @@
+chainsaw (0.3.3) unstable; urgency=medium
+
+  * Makefile: remove unused PHONY targets
+  * setuptools: use `setuptools-scm` for version discovery
+  * cli: mutually exclude `--portaudio` and `--jack`
+  * configuration: make sure the audio server is booted before launching the `chainsaw`
+  * Revert "cli: mutually exclude `--portaudio` and `--jack`"
+    This reverts commit 470b940d087a0bbd37d831d91dce44020adda4e1.
+  * Depends on `pyo >= 1.0.4`
+
+ -- Grégory DAVID <groolot@groolot.net>  Fri, 27 Dec 2024 22:31:24 +0100
+
+chainsaw (0.3.1) unstable; urgency=medium
+
+  * Release chainsaw-0.3.1
+
+ -- Grégory DAVID <groolot@groolot.net>  Tue, 23 Jan 2024 01:41:05 +0100
+
+chainsaw (0.3) unstable; urgency=medium
+
+  [ Grégory DAVID ]
+  * add convenient Makefile
+  * Python Lint
+  * prepare for release to PyPi
+  * Initial UML class diagram
+  * Visually Organize the UML class diagram
+  * UML: Modify names and minor things
+  * Instruments: structure done
+  * Instruments: add InstrumentManager skeleton
+  * GITIGNORE: +compiled python, +log files, +temp~ files
+  * Instruments: do not load OscRootNode
+  * OSC: correctly load modules
+  * OSC: place docstrings where it has to be
+  * Tracks: very light skeleton for the tracks component
+  * Chainsaw: light skeleton for the main entry program
+  * CLI: implementation of the argparse parsing mechanism
+  * Configuration: configuration module to define globals and constants
+  * UML: adapt diagram to early modifications
+  * UML: adapt diagram to early modifications
+  * Instruments: formatting
+  * Tracks: implement Track constructor to allow simple testing at the moment
+  * Instruments: implements Instrument.refreshFixedBuffer()
+  * Instruments: testing code while module's called as program
+  * Instruments: implement Instrument's addition
+  * Instruments-test: improve testing code with InstrumentManager usage
+  * Instruments: implement removeInstrument and comply addInstrument
+    withOscNode.addChild()
+  * SEGFAULTING on Pyo-0.8.0
+  * Instruments-test: enhance instrument testing
+  * Effects: EffectChain inherits from pyo.PyoObject to let it be a stream
+    automatically registered to pyo.Server
+  * Effects: DO NOT use pyo.Mix as it do not implement setInput()
+    so use of double pyo.InputFader to do I/O
+  * All: minor formatting
+  * Effects: rename properties to not conflict with pyo.PyoObject ones
+  * Effects: correct Dry/Wet usage inside refreshPatch()
+  * Effects: testing code validating Effect and EffectChain
+  * Effects: formatting
+  * Effects: documentation
+  * All: documentation
+  * Effects: correct patching of the last element in refreshPatch()
+  * Osc: implement a processFallback method to help when a method calling does
+    not end with success
+  * Effects + Osc: testing code validating OscNode and OscRootNode
+  * Documentation: BCF2000 template with MIDI CC numbers and assignations
+  * Utils: naming convention
+  * Tracks: add all control wrappers like setGrains, setFreqLFO, etc.
+  * Tracks: Use décorator @mapArgs to help mapping values while setting them
+    onto object
+  * Tracks: testing code enhanced to use two Tracks, one GranulatorTrack and
+    one LooperTrack ; comments provided to warn about Track.ctrl() BUG
+  * Tracks: fix a misspelling inside Track.maps dictionary done in 2a3b0b0
+  * UML: adapt class diagram to follow source code.
+  * UML: adapt class diagram to represent utils, cli and configuration
+    as they exactly are
+  * Envelopes: use a list instead of dictionary
+    to store all envelope tables
+  * Tracks: refactoring attributes name
+    particularely 'controllerLFO' -> 'controller'
+  * Tracks: enhance testing code to comply with 87cefd3
+  * Tracks: define a new 'setController' method that helps changing
+    the specific track's controller
+  * Tracks: Change inheritance from 'pyo.Granulator' to 'pyo.Particle'
+    that gives more control over the granulator synthesizer
+  * UML: modify diagram to reveal 'pyo.Particle' inheritance.
+    Add a README file in ReStructuredText
+  * Documentation: minor corrections
+  * Remove typos
+  * Fixes #1: refactoring to make utils.mapToRange functioning
+  * All: implement logging facilities
+  * Instruments: fix ParticleTrack use
+  * CLI: new option to set recording buffer length: '--length'
+  * Osc: enhance 'addChild' method to use 'removeChild'
+  * Osc: create a 'dumpOscTree' method to help viewing the overall
+    OSC tree structure
+  * Midi + instruments: harmonize testing code
+  * UML: Fixes #2, add MIDI class diagram
+  * Instruments: Add a snapShot() method that wrap the long named
+    refreshFixedBuffer() method.
+    Add debug information to understand Instrument creation
+  * Tracks: bugfix track creation without controller
+  * UML: adapt diagram to early modifications
+  * Instruments: implements auto normalization on live buffer snapshot
+    when snapshooting if Instrument is created with autoNormalize flag
+    set to True (the default in constructor)
+  * Instruments: implements doctest
+  * Instruments: implementing '__del__' destructor seems to
+    break segfault
+  * Instruments: implement operator []
+  * README.rst -> README.md, Markdown formatting
+  * Integrates Instrument en Instrument Manager inside main block
+  * Fixes the server booting with standard instruments
+  * Fixes autonormalization ineffectivity due to incorrect normalize()
+    call on a list() instead of a PyoTableObject
+  * Fixes BCF patch setMode and setEnv
+  * Fixes table length use in second instead of samples
+  * Give togglePlay() responsibility to Track instead of Instrument
+  * Reverts commit fbc064d5625a908476d093b059aea6103038b70e.
+  * Fixes Instrument inner audio patch
+  * Adapt controllers and controlled parameters to match interesting
+    sound things
+  * BCF: define Monitoring master Mul controller
+  * Monitoring: Fine tunes (mapArgs + BCF_patch)
+  * MIDI Device: tune CLI to help selecting MIDI device.
+  	Incidence was to widely use 'commandLine' dictionary to access
+	  CLI values or standard ones
+  * Logging: tune logging facility
+  * Change empty method parameter MIDItoOSC route structure behaviour
+  * Osc: Change default port number to None
+  * Chainsaw: enhance program to a better performance state
+  * InstrumentManager: Fixes output instrument assignation
+  * CLI+x: rename CLI options and group them by semantic
+  * InstrumentManager: Fixes output instrument assignation
+  * Instruments: set the 'xfade' initial parameter to 5% of table size
+    for the 'pyo.Looper' in 'LooperTrack' to avoid default one set to 20%
+    that is too much longer
+  * CLI: add CLI parameter that gives user ability to load a MIDI to OSC
+    map file at invoke time and not hardly set in code
+  * Documentation: update BCF preset documentation to map exactly what is
+    defined in 'bcf_midi_route.py'
+  * doc: begin audio pipeline documentation
+  * doc: enhance audio pipeline schema
+  * doc: schema producer from MIDI to OSC mapping file like 'bcf_midi_route.py'
+  * doc: import generated DOT and PNG file of audio pipeline
+  * doc: integrates audio pipeline diagram inside front README.md
+  * doc: use another arrow semantic to represant functionnal transition instead
+    of audio flow (that is known to be a plain arrow with a boxed head)
+  * Fixes some minor errors
+  * Instruments: helper to view all fixedBuffers
+  * effects: setup the complete efect chain / Fixes #11
+  * UML: update class diagram
+  * UML: update PNG file view size
+  * documentation: update BCF preset documentation to new definitions
+  * osc: better show OSC Tree by sorting everything ascendant and reduce by one
+    space child indentation
+  * osc: logging to warning level a message that was previously output
+    to debug level
+  * Use TableFill, copyData and rotate from the newer Pyo version
+  * Pylint onto BCF200 routing module
+  * Start enhancing the graph
+  * Fix integer calculation in mapArgs decorator
+  * Change setMul, setStart, setDur and setPos to 'exp' scaling
+  * Fix argparse argument specification without 'nargs'
+  * Change default argparse arguments value
+  * MIDI to OSC mapping is now based on Chainsaw JackName and load
+    corresponding file.
+    Example: if Chainsaw is launched with the jackname 'marvelous', then the
+    mapping is searched through 'marvelous.py', then 'midi2osc.py', then the
+    file given on CLI and finally 'mapping.py'
+  * Use variables inside channelX.py
+  * Add LICENSE
+  * Python3 as default interpreter
+  * Change Track.togglePlay() behaviour to better match its definition
+    togglePlay() really toggle state, and the new setPlay() function replace
+    the old behaviour
+  * Clean channelX.py formatting
+  * Remove FreqShift from WaveGuide (copy/paste error)
+  * Redefine factory default AllpassWG parameters
+  * Change Instrument.togglePlay() behaviour to better match its definition
+    togglePlay() really toggle state, and the new setPlay() function replace
+    the old behaviour
+  * Change matching regexp comparison debug message
+  * Add x**2 et x**3 scaling modifier tothe mapToRange function
+  * Fix security breach against exposed functions to OSC.
+    All functions where exposed to remote OSC control
+    Fixes #15
+  * Show exposed OSC method in the OSC dump tree.
+    Fixes #14
+  * Set the default Python interpreter to python3.
+    Rename shorts variables to long name
+  * Externalize MIDI to OSC mapping in midi_chainsaw.py program based on
+    mididings (uses mapping_template.py as general mapping)
+    Removes long OSC address and keep clear to the /chainsaw global prefix
+    Fix #19
+  * Set default value according to BCF standard config
+  * Remove default instrument's waveform display
+  * midi: Define mididings amplitue controllers with BCF
+  * Enhance ParticleTrack.dens rate to start at 1/table.length instead of 1.
+    This is very useful when we want a grain played under one second rating.
+    We can now rate at the minimum of 1/table.length.
+  * Change Track.LFO.freq rate range to 0..100
+  * Change maximum ParticleTrack duration
+  * Begin debianization
+
+  [ Jean-Emmanuel Doucet ]
+  * Add osc and effects module
+  * Effects: fix methods' docstring placement
+  * Effects: access pyo global variable without calling globals()
+  * Effects: pass a tuple to type()
+  * Configuration: set globals in a init method, call it only once in the main
+    script, and just import the module in the other
+  * Configuration: move audio server init and cli parsing to configuration's
+    initialization method
+  * Effects: add chain's setInput method and replace Sig(0) with its global
+    version stored in config
+  * Configuration: don't use init method (modules are only executed once anyway)
+  * Configuration: use cli defined number of input ports
+  * OSC: make oscNode store its children and a reference to its parent, retrieve
+    oscPort from CLI args,
+  * Effects: [Chain] children are managed via OscNode inheritance, add missing
+    init params & methods [Effect] apply changes needed by OSC module's
+    modifications
+  * OSC: regexp correct usage
+  * Main: fix config variable access
+  * [OSC / Effects] fix typos / syntax
+  * OSC: osc 1.1 to regexp converter, make each node responsible for determining
+    if he has to interpret a received osc msg,
+  * OSC: remove first '/' from osc messages, fix OscNode type detection, fix
+    stringMatch method, make OscNode inherit from object
+  * OSC: fix nodeName call without the right namespace
+  * OSC: raise TypeError if attempting to add a non-OscNode child to an OscNode
+  * OSC: generalize osc message handling : use address to target a node in the
+    tree, 1st argument to name a method to execute, rest as the methods args
+  * Effects: effects must inherit from their corresponding pyo classes
+  * Effects: make one class per effect to make sure it inherits from it,
+    thus making the effect osc controllable Also write Effectchain's methods,
+    and use Mix instead of Mixer to handle dry/wet setting
+  * Instruments: remove processOsc methods (use the default provided by OscNode)
+  * Tracks: use Mix instead of Mixer to handle dry/wet setting and output
+  * Tracks: set internal Mix object as the Track's audio output
+  * Effects: set the internal Mix object as the Effect's audio output
+  * Effects: EffectChain uses an internal Mix object as audio output instead
+    of inheriting from it
+  * Effect: Chain's setOrder method takes 1 arg per item that will be packed
+    in the order list
+  * Tracks: rename mix to _out_fader
+  * Tracks: avoid circular patch (segfault) by giving the Track's output
+    through a getOut() method
+  * Effects: rename mix to _out_fader
+  * Effects: rename effect input to in_fader
+  * Tracks: don't store self.chain before adding it to Track's children
+  * Tracks: add pseudo-random position control to GranulatorTrack
+  * Tracks: import audioServer (use its sampling rate in GranulatorTrack's
+    position setting
+  * Tracks: testing code validating Tracks audio output with an
+    empty chain effect
+  * Instruments: don't convert nodeName before calling OscNode's init
+  * Instruments: rewrite NewTable copyData and rotate
+  * Instruments: make Instrument inherit from pyo.PyoObject and
+    output an audio stream
+  * Instruments: extend setInput to accept an audio input number or a PyoObject
+  * Instruments: rename self.input to self.in_fader
+  * Instruments: use a dummy object as out_fader
+  * Tracks: use a dummy object as output and fix its dry/wet calculation
+  * Effects: use a dummy object as output
+  * Tracks: rename _out_fader to out_fader
+  * Instruments: add togglePlay method
+  * OSC: avoid data sharing between OscNode instances
+  * OSC: use a threaded OSC receiver, not bound to the audio server
+  * Tracks: dynamic control implementation tests
+  * Config: disable audio server's midi handling (as we use threaded listeners)
+  * Midi: add midi to osc module with test case validating messages conversion
+    and sending
+  * Midi: allow defining in the route if the midi value has to be normalized
+  * Utils: add utilities module, including Clamp class
+  * Revert commit 10d424a2e65b5bb7f7b9c3a569f4ae3de5d636f1
+  * Utils: add utilities module, including Clamp class
+  * Utils: fix Clamp
+  * Tracks / Utils: Rewrite argument mapping function: don't use pyo.Map,
+    use a single robust custom fonction called by the decorator, whose args
+    are retrieve in the objects "self.maps" dictionary
+  * README: fix diagram link target (404 error)
+  * OSC: move osc address splitting to normalizeOsc method so that
+    normalizeAddress returns a true standard osc address
+  * OSC: differentiate address normalizing and path-array computing
+    in log messages
+  * MIDI: remove dict keys() generator as the for loop iterates over
+    the dict's keys already
+  * midi: channel and cc number must be integers in route definition
+  * midi: fix wrong global route variable access & add debug logging
+  * midi: add bcf2000 midi to osc routing
+  * tracks: fix tracks' base object to allow proper multiplication
+    factor setting (setMul) on the returned stream
+  * configuration: add a dedicated channel for monitoring tracks' outputs
+    using a global pyo.Mixer instance
+  * tracks: add a monitor output and route it to the global monitor manager
+  * monitoring: implement an osc ready monitor manager
+  * osc: don't import configuration module
+  * monitor: fix addInput wrapper (specify voice=None)
+  * main: add osc and midi router, instantiate monitor manager
+  * monitor: set setMul args mapping
+
+ -- Grégory DAVID <groolot@groolot.net>  Mon, 22 Jan 2024 23:56:59 +0100
