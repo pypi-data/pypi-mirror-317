@@ -1,0 +1,6 @@
+django
+django-click
+django-model-helper
+django-environment-settings
+simqcore
+redis
