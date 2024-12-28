@@ -1,0 +1,11 @@
+t_ocr
+t_desktop
+pillow>=10.0.1
+pyautogui
+# Streamlines the process of creating data classes, enables the dumping and restoration of data
+t-object>=0.1.7
+
+opencv-python==4.10.0.84
+numpy==2.0.1
+
+pyautogui
