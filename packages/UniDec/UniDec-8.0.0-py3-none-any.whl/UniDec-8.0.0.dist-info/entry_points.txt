@@ -1,0 +1,4 @@
+[console_scripts]
+gunidec = unidec.Launcher:run_launcher
+isodec = unidec.IsoDec.__main__:main
+unidec = unidec.__main__:main
