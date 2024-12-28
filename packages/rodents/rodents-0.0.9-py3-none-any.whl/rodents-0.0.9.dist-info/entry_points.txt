@@ -1,0 +1,2 @@
+[console_scripts]
+rodents = rodents.jiggler:run_jiggler
