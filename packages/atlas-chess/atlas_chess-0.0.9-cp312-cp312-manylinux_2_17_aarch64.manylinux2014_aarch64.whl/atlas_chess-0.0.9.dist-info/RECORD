@@ -1,0 +1,5 @@
+atlas_chess-0.0.9.dist-info/METADATA,sha256=YE3Zpjg4M-lyovSalWGQc6kpUB8D97mbf0BpDCqVKbQ,416
+atlas_chess-0.0.9.dist-info/WHEEL,sha256=8yAwj5UNZT3KGT9fxhtjeIsm2tPcLw5YO4TKHHvTCBw,131
+atlas_chess/__init__.py,sha256=C0zYZ43kX3u9xrczU58HKQg5GX0f392A6saXkYeoaTk,127
+atlas_chess/atlas_chess.cpython-312-aarch64-linux-gnu.so,sha256=cI1KzqVgOyb05UiBi2nuKYbGI_VCwnZ6C7pBDQ4IEZc,9404416
+atlas_chess-0.0.9.dist-info/RECORD,,
