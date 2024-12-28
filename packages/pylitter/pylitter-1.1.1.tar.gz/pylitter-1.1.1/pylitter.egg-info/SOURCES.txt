@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+litter/__init__.py
+litter/main.py
+litter/tests/__init__.py
+litter/tests/upload_test.py
+litter/uploader/__init__.py
+litter/uploader/base.py
+litter/uploader/catbox.py
+litter/uploader/litterbox.py
+pylitter.egg-info/PKG-INFO
+pylitter.egg-info/SOURCES.txt
+pylitter.egg-info/dependency_links.txt
+pylitter.egg-info/entry_points.txt
+pylitter.egg-info/requires.txt
+pylitter.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+litter = litter.main:cli
+throw = litter.main:cli
