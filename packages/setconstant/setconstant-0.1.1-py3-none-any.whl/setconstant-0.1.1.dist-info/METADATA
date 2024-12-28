@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: setconstant
+Version: 0.1.1
+Summary: A Python module to handle constants using integer, string, and float types
+Author: Anuraj R
+Author-email: Anuraj R <anurajanu2883@gmail.com>
+License: MIT
+Project-URL: Homepage, https://pypi.org/project/setconstant/0.1.1/
+Project-URL: Web Page, https://my-profile-63a52.web.app/
+Project-URL: Source Code, https://github.com/Anuraj-CodeHaven
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+#setconstant Module
+
+This module provides a way to define and manage constants in Python. 
+
+## Features
+- Declare integer, string, and floating-point constants.
+- Retrieve and delete constants.
+- Access constants directly through module attributes.
