@@ -1,0 +1,44 @@
+[build-system]
+requires = [
+    "setuptools>=71.1",
+    "wheel>=0.43"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "advent-of-code-explainer"
+dynamic = ["version"]
+description = 'An "explainer" app for "Advent of Code" puzzles.'
+requires-python = ">=3.10"
+authors = [
+    {name = "Skenvy", email = "nathan.a.z.levett@gmail.com"},
+]
+maintainers = [
+    {name = "Skenvy", email = "nathan.a.z.levett@gmail.com"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = [
+    "Advent",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Skenvy/advent-of-code-explainer/tree/main/pkg"
+Download = "https://github.com/Skenvy/advent-of-code-explainer/archive/refs/heads/main.zip"
+Changelog = "https://github.com/Skenvy/advent-of-code-explainer/releases"
+Documentation = "https://skenvy.github.io/advent-of-code-explainer/pkg/"
+BugTracker = "https://github.com/Skenvy/advent-of-code-explainer/issues"
+Funding = "https://github.com/sponsors/Skenvy"
+GitHub = "https://github.com/Skenvy/advent-of-code-explainer"
+PyPI = "https://pypi.org/project/advent-of-code-explainer/"
+
+[tool.setuptools.dynamic]
+version = {attr = "advent_of_code_explainer.__version__"}
+
+[tool.pytest.ini_options]
+addopts = "-r a -v -W ignore::DeprecationWarning"
