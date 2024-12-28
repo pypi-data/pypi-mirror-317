@@ -1,0 +1,66 @@
+:py:mod:`testbot.config.static_setting`
+=======================================
+
+.. py:module:: testbot.config.static_setting
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.config.static_setting.ResourceSetting
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.config.static_setting.__copyright__
+   testbot.config.static_setting.__author__
+   testbot.config.static_setting.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: ResourceSetting
+
+
+   Bases: :py:obj:`testbot.config.setting.SettingBase`
+
+   资源设置类
+
+   .. py:attribute:: file_name
+      :value: 'ResourceSetting.json'
+
+      
+
+   .. py:attribute:: resource_path
+
+      
+
+   .. py:attribute:: auto_connect
+      :value: False
+
+      
+
+

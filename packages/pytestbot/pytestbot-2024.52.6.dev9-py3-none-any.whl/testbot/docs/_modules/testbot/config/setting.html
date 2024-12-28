@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>testbot.config.setting &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=359c27e9"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../../testbot.html">testbot</a></li>
+          <li class="breadcrumb-item"><a href="../config.html">testbot.config</a></li>
+      <li class="breadcrumb-item active">testbot.config.setting</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for testbot.config.setting</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<div class="viewcode-block" id="__copyright__"><a class="viewcode-back" href="../../../autoapi/testbot/config/setting/index.html#testbot.config.setting.__copyright__">[docs]</a><span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved&quot;</span></div>
+<div class="viewcode-block" id="__author__"><a class="viewcode-back" href="../../../autoapi/testbot/config/setting/index.html#testbot.config.setting.__author__">[docs]</a><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Nuanguang Gu(Sunny)&quot;</span></div>
+<div class="viewcode-block" id="__email__"><a class="viewcode-back" href="../../../autoapi/testbot/config/setting/index.html#testbot.config.setting.__email__">[docs]</a><span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;nuanguang.gu@aliyun.com&quot;</span></div>
+
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABCMeta</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="kn">from</span> <span class="nn">testbot.config</span> <span class="kn">import</span> <span class="n">CONFIG_PATH</span>
+
+<div class="viewcode-block" id="_DEFAULT_PATH"><a class="viewcode-back" href="../../../autoapi/testbot/config/setting/index.html#testbot.config.setting._DEFAULT_PATH">[docs]</a><span class="n">_DEFAULT_PATH</span> <span class="o">=</span> <span class="n">CONFIG_PATH</span></div>
+
+
+<div class="viewcode-block" id="SettingError"><a class="viewcode-back" href="../../../autoapi/testbot/config/setting/index.html#testbot.config.setting.SettingError">[docs]</a><span class="k">class</span> <span class="nc">SettingError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="SettingBase"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.SettingBase">[docs]</a><span class="k">class</span> <span class="nc">SettingBase</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    配置基类</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="SettingBase.file_name"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.SettingBase.file_name">[docs]</a>    <span class="n">file_name</span> <span class="o">=</span> <span class="kc">None</span></div>
+<div class="viewcode-block" id="SettingBase.setting_path"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.SettingBase.setting_path">[docs]</a>    <span class="n">setting_path</span> <span class="o">=</span> <span class="n">_DEFAULT_PATH</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="SettingBase._get_full_path"><a class="viewcode-back" href="../../../autoapi/testbot/config/setting/index.html#testbot.config.setting.SettingBase._get_full_path">[docs]</a>    <span class="k">def</span> <span class="nf">_get_full_path</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        获取配置文件全路径</span>
+<span class="sd">        :return: 配置文件全路径</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">file_name</span> <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">file_name</span> <span class="k">else</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;.json&quot;</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">setting_path</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="SettingBase.save"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.SettingBase.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        保存配置文件</span>
+
+<span class="sd">        :return: None</span>
+<span class="sd">        :rtype: NoneType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">setting_path</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">setting_path</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_get_full_path</span><span class="p">(),</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;setting_path&quot;</span> <span class="ow">or</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;file_name&quot;</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">obj</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="SettingBase.load"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.SettingBase.load">[docs]</a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        加载配置文件</span>
+
+<span class="sd">        :return: None</span>
+<span class="sd">        :rtype: NoneType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_get_full_path</span><span class="p">()):</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_get_full_path</span><span class="p">())</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                <span class="n">obj</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">save</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="dynamic_setting"><a class="viewcode-back" href="../../../autoapi/testbot/config/setting/index.html#testbot.config.setting.dynamic_setting">[docs]</a><span class="k">def</span> <span class="nf">dynamic_setting</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    对SettingBase子类进行动态配置</span>
+
+<span class="sd">    :param cls:</span>
+<span class="sd">    :type cls:</span>
+<span class="sd">    :return:</span>
+<span class="sd">    :rtype:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;__base__&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">value</span><span class="o">.</span><span class="n">__base__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;SettingBase&quot;</span><span class="p">:</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span> <span class="s2">&quot;setting&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span> <span class="s2">&quot;setting_path&quot;</span><span class="p">):</span>
+                    <span class="n">value</span><span class="o">.</span><span class="n">setting_path</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">setting_path</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span> <span class="s2">&quot;setting_file&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">rv</span><span class="o">.</span><span class="n">setting_file</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">value</span><span class="o">.</span><span class="n">file_name</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">setting_file</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">file_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">value</span><span class="o">.</span><span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">value</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">.json&quot;</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">value</span><span class="o">.</span><span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">value</span><span class="o">.</span><span class="n">file_name</span><span class="si">}</span><span class="s2">.json&quot;</span>
+                <span class="n">value</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">rv</span>
+    <span class="k">return</span> <span class="n">inner</span></div>
+
+
+<div class="viewcode-block" id="TestSettingBase"><a class="viewcode-back" href="../../../autoapi/testbot/config/setting/index.html#testbot.config.setting.TestSettingBase">[docs]</a><span class="k">class</span> <span class="nc">TestSettingBase</span><span class="p">(</span><span class="n">SettingBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    测试设置基类</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">setting_path</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">file_name</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">setting_path</span> <span class="o">=</span> <span class="n">setting_path</span></div>
+
+
+<div class="viewcode-block" id="StaticSettingManager"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.StaticSettingManager">[docs]</a><span class="k">class</span> <span class="nc">StaticSettingManager</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    静态配置管理类</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_setting_path</span> <span class="o">=</span> <span class="n">_DEFAULT_PATH</span>
+
+<div class="viewcode-block" id="StaticSettingManager.add_setting"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.StaticSettingManager.add_setting">[docs]</a>    <span class="k">def</span> <span class="nf">add_setting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">setting_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">setting_class</span><span class="p">:</span> <span class="nb">object</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        添加配置对象</span>
+
+<span class="sd">        :param setting_name: 配置名称</span>
+<span class="sd">        :type setting_name: str</span>
+<span class="sd">        :param setting_class: 配置类</span>
+<span class="sd">        :type setting_class: object</span>
+<span class="sd">        :return:</span>
+<span class="sd">        :rtype:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">setting_class</span><span class="p">,</span> <span class="s2">&quot;__base__&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">setting_class</span><span class="o">.</span><span class="n">__base__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">!=</span> <span class="s2">&quot;SettingBase&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">SettingError</span><span class="p">(</span><span class="s2">&quot;注册的配置必须是SettingBase的子类&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">SettingError</span><span class="p">(</span><span class="s2">&quot;注册的配置必须是SettingBase的子类&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="p">[</span><span class="n">setting_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">setting_class</span>
+        <span class="n">setting_class</span><span class="o">.</span><span class="n">setting_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_setting_path</span></div>
+
+<div class="viewcode-block" id="StaticSettingManager.setting"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.StaticSettingManager.setting">[docs]</a>    <span class="k">def</span> <span class="nf">setting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">setting_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        配置文件的注册装饰器</span>
+
+<span class="sd">        :param setting_name: 配置名称</span>
+<span class="sd">        :type setting_name: str</span>
+<span class="sd">        :param args:</span>
+<span class="sd">        :type args:</span>
+<span class="sd">        :param kwargs:</span>
+<span class="sd">        :type kwargs:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        :rtype:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_setting</span><span class="p">(</span><span class="n">setting_name</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">cls</span>
+        <span class="k">return</span> <span class="n">wrapper</span></div>
+
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="StaticSettingManager.setting_path"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.StaticSettingManager.setting_path">[docs]</a>    <span class="k">def</span> <span class="nf">setting_path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        设置路径</span>
+
+<span class="sd">        :return: 设置路径</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_setting_path</span></div>
+
+    <span class="nd">@setting_path</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">setting_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_setting_path</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">setting</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">setting</span><span class="o">.</span><span class="n">setting_path</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="StaticSettingManager.sync_path"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.StaticSettingManager.sync_path">[docs]</a>    <span class="k">def</span> <span class="nf">sync_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        同步所有配置的路径</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">setting</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">setting</span><span class="o">.</span><span class="n">setting_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_setting_path</span></div>
+
+<div class="viewcode-block" id="StaticSettingManager.save_all"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.StaticSettingManager.save_all">[docs]</a>    <span class="k">def</span> <span class="nf">save_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        保存所有配置</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sync_path</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">setting</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">setting</span><span class="o">.</span><span class="n">save</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="StaticSettingManager.load_all"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.config.setting.StaticSettingManager.load_all">[docs]</a>    <span class="k">def</span> <span class="nf">load_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        读取所有配置</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sync_path</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">setting</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">setting</span><span class="o">.</span><span class="n">load</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="static_setting"><a class="viewcode-back" href="../../../autoapi/testbot/config/setting/index.html#testbot.config.setting.static_setting">[docs]</a><span class="n">static_setting</span> <span class="o">=</span> <span class="n">StaticSettingManager</span><span class="p">()</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
