@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tracestorm"
+version = "0.0.1"
+description = "A replay tool for LLM requests"
+authors = [
+    {name="Yao Fu", email="yao.fu.aisys@gmail.com"}
+]
+
+dependencies = [
+    "openai>=1.58.0",
+    "vllm>=0.6.3",
+    "numpy>=1.26.4",
+    "pandas>=2.2.3",
+    "seaborn>=0.13.2",
+    "matplotlib>=3.10"
+]
+
+[tool.ruff]
+line-length = 80
+exclude = []
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+unfixable = [
+    # star imports
+    "F405",
+    "F403",
+    # lambda expression assignment
+    "E731",
+    # Loop control variable not used within loop body
+    "B007",
+    # raise distinguish errors
+    "B904",
+    # f-string format
+    "UP032",
+]
+select = [
+    # isort
+    "I",
+]
+ignore = [
+    # Loop control variable not used within loop body
+    "B007"
+]
+
+
+[tool.isort]
+use_parentheses = true
+skip_gitignore = true
+
+[tool.codespell]
+skip = 'build,*.egg-info,images'
+quiet-level = 1
