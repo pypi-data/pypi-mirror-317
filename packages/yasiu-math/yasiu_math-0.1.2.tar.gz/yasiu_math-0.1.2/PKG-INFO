@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: yasiu-math
+Version: 0.1.2
+Summary: High level functions that are missing in numpy / scipy
+Author: Grzegorz Krug
+Author-email: kruggrzegorz@gmail.com
+Maintainer: Grzegorz Krug
+Maintainer-email: kruggrzegorz@gmail.com
+License: MIT
+Project-URL: 1. Native Package, https://pypi.org/project/yasiu-native/
+Project-URL: 2. Math Package, https://pypi.org/project/yasiu-math/
+Project-URL: 3. Image Package, https://pypi.org/project/yasiu-image/
+Project-URL: 4. Visualisation Package, https://pypi.org/project/yasiu-vis/
+Project-URL: 5. Source repo, https://github.com/GrzegorzKrug/yasiu-math
+Keywords: numpy,scipy,math
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# Readme of `yasiu-math`
+
+Module with useful math functions that are missing in numpy or scipy.
+
+# Installation
+
+```shell
+pip install yasiu-math
+```
+# Modules list
+- `convolve` - Convolution functions
+
+### Use example:
+
+```py
+from yasiu.math.convolve import moving_average
+
+moving_average(Union[list, "1d np array"], radius=1, padding="try", kernel_type="avg", kernel_exp=2)
+```
+
+#### Example
+
+![picure](https://raw.githubusercontent.com/GrzegorzKrug/yasiu-math/refs/heads/main/pics/convolveComparison.png)
+
+# All packages
+
+[1. Native Package](https://pypi.org/project/yasiu-native/)
+
+[2. Math Package](https://pypi.org/project/yasiu-math/)
+
+[3. Image Package](https://pypi.org/project/yasiu-image/)
+
+[4. Visualisation Package](https://pypi.org/project/yasiu-vis/)
