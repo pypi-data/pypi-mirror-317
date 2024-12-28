@@ -1,0 +1,51 @@
+# TkVar: Tkinter Variable Manager
+
+TkVar is a Python utility that simplifies managing variables in Tkinter applications. With a singleton implementation, it ensures efficient handling of variables, supports dynamic creation and updates, and integrates seamlessly with Tkinter's tracing mechanisms for variable change events.
+
+## Features
+- **Singleton Design**: Guarantees a single instance of the variable manager.
+- **Dynamic Variable Management**: Automatically assigns appropriate Tkinter variable types (`StringVar`, `IntVar`, `DoubleVar`, `BooleanVar`) based on value types.
+- **Trace Support**: Easily attach and remove callbacks to monitor or respond to variable changes.
+- **Centralized Access**: Manage all variables through a single interface.
+
+## Installation
+You can integrate TkVar into your Tkinter projects by including the `tkvariable.py` file.
+
+## Usage
+
+### Initialization
+Start by initializing the `TkVar` instance with a `tk.Tk` master:
+```python
+import tkinter as tk
+from tkvariable import variable
+
+root = tk.Tk()
+variable.init(root)
+```
+
+### Creating and Accessing Variables
+```python
+variable["username"] = "Guest"  # Create a StringVar
+print(variable["username"].get())  # Access the variable
+```
+
+### Tracing Variable Changes
+```python
+def on_change(*args):
+    print("Variable changed!")
+
+variable.map("username", on_change, "write")
+```
+
+### Updating Variable Values
+```python
+variable.set("username", "Admin")
+```
+
+### Retrieving All Variables
+```python
+print(variable.variables)
+```
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.

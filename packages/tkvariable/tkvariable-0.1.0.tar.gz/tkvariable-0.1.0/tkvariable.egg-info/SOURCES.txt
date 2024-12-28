@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+tkvariable.py
+tkvariable.egg-info/PKG-INFO
+tkvariable.egg-info/SOURCES.txt
+tkvariable.egg-info/dependency_links.txt
+tkvariable.egg-info/top_level.txt
