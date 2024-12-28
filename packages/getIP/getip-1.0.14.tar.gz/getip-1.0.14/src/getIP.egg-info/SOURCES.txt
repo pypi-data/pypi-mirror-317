@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/getIP/__init__.py
+src/getIP/getIP.py
+src/getIP.egg-info/PKG-INFO
+src/getIP.egg-info/SOURCES.txt
+src/getIP.egg-info/dependency_links.txt
+src/getIP.egg-info/requires.txt
+src/getIP.egg-info/top_level.txt
+tests/test_getIP.py
