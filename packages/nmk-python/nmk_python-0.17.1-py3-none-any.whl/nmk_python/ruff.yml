@@ -1,0 +1,64 @@
+config:
+
+    # Just needs ruff
+    venvPkgDeps:
+        - ruff
+
+    # Max line length
+    pythonLineLength: 160
+
+    # Add project file fragment for ruff config
+    pythonProjectFileFragments:
+        - ${BASEDIR}/templates/ruff.toml.jinja
+
+    # Stamp files for ruff execution
+    pythonRuffFormatStamp: ${outputDir}/.ruff-format
+    pythonRuffCheckStamp: ${outputDir}/.ruff-check
+
+    # Ignored rules
+    pythonIgnoredRules:
+        - E203 # space before ":"; sometimes formatting with black introduces this kind of space in slice expressions
+        - E501 # line length; we're working with lines wider than the recommended 79 length
+
+    # Require VSCode specific extension for ruff analysis
+    vscodeExtensionsNames:
+        - charliermarsh.ruff
+
+tasks:
+
+    # Python source code format with ruff
+    py.format:
+        description: Format python code
+        emoji: ":snake:.:lipstick:"
+        deps:
+            - out
+            - py.project
+        appendToDeps: build
+        if: ${pythonSrcFiles}   # Only if python source files are found
+        output:
+            - ${pythonRuffFormatStamp}
+        input:
+            - ${pythonProjectFile}
+            - ${pythonSrcFiles}
+        builder: nmk_python.ruff.RuffBuilder
+        params:
+            src_folders: ${pythonSrcFolders}
+            command: format
+
+    # Python source code analysis with ruff
+    py.analyze:
+        description: Analyze python code
+        emoji: ":snake:.:eye: "
+        deps:
+            - py.format
+        appendToDeps: build
+        if: ${pythonSrcFiles}   # Only if python source files are found
+        output:
+            - ${pythonRuffCheckStamp}
+        input:
+            - ${pythonProjectFile}
+            - ${pythonSrcFiles}
+        builder: nmk_python.ruff.RuffBuilder
+        params:
+            src_folders: ${pythonSrcFolders}
+            command: check
