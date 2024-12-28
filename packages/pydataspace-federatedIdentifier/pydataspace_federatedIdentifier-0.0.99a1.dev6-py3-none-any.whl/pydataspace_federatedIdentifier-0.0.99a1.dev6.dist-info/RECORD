@@ -1,0 +1,10 @@
+pydataspace/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydataspace/data/federatedIdentifier.yaml,sha256=UOXkKh1yilKQE_yv0HLelWL8uorfo6AAXctDXa6RRkA,953
+pydataspace/federatedIdentifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydataspace/federatedIdentifier/context.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydataspace/federatedIdentifier/federatedIdentifier.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydataspace/federatedIdentifier/objectDependencies.py,sha256=MUSnjtAbZEvTKXLaXWYdKZo--RQjUOu_D1unkeb9Jrg,132
+pydataspace_federatedIdentifier-0.0.99a1.dev6.dist-info/METADATA,sha256=WsG4oLUhGfkkKS0dRQJmUEt5iZujuOrOXC8Iw4nIg0M,4639
+pydataspace_federatedIdentifier-0.0.99a1.dev6.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+pydataspace_federatedIdentifier-0.0.99a1.dev6.dist-info/top_level.txt,sha256=C-E1WCa2e5Oj6k66hbX3SPeCF5UcAfvv7TiBdShz4Ek,12
+pydataspace_federatedIdentifier-0.0.99a1.dev6.dist-info/RECORD,,
