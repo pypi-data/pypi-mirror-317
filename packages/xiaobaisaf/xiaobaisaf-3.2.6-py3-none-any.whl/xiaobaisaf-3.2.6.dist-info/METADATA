@@ -1,0 +1,541 @@
+Metadata-Version: 2.1
+Name: xiaobaisaf
+Version: 3.2.6
+Summary: simple_automation_framework(简称：SAF)使用最简单的模式就可以实现需要功能和测试效果，也是xiaobaiauto2的简化版SAF继承了selenium、requests/httpx、appium、loguru、xiaobaiauto2、飞书机器人、钉钉机器人、企业微信机器人（暂时不支持）、禅道提单API
+Home-page: https://gitee.com/xiaobaiOTS/simlpe_automation_framework
+Author: xiaobaiTser
+Author-email: 807447312@qq.com
+Keywords: saf automation xiaobai xiaobaiauto2 test framework
+Requires-Python: >3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: adbutils
+Requires-Dist: loguru
+Requires-Dist: bs4
+Requires-Dist: lxml
+Requires-Dist: matplotlib
+Requires-Dist: msvc-runtime
+Requires-Dist: psutil
+Requires-Dist: pillow
+Requires-Dist: pypinyin
+Requires-Dist: xiaobaiauto2
+
+# simlpe_automation_framework
+[![Downloads](https://pepy.tech/badge/xiaobaisaf)](https://pepy.tech/project/xiaobaisaf)
+[![Downloads](https://pepy.tech/badge/xiaobaisaf/month)](https://pepy.tech/project/xiaobaisaf/month)
+[![Downloads](https://pepy.tech/badge/xiaobaisaf/week)](https://pepy.tech/project/xiaobaisaf/week)
+[![Downloads](https://img.shields.io/badge/xiaobaisaf-ππ-green)](https://img.shields.io/badge/xiaobaisaf-success-green)
+
+### 介绍
+    simple_automation_framework(简称：SAF)
+    使用最简单的模式就可以实现需要功能和测试效果，也是xiaobaiauto2的简化版
+    SAF继承了selenium、requests/httpx、appium、loguru、xiaobaiauto2、飞书机器人、钉钉机器人、企业微信机器人（暂时不支持）、禅道提单API
+    
+
+### 软件架构
+    xiaobaiauto2的简化版
+
+### 版本注意
+    建议使用Python 3.9.* 版本
+    建议selenium >=4.16.0 支持代码自动执行无需关注浏览器驱动问题，可以自行下载
+    防止某些库出现不兼容问题，导致功能不可使用
+
+### 安装教程
+```commandline
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple   
+pip install xiaobaisaf
+```
+
+### 使用说明
+- 优先修改saf/data/config.py中飞书/钉钉的webhook
+```python
+# filename=config.py
+
+class feishu(object):
+    @staticmethod
+    def webhook():
+        return 'https://open.feishu.cn/open-apis/bot/v2/hook/xxxx'
+
+class dingding(object):
+    @staticmethod
+    def webhook():
+        return 'https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx'
+```
+
+- conftest.py（保持此文件与用例文件在同目录下）
+```python
+# filename = conftest.py
+from saf.utils.SendMsgUtils import robotSendMessage
+import pytest
+
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item):
+    """
+    :param item:
+    """
+    outcome = yield
+    report = outcome.get_result()
+    if report.outcome == 'failed':
+        # 调用机器人发送执行结果
+        robotSendMessage(robot_name='feishu', msg=f'测试脚本：{report.nodeid.split("::")[0]}\n测试用例：{report.nodeid.split("::")[1]}\n测试结果：{report.outcome}')
+        # robotSendMessage(robot_name='dingding', msg=f'测试脚本：{report.nodeid.split("::")[0]}\n测试用例：{report.nodeid.split("::")[1]}\n测试结果：{report.outcome}')
+        # robotSendMessage(robot_name='feishu,dingding', msg=f'测试脚本：{report.nodeid.split("::")[0]}\n测试用例：{report.nodeid.split("::")[1]}\n测试结果：{report.outcome}')
+```
+
+- 用例文件
+```python
+# fielname = test_xiaobai_testcase.py
+
+def setup_module():
+    ''' 用例脚本执行之前需要准备的信息 '''
+    ...
+
+def teardown_module():
+    ''' 用例脚本执行之后需要清除的信息 '''
+
+def setup_function():
+    ''' 初始化测试用例执行之前状态信息 '''
+    ...
+
+def teardown_function():
+    ''' 清除测试用例执行之后所产生的信息 '''
+    ...
+
+def test_yewu_name_a():
+    ''' 用例函数
+        需要针对业务场景的测试步骤的实现
+            1、UI测试就是定位需要操作的界面节点然后执行操作
+            2、API测试就是执行相关接口实现接口的功能
+        需要针对每次的结果添加断言进行判断处理
+    '''
+
+def test_yewu_name_b():
+    ''' 用例函数
+        需要针对业务场景的测试步骤的实现
+            1、UI测试就是定位需要操作的界面节点然后执行操作
+            2、API测试就是执行相关接口实现接口的功能
+        需要针对每次的结果添加断言进行判断处理
+    '''
+```
+
+```python
+# filename = test_xiaobai_allure.py
+# JDK与Allure已安装且配置好环境变量（若不知道可以查看公众号：小白科技之窗）
+import pytest
+import allure
+
+@allure.feature('下单')
+class Test_order():
+    @allure.story('登录')
+    def test_login(self):
+        ''' 登录 '''
+        with allure.step('输入账户'):
+            assert True
+        with allure.step('输入密码'):
+            assert True
+        with allure.step('点击登录'):
+            assert True
+
+    @allure.story('搜索商品')
+    def test_search(self):
+        ''' 搜索商品 '''
+        with allure.step('搜索框输入：苹果'):
+            assert True
+        with allure.step('点击搜索按钮'):
+            assert False
+'''
+# 执行脚本
+pytest test_xiaobai_allure.py --alluredir=../data
+
+# 打开报告
+allure serve ../data
+或者
+allure generate -c -o ../report ../data
+allure open ../report
+'''
+```
+------
+### saf>1.1 使用禅道API，测试失败自动提单
+- 需要在禅道后台>>二次开发>>应用>>添加应用>>创建开启免密的应用 
+- 需要将上一步所生成数据【代号】与【密钥】写入到`saf/data/config.py`中zenTao相关的参数位置
+
+```python
+# filename = saf/data/config.py
+
+import hashlib
+import time
+class zenTao(object):
+    '''
+    参考禅道接口文档：
+    https://www.zentao.net/book/zentaopmshelp/integration-287.html
+    '''
+    @staticmethod
+    def baseURL():
+        ''' 禅道的根路径 '''
+        return 'http://192.168.0.240/zentao'
+ 
+    @staticmethod
+    def account():
+        ''' 后台-》二次开发-》应用-》免密登录的账户名 '''
+        return '开启密钥的账户名称，例如管理员：admin'
+ 
+    @staticmethod
+    def getCode():
+        ''' 后台-》二次开发-》应用-》创建-》代号 '''
+        return '复制生成应用的代号字符串'
+  
+    @staticmethod
+    def getKey():
+        ''' 后台-》二次开发-》应用-》创建-》密钥 '''
+        return '复制生成应用的密钥字符串'
+  
+    @staticmethod
+    def getTime():
+        ''' 获取时间戳 ，默认即可，无需修改'''
+        return int(time.time())
+  
+    @staticmethod
+    def getToken():
+        ''' 获取token： md5($code + $key + $time) ，默认即可，无需修改'''
+        _md5 = hashlib.md5(f'{zenTao.getCode()}{zenTao.getKey()}{zenTao.getTime()}'.encode('utf-8'))
+        return _md5.hexdigest()
+```
+
+- 用例同目录下创建`conftest.py`pytest的配置文件
+```python
+# filename = conftest.py
+
+from saf.utils.BugUtils import addZenTaoBUG
+import pytest
+  
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item, call):
+  """
+  :param item:
+  """
+  outcome = yield
+  report = outcome.get_result()
+  if report.outcome == 'failed':
+      doc = item.function.__doc__
+      doc = str(doc).replace('\n', '<br>')
+      addZenTaoBUG(title=item.function.__name__,
+                        steps=f'{doc}预期结果：passed<br>测试结果：{report.outcome}')
+    
+ ```
+- 用例文件正常编写，正常运行即可
+-----
+### saf>1.0 拷贝web自动化模板到D:\autoProject目录下
+```bat
+xiaobaicmd -t web -d D:\autoProject
+xiaobaicmd --template web --dirname D:\autoProject
+xiaobaicmd -t api -d D:\autoProject
+xiaobaicmd --template api --dirname D:\autoProject
+xiaobaicmd -t app -d D:\autoProject[暂时不支持]
+```
+------
+### saf>1.3 新增pytest参数多种样例，`web`中包含
+```python
+# filename = test_xiaobai_case_v2.py
+import pytest
+from yaml import full_load
+
+''' 参数化 '''
+
+data2 = {
+    'test_login': {
+        'keys': 'username, password, _assert',
+        'values': [('xiaobai', '12345', 200), ('xiaohui', '1234567', 200)]
+    }
+}
+
+data3 = full_load(open('..\\data\\testCase.yaml', 'r').read())
+
+# 内部数据
+@pytest.mark.parametrize('username, password, _assert', [('xiaobai', '12345', 200), ('xiaohui', '1234567', 200)])
+def test_xiaobai_login1(username, password, _assert):
+    # 业务实现代码
+    assert _assert == 200
+
+# 外部数据
+@pytest.mark.parametrize(data2['test_login']['keys'], data2['test_login']['values'])
+def test_xiaobai_login2(username, password, _assert):
+    # 业务实现代码
+    assert _assert == 200
+
+
+# 外部文件数据
+@pytest.mark.parametrize(data3['test_login']['keys'], [eval(v) for v in data3['test_login']['values']])
+def test_xiaobai_login3(username, password, _assert):
+    # 业务实现代码
+    assert _assert == 200
+```
+```yaml
+# filename = ..\\data\\testCase.yaml
+---
+test_login:
+  keys: username,password,_assert
+  values:
+    - ('xiaobai', '12346', 200)
+    - ('xiaohui', '123456', 200)
+```
+-----
+### saf>1.8 工具会自动在当前目录下生成target文件夹，target目录内容与web模板保持一致，页面对象代码在PageObjects目录下
+```cmd
+xiaobaicmd -u https://www.baidu.com 
+xiaobaicmd --url https://www.baidu.com 
+```
+-----
+### saf>1.9  基于adb实现监控Android设备中APP操作时实时生成XPath表达式及坐标等数据
+```cmd
+xiaobaicmd -m gui             # 基于界面实时获取APP数据
+xiaobaicmd --monitor gui      # 基于界面实时获取APP数据
+xiaobaicmd -m cli             # 基于命令实时获取APP数据
+xiaobaicmd --monitor cli      # 基于命令实时获取APP数据
+```
+----
+### saf>2.0   基础adb实现Android设备的界面监控功能
+```cmd
+xiaobaicmd -e [1]   # 默认值为1，可省略；表示打开界面监控第一个设备的实时界面
+xiaobaicmd --device 1
+```
+-----
+### saf>2.2   基础adb实现Android设备的电量监控功能
+```cmd
+xiaobaicmd -m power   # 界面监控设备的电量与内存使用率的实时界面
+xiaobaicmd -m memory   # 界面监控设备的电量与内存使用率的实时界面
+```
+------
+### saf>2.3.5 新增实时监控Android当前APP的CPU使用率及FPS数据
+```cmd
+xiaobaicmd -m gui
+```
+-------
+### saf>2.3.7 新增识别滑块验证码破解
+```python
+from saf.utils.CaptchaUtils import checkSlider
+from selenium import webdriver as selenium_webdriver
+from selenium.webdriver.common.by import By
+
+driver = selenium_webdriver.Chrome()
+
+driver.get("https://www.xiaobaisoftware.com")
+
+# 其它操作...
+
+# 定位目标图（小图）
+target_element = driver.find_element(By.XPATH, value='')
+
+# 定位背景图（大图）
+background_element = driver.find_element(By.XPATH, value='')
+
+# 定位滑块按钮
+button_element = driver.find_element(By.XPATH, value='')
+
+# 参数：浏览器驱动、目标元素、背景元素、滑块元素、失败重试（非必须，默认：False）、重试次数（非必须，默认：3）
+checkSlider(driver, target_element, background_element, button_element, True, 5)
+```
+-----
+### saf>2.3.8 新增解析DNS并刷新DNS缓存，数据保存HOSTS
+```cmd
+# 执行脚本之前请修改系统hosts文件在当前用户下有可读可写的权限！
+# windows的hosts文件路径：C:\Windows\System32\drivers\etc\hosts
+# Mac OS的hosts文件路径 ：/private/etc/hosts
+# Linux的hosts文件路径  ：/etc/hosts
+
+# --domains 后面的域名使用逗号分离即可
+xiaobaicmd --domains github.com,raw.githubusercontent.com,github.global.ssl.fastly.net,assets-cdn.github.com
+```
+------
+### saf>=2.5.0 新增小白软件管理工具，目前支持（安装、卸载、替换不同版本的）JMeter
+```cmd
+# 命令行运行
+xiaobaimanager
+```
+------
+### saf>=2.5.2 新增文件查找工具
+```cmd
+# 命令行运行
+xiaobaifinder
+```
+----
+### saf>=3.0.0 全面升级安卓设备实时监控、生成代码、启动服务、运行脚本等（Python版）
+```cmd
+# 命令行运行
+xiaobaidevice
+```
+-----
+### saf>=3.0.0 全面升级安卓设备实时监控、生成代码、启动服务、运行脚本等（二进制版）
+```cmd
+# 命令行运行
+xiaobaidevice2
+```
+----
+### saf>=3.0.0 监控粘贴板将浏览器 >> F12 >> copy >> fetch(Nodejs)转为requests代码
+```cmd
+# 命令行运行
+xiaobaicmd -m cp
+```
+-----
+### saf>=3.0.2 替换api自动化项目模板(template)
+```cmd
+xiaobaicmd -t api -d D:/
+```
+
+-----
+
+### saf>=3.0.3 替换api自动化项目模板(template)
+
+#### 1、导出模板
+`xiaobaicmd -t api -d D:/`
+
+#### 2、进入模板目录
+`cd API_Project`
+
+#### 3、初始化环境
+`init_env.bat 或者 init_env.sh 或者 python init_env.py`
+
+#### 4、运行转换工具
+`convert_ui.bat 或者 convert_ui.sh 或者 python convert_ui.py`
+
+#### 5、修改配置文件（具体位置如下）
+```cmd
+  Email(邮箱服务配置)
+  API_Project>>api_project>>config>>email_config.py
+  
+  BUG(BUG单配置)
+  API_Project>>api_project>>config>>bug_config.py
+  
+  message(消息配置)
+  API_Project>>api_project>>config>>message_config.py
+```
+
+#### 6、新增测试数据（可选）
+路径：API_Project>>api_project>>case_data_files>>*
+
+#### 7、修改测试用例（可选）
+路径：API_Project>>api_project>>testcases>>*
+
+#### 8、执行用例
+`run_apis.bat 或者 run_apis.sh 或者 python run_apis.py`
+
+细节请查阅导出的模板项目中[README.md](saf/templates/API_Project/README.md)文档内容
+
+----
+
+### saf>=3.2.0 新增`xiaobaipom`命令行工具，从`xiaobaicmd --url`命令优化独立出来
+可以配置`xiaobaicmd -t web`Web模板 + `xiaobaipom`命令行工具，实现Web自动化项目的快速生成
+
+#### 1、导出Web模板
+`xiaobaicmd -t web -d D:/`
+
+#### 2、进入模板目录
+`cd Web_Project`
+
+#### 3、初始化环境
+`init_env.bat 或者 init_env.sh 或者 python init_env.py`
+
+#### 4、运行POM工具（将网页自动生成PO模型代码）
+`pomGenerator.bat`
+或者
+`xiaobaipom --help`
+
+#### 5、修改配置文件（具体位置如下）
+```cmd
+  Email(邮箱服务配置)
+  Web_Project>>web_project>>config>>email_config.py
+
+  BUG(BUG单配置)
+  Web_Project>>web_project>>config>>bug_config.py
+  message(消息配置)
+  Web_Project>>web_project>>config>>message_config.py
+```
+
+#### 6、修改测试用例（可选）
+路径：WEB_Project>>web_project>>testcases>>*
+
+#### 7、执行用例
+`main.bat 或者 main.sh 或者 python main.py`
+
+细节请查阅导出的模板项目中[README.md](saf/templates/WEB_Project/README.md)文档内容
+
+-----
+
+### 操作介绍
+可以观看官方抖音（抖音号：xiaobaiTser）
+
+
+### 参与贡献
+[selenium官网文档](https://www.selenium.dev/documentation/, "selenium官网文档")
+
+[requests官网文档](https://requests.readthedocs.io/en/latest/, "requests官网文档")
+
+[appium官网](http://appium.io/, "appium官网")
+
+[loguru官方文档](https://loguru.readthedocs.io/en/stable/overview.html, "loguru官方文档")
+
+[xiaobaiauto2帮助文档](https://pypi.org/project/xiaobaiauto2/, "xiaobaiauto2帮助文档")
+
+[Allure帮助文档](https://docs.qameta.io/allure, "Allure帮助文档")
+
+[飞书机器人获取WebHook](https://open.feishu.cn/document/ukTMukTMukTM/ucTM5YjL3ETO24yNxkjN?lang=zh-CN, "飞书机器人获取WebHook")
+
+[钉钉机器人获取WebHook](https://open.dingtalk.com/document/group/custom-robot-access, "钉钉机器人获取WebHook")
+
+[163邮箱配置](http://help.163.com/09/1223/14/5R7P3QI100753VB8.html, "163邮箱配置")
+
+[QQ邮箱配置](https://service.mail.qq.com/cgi-bin/help?subtype=1&id=28&no=369, "QQ邮箱配置")
+
+### 更新日志
+
+| version | info                                            |
+|---------|-------------------------------------------------|
+| 1.0     | 基本实现web自动化模板功能                                  |
+| 1.1     | 修复已知BUG                                         |
+| 1.2     | 新增allure报告库及封装禅道提单接口                            |
+| 1.3     | 新增jira提单接口                                      |
+| 1.4     | 新增pytest参数化样例                                   |
+| 1.5     | 优化pytest样例内容                                    |
+| 1.6     | 修复已知BUG                                         |
+| 1.7     | 新增基础环境检测功能                                      |
+| 1.8     | 新增API自动化模板                                      |
+| 1.9     | 新增xiaobaicmd -u命令                               |
+| 2.0     | 新增xiaobaicmd -m命令                               |
+| 2.1     | 新增xiaobaicmd --device命令                         |
+| 2.2     | 修复已知BUG                                         |
+| 2.3     | 新增实时监控Android设备耗电量                              |
+| 2.3.1   | 修复已知BUG                                         |
+| 2.3.2   | 修复已知BUG                                         |
+| 2.3.3   | 新增实时监控Android当前APP的内存使用率                        |
+| 2.3.4   | 新增xiaobaicmd -m gui效果展示                         |
+| 2.3.5   | 新增xiaobaicmd -u 转PO代码时xpath的表达式                 |
+| 2.3.6   | 新增实时监控Android当前APP的CPU使用率及FPS数据                 |
+| 2.3.7   | 新增识别滑块验证码破解                                     |
+| 2.3.8   | 优化识别滑块验证码破解                                     |
+| 2.3.9   | 新增解析DNS并刷新DNS缓存，数据保存HOSTS                       |
+| 2.4     | 修复已知BUG                                         |
+| 2.4.1   | 优化DNS解析效果                                       |
+| 2.4.2   | 优化自动生成代码                                        |
+| 2.4.3   | 优化                                              |
+| 2.4.3.1 | 优化                                              |
+| 2.4.3.2 | 优化                                              |
+| 2.5.0   | 添加xiaobaimanager命令                              |
+| 2.5.1   | 优化xiaobai                                       |
+| 2.5.1   | 新增xiaobaifinder                                 |
+| 3.0.0   | 新增xiaobaidevice、xiaobaidevice2、xiaobaicmd -m cp |
+| 3.0.1   | xiaobaicmd -m cp 新增【Ctrl + S】                   |
+| 3.0.2   | xiaobaicmd -t api 替换模板                          |                 
+| 3.0.3   | xiaobaicmd -t api 新增界面操作替换模板                    |   
+| 3.0.4   | 优化生成接口自动化模板                                     | 
+| 3.1.0   | 优化                                              |
+| 3.1.1   | Fix                                             |
+| 3.1.2   | Fix                                             |
+| 3.1.6   | Fix                                             |
+| 3.1.7   | Fix                                             |
+| 3.1.8   | 修复`xiaobaidevice2`功能不可用                         |
+| 3.1.9   | 精简依赖库                                           |
+| 3.2.0   | 新增`xiaobaipom`                                  |
+| 3.2.1   | 优化`xiaobaipom`                                              |
+| 3.2.2   | 优化`xiaobaipom`                                              |
+| 3.2.3   | 优化`xiaobaipom`                                              |
+| 3.2.5   | 优化                                              |
+| 3.2.6   | 优化                                              |
