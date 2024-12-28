@@ -1,0 +1,16 @@
+tgshops_integrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tgshops_integrations/middlewares/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tgshops_integrations/middlewares/gateway.py,sha256=s6W2-O8BaAGlbNurl1_zbtbzCECN_E1n1Y3Cs57gLDg,6269
+tgshops_integrations/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tgshops_integrations/models/categories.py,sha256=EG6C8g5dOfXB2MH-vtqH13aqB7_VyOobY2FHpDb-fsY,977
+tgshops_integrations/models/products.py,sha256=4XC6fyC91TAWj5oaX0A26kT_UizZIGaf4qyrVv9lPpQ,1403
+tgshops_integrations/nocodb_connector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tgshops_integrations/nocodb_connector/categories_management.py,sha256=czDL9o-cy4w28BsTqJD3Jug3mJL75TiH0rtC99KJ9bc,6748
+tgshops_integrations/nocodb_connector/client.py,sha256=U2rNozjluWVul-VZroQW-8b2j6nEtKrhOkFMz1L8KmI,12022
+tgshops_integrations/nocodb_connector/model_mapping.py,sha256=UY6QHCba8o8J28duCgAzx95agGlE1pLagkNdZLV5nro,8719
+tgshops_integrations/nocodb_connector/products_management.py,sha256=uo0b3azbO7is4PUXuQJ1Ode7T9IVnUaAFk9gXcVOZHI,6068
+tgshops_integrations/nocodb_connector/tables.py,sha256=ha_QXZXd93mht0fR5E1nM0wUpz1ePon-pIdO2HI67l8,356
+tgshops_integrations-3.7.dist-info/METADATA,sha256=4T3ijjv0Hhl2o8e3MqlkXCb9eeVQdx0O6InkDxdlF2s,2844
+tgshops_integrations-3.7.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+tgshops_integrations-3.7.dist-info/top_level.txt,sha256=HFNtxqDpzmlF4ZLnMiwhbU7pOa_YozxU2zBl0bnUmcY,21
+tgshops_integrations-3.7.dist-info/RECORD,,
