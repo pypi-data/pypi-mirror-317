@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include DOCUMENTATION.md
+recursive-include examples *
+recursive-include src/explorytics/core *
+recursive-include src/explorytics/utils *
+recursive-include src/explorytics/visualizations *
