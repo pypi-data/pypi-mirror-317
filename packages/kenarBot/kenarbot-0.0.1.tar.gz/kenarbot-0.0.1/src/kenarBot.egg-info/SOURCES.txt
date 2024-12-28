@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/kenarBot/__init__.py
+src/kenarBot/app.py
+src/kenarBot/message_handler.py
+src/kenarBot/types.py
+src/kenarBot.egg-info/PKG-INFO
+src/kenarBot.egg-info/SOURCES.txt
+src/kenarBot.egg-info/dependency_links.txt
+src/kenarBot.egg-info/requires.txt
+src/kenarBot.egg-info/top_level.txt
