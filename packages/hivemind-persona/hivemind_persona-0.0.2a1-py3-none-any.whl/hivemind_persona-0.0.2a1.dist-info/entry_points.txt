@@ -1,0 +1,3 @@
+[console_scripts]
+hivemind-persona = hivemind_persona.__main__:listen
+
