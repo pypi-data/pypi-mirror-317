@@ -1,0 +1,15 @@
+akai_mpkmini_mkii_ctrl/__init__.py,sha256=qP960s9oxKd3a_gCLWcvWHaMdtWx9n8_gDj0omDE_To,49
+akai_mpkmini_mkii_ctrl/__main__.py,sha256=xZnrbBCtd2LsJv9XvuHuVngKUz57Y6kUlEkLSNE8650,3971
+akai_mpkmini_mkii_ctrl/config_reader.py,sha256=S49JkE8NUK_sZ62C0rsyGsUTKNuNlLob2qObJEdpfrM,1219
+akai_mpkmini_mkii_ctrl/controller.py,sha256=Drnke-JInC18HFlqdqfl2YViesF4qs1271lSBW4O3Vw,3736
+akai_mpkmini_mkii_ctrl/json_converter.py,sha256=5m5RFidQpjJitEIs5JGoCtzQNVzhuIGkSuvkexoXLJs,5518
+akai_mpkmini_mkii_ctrl/mpkmini_mk2.py,sha256=UW68WqDjR5eqvswRssqYI7-dvH4MXXHuCd0CDpxbrUs,4810
+akai_mpkmini_mkii_ctrl/note_converter.py,sha256=hvcc8yc3Sx0dudcQNa6i2AEsy5dJa36BzwkEgZLeOeU,1109
+akai_mpkmini_mkii_ctrl/preset.mk2,sha256=i3R2p-uhmJbri5Xi6_OIyMBE41ZtSeEkWGw0lmkgwdY,117
+akai_mpkmini_mkii_ctrl-0.3.0.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+akai_mpkmini_mkii_ctrl-0.3.0.dist-info/METADATA,sha256=gaoGLzjIVLXB9ZbpToT9YlXJViyofidp28axD6w9-FM,5186
+akai_mpkmini_mkii_ctrl-0.3.0.dist-info/README.md,sha256=NbcYTkZXaqmFMSKTIwWeqs01AdztqXT_9XEKX8MRk-8,4264
+akai_mpkmini_mkii_ctrl-0.3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+akai_mpkmini_mkii_ctrl-0.3.0.dist-info/preset.mk2,sha256=i3R2p-uhmJbri5Xi6_OIyMBE41ZtSeEkWGw0lmkgwdY,117
+akai_mpkmini_mkii_ctrl-0.3.0.dist-info/top_level.txt,sha256=6tIdujMkB4FNdPukRDyeHYph4W6e3NNbGosMf3SJEEM,23
+akai_mpkmini_mkii_ctrl-0.3.0.dist-info/RECORD,,
