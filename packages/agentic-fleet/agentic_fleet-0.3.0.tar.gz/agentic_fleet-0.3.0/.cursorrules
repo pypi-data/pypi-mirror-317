@@ -1,0 +1,85 @@
+# Project Planning and Documentation
+check documentation {
+    description: "Review project documentation and requirements"
+    read: "docs/intro.md"
+    suggest: "Consider checking documentation in docs/ or searching online for best practices"
+}
+
+# Repository Structure and Setup
+init repo structure {
+    description: "Initialize repository structure following best practices"
+    suggest: """
+    Consider creating:
+    - src/
+    - tests/
+    - docs/
+    - .github/workflows/
+    - frontend/
+    """
+}
+
+# Package Management
+manage dependencies {
+    description: "Manage Python dependencies with uv"
+    run: "uv pip install -e ."
+    suggest: "Keep dependencies updated and properly documented in pyproject.toml"
+}
+
+# Backend Development with FastAPI and Pydantic
+init backend {
+    description: "Setup FastAPI backend with Pydantic models"
+    run: "uv venv .venv && uv pip install fastapi pydantic pydanticai 'agentic-fleet[all]'"
+    suggest: "Consider implementing Azure OpenAI format compatibility"
+}
+
+# Frontend Development with Builder.io
+init frontend {
+    description: "Setup Next.js frontend using Builder.io"
+    run: "npm init builder.io@latest"
+    suggest: """
+    Remember to:
+    1. Configure Builder.io API key in environment variables
+    2. Set up Builder.io space and models
+    3. Implement visual editing components
+    4. Test Builder.io integration
+    5. Review Builder.io documentation for best practices
+    """
+}
+
+# Testing and Quality Assurance
+add tests {
+    description: "Add test files and configurations"
+    read: "tests/**/*"
+    suggest: "Implement unit tests, integration tests, and e2e tests using pytest"
+}
+
+# CI/CD Workflows
+setup github actions {
+    description: "Configure GitHub Actions workflows"
+    read: ".github/workflows/**/*"
+    suggest: "Add workflows for testing, linting, and deployment"
+}
+
+# Incremental Development
+commit changes {
+    description: "Regular commits following best practices"
+    suggest: """
+    Remember to:
+    1. Make small, focused commits
+    2. Write clear commit messages
+    3. Push regularly
+    4. Create PRs for significant changes
+    """
+}
+
+# Review Changes
+review code {
+    description: "Review code changes before committing"
+    suggest: """
+    Check for:
+    1. Code functionality
+    2. Test coverage
+    3. Documentation updates
+    4. Security considerations
+    """
+}

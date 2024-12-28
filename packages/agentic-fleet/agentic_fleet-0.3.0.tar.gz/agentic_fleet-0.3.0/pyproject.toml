@@ -1,0 +1,102 @@
+[project]
+name = "agentic-fleet"
+version = "0.3.0"
+description = "Advanced multi-agent system building upon Magentic-One concepts"
+requires-python = ">=3.11"
+authors = [
+    {name = "Zachary BENSALEM", email = "zachary@qredence.ai"}
+]
+dependencies = [
+    "fastapi>=0.109.0",
+    "pydantic>=2.4.2",
+    "uvicorn>=0.23.2",
+    "azure-identity>=1.19.0",
+    "python-dotenv>=1.0.1",
+    "pyautogen>=0.2.0",
+    "openai>=1.12.0",
+    "redis>=5.0.1",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "chainlit>=1.0.0",
+    "httpx>=0.25.1",
+    "websockets>=11.0.3",
+    "aiohttp>=3.8.5",
+    "termcolor>=2.4.0",
+    "docker>=7.0.0",
+    "azure-core>=1.29.6",
+    "azure-mgmt-cognitiveservices>=13.5.0",
+    "python-socketio>=5.8.0,<6.0.0",
+    "python-socketio-client>=0.5.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.23.5",
+    "pytest-cov>=4.1.0",
+    "pytest-xdist",
+    "pytest_mock",
+    "black>=23.9.1",
+    "isort>=5.12.0",
+    "mypy==1.13.0",
+    "pyright==1.1.389",
+    "ruff==0.4.8",
+    "types-redis>=4.6.0.20240106",
+    "types-python-jose>=3.3.4.20240106",
+    "typer",
+    "rich",
+    "polars",
+    "poethepoet",
+    "packaging",
+    "grpcio-tools~=1.62.0",
+    "mypy-protobuf",
+    "cookiecutter",
+    "tomli",
+]
+
+promptflow = [
+    "promptflow-devkit>=1.16.2",
+    "promptflow-tracing>=1.16.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agenticfleet"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "azure.*",
+    "openai.*",
+    "redis.*",
+    "jose.*",
+    "passlib.*",
+    "chainlit.*",
+]
+ignore_missing_imports = true
+
+[tool.uv]
+python = "3.11"
+exclude = ["tests"] 

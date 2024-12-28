@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: agentic-fleet
+Version: 0.3.0
+Summary: Advanced multi-agent system building upon Magentic-One concepts
+Author-email: Zachary BENSALEM <zachary@qredence.ai>
+Requires-Python: >=3.11
+Requires-Dist: aiohttp>=3.8.5
+Requires-Dist: azure-core>=1.29.6
+Requires-Dist: azure-identity>=1.19.0
+Requires-Dist: azure-mgmt-cognitiveservices>=13.5.0
+Requires-Dist: chainlit>=1.0.0
+Requires-Dist: docker>=7.0.0
+Requires-Dist: fastapi>=0.109.0
+Requires-Dist: httpx>=0.25.1
+Requires-Dist: openai>=1.12.0
+Requires-Dist: passlib[bcrypt]>=1.7.4
+Requires-Dist: pyautogen>=0.2.0
+Requires-Dist: pydantic>=2.4.2
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: python-jose[cryptography]>=3.3.0
+Requires-Dist: python-socketio-client>=0.5.3
+Requires-Dist: python-socketio<6.0.0,>=5.8.0
+Requires-Dist: redis>=5.0.1
+Requires-Dist: termcolor>=2.4.0
+Requires-Dist: uvicorn>=0.23.2
+Requires-Dist: websockets>=11.0.3
+Provides-Extra: dev
+Requires-Dist: black>=23.9.1; extra == 'dev'
+Requires-Dist: cookiecutter; extra == 'dev'
+Requires-Dist: grpcio-tools~=1.62.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy-protobuf; extra == 'dev'
+Requires-Dist: mypy==1.13.0; extra == 'dev'
+Requires-Dist: packaging; extra == 'dev'
+Requires-Dist: poethepoet; extra == 'dev'
+Requires-Dist: polars; extra == 'dev'
+Requires-Dist: pyright==1.1.389; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.23.5; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'dev'
+Requires-Dist: pytest-mock; extra == 'dev'
+Requires-Dist: pytest-xdist; extra == 'dev'
+Requires-Dist: pytest>=7.4.0; extra == 'dev'
+Requires-Dist: rich; extra == 'dev'
+Requires-Dist: ruff==0.4.8; extra == 'dev'
+Requires-Dist: tomli; extra == 'dev'
+Requires-Dist: typer; extra == 'dev'
+Requires-Dist: types-python-jose>=3.3.4.20240106; extra == 'dev'
+Requires-Dist: types-redis>=4.6.0.20240106; extra == 'dev'
+Provides-Extra: promptflow
+Requires-Dist: promptflow-devkit>=1.16.2; extra == 'promptflow'
+Requires-Dist: promptflow-tracing>=1.16.2; extra == 'promptflow'
