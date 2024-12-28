@@ -1,0 +1,8 @@
+koji>=1.35.0
+typing_extensions
+
+[typedeps]
+types-psycopg2
+types-python-dateutil
+types-requests
+types-six
