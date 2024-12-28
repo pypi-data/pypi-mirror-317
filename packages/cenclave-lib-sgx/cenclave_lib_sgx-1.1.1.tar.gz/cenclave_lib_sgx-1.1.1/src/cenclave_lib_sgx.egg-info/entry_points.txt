@@ -1,0 +1,2 @@
+[console_scripts]
+cenclave-bootstrap = cenclave_lib_sgx.cli:run
