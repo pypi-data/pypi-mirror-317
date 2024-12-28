@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling", "chardet"]
+build-backend = "hatchling.build"
+
+[project]
+name = "WeirdGitter"
+version = "0.0.4"
+authors = [
+    { name="Nikita Trubitsyn", email="nikitos99099@gmail.com" },
+]
+description = "Simple yet useful Continious Delivery script. Work with git and .sh/.bat scripts."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+]
