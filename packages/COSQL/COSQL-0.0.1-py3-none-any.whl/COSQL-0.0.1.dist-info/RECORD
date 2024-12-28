@@ -1,0 +1,10 @@
+COSQL/__init__.py,sha256=Uhiq4-k9uLt2sTbvFW4GCh1eiDpktsLJya4FWyKCWds,949
+COSQL/__version__.py,sha256=wl973qP7eOzFxR-M_RE8CUNC58nCtTMZEIddmMcMsK8,163
+COSQL/context.py,sha256=73_drb_i4R5MvkbqNgMMGZPYfiUw7vUGsQmOK9VCBLw,1422
+COSQL/core.py,sha256=KEHSAhMiA1CyaG4L3oqJdFmb_yLxpBDgzxDGQo-1abc,12620
+COSQL/cursor.py,sha256=jC-0v6CHlcmXIVIXF5Uz5rXCvBIiPs2XA52v_0mGbXg,3620
+COSQL/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+COSQL-0.0.1.dist-info/METADATA,sha256=5Y_dIfDAouZVIccu3EFc93eXBWt_8_iT2h0ZQTe8-ek,288
+COSQL-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+COSQL-0.0.1.dist-info/top_level.txt,sha256=20JJ4TXwgZHUjt_YoXP0h22O_rWLLT6wbEWzBmy_tPY,6
+COSQL-0.0.1.dist-info/RECORD,,
