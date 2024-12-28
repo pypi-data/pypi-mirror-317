@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: ezsec-requests
+Version: 0.1.1
+Summary: A set of pre-formatted request sending functions to interact with ezsec-api
+Home-page: https://www.ezsec-api.com
+Author: EZSEC LLC
+Author-email: mbultman@ezsec-api.com
+License: MIT License
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
