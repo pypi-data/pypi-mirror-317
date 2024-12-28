@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: sunpy_soar
+Version: 1.11.0
+Summary: A sunpy FIDO plugin for accessing data in the Solar Orbiter Archive (SOAR).
+Author: David Stansby
+Author-email: The SunPy Community <sunpy@googlegroups.com>
+License: Copyright (c) 2024, The SunPy Community
+        
+        Redistribution and use in source and binary forms, with or without modification,
+        are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+        ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+        (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+        LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+        ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://sunpy.org
+Project-URL: Source Code, https://github.com/sunpy/sunpy-soar
+Project-URL: Download, https://pypi.org/project/sunpy-soar
+Project-URL: Documentation, https://docs.sunpy.org/projects/soar
+Project-URL: Changelog, https://docs.sunpy.org/projects/soar/en/stable/whatsnew/changelog.html
+Project-URL: Issue Tracker, https://github.com/sunpy/sunpy-soar/issues
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: matplotlib>=3.6.0
+Requires-Dist: astropy>=5.3.0
+Requires-Dist: sunpy[net]>=6.0.0
+Requires-Dist: requests>=2.28.0
+Provides-Extra: tests
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: pytest-doctestplus; extra == "tests"
+Requires-Dist: pytest-xdist; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: responses>=0.20.0; extra == "tests"
+Requires-Dist: sunpy[map,net]>=6.0.0; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-automodapi; extra == "docs"
+Requires-Dist: matplotlib; extra == "docs"
+Requires-Dist: sphinx-changelog; extra == "docs"
+Requires-Dist: sphinx-copybutton; extra == "docs"
+Requires-Dist: sphinx-gallery; extra == "docs"
+Requires-Dist: sphinxext-opengraph; extra == "docs"
+Requires-Dist: sunpy-sphinx-theme; extra == "docs"
+
+**************
+``sunpy-soar``
+**************
+
+|ci-status| |coverage|
+
+.. |ci-status| image:: https://github.com/sunpy/sunpy-soar/actions/workflows/ci.yml/badge.svg
+    :alt: CI status
+
+.. |coverage| image:: https://codecov.io/gh/dstansby/sunpy-soar/branch/main/graph/badge.svg?token=5NKZHBX3AW
+   :target: https://codecov.io/gh/dstansby/sunpy-soar
+   :alt: Code coverage
+
+
+A sunpy Fido plugin for accessing data in the Solar Orbiter Archive (SOAR).
+
+See the `documentation <https://docs.sunpy.org/projects/soar/>`_ for installation instructions, examples, how to get help and how to contribute.

@@ -1,0 +1,17 @@
+sunpy_soar/__init__.py,sha256=00VN7ty63_FSKADp08q8bKbcOF8NnYMa2RsHPHOdra0,428
+sunpy_soar/_version.py,sha256=rZqhcUFwPMyj_mTWUN2A6qcFr8Ptv08CSbXbruC3jR4,413
+sunpy_soar/attrs.py,sha256=pdK5-VJ9E23bToQ2TRCyRnlbovTmZO4ELnlShQwKftE,5506
+sunpy_soar/client.py,sha256=5mY136ThiFSUpe4OSyv22o4bPmV9a8Au4zKt9O3-BAw,13996
+sunpy_soar/conftest.py,sha256=zM2NU-fnedRJ1tacWJ0C8sp_8rbztLgkTpP9dhTkyIE,307
+sunpy_soar/version.py,sha256=vrAYrS960MC-1T9rXVXfmV9F0O_TtXscJK0EvIxOyJY,736
+sunpy_soar/data/README.rst,sha256=7RU7-Tnvn3evkEtPNZTDBmohRUPE4SQS-TF3E1KeZvA,245
+sunpy_soar/data/attrs.json,sha256=rbaO_qPg8zV0a1n4OJJ6i437kXWzLXBmbkUb5-JkV7A,18393
+sunpy_soar/data/instrument_attrs.json,sha256=ARSdW9lwQEFBARsUNegPf6J3yTyxocSPzZ981ajkC1Y,455
+sunpy_soar/data/soop_attrs.json,sha256=-k-D3rpA5o6kFdx7rV3yRNyINDOnsjPt9a67qTk-8Vw,2048
+sunpy_soar/tests/__init__.py,sha256=W9JYSayCPwoTmtRpjYCkKnnbPQqpf26ANqXe52YASmk,44
+sunpy_soar/tests/test_sunpy_soar.py,sha256=d7X3YDWHWxPui2-Vn3r2T94ERMQlNWIJ3myV6gqkObw,13670
+sunpy_soar-1.11.0.dist-info/LICENSE,sha256=HVLp9D_L1781WZal7ri0g6RyAMorWW3FLOQ7Z9L6MH8,1334
+sunpy_soar-1.11.0.dist-info/METADATA,sha256=7pQTWOL0y0fVeantfwPR9teImAK1jNOQA0qxvn9wJWg,3605
+sunpy_soar-1.11.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+sunpy_soar-1.11.0.dist-info/top_level.txt,sha256=8GzNwb6D2nAaYICgNMDbFPJ2Q1kBOOlGqaullWXYNFI,11
+sunpy_soar-1.11.0.dist-info/RECORD,,
