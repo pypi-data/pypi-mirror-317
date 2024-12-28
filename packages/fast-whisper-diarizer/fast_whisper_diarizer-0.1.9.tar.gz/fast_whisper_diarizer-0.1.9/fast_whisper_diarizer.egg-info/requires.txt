@@ -1,0 +1,11 @@
+faster-whisper==1.1.0
+ctranslate2==4.4.0
+nemo-toolkit==2.1.0rc0
+torch==2.5.1
+torchaudio==2.5.1
+omegaconf==2.3.0
+nltk==3.9.1
+wget==3.2
+deepmultilingualpunctuation==1.0.1
+demucs==4.0.1
+numpy==1.26.4
