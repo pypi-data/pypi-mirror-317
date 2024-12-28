@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/main.py
+src/simple_markdown_splitter.egg-info/PKG-INFO
+src/simple_markdown_splitter.egg-info/SOURCES.txt
+src/simple_markdown_splitter.egg-info/dependency_links.txt
+src/simple_markdown_splitter.egg-info/top_level.txt
+src/simplemarkdownsplitter/__init__.py
+src/simplemarkdownsplitter/split.py
