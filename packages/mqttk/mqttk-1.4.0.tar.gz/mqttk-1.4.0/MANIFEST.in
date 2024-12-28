@@ -1,0 +1,2 @@
+include mqttk/*.png
+recursive-include mqttk *.py

@@ -1,0 +1,5 @@
+[console_scripts]
+mqttk-console = mqttk.__main__:main
+
+[gui_scripts]
+mqttk = mqttk.__main__:main
