@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: repo-scaffold
+Version: 0.3.0
+Summary: shawn deng repo temple project
+License: MIT
+Author: shawndeng
+Author-email: shawndeng1109@qq.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: cookiecutter (>=2.6.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# repo_scaffold
+
+### Overview
+
+shawn deng repo temple project
+
+### Installation
+
+```bash
+pip install repo_scaffold
+# or
+poetry add repo_scaffold
