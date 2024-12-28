@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: BinaryOptionsToolsV2
+Version: 0.1.4
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Summary: A library to connect to PocketOption using python with async and sync support.
+Home-Page: https://github.com/ChipaDevTeam/BinaryOptionsTools-v2
+License: BSD License (BSD)
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+👉 [Join us on Discord](https://discord.gg/T3FGXcmd)
+# BinaryOptionsTools
+
+**BinaryOptionsTools** is a powerful suite of tools designed to enhance your binary options trading experience. Whether you're looking for analysis, strategy optimization, or execution tools, this project provides a variety of solutions to help you make informed trading decisions.
+
