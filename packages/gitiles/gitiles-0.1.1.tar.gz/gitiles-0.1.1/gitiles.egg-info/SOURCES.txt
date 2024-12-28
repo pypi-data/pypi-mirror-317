@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+gitiles/__init__.py
+gitiles/cli.py
+gitiles/profiles.py
+gitiles/ssh_setup.py
+gitiles.egg-info/PKG-INFO
+gitiles.egg-info/SOURCES.txt
+gitiles.egg-info/dependency_links.txt
+gitiles.egg-info/entry_points.txt
+gitiles.egg-info/top_level.txt
