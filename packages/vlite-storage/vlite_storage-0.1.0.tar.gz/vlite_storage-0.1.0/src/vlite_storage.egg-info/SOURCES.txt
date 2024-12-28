@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/vlite_storage/__init__.py
+src/vlite_storage/embedders.py
+src/vlite_storage/storages.py
+src/vlite_storage.egg-info/PKG-INFO
+src/vlite_storage.egg-info/SOURCES.txt
+src/vlite_storage.egg-info/dependency_links.txt
+src/vlite_storage.egg-info/requires.txt
+src/vlite_storage.egg-info/top_level.txt

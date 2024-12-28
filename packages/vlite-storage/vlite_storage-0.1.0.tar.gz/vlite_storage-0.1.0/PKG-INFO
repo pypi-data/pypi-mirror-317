@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: vlite-storage
+Version: 0.1.0
+Summary: Super simple vector data storage based on vectorlite
+Author-email: Ivan Slepovichev <gurgutan@yandex.ru>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: vectorlite-py>=0.2.0
+Requires-Dist: apsw>=3.47.2.0
+Requires-Dist: numpy>=2.2.1
+Requires-Dist: ollama>=0.4.4
+
+# VLite Storage
+
+VLite Storage is a Python library that provides vector similarity search capabilities using SQLite and the vectorlite packages. It allows you to store documents with their vector embeddings and perform efficient similarity searches. For creating text embeddings, it integrates with the Ollama server.
+
+## Features
+
+- Document storage with vector embeddings
+- Efficient similarity search using HNSW algorithm
+- Integration with Ollama for text embeddings
+- Support for document metadata
+- Simple and intuitive API
+
+## Installation
+
+```bash
+pip install vlite-storage
+```
+
+## Prerequisites
+
+- Python 3.7+
+- Ollama server running locally (default: http://localhost:11434)
+- VectorLite SQLite extension
+
+## Quick Start
+
+Here's a simple example of how to use VLite Storage:
+
+```python
+from vlite_storage.embedders import OllamaEmbedder
+from vlite_storage.storages import Storage
+
+# Initialize embedder and storage
+embedder = OllamaEmbedder()
+dim = embedder.dimensions()
+storage = Storage(db_name="my_database.db", dim=dim, embedding_fn=embedder)
+
+# Add documents
+storage.add(
+    content="This is a sample document",
+    metadata={"source": "example", "category": "sample"}
+)
+
+# Search for similar documents
+results = storage.search("sample document", k=5)
+for doc, distance in results:
+    print(f"Content: {doc.content}")
+    print(f"Metadata: {doc.metadata}")
+    print(f"Distance: {distance}")
+
+# Close the connection
+storage.close()
+```
+
+## API Reference
+
+### Storage Class
+
+The main class for document storage and retrieval.
+
+```python
+Storage(db_name: str, dim: int, embedding_fn: Optional[Callable[[str], np.ndarray]] = None)
+```
+
+#### Methods:
+
+- `add(content: str, metadata: dict)`: Add a document with content and metadata
+- `remove(rowid: int)`: Remove a document by ID
+- `update(rowid: int, content: Optional[str], metadata: Optional[dict])`: Update document content and/or metadata
+- `get(rowid: int) -> Document`: Retrieve a document by ID
+- `search(text: str, k: int) -> List[Tuple[Document, float]]`: Find k most similar documents
+- `close()`: Close the database connection
+
+### OllamaEmbedder Class
+
+Class for generating text embeddings using Ollama models.
+
+```python
+OllamaEmbedder(base_url: str = "http://localhost:11434", model_name: str = "bge-m3:latest")
+```
+
+#### Methods:
+
+- `dimensions() -> int`: Get embedding dimensions
+- `__call__(texts: List[str]) -> np.ndarray`: Generate embeddings for texts
+
+## Example Usage
+
+Check the `examples/` directory for more detailed examples, including:
+- Text chunk processing and storage
+- Similarity search in large documents
+- Metadata handling
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

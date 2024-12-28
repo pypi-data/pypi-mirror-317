@@ -1,0 +1,4 @@
+vectorlite-py>=0.2.0
+apsw>=3.47.2.0
+numpy>=2.2.1
+ollama>=0.4.4
