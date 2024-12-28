@@ -1,0 +1,11 @@
+beautifulsoup4
+joblib
+numpy
+pandas
+ruamel.yaml
+scikit-learn>=1.5.0,<1.6.0
+scipy
+seaborn
+tabulate
+typing_extensions
+wandb
