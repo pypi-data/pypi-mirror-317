@@ -1,0 +1,3 @@
+[swarmauri.agents]
+ExampleCommunityAgent=swm_example_community_package.ExampleCommunityAgent:ExampleCommunityAgent
+
