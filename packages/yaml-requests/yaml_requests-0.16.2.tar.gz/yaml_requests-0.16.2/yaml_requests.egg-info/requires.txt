@@ -1,0 +1,4 @@
+ciou~=0.6
+Jinja2~=3.0
+pyyaml~=6.0
+requests~=2.0
