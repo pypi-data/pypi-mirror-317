@@ -1,0 +1,57 @@
+# SimpleDiscordWebhooks
+
+A powerful and flexible Python library for creating and sending Discord webhooks with advanced embed customization.
+
+---
+
+## Features
+- **Custom Embeds:** Create and configure embeds with fields, thumbnails, images, authors, footers, and URLs.
+- **Color Helper:** Predefined color constants and an RGB-to-color helper for easy customization.
+- **Simple Interface:** Easily configure webhooks with a few lines of code.
+- **Lightweight:** Built with `urllib3` for minimal dependencies.
+
+---
+
+## Installation
+
+Install the library with pip.
+
+---
+
+## Usage
+
+```python
+from discord_webhook_helper import Webhook, Embed, Color
+
+# Initialize the webhook
+hook = Webhook("https://discord.com/api/webhooks/.../...")
+hook.set_username("Example Bot")
+
+# Create an embed
+embed = Embed(
+    title="Hello World!",
+    description="This is a test message with an embed.",
+    color=Color.BLUE
+)
+embed.add_field(name="Field Name", value="Field Value", inline=True)
+embed.set_thumbnail("https://example.com/thumbnail.png")
+embed.set_author(name="Author Name", url="https://example.com", icon_url="https://example.com/icon.png")
+embed.set_footer(text="Footer Text", icon_url="https://example.com/footer-icon.png")
+
+# Attach the embed to the webhook
+hook.add_embed(embed)
+
+# Send the webhook
+status, response = hook.send(content="Check out this cool embed!")
+print(f"Status: {status}, Response: {response}")
+```
+
+## Requirements
+- Python 3.6 or higher
+- urllib3
+
+## License
+### This library is open-source and available under the MIT License. Feel free to modify and use it in your projects
+
+## Contributing
+### If you'd like to contribute, feel free to open issues or pull requests on the GitHub repository.

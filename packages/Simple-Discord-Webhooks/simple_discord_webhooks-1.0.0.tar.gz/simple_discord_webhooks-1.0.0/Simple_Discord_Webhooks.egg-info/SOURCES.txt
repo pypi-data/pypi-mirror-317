@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README
+setup.py
+Simple-Discord-Webhooks/__init__.py
+Simple-Discord-Webhooks/color.py
+Simple-Discord-Webhooks/embed.py
+Simple-Discord-Webhooks/webhook.py
+Simple_Discord_Webhooks.egg-info/PKG-INFO
+Simple_Discord_Webhooks.egg-info/SOURCES.txt
+Simple_Discord_Webhooks.egg-info/dependency_links.txt
+Simple_Discord_Webhooks.egg-info/requires.txt
+Simple_Discord_Webhooks.egg-info/top_level.txt
