@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: convokit
+Version: 3.0.2
+Summary: ConvoKit
+Home-page: https://github.com/CornellNLP/ConvoKit
+Author: Jonathan P. Chang, Caleb Chiam, Liye Fu, Andrew Wang, Justine Zhang, Cristian Danescu-Niculescu-Mizil
+Author-email: cristian@cs.cornell.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: craft
+License-File: LICENSE.md
+
+UNKNOWN
+
