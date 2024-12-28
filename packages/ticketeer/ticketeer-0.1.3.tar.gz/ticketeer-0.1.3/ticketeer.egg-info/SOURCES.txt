@@ -1,0 +1,12 @@
+.version
+README.md
+pyproject.toml
+ticketeer/__init__.py
+ticketeer/__main__.py
+ticketeer/ticketeer.py
+ticketeer.egg-info/PKG-INFO
+ticketeer.egg-info/SOURCES.txt
+ticketeer.egg-info/dependency_links.txt
+ticketeer.egg-info/entry_points.txt
+ticketeer.egg-info/requires.txt
+ticketeer.egg-info/top_level.txt
