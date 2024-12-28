@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+lightweight_gan/__init__.py
+lightweight_gan/cli.py
+lightweight_gan/diff_augment.py
+lightweight_gan/diff_augment_test.py
+lightweight_gan/lightweight_gan.py
+lightweight_gan/version.py
+singtech_lightweight_gan_v2.egg-info/PKG-INFO
+singtech_lightweight_gan_v2.egg-info/SOURCES.txt
+singtech_lightweight_gan_v2.egg-info/dependency_links.txt
+singtech_lightweight_gan_v2.egg-info/entry_points.txt
+singtech_lightweight_gan_v2.egg-info/requires.txt
+singtech_lightweight_gan_v2.egg-info/top_level.txt
