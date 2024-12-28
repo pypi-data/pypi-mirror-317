@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: awspacha
+Version: 0.2.3
+Summary: Paquete para operaciones con Spark y S3
+Home-page: https://github.com/edcondoric/awspacha.git
+Author: Ed Condori
+Author-email: edcondoricc@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+
+# AWS PACHA
+
+Este paquete contiene funciones para:
+
+
+## Instalacion
+```bash
+pip install awspacha
