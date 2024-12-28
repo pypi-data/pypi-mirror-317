@@ -1,0 +1,11 @@
+model_connector/__init__.py,sha256=Frtcaq6rUJBVZn4DcU4l3DwxYmIIfm7CVGghu2CP1so,244
+model_connector/common.py,sha256=k4YlL7gBRbLsjY2ACkW-HVKYdTCX0kq7blC35iT-hwY,747
+model_connector/matrix_utils.py,sha256=af8xAny6TeNyb2VXQxh9txOyg5n3qetMAzeLqVI6O9w,1740
+model_connector/read_ffb.py,sha256=9X-RWasY_7uHZu7D7D9EHbsfTYq5dg25cgo6Xe5XpVA,9265
+model_connector/tc_matrix.py,sha256=Wq69I9Xh0QDBGsZwmjDg0ZxMf8V-znHmkhvI1bPYAyw,33242
+model_connector/tc_matrix_dll.py,sha256=oDJkBx_R9z8pOJF8XEhdKRv81SO2pBAafHFi4tUq1CQ,24571
+model_connector/write_ffb.py,sha256=7L8lMEkLZqfWJI4WUm5bb8bUeXXRXHa_wJAiEcm-_jU,14275
+model_connector-0.0.4.dist-info/METADATA,sha256=N1zeq2Q84iU4e-PbT9Fd_pCQtK1UFf2aFw7_8WDde78,4635
+model_connector-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+model_connector-0.0.4.dist-info/licenses/LICENSE,sha256=q8Hfr1YkpCVM5e4mL7SdTTxNAUKcGmUKG_2i_NPyIlY,1089
+model_connector-0.0.4.dist-info/RECORD,,
