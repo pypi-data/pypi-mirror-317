@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "cwtch-dm"
+version = "0.1.0"
+description = ""
+authors = ["Roman Koshel <roma.koshel@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = []
+packages = [{ include = "cwtch_dm" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11, <4.0"
+asyncpg = "*"
+cwtch = ">=0.10.0"
+sqlalchemy = { version="^2", extras=["asyncio"] }
+
+[tool.poetry.group.test.dependencies]
+coverage = "*"
+docker = "*"
+pylint = "*"
+pytest = "==7.4.4"
+pytest_asyncio = "*"
+pytest_timeout = "*"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "*"
+mkdocs-material = "*"
+mkdocstrings = { extras = ["python"], version = "*" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+indent = 4
+lines_after_imports = 2
+lines_between_types = 1
+src_paths = ["."]
+profile = "black"
