@@ -1,0 +1,9 @@
+pre_commit_run_hook_entry/__init__.py,sha256=fKHV_7NosZoLD0OnxTtVyJjgDIZJJ2m6uAFwmk1ZfkA,122
+pre_commit_run_hook_entry/__main__.py,sha256=0tV2YTLYyKV0iG8KS_TL3hVbQSkXCeOzcqB3DwAPB2k,105
+pre_commit_run_hook_entry/annotations.py,sha256=8iUhHSGRGSo8kSRGnNAFEFtU9D63w4F8T2p4s7HHQWk,51
+pre_commit_run_hook_entry/cli.py,sha256=g1S0hlMrTEFo_Pb-ZMGKTHod-D2vUnMtlJcTDjmyAGk,7450
+pre_commit_run_hook_entry-1.0.0rc0.dist-info/LICENSE,sha256=ObH1M4cLJPNu72yZ_PapvXZGoWBzgMgqEtKQkxpa2ek,1485
+pre_commit_run_hook_entry-1.0.0rc0.dist-info/METADATA,sha256=3xIeEWaEv4MoUYnVPjvvHW_ALxj3IOQ_7p9XBfzj7Wg,6910
+pre_commit_run_hook_entry-1.0.0rc0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pre_commit_run_hook_entry-1.0.0rc0.dist-info/entry_points.txt,sha256=zjKEzpTgnCLnuvQdCSolvYCRD1vQJjhEXNribNZ3fdc,217
+pre_commit_run_hook_entry-1.0.0rc0.dist-info/RECORD,,
