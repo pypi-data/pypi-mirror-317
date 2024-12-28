@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+T2fa.egg-info/PKG-INFO
+T2fa.egg-info/SOURCES.txt
+T2fa.egg-info/dependency_links.txt
+T2fa.egg-info/requires.txt
+T2fa.egg-info/top_level.txt
