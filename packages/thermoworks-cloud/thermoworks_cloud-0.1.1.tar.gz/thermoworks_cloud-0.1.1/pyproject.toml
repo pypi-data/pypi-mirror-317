@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thermoworks-cloud"
+# Use setuptools-scm to do dynamic versioning
+dynamic = ["version"]
+description = "Pull data for Thermoworks Cloud enabled thermometers"
+readme = "README.md"
+authors = [{name = "Austin Hill", email = "austin@nitsua.org"}]
+license = {file = "LICENSE.txt"}
+dependencies = [
+    "aiohttp >= 3.11.7"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.10"
+[project.optional-dependencies]
+# pip install -e ".[test]"
+test = [
+    "pytest>=8.3.4",
+    "pytest-asyncio>=0.25.0",
+    "aioresponses>=0.7.7",
+    "pytest_httpserver>=1.1.0",
+    "pytest-cov>=6.0.0"
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.coverage.run]
+omit = [
+    "*/tests/*",
+]
+
+[tool.setuptools_scm]
+# presence enables setuptools-scm
