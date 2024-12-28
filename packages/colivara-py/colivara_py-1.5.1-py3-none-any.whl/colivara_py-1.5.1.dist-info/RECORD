@@ -1,0 +1,12 @@
+colivara_py/__init__.py,sha256=63Z2C2ak5NIIM5Vjsk0q7lQ-XW_Wvx53cQiS_vQDlik,3376
+colivara_py/api_client.py,sha256=IeXQ8vbuMqu43nt0cgRYNa7kRTo6GPg34si9OXMOOdM,27728
+colivara_py/api_response.py,sha256=eMxw1mpmJcoGZ3gs9z6jM4oYoZ10Gjk333s9sKxGv7s,652
+colivara_py/client.py,sha256=IlsMBXwUeo_H4Qw15rZgSpca-MKEM9mMiKWOS48wZuk,26160
+colivara_py/configuration.py,sha256=quIwpp-3Ryc5CEgM6FJxf61rMxH-ixvf9QX-bw9KUKY,18349
+colivara_py/exceptions.py,sha256=U68b6wA0V7XQTP8vg4lPuIHEJReiRcBYoPIFWjf98QM,6251
+colivara_py/rest.py,sha256=8FkVw6P0UeD9bwQWDjuwUsVAK_msVGyEWvDvA7-IfWk,7908
+colivara_py-1.5.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+colivara_py-1.5.1.dist-info/METADATA,sha256=OgI24FVoiEPYzIoXGx5mZauKwzDBC8wKU7O0k48rY-4,6029
+colivara_py-1.5.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+colivara_py-1.5.1.dist-info/top_level.txt,sha256=TInb5thfDY4rcXIyqITfJmS6KwJlRxGQqNRd6P_5w5A,12
+colivara_py-1.5.1.dist-info/RECORD,,
