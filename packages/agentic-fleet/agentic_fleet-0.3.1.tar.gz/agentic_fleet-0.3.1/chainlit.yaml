@@ -1,0 +1,53 @@
+# Project settings
+project_name: "AgenticFleet"
+description: "Advanced Multi-Agent System"
+
+# UI settings
+ui:
+  name: "AgenticFleet"
+  description: "Advanced Multi-Agent System"
+  theme: "dark"
+  default_collapse_content: false
+  default_expand_messages: true
+  hide_cot: false
+
+# Features
+features:
+  multi_modal: true
+  latex: true
+  code_highlighting: true
+  speech_to_text: false
+  file_upload: 
+    enabled: true
+    max_size_mb: 100
+    accept:
+      - ".txt"
+      - ".md"
+      - ".py"
+      - ".json"
+      - ".yaml"
+      - ".csv"
+
+# Code display
+code:
+  theme: "dark"
+  max_lines: 100
+  line_numbers: true
+
+# Server settings
+server:
+  port: 8000
+  host: "0.0.0.0"
+
+# Cache settings
+cache:
+  enabled: true
+  type: "redis"
+  redis_url: ${REDIS_URL}
+
+meta:
+  generated_by: "AgenticFleet"
+  version: "0.3.0"
+
+telemetry:
+  enabled: false 

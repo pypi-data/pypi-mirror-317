@@ -1,0 +1,26 @@
+[project]
+enable_telemetry = false
+session_timeout = 3600
+
+[features]
+prompt_playground = false
+unsafe_allow_html = false
+latex = false
+multi_modal = false
+
+[UI]
+name = "AgenticFleet"
+description = "Advanced Multi-Agent System"
+default_expand_messages = true
+hide_cot = false
+show_readme_as_default = true
+
+[server]
+port = 8000
+host = "0.0.0.0"
+base_url = "/"
+websocket_path = "/ws"
+cors_allowed_origins = ["*"]
+
+[meta]
+generated_by = "0.7.700"

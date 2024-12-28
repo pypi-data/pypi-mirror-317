@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.env
+.env.*
+!.env.example
+.venv
+env/
+venv/
+ENV/
+
+# PyPI
+.pypirc 
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# Frontend
+node_modules/
+.next/
+out/
+.DS_Store
+
+# Cache and Logs
+*.log
+*.cache
+.redis/
+__pycache__/
+.ruff_cache/
+
+# Secrets
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore 
