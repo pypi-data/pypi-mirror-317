@@ -1,0 +1,69 @@
+[tool.poetry]
+name = "fujitsu-quantum"
+version = "1.4.7"
+description = "Fujitsu Quantum Cloud SDK"
+authors = ["Fujitsu Limited"]
+readme = "README.md"
+packages = [{include = "fujitsu_quantum", from = "src"}]
+
+[tool.poetry.scripts]
+fujitsu-quantum = 'fujitsu_quantum.cli.fujitsu_quantum_login:main'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.32.3"
+typing-extensions = { version = "^4.8.0", python = "<3.11" }
+qiskit = { version = "^0.45", optional = true }
+pyjson5 = "^1.6.6"
+boto3 = "^1.34.58"
+pycognito = "^2024.2.0"
+filelock = "^3.13.1"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+flake8 = "^5.0.4"
+autoflake = "^1.7.8"
+autopep8 = "^2.0.0"
+mypy = "^1.4.1"
+types-requests = "^2.31.0.2"
+pytest = "^7.4.0"
+qiskit-qasm3-import = "^0.4.1"
+qulacs = "^0.6.4.1"
+openfermionpyscf = "^0.5"
+
+[tool.poetry.extras]
+qiskit = ["qiskit"]
+
+[tool.isort]
+line_length = 120
+
+[tool.autopep8]
+max_line_length = 120
+recursive = true
+ignore = ["E501"]
+
+[tool.mypy]
+exclude = [
+    ".venv",
+    ".git",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning:qiskit.utils.algorithm_globals",
+    "ignore::PendingDeprecationWarning:qiskit.utils.deprecation",
+    "ignore::PendingDeprecationWarning:qiskit.visualization.circuit.matplotlib"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "if TYPE_CHECKING:",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
