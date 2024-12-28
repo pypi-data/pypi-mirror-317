@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "sarmat"
+version = "3.0.0"
+description = "Sarmat package for IT decisions in the passenger transport sphere"
+authors = ["jn <artel61@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+faker = "^24.14.0"
+pytest-factoryboy = "^2.7.0"
+pre-commit = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+testpaths = [
+    "tests",
+]
