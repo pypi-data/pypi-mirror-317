@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/agentic_fleet.egg-info/PKG-INFO
+src/agentic_fleet.egg-info/SOURCES.txt
+src/agentic_fleet.egg-info/dependency_links.txt
+src/agentic_fleet.egg-info/requires.txt
+src/agentic_fleet.egg-info/top_level.txt
+src/agenticfleet/__init__.py
+src/agenticfleet/config.py
+tests/test_agent.py
+tests/test_azure.py
+tests/test_config.py
+tests/test_fleet.py
+tests/test_prompty.py

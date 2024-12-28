@@ -1,0 +1,100 @@
+# AgenticFleet
+
+An advanced multi-agent system framework building upon Magentic-One concepts, focusing on agent collaboration and autonomous interactions. AgenticFleet enables the creation and orchestration of AI agent fleets for complex task completion.
+
+## Features
+
+- **Multi-Agent Orchestration**: Coordinate multiple AI agents working together on complex tasks
+- **Azure OpenAI Integration**: First-class support for Azure OpenAI models and API
+- **Flexible Agent Types**: Built-in support for various agent roles (Planner, Executor, Critic, Researcher)
+- **PydanticAI Integration**: Strong type validation and model management
+- **Chainlit UI**: Built-in support for interactive chat interface
+- **Extensible Architecture**: Easy to add new agent types and behaviors
+
+## Quick Start
+
+```bash
+# Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone the repository
+git clone https://github.com/yourusername/agenticfleet.git
+cd agenticfleet
+
+# Create and activate virtual environment
+uv venv .venv
+source .venv/bin/activate  # On Unix/macOS
+# or
+.venv\Scripts\activate  # On Windows
+
+# Install dependencies
+uv pip install -e ".[all]"
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your configuration
+
+# Run the Chainlit UI
+python run_chainlit.py
+```
+
+## Project Structure
+
+```
+agenticfleet/
+├── src/agenticfleet/          # Main package directory
+│   ├── agents/               # Agent implementations
+│   │   ├── planner.py       # Strategic planning agent
+│   │   ├── executor.py      # Task execution agent
+│   │   ├── critic.py        # Result evaluation agent
+│   │   └── researcher.py    # Information gathering agent
+│   ├── api/                 # API endpoints
+│   ├── core/                # Core functionality
+│   ├── llm/                 # LLM integrations
+│   └── frontend/            # UI components
+├── tests/                    # Test files
+├── docs/                     # Documentation
+└── .github/                  # GitHub specific files
+    └── workflows/           # CI/CD workflows
+```
+
+## Configuration
+
+The project uses environment variables for configuration. Copy `.env.example` to `.env` and set the following variables:
+
+- `AZURE_OPENAI_API_KEY`: Your Azure OpenAI API key
+- `AZURE_OPENAI_API_BASE`: Azure OpenAI API base URL
+- `AZURE_OPENAI_API_VERSION`: API version to use
+- `AZURE_OPENAI_DEPLOYMENT`: Model deployment name
+
+## Development
+
+```bash
+# Install development dependencies
+uv pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Format code
+black .
+isort .
+
+# Type checking
+mypy src/
+
+# Update dependencies
+uv pip compile pyproject.toml -o requirements.txt
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+MIT License - See LICENSE file for details 

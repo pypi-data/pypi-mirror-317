@@ -1,0 +1,15 @@
+fastapi>=0.104.1
+uvicorn>=0.24.0
+pydantic<3.0.0,>=2.5.2
+python-multipart<0.1.0,>=0.0.6
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+autogen-agentchat==0.4.0.dev12
+autogen-core==0.4.0.dev12
+autogen-ext==0.4.0.dev12
+openai>=1.3.5
+azure-identity>=1.15.0
+azure-keyvault-secrets>=4.7.0
+python-dotenv>=1.0.0
+chainlit>=1.0.0
+redis>=5.2.1
