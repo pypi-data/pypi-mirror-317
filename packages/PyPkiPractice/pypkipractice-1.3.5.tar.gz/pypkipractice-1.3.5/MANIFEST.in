@@ -1,0 +1,6 @@
+include README.md
+include NOTES.md
+include HOLDERS.md
+include LICENSE
+include requirements.txt
+include Default_Configs/*
