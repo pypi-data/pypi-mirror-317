@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ParallelAtariBreakoutEnv
+Version: 0.0.3.0
+Summary: ParallelAtariBreakoutEnv
+Author: M.Uchiyama
+License: MIT
+Keywords: Breakout ParallelAtariEnv
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+
+# Breakout
+ParallelAtariEnv
