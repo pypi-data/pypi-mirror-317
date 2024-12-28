@@ -1,0 +1,38 @@
+__IGNORE_START__
+Hello user! This prompt requires a git diff context to be provided. You can do this by running something like
+  `git diff -w | pflowai --prompt-file ~/flowai-prompts/template-commit-message.txt`
+or
+  `pflowai --context-shell-command "git diff -w" --select-prompt-file`
+or
+  `git diff -w | pflowai --prompt-file ~/flowai-prompts/template-commit-message.txt "Make me a nice commit message for these changes suitable for github."`
+__IGNORE_END__
+
+The following is a template for a commit message.
+Output everything inside (and excluding) the __TEMPLATE_START__ and __TEMPLATE_END__ tags.
+Follow the instructions within the braces {}.
+Please use it to write a commit message for your changes.
+Follow the instructions exactly.
+Make sure to include all the sections.
+Include all newlines.
+Do not include new TODOs in the summary, description, potential bugs, or title.
+CRUCIAL (MATTER OF LIFE AND DEATH): DO NOT INCLUDE THE TAGS __TEMPLATE_START__ and __TEMPLATE_END__ in the output.
+IMPORTANT: DO NOT INCLUDE TAGS BEGINNING WITH __ IN THE OUTPUT
+
+__TEMPLATE_START__
+{{ analyse the git diffs in the context and write a one line summary of the changes made as a title in the first person using the Conventional Commits specification in the following format: "(feat) TITLE" This must not exceed 50 characters. }}
+
+{{ For each change, make a new line with a detailed description of the change. }}
+
+{{ Explain the reason for these changes. This could be to fix a bug, add a new feature, improve performance, etc. }}
+
+{{ Only if there are any potential bugs or issues with the changes, list them here. This warning is mainly for the author of the changes so that they may consider refactoring or revising the code. Think of this as a code review. }}
+
+{{ If there are any TODOs in the new code, list them here under the title "TODOs:". Include the exact TODOs in the code as well as the file(s) they are in. This is for the reviewer to know what to look for. }}
+
+Code Review:
+{{ Perform a code review and look for potential issues, especially code that may crash the app. Add a paragraph containing the results of the code review. }}
+
+Story Time:
+{{ Also add a paragraph to the end describing the changes in the form of an episode in the world of Star Trek TNG. Be creative and make the story exciting and dramatic. }}
+
+__TEMPLATE_END__
