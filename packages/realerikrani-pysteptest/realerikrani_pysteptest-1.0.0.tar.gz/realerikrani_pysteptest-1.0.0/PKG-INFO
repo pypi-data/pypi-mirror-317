@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: realerikrani-pysteptest
+Version: 1.0.0
+Summary: Pytest marker @pytest.mark.pysteptest for sequential tests in a class
+License: Apache-2.0
+Project-URL: Repository, https://github.com/realerikrani/pysteptest
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE_OF_PYTEST
+Requires-Dist: pytest==8.*
+
+# pysteptest
+
+After installing via pip, use the `@pytest.mark.pysteptest` marker on a class
+for example for system tests
+that need to happen in a specific order one after another.
+When one test fails, then do not run the following ones.
+
+```py
+@pytest.mark.pysteptest
+class TestTodos:
+    def test_it_creates_todo(self):
+        # ...
+
+    def test_it_reads_todo(self):
+        # ...
+
+    def test_it_deletes_todo(self):
+        # ...
+```
+
+This incremental marker is created by changing the code of <https://github.com/pytest-dev/pytest/blob/24e84f08f43216f95620135305cbebe9f646e433/doc/en/example/simple.rst#incremental-testing---test-steps>.
+See pytest repo's MIT license, LICENSE_OF_PYTEST file, included in the repository of this pysteptest project.

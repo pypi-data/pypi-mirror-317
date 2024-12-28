@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "realerikrani-pysteptest"
+version = "1.0.0"
+description = "Pytest marker @pytest.mark.pysteptest for sequential tests in a class"
+dynamic = ["dependencies"]
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+urls = { "Repository" = "https://github.com/realerikrani/pysteptest" }
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements/prod.in"] }
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[project.entry-points]
+pytest11 = { pysteptest = "realerikrani.pysteptest.marker" }
