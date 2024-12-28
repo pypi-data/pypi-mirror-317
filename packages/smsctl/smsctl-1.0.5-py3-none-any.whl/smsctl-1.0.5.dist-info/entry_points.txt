@@ -1,0 +1,2 @@
+[console_scripts]
+smscli = core.command_handler:sms_cli
