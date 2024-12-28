@@ -1,0 +1,2 @@
+py-enum>=1.1.1
+Pillow>=8
