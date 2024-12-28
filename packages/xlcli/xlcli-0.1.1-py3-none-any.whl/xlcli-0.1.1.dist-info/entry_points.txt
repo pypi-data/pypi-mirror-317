@@ -1,0 +1,2 @@
+[console_scripts]
+xlcli = xlcli.main:app
