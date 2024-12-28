@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: danbooru_scraper
+Version: 0.1.2
+Summary: Scraper for the site danbooru
+License: MIT
+Author: trojblue
+Author-email: trojblue@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: httpx (>=0.28.1,<0.29.0)
+Requires-Dist: ipykernel (>=6.29.5,<7.0.0)
+Requires-Dist: pip (>=24.3.1,<25.0.0)
+Requires-Dist: s5cmdpy (>=0.2.7,<0.3.0)
+Requires-Dist: tenacity (>=9.0.0,<10.0.0)
+Requires-Dist: tqdm (>=4.67.1,<5.0.0)
+Requires-Dist: unibox (>=0.4.13,<0.5.0)
+Description-Content-Type: text/markdown
+
+# danbooru-scraper
+
+yet another danbooru scraper, this time distributed for sagemaker use
+
+## Installation:
+
+```bash
+pip install danbooru-scraper
+```
+
+## Usage
+
+### cli:
+
+```bash
+# danbooru-scraper --help
+usage: danbooru-scraper [-h] --from-id FROM_ID --to-id TO_ID
+                        --local-dir LOCAL_DIR --upload-dir UPLOAD_DIR
+```
+
+example inputs:
+```bash
+danbooru-scraper --from-id 8627380 --to-id 8627391 --local-dir danbooru_downloads --upload-dir s3://dataset-ingested/danbooru --request-interval 0.85
+```
+
+### python:
+
+```python
+from danbooru_scraper import DanbooruScraper
+
+scraper = DanbooruScraper(root_dir='../data/')
+post_ids = [i for i in range(1000, 10000)]
+scraper.scrape_posts(post_ids)
+```
+
+### SageMaker:
+
+(Check notebooks/laucch_sagemaker.ipynb for a complete example of distributed scraping on sagemaker.)
+
+## Build:
+
+```bash
+python -m pip install build twine
+python -m build
+twine check dist/*
+twine upload dist/*
+```
