@@ -1,0 +1,7 @@
+hyper_connections/__init__.py,sha256=mAy66IuHqXM4XOyOZGt5mo2B2hfHdUk8jW31YnWNQTg,104
+hyper_connections/hyper_connections.py,sha256=hZ-O79zKOAJxAzobAQVHGamQUEnZbs5tD2vqonATLUY,8199
+hyper_connections/hyper_connections_with_multi_branch_inputs.py,sha256=sTQ4sh1JLhRz06iP4PvpkLb_BMvIrcWRC-5_JxkbznQ,7396
+hyper_connections-0.0.18.dist-info/METADATA,sha256=GzMgZhbW5wLLHTsTbAU2lk1-8cGL9UNBt8iejNr08xA,5076
+hyper_connections-0.0.18.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hyper_connections-0.0.18.dist-info/licenses/LICENSE,sha256=E7RGS7kpJIStk5za_-4DVhWEAamf65EU0CNML25mq4c,1066
+hyper_connections-0.0.18.dist-info/RECORD,,
