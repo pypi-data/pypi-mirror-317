@@ -1,0 +1,12 @@
+unicloud/__init__.py,sha256=-b2ihoiNj37q4XSUgMpXbh4Io12yBBgb-cTVg_h66RI,410
+unicloud/abstract_class.py,sha256=csWZV_mtMyt1KqDuv0_G3siMT-haM349Dd0DnNIsE6E,2470
+unicloud/aws/__init__.py,sha256=qHADnWE1hfh-QdXHEw25a7mADB3Wr7IHWGCn1I7PlqY,11
+unicloud/aws/aws.py,sha256=hXijYEls4Ak3m0sT0dTNQNnrYTOov2i7MEozGeM8rXU,17162
+unicloud/google_cloud/__init__.py,sha256=G1E9U9tLjkUySlwMHqrKFSpLFhiDCB--qjDMv3VnrKo,20
+unicloud/google_cloud/gcs.py,sha256=bQKa1ElwTuFr_S-JIVKoqKXlr5HQp_T81RwOXaOfH3Y,31256
+unicloud/utils.py,sha256=K9n9AhSB70uAZeFk6_JeFY2-d1DyXDkgFWEDyJR9now,2766
+unicloud-0.4.0.dist-info/LICENSE.md,sha256=M7wm1EmMGDtwPRdg7kW4d00h1uAXjKOT3HFScYQMeiE,34916
+unicloud-0.4.0.dist-info/METADATA,sha256=YWcLnjmBFrG0XnlSYkGLz4SeHbNO4XiRzj7i4IwmdDg,8026
+unicloud-0.4.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+unicloud-0.4.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unicloud-0.4.0.dist-info/RECORD,,
