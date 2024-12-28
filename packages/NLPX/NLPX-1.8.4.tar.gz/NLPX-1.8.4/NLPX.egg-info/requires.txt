@@ -1,0 +1,2 @@
+xtokenizer>=0.0.3model_wrapper>=0.3.9
+torch_model_hub>=0.0.9
