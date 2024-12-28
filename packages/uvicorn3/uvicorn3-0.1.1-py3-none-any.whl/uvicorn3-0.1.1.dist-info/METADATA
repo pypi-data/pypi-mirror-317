@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: uvicorn3
+Version: 0.1.1
+Summary: uvicorn的国产化平替版本
+Author: zhangdapeng
+Author-email: 1156956636@qq.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# uvicorn3
+
+uvicorn的国产化平替版本
+
