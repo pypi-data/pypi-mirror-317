@@ -1,0 +1,7 @@
+pathspec>=0.9.0
+PyYAML>=6.0
+
+[dev]
+pytest
+pathspec>=0.9.0
+pyyaml>=6.0
