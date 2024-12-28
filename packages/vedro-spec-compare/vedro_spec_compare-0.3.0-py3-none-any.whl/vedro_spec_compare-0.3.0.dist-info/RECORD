@@ -1,0 +1,15 @@
+vedro_spec_compare/__init__.py,sha256=WPbMVHrBJCu2m_oglxroYhJ2QPES7eUgXUNkPtvWa18,52
+vedro_spec_compare/command.py,sha256=zc6DlUd4aeBk2-eQDvCyywTu0ciszURULv3ouyOTHsY,1323
+vedro_spec_compare/coverage.py,sha256=vUO2GU-2TYL-WhHpIOdBeQQD47LiEWZYIwNCEwlSq8c,955
+vedro_spec_compare/differ.py,sha256=UPPCmdzLbhCfAZYaRcpeaEK3ZfLN85xzZsTrWF_jRZg,7475
+vedro_spec_compare/discrepancy.py,sha256=aHwvg7mmQpaslnZBxteJH1ze6i-xbqQmrNS_WAAtBtk,990
+vedro_spec_compare/generator.py,sha256=o9JBTdLgJKOupUG-dcsLw0QCP4ty40Cx0dE-oL6GfWo,1469
+vedro_spec_compare/parser.py,sha256=jr9FfzYBUtXRhv8iCgY3-JSbkoQAfue7Q2zCxbbljzI,2415
+vedro_spec_compare/templates/coverage.html.j2,sha256=lC88Z2ZewlY192xO_oAMG_yRI6VZCA-imcpYTdh8YhE,5039
+vedro_spec_compare/templates/discrepancy.html.j2,sha256=G9Rnl_UEHOnxABnFvRUM6RtBwikwbVuoqcMZPrPFkxk,1928
+vedro_spec_compare-0.3.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+vedro_spec_compare-0.3.0.dist-info/METADATA,sha256=dek1t79qek02GJN3Y4dmcErgXKF7P-t-yNq3bqQ28-o,4580
+vedro_spec_compare-0.3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+vedro_spec_compare-0.3.0.dist-info/entry_points.txt,sha256=KplNWAkA3YWctfj9G9Hzm_kplbKleCipqXbfUgmRBNg,51
+vedro_spec_compare-0.3.0.dist-info/top_level.txt,sha256=7lbBKVhIS1Ujqf2cbvKcFR-aW8su_WEazfs6vCesqfc,19
+vedro_spec_compare-0.3.0.dist-info/RECORD,,
