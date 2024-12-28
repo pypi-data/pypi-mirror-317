@@ -1,0 +1,12 @@
+fastapi_boot/DI.py,sha256=6HNCnwsSaADhPJ5z6kv9ZlJy0aSCz9W1pb1ng57z4Tw,8422
+fastapi_boot/__init__.py,sha256=dYzmZG95R2pi4kTAndBpp9XNZTyPGXxtffOJDzshrqc,830
+fastapi_boot/const.py,sha256=Fe9HhCZP3_a8w6y-zyy61XUPM_Fe93juV7OMFsMoLBM,3648
+fastapi_boot/helper.py,sha256=SWR7OVJAk3SRcFdcqRY5XbF4MJyHti1bR034qrLKRYc,10025
+fastapi_boot/model.py,sha256=y3pMsjU2wy26TnlLT8np11cHzx6nMzM_AJ81z4jGLcY,8872
+fastapi_boot/routing.py,sha256=F_zCpEZvTbhq3OU_lnXXP6pmWO6IWP-9jJicXareJ60,12390
+fastapi_boot/util.py,sha256=kjTFjiVp_F3zUH3oQ5bH6SZSUYPNlfF_mH8j6Zpg4co,239
+fastapi_boot-0.0.3.dist-info/LICENSE,sha256=U-4KxDVxYsKI5J-iDad7Gc-LHyfT-fp9u03ay5YxiZo,1090
+fastapi_boot-0.0.3.dist-info/METADATA,sha256=83Bp9osDxs5MUs7v5V_T-BdDPlJwwGWzz8SAx6c4-1c,3137
+fastapi_boot-0.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+fastapi_boot-0.0.3.dist-info/top_level.txt,sha256=E8vwybH1YYjdJ06A530BQD7oMRup4vVbZx6yN8ys9jE,13
+fastapi_boot-0.0.3.dist-info/RECORD,,
