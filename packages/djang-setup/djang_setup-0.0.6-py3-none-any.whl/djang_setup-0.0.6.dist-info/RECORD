@@ -1,0 +1,10 @@
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/cli.py,sha256=b05nuUxTkGtOYTkqjhx-uaSx_7veCubn_LGO3FThOuk,18470
+cli/console.py,sha256=ZcW6tagLRhQNT6w4Nq9Ok9gUfE65eV9MVj2jLgjOlFM,52
+cli/script.py,sha256=sacynkkZfzlYbcOQ7X2DPR6YJIjYCyA4C5VGQZWb0hQ,624
+djang_setup-0.0.6.dist-info/LICENSE,sha256=x5Z6E8W0-31VJWeZKOntNnYv7x6J7-u9x49zUAFXskQ,1064
+djang_setup-0.0.6.dist-info/METADATA,sha256=gIiMqYv7RMM6oynyjwYtd296HRvrJk1qNBFs9oqPMm8,1643
+djang_setup-0.0.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+djang_setup-0.0.6.dist-info/entry_points.txt,sha256=-xXBlLaWIQywlpYy2TTXGPtofCQH4VNYS4oQTCdoYX8,48
+djang_setup-0.0.6.dist-info/top_level.txt,sha256=2ImG917oaVHlm0nP9oJE-Qrgs-fq_fGWgba2H1f8fpE,4
+djang_setup-0.0.6.dist-info/RECORD,,

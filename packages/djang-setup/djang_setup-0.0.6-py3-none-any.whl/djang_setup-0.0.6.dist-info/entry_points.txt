@@ -1,0 +1,2 @@
+[console_scripts]
+djang-setup = cli.script:main
