@@ -1,0 +1,4647 @@
+{
+  "1_HP-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 1_HP-UVR",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.24871,
+            "SIR": 15.4624,
+            "SAR": 4.83391,
+            "ISR": 8.8857
+          },
+          "instrumental": {
+            "SDR": 14.8927,
+            "SIR": 19.3158,
+            "SAR": 18.24,
+            "ISR": 18.8107
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.43096,
+            "SIR": 12.0094,
+            "SAR": 5.75084,
+            "ISR": 12.7187
+          },
+          "instrumental": {
+            "SDR": 10.6068,
+            "SIR": 18.0944,
+            "SAR": 12.3348,
+            "ISR": 14.9249
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.33983,
+        "SIR": 13.7359,
+        "SAR": 5.29237,
+        "ISR": 10.8022
+      },
+      "instrumental": {
+        "SDR": 12.7497,
+        "SIR": 18.7051,
+        "SAR": 15.2874,
+        "ISR": 16.8678
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "2_HP-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 2_HP-UVR",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.00778,
+            "SIR": 16.5022,
+            "SAR": 4.95801,
+            "ISR": 9.04026
+          },
+          "instrumental": {
+            "SDR": 14.9485,
+            "SIR": 20.0149,
+            "SAR": 19.0058,
+            "ISR": 18.6304
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.15725,
+            "SIR": 10.082,
+            "SAR": 5.58263,
+            "ISR": 12.6914
+          },
+          "instrumental": {
+            "SDR": 10.3331,
+            "SIR": 17.7535,
+            "SAR": 12.1266,
+            "ISR": 13.9989
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.08252,
+        "SIR": 13.2921,
+        "SAR": 5.27032,
+        "ISR": 10.8658
+      },
+      "instrumental": {
+        "SDR": 12.6408,
+        "SIR": 18.8842,
+        "SAR": 15.5662,
+        "ISR": 16.3147
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "3_HP-Vocal-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 3_HP-Vocal-UVR",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 3.91517,
+            "SIR": 16.8581,
+            "SAR": 3.2452,
+            "ISR": 8.16718
+          },
+          "instrumental": {
+            "SDR": 15.4662,
+            "SIR": 20.2019,
+            "SAR": 18.6457,
+            "ISR": 19.0081
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.87231,
+            "SIR": 10.679,
+            "SAR": 5.30314,
+            "ISR": 14.2979
+          },
+          "instrumental": {
+            "SDR": 10.1178,
+            "SIR": 19.7643,
+            "SAR": 11.6539,
+            "ISR": 14.2331
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.39374,
+        "SIR": 13.7686,
+        "SAR": 4.27417,
+        "ISR": 11.2325
+      },
+      "instrumental": {
+        "SDR": 12.792,
+        "SIR": 19.9831,
+        "SAR": 15.1498,
+        "ISR": 16.6206
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "4_HP-Vocal-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 4_HP-Vocal-UVR",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.13247,
+            "SIR": 15.6369,
+            "SAR": 4.46161,
+            "ISR": 9.59156
+          },
+          "instrumental": {
+            "SDR": 14.9272,
+            "SIR": 20.4818,
+            "SAR": 17.6023,
+            "ISR": 18.6389
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.70667,
+            "SIR": 9.1547,
+            "SAR": 5.63561,
+            "ISR": 15.3189
+          },
+          "instrumental": {
+            "SDR": 9.99389,
+            "SIR": 20.6067,
+            "SAR": 11.2725,
+            "ISR": 14.0836
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.91957,
+        "SIR": 12.3958,
+        "SAR": 5.04861,
+        "ISR": 12.4552
+      },
+      "instrumental": {
+        "SDR": 12.4605,
+        "SIR": 20.5442,
+        "SAR": 14.4374,
+        "ISR": 16.3612
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "5_HP-Karaoke-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 5_HP-Karaoke-UVR",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 2.37002,
+            "SIR": 20.6581,
+            "SAR": 1.28458,
+            "ISR": 4.10107
+          },
+          "instrumental": {
+            "SDR": 14.9129,
+            "SIR": 15.7183,
+            "SAR": 20.1,
+            "ISR": 19.509
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.12631,
+            "SIR": 20.9962,
+            "SAR": 0.86005,
+            "ISR": 5.41791
+          },
+          "instrumental": {
+            "SDR": 9.77765,
+            "SIR": 10.6192,
+            "SAR": 13.3887,
+            "ISR": 18.5952
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 3.24817,
+        "SIR": 20.8272,
+        "SAR": 1.07232,
+        "ISR": 4.75949
+      },
+      "instrumental": {
+        "SDR": 12.3453,
+        "SIR": 13.1687,
+        "SAR": 16.7444,
+        "ISR": 19.0521
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "6_HP-Karaoke-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 6_HP-Karaoke-UVR",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 2.40569,
+            "SIR": 22.1346,
+            "SAR": 0.01828,
+            "ISR": 4.20645
+          },
+          "instrumental": {
+            "SDR": 14.9884,
+            "SIR": 15.2129,
+            "SAR": 19.224,
+            "ISR": 19.398
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.61504,
+            "SIR": 18.5853,
+            "SAR": 1.75763,
+            "ISR": 6.13348
+          },
+          "instrumental": {
+            "SDR": 10.3293,
+            "SIR": 11.221,
+            "SAR": 13.52,
+            "ISR": 18.4318
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 3.51036,
+        "SIR": 20.3599,
+        "SAR": 0.887955,
+        "ISR": 5.16996
+      },
+      "instrumental": {
+        "SDR": 12.6589,
+        "SIR": 13.217,
+        "SAR": 16.372,
+        "ISR": 18.9149
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "7_HP2-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 7_HP2-UVR",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.93236,
+            "SIR": 17.387,
+            "SAR": 4.36463,
+            "ISR": 8.40421
+          },
+          "instrumental": {
+            "SDR": 15.0848,
+            "SIR": 19.1375,
+            "SAR": 18.9953,
+            "ISR": 18.7277
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.05415,
+            "SIR": 13.9499,
+            "SAR": 6.28066,
+            "ISR": 12.4333
+          },
+          "instrumental": {
+            "SDR": 11.1818,
+            "SIR": 17.7609,
+            "SAR": 13.2374,
+            "ISR": 15.8376
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.49325,
+        "SIR": 15.6684,
+        "SAR": 5.32264,
+        "ISR": 10.4188
+      },
+      "instrumental": {
+        "SDR": 13.1333,
+        "SIR": 18.4492,
+        "SAR": 16.1164,
+        "ISR": 17.2827
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "8_HP2-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 8_HP2-UVR",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.5483,
+            "SIR": 18.0967,
+            "SAR": 4.25896,
+            "ISR": 7.83695
+          },
+          "instrumental": {
+            "SDR": 15.0298,
+            "SIR": 18.8059,
+            "SAR": 19.0634,
+            "ISR": 19.0558
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.5217,
+            "SIR": 9.25839,
+            "SAR": 5.11401,
+            "ISR": 12.5705
+          },
+          "instrumental": {
+            "SDR": 9.79435,
+            "SIR": 17.7386,
+            "SAR": 11.5506,
+            "ISR": 13.705
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.535,
+        "SIR": 13.6775,
+        "SAR": 4.68649,
+        "ISR": 10.2037
+      },
+      "instrumental": {
+        "SDR": 12.4121,
+        "SIR": 18.2722,
+        "SAR": 15.307,
+        "ISR": 16.3804
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "9_HP2-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 9_HP2-UVR",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.22431,
+            "SIR": 18.2506,
+            "SAR": 4.90021,
+            "ISR": 8.40822
+          },
+          "instrumental": {
+            "SDR": 15.1383,
+            "SIR": 19.3881,
+            "SAR": 19.1667,
+            "ISR": 19.0479
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.91892,
+            "SIR": 13.4315,
+            "SAR": 5.87209,
+            "ISR": 11.5725
+          },
+          "instrumental": {
+            "SDR": 11.1616,
+            "SIR": 17.0683,
+            "SAR": 13.1556,
+            "ISR": 15.7575
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.57161,
+        "SIR": 15.841,
+        "SAR": 5.38615,
+        "ISR": 9.99036
+      },
+      "instrumental": {
+        "SDR": 13.15,
+        "SIR": 18.2282,
+        "SAR": 16.1611,
+        "ISR": 17.4027
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "10_SP-UVR-2B-32000-1.pth": {
+    "model_name": "VR Arch Single Model v5: 10_SP-UVR-2B-32000-1",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.55666,
+            "SIR": 13.1594,
+            "SAR": 4.60601,
+            "ISR": 8.92065
+          },
+          "instrumental": {
+            "SDR": 15.0844,
+            "SIR": 20.3956,
+            "SAR": 18.4196,
+            "ISR": 18.3987
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.31353,
+            "SIR": 9.47502,
+            "SAR": 5.09269,
+            "ISR": 12.714
+          },
+          "instrumental": {
+            "SDR": 9.37283,
+            "SIR": 17.8028,
+            "SAR": 10.9615,
+            "ISR": 13.6907
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.4351,
+        "SIR": 11.3172,
+        "SAR": 4.84935,
+        "ISR": 10.8173
+      },
+      "instrumental": {
+        "SDR": 12.2286,
+        "SIR": 19.0992,
+        "SAR": 14.6905,
+        "ISR": 16.0447
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "11_SP-UVR-2B-32000-2.pth": {
+    "model_name": "VR Arch Single Model v5: 11_SP-UVR-2B-32000-2",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.38186,
+            "SIR": 13.6055,
+            "SAR": 4.31086,
+            "ISR": 8.63485
+          },
+          "instrumental": {
+            "SDR": 15.3254,
+            "SIR": 20.4471,
+            "SAR": 19.4538,
+            "ISR": 18.7182
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.61384,
+            "SIR": 10.2422,
+            "SAR": 4.80059,
+            "ISR": 12.4588
+          },
+          "instrumental": {
+            "SDR": 9.54512,
+            "SIR": 17.5755,
+            "SAR": 11.2566,
+            "ISR": 14.1752
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.49785,
+        "SIR": 11.9238,
+        "SAR": 4.55572,
+        "ISR": 10.5468
+      },
+      "instrumental": {
+        "SDR": 12.4353,
+        "SIR": 19.0113,
+        "SAR": 15.3552,
+        "ISR": 16.4467
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "12_SP-UVR-3B-44100.pth": {
+    "model_name": "VR Arch Single Model v5: 12_SP-UVR-3B-44100",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.02814,
+            "SIR": 13.8688,
+            "SAR": 3.86639,
+            "ISR": 7.45564
+          },
+          "instrumental": {
+            "SDR": 15.0726,
+            "SIR": 18.9793,
+            "SAR": 19.1598,
+            "ISR": 18.6167
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.93034,
+            "SIR": 10.449,
+            "SAR": 5.22867,
+            "ISR": 12.0323
+          },
+          "instrumental": {
+            "SDR": 10.0922,
+            "SIR": 17.3567,
+            "SAR": 11.9871,
+            "ISR": 14.2859
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.47924,
+        "SIR": 12.1589,
+        "SAR": 4.54753,
+        "ISR": 9.74397
+      },
+      "instrumental": {
+        "SDR": 12.5824,
+        "SIR": 18.168,
+        "SAR": 15.5735,
+        "ISR": 16.4513
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "13_SP-UVR-4B-44100-1.pth": {
+    "model_name": "VR Arch Single Model v5: 13_SP-UVR-4B-44100-1",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.41826,
+            "SIR": 14.6844,
+            "SAR": 4.2865,
+            "ISR": 8.28759
+          },
+          "instrumental": {
+            "SDR": 14.8749,
+            "SIR": 19.2658,
+            "SAR": 18.7497,
+            "ISR": 18.731
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.98532,
+            "SIR": 10.0177,
+            "SAR": 5.29026,
+            "ISR": 12.1635
+          },
+          "instrumental": {
+            "SDR": 10.0819,
+            "SIR": 17.5659,
+            "SAR": 12.1074,
+            "ISR": 14.0863
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.70179,
+        "SIR": 12.3511,
+        "SAR": 4.78838,
+        "ISR": 10.2255
+      },
+      "instrumental": {
+        "SDR": 12.4784,
+        "SIR": 18.4158,
+        "SAR": 15.4286,
+        "ISR": 16.4087
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "14_SP-UVR-4B-44100-2.pth": {
+    "model_name": "VR Arch Single Model v5: 14_SP-UVR-4B-44100-2",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.5248,
+            "SIR": 13.5222,
+            "SAR": 4.46966,
+            "ISR": 8.8485
+          },
+          "instrumental": {
+            "SDR": 14.8167,
+            "SIR": 19.8877,
+            "SAR": 18.6056,
+            "ISR": 18.3775
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.50422,
+            "SIR": 9.35119,
+            "SAR": 5.2104,
+            "ISR": 12.7287
+          },
+          "instrumental": {
+            "SDR": 9.81308,
+            "SIR": 18.0013,
+            "SAR": 11.5798,
+            "ISR": 13.6069
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.51451,
+        "SIR": 11.4367,
+        "SAR": 4.84003,
+        "ISR": 10.7886
+      },
+      "instrumental": {
+        "SDR": 12.3149,
+        "SIR": 18.9445,
+        "SAR": 15.0927,
+        "ISR": 15.9922
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "15_SP-UVR-MID-44100-1.pth": {
+    "model_name": "VR Arch Single Model v5: 15_SP-UVR-MID-44100-1",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.04636,
+            "SIR": 14.85,
+            "SAR": 3.83909,
+            "ISR": 7.84627
+          },
+          "instrumental": {
+            "SDR": 15.8345,
+            "SIR": 19.119,
+            "SAR": 19.62,
+            "ISR": 19.9563
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.03427,
+            "SIR": 10.1512,
+            "SAR": 5.33985,
+            "ISR": 12.5775
+          },
+          "instrumental": {
+            "SDR": 10.3835,
+            "SIR": 17.9081,
+            "SAR": 12.3015,
+            "ISR": 14.015
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.54031,
+        "SIR": 12.5006,
+        "SAR": 4.58947,
+        "ISR": 10.2119
+      },
+      "instrumental": {
+        "SDR": 13.109,
+        "SIR": 18.5136,
+        "SAR": 15.9608,
+        "ISR": 16.9856
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "16_SP-UVR-MID-44100-2.pth": {
+    "model_name": "VR Arch Single Model v5: 16_SP-UVR-MID-44100-2",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.05476,
+            "SIR": 14.7077,
+            "SAR": 3.82144,
+            "ISR": 7.84507
+          },
+          "instrumental": {
+            "SDR": 15.1911,
+            "SIR": 19.3774,
+            "SAR": 19.53,
+            "ISR": 18.7747
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.14488,
+            "SIR": 10.564,
+            "SAR": 5.30249,
+            "ISR": 12.2981
+          },
+          "instrumental": {
+            "SDR": 10.8672,
+            "SIR": 17.6631,
+            "SAR": 12.363,
+            "ISR": 14.2162
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.59982,
+        "SIR": 12.6359,
+        "SAR": 4.56196,
+        "ISR": 10.0716
+      },
+      "instrumental": {
+        "SDR": 13.0292,
+        "SIR": 18.5203,
+        "SAR": 15.9465,
+        "ISR": 16.4954
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "17_HP-Wind_Inst-UVR.pth": {
+    "model_name": "VR Arch Single Model v5: 17_HP-Wind_Inst-UVR",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "no woodwinds",
+      "woodwinds"
+    ],
+    "target_stem": "no woodwinds"
+  },
+  "UVR-De-Echo-Aggressive.pth": {
+    "model_name": "VR Arch Single Model v5: UVR-De-Echo-Aggressive by FoxJoy",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "no echo",
+      "echo"
+    ],
+    "target_stem": "no echo"
+  },
+  "UVR-De-Echo-Normal.pth": {
+    "model_name": "VR Arch Single Model v5: UVR-De-Echo-Normal by FoxJoy",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "no echo",
+      "echo"
+    ],
+    "target_stem": "no echo"
+  },
+  "UVR-DeEcho-DeReverb.pth": {
+    "model_name": "VR Arch Single Model v5: UVR-DeEcho-DeReverb by FoxJoy",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "no reverb",
+      "reverb"
+    ],
+    "target_stem": "no reverb"
+  },
+  "UVR-DeNoise-Lite.pth": {
+    "model_name": "VR Arch Single Model v5: UVR-DeNoise-Lite by FoxJoy",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "noise",
+      "no noise"
+    ],
+    "target_stem": "noise"
+  },
+  "UVR-DeNoise.pth": {
+    "model_name": "VR Arch Single Model v5: UVR-DeNoise by FoxJoy",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "noise",
+      "no noise"
+    ],
+    "target_stem": "noise"
+  },
+  "UVR-BVE-4B_SN-44100-1.pth": {
+    "model_name": "VR Arch Single Model v5: UVR-BVE-4B_SN-44100-1",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 0.0143,
+            "SIR": 5.71885,
+            "SAR": 0.00389,
+            "ISR": 2.65473
+          },
+          "instrumental": {
+            "SDR": 12.0434,
+            "SIR": 13.2314,
+            "SAR": 20.3884,
+            "ISR": 18.1082
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 0.04364,
+            "SIR": -0.21064,
+            "SAR": 1.13731,
+            "ISR": 4.28305
+          },
+          "instrumental": {
+            "SDR": 5.134,
+            "SIR": 8.18763,
+            "SAR": 9.75106,
+            "ISR": 12.2035
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 0.02897,
+        "SIR": 2.75411,
+        "SAR": 0.5706,
+        "ISR": 3.46889
+      },
+      "instrumental": {
+        "SDR": 8.5887,
+        "SIR": 10.7095,
+        "SAR": 15.0697,
+        "ISR": 15.1559
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "MGM_HIGHEND_v4.pth": {
+    "model_name": "VR Arch Single Model v4: MGM_HIGHEND_v4",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 3.90158,
+            "SIR": 15.9598,
+            "SAR": 3.37143,
+            "ISR": 6.56793
+          },
+          "instrumental": {
+            "SDR": 14.4628,
+            "SIR": 17.3509,
+            "SAR": 18.4845,
+            "ISR": 18.8014
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.14604,
+            "SIR": 10.0782,
+            "SAR": 3.92013,
+            "ISR": 9.93124
+          },
+          "instrumental": {
+            "SDR": 9.75011,
+            "SIR": 15.2216,
+            "SAR": 11.5548,
+            "ISR": 14.6244
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.02381,
+        "SIR": 13.019,
+        "SAR": 3.64578,
+        "ISR": 8.24958
+      },
+      "instrumental": {
+        "SDR": 12.1065,
+        "SIR": 16.2862,
+        "SAR": 15.0197,
+        "ISR": 16.7129
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "MGM_LOWEND_A_v4.pth": {
+    "model_name": "VR Arch Single Model v4: MGM_LOWEND_A_v4",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.13243,
+            "SIR": 17.8811,
+            "SAR": 3.52338,
+            "ISR": 6.90286
+          },
+          "instrumental": {
+            "SDR": 14.9123,
+            "SIR": 18.3341,
+            "SAR": 19.4275,
+            "ISR": 18.9589
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.01049,
+            "SIR": 11.6772,
+            "SAR": 4.99365,
+            "ISR": 11.1504
+          },
+          "instrumental": {
+            "SDR": 9.92313,
+            "SIR": 16.3978,
+            "SAR": 11.7922,
+            "ISR": 15.0924
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.57146,
+        "SIR": 14.7791,
+        "SAR": 4.25852,
+        "ISR": 9.02663
+      },
+      "instrumental": {
+        "SDR": 12.4177,
+        "SIR": 17.3659,
+        "SAR": 15.6098,
+        "ISR": 17.0256
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "MGM_LOWEND_B_v4.pth": {
+    "model_name": "VR Arch Single Model v4: MGM_LOWEND_B_v4",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 3.9675,
+            "SIR": 15.4909,
+            "SAR": 2.98769,
+            "ISR": 8.2918
+          },
+          "instrumental": {
+            "SDR": 14.8575,
+            "SIR": 19.7225,
+            "SAR": 17.7783,
+            "ISR": 18.5521
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.18477,
+            "SIR": 8.98029,
+            "SAR": 5.10279,
+            "ISR": 14.4782
+          },
+          "instrumental": {
+            "SDR": 8.99737,
+            "SIR": 19.4874,
+            "SAR": 10.5674,
+            "ISR": 13.0905
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.07613,
+        "SIR": 12.2356,
+        "SAR": 4.04524,
+        "ISR": 11.385
+      },
+      "instrumental": {
+        "SDR": 11.9274,
+        "SIR": 19.605,
+        "SAR": 14.1729,
+        "ISR": 15.8213
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "MGM_MAIN_v4.pth": {
+    "model_name": "VR Arch Single Model v4: MGM_MAIN_v4",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 3.72751,
+            "SIR": 19.3325,
+            "SAR": 3.02685,
+            "ISR": 5.7645
+          },
+          "instrumental": {
+            "SDR": 14.4502,
+            "SIR": 16.2785,
+            "SAR": 19.0347,
+            "ISR": 19.0905
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 4.93812,
+            "SIR": 11.2323,
+            "SAR": 4.85155,
+            "ISR": 11.141
+          },
+          "instrumental": {
+            "SDR": 10.0664,
+            "SIR": 16.3012,
+            "SAR": 11.9555,
+            "ISR": 14.8655
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.33282,
+        "SIR": 15.2824,
+        "SAR": 3.9392,
+        "ISR": 8.45275
+      },
+      "instrumental": {
+        "SDR": 12.2583,
+        "SIR": 16.2899,
+        "SAR": 15.4951,
+        "ISR": 16.978
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR-De-Reverb-aufr33-jarredou.pth": {
+    "model_name": "VR Arch Single Model v4: UVR-De-Reverb by aufr33-jarredou",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "dry",
+      "no dry"
+    ],
+    "target_stem": "dry"
+  },
+  "UVR-MDX-NET-Inst_HQ_1.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Inst HQ 1",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.26685,
+            "SIR": 19.0489,
+            "SAR": 5.43294,
+            "ISR": 9.16527
+          },
+          "instrumental": {
+            "SDR": 16.5292,
+            "SIR": 23.6979,
+            "SAR": 19.953,
+            "ISR": 18.9037
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.86386,
+            "SIR": 13.8367,
+            "SAR": 7.1304,
+            "ISR": 12.6514
+          },
+          "instrumental": {
+            "SDR": 12.1846,
+            "SIR": 21.8827,
+            "SAR": 13.5634,
+            "ISR": 15.4953
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.06536,
+        "SIR": 16.4428,
+        "SAR": 6.28167,
+        "ISR": 10.9083
+      },
+      "instrumental": {
+        "SDR": 14.3569,
+        "SIR": 22.7903,
+        "SAR": 16.7582,
+        "ISR": 17.1995
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR-MDX-NET-Inst_HQ_2.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Inst HQ 2",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.75013,
+            "SIR": 18.1092,
+            "SAR": 5.6745,
+            "ISR": 10.305
+          },
+          "instrumental": {
+            "SDR": 16.5295,
+            "SIR": 25.0494,
+            "SAR": 19.9577,
+            "ISR": 18.7263
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.25193,
+            "SIR": 10.5995,
+            "SAR": 6.92066,
+            "ISR": 13.4755
+          },
+          "instrumental": {
+            "SDR": 11.1988,
+            "SIR": 23.0424,
+            "SAR": 12.6725,
+            "ISR": 13.847
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.00103,
+        "SIR": 14.3544,
+        "SAR": 6.29758,
+        "ISR": 11.8902
+      },
+      "instrumental": {
+        "SDR": 13.8641,
+        "SIR": 24.0459,
+        "SAR": 16.3151,
+        "ISR": 16.2866
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR-MDX-NET-Inst_HQ_3.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Inst HQ 3",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.62282,
+            "SIR": 18.7143,
+            "SAR": 5.72698,
+            "ISR": 9.80979
+          },
+          "instrumental": {
+            "SDR": 16.512,
+            "SIR": 24.6836,
+            "SAR": 19.931,
+            "ISR": 18.8168
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.9593,
+            "SIR": 11.6041,
+            "SAR": 7.30291,
+            "ISR": 13.0865
+          },
+          "instrumental": {
+            "SDR": 11.8454,
+            "SIR": 22.4631,
+            "SAR": 13.3694,
+            "ISR": 14.4199
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.29106,
+        "SIR": 15.1592,
+        "SAR": 6.51494,
+        "ISR": 11.4481
+      },
+      "instrumental": {
+        "SDR": 14.1787,
+        "SIR": 23.5733,
+        "SAR": 16.6502,
+        "ISR": 16.6183
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR-MDX-NET-Inst_HQ_4.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Inst HQ 4",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.85686,
+            "SIR": 19.2837,
+            "SAR": 5.7082,
+            "ISR": 10.1135
+          },
+          "instrumental": {
+            "SDR": 16.7591,
+            "SIR": 25.0221,
+            "SAR": 20.0476,
+            "ISR": 19.0067
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.03511,
+            "SIR": 12.8602,
+            "SAR": 7.41324,
+            "ISR": 12.7271
+          },
+          "instrumental": {
+            "SDR": 11.8894,
+            "SIR": 21.7858,
+            "SAR": 13.4914,
+            "ISR": 14.9551
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.44599,
+        "SIR": 16.072,
+        "SAR": 6.56072,
+        "ISR": 11.4203
+      },
+      "instrumental": {
+        "SDR": 14.3242,
+        "SIR": 23.4039,
+        "SAR": 16.7695,
+        "ISR": 16.9809
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR_MDXNET_Main.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Main",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.63812,
+            "SIR": 17.4406,
+            "SAR": 5.78804,
+            "ISR": 10.1273
+          },
+          "instrumental": {
+            "SDR": 16.5084,
+            "SIR": 24.7649,
+            "SAR": 19.8021,
+            "ISR": 18.7235
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.78169,
+            "SIR": 8.41188,
+            "SAR": 6.9639,
+            "ISR": 14.1907
+          },
+          "instrumental": {
+            "SDR": 10.2124,
+            "SIR": 24.1852,
+            "SAR": 12.1118,
+            "ISR": 12.495
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.70991,
+        "SIR": 12.9262,
+        "SAR": 6.37597,
+        "ISR": 12.159
+      },
+      "instrumental": {
+        "SDR": 13.3604,
+        "SIR": 24.475,
+        "SAR": 15.9569,
+        "ISR": 15.6092
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR-MDX-NET-Inst_Main.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Inst Main",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.94817,
+            "SIR": 18.4295,
+            "SAR": 5.567,
+            "ISR": 9.73235
+          },
+          "instrumental": {
+            "SDR": 16.4933,
+            "SIR": 24.3046,
+            "SAR": 19.8225,
+            "ISR": 18.7949
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.44254,
+            "SIR": 11.307,
+            "SAR": 7.01952,
+            "ISR": 12.9618
+          },
+          "instrumental": {
+            "SDR": 11.3824,
+            "SIR": 22.155,
+            "SAR": 13.1415,
+            "ISR": 14.1184
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.19536,
+        "SIR": 14.8682,
+        "SAR": 6.29326,
+        "ISR": 11.3471
+      },
+      "instrumental": {
+        "SDR": 13.9379,
+        "SIR": 23.2298,
+        "SAR": 16.482,
+        "ISR": 16.4566
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR_MDXNET_1_9703.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET 1",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.5934,
+            "SIR": 17.0409,
+            "SAR": 5.26672,
+            "ISR": 10.3872
+          },
+          "instrumental": {
+            "SDR": 16.4668,
+            "SIR": 24.9046,
+            "SAR": 19.569,
+            "ISR": 18.5774
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.22266,
+            "SIR": 10.9764,
+            "SAR": 6.91905,
+            "ISR": 13.215
+          },
+          "instrumental": {
+            "SDR": 10.8234,
+            "SIR": 22.5692,
+            "SAR": 12.482,
+            "ISR": 13.8857
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.90803,
+        "SIR": 14.0086,
+        "SAR": 6.09289,
+        "ISR": 11.8011
+      },
+      "instrumental": {
+        "SDR": 13.6451,
+        "SIR": 23.7369,
+        "SAR": 16.0255,
+        "ISR": 16.2315
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR_MDXNET_2_9682.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET 2",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.46453,
+            "SIR": 17.675,
+            "SAR": 4.99802,
+            "ISR": 9.81412
+          },
+          "instrumental": {
+            "SDR": 16.3486,
+            "SIR": 24.0614,
+            "SAR": 19.3918,
+            "ISR": 18.7301
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.40079,
+            "SIR": 12.6505,
+            "SAR": 6.87446,
+            "ISR": 12.1831
+          },
+          "instrumental": {
+            "SDR": 11.0032,
+            "SIR": 20.9133,
+            "SAR": 12.8517,
+            "ISR": 14.9143
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.93266,
+        "SIR": 15.1627,
+        "SAR": 5.93624,
+        "ISR": 10.9986
+      },
+      "instrumental": {
+        "SDR": 13.6759,
+        "SIR": 22.4873,
+        "SAR": 16.1217,
+        "ISR": 16.8222
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR_MDXNET_3_9662.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET 3",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.42437,
+            "SIR": 18.0352,
+            "SAR": 4.82973,
+            "ISR": 9.64703
+          },
+          "instrumental": {
+            "SDR": 16.4386,
+            "SIR": 24.5125,
+            "SAR": 19.4329,
+            "ISR": 18.7654
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.1878,
+            "SIR": 10.7021,
+            "SAR": 6.85693,
+            "ISR": 12.771
+          },
+          "instrumental": {
+            "SDR": 10.7318,
+            "SIR": 21.7972,
+            "SAR": 12.39,
+            "ISR": 13.7819
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.80608,
+        "SIR": 14.3686,
+        "SAR": 5.84333,
+        "ISR": 11.209
+      },
+      "instrumental": {
+        "SDR": 13.5852,
+        "SIR": 23.1548,
+        "SAR": 15.9115,
+        "ISR": 16.2736
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR-MDX-NET-Inst_1.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Inst 1",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.82133,
+            "SIR": 18.827,
+            "SAR": 5.68742,
+            "ISR": 9.93487
+          },
+          "instrumental": {
+            "SDR": 16.4818,
+            "SIR": 24.78,
+            "SAR": 19.7198,
+            "ISR": 18.7803
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.01205,
+            "SIR": 10.2907,
+            "SAR": 6.74881,
+            "ISR": 13.327
+          },
+          "instrumental": {
+            "SDR": 10.7604,
+            "SIR": 22.6716,
+            "SAR": 12.6458,
+            "ISR": 13.4699
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.91669,
+        "SIR": 14.5588,
+        "SAR": 6.21812,
+        "ISR": 11.6309
+      },
+      "instrumental": {
+        "SDR": 13.6211,
+        "SIR": 23.7258,
+        "SAR": 16.1828,
+        "ISR": 16.1251
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR-MDX-NET-Inst_2.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Inst 2",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.81251,
+            "SIR": 18.688,
+            "SAR": 5.91282,
+            "ISR": 10.5675
+          },
+          "instrumental": {
+            "SDR": 16.6667,
+            "SIR": 25.3572,
+            "SAR": 19.8788,
+            "ISR": 18.9157
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.03507,
+            "SIR": 13.2679,
+            "SAR": 7.40571,
+            "ISR": 12.5667
+          },
+          "instrumental": {
+            "SDR": 12.0218,
+            "SIR": 21.7743,
+            "SAR": 13.7749,
+            "ISR": 15.3119
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.42379,
+        "SIR": 15.9779,
+        "SAR": 6.65926,
+        "ISR": 11.5671
+      },
+      "instrumental": {
+        "SDR": 14.3442,
+        "SIR": 23.5658,
+        "SAR": 16.8269,
+        "ISR": 17.1138
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR-MDX-NET-Inst_3.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Inst 3",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.77412,
+            "SIR": 16.6923,
+            "SAR": 5.69646,
+            "ISR": 9.88816
+          },
+          "instrumental": {
+            "SDR": 16.5002,
+            "SIR": 24.725,
+            "SAR": 19.8214,
+            "ISR": 18.6737
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.6432,
+            "SIR": 12.2482,
+            "SAR": 7.11848,
+            "ISR": 12.8001
+          },
+          "instrumental": {
+            "SDR": 11.7117,
+            "SIR": 22.0246,
+            "SAR": 13.5846,
+            "ISR": 14.7927
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.20866,
+        "SIR": 14.4703,
+        "SAR": 6.40747,
+        "ISR": 11.3441
+      },
+      "instrumental": {
+        "SDR": 14.1059,
+        "SIR": 23.3748,
+        "SAR": 16.703,
+        "ISR": 16.7332
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR_MDXNET_KARA.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Karaoke",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 2.5289,
+            "SIR": 11.2152,
+            "SAR": 2.35093,
+            "ISR": 5.35324
+          },
+          "instrumental": {
+            "SDR": 15.417,
+            "SIR": 19.1696,
+            "SAR": 18.0835,
+            "ISR": 18.3171
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.0564,
+            "SIR": 20.8422,
+            "SAR": 3.04063,
+            "ISR": 5.94235
+          },
+          "instrumental": {
+            "SDR": 11.0574,
+            "SIR": 12.3998,
+            "SAR": 13.613,
+            "ISR": 18.6982
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 3.79265,
+        "SIR": 16.0287,
+        "SAR": 2.69578,
+        "ISR": 5.6478
+      },
+      "instrumental": {
+        "SDR": 13.2372,
+        "SIR": 15.7847,
+        "SAR": 15.8483,
+        "ISR": 18.5076
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR_MDXNET_KARA_2.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Karaoke 2",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.00209,
+            "SIR": 14.6178,
+            "SAR": 4.02018,
+            "ISR": 6.89909
+          },
+          "instrumental": {
+            "SDR": 16.0738,
+            "SIR": 21.7738,
+            "SAR": 19.382,
+            "ISR": 18.5912
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.61701,
+            "SIR": 15.9976,
+            "SAR": 3.58878,
+            "ISR": 7.10318
+          },
+          "instrumental": {
+            "SDR": 11.1291,
+            "SIR": 13.1536,
+            "SAR": 12.9738,
+            "ISR": 17.3359
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.80955,
+        "SIR": 15.3077,
+        "SAR": 3.80448,
+        "ISR": 7.00113
+      },
+      "instrumental": {
+        "SDR": 13.6014,
+        "SIR": 17.4637,
+        "SAR": 16.1779,
+        "ISR": 17.9635
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR_MDXNET_9482.onnx": {
+    "model_name": "MDX-Net Model: UVR_MDXNET_9482",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.70393,
+            "SIR": 15.5526,
+            "SAR": 4.81548,
+            "ISR": 9.38948
+          },
+          "instrumental": {
+            "SDR": 16.1586,
+            "SIR": 23.716,
+            "SAR": 19.3851,
+            "ISR": 18.5291
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.07234,
+            "SIR": 11.5188,
+            "SAR": 6.46524,
+            "ISR": 12.3028
+          },
+          "instrumental": {
+            "SDR": 11.0337,
+            "SIR": 21.0694,
+            "SAR": 12.6453,
+            "ISR": 14.3454
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.38814,
+        "SIR": 13.5357,
+        "SAR": 5.64036,
+        "ISR": 10.8461
+      },
+      "instrumental": {
+        "SDR": 13.5961,
+        "SIR": 22.3927,
+        "SAR": 16.0152,
+        "ISR": 16.4372
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR-MDX-NET-Voc_FT.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Voc FT",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.85247,
+            "SIR": 18.6162,
+            "SAR": 5.85353,
+            "ISR": 9.82122
+          },
+          "instrumental": {
+            "SDR": 16.5346,
+            "SIR": 24.6446,
+            "SAR": 19.9257,
+            "ISR": 18.9024
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.96594,
+            "SIR": 17.5106,
+            "SAR": 8.00501,
+            "ISR": 12.1838
+          },
+          "instrumental": {
+            "SDR": 13.2981,
+            "SIR": 21.2883,
+            "SAR": 15.182,
+            "ISR": 17.0256
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.90921,
+        "SIR": 18.0634,
+        "SAR": 6.92927,
+        "ISR": 11.0025
+      },
+      "instrumental": {
+        "SDR": 14.9164,
+        "SIR": 22.9665,
+        "SAR": 17.5539,
+        "ISR": 17.964
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "Kim_Vocal_1.onnx": {
+    "model_name": "MDX-Net Model: Kim Vocal 1",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.7787,
+            "SIR": 19.3037,
+            "SAR": 5.83443,
+            "ISR": 9.62516
+          },
+          "instrumental": {
+            "SDR": 16.6193,
+            "SIR": 24.5137,
+            "SAR": 19.9734,
+            "ISR": 18.9958
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.72532,
+            "SIR": 16.6197,
+            "SAR": 7.91073,
+            "ISR": 11.9734
+          },
+          "instrumental": {
+            "SDR": 13.1701,
+            "SIR": 20.8569,
+            "SAR": 15.0532,
+            "ISR": 16.7519
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.75201,
+        "SIR": 17.9617,
+        "SAR": 6.87258,
+        "ISR": 10.7993
+      },
+      "instrumental": {
+        "SDR": 14.8947,
+        "SIR": 22.6853,
+        "SAR": 17.5133,
+        "ISR": 17.8738
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "Kim_Vocal_2.onnx": {
+    "model_name": "MDX-Net Model: Kim Vocal 2",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.78748,
+            "SIR": 18.1983,
+            "SAR": 5.91704,
+            "ISR": 10.1435
+          },
+          "instrumental": {
+            "SDR": 16.5766,
+            "SIR": 24.9934,
+            "SAR": 19.8726,
+            "ISR": 18.7919
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 8.03279,
+            "SIR": 17.5348,
+            "SAR": 8.07367,
+            "ISR": 12.4061
+          },
+          "instrumental": {
+            "SDR": 13.2508,
+            "SIR": 21.5817,
+            "SAR": 15.168,
+            "ISR": 16.9983
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.91014,
+        "SIR": 17.8666,
+        "SAR": 6.99535,
+        "ISR": 11.2748
+      },
+      "instrumental": {
+        "SDR": 14.9137,
+        "SIR": 23.2876,
+        "SAR": 17.5203,
+        "ISR": 17.8951
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "Kim_Inst.onnx": {
+    "model_name": "MDX-Net Model: Kim Inst",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.26277,
+            "SIR": 19.5259,
+            "SAR": 4.96245,
+            "ISR": 8.62868
+          },
+          "instrumental": {
+            "SDR": 16.55,
+            "SIR": 23.7871,
+            "SAR": 19.7671,
+            "ISR": 18.9284
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.11105,
+            "SIR": 12.189,
+            "SAR": 6.56294,
+            "ISR": 12.4095
+          },
+          "instrumental": {
+            "SDR": 11.3977,
+            "SIR": 21.3127,
+            "SAR": 12.8984,
+            "ISR": 14.6754
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.68691,
+        "SIR": 15.8575,
+        "SAR": 5.76269,
+        "ISR": 10.5191
+      },
+      "instrumental": {
+        "SDR": 13.9739,
+        "SIR": 22.5499,
+        "SAR": 16.3328,
+        "ISR": 16.8019
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "Reverb_HQ_By_FoxJoy.onnx": {
+    "model_name": "MDX-Net Model: Reverb HQ By FoxJoy",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "reverb",
+      "no reverb"
+    ],
+    "target_stem": "reverb"
+  },
+  "UVR-MDX-NET_Crowd_HQ_1.onnx": {
+    "model_name": "MDX-Net Model: UVR-MDX-NET Crowd HQ 1 By Aufr33",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "no crowd",
+      "crowd"
+    ],
+    "target_stem": "no crowd"
+  },
+  "kuielab_a_vocals.onnx": {
+    "model_name": "MDX-Net Model: kuielab_a_vocals",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 6.03051,
+            "SIR": 19.0287,
+            "SAR": 6.30829,
+            "ISR": 10.7322
+          },
+          "instrumental": {
+            "SDR": 16.4026,
+            "SIR": 25.2452,
+            "SAR": 20.0441,
+            "ISR": 18.8
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.79108,
+            "SIR": 19.5485,
+            "SAR": 8.18339,
+            "ISR": 12.0497
+          },
+          "instrumental": {
+            "SDR": 13.1751,
+            "SIR": 21.2396,
+            "SAR": 15.3596,
+            "ISR": 17.6468
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.9108,
+        "SIR": 19.2886,
+        "SAR": 7.24584,
+        "ISR": 11.391
+      },
+      "instrumental": {
+        "SDR": 14.7889,
+        "SIR": 23.2424,
+        "SAR": 17.7019,
+        "ISR": 18.2234
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "kuielab_a_other.onnx": {
+    "model_name": "MDX-Net Model: kuielab_a_other",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "other": {
+            "SDR": 10.2985,
+            "SIR": 23.2364,
+            "SAR": 10.8844,
+            "ISR": 15.4433
+          },
+          "instrumental": {
+            "SDR": 5.0566,
+            "SIR": 13.1137,
+            "SAR": 10.1327,
+            "ISR": 6.35631
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "other": {
+            "SDR": 7.61851,
+            "SIR": 15.8185,
+            "SAR": 8.05757,
+            "ISR": 13.0745
+          },
+          "instrumental": {
+            "SDR": 2.76622,
+            "SIR": 10.1729,
+            "SAR": 3.73319,
+            "ISR": 5.413
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "instrumental": {
+        "SDR": 3.91141,
+        "SIR": 11.6433,
+        "SAR": 6.93295,
+        "ISR": 5.88466
+      }
+    },
+    "stems": [
+      "other",
+      "no other"
+    ],
+    "target_stem": "other"
+  },
+  "kuielab_a_bass.onnx": {
+    "model_name": "MDX-Net Model: kuielab_a_bass",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "bass": {
+            "SDR": 16.0732,
+            "SIR": 23.7351,
+            "SAR": 18.5785,
+            "ISR": 18.8732
+          },
+          "instrumental": {
+            "SDR": 0.77436,
+            "SIR": 6.81879,
+            "SAR": 4.43829,
+            "ISR": 1.74334
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "bass": {
+            "SDR": 10.4234,
+            "SIR": 21.1994,
+            "SAR": 12.4414,
+            "ISR": 13.555
+          },
+          "instrumental": {
+            "SDR": 2.16512,
+            "SIR": 5.57842,
+            "SAR": 2.94353,
+            "ISR": 3.86083
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "bass": {
+        "SDR": 13.2483,
+        "SIR": 22.4672,
+        "SAR": 15.5099,
+        "ISR": 16.2141
+      },
+      "instrumental": {
+        "SDR": 1.46974,
+        "SIR": 6.19861,
+        "SAR": 3.69091,
+        "ISR": 2.80208
+      }
+    },
+    "stems": [
+      "bass",
+      "no bass"
+    ],
+    "target_stem": "bass"
+  },
+  "kuielab_a_drums.onnx": {
+    "model_name": "MDX-Net Model: kuielab_a_drums",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "drums": {
+            "SDR": 2.18069,
+            "SIR": 12.4405,
+            "SAR": 0.482,
+            "ISR": 3.95218
+          },
+          "instrumental": {
+            "SDR": 10.5281,
+            "SIR": 24.8726,
+            "SAR": 10.707,
+            "ISR": 18.0658
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "drums": {
+            "SDR": 6.09482,
+            "SIR": 15.3373,
+            "SAR": 5.69309,
+            "ISR": 9.71032
+          },
+          "instrumental": {
+            "SDR": 5.95259,
+            "SIR": 12.4937,
+            "SAR": 6.345,
+            "ISR": 13.3849
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "drums": {
+        "SDR": 4.13776,
+        "SIR": 13.8889,
+        "SAR": 3.08754,
+        "ISR": 6.83125
+      },
+      "instrumental": {
+        "SDR": 8.24034,
+        "SIR": 18.6831,
+        "SAR": 8.526,
+        "ISR": 15.7253
+      }
+    },
+    "stems": [
+      "drums",
+      "no drums"
+    ],
+    "target_stem": "drums"
+  },
+  "kuielab_b_vocals.onnx": {
+    "model_name": "MDX-Net Model: kuielab_b_vocals",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.30456,
+            "SIR": 21.1354,
+            "SAR": 4.92979,
+            "ISR": 8.8335
+          },
+          "instrumental": {
+            "SDR": 16.2972,
+            "SIR": 23.2941,
+            "SAR": 19.5481,
+            "ISR": 19.0885
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.5451,
+            "SIR": 19.2118,
+            "SAR": 7.6691,
+            "ISR": 11.8577
+          },
+          "instrumental": {
+            "SDR": 12.8641,
+            "SIR": 20.8663,
+            "SAR": 14.6975,
+            "ISR": 17.5673
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.42483,
+        "SIR": 20.1736,
+        "SAR": 6.29945,
+        "ISR": 10.3456
+      },
+      "instrumental": {
+        "SDR": 14.5807,
+        "SIR": 22.0802,
+        "SAR": 17.1228,
+        "ISR": 18.3279
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "kuielab_b_other.onnx": {
+    "model_name": "MDX-Net Model: kuielab_b_other",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "other": {
+            "SDR": 9.64939,
+            "SIR": 22.6796,
+            "SAR": 10.5282,
+            "ISR": 13.6929
+          },
+          "instrumental": {
+            "SDR": 5.30899,
+            "SIR": 13.7586,
+            "SAR": 10.6078,
+            "ISR": 6.64791
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "other": {
+            "SDR": 7.2477,
+            "SIR": 15.4396,
+            "SAR": 7.63335,
+            "ISR": 11.639
+          },
+          "instrumental": {
+            "SDR": 3.03107,
+            "SIR": 10.8778,
+            "SAR": 4.0042,
+            "ISR": 5.69864
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "instrumental": {
+        "SDR": 4.17003,
+        "SIR": 12.3182,
+        "SAR": 7.306,
+        "ISR": 6.17328
+      }
+    },
+    "stems": [
+      "other",
+      "no other"
+    ],
+    "target_stem": "other"
+  },
+  "kuielab_b_bass.onnx": {
+    "model_name": "MDX-Net Model: kuielab_b_bass",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "bass": {
+            "SDR": 15.7548,
+            "SIR": 23.7323,
+            "SAR": 18.4123,
+            "ISR": 18.2626
+          },
+          "instrumental": {
+            "SDR": 0.81314,
+            "SIR": 6.97275,
+            "SAR": 4.42315,
+            "ISR": 1.81282
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "bass": {
+            "SDR": 10.2335,
+            "SIR": 21.1984,
+            "SAR": 12.3839,
+            "ISR": 13.3543
+          },
+          "instrumental": {
+            "SDR": 2.2203,
+            "SIR": 5.75124,
+            "SAR": 2.93622,
+            "ISR": 3.89337
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "bass": {
+        "SDR": 12.9941,
+        "SIR": 22.4654,
+        "SAR": 15.3981,
+        "ISR": 15.8085
+      },
+      "instrumental": {
+        "SDR": 1.51672,
+        "SIR": 6.362,
+        "SAR": 3.67969,
+        "ISR": 2.8531
+      }
+    },
+    "stems": [
+      "bass",
+      "no bass"
+    ],
+    "target_stem": "bass"
+  },
+  "kuielab_b_drums.onnx": {
+    "model_name": "MDX-Net Model: kuielab_b_drums",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "drums": {
+            "SDR": 2.5684,
+            "SIR": 15.1012,
+            "SAR": 0.54169,
+            "ISR": 3.75755
+          },
+          "instrumental": {
+            "SDR": 10.5504,
+            "SIR": 25.3366,
+            "SAR": 10.7179,
+            "ISR": 18.4031
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "drums": {
+            "SDR": 6.2011,
+            "SIR": 19.1452,
+            "SAR": 5.91363,
+            "ISR": 9.29231
+          },
+          "instrumental": {
+            "SDR": 6.00811,
+            "SIR": 12.5654,
+            "SAR": 6.30249,
+            "ISR": 14.0578
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "drums": {
+        "SDR": 4.38475,
+        "SIR": 17.1232,
+        "SAR": 3.22766,
+        "ISR": 6.52493
+      },
+      "instrumental": {
+        "SDR": 8.27925,
+        "SIR": 18.951,
+        "SAR": 8.51019,
+        "ISR": 16.2304
+      }
+    },
+    "stems": [
+      "drums",
+      "no drums"
+    ],
+    "target_stem": "drums"
+  },
+  "UVR-MDX-NET_Main_340.onnx": {
+    "model_name": "MDX-Net Model VIP: UVR-MDX-NET_Main_340",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.59047,
+            "SIR": 19.3254,
+            "SAR": 5.54795,
+            "ISR": 9.92554
+          },
+          "instrumental": {
+            "SDR": 16.5772,
+            "SIR": 24.8953,
+            "SAR": 19.8876,
+            "ISR": 18.9964
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.54666,
+            "SIR": 11.9182,
+            "SAR": 7.21952,
+            "ISR": 13.6981
+          },
+          "instrumental": {
+            "SDR": 11.8166,
+            "SIR": 23.4527,
+            "SAR": 13.2295,
+            "ISR": 14.4353
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.06856,
+        "SIR": 15.6218,
+        "SAR": 6.38373,
+        "ISR": 11.8118
+      },
+      "instrumental": {
+        "SDR": 14.1969,
+        "SIR": 24.174,
+        "SAR": 16.5586,
+        "ISR": 16.7158
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR-MDX-NET_Main_390.onnx": {
+    "model_name": "MDX-Net Model VIP: UVR-MDX-NET_Main_390",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 3.20541,
+            "SIR": 16.7913,
+            "SAR": 5.91045,
+            "ISR": 9.75897
+          },
+          "instrumental": {
+            "SDR": 12.3509,
+            "SIR": 18.2773,
+            "SAR": 15.1963,
+            "ISR": 17.5234
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 2.78109,
+            "SIR": 13.0325,
+            "SAR": 7.55413,
+            "ISR": 9.30404
+          },
+          "instrumental": {
+            "SDR": 6.75573,
+            "SIR": 10.8264,
+            "SAR": 9.24601,
+            "ISR": 12.5868
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 2.99325,
+        "SIR": 14.9119,
+        "SAR": 6.73229,
+        "ISR": 9.5315
+      },
+      "instrumental": {
+        "SDR": 9.55331,
+        "SIR": 14.5518,
+        "SAR": 12.2212,
+        "ISR": 15.0551
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR-MDX-NET_Main_406.onnx": {
+    "model_name": "MDX-Net Model VIP: UVR-MDX-NET_Main_406",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.85269,
+            "SIR": 17.2346,
+            "SAR": 5.75262,
+            "ISR": 10.9493
+          },
+          "instrumental": {
+            "SDR": 16.5944,
+            "SIR": 26.387,
+            "SAR": 19.5127,
+            "ISR": 18.6513
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.92379,
+            "SIR": 12.2082,
+            "SAR": 7.45387,
+            "ISR": 14.543
+          },
+          "instrumental": {
+            "SDR": 12.0279,
+            "SIR": 24.5345,
+            "SAR": 13.3392,
+            "ISR": 14.4247
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.38824,
+        "SIR": 14.7214,
+        "SAR": 6.60325,
+        "ISR": 12.7462
+      },
+      "instrumental": {
+        "SDR": 14.3112,
+        "SIR": 25.4608,
+        "SAR": 16.426,
+        "ISR": 16.538
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR-MDX-NET_Main_427.onnx": {
+    "model_name": "MDX-Net Model VIP: UVR-MDX-NET_Main_427",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.82906,
+            "SIR": 17.6647,
+            "SAR": 5.943,
+            "ISR": 10.1517
+          },
+          "instrumental": {
+            "SDR": 16.5208,
+            "SIR": 25.1407,
+            "SAR": 20.0019,
+            "ISR": 18.7475
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.18473,
+            "SIR": 13.6405,
+            "SAR": 7.63287,
+            "ISR": 13.145
+          },
+          "instrumental": {
+            "SDR": 12.5536,
+            "SIR": 22.5558,
+            "SAR": 14.1371,
+            "ISR": 15.4313
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.5069,
+        "SIR": 15.6526,
+        "SAR": 6.78793,
+        "ISR": 11.6484
+      },
+      "instrumental": {
+        "SDR": 14.5372,
+        "SIR": 23.8483,
+        "SAR": 17.0695,
+        "ISR": 17.0894
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR-MDX-NET_Main_438.onnx": {
+    "model_name": "MDX-Net Model VIP: UVR-MDX-NET_Main_438",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.53862,
+            "SIR": 16.0907,
+            "SAR": 5.62231,
+            "ISR": 9.7587
+          },
+          "instrumental": {
+            "SDR": 16.5526,
+            "SIR": 24.6013,
+            "SAR": 19.8913,
+            "ISR": 18.7021
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.87137,
+            "SIR": 10.954,
+            "SAR": 7.51221,
+            "ISR": 13.1776
+          },
+          "instrumental": {
+            "SDR": 11.8205,
+            "SIR": 22.5439,
+            "SAR": 13.5629,
+            "ISR": 13.9922
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.205,
+        "SIR": 13.5223,
+        "SAR": 6.56726,
+        "ISR": 11.4681
+      },
+      "instrumental": {
+        "SDR": 14.1866,
+        "SIR": 23.5726,
+        "SAR": 16.7271,
+        "ISR": 16.3471
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "UVR-MDX-NET_Inst_82_beta.onnx": {
+    "model_name": "MDX-Net Model VIP: UVR-MDX-NET_Inst_82_beta",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.97868,
+            "SIR": 15.9098,
+            "SAR": 4.93943,
+            "ISR": 8.46945
+          },
+          "instrumental": {
+            "SDR": 15.8315,
+            "SIR": 22.5876,
+            "SAR": 19.2636,
+            "ISR": 18.0554
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.33976,
+            "SIR": 12.3039,
+            "SAR": 6.87203,
+            "ISR": 12.0359
+          },
+          "instrumental": {
+            "SDR": 11.2058,
+            "SIR": 20.7697,
+            "SAR": 13.0201,
+            "ISR": 14.6704
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.65922,
+        "SIR": 14.1069,
+        "SAR": 5.90573,
+        "ISR": 10.2527
+      },
+      "instrumental": {
+        "SDR": 13.5187,
+        "SIR": 21.6786,
+        "SAR": 16.1418,
+        "ISR": 16.3629
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR-MDX-NET_Inst_90_beta.onnx": {
+    "model_name": "MDX-Net Model VIP: UVR-MDX-NET_Inst_90_beta",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.20267,
+            "SIR": 12.2383,
+            "SAR": 6.46048,
+            "ISR": 9.42509
+          },
+          "instrumental": {
+            "SDR": 15.2004,
+            "SIR": 23.5832,
+            "SAR": 19.5653,
+            "ISR": 16.7009
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.57133,
+            "SIR": 9.09481,
+            "SAR": 6.93344,
+            "ISR": 12.0644
+          },
+          "instrumental": {
+            "SDR": 10.2586,
+            "SIR": 20.2755,
+            "SAR": 12.5757,
+            "ISR": 12.9299
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.387,
+        "SIR": 10.6666,
+        "SAR": 6.69696,
+        "ISR": 10.7447
+      },
+      "instrumental": {
+        "SDR": 12.7295,
+        "SIR": 21.9293,
+        "SAR": 16.0705,
+        "ISR": 14.8154
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR-MDX-NET_Inst_187_beta.onnx": {
+    "model_name": "MDX-Net Model VIP: UVR-MDX-NET_Inst_187_beta",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.36936,
+            "SIR": 13.026,
+            "SAR": 7.20428,
+            "ISR": 9.46774
+          },
+          "instrumental": {
+            "SDR": 15.2983,
+            "SIR": 23.7378,
+            "SAR": 19.7604,
+            "ISR": 16.8152
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.51237,
+            "SIR": 8.68336,
+            "SAR": 7.02625,
+            "ISR": 13.4352
+          },
+          "instrumental": {
+            "SDR": 10.0231,
+            "SIR": 22.6724,
+            "SAR": 12.2508,
+            "ISR": 12.4554
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.44087,
+        "SIR": 10.8547,
+        "SAR": 7.11526,
+        "ISR": 11.4515
+      },
+      "instrumental": {
+        "SDR": 12.6607,
+        "SIR": 23.2051,
+        "SAR": 16.0056,
+        "ISR": 14.6353
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "UVR-MDX-NET-Inst_full_292.onnx": {
+    "model_name": "MDX-Net Model VIP: UVR-MDX-NET-Inst_full_292",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.54252,
+            "SIR": 15.7078,
+            "SAR": 5.50417,
+            "ISR": 10.0188
+          },
+          "instrumental": {
+            "SDR": 16.1056,
+            "SIR": 24.6499,
+            "SAR": 19.6085,
+            "ISR": 18.3314
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.47415,
+            "SIR": 10.7711,
+            "SAR": 7.08723,
+            "ISR": 13.123
+          },
+          "instrumental": {
+            "SDR": 11.317,
+            "SIR": 22.4021,
+            "SAR": 12.8289,
+            "ISR": 13.9143
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.00833,
+        "SIR": 13.2395,
+        "SAR": 6.2957,
+        "ISR": 11.5709
+      },
+      "instrumental": {
+        "SDR": 13.7113,
+        "SIR": 23.526,
+        "SAR": 16.2187,
+        "ISR": 16.1228
+      }
+    },
+    "stems": [
+      "instrumental",
+      "vocals"
+    ],
+    "target_stem": "instrumental"
+  },
+  "htdemucs_ft.yaml": {
+    "model_name": "Demucs v4: htdemucs_ft",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 6.08748,
+            "SIR": 17.144,
+            "SAR": 6.11034,
+            "ISR": 12.6967
+          },
+          "drums": {
+            "SDR": 5.1398,
+            "SIR": 16.7632,
+            "SAR": 4.47122,
+            "ISR": 8.87269
+          },
+          "bass": {
+            "SDR": 19.6061,
+            "SIR": 26.9475,
+            "SAR": 19.9212,
+            "ISR": 25.6764
+          },
+          "other": {
+            "SDR": 10.379,
+            "SIR": 15.77,
+            "SAR": 11.5282,
+            "ISR": 20.5043
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.87915,
+            "SIR": 19.0441,
+            "SAR": 7.86232,
+            "ISR": 14.6037
+          },
+          "drums": {
+            "SDR": 9.49839,
+            "SIR": 20.977,
+            "SAR": 10.2955,
+            "ISR": 14.0041
+          },
+          "bass": {
+            "SDR": 12.555,
+            "SIR": 20.7999,
+            "SAR": 14.0735,
+            "ISR": 15.4626
+          },
+          "other": {
+            "SDR": 8.49975,
+            "SIR": 14.2335,
+            "SAR": 9.43418,
+            "ISR": 16.7411
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.98332,
+        "SIR": 18.094,
+        "SAR": 6.98633,
+        "ISR": 13.6502
+      },
+      "drums": {
+        "SDR": 7.3191,
+        "SIR": 18.8701,
+        "SAR": 7.38336,
+        "ISR": 11.4384
+      },
+      "bass": {
+        "SDR": 16.0806,
+        "SIR": 23.8737,
+        "SAR": 16.9973,
+        "ISR": 20.5695
+      }
+    },
+    "stems": [
+      "vocals",
+      "drums",
+      "bass",
+      "other"
+    ],
+    "target_stem": null
+  },
+  "htdemucs.yaml": {
+    "model_name": "Demucs v4: htdemucs",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.57989,
+            "SIR": 15.919,
+            "SAR": 5.6672,
+            "ISR": 12.5146
+          },
+          "drums": {
+            "SDR": 3.4786,
+            "SIR": 15.3778,
+            "SAR": 2.08293,
+            "ISR": 5.22501
+          },
+          "bass": {
+            "SDR": 18.5115,
+            "SIR": 22.9108,
+            "SAR": 19.5757,
+            "ISR": 25.8449
+          },
+          "other": {
+            "SDR": 9.94838,
+            "SIR": 15.6823,
+            "SAR": 11.0621,
+            "ISR": 19.3189
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.39182,
+            "SIR": 18.1421,
+            "SAR": 7.33519,
+            "ISR": 13.7516
+          },
+          "drums": {
+            "SDR": 8.40161,
+            "SIR": 19.6676,
+            "SAR": 8.92091,
+            "ISR": 12.633
+          },
+          "bass": {
+            "SDR": 11.909,
+            "SIR": 19.711,
+            "SAR": 13.632,
+            "ISR": 14.9125
+          },
+          "other": {
+            "SDR": 7.77882,
+            "SIR": 12.9784,
+            "SAR": 8.84332,
+            "ISR": 16.1011
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.48585,
+        "SIR": 17.0305,
+        "SAR": 6.5012,
+        "ISR": 13.1331
+      },
+      "drums": {
+        "SDR": 5.9401,
+        "SIR": 17.5227,
+        "SAR": 5.50192,
+        "ISR": 8.92901
+      },
+      "bass": {
+        "SDR": 15.2103,
+        "SIR": 21.3109,
+        "SAR": 16.6039,
+        "ISR": 20.3787
+      }
+    },
+    "stems": [
+      "vocals",
+      "drums",
+      "bass",
+      "other"
+    ],
+    "target_stem": null
+  },
+  "hdemucs_mmi.yaml": {
+    "model_name": "Demucs v4: hdemucs_mmi",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.56426,
+            "SIR": 15.3421,
+            "SAR": 5.81316,
+            "ISR": 13.3612
+          },
+          "drums": {
+            "SDR": 4.76153,
+            "SIR": 17.0363,
+            "SAR": 3.95759,
+            "ISR": 7.58476
+          },
+          "bass": {
+            "SDR": 19.1023,
+            "SIR": 24.9967,
+            "SAR": 20.0212,
+            "ISR": 26.5658
+          },
+          "other": {
+            "SDR": 9.95157,
+            "SIR": 16.1186,
+            "SAR": 11.1911,
+            "ISR": 18.8137
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.4434,
+            "SIR": 18.4871,
+            "SAR": 7.33728,
+            "ISR": 14.0059
+          },
+          "drums": {
+            "SDR": 8.96928,
+            "SIR": 21.1526,
+            "SAR": 10.1224,
+            "ISR": 12.9924
+          },
+          "bass": {
+            "SDR": 12.7492,
+            "SIR": 19.4508,
+            "SAR": 13.3306,
+            "ISR": 16.4465
+          },
+          "other": {
+            "SDR": 7.773,
+            "SIR": 13.5621,
+            "SAR": 8.92433,
+            "ISR": 16.5778
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.50383,
+        "SIR": 16.9146,
+        "SAR": 6.57522,
+        "ISR": 13.6836
+      },
+      "drums": {
+        "SDR": 6.8654,
+        "SIR": 19.0945,
+        "SAR": 7.04,
+        "ISR": 10.2886
+      },
+      "bass": {
+        "SDR": 15.9258,
+        "SIR": 22.2238,
+        "SAR": 16.6759,
+        "ISR": 21.5061
+      }
+    },
+    "stems": [
+      "vocals",
+      "drums",
+      "bass",
+      "other"
+    ],
+    "target_stem": null
+  },
+  "htdemucs_6s.yaml": {
+    "model_name": "Demucs v4: htdemucs_6s",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 5.0671,
+            "SIR": 14.5366,
+            "SAR": 5.39175,
+            "ISR": 13.2148
+          },
+          "drums": {
+            "SDR": 2.79582,
+            "SIR": 16.3173,
+            "SAR": 1.06495,
+            "ISR": 4.3619
+          },
+          "bass": {
+            "SDR": 17.5429,
+            "SIR": 22.165,
+            "SAR": 19.0201,
+            "ISR": 25.5315
+          },
+          "other": {
+            "SDR": 0.00485,
+            "SIR": 12.9123,
+            "SAR": 0.02412,
+            "ISR": 0.13107
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 5.63418,
+            "SIR": 10.3112,
+            "SAR": 6.45533,
+            "ISR": 14.8126
+          },
+          "drums": {
+            "SDR": 6.25735,
+            "SIR": 12.8745,
+            "SAR": 6.40789,
+            "ISR": 12.4119
+          },
+          "bass": {
+            "SDR": 9.5516,
+            "SIR": 17.7919,
+            "SAR": 11.9827,
+            "ISR": 11.8647
+          },
+          "other": {
+            "SDR": 3.64451,
+            "SIR": 10.5018,
+            "SAR": 4.14296,
+            "ISR": 6.22975
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 5.35064,
+        "SIR": 12.4239,
+        "SAR": 5.92354,
+        "ISR": 14.0137
+      },
+      "drums": {
+        "SDR": 4.52658,
+        "SIR": 14.5959,
+        "SAR": 3.73642,
+        "ISR": 8.3869
+      },
+      "bass": {
+        "SDR": 13.5473,
+        "SIR": 19.9784,
+        "SAR": 15.5014,
+        "ISR": 18.6981
+      }
+    },
+    "stems": [
+      "vocals",
+      "drums",
+      "bass",
+      "guitar",
+      "piano",
+      "other"
+    ],
+    "target_stem": null
+  },
+  "MDX23C-8KFFT-InstVoc_HQ.ckpt": {
+    "model_name": "MDX23C Model: MDX23C-InstVoc HQ",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 6.73898,
+            "SIR": 23.2009,
+            "SAR": 6.78415,
+            "ISR": 11.0084
+          },
+          "instrumental": {
+            "SDR": 17.1121,
+            "SIR": 25.9275,
+            "SAR": 20.4969,
+            "ISR": 19.2533
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.38292,
+            "SIR": 14.01,
+            "SAR": 7.95108,
+            "ISR": 12.7761
+          },
+          "instrumental": {
+            "SDR": 12.5347,
+            "SIR": 22.1489,
+            "SAR": 14.6948,
+            "ISR": 15.648
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 7.06095,
+        "SIR": 18.6055,
+        "SAR": 7.36762,
+        "ISR": 11.8923
+      },
+      "instrumental": {
+        "SDR": 14.8234,
+        "SIR": 24.0382,
+        "SAR": 17.5958,
+        "ISR": 17.4506
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": null
+  },
+  "MDX23C_D1581.ckpt": {
+    "model_name": "MDX23C Model VIP: MDX23C_D1581",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 6.95222,
+            "SIR": 20.5681,
+            "SAR": 6.71226,
+            "ISR": 10.7332
+          },
+          "instrumental": {
+            "SDR": 16.8928,
+            "SIR": 25.3018,
+            "SAR": 20.6132,
+            "ISR": 19.1445
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 6.0582,
+            "SIR": 10.5784,
+            "SAR": 6.98246,
+            "ISR": 12.6513
+          },
+          "instrumental": {
+            "SDR": 10.9396,
+            "SIR": 21.5384,
+            "SAR": 12.9976,
+            "ISR": 13.8444
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.50521,
+        "SIR": 15.5733,
+        "SAR": 6.84736,
+        "ISR": 11.6923
+      },
+      "instrumental": {
+        "SDR": 13.9162,
+        "SIR": 23.4201,
+        "SAR": 16.8054,
+        "ISR": 16.4945
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": null
+  },
+  "MDX23C-8KFFT-InstVoc_HQ_2.ckpt": {
+    "model_name": "MDX23C Model VIP: MDX23C-InstVoc HQ 2",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 6.87617,
+            "SIR": 23.4542,
+            "SAR": 6.81798,
+            "ISR": 11.2126
+          },
+          "instrumental": {
+            "SDR": 17.2403,
+            "SIR": 26.108,
+            "SAR": 20.4428,
+            "ISR": 19.4813
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 7.42785,
+            "SIR": 14.0147,
+            "SAR": 8.01004,
+            "ISR": 12.9014
+          },
+          "instrumental": {
+            "SDR": 12.6142,
+            "SIR": 22.3347,
+            "SAR": 14.5291,
+            "ISR": 15.5849
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 7.15201,
+        "SIR": 18.7344,
+        "SAR": 7.41401,
+        "ISR": 12.057
+      },
+      "instrumental": {
+        "SDR": 14.9273,
+        "SIR": 24.2214,
+        "SAR": 17.4859,
+        "ISR": 17.5331
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": null
+  },
+  "model_bs_roformer_ep_317_sdr_12.9755.ckpt": {
+    "model_name": "Roformer Model: BS-Roformer-Viperx-1297",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 7.27145,
+            "SIR": 21.3266,
+            "SAR": 6.89905,
+            "ISR": 12.7087
+          },
+          "instrumental": {
+            "SDR": 17.2885,
+            "SIR": 28.2786,
+            "SAR": 20.7563,
+            "ISR": 19.1431
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 9.36916,
+            "SIR": 25.2781,
+            "SAR": 9.32521,
+            "ISR": 13.8011
+          },
+          "instrumental": {
+            "SDR": 14.7147,
+            "SIR": 24.0983,
+            "SAR": 16.5033,
+            "ISR": 18.6872
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 8.32031,
+        "SIR": 23.3023,
+        "SAR": 8.11213,
+        "ISR": 13.2549
+      },
+      "instrumental": {
+        "SDR": 16.0016,
+        "SIR": 26.1884,
+        "SAR": 18.6298,
+        "ISR": 18.9152
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "model_bs_roformer_ep_368_sdr_12.9628.ckpt": {
+    "model_name": "Roformer Model: BS-Roformer-Viperx-1296",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 7.39953,
+            "SIR": 22.6627,
+            "SAR": 6.9396,
+            "ISR": 12.5152
+          },
+          "instrumental": {
+            "SDR": 17.2737,
+            "SIR": 28.1382,
+            "SAR": 20.7429,
+            "ISR": 19.2457
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 9.36037,
+            "SIR": 25.3319,
+            "SAR": 9.31179,
+            "ISR": 13.7824
+          },
+          "instrumental": {
+            "SDR": 14.7536,
+            "SIR": 24.0896,
+            "SAR": 16.4184,
+            "ISR": 18.6887
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 8.37995,
+        "SIR": 23.9973,
+        "SAR": 8.1257,
+        "ISR": 13.1488
+      },
+      "instrumental": {
+        "SDR": 16.0137,
+        "SIR": 26.1139,
+        "SAR": 18.5806,
+        "ISR": 18.9672
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "model_bs_roformer_ep_937_sdr_10.5309.ckpt": {
+    "model_name": "Roformer Model: BS-Roformer-Viperx-1053",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "no drum-bass",
+      "drum-bass"
+    ],
+    "target_stem": "no drum-bass"
+  },
+  "model_mel_band_roformer_ep_3005_sdr_11.4360.ckpt": {
+    "model_name": "Roformer Model: Mel-Roformer-Viperx-1143",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 7.22599,
+            "SIR": 20.7364,
+            "SAR": 6.81363,
+            "ISR": 11.9464
+          },
+          "instrumental": {
+            "SDR": 16.1126,
+            "SIR": 25.7777,
+            "SAR": 19.0311,
+            "ISR": 18.8924
+          }
+        }
+      },
+      {
+        "track_name": "ANiMAL - Clinic A",
+        "scores": {
+          "vocals": {
+            "SDR": 8.04546,
+            "SIR": 21.2043,
+            "SAR": 7.67787,
+            "ISR": 12.7872
+          },
+          "instrumental": {
+            "SDR": 13.7151,
+            "SIR": 22.0413,
+            "SAR": 15.1107,
+            "ISR": 17.9742
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 7.63573,
+        "SIR": 20.9703,
+        "SAR": 7.24575,
+        "ISR": 12.3668
+      },
+      "instrumental": {
+        "SDR": 14.9139,
+        "SIR": 23.9095,
+        "SAR": 17.0709,
+        "ISR": 18.4333
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "MDX23C-De-Reverb-aufr33-jarredou.ckpt": {
+    "model_name": "MDX23C Model: MDX23C De-Reverb by aufr33-jarredou",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "dry",
+      "no dry"
+    ],
+    "target_stem": null
+  },
+  "MDX23C-DrumSep-aufr33-jarredou.ckpt": {
+    "model_name": "MDX23C Model: MDX23C DrumSep by aufr33-jarredou",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "kick",
+      "snare",
+      "toms",
+      "hh",
+      "ride",
+      "crash"
+    ],
+    "target_stem": null
+  },
+  "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt": {
+    "model_name": "Roformer Model: Mel-Roformer-Karaoke-Aufr33-Viperx",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 6.80284,
+            "SIR": 28.1352,
+            "SAR": 6.2309,
+            "ISR": 8.72186
+          },
+          "instrumental": {
+            "SDR": 16.4103,
+            "SIR": 20.3727,
+            "SAR": 19.1878,
+            "ISR": 19.5712
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.80284,
+        "SIR": 28.1352,
+        "SAR": 6.2309,
+        "ISR": 8.72186
+      },
+      "instrumental": {
+        "SDR": 16.4103,
+        "SIR": 20.3727,
+        "SAR": 19.1878,
+        "ISR": 19.5712
+      }
+    },
+    "stems": [
+      "vocals",
+      "instrumental"
+    ],
+    "target_stem": "vocals"
+  },
+  "denoise_mel_band_roformer_aufr33_sdr_27.9959.ckpt": {
+    "model_name": "Roformer Model: Mel-Roformer-Denoise-Aufr33",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "dry",
+      "other"
+    ],
+    "target_stem": "dry"
+  },
+  "denoise_mel_band_roformer_aufr33_aggr_sdr_27.9768.ckpt": {
+    "model_name": "Roformer Model: Mel-Roformer-Denoise-Aufr33-Aggr",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "dry",
+      "other"
+    ],
+    "target_stem": "dry"
+  },
+  "mel_band_roformer_crowd_aufr33_viperx_sdr_8.7144.ckpt": {
+    "model_name": "Roformer Model: Mel-Roformer-Crowd-Aufr33-Viperx",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "crowd",
+      "other"
+    ],
+    "target_stem": "crowd"
+  },
+  "deverb_bs_roformer_8_384dim_10depth.ckpt": {
+    "model_name": "Roformer Model: BS-Roformer-De-Reverb",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "noreverb",
+      "reverb"
+    ],
+    "target_stem": "noreverb"
+  },
+  "vocals_mel_band_roformer.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer | Vocals by Kimberley Jensen",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 8.20453,
+            "SIR": 24.62,
+            "SAR": 8.44323,
+            "ISR": 12.5478
+          },
+          "other": {
+            "SDR": -4.75106,
+            "SIR": 18.6217,
+            "SAR": -5.8514,
+            "ISR": 17.2321
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 8.20453,
+        "SIR": 24.62,
+        "SAR": 8.44323,
+        "ISR": 12.5478
+      }
+    },
+    "stems": [
+      "vocals",
+      "other"
+    ],
+    "target_stem": "vocals"
+  },
+  "mel_band_roformer_kim_ft_unwa.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer Kim | FT by unwa",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 8.35618,
+            "SIR": 26.0703,
+            "SAR": 8.36585,
+            "ISR": 11.7519
+          },
+          "other": {
+            "SDR": -4.98154,
+            "SIR": 17.0602,
+            "SAR": -6.0678,
+            "ISR": 17.3498
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 8.35618,
+        "SIR": 26.0703,
+        "SAR": 8.36585,
+        "ISR": 11.7519
+      }
+    },
+    "stems": [
+      "vocals",
+      "other"
+    ],
+    "target_stem": "vocals"
+  },
+  "melband_roformer_inst_v1e.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer Kim | Inst V1 (E) by Unwa",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 6.1805,
+            "SIR": 24.2704,
+            "SAR": 6.82554,
+            "ISR": 9.89464
+          },
+          "instrumental": {
+            "SDR": 16.7943,
+            "SIR": 23.9173,
+            "SAR": 20.2513,
+            "ISR": 19.3787
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 6.1805,
+        "SIR": 24.2704,
+        "SAR": 6.82554,
+        "ISR": 9.89464
+      },
+      "instrumental": {
+        "SDR": 16.7943,
+        "SIR": 23.9173,
+        "SAR": 20.2513,
+        "ISR": 19.3787
+      }
+    },
+    "stems": [
+      "other",
+      "vocals"
+    ],
+    "target_stem": "other"
+  },
+  "dereverb_mel_band_roformer_anvuew_sdr_19.1729.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer | De-Reverb by anvuew",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "noreverb",
+      "reverb"
+    ],
+    "target_stem": "noreverb"
+  },
+  "dereverb_mel_band_roformer_less_aggressive_anvuew_sdr_18.8050.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer | De-Reverb Less Aggressive by anvuew",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "noreverb",
+      "reverb"
+    ],
+    "target_stem": "noreverb"
+  },
+  "dereverb-echo_mel_band_roformer_sdr_10.0169.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer | De-Reverb-Echo by Sucial",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "dry",
+      "no dry"
+    ],
+    "target_stem": null
+  },
+  "dereverb-echo_mel_band_roformer_sdr_13.4843_v2.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer | De-Reverb-Echo V2 by Sucial",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "dry",
+      "no dry"
+    ],
+    "target_stem": "dry"
+  },
+  "MelBandRoformerSYHFT.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer Kim | SYHFT by SYH99999",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.28397,
+            "SIR": 25.5937,
+            "SAR": -6.65094,
+            "ISR": 2.14962
+          },
+          "other": {
+            "SDR": -4.88875,
+            "SIR": 5.38152,
+            "SAR": -4.84099,
+            "ISR": 18.3422
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.28397,
+        "SIR": 25.5937,
+        "SAR": -6.65094,
+        "ISR": 2.14962
+      }
+    },
+    "stems": [
+      "vocals",
+      "other"
+    ],
+    "target_stem": "vocals"
+  },
+  "MelBandRoformerSYHFTV2.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer Kim | SYHFT V2 by SYH99999",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 4.37024,
+            "SIR": 26.0963,
+            "SAR": -6.42188,
+            "ISR": 2.13067
+          },
+          "other": {
+            "SDR": -5.31182,
+            "SIR": 5.24659,
+            "SAR": -5.2012,
+            "ISR": 18.3257
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 4.37024,
+        "SIR": 26.0963,
+        "SAR": -6.42188,
+        "ISR": 2.13067
+      }
+    },
+    "stems": [
+      "vocals",
+      "other"
+    ],
+    "target_stem": "vocals"
+  },
+  "MelBandRoformerSYHFTV2.5.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer Kim | SYHFT V2.5 by SYH99999",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 3.2509,
+            "SIR": 27.1264,
+            "SAR": -5.74739,
+            "ISR": 1.89387
+          },
+          "other": {
+            "SDR": -4.60354,
+            "SIR": 5.3787,
+            "SAR": -4.48298,
+            "ISR": 18.5497
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 3.2509,
+        "SIR": 27.1264,
+        "SAR": -5.74739,
+        "ISR": 1.89387
+      }
+    },
+    "stems": [
+      "vocals",
+      "other"
+    ],
+    "target_stem": "vocals"
+  },
+  "MelBandRoformerSYHFTV3Epsilon.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer Kim | SYHFT V3 by SYH99999",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 3.69476,
+            "SIR": 23.11,
+            "SAR": -4.41369,
+            "ISR": 2.2685
+          },
+          "other": {
+            "SDR": -4.2509,
+            "SIR": 6.84262,
+            "SAR": -4.03572,
+            "ISR": 18.5098
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 3.69476,
+        "SIR": 23.11,
+        "SAR": -4.41369,
+        "ISR": 2.2685
+      }
+    },
+    "stems": [
+      "vocals",
+      "other"
+    ],
+    "target_stem": "vocals"
+  },
+  "MelBandRoformerBigSYHFTV1.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer Kim | Big SYHFT V1 by SYH99999",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 7.32802,
+            "SIR": 23.7231,
+            "SAR": 7.63523,
+            "ISR": 11.8524
+          },
+          "other": {
+            "SDR": -4.23591,
+            "SIR": 18.7075,
+            "SAR": -5.19124,
+            "ISR": 17.3589
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 7.32802,
+        "SIR": 23.7231,
+        "SAR": 7.63523,
+        "ISR": 11.8524
+      }
+    },
+    "stems": [
+      "vocals",
+      "other"
+    ],
+    "target_stem": "vocals"
+  },
+  "melband_roformer_big_beta4.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer Kim | Big Beta 4 FT by unwa",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 7.37689,
+            "SIR": 22.7518,
+            "SAR": 7.64581,
+            "ISR": 12.3426
+          },
+          "other": {
+            "SDR": -4.16058,
+            "SIR": 19.2598,
+            "SAR": -5.20131,
+            "ISR": 17.0692
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 7.37689,
+        "SIR": 22.7518,
+        "SAR": 7.64581,
+        "ISR": 12.3426
+      }
+    },
+    "stems": [
+      "vocals",
+      "other"
+    ],
+    "target_stem": "vocals"
+  },
+  "melband_roformer_big_beta5e.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer Kim | Big Beta 5e FT by unwa",
+    "track_scores": [
+      {
+        "track_name": "A Classic Education - NightOwl",
+        "scores": {
+          "vocals": {
+            "SDR": 7.49169,
+            "SIR": 22.6356,
+            "SAR": 7.5593,
+            "ISR": 12.2271
+          },
+          "other": {
+            "SDR": -4.19563,
+            "SIR": 19.085,
+            "SAR": -5.23404,
+            "ISR": 16.9934
+          }
+        }
+      }
+    ],
+    "median_scores": {
+      "vocals": {
+        "SDR": 7.49169,
+        "SIR": 22.6356,
+        "SAR": 7.5593,
+        "ISR": 12.2271
+      }
+    },
+    "stems": [
+      "vocals",
+      "other"
+    ],
+    "target_stem": "vocals"
+  },
+  "model_chorus_bs_roformer_ep_267_sdr_24.1275.ckpt": {
+    "model_name": "Roformer Model: BS Roformer | Chorus Male-Female by Sucial",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "male",
+      "female"
+    ],
+    "target_stem": null
+  },
+  "aspiration_mel_band_roformer_sdr_18.9845.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer | Aspiration by Sucial",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "aspiration",
+      "other"
+    ],
+    "target_stem": null
+  },
+  "aspiration_mel_band_roformer_less_aggr_sdr_18.1201.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer | Aspiration Less Aggressive by Sucial",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "aspiration",
+      "other"
+    ],
+    "target_stem": null
+  },
+  "mel_band_roformer_bleed_suppressor_v1.ckpt": {
+    "model_name": "Roformer Model: MelBand Roformer | Bleed Suppressor V1 by unwa-97chris",
+    "track_scores": [],
+    "median_scores": {},
+    "stems": [
+      "instrumental",
+      "bleed"
+    ],
+    "target_stem": "instrumental"
+  }
+}
