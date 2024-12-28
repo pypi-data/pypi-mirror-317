@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: mur
+Version: 0.0.3
+Summary: Mur CLI for publishing agents and tools to your own PyPI server.
+Project-URL: Repository, https://github.com/murmur-nexus/mur
+Author-email: "E.W. de Graaff" <hi@murmur.nexus>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# mur
+
+```bash
+pip install mur 
+```
+
+This CLI allows you to manage your AI agents and tools in combindation with the [murmur](https://murmur-nexus.github.io/murmur/) package.
+
+To get started quickly, follow our [Getting Started with the Examples](https://murmur-nexus.github.io/murmur/tutorial/getting-started-with-examples/) tutorial.
