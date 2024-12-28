@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: mt5_grpc_proto
+Version: 0.1.1
+Summary: Protocol Buffers and gRPC service definitions for MetaTrader 5 RPC Server
+Home-page: https://github.com/Starmel/Metatrader5-gRPC-server
+Author: starmel
+Author-email: slava.kornienko16@gmail.com
+Project-URL: Documentation, https://github.com/Starmel/Metatrader5-gRPC-server/tree/main/docs
+Project-URL: Source, https://github.com/Starmel/Metatrader5-gRPC-server
+Project-URL: Tracker, https://github.com/Starmel/Metatrader5-gRPC-server/issues
+Keywords: metatrader,mt5,trading,grpc,protobuf,api
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: grpcio>=1.68.1
+Requires-Dist: grpcio-tools>=1.68.1
+Requires-Dist: protobuf>=5.29.2
+
+# MT5 gRPC Proto
+
+Protocol Buffers and gRPC service definitions for MetaTrader 5 RPC Server.
+
+## Overview
+This module contains the Protocol Buffer definitions and generated gRPC service code for interacting with MetaTrader 5 through a gRPC interface. It provides the contract between the MT5 gRPC server and its clients.
+
+## Installation
+
+```bash
+pip install mt5-grpc-proto
+```
+
+## Features
+
+The proto definitions cover the following MetaTrader 5 functionalities:
+- Account operations
+- Trading operations
+- Market data retrieval
+- Order management
+- Position tracking
+- Historical data access
+- Terminal information
