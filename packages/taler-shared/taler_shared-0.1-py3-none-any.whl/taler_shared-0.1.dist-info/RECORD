@@ -1,0 +1,7 @@
+api/__init__.py,sha256=loym629x6jmWwCsK4q4A_Wm2Gm_TkMd2qS-sFduPRaA,127
+api/api_client.py,sha256=tLY9fD-GaXHRqhjt0MT2WyELAHF_ppWbWu4ItiMwhRc,2716
+api/parse_for_apis.py,sha256=O5kgsqNoPYwRA-yQ_gaSEFcrLP6nygb5fJMbdUZneVc,955
+taler_shared-0.1.dist-info/METADATA,sha256=5hZvfLYFtIzDZe4sF3hmSTJ-jGSuJqb2Xqq-YTqLprI,216
+taler_shared-0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+taler_shared-0.1.dist-info/top_level.txt,sha256=0XF5TFwfelCuuPcFarhKT7zW-9WUsZmb3a790D78BZE,4
+taler_shared-0.1.dist-info/RECORD,,
