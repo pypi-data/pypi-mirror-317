@@ -1,0 +1,13 @@
+taler_shared/__init__.py,sha256=szgBNsLqnQoLGc0RcOGIz6CcW-hfWNlc37nfckeQtEQ,226
+taler_shared/api/__init__.py,sha256=nP3JJUW5JshrE9ef7BtpX9c3yRreKHAkgGfh3evFa-Q,82
+taler_shared/api/api_client.py,sha256=tLY9fD-GaXHRqhjt0MT2WyELAHF_ppWbWu4ItiMwhRc,2716
+taler_shared/api/parse_for_apis.py,sha256=O5kgsqNoPYwRA-yQ_gaSEFcrLP6nygb5fJMbdUZneVc,955
+taler_shared/environment/__init__.py,sha256=dyBS8nkawEvx15cu4z8470Bb621U-RjgYYA32MrQcik,49
+taler_shared/environment/load_env_variables.py,sha256=HP0W38PKfjMeSQMHzQZCeJTNzOiwl80j1Nes1kaEn4M,1220
+taler_shared/utils/__init__.py,sha256=aXMkykvf9mvzGvTg5W9kRni-9r_E2M___AvPbVXSHP0,29
+taler_shared/utils/type_utils.py,sha256=tQTC6dQvpd9huEyH0QhK1ti_f_0juURfjuiuv3N80jg,397
+taler_shared-0.2.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taler_shared-0.2.dist-info/METADATA,sha256=S4qqHQxbhE0YDJeONLMLBtdrHFwpZ42Fjmm6mOVPGlk,282
+taler_shared-0.2.dist-info/WHEEL,sha256=pL8R0wFFS65tNSRnaOVrsw9EOkOqxLrlUPenUYnJKNo,91
+taler_shared-0.2.dist-info/top_level.txt,sha256=G9ewMUn4rDg7SAtVxq6rnRja30xTkT0IXQ9IXgW_lS8,13
+taler_shared-0.2.dist-info/RECORD,,
