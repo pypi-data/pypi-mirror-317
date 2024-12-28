@@ -1,0 +1,13 @@
+setup.py
+COSQL/__init__.py
+COSQL/__version__.py
+COSQL/context.py
+COSQL/core.py
+COSQL/cursor.py
+COSQL/py.typed
+COSQL.egg-info/PKG-INFO
+COSQL.egg-info/SOURCES.txt
+COSQL.egg-info/dependency_links.txt
+COSQL.egg-info/not-zip-safe
+COSQL.egg-info/requires.txt
+COSQL.egg-info/top_level.txt
