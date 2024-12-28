@@ -1,0 +1,5 @@
+murmur/clients/swarm/__init__.py,sha256=-eGobaCPxLa6qpXPYwLLPMFMP2buGKGNe7DrmG7P8hI,50
+murmur/clients/swarm/swarm_agent.py,sha256=-RLbskKTIkgB049NUsRLx8X868gcX2IkXVANVb02VQE,1630
+murmur_swarm-0.0.1.dist-info/METADATA,sha256=e-WAQM59wkJhS7HrJpuafs_cLbCdOpttNYkKDHmEkWg,1207
+murmur_swarm-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+murmur_swarm-0.0.1.dist-info/RECORD,,
