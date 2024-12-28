@@ -1,0 +1,8 @@
+/.idea
+# Coverage output
+.coverage
+/.nox/
+/build/
+/coverage.xml
+/.zip/
+/venv/
