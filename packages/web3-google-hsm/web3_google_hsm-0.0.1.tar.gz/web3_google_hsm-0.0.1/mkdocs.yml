@@ -1,0 +1,101 @@
+# Project information
+site_name: Google Cloud HSM
+site_description: Cloud HSM to sign Web3 Ethereum transactions using python
+site_author: Saikat Karmakar
+site_url: https://github.com/Ankvik-Tech-Labs/web3-google-hsm
+copyright: 'Copyright &copy; Saikat Karmakar 2024-present'
+
+# Repository
+repo_url: https://github.com/Ankvik-Tech-Labs/web3-google-hsm
+repo_name: Ankvik-Tech-Labs/web3-google-hsm
+
+theme:
+    name: material
+    font:
+        text: Roboto
+        code: Roboto Mono
+    icon:
+        logo: material/library
+    palette:
+        # Palette toggle for automatic mode
+        - media: "(prefers-color-scheme)"
+          toggle:
+            icon: material/brightness-auto
+            name: Switch to light mode
+
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: teal
+          accent: light blue
+          toggle:
+            icon: material/brightness-7
+            name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: teal
+          accent: light blue
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
+
+markdown_extensions:
+    - toc:
+        permalink: true
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - footnotes
+    - attr_list
+    - md_in_html
+    - pymdownx.blocks.caption
+
+plugins:
+    - search
+    - glightbox
+    - mkdocstrings:
+        handlers:
+            python:
+                import:
+                    - https://docs.python.org/3.10/objects.inv
+                options:
+                    docstring_style: google
+    - gen-files:
+        scripts:
+            - docs/scripts/gen_ref_nav.py
+
+watch:
+    - docs
+    - src
+
+# Navigation
+nav:
+    - Home:
+        - About: index.md
+        - Changelog: changelog.md
+        - License: license.md
+        - Authors: authors.md
+        - Contributing: contributing.md
+    - Usage:
+        - As Module: Usage/as_a_module.md
+        - As CLI: Usage/as_a_cli_tool.md
+        - Example: Usage/example.md
+    - Reference:
+        - Summary: reference/SUMMARY.md
+        - Google Cloud HSM:
+          - Overview: reference/web3_google_hsm/index.md
+          - Config: reference/web3_google_hsm/config.md
+          - Exceptions: reference/web3_google_hsm/exceptions.md
+          - Utils: reference/web3_google_hsm/utils.md
+          - Accounts:
+              - Overview: reference/web3_google_hsm/accounts/index.md
+            #   - GCP KMS Account: reference/web3_google_hsm/accounts/gcp_kms_account.md
+          - Types:
+              - Overview: reference/web3_google_hsm/types/index.md
+            #   - Ethereum Types: reference/web3_google_hsm/types/ethereum_types.md
