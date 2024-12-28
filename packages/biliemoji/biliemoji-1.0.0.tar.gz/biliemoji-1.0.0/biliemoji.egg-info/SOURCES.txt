@@ -1,0 +1,10 @@
+README.md
+setup.py
+biliemoji/__init__.py
+biliemoji/download.py
+biliemoji/dress.py
+biliemoji/emoji.py
+biliemoji.egg-info/PKG-INFO
+biliemoji.egg-info/SOURCES.txt
+biliemoji.egg-info/dependency_links.txt
+biliemoji.egg-info/top_level.txt
