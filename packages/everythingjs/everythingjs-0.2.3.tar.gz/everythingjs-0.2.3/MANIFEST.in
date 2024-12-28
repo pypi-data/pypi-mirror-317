@@ -1,0 +1,2 @@
+recursive-include everythingjs templates *
+include everythingjs/secrets.regex

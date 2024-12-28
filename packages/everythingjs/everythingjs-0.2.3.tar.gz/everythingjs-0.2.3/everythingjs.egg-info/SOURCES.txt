@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+everythingjs/__init__.py
+everythingjs/app.py
+everythingjs.egg-info/PKG-INFO
+everythingjs.egg-info/SOURCES.txt
+everythingjs.egg-info/dependency_links.txt
+everythingjs.egg-info/entry_points.txt
+everythingjs.egg-info/requires.txt
+everythingjs.egg-info/top_level.txt
+everythingjs/__pycache__/app.cpython-313.pyc
+everythingjs/templates/monitor.html
+everythingjs/templates/template.html

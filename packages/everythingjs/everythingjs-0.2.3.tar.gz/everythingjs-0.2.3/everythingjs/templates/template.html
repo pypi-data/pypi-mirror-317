@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>everythingjs</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/lumen/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        .tab-content {
+            margin-top: 20px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 14px;
+            border: 1px solid #ccc;
+        }
+        .code-header {
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        .js-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .js-link:hover {
+            text-decoration: underline;
+        }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        .copy-btn {
+            margin-left: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .fade-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            font-size: 16px;
+        }
+        .tab-icon {
+            margin-right: 10px;
+        }
+
+        /* Add a thin border around the left column */
+.border-left-pane {
+    border: 1px solid #ddd; /* Thin border */
+    padding: 15px;           /* Add some padding for spacing */
+    word-wrap: break-word;   /* Allow long words to wrap */
+    white-space: normal;     /* Ensure the text wraps properly */
+}
+
+/* Optional: To ensure the links inside the list wrap */
+.no-bullets {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.no-bullets li {
+    word-wrap: break-word;  /* Ensure long URLs or filenames wrap */
+    overflow-wrap: break-word; /* For additional word wrapping support */
+}
+
+/* Styling for the search input */
+#js-search-input {
+    margin-bottom: 10px;
+}
+
+/* General badge styling */
+.badge {
+    font-size: 0.875rem;
+    padding: 0.1rem 0.2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+/* Success badge (Mapped) */
+.badge-success {
+    background-color: #28a745;
+    color: #fff; /* White text */
+}
+
+/* Danger badge (Unmapped) */
+.badge-danger {
+    background-color: #dc3545;
+    color: #fff; /* White text */
+}
+
+/* Badge margin for spacing */
+.ml-2 {
+    margin-left: 0.5rem;
+}
+    </style>
+
+<!-- Add custom CSS to remove bullet points -->
+<style>
+    /* Remove bullet points from all <ul> elements with the 'no-bullets' class */
+    .no-bullets {
+        list-style-type: none; /* Remove default list bullets */
+        padding-left: 0; /* Remove default padding */
+    }
+
+    /* Optionally, add a little spacing between the <li> elements */
+    .no-bullets li {
+        margin-bottom: 10px;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4"><a href="https://pypi.org/project/everythingjs/" target="_blank">everythingjs</a> (results for {{ data | length }} domains)</h1>
+        <ul class="nav nav-tabs" id="dataTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="endpoints-tab" data-toggle="tab" href="#endpoints" role="tab" aria-controls="endpoints" aria-selected="true">
+                    <i class="fas fa-plug tab-icon"></i>Endpoints
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="links-tab" data-toggle="tab" href="#links" role="tab" aria-controls="links" aria-selected="false">
+                    <i class="fas fa-link tab-icon"></i>Links
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="secrets-tab" data-toggle="tab" href="#secrets" role="tab" aria-controls="secrets" aria-selected="false">
+                    <i class="fas fa-lock tab-icon"></i>Secrets
+                </a>
+            </li>
+            <!-- New Tab for DOM Sinks -->
+            <li class="nav-item">
+                <a class="nav-link" id="dom-sinks-tab" data-toggle="tab" href="#dom-sinks" role="tab" aria-controls="dom-sinks" aria-selected="false">
+                    <i class="fas fa-code tab-icon"></i>DOM Sinks(XSS)
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="search-string-tab" data-toggle="tab" href="#search-strings" role="tab" aria-controls="search-strings" aria-selected="false">
+                    <i class="fas fa-search tab-icon"></i>Search String
+                </a>
+            </li>
+            
+            
+        </ul>
+        <div class="tab-content" id="dataTabsContent">
+          
+            <!-- Endpoints Tab -->
+<div class="tab-pane fade show active" id="endpoints" role="tabpanel" aria-labelledby="endpoints-tab">
+    <h4>Endpoints</h4>
+    <!-- Search Box -->
+    <input type="text" id="endpointsSearch" class="form-control search-box" placeholder="Search Endpoints...">
+    <ul id="endpointsList">
+        {% for entry in data %}
+            <h5>
+                <a href="{{ entry.jslink }}" class="js-link" target="_blank">{{ entry.jslink }}</a>
+                {% if entry.endpoints.mapping %}
+                    <span class="badge badge-success ml-2">Mapped</span>
+                {% else %}
+                {% endif %}
+                <button class="btn btn-outline-primary copy-btn" data-jslink="{{ entry.jslink }}" data-endpoints="{{ entry.endpoints.endpoints | join('\n') }}">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </h5>
+            <ul>
+                {% for endpoint in entry.endpoints.endpoints %}
+                    <li>{{ endpoint }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+</div>
+
+            <!-- Links Tab -->
+            <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="links-tab">
+                <h4>Links</h4>
+                <div class="row">
+                    {% for entry in data %}
+                        {% if entry.endpoints.links.s3 or entry.endpoints.links.gcs or entry.endpoints.links.azure_blob or entry.endpoints.links.cloudfront %}
+                            <h5>Data from <a href="{{ entry.jslink }}" class="js-link" target="_blank">{{ entry.jslink }}</a></h5>
+                            <ul>
+                                {% for link_type, links in entry.endpoints.links.items() %}
+                                    <h6>{{ link_type.capitalize() }}</h6>
+                                    {% if links %}
+                                        <ul>
+                                            {% for link in links %}
+                                                <li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% else %}
+                                        <p>No links found</p>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+          <!-- Secrets Tab -->
+<div class="tab-pane fade" id="secrets" role="tabpanel" aria-labelledby="secrets-tab">
+    <h4>Secrets</h4>
+    <div class="row">
+        {% for entry in data %}
+            {% if entry.endpoints.secrets %}
+                <!-- Remove bullet points from the list -->
+                <ul class="no-bullets">
+                    {% for secret in entry.endpoints.secrets %}
+                        <li>
+                            <div class="code-header">
+                                <a href="{{ entry.jslink }}" class="js-link" target="_blank">{{ secret.name }}</a>
+                            </div>
+                            <pre>{{ secret.matches }}</pre> <!-- Display secrets data in a code block -->
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+
+        
+            <div class="tab-pane fade" id="dom-sinks" role="tabpanel" aria-labelledby="dom-sinks-tab">
+                <h4>DOM Sinks</h4>
+            
+                <!-- Search Bar -->
+                <div class="mb-3">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search DOM sinks..." onkeyup="filterResults()">
+                </div>
+            
+                <div class="row" id="domSinksList">
+                    {% for entry in data %}
+                        {% if entry.endpoints.dom_sinks %}
+                            <!-- JS Link Section -->
+                            <div class="js-link-section" data-jslink="{{ entry.jslink }}">
+                                <div class="code-header">
+                                    <a href="{{ entry.jslink }}" class="js-link" target="_blank">{{ entry.jslink }}</a>
+                                </div>
+                                <pre class="dom-sink-content">{% for dom_sink in entry.endpoints.dom_sinks %}<div class="dom-sink-line" data-line="{{ dom_sink[0] }}" data-sink="{{ dom_sink[1] }}">Line {{ dom_sink[0] }}: {{ dom_sink[1] }}</div>{% endfor %}</pre>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+
+
+            <!-- Search Strings Tab -->
+<div class="tab-pane fade" id="search-strings" role="tabpanel" aria-labelledby="search-strings-tab">
+    <h4>Search Strings</h4>
+    <div class="row">
+        <!-- Left Column: Filenames -->
+        <div class="col-md-3 border-left-pane">
+            <h5>Files</h5>
+            <div class="form-group">
+                <input type="text" id="js-search-input" class="form-control" placeholder="Search JS by name" onkeyup="filterJsLinks()">
+            </div>
+            <ul class="no-bullets" id="js-links-list">
+                {% for entry in data %}
+                    <li class="js-link-item">
+                        <a href="{{ entry.endpoints.js_url.js_url }}" class="js-link" target="_blank">
+                            {{ entry.endpoints.js_url.filename }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- Right Column: Search Bar -->
+        <div class="col-md-9">
+            <h5>Search</h5>
+            <form id="search-form">
+                <div class="form-group">
+                    <label for="search-input">Keyword</label>
+                    <input type="text" class="form-control" id="search-input" placeholder="Enter search keyword" required>
+                </div>
+                <div class="form-group">
+                    <label for="lines-input">Number of Lines</label>
+                    <input type="number" class="form-control" id="lines-input" placeholder="Enter number of lines" value="5" min="1">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            <h5 class="mt-4">Results</h5>
+            <div id="search-results">
+                <!-- Results will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            
+
+            
+        </div>
+    </div>
+
+    <!-- Fading Message -->
+    <div class="fade-message" id="fadeMessage">
+        Endpoints copied to clipboard!
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Search filter for endpoints
+            $("#endpointsSearch").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#endpointsList li").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+
+            // Copy Endpoints functionality
+            $(".copy-btn").click(function() {
+                var endpointsText = $(this).data("endpoints");
+                var textArea = document.createElement("textarea");
+                textArea.value = endpointsText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textArea);
+
+                // Show and fade the message
+                var message = $("#fadeMessage");
+                message.fadeIn().delay(2000).fadeOut();
+            });
+        });
+    </script>
+
+    <!-- JavaScript to handle search functionality -->
+<script>
+    function filterResults() {
+        // Get the value of the search input
+        var searchKeyword = document.getElementById("searchInput").value.toLowerCase();
+        
+        // Get all the JS link sections
+        var jsLinkSections = document.querySelectorAll(".js-link-section");
+
+        // Loop through each JS link section and check if any DOM sinks match the search keyword
+        jsLinkSections.forEach(function(section) {
+            var domSinks = section.querySelectorAll(".dom-sink-line");
+            var isAnyMatch = false;
+
+            // Loop through each DOM sink line in this section
+            domSinks.forEach(function(sink) {
+                var lineText = sink.textContent.toLowerCase();
+                if (lineText.indexOf(searchKeyword) > -1) {
+                    sink.style.display = "";  // Show the matching line
+                    isAnyMatch = true;  // If we find any match, mark the section as valid
+                } else {
+                    sink.style.display = "none";  // Hide non-matching lines
+                }
+            });
+
+            // Hide or show the entire section based on whether any DOM sinks match the search keyword
+            if (isAnyMatch) {
+                section.style.display = "";  // Show the section
+            } else {
+                section.style.display = "none";  // Hide the section
+            }
+        });
+    }
+</script>
+
+<script>
+    // Handle the search form submission
+    document.getElementById('search-form').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const keyword = document.getElementById('search-input').value.trim();
+        const lines = document.getElementById('lines-input').value.trim() || '5';
+
+        if (keyword) {
+            try {
+                const response = await fetch(`/filesearch?keyword=${encodeURIComponent(keyword)}&lines=${encodeURIComponent(lines)}`);
+                if (response.ok) {
+                    const results = await response.json();
+                    const resultsContainer = document.getElementById('search-results');
+                    resultsContainer.innerHTML = ''; // Clear previous results
+                    results.forEach(result => {
+                        const fileContainer = document.createElement('div');
+                        fileContainer.classList.add('result-item');
+                        fileContainer.innerHTML = `
+                            <h6>${result.filename}</h6>
+                            <pre>${result.codesnippet}</pre>
+                        `;
+                        resultsContainer.appendChild(fileContainer);
+                    });
+                } else {
+                    alert('Error fetching search results.');
+                }
+            } catch (error) {
+                alert('An error occurred while processing your search.');
+            }
+        } else {
+            alert('Please enter a keyword to search.');
+        }
+    });
+
+
+    function filterJsLinks() {
+    var input = document.getElementById('js-search-input');
+    var filter = input.value.toLowerCase();
+    var ul = document.getElementById('js-links-list');
+    var li = ul.getElementsByClassName('js-link-item');
+
+    // Loop through all list items and hide those that don't match the search
+    for (var i = 0; i < li.length; i++) {
+        var a = li[i].getElementsByTagName('a')[0];
+        var text = a.textContent || a.innerText;
+        if (text.toLowerCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
