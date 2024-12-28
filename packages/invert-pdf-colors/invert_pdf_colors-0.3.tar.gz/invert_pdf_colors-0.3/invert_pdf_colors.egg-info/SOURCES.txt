@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+invert_pdf_colors/__init__.py
+invert_pdf_colors/invert.py
+invert_pdf_colors.egg-info/PKG-INFO
+invert_pdf_colors.egg-info/SOURCES.txt
+invert_pdf_colors.egg-info/dependency_links.txt
+invert_pdf_colors.egg-info/entry_points.txt
+invert_pdf_colors.egg-info/requires.txt
+invert_pdf_colors.egg-info/top_level.txt
