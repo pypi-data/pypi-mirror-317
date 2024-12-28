@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: fastapi3
+Version: 0.1.1
+Summary: fastapi的国产化替代品
+Author: zhangdapeng
+Author-email: 1156956636@qq.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.7.1,<3.0.0)
+Requires-Dist: pydantic-extra-types (>=2.10.1,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.2.1,<3.0.0)
+Requires-Dist: pydantic_core (>=2.18.2,<3.0.0)
+Description-Content-Type: text/markdown
+
+# fastapi3
+
+fastapi的国产化替代品，用法和fastapi完全一样！！！
+
+## 安装
+
+```shell
+pip install fastapi3
+```
+
+
