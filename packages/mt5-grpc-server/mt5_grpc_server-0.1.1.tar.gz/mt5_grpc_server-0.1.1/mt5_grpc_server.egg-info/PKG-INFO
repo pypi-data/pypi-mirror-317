@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: mt5_grpc_server
+Version: 0.1.1
+Summary: MetaTrader 5 gRPC Server for remote trading operations
+Home-page: https://github.com/Starmel/Metatrader5-gRPC-server
+Author: starmel
+Author-email: slava.kornienko16@gmail.com
+Project-URL: Documentation, https://github.com/Starmel/Metatrader5-gRPC-server/tree/main/docs
+Project-URL: Source, https://github.com/Starmel/Metatrader5-gRPC-server
+Project-URL: Tracker, https://github.com/Starmel/Metatrader5-gRPC-server/issues
+Keywords: metatrader,mt5,trading,grpc,server,api
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: grpcio>=1.68.1
+Requires-Dist: grpcio-tools>=1.68.1
+Requires-Dist: protobuf>=5.29.2
+Requires-Dist: pytz>=2024.2
+Requires-Dist: MetaTrader5>=5.0.33
+Requires-Dist: mt5_grpc_proto>=0.1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: build>=1.0.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+
+# MT5 gRPC Server
+
+A high-performance gRPC server implementation for MetaTrader 5, enabling remote trading operations and market data access.
+
+## Overview
+This module provides a gRPC server that interfaces with MetaTrader 5 terminal, allowing remote access to trading operations, market data, and account management through a standardized gRPC API.
+
+## Installation
+
+```bash
+pip install mt5-grpc-server
+```
+
+## Features
+
+- **Account Operations**
+  - Account info retrieval
+  - Balance and equity monitoring
+  - Trading history access
+
+- **Trading Operations**
+  - Order placement and modification
+  - Position management
+  - Order validation and calculations
+
+- **Market Data**
+  - Real-time price data
+  - Symbol information
+  - Market depth (DOM)
+
+
+## Usage
+
+### Starting the Server
+
+Example with secure connection:
+```bash
+mt5-grpc-server --host 127.0.0.1 --port 50052 --secure --cert-file server.crt --private-key-file server.key
+```
+
+Or without secure connection:
+```bash
+# Default port is 50051 and host is 0.0.0.0
+mt5-grpc-server 
+```
+
+
+### Command-line Options
+
+The server supports the following command-line options:
+
+- `--host HOST`: Host address to bind the server to (default: "0.0.0.0")
+- `--port PORT`: Port number to listen on (default: 50051)
+- `--secure`: Enable secure connection with SSL/TLS
+- `--cert-file FILE`: Path to the SSL certificate file (required if --secure is used)
+- `--private-key-file FILE`: Path to the private key file (required if --secure is used)
