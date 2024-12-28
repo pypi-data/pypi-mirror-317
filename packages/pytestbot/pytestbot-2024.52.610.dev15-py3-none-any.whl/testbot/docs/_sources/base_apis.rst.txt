@@ -1,0 +1,82 @@
+================================
+基础原子API接口
+================================
+
+测试设备资源接口集
+============================
+
+TCL TV设备TCLTVDevice类接口
+------------------------------------------
+
+* 电源模块接口
+
+.. autoapiclass:: testbot.resource.modules.tv_device_module.PowerModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 音频模块接口
+
+.. autoapiclass:: testbot.resource.modules.tv_device_module.AudioModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 采集卡模块接口
+
+.. autoapiclass:: testbot.resource.modules.tv_device_module.CaptureCardModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 指令通信串口模块接口
+
+.. autoapiclass:: testbot.resource.modules.tv_device_module.CommSerialModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 红外遥控串口模块接口
+
+.. autoapiclass:: testbot.resource.modules.tv_device_module.InfraredSerialModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* gRPC客户端模块接口
+
+.. autoapiclass:: testbot.resource.modules.tv_device_module.GRPCModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* ADB客户端模块接口
+
+.. autoapiclass:: testbot.resource.modules.tv_device_module.ADBModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+PC设备PCDevice类接口
+------------------------------------------
+
+* 网络模块接口
+
+.. autoapiclass:: testbot.resource.modules.pc_device_module.NetworkModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+测试软件资源接口集
+============================
+
+测试服务资源接口集
+============================

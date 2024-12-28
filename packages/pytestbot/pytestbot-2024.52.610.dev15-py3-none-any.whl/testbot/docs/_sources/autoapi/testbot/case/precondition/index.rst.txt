@@ -1,0 +1,118 @@
+:py:mod:`testbot.case.precondition`
+===================================
+
+.. py:module:: testbot.case.precondition
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.case.precondition.PreConditionBase
+   testbot.case.precondition.IsTestCaseType
+   testbot.case.precondition.IsTestCasePriority
+   testbot.case.precondition.IsPreCasePassed
+   testbot.case.precondition.IsHigherPriorityPassed
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.case.precondition.__copyright__
+   testbot.case.precondition.__author__
+   testbot.case.precondition.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: PreConditionBase
+
+
+   前置条件判断基类
+
+   .. py:method:: is_meet(test_case, reporter: testbot.result.testreporter.StepReporter)
+      :abstractmethod:
+
+
+   .. py:method:: get_description()
+      :abstractmethod:
+
+
+
+.. py:class:: IsTestCaseType(expected_type)
+
+
+   Bases: :py:obj:`PreConditionBase`
+
+   判断测试用例是否是指定的类型
+
+   .. py:method:: is_meet(test_case, reporter: testbot.result.testreporter.StepReporter)
+
+
+   .. py:method:: get_description()
+
+
+
+.. py:class:: IsTestCasePriority(expected_priority)
+
+
+   Bases: :py:obj:`PreConditionBase`
+
+   判断测试用例是否是指定额优先级
+
+   .. py:method:: is_meet(test_case, reporter: testbot.result.testreporter.StepReporter)
+
+
+   .. py:method:: get_description()
+
+
+
+.. py:class:: IsPreCasePassed(result_list)
+
+
+   Bases: :py:obj:`PreConditionBase`
+
+   判断前置测试用例是否是某个期望的结果
+
+   .. py:method:: is_meet(test_case, reporter: testbot.result.testreporter.StepReporter)
+
+
+   .. py:method:: get_description()
+
+
+
+.. py:class:: IsHigherPriorityPassed(priority, result_list)
+
+
+   Bases: :py:obj:`PreConditionBase`
+
+   高优先级测试用例全部通过
+
+   .. py:method:: is_meet(test_case, reporter: testbot.result.testreporter.StepReporter)
+
+
+   .. py:method:: get_description()
+
+
+

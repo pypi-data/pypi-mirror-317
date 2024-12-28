@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>testbot.testengine.caserunner &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js?v=359c27e9"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">testbot.testengine.caserunner</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/testbot/testengine/caserunner/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-testbot.testengine.caserunner">
+<span id="testbot-testengine-caserunner"></span><h1><a class="reference internal" href="#module-testbot.testengine.caserunner" title="testbot.testengine.caserunner"><code class="xref py py-mod docutils literal notranslate"><span class="pre">testbot.testengine.caserunner</span></code></a><a class="headerlink" href="#module-testbot.testengine.caserunner" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.testengine.caserunner.CaseRunnerSetting" title="testbot.testengine.caserunner.CaseRunnerSetting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CaseRunnerSetting</span></code></a></p></td>
+<td><p>The case runner setting</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.testengine.caserunner.RunningStatus" title="testbot.testengine.caserunner.RunningStatus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunningStatus</span></code></a></p></td>
+<td><p>Generic enumeration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner" title="testbot.testengine.caserunner.CaseRunner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CaseRunner</span></code></a></p></td>
+<td><p>测试用例执行器</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.testengine.caserunner.__copyright__" title="testbot.testengine.caserunner.__copyright__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__copyright__</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.testengine.caserunner.__author__" title="testbot.testengine.caserunner.__author__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__author__</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.testengine.caserunner.__email__" title="testbot.testengine.caserunner.__email__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__email__</span></code></a></p></td>
+<td><p>Test Engine</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.__copyright__">
+<span class="sig-prename descclassname"><span class="pre">testbot.testengine.caserunner.</span></span><span class="sig-name descname"><span class="pre">__copyright__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Copyright</span> <span class="pre">(c)</span> <span class="pre">2024</span> <span class="pre">Nuanguang</span> <span class="pre">Gu(Sunny)</span> <span class="pre">Reserved'</span></em><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#__copyright__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.__copyright__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.__author__">
+<span class="sig-prename descclassname"><span class="pre">testbot.testengine.caserunner.</span></span><span class="sig-name descname"><span class="pre">__author__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Nuanguang</span> <span class="pre">Gu(Sunny)'</span></em><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#__author__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.__author__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.__email__">
+<span class="sig-prename descclassname"><span class="pre">testbot.testengine.caserunner.</span></span><span class="sig-name descname"><span class="pre">__email__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'nuanguang.gu&#64;aliyun.com'</span></em><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#__email__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.__email__" title="Permalink to this definition"></a></dt>
+<dd><p>Test Engine</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunnerSetting">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.testengine.caserunner.</span></span><span class="sig-name descname"><span class="pre">CaseRunnerSetting</span></span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunnerSetting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunnerSetting" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../../../fwk_apis.html#testbot.config.setting.SettingBase" title="testbot.config.setting.SettingBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">testbot.config.setting.SettingBase</span></code></a></p>
+<p>The case runner setting</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunnerSetting.default_case_setting_path">
+<span class="sig-name descname"><span class="pre">default_case_setting_path</span></span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunnerSetting.default_case_setting_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunnerSetting.default_case_setting_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunnerSetting.log_path">
+<span class="sig-name descname"><span class="pre">log_path</span></span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunnerSetting.log_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunnerSetting.log_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunnerSetting.case_log">
+<span class="sig-name descname"><span class="pre">case_log</span></span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunnerSetting.case_log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunnerSetting.case_log" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunnerSetting.log_level">
+<span class="sig-name descname"><span class="pre">log_level</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'INFO'</span></em><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunnerSetting.log_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunnerSetting.log_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseImportError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.testengine.caserunner.</span></span><span class="sig-name descname"><span class="pre">CaseImportError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inner_ex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseImportError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseImportError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.TestEngineNotReadyError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.testengine.caserunner.</span></span><span class="sig-name descname"><span class="pre">TestEngineNotReadyError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#TestEngineNotReadyError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.TestEngineNotReadyError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.RunningStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.testengine.caserunner.</span></span><span class="sig-name descname"><span class="pre">RunningStatus</span></span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#RunningStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.RunningStatus" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Generic enumeration.</p>
+<p>Derive from this class to define new enumerations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.RunningStatus.Idle">
+<span class="sig-name descname"><span class="pre">Idle</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#RunningStatus.Idle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.RunningStatus.Idle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.RunningStatus.Running">
+<span class="sig-name descname"><span class="pre">Running</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#RunningStatus.Running"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.RunningStatus.Running" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.testengine.caserunner.</span></span><span class="sig-name descname"><span class="pre">CaseRunner</span></span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>测试用例执行器</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.resource_ready">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resource_ready</span></span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.resource_ready"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.resource_ready" title="Permalink to this definition"></a></dt>
+<dd><p>资源是否已准备好</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.test_list_ready">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">test_list_ready</span></span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.test_list_ready"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.test_list_ready" title="Permalink to this definition"></a></dt>
+<dd><p>测试用例列表是否已准备好</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.load_resource">
+<span class="sig-name descname"><span class="pre">load_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.load_resource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.load_resource" title="Permalink to this definition"></a></dt>
+<dd><p>加载测试资源</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_name</strong> (<em>str</em>) – 资源文件路径</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – 资源拥有者</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.load_test">
+<span class="sig-name descname"><span class="pre">load_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../case/base/index.html#testbot.case.base.TestCaseBase" title="testbot.case.base.TestCaseBase"><span class="pre">testbot.case.base.TestCaseBase</span></a></span></span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.load_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.load_test" title="Permalink to this definition"></a></dt>
+<dd><p>实例化测试用例</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>test_name</strong> (<em>str</em>) – 测试名称</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.print_module_info">
+<span class="sig-name descname"><span class="pre">print_module_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.print_module_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.print_module_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.set_test_list">
+<span class="sig-name descname"><span class="pre">set_test_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../testlist/index.html#testbot.testengine.testlist.TestList" title="testbot.testengine.testlist.TestList"><span class="pre">testbot.testengine.testlist.TestList</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.set_test_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.set_test_list" title="Permalink to this definition"></a></dt>
+<dd><p>#装载测试列表</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.start" title="Permalink to this definition"></a></dt>
+<dd><p>测试引擎开始执行</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.wait_for_test_done">
+<span class="sig-name descname"><span class="pre">wait_for_test_done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.wait_for_test_done"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.wait_for_test_done" title="Permalink to this definition"></a></dt>
+<dd><p>等待测试完成</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.run_case_lcm">
+<span class="sig-name descname"><span class="pre">run_case_lcm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../case/base/index.html#testbot.case.base.TestCaseBase" title="testbot.case.base.TestCaseBase"><span class="pre">testbot.case.base.TestCaseBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.run_case_lcm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.run_case_lcm" title="Permalink to this definition"></a></dt>
+<dd><p>执行测试用例生命周期管理
+这个方法应该在子线程被运行</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner._import_list_case">
+<span class="sig-name descname"><span class="pre">_import_list_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">case_tree_node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner._import_list_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner._import_list_case" title="Permalink to this definition"></a></dt>
+<dd><p>递归导入测试列表中的测试用例</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.__init_precondition">
+<span class="sig-name descname"><span class="pre">__init_precondition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../case/base/index.html#testbot.case.base.TestCaseBase" title="testbot.case.base.TestCaseBase"><span class="pre">testbot.case.base.TestCaseBase</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.__init_precondition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.__init_precondition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.__pre_check">
+<span class="sig-name descname"><span class="pre">__pre_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../case/base/index.html#testbot.case.base.TestCaseBase" title="testbot.case.base.TestCaseBase"><span class="pre">testbot.case.base.TestCaseBase</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.__pre_check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.__pre_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.__get_case_log">
+<span class="sig-name descname"><span class="pre">__get_case_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.__get_case_log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.__get_case_log" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.__main_test_thread">
+<span class="sig-name descname"><span class="pre">__main_test_thread</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.__main_test_thread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.__main_test_thread" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.__run_test_list">
+<span class="sig-name descname"><span class="pre">__run_test_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">testlist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.__run_test_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.__run_test_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.__run_case">
+<span class="sig-name descname"><span class="pre">__run_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../case/base/index.html#testbot.case.base.TestCaseBase" title="testbot.case.base.TestCaseBase"><span class="pre">testbot.case.base.TestCaseBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.__run_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.__run_case" title="Permalink to this definition"></a></dt>
+<dd><p>测试用例执行线程</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.__call_cleanup">
+<span class="sig-name descname"><span class="pre">__call_cleanup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../case/base/index.html#testbot.case.base.TestCaseBase" title="testbot.case.base.TestCaseBase"><span class="pre">testbot.case.base.TestCaseBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/testengine/caserunner.html#CaseRunner.__call_cleanup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.__call_cleanup" title="Permalink to this definition"></a></dt>
+<dd><p>执行清除操作</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

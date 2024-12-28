@@ -1,0 +1,75 @@
+:py:mod:`testbot.resource.constraint`
+=====================================
+
+.. py:module:: testbot.resource.constraint
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.constraint.Constraint
+   testbot.resource.constraint.ConnectionConstraint
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.constraint.__copyright__
+   testbot.resource.constraint.__author__
+   testbot.resource.constraint.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: Constraint
+
+
+   资源选择器限制条件的基类
+
+   .. py:method:: is_meet(resource, *args, **kwargs)
+      :abstractmethod:
+
+
+
+.. py:exception:: ResourceNotMeetConstraint(constraints)
+
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+
+.. py:class:: ConnectionConstraint
+
+
+   Bases: :py:obj:`Constraint`
+
+   用户限制获取Remote Port的限制条件。
+
+   .. py:method:: get_connection(resource, *args, **kwargs)
+      :abstractmethod:
+
+
+

@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: pytestbot
+Version: 2024.52.610.dev15
+Summary: testbot framework, the branch name: ，commit id: 
+Home-page: https://gitlab.com/nuangua/testbot.git
+Author: Nuanguang Gu(Sunny)
+Author-email: nuanguang.gu@aliyun.com
+License: Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved
+Project-URL: Bug Reports, https://confluence.tclking.com/pages/viewpage.action?pageId=346260551
+Project-URL: Source, http://gitlab10.tclking.com/sqa_test_dev/tbot
+Keywords: testbot
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: adbutils ==2.5.0 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: pkginfo ==1.11.2 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: click ==8.1.7 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: atlassian-python-api ==3.41.16 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: grpcio ==1.68.0 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: grpcio-tools ==1.68.0 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: protobuf ==5.29.0 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: imagehash ==4.3.1 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: pillow ==10.3.0 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: pyserial ==3.5 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: rst2html5 ==2.0.1 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: docutils ==0.19 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: docstring-parser ==0.16 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: json2html ==1.3.0 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: pytest ==7.2.0 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: opencv-contrib-python ==4.10.0.84 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: opencv-python ==4.10.0.84 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+Requires-Dist: uiautomator2 ==3.2.5 ; python_version == "3.8" and sys_platform == "win32" or python_version == "3.8" and sys_platform == "linux" and python_version == "3.8" or sys_platform == "darwin"
+
+# 项目文档
+
+* [需求文档](https://gitlab.com/nuangua/testbot/-/wikis/requirement_docs)
+* [设计文档](https://gitlab.com/nuangua/testbot/-/wikis/design_docs)
+* [开发文档](https://gitlab.com/nuangua/testbot/-/wikis/design_docs)
+* [API文档](https://nuangua.gitlab.io/testbot/)
+* [使用文档](https://gitlab.com/nuangua/testbot/-/wikis/usage_docs)
+
+# 安装依赖库
+
+```buildoutcfg
+python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements-dev.txt
+python3 -m pip install -r requirements-test.txt
+```
+
+# 编译代码
+
+```buildoutcfg
+python3 setup.py bdist_wheel
+```
+
+# 编译API文档
+
+```buildoutcfg
+make html
+```
+
+# 运行Demo用例
+
+```buildoutcfg
+python -m testbot.cli runner test --testlist src/testbot_apps/scripts/unit_test/TCList.json --resource src/testbot_apps/scripts/unit_test/ResourcePool.json
+```
