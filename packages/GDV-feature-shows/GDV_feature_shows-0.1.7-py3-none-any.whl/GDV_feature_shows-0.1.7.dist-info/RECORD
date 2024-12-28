@@ -1,0 +1,16 @@
+GDV_feature_shows/__init__.py,sha256=i2dmadd7R78lws53hOLF3W5XI0sdy_eSp_cl_IAQlYc,39
+GDV_feature_shows/feature_extraction.py,sha256=wHLVfn0vC_EdSgq56pAXCq7xXn-PzQ5VtYqDAIhfVXE,31058
+GDV_feature_shows/interface_gradio.py,sha256=zwEmqSMGMOAvfg2RJm99URn2gtajqQIfYkq2xoWiUh0,5865
+GDV_feature_shows/interface_tk.py,sha256=gqGGbcxarN0wwkVzq7LWsV3Ya7BRkajrRaTBwuF1Q80,9222
+GDV_feature_shows/main.py,sha256=v6Lm87NNzyQQcCrQLSll36F9ibM0rgChfec_b0yGPPg,900
+GDV_feature_shows/name_volume.py,sha256=ZlZFUYm-leLJkCQ6DoAhf7wdX5QQ4dzxL33AWQlJtE0,4986
+GDV_feature_shows/parsing.py,sha256=2mDM49fnAf7TQQvfx2c3pVmMZSkE_Zv0XjIiYGcPtNk,1441
+GDV_feature_shows/process.py,sha256=fO0HNmtmopAl08TIqOFW--kBp5wooqhyjKsKqXOiqJA,19443
+GDV_feature_shows/resource_manager.py,sha256=ZfmLy1-n7YejnbjxTbHT-iHwqDYZYOvIVmTJosOur7w,566
+GDV_feature_shows/assets/ico.png,sha256=7cjxFsU8DhBVNRzLbYwwFZp8ljneuuMNWVe9GAGvEV4,247217
+GDV_feature_shows-0.1.7.dist-info/LICENSE,sha256=NUWzrphEGbv6cISGGsfMYsaldTYr9XMmvdbb_1apjB4,1065
+GDV_feature_shows-0.1.7.dist-info/METADATA,sha256=BvrMrtV1pQ2Vyli4s47KKE6FsmZPXBsX34NUeX59iTk,729
+GDV_feature_shows-0.1.7.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+GDV_feature_shows-0.1.7.dist-info/entry_points.txt,sha256=ZHTcLssBBAloGR1ZyDXhPLZDsoHrCvioSMNs5RriZGA,66
+GDV_feature_shows-0.1.7.dist-info/top_level.txt,sha256=99NYYZHxO33CBCoNI0asfD2JfFSede96lWRrT6W2GiY,18
+GDV_feature_shows-0.1.7.dist-info/RECORD,,
