@@ -1,0 +1,5 @@
+[ovos.plugin.phal]
+neon-phal-plugin-system = neon_phal_plugin_system:SystemEventsPlugin
+
+[ovos.plugin.phal.admin]
+neon-phal-plugin-system = neon_phal_plugin_system:SystemEventsAdminPlugin
