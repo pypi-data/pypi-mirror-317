@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gitiles
+Version: 0.1.0
+Summary: A CLI tool to manage multiple Git profiles
+Home-page: https://github.com/yourusername/git-profile-manager
+Author: Shivam Jain
+Author-email: shivamjain.dev@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+A command-line tool for managing multiple Git profiles with different SSH keys.
