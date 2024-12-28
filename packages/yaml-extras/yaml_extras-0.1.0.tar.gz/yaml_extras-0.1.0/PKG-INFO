@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: yaml-extras
+Version: 0.1.0
+Summary: A collection of YAML utilities
+Author: David Sillman
+Author-email: dsillman2000@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
