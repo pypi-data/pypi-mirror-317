@@ -1,0 +1,2 @@
+[console_scripts]
+fagflag = fagflag.__main__:main
