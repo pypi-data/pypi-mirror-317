@@ -1,0 +1,10 @@
+thermofeel/__init__.py,sha256=F_y505fNgJy2_LKrjXx7VlV_UO1rhssxGfqH1r22AKU,436
+thermofeel/experimental_wbgt.py,sha256=rG1X84xRbpQlRVGuxkliPnQJjVdz2HFXjLoBizAbfFo,7946
+thermofeel/helpers.py,sha256=0rIybyI6P_FAKxlSP1_nId4480dU-QlLVHOJ9lV5xR4,904
+thermofeel/thermofeel.py,sha256=Ihu2Y9TktA9vuqpDuHQScXxq2RbU44RTUixwar9c3gA,28637
+thermofeel-2.1.1.dist-info/LICENSE,sha256=onD34vC4WOTvTR_DZL22maxTGO9PL9sWZdBy7sI5SwA,11346
+thermofeel-2.1.1.dist-info/METADATA,sha256=_XhIGGf-ekRFM7Dzo6Dyg3LwVgmg0akHaNnZ7NSuZMA,6611
+thermofeel-2.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+thermofeel-2.1.1.dist-info/top_level.txt,sha256=46V5MocUsOJlDruRVg-Gc4KDWx690SikPFrcK6FnDcs,11
+thermofeel-2.1.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+thermofeel-2.1.1.dist-info/RECORD,,
