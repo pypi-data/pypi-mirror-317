@@ -1,0 +1,11 @@
+LICENSE.md
+setup.py
+hivemind_persona/__init__.py
+hivemind_persona/__main__.py
+hivemind_persona/version.py
+hivemind_persona.egg-info/PKG-INFO
+hivemind_persona.egg-info/SOURCES.txt
+hivemind_persona.egg-info/dependency_links.txt
+hivemind_persona.egg-info/entry_points.txt
+hivemind_persona.egg-info/requires.txt
+hivemind_persona.egg-info/top_level.txt
