@@ -1,0 +1,176 @@
+Metadata-Version: 2.1
+Name: pad-final-project
+Version: 0.1.6
+Summary: Final project for the 'Python for data analysis' subject in the UNAV Master's degree in Big Data Science.
+Home-page: https://github.com/eduardo-miralles/pad-final-project
+Author: Eduardo Miralles
+Author-email: emirallesiz@alumni.unav.es
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: altair (==5.5.0)
+Requires-Dist: asttokens (==3.0.0)
+Requires-Dist: attrs (==24.3.0)
+Requires-Dist: blinker (==1.9.0)
+Requires-Dist: build (==1.2.2.post1)
+Requires-Dist: cachecontrol (==0.14.1)
+Requires-Dist: cachetools (==5.5.0)
+Requires-Dist: certifi (==2024.12.14)
+Requires-Dist: cffi (==1.17.1)
+Requires-Dist: charset-normalizer (==3.4.1)
+Requires-Dist: cleo (==2.1.0)
+Requires-Dist: click (==8.1.8)
+Requires-Dist: comm (==0.2.2)
+Requires-Dist: contourpy (==1.3.1)
+Requires-Dist: coverage (==7.6.10)
+Requires-Dist: crashtest (==0.4.1)
+Requires-Dist: cryptography (==44.0.0)
+Requires-Dist: cycler (==0.12.1)
+Requires-Dist: debugpy (==1.8.11)
+Requires-Dist: decorator (==5.1.1)
+Requires-Dist: distlib (==0.3.9)
+Requires-Dist: dulwich (==0.21.7)
+Requires-Dist: executing (==2.1.0)
+Requires-Dist: fastjsonschema (==2.21.1)
+Requires-Dist: filelock (==3.16.1)
+Requires-Dist: fonttools (==4.55.3)
+Requires-Dist: gitdb (==4.0.11)
+Requires-Dist: gitpython (==3.1.43)
+Requires-Dist: idna (==3.10)
+Requires-Dist: iniconfig (==2.0.0)
+Requires-Dist: installer (==0.7.0)
+Requires-Dist: ipykernel (==6.29.5)
+Requires-Dist: ipython (==8.31.0)
+Requires-Dist: jaraco-classes (==3.4.0)
+Requires-Dist: jedi (==0.19.2)
+Requires-Dist: jeepney (==0.8.0)
+Requires-Dist: jinja2 (==3.1.5)
+Requires-Dist: jsonschema (==4.23.0)
+Requires-Dist: jsonschema-specifications (==2024.10.1)
+Requires-Dist: jupyter-client (==8.6.3)
+Requires-Dist: jupyter-core (==5.7.2)
+Requires-Dist: keyring (==24.3.1)
+Requires-Dist: kiwisolver (==1.4.7)
+Requires-Dist: krakenex (==2.2.2)
+Requires-Dist: markdown-it-py (==3.0.0)
+Requires-Dist: markupsafe (==3.0.2)
+Requires-Dist: matplotlib (==3.10.0)
+Requires-Dist: matplotlib-inline (==0.1.7)
+Requires-Dist: mdurl (==0.1.2)
+Requires-Dist: more-itertools (==10.5.0)
+Requires-Dist: mplfinance (==0.12.10b0)
+Requires-Dist: msgpack (==1.1.0)
+Requires-Dist: narwhals (==1.19.0)
+Requires-Dist: nest-asyncio (==1.6.0)
+Requires-Dist: numpy (==2.2.1)
+Requires-Dist: packaging (==24.2)
+Requires-Dist: pandas (==2.2.3)
+Requires-Dist: parso (==0.8.4)
+Requires-Dist: pexpect (==4.9.0)
+Requires-Dist: pillow (==11.0.0)
+Requires-Dist: pkginfo (==1.12.0)
+Requires-Dist: platformdirs (==4.3.6)
+Requires-Dist: pluggy (==1.5.0)
+Requires-Dist: poetry (==1.8.5)
+Requires-Dist: poetry-core (==1.9.1)
+Requires-Dist: poetry-plugin-export (==1.8.0)
+Requires-Dist: prompt-toolkit (==3.0.48)
+Requires-Dist: protobuf (==5.29.2)
+Requires-Dist: psutil (==6.1.1)
+Requires-Dist: ptyprocess (==0.7.0)
+Requires-Dist: pure-eval (==0.2.3)
+Requires-Dist: pyarrow (==18.1.0)
+Requires-Dist: pycparser (==2.22)
+Requires-Dist: pydeck (==0.9.1)
+Requires-Dist: pygments (==2.18.0)
+Requires-Dist: pyparsing (==3.2.0)
+Requires-Dist: pyproject-hooks (==1.2.0)
+Requires-Dist: pyqt6 (==6.8.0)
+Requires-Dist: pyqt6-qt6 (==6.8.1)
+Requires-Dist: pyqt6-sip (==13.9.1)
+Requires-Dist: pytest (==8.3.4)
+Requires-Dist: pytest-cov (==6.0.0)
+Requires-Dist: python-dateutil (==2.9.0.post0)
+Requires-Dist: pytz (==2024.2)
+Requires-Dist: pyzmq (==26.2.0)
+Requires-Dist: rapidfuzz (==3.11.0)
+Requires-Dist: referencing (==0.35.1)
+Requires-Dist: requests (==2.32.3)
+Requires-Dist: requests-toolbelt (==1.0.0)
+Requires-Dist: rich (==13.9.4)
+Requires-Dist: rpds-py (==0.22.3)
+Requires-Dist: secretstorage (==3.3.3)
+Requires-Dist: shellingham (==1.5.4)
+Requires-Dist: six (==1.17.0)
+Requires-Dist: smmap (==5.0.1)
+Requires-Dist: stack-data (==0.6.3)
+Requires-Dist: streamlit (==1.41.1)
+Requires-Dist: tenacity (==9.0.0)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: tomlkit (==0.13.2)
+Requires-Dist: tornado (==6.4.2)
+Requires-Dist: traitlets (==5.14.3)
+Requires-Dist: trove-classifiers (==2024.10.21.16)
+Requires-Dist: typing-extensions (==4.12.2)
+Requires-Dist: tzdata (==2024.2)
+Requires-Dist: urllib3 (==2.3.0)
+Requires-Dist: virtualenv (==20.28.0)
+Requires-Dist: watchdog (==6.0.0)
+Requires-Dist: wcwidth (==0.2.13)
+Project-URL: Repository, https://github.com/eduardo-miralles/pad-final-project
+Description-Content-Type: text/markdown
+
+# Final Project: Python for Data Analysis
+
+## Table of Contents
+- [Overview](#Overview)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Tests](#Tests)
+- [Contributors](#Contributors)
+
+## Overview
+The goal of this project is computing the Bollinger Bands of a specified cryptocurrency pair and use that information to automate buy and sell signals. Data containing prices and volumes along time is obtanied via Krakenex API.
+
+## Installation
+- From GitHub:
+   1. Clone the repository:
+      ```bash
+      git clone https://github.com/eduardo-miralles/pad-final-project.git
+      ```
+   2. Install poetry:
+      ```bash
+      sudo apt install python3-poetry
+      ```
+   3. Install dependencies:
+      ```bash
+      poetry install
+      ```
+   4. To use poetry's virtual environment with the required dependencies, run:
+      ```bash
+      poetry shell
+      ```
+- From PiPy:
+   1. Install the package:
+   ```bash
+   pip install pad-final-project
+   ```
+
+## Usage
+1. If the repo is clonned but the package is not installed, go to the main repo folder.
+2. To start the application run:
+   ```bash
+   python -m pad_final_project
+   ```
+   and make sure to have a browser installed.
+3. To terminate the app, type `ctrl + C` on the command line.
+
+## Tests
+Run tests with the following command to see coverage:
+```bash
+poetry run pytest --cov
+```
+
+## Contributors
+- Eduardo Miralles [[emirallesiz@alumni.unav.es](mailto:emirallesiz@alumni.unav.es)]
