@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "cobra-ssg"
+version = "0.1.0"
+description = "Simple static site generator developed using TDD"
+authors = ["Juan Lucha <juanlucha@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Markdown = "^3.7"
+python-frontmatter = "^1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
