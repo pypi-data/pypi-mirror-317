@@ -1,0 +1,35 @@
+cffi>=1.15.1
+
+[:platform_system == "Windows"]
+packaging
+
+[:python_version < "3.8"]
+typing-extensions
+
+[:python_version < "3.9"]
+backports.zoneinfo
+
+[all]
+pytest>=8
+coverage
+pytest-cov
+
+[doc]
+ipykernel
+jupytext
+multipledispatch
+nbconvert
+pygraphviz
+sphinx
+
+[test]
+pytest>=8
+coverage
+pytest-cov
+
+[types]
+mypy
+packaging
+pandas-stubs
+types-Pygments
+types-tzlocal
