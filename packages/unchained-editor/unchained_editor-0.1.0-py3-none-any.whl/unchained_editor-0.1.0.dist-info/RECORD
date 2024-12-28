@@ -1,0 +1,17 @@
+unchained_editor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unchained_editor/admin.py,sha256=2h43pTXd3NKV8-_fkUEkzkS4zqih0qBLE8q6Yj7fpEg,33
+unchained_editor/apps.py,sha256=nbntJXvF85tO0cjzKJkl6kbEnr-ilKnfBTBlke0FD50,163
+unchained_editor/fields.py,sha256=cXhB_sH9BOPLFDw-GchmM4aHj4NaW2U0nBP_MmHIlL4,832
+unchained_editor/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unchained_editor/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+unchained_editor/static/unchained_editor/css/styles.css,sha256=V2VJu0WpD_k7h0lYKyLSEED6kglcio5_nl_uZz3Nppg,1110
+unchained_editor/static/unchained_editor/js/script.js,sha256=7V-2vjy8DSZPmYXMLR8US9pAsGG1ioMs7R5SxRSCSMU,27899
+unchained_editor/templates/unchained_editor/editor.html,sha256=7SewOZ8ltqVmwBqMCSiPxpW5GXvft3XKdPsrV1jkOiQ,4395
+unchained_editor/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+unchained_editor/urls.py,sha256=DAtXfd8vt3fI4FzbS-9iZV2lHRwqQr1OjD0OshPxeZ8,167
+unchained_editor/views.py,sha256=6_kAjC3-P9-pmvN6VnngO9qZpceDV3laHBCFVoZJZEQ,1397
+unchained_editor/widgets.py,sha256=vrJxdHgY05bpdMkEnZtoKQPFCllm7jxdxnS1t8wYAe8,3110
+unchained_editor-0.1.0.dist-info/LICENSE,sha256=3ujbd9DtgYLGzKpAZ0DVODlZj9jb1r3iU4TVMHKhimU,32583
+unchained_editor-0.1.0.dist-info/METADATA,sha256=xYamUpdfJCVkmg0BBopRhG_k_B4PFAPGAmRg5aHDp_4,2527
+unchained_editor-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+unchained_editor-0.1.0.dist-info/RECORD,,
