@@ -1,0 +1,37 @@
+:py:mod:`testbot_tests`
+=======================
+
+.. py:module:: testbot_tests
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   confluence_test1/index.rst
+   dopuyin_dl2/index.rst
+   douyin_dl/index.rst
+   douyin_dl3/index.rst
+   douyin_test/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+

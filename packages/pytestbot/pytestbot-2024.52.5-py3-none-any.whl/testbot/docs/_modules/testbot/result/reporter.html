@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>testbot.result.reporter &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=359c27e9"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../../testbot.html">testbot</a></li>
+          <li class="breadcrumb-item"><a href="../result.html">testbot.result</a></li>
+      <li class="breadcrumb-item active">testbot.result.reporter</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for testbot.result.reporter</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<div class="viewcode-block" id="__copyright__"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.__copyright__">[docs]</a><span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved&quot;</span></div>
+<div class="viewcode-block" id="__author__"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.__author__">[docs]</a><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Nuanguang Gu(Sunny)&quot;</span></div>
+<div class="viewcode-block" id="__email__"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.__email__">[docs]</a><span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;nuanguang.gu@aliyun.com&quot;</span></div>
+
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">IntEnum</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Event</span><span class="p">,</span> <span class="n">Lock</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<span class="kn">from</span> <span class="nn">testbot.utilities.time</span> <span class="kn">import</span> <span class="n">get_local_time</span>
+
+
+<div class="viewcode-block" id="StepResult"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.StepResult">[docs]</a><span class="k">class</span> <span class="nc">StepResult</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    表示节点的状态</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="StepResult.INFO"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.StepResult.INFO">[docs]</a>    <span class="n">INFO</span> <span class="o">=</span> <span class="mi">1</span></div>
+<div class="viewcode-block" id="StepResult.PASS"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.StepResult.PASS">[docs]</a>    <span class="n">PASS</span> <span class="o">=</span> <span class="mi">2</span></div>
+<div class="viewcode-block" id="StepResult.FAIL"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.StepResult.FAIL">[docs]</a>    <span class="n">FAIL</span> <span class="o">=</span> <span class="mi">4</span></div>
+<div class="viewcode-block" id="StepResult.EXCEPTION"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.StepResult.EXCEPTION">[docs]</a>    <span class="n">EXCEPTION</span> <span class="o">=</span> <span class="mi">8</span></div>
+<div class="viewcode-block" id="StepResult.WARNING"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.StepResult.WARNING">[docs]</a>    <span class="n">WARNING</span> <span class="o">=</span> <span class="mi">16</span></div>
+<div class="viewcode-block" id="StepResult.ERROR"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.StepResult.ERROR">[docs]</a>    <span class="n">ERROR</span> <span class="o">=</span> <span class="mi">32</span></div></div>
+
+
+<div class="viewcode-block" id="NodeType"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.NodeType">[docs]</a><span class="k">class</span> <span class="nc">NodeType</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    表示节点的类型</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="NodeType.Step"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.NodeType.Step">[docs]</a>    <span class="n">Step</span> <span class="o">=</span> <span class="mi">1</span></div>
+<div class="viewcode-block" id="NodeType.Case"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.NodeType.Case">[docs]</a>    <span class="n">Case</span> <span class="o">=</span> <span class="mi">2</span></div>
+<div class="viewcode-block" id="NodeType.TestList"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.NodeType.TestList">[docs]</a>    <span class="n">TestList</span> <span class="o">=</span> <span class="mi">4</span></div>
+<div class="viewcode-block" id="NodeType.Other"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.NodeType.Other">[docs]</a>    <span class="n">Other</span> <span class="o">=</span> <span class="mi">256</span></div></div>
+
+
+<div class="viewcode-block" id="ResultNode"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode">[docs]</a><span class="k">class</span> <span class="nc">ResultNode</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    测试结果节点</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">node_type</span><span class="o">=</span><span class="n">NodeType</span><span class="o">.</span><span class="n">Other</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">INFO</span> <span class="k">if</span> <span class="n">status</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">status</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">header</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">node_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">get_local_time</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="ResultNode.add_child"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode.add_child">[docs]</a>    <span class="k">def</span> <span class="nf">add_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">StepResult</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                  <span class="n">node_type</span><span class="o">=</span><span class="n">NodeType</span><span class="o">.</span><span class="n">Other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        添加新的子节点并返回该节点</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_node</span> <span class="o">=</span> <span class="n">ResultNode</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+                              <span class="n">node_type</span><span class="o">=</span><span class="n">node_type</span><span class="p">)</span>
+        <span class="c1"># 在case或者step类型的节点中，只允许类型是Step</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="ow">in</span> <span class="p">[</span><span class="n">NodeType</span><span class="o">.</span><span class="n">Step</span><span class="p">,</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">Case</span><span class="p">]:</span>
+            <span class="n">new_node</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">Step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_node</span><span class="p">)</span>
+        <span class="n">new_node</span><span class="o">.</span><span class="n">set_status</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_node</span></div>
+
+<div class="viewcode-block" id="ResultNode.set_status"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode.set_status">[docs]</a>    <span class="k">def</span> <span class="nf">set_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        设置当前节点的状态，并且同时更新父节点的状态</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">Other</span><span class="p">:</span>
+            <span class="c1"># 对于类型是非case或者是step的节点，不作状态设置</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">INFO</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="ow">in</span> <span class="p">[</span><span class="n">StepResult</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">set_status</span><span class="p">(</span><span class="n">status</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ResultNode.add"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        简化的add方法，提供给事件驱动</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">Step</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">header</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ResultNode.get_test_point_stats"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode.get_test_point_stats">[docs]</a>    <span class="k">def</span> <span class="nf">get_test_point_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">stats_pass</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">stats_fail</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">stats_error</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">stats_warning</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">stats_exception</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">child_stats</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">get_test_point_stats</span><span class="p">()</span>
+            <span class="n">stats_pass</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">stats_fail</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">stats_error</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">stats_warning</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="n">stats_exception</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">:</span>
+                <span class="n">stats_pass</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">FAIL</span><span class="p">:</span>
+                <span class="n">stats_fail</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">ERROR</span><span class="p">:</span>
+                <span class="n">stats_error</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">WARNING</span><span class="p">:</span>
+                <span class="n">stats_warning</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">EXCEPTION</span><span class="p">:</span>
+                <span class="n">stats_exception</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">stats_pass</span><span class="p">,</span> <span class="n">stats_fail</span><span class="p">,</span> <span class="n">stats_error</span><span class="p">,</span> <span class="n">stats_warning</span><span class="p">,</span> <span class="n">stats_exception</span></div>
+
+<div class="viewcode-block" id="ResultNode.get_test_case_stats"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode.get_test_case_stats">[docs]</a>    <span class="k">def</span> <span class="nf">get_test_case_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">stats_pass</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">stats_fail</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">stats_error</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">stats_warning</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">stats_exception</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">Case</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">:</span>
+                <span class="n">stats_pass</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">FAIL</span><span class="p">:</span>
+                <span class="n">stats_fail</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">ERROR</span><span class="p">:</span>
+                <span class="n">stats_error</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">WARNING</span><span class="p">:</span>
+                <span class="n">stats_warning</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">EXCEPTION</span><span class="p">:</span>
+                <span class="n">stats_exception</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                <span class="n">child_stats</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">get_test_case_stats</span><span class="p">()</span>
+                <span class="n">stats_pass</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">stats_fail</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">stats_error</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                <span class="n">stats_warning</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+                <span class="n">stats_exception</span> <span class="o">+=</span> <span class="n">child_stats</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">stats_pass</span><span class="p">,</span> <span class="n">stats_fail</span><span class="p">,</span> <span class="n">stats_error</span><span class="p">,</span> <span class="n">stats_warning</span><span class="p">,</span> <span class="n">stats_exception</span></div>
+
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="ResultNode.is_leaf"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode.is_leaf">[docs]</a>    <span class="k">def</span> <span class="nf">is_leaf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ResultNode.to_dict"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        将结果节点输出成字典结构</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">rv</span><span class="p">[</span><span class="s2">&quot;header&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span>
+        <span class="n">rv</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">rv</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span>
+        <span class="n">rv</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">rv</span><span class="p">[</span><span class="s2">&quot;children&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">rv</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">rv</span><span class="p">[</span><span class="s2">&quot;children&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">rv</span></div>
+
+<div class="viewcode-block" id="ResultNode.to_text"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode.to_text">[docs]</a>    <span class="k">def</span> <span class="nf">to_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        将结果生成文本类型的结构</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_intent</span><span class="p">(</span><span class="n">indent</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">Case</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">+=</span> <span class="s2">&quot;&lt;测试用例&gt; &quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">TestList</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">+=</span> <span class="s2">&quot;&lt;测试列表&gt; &quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">Step</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">+=</span> <span class="s2">&quot;&lt;测试步骤&gt; &quot;</span>
+        <span class="n">rv</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;【步骤】:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="si">}</span><span class="s2">,【失败描述】:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="ow">in</span> <span class="p">[</span><span class="n">NodeType</span><span class="o">.</span><span class="n">Case</span><span class="p">,</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">Step</span><span class="p">]:</span>
+            <span class="n">rv</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_dot_line</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+            <span class="n">rv</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">rv</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">+=</span> <span class="n">child</span><span class="o">.</span><span class="n">to_text</span><span class="p">(</span><span class="n">indent</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rv</span></div>
+
+<div class="viewcode-block" id="ResultNode._get_intent"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode._get_intent">[docs]</a>    <span class="k">def</span> <span class="nf">_get_intent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indent</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;  &quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">indent</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ResultNode._get_dot_line"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultNode._get_dot_line">[docs]</a>    <span class="k">def</span> <span class="nf">_get_dot_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">line_max</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">line_max</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">line</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">line_max</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">))</span></div></div>
+
+
+<div class="viewcode-block" id="locker"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.locker">[docs]</a><span class="k">def</span> <span class="nf">locker</span><span class="p">(</span><span class="n">lock</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">outer</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="n">lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">inner</span>
+    <span class="k">return</span> <span class="n">outer</span></div>
+
+
+<div class="viewcode-block" id="ResultReporter"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter">[docs]</a><span class="k">class</span> <span class="nc">ResultReporter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ResultReporter.my_lock"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.my_lock">[docs]</a>    <span class="n">my_lock</span> <span class="o">=</span> <span class="n">Lock</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">halt_on_failure</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">halt_on_exception</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">halt_event</span> <span class="o">=</span> <span class="n">Event</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">ResultNode</span><span class="p">(</span><span class="s2">&quot;Root&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_case</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_list</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_logger</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="ResultReporter.search_result"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.search_result">[docs]</a>    <span class="k">def</span> <span class="nf">search_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">case_name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        搜索给定的测试用例名称的测试结果</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_search_result</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">,</span> <span class="n">case_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ResultReporter._search_result"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter._search_result">[docs]</a>    <span class="k">def</span> <span class="nf">_search_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">case_name</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">NodeType</span><span class="o">.</span><span class="n">Step</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">header</span> <span class="o">==</span> <span class="n">case_name</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">child</span><span class="o">.</span><span class="n">status</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_search_result</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">case_name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">rv</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">rv</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.add_node"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.add_node">[docs]</a>    <span class="k">def</span> <span class="nf">add_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">StepResult</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">node_type</span><span class="o">=</span><span class="n">NodeType</span><span class="o">.</span><span class="n">Other</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">,</span>
+                                                      <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">,</span>
+                                                      <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
+                                                      <span class="n">node_type</span><span class="o">=</span><span class="n">node_type</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_log_info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Result Node </span><span class="si">{</span><span class="n">header</span><span class="si">}</span><span class="s2">, Message: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.pop"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.pop">[docs]</a>    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">parent</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.add_test"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.add_test">[docs]</a>    <span class="k">def</span> <span class="nf">add_test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">case_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="n">case_name</span><span class="p">,</span>
+                                                      <span class="n">node_type</span><span class="o">=</span><span class="n">NodeType</span><span class="o">.</span><span class="n">Case</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_case</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_log_info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;【测试用例】 </span><span class="si">{</span><span class="n">case_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.end_test"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.end_test">[docs]</a>    <span class="k">def</span> <span class="nf">end_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_case</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_case</span><span class="o">.</span><span class="n">parent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_case</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.add_list"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.add_list">[docs]</a>    <span class="k">def</span> <span class="nf">add_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">list_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="n">list_name</span><span class="p">,</span>
+                                                      <span class="n">node_type</span><span class="o">=</span><span class="n">NodeType</span><span class="o">.</span><span class="n">TestList</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_log_info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;【测试列表】 </span><span class="si">{</span><span class="n">list_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.end_list"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.end_list">[docs]</a>    <span class="k">def</span> <span class="nf">end_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_list</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_list</span><span class="o">.</span><span class="n">parent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_list</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.add_step_group"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.add_step_group">[docs]</a>    <span class="k">def</span> <span class="nf">add_step_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="n">group_name</span><span class="p">,</span> <span class="n">node_type</span><span class="o">=</span><span class="n">NodeType</span><span class="o">.</span><span class="n">Step</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_log_info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;【测试步骤组】 </span><span class="si">{</span><span class="n">group_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.add_event_group"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.add_event_group">[docs]</a>    <span class="k">def</span> <span class="nf">add_event_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_name</span><span class="p">):</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="n">group_name</span><span class="p">,</span>
+                                        <span class="n">node_type</span><span class="o">=</span><span class="n">NodeType</span><span class="o">.</span><span class="n">Step</span><span class="p">)</span>
+        <span class="n">rv</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">case_logger</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">case_logger</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_log_info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;【事件】 </span><span class="si">{</span><span class="n">group_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rv</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.end_step_group"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.end_step_group">[docs]</a>    <span class="k">def</span> <span class="nf">end_step_group</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">parent</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">parent</span></div>
+
+<div class="viewcode-block" id="ResultReporter.add_precheck_result"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.add_precheck_result">[docs]</a>    <span class="k">def</span> <span class="nf">add_precheck_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">headline</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="ResultReporter.is_high_priority_passed"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.is_high_priority_passed">[docs]</a>    <span class="k">def</span> <span class="nf">is_high_priority_passed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">priority</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@locker</span><span class="p">(</span><span class="n">my_lock</span><span class="p">)</span>
+<div class="viewcode-block" id="ResultReporter.add"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="n">StepResult</span><span class="p">,</span> <span class="n">headline</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">recent_node</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="n">headline</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">node_type</span><span class="o">=</span><span class="n">NodeType</span><span class="o">.</span><span class="n">Step</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_log_info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;【步骤】: </span><span class="si">{</span><span class="n">headline</span><span class="si">}</span><span class="s2">，【结果】</span><span class="si">{</span><span class="n">status</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">：，【失败描述】：</span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">halt_event</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">FAIL</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">halt_on_failure</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">halt_event</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="n">StepResult</span><span class="o">.</span><span class="n">EXCEPTION</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">halt_on_exception</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">halt_event</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ResultReporter._log_info"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.ResultReporter._log_info">[docs]</a>    <span class="k">def</span> <span class="nf">_log_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">case_logger</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">case_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message</span><span class="p">)</span></div></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">logging</span>
+<div class="viewcode-block" id="rr"><a class="viewcode-back" href="../../../autoapi/testbot/result/reporter/index.html#testbot.result.reporter.rr">[docs]</a>    <span class="n">rr</span> <span class="o">=</span> <span class="n">ResultReporter</span><span class="p">(</span><span class="n">logging</span><span class="p">)</span></div>
+    <span class="c1"># 添加一个测试列表节点</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_list</span><span class="p">(</span><span class="s2">&quot;Test List 1&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 添加一个测试用例节点</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_test</span><span class="p">(</span><span class="s2">&quot;Test Case 1&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 添加一个SETUP步骤节点</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;SETUP&quot;</span><span class="p">)</span>
+    <span class="c1"># 添加一些步骤</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Do Something Setup&quot;</span><span class="p">,</span> <span class="s2">&quot;I&#39;m doing something&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_step_group</span><span class="p">()</span>
+
+    <span class="c1"># 添加一个测试步骤节点</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;TEST&quot;</span><span class="p">)</span>
+
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;Login to website&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Input Username&quot;</span><span class="p">,</span> <span class="s2">&quot;Username is admin&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Input Password&quot;</span><span class="p">,</span> <span class="s2">&quot;Password is admin&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">FAIL</span><span class="p">,</span> <span class="s2">&quot;Login&quot;</span><span class="p">,</span> <span class="s2">&quot;Login is failed&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_step_group</span><span class="p">()</span>
+
+    <span class="c1"># 这里我们少了一个end_group, 但是end_test会把我们带回正确的位置。</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_test</span><span class="p">()</span>
+
+    <span class="c1"># 第二个测试用例</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_test</span><span class="p">(</span><span class="s2">&quot;Test Case 2&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;SETUP&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Do Something Setup&quot;</span><span class="p">,</span> <span class="s2">&quot;I&#39;m doing something&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_step_group</span><span class="p">()</span>
+
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;TEST&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;Login to website&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Input Username&quot;</span><span class="p">,</span> <span class="s2">&quot;Username is admin&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Input Password&quot;</span><span class="p">,</span> <span class="s2">&quot;Password is admin&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_step_group</span><span class="p">()</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_test</span><span class="p">()</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_list</span><span class="p">(</span><span class="s2">&quot;Sub Test List&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_test</span><span class="p">(</span><span class="s2">&quot;Test Case 3&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;SETUP&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Do Something Setup&quot;</span><span class="p">,</span> <span class="s2">&quot;I&#39;m doing something&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_step_group</span><span class="p">()</span>
+
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;TEST&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;Login to website&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Input Username&quot;</span><span class="p">,</span> <span class="s2">&quot;Username is admin&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Input Password&quot;</span><span class="p">,</span> <span class="s2">&quot;Password is admin&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_step_group</span><span class="p">()</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_test</span><span class="p">()</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_list</span><span class="p">()</span>
+
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_test</span><span class="p">(</span><span class="s2">&quot;Test Case 4&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;SETUP&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Do Something Setup&quot;</span><span class="p">,</span> <span class="s2">&quot;I&#39;m doing something&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_step_group</span><span class="p">()</span>
+
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;TEST&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add_step_group</span><span class="p">(</span><span class="s2">&quot;Login to website&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Input Username&quot;</span><span class="p">,</span> <span class="s2">&quot;Username is admin&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">StepResult</span><span class="o">.</span><span class="n">PASS</span><span class="p">,</span> <span class="s2">&quot;Input Password&quot;</span><span class="p">,</span> <span class="s2">&quot;Password is admin&quot;</span><span class="p">)</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_step_group</span><span class="p">()</span>
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_test</span><span class="p">()</span>
+
+    <span class="n">rr</span><span class="o">.</span><span class="n">end_list</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">rr</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rr</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">to_text</span><span class="p">())</span>
+    <span class="n">tp_stats</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">get_test_point_stats</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PASS: </span><span class="si">{</span><span class="n">tp_stats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, FAIL: </span><span class="si">{</span><span class="n">tp_stats</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ERROR: </span><span class="si">{</span><span class="n">tp_stats</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">, WARNING: </span><span class="si">{</span><span class="n">tp_stats</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">, EXCEPTION: </span><span class="si">{</span><span class="n">tp_stats</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">tc_stats</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">get_test_case_stats</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PASS: </span><span class="si">{</span><span class="n">tc_stats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, FAIL: </span><span class="si">{</span><span class="n">tc_stats</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ERROR: </span><span class="si">{</span><span class="n">tc_stats</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">, WARNING: </span><span class="si">{</span><span class="n">tc_stats</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">, EXCEPTION: </span><span class="si">{</span><span class="n">tc_stats</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># import json</span>
+    <span class="c1"># print(json.dumps(rr.root.to_dict(), indent=4))</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

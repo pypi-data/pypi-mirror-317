@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>testbot_tests.dopuyin_dl2 &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=359c27e9"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../testbot_tests.html">testbot_tests</a></li>
+      <li class="breadcrumb-item active">testbot_tests.dopuyin_dl2</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for testbot_tests.dopuyin_dl2</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<div class="viewcode-block" id="__copyright__"><a class="viewcode-back" href="../../autoapi/testbot_tests/dopuyin_dl2/index.html#testbot_tests.dopuyin_dl2.__copyright__">[docs]</a><span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved&quot;</span></div>
+<div class="viewcode-block" id="__author__"><a class="viewcode-back" href="../../autoapi/testbot_tests/dopuyin_dl2/index.html#testbot_tests.dopuyin_dl2.__author__">[docs]</a><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Nuanguang Gu(Sunny)&quot;</span></div>
+<div class="viewcode-block" id="__email__"><a class="viewcode-back" href="../../autoapi/testbot_tests/dopuyin_dl2/index.html#testbot_tests.dopuyin_dl2.__email__">[docs]</a><span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;nuanguang.gu@aliyun.com&quot;</span></div>
+
+<span class="kn">import</span> <span class="nn">requests</span>  <span class="c1"># 导入requests模块</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<div class="viewcode-block" id="dy"><a class="viewcode-back" href="../../autoapi/testbot_tests/dopuyin_dl2/index.html#testbot_tests.dopuyin_dl2.dy">[docs]</a><span class="k">def</span> <span class="nf">dy</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;(https://v.douyin.com/.*?/)&#39;</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">html</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="c1"># 获取跳转地址</span>
+        <span class="n">url2</span><span class="o">=</span><span class="n">html</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">url2</span><span class="p">)</span>
+        <span class="n">item_ids</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;video\/(.*?)\/\?&#39;</span><span class="p">,</span> <span class="n">url2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">item_ids</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">ur</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids=</span><span class="si">{</span><span class="n">item_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;user-agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3877.400 QQBrowser/10.8.4506.400&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;cookie&#39;</span><span class="p">:</span> <span class="s1">&#39;douyin.com; xg_device_score=7.453821943745746; device_web_cpu_core=4; device_web_memory_size=8; __ac_referer=__ac_blank; store-region=cn-gd; store-region-src=uid; xgplayer_user_id=162414252429; passport_csrf_token=9d48ab78d57063ec9ff6710a4c850587; passport_csrf_token_default=9d48ab78d57063ec9ff6710a4c850587; bd_ticket_guard_client_web_domain=2; toutiao_sso_user=c1bf7ced8716b454d7cdd6835b62bb09; toutiao_sso_user_ss=c1bf7ced8716b454d7cdd6835b62bb09; is_staff_user=false; _bd_ticket_crypt_doamin=2; __security_server_data_status=1; UIFID_TEMP=f934fcbcf795d539f0bfaf44dd326fe93e5e5daae30d485d476a271bea66637a1ef794940bab692168182a5cad1b7a8cea2aad762470f1cb8c4c77ce5a39ae25899c50594268a7e062f6acbd935c5e8a; s_v_web_id=verify_m24nrhe5_y7T178P9_WXgk_4rbg_B5ij_baPJLoTS9S2C; hevc_supported=true; fpk1=U2FsdGVkX18uRM47OerckDrvEICvkrQP14zCZoGT9NEdHZNvoYN6SWMRlD/yivddMVKC4TJJlDlTSvrPeQOhAA==; fpk2=9148266e558e3a256f7d785ca080c2a6; UIFID=f934fcbcf795d539f0bfaf44dd326fe93e5e5daae30d485d476a271bea66637a5d12a6ba583641ff39e8751b6542a4bef4caa39dc3b6c9d2ce6bbfae827e1b019fd0429b7c99249d8e36b172d7e575d92575200db8e03c60f3cd5d56e6cc1f5548649eab20e3325c23f153751e3f0d6e2ad78934101e6642aad15e94dd3774dc54443c0183a7a88bdfeaafab0f2e663a9d7f83349f59f36b30a5554d68435937; csrf_session_id=f11777b58b6dcf82577151417ffcbbd0; d_ticket=022b83726fbf80fb9cd7d5191a9823fe2c872; passport_assist_user=CkDEWVOF179aVIAGRAW2A83XibZk5EYODMGOzz3Ho53uM9A80A_M7NZ9yWCf_EE0bvsSnlMEWIRzzhqYx34fe4tmGkoKPClRHagojLTknfPsmymtezBkmqzw1l5EgQvD-2ke7pyWSqTY5bXVhfdwNPxVNzE3HzM-EQZCg-oIpPNoVhCklOENGImv1lQgASIBA04h0RI%3D; n_mh=HzlioHjI5I9wntqCGtTd39Tm1rnlRMsWJKsz04of4C4; sso_uid_tt=52949f0eb18f79a00d72b6425a040c41; sso_uid_tt_ss=52949f0eb18f79a00d72b6425a040c41; sid_ucp_sso_v1=1.0.0-KDdmZDNhMWJhNzNiMjEyMDgwNjllOTY4M2I4OTFmOGQ5M2I3OTkwNjEKIQi-q5Gb0_XFARCRnca5BhjaFiAMMOvuzPYFOAZA9AdIBhoCbHEiIGMxYmY3Y2VkODcxNmI0NTRkN2NkZDY4MzViNjJiYjA5; ssid_ucp_sso_v1=1.0.0-KDdmZDNhMWJhNzNiMjEyMDgwNjllOTY4M2I4OTFmOGQ5M2I3OTkwNjEKIQi-q5Gb0_XFARCRnca5BhjaFiAMMOvuzPYFOAZA9AdIBhoCbHEiIGMxYmY3Y2VkODcxNmI0NTRkN2NkZDY4MzViNjJiYjA5; passport_auth_status=c19efb2f2f7ec5e0f53f7cec1902a778%2C; passport_auth_status_ss=c19efb2f2f7ec5e0f53f7cec1902a778%2C; uid_tt=975086b1e0d4d72102154d28c95db1b5; uid_tt_ss=975086b1e0d4d72102154d28c95db1b5; sid_tt=fd80251e8bbfbe5d4fb376607eef662f; sessionid=fd80251e8bbfbe5d4fb376607eef662f; sessionid_ss=fd80251e8bbfbe5d4fb376607eef662f; ttwid=1%7CyJfKHeC4wV5DL5QRCPuoX42dNh1l6qv-0TKJ4cgBPrM%7C1731301011%7Ca28e180e7b1f6df14a3a2f74877a931b5c6a76795c12f057b33338861e22f20a; _bd_ticket_crypt_cookie=2eb23f10ae2721b53b2547cd95c03730; sid_guard=fd80251e8bbfbe5d4fb376607eef662f%7C1731301013%7C5183999%7CFri%2C+10-Jan-2025+04%3A56%3A52+GMT; sid_ucp_v1=1.0.0-KGYyYmNkYTIwMzA1NTM4MWEwMGRmMjUyZjliNWM1ZWE1NDE5ZWU5OTIKGwi-q5Gb0_XFARCVnca5BhjaFiAMOAZA9AdIBBoCbGYiIGZkODAyNTFlOGJiZmJlNWQ0ZmIzNzY2MDdlZWY2NjJm; ssid_ucp_v1=1.0.0-KGYyYmNkYTIwMzA1NTM4MWEwMGRmMjUyZjliNWM1ZWE1NDE5ZWU5OTIKGwi-q5Gb0_XFARCVnca5BhjaFiAMOAZA9AdIBBoCbGYiIGZkODAyNTFlOGJiZmJlNWQ0ZmIzNzY2MDdlZWY2NjJm; SelfTabRedDotControl=%5B%5D; is_dash_user=1; volume_info=%7B</span><span class="si">%22i</span><span class="s1">sUserMute</span><span class="si">%22%</span><span class="s1">3Afalse%2C</span><span class="si">%22i</span><span class="s1">sMute</span><span class="si">%22%</span><span class="s1">3Atrue%2C%22volume</span><span class="si">%22%</span><span class="s1">3A0.5%7D; WallpaperGuide=%7B</span><span class="si">%22s</span><span class="s1">howTime</span><span class="si">%22%</span><span class="s1">3A0%2C</span><span class="si">%22c</span><span class="s1">loseTime</span><span class="si">%22%</span><span class="s1">3A0%2C</span><span class="si">%22s</span><span class="s1">howCount</span><span class="si">%22%</span><span class="s1">3A0%2C</span><span class="si">%22c</span><span class="s1">ursor1</span><span class="si">%22%</span><span class="s1">3A10%2C</span><span class="si">%22c</span><span class="s1">ursor2</span><span class="si">%22%</span><span class="s1">3A2%7D; pwa2=</span><span class="si">%220%</span><span class="s1">7C0%7C3%7C0%22; strategyABtestKey=</span><span class="si">%221732015861.739%</span><span class="s1">22; biz_trace_id=06610736; XIGUA_PARAMS_INFO=%7B%7D; __ac_signature=_02B4Z6wo00f01jXc6awAAIDD2.ktUW0jTxI17O0AAOpZHyUXk6aHFG88E8gFja1J.mdxOq-iWP1Ft2pUA.jzP0cdKVfGWd.3eIwlp9Y4sjHdS7R0t-Ygf7cmWw6p63UyU2MMgc0KtXfwcsG3bb; MONITOR_WEB_ID=ca8e08c7-dd22-4886-886f-770c2ab0f6de; _tea_utm_cache_1243=undefined; __ac_nonce=0673c7f2a00e2879573d2; dy_swidth=1680; dy_sheight=1050; my_rd=2; FOLLOW_LIVE_POINT_INFO=%22MS4wLjABAAAA01OKl5u5ghNXMVbMN8NUrSiXX3GJhZ1CL0efgLJHELs</span><span class="si">%2F</span><span class="s1">1732032000000</span><span class="si">%2F</span><span class="s1">0</span><span class="si">%2F</span><span class="s1">0</span><span class="si">%2F</span><span class="s1">1732018701026%22; FOLLOW_NUMBER_YELLOW_POINT_INFO=%22MS4wLjABAAAA01OKl5u5ghNXMVbMN8NUrSiXX3GJhZ1CL0efgLJHELs</span><span class="si">%2F</span><span class="s1">1732032000000</span><span class="si">%2F</span><span class="s1">0</span><span class="si">%2F</span><span class="s1">0</span><span class="si">%2F</span><span class="s1">1732019301028%22; passport_fe_beating_status=true; stream_recommend_feed_params=</span><span class="si">%22%</span><span class="s1">7B%5C</span><span class="si">%22c</span><span class="s1">ookie_enabled%5C</span><span class="si">%22%</span><span class="s1">3Atrue%2C%5C</span><span class="si">%22s</span><span class="s1">creen_width%5C</span><span class="si">%22%</span><span class="s1">3A1680%2C%5C</span><span class="si">%22s</span><span class="s1">creen_height%5C</span><span class="si">%22%</span><span class="s1">3A1050%2C%5C%22browser_online%5C</span><span class="si">%22%</span><span class="s1">3Atrue%2C%5C</span><span class="si">%22c</span><span class="s1">pu_core_num%5C</span><span class="si">%22%</span><span class="s1">3A4%2C%5C</span><span class="si">%22d</span><span class="s1">evice_memory%5C</span><span class="si">%22%</span><span class="s1">3A8%2C%5C</span><span class="si">%22d</span><span class="s1">ownlink%5C</span><span class="si">%22%</span><span class="s1">3A6.8%2C%5C</span><span class="si">%22e</span><span class="s1">ffective_type%5C</span><span class="si">%22%</span><span class="s1">3A%5C</span><span class="si">%224g</span><span class="s1">%5C</span><span class="si">%22%</span><span class="s1">2C%5C</span><span class="si">%22r</span><span class="s1">ound_trip_time%5C</span><span class="si">%22%</span><span class="s1">3A100%7D%22; home_can_add_dy_2_desktop=</span><span class="si">%221%</span><span class="s1">22; bd_ticket_guard_client_data=eyJiZC10aWNrZXQtZ3VhcmQtdmVyc2lvbiI6MiwiYmQtdGlja2V0LWd1YXJkLWl0ZXJhdGlvbi12ZXJzaW9uIjoxLCJiZC10aWNrZXQtZ3VhcmQtcmVlLXB1YmxpYy1rZXkiOiJCUEN4cnlVUlpDU3dFZC9MSXlvY3YzNTVaS05DNnhHRFBuK3d3ZXd6cy80TzJqWkpHSGd2eGRjemQ0c3FGRVRoV1NMdXhndThVWjh4RU4zNVlKZDhVNG89IiwiYmQtdGlja2V0LWd1YXJkLXdlYi12ZXJzaW9uIjoyfQ%3D%3D; publish_badge_show_info=</span><span class="si">%220%</span><span class="s1">2C0%2C0%2C1732018120879%22; odin_tt=98d5fc675333a3b661ddf24b539bf3c2c828efc0590f0f786e5baa56ca4c1f7ac750d68f0475fcc2c6681ffc7b0201d2; IsDouyinActive=false&#39;</span>
+            <span class="p">}</span>
+            <span class="n">html2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ur</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+            <span class="c1"># print(html2)  # 链接成功200</span>
+            <span class="n">t2</span><span class="o">=</span><span class="n">html2</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="n">title</span><span class="o">=</span><span class="n">html2</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;item_list&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;desc&#39;</span><span class="p">]</span>
+            <span class="c1"># print(title)</span>
+            <span class="n">video_id</span><span class="o">=</span><span class="n">html2</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;item_list&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;video&#39;</span><span class="p">][</span><span class="s1">&#39;play_addr&#39;</span><span class="p">][</span><span class="s1">&#39;uri&#39;</span><span class="p">]</span>
+            <span class="n">video_url</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;https://aweme.snssdk.com/aweme/v1/play/?video_id=</span><span class="si">{</span><span class="n">video_id</span><span class="si">}</span><span class="s1">&amp;ratio=720p&amp;line=0&#39;</span>
+            <span class="n">html3</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">video_url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+            <span class="c1">#print(html3.url)</span>
+
+            <span class="n">video_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">video_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>  <span class="c1"># 发送下载视频的网络请求</span>
+            <span class="k">if</span> <span class="n">video_response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>  <span class="c1"># 如果请求成功</span>
+                <span class="n">z</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+                <span class="n">temp_path</span> <span class="o">=</span> <span class="n">z</span> <span class="o">+</span> <span class="s1">&#39;/抖音视频/&#39;</span>  <span class="c1"># 在程序当前文件夹下建立文件夹</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;保存视频文档到</span><span class="si">{</span><span class="n">temp_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">temp_path</span><span class="p">):</span>
+                    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">temp_path</span><span class="p">)</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">video_response</span><span class="o">.</span><span class="n">content</span>  <span class="c1"># 获取返回的视频二进制数据</span>
+                <span class="n">rstr</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;[\/</span><span class="se">\\</span><span class="s2">\:\*\?</span><span class="se">\&quot;</span><span class="s2">\&lt;\&gt;\|]&quot;</span>  <span class="c1"># &#39;/ \ : * ? &quot; &lt; &gt; |&#39;</span>
+                <span class="n">new_title</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">rstr</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>  <span class="c1"># 过滤不能作为文件名的字符，替换为下划线</span>
+                <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">.mp4&#39;</span> <span class="o">%</span> <span class="n">new_title</span>  <span class="c1"># 视频文件的命名</span>
+                <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">temp_path</span> <span class="o">+</span> <span class="n">c</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>  <span class="c1"># 创建open对象</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># 写入数据</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># 关闭</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="o">+</span><span class="s2">&quot;视频下载成功！&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;请输入正确的分享链接！&#39;</span><span class="p">)</span></div>
+
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># dl = DouyinDownloader(url=&quot;https://www.douyin.com/user/MS4wLjABAAAACIs5MzoOHIuWssmIINOjhxc34XXx9Ym3H2TD3cDbuRBm1cCZwWe0oKWFK9_v0xfw?from_tab_name=main&amp;modal_id=7428940998916443404&amp;relation=2&amp;vid=7417309907449351435&quot;)</span>
+    <span class="c1"># dl.download_video()</span>
+
+<div class="viewcode-block" id="url"><a class="viewcode-back" href="../../autoapi/testbot_tests/dopuyin_dl2/index.html#testbot_tests.dopuyin_dl2.url">[docs]</a>    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;7.15 复制打开抖音，看看【顾顾+的作品】《月亮与六便士》# 月亮与六便士 # 等我攒够了六... https://v.douyin.com/CeinRQb8/ w@S.Yz 11/03 teB:/&quot;&quot;&quot;</span></div>
+    <span class="n">dy</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

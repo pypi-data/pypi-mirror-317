@@ -1,0 +1,153 @@
+:py:mod:`testbot.config.logicmodule`
+====================================
+
+.. py:module:: testbot.config.logicmodule
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.config.logicmodule.ModuleType
+   testbot.config.logicmodule.ModuleBase
+   testbot.config.logicmodule.ModuleSetting
+   testbot.config.logicmodule.ModuleManager
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.config.logicmodule.__copyright__
+   testbot.config.logicmodule.__author__
+   testbot.config.logicmodule.__email__
+   testbot.config.logicmodule.mm
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: ModuleType
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: PRE
+      :value: 1
+
+      
+
+   .. py:attribute:: PARALLEL
+      :value: 2
+
+      
+
+   .. py:attribute:: POST
+      :value: 3
+
+      
+
+
+.. py:class:: ModuleBase(report: testbot.result.reporter.ResultReporter, resource: testbot.resource.pool.ResourcePool)
+
+
+   逻辑配置模块的基类
+
+   .. py:attribute:: module_type
+
+      
+
+   .. py:attribute:: priority
+      :value: 99
+
+      
+
+   .. py:method:: action()
+      :abstractmethod:
+
+      实现该方法来实现模块的逻辑功能
+
+
+   .. py:method:: do()
+
+
+   .. py:method:: stop()
+      :abstractmethod:
+
+      实现该方法来实现模块逻辑功能的终止方法
+
+
+
+.. py:class:: ModuleSetting
+
+
+   Bases: :py:obj:`testbot.config.setting.SettingBase`
+
+   .. py:attribute:: module_list_file
+
+      
+
+   .. py:attribute:: module_setting_path
+
+      
+
+
+.. py:class:: ModuleManager
+
+
+   配置模块的管理
+
+   .. py:method:: load()
+
+      从模块列表装载所有模块类
+
+
+   .. py:method:: add_module(module_class, setting_file=None, setting_path=None)
+
+      添加模块
+
+
+   .. py:method:: get_module_instances(module_type, result_reporter, resources)
+
+      获取模块的实例化列表
+
+
+   .. py:method:: save()
+
+      保存所有模块到模块配置列表
+
+
+   .. py:method:: run_module(type)
+
+
+   .. py:method:: stop_module()
+
+
+
+.. py:data:: mm
+
+   
+

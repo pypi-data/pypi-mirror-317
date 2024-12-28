@@ -1,0 +1,264 @@
+:py:mod:`testbot.result.testreporter`
+=====================================
+
+.. py:module:: testbot.result.testreporter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.result.testreporter.ResultType
+   testbot.result.testreporter.NodeEntry
+   testbot.result.testreporter.CaseEntry
+   testbot.result.testreporter.CaseStepEntry
+   testbot.result.testreporter.StepReporter
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.result.testreporter.__copyright__
+   testbot.result.testreporter.__author__
+   testbot.result.testreporter.__email__
+   testbot.result.testreporter.TIME_FORMAT
+   testbot.result.testreporter.logger
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:data:: TIME_FORMAT
+   :value: '%Y-%m-%d %H:%M:%S'
+
+   
+
+.. py:class:: ResultType
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: PASS
+      :value: 'Passed'
+
+      
+
+   .. py:attribute:: FAIL
+      :value: 'Failed'
+
+      
+
+   .. py:attribute:: ERROR
+      :value: 'Errored'
+
+      
+
+   .. py:attribute:: BLOCK
+      :value: 'Blocked'
+
+      
+
+   .. py:attribute:: SKIP
+      :value: 'Skipped'
+
+      
+
+   .. py:attribute:: INFO
+      :value: 'Information'
+
+      
+
+
+.. py:exception:: StepEnd(result)
+
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+
+.. py:class:: NodeEntry(headline, parent=None, message='', update_action=None)
+
+
+   Bases: :py:obj:`object`
+
+   代表一般节点，比如测试列表
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(exc_type, exc_val, exc_tb)
+
+
+   .. py:method:: start_node(headline: str, message: str = '')
+
+      创建新的普通节点
+
+      :param headline: 步骤头信息
+      :type headline: str
+      :param message: 失败详情
+      :type message: str
+      :return:
+      :rtype: NodeEntry
+
+
+   .. py:method:: start_case(headline: str)
+
+      创建新用例节点
+
+      :param headline: 步骤头信息
+      :type headline: str
+      :return:
+      :rtype: CaseEntry
+
+
+   .. py:method:: get_json()
+
+
+   .. py:method:: to_dict()
+
+
+   .. py:method:: to_text(indent=0)
+
+      将结果生成文本类型的结构
+
+
+   .. py:method:: _get_intent(indent)
+
+
+   .. py:method:: _get_dot_line(line, line_max)
+
+
+   .. py:method:: get_friend_print(indent=0)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:class:: CaseEntry(headline, parent=None, message='')
+
+
+   Bases: :py:obj:`NodeEntry`
+
+   代表测试用例的节点
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(exc_type, exc_val, exc_tb)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+   .. py:method:: _get_result_headline(width, indent, headline_max=59)
+
+
+   .. py:method:: start(headline, message, prefix=None)
+
+
+   .. py:method:: passed(message)
+
+
+   .. py:method:: failed(message)
+
+
+   .. py:method:: blocked(message)
+
+
+   .. py:method:: skipped(message)
+
+
+   .. py:method:: errored(message)
+
+
+   .. py:method:: info(message)
+
+
+   .. py:method:: get_json()
+
+
+   .. py:method:: get_friend_print(indent=0)
+
+
+   .. py:method:: update_result()
+
+
+
+.. py:class:: CaseStepEntry(headline, parent=None, message='', step_prefix='', step_no=1, _continue=False)
+
+
+   Bases: :py:obj:`CaseEntry`
+
+   测试步骤节点
+
+   .. py:method:: __exit__(exc_type, exc_val, exc_tb)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+   .. py:method:: start(headline, message, _continue=False, prefix=None)
+
+
+   .. py:method:: get_json()
+
+
+
+.. py:class:: StepReporter(logger)
+
+
+   Bases: :py:obj:`object`
+
+   测试结果，用单例实现
+
+   .. py:attribute:: instance
+
+      
+
+   .. py:method:: get_instance(logger)
+      :classmethod:
+
+
+   .. py:method:: start_node(headline, message)
+
+
+   .. py:method:: print()
+
+
+
+.. py:data:: logger
+
+   
+

@@ -1,0 +1,91 @@
+================================
+业务封装API接口
+================================
+
+测试设备资源接口集
+============================
+
+TCL TV设备TCLTVDevice类接口
+------------------------------------------
+
+* 蓝牙模块接口
+
+.. autoapiclass:: testbot_aw.Device.TCLTVDevice.Bluetooth.BluetoothModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 信源模块接口
+
+.. autoapiclass:: testbot_aw.Device.TCLTVDevice.Channel.ChannelModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* FactoryMode模块接口
+
+.. autoapiclass:: testbot_aw.Device.TCLTVDevice.FactoryMode.FactoryModeModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 多媒体模块接口
+
+.. autoapiclass:: testbot_aw.Device.TCLTVDevice.Multimedia.MultimediaModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 电源模块接口
+
+.. autoapiclass:: testbot_aw.Device.TCLTVDevice.Power.PowerModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 设置模块接口
+
+.. autoapiclass:: testbot_aw.Device.TCLTVDevice.Setting.SettingModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* UI模块接口
+
+.. autoapiclass:: testbot_aw.Device.TCLTVDevice.UI.UIModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* WIFI模块接口
+
+.. autoapiclass:: testbot_aw.Device.TCLTVDevice.Wifi.WifiModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* Youtube模块接口
+
+.. autoapiclass:: testbot_aw.Device.TCLTVDevice.Youtube.YoutubeModule
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+PC设备PCDevice类接口
+------------------------------------------
+
+测试软件资源接口集
+============================
+
+测试服务资源接口集
+============================

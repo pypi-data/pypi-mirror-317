@@ -1,0 +1,41 @@
+:py:mod:`testbot_aw.Device`
+===========================
+
+.. py:module:: testbot_aw.Device
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   Bluetooth/index.rst
+   Channel/index.rst
+   FactoryMode/index.rst
+   Multimedia/index.rst
+   Power/index.rst
+   Setting/index.rst
+   UI/index.rst
+   Wifi/index.rst
+   Youtube/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+

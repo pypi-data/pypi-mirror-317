@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>testbot.testengine.caserunner &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=359c27e9"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../../testbot.html">testbot</a></li>
+          <li class="breadcrumb-item"><a href="../testengine.html">testbot.testengine</a></li>
+      <li class="breadcrumb-item active">testbot.testengine.caserunner</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for testbot.testengine.caserunner</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<div class="viewcode-block" id="__copyright__"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.__copyright__">[docs]</a><span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved&quot;</span></div>
+<div class="viewcode-block" id="__author__"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.__author__">[docs]</a><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Nuanguang Gu(Sunny)&quot;</span></div>
+<div class="viewcode-block" id="__email__"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.__email__">[docs]</a><span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;nuanguang.gu@aliyun.com&quot;</span></div>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Test Engine</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">importlib</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">pkginfo</span> <span class="kn">import</span> <span class="n">Installed</span>
+<span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="kn">import</span> <span class="n">get_distribution</span>
+
+<span class="kn">from</span> <span class="nn">testbot.config</span> <span class="kn">import</span> <span class="n">CONFIG_PATH</span><span class="p">,</span> <span class="n">RUNNER_LOGS_PATH</span><span class="p">,</span> <span class="n">CASE_LOGS_PATH</span>
+<span class="kn">from</span> <span class="nn">testbot.case.precondition</span> <span class="kn">import</span> <span class="n">IsTestCaseType</span><span class="p">,</span> <span class="n">IsTestCasePriority</span><span class="p">,</span> <span class="n">IsPreCasePassed</span><span class="p">,</span> <span class="n">IsHigherPriorityPassed</span>
+<span class="kn">from</span> <span class="nn">testbot.config.setting</span> <span class="kn">import</span> <span class="n">static_setting</span><span class="p">,</span> <span class="n">SettingBase</span>
+<span class="kn">from</span> <span class="nn">testbot.result.testreporter</span> <span class="kn">import</span> <span class="n">StepReporter</span><span class="p">,</span> <span class="n">CaseEntry</span>
+<span class="kn">from</span> <span class="nn">testbot.case.base</span> <span class="kn">import</span> <span class="n">TestCaseBase</span>
+<span class="kn">from</span> <span class="nn">testbot.resource.error</span> <span class="kn">import</span> <span class="n">ResourceNotMeetConstraintError</span><span class="p">,</span> <span class="n">ResourceLoadError</span><span class="p">,</span> <span class="n">ResourceNotRelease</span>
+<span class="kn">from</span> <span class="nn">testbot.resource.pool</span> <span class="kn">import</span> <span class="n">ResourcePool</span>
+<span class="kn">from</span> <span class="nn">testbot.testengine.testlist</span> <span class="kn">import</span> <span class="n">TestList</span>
+<span class="kn">from</span> <span class="nn">testbot.config.logicmodule</span> <span class="kn">import</span> <span class="n">ModuleManager</span><span class="p">,</span> <span class="n">ModuleType</span>
+<span class="kn">from</span> <span class="nn">testbot.result.logger</span> <span class="kn">import</span> <span class="n">logger_manager</span>
+<span class="kn">from</span> <span class="nn">testbot.utilities.time</span> <span class="kn">import</span> <span class="n">get_time_stamp</span>
+
+
+<span class="nd">@static_setting</span><span class="o">.</span><span class="n">setting</span><span class="p">(</span><span class="s2">&quot;CaseRunner&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="CaseRunnerSetting"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunnerSetting">[docs]</a><span class="k">class</span> <span class="nc">CaseRunnerSetting</span><span class="p">(</span><span class="n">SettingBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The case runner setting</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="CaseRunnerSetting.default_case_setting_path"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunnerSetting.default_case_setting_path">[docs]</a>    <span class="n">default_case_setting_path</span> <span class="o">=</span> <span class="n">CONFIG_PATH</span></div>
+<div class="viewcode-block" id="CaseRunnerSetting.log_path"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunnerSetting.log_path">[docs]</a>    <span class="n">log_path</span> <span class="o">=</span> <span class="n">RUNNER_LOGS_PATH</span></div>
+<div class="viewcode-block" id="CaseRunnerSetting.case_log"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunnerSetting.case_log">[docs]</a>    <span class="n">case_log</span> <span class="o">=</span> <span class="n">CASE_LOGS_PATH</span></div>
+<div class="viewcode-block" id="CaseRunnerSetting.log_level"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunnerSetting.log_level">[docs]</a>    <span class="n">log_level</span> <span class="o">=</span> <span class="s2">&quot;INFO&quot;</span></div></div>
+
+
+<div class="viewcode-block" id="CaseImportError"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseImportError">[docs]</a><span class="k">class</span> <span class="nc">CaseImportError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">inner_ex</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inner_ex</span> <span class="o">=</span> <span class="n">inner_ex</span></div>
+
+
+<div class="viewcode-block" id="TestEngineNotReadyError"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.TestEngineNotReadyError">[docs]</a><span class="k">class</span> <span class="nc">TestEngineNotReadyError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RunningStatus"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.RunningStatus">[docs]</a><span class="k">class</span> <span class="nc">RunningStatus</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<div class="viewcode-block" id="RunningStatus.Idle"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.RunningStatus.Idle">[docs]</a>    <span class="n">Idle</span> <span class="o">=</span> <span class="mi">1</span></div>
+<div class="viewcode-block" id="RunningStatus.Running"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.RunningStatus.Running">[docs]</a>    <span class="n">Running</span> <span class="o">=</span> <span class="mi">3</span></div></div>
+
+
+<div class="viewcode-block" id="CaseRunner"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner">[docs]</a><span class="k">class</span> <span class="nc">CaseRunner</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    测试用例执行器</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">list_setting</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_list</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_tree</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">priority_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pre_conditions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">RunningStatus</span><span class="o">.</span><span class="n">Idle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">module_manager</span> <span class="o">=</span> <span class="n">ModuleManager</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running_thread</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;CaseRunner&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RUNNER_LOGS_PATH</span><span class="p">,</span> <span class="s2">&quot;CaseRunner.log&quot;</span><span class="p">),</span> <span class="n">default_level</span><span class="o">=</span><span class="n">CaseRunnerSetting</span><span class="o">.</span><span class="n">log_level</span><span class="p">,</span> <span class="n">for_test</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># self.result_report = ResultReporter(logger=self.logger)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step_report</span> <span class="o">=</span> <span class="n">StepReporter</span><span class="o">.</span><span class="n">get_instance</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;执行器装载完毕&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_log_folder</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_result</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<div class="viewcode-block" id="CaseRunner.load_resource"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner.load_resource">[docs]</a>    <span class="k">def</span> <span class="nf">load_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        加载测试资源</span>
+
+<span class="sd">        :param file_name: 资源文件路径</span>
+<span class="sd">        :type file_name: str</span>
+<span class="sd">        :param username: 资源拥有者</span>
+<span class="sd">        :type username: str</span>
+<span class="sd">        :return:</span>
+<span class="sd">        :rtype:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span> <span class="o">=</span> <span class="n">ResourcePool</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">device</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">pre_connect</span><span class="p">:</span>
+                    <span class="n">device_instance</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">get_comm_instance</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">device_instance</span><span class="p">,</span> <span class="s2">&quot;connect&quot;</span><span class="p">):</span>
+                        <span class="n">device_instance</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span><span class="o">.</span><span class="n">discover_resources</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">ResourceLoadError</span> <span class="k">as</span> <span class="n">rle</span><span class="p">:</span>
+            <span class="c1">#资源文件读取错误</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">rle</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">except</span> <span class="n">ResourceNotRelease</span> <span class="k">as</span> <span class="n">rnr</span><span class="p">:</span>
+            <span class="c1">#资源文件被占用</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">rnr</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;测试资源装载完毕&quot;</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="CaseRunner.resource_ready"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner.resource_ready">[docs]</a>    <span class="k">def</span> <span class="nf">resource_ready</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        资源是否已准备好</span>
+
+<span class="sd">        :return:</span>
+<span class="sd">        :rtype:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span></div>
+
+    <span class="nd">@property</span>
+<div class="viewcode-block" id="CaseRunner.test_list_ready"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner.test_list_ready">[docs]</a>    <span class="k">def</span> <span class="nf">test_list_ready</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        测试用例列表是否已准备好</span>
+
+<span class="sd">        :return:</span>
+<span class="sd">        :rtype:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="CaseRunner.load_test"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner.load_test">[docs]</a>    <span class="k">def</span> <span class="nf">load_test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TestCaseBase</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        实例化测试用例</span>
+
+<span class="sd">        :param test_name: 测试名称</span>
+<span class="sd">        :type test_name: str</span>
+<span class="sd">        :return:</span>
+<span class="sd">        :rtype:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># 获取测试用例的模块名和类名</span>
+        <span class="n">case_module_name</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">test_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">case_name</span> <span class="o">=</span> <span class="n">test_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;正在加载用例模块: </span><span class="si">{</span><span class="n">case_module_name</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">print_module_info</span><span class="p">()</span>
+            <span class="n">case_module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">case_module_name</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">case_module</span><span class="p">,</span> <span class="n">case_name</span><span class="p">)(</span><span class="n">reporter</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">step_report</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+            <span class="n">traceinfo</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exception</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ex</span><span class="p">),</span> <span class="n">ex</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">))</span>
+            <span class="c1"># 导入测试用例失败，抛出异常</span>
+            <span class="k">raise</span> <span class="n">CaseImportError</span><span class="p">(</span><span class="s2">&quot;Failed to Import Test Case </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">test_name</span><span class="p">,</span> <span class="n">traceinfo</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CaseRunner.print_module_info"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner.print_module_info">[docs]</a>    <span class="k">def</span> <span class="nf">print_module_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;#&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+        <span class="n">fwk_versions</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;testbot&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;testbot_aw&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;testbot_scripts&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;testbot_tools&quot;</span><span class="p">:</span> <span class="kc">None</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">fwk_versions</span><span class="p">:</span>
+            <span class="n">pkg</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">location</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">pkg</span> <span class="o">=</span> <span class="n">Installed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+                <span class="n">location</span> <span class="o">=</span> <span class="n">get_distribution</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;############## </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">模块 【Version】:</span><span class="si">{</span><span class="n">pkg</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2">,【概要】:</span><span class="si">{</span><span class="n">pkg</span><span class="o">.</span><span class="n">summary</span><span class="si">}</span><span class="s2">,【安装路径】:</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">location</span><span class="p">)</span><span class="si">}</span><span class="s2"> ##############&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;#&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CaseRunner.set_test_list"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner.set_test_list">[docs]</a>    <span class="k">def</span> <span class="nf">set_test_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_list</span><span class="p">:</span> <span class="n">TestList</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        #装载测试列表</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_list</span> <span class="o">=</span> <span class="n">test_list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">list_setting</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_tree</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_import_list_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">case_tree</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_list</span><span class="o">.</span><span class="n">setting</span><span class="o">.</span><span class="n">priority_to_run</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">priority_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list</span><span class="o">.</span><span class="n">setting</span><span class="o">.</span><span class="n">priority_to_run</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;测试列表装载完毕&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CaseRunner.start"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        测试引擎开始执行</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">RunningStatus</span><span class="o">.</span><span class="n">Running</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource_ready</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TestEngineNotReadyError</span><span class="p">(</span><span class="s2">&quot;测试引擎未准备就绪，测试资源未装载&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TestEngineNotReadyError</span><span class="p">(</span><span class="s2">&quot;测试引擎未准备就绪，测试列表未装载&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">RunningStatus</span><span class="o">.</span><span class="n">Running</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_log_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">CaseRunnerSetting</span><span class="o">.</span><span class="n">case_log</span><span class="p">,</span> <span class="n">get_time_stamp</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__main_test_thread</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="CaseRunner.wait_for_test_done"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner.wait_for_test_done">[docs]</a>    <span class="k">def</span> <span class="nf">wait_for_test_done</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        等待测试完成</span>
+
+<span class="sd">        :return:</span>
+<span class="sd">        :rtype:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running_thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="CaseRunner.run_case_lcm"><a class="viewcode-back" href="../../../fwk_apis.html#testbot.testengine.caserunner.CaseRunner.run_case_lcm">[docs]</a>    <span class="k">def</span> <span class="nf">run_case_lcm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">:</span> <span class="n">TestCaseBase</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">CaseEntry</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        执行测试用例生命周期管理</span>
+<span class="sd">        这个方法应该在子线程被运行</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__init_precondition</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">__pre_check</span><span class="p">(</span><span class="n">test</span><span class="p">):</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">module_manager</span><span class="o">.</span><span class="n">run_module</span><span class="p">(</span><span class="n">ModuleType</span><span class="o">.</span><span class="n">PRE</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">module_manager</span><span class="o">.</span><span class="n">run_module</span><span class="p">(</span><span class="n">ModuleType</span><span class="o">.</span><span class="n">PARALLEL</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__run_case</span><span class="p">(</span><span class="n">test</span><span class="o">=</span><span class="n">test</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="n">node</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">module_manager</span><span class="o">.</span><span class="n">stop_module</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">module_manager</span><span class="o">.</span><span class="n">run_module</span><span class="p">(</span><span class="n">ModuleType</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CaseRunner._import_list_case"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunner._import_list_case">[docs]</a>    <span class="k">def</span> <span class="nf">_import_list_case</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">case_tree_node</span><span class="p">,</span> <span class="n">test_list</span><span class="p">,</span> <span class="n">log_path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        递归导入测试列表中的测试用例</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">case_log_path</span> <span class="o">=</span> <span class="n">test_list</span><span class="o">.</span><span class="n">test_list_name</span>
+        <span class="k">if</span> <span class="n">log_path</span><span class="p">:</span>
+            <span class="n">case_log_path</span> <span class="o">=</span> <span class="n">log_path</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">case_log_path</span>
+        <span class="n">case_tree_node</span><span class="p">[</span><span class="s2">&quot;list_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">test_list</span><span class="o">.</span><span class="n">test_list_name</span>
+        <span class="n">case_tree_node</span><span class="p">[</span><span class="s2">&quot;test_cases&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">testcase</span> <span class="ow">in</span> <span class="n">test_list</span><span class="o">.</span><span class="n">test_cases</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">testcase</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">case_descriptor</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="n">case_entry</span> <span class="o">=</span> <span class="n">testcase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+            <span class="n">case_name</span> <span class="o">=</span> <span class="n">case_entry</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">case_setting_file</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">case_entry</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">case_setting_file</span> <span class="o">=</span> <span class="n">case_entry</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># 导入测试用例</span>
+                <span class="n">case_descriptor</span><span class="p">[</span><span class="s1">&#39;case&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_test</span><span class="p">(</span><span class="n">case_name</span><span class="p">)</span>
+                <span class="n">case_descriptor</span><span class="p">[</span><span class="s1">&#39;case_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">case_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">case_descriptor</span><span class="p">[</span><span class="s1">&#39;log_path&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">case_log_path</span>
+                <span class="n">case_descriptor</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">case_setting_file</span>
+                <span class="c1"># 设置测试用例配置文件路径</span>
+                <span class="k">if</span> <span class="n">test_list</span><span class="o">.</span><span class="n">setting</span><span class="o">.</span><span class="n">case_setting_path</span><span class="p">:</span>
+                    <span class="n">case_descriptor</span><span class="p">[</span><span class="s1">&#39;setting_path&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">test_list</span><span class="o">.</span><span class="n">setting</span><span class="o">.</span><span class="n">case_setting_path</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">case_descriptor</span><span class="p">[</span><span class="s1">&#39;setting_path&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">case_descriptor</span><span class="p">[</span><span class="s1">&#39;case&#39;</span><span class="p">]</span><span class="o">.</span><span class="vm">__class__</span><span class="p">))</span> <span class="k">if</span> <span class="n">case_descriptor</span><span class="p">[</span><span class="s1">&#39;case&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="n">CaseRunnerSetting</span><span class="o">.</span><span class="n">default_case_setting_path</span>
+                <span class="n">case_priority</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">case_descriptor</span><span class="p">[</span><span class="s1">&#39;case&#39;</span><span class="p">],</span> <span class="s2">&quot;priority&quot;</span><span class="p">,</span> <span class="mi">999</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">case_priority</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">priority_list</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">priority_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">case_priority</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">CaseImportError</span> <span class="k">as</span> <span class="n">cie</span><span class="p">:</span>
+                <span class="c1"># 测试用例导入失败</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;不能导入测试用例</span><span class="si">{</span><span class="n">case_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">cie</span><span class="p">)</span>
+            <span class="n">case_tree_node</span><span class="p">[</span><span class="s1">&#39;test_cases&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">case_descriptor</span><span class="p">)</span>
+        <span class="n">case_tree_node</span><span class="p">[</span><span class="s1">&#39;sub_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">sub_list</span> <span class="ow">in</span> <span class="n">test_list</span><span class="o">.</span><span class="n">sub_list</span><span class="p">:</span>
+            <span class="n">sub_list_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="n">case_tree_node</span><span class="p">[</span><span class="s1">&#39;sub_list&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sub_list_dict</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_import_list_case</span><span class="p">(</span><span class="n">sub_list_dict</span><span class="p">,</span> <span class="n">sub_list</span><span class="p">,</span> <span class="n">log_path</span><span class="o">=</span><span class="n">case_log_path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CaseRunner.__init_precondition"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunner.__init_precondition">[docs]</a>    <span class="k">def</span> <span class="nf">__init_precondition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">:</span> <span class="n">TestCaseBase</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pre_conditions</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pre_conditions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IsTestCaseType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_list</span><span class="o">.</span><span class="n">setting</span><span class="o">.</span><span class="n">run_type</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_list</span><span class="o">.</span><span class="n">setting</span><span class="o">.</span><span class="n">priority_to_run</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pre_conditions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IsTestCasePriority</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_list</span><span class="o">.</span><span class="n">setting</span><span class="o">.</span><span class="n">priority_to_run</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">pre_tests</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pre_conditions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IsPreCasePassed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">case_result</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pre_conditions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IsHigherPriorityPassed</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">priority</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">case_result</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="CaseRunner.__pre_check"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunner.__pre_check">[docs]</a>    <span class="k">def</span> <span class="nf">__pre_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">:</span><span class="n">TestCaseBase</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pre_conditions</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">condition</span><span class="o">.</span><span class="n">is_meet</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">reporter</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">step_report</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">step_report</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">test</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">不能执行！&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="CaseRunner.__get_case_log"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunner.__get_case_log">[docs]</a>    <span class="k">def</span> <span class="nf">__get_case_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">case_name</span><span class="p">):</span>
+        <span class="n">log_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">case_log_folder</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">case_name</span><span class="si">}</span><span class="s2">.log&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">logger_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">case_name</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">log_path</span><span class="p">,</span> <span class="n">is_test</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CaseRunner.__main_test_thread"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunner.__main_test_thread">[docs]</a>    <span class="k">def</span> <span class="nf">__main_test_thread</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__run_test_list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">case_tree</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">RunningStatus</span><span class="o">.</span><span class="n">Idle</span></div>
+
+<div class="viewcode-block" id="CaseRunner.__run_test_list"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunner.__run_test_list">[docs]</a>    <span class="k">def</span> <span class="nf">__run_test_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">testlist</span><span class="p">):</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">step_report</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">start_node</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;执行测试节点&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">start_case</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;执行测试用例&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">node</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">testlist</span><span class="p">[</span><span class="s1">&#39;test_cases&#39;</span><span class="p">]:</span>
+                <span class="n">test</span><span class="p">[</span><span class="s2">&quot;case&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get_setting</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="s2">&quot;setting_path&quot;</span><span class="p">],</span> <span class="n">test</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">step_report</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_case_log</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;log_path&#39;</span><span class="p">],</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;case_name&#39;</span><span class="p">])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">case_result</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s2">&quot;case_name&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">case_result</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s2">&quot;case_name&quot;</span><span class="p">]][</span><span class="s1">&#39;priority&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s2">&quot;case&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">priority</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">case_result</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s2">&quot;case_name&quot;</span><span class="p">]][</span><span class="s1">&#39;result&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;执行用例&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;RUNCASE&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">node2</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">run_case_lcm</span><span class="p">(</span><span class="n">test</span><span class="o">=</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;case&#39;</span><span class="p">],</span> <span class="n">node</span><span class="o">=</span><span class="n">node2</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">step_report</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">logger_manager</span><span class="o">.</span><span class="n">unregister</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;case_name&#39;</span><span class="p">])</span>
+            <span class="k">for</span> <span class="nb">list</span> <span class="ow">in</span> <span class="n">testlist</span><span class="p">[</span><span class="s1">&#39;sub_list&#39;</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__run_test_list</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CaseRunner.__run_case"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunner.__run_case">[docs]</a>    <span class="k">def</span> <span class="nf">__run_case</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">:</span> <span class="n">TestCaseBase</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">CaseEntry</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        测试用例执行线程</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">test</span><span class="o">.</span><span class="n">_run_case</span><span class="p">(</span><span class="n">pool</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">resource_pool</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="n">node</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CaseRunner.__call_cleanup"><a class="viewcode-back" href="../../../autoapi/testbot/testengine/caserunner/index.html#testbot.testengine.caserunner.CaseRunner.__call_cleanup">[docs]</a>    <span class="k">def</span> <span class="nf">__call_cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">:</span> <span class="n">TestCaseBase</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">CaseEntry</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        执行清除操作</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;清理后置条件&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;CLEANUP&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">node2</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">test</span><span class="o">.</span><span class="n">cleanup</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="n">node2</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+                <span class="n">traceinfo</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exception</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">ex</span><span class="p">),</span> <span class="n">ex</span><span class="p">,</span> <span class="n">ex</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">traceinfo</span><span class="p">)</span>
+                <span class="n">node2</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;捕获异常: </span><span class="si">{</span><span class="n">traceinfo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="k">pass</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

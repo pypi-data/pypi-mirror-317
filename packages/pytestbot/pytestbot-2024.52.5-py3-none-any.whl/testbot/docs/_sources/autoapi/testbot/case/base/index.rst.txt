@@ -1,0 +1,247 @@
+:py:mod:`testbot.case.base`
+===========================
+
+.. py:module:: testbot.case.base
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.case.base.TestType
+   testbot.case.base.TestCaseBase
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.case.base.__copyright__
+   testbot.case.base.__author__
+   testbot.case.base.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: TestType
+
+
+   Bases: :py:obj:`enum.IntEnum`
+
+   测试类型分类
+
+   * 类型编码规则
+
+   每个类型对应一个8位的二进制编码，前4位二进制表示主类，后4位二进制表示次类。如单元测试类型为0b00010000，0001为主类编码，0000为次类编码
+
+   * 主类类型及编码
+
+   测试类型的主类有：单元测试（0000）、沙盒测试（0001）、集成测试（0010）、冒烟测试（0011）、系统测试（0100）、稳定性测试（0101）、性能测试（0110）、点检测试（0111）、接口测试（1000）、专项测试（1001）、通用测试（1111）等
+
+   * 次类类型及编码
+
+   测试类型的次类，是主类类型的进一步分类，如系统冒烟测试，属于大类冒烟测试（0011），是其次类的一种类型，其测试类型编码为00110001
+
+   * 测试类型列表
+
+       ================================================   ================================================   ================================================   ================================================
+       测试类型名称(主类型)                                    测试类型名称(次类型)                                                测试类型代码                                      测试类型编码
+       ================================================   ================================================   ================================================   ================================================
+       单元测试                                                                                                        UNIT_TEST                                              0b00000000
+       沙盒测试                                                                                                       SANITY_TEST                                          0b00010000
+       集成测试                                                                                                       INTEGRATION_TEST                                     0b00100000
+       冒烟测试                                                                                                       SMOKE_TEST                                          0b00110000
+          -                                                    系统冒烟测试                                              SMOKE_TEST_SYSTEM                                  0b00110001
+          -                                                    中间件冒烟测试                                             SMOKE_TEST_MIDDLEWARE                              0b00110010
+       系统测试                                                                                                        SYSTEM_TEST                                           0b01000000
+       稳定性测试                                                                                                      STABILITY_TEST                                      0b01000000
+       性能测试                                                                                                       PERFORMANCE_TEST                                    0b01100000
+       点检测试                                                                                                       CHECK_TEST                                           0b01110000
+       接口测试                                                                                                       INTERFACE_TEST                                     0b10000000
+       专项测试                                                                                                       SPECIAL_TEST                                        0b10000000
+          -                                                    媒资专项测试                                             SPECIAL_TEST_MEDIA                                   0b10000001
+       通用测试                                                                                                       COMMON_TEST                                         0b11111111
+       ================================================   ================================================   ================================================   ================================================
+
+   .. py:attribute:: UNIT_TEST
+      :value: 0
+
+      
+
+   .. py:attribute:: SANITY_TEST
+      :value: 16
+
+      
+
+   .. py:attribute:: INTEGRATION_TEST
+      :value: 32
+
+      
+
+   .. py:attribute:: SMOKE_TEST
+      :value: 48
+
+      
+
+   .. py:attribute:: SMOKE_TEST_SYSTEM
+      :value: 49
+
+      
+
+   .. py:attribute:: SMOKE_TEST_MIDDLEWARE
+      :value: 50
+
+      
+
+   .. py:attribute:: SYSTEM_TEST
+      :value: 64
+
+      
+
+   .. py:attribute:: STABILITY_TEST
+      :value: 80
+
+      
+
+   .. py:attribute:: PERFORMANCE_TEST
+      :value: 96
+
+      
+
+   .. py:attribute:: CHECK_TEST
+      :value: 112
+
+      
+
+   .. py:attribute:: INTERFACE_TEST
+      :value: 128
+
+      
+
+   .. py:attribute:: SPECIAL_TEST
+      :value: 128
+
+      
+
+   .. py:attribute:: SPECIAL_TEST_MEDIA
+      :value: 129
+
+      
+
+   .. py:attribute:: COMMON_TEST
+      :value: 255
+
+      
+
+
+.. py:class:: TestCaseBase(**kwargs)
+
+
+   测试用例基类
+
+   用户应该实现以下3个方法：
+       * collect_resource: 初始化资源对象
+       * setup: 测试执行之前的初始化工作
+       * test: 测试执行体
+       * cleanup: 测试执行之后的清理工作
+
+   .. py:property:: output_var
+
+      The test case output variable
+      Can be collected by Test Engine
+      :return:
+
+   .. py:method:: collect_resource(node: testbot.result.testreporter.CaseEntry, pool: testbot.resource.pool.ResourcePool)
+      :abstractmethod:
+
+      初始化资源对象
+
+      :param pool: 资源池
+      :type pool: ResourcePool
+      :return:
+      :rtype:
+
+
+   .. py:method:: setup_class(node: testbot.result.testreporter.CaseEntry, **kwargs)
+
+      执行测试之前的初始化工作
+
+      :param args:
+      :return:
+
+
+   .. py:method:: setup(node: testbot.result.testreporter.CaseEntry, **kwargs)
+      :abstractmethod:
+
+      执行测试的每个循环之前的初始化工作
+
+      :param args:
+      :return:
+
+
+   .. py:method:: test(node: testbot.result.testreporter.CaseEntry, **kwargs)
+      :abstractmethod:
+
+      测试执行体
+
+      :param args:
+      :return:
+
+
+   .. py:method:: cleanup(node: testbot.result.testreporter.CaseEntry, **kwargs)
+      :abstractmethod:
+
+      执行每个循环之后的清理工作
+
+      :param args:
+      :return:
+
+
+   .. py:method:: cleanup_class(node: testbot.result.testreporter.CaseEntry, **kwargs)
+
+      执行测试之后的清理工作
+
+      :param args:
+      :return:
+
+
+   .. py:method:: get_setting(setting_path, filename)
+
+      获取测试用例配置文件实例
+
+
+
+   .. py:method:: _run_case(pool: testbot.resource.pool.ResourcePool, node: testbot.result.testreporter.CaseEntry)
+
+      测试用例执行线程
+
+
+   .. py:method:: __call_cleanup(node: testbot.result.testreporter.CaseEntry)
+
+      执行清除操作
+
+
+   .. py:method:: start()
+
+
+

@@ -1,0 +1,52 @@
+:py:mod:`testbot.resource.modules.service_module`
+=================================================
+
+.. py:module:: testbot.resource.modules.service_module
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.modules.service_module.SoftwareModuleBase
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.modules.service_module.__copyright__
+   testbot.resource.modules.service_module.__author__
+   testbot.resource.modules.service_module.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: SoftwareModuleBase(resource, *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`testbot.resource.modules.module.ModuleBase`
+
+   测试软件资源模块基类
+
+

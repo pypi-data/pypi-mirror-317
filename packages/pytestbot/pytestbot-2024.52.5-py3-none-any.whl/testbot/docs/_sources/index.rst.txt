@@ -1,0 +1,44 @@
+.. testbot documentation master file, created by
+   sphinx-quickstart on Thu Apr 25 19:20:19 2024.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 使用文档
+
+   usage_quickstart
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 开发文档
+
+   dev_pipeline_setup
+   dev_training
+   dev_coding_spec
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: API文档
+
+   fwk_apis
+   base_apis
+   buz_apis
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 脚本文档
+
+   dfm_scripts
+
+
+
+Indices and tables
+====================================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

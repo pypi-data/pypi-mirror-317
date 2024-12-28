@@ -1,0 +1,22 @@
+:py:mod:`testbot_webui.polls.views`
+===================================
+
+.. py:module:: testbot_webui.polls.views
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot_webui.polls.views.index
+
+
+
+.. py:function:: index(request)
+
+
