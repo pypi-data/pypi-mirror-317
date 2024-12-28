@@ -1,0 +1,7 @@
+pandas_image_methods/__init__.py,sha256=HXZCbt9lp2Qlh-UXY6cyIFXyi9vtsoMgjtcqKwQ6FFA,29
+pandas_image_methods/core.py,sha256=weFFXMBf6aX5qiDHd89NvfvNYeQPM-Zysen4UPO9mOg,4652
+pandas_image_methods/huggingface.py,sha256=3xrBOxJTTRTRfQROfCsgvoqKbetXwwoku6WHwOCHdhk,638
+pandas_image_methods-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pandas_image_methods-0.1.0.dist-info/METADATA,sha256=n6fkU7Bmq2ljmewd9UkrOWauBpCky35gwVtpep60CSo,3356
+pandas_image_methods-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pandas_image_methods-0.1.0.dist-info/RECORD,,
