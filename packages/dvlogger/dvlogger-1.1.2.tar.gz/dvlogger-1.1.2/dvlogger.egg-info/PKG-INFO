@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dvlogger
+Version: 1.1.2
+Summary: A custom logger with coloured output and uncaught exception logging.
+Home-page: https://github.com/mlpranav/dvlogger
+Author: Pranav Mittal
+Author-email: pranavmittal611@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: colorama
