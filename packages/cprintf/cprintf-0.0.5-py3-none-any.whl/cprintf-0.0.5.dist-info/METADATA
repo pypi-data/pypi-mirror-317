@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: cprintf
+Version: 0.0.5
+Summary: Printing and debugging with color
+Home-page: https://github.com/wang-zhibo/cprintf
+Author: gm.zhibo.wang
+Author-email: gm.zhibo.wang@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+
+## cprintf
+
+## Install
+
+`pip install cprintf`
+
+## Usage
+
+```python
+import cprintf
+
+cprintf.debug("Debug info")
+cprintf.ok("Everything looks good.")
+cprintf.info("This is some info.")
+cprintf.warn("This is a warning.")
+cprintf.err("This is an error message.")
+cprintf.fatal("This is a fatal error.")
+cprintf.line()
+cprintf.custom("This is a custom color message in cyan!", "\033[96m")
+cprintf.line(char='=', length=60, color='OK')
+
