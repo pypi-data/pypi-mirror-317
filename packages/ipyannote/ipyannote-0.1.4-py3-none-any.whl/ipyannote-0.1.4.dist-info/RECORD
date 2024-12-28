@@ -1,0 +1,15 @@
+ipyannote/__init__.py,sha256=eNtdnWlYySYuS4ta7G-pOyBJKzvW-u3Nhw0u_B-xTyc,942
+ipyannote/controls.py,sha256=ly51hiGxJ4n0eR7Bt0aTRnIXGhk0g62WG_2SaCk_Xls,832
+ipyannote/errors.py,sha256=pspoSv43YQiwb7VUrBE2G_uWGw2lfVeka-aXjiuFEiI,2587
+ipyannote/labels.py,sha256=EUFAG8WLR3z3q8OOq2Uea58n7RxueU1VlhfHBQT8HO0,1122
+ipyannote/utils.py,sha256=FrCKIkspD9GuOUWIJAcybvhfsV7ZJqMrs8yFrZihUBc,939
+ipyannote/waveform.py,sha256=npC9-eWbyewV3E6JUHZLtH0lODbUt_JE1fUwrDhkLzA,5053
+ipyannote/static/controls.css,sha256=1DXavRh09_kSIeqD51D6svql7FxvByiaZrTmf2NJGeM,1103
+ipyannote/static/controls.js,sha256=uFlMA92wdjzhKWaBdQ-UHsFE9vB-RUzsKI-hYrZqbUM,5075
+ipyannote/static/labels.css,sha256=5SvO9HMrGbNJm-RqLlXQJLXyHY2D5JGToxT3FbcNUxU,1561
+ipyannote/static/labels.js,sha256=rzt4OhSFNJOJzd5xiY3mH4jlJIMra0KAOMPE_yDUXDY,4450
+ipyannote/static/waveform.css,sha256=sTZ6uZrmLwb8R39nRzC3Gf7tPVFa3-DS06uy19neNMM,972
+ipyannote/static/waveform.js,sha256=KgZndz3TlBSj7NhDsfhJT-qW468pM0h8NrkCvvNdJ_Q,186393
+ipyannote-0.1.4.dist-info/METADATA,sha256=CuR3gYwyttKkZWoAYxDbNiRG0-OhnmG8f2uurHPUA5Q,1601
+ipyannote-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ipyannote-0.1.4.dist-info/RECORD,,
