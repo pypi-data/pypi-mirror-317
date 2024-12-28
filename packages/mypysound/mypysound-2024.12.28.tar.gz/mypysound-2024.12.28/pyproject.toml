@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mypysound"
+version = "2024.12.28"
+description = "A library to play sound on several platforms (including mobile using toga and chaquopy)"
+authors = ["tct123 <42028373+tct123@users.noreply.github.com>"]
+repository = "https://github.com/Creative-Media-Group/pysound"
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+playsound3 = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
