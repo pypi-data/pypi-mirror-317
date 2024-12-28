@@ -1,0 +1,387 @@
+Metadata-Version: 2.1
+Name: manjpfb
+Version: 0.0.7
+Summary: FreeBSD Japanese-man Pager
+Author-email: MikeTurkey <voice@miketurkey.com>
+Maintainer-email: MikeTurkey <voice@miketurkey.com>
+License: ######################################################################
+        ####################  SOFTWARE LICENSE   #############################
+        ######################################################################
+        
+        manjpfb, FreeBSD Japanese-man Pager.
+        COPYRIGHT 2024 MikeTurkey (real name: Takaaki Watanabe)
+        Contact: voice[ATmark]miketurkey.com
+        License: GPLv3 License including a prohibition clause for AI training.
+        
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+        
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+        
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <https://www.gnu.org/licenses/>.
+        
+        ADDITIONAL MACHINE LEARNING PROHIBITION CLAUSE
+        
+        In addition to the rights granted under the applicable license(GPL-3),
+        you are expressly prohibited from using any form of machine learning,
+        artificial intelligence, or similar technologies to analyze, process,
+        or extract information from this software, or to create derivative
+        works based on this software.
+        
+        This prohibition includes, but is not limited to, training machine
+        learning models, neural networks, or any other automated systems using
+        the code or output of this software.
+        
+        The purpose of this prohibition is to protect the integrity and
+        intended use of this software. If you wish to use this software for
+        machine learning or similar purposes, you must seek explicit written
+        permission from the copyright holder.
+        
+        see also 
+            GPL-3 Licence: https://www.gnu.org/licenses/gpl-3.0.html.en
+            Mike Turkey.com: https://miketurkey.com/
+        
+        ######################################################################
+        ############  FREEBSD MAN DOCUMENTATION LICENSE  #####################
+        ######################################################################
+        
+        COPYRIGHT 2024 MikeTurkey (real name: Takaaki Watanabe)
+        FreeBSD man documents were translated by MikeTurkey using Deep-Learning.
+        Contact: voice[ATmark]miketurkey.com
+        License: FreeBSD Document License including a prohibition clause
+        	 for AI training.
+        
+        Redistribution and use in source (AsciiDoc) and 'compiled' forms (HTML,
+        PDF, EPUB and so forth) with or without modification, are permitted
+        provided that the following conditions are met:
+        
+        1.  Redistributions of source code (AsciiDoc) must retain the above
+            copyright notice, this list of conditions and the following
+            disclaimer as the first lines of this file unmodified.
+        
+        2.  Redistributions in compiled form (Converted to PDF, EPUB and other
+            formats) must reproduce the above copyright notice, this list of
+            conditions and the following disclaimer in the documentation and/or
+            other materials provided with the distribution.
+        
+        3.  ADDITIONAL MACHINE LEARNING PROHIBITION CLAUSE:  
+            You may not use this documentation or any part thereof for the
+            purpose of training or developing machine learning models,
+            algorithms, or systems, without prior written permission from the
+            copyright holder. This prohibition applies to any use that
+            involves automated extraction of knowledge or features from the
+            documentation, including but not limited to training neural
+            networks, statistical models, or other artificial intelligence
+            technologies.
+        
+        THIS DOCUMENTATION IS PROVIDED BY MIKETURKEY "AS IS" AND ANY EXPRESS
+        OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL MIKETURKEY BE LIABLE FOR ANY DIRECT,
+        INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+        (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+        HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+        STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+        IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF
+        THE POSSIBILITY OF SUCH DAMAGE.
+        
+        Manual Pages
+        
+        Some FreeBSD manual pages contain text from the IEEE Std 1003.1, 2004
+        Edition, Standard for Information Technology - Portable Operating System
+        Interface (POSIX®) specification. These manual pages are subject to the
+        following terms:
+        
+          The Institute of Electrical and Electronics Engineers and The Open
+          Group, have given us permission to reprint portions of their
+          documentation.
+        
+          In the following statement, the phrase "this text" refers to portions
+          of the system documentation.
+        
+          Portions of this text are reprinted and reproduced in electronic form
+          in the FreeBSD manual pages, from IEEE Std 1003.1, 2004 Edition,
+          Standard for Information Technology - Portable Operating System
+          Interface (POSIX), The Open Group Base Specifications Issue 6,
+          Copyright© 2001-2004 by the Institute of Electrical and Electronics
+          Engineers, Inc and The Open Group. In the event of any discrepancy
+          between these versions and the original IEEE and The Open Group
+          Standard, the original IEEE and The Open Group Standard is the referee
+          document. The original Standard can be obtained online at
+          https://www.opengroup.org/membership/forums/platform/unix.
+        
+          This notice shall appear on any product containing this material.
+        
+        See also:
+            FDL: https://www.freebsd.org/copyright/freebsd-doc-license/
+            Mike Turkey: https://miketurkey.com/
+        
+        ######################################################################
+        ############  GNU/Linux man Documentation License ####################
+        ############  Owner's Document License  ##############################
+        ######################################################################
+        
+        COPYRIGHT 2024 MikeTurkey(real name: Takaaki Watanabe)
+        Man documents were translated by MikeTurkey using Deep-Learning.
+        Contact: voice[ATmark]miketurkey.com
+        License: GFDL1.3 License including a prohibition clause for AI training.
+        
+        Permission is granted to copy, distribute and/or modify this document
+        under the terms of the GNU Free Documentation License, Version 1.3
+        or any later version published by the Free Software Foundation;
+        with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+        A copy of the license is included in the section entitled "GNU
+        Free Documentation License".
+        
+        ADDITIONAL MACHINE LEARNING PROHIBITION CLAUSE
+        
+        In addition to the rights granted under the GNU Free Documentation
+        License, Version 1.3, you are expressly prohibited from using any form
+        of machine learning, artificial intelligence, or similar technologies
+        to analyze, process, or extract information from this document, or to
+        create derivative works based on this document.
+        
+        This prohibition includes, but is not limited to, training machine
+        learning models, neural networks, or any other automated systems using
+        the content of this document.
+        
+        The purpose of this prohibition is to protect the integrity and
+        intended use of this document. If you wish to use this document for
+        machine learning or similar purposes, you must seek explicit written
+        permission from the copyright holder.
+        
+        Additional Term: Documentation
+        
+        "Documentation" refers to any written or electronic materials,
+        including but not limited to manuals, guides, help files, and any
+        other accompanying explanatory materials, that are provided or made
+        available along with the software. The Documentation may be in printed
+        or digital format and is an integral part of the software package.
+        
+        The Documentation is licensed under the terms of the GNU Free
+        Documentation License (GFDL) version 1.3, a copy of which can be found
+        at [https://www.gnu.org/licenses/fdl-1.3.txt]. Users are granted the
+        right to copy, distribute, and/or modify the Documentation under the
+        terms of the GFDL, but not to modify it in any way that would cause
+        the Documentation to become subject to any license other than the
+        GFDL.
+        
+        Users are expressly prohibited from sublicensing or otherwise
+        transferring their rights to the Documentation. Any reproduction,
+        distribution, or modification of the Documentation must retain the
+        notices and disclaimers of the GFDL.
+        
+        This Additional Term forms an integral part of the overall software
+        document license and should be interpreted in conjunction with the
+        main terms and conditions outlined in the license agreement.
+        
+        See also:
+            GFDL1.3: https://www.gnu.org/licenses/fdl-1.3.txt
+            Mike Turkey: https://miketurkey.com/
+        
+Project-URL: Homepage, https://miketurkey.com
+Project-URL: Repository, https://github.com/MikeTurkey/manjpfb
+Classifier: Topic :: Documentation
+Classifier: Topic :: Education
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: <=4.0,>=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: importlib-metadata; python_version < "3.8"
+
+..
+  Copyright 2024 Mike Turkey
+  FreeBSD man documents were translated by MikeTurkey using Deep-Learning.
+  contact: voice[ATmark]miketurkey.com
+  license: GFDL1.3 License including a prohibition clause for AI training.
+  
+  Permission is granted to copy, distribute and/or modify this document
+  under the terms of the GNU Free Documentation License, Version 1.3
+  or any later version published by the Free Software Foundation;
+  with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+  A copy of the license is included in the section entitled "GNU
+  Free Documentation License".
+  See also
+    GFDL1.3: https://www.gnu.org/licenses/fdl-1.3.txt
+    Mike Turkey: https://miketurkey.com/
+..
+
+=================================
+manjpfb
+=================================
+
+  |  manjpfb created by MikeTurkey
+  |  Version 0.0.7, 28 Dec 2024
+  |  2024, COPYRIGHT MikeTurkey, All Right Reserved.
+  |  ABSOLUTELY NO WARRANTY.
+  |  GPLv3 License including a prohibition clause for AI training.
+
+要約
+---------------------------------
+
+  FreeBSD 日本語マニュアルページャー
+
+
+概要
+---------------------------------
+
+  manjpfbはpython3で動作するFreeBSD日本語マニュアルページャーです。
+  このプログラムはデータを保存せず、その都度ごとにダウンロードをします。
+  pythonスクリプトで動作していることから、将来的には多くのOSで動作すれば良いと考えています。
+  多くのオペレーティングシステムでFreeBSD日本語マニュアルを読めるようになります。
+  FreeBSD日本語マニュアルの中には完全に翻訳されていないものがありますが、現在のところ仕様です。
+  ドキュメントの翻訳に全ての責任を負わないことに注意してください。
+
+SUMMARY
+---------------------------------
+
+  FreeBSD Japanese-Man Pager.
+
+SYNOPSIS
+--------------------------------
+
+  | manjpfb [ \--version | \--help ]
+  | manjpfb [ \--listos | \--listman]
+  | manjpfb [MANNUM] [MANNAME]
+
+QUICK START
+--------------------------------
+
+Run on python pypi.
+
+.. code-block:: console
+
+  $ python3.xx -m pip install manjpfb
+  $ python3.xx -m manjpfb man 
+
+
+DESCRIPTION
+--------------------------------
+
+  manjpfb is pager of FreeBSD Japanese man using Python3.
+  The program does not store man-data and download it with each request.
+  Since it is a Python script, it is expected to run on many Operating Systems in the future.
+  We can read the FreeBSD Japanese man on many Operating Systems.
+  There is man-data that is not fully translated, but this is currently by design.
+  Please note that I do not take full responsibility for the translation of the documents.
+
+OPTIONS
+-------------------------------
+
+| \--version
+
+  |   Show version.
+
+| \--help
+
+  |   Show help messages.
+  
+| \--showtmpdir
+
+  |   Print temporary(cache) directory.
+
+| \--listos
+
+  |   Show the FreeBSD version name list of the manual.
+  |   e.g. FreeBSD 13.2-Release
+
+| \--listman
+
+  |   Show the man list of the FreeBSD.
+  |   e.g. ls, cp, rm, mv ... 
+
+| \--listman1
+
+  |   Show the man 1 list of the FreeBSD.
+  |   man 1: General Commands Manual
+
+| \--listman2
+
+  |   Show the man 2 list of the FreeBSD.
+  |   man 2: System Calls Manual
+
+| \--listman3
+
+  |   Show the man 3 list of the FreeBSD.
+  |   man 3: Library Functions Manual
+
+| \--listman4
+
+  |   Show the man 4 list of the FreeBSD.
+  |   man 4: Kernel Interfaces Manual
+
+| \--listman5
+
+  |   Show the man 5 list of the FreeBSD.
+  |   man 5: File Formats Manual
+
+| \--listman6
+
+  |   Show the man 6 list of the FreeBSD.
+  |   man 6: Games Manual
+
+| \--listman7
+
+  |   Show the man 7 list of the FreeBSD.
+  |   man 7: Miscellaneous Information Manual
+
+| \--listman8
+
+  |   Show the man 8 list of the FreeBSD.
+  |   man 8: System Manager's Manual
+
+| \--listman9
+
+  |   Show the man 9 list of the FreeBSD.
+  |   man 9: Kernel Developer's Manual
+
+
+EXAMPLE
+--------------------------------
+
+.. code-block:: console
+		
+  $ manjpfb ls
+      print ls man.
+  $ manjpfb 1 head
+      print head 1 section man.
+  $ manjpfb --version
+      Show the message
+  $ manjpfb --listman
+      Show man page list.
+  $ manjpfb --listos
+      Show os name list of man.
+
+
+BUGS
+------
+
+  | Please report bugs to the issue tracker: https://github.com/MikeTurkey/mman/issues
+  | or by e-mail: <voice[ATmark]miketurkey.com>
+   
+AUTHOR
+------
+
+  MikeTurkey <voice[ATmark]miketurkey.com>
+
+LICENSE
+----------
+
+  GPLv3 License including a prohibition clause for AI training.
+
