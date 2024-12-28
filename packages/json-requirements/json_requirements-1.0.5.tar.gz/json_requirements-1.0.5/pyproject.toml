@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "json_requirements"
+version = "1.0.5"
+description = "Uma biblioteca para gerenciar dependências python em formato JSON."
+authors = ["Daniel Mendes <senseidanielmendes@gmail.com>"]
+license = "MIT"
+readme = "README.md"  
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
