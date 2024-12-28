@@ -1,0 +1,2 @@
+[console_scripts]
+seashells = seashells.cli:main
