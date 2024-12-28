@@ -1,0 +1,6 @@
+mutagen
+requests
+ytmusicapi
+yt-dlp
+TruLogger
+ascii_magic
