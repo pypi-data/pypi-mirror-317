@@ -1,0 +1,2 @@
+[console_scripts]
+trakt-watch = trakt_watch.__main__:main
