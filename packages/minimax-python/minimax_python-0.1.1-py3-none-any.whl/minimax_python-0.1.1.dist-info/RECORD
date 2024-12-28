@@ -1,0 +1,10 @@
+minimax/__init__.py,sha256=3ixi5NvgDPA8C5H0Msnt3Wg1vx_GXtlgDbk04IE1X08,331
+minimax/base_client.py,sha256=mBSHSTQWED1XhKD_Of5LIMywL2rp6fNBfy0FsZxQWdc,25542
+minimax/client.py,sha256=jGngwDpfC7UFY0ww2mrv6HUQEGPZqdYpCWby4B0rwD0,21100
+minimax/exceptions.py,sha256=XoUddWJEpF3IfXpeNTOXcEw7XBbnwifX96i8yiFYTF0,2465
+minimax/types.py,sha256=19jS8VGfVkE2VtCxVqQfQ4s0l8NsS1SWXHVmmJBa5vQ,2684
+minimax/utils.py,sha256=523cBH4kbRu84OhDwQLsMfpNIj7ZUmTxLWZW0QJSBhA,882
+minimax_python-0.1.1.dist-info/METADATA,sha256=WrSJmBYmRg8YWIP3Pp8PfcoZ39vzjVy-MUtDZJSIXDo,6520
+minimax_python-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+minimax_python-0.1.1.dist-info/licenses/LICENSE,sha256=S5nAcabwoAuBN-qwUwwY5zQ4A3QxL1t2XZJQy6J91SI,1373
+minimax_python-0.1.1.dist-info/RECORD,,
