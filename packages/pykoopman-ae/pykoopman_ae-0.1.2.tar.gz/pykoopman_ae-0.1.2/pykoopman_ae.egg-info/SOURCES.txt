@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+pykoopman_ae/__init__.py
+pykoopman_ae/autoencoder.py
+pykoopman_ae/dataset_generator.py
+pykoopman_ae/default_params.py
+pykoopman_ae/model_io.py
+pykoopman_ae/params_test.py
+pykoopman_ae/system_extraction.py
+pykoopman_ae/training.py
+pykoopman_ae.egg-info/PKG-INFO
+pykoopman_ae.egg-info/SOURCES.txt
+pykoopman_ae.egg-info/dependency_links.txt
+pykoopman_ae.egg-info/requires.txt
+pykoopman_ae.egg-info/top_level.txt
