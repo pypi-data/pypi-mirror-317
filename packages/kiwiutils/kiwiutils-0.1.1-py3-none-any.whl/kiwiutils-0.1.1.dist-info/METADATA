@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: kiwiutils
+Version: 0.1.1
+Summary: Misc utilities
+License: MIT
+Author: aaron-sandoval
+Author-email: 32021231+aaron-sandoval@users.noreply.github.com
+Requires-Python: >=3.9,<4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aenum (>=3.1.15,<4.0.0)
+Requires-Dist: frozendict (>=2.4.6,<3.0.0)
+Requires-Dist: pandas (>=1.5.2,<3)
+Requires-Dist: portion (>=2.4.0,<3.0.0)
+Requires-Dist: yamlable (>=1.1.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# kiwiutils
+`kiwiutils` is a library for various general purpose utilities.
+It was split from a module in the [lifelog](https://github.com/aaron-sandoval/lifelog) project, with a few other utilities I developed for [other projects](https://github.com/understanding-search/maze-dataset).
+
+# Installation
+```bash
+pip install kiwiutils
+```
