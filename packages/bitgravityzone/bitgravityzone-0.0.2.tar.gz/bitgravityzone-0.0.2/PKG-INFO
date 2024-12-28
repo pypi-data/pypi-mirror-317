@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: bitgravityzone
+Version: 0.0.2
+Summary: GravityZone API
+Home-page: https://github.com/sonpd2/bitgravityzone
+Author: son
+Author-email: son@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+GravityZone API https://www.bitdefender.com/business/support/en/77211-125277-public-api.html
