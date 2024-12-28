@@ -1,0 +1,11 @@
+kurirogram
+click
+pydantic
+openai
+croniter
+
+[speedup]
+tgcrypto
+
+[tgcrypto]
+tgcrypto
