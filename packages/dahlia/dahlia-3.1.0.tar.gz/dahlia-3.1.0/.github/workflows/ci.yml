@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  PY_COLORS: 1
+  UV_VERSION: 0.5.5
+
+jobs:
+  ci:
+    runs-on: "${{ matrix.platform }}-latest"
+    strategy:
+      fail-fast: false
+      # https://blog.jaraco.com/efficient-use-of-ci-resources/
+      matrix:
+        python: ["3.9", "3.13"]
+        platform: ["ubuntu", "macos", "windows"]
+        include:
+        - python: "3.10"
+          platform: "ubuntu"
+        - python: "3.11"
+          platform: "ubuntu"
+        - python: "3.12"
+          platform: "ubuntu"
+        - python: "pypy3.10"
+          platform: "ubuntu"
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup uv
+      uses: astral-sh/setup-uv@v4
+      with:
+        version: ${{ env.UV_VERSION }}
+    - name: Install project
+      run: uv sync -p ${{ matrix.python }}
+    - name: Check coverage
+      run: |
+        uv run pytest --cov src --cov-report term-missing
+        uv run interrogate -vv
+    - name: Lint code
+      if: always()
+      run: |
+        uv run ruff check
+        uv run ruff format --check
+    - name: Run mypy
+      if: always()
+      run: uv run mypy --strict src tests

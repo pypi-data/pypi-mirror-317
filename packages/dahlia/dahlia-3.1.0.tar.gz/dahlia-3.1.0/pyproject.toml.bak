@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "dahlia"
+version = "3.0.0"
+description = "A library allowing you to use Minecraft format codes in strings."
+authors = ["trag1c <trag1cdev@yahoo.com>"]
+license = "MIT"
+documentation = "https://dahlia-lib.github.io/dahlia/"
+repository = "https://github.com/dahlia-lib/dahlia"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+mkdocs = "^1.6.0"
+mkdocs-material = "^9.5.24"
+ruff = "^0.4.4"
+mypy = "^1.10.0"
+pytest = "^8.2.1"
+pytest-cov = "^5.0.0"
+interrogate = "^1.7.0"
+mike = "^2.1.1"
+
+[tool.coverage.report]
+exclude_also = ["if TYPE_CHECKING:", "if sys.version_info.*:", "if __name__ == \"__main__\":"]
+
+[tool.interrogate]
+exclude = ["tests"]
+ignore-init-method = true
+ignore-semiprivate = true
+ignore-private = true
+ignore-module = true
+ignore-magic = true
+ignore-nested-functions = true
+verbose = 1
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["COM", "D", "FIX", "ANN1", "ANN401", "ISC001", "T201", "TD003", "PLR2004"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 15
+
+[tool.ruff.lint.pylint]
+max-returns = 8
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["INP", "FBT", "PLC2701", "S101", "SLF001"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
