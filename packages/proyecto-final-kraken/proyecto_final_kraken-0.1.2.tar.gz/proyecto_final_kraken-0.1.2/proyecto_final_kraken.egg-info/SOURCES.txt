@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+./proyecto_kraken/__init__.py
+./proyecto_kraken/bollinger_bands.py
+./proyecto_kraken/kraken_client.py
+./proyecto_kraken/main.py
+./proyecto_kraken/plot_utils.py
+proyecto_final_kraken.egg-info/PKG-INFO
+proyecto_final_kraken.egg-info/SOURCES.txt
+proyecto_final_kraken.egg-info/dependency_links.txt
+proyecto_final_kraken.egg-info/entry_points.txt
+proyecto_final_kraken.egg-info/requires.txt
+proyecto_final_kraken.egg-info/top_level.txt
+tests/test_bollinger.py
+tests/test_kraken.py
+tests/test_plot.py
