@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/residPCA/__init__.py
+src/residPCA/residPCA.py
+src/residPCA.egg-info/PKG-INFO
+src/residPCA.egg-info/SOURCES.txt
+src/residPCA.egg-info/dependency_links.txt
+src/residPCA.egg-info/entry_points.txt
+src/residPCA.egg-info/top_level.txt
