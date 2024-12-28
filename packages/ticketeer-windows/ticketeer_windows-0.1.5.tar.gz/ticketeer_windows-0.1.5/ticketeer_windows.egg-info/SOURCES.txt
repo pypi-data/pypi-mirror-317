@@ -1,0 +1,8 @@
+.version
+README.md
+pyproject.toml
+ticketeer_windows/__init__.py
+ticketeer_windows.egg-info/PKG-INFO
+ticketeer_windows.egg-info/SOURCES.txt
+ticketeer_windows.egg-info/dependency_links.txt
+ticketeer_windows.egg-info/top_level.txt
