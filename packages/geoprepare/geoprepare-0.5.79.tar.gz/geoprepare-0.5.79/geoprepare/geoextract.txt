@@ -1,0 +1,89 @@
+[kenya]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+[rwanda]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+[malawi]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+[zambia]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+[united_republic_of_tanzania]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+[united_states_of_america]
+category = AMIS
+scales = ['admin_1']
+growing_seasons = [1]
+crops = ['sb', 'ww', 'sw', 'rc', 'mz']
+shp_boundary = gaul1_asap_v04.shp
+
+[ww]
+mask = Percent_Winter_Wheat.tif
+
+[sw]
+mask = Percent_Spring_Wheat.tif
+
+[mz]
+mask = Percent_Maize.tif
+
+[sb]
+mask = Percent_Soybean.tif
+
+[rc]
+mask = Percent_Rice.tif
+
+[tf]
+mask = cropland_v9.tif
+
+[sr]
+mask = cropland_v9.tif
+
+[ml]
+mask = cropland_v9.tif
+
+[EWCM]
+calendar_file = EWCM_2021-6-17.xlsx
+
+[AMIS]
+calendar_file = AMISCM_2021-6-17.xlsx
+
+[DEFAULT]
+method = JRC
+redo = False
+threshold = True
+floor = 20
+ceil = 90
+scales = ['admin_1']
+growing_seasons = [1]
+countries = ['united_states_of_america']
+forecast_seasons = [2022]
+mask = cropland_v9.tif
+use_cropland_mask = False
+shp_boundary = EWCM_Level_1.shp
+statistics_file = statistics.csv
+zone_file = countries.csv
+calendar_file = crop_calendar.csv
+eo_model = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'chirps', 'chirps_gefs', 'esi_4wk', 'soil_moisture_as1', 'soil_moisture_as2']
