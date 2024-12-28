@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+custom_print/__init__.py
+custom_print/cmdl.py
+custom_print.egg-info/PKG-INFO
+custom_print.egg-info/SOURCES.txt
+custom_print.egg-info/dependency_links.txt
+custom_print.egg-info/entry_points.txt
+custom_print.egg-info/top_level.txt
