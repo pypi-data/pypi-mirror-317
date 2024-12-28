@@ -1,0 +1,11 @@
+awspacha/__init__.py,sha256=q6Q4BTPe078jy_Vt5f4HkgkpqfCCQNE0BkRecQBcHDQ,166
+awspacha/athena.py,sha256=xCDigdRD29Kq66cR3Fu5Z4MakLj3IbrWDiWwfCaQ5X8,6014
+awspacha/awsglue.py,sha256=V0XZexSEL_jg1h8picjMbfCMauODlc0j2JDP5l0RUH8,3501
+awspacha/crawler.py,sha256=eZCxmWBbd0R53giAZ9VmAZ8l3bgD0WkWo5G27oViRzM,3643
+awspacha/main.py,sha256=zyg_gRdZWARCAopPVq0FWGZqWlwFJlUQWcc8Fm4uGnM,38
+awspacha/sqlfile.py,sha256=VAyFA9411WdMOP38ISWdL0M14eCLiao4ycEB5FNa1VE,1180
+awspacha-0.1.16.dist-info/LICENSE,sha256=DGeKNYcibENBZpRs59y0rGpQ7KQ1DvgkFKgSzeRorQ4,1094
+awspacha-0.1.16.dist-info/METADATA,sha256=oleOg9sDcx8GM-js98dtIpbTe5Ycx-2XOqT62Yl2ISc,584
+awspacha-0.1.16.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+awspacha-0.1.16.dist-info/top_level.txt,sha256=bD4mH11V5JKA7AKUdRkovzFOc818G6yIzLiOAhCEXFI,9
+awspacha-0.1.16.dist-info/RECORD,,
