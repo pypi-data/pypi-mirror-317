@@ -1,0 +1,9 @@
+json_requirements/__init__.py,sha256=NrlmRqrDuSpW9JFNjvynCNkqhInrQXZ0lxFeFdJppvk,81
+json_requirements/manager.py,sha256=kfxKcsCHa_2SmgMPwRt7XhumHzvcCWpsikcR_cYwI_I,2560
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_json.py,sha256=nf7TvamE7N9Kn2nPDJ4LuMS565Od4tZaMKkZeu0jZXU,4752
+json_requirements-1.0.5.dist-info/LICENSE,sha256=74toekPsqK4Ljs6JlegOLk-Ykmtl13WpSQwt77zVH24,1069
+json_requirements-1.0.5.dist-info/METADATA,sha256=dMuLLVKxTiZSvpZlkgxsT4f1_SDEJ7TVRXvnJacESEM,461
+json_requirements-1.0.5.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+json_requirements-1.0.5.dist-info/top_level.txt,sha256=XGJ_jq17yJOKPxQh03dWbW6wnwLbl0xlYn1OGigdw0g,24
+json_requirements-1.0.5.dist-info/RECORD,,
