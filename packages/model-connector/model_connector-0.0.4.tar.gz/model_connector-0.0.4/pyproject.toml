@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "model_connector"
+version = "0.0.4"
+authors = [
+  { name="Sean McAtee" },
+]
+description = "Library for connection of TransCAD data files to Python"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+]
+dependencies = [
+  "pandas>=1.5.3",
+  "numpy",
+]
+
+[project.optional-dependencies]
+  "dev" = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "jupyterlab"]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[tool.hatch.build]
+exclude = [
+    "tests/",
+    ".gitignore",
+    "activate-env.bat",
+    "setup-env.bat",
+]
