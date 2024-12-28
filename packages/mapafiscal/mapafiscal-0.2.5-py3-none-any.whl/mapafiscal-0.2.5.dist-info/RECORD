@@ -1,0 +1,11 @@
+mapafiscal/__init__.py,sha256=HEzW8Suxj1XYpUEYOOcfQqsRmNLzUwk7MWFEtNI3MtA,88
+mapafiscal/application/__init__.py,sha256=W_Iv1bGtBZq7Y4U8eGV5DmIJLJAJfLCCbRKYE5c8imA,136
+mapafiscal/application/cenario_builder.py,sha256=Ih9Igrju6wAL864P1Gks5yzhUBChRh9NKXB4FnvQyTY,3293
+mapafiscal/interfaces/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mapafiscal/interfaces/repositorio_interface.py,sha256=u3GUmbGKc3etuYCvrxHvFSs6y2kTTkFUDzcbHQQCoLc,2048
+mapafiscal-0.2.5.dist-info/LICENSE,sha256=C4y8wFonub6TtYIBo_tHKTSIMvauXYAdLcFUEpePpkM,1142
+mapafiscal-0.2.5.dist-info/METADATA,sha256=8KJdAnWlfcBP0M01lba7B6OD_qXwJ0EYWRk0Q6Tyz0Q,4941
+mapafiscal-0.2.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mapafiscal-0.2.5.dist-info/entry_points.txt,sha256=fp4IJlQptjFUkMrB9FmIamQ2unR6NXsyEXcnL29Cnfs,50
+mapafiscal-0.2.5.dist-info/top_level.txt,sha256=leVi3QaI-hW3egrqZMawzKoRmCih9lmYrDJUHGMDMAk,11
+mapafiscal-0.2.5.dist-info/RECORD,,
