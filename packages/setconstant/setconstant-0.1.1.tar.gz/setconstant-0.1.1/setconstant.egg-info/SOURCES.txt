@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+setconstant/__init__.py
+setconstant/setconstant.py
+setconstant.egg-info/PKG-INFO
+setconstant.egg-info/SOURCES.txt
+setconstant.egg-info/dependency_links.txt
+setconstant.egg-info/top_level.txt
