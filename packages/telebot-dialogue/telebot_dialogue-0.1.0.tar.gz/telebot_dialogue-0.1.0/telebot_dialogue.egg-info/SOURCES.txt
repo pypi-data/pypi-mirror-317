@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+example.py
+setup.py
+telebot_dialogue/__init__.py
+telebot_dialogue/dialogue_manager.py
+telebot_dialogue.egg-info/PKG-INFO
+telebot_dialogue.egg-info/SOURCES.txt
+telebot_dialogue.egg-info/dependency_links.txt
+telebot_dialogue.egg-info/top_level.txt
+telebot_dialogue/__pycache__/__init__.cpython-313.pyc
+telebot_dialogue/__pycache__/dialogue_manager.cpython-313.pyc
