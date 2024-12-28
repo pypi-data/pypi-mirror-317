@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.bumpver]
+current_version = "1.2.3"
+version_pattern = "MAJOR.MINOR.PATCH[.TAG]"
+commit_message = "bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+pre_commit_hook = ""
+post_commit_hook = ""
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    '^current_version = "{version}"',
+]
+"version.txt" = [
+    "^v{version}",
+]
+"gradunwarp/core/globals.py" = [
+    "^VERSION = '{version}'"
+]
+
+[tool.ruff.extend-per-file-ignores]
+"*/__init__.py" = ["F401"]
