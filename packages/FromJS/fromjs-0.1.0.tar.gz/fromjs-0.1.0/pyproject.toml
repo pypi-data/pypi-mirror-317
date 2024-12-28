@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "FromJS"
+version = "0.1.0"
+authors = [
+    { name = "Obedience Adara", email = "obedienceadara@gmail.com" },
+]
+description = "A Python library for parsing and executing JavaScript code within Python applications."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "esprima>=4.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/obedienceadara/FromJS"
+"Bug Tracker" = "https://github.com/obedienceadara/FromJS/issues"
