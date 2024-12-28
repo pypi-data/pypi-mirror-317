@@ -1,0 +1,16 @@
+
+[crypto]
+cryptography>=43
+
+[docs]
+sphinx
+sphinx_rtd_theme
+cryptography>=43
+
+[test]
+flake8
+pytest
+bump2version
+coverage
+cryptography
+python-dateutil
