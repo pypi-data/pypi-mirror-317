@@ -1,0 +1,4 @@
+[gui_scripts]
+pymerdoc = pymerdoc.main:main
+pymerdoc-gm = pymerdoc.gm:main
+pymerdoc-mc = pymerdoc.mc:main
