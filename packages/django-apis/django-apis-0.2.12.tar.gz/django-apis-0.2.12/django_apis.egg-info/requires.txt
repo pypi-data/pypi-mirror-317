@@ -1,0 +1,6 @@
+pydantic
+django
+zenutils
+django-static-swagger-ui
+openapi-pydantic
+jsonpath-ng
