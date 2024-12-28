@@ -1,0 +1,3 @@
+[console_scripts]
+mainframer=mainframer.__main__:main
+

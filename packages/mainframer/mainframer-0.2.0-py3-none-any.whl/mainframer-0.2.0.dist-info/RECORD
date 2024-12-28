@@ -1,0 +1,13 @@
+mainframer/__about__.py,sha256=ONomJilFdgSC1LEZPkqpWN8ufaBr3luYxNh8f6CvrqI,811
+mainframer/__init__.py,sha256=BbBKMWKl59dn1JNYgabx-G3yM8IJdetD23LR5a9uL-M,451
+mainframer/__main__.py,sha256=8MUHFRIp50XBd2dvDX2IcMfnFP1o0u6Co_bZ6FF3dHU,3743
+mainframer/activate_environment.py,sha256=UnsSlID8SOvdS0v798HIjXOLunR8YfDs-jpr5exmsqg,2454
+mainframer/build.py,sha256=tOsOPctAKbXYiS4UFp_LI7g65IiMLehzKxBpCgLHCr8,3476
+mainframer/install_cobols.py,sha256=iIWgXuJb8KyVk7qy2SApgrKopIs_N4VROJta1nl8CAo,5577
+mainframer/manage_config.py,sha256=XEM6eYLIERMuTMXIeasgNW2LDXY9iYLTxbkyEpctqig,683
+mainframer/manage_environments.py,sha256=MX1RXRgOf7HiABDzoFd2HZ0GC32RzJNoYmWRxbv0iA4,2602
+mainframer-0.2.0.dist-info/LICENSE,sha256=jorgCGk-Vzqzuda58x7WxtiRSnL0_WaOSLcZIe3czgo,1071
+mainframer-0.2.0.dist-info/METADATA,sha256=1_cak4d1VKaaJqAwDQnonURm2q4XvJELSCv7YFs7P0Q,2767
+mainframer-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+mainframer-0.2.0.dist-info/entry_points.txt,sha256=O2EAKnUoVeUW5u1YOEtGuIeVnvxzj_TAP5a91ns0rIM,55
+mainframer-0.2.0.dist-info/RECORD,,
