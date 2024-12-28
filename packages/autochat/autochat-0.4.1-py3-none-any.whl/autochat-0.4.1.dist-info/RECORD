@@ -1,0 +1,11 @@
+autochat/__init__.py,sha256=cwfUA5EE-4BQEtlBz4X3AJ2IwYk79QHreqqmmh6TtPU,22223
+autochat/model.py,sha256=4ORJe33ybzybcLbaa4_xp5OMX6Z5yxCC8-rZQ5zCmNw,13793
+autochat/test.py,sha256=jE9krjBzkh6b6iBWvnCB_nVydoFwMcBmczF2AUc0n_Y,2393
+autochat/test_anthropic.py,sha256=Vasii5LrBZD6AwkkqOtvUe74xn5V-kRRSpK7T01HE40,2046
+autochat/test_utils.py,sha256=YkO1LKKXXGA2xjQnGb6ZzFt7L0MwGf7c1tJaXrQNS3U,7264
+autochat/utils.py,sha256=brGNTHBoQu1V6OcF8Leajf3kNH5gA8B2Mq7oGVjh3KU,7476
+autochat-0.4.1.dist-info/LICENSE,sha256=dUhuoK-TCRQMpuLEAdfme-qPSJI0TlcH9jlNxeg9_EQ,1056
+autochat-0.4.1.dist-info/METADATA,sha256=a0PU4pFNGkZjYF5_V2mykTuybV7Mx-UdrffZl3OqNYA,7376
+autochat-0.4.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+autochat-0.4.1.dist-info/top_level.txt,sha256=X3S5YT08HGdgR7vgtCg8RgL44Cf9xw4wV_8IH03fYro,9
+autochat-0.4.1.dist-info/RECORD,,
