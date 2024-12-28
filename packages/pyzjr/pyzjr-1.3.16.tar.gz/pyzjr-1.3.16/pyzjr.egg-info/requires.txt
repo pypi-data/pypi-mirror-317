@@ -1,0 +1,14 @@
+requests
+tqdm
+matplotlib
+scikit-image
+thop
+argparse
+torch
+einops
+pyyaml
+tensorboard
+pytorch_wavelets
+opencv-python
+torchvision
+nibabel
