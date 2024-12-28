@@ -1,0 +1,3 @@
+[jupyterlite_pyodide_lock.locker.v0]
+WebDriverLocker=jupyterlite_pyodide_lock_webdriver.locker:WebDriverLocker
+
