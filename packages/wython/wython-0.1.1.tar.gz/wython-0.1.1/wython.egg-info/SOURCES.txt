@@ -1,0 +1,13 @@
+README.md
+setup.py
+wython/__init__.py
+wython/__main__.py
+wython/read.py
+wython/transform.py
+wython/writein.py
+wython/wwritein.py
+wython.egg-info/PKG-INFO
+wython.egg-info/SOURCES.txt
+wython.egg-info/dependency_links.txt
+wython.egg-info/requires.txt
+wython.egg-info/top_level.txt
