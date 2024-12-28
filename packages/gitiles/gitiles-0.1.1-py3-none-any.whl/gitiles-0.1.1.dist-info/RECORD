@@ -1,0 +1,9 @@
+gitiles/__init__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+gitiles/cli.py,sha256=GKrjguBOtZcQqSAjz_NvI0uTUV38JRi9gTpG72_IcxA,2659
+gitiles/profiles.py,sha256=G1YmIhQ1wPViuTrYVF-m6N8O6tGfYanKSd11n1ZYC2k,6644
+gitiles/ssh_setup.py,sha256=VDdcKacW79SwT3irAfAl_UwCiyREjfvVTXSU0y5wIzE,2109
+gitiles-0.1.1.dist-info/METADATA,sha256=yeYhF_NL7uJ7hMxbMf1CqjkaX0v5FinBVz6RZlwAnTg,491
+gitiles-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gitiles-0.1.1.dist-info/entry_points.txt,sha256=jP2-4cn9umhIaOKb0-cviQ-LGwmPevAPfdXFxa3XdcM,45
+gitiles-0.1.1.dist-info/top_level.txt,sha256=GBTCm002ZwOi2Ob3GKnOsYKk4PG6DgFKG7NSMqHAzyM,8
+gitiles-0.1.1.dist-info/RECORD,,
