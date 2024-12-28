@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+tkscenes/__init__.py
+tkscenes/child.py
+tkscenes/errors.py
+tkscenes/scene.py
+tkscenes.egg-info/PKG-INFO
+tkscenes.egg-info/SOURCES.txt
+tkscenes.egg-info/dependency_links.txt
+tkscenes.egg-info/top_level.txt

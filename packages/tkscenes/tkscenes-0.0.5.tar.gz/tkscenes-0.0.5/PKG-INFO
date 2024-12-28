@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tkscenes
+Version: 0.0.5
+Summary: A package to help with scene management in TKinter and CustomTKinter
+Author: TonyLovesCoding
+Author-email: TonyLovesMusic <tony.tonylovescoding@example.com>
+Project-URL: Homepage, https://github.com/TonyLovesCoding/tkscenes
+Project-URL: Issues, https://github.com/TonyLovesCoding/tkscenes/issues
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+A simple package for adding different scenes to TKinter and CustomTKinter
