@@ -1,0 +1,16 @@
+llamero/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+llamero/__main__.py,sha256=T2HHp1aNbFUZ89bxwI4nGGofdfKRLWM2rXOmVOOOQa0,4810
+llamero/dir2doc.py,sha256=gtcew7GR6TwMfxAg6MleAtRF1MVPTrph0k0bwCgnq_w,4751
+llamero/tree_generator.py,sha256=ItgPdX_Y0QLPKD-4-ubyYlZHDA8ST3U30OlH_LxamOQ,2894
+llamero/utils.py,sha256=sC_0Q7f_KiXW_SKjxkUuiJkemsyr8KKOk_UvqhNoc7s,5518
+llamero/summary/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+llamero/summary/concatenative.py,sha256=C0tPRyCUy34mThO2Xrex-4s4dbhdn07GsKXgLg8ahlw,9924
+llamero/summary/python_files.py,sha256=FBtxqT_jDYB2IDqYy4pEDiQH55NKn27xGL3JsLY8JYo,1201
+llamero/summary/python_signatures.py,sha256=L0H63bjAlAOzqoFzHLfYTayi0OelDkngOMGK5z5S04A,8567
+llamero/summary/readmes.py,sha256=jPRTkoxFWzzmEj6KsbiEnqWPtnc7O-HY7Se2osiN1LM,2298
+llamero-0.2.5.dist-info/LICENSE,sha256=tOBU-4eEmm43rbjtI9Cutl0xcsgNjIxONLSaZ664zP8,1067
+llamero-0.2.5.dist-info/METADATA,sha256=s50-XB21vTVticILaTXRMsYxU39XUF-Lb6EECkAur2s,8522
+llamero-0.2.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+llamero-0.2.5.dist-info/entry_points.txt,sha256=YdXc6cvIlNmVcDtgqMrd3RigOnOeWlBQ6B7e6do91Gc,49
+llamero-0.2.5.dist-info/top_level.txt,sha256=JKM_RGzUI52vhXlcpalpSd9SmKcwWK-MEK4Oyx2LaBY,8
+llamero-0.2.5.dist-info/RECORD,,
