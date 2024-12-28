@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "loguru3"
+version = "0.1.0"
+description = ""
+authors = ["zhangdapeng <1156956636@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+colorama = { version = ">=0.3.4", markers = "sys_platform == 'win32'" }
+aiocontextvars = { version = ">=0.2.0", markers = "python_version < '3.7'" }
+win32-setctime = { version = ">=1.0.0", markers = "sys_platform == 'win32'" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
