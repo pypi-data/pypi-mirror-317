@@ -1,0 +1,3 @@
+include setup.cfg
+include README.md LICENSE
+recursive-include pm_ansible/*.c *

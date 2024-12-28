@@ -1,0 +1,94 @@
+[build-system]
+requires = ["setuptools>=61.2", "vstcompile~=3.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polemarch-ansible"
+authors = [{name = "VST Consulting", email = "sergey.k@vstconsulting.net"}]
+license = {text = "GPLv3"}
+description = "Wrapper for Ansible cli."
+dependencies = [
+    "ansible-core>=2.11,<2.19",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: POSIX",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dynamic = ["version"]
+
+[project.urls]
+Home = "https://gitlab.com/vstconsulting/polemarch-ansible"
+"Web Site" = "https://polemarch.org/"
+"Issue Tracker" = "https://gitlab.com/vstconsulting/polemarch-ansible/issues"
+"Source Code" = "https://gitlab.com/vstconsulting/polemarch-ansible"
+Documentation = "https://about.polemarch.org/"
+
+[project.readme]
+file = "README.rst"
+content-type = "text/x-rst"
+
+[project.scripts]
+pm-ansible = "pm_ansible.cli:main"
+pm-execute = "pm_ansible.cli.execute:handler"
+pm-cli-reference = "pm_ansible.cli.reference:handler"
+pm-cli-modules = "pm_ansible.cli.modules:handler"
+pm-cli-parse-inventory = "pm_ansible.cli.inventory_parser:handler"
+pm-cli-parse-config = "pm_ansible.cli.config:handler"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+license-files = ["LICENSE"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pm_ansible.__version__"}
+
+[tool.setuptools.packages.find]
+include = ['pm_ansible', 'pm_ansible.*']
+namespaces = false
+
+[tool.flake8]
+ignore = "B008,CFQ004,E221,E222,E121,E123,E126,E226,E24,E704,E116,E731,E722,E741,E402,W605"
+max-line-length = '120'
+import-order-style = 'pep8'
+jobs = '8'
+
+[tool.coverage.run]
+# branch = true
+source = [
+    'pm_ansible',
+]
+parallel = false
+concurrency = [
+    'thread',
+    'multiprocessing',
+]
+omit = [
+    '.tox/*',
+    '*/__main__.py',
+]
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true
+exclude_lines = [
+    'pragma: no cover',
+    'nocv',
+    'pass',
+    'except Exception:  # pylint: disable=broad-except',
+    'noee',
+    'raise NotImplementedError',
+]
