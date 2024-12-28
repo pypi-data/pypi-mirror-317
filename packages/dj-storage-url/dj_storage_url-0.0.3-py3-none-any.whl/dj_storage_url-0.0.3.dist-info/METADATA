@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: dj-storage-url
+Version: 0.0.3
+Summary: Configure Django storage from a URL
+Home-page: https://github.com/lucasrcezimbra/dj-storage-url
+License: LICENSE
+Keywords: dj-storage-url
+Author: Lucas Rangel Cezimbra
+Author-email: lucas@cezimbra.tec.br
+Requires-Python: >=3.9
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Project-URL: Documentation, https://dj-storage-url.readthedocs.io/
+Project-URL: Repository, https://github.com/lucasrcezimbra/dj-storage-url
+Description-Content-Type: text/markdown
+
+# dj-storage-url
+
+
+[![PyPI](https://img.shields.io/pypi/v/dj-storage-url.svg)](https://pypi.python.org/pypi/dj-storage-url)
+
+[![codecov](https://codecov.io/gh/lucasrcezimbra/dj-storage-url/graph/badge.svg)](https://codecov.io/gh/lucasrcezimbra/dj-storage-url)
+
+[![Documentation Status](https://readthedocs.org/projects/dj-storage-url/badge/?version=latest)](https://dj-storage-url.readthedocs.io/en/latest/?version=latest)
+
+Configure Django storage from a URL
+
+
+* Documentation: https://dj-storage-url.readthedocs.io.
+
+
+## Installation
+
+```bash
+pip install dj-storage-url
+```
+
+
+
+
+## How to Use
+
+- TODO
+
+
+## Contributing
+
+Contributions are welcome, feel free to open an Issue or Pull Request.
+
+```
+git clone https://github.com/lucasrcezimbra/dj-storage-url
+cd dj-storage-url
+make install
+make test
+```
+
