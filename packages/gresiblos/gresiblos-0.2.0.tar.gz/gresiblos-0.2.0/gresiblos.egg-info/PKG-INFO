@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: gresiblos
+Version: 0.2.0
+Summary: A simple private blogging system
+Home-page: http://gresiblos.readthedocs.org/
+Download-URL: http://pypi.python.org/pypi/gresiblos
+Author: dkrajzew
+Author-email: d.krajzewicz@gmail.com
+License: GPLv3
+Project-URL: Documentation, https://gresiblos.readthedocs.io/
+Project-URL: Source, https://github.com/dkrajzew/gresiblos
+Project-URL: Tracker, https://github.com/dkrajzew/gresiblos/issues
+Project-URL: Discussions, https://github.com/dkrajzew/gresiblos/discussions
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Intended Audience :: Other Audience
+Classifier: Topic :: Communications
+Classifier: Topic :: Documentation
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Text Processing
+Requires-Python: >=3, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# gresiblos
+
+[![License: GPL](https://img.shields.io/badge/License-GPL-green.svg)](https://github.com/dkrajzew/gresiblos/blob/master/LICENSE)
+[![PyPI version](https://badge.fury.io/py/gresiblos.svg)](https://pypi.python.org/pypi/gresiblos)
+![test](https://github.com/dkrajzew/gresiblos/actions/workflows/test.yml/badge.svg)
+[![Downloads](https://pepy.tech/badge/gresiblos)](https://pepy.tech/project/gresiblos)
+[![Downloads](https://static.pepy.tech/badge/gresiblos/week)](https://pepy.tech/project/gresiblos)
+[![Coverage Status](https://coveralls.io/repos/github/dkrajzew/gresiblos/badge.svg?branch=main)](https://coveralls.io/github/dkrajzew/gresiblos?branch=main)
+[![Documentation Status](https://readthedocs.org/projects/gresiblos/badge/?version=latest)](https://gresiblos.readthedocs.io/en/latest/?badge=latest)
+[![Dependecies](https://img.shields.io/badge/dependencies-none-green)](https://img.shields.io/badge/dependencies-none-green)
+
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVQQWZKB6FDES)
+
+
+Introduction
+============
+
+__gresiblos__ is the acronym for __*gre*yrat's *si*mple *blo*g *s*ystem__. It is a simple blogging system written in [Python](https://www.python.org/) that generates static HTML pages from blog content definitions. Different source formats are supported.
+
+__gresiblos__ is currently under development. 
+
+
+Background
+----------
+
+I wanted to have a blog and I wanted it to use static pages. That's why I wrote it.
+
+
+License
+-------
+
+__gresiblos__ is licensed under the [GPL v3.0 license](license.md).
+
