@@ -1,0 +1,5 @@
+pyproject.toml
+matricity.egg-info/PKG-INFO
+matricity.egg-info/SOURCES.txt
+matricity.egg-info/dependency_links.txt
+matricity.egg-info/top_level.txt
