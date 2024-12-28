@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: lmdeployv1
+Version: 0.0.8.dev3
+Summary: LMDeploy api client
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: bceidaas==0.0.1.dev2
+Requires-Dist: openai==1.55.0
+Requires-Dist: pyrate-limiter~=2.10.0
+Requires-Dist: tenacity==8.2.2
