@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+typed_macro/__init__.py
+typed_macro/cli.py
+typed_macro/constants.py
+typed_macro/file_writers.py
+typed_macro/inline_codegen.py
+typed_macro/macro_codegen.py
+typed_macro/py.typed
+typed_macro/util.py
+typed_macro.egg-info/PKG-INFO
+typed_macro.egg-info/SOURCES.txt
+typed_macro.egg-info/dependency_links.txt
+typed_macro.egg-info/entry_points.txt
+typed_macro.egg-info/requires.txt
+typed_macro.egg-info/top_level.txt
