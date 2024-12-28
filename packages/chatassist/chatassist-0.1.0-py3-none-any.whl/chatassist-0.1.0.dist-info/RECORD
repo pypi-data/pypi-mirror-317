@@ -1,0 +1,11 @@
+chatassist/__init__.py,sha256=9TWyynwuRD4Yl7iBP0O5DxMIg2edXqMPHnlfIjp8xx8,63
+chatassist/api.py,sha256=PP3YSq_KlBRyd1v--pTrD_T7j01b5Qq-H1KlCZGn5tw,2135
+chatassist/cli.py,sha256=5t8UsdUjXleqrTqc9x484bATH5S700tnglclT-IrcNg,2621
+chatassist/conversation.py,sha256=-ehtoW59x2_cofIqjbBRFONZEqWKHO2yPiJMM9nCyxg,1564
+chatassist/gui.py,sha256=92fAqBqJAonaUpKvobSLEP54wnAHS1QR_2qn7Xxkkhk,4982
+chatassist/utils.py,sha256=-1BLgM1hN3dW0iyLoJsjF8UAx1ugY0xkCsAfhEThEm8,743
+chatassist-0.1.0.dist-info/LICENSE,sha256=w2LznMHmnRdOHr1l55VRZsvoR64qkwoRZ_kO3LLFoFc,1094
+chatassist-0.1.0.dist-info/METADATA,sha256=tg5eS9aQ6ACD55JGE26dKpm3BQAgxgJibhgoaUN0Pe4,7319
+chatassist-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+chatassist-0.1.0.dist-info/top_level.txt,sha256=TAg8ngKKEYpSIfMGuy2WS6YXxJnT1_W5wj1NmPmbRNQ,11
+chatassist-0.1.0.dist-info/RECORD,,
