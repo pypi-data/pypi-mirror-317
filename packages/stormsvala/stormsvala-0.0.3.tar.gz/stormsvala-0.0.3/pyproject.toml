@@ -1,0 +1,23 @@
+[project]
+name = "stormsvala"
+
+version = "0.0.3"
+
+authors = [
+  { name="Erik Bremstedt", email="erik.bremstedt@gmail.com" },
+]
+description = "Helpful module for interacting with postgres"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "psycopg2-binary==2.9.9"
+]
+
+[project.urls]
+Homepage = "https://github.com/ebremstedt/stormsvala"
+Issues = "https://github.com/ebremstedt/stormsvala/issues"
