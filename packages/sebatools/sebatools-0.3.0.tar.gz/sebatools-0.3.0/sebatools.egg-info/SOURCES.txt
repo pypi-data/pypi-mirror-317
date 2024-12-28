@@ -1,0 +1,8 @@
+README.txt
+setup.py
+sebatools/__init__.py
+sebatools/remove_emojis.py
+sebatools.egg-info/PKG-INFO
+sebatools.egg-info/SOURCES.txt
+sebatools.egg-info/dependency_links.txt
+sebatools.egg-info/top_level.txt

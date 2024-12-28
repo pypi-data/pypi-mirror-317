@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: sebatools
+Version: 0.3.0
+Summary: A package to remove emojis from text and more...
+Author: Sebastiaan Hendriks
+Author-email: sgtahendriks@gmail.com
+Requires-Python: >=3.9
