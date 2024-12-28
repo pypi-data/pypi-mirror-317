@@ -1,0 +1,16 @@
+chatlite/__init__.py,sha256=ExzUW2D3Bd8fawMuCh0WVcMQov9FmWOvJfAUcoAuCuw,23
+chatlite/app.py,sha256=cGZhvxgkNSupJZoUDP8k1eH4Mvl7xCd7Q1PamkUXGAg,1166
+chatlite/core/__init__.py,sha256=0O6thEs1RHl_4F-69cEKDVKo5rJL7becseK4UETSkWo,76
+chatlite/core/_types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chatlite/core/_types/_hf_type.py,sha256=T3xSTMjszCO1ZsZgLkmC8Qm_9ZdAGPN2bXPUafoZn-s,1193
+chatlite/core/chat_service.py,sha256=3AYnGVP9SJeDQ2Q_yIEkMUSqGVazGqNcbnBn2JYMO64,2174
+chatlite/core/config.py,sha256=J2X9xLEzyj_mzeLsc6IWgN9tKCm8lV20o7JGHFYQ3wA,2734
+chatlite/core/features/__init__.py,sha256=UjLOwywv_7GbirHX-Biwr3JlRW9w9a6Ens6KiA-sq-4,132
+chatlite/core/features/base.py,sha256=to9FKUt7gmFa0GQXwfNuN2M-H3HxK_PvA4jYc_f3JC0,631
+chatlite/core/features/email.py,sha256=ytq48ogKhB19lf2dwEfl4TiNLyUXlHqRCcXcpWg64mU,411
+chatlite/core/features/google_search.py,sha256=YVSDUFAbNY8vAduh2jvZPc0USZgz9FJXYxpoXSY2O8U,445
+chatlite/core/features/handle_google_search.py,sha256=duuF0WysLXpT5BhGcRKS1wFlh8kWQbx4Vamw5kGRGdc,1070
+chatlite/core/model_service.py,sha256=ozxrpZQh3qsduVoM9xH3ynS6htqRURSwvB9iwFaD-c0,2258
+chatlite-0.0.42.dist-info/METADATA,sha256=wUfFhuTuJjYi0941PLGvdU5vz0sd2gkTDtGwFEereok,671
+chatlite-0.0.42.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+chatlite-0.0.42.dist-info/RECORD,,
