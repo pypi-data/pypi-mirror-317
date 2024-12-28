@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: AILink
+Version: 0.0.1
+Summary: A creative idea involves wrapping the OpenAI library to facilitate seamless connections with domestic large models. This project emerged precisely because large model interfaces are compatible with OpenAI, making it easier to utilize large models compared to traditional methods.
+Home-page: https://github.com/cador/AILink
+Author: Haolin You
+Author-email: cador.ai@aliyun.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# AILink
