@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/mailsender/__init__.py
+src/mailsender/mailsender.py
+src/mymailsender.egg-info/PKG-INFO
+src/mymailsender.egg-info/SOURCES.txt
+src/mymailsender.egg-info/dependency_links.txt
+src/mymailsender.egg-info/top_level.txt
+src/tests/test_mailsender.py
