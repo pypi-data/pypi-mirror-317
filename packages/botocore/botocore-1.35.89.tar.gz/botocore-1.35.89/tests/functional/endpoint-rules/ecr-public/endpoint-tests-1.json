@@ -1,0 +1,71 @@
+{
+    "testCases": [
+        {
+            "documentation": "Valid with dualstack and FIPS disabled. i.e, IPv4 Only stack with no FIPS, with special prefix",
+            "expect": {
+                "endpoint": {
+                    "url": "https://api.ecr-public.us-east-1.amazonaws.com"
+                }
+            },
+            "operationInputs": [
+                {
+                    "builtInParams": {
+                        "AWS::Region": "us-east-1"
+                    },
+                    "operationName": "DescribeRegistries"
+                }
+            ],
+            "params": {
+                "UseDualStack": false,
+                "UseFIPS": false,
+                "Region": "us-east-1"
+            }
+        },
+        {
+            "documentation": "Valid with dualstack enabled",
+            "expect": {
+                "endpoint": {
+                    "url": "https://ecr-public.us-east-1.api.aws"
+                }
+            },
+            "params": {
+                "UseDualStack": true,
+                "UseFIPS": false,
+                "Region": "us-east-1"
+            }
+        },
+        {
+            "documentation": "Invalid with FIPS set, dualstack disabled",
+            "expect": {
+                "error": "ECR Public does not support FIPS"
+            },
+            "params": {
+                "UseDualStack": false,
+                "UseFIPS": true,
+                "Region": "us-east-1"
+            }
+        },
+        {
+            "documentation": "Invalid with both dualstack and FIPS enabled",
+            "expect": {
+                "error": "ECR Public does not support FIPS"
+            },
+            "params": {
+                "UseDualStack": true,
+                "UseFIPS": true,
+                "Region": "us-east-1"
+            }
+        },
+        {
+            "documentation": "Invalid with DualStack enabled and partition does not support Dualstack",
+            "expect": {
+                "error": "Dualstack is enabled but this partition does not support dualstack"
+            },
+            "params": {
+                "UseDualStack": true,
+                "Region": "us-isob-east-1"
+            }
+        }
+    ],
+    "version": "1.0"
+}
