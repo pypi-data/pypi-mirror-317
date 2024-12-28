@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: xiaoqiangclub
+Version: 0.1.83
+Summary: XiaoqiangClub 自用工具包
+Home-page: https://gitee.com/xiaoqiangclub/xiaoqiangclub
+Author: xiaoqiang
+Author-email: xiaoqiangclub@hotmail.com
+License: Apache 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiofiles
+Requires-Dist: aiosqlite
+Requires-Dist: apscheduler
+Requires-Dist: bencodepy
+Requires-Dist: fake_useragent
+Requires-Dist: fastapi
+Requires-Dist: httpx[socks]
+Requires-Dist: jinja2
+Requires-Dist: openai
+Requires-Dist: pandas
+Requires-Dist: parsel
+Requires-Dist: pycryptodome
+Requires-Dist: PyYAML
+Requires-Dist: pyzipper
+Requires-Dist: redis
+Requires-Dist: slowapi
+Requires-Dist: sqlitedict
+Requires-Dist: tinydb
+Requires-Dist: websocket
+Requires-Dist: wechatpy
+Requires-Dist: zhipuai
+Provides-Extra: playwright
+Requires-Dist: playwright; extra == "playwright"
+Provides-Extra: windows
+Requires-Dist: pywin32; extra == "windows"
+Requires-Dist: opencv-python; extra == "windows"
+Requires-Dist: pillow; extra == "windows"
+Requires-Dist: PyAutoGUI; extra == "windows"
+Requires-Dist: pynput; extra == "windows"
+Requires-Dist: playwright; extra == "windows"
+
+XiaoqiangClub 自用工具包
