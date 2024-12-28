@@ -1,0 +1,156 @@
+Metadata-Version: 2.1
+Name: powerline-owmweather
+Version: 0.5
+Summary: A Powerline segment for fetching and showing the weather in the current location
+Home-page: https://github.com/DeepSpace2/powerline-owmweather
+Author: DeepSpace2
+Author-email: deepspace2@gmail.com
+License: MIT
+Keywords: powerline weather segment terminal cli
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Terminals
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+[![PyPI](https://img.shields.io/pypi/v/powerline-owmweather?color=blue&logo=python&logoColor=green&style=plastic)](https://pypi.org/project/powerline-owmweather/)
+[![Downloads](http://pepy.tech/badge/powerline-owmweather)](http://pepy.tech/count/powerline-owmweather)
+
+# powerline-owmweather ðŸŒ¦
+
+![Example 1](readme-images/screenshot1.png?raw=true)
+
+A light-hearted [Powerline](https://github.com/powerline/powerline) segment for fetching and showing the weather in the current location (either by IP geolocation or by setting a location, see [Configuration](#configuration) below).
+
+
+- [Motivation](#motivation)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Activation](#activiation)
+- [Configuration and Customization](#configuration-and-customization)
+- [Changelog](#changelog)
+- [TODO](#todo)
+
+## Motivation
+
+The built-in weather segment is using Yahoo Weather API which is no longer available so I decided to create an almost drop-in replacement using [OpenWeather](https://openweathermap.org/).
+
+## Requirements
+
+ - [Powerline](https://github.com/powerline/powerline)
+ - A (free) [OpenWeather](https://openweathermap.org/) account and API key with the "Current Weather Data" plan enabled.
+ 
+## Installation
+ 
+```
+pip install powerline-owmweather
+```
+
+## Activation
+ 
+The very minimum required to activate the segment is to add the following to your theme JSON:
+ 
+```
+{
+   "function": "powerline_owmweather.weather",
+   "args": {
+       "openweathermap_api_key": API_KEY
+   }
+}
+```
+
+Alternatively, the API key can also be provided by setting it as an environment variable,
+see [Configuration and Customization](#configuration-and-customization) for details. 
+
+and the following to your colorscheme JSON (the colors can be customized):
+ 
+```
+"groups": {
+      ...,
+      "owmweather": {
+          "fg": "gray9",
+          "bg": "gray2",
+          "attrs": []
+    }
+}
+```
+ 
+## Configuration and Customization
+ 
+The following optional `args` are available:
+ 
+| Argument                 | Type    | Description                                                                                                                                                          | Default                                                      |
+|--------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `openweathermap_api_key` | string  | If not provided in the theme JSON, the segment will try to use the `POWERLINE_OPENWEATHERMAP_API_KEY` environment variable                                           | `POWERLINE_OPENWEATHERMAP_API_KEY` <br/>environment variable |
+| `condition_as_icon`      | boolean | If `true`, condition will be displayed as an icon (if one of known conditions).<br>If `false` condition will be displayed as a string                                | `true`                                                       |
+| `humidity_format`        | string  | A Python format string that accepts `humidity` as an argument                                                                                                        | `"{humidity:.0f}"`                                           |
+| `location_query`         | string  | Location in format CITY, 2-LETTERS-COUNTRY-CODE                                                                                                                      | Retrived using IP geolocation                                | 
+| `post_condition`         | string  | String to append after `condition`                                                                                                                                   | ""                                                           |
+| `post_humidity`          | string  | String to append after `humidity`                                                                                                                                    | ""                                                           |
+| `post_location`          | string  | String to append after `location`                                                                                                                                    | ""                                                           |
+| `post_temp`              | string  | String to append after `temp`                                                                                                                                        | ""                                                           |
+| `pre_condition`          | string  | String to prepend before `condition`                                                                                                                                 | " "                                                          |
+| `pre_humidity`           | string  | String to prepend before `humidity`                                                                                                                                  | " "                                                          |
+| `pre_location`           | string  | String to prepend before `location`                                                                                                                                  | " "                                                          |
+| `pre_temp`               | string  | String to prepend before `temp`                                                                                                                                      | " "                                                          |
+| `show `                  | string  | Comma-separated string specifies what data to show.<br>Can include `"condition"`, `"humidity"`, `"location"`, `"temp"`.<br>See [Highlight Groups](#highlight-groups) | `"temp"`                                                     |
+| `temp_format`            | string  | A Python format string that accepts `temp` as an argument                                                                                                            | `"{temp:.0f}"`                                               |
+| `ttl_in_minutes`         | integer | Time in minutes for which location and weather are cached.<br>**Warning: The lower the value the slower your terminal will be**                                      | 60                                                           |
+| `units`                  | string  | Temperature units.<br>Should be one of `"C"`, `"F"`, `"K"`                                                                                                           | `"C"`                                                        |
+
+### Highlight Groups
+
+Every data in `"show"` is displayed in its own segment with its own highlight group, meaning it can be styled independently in your colorscheme JSON. Each highlight group is composed of `owmweather_{data_name}`, for example:
+
+```
+"owmweather_condition": {
+    "fg": "gray6",
+    "bg": "gray3",
+    "attrs": []
+},
+"owmweather_temp": {
+    "fg": "gray9",
+    "bg": "gray2",
+    "attrs": []
+}
+```
+
+`"pre_{data_name}"` and `"post_{data_name}"` can also be customized using `"owmweather_pre_{data_name}"` and `"owmweather_post_{data_name}"` highlight groups.
+
+If a specific highlight group is not defined then the style of `"owmweather"` group will be used.
+
+## Changelog
+
+### 0.5 - Dec. 27 2024
+* Allowing to set openweathermap API key as an environment variable
+
+### 0.4 - Nov. 3 2020
+* `'%'` is no longer in the default `humidity_format`
+* Added `pre_data` and `post_data` arguments and highlight groups
+* Added ability to show location
+
+### 0.3 - Nov. 1 2020
+* Added ability to display humidity
+
+### 0.2 - Nov. 1 2020
+* Added ability to display temperature, condition
+* Added ability to display condition as either icons or strings
+
+### 0.1.1 - Oct. 31 2020
+* Fixed a bug that prevented setting a custom `ttl_in_minutes`
+* Added debug logs
+
+### 0.1.0 - Oct. 31 2020
+Initial release
+
+## TODO
+
+ - [x] Support icons
+ - [x] Support weather description ("cloudy", "windy", etc)
+ - [ ] Support configurable information to display:
+   - [x] Temperature
+   - [x] Condition
+   - [ ] Wind speed/direction
+   - [x] Humidity
+   - [ ] Pressure
