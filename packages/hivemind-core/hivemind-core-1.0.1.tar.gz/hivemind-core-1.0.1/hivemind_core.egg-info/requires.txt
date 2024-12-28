@@ -1,0 +1,13 @@
+tornado
+click
+click_default_group
+rich
+pyOpenSSL
+pycryptodomex
+poorman_handshake>=0.1.0
+hivemind-ggwave
+hivemind_bus_client<1.0.0,>=0.1.0
+HiveMind_presence<1.0.0,>=0.0.2a3
+ovos_utils<1.0.0,>=0.0.33
+ovos-bus-client<2.0.0,>=0.0.6
+pybase64
