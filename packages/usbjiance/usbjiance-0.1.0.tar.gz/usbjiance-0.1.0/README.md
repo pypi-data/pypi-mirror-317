@@ -1,0 +1,157 @@
+# USB监控工具 (usbjiance)
+
+一个用于监控Windows系统上USB设备连接和断开事件的Python包。支持实时监控、设备信息获取、位置跟踪等功能。
+
+## 功能特点
+
+- 实时监控USB设备的连接和断开事件
+- 获取详细的设备信息，包括：
+  - 设备ID和实际设备ID
+  - USB端口位置（Hub和端口号）
+  - 设备描述、制造商、服务等信息
+  - 硬件ID和兼容ID
+- 支持设备事件回调函数（连接和断开）
+- 可配置的监控间隔时间
+- 可选的设备位置跟踪功能
+- 内置缓存机制，提高性能
+- 完善的错误处理和异常恢复
+- 支持格式化输出设备信息
+
+## 安装
+
+```bash
+pip install usbjiance
+```
+
+## 系统要求
+
+- Windows操作系统
+- Python 3.6 或更高版本
+- wmi>=1.5.1
+- pywin32>=227
+
+## 快速开始
+
+### 基本使用
+
+```python
+from usbjiance import USBEventMonitor
+import time
+
+def on_connect(device_info):
+    print(f"设备已连接: {device_info['设备ID']}")
+    # device_info 包含设备的详细信息
+    # 例如：设备ID、位置、制造商等
+
+def on_disconnect(device_info):
+    print(f"设备已断开: {device_info['设备ID']}")
+    print(f"断开时间: {device_info['断开时间']}")
+
+# 创建监控器实例
+monitor = USBEventMonitor(
+    on_connect=on_connect,
+    on_disconnect=on_disconnect,
+    enable_print=True  # 启用详细输出
+)
+
+try:
+    # 启动监控
+    monitor.start()
+    # 保持程序运行
+    while True:
+        time.sleep(1)
+except KeyboardInterrupt:
+    print("监控已停止")
+finally:
+    # 停止监控
+    monitor.stop()
+```
+
+### 设备信息示例
+
+当启用 `enable_print=True` 时，会输出如下格式的设备信息：
+
+```
+============================================================
+USB设备连接
+============================================================
+设备ID          : USB\VID_0483&PID_5740\...
+实际设备ID      : 0483574098A
+设备位置        : 3-1
+制造商          : STMicroelectronics
+描述            : STM32 Virtual COM Port
+硬件ID          : USB\VID_0483&PID_5740
+状态            : 已连接
+添加时间        : 2023-12-28 10:59:23
+============================================================
+```
+
+## API参考
+
+### USBEventMonitor
+
+```python
+USBEventMonitor(
+    on_connect=None,
+    on_disconnect=None,
+    check_interval=0.2,
+    enable_print=False,
+    enable_location=True
+)
+```
+
+#### 参数说明
+
+- `on_connect` (Optional[Callable[[Dict[str, Any]], None]]): 设备连接事件的回调函数
+  - 当USB设备连接时调用
+  - 参数为包含设备信息的字典
+- `on_disconnect` (Optional[Callable[[Dict[str, Any]], None]]): 设备断开事件的回调函数
+  - 当USB设备断开时调用
+  - 参数为包含设备信息的字典
+- `check_interval` (float): 检查间隔时间，单位秒（默认: 0.2）
+  - 最小值为0.1秒
+- `enable_print` (bool): 是否启用控制台输出（默认: False）
+  - 启用后会打印详细的设备信息
+- `enable_location` (bool): 是否启用设备位置跟踪（默认: True）
+  - 启用后会获取设备的Hub和端口信息
+
+#### 设备信息字典
+
+回调函数接收的设备信息字典可能包含以下字段：
+
+- `设备ID`: 设备的唯一标识符
+- `实际设备ID`: 设备的实际ID（如果可用）
+- `设备位置`: USB端口位置（格式：port-hub）
+- `状态`: 设备状态（已连接/已断开）
+- `添加时间`/`断开时间`: 事件发生的时间戳
+- 其他可能的字段（如果可用）：
+  - `Manufacturer`: 制造商
+  - `Description`: 设备描述
+  - `HardwareID`: 硬件ID
+  - `CompatibleID`: 兼容ID
+  - `Service`: 设备服务
+  - `Status`: 设备状态
+
+#### 方法
+
+- `start()`: 开始监控USB设备
+  - 如果已经在运行，则不会重复启动
+  - 会初始化WMI监控
+- `stop()`: 停止监控USB设备
+  - 清理资源和缓存
+  - 停止WMI监控
+
+## 许可证
+
+MIT License
+
+## 贡献
+
+欢迎提交Pull Request来改进这个项目！
+
+## 注意事项
+
+1. 该工具使用WMI监控USB事件，需要适当的系统权限
+2. 请确保在程序结束时调用 `stop()` 方法以清理资源
+3. 回调函数中的异常会被捕获并处理，不会影响监控进程
+4. 设备位置跟踪功能需要访问系统注册表 
