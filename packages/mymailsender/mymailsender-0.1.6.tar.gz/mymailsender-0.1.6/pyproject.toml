@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mymailsender"
+version = "0.1.6"
+description = "A simple Python mailer for SMTP sending."
+readme = "README.md"
+authors = [
+  { name="Marius Berge Eide", email="mariusbe@gmail.com" }
+]
+license = {"text" = "MIT"}
+keywords = ["smtp", "email", "mailer"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+]
+
+[project.urls]
+"Source Code" = "https://github.com/mariusei/mymailsender"
