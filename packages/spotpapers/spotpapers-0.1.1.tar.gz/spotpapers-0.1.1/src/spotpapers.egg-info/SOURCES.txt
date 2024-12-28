@@ -1,0 +1,13 @@
+LICENCE
+README.md
+pyproject.toml
+src/spotpapers/__init__.py
+src/spotpapers/main.py
+src/spotpapers.egg-info/PKG-INFO
+src/spotpapers.egg-info/SOURCES.txt
+src/spotpapers.egg-info/dependency_links.txt
+src/spotpapers.egg-info/entry_points.txt
+src/spotpapers.egg-info/requires.txt
+src/spotpapers.egg-info/top_level.txt
+src/spotpapers/AI/groq.py
+tests/test.py
