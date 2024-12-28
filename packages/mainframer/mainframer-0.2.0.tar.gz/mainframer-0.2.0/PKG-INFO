@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: mainframer
+Version: 0.2.0
+Summary: GnuCOBOL environment and package manager.
+Home-page: https://github.com/matthewdeanmartin/mainframer
+License: MIT
+Keywords: cobol,gnucobol
+Author: Matthew Martin
+Author-email: matthewdeanmartin@gmail.com
+Requires-Python: >=3.8
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: httpx (>=0.28.1)
+Requires-Dist: requests (>=2.32.3)
+Requires-Dist: rich (>=13.9.4)
+Requires-Dist: shellingham (>=1.5.4)
+Requires-Dist: toml (>=0.10.2)
+Requires-Dist: tomli-w
+Project-URL: Bug Tracker, https://github.com/matthewdeanmartin/mainframer/issues
+Project-URL: Change Log, https://github.com/matthewdeanmartin/mainframer/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://matthewdeanmartin.github.io/mainframer/mainframer/index.html
+Project-URL: Repository, https://github.com/matthewdeanmartin/mainframer
+Description-Content-Type: text/markdown
+
+# metametameta
+
+Package manager for gnuCOBOL. Very alpha right now. Not all commands work.
+
+## Installation
+
+```bash
+pipx install mainframer
+```
+
+## Usage
+
+Installs various versions of gnuCOBOL to `~/.cobol/`
+```bash
+mainframer cobol 3.2
+mainframer cobol 3.2.2
+mainframer cobol 3.2-b
+```
+
+Now create a `mainframer.toml` in your project root. This is a monorepo, so you can have multiple `mainframer.toml` 
+files with at minimum the gnucobol version.
+
+```toml
+[project]
+gnucobol = "3.2"
+
+[compiler]
+# modify compiler options here.
+
+[packages]
+"name" = { version="1.2.3", url="github.com/matthewdeanmartin/mainframer" }
+```
+
+Activate a cobol. This adds the necessary environment variables.
+```bash
+mainframer shell
+```
+
+Build a cobol project, assuming a particular layout.
+```bash
+mainframer build compile_objects
+mainframer build build_binary
+mainframer build test
+mainframer build run
+```
+
+Help for CLI
+```text
+usage: mainframer [-h] [-V] {cobol,shell,install,build,clean,test,run} ...
+Manage GnuCobol.
+positional arguments:
+options:
+  -h, --help            show this help message and exit
+  -V, --version         Show program's version number and exit.
+```
+
+## Motivation and Goals
+
+Trying to make a package manager for COBOL.
+
+## Prior Art
+- Build script inspired by [CobolCraft](https://github.com/meyfa/CobolCraft)
+
