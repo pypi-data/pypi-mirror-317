@@ -1,0 +1,32 @@
+[project]
+name = "qubecrawl"
+version = "0.1.1"
+authors = [
+  { name="Adhishtanaka Thiramithu Kulasooriya", email="kulasoooriyaa@gmail.com" },
+]
+description = "qubecrawl is a lightweight and LLLM friendly Webscraper that extracts HTML content and converts it into clean, readable Markdown to reduce token."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "beautifulsoup4",
+    "html2text",
+    "lxml",
+]
+
+[project.optional-dependencies]
+dev = ["twine"]
+
+[project.urls]
+Homepage = "https://github.com/adhishtanaka/qubecrawl/"
+Issues = "https://github.com/adhishtanaka/qubecrawl/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

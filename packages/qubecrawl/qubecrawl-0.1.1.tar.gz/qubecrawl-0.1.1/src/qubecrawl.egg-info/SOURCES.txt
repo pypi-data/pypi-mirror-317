@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/qubecrawl/__init__.py
+src/qubecrawl/qubecrawl.py
+src/qubecrawl.egg-info/PKG-INFO
+src/qubecrawl.egg-info/SOURCES.txt
+src/qubecrawl.egg-info/dependency_links.txt
+src/qubecrawl.egg-info/requires.txt
+src/qubecrawl.egg-info/top_level.txt
