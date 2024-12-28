@@ -1,0 +1,2 @@
+[console_scripts]
+custom_print = custom_print.cmdl:main
