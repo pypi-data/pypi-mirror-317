@@ -1,0 +1,9 @@
+requests>=2.25.1
+web3
+pathlib
+json
+dotenv
+typing
+pandas
+IPython
+logging
