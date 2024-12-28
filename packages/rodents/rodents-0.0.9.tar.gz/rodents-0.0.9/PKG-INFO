@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: rodents
+Version: 0.0.9
+License-File: LICENSE
+Requires-Dist: keyboard==0.13.5
+Requires-Dist: numpy==1.24.2
+Requires-Dist: PyAutoGUI==0.9.53
+Requires-Dist: pytest
+Requires-Dist: twine

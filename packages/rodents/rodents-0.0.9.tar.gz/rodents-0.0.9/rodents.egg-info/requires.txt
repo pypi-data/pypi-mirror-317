@@ -1,0 +1,5 @@
+keyboard==0.13.5
+numpy==1.24.2
+PyAutoGUI==0.9.53
+pytest
+twine
