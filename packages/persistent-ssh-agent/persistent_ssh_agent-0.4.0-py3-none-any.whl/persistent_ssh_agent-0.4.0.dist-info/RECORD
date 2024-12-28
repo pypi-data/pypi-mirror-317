@@ -1,0 +1,8 @@
+persistent_ssh_agent/__init__.py,sha256=BIbSRDnh7yp-GPEal3l7Kr92mdG5E5gMB5lFIlApmHQ,184
+persistent_ssh_agent/__version__.py,sha256=42STGor_9nKYXumfeV5tiyD_M8VdcddX7CEexmibPBk,22
+persistent_ssh_agent/config.py,sha256=pIEsyLX62HVSqADOaCYtmez2Lmy-DMdbS1-IoGhgVeM,671
+persistent_ssh_agent/core.py,sha256=XyJslvj_pLvLwB-7xVQzUvk-icqTLkJzDLpkulFcB1U,38076
+persistent_ssh_agent-0.4.0.dist-info/LICENSE,sha256=tJf0Pz8q_65AjEkm3872K1cl4jGil28vJO5Ko_LhUqc,1060
+persistent_ssh_agent-0.4.0.dist-info/METADATA,sha256=AcdjOsLCZ27wS1AmB4wg84pNxpUwmiyE9t9OVSHP8T4,12316
+persistent_ssh_agent-0.4.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+persistent_ssh_agent-0.4.0.dist-info/RECORD,,
