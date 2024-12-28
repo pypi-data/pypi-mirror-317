@@ -1,0 +1,7 @@
+LogExportTable5.py
+setup.cfg
+setup.py
+LogExportTable5.egg-info/PKG-INFO
+LogExportTable5.egg-info/SOURCES.txt
+LogExportTable5.egg-info/dependency_links.txt
+LogExportTable5.egg-info/top_level.txt
