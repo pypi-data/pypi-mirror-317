@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: jmagics
+Version: 0.1.0
+Summary: Magics for jupyter notebook
+Author-Email: Sreenath Somarajapuram <somarajapuram@gmail.com>
+License: Apache-2.0
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# jmagics
