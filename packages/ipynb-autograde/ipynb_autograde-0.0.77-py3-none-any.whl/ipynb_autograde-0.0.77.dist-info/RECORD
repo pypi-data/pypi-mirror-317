@@ -1,0 +1,14 @@
+analysis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+analysis/autograde_automata.py,sha256=wpMjEnLUMa_J5lej6tIPeUa9wZ7EoQN9r2Dj289rsFw,2889
+analysis/google_sheets.py,sha256=o-MaxNHUDtyG_QHlRcYHE4k2GyTM_mDhGpEd7pMcjvk,5498
+autograde/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autograde/autograde.py,sha256=d3RZCFNc3scRc_wKYfj002c2UTST9wwsJkaINQ_hBtY,7731
+autograde/cython_autograde.py,sha256=y6cUoxgKHyssuViNN5W4KEn5DyuT3Dh5D_mmQSzFpfo,507
+autograde/defs.py,sha256=Q8FME4PdmjoASGGiMV9R_5rttr_EWtwSyMT2M6A6bac,1809
+ipynb_autograde/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipynb_autograde/main.py,sha256=SXf_Au-OweNNIampZJ2Kw4ZoBM9F1_OvzW6iaOvOCUs,338
+ipynb_autograde-0.0.77.dist-info/LICENSE.txt,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+ipynb_autograde-0.0.77.dist-info/METADATA,sha256=oln7quLbVCr4NZ3ipZmf2m0EqPihJ3AzfXJ--OH2a8c,1115
+ipynb_autograde-0.0.77.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ipynb_autograde-0.0.77.dist-info/top_level.txt,sha256=QuF2boXEVH3vhC_UNTRG8cQGzOx3VwyIXeiqK0CwvSY,35
+ipynb_autograde-0.0.77.dist-info/RECORD,,
