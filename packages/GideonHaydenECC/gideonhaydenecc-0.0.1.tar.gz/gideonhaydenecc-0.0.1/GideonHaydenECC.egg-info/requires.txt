@@ -1,0 +1,7 @@
+numpy
+scipy.interpolate
+matplotlib.pyplot
+sympy.ntheory
+warnings
+math
+numbers

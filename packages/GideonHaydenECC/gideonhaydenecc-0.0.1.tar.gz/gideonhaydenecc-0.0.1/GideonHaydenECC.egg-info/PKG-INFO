@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: GideonHaydenECC
+Version: 0.0.1
+Summary: Elliptic curve python package
+Author: Gideon Hayden
+Keywords: python,first package
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy.interpolate
+Requires-Dist: matplotlib.pyplot
+Requires-Dist: sympy.ntheory
+Requires-Dist: warnings
+Requires-Dist: math
+Requires-Dist: numbers
+
+Python package that facilitates the arithmetic operations on elliptic curves both over reals and finite fields
