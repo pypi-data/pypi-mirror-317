@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: csst-ifs-gehong
+Version: 1.1.3
+Home-page: https://csst-ifs-gehong.readthedocs.io/en/latest/
+Author: Shuai Feng
+Author-email: sfeng@hebtu.edu.cn
+License: MIT
+Keywords: CSST-IFS
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: astropy
+
