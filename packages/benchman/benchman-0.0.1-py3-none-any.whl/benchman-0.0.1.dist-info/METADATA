@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: benchman
+Version: 0.0.1
+Summary: Generate and analyze micro benchmarks
+Author-email: Martin Wendt <benchman@wwwendt.de>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: analysis,benchmark,micro benchmark,performance,reporting
+Requires-Python: >=3.9
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: psutil>=6.1.0
+Requires-Dist: snazzy>=0.2.2
+Requires-Dist: tablib[cli]>=3.7.0
+Requires-Dist: toml>=0.10.2
+Requires-Dist: typing-extensions>=4.12.2
+Description-Content-Type: text/markdown
+
+# benchman
+ 

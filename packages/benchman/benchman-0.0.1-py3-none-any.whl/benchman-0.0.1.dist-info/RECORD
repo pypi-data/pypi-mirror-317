@@ -1,0 +1,15 @@
+benchman/__init__.py,sha256=u_FEPyeaiMLjtwSQeYx7-TPezpR19XHAjycAezAC5uY,256
+benchman/benchman.py,sha256=niJTvQ_XIciF7DjgcFEBrWAP5Tbzp82CAYV_Uc6-n_Q,22147
+benchman/cli.py,sha256=n1put9rB1SBIwar5hR_KmYP0j0mnU-CXz1cFdgClcsM,9726
+benchman/cli_commands.py,sha256=WJ-s7Wb1KPeSjBpSnK4eS22prYnUcnkMyCWeWjLIUsc,5660
+benchman/context_info.py,sha256=7HDCZvqd3H4VBg0pTS4ME0jGvbEE65Usl3X_8ejlCzo,6189
+benchman/dataset.py,sha256=a1A_e3etaSSMewTV3ynjpDI07-zLJ2G2s-25halkVek,23530
+benchman/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+benchman/reporter.py,sha256=Z43CbCM1sURRsenlGqTqPUJpRD2SwRLjSn6pSiz_WLo,5351
+benchman/timings.py,sha256=jTDtdWAcRIGI1jK94IrzLZNlJR0HwDPExUt0XrcSJUg,4032
+benchman/util.py,sha256=WoXlP0oUKqyF8JggkjFY_VyR4gA1x8l3ZiKRi0s6YAs,19190
+benchman-0.0.1.dist-info/METADATA,sha256=eS64oAddI5vabGEp4xrK-00-8sOLahkYLp_vsrDhIdY,533
+benchman-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+benchman-0.0.1.dist-info/entry_points.txt,sha256=m5lSYX2qLLTJ60wQXvSDrcF_Lat3TCv1nzrSC_zXGSE,46
+benchman-0.0.1.dist-info/licenses/LICENSE,sha256=7ddImfwxriUFIjzzbeDdRs-bCbKc84NLmorwb73SVj0,1069
+benchman-0.0.1.dist-info/RECORD,,
