@@ -1,0 +1,10 @@
+flask_dynamic_router/__init__.py,sha256=90my3PozLh8FuqWXTGrDMKiJ4axw_Z5Y6wIAs3O_No0,204
+flask_dynamic_router/directory_processor.py,sha256=q4HXPeAvQrRGwmW-aKfJR9-DgItpUupGLg5Mz6QchnU,1281
+flask_dynamic_router/dynamic_router.py,sha256=DpcKCbpDN6cnQIUlRPGrVdrD5gLA-yNvEqDqRLKdvdQ,1774
+flask_dynamic_router/route_registrar.py,sha256=At3K2Oiktg5yjo0fGVi___AirdGNjIQWtNSZxvWtKfk,1321
+flask_dynamic_router/utils/__init__.py,sha256=AGdeGVRVuAPXwd7vlvmrzhZJvfOChlFXcjMfwVuqROQ,49
+flask_dynamic_router/utils/param_parser.py,sha256=dgfgqhWe3RvD8AqAUwHWzXq18yppS5EQyR84JshdANQ,712
+flask_dynamic_router-0.1.0.dist-info/METADATA,sha256=EQEykaoXJLEltj4_MvHK-CrTQ7PaMUxaWZXPKje9o3M,3970
+flask_dynamic_router-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+flask_dynamic_router-0.1.0.dist-info/licenses/LICENSE,sha256=UtWDM6w7nMyyFqRyOZnsYCr408jfBPWGJGVXAx8pIKM,1065
+flask_dynamic_router-0.1.0.dist-info/RECORD,,
