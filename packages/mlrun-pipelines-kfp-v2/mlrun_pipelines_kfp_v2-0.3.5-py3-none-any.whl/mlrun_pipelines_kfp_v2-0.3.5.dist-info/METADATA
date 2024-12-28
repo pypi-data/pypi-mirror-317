@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mlrun-pipelines-kfp-v2
+Version: 0.3.5
+Summary: MLRun Pipelines package for providing KFP 2.* compatibility
+Home-page: https://github.com/mlrun/mlrun
+Author: Yaron Haviv
+Author-email: yaronh@iguazio.com
+License: Apache License 2.0
+Keywords: mlrun,kfp
+Requires-Python: >=3.9, <3.12
+Description-Content-Type: text/markdown
+Requires-Dist: kfp_server_api>=2.3.0
+Provides-Extra: kfp
+Requires-Dist: kfp[kubernetes]>=2.11.0; extra == "kfp"
+
+MLRun Pipelines package for providing KFP 2.* compatibility
