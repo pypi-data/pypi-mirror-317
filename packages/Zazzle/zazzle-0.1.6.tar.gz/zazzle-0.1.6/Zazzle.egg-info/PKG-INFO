@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Zazzle
+Version: 0.1.6
+Summary: An easy logging library.
+Home-page: https://github.com/Zalek4/zazzle
+Download-URL: https://github.com/Zalek4/zazzle/archive/refs/tags/0.1.6.tar.gz
+Author: Alex Hallenbeck
+Author-email: alexhallenbeck1@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.8
+License-File: LICENSE
