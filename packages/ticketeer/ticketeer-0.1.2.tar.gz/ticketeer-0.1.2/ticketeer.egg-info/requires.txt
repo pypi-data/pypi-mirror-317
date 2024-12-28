@@ -1,0 +1,15 @@
+
+[:sys_platform == "darwin"]
+ticketeer_darwin==0.1.2
+
+[:sys_platform == "freebsd"]
+ticketeer_freebsd==0.1.2
+
+[:sys_platform == "linux"]
+ticketeer_linux==0.1.2
+
+[:sys_platform == "openbsd"]
+ticketeer_openbsd==0.1.2
+
+[:sys_platform == "win32"]
+ticketeer_windows==0.1.2
