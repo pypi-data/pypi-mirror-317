@@ -1,0 +1,10 @@
+.version
+README.md
+pyproject.toml
+ticketeer_darwin/__init__.py
+ticketeer_darwin/ticketeer_amd64
+ticketeer_darwin/ticketeer_arm64
+ticketeer_darwin.egg-info/PKG-INFO
+ticketeer_darwin.egg-info/SOURCES.txt
+ticketeer_darwin.egg-info/dependency_links.txt
+ticketeer_darwin.egg-info/top_level.txt
