@@ -1,0 +1,142 @@
+import os
+import numpy as np
+import zelas2.TheHeartOfTheMilitaryGod as zt
+import random
+import mmengine
+
+def get_pts_paths(folder_path, end='las'):
+    """
+    读取当前文件夹下所有点云数据的绝对路径并保存到一个数组中
+
+    Args:
+        folder_path (str): 文件夹路径
+
+    Returns:
+        list: 所有las点云数据的绝对路径列表
+    """
+    las_paths = []
+    for filename in os.listdir(folder_path):
+        if filename.endswith(end):
+            print(os.path.join(folder_path, filename))
+            las_paths.append(os.path.join(folder_path, filename))
+    return las_paths
+
+def cut_points(xyzi,output_dir,name,chunk_size=160):
+    '将大点云分割成小点云,并重置xy坐标系'
+    min_x = np.min(xyzi[:, 0])
+    max_x = np.max(xyzi[:, 0])
+    min_y = np.min(xyzi[:, 1])
+    max_y = np.max(xyzi[:, 1])
+
+    num_chunks_x = int(np.ceil((max_x - min_x) / chunk_size))
+    num_chunks_y = int(np.ceil((max_y - min_y) / chunk_size))
+
+    for i in range(num_chunks_x):
+        for j in range(num_chunks_y):
+            chunk_min_x = min_x + i * chunk_size
+            chunk_max_x = chunk_min_x + chunk_size
+            chunk_min_y = min_y + j * chunk_size
+            chunk_max_y = chunk_min_y + chunk_size
+
+            xyzi_ = xyzi[xyzi[:,0]>=chunk_min_x,:]
+            xyzi_ = xyzi_[xyzi_[:,0]<chunk_max_x,:]
+            xyzi_ = xyzi_[xyzi_[:,1]>=chunk_min_y,:]
+            xyzi_ = xyzi_[xyzi_[:,1]<chunk_max_y,:]
+            '重置坐标系'
+            center_x = (chunk_min_x + chunk_max_x) / 2
+            center_y = (chunk_min_y + chunk_max_y) / 2
+
+            xyzi_[:, 0] = xyzi_[:, 0] - center_x
+            xyzi_[:, 1] = xyzi_[:, 1] - center_y
+
+            output_path = output_dir+'\\'+name+str(i)+str(j)+'.txt'
+            np.savetxt(output_path,xyzi_,fmt='%.05f')
+            print('已经输出',output_path,'点云')
+
+def reset_z_intensity(xyzil,old_max_i=65535):
+    '重置z坐标和强度值'
+    xyzil[:,3] = xyzil[:,3]/old_max_i  # 重置强度值
+
+    center_z = np.min(xyzil[:,2])  # 获取最低高程值
+    xyzil[:,2] = xyzil[:,2] - center_z  # 矫正高程值，使得都大于0
+    return xyzil
+
+def np2bin_batch(input,otput):
+    'numpy点云批量转为.bin格式'
+    # 获取点云路径
+    files = [f for f in os.listdir(input) if f.endswith('.txt')]
+    # 批量转为.bin
+    for file in files:
+        xyzil_ = zt.ReadByPolars(os.path.join(input, file))
+        xyzi_ = xyzil_[:,:4]
+        xyzi_ = np.float32(xyzi_)
+        print('已经读取点云',os.path.join(input, file))
+        name_ = os.path.splitext(file)[0] + '.bin'
+        with open(os.path.join(otput,name_), 'wb') as f:
+            f.write(xyzi_.tobytes())
+        print('已经输出点云',os.path.join(otput, name_))
+
+def np2label_batch(input,otput):
+    'numpy点云标签批量生成.bin格式标签'
+    files = [f for f in os.listdir(input) if f.endswith('.txt')]
+    '标签批量转为.bin'
+    for file in files:
+        xyzil_ = zt.ReadByPolars(os.path.join(input, file))
+        print('已经读取点云',os.path.join(input, file))
+        L = np.int32(xyzil_[:,4])
+        print(np.unique(L))
+        name_ = os.path.splitext(file)[0] + '.label'
+        with open(os.path.join(otput,name_), 'wb') as f:
+            f.write(L.tobytes())
+        print('已经输出逐点级标签',os.path.join(otput, name_))
+
+def np2ImageSets_batch(input_path,train_file,val_file,test_file,p=np.array([5,2,3])):
+    '生成训练集、验证集和测试集.txt'
+    '批量读取las'
+    files = [f for f in os.listdir(input_path) if f.endswith('.bin')]
+    random.shuffle(files)  # 打乱数据集
+    p_sum = np.sum(p)
+    total_length = len(files)
+    part1_length = np.floor(total_length * p[0] / p_sum).astype(int)
+    part2_length = np.floor(total_length * p[1] / p_sum).astype(int)
+    # part3_length = total_length - part1_length - part2_length
+    part1 = files[:part1_length]
+    part2 = files[part1_length:part1_length + part2_length]
+    part3 = files[part1_length + part2_length:]
+    # 将训练集和验证集\测试集的文件名写入对应的 .txt 文件
+    with open(train_file, 'w') as train_f:
+        for file in part1:
+            train_f.write(f"{file}\n")
+    with open(val_file, 'w') as val_f:
+        for file in part2:
+            val_f.write(f"{file}\n")
+    with open(test_file, 'w') as test_f:
+        for file in part3:
+            test_f.write(f"{file}\n")
+
+def create_pkl(ImageSets_path,out_file,data_set='Custom'):
+    '通过数据集生成mmdet3d所能接受的仿seg_kitti的.pkl'
+    data_infos = dict()
+    data_infos['metainfo'] = dict(DATASET=data_set)
+    data_list = []
+    # 读取ImageSets里面的txt
+    with open(ImageSets_path, 'r') as f:
+        # 读取所有行并去除每行的换行符
+        samples = [line.strip() for line in f.readlines()]
+    num_samples = len(samples)
+    for i in range(num_samples):
+        data_list.append({
+            'lidar_points': {
+                'lidar_path':
+                    'points'+'/'+samples[i],
+                'num_pts_feats':
+                    4
+            },
+            'pts_semantic_mask_path':
+                'semantic_mask'+'/'+os.path.splitext(samples[i])[0] + '.label',
+            'sample_id':
+                str(i)
+        })
+    data_infos.update(dict(data_list=data_list))
+    # 保存.pkl
+    mmengine.dump(data_infos, out_file)

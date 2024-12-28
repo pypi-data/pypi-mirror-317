@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: Zelas2
+Version: 1.1.1.241227
+Summary: Static LiDAR point cloud processing library
+Home-page: UNKNOWN
+Author: Ze You, Shichao Wang, Huaxin Chen, Yimo Geng, Yuqing Wang
+Author-email: 878054597@qq.com
+License: UNKNOWN
+Keywords: python,las,LiDAR,windows,linux
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+1.1.1.241227更新日志
+1.新增了.mmdet3d_base 深度学习自定义数据集支撑代码（需要加装pytorch和mmengine）：
+（1）.get_pts_paths：批量获得点云数据路径
+（2）.cut_points：将大点云分割成小块点云，并将绝对坐标系转换成相对中心坐标系
+（3）.reset_z_intensity：重置点云的z坐标和强度值
+（4）.np2bin_batch：numpy点云批量转为.bin格式
+（5）.np2label_batch：numpy点云标签批量生成.bin格式标签
+（6）.np2ImageSets_batch：生成训练集、验证集和测试集.txt
+（7）.create_pkl：通过数据集生成mmdet3d所能接受的仿seg_kitti的.pkl
+2.暂停了图割和超体素理论的开发项目
+3.对.TheHeartOfTheMilitaryGod新增了一些功能
+（1）.ground_ps2DEM：地面点转DEM,并返回网格坐标（可自行填补空洞）
+（2）.get_buildDSM：在建立DEM网格的情况下建立建筑物DSM
+
+1.0.3.241205更新日志
+1.增加了基于点集拟合直线到椭圆\圆的切角剔除非衬砌点的算法，效果和基于角度差的不相上下
+2.删除了部分含有bug或已经无法使用的代码
+
+1.0.2.241111更新日志
+1.增加了改进PCA算法
+2.修复了zelas转zelas2的问题
+3.新增了图割和超体素理论的开发项目
+
+
