@@ -1,0 +1,10 @@
+matplotlib
+scipy
+numpy
+getdist
+pathos
+extension-helpers
+astropy
+bokeh
+natsort
+six
