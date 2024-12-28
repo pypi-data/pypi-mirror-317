@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+opal_fetcher_dynamodb/__init__.py
+opal_fetcher_dynamodb/provider.py
+opal_fetcher_dynamodb.egg-info/PKG-INFO
+opal_fetcher_dynamodb.egg-info/SOURCES.txt
+opal_fetcher_dynamodb.egg-info/dependency_links.txt
+opal_fetcher_dynamodb.egg-info/requires.txt
+opal_fetcher_dynamodb.egg-info/top_level.txt
