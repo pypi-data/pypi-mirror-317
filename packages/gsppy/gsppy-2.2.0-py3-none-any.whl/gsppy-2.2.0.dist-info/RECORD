@@ -1,0 +1,9 @@
+gsppy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gsppy/cli.py,sha256=YxBL341LJzb6EN-RBkhW3o4ZCexOGiQXq_aRovKccA8,6790
+gsppy/gsp.py,sha256=CUCC1W5GGlGbWkC_td0qDfnSJiuzbWoMapR0qciejw8,13800
+gsppy/utils.py,sha256=gOT3USxmC0MrBnSHOQ8avxghWmjQe59hS4jNQ3eiENQ,3363
+gsppy-2.2.0.dist-info/METADATA,sha256=1Y8LcuU7engLWoCWFIKRwRMNsgkAawnpvX6s1BoXP_8,12485
+gsppy-2.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gsppy-2.2.0.dist-info/entry_points.txt,sha256=smvmcIWk424ARIGKOC_BM42hpT_SptKPcIeqs-8u8lM,41
+gsppy-2.2.0.dist-info/licenses/LICENSE,sha256=co1jy5VZd1wXOPdUC2uk1hn7zsBm6aJNgVmhPOZ47g8,1086
+gsppy-2.2.0.dist-info/RECORD,,
