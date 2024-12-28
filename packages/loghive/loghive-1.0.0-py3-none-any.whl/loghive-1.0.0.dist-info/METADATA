@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: loghive
+Version: 1.0.0
+Summary: A powerful, extensible Python logging library that enables distributed log collection across multiple Python servers with support for multiple message brokers and asynchronous database operations.
+Author: Pratham Agrawal
+Author-email: prathamagrawal1205@example.com
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
