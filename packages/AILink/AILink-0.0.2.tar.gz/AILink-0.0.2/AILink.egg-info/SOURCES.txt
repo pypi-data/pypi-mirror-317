@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+AILink.egg-info/PKG-INFO
+AILink.egg-info/SOURCES.txt
+AILink.egg-info/dependency_links.txt
+AILink.egg-info/requires.txt
+AILink.egg-info/top_level.txt
