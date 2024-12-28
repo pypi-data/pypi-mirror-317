@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "musurgia"
+version = "3.1"
+description = "Tools for algorithmic composition."
+authors = ["Alex Gorji <aligorji@hotmail.com>"]
+license = "MIT"
+homepage = "https://github.com/alexgorji/musurgia.git"
+repository = "https://github.com/alexgorji/musurgia.git"
+readme = "README.rst"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+matplotlib = "^3.9.0"
+fpdf2 = "^2.8.2"
+musicscore = "^2.4.0"
+verysimpletree = "^1.2"
+
+[tool.poetry.group.test.dependencies]
+pytest-xdist = "^3.6.1"
+pytest-cov = "^6.0.0"
+xmltodict = "^0.14.2"
+deepdiff = "^8.0.1"
+diff_pdf_visually = "^1.8.0"
+mypy = "^1.14.0"
+types-fpdf2 = "^2.8.1.20241204"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.3"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+ignore = ["F403", "F405", "E741", "F821"]
+unfixable = ["F401"]
+
+[tool.mypy]
+exclude = [
+    "tests"
+]
+
+[[tool.mypy.overrides]]
+module = [
+    "musicscore.*",
+]
+ignore_missing_imports = true
