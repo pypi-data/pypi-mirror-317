@@ -1,0 +1,13 @@
+tinytopics/__init__.py,sha256=jEI8wpTzNzXbAVYsNXmW0W0UHuukTfj8PHNFAQKiSm8,486
+tinytopics/colors.py,sha256=5phFwHo1BPyKgpuIkTZadeQkdqlfEDPBCyLl2d6f6XQ,3865
+tinytopics/data.py,sha256=jSH6NWGCiS_NkHqwUTBeQZ2SYtui2L1fq5mbA4VbUrc,2755
+tinytopics/fit.py,sha256=WpmgXEY3A1Tj_HgE3k8Lrj7sQDnGbsroU2iuRF1do7M,3412
+tinytopics/fit_distributed.py,sha256=SSXzjEwCOzYhB0WTMR7Ez962ZosnqjIZ6xkee4MxGyc,4626
+tinytopics/loss.py,sha256=QALBRjWpLdkjU19mKON-9nsO1wOlJcYgAjb3JxmyADc,496
+tinytopics/models.py,sha256=GCoTLdpeogCeiRD5BrQPEmP8Fr4wkVHT4TYzgVZyAeQ,2411
+tinytopics/plot.py,sha256=H8QrFRtoFhJNaZWDeUZaZES7WrNDw4l6-Cx75T1Q0gQ,5546
+tinytopics/utils.py,sha256=c2dN0zenaB03xfJTDV-Oz0gmCuTE2yGNEXL4auir2a0,4444
+tinytopics-0.7.0.dist-info/METADATA,sha256=0zfu88WXxJ8UF5XPY6Qj29BFCIH3Z3VUL0H6qyX-1Ps,3623
+tinytopics-0.7.0.dist-info/WHEEL,sha256=C2FUgwZgiLbznR-k0b_5k3Ai_1aASOXDss3lzCUsUug,87
+tinytopics-0.7.0.dist-info/licenses/LICENSE,sha256=jbm9pzuGurwII3Yv_AWZIuQQ3WsHK9525koOPP-YLO4,1063
+tinytopics-0.7.0.dist-info/RECORD,,
