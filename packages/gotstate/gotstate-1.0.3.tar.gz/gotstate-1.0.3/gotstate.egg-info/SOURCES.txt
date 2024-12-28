@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+gotstate.egg-info/PKG-INFO
+gotstate.egg-info/SOURCES.txt
+gotstate.egg-info/dependency_links.txt
+gotstate.egg-info/requires.txt
+gotstate.egg-info/top_level.txt
