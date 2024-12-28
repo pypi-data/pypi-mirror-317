@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: polemarch-ansible
+Version: 3.0.1
+Summary: Wrapper for Ansible cli.
+Author-email: VST Consulting <sergey.k@vstconsulting.net>
+License: GPLv3
+Project-URL: Home, https://gitlab.com/vstconsulting/polemarch-ansible
+Project-URL: Web Site, https://polemarch.org/
+Project-URL: Issue Tracker, https://gitlab.com/vstconsulting/polemarch-ansible/issues
+Project-URL: Source Code, https://gitlab.com/vstconsulting/polemarch-ansible
+Project-URL: Documentation, https://about.polemarch.org/
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: ansible-core <2.19,>=2.11
+
+Wrapper for Ansible cli.
+========================
+
+Compatibility
+=============
+
+- Versions 2.2.x are the last to support Ansible 2.5 - 2.9.
+- Version 3.0.x supports ansible-core 2.11 to 2.17. It can also work with Ansible 2.10, but it must be installed manually.
+
+Usage
+=====
+
+*  `pm-execute [ansible command name] [args]` - calls any ansible cli tool.
+*  `pm-cli-reference [ansible command name,...] [--exclude key]` -
+    output cli keys for command. Default - all. Exclude keys by names (support many).
+    Now support output only 'ansible', 'ansible-playbook' and
+    'ansible-galaxy'.
+*  `pm-ansible [reference/ansible_command]` - run as module.
+   For output reference use 'reference', or full ansible command.
+*  `pm-ansible [--detail] [--get]` -
+    Output modules reference. 
+
+Contribution
+============
+
+We use `tox` for tests and deploy. Just run `tox -e py36-coverage,py37-install,flake`
+for full tests with coverage output.
