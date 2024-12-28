@@ -1,0 +1,9 @@
+kenarBot/__init__.py,sha256=9i4dLLCbjWR6HywoK7TrrTq8m0WUbKPDCNuGkZrOKsI,25
+kenarBot/app.py,sha256=8ldEV5ZJeccmRqV6k6bvvk64cXtY9A5okDPv4crRckE,2848
+kenarBot/message_handler.py,sha256=NdiyiEYaFMUaP2Oqi_sI8hAbXexQA_IGgocC-h8YLYQ,475
+kenarBot/types.py,sha256=Rz-P6yxgo-Bt-OYYGqBLU-YGR5HLzvCjEFIKbtm_Css,267
+kenarBot-0.0.1.dist-info/LICENSE,sha256=nl5xPKH4oNpAorQMyb2qqMsnK3APT0DT6W_wl8URXl8,1074
+kenarBot-0.0.1.dist-info/METADATA,sha256=2D2htj4iQjT-BmKYlwCKc0LUqziHM2MOpmPY2lKsraE,1425
+kenarBot-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+kenarBot-0.0.1.dist-info/top_level.txt,sha256=L4UTa-8e-uT2kD8b1BB4QiUJjvzv7cHy7aY-FIQhniA,9
+kenarBot-0.0.1.dist-info/RECORD,,
