@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: pictor_lib
+Version: 0.2
+Summary: An image processings library wrapper based on Python Pillow
+Project-URL: homepage, https://github.com/huangyunict/pictor_lib
+Project-URL: issues, https://github.com/huangyunict/pictor_lib/issues
+Author-email: Yun Huang <huangyunict@gmail.com>
+Maintainer-email: Yun Huang <huangyunict@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Requires-Dist: assertpy>=1.1
+Requires-Dist: pillow>=11.0.0
+Requires-Dist: pytest>=8.3.4
+Description-Content-Type: text/markdown
+
+# Pictor Lib
+
+[![Pylint](https://github.com/huangyunict/pictor_lib/actions/workflows/pylint.yml/badge.svg)](https://github.com/huangyunict/pictor_lib/actions/workflows/pylint.yml)
+[![Python application](https://github.com/huangyunict/pictor_lib/actions/workflows/python-app.yml/badge.svg)](https://github.com/huangyunict/pictor_lib/actions/workflows/python-app.yml)
+
+Pictor Library provide help classes and functions Python image processing library Pillow.
+
