@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+myhttps/__init__.py
+myhttps/__main__.py
+myhttps/_myhttps.py
+myhttps.egg-info/PKG-INFO
+myhttps.egg-info/SOURCES.txt
+myhttps.egg-info/dependency_links.txt
+myhttps.egg-info/requires.txt
+myhttps.egg-info/top_level.txt
