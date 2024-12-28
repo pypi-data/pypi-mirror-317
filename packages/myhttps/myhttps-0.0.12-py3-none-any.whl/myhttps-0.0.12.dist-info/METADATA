@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: myhttps
+Version: 0.0.12
+Home-page: https://github.com/leeyang1991/myhttps
+Author: Yang Li
+Author-email: leeyang1991@gmail.com
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: pyOpenSSL
+Requires-Dist: outdated
+
+# myhttps
+#### alpha version
+pip install myhttps
+
+USAGE:
+        As a module from any location
+            python3 -m myhttps [-option value]
+
+    OPTIONS:
+        --v             Version Info(**)
+        --help          Help and usage Info(**)
+        -p              Port Number [default: 11443]
+        -h              Host address
+        -c              ssl cert file location
+        -k              ssl key file location
+        -mode           HTTPS or HTTP
