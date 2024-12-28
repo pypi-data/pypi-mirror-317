@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: enthusiast-common
+Version: 0.2.0
+Summary: 
+Author: Rafal Cymerys
+Author-email: rafal@upsidelab.io
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Enthusiast Common
+
+This package includes interface definitions for developing plugins for Enthusiast.
