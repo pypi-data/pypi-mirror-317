@@ -1,0 +1,17 @@
+wvutils/__init__.py,sha256=_7OlQdbVkK4jad0CLdpI0grT-zEAb-qgFmH5mFzDXiA,22
+wvutils/args.py,sha256=-5xiTUPECOo0qbD5-6Mw6uigx_7h1rXKllQvZKiOt4E,2947
+wvutils/aws.py,sha256=JIhh8lFn3AjO0tEzGyCAeDSXV8wXxzsfRz3H4WWPUsw,10410
+wvutils/compat.py,sha256=gP0OhDMC6rHAZAmgBHcNQLJAmEM3lF6Ek1uFbJcK4xw,728
+wvutils/constants.py,sha256=n25w2pwi9Pb7zyzaqXABZGzr4ZX3YV-vc7vvHBlGi6k,506
+wvutils/datetime.py,sha256=qB6AJmphWbJGFv5ew4A8RwGjx_2eQLjFXIWJfFhKaeQ,1046
+wvutils/errors.py,sha256=KDfQAZdRhBWFx6SI5DmQoiWrtvHSATKSLZCl-NtoYHQ,1088
+wvutils/general.py,sha256=lmDkhnDX3-Dt344PiD0Oc3EOuQ1A1I1tHNyR78ACv2k,12203
+wvutils/parquet.py,sha256=m4OxXWxZhmyA1Lt-RNTTZGyMWUT0_eMK1_R2gP7vdCs,8578
+wvutils/path.py,sha256=VxqI3a0HB9ynwn7e_-Xm634aRORU8IsARz61vJND7SA,3217
+wvutils/proxies.py,sha256=ueX5zQAlUVug51FqqZrvWuhpngHnzfN7c7d2kktfDao,5626
+wvutils/type_aliases.py,sha256=SUFyxQ9nU_aUib-dU3CBXYSLH6Ui9xxDnTGjaGWQcDE,1158
+wvutils-2.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+wvutils-2.0.0.dist-info/METADATA,sha256=t4MisdDgxExgCNwM0XwD5NmbJSVLXkWAqOrBnM9lQbY,76510
+wvutils-2.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wvutils-2.0.0.dist-info/top_level.txt,sha256=zfqn8ITkS8iOhQ_4sqR4gkAQ63v0Sq64qmxrZwi01D8,8
+wvutils-2.0.0.dist-info/RECORD,,
