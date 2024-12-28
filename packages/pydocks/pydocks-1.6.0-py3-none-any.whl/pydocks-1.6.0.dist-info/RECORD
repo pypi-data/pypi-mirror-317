@@ -1,0 +1,14 @@
+pydocks/__init__.py,sha256=RWENz61xwc2Fhzt0-BuPRZ7PAyUVGAmYjhAkDJTWBgk,989
+pydocks/plugin.py,sha256=uUGkDj8kagJoDRFNJJ4SRaEWW8TMFf51mb2zAvjtRlo,2241
+pydocks/postgresql.py,sha256=frLG0jFsKCfqTZYqAOq4r5xpzMDBayYTpUNFHxDfd8A,4442
+pydocks/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydocks/redis.py,sha256=to20pVIa2dx_Rt22zS687ksz8TdYET4R66U6lgP2L_s,2991
+pydocks/ubuntu.py,sha256=0LSkdPGCY5AvNUNjI5Jrt8WZdCjk6ojg7SeZFPeZNSc,2782
+pydocks/vault.py,sha256=yWQp9WZpoFVA_-Rv9Rnd4uyWbXfriqTFIEAjPidcmBs,3925
+pydocks/vault_resources/test-vault-init.sh,sha256=GNF591gk5OnaEy9NSbcJx5iMrkTgLpaDhSrcUkveIIc,1524
+pydocks/vault_resources/vault-test.json,sha256=SMpJgDwNzDz3WIHegzXkOZvRmXh9ZzHxLbb8z_6nN_w,236
+pydocks-1.6.0.dist-info/METADATA,sha256=nCpwRdAC6L-pNlRvob8hppmLaWmO5Ul6VkpP0znQbc0,4025
+pydocks-1.6.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pydocks-1.6.0.dist-info/entry_points.txt,sha256=xM0EPrcMDdbClZ8xZedU09BiL6dyq1B70eZuS2Cb_6M,29
+pydocks-1.6.0.dist-info/licenses/LICENSE,sha256=apw6aefq1u6QAh-QZbpNI5ZDDfjM5Uv3hjDPAQsrsC0,1064
+pydocks-1.6.0.dist-info/RECORD,,
