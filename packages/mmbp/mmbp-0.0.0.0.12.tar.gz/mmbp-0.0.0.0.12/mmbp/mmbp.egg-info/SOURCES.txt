@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+setup.py
+mmbp/LICENSE
+mmbp/mmbConfig.json
+mmbp/MMB.egg-info/PKG-INFO
+mmbp/MMB.egg-info/SOURCES.txt
+mmbp/MMB.egg-info/dependency_links.txt
+mmbp/MMB.egg-info/top_level.txt
+mmbp/MMBP/__init__.py
+mmbp/MMBP/core.py
+mmbp/MMBP/likeJS.py
+mmbp/mmbp.egg-info/PKG-INFO
+mmbp/mmbp.egg-info/SOURCES.txt
+mmbp/mmbp.egg-info/dependency_links.txt
+mmbp/mmbp.egg-info/top_level.txt
