@@ -1,0 +1,8 @@
+dynamic_cli_builder/__init__.py,sha256=2rNjQtvgZbTgNa2gDTPdv4RZcECvNCO6xDI4hONfxXw,448
+dynamic_cli_builder/cli.py,sha256=VHqncj8MIugM9u5zk8P-r2OGa42EkTJkiHjInic528w,981
+dynamic_cli_builder/loader.py,sha256=DRIF7wPUuK9G4mdgew8r-x-t2ULdNxFNnrOjhPv5N4s,119
+dynamic_cli_builder-0.1.4.dist-info/METADATA,sha256=yCUk-VpnTdRtLLNkfQRr1BrizxTif9vGDsLkV9ovqZo,1917
+dynamic_cli_builder-0.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dynamic_cli_builder-0.1.4.dist-info/entry_points.txt,sha256=N584KmUhkL7hjL7b8s3511JyhLRNN8_p_NuAsB-wPKg,65
+dynamic_cli_builder-0.1.4.dist-info/top_level.txt,sha256=G9e-ob7sBDpknKhtS7Emg_tSyR3YMR_xK2oKQz9_gzk,20
+dynamic_cli_builder-0.1.4.dist-info/RECORD,,
