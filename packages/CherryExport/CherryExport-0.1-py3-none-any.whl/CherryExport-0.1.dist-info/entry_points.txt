@@ -1,0 +1,2 @@
+[console_scripts]
+CherryExport = CherryExport.log_export:main
