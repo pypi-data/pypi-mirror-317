@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: testing-pants-distribution
+Version: 0.0.2
+Summary: An example distribution built with Pants.
+Author: ksajere
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: <=3.12,>=3.10
