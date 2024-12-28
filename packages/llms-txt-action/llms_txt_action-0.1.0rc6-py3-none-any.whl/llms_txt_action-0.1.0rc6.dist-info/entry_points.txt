@@ -1,0 +1,3 @@
+[console_scripts]
+llms-txt=llms_txt_action.entrypoint:main
+

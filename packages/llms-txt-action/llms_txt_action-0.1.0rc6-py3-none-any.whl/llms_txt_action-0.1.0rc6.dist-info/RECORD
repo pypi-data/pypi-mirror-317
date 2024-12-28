@@ -1,0 +1,8 @@
+llms_txt_action/__init__.py,sha256=Ou9K1VMhEzanbVKyPA6-21FlRslQMKTwlXgCiJgIdH8,23
+llms_txt_action/entrypoint.py,sha256=qQG5Ge8AMUR1sx-a4Dh2kXMiaXBr6b1bILRWtT9tgIY,5176
+llms_txt_action/utils.py,sha256=4pbz4nZz6MEydnb3NcY9wyIQxPBx49NZbzHnqN6gxFk,5199
+llms_txt_action-0.1.0rc6.dist-info/LICENSE,sha256=fGcF0BpEeACkj4m5DcIXyHpqVOr02t6KiEacJMX_0Vw,1069
+llms_txt_action-0.1.0rc6.dist-info/METADATA,sha256=JOY0UgGChQ1LBCnZFTalHGDr1fkZkHOHPFViyP3m2Zs,4103
+llms_txt_action-0.1.0rc6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+llms_txt_action-0.1.0rc6.dist-info/entry_points.txt,sha256=cL3CThLBQFhMYQjGWjBb6WaG0Dmi-S5LXRkhgTcWNf4,60
+llms_txt_action-0.1.0rc6.dist-info/RECORD,,
