@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pioreactor_logs2discord/LEADER_ONLY
+pioreactor_logs2discord/__init__.py
+pioreactor_logs2discord/additional_config.ini
+pioreactor_logs2discord/post_install.sh
+pioreactor_logs2discord/pre_uninstall.sh
+pioreactor_logs2discord.egg-info/PKG-INFO
+pioreactor_logs2discord.egg-info/SOURCES.txt
+pioreactor_logs2discord.egg-info/dependency_links.txt
+pioreactor_logs2discord.egg-info/entry_points.txt
+pioreactor_logs2discord.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+include pioreactor_logs2discord/additional_config.ini
+include pioreactor_logs2discord/post_install.sh
+include pioreactor_logs2discord/pre_uninstall.sh
+include pioreactor_logs2discord/LEADER_ONLY
