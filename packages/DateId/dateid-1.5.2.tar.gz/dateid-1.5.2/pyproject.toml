@@ -1,0 +1,89 @@
+[build-system]
+requires = [
+    "poetry-core>=1.0.0",
+]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+#skip-string-normalization = true
+target-version = [
+    "py312",
+]
+
+[tool.codespell]
+count = ''
+quiet-level = 2
+skip = 'documentation/Archive/*'
+ignore-words-list = 'space-holder'
+
+[tool.coverage.run]
+source = [
+    'src',
+    'tests',
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.poetry]
+name = 'DateId'
+version = '1.5.2'
+description = 'Calculate an integer value for months and dates from a base date.'
+authors = [
+    "Hendrik du Toit <hendrik@brightedge.co.za>",
+]
+license = "file:LICENSE"
+readme = "README.rst"
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'Topic :: Software Development',
+    'Topic :: Software Development :: Libraries',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11'
+]
+# documentation = "https://readthedocs.org"
+homepage = 'https://github.com/BrightEdgeeServices/venvit'
+repository = "https://github.com/RealTimeEvents/rtecommon.git"
+
+[tool.poetry.dependencies]
+python = "^3.12.2"
+time-machine = "^2.16.0"
+
+[tool.poetry.group.dev.dependencies]
+mdformat-gfm = "^0.3.6"
+mdformat-frontmatter = "^2.0.8"
+mdformat-footnote = "^0.1.1"
+black = "^24.8.0"
+flake8 = "^7.1.1"
+pre-commit = "^3.8.0"
+pytest = "^8.3.4"
+codecov = "^2.1.13"
+pytest-cov = "^6.0.0"
+
+[tool.poetry.urls]
+issues = "https://github.com/BrightEdgeeServices/DateId/issues"
+changelog = 'https://github.com/BrightEdgeeServices/DateId/blob/enhancement/master/ReleaseNotes.md'
+
+[tool.pytest.ini_options]
+addopts = [
+    '-vv',
+    '--ignore-glob=*\\Archive',
+]
+#addopts = ['--import-mode=importlib', "-v", "--cov=./", "--ignore-glob=*\\Archive", "--cov-report=html"]
+markers = [
+    "config: Run config tests",
+    "dbdef: Run dbdef tests ",
+    "select: Run a selection of tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+pythonpath = [
+    'src',
+    'tests',
+]
+testpaths = 'tests'
