@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scenario Thinker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+</head>
+<style>
+.button{
+    border: black 1px solid;
+    background-color: rgb(201, 201, 201);
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 18px;
+}
+</style>
+<body>
+    <script src="script.js"></script>
+    <div style="display: flex; justify-content: space-between;">
+        <input id="files" style="display: none" type="file" onchange="addFile(this)"/>
+        <label for="files" class="button">Upload file for scenario</label>
+        <button onclick="colorChange()" style="width: 20%;" class="button">Format scenario file :D</button>
+    </div>
+    <div style="display: flex; flex-direction: column; width: 100%; margin-top: 30px">
+        <span>INPUT</span>
+        <div contenteditable="true" style="border: 1px solid #ccc; padding: 10px; width: 100%; height: 150px; overflow-y: scroll;" id="input-text">
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 30px; margin-bottom: 30px; ">
+        <button class="button" onclick="sendScenarioToPython()">
+            Generate execution python script
+        </button>
+    </div>
+    <span>OUTPUT</span>
+    <pre>
+        <code class="python" style="border: 1px solid #ccc; padding: 10px; width: 100%; height: 150px; overflow-y: scroll;" id="output-text">
+
+        </code>
+    </pre>
+    <div style="display: flex; justify-content: center; margin-top: 30px; margin-bottom: 30px; ">
+        <button class="button" onclick="download('dupa.py')">
+            Download the file
+        </button>
+    </div>
+    <p id="response"></p>
+
+    <div id="error-container" style="display: none">
+        <span>ERRORS</span>
+        <pre>
+            <code class="text" style="border: 1px solid #ccc; padding: 10px; width: 100%; height: 150px; overflow-y: scroll;" id="error-text">
+
+            </code>
+        </pre>
+    </div>
+</body>
+ 
+</html>
