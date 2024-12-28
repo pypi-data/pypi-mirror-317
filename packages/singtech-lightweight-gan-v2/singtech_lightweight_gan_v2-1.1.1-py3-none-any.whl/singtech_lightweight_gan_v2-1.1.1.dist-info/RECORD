@@ -1,0 +1,12 @@
+lightweight_gan/__init__.py,sha256=mZBfgxIqdqoTh6mrj6AZVIXzgHs4nyINgdsgqcAZ118,146
+lightweight_gan/cli.py,sha256=_79w62UsZcxjf81wflD5oBgPrj6qir70W8de3i1cQLA,6213
+lightweight_gan/diff_augment.py,sha256=fL10DXM5Yl_i2OFgeEC7PFO4INzN-sJxMv2n6eLKnnA,3844
+lightweight_gan/diff_augment_test.py,sha256=9FSeL41uH4fP95jxcy_IJLc2nCO-M1v1Xs39keVK5HI,1560
+lightweight_gan/lightweight_gan.py,sha256=HVKboexr0b51-LxU65pniKWt_YDHnsE_F1OnavJs_rc,58791
+lightweight_gan/version.py,sha256=ta6I5vO0KnL-6Jq8dfzJ529b-Y7Jx7pTPxZEzA2vnsc,23
+singtech_lightweight_gan_v2-1.1.1.dist-info/LICENSE,sha256=rM4nWFj0DDrnsbDYW7FmZCzrAhjSDx9u5CyhFxag8Ec,1087
+singtech_lightweight_gan_v2-1.1.1.dist-info/METADATA,sha256=CyGpQDrUDonwPec5T7NnbZWfE18p5V3LMiS6-gfd6_k,863
+singtech_lightweight_gan_v2-1.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+singtech_lightweight_gan_v2-1.1.1.dist-info/entry_points.txt,sha256=0PcDIRnYb0MuOtLusveTOmjJdpeS46OatcFmU1gRfns,61
+singtech_lightweight_gan_v2-1.1.1.dist-info/top_level.txt,sha256=clQMasbidB0G_6cayDp27FldzKhG35TErvoCLL_DkLc,16
+singtech_lightweight_gan_v2-1.1.1.dist-info/RECORD,,
