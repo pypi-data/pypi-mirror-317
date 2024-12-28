@@ -1,0 +1,13 @@
+README.md
+setup.py
+mydocs/__init__.py
+mydocs/functions_value.py
+mydocs/index.py
+mydocs/main.py
+mydocs/running.py
+mydocs_streamlit.egg-info/PKG-INFO
+mydocs_streamlit.egg-info/SOURCES.txt
+mydocs_streamlit.egg-info/dependency_links.txt
+mydocs_streamlit.egg-info/entry_points.txt
+mydocs_streamlit.egg-info/requires.txt
+mydocs_streamlit.egg-info/top_level.txt
