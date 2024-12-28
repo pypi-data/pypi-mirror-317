@@ -1,0 +1,16 @@
+PyGithub==v2.4.0
+click
+types-click
+tqdm
+types-tqdm
+pydantic
+
+[dev]
+build
+twine
+
+[py2exe]
+py2exe>=0.12
+
+[pyinstaller]
+pyinstaller>=6.10.0
