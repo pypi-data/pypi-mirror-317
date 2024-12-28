@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: xid-msi
+Version: 0.0.34
+Summary: Xidware Microsoft Installer
+Home-page: https://xidware.com
+Author: xidware
+Author-email: developer@xidware.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: xid-xpl
+
+# **xid-msi**
+
+## **개요**
+- wix3 기반의 MSI 설치 파일 생성 라이브러리.
+
+# **설치**
+1. wix3.14 설치 및 시스템 환경변수의 PATH에 등록.
+2. xid-msi 설치
+3. 다음과 같이 사용.
+```python
+import msi
+
+project = msi.Create()
+project.Build()
+
+```

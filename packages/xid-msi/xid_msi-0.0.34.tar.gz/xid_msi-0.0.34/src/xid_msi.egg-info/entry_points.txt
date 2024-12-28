@@ -1,0 +1,2 @@
+[console_scripts]
+msi = msi.commandmanager:CommandManager.Run
