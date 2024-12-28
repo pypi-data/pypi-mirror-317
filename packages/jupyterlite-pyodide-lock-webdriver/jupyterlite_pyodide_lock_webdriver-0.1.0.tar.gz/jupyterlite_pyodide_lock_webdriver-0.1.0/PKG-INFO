@@ -1,0 +1,58 @@
+Metadata-Version: 2.3
+Name: jupyterlite-pyodide-lock-webdriver
+Version: 0.1.0
+Summary: A WebDriver strategy for jupyterlite-pyodide-kernel-lock
+Author: jupyterlite-pyodide-lock contributors
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Framework :: Jupyter :: JupyterLab :: 4
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Typing :: Typed
+Requires-Dist: jupyterlite-pyodide-lock ==0.1.0
+Requires-Dist: selenium >=4.19
+Requires-Dist: pytest >=8,<9 ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: pytest-html ; extra == "test"
+Project-URL: Bug Tracker, https://github.com/deathbeds/jupyterlite-pyodide-lock/issues
+Project-URL: Changelog, https://github.com/deathbeds/jupyterlite-pyodide-lock/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://jupyterlite-pyodide-lock.readthedocs.io
+Project-URL: PyPI, https://pypi.org/project/jupyterlite-pyodide-lock
+Project-URL: Source, https://github.com/deathbeds/jupyterlite-pyodide-lock/tree/main
+Provides-Extra: test
+
+# jupyterlite-pyodide-lock-webdriver
+
+> A `jupyterlite-pyodide-lock` lock strategy using the [WebDriver] standard.
+
+[webdriver]: https://www.w3.org/TR/webdriver
+
+## Install
+
+> This package is not yet released. See `CONTRIBUTING.md` for development.
+>
+> ```bash
+> pip install jupyterlite-pyodide-lock-webdriver
+> ```
+
+## Usage
+
+### Configure
+
+> See the `jupyterlite-pyodide-lock` documentation for more information.
+
+```yaml
+# examples/jupyter_lite_config.json
+{
+  'PyodideLockAddon': { 'enabled': true, 'locker': 'WebDriverLocker' },
+  'WebDriverLocker': { 'browser': 'firefox' },
+}
+```
+
