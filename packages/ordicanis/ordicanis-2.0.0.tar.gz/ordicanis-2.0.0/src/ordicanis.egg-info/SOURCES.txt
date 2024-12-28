@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ordicanis.egg-info/PKG-INFO
+src/ordicanis.egg-info/SOURCES.txt
+src/ordicanis.egg-info/dependency_links.txt
+src/ordicanis.egg-info/requires.txt
+src/ordicanis.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_gui.py
+tests/test_web.py
