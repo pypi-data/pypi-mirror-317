@@ -1,0 +1,14 @@
+pyoframe/__init__.py,sha256=nEN0OgqhevtsvxEiPbJLzwPojf3ngYAoT90M_1mc4kM,477
+pyoframe/_arithmetic.py,sha256=LvuxI4pFYuqrqus4FxcIekUwXfdEMEVWBR-1h5hF7Ac,14764
+pyoframe/constants.py,sha256=STQZufgBCS7QTmyQTK_8lINYNSDjXCxVFgF1mXoXen4,3769
+pyoframe/core.py,sha256=C9T0wFDAgcsFVxwnLOYqQ2j9fwnCCS_usjlGSME_qmo,62743
+pyoframe/model.py,sha256=_anptjuAUK2JrHhC2Hy2ouyTT9arEiQAsLO1t5SwsAs,9483
+pyoframe/model_element.py,sha256=nCfe56CRWr6bwP8irUd2bmLAEGQ-7GwOQtWeqz2WxtU,5944
+pyoframe/monkey_patch.py,sha256=9IfS14G6IPabmM9z80jzi_D4Rq0Mdx5aUCA39Yi2tgE,2044
+pyoframe/objective.py,sha256=PBWxj30QkFlsvY6ijZ6KjyKdrJARD4to0ieF6GUqaQU,3238
+pyoframe/util.py,sha256=6Z-hccQ9RT208jJ4hA8pyjSoLvym5Et7M4zcJurIkkY,12941
+pyoframe-0.1.0.dist-info/LICENSE,sha256=dkwA40ZzT-3x6eu2a6mf_o7PNSqHbdsyaFNhLxGHNQs,1065
+pyoframe-0.1.0.dist-info/METADATA,sha256=PuYGrFWwrUL9sxQrremTxbUumg9KOtKVgPds14KCyjs,3518
+pyoframe-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyoframe-0.1.0.dist-info/top_level.txt,sha256=10z3OOJSVLriQ0IrFLMH8CH9zByugPWolqhlHlkNjV4,9
+pyoframe-0.1.0.dist-info/RECORD,,
