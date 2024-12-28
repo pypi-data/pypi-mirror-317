@@ -1,0 +1,9 @@
+gcp_logger/__init__.py,sha256=SiryLM7MTLNZ7QOCzJifoKtRZcdj7cN5b42M7tY6Mzs,300
+gcp_logger/custom_logger.py,sha256=rsuiBDMHtqfrNipDEsuNwUKw77An1i8LAzUoPOysrz8,2575
+gcp_logger/formatters.py,sha256=gntcBGcDN0mxQWYhMwq3vKjtCRE_MYKXgnB2ZzWuYYs,3244
+gcp_logger/handlers.py,sha256=loCBKfWs9KcW4xWaxUELF5oQv5tDEX9vvUD2ngS2F6Y,2038
+gcp_logger/logger.py,sha256=y5kV0EuoeOUo7SPNou5Ie-LkEIcZsMvVyHV3BV7s3xE,2195
+gcp_logger-1.0.0.dist-info/METADATA,sha256=dc6xnfg4mbrA1Yx3QZCA1Yyk9ZUU_QqhypSHyk2_MpA,332
+gcp_logger-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gcp_logger-1.0.0.dist-info/top_level.txt,sha256=bx5QHWfxQSI64GXrkOaf43ZJotLUGQuLRmI5S_aaen4,11
+gcp_logger-1.0.0.dist-info/RECORD,,
