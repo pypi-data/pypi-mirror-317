@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+include Logo.png
+recursive-include JSON_requirements *.py
