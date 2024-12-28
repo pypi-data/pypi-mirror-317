@@ -1,0 +1,205 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": ".x86_64-clang-17",
+            "hidden": true,
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/clang-17",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++-17"
+            },
+            "environment": {
+                "_CONAN_PROFILE_INSTALL_DIR": "${sourceDir}/build/x86_64-clang-17"
+            }
+        },
+        {
+            "name": ".x86_64-gcc-13",
+            "hidden": true,
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-13",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++-13"
+            },
+            "environment": {
+                "_CONAN_PROFILE_INSTALL_DIR": "${sourceDir}/build/x86_64-gcc-13"
+            }
+        },
+        {
+            "name": ".x86_64-gcc-11",
+            "hidden": true,
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/gcc-11",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++-11"
+            },
+            "environment": {
+                "_CONAN_PROFILE_INSTALL_DIR": "${sourceDir}/build/x86_64-gcc-11"
+            }
+        },
+        {
+            "name": ".x86_64-msvc-194",
+            "hidden": true,
+            "environment": {
+                "_CONAN_PROFILE_INSTALL_DIR": "${sourceDir}/build/x86_64-msvc-194"
+            },
+            "cacheVariables":  {
+                "CMAKE_POLICY_DEFAULT_CMP0091":  "NEW"
+            },
+            "toolchainFile": "$env{_CONAN_PROFILE_INSTALL_DIR}/generators/conan_toolchain.cmake"
+        },
+        {
+            "name": ".debug",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            },
+            "toolchainFile": "$env{_CONAN_PROFILE_INSTALL_DIR}/Debug/generators/conan_toolchain.cmake"
+        },
+        {
+            "name": ".release",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            },
+            "toolchainFile": "$env{_CONAN_PROFILE_INSTALL_DIR}/Release/generators/conan_toolchain.cmake"
+        },
+        {
+            "name": ".relwithdebinfo",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+            },
+            "toolchainFile": "$env{_CONAN_PROFILE_INSTALL_DIR}/RelWithDebInfo/generators/conan_toolchain.cmake"
+        },
+        {
+            "name": ".tests",
+            "hidden": true,
+            "cacheVariables": {
+                "BUILD_TESTING": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        },
+        {
+            "name": ".default-buildir",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
+            }
+        },
+        {
+            "name": ".bindings",
+            "hidden": true,
+            "cacheVariables": {
+                "MANDOS_BUILD_BINDINGS": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        },
+        {
+            "name": ".examples",
+            "hidden": true,
+            "cacheVariables": {
+                "MANDOS_BUILD_EXAMPLES": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        },
+        {
+            "name": ".tracing",
+            "hidden": true,
+            "cacheVariables": {
+                "MANDOS_ENABLE_TRACING": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        },
+        {
+            "name": ".base",
+            "hidden": true,
+            "inherits": [
+                ".default-buildir"
+            ],
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        },
+        {
+            "name": ".clang-tidy",
+            "hidden": true,
+            "cacheVariables": {
+                "ENABLE_CLANG_TIDY": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        },
+        {
+            "name": ".asan",
+            "hidden": true,
+            "cacheVariables": {
+                "ENABLE_SANITIZER_ADDRESS": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        },
+        {
+            "name": ".ubsan",
+            "hidden": true,
+            "cacheVariables": {
+                "ENABLE_SANITIZER_UNDEFINED": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        },
+        {
+            "name": ".coverage",
+            "hidden": true,
+            "cacheVariables": {
+                "ENABLE_COVERAGE": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        },
+        {
+            "name": ".warnings-as-errors",
+            "hidden": true,
+            "cacheVariables": {
+                "WARNINGS_AS_ERRORS": {
+                    "type": "BOOL",
+                    "value": "ON"
+                }
+            }
+        }
+    ],
+    "testPresets": [
+        {
+            "name": ".test-base",
+            "hidden": true,
+            "environment": {
+                "ASAN_OPTIONS": "detect_stack_use_after_return=1:detect_leaks=1:check_initialization_order=1:halt_on_error=false:print_full_thread_history=false:malloc_context_size=20:strip_path_prefix=true",
+                "LSAN_OPTIONS": "malloc_context_size=20:strip_path_prefix=true"
+            },
+            "output": {
+                "outputOnFailure": true,
+                "shortProgress": true
+            },
+            "execution": {
+                "noTestsAction": "error",
+                "stopOnFailure": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+# Mandos
+Mandos is a general purpose differentiable simulator for C++ and Python.
+
+
+## Tools
+Mandos uses standard tools for configuration and compilation. 
+
+|  Tool | Version  | OS | Description  |
+|---|---|---|---|
+| Conan  | 2.0 or above  | Linux / Windows | Fetch dependencies  |
+| CMake  | 3.27 or above | Linux / Windows | Configure project   |
+| clang*  | 17 or above   | Linux          | Compiler            |
+| gcc*    | 11 or above   | Linux          | Compiler            |
+| MSVC    | 194 or above  | Windows        | Compiler            |
+
+
+> \* Only one of gcc or clang is needed, although you can have both and compile with both to ensure compatibility
+
+## External dependencies
+
+Mandos uses Conan 2 to manage its external dependencies. If you dont have Conan 2, you can install it using `pip install conan`
+
+Each set of dependencies can be used for several mandos compilations, but the build type of Mandos must be specified when fetching the dependencies (this is a limitation of CMake)
+
+
+```
+conan install . --profile:build conan/profiles/x86_64-clang-17 --settings:build "&:build_type=Release" --profile:host conan/profiles/x86_64-clang-17 --settings:host "&:build_type=Release" --settings:host "*:build_type=Release" --build=missing
+```
+
+Lets break that line: 
+* `conan install .`: execute conan install with a conanfile in .
+* `--profile:build conan/profiles/x86_64-clang-17`: Profile used for the build machine. It provides information on the machine that runs the compilation process
+* `--settings:build "build_type=Release"`: The build tools will be compiled in Release mode
+* `--profile:host conan/profiles/x86_64-clang-17`: Profile used for the host machine. It provides information on the machine that will run Mandos.
+* `--settings:host "&:build_type=Release"`: Specifies the build type of our project (`&`)
+* `--settings:host "*:build_type=Release"`: Specifies the build type of our dependencies (`*`)
+* `--build=missing`: Compile all missing dependencies
+
+When running the above command, Conan will fetch the dependencies and compile them using the specified profiles and build types and generate files for configuring Mandos with CMake. You can inspect those files inside the `build/<profile_name>/<build_type>/generators` directory.
+
+We provide several Conan profiles
+* `x86_64-clang-17`
+* `x86_64-clang-18`
+* `x86-64-gcc-11`
+* `x86_64-gcc-13`
+* `x86_64-msvc-194`
+
+## Compiling Mandos
+
+We use CMake for configuring and managing Mandos build and we provide several CMakePresets to ease configuration. 
+
+Once the external dependencies are compiled, you can configure the Mandos project using 
+
+```
+cmake -S . --preset <conf_preset>
+```
+from the source directory.
+
+We provide several configuration presets
+
+* `dev-release`: General purpose preset which compiles Mandos in Release mode using clang-17
+* `dev-debug`: General purpose preset which compiles Mandos in Debug mode using clang-17
+* `x86_64-msvc-194`: General purpose preset for MSVC 194
+
+Take into account that these presets doesn't enable the checks that are used in the CI, so even if the project compiles fine with these presets, the build may fail in the CI. 
+
+You can check the complete list in CMakePresets.json. 
+We recommend your create your own presets in CMakeUserPresets.json as you need.
+
+Different presets may look for different set of dependencies. Architecture, compiler and build type must match between the Conan profile and the CMake preset. Check ` .x86_64-clang-17`, `.debug` and related base presets in `presets/common.json`.
+
+Once the project is configured using a preset, you can build the project using a build preset
+
+```
+cmake --build --preset <build_preset>
+```
+
+from the source directory.
+
+
+> On Linux (technically, when using a single config generator like Ninja), the build type is a property of the configuration preset. On Windows (technically, when using a multi config generator like MSVC), the build type is defined in the build preset. Check the default presets in presets/dev.json to check what each preset is doing. 
+
+ 
+>Mandos developers usually work on Linux systems and Windows builds might not be as tested as Linux builds. Please, open a ticket if you find an issue. 
+
+## Examples
+
+Mandos provides a high level Python API to simplify the creation of demos and examples. The Python API is compiled by default when using `dev-release` or `dev-debug` presets (check what other presets are doing if needed). 
+
+You can find different examples in the `examples/python` directory.
+To run any of them, you need several python dependencies such as meshio or polyscope. You can install them using 
+
+```
+pip install meshio polyscope
+```
+
+If you prefer, you can also use a Python venv.
+
+To execute the examples, first, you need the specify to Python where to find Mandos bindings by setting the PYTHONPATH environment variable
+
+```
+export PYTHONPATH=<build_dir>/lib
+```
+
+for example, for the `dev-release` preset
+
+```
+export PYTHONPATH=<source_dir>/build/dev-release/lib
+```
+
+Note that if you frequently change between presets (for example, from `dev-release` to `dev-debug`), you need to update the PYTHONPATH variable to match the last build. 
+
+

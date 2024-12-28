@@ -1,0 +1,332 @@
+{
+    "version": 6,
+    "vendor": {
+        "name": "mandos"
+    },
+    "include": [
+        "common.json"
+    ],
+    "configurePresets": [
+        {
+            "name": "ci-x86_64-clang-17-Release",
+            "displayName": "CI x86_64 Release with Clang 17",
+            "inherits": [
+                ".release",
+                ".x86_64-clang-17",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".clang-tidy",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Release",
+            "displayName": "CI x86_64 Release with GCC 11",
+            "inherits": [
+                ".release",
+                ".x86_64-gcc-11",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-gcc-13-Release",
+            "displayName": "CI x86_64 Release with GCC 13",
+            "inherits": [
+                ".release",
+                ".x86_64-gcc-13",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-clang-17-Debug-asan",
+            "displayName": "CI x86_64 Debug (ASAN) with Clang 17",
+            "inherits": [
+                ".debug",
+                ".x86_64-clang-17",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".asan",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Debug-asan",
+            "displayName": "CI x86_64 Debug (ASAN) with GCC 11",
+            "inherits": [
+                ".debug",
+                ".x86_64-gcc-11",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".asan",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-gcc-13-Debug-asan",
+            "displayName": "CI x86_64 Debug (ASAN) with GCC 13",
+            "inherits": [
+                ".debug",
+                ".x86_64-gcc-13",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".asan",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-clang-17-Debug-ubsan",
+            "displayName": "CI x86_64 Debug (UBSAN) with Clang 17",
+            "inherits": [
+                ".debug",
+                ".x86_64-clang-17",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".ubsan",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Debug-ubsan",
+            "displayName": "CI x86_64 Debug (UBSAN) with GCC 11",
+            "inherits": [
+                ".debug",
+                ".x86_64-gcc-11",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".ubsan",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-gcc-13-Debug-ubsan",
+            "displayName": "CI x86_64 Debug (UBSAN) with GCC 13",
+            "inherits": [
+                ".debug",
+                ".x86_64-gcc-13",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".ubsan",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-clang-17-Debug-gcov",
+            "displayName": "CI x86_64 Debug (gcov) with Clang 17",
+            "inherits": [
+                ".debug",
+                ".x86_64-clang-17",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".coverage",
+                ".warnings-as-errors"
+            ]
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Debug-gcov",
+            "displayName": "CI x86_64 Debug (gcov) with GCC 11",
+            "inherits": [
+                ".debug",
+                ".x86_64-gcc-11",
+                ".base",
+                ".tests",
+                ".bindings",
+                ".coverage",
+                ".warnings-as-errors"
+            ]
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "ci-x86_64-clang-17-Release",
+            "displayName": "CI x86_64 Release with Clang 17",
+            "configurePreset": "ci-x86_64-clang-17-Release"
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Release",
+            "displayName": "CI x86_64 Release with GCC 11",
+            "configurePreset": "ci-x86_64-gcc-11-Release"
+        },
+        {
+            "name": "ci-x86_64-gcc-13-Release",
+            "displayName": "CI x86_64 Release with GCC 13",
+            "configurePreset": "ci-x86_64-gcc-13-Release"
+        },
+        {
+            "name": "ci-x86_64-clang-17-Debug-asan",
+            "displayName": "CI x86_64 Debug (ASAN) with Clang 17",
+            "configurePreset": "ci-x86_64-clang-17-Debug-asan"
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Debug-asan",
+            "displayName": "CI x86_64 Debug (ASAN) with GCC 11",
+            "configurePreset": "ci-x86_64-gcc-11-Debug-asan"
+        },
+        {
+            "name": "ci-x86_64-gcc-13-Debug-asan",
+            "displayName": "CI x86_64 Debug (ASAN) with GCC 13",
+            "configurePreset": "ci-x86_64-gcc-13-Debug-asan"
+        },
+        {
+            "name": "ci-x86_64-clang-17-Debug-ubsan",
+            "displayName": "CI x86_64 Debug (UBSAN) with Clang 17",
+            "configurePreset": "ci-x86_64-clang-17-Debug-ubsan"
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Debug-ubsan",
+            "displayName": "CI x86_64 Debug (UBSAN) with GCC 11",
+            "configurePreset": "ci-x86_64-gcc-11-Debug-ubsan"
+        },
+        {
+            "name": "ci-x86_64-gcc-13-Debug-ubsan",
+            "displayName": "CI x86_64 Debug (UBSAN) with GCC 13",
+            "configurePreset": "ci-x86_64-gcc-13-Debug-ubsan"
+        },
+        {
+            "name": "ci-x86_64-clang-17-Debug-gcov",
+            "displayName": "CI x86_64 Debug (gcov) with Clang 17",
+            "configurePreset": "ci-x86_64-clang-17-Debug-gcov"
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Debug-gcov",
+            "displayName": "CI x86_64 Debug (gcov) with GCC 11",
+            "configurePreset": "ci-x86_64-gcc-11-Debug-gcov"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "ci-x86_64-clang-17-Release",
+            "displayName": "CI x86_64 Release with Clang 17",
+            "configurePreset": "ci-x86_64-clang-17-Release",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Release",
+            "displayName": "CI x86_64 Release with GCC 11",
+            "configurePreset": "ci-x86_64-gcc-11-Release",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-gcc-13-Release",
+            "displayName": "CI x86_64 Release with GCC 13",
+            "configurePreset": "ci-x86_64-gcc-13-Release",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-clang-17-Debug-asan",
+            "displayName": "CI x86_64 Debug (ASAN) with Clang 17",
+            "configurePreset": "ci-x86_64-clang-17-Debug-asan",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Debug-asan",
+            "displayName": "CI x86_64 Debug (ASAN) with GCC 11",
+            "configurePreset": "ci-x86_64-gcc-11-Debug-asan",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-gcc-13-Debug-asan",
+            "displayName": "CI x86_64 Debug (ASAN) with GCC 13",
+            "configurePreset": "ci-x86_64-gcc-13-Debug-asan",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-clang-17-Debug-ubsan",
+            "displayName": "CI x86_64 Debug (UBSAN) with Clang 17",
+            "configurePreset": "ci-x86_64-clang-17-Debug-ubsan",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Debug-ubsan",
+            "displayName": "CI x86_64 Debug (UBSAN) with GCC 11",
+            "configurePreset": "ci-x86_64-gcc-11-Debug-ubsan",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-gcc-13-Debug-ubsan",
+            "displayName": "CI x86_64 Debug (UBSAN) with GCC 13",
+            "configurePreset": "ci-x86_64-gcc-13-Debug-ubsan",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-clang-17-Debug-gcov",
+            "displayName": "CI x86_64 Debug (gcov) with Clang 17",
+            "configurePreset": "ci-x86_64-clang-17-Debug-gcov",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        },
+        {
+            "name": "ci-x86_64-gcc-11-Debug-gcov",
+            "displayName": "CI x86_64 Debug (gcov) with GCC 11",
+            "configurePreset": "ci-x86_64-gcc-11-Debug-gcov",
+            "inherits": [
+                ".test-base"
+            ],
+            "output": {
+                "outputJUnitFile": "test-${presetName}.xml"
+            }
+        }
+    ]
+}

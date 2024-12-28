@@ -1,0 +1,37 @@
+{
+    "format": {
+        "line_width": 120,
+        "tab_size": 2,
+        "max_pargs_hwrap": 5,
+        "max_subgroups_hwrap": 3,
+        "always_wrap": [
+            "target_link_libraries/PUBLIC/PargGroupNode[0]",
+            "target_link_libraries/PRIVATE/PargGroupNode[0]",
+            "target_link_libraries/INTERFACE/PargGroupNode[0]",
+            "target_sources/PUBLIC/PargGroupNode[0]",
+            "target_sources/PRIVATE/PargGroupNode[0]",
+            "target_sources/INTERFACE/PargGroupNode[0]",
+            "target_include_directories/PUBLIC/PargGroupNode[0]",
+            "target_include_directories/PRIVATE/PargGroupNode[0]",
+            "target_include_directories/INTERFACE/PargGroupNode[0]",
+            "target_compile_definitions/PUBLIC/PargGroupNode[0]",
+            "target_compile_definitions/PRIVATE/PargGroupNode[0]",
+            "target_compile_definitions/INTERFACE/PargGroupNode[0]",
+            "gtest_discover_tests/PargGroupNode[0]",
+            "gtest_discover_tests/PROPERTIES/PargGroupNode[0]"
+        ],
+        "enable_sort": true,
+        "autosort": true,
+        "separate_ctrl_name_with_space": false,
+        "separate_fn_name_with_space": false,
+        "dangle_parens": true,
+        "line_ending": "unix",
+        "command_case": "lower",
+        "keyword_case": "upper"
+    },
+    "markup": {
+        "bullet_char": "*",
+        "enum_char": ".",
+        "enable_markup": false
+    }
+}

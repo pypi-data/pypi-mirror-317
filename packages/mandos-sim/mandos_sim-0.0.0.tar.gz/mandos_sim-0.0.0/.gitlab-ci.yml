@@ -1,0 +1,179 @@
+stages:
+  - precheck
+  - build_test_x86-64_release
+  - quality
+
+workflow:
+  # only create the regular pipeline on a commit to default branch or the MR pipeline, but not both
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: never
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+default:
+  image: registry.gitlab.com/mslab-urjc/mandos/ci
+  tags:
+    - saas-linux-xlarge-amd64
+
+variables:
+  COVERAGE_OUTPUT_DIR: ".gcov"
+  GIT_DEPTH: "0" # Tells git to fetch all the branches of the project, required by the analysis task
+  GIT_SUBMODULE_STRATEGY: recursive
+  GIT_SUBMODULE_FORCE_HTTPS: "true"
+  CLANG_TIDY_PATH: /usr/bin/clang-tidy-17
+
+.only_mr_rules:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - when: never
+
+format_check:
+  stage: precheck
+  extends: [.only_mr_rules]
+  before_script:
+    - clang-format-17 --version
+    - /venv/bin/cmake-format --version
+    - git config --global --add safe.directory $CI_PROJECT_DIR
+  script:
+    - git ls-files '*.cpp' '*.h' '*.inl'  | xargs -P0 -I{} clang-format-17 --dry-run -Werror {}
+    - /venv/bin/cmake-format --check $(git ls-files '*.cmake' '*CMakeLists.txt')
+
+fast_forward_check:
+  stage: precheck
+  extends: [.only_mr_rules]
+  script:
+    - git config --global --add safe.directory $CI_PROJECT_DIR
+    - git fetch origin $CI_MERGE_REQUEST_TARGET_BRANCH_NAME
+    - git merge-base --is-ancestor FETCH_HEAD HEAD
+
+## Host profiles
+
+## Build jobs
+.conan_install:
+  script:
+    - /venv/bin/pip install conan --upgrade
+    - /venv/bin/conan --version
+    # - /venv/bin/conan remote add artifactory https://artifactory.jjcasafranca.es/artifactory/api/conan/conan-local
+    # - /venv/bin/conan remote login artifactory mandos-ci -p ${MANDOS_ARTIFACTORY_TOKEN}
+    - /venv/bin/conan install .
+      --profile:build conan/profiles/build/$CONAN_BUILD_PROFILE
+      --profile:host conan/profiles/host/ci/$CONAN_HOST_PROFILE
+      --settings:build="build_type=Release"
+      --settings:host="*:build_type=Release"
+      --settings:host="&:build_type=$BUILD_TYPE"
+      --build=missing --generator VirtualBuildEnv
+
+.build:
+  script:
+    - export build_type_lowercase="${BUILD_TYPE,,}"
+    - cmake -S . --preset conan-$CONAN_HOST_PROFILE-$build_type_lowercase
+    - cmake --build --preset conan-$CONAN_HOST_PROFILE-$build_type_lowercase
+
+.test:
+  script:
+    - export build_type_lowercase="${BUILD_TYPE,,}"
+    - ctest --preset conan-$CONAN_HOST_PROFILE-$build_type_lowercase --output-junit test.xml
+
+.test_report:
+  artifacts:
+    expire_in: 3 hours
+    when: always
+    paths:
+      - build/$CONAN_HOST_PROFILE/$BUILD_TYPE/test.xml
+    reports:
+      junit: build/$CONAN_HOST_PROFILE/$BUILD_TYPE/test.xml
+
+.gcov:
+  variables:
+    ENABLE_COVERAGE: 1
+  script:
+    - mkdir gcov
+    - ln -s /usr/bin/gcov-11 gcov/gcov
+    - export PATH=$PWD/gcov:$PATH
+    - cd build/$CONAN_HOST_PROFILE/$BUILD_TYPE
+    - gcov --version
+    - /venv/bin/gcovr --xml-pretty --exclude-unreachable-branches --print-summary -o coverage.xml -e tests --root ${CI_PROJECT_DIR} -e ${CI_PROJECT_DIR}/tests -e _deps
+  artifacts:
+    expire_in: 3 hours
+    when: always
+    paths:
+      - build/$CONAN_HOST_PROFILE/$BUILD_TYPE/coverage.xml
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: build/$CONAN_HOST_PROFILE/$BUILD_TYPE/coverage.xml
+
+## Compose jobs
+clang-17-Release:
+  stage: build_test_x86-64_release
+  variables:
+    CONAN_HOST_PROFILE: ci-clang-17
+    CONAN_BUILD_PROFILE: linux
+    BUILD_TYPE: Release
+  extends: [.test_report]
+  script:
+    - !reference [.conan_install, script]
+    - !reference [.build, script]
+    - !reference [.test, script]
+
+gcc-11-Release:
+  stage: build_test_x86-64_release
+  variables:
+    CONAN_HOST_PROFILE: ci-gcc-11
+    CONAN_BUILD_PROFILE: linux
+    BUILD_TYPE: Release
+  extends: [.test_report]
+  script:
+    - !reference [.conan_install, script]
+    - !reference [.build, script]
+    - !reference [.test, script]
+
+clang-17-Debug-ASAN:
+  stage: quality
+  variables:
+    CONAN_HOST_PROFILE: ci-clang-17-asan
+    CONAN_BUILD_PROFILE: linux
+    BUILD_TYPE: Debug
+  extends: [.test_report]
+  script:
+    - !reference [.conan_install, script]
+    - !reference [.build, script]
+    - !reference [.test, script]
+
+clang-17-Debug-UBSAN:
+  stage: quality
+  variables:
+    CONAN_HOST_PROFILE: ci-clang-17-ubsan
+    CONAN_BUILD_PROFILE: linux
+    BUILD_TYPE: Debug
+  extends: [.test_report]
+  script:
+    - !reference [.conan_install, script]
+    - !reference [.build, script]
+    - !reference [.test, script]
+
+gcc-11-Debug-gcov:
+  stage: quality
+  variables:
+    CONAN_HOST_PROFILE: ci-gcc-11-gcov
+    CONAN_BUILD_PROFILE: linux
+    BUILD_TYPE: Debug
+  extends: [.gcov]
+  script:
+    - !reference [.conan_install, script]
+    - !reference [.build, script]
+    - !reference [.gcov, script]
+
+generate-python-wheel:
+  stage: quality
+  variables:
+    CONAN_HOST_PROFILE: ci-clang-17
+    CONAN_BUILD_PROFILE: linux
+    BUILD_TYPE: Release
+  script:
+    - pip install patchelf scikit-build
+    - !reference [.conan_install, script]
+    - pip install .

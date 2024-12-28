@@ -1,0 +1,65 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+/.cache/
+/build/
+/compile_commands.json
+/imgui.ini
+
+# Conan
+.conan2/
+ConanPresets.json
+conan/profiles/host/user/**
+
+# IDEs
+.devcontainer/
+*.code-workspace
+.vscode/
+.vs/
+
+# github
+.github/dependabot
+
+# Polyscope
+**/.polyscope.ini
+**/imgui.ini
+
+# Python cache
+**/__pycache__/
+
+# git merge resolution stuff
+**/**.orig
+
+# CMake User Preset
+/CMakeUserPresets.json
+
+
