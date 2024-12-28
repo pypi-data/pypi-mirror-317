@@ -1,0 +1,8 @@
+searchlite/__init__.py,sha256=hqy_GmI7iJi4_ggoNbhQFh5MNPinNH76ttwBf4EPH5g,87
+searchlite/optimized_multi_query_searcher.py,sha256=pBw_oqap1RjHQu9DfqDNiwRlh4K023NDl1jsmq94_uI,10065
+searchlite/providers.py,sha256=KUkQ9IVV500ApnTWB44Or4uynEuw1uDxlVla0G5Okko,2852
+searchlite/searcher.py,sha256=3g76qJNdXgOCiyxisfMw9FoW-vMCwo0Iw0xMYSkH5AI,3008
+searchlite-0.7.12.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+searchlite-0.7.12.dist-info/METADATA,sha256=kwWOL-9Tcbj5Bs09qGvLjdBbLJZbjQGwu2VCryXj1lA,3895
+searchlite-0.7.12.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+searchlite-0.7.12.dist-info/RECORD,,
