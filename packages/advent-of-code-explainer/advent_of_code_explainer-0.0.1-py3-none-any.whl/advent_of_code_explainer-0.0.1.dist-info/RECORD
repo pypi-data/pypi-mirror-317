@@ -1,0 +1,14 @@
+advent_of_code_explainer/__init__.py,sha256=hJC8uVcSzE5V0KBfCjisn1f9aVcAo4sXRIX2HgBewgI,60
+advent_of_code_explainer/__version__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+advent_of_code_explainer/puzzles/__init__.py,sha256=Ma1o2CET9nJNRxHEATxjpFx-p1BWdZfOe5ic1TOP4vU,718
+advent_of_code_explainer/puzzles/year_2023/__init__.py,sha256=tIdR4xfc30c8lSur1YrkSNTdoEDlRW7T_FQgTscXSKw,513
+advent_of_code_explainer/puzzles/year_2023/day_1.py,sha256=2XBasMyk321RwkDUqX4UALUViOMu8o_AwwbJ3YfTq9o,92
+advent_of_code_explainer/puzzles/year_2023/day_2.py,sha256=ZvJ2kEB0KqKCsaC_l_FrFLc34gE55NIBPVKzaksI4sg,92
+advent_of_code_explainer/puzzles/year_2024/__init__.py,sha256=tIdR4xfc30c8lSur1YrkSNTdoEDlRW7T_FQgTscXSKw,513
+advent_of_code_explainer/puzzles/year_2024/day_1.py,sha256=2XBasMyk321RwkDUqX4UALUViOMu8o_AwwbJ3YfTq9o,92
+advent_of_code_explainer/puzzles/year_2024/day_2.py,sha256=ZvJ2kEB0KqKCsaC_l_FrFLc34gE55NIBPVKzaksI4sg,92
+advent_of_code_explainer-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+advent_of_code_explainer-0.0.1.dist-info/METADATA,sha256=4jUTuoftIU3Ib39LCcUxNK3gq1RfX4mh55YBVCm_Y20,43136
+advent_of_code_explainer-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+advent_of_code_explainer-0.0.1.dist-info/top_level.txt,sha256=5IIp3Ao8m0pkGdXbfK7mNWiOBpPzw0CjSXj6o8RUldE,25
+advent_of_code_explainer-0.0.1.dist-info/RECORD,,
