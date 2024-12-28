@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: CCFT-PyMarkdown
+Version: 1.3.0
+Summary: A Python wrapper around jackdewinter's PyMarkdown linter to suppress errors, caused by custom-formatted tables in Markdown files
+Project-URL: Issues, https://github.com/CarrotManMatt/ccft-pymarkdown/issues
+Project-URL: Repository, https://github.com/CarrotManMatt/ccft-pymarkdown
+Author-email: Matt Norton <matt@carrotmanmatt.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Keywords: linter,markdown,static analysis
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Requires-Dist: gitpython>=3.1
+Requires-Dist: pymarkdownlnt>=0.9
+Description-Content-Type: text/markdown
+
+# CCFT-PyMarkdown
+
+![CCFT-PyMarkdown](https://img.shields.io/badge/%F0%9F%A5%95-CCFT--PyMarkdown-blue)
+![PyPI Version](https://img.shields.io/pypi/v/CCFT-PyMarkdown)
+![Python Version](https://img.shields.io/pypi/pyversions/CCFT-PyMarkdown?logo=Python&logoColor=white&label=Python)
+![PyMarkdown Version](https://img.shields.io/endpoint?url=https://toml-version-extractor.carrotmanmatt.com/uv/CarrotManMatt/CCFT-PyMarkdown&logo=Markdown&label=PyMarkdown)
+![Tests Status](https://github.com/CarrotManMatt/CCFT-PyMarkdown/actions/workflows/check-build-publish.yaml/badge.svg)
+![mypy Status](https://img.shields.io/badge/mypy-checked-%232EBB4E&label=mypy)
+![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)
+![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)
+
+A [Python](https://python.org) wrapper around [jackdewinter](https://github.com/jackdewinter)'s [PyMarkdown](https://github.com/jackdewinter/pymarkdown) linter to suppress errors, caused by custom-formatted tables in Markdown files
+
+When running [PyMarkdown](https://github.com/jackdewinter/pymarkdown) it may incorrectly flag errors inside a table that has correct formatting.
+Using this wrapper, the errors will be suppressed by temporarily cleaning any custom-formatted tables.
+
+## Usage
+
+If you require sending additional arguments to the `pymarkdown` command you must [manually clean](#manually-cleaning-custom-formatted-tables) any custom-formatted tables and then [manually restore](#manually-restoring-https://wikipedia.org/wiki/markdown[markdown]-files) the [MarkDown](https://wikipedia.org/wiki/Markdown) files.
+
+### Scanning All Files After Cleaning Custom-Formatted Tables
+
+To perform linting using [PyMarkdown](https://github.com/jackdewinter/pymarkdown), after cleaning custom-formatted tables within any [MarkDown](https://wikipedia.org/wiki/Markdown) files, use the `scan-all` action:
+
+ccft-pymarkdown scan-all
+
+### Manually Cleaning Custom-Formatted Tables
+
+To manually clean custom-formatted-tables within any [MarkDown](https://wikipedia.org/wiki/Markdown) files without running [PyMarkdown](https://github.com/jackdewinter/pymarkdown), use the `clean` action:
+
+ccft-pymarkdown clean
+
+### Manually Restoring https://wikipedia.org/wiki/Markdown[MarkDown] Files
+
+To manually restore any [MarkDown](https://wikipedia.org/wiki/Markdown) files without running [PyMarkdown](https://github.com/jackdewinter/pymarkdown), use the `restore` action:
+
+ccft-pymarkdown restore

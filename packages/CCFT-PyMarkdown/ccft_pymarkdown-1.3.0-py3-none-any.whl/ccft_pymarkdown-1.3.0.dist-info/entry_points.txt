@@ -1,0 +1,2 @@
+[console_scripts]
+ccft-pymarkdown = ccft_pymarkdown.console:run
