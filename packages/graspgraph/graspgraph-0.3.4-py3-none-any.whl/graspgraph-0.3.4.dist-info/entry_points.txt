@@ -1,0 +1,2 @@
+[console_scripts]
+graspgraph = graspgraph.cli:main
