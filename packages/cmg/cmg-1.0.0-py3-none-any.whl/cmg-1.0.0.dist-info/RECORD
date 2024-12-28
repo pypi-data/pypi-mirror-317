@@ -1,0 +1,13 @@
+cmg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cmg/cli.py,sha256=UArg79prEUeTLq1mSYXbPcJdoRwRDkcHwT9sUkIgFZU,794
+cmg/generator.py,sha256=h06rrgU1yBSPZVe2XmZv5_8D_kTmEtp2hhtRV8dfFD0,1748
+cmg/schema.py,sha256=pI0__I4DWizqTT8JtWpyuid8Zj22vlgKrkdPwd_X-xw,15585
+cmg/templates/cmakelists_txt_j2.py,sha256=rfFL6xZHB-c0gbBu8HpIqXumvqzCn6-d2OzyWqUEl8g,987
+cmg/templates/klass_cpp_j2.py,sha256=yJV7PmDkhVXnQgMJiU4LZgXq15ZWIgHVp-YZhHGgeUk,6938
+cmg/templates/klass_hpp_j2.py,sha256=4qYk7CpH5rSWylbo3e3U10-hIFaNhgHJRdsFBVRfFpA,4109
+cmg/templates/test_cpp_j2.py,sha256=vheesj-9ckK2BAr3XPRs7rU_2QSil40uo22xHpAmbDY,5785
+cmg-1.0.0.dist-info/LICENSE,sha256=lhYOd9KPtLBt4JdRjhI2K__u8XEEB_GK3lmBsf7Zemw,1079
+cmg-1.0.0.dist-info/METADATA,sha256=WF1erihW8tN2RdnenQyKLb-h_Dx-bkhfTcpYswrUuQw,5083
+cmg-1.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+cmg-1.0.0.dist-info/entry_points.txt,sha256=IaW14bdNE4RIy4pAHT_KP4zh9QRWih3gbfyzMvcFLcM,35
+cmg-1.0.0.dist-info/RECORD,,
