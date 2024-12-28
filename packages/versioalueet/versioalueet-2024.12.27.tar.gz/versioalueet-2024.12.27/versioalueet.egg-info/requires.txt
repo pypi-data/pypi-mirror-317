@@ -1,0 +1,10 @@
+
+[dev]
+black
+coverage
+hypothesis
+mypy
+pytest
+pytest-cov
+pytest-flake8
+ruff
