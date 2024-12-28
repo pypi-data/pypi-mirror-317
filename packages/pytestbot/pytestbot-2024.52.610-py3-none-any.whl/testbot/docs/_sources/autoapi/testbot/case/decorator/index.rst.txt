@@ -1,0 +1,124 @@
+:py:mod:`testbot.case.decorator`
+================================
+
+.. py:module:: testbot.case.decorator
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.case.decorator.StepResult
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.case.decorator.case
+   testbot.case.decorator._replace_value
+   testbot.case.decorator.data_provider
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.case.decorator.__copyright__
+   testbot.case.decorator.__author__
+   testbot.case.decorator.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: StepResult
+
+
+   Bases: :py:obj:`enum.IntEnum`
+
+   表示节点的状态
+
+   .. py:attribute:: INFO
+      :value: 1
+
+      
+
+   .. py:attribute:: PASS
+      :value: 2
+
+      
+
+   .. py:attribute:: FAIL
+      :value: 4
+
+      
+
+   .. py:attribute:: EXCEPTION
+      :value: 8
+
+      
+
+   .. py:attribute:: WARNING
+      :value: 16
+
+      
+
+   .. py:attribute:: ERROR
+      :value: 32
+
+      
+
+
+.. py:exception:: TestDataFileNotFound
+
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+
+.. py:exception:: MethodNotFoundError
+
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+
+.. py:function:: case(priority=0, test_type=TestType.COMMON_TEST, feature_name=None, testcase_id=None, testcase_name=None, pre_tests=None, skip_if_high_priority_failed=False)
+
+   The Decorator for the test cases
+
+
+.. py:function:: _replace_value(obj, test_case)
+
+
+.. py:function:: data_provider(filename=None, stop_on_error=False)
+
+   The data provider for test method in test case
+   :param filename: the test data file, default case name is script name + ".json"
+   :param stop_on_error: If true, the case will stop if 1 data iteration failed.
+   :return:
+
+

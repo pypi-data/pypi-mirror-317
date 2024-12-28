@@ -1,0 +1,145 @@
+:py:mod:`testbot.resource.pool`
+===============================
+
+.. py:module:: testbot.resource.pool
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.pool.ResourcePool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.pool.get_resource_pool
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.pool.__copyright__
+   testbot.resource.pool.__author__
+   testbot.resource.pool.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: ResourcePool(*args, **kwargs)
+
+
+   Bases: :py:obj:`object`
+
+   资源池类，负责资源的序列化和反序列化以及储存和读取
+
+   .. py:method:: add_device(device_name: str, **kwargs)
+
+      添加设备到资源池
+
+      :param device_name: 设备名称
+      :type device_name: str
+      :param kwargs: 键值对参数
+      :type kwargs: dict
+      :return: None
+      :rtype: NoneType
+
+
+   .. py:method:: reserve()
+
+      占用当前资源
+
+      :return:
+      :rtype:
+
+
+   .. py:method:: release()
+
+      释放当前资源
+
+      :return:
+      :rtype:
+
+
+   .. py:method:: collect_device(device_type, count, constraints=list())
+
+
+   .. py:method:: collect_all_device(device_type, constraints=list())
+
+
+   .. py:method:: collect_connection_route(resource: str, constraints: list = list()) -> list
+
+      获取资源连接路由
+
+      :param resource:
+      :type resource:
+      :param constraints:
+      :type constraints:
+      :return: 链接路由
+      :rtype: list
+
+
+   .. py:method:: load(filename: str, owner: str)
+
+      加载文件
+
+      :param filename: 文件路径
+      :type filename: str
+      :param owner: 资源所有人
+      :type owner: str
+      :return: None
+      :rtype: NoneType
+
+
+   .. py:method:: save(filename: str)
+
+      保存文件
+
+      :param filename: 文件路径
+      :type filename: str
+      :return: None
+      :rtype: NoneType
+
+
+   .. py:method:: discover_resources()
+
+      发现测试资源
+
+
+
+.. py:function:: get_resource_pool(filename: str, owner: str) -> ResourcePool
+
+   获取资源池，加载本地json文件以获取资源池，并设置该资源池的owner所有者
+
+   :param filename: 资源池json文件路径
+   :type filename: str
+   :param owner: 资源所有者
+   :type owner: str
+   :return: 资源池对象
+   :rtype: ResourcePool
+
+

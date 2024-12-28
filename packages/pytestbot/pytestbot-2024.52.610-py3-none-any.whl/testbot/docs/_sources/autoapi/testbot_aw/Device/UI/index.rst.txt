@@ -1,0 +1,52 @@
+:py:mod:`testbot_aw.Device.UI`
+==============================
+
+.. py:module:: testbot_aw.Device.UI
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot_aw.Device.UI.UIModule
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot_aw.Device.UI.__copyright__
+   testbot_aw.Device.UI.__author__
+   testbot_aw.Device.UI.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: UIModule
+
+
+   Bases: :py:obj:`testbot.resource.modules.tv_device_module.TCLTVDeviceModuleBase`
+
+   TCL TV UI模块API接口集
+
+

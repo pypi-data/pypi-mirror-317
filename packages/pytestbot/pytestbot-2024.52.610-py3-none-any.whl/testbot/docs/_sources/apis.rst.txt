@@ -1,0 +1,13 @@
+================================
+demo模块
+================================
+
+.. autoapimodule:: testbot.demo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. autoapiclass:: testbot.demo.Foo
+    :members:
+   :undoc-members:
+   :show-inheritance:

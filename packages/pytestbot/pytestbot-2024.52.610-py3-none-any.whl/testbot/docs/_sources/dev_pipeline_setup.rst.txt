@@ -1,0 +1,252 @@
+========================================================
+搭建GitLab流水线
+========================================================
+
+我们希望可以借助Gitlab CI/CD流水线的能力，实现源码从提交开始，经过平台问题拦截、API文档生成、代码编写规范校验、源码加密、版本编译打包发布，到最终部署到测试环境等端到端的完全自动化。
+
+.. image:: _static/cicd_pipeline.png
+
+编写流水线配置脚本
+====================
+
+我们通过编写pipeline流水线脚本（.gitlab-ci.yml）来定义流水线流程。该文件定义了流水线有4条阶段：安装install、测试test、构建build、发布release、部署deploy。
+
+.. image:: _static/gitlab_pipeline.png
+
+.. tabs::
+
+   .. tab:: 安装install
+
+      * 在Windows主机安装依赖库
+      * 在Linux主机安装依赖库
+
+   .. tab:: 测试test
+
+      * 在Windows主机执行单元测试
+      * 在Linux主机执行单元测试
+
+   .. tab:: 构建build
+
+      * 在Windows主机生成API文档
+      * 在Windows主机编译打包pypi安装包
+      * 在Linux主机编译打包pypi安装包
+
+   .. tab:: 发布release
+
+      * 在Windows主机将pypi安装包上传发布到pypi仓库
+      * 在Linux主机将pypi安装包上传发布到pypi仓库
+      * 在Linux主机创建仓库的tag版本分支
+
+   .. tab:: 部署deploy
+
+      * 在Windows主机上传更新API文档
+      * 将最新pypi安装包版本部署到测试环境上（主动推送/定时更新）
+
+流水线脚本示例
+-------------------------
+
+下面是编写的pipeline yaml文件。
+
+.. literalinclude:: ../.gitlab-ci.yml
+   :language: yaml
+   :linenos:
+
+流水线变量配置
+===========================
+
+流水线脚本需要从环境变量读取到GitLab和NEXUS服务器的认证信息，请到TATF仓库的 `CI/CD Settings <https://gitlab.com/nuangua/testbot/-/settings/ci_cd>`_ 的Variables页面，添加以下参数：
+
+.. image:: _static/cicd_variables.png
+
+.. code-block::
+
+    NEXUS_USERNAME = nuangua
+    NEXUS_PASSWORD = {NEXUS PASSWORD}
+    GITLAB_USERNAME = {GITLAB USERNAME}
+    GITLAB_USERNAME = {GITLAB EMAIL}
+    GITLAB_PASSWORD = {GITLAB PASSWORD}
+    TWINE_REPOSITORY_URL = {TWINE REPOSITORY URL}
+    TWINE_USERNAME = nuangua
+    TWINE_PASSWORD = {TWINE PASSWORD}
+
+安装流水线代理程序
+====================================
+
+流水线的执行，依赖Gitlab Runner，由于我们的流水线脚本既需要在Windows主机上执行，也需要在Linux主机上执行。因此，我们需要分别在一台Windows主机和一台Linux主机上安装GitLab Runner。
+
+请到TATF仓库的 `CI/CD Settings <https://gitlab.com/nuangua/testbot/-/settings/ci_cd>`_ 的Runner页面，点击链接 `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_ ，选择操作系统类型进行相应的安装。
+
+.. image:: _static/cicd_runners.png
+
+Windows主机安装代理
+-----------------------------------
+
+* 下载最新的gitlab-runner程序
+* 创建文件夹 **D:/GitLab-Runner/tatf** ，拷贝gitlab-runner程序到该目录，修改程序名称为gitlab-runner.exe
+
+.. code-block::
+
+    mkdir D:\GitLab-Runner\testbot
+    cd D:\GitLab-Runner\testbot
+
+* 以管理员权限打开命令行窗口，注册一个Runner，过程会提示你输入URL和注册token等信息，该信息可以在Runner页面找到；tag输入为windows
+
+.. code-block::
+
+    D:\GitLab-Runner\testbot\gitlab-runner.exe register
+
+.. image:: _static/runner_register.png
+
+* 注册完成后，会在当前目录生成一个config.toml配置文件，修改配置文件的shell参数为cmd
+
+.. image:: _static/runner_config.png
+
+* 以管理员权限打开命令行窗口，安装Runner服务
+
+.. code-block::
+
+    D:\GitLab-Runner\testbot\gitlab-runner.exe install --service tatf-runner --config D:\GitLab-Runner\testbot\config.toml
+
+* 打开命令行窗口，启动Runner服务
+
+.. code-block::
+
+    D:\GitLab-Runner\testbot\gitlab-runner.exe start --service testbot-runner
+
+* 打开PowerShell窗口，查看Runner日志流
+
+.. code-block::
+
+    Get-WinEvent -ProviderName gitlab-runner
+
+* 到浏览器Runner页面检查Runner状态
+
+.. image:: _static/runner_list.png
+
+Raspbian树莓派Linux主机安装代理
+---------------------------------------------------------
+
+* 安装最新版本的gitlab-runner程序
+
+.. code-block::
+
+    curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
+    sudo apt install -y gitlab-runner
+
+* 创建文件夹 **/opt/GitLab-Runner/tatf**
+
+.. code-block::
+
+    sudo mkdir /opt/GitLab-Runner/testbot
+    cd /opt/GitLab-Runner/testbot
+
+* 打开命令行窗口，注册一个Runner，过程会提示你输入URL和注册token等信息，该信息可以在Runner页面找到；tag输入为raspbian
+
+.. code-block::
+
+    sudo gitlab-runner register
+
+.. image:: _static/runner_register_raspbian.png
+
+* 打开命令行窗口，安装Runner服务，安装过程会提示你输入URL和注册token等信息
+
+.. code-block::
+
+    sudo gitlab-runner install install --service testbot-runner --user gitlab-runner
+
+* 打开命令行窗口，启动Runner服务
+
+.. code-block::
+
+    sudo gitlab-runner start --service testbot-runner
+
+* 打开命令行窗口，查看Runner日志流
+
+.. code-block::
+
+    journalctl -xefu testbot-runner.service
+
+触发流水线执行
+====================
+
+GitLab CICD流水线支持3种流水线触发方式：代码提交触发、手动触发、定时触发。
+
+代码提交触发
+------------------
+
+任何一笔代码提交到仓库TATF，都会触发该仓库相应CICD流水线的执行。
+
+手动触发
+------------------
+
+.. image:: _static/trigger_pipeline.png
+
+定时触发
+------------------
+
+.. image:: _static/schedule_trigger.png
+
+版本发布
+===================
+
+当前我们仅提供pip安装的手动方式，后续我们将会提供一键式安装python、tatf库的命令。
+
+版本分类
+------------------
+
+流水线会自动对源码进行编译、打包，生成一个pypi安装包。安装包版本类型有：alpha版本、beta版本、rc版本和正式版本，分别对应着alpha分支、beta分支、rc分支和master分支的代码。
+
+.. image:: _static/cicd_pipeline.png
+
+版本存储
+------------------
+
+安装包会被上传到一个pypi仓库进行持久化储存。
+
+.. image:: _static/pypi_repo.png
+
+安装更新版本
+------------------
+
+* 安装最新版本
+
+会安装最新的testbot版本，以及其依赖库。
+
+.. code-block::
+
+    python -m pip install -U testbot
+
+* 安装指定版本
+
+会安装指定的testbot版本，以及其依赖库。
+
+.. code-block::
+
+    python -m pip install testbot==2024.45.4
+
+* 检查当前安装的版本
+
+.. code-block::
+
+    python -m pip show testbot
+
+返回信息如下：其中Version是当前已安装工具的版本号，Summary里提交ID是当前版本是基于代码仓库的哪个commitid编译打包的，方便我们定位问题。
+
+.. code-block::
+
+    Name: testbot
+    Version: 2024.45.4
+    Summary: TESTBOT测试框架，分支名称：master，提交ID：7e33f39f
+    Home-page: https://gitlab.com/nuangua/testbot
+    Author: Nuanguang Gu(Sunny)
+    Author-email: nuanguang.gu@aliyun.com
+    License: Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.
+    Location: c:\python38\lib\site-packages
+    Requires: adbutils
+    Required-by:
+
+* 卸载
+
+.. code-block::
+
+    python -m pip uninstall -y testbot
