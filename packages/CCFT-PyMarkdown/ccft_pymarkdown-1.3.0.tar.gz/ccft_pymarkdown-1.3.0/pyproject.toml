@@ -1,0 +1,187 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["Pydowndoc", "hatch-vcs", "hatchling"]
+
+[dependency-groups]
+dev = [
+    { include-group = "lint-format" },
+    { include-group = "pre-commit" },
+    { include-group = "test" },
+    { include-group = "type-check" },
+]
+lint-format = ["ruff>=0.8"]
+pre-commit = ["pre-commit"]
+test = ["gitpython", "pytest"]
+type-check = ["mypy>=1.12", { include-group = "test" }]
+
+[project]
+authors = [{ name = "Matt Norton", email = "matt@carrotmanmatt.com" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Text Processing :: Markup :: Markdown",
+    "Typing :: Typed",
+]
+dependencies = ["gitpython>=3.1", "pymarkdownlnt>=0.9"]
+description = "A Python wrapper around jackdewinter's PyMarkdown linter to suppress errors, caused by custom-formatted tables in Markdown files"
+dynamic = ["readme", "version"]
+keywords = ["linter", "markdown", "static analysis"]
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+name = "CCFT-PyMarkdown"
+requires-python = ">=3.12"
+
+[project.urls]
+Issues = "https://github.com/CarrotManMatt/ccft-pymarkdown/issues"
+Repository = "https://github.com/CarrotManMatt/ccft-pymarkdown"
+
+[project.scripts]
+ccft-pymarkdown = "ccft_pymarkdown.console:run"
+
+[tool.hatch.build]
+only-packages = true
+
+[tool.hatch.metadata.hooks]
+downdoc-readme = { path = "README.adoc" }
+
+[tool.hatch.version]
+raw-options = { local_scheme = "no-local-version", version_scheme = "python-simplified-semver" }
+source = "vcs"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_decorated = true
+disallow_any_explicit = true
+disallow_any_generics = true
+disallow_any_unimported = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+extra_checks = true
+no_implicit_reexport = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[tool.ruff]
+indent-width = 4
+line-length = 95
+output-format = "concise"
+
+[tool.ruff.format]
+docstring-code-format = true
+indent-style = "space"
+line-ending = "lf"
+quote-style = "double"
+
+[tool.ruff.lint]
+ignore = [
+    "C90",
+    "COM812",
+    "COM819",
+    "CPY",
+    "D206",
+    "D212",
+    "DJ",
+    "FA",
+    "FAST",
+    "INP001",
+    "ISC001",
+    "ISC002",
+    "N806",
+    "PD",
+    "PIE808",
+    "Q000",
+    "Q001",
+    "Q002",
+    "Q003",
+    "S603",
+    "SIM910",
+    "TD002",
+    "TD003",
+    "W191",
+]
+select = ["ALL", "D204", "D213", "D401"]
+task-tags = ["BUG", "DONE", "FIXME", "HACK", "IDEA", "ISSUE", "NOBUG", "NOTE", "REQ", "TODO"]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = true
+mark-parentheses = true
+parametrize-values-type = "tuple"
+
+[tool.ruff.lint.flake8-type-checking]
+quote-annotations = true
+strict = true
+
+[tool.ruff.lint.pep8-naming]
+classmethod-decorators = [
+    "typed_classproperties.cached_classproperty",
+    "typed_classproperties.classproperty",
+]
+extend-ignore-names = ["BROKEN_*_MESSAGE", "INVALID_*_MESSAGE", "NO_*_MESSAGE"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/test_*.py" = ["S101"]
+
+[tool.ruff.lint.pycodestyle]
+ignore-overlong-task-comments = true
+max-doc-length = 95
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+property-decorators = [
+    "typed_classproperties.cached_classproperty",
+    "typed_classproperties.classproperty",
+]
+
+[tool.ruff.lint.pylint]
+allow-magic-value-types = ["bytes", "int", "str"]
+max-args = 8
+max-branches = 19
+max-returns = 10
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
+[tool.pymarkdown]
+extensions.front-matter.enabled = true
+mode.strict-config = true
+plugins.code-block-style.style = "fenced"
+plugins.code-fence-style.style = "backtick"
+plugins.heading-style.style = "atx"
+plugins.hr-style.style = "---"
+plugins.line-length.enabled = false
+plugins.no-inline-html.allow_first_image_element = false
+plugins.no-inline-html.allowed_elements = "!--,br"
+plugins.no-trailing-spaces.strict = true
+plugins.ol-prefix.style = "ordered"
+plugins.ul-indent.indent = 4
+plugins.ul-start-left.enabled = true
+plugins.ul-style.style = "asterisk"
+
+[tool.uv]
+default-groups = ["dev"]
+no-binary-package = ["CCFT-PyMarkdown"]
+no-build = true
+package = true
+trusted-publishing = "always"
+
+[[tool.uv.index]]
+explicit = true
+name = "Test-PyPI"
+publish-url = "https://test.pypi.org/legacy/"
+url = "https://test.pypi.org/simple/"
