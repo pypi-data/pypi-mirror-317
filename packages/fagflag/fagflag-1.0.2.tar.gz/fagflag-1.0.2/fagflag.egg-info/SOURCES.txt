@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+fagflag/__init__.py
+fagflag/__main__.py
+fagflag/generator.py
+fagflag.egg-info/PKG-INFO
+fagflag.egg-info/SOURCES.txt
+fagflag.egg-info/dependency_links.txt
+fagflag.egg-info/entry_points.txt
+fagflag.egg-info/requires.txt
+fagflag.egg-info/top_level.txt
