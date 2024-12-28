@@ -1,0 +1,9 @@
+compositefk/__init__.py,sha256=0ueZATaPyOQP_maTI-HeEcwNxnwXxQ-n10kCGzSoqN8,23
+compositefk/compat.py,sha256=wyvc1tUCT1RxpLN4QTkaQK8G7JkQ4LpqRDxGtk4AbxE,685
+compositefk/fields.py,sha256=Z0Fhzr1TiVvl4S7tgCnr4rYrm2jPY4jxHVrDZ3rtGIs,20346
+compositefk/related_descriptors.py,sha256=V5hFErvYLIhemWdUoj0V-Cpffiiwm46OuEFTR6uGas8,2112
+m3_django_composite_foreignkey-1.0.5.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+m3_django_composite_foreignkey-1.0.5.dist-info/METADATA,sha256=fTHwahmIzefppxXeT92g7F6qqyw2fb1mat-VEee1WJA,5955
+m3_django_composite_foreignkey-1.0.5.dist-info/WHEEL,sha256=pxeNX5JdtCe58PUSYP9upmc7jdRPgvT0Gm9kb1SHlVw,109
+m3_django_composite_foreignkey-1.0.5.dist-info/top_level.txt,sha256=YJXiAdkNx1d4jPg1U2UqbKx2_ovWGTqlY05KXbcpVHU,12
+m3_django_composite_foreignkey-1.0.5.dist-info/RECORD,,
