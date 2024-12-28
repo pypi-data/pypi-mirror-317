@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "uvicorn3"
+version = "0.1.1"
+description = "uvicorn的国产化平替版本"
+authors = ["zhangdapeng <1156956636@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.scripts]
+uvicorn3 = "uvicorn3.main:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
