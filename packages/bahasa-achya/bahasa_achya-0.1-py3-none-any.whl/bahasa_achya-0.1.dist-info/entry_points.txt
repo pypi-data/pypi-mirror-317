@@ -1,0 +1,3 @@
+[console_scripts]
+achya = achya:main
+achya-install = achya_install:main
