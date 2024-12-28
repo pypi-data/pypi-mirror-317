@@ -1,0 +1,13 @@
+streamlit_stl/.DS_Store,sha256=gJNIK0kXpf-Mn0_ieF2FCSnYfHJB1DLomDugIeDi3gg,6148
+streamlit_stl/__init__.py,sha256=VeT5R5Ng0GvFxBSXt9ijNV1g0g2x8gWgirGfGSURMYQ,10339
+streamlit_stl/index.html,sha256=-f6vU-qs9ze7c7HdVhEl4jZvdR9xwFbq-eiGRtBSQqY,3296
+streamlit_stl/__pycache__/__init__.cpython-312.pyc,sha256=HXwT6m1MdswoQ6EWwvNyFMsKnmo1PfL_twFKiQkpC34,10077
+streamlit_stl/three_js_scripts/OrbitControls.js,sha256=4ipyoS-kRbgxtKzEDqaHXBha6VU5HPPd61bXGDYkvjs,26375
+streamlit_stl/three_js_scripts/STLLoader.js,sha256=w5K5PRMx5kCCy9dt64UP5d4ROFRyo_TFt_6CuiFstJ4,9847
+streamlit_stl/three_js_scripts/stl-viewer.js,sha256=AJA3SKqrLoKs70QC0qHAELH7ko7CM7q2j0uNhR2vOd8,4303
+streamlit_stl/three_js_scripts/three.min.js,sha256=3-nDjMnQVXjWP7HmVeaW8ZXEmAozSP6SF2bVb0I8WSE,604885
+streamlit_stl-0.0.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+streamlit_stl-0.0.4.dist-info/METADATA,sha256=xUx3dvrjVlVmOyscA-v_fYjEblgKNI85L1kLT7e_-jU,3476
+streamlit_stl-0.0.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+streamlit_stl-0.0.4.dist-info/top_level.txt,sha256=MejjBpo9PZ9cVMN2gj8-u5c9_mKwG47ucPjZL1aEcBE,14
+streamlit_stl-0.0.4.dist-info/RECORD,,
