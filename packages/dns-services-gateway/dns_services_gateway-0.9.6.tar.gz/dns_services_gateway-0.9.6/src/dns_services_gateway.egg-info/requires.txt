@@ -1,0 +1,10 @@
+requests>=2.31.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+typing-extensions>=4.8.0
+click>=8.0.0
+PyJWT>=2.0.0
+python-dateutil>=2.8.2
+
+[cli]
+rich>=13.7.0
