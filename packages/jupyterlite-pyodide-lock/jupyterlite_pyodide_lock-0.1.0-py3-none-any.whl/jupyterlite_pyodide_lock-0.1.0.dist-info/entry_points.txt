@@ -1,0 +1,10 @@
+[console_scripts]
+jupyter-pyodide-lock=jupyterlite_pyodide_lock.app:main
+
+[jupyterlite.addon.v0]
+jupyterlite-pyodide-lock=jupyterlite_pyodide_lock.addons.lock:PyodideLockAddon
+jupyterlite-pyodide-lock-offline=jupyterlite_pyodide_lock.addons.offline:PyodideLockOfflineAddon
+
+[jupyterlite_pyodide_lock.locker.v0]
+BrowserLocker=jupyterlite_pyodide_lock.lockers.browser:BrowserLocker
+
