@@ -1,0 +1,10 @@
+aws_cdk/aws_pipes_sources_alpha/__init__.py,sha256=ILeZVGA5rDKWR_HYDt9uetln3kwIS0Jd49L3c1gJFNg,76383
+aws_cdk/aws_pipes_sources_alpha/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_pipes_sources_alpha/_jsii/__init__.py,sha256=d7rE25lb6vmRs06ts_qtfAR2l_on0XOHd17S8wCoaJg,1536
+aws_cdk/aws_pipes_sources_alpha/_jsii/aws-pipes-sources-alpha@2.173.4-alpha.0.jsii.tgz,sha256=nrr8y58TY1Ya2fcvSMdVtVqmSoNDEop-Ewmj_wGHmt0,39756
+aws_cdk.aws_pipes_sources_alpha-2.173.4a0.dist-info/LICENSE,sha256=kEDF86xJUQh1E9M7UPKKbHepBEdFxIUyoGfTwQB7zKg,11391
+aws_cdk.aws_pipes_sources_alpha-2.173.4a0.dist-info/METADATA,sha256=gpXsuQ9vNogRb4Q_11TKVIyJHMhr1gHrkK3tIQHCJPo,4028
+aws_cdk.aws_pipes_sources_alpha-2.173.4a0.dist-info/NOTICE,sha256=dXf56qvx2VDNCaqiRscOD2IH5GbmqbnKRzroZCeLtaQ,113
+aws_cdk.aws_pipes_sources_alpha-2.173.4a0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+aws_cdk.aws_pipes_sources_alpha-2.173.4a0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_pipes_sources_alpha-2.173.4a0.dist-info/RECORD,,
