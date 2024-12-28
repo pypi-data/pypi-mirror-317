@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codesters3"
+version = "1.0.0"
+authors = [
+  { name="Codesters", email="thomas@codesters.org" },
+  { name="Joey Parrish", email="joey.parrish@gmail.com" },
+]
+maintainers = [
+  { name="Joey Parrish", email="joey.parrish@gmail.com" },
+]
+description = "Offline replication of the graphics on codesters.com, updated for Python 3"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Education",
+    "Topic :: Education :: Computer Aided Instruction (CAI)",
+    "Development Status :: 2 - Pre-Alpha",
+]
+dependencies = [
+    "Pillow >= 10, < 11",
+    "Tkinter >= 3, < 4",
+]
+
+[project.urls]
+Homepage = "https://github.com/joeyparrish/codesters-graphics"
+Issues = "https://github.com/joeyparrish/codesters-graphics/issues"
+
+[project.scripts]
+codesters = "codesters.execute:runner"
+
+[tool.setuptools.package-data]
+codesters = [
+    "sprites/*.gif",
+    "examples/*.py",
+]

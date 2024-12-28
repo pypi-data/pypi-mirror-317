@@ -1,0 +1,2 @@
+Pillow<11,>=10
+Tkinter<4,>=3
