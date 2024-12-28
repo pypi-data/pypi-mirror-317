@@ -1,0 +1,14 @@
+asynchuobi
+python-binance
+pybit
+pyotp
+pyrogram
+python-okx
+xn-client>=0.0.3dev3
+xync-schema
+
+[dev]
+build
+python-dotenv
+pytest-asyncio
+twine
