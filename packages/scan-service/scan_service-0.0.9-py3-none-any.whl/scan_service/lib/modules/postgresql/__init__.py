@@ -1,0 +1,1 @@
+from scan_service.lib.modules.postgresql.scan_postgresql import PGScan

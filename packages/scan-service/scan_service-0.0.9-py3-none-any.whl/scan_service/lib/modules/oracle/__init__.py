@@ -1,0 +1,1 @@
+from scan_service.lib.modules.oracle.scan_oracle import OracleScan
