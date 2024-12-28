@@ -1,0 +1,107 @@
+Metadata-Version: 2.4
+Name: gasp-py
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Summary: GASP (Gee Another Schema Parser) - A validator for WAIL (Widely Applicable Interface Language) schemas and JSON
+Keywords: wail,schema,validation,json,llm,prompt
+Author-email: Ian Butler <ian@bismuth.cloud>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/iantbutler01/gasp
+Project-URL: Documentation, https://github.com/iantbutler01/gasp#readme
+
+# GASP - Gee Another Schema Parser
+
+GASP (Gee Another Schema Parser) is a Python package for validating WAIL (Widely Applicable Interface Language) schemas and JSON data. GASP helps ensure your WAIL schemas are correctly formatted, all types are properly defined, and your JSON data conforms to the schema.
+
+## Installation
+
+```bash
+pip install gasp
+```
+
+## Usage
+
+### WAIL Schema Validation
+
+```python
+from gasp import WAILValidator
+
+# Create a validator
+validator = WAILValidator()
+
+# Load a WAIL schema
+wail_schema = '''
+object Person {
+    name: String
+    age: Number
+}
+
+template GetPersonFromDescription(description: String) -> Person {
+    prompt: """
+    Given this description of a person: {{description}}
+    Create a Person object with their name and age.
+    Return in this format: {{return_type}}
+    """
+}
+'''
+
+validator.load_wail(wail_schema)
+
+# Validate the schema
+warnings, errors = validator.validate()
+
+print("Validation Results:")
+print("\nWarnings:")
+for warning in warnings:
+    print(f"- {warning}")
+
+print("\nErrors:")
+for error in errors:
+    print(f"- {error}")
+```
+
+### JSON Validation
+
+```python
+# Load JSON to validate against the schema
+json_data = '''
+{
+    "name": "John Doe",
+    "age": 30
+}
+'''
+validator.load_json(json_data)
+
+# Validate both schema and JSON
+warnings, errors = validator.validate()
+```
+
+## Features
+
+- Validates WAIL schema syntax
+- Detects undefined types
+- Provides helpful warnings for potential typos
+- Validates type references in templates
+- Validates array types and their element types
+- Validates JSON data against WAIL schemas
+
+## Requirements
+
+- Python 3.7 or higher
+
+## License
+
+MIT License
+
