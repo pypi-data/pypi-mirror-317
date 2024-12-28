@@ -1,0 +1,6 @@
+README.md
+setup.py
+parallelatarienv.egg-info/PKG-INFO
+parallelatarienv.egg-info/SOURCES.txt
+parallelatarienv.egg-info/dependency_links.txt
+parallelatarienv.egg-info/top_level.txt
