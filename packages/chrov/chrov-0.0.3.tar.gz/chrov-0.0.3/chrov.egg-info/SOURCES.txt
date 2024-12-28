@@ -1,0 +1,16 @@
+LICENCE
+README.md
+setup.py
+chrov/__init__.py
+chrov.egg-info/PKG-INFO
+chrov.egg-info/SOURCES.txt
+chrov.egg-info/dependency_links.txt
+chrov.egg-info/requires.txt
+chrov.egg-info/top_level.txt
+chrov/viz/__init__.py
+chrov/viz/annot.py
+chrov/viz/chrom.py
+chrov/viz/figure.py
+chrov/viz/plot.py
+chrov/viz/ranges.py
+tests/test_examples.py
