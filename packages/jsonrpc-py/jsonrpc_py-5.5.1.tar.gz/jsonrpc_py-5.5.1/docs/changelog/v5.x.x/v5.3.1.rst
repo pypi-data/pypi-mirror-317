@@ -1,0 +1,8 @@
+v5.3.1
+======
+
+Released on Nov 12, 2024 (`diff`_).
+
+* Skip one event loop run cycle on :class:`~jsonrpc.Error` responses.
+
+.. _`diff`: https://gitlab.com/jsonrpc/jsonrpc-py/-/compare/v5.3.0...v5.3.1

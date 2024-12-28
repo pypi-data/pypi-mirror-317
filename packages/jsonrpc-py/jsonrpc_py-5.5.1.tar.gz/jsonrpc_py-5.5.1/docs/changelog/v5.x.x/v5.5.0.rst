@@ -1,0 +1,9 @@
+v5.5.0
+======
+
+Released on Nov 20, 2024 (`diff`_).
+
+* Relicensed project under both Apache License 2.0 and MIT License.
+* Renamed ``development`` branch to ``main``.
+
+.. _`diff`: https://gitlab.com/jsonrpc/jsonrpc-py/-/compare/v5.4.0...v5.5.0

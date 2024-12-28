@@ -1,0 +1,10 @@
+v5.5.1
+======
+
+Released on Dec 27, 2024 (`diff`_).
+
+* Improved configuration for `setuptools-scm`_.
+* Updated dependencies for development and testing.
+
+.. _`diff`: https://gitlab.com/jsonrpc/jsonrpc-py/-/compare/v5.5.0...v5.5.1
+.. _`setuptools-scm`: https://pypi.org/project/setuptools-scm
