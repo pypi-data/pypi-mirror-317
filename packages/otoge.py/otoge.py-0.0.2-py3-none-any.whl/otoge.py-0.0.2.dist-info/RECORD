@@ -1,0 +1,14 @@
+otoge/__init__.py,sha256=JJlhOhdygDAdIXcgRjp9zRDOJVQPS3gjDC1AlZCBc6A,139
+otoge/enum.py,sha256=57uuOflO1yRK-Yb7JiVApLKTbJi3TEg3XiUiAFnTo_4,531
+otoge/exceptions.py,sha256=cPS-qxFi4TgK2CVapIdXzPVtO1eELQJ1jGFvLi0xtx8,292
+otoge/konami.py,sha256=XmHJTPVSOZcHcM-OYvnzamo33AVrnlb9dbO0tY2i5qw,3025
+otoge/konami_captcha.py,sha256=t5erMyRjChxbXaJGgUztMlVMB9V7AW1xuGU1PyGZ8QY,8255
+otoge/logger.py,sha256=BDT8Y1TF28uV_74PDnmmyMUBz73dXB1j1H6y9p61Ze8,2517
+otoge/maimai.py,sha256=7-9obQqrKV0nEB4btvm9ZzEC0sGjhdwtK1yxsKn8564,13117
+otoge/popn.py,sha256=DlZtA6FtQi1nSEABGwzur5iwHdJgv3YxXHGqmWXDSN8,6848
+otoge/utils.py,sha256=WAbWwwJU7nX21Ys8sipFQdrUSWgn6iE1vSeUCc0hKGU,413
+otoge.py-0.0.2.dist-info/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+otoge.py-0.0.2.dist-info/METADATA,sha256=j8NzIMrJBKByrHIH2P3HW0XiyDJJjtUVEdQ-pFro3pY,3718
+otoge.py-0.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+otoge.py-0.0.2.dist-info/top_level.txt,sha256=ik6XzZpqSGoaiaZE7b1h8vf-zU8zTksJUKqI9eKRun8,6
+otoge.py-0.0.2.dist-info/RECORD,,
