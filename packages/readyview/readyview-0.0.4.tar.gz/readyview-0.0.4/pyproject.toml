@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "readyview"
+version = "0.0.4"
+authors = [
+  { name="ReadyLinks Developers", email="developers@ready-links.com" },
+]
+description = "ReadyLinks ReadyView API library."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/readylinks"
+Issues = "https://gitlab.com/readylinks"
