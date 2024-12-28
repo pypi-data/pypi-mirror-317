@@ -1,0 +1,21 @@
+[project]
+name='com.castsoftware.uc.oneclick'
+description="AIP and Highlight Automation"
+version='1.1.2' 
+dependencies = [
+    'pandas','python-docx',
+    'argparse_formatter','django','pyunpack','tqdm',
+    'patool','archive','pypiwin32','psycopg2','openpyxl',
+    'com.castsoftware.uc.python.common>=1.1.14'
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent"
+]
+
+requires-python = ">=3.10"
+readme = "README.md"
+[project.urls]
+"Homepage" = "https://github.com/CAST-Extend/com.castsoftware.uc.arg"
+"Bug Tracker" = "https://github.com/CAST-Extend/com.castsoftware.uc.arg/issues"
