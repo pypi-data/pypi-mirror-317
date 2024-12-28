@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+ihook/__init__.py
+ihook.egg-info/PKG-INFO
+ihook.egg-info/SOURCES.txt
+ihook.egg-info/dependency_links.txt
+ihook.egg-info/top_level.txt
+tests/test_common.py
+tests/test_common_without_decorator.py
+tests/test_custom_meta_finder.py
+tests/test_custom_package.py
+tests/test_import_pyqt6.py
+tests/test_namespace_package.py
+tests/test_util_funcs.py
