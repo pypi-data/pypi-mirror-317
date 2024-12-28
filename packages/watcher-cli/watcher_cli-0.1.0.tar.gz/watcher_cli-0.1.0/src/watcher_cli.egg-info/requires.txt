@@ -1,0 +1,6 @@
+watchdog
+
+[dev]
+pytest
+twine
+build
