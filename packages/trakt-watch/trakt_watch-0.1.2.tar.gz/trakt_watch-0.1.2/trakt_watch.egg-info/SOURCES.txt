@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+trakt_watch/__init__.py
+trakt_watch/__main__.py
+trakt_watch/core.py
+trakt_watch/py.typed
+trakt_watch.egg-info/PKG-INFO
+trakt_watch.egg-info/SOURCES.txt
+trakt_watch.egg-info/dependency_links.txt
+trakt_watch.egg-info/entry_points.txt
+trakt_watch.egg-info/requires.txt
+trakt_watch.egg-info/top_level.txt

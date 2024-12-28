@@ -1,0 +1,8 @@
+click>=8.1.6
+dateparser
+pytrakt>=3.4.30
+traktexport>=0.1.8
+
+[testing]
+flake8
+mypy
