@@ -1,0 +1,16 @@
+core/__init__.py,sha256=53ZeQI2UbYJP0y-76Fk9bbg28Y03eAIQg24u29Wppco,687
+core/asset_manager.py,sha256=-4SKEOGyDUkBUNja_cCvrTvcP9wULVyejyfAD0KXJTg,1164
+core/dataclasses.py,sha256=YujUFGQ_ZWeOhU30t8v7D9TQgM_5E8jZoe4zV5_E0rE,4721
+core/entity.py,sha256=WDXx58kdSsmZckWx2B8hGe3j8DYDPR_i0Ygozbntdas,845
+core/game.py,sha256=nvSTl1N-KC8WHfNqKss_ZZTG38UrWeU0Tc-ufhXit9k,2048
+core/game_context.py,sha256=QtwxcKtdwNjCt4MqLxqbLhXR7eGAeZHE9yMsEBPYt0Q,2959
+core/input_manager.py,sha256=Nws7RNsuC_hpQxrwan_4yYB346dpE7bf_zfP7nowEBM,3866
+core/scene.py,sha256=90Qpgz-YHwt7IOi0feJ8BmCac1JPAYgrQsAsnlE7e1g,847
+core/scene_manager.py,sha256=zlnHv99Izmarg2K1P_pOJ3KzkmrEWFPiHL-Y7rUodXg,1780
+core/settings.py,sha256=LEEMLY3Sj6u35Zfvlf6eiJC7SZxYBBV14-g3rdP6z5E,2929
+core/utils.py,sha256=lkKR_ZHFfvri7Ds58ZIpVtQd3ltzwX3Y9OSrDZ9u8zc,1042
+core/wrappers.py,sha256=wnViOpHFZKdkNnrU9bfWD2xGq012W-wtZzGTkzVvefo,1840
+pygame_core-0.1.27.dist-info/METADATA,sha256=wvdYrkvTfX69RA3-LYN5XAfdvnhrEU7Lugq4hV6z04I,3765
+pygame_core-0.1.27.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pygame_core-0.1.27.dist-info/top_level.txt,sha256=0ebp8k35dOTHVwbY3UcokRsjC7cWLN_iaJ70tIcmODU,5
+pygame_core-0.1.27.dist-info/RECORD,,
