@@ -1,0 +1,30 @@
+# markdown2image.py
+
+Python utility to convert markdown and html to image using [markdown](https://github.com/Python-Markdown/markdown) and [playwright](https://github.com/microsoft/playwright).
+
+## Installing
+``` bash
+pip install markdown2image
+playwright install chromium
+```
+
+## Usage
+Just 
+``` python
+from markdown2image import sync_api as md2img
+
+md2img.html2image(html_code, save_path)
+md2img.markdown2image(markdown_code, save_path)
+```
+
+Or in a running event loop,
+
+``` python
+from markdown2image import async_api as md2img
+
+async def func():
+    await md2img.html2image(html_code, save_path)
+    await md2img.markdown2image(markdown_code, save_path)
+```
+
+See main.py for example code
