@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: bahasa-achya
+Version: 0.1
+Summary: Achya Language adalah bahasa pemrograman berbasis Python dengan sintaks menggunakan bahasa Indonesia.
+Home-page: https://github.com/cholilfayyadl/bahasa-achya
+Author: Muhammad Achya
+Author-email: muhachya@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Bahasa Achya
+
+Bahasa Achya adalah bahasa pemrograman yang terinspirasi dari sintaks Jakarta Selatan (Jaksel). Dengan menggunakan Achya, Anda dapat menulis kode Python dengan gaya Jaksel!
+
+## Instalasi
+
+Untuk menginstal Bahasa Achya, cukup jalankan perintah berikut:
+
+```bash
+pip install bahasa-achya
+```
+
+## Penggunaan
+
+Setelah menginstal, Anda dapat menggunakan perintah `achya` untuk mentranspile kode Achya (.al) menjadi kode Python (.py).
+
+Contoh:
+
+```bash
+achya contoh_program.al
+```
+
+Untuk menginstal paket seperti `pandas`, gunakan perintah `achya install`:
+
+```bash
+achya install pandas
+```
