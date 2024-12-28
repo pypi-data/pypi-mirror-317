@@ -1,0 +1,19 @@
+# Environnement Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Environnements virtuels
+.env/
+.venv/
+venv/
+.venc/
+venc/
+
+# Outils
+poetry.lock
+*.egg-info
+
