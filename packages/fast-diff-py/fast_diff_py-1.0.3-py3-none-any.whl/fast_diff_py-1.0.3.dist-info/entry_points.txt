@@ -1,0 +1,4 @@
+[console_scripts]
+difpy=fast_diff_py.dif:main
+fastdiffpy=fast_diff_py.main:main
+
