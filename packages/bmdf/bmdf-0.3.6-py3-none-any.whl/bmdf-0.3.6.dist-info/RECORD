@@ -1,0 +1,13 @@
+bmdf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bmdf/utils.py,sha256=dZL7J-1Mr58u4YNQBkCtu5WI5IvrnHbaK7Y5Uhq6v8k,1666
+bmdf/cli/__init__.py,sha256=Qjj_qBdoW7WaodLhfsqAb0hu6jgiiBjBhgJOdSJ4AxE,6223
+mdcmd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdcmd/cli/__init__.py,sha256=-gF0u-CdHk1gwDITLALd2r09MMhTM7Dw-U6tFerJz5o,4653
+mktoc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mktoc/cli/__init__.py,sha256=fPyBCDNZMLbN4t45sExejbIbHk6eYrtqSVquGERJSsc,3031
+bmdf-0.3.6.dist-info/LICENSE,sha256=tNEc4t-f14dXtZppT5u1eRdYgvwLcFY-ZCn_TmhhXQ4,1070
+bmdf-0.3.6.dist-info/METADATA,sha256=chAB6demMLeOEBCZCGvwRv5u345GQkUaTLXLFwQgPRY,12200
+bmdf-0.3.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+bmdf-0.3.6.dist-info/entry_points.txt,sha256=w33KXLPBw9GUNa9WGmgJTptPKe2H8lxbE4uiKhuVHj4,155
+bmdf-0.3.6.dist-info/top_level.txt,sha256=ZyZX1SCLPkyNowqRQba92C3SBSIQgCcEslHNa9YpNXQ,17
+bmdf-0.3.6.dist-info/RECORD,,
