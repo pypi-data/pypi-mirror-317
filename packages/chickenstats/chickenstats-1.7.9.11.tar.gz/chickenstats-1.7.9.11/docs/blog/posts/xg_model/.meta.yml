@@ -1,0 +1,11 @@
+authors:
+  - chicken
+social:
+  cards_layout_options:
+    background_image: docs/layouts/backgrounds/default.png
+categories:
+  - xG
+tags:
+  - hockey
+  - chickenstats
+  - "xG model"
