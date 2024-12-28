@@ -1,0 +1,3 @@
+[console_scripts]
+drmfree=drm_free_audible.main:main
+
