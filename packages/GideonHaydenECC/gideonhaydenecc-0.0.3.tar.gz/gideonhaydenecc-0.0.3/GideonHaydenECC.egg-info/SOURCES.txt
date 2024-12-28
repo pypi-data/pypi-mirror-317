@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+GideonHaydenECC.egg-info/PKG-INFO
+GideonHaydenECC.egg-info/SOURCES.txt
+GideonHaydenECC.egg-info/dependency_links.txt
+GideonHaydenECC.egg-info/requires.txt
+GideonHaydenECC.egg-info/top_level.txt
