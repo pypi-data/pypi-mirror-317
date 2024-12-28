@@ -1,0 +1,2 @@
+[console_scripts]
+updatePhiDB = PhigrosAPILib.Cli:main
