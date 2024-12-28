@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+FRENPY.egg-info/PKG-INFO
+FRENPY.egg-info/SOURCES.txt
+FRENPY.egg-info/dependency_links.txt
+FRENPY.egg-info/top_level.txt
+frenpy/__init__.py
+frenpy/main.py
+frenpy/words.json
