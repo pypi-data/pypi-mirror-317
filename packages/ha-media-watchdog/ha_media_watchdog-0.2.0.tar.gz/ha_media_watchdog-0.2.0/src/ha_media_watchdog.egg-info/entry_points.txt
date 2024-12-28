@@ -1,0 +1,2 @@
+[console_scripts]
+ha-media-watchdog = ha_watchdog_libs:main_cli
