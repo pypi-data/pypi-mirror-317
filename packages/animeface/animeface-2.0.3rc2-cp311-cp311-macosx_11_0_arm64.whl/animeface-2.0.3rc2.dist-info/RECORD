@@ -1,0 +1,9 @@
+animeface-2.0.3rc2.dist-info/RECORD,,
+animeface-2.0.3rc2.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+animeface-2.0.3rc2.dist-info/WHEEL,sha256=aDf-IWQmq1RVXR_5Ck1qPm3e7xxy4ZeSSdW4ZZA07R8,109
+animeface-2.0.3rc2.dist-info/top_level.txt,sha256=OI1puDPhoa6XMRjdPQsJnSelpN6kv7jEnQm_hq8iGTA,10
+animeface-2.0.3rc2.dist-info/METADATA,sha256=bxBauangtuFJT9jZjqIpiX-6optjymeepcfCxhEjr-Y,3208
+animeface/__init__.py,sha256=UamBbFIgYP4lITW_xt4WZQujxCPI0M-X-D5NeR5J760,3916
+animeface/_nvxs.cpython-311-darwin.so,sha256=J3ZQzsY6rAnUq-W0QRTBiXu7dOx05mQEkSbmtcBeD_Q,70080
+animeface/_nvxs.py,sha256=sjIvDtFhIgSSbu7OzueYh4MLqVbTlS65Bi2g3hggU-U,673
+animeface/.dylibs/libnvxs.0.0.0.dylib,sha256=Rl3s8fsj14NpnUYZslQ0aDcJnJgWPnL0SpT3dNhBHEY,3102128
