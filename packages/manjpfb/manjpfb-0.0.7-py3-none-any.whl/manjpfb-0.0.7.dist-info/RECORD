@@ -1,0 +1,13 @@
+manjpfb/CHECKSUM-SHA3-256.py,sha256=O0tLq9JITlz7hulxCrt6uep_SBNSVmcQpSnECxs6sME,845
+manjpfb/__init__.py,sha256=nl2OBeHE6Id5NvYyk7DreH_MhQ86NKBWuK3ulsMrFAU,1946
+manjpfb/__main__.py,sha256=IYvN-TErSDieFUPoMyVNcNnfIJJ6hNSP3c22nrsuVqw,1876
+manjpfb/man_common.py,sha256=gn3u8AXJwBhkm_aE0bMDxfoRVz8Tm-jIO39Nq8uSUUA,9685
+manjpfb/man_mother_mary.py,sha256=z1EE89-CioT_X5rGaAIQV_mWZP78VspBWobPcskdQQM,23477
+manjpfb/manjpfb.py,sha256=4ynDp-MEQnSeGQ5ihcsUQYhkystcQSm-JgwqTKyTaxA,1861
+manjpfb/mman.py,sha256=PbZ0GeULojfr_qFKV7TGjJRtHEsIUhGIZsznzjKPfbo,44052
+manjpfb-0.0.7.dist-info/LICENSE,sha256=cu3Z-8HZJN4CPWuO44XegFZ5IAFnwRqXNhWTzj74Qjk,8624
+manjpfb-0.0.7.dist-info/METADATA,sha256=oOdsZlUCl0GGDjLh2LP1_7vtrYvS6ZXmvnDe1nv1CTc,15651
+manjpfb-0.0.7.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+manjpfb-0.0.7.dist-info/entry_points.txt,sha256=CMiapss7e9btrSAvwuO_xTu6JjMty6SE8q0QImctXKY,49
+manjpfb-0.0.7.dist-info/top_level.txt,sha256=kPZGgN_pf-0rY0NQaXcGN8215AIKxXD8c5aTMNgJBiM,8
+manjpfb-0.0.7.dist-info/RECORD,,
