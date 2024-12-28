@@ -1,0 +1,11 @@
+pioreactor_logs2discord/LEADER_ONLY,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pioreactor_logs2discord/__init__.py,sha256=0A4fXe4XfxHP1oGC3xGL1bK83SCXZiMBJHzOjCpAyJQ,2966
+pioreactor_logs2discord/additional_config.ini,sha256=WilEPMGMmhxjgyEJvh6ph_ygINpRGa0yybvKy4xQ-iM,51
+pioreactor_logs2discord/post_install.sh,sha256=WsFf8LqHjCXb6byuVnQAzUn2MMU8nVihChDAhZXhYOs,111
+pioreactor_logs2discord/pre_uninstall.sh,sha256=4t0HjQ5bNVetHwMB_V1GKZhtr6hVub3G2FdihnBk9RE,176
+pioreactor_logs2discord-0.3.0.dist-info/LICENSE,sha256=RTnFva3sXKEPtRcFEvpWgg6NqscwpXrZ0ckNz9x2tlo,1079
+pioreactor_logs2discord-0.3.0.dist-info/METADATA,sha256=1uCIsPg_dVFaue_JanjX3GbiZLGM2YSdnwRyAhtrbZk,2058
+pioreactor_logs2discord-0.3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pioreactor_logs2discord-0.3.0.dist-info/entry_points.txt,sha256=3X0EwWxq6b3BuBfCu0zqa3gyTdaoxT6c4Z8PgzQPvhw,71
+pioreactor_logs2discord-0.3.0.dist-info/top_level.txt,sha256=70zcfhSFh7A3wIhN-E-VHAyRdkJeWObXtAdMDiB1skA,24
+pioreactor_logs2discord-0.3.0.dist-info/RECORD,,

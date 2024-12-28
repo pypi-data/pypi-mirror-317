@@ -1,0 +1,2 @@
+[pioreactor.plugins]
+pioreactor_logs2discord = pioreactor_logs2discord
