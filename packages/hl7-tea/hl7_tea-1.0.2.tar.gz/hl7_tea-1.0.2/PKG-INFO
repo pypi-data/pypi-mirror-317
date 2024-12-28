@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hl7_tea
+Version: 1.0.2
+Summary: A package for manipulating HL7 data.
+Home-page: https://github.com/kouroshparsa/hl7_tea
+Download-URL: https://github.com/kouroshparsa/hl7_tea/packages/1.0.2
+Author: Kourosh Parsa
+Author-email: kouroshtheking@gmail.com
+License: GNU
+Platform: all
+Classifier: Programming Language :: Python
+License-File: LICENSE
+
+
+hl7_tea
+-----------
+A package for manipulating HL7 data.
+Link
+`````
+* Source
+https://github.com/kouroshparsa/hl7_tea
