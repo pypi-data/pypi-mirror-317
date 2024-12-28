@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+include DOCUMENTATION.md
+recursive-include src/explorytics *.py
