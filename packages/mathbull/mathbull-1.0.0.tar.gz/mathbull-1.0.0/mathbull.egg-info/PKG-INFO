@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: mathbull
+Version: 1.0.0
+Summary: A full mathematical library for various calculations.
+Author: A.AB
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+this library is a full library of maths
+
+for importing you must type:
+import mathbull.mathbull
+
+
+if you see any problem email:
+a.ab.coder@gmail.com

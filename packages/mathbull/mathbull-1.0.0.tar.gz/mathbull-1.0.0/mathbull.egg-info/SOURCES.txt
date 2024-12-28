@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+mathbull/__init__.py
+mathbull/mathbull.py
+mathbull.egg-info/PKG-INFO
+mathbull.egg-info/SOURCES.txt
+mathbull.egg-info/dependency_links.txt
+mathbull.egg-info/top_level.txt
