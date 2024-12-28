@@ -1,0 +1,7 @@
+ipywidgets
+ipyfilechooser
+requests
+markdown
+nest_asyncio
+openai
+asyncio
