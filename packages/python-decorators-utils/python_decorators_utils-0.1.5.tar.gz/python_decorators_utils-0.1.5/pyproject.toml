@@ -1,0 +1,35 @@
+
+[project]
+name = "python_decorators_utils"
+dynamic = ["version"]
+description = "A collection of useful Python decorators including timing and caching"
+authors = [{"name" = "Udit Anand", "email" = "getuditanand@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pytest", "flake8", "black"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["Decorators*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "Decorators.version.__version__"}
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
