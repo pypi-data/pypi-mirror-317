@@ -1,0 +1,8 @@
+.version
+README.md
+pyproject.toml
+ticketeer_openbsd/__init__.py
+ticketeer_openbsd.egg-info/PKG-INFO
+ticketeer_openbsd.egg-info/SOURCES.txt
+ticketeer_openbsd.egg-info/dependency_links.txt
+ticketeer_openbsd.egg-info/top_level.txt
