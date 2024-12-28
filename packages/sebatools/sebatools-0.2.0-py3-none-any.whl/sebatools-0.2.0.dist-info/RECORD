@@ -1,0 +1,8 @@
+remove_emojis_package/__init__.py,sha256=oy9hmvD6yq53PWwysniX3IZJOV8XBA-FJ-xjJObv6-A,39
+remove_emojis_package/remove_emojis.py,sha256=eXcHh6Jvbl2BbwhbdpC8egBm_qdFvB9WC7g-hihVL8Y,731
+sebatools/__init__.py,sha256=MXoyhqiJS3IeLlTYQx3AJSWpbhWcZul972g88rsE-mQ,35
+sebatools/remove_emojis.py,sha256=eXcHh6Jvbl2BbwhbdpC8egBm_qdFvB9WC7g-hihVL8Y,731
+sebatools-0.2.0.dist-info/METADATA,sha256=D0pQ_l_lj8GIAd4hi25fDhQO3BnQuuFY_OhUylhaeMU,263
+sebatools-0.2.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+sebatools-0.2.0.dist-info/top_level.txt,sha256=HGAly4_CVXR_6ZOelXuhtWi0pfCrS8r1WPXFLtpEkmY,10
+sebatools-0.2.0.dist-info/RECORD,,
