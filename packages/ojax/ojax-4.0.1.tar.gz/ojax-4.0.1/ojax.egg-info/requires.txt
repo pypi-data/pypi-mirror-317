@@ -1,0 +1,13 @@
+typing-extensions
+jax
+
+[dev]
+coverage
+mypy
+black
+twine
+sphinx
+myst-parser
+sphinx-book-theme
+sphinx-rtd-theme
+sphinx-readme
