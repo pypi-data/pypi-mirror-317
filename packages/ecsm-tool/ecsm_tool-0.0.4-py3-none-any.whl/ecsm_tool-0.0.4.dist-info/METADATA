@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ecsm-tool
+Version: 0.0.4
+Summary: ECSM TOOLS
+Author: liuyang.z
+Author-email: chalks_arrival.0i@icloud.com
+License: MIT
+Keywords: ECSM,TOOLS,API
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.3
+Requires-Dist: tqdm>=4.67.1
+
+
+# ECSM-TOOL
+
+ECSM 指令完全符合 ECSM APIv1 规范，暂时支持如下功能，后续持续迭代以增加更多功能子集。
+
+- ECSM_TOOLS
+    - images
+        - upload
+        - list
+        - summary
