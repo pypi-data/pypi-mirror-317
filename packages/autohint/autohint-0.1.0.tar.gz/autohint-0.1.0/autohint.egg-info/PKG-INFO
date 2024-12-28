@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: autohint
+Version: 0.1.0
+Summary: AutoHint provides real-time search suggestions with internet integration.
+Home-page: https://github.com/Jkdevlopments/autohint
+Author: Jai Akash
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: prompt-toolkit
+Requires-Dist: requests
+
+# AutoHint
+This is made by Jai Akash
+
+AutoHint is a Python module that provides an interactive search bar with real-time internet-based suggestions.
+
+## Features
+- Fetches real-time suggestions from the internet.
+- Caches results to improve efficiency.
+- Uses a debounce mechanism to optimize API requests.
+
+## Installation
+Install AutoHint from PyPI:
+```bash
+pip install autohint
