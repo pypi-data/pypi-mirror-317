@@ -1,0 +1,1 @@
+from .java_scan import JavaScan
