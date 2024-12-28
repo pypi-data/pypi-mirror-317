@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pictor_lib"
+version = "0.0.1"
+authors = [
+  { name = "Yun Huang", email = "huangyunict@gmail.com" },
+]
+maintainers = [
+  { name = "Yun Huang", email = "huangyunict@gmail.com" },
+]
+description = "An image processings library wrapper based on Python Pillow"
+readme = "README.md"
+requires-python = ">=3.12"
+dynamic = ["dependencies"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+homepage = "https://github.com/huangyunict/pictor_lib"
+issues = "https://github.com/huangyunict/pictor_lib/issues"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
