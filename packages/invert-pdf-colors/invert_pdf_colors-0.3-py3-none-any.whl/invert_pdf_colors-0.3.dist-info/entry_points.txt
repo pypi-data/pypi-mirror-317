@@ -1,0 +1,2 @@
+[console_scripts]
+invert-pdf = invert_pdf_colors.invert:invert_pdf_colors
