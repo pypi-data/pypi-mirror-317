@@ -1,0 +1,2 @@
+[console_scripts]
+trello-csv = trello_csv.__main__:main

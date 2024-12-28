@@ -1,0 +1,14 @@
+trello_csv/__init__.py,sha256=5YdTwwQoP6maFB-_aV12Jf5cZJMLoUeunz-pb1XWKV0,14
+trello_csv/__main__.py,sha256=Vdhw8YA1K3wPMlbJQYL5WqvRzAKVeZ16mZQFO9VRmCo,62
+trello_csv/api.py,sha256=LA6MBdnpxgF616bEyOlOvKFWuynp91yH7XA6NDbUkY8,2462
+trello_csv/excel.py,sha256=G9Zvi6tn1jPeZbzjydQgaL7uEk8ebHH0-DPfmN__PAY,4196
+trello_csv/main.py,sha256=fq3qtadOuAyfCdihkXq-JextREp54qdJvbJL_wbdmcg,3079
+trello_csv/utils.py,sha256=toFCeALafi-UmEPy-zqplgBoYHu671FrcMxq9iwEcq0,3096
+trello_csv/csv/__init__.py,sha256=5YdTwwQoP6maFB-_aV12Jf5cZJMLoUeunz-pb1XWKV0,14
+trello_csv/csv/trello_template.xlsx,sha256=VUQdhdyMLIXbiEpEgmoU4qq9qs5ivB2iAYSkeq-GN1Y,10933
+trello_csv-1.0.1.dist-info/LICENSE,sha256=5mbo1uEk7hBSDWzCH8o_cLyMQtP1oBaipzUorEKzhFA,1073
+trello_csv-1.0.1.dist-info/METADATA,sha256=cpKtSwPwH9Uo0B2NectbVq7TTPsvZzr9xJ9XiLa-oko,3677
+trello_csv-1.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+trello_csv-1.0.1.dist-info/entry_points.txt,sha256=FybhJB0pzLW8PUpsW5Z2xWVGLBgScIskBZH7lc-XkDs,56
+trello_csv-1.0.1.dist-info/top_level.txt,sha256=CveYyglz6GXUOyf6FZKuj3mH3AmWja5Qa0XODcJAPWU,11
+trello_csv-1.0.1.dist-info/RECORD,,
