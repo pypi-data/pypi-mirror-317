@@ -1,0 +1,12 @@
+pydantic
+typing
+pytz
+logging
+circuitbreaker
+requests<3.0.0,>=2.25.1
+tenacity
+fastapi
+motor
+uvicorn
+urllib3<2.0.0,>=1.26.5
+charset_normalizer<3.0.0,>=2.0.0
