@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mud/MUDIndexerSDK.py
+mud/Player.py
+mud/World.py
+mud/__init__.py
+mud_aw.py.egg-info/PKG-INFO
+mud_aw.py.egg-info/SOURCES.txt
+mud_aw.py.egg-info/dependency_links.txt
+mud_aw.py.egg-info/requires.txt
+mud_aw.py.egg-info/top_level.txt
