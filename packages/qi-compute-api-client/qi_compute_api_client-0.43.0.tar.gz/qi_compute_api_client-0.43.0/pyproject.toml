@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "qi-compute-api-client"
+version = "0.43.0"
+description = "An API client for the Compute Job Manager of Quantum Inspire."
+license = "Apache-2.0"
+authors = ["Quantum Inspire <support@quantum-inspire.eu>"]
+readme = "README.md"
+repository = "https://github.com/QuTech-Delft/compute-api-client"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: Apache Software License"
+]
+packages = [
+    { include = "compute_api_client" },
+    { include = "qi2_shared" },
+]
+exclude = ["compute_api_client/test", "tests"]
+
+[tool.poetry.dependencies]
+# Should not exceed package python version, so be conservative
+aiohttp = "^3.10.5"
+pydantic = "^2.10.4"
+python = "^3.8"
+python-dateutil = "^2.8.2"
+urllib3 = "^2.0.0"
+requests = "^2.32.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = {extras = ["toml"], version = "^8.0.0"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
