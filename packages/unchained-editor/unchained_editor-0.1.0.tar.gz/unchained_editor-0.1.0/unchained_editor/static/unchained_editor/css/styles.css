@@ -1,0 +1,50 @@
+.editor-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Toolbar Styling */
+.toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px; /* Adjust spacing between buttons */
+}
+
+/* Divider Styling */
+.divider {
+    width: 1px;
+    height: 24px; /* Adjust height to match toolbar buttons */
+    background-color: #ccc; /* Light gray color */
+    margin: 0 8px; /* Spacing around the divider */
+}
+
+.toolbar button {
+    background: inherit;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.toolbar button:hover {
+    background: #e0e0e0;
+}
+
+/* Editable Area */
+#editor_content_new {
+    min-height: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: auto;
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Focus State */
+#editor_content_new:focus {
+    border-color: var(--bs-primary); /* Use Bootstrap's primary color */
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), .25); /* Optional: add a shadow */
+}

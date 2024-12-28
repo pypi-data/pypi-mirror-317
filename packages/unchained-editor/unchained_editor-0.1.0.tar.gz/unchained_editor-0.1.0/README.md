@@ -1,0 +1,82 @@
+# Unchained Editor
+
+A custom **Django WYSIWYG** editor widget.  
+Licensed under the **GNU General Public License v3.0 (GPLv3)**.
+
+---
+
+## Features
+
+- **Rich Text Editing**: Style text (bold, italic, etc.), insert images, videos, tables, and more.  
+- **Django Integration**: A drop-in replacement for Django’s `TextField` or `CharField` in models and forms.  
+- **Toolbar Customization**: Easily configure buttons for formatting, lists, links, alignment, images, etc.  
+- **CSS/JS Customization**: Ships with default `styles.css` and `script.js`—override or expand them as needed.
+
+---
+
+## Installation
+
+1. **Install via PyPI**:
+
+```bash
+pip install unchained-editor
+```
+
+2. **Add to settings.py**
+
+```python
+INSTALLED_APPS = [
+    # ...
+    'unchained_editor',
+    # ...
+]
+
+UNCHAINED_EDITOR_LICENSE_KEY = "your license key (get from the author)"
+```
+
+3. **Add to urls.py in the main project**
+
+```python
+urlpatterns = [
+    # ...
+    path('unchained_editor/', include('unchained_editor.urls', namespace='unchained_editor')), 
+    # ...
+]
+```
+
+4. **Collectstatic to load WYSIWYG styles**
+
+```bash
+python manage.py collectstatic
+```
+
+# Usage
+
+## A. Model Field
+```python
+# myapp/models.py
+from django.db import models
+from unchained_editor.fields import CustomWYSIWYGField
+
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    content = CustomWYSIWYGField()
+    # ...
+```
+In Django Admin or any ModelForm, content will now render as a rich text editor.
+
+## B. Form Field
+```python
+# myapp/forms.py
+from django import forms
+from unchained_editor.widgets import CustomWYSIWYGWidget
+
+class PostForm(forms.Form):
+    title = forms.CharField(max_length=200)
+    content = forms.CharField(widget=CustomWYSIWYGWidget())
+```
+
+# License
+
+Unchained Editor is released under the GNU General Public License v3.0 (GPLv3).
+

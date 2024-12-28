@@ -1,0 +1,90 @@
+<div class="">
+    {% if license_valid %}
+    <!-- customwysiwyg/templates/customwysiwyg/editor.html -->
+    <div class="editor-container" data-field-name="content_new">
+        <div class="toolbar">
+            <!-- Text Styling Group -->
+            <button type="button" data-command="bold"><b>B</b></button>
+            <button type="button" data-command="italic"><i>I</i></button>
+            <button type="button" data-command="underline"><u>U</u></button>
+            <button type="button" data-command="strikeThrough"><s>S</s></button>
+            
+            <!-- Divider -->
+            <span class="divider"></span>
+            
+            <!-- Lists Group -->
+            <button type="button" data-command="insertUnorderedList"><i class="las la-list-ul"></i></button>
+            <button type="button" data-command="insertOrderedList"><i class="las la-list-ol"></i></button>
+            
+            <!-- Divider -->
+            <span class="divider"></span>
+            
+            <!-- Links Group -->
+            <button type="button" data-command="createLink"><i class="las la-link"></i></button>
+            <button type="button" data-command="unlink"><i class="las la-unlink"></i></button>
+            
+            <!-- Divider -->
+            <span class="divider"></span>
+            
+            <!-- Alignment Group -->
+            <button type="button" data-command="justifyLeft"><i class="las la-align-left"></i></button>
+            <button type="button" data-command="justifyCenter"><i class="las la-align-center"></i></button>
+            <button type="button" data-command="justifyRight"><i class="las la-align-right"></i></button>
+            <button type="button" data-command="justifyFull"><i class="las la-align-justify"></i></button>
+            
+            <!-- Divider -->
+            <span class="divider"></span>
+            
+            <!-- Indentation Group -->
+            <button type="button" data-command="indent"><i class="las la-indent"></i></button>
+            <button type="button" data-command="outdent"><i class="las la-outdent"></i></button>
+            
+            <!-- Divider -->
+            <span class="divider"></span>
+            
+            <!-- Formatting Group -->
+            <button type="button" data-command="subscript"><i class="las la-subscript"></i></button>
+            <button type="button" data-command="superscript"><i class="las la-superscript"></i></button>
+            <button type="button" data-command="removeFormat"><i class="las la-eraser"></i></button>
+            
+            <!-- Divider -->
+            <span class="divider"></span>
+            
+            <!-- Images Group -->
+            <button type="button" data-command="uploadImage" id="uploadImageButton_content_new">
+                <i class="las la-image"></i>
+            </button>
+            <input type="file" id="imageUpload_content_new" accept="image/*" style="display: none;">
+            
+            <button type="button" data-command="insertImageURL" id="insertImageURLButton_content_new">
+                <i class="las la-globe"></i>
+            </button>
+            
+            <!-- Divider -->
+            <span class="divider"></span>
+            
+            <!-- Media Group -->
+            <button type="button" id="insertTableButton" data-command="insertTable"><i class="las la-table"></i></button>
+            <div id="tableGridContainer" style="display:none; position:absolute; z-index:1000;"></div>
+            <button type="button" data-command="insertVideo"><i class="las la-video"></i></button>
+            <button type="button" data-command="editHTML"><i class="las la-code"></i></button>
+            
+            <!-- Divider -->
+            <span class="divider"></span>
+            
+            <!-- Undo/Redo Group -->
+            <button type="button" data-command="undo"><i class="las la-undo"></i></button>
+            <button type="button" data-command="redo"><i class="las la-redo"></i></button>
+        </div>
+        <div id="editor_content_new" contenteditable="true">
+            <p>Start editing...</p>
+        </div>
+    </div>
+    {% else %}
+        <p style="color: red;">Your license for Unchained Editor is invalid or expired.</p>
+    {% endif %}
+    <!-- Removed redundant hidden file input for image uploads -->
+    <script>
+        initializeCustomWYSIWYG('content_new');
+    </script>
+</div>

@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "unchained-editor"
+version = "0.1.0"
+description = "A custom Django WYSIWYG editor widget."
+authors = [
+    "Kamila Kolpashnikova <kamilakolpashnikova@gmail.com>"
+]
+license = "GNUv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^5.1.4"
+pyjwt = "^2.6.0"
+cryptography = "^41.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
