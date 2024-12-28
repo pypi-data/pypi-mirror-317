@@ -1,0 +1,2 @@
+[console_scripts]
+treecraft = dirforge.core:main
