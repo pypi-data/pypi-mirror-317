@@ -1,0 +1,10 @@
+proyecto_kraken/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proyecto_kraken/bollinger_bands.py,sha256=wULtmFZv_8Sl8-wCchatr-XYKMODCi6ZMwHObld7ies,897
+proyecto_kraken/kraken_client.py,sha256=_NCyzQG0ckn5VydFeEtSgtNPaFLH9sT30rP8NptspYQ,636
+proyecto_kraken/main.py,sha256=WM7O9buit0sSShai5DV_hI664x2qojLDrFZ1VWs8Kcs,1394
+proyecto_kraken/plot_utils.py,sha256=8ymPyx49ziQarSoESaUpsEb_4nNtWb-2qO0BFiJphHs,999
+proyecto_final_kraken-0.1.1.dist-info/METADATA,sha256=guWYXLE7-rDvDKKiz1Z4iakpMnNC1gi_At2n7TqJh-Q,574
+proyecto_final_kraken-0.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+proyecto_final_kraken-0.1.1.dist-info/entry_points.txt,sha256=G_MSOM5jDhQ4TXgjriiFaper-3iT6tIRJbHkhy3JT-M,62
+proyecto_final_kraken-0.1.1.dist-info/top_level.txt,sha256=2VG5UFU0hqu8oExYp8WClIxDmlNGB8np39YNAGoyUsE,16
+proyecto_final_kraken-0.1.1.dist-info/RECORD,,
