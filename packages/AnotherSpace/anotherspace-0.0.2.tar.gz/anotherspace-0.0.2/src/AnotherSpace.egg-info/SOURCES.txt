@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+src/AnotherSpace/__init__.py
+src/AnotherSpace.egg-info/PKG-INFO
+src/AnotherSpace.egg-info/SOURCES.txt
+src/AnotherSpace.egg-info/dependency_links.txt
+src/AnotherSpace.egg-info/top_level.txt
+src/AnotherSpace/Encrypter/__init__.py

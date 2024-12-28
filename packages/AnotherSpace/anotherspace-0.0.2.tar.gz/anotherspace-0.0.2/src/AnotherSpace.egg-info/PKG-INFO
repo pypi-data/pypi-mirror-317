@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: AnotherSpace
+Version: 0.0.2
+Summary: AnotherSpace team's internal library
+Author-email: William Adams <williamadams.aurora@gmail.com>
+Project-URL: Homepage, https://github.com/WilliamAdamsWAG/AnotherSpace
+Project-URL: Issues, https://github.com/WilliamAdamsWAG/AnotherSpace/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
