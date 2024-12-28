@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+fits_reader/__init__.py
+fits_reader/fits_info.py
+fits_reader.egg-info/PKG-INFO
+fits_reader.egg-info/SOURCES.txt
+fits_reader.egg-info/dependency_links.txt
+fits_reader.egg-info/requires.txt
+fits_reader.egg-info/top_level.txt
+test/test.py
