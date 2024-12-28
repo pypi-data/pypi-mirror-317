@@ -1,0 +1,11 @@
+pyproject.toml
+gcp_logger/__init__.py
+gcp_logger/custom_logger.py
+gcp_logger/formatters.py
+gcp_logger/handlers.py
+gcp_logger/logger.py
+gcp_logger.egg-info/PKG-INFO
+gcp_logger.egg-info/SOURCES.txt
+gcp_logger.egg-info/dependency_links.txt
+gcp_logger.egg-info/requires.txt
+gcp_logger.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: gcp-logger
+Version: 1.0.0
+Summary: A flexible Python package for logging with Google Cloud integration and multi-environment support.
+Author-email: Caio Pizzol <caio@harbourshare.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: google-cloud-logging==3.11.3
