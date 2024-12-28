@@ -1,0 +1,7 @@
+click
+llm
+sqlite-utils
+tabulate
+
+[test]
+pytest
