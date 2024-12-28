@@ -1,0 +1,2 @@
+jvopenai>=1.0.6
+jvcore>=1.0.20
