@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+pyrevizto/pyRevizto.egg-info/PKG-INFO
+pyrevizto/pyRevizto.egg-info/SOURCES.txt
+pyrevizto/pyRevizto.egg-info/dependency_links.txt
+pyrevizto/pyRevizto.egg-info/requires.txt
+pyrevizto/pyRevizto.egg-info/top_level.txt
