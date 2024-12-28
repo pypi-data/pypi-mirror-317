@@ -1,0 +1,12 @@
+articlib/articFileUtils.py,sha256=6DEL_3aBdHT4327dXH937CrI1Q3E87wMHRICJKcbi6k,2004
+articlib/articLogger.py,sha256=ebdrn2V6DwTBm2kuyZS6Hav-olyf8CgQ6Oc2iLZUQcw,2922
+articlib/consoleUtils.py,sha256=lGRazY1upmUTbPR0kXqg9C_Nxmc9xH580WcN8TOK-BI,932
+articlib/dateTime.py,sha256=heTdkfYgTCQ5PMcA94zn_r4bLDgmycOTs8-wFwFYas8,4303
+articlib/dice.py,sha256=eqKRuddChCldl9O11c0_Q2ne9moixusABb_GjmDP8Dk,798
+articlib/sqliteEngine.py,sha256=bG1yaxJR0LdY9v2gJyjwnnYPzSs5lQvmtiYwYoim9jY,2394
+articlib/systemUtils.py,sha256=6HXFCtq5PbosgyBwyHPz4MsJlBu0u-EkZN9Gror3dro,803
+articlib/testEngine.py,sha256=w6OvaJy2kYd_s0HS13GabBoNeJHaTVy1GPpjKSVJJI8,4507
+articlib-0.2.5.dist-info/LICENSE,sha256=3-aTTjabtkZs4isOSc-gRzV0yFur4FhDOXt61keEaqo,1073
+articlib-0.2.5.dist-info/METADATA,sha256=iI07rO8r3FHcqTPlmQQOIkGXjfUkJyNv-hM-YI9Nz7M,1958
+articlib-0.2.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+articlib-0.2.5.dist-info/RECORD,,
