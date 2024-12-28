@@ -1,0 +1,3 @@
+[console_scripts]
+twrpdtgen_v2=twrpdtgen_v2.main:main
+
