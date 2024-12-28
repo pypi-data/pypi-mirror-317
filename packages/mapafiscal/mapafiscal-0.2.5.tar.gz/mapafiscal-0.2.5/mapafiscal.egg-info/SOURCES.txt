@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mapafiscal/__init__.py
+mapafiscal.egg-info/PKG-INFO
+mapafiscal.egg-info/SOURCES.txt
+mapafiscal.egg-info/dependency_links.txt
+mapafiscal.egg-info/entry_points.txt
+mapafiscal.egg-info/requires.txt
+mapafiscal.egg-info/top_level.txt
+mapafiscal/application/__init__.py
+mapafiscal/application/cenario_builder.py
+mapafiscal/interfaces/__init__.py
+mapafiscal/interfaces/repositorio_interface.py

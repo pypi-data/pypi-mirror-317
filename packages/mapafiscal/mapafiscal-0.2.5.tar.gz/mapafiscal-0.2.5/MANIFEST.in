@@ -1,0 +1,8 @@
+# Incluir arquivos JSON e Excel
+recursive-include mapafiscal/etc *.json *.xlsx
+
+# Incluir arquivos JSON do diretório contexto/impl/etc
+recursive-include mapafiscal/contexto/json_contexto/etc *.json
+
+# Excluir arquivos desnecessários, como testes
+exclude tests/*
