@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "twrpdtgen-v2"
+version = "2.0.1"
+description = "Create an Android device tree from a device dump"
+authors = ["Biraru <biraruyt@gmail.com>", "Sebastiano Barezzi <seba@sebaubuntu.dev>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/BiraruX/twrpdtgen-v2"
+
+[tool.poetry.scripts]
+twrpdtgen_v2 = 'twrpdtgen_v2.main:main'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Jinja2 = "^3.1.2"
+GitPython = "^3.1.31"
+sebaubuntu-libs = "^1.4.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
