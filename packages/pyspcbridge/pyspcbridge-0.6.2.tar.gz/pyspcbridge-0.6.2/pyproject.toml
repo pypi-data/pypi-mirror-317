@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "pyspcbridge"
+version = "0.6.2"
+description = "Python library for communicating with acre/Vanderbilt SPC alarm system via Lundix's SPC Bridge Generic (Lite)"
+authors = ["Lundix IT <info@lundix.se>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = ">=0.27.0"
+aiohttp = ">=3.10.8"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.3"
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+ignore = ["E501", "SIM102"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+split-on-trailing-comma = false
