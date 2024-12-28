@@ -1,0 +1,8 @@
+.env
+
+.*/
+dist/
+temp/
+__pycache__/
+
+!.github/
