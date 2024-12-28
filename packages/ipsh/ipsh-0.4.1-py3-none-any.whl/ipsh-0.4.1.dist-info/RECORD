@@ -1,0 +1,15 @@
+ipsh/__init__.py,sha256=fnNU-bGJNk8zIWAeSafGGMr2xh_7sm577QnBfsDSXAw,92
+ipsh/__main__.py,sha256=Kn0ixypokItQhEDn0-IlsF30JF8WguAcTQ-C9RChNPI,79
+ipsh/history.py,sha256=AOag1mj2q8OOVQVa-LuUjO-Cn9k1BqMr7pAG1oBfa0U,2801
+ipsh/i18n.py,sha256=gpzOFnO3YVRti_IRne3DpJr4JIwbVuwmNdI3UCwyO0A,837
+ipsh/interpreters.py,sha256=Rq-wD76DnwtNFjuJC6RLM9TDvciyJe8kLYr9CED6WtM,5298
+ipsh/main.py,sha256=grqQf99veE7rRtL11XIa9c4jUOFPOHZp5pk4lNsxPK4,2265
+ipsh/parsers.py,sha256=6lp4TwmfSnKLhr7o26DDvuxllMZyc01KVDoDvHzyQ98,4689
+ipsh/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipsh/locale/de/LC_MESSAGES/argparse.mo,sha256=mA6a2-G8RZr3Obu9IWvsq7YqDKIAPtgrzBtlUzyhkjg,4026
+ipsh/locale/de/LC_MESSAGES/ipsh.mo,sha256=xd0a3ajTDTRivACCrQiNnCgH_GyzKf5s1S1Y4iTJcb0,2964
+ipsh-0.4.1.dist-info/METADATA,sha256=iMK3DTyOkKUoU9yMHLeT9Pm-cKZPw4Q0wyVscy2WNcU,2584
+ipsh-0.4.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ipsh-0.4.1.dist-info/entry_points.txt,sha256=ZVnpQZWRppMOcVFwWqtuBBOPRaob3w_9R7Pg-2JJ-Jw,39
+ipsh-0.4.1.dist-info/top_level.txt,sha256=07iYVOKhKVRqYnvSBsNkgozs-sYW0tFTpv7wPabPeoY,5
+ipsh-0.4.1.dist-info/RECORD,,
