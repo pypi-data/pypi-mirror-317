@@ -1,0 +1,2 @@
+[console_scripts]
+slm = selenium_make:main
