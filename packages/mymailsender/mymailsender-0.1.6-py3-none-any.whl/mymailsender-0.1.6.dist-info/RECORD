@@ -1,0 +1,7 @@
+mymailsender/__init__.py,sha256=2N-2_2Hs8BS9nnfWwk5yKoTIokCL5FCu3lA_anistnY,133
+mymailsender/my_mail_sender.py,sha256=GEssK6czPEJTrlIshsZZFzDCZqA_6gGbkf-25YEdWNo,7259
+tests/test_mailsender.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mymailsender-0.1.6.dist-info/METADATA,sha256=1-gAyKIOBHF6NlQ_u4A7GXdPTC1a9gPnnJyA6fwbbVg,5582
+mymailsender-0.1.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mymailsender-0.1.6.dist-info/top_level.txt,sha256=17Bmd0zg_1O_6kgMPyAcC44GK0UsdBu4WBfU92UkD3g,19
+mymailsender-0.1.6.dist-info/RECORD,,
