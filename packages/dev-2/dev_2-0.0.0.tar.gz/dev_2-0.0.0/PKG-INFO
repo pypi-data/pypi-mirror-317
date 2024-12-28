@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: dev_2
+Version: 0.0.0
+Summary: Bibliothèque Python pour des jeux de plateau
+Home-page: https://github.com/Ajkll/dev2_jeux_plateau_prod
+Author: Alex
+Author-email: Alexisjacobs@protonmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# DESCRIPTION PLATUS : JEUX DE PLATEAU LOUFOQUE A JOUER A PLUSEUR
+
+xxxxxxxxxxxxxxx a venir
+
+# REGLE DU JEUX
+
+# FONCTIONNEMENT TECHNIQUE
+
+## partie testing
+
+## partie module
+
+## partie linter
+
+## partie ...
