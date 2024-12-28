@@ -1,0 +1,79 @@
+[tool.poetry]
+name = "tg-bw-helper"
+version = "1.1.0.dev1"
+description = "Thorgate helper for ansible vault password"
+authors = ["Sergey Kovalskiy <sergey@thorgate.eu>"]
+include = ["README.rst", "CHANGELOG.md"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+]
+readme = "README.rst"
+homepage = "https://thorgate.eu"
+
+[tool.poetry.urls]
+"Changelog" = "https://gitlab.com/thorgate-public/tg-bw-helper/-/blob/master/CHANGELOG.md"
+"Source Code" = "https://gitlab.com/thorgate-public/tg-bw-helper"
+"Bug Tracker" = "https://gitlab.com/thorgate-public/tg-bw-helper/-/issues"
+
+[tool.poetry.scripts]
+bw_helper = 'tg_bw_helper.__main__:run'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "6.2.4"
+coverage = "5.5"
+prospector = ">=1.3.1"
+black = "22.12.0"
+readme-renderer = "^44.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+atomic = true
+force_alphabetical_sort_within_sections = true
+include_trailing_comma = true
+known_pytest = "pytest"
+# 120 is a random number that doesn't mean anything, it was picked because it was used in other project,
+# where it was known to make people happy
+line_length = 120
+lines_after_imports = 2
+multi_line_output = 3
+sections = "FUTURE,STDLIB,PYTEST,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+use_parentheses = true
+
+[tool.black]
+line-length = 120
+
+[tool.pytest.ini_options]
+python_files="tests.py test_*.py *_tests.py"
+
+[tool.tox]
+legacy_tox_ini = """
+
+[tox]
+isolated_build = true
+envlist = py{3.9,3.10,3.11,3.12}
+
+[testenv]
+allowlist_externals  =
+    make
+    poetry
+setenv =
+    POETRY_VIRTUALENVS_CREATE=0
+commands =
+    poetry install
+    make quality
+    make coverage
+"""
