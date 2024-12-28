@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: proyecto-final-kraken
+Version: 0.1.1
+Summary: Un proyecto para calcular entradas de compra y venta usando las Bandas de Bollinger y la API de Kraken.
+Home-page: https://github.com/pmontt/proyecto-kraken
+Author: Pedro Montt Pacheco
+Author-email: p-montt@hotmail.com
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Requires-Dist: krakenex==2.2.2
+Requires-Dist: matplotlib==3.10.0
+Requires-Dist: pandas==2.2.3
