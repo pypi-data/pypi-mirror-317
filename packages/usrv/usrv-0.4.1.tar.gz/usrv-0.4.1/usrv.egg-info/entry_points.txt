@@ -1,0 +1,2 @@
+[console_scripts]
+usrv_serve = wsgi_srv

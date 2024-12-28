@@ -1,0 +1,3 @@
+include wsgi_srv.py
+include LICENSE
+include VERSION
