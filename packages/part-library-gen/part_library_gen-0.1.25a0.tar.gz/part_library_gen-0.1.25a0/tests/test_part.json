@@ -1,0 +1,57 @@
+[
+	{
+		"designator": "U?",
+		"part": "TAD1586",
+		"manufacturer": "test_manufacturer",
+		"pins": {
+			"I": {"no": 1, "func":  "In", "desc": "ddl"},
+			"IA": {"no": 2, "func":  "InAnalog", "desc": "ddl"},
+			"ID": {"no": 3, "func":  "InDigital", "desc": "ddl"},
+			"ID-AL": {"no": 4, "func":  "InDigital;ActiveLow", "desc": "ddl"},
+			"IO": {"no": 5, "func":  "InOut", "desc": "ddl"},
+			"O": {"no": 6, "func":  "Out", "desc": "ddl"},
+			"OA": {"no": 7, "func":  "OutAnalog", "desc": "ddl"},
+			"OD": {"no": 8, "func":  "OutDigital", "desc": "ddl"},
+			"OD-AL": {"no": 9, "func":  "OutDigital;ActiveLow", "desc": "ddl"},
+			"OD-OD": {"no": 10, "func":  "OutDigital;OpenDrain", "desc": "ddl"},
+			"OD-OD-AL": {"no": 11, "func":  "OutDigital;OpenDrain;ActiveLow", "desc": "ddl"}
+		},
+		"symbol_generator": {
+			"rectangle": {
+				"left_side": ["I", "IA", "ID", "ID-AL", "IO"],
+				"right_side": ["O", "OA", "OD"]
+			},
+			"default": {}
+		}
+	},
+	{
+		"designator": "U?",
+		"part": "Opamp",
+		"manufacturer": "test_manufacturer",
+		"pins": {
+			"IN+": {"no": 2, "func":  "InAnalog", "desc": "ddl"},
+			"IN-": {"no": 3, "func":  "InAnalog", "desc": "ddl"},
+			"OUT": {"no": 7, "func":  "OutAnalog", "desc": "ddl"}
+		},
+		"symbol_generator": {
+			"opamp": {},
+			"default": {}
+		}
+	},
+	{
+		"designator": "U?",
+		"part": "OpampPWR",
+		"manufacturer": "test_manufacturer",
+		"pins": {
+			"IN+": {"no": 2, "func":  "InAnalog", "desc": "ddl"},
+			"IN-": {"no": 3, "func":  "InAnalog", "desc": "ddl"},
+			"OUT": {"no": 7, "func":  "OutAnalog", "desc": "ddl"},
+			"V+": {"no": 8, "func":  "PwrIn", "desc": "ddl"},
+			"V-": {"no": 4, "func":  "PwrIn", "desc": "ddl"}
+		},
+		"symbol_generator": {
+			"opamp": {},
+			"default": {}
+		}
+	}
+]
