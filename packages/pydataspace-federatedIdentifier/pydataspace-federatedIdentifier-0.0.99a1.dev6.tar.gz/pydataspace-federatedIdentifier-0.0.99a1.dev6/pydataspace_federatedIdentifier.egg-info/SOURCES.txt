@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+pydataspace/__init__.py
+pydataspace/data/federatedIdentifier.yaml
+pydataspace/federatedIdentifier/__init__.py
+pydataspace/federatedIdentifier/context.py
+pydataspace/federatedIdentifier/federatedIdentifier.py
+pydataspace/federatedIdentifier/objectDependencies.py
+pydataspace_federatedIdentifier.egg-info/PKG-INFO
+pydataspace_federatedIdentifier.egg-info/SOURCES.txt
+pydataspace_federatedIdentifier.egg-info/dependency_links.txt
+pydataspace_federatedIdentifier.egg-info/requires.txt
+pydataspace_federatedIdentifier.egg-info/top_level.txt

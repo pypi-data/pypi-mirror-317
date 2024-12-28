@@ -1,0 +1,42 @@
+name: 'fedid'
+description: 'Federated Id and Object for CDE'
+id: https://w3id.org/byon/fedid/v1.0/
+imports:
+- linkml:types
+- linkml_dependencies/jsonLDObject
+prefixes:
+  linkml: https://w3id.org/linkml/
+  fedid: https://w3id.org/byon/fedid/v1.0/#
+default_prefix: 'fedid'
+default_range: string
+slots:
+  hasFederatedId:
+    slot_uri: fedid:hasFederatedId
+    multivalued: true
+    range: FederatedId
+  belongsToDomain:
+    slot_uri: fedid:belongsToDomain
+    multivalued: false
+    required: true
+    range: string
+  knownAs:
+    slot_uri: fedid:knowAs
+    multivalued: true
+    range: DomainIdentifier
+classes:
+  FederatedObject:
+    is_a: JsonLDObject
+    slots:
+    - hasFederatedId
+    - belongsToDomain
+    class_uri: fedid:FederatedObject
+  FederatedId:
+    is_a: JsonLDObject
+    slots:
+    - knownAs
+    class_uri: fedid:FederatedId
+  DomainIdentifier:
+    is_a: JsonLDObject
+    slots:
+    - belongsToDomain
+    class_uri: fedid:DomainIdentifier

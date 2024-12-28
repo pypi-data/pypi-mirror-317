@@ -1,0 +1,2 @@
+include pydataspace/data/federatedIdentifier.yaml
+recursive-include pydataspace/federatedIdentifier/docs *.md
