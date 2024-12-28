@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: groovindb
+Version: 0.2.6
+Summary: ORM asíncrono para Python con interfaz similar a Prisma
+Home-page: https://bitbucket.org/groovinads/groovindb
+Author: Juan Manuel Panozzo Zenere
+Author-email: Juan Manuel Panozzo Zenere <jmpanozzoz@gmail.com>
+License: MIT
+Project-URL: Homepage, https://bitbucket.org/groovinads/groovindb
+Project-URL: Bug Tracker, https://bitbucket.org/groovinads/groovindb/issues
+Project-URL: Documentation, https://bitbucket.org/groovinads/groovindb/src/master/README.md
+Project-URL: Source Code, https://bitbucket.org/groovinads/groovindb
+Keywords: database,orm,async,postgresql,mysql,prisma
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: AsyncIO
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.0.0
+Requires-Dist: questionary>=1.10.0
+Requires-Dist: asyncpg>=0.27.0
+Requires-Dist: aiomysql>=0.1.1
+Requires-Dist: colorama>=0.4.4
+Requires-Dist: setuptools>=42.0.0
+Requires-Dist: wheel>=0.37.0
+Requires-Dist: redis>=5.0.0
+Requires-Dist: psutil>=5.9.0
+
+# GroovinDB
+
+GroovinDB es un ORM asíncrono para Python que proporciona una interfaz similar a Prisma para interactuar con bases de datos PostgreSQL y MySQL.
+
+## Características
+
+- Soporte para PostgreSQL y MySQL
+- API asíncrona
+- Sistema de caché integrado (memoria y Redis)
+- CLI para inicialización y gestión
+- Introspección automática de bases de datos
+- Generación automática de modelos
+- Soporte para múltiples esquemas
+- Sistema de logging configurable
+
+## Instalación
+
+```bash
+pip install groovindb
+```
+
+## Uso Rápido
+
+1. Inicializar el proyecto:
+
+```bash
+groovindb init
+```
+
+2. Usar en código:
+
+```python
+import asyncio
+from groovindb import GroovinDB
+
+async def main():
+    db = GroovinDB()
+    await db.connect()
+
+    # Consultar registros
+    users = await db.client.users.findMany(
+        where={"active": True},
+        orderBy=[{"name": "asc"}],
+        take=10
+    )
+
+    await db.disconnect()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## Configuración
+
+La configuración se almacena en `groovindb.json`:
+
+```json
+{
+  "postgresql": {
+    "user": "user",
+    "password": "password",
+    "database": "mydb",
+    "host": "localhost",
+    "port": 5432,
+    "schema": "public"
+  },
+  "cache": {
+    "type": "memory",
+    "ttl": 300
+  },
+  "debug": {
+    "level": "INFO"
+  }
+}
+```
+
+## Documentación
+
+Para más información, consulta la [documentación completa](https://bitbucket.org/groovinads/groovindb/src/master/README.md).
+
+## Licencia
+
+MIT
