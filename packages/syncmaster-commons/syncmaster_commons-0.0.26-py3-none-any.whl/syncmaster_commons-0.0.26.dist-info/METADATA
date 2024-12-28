@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: syncmaster-commons
+Version: 0.0.26
+Summary: A core library for syncmaster.
+Home-page: https://github.com/jain-t/syncmaster-commons
+Author: nakulben
+Author-email: tech@jinacode.systems
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic
+Requires-Dist: setuptools
+Requires-Dist: pytest
+
+# syncmaster-core
