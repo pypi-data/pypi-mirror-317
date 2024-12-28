@@ -1,0 +1,11 @@
+
+[ci]
+pytest
+flake8
+
+[dev]
+commitizen
+pre-commit
+build
+twine
+readme_renderer

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/bitbully/__init__.py
+src/bitbully/main.py
+src/bitbully.egg-info/PKG-INFO
+src/bitbully.egg-info/SOURCES.txt
+src/bitbully.egg-info/dependency_links.txt
+src/bitbully.egg-info/requires.txt
+src/bitbully.egg-info/top_level.txt
