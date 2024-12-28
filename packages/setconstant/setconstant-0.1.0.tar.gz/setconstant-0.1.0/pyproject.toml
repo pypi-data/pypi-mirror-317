@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "setconstant"
+version = "0.1.0"
+description = "A Python module to handle constants using integer, string, and float types"
+authors = [{name = "Anuraj R", email = "anurajanu2883@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+
+[project.urls]
+"Homepage" = "https://github.com/Anuraj-CodeHaven"
