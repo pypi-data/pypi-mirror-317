@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+python/aineed/__init__.py
+python/aineed.egg-info/PKG-INFO
+python/aineed.egg-info/SOURCES.txt
+python/aineed.egg-info/dependency_links.txt
+python/aineed.egg-info/entry_points.txt
+python/aineed.egg-info/not-zip-safe
+python/aineed.egg-info/top_level.txt
