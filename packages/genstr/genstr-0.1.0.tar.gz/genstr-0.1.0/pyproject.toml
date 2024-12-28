@@ -1,0 +1,86 @@
+[project]
+name = "genstr"
+version = "0.1.0"
+description = "按指定规则生成字符串。"
+authors = [
+    { name = "Jetsung Chan", email = "jetsungchan@gmail.com" }
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.10"
+
+keywords = ["string", "generator"]
+license = { text = "Apache-2.0" }
+
+[project.classifier]
+development_status = "5 - Production/Stable"
+intended_audience = "Developers"
+license = "OSI Approved :: Apache Software License"
+natural_language = "Chinese (Simplified)"
+operating_system = "OS Independent"
+programming_language = "Python"
+programming_language_python = "3"
+programming_language_python_version = [
+    "3.10",
+    "3.11",
+    "3.12",
+    "3.13"
+]
+programming_language_python_only = "True"
+programming_language_implementation = "CPython"
+topic = "Software Development :: Libraries"
+
+[project.urls]
+Homepage = "https://git.jetsung.com/idev/pygenstr"
+Documentation = "https://framagit.org/idev/pygenstr"
+Repository = "https://framagit.org/idev/pygenstr.git"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.rye.scripts]
+tests = { cmd = "pytest" }
+check = { cmd = "ruff check . --fix" }
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/genstr"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [
+    "error",
+]
+
+[tool.ruff]
+src = ["src"]
+fix = true
+show-fixes = true
+# line-length = 100
+
+[tool.ruff.format]
+quote-style = "single"
+# indent-style = "tab"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = [
+    "B",  # flake8-bugbear
+    "E",  # pycodestyle error
+    "F",  # pyflakes
+    "I",  # isort
+    "UP", # pyupgrade
+    "W",  # pycodestyle warning
+]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+order-by-type = false
