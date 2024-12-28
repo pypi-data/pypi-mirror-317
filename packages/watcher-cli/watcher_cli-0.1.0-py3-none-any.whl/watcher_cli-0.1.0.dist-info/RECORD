@@ -1,0 +1,11 @@
+watcher/__init__.py,sha256=njj0Q-As8bWu6ELOknnJMC03PrYIxU711LDIyBGl630,74
+watcher/arguments.py,sha256=tUhlNvfBonrfpSelUE6HjrmDO-JTD4Pc0UuCt_Cbhnw,1587
+watcher/event.py,sha256=owZLdlT3HWZ6-rjF2TK_y1OKBp8JLjuZ0hHdmbBofM8,5073
+watcher/text_formatting.py,sha256=XFcQW61ldmH4xznOQGkxBA25SUaTYWcWTRp-g9jF-Xo,327
+watcher/watcher.py,sha256=dbWM5cuKVGm2yY_quZUZnTlq7A-6S30J_cTv5NdaC7Y,1243
+watcher_cli-0.1.0.dist-info/LICENSE,sha256=gkW7laNRDcAfdoxG80kY8ipyaE9aOsmoQIEQWE3fNqA,1072
+watcher_cli-0.1.0.dist-info/METADATA,sha256=eREKmi8lUEkmZQ7HIpqV4piFIQtuur7hvK4tg1zF7kQ,3242
+watcher_cli-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+watcher_cli-0.1.0.dist-info/entry_points.txt,sha256=etpDGxq4sklP-GKcMTfE0VBAGj5qQKjcR2PW7PktdeQ,41
+watcher_cli-0.1.0.dist-info/top_level.txt,sha256=O2B7Sbzshq5s-tZxb2a7VETvMDiJItSYieAiJ6Jm5yY,8
+watcher_cli-0.1.0.dist-info/RECORD,,
