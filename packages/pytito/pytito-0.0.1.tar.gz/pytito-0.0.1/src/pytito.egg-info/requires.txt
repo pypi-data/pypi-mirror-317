@@ -1,0 +1,7 @@
+requests
+
+[dev]
+mypy
+pylint
+coverage
+types-requests
