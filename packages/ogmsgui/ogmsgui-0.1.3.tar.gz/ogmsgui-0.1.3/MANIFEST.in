@@ -1,0 +1,10 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include ogmsgui/data *.json
+recursive-include ogmsgui/assets *.png *.gif
+include ogmsgui/assets/creategui.png
+include ogmsgui/assets/invoke.gif
+include ogmsgui/assets/ogms_task.gif
+include ogmsgui/assets/ogmsChat.png
+include ogmsgui/assets/showmodel.png
