@@ -1,0 +1,8 @@
+requests<2.33,>=2.31
+
+[dev]
+black
+bumpver
+freezegun
+isort
+pytest
