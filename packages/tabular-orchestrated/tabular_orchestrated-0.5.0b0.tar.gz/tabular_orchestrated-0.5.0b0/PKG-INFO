@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: tabular-orchestrated
+Version: 0.5.0b0
+Author-email: DanielAvdar <66269169+DanielAvdar@users.noreply.github.com>
+License: MIT
+License-File: LICENSE
+Keywords: python
+Requires-Python: >3.10
+Requires-Dist: pandas-pyarrow>=0.1.11
+Provides-Extra: base
+Requires-Dist: ml-orchestrator; extra == 'base'
+Requires-Dist: numpy<2.0.0; extra == 'base'
+Provides-Extra: deepchecks
+Requires-Dist: eh-tabular-deepchecks>=0.0.4b; extra == 'deepchecks'
+Requires-Dist: ml-orchestrator; extra == 'deepchecks'
+Requires-Dist: numpy<2.0.0; extra == 'deepchecks'
+Requires-Dist: setuptools; extra == 'deepchecks'
+Provides-Extra: editor
+Requires-Dist: ml-orchestrator[editor]>=0.0.14b0; extra == 'editor'
+Provides-Extra: evalml
+Requires-Dist: eh-evalml; extra == 'evalml'
+Requires-Dist: ml-orchestrator; extra == 'evalml'
+Requires-Dist: numpy<2.0.0; extra == 'evalml'
+Provides-Extra: mljar
+Requires-Dist: ml-orchestrator; extra == 'mljar'
+Requires-Dist: mljar-supervised; extra == 'mljar'
+Requires-Dist: numpy<2.0.0; extra == 'mljar'
+Provides-Extra: spliter
+Requires-Dist: ml-orchestrator; extra == 'spliter'
+Requires-Dist: numpy<2.0.0; extra == 'spliter'
+Requires-Dist: scikit-learn>=1.3.0; extra == 'spliter'
+Description-Content-Type: text/markdown
+
+[![version](https://img.shields.io/pypi/v/tabular-orchestrated)](https://img.shields.io/pypi/v/tabular-orchestrated)
+
+# tabular-orchestrated
+
+
+packaged open source tabular machine learning modules, for KubeFlow pipelines.
