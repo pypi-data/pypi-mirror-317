@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+scripts/getmyip
+src/getmyip/__init__.py
+src/getmyip/getmyip.py
+src/getmyip/getmyipmain.py
+src/getmyip46.egg-info/PKG-INFO
+src/getmyip46.egg-info/SOURCES.txt
+src/getmyip46.egg-info/dependency_links.txt
+src/getmyip46.egg-info/requires.txt
+src/getmyip46.egg-info/top_level.txt
