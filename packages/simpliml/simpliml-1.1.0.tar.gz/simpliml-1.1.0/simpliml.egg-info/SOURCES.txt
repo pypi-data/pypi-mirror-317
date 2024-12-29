@@ -1,0 +1,17 @@
+pyproject.toml
+setup.py
+simpliml/__init__.py
+simpliml/about.py
+simpliml.egg-info/PKG-INFO
+simpliml.egg-info/SOURCES.txt
+simpliml.egg-info/dependency_links.txt
+simpliml.egg-info/requires.txt
+simpliml.egg-info/top_level.txt
+simpliml/timeseriesforecast/__init__.py
+simpliml/timeseriesforecast/dataAnalysis.py
+simpliml/timeseriesforecast/dataBuild.py
+simpliml/timeseriesforecast/dataModeling.py
+simpliml/timeseriesforecast/modelPyTorch.py
+simpliml/timeseriesforecast/modelScikitLearn.py
+simpliml/timeseriesforecast/modelStatsModels.py
+simpliml/timeseriesforecast/tsfCommon.py
