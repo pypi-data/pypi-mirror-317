@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: PyL360
+Version: 0.1.5
+Summary: A package for interfacing with Life360
+Home-page: https://github.com/arkangel-dev/PyL360
+Author: Sam Ramirez
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: certifi==2024.12.14
+Requires-Dist: charset-normalizer==3.4.1
+Requires-Dist: dacite==1.8.1
+Requires-Dist: idna==3.10
+Requires-Dist: requests==2.32.3
+Requires-Dist: tls-client==1.0.1
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: urllib3==2.3.0
+
+# PyL360
+This is a Python library to interact with Life360, primarily to read data.
+
+
+## Usage
+```shell
+pip install PyL360
+```
+
+
+Example to print out a list of all users and their current location in all your circles
+```py
+from PyL360 import L360Client
+
+if __name__ == '__main__':
+	client = L360Client(
+		username="sammy@gmail.com",
+		password="my-secure-password"
+	)
+
+	client.Authenticate()
+	circles = client.GetCircles().circles
+
+	for circle in circles:
+		for p in circle.GetDetails().members:
+			print("{} is at ({},{})".format(p.firstName, p.location.latitude, p.location.longitude))
+
+```
+
+Example to print out a list of all the places in all your circles along with their locations
+```py
+from PyL360 import L360Client
+
+client = L360Client(
+    username="sammy@gmail.com",
+    password="my-secure-password"
+)
+
+client.Authenticate()
+circles = client.GetCircles().circles
+
+for circle in circles:
+    for place in client.GetPlaces(circle.id).places:
+        print('{} is loacated at ({}, {})'.format(place.name, place.latitude, place.longitude))
+```
+
