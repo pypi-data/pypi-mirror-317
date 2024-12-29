@@ -1,0 +1,2 @@
+[console_scripts]
+chat_completion_md = chat_completion_md.cli:main

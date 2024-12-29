@@ -1,0 +1,10 @@
+chat_completion_md/__init__.py,sha256=DoLj79BZJp1NNFqvggYy3YwQBuglqAeF5W_yNxEnGCM,102
+chat_completion_md/api.py,sha256=kM6HdJuM2t7v9pWKBmBQwMUha8ocw9X0MbvJa2Gg-2s,3045
+chat_completion_md/cli.py,sha256=95EkhT3LRleKdB_TEfrz8N6kzjw8itSfzB8akeV-mMM,1060
+chat_completion_md/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chat_completion_md/types.py,sha256=ReW6fNrqHD_JAiRIMDqP3yZDejCujY6vewFEi_Z3Bsw,545
+chat_completion_md-0.1.0.dist-info/METADATA,sha256=wu0xArFzHwoUOc1Vn9ktZFh_UdiGMKb64vy1FPGX_dk,4987
+chat_completion_md-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+chat_completion_md-0.1.0.dist-info/entry_points.txt,sha256=W2EUvO96zdejMeAAbyqI9ugoNeHiR5eOmI5EslPmWSM,67
+chat_completion_md-0.1.0.dist-info/licenses/LICENSE,sha256=i3MmHzK--m1M9m6nngVB8OM-hjhGbKf7nx-sIz5y35k,1064
+chat_completion_md-0.1.0.dist-info/RECORD,,
