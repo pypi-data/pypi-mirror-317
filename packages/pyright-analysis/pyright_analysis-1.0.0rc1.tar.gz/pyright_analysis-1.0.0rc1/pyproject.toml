@@ -1,0 +1,95 @@
+[project]
+name = "pyright-analysis"
+description = "Visualise Python project type completeness"
+readme = "README.md"
+authors = [
+    { name = "Martijn Pieters", email = "mj@zopatista.com" }
+]
+license = "MIT"
+license-files = ["LICENSE.txt"]
+keywords = [ "pyright", "type-compleness", "visualisation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+requires-python = ">=3.12"
+dynamic = ["version"]
+dependencies = [
+    "kaleido>=1.0.0rc0",
+    "plotly>=5.24.1",
+    "pydantic>=2.10.4",
+    "typer>=0.15.1",
+]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.391",
+    "pytest-cov>=6.0.0",
+    "pytest>=8.3.4",
+    "ruff>=0.8.4",
+    "syrupy>=4.8.0",
+    "towncrier>=24.8.0",
+]
+
+[project.scripts]
+pyright-analysis = "pyright_analysis.cli:app"
+
+[project.urls]
+GitHub = "https://github.com/mjpieters/pyright-analysis"
+Issues = "https://github.com/mjpieters/pyright-analysis/issues"
+Changelog = "https://github.com/mjpieters/pyright-analysis/blob/master/CHANGELOG.md"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "code"
+path = "src/pyright_analysis/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+only-packages = true
+
+[tool.coverage.run]
+source_pkgs = ["pyright_analysis"]
+branch = true
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "return NotImplemented",
+]
+show_missing = true
+
+[tool.coverage.xml]
+output = "coverage.xml"
+
+[tool.pyright]
+strict = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov --cov-report xml --cov-report term"
+
+[tool.ruff.lint]
+extend-select = [
+    "I",
+    "UP"
+]
+
+[tool.towncrier]
+directory = "changelog.d"
+name = "Pyright Analysis"
+filename = "CHANGELOG.md"
+template = "changelog.d/towncrier_template.md"
+package_dir = "src"
+package = "pyright_analysis"
+title_format = "## [{name} {version}](https://github.com/mjpieters/pyright-analysis/tree/v{version}) ({project_date})"
+issue_format = "[#{issue}](https://github.com/mjpieters/pyright-analysis/issues/{issue})"
+start_string = "<!-- Towncrier release notes start -->\n"
+underlines = ["", "", ""]
