@@ -1,0 +1,8 @@
+setup.py
+myeasySQL.egg-info/PKG-INFO
+myeasySQL.egg-info/SOURCES.txt
+myeasySQL.egg-info/dependency_links.txt
+myeasySQL.egg-info/requires.txt
+myeasySQL.egg-info/top_level.txt
+myeasysql/__init__.py
+myeasysql/main.py
