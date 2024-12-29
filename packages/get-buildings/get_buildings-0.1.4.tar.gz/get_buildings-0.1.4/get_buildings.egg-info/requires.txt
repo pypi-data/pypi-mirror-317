@@ -1,0 +1,5 @@
+geopandas
+mercantile
+pandas
+shapely
+tqdm
