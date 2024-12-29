@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: qprocess
+Version: 0.0.2
+Summary: A Python library for processing Quantum Chemical program output files
+Home-page: https://github.com/fehergandalf/Gaussian.git
+Author: Bogdan Virag
+Author-email: viragbogdan@edu.bme.hu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: pandas
+Requires-Dist: numpy
