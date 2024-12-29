@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: epoch8-smartrec-lib
+Version: 0.1.0.dev1
+Summary: Add your description here
+Author-email: Shakirov Renat <renat@epoch8.co>
+Requires-Python: <3.13,>=3.10
+Requires-Dist: dill>=0.3.8
+Requires-Dist: fsspec>=2021.4.0
+Requires-Dist: implicit<1.0.0,>=0.7.2
+Requires-Dist: pathy>=0.11.0
+Requires-Dist: pydantic-settings>=2.5.2
+Requires-Dist: pydantic>=1.9.2
+Requires-Dist: rectools<=0.8.0,>=0.6.0
