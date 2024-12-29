@@ -1,0 +1,13 @@
+COPYING
+LICENSE
+README.md
+setup.py
+xiang/__init__.py
+xiang/cli.py
+xiang/converter.py
+xlsxtofits.egg-info/PKG-INFO
+xlsxtofits.egg-info/SOURCES.txt
+xlsxtofits.egg-info/dependency_links.txt
+xlsxtofits.egg-info/entry_points.txt
+xlsxtofits.egg-info/requires.txt
+xlsxtofits.egg-info/top_level.txt

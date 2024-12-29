@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: xlsxtofits
+Version: 1.0.0
+Summary: A Python package to convert XLSX files to FITS files.
+Author: xiangyunchuan
+Author-email: xiang_yunchuan@yeah.net
+License-File: LICENSE
+License-File: COPYING
+Requires-Dist: pandas
+Requires-Dist: astropy
+Requires-Dist: openpyxl
