@@ -1,0 +1,11 @@
+
+6. **Create the `LICENSE` file:**
+
+Choose a license for your package, for example, MIT License.
+
+7. **Build and upload your package to PyPI:**
+
+```sh
+cd img2csv_package
+python setup.py sdist bdist_wheel
+twine upload dist/*
