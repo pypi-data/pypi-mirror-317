@@ -1,0 +1,7 @@
+setup.py
+cw_test/__init__.py
+cw_test/manim_setup.py
+cw_test.egg-info/PKG-INFO
+cw_test.egg-info/SOURCES.txt
+cw_test.egg-info/dependency_links.txt
+cw_test.egg-info/top_level.txt
