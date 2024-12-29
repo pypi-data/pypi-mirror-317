@@ -1,0 +1,4 @@
+[console_scripts]
+new_game = cw_test.call:caller
+new_test = cw_test:test
+tscene = cw_test.manim_setup:main
