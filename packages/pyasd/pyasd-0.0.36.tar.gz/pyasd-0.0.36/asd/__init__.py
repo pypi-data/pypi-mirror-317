@@ -1,0 +1,8 @@
+__built_time__        =  "built at Sun Dec 29 02:11:21 2024_CST"
+__name__              =  "pyasd"
+__version__           =  "0.0.36"
+__author__            =  "Shunhong Zhang"
+__author_email__      =  "zhangshunhong.pku@gmail.com"
+__url__               =  "https://pypi.org/project/pyasd/"
+__license__           =  "MIT LICENSE"
+__platform__          =  "linux"
