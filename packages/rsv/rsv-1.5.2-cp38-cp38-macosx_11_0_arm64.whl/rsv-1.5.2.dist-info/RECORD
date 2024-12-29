@@ -1,0 +1,16 @@
+a7e3acee01e7793f6f0a__mypyc.cpython-38-darwin.so,sha256=sQNXVIEmG9aMxqgFk7L9ZocwYdNSxQITnmH3mTBIXXU,168880
+rsv-1.5.2.dist-info/RECORD,,
+rsv-1.5.2.dist-info/LICENSE,sha256=1cWX-vc9BaIBbr71RxffbFbzvJvjGWV8CF_cGMzbT68,1064
+rsv-1.5.2.dist-info/WHEEL,sha256=7_oe0rMIEoZOpgBhth1WRv0SCKz8pdiUZgyT0NjKRv8,107
+rsv-1.5.2.dist-info/top_level.txt,sha256=oK9Osequ6fdVbD2g28hQMAdfqJAMr5iq2s62eAhB8D8,38
+rsv-1.5.2.dist-info/METADATA,sha256=f0MJmL-CBT3GlrKRNpxfH_Q_eE8OwUwZwR7mFyc2Amg,2419
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_main.py,sha256=H-rzvIm6zHeZ6RihsSqtiIftK3dHISUcmRFLcsXFcPY,783
+rsv/decoder.py,sha256=kPrddg_QcVFgURPpR42HxFzgi0HiZG5X80hpJx25Ccg,1711
+rsv/encoder.cpython-38-darwin.so,sha256=Oh_aU1kwa32FkxKNLH1gO80EBcObkLybhx0tSTnYBds,50144
+rsv/rsv.py,sha256=Z3anIHYBhlsa4y_Z-IBM1liSGnFTpOXAzmY-p-NxGaU,1477
+rsv/__init__.cpython-38-darwin.so,sha256=GaVSU39dznrY_za9hqZHjxaellSGz2e6HLLVNiflWpc,50144
+rsv/__init__.py,sha256=0XdSvTUc5wb2td_SJU3xqB_JwGoYlbYKU3r0FdLZ9Ao,281
+rsv/encoder.py,sha256=3JpNEzhQUYx0aSH9IuWHw5Gydt5ghkF6NnNaSkYs3zc,632
+rsv/decoder.cpython-38-darwin.so,sha256=hgF0KMN_j7AngEqdK1KQSyxDNAo-34ULg5QxYG6C7FU,50144
+rsv/rsv.cpython-38-darwin.so,sha256=HcnaPbRMPZedUVuR3z7zBfpOGox6khw_tsN50Z1GKDU,50136
