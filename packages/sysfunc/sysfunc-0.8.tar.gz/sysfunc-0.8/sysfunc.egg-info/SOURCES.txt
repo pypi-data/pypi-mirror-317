@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.py
+sysfunc/__init__.py
+sysfunc.egg-info/PKG-INFO
+sysfunc.egg-info/SOURCES.txt
+sysfunc.egg-info/dependency_links.txt
+sysfunc.egg-info/top_level.txt
+sysfunc/pyarmor_runtime_000000/__init__.py
+sysfunc/pyarmor_runtime_000000/pyarmor_runtime.pyd

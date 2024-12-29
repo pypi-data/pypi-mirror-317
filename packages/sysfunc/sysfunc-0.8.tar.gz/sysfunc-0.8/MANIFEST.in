@@ -1,0 +1,2 @@
+recursive-include sysfunc/pyarmor_runtime_000000 *
+include sysfunc/pyarmor_runtime_000000/pyarmor_runtime.pyd
