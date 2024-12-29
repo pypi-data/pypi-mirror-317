@@ -1,0 +1,27 @@
+[project]
+name = "ritify"
+version = "1.0.0"
+description = "Default template for PDM package"
+authors = [
+    { name = "Alex Graham", email = "destgraham@icloud.com" },
+]
+dependencies = [
+    "pygments>=2.18.0",
+    "markdown-it-py>=3.0.0",
+    "wcwidth>=0.2.13",
+    "emoji>=2.14.0",
+]
+requires-python = ">=3.13"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
