@@ -1,0 +1,7 @@
+pip_help/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pip_help/main.py,sha256=KPrAXkPrwSmsilJchhVcbPQHUl3SCBV3ypyAEvTQTL0,3059
+pip_help/pip_func.py,sha256=vjGHimGwI4FWwn7LEXPoahd2_2-EvpXV9a2dz9JSnd0,3622
+pip_help-1.0.3.dist-info/METADATA,sha256=voZrfQ25ZoETSnbKzC3pYwPbFSBHUu5c6B99-INK3Eg,1653
+pip_help-1.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pip_help-1.0.3.dist-info/entry_points.txt,sha256=MTvs6zFmiPfQfNpcF0lL9jpOEqlM-yr5RE6tfMhpi9c,48
+pip_help-1.0.3.dist-info/RECORD,,
