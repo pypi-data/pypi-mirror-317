@@ -1,0 +1,19 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jailmin"
+version = "0.0.2"
+readme = "README.md"
+description = "Python wrapper to jail manager Bastille as a CLI enhancer.\n"
+dependencies = []
+[[project.authors]]
+name = "Ji-Haw Foo"
+email = "jhfoo@kungfoo.info"
+
+[project.scripts]
+jailmin = "jailmin:doCli"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
