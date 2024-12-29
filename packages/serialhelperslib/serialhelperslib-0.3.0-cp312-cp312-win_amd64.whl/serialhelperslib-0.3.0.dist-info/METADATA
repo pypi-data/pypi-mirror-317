@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: serialhelperslib
+Version: 0.3.0
+Summary: A fast Cython-based package
+Author-email: Your Name <your.email@example.com>
+Project-URL: Homepage, https://github.com/yourusername/my_cython_package
+Keywords: cython,example
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: cython
+
+TODO
