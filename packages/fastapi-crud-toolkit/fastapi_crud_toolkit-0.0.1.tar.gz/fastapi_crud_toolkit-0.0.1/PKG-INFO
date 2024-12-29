@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: fastapi_crud_toolkit
+Version: 0.0.1
+Summary: The package for automatically performing crud operations
+Author-email: Dmitry Bevz <dbevzpr@mail.ru>
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+***HELLO WORLD!***
