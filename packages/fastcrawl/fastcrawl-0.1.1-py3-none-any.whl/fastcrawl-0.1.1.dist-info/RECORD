@@ -1,0 +1,14 @@
+fastcrawl/__init__.py,sha256=iGbnoVYe3fNa0bjW1S1Ub9OU5KcMbS-BeqGT_PrzZBo,227
+fastcrawl/base_crawler.py,sha256=AeQqZpUNcxJyOeCw1z2eso0sVMmowU2wn2LfIHyxg7U,5404
+fastcrawl/base_pipeline.py,sha256=4vq1AfTLTyFCnoNqx7vQKUyqU4HugDMBMasWE9olgG4,1673
+fastcrawl/models/__init__.py,sha256=QSxSp4UC2LvK5rr3w1Pz5itgDrsyzuU70GYKejhTGaY,214
+fastcrawl/models/crawler_settings.py,sha256=M1HL_7vVMTVIjgj4ExpRiiQ0MHZ-6DaSvTrGhZfsT4Y,4493
+fastcrawl/models/crawler_stats.py,sha256=W8ziL3Ohc0ZSGALrNvJ5_2VEoXhtaQiBby3BhYjEg44,1991
+fastcrawl/models/request.py,sha256=hfB2KjlELMEqKqngfzYl2S2jguYTnzoI4PL3iknEK9c,1834
+fastcrawl/models/response.py,sha256=QgBTRSo8jziUmfrDaIFZAq21TjG0rZWPAX3Q8xZ3oyw,2354
+fastcrawl/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastcrawl/types.py,sha256=QSqxq5OG5fOUv0jPKz6Y7b_8qvMDObdd0XaotwXfQho,633
+fastcrawl-0.1.1.dist-info/LICENSE,sha256=0fPCYhDo7buSaQtI6IMniEUt7hWCTgBweDOxhcJCjys,1073
+fastcrawl-0.1.1.dist-info/METADATA,sha256=eXuHh4YyQa6qSnkr1Vg8FB7BTP1LRWL2oLK6oi4WZ7Q,4552
+fastcrawl-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+fastcrawl-0.1.1.dist-info/RECORD,,
