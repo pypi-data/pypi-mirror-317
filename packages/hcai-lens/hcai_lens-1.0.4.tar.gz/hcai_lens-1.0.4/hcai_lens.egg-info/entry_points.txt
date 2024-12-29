@@ -1,0 +1,2 @@
+[console_scripts]
+lens = lens.app:_run

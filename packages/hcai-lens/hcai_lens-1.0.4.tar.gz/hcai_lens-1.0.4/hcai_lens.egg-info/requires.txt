@@ -1,0 +1,6 @@
+flask==3.0.0
+flask-caching
+waitress
+python-dotenv
+psutil
+litellm==1.46.8
