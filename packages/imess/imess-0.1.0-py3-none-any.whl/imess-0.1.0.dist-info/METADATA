@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: imess
+Version: 0.1.0
+Author: Michael Wornow
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: pandas==2.2.3
+Requires-Dist: numpy==2.2.1
+Requires-Dist: plotnine==0.14.4
+Requires-Dist: matplotlib==3.10.0
+Requires-Dist: mizani==0.13.1
+Requires-Dist: wordcloud==1.9.4
+Requires-Dist: stop-words==2018.7.23
+Requires-Dist: nltk==3.9.1
+Requires-Dist: wordfreq==3.1.1
+Requires-Dist: stopwords==1.0.1
+Requires-Dist: vobject==0.9.9
+Requires-Dist: pytypedstream==0.1.0
+Requires-Dist: pyarrow==18.1.0
+Requires-Dist: phonenumbers==8.13.52
+Requires-Dist: Levenshtein==0.26.1
+Requires-Dist: calplot==0.1.7.5
+Requires-Dist: tqdm==4.67.1
