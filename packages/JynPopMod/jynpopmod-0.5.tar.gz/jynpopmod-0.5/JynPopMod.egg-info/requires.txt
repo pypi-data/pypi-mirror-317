@@ -1,0 +1,7 @@
+opencv-python
+requests
+pyperclip
+pyttsx3
+speechrecognition
+psutil
+pyautogui
