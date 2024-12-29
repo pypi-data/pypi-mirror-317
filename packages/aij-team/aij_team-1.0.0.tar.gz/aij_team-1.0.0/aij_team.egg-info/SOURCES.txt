@@ -1,0 +1,8 @@
+README.md
+setup.py
+aij_team/__init__.py
+aij_team/functions.py
+aij_team.egg-info/PKG-INFO
+aij_team.egg-info/SOURCES.txt
+aij_team.egg-info/dependency_links.txt
+aij_team.egg-info/top_level.txt
