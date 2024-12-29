@@ -1,0 +1,11 @@
+deimos_client/__init__.py,sha256=5SOzEWnUkMvDL4mDQxv-wvc7rCTtQ6n1vlUhbY6GDMc,221
+deimos_client/base_client_handler.py,sha256=uXS4W0kN4-NeEL2jw54rmm9mAScFYHurHOERLq7rwo4,6826
+deimos_client/client_oss.py,sha256=xSgUr0a04RwUi4mvOR38EAGmm7H43FDlPBAyXbOxwbI,2227
+deimos_client/client_s3.py,sha256=hJdN9ReEdKGt-1j2tC3YrXAKHPIOE1q6r1h03EtDpzg,2730
+deimos_client/client_tos.py,sha256=I-egXa16YC5SJ9OV8Bge0P1sA5dQfW5GrcULYyKIV0E,2723
+deimos_client/file_client.py,sha256=D6SmutUBhyWaMjtCf8hrfrfK3cev_VFKu8UJmnfgehI,460
+deimos_client/file_management.py,sha256=Ct6FQfbF6HNBpr7LWx0CS0j1hR5t-_A_utadAL8M4iU,1392
+deimos_client/utils.py,sha256=gjRVOpzs8pTylUmNNhg4qN-tcRRVGao3c2DbCDBlHhw,632
+deimos_client-0.1.8.dist-info/METADATA,sha256=U_kFcWXq5z5RLEsxafpYof3HSyjWD4s4INQJ2hz8eug,283
+deimos_client-0.1.8.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+deimos_client-0.1.8.dist-info/RECORD,,
