@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+npDoseResponse/__init__.py
+npDoseResponse/npDoseResponse.py
+npDoseResponse/npDoseResponseDR.py
+npDoseResponse/npDoseResponseDerivDR.py
+npDoseResponse/rbf.py
+npDoseResponse/utils.py
+npDoseResponse.egg-info/PKG-INFO
+npDoseResponse.egg-info/SOURCES.txt
+npDoseResponse.egg-info/dependency_links.txt
+npDoseResponse.egg-info/requires.txt
+npDoseResponse.egg-info/top_level.txt
