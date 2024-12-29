@@ -1,0 +1,14 @@
+scrnaseq/__init__.py,sha256=CorVEFLu-LCX5Ec1jlkmCs5TMjk3LtWqOn57aptuvA0,909
+scrnaseq/fetch_dataset.py,sha256=xAZeOPeXg53T-MJvn8aaKQs0Y_aBnSJ7cCosfqQT6qk,4206
+scrnaseq/list_datasets.py,sha256=OxXeg-TNfOiAPS1wvIn01a4mRaoLj3ApeAAoyu6zOqY,5937
+scrnaseq/list_versions.py,sha256=bh4M7IlDLnlVMkqxgIV76ccF2MiqbtrBq8V7B2SIlsk,923
+scrnaseq/polish_dataset.py,sha256=-W2jS4qJEupvdWIiFaZ3fAj3OCvh6A744P32uac53FU,4435
+scrnaseq/save_dataset.py,sha256=VEL3wsQquMtP2-Rn2RksJ4G5UUM9ofGr7J1tZ0LzmvM,4703
+scrnaseq/search_datasets.py,sha256=v_-YyJv2DuFbzldApgeAlm8ewwns4dzts0Sstqkkg6I,3492
+scrnaseq/upload_dataset.py,sha256=w7ArYfgIQSonPy4AVqzFYneLi1Ag7-Bhv26mJEPD2v0,2412
+scrnaseq/utils.py,sha256=T4XJ5AoCloIXt_EqNjwLAHnlwDrrZwz8dOQxs81TrWM,3809
+scrnaseq-0.3.0.dist-info/LICENSE.txt,sha256=kXGI4eKM3dFP79vCaYersRg8MA4GYpZ9oEiGwdIGGA8,1084
+scrnaseq-0.3.0.dist-info/METADATA,sha256=p2Z9GqbmVYVPXuIxbbBHZnysI_6XBy7HIBa3GwMLpg8,13212
+scrnaseq-0.3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+scrnaseq-0.3.0.dist-info/top_level.txt,sha256=iw1NnkA-nosoEzwTcti0gZfRWEc5-8hhMFtGTirSiUs,9
+scrnaseq-0.3.0.dist-info/RECORD,,
