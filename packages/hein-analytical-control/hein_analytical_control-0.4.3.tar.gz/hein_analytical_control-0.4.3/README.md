@@ -1,0 +1,38 @@
+# Hein Analytical Control
+[![PyPI Downloads](https://img.shields.io/pypi/dm/hein-analytical-control.svg?label=PyPI%20downloads)](https://pypi.org/project/hein-analytical-control)
+
+Check out the [docs](https://hein-analytical-control-5e6e85.gitlab.io/) for usage instructions.
+
+## Usage
+Before running this library, these are the steps you need to complete.
+
+### Adding required MACRO script
+
+1. Open ChemStation
+2. Run this in the ChemStation command line: ``Print _AutoPath$``. Go to this path in your file navigator, as this is where you will put your
+MACRO file(s). 
+3. Download the [`hplc_talk.mac`](https://github.com/croningp/analyticallabware/blob/master/AnalyticalLabware/devices/Agilent/hplctalk.mac).
+   - On line 69, change the path name up to `\cmd` and `\reply`. For instance, you should have: `MonitorFile "[my path]\cmd", "[my path]\reply"`
+   - and then add this file to the folder from the previous step. 
+4. To have these MACRO files be read by ChemStation, you must either:
+   - Open ChemStation and run:
+```MACRO
+macro hplc_talk.mac
+HPLCTalk_Run
+```
+   - OR add the above lines to a MACRO file named: `user.mac`, and then put `user.mac` in the same folder from step 3. 
+     - ChemStation will automatically load these MACRO files for you. However, sometimes this does not work, and if it does not, you will have to run the lines in the `user.mac` manually.
+
+### Adding your own MACROs
+
+If you wish to add your own MACRO functions, then all you need to do is write you MACRO (using Agilent's) MACRO guide, 
+put the file in the `user.mac` file and then list the function you want to use.
+
+## Developing
+
+If you would like to contribute to this project...
+
+## Authors and Acknowledgements
+Lucy Hao
+
+- Adapted from [**AnalyticalLabware**](https://github.com/croningp/analyticallabware), created by members in the Cronin Group. Copyright © Cronin Group, used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
