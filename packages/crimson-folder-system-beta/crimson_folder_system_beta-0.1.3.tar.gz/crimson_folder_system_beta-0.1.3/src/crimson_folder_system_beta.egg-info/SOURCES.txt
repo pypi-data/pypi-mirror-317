@@ -1,0 +1,10 @@
+pyproject.toml
+src/crimson/folder_system_beta/__init__.py
+src/crimson/folder_system_beta/delete.py
+src/crimson/folder_system_beta/filter.py
+src/crimson/folder_system_beta/search.py
+src/crimson_folder_system_beta.egg-info/PKG-INFO
+src/crimson_folder_system_beta.egg-info/SOURCES.txt
+src/crimson_folder_system_beta.egg-info/dependency_links.txt
+src/crimson_folder_system_beta.egg-info/requires.txt
+src/crimson_folder_system_beta.egg-info/top_level.txt
