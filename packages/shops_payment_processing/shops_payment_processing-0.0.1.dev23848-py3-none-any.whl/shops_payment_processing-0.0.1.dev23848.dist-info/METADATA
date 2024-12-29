@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: shops_payment_processing
+Version: 0.0.1.dev23848
+Summary: Payment processing library for tg-shops.
+Author: Pavel Mulin
+Author-email: pavel@tg-shops.com
+Requires-Python: >=3.10.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: annotated-types (>=0.7.0)
+Requires-Dist: fastapi (>=0.112.2)
+Requires-Dist: httpx (>=0.25.0)
+Requires-Dist: pydantic (>=2.10.3)
+Requires-Dist: pydantic-core (>=2.27.1)
+Requires-Dist: typing_extensions (>=4.12.2)
+Description-Content-Type: text/markdown
+
+
