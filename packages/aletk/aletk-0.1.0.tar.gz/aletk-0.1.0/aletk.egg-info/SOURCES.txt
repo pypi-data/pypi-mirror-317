@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+aletk/ResultMonad.py
+aletk/__init__.py
+aletk/adapters.py
+aletk/utils.py
+aletk.egg-info/PKG-INFO
+aletk.egg-info/SOURCES.txt
+aletk.egg-info/dependency_links.txt
+aletk.egg-info/requires.txt
+aletk.egg-info/top_level.txt
