@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "funcshauns"
+version = "0.1.1"
+description = "My Python functions"
+authors = ["Shaun Porwal <shaun.porwal@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = true
+packages = [
+    { include = "funcshauns" }
+]
+include = ["pyproject.toml"]
+
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+tomli = "^2.2.1"
+pathlib = "^1.0.1"
+jupyterlab = "^4.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
