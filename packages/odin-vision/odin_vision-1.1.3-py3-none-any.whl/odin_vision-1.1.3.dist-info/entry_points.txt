@@ -1,0 +1,3 @@
+[console_scripts]
+odin=odin_vision.cli:main
+
