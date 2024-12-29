@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: slicenet
+Version: 0.0.8.dev3
+Summary: mininet-like simulation for Network Slices
+Home-page: https://kspviswa.github.io/slicenet-pages/
+Author: Viswa Kumar
+Author-email: kspviswaphd@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certifi ==2023.7.22
+Requires-Dist: charset-normalizer ==3.3.1
+Requires-Dist: click ==8.1.7
+Requires-Dist: docutils ==0.20.1
+Requires-Dist: idna ==3.4
+Requires-Dist: importlib-metadata ==6.8.0
+Requires-Dist: jaraco.classes ==3.3.0
+Requires-Dist: keyring ==24.2.0
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: more-itertools ==10.1.0
+Requires-Dist: nh3 ==0.2.14
+Requires-Dist: numpy ==1.26.2
+Requires-Dist: pkginfo ==1.9.6
+Requires-Dist: Pygments ==2.16.1
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: readerwriterlock ==1.0.9
+Requires-Dist: readme-renderer ==42.0
+Requires-Dist: requests ==2.31.0
+Requires-Dist: requests-toolbelt ==1.0.0
+Requires-Dist: rfc3986 ==2.0.0
+Requires-Dist: rich ==13.6.0
+Requires-Dist: semver ==3.0.2
+Requires-Dist: tabulate ==0.9.0
+Requires-Dist: twine ==4.0.2
+Requires-Dist: typing-extensions ==4.8.0
+Requires-Dist: urllib3 ==2.0.7
+Requires-Dist: wheel ==0.42.0
+Requires-Dist: zipp ==3.17.0
+
+<p align="center">
+      <img src="https://raw.githubusercontent.com/kspviswa/slicenet-pages/main/slicenet-1-tr-logo.png">
+</p>
+
+# Slicenet
+mininet-like simulation for Network Slices
+
+## What is Slicenet
+
+* A mininet like Simulator for simulating large macro network topologies along with UEs, Application nodes, Access networks, Transport networks, Core network & Data network.
+* Network Slicing policies & optimization logics can be experimented in various topologies and performance of each experiment can be measured in predictable & reproducible manner.
+* Unlike mininet, Slicenet only “simulates” the network. Hence without any real compute & power resources, lot of resource optimization, scheduling, prioritization & capacity models can be experimented in consistent way.
+* By abstracting topology out of the traffic pattern, same topology can be experiments with different traffic pattern. Mobility scenarios can also be easily experimented
+
+## Why Slicenet ?
+
+* Operators & Researchers have a simple & efficient way to try their experiments without the need to emulate entire physical / virtual topology
+* Borrows the topology, simulation & experiments concepts on all the previous tools and provides a consistent way to experiment & report the findings
+* Based on python and thereby extending itself to popular ML frameworks like TensorFlow / PyTorch to native use ML/DL/NN models as part of the experiments
+* Since Slicenet is just simulation, it can be run in Jupyter notebook setup as well (unlike mininet which is based on linux namespaces). This makes Slicenet extremely useful for researchers to quickly export the findings of the experiments and generates charts / visualizations and share it with wider research community
+
+If you find `Slicenet` to be useful in your research work, please cite the following publication:
+
+```bash
+@INPROCEEDINGS{10323887,
+  author={KumarSkandPriya, Viswanath and Dandoush, Abdulhalim and Diaz, Gladys},
+  booktitle={2023 International Symposium on Networks, Computers and Communications (ISNCC)}, 
+  title={Slicenet: a Simple and Scalable Flow-Level Simulator for Network Slice Provisioning and Management}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-6},
+  doi={10.1109/ISNCC58260.2023.10323887}}
+```
+
+## Other Publications
+
+```bash
+@article{KumarSkandPriya2023,
+author = "Viswanath Kumar Skand Priya and Abdulhalim Dandoush and gladys diaz",
+title = "{Slicenet: A Simple and Scalable Flow-Level Simulator for Network Slice Provisioning and Management}",
+year = "2023",
+month = "10",
+url = "https://www.techrxiv.org/articles/preprint/Slicenet_A_Simple_and_Scalable_Flow-Level_Simulator_for_Network_Slice_Provisioning_and_Management/24311254",
+doi = "10.36227/techrxiv.24311254.v1"
+```
+```bash
+@misc{kumarskandpriya2023slicenet,
+      title={Slicenet: a Simple and Scalable Flow-Level Simulator for Network Slice Provisioning and Management}, 
+      author={Viswanath KumarSkandPriya and Abdulhalim Dandoush and Gladys Diaz},
+      year={2023},
+      eprint={2310.11033},
+      archivePrefix={arXiv},
+      primaryClass={cs.NI}
+}
+```

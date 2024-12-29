@@ -1,0 +1,2 @@
+[console_scripts]
+slicenet = slicenet.cli:cli
