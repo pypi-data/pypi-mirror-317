@@ -1,0 +1,11 @@
+safe_migrations/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+safe_migrations/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_migrations/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_migrations/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_migrations/management/commands/safe_migration.py,sha256=TyZOwIc4wsetHzOYvqy9rW3rqyV2UlVyddYQtogGU-k,3266
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_migrations-0.1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_migrations-0.1.0.dist-info/METADATA,sha256=bV8r2WIxbXCTXEMjVDGIASwHw9YOCTTV5hMfJ2jvr2Y,982
+safe_migrations-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+safe_migrations-0.1.0.dist-info/top_level.txt,sha256=dE8-J8502qRLUOp-OjGWWW1QkPSBcuzoOY7YenPVn-k,22
+safe_migrations-0.1.0.dist-info/RECORD,,
