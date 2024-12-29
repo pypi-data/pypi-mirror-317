@@ -1,0 +1,17 @@
+libfilter/__init__.py,sha256=6ReSz1b8oj55sEqeKtOYSHe_t_SwRMxErogEmbFkRVY,363
+libfilter/afte_encoder.py,sha256=yQWhQ3I0xbu37iZi3b7yy9Xx8v-_RSQYQtohG8a4-vk,6643
+libfilter/audio_filters.py,sha256=EKxXypTyKzQ_AlclspVGt0dcP1zInosBz7u8PZ_wJcU,18607
+libfilter/base_classes.py,sha256=NaHXnucWoSBAodVEfattoQIxQrdKVt_lNczEHLI1L3c,1277
+libfilter/data_encoders.py,sha256=34POe08SJ6MUrPsE3224fEi7UnR1I1TGoyv2VM0FWBI,7357
+libfilter/decoders.py,sha256=VvAROBlqJTM3JSgSoqMycy6pQ5APzQW9nzZOdZKvreU,437
+libfilter/encoders.py,sha256=ND9avBdp6GWmOKWPrr1yHhvY8_Luq6I17OJ7ygckC7U,2217
+libfilter/modulators.py,sha256=4kRxGiMP24OljfchOwBGB8TX-bLJPnXgznBXmC2asG0,8697
+libfilter/oscillators.py,sha256=5WxyvHMPXI9Ya5dPh5o5hAWqxxN0T18xNRLimtWVTp0,5839
+libfilter/other.py,sha256=PbH-SLNZgc9Z6apa2wQyed3YKsh6gxk6Ig_WS9gWDQc,817
+libfilter/samplers.py,sha256=ddBq37IspKxfsE9WRaY1vvDt_AE7VIVI1gQfw1oWAIA,1329
+libfilter/transformers.py,sha256=ZhRajsstoYX2CaJuGKiWW6BdCq-9KQcSh7yujrRflLQ,6324
+libfilter-1.31.dist-info/LICENCE,sha256=6XJiGmIp_nUdxrYRyA7FEC6YSDiC9nR8Qi9UoJk5La4,35187
+libfilter-1.31.dist-info/METADATA,sha256=xejSGfcAQNbI5qnFIAlSV6IWQyffGUsalIhZgHilYss,1830
+libfilter-1.31.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+libfilter-1.31.dist-info/top_level.txt,sha256=gMW1Au8BgTYHDgdhrsczixh8TDjDhOznujm-pnzGSBA,10
+libfilter-1.31.dist-info/RECORD,,
