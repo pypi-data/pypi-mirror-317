@@ -1,0 +1,240 @@
+Metadata-Version: 2.1
+Name: pdf-text-extractor
+Version: 0.1.0
+Summary: Extract text and images from PDF files
+Home-page: https://github.com/baxromov/pdf-text-extractor
+Author: Your Name
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: aiohappyeyeballs==2.4.4
+Requires-Dist: aiohttp==3.11.11
+Requires-Dist: aiosignal==1.3.2
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: anyio==4.7.0
+Requires-Dist: appdirs==1.4.4
+Requires-Dist: attrs==24.3.0
+Requires-Dist: autoflake==2.3.1
+Requires-Dist: beautifulsoup4==4.12.2
+Requires-Dist: bs4==0.0.1
+Requires-Dist: certifi==2023.7.22
+Requires-Dist: cffi==1.17.1
+Requires-Dist: chardet==5.2.0
+Requires-Dist: charset-normalizer==3.4.1
+Requires-Dist: click==8.1.8
+Requires-Dist: colorama==0.4.6
+Requires-Dist: contourpy==1.3.1
+Requires-Dist: cramjam==2.9.1
+Requires-Dist: cryptography==44.0.0
+Requires-Dist: cssselect==1.2.0
+Requires-Dist: cycler==0.12.1
+Requires-Dist: dataclasses-json==0.6.7
+Requires-Dist: deepsearch-glm==1.0.0
+Requires-Dist: dill==0.3.9
+Requires-Dist: docling==2.14.0
+Requires-Dist: docling-core==2.12.1
+Requires-Dist: docling-ibm-models==3.1.0
+Requires-Dist: docling-parse==3.0.0
+Requires-Dist: docutils==0.21.2
+Requires-Dist: easyocr==1.7.2
+Requires-Dist: et_xmlfile==2.0.0
+Requires-Dist: fastparquet==2024.11.0
+Requires-Dist: filelock==3.16.1
+Requires-Dist: filetype==1.2.0
+Requires-Dist: fonttools==4.55.3
+Requires-Dist: frozenlist==1.5.0
+Requires-Dist: fsspec==2024.12.0
+Requires-Dist: h11==0.14.0
+Requires-Dist: httpcore==1.0.7
+Requires-Dist: httpx==0.28.1
+Requires-Dist: httpx-sse==0.4.0
+Requires-Dist: huggingface-hub==0.27.0
+Requires-Dist: idna==3.10
+Requires-Dist: imageio==2.36.1
+Requires-Dist: importlib-metadata==6.8.0
+Requires-Dist: jaraco.classes==3.4.0
+Requires-Dist: jaraco.context==6.0.1
+Requires-Dist: jaraco.functools==4.1.0
+Requires-Dist: jigi==1.0.7
+Requires-Dist: Jinja2==3.1.5
+Requires-Dist: jsonlines==3.1.0
+Requires-Dist: jsonpatch==1.33
+Requires-Dist: jsonpointer==3.0.0
+Requires-Dist: jsonref==1.1.0
+Requires-Dist: jsonschema==4.23.0
+Requires-Dist: jsonschema-specifications==2024.10.1
+Requires-Dist: keyring==25.6.0
+Requires-Dist: kiwisolver==1.4.8
+Requires-Dist: langchain==0.3.13
+Requires-Dist: langchain-community==0.3.13
+Requires-Dist: langchain-core==0.3.28
+Requires-Dist: langchain-text-splitters==0.3.4
+Requires-Dist: langsmith==0.2.6
+Requires-Dist: lazy_loader==0.4
+Requires-Dist: lxml==4.9.3
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: marko==2.1.2
+Requires-Dist: MarkupSafe==3.0.2
+Requires-Dist: marshmallow==3.23.2
+Requires-Dist: matplotlib==3.10.0
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: more-itertools==10.5.0
+Requires-Dist: mpd-parser==0.1.2
+Requires-Dist: mpire==2.10.2
+Requires-Dist: mpmath==1.3.0
+Requires-Dist: multidict==6.1.0
+Requires-Dist: multiprocess==0.70.17
+Requires-Dist: mypy-extensions==1.0.0
+Requires-Dist: networkx==3.4.2
+Requires-Dist: nh3==0.2.20
+Requires-Dist: ninja==1.11.1.3
+Requires-Dist: numpy==2.2.1
+Requires-Dist: opencv-python==4.10.0.84
+Requires-Dist: opencv-python-headless==4.10.0.84
+Requires-Dist: openpyxl==3.1.5
+Requires-Dist: orjson==3.10.12
+Requires-Dist: packaging==24.2
+Requires-Dist: pandas==2.2.3
+Requires-Dist: pdf2image==1.17.0
+Requires-Dist: pdfminer.six==20240706
+Requires-Dist: pillow==10.4.0
+Requires-Dist: pkginfo==1.12.0
+Requires-Dist: propcache==0.2.1
+Requires-Dist: pyarrow==18.1.0
+Requires-Dist: pyclipper==1.3.0.post6
+Requires-Dist: pycparser==2.22
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: pydantic-settings==2.7.0
+Requires-Dist: pydantic_core==2.27.2
+Requires-Dist: pyee==8.2.2
+Requires-Dist: pyflakes==3.2.0
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: PyMuPDF==1.25.1
+Requires-Dist: pyparsing==3.2.0
+Requires-Dist: pypdfium2==4.30.1
+Requires-Dist: pyppeteer==1.0.2
+Requires-Dist: pyquery==2.0.1
+Requires-Dist: pytesseract==0.3.13
+Requires-Dist: python-bidi==0.6.3
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: python-docx==1.1.2
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: python-pptx==1.0.2
+Requires-Dist: pytz==2024.2
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: readme_renderer==44.0
+Requires-Dist: referencing==0.35.1
+Requires-Dist: regex==2024.11.6
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rfc3986==2.0.0
+Requires-Dist: rich==13.9.4
+Requires-Dist: roman==4.2
+Requires-Dist: rpds-py==0.22.3
+Requires-Dist: Rtree==1.3.0
+Requires-Dist: safetensors==0.4.5
+Requires-Dist: scikit-image==0.25.0
+Requires-Dist: scipy==1.14.1
+Requires-Dist: semchunk==2.2.2
+Requires-Dist: setuptools==75.6.0
+Requires-Dist: shapely==2.0.6
+Requires-Dist: shellingham==1.5.4
+Requires-Dist: six==1.17.0
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: soupsieve==2.5
+Requires-Dist: SQLAlchemy==2.0.36
+Requires-Dist: sympy==1.13.1
+Requires-Dist: tabulate==0.9.0
+Requires-Dist: tenacity==9.0.0
+Requires-Dist: tifffile==2024.12.12
+Requires-Dist: tokenizers==0.21.0
+Requires-Dist: torch==2.5.1
+Requires-Dist: torchvision==0.20.1
+Requires-Dist: tqdm==4.66.1
+Requires-Dist: transformers==4.47.1
+Requires-Dist: twine==6.0.1
+Requires-Dist: typer==0.12.5
+Requires-Dist: typing-inspect==0.9.0
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: tzdata==2024.2
+Requires-Dist: urllib3==1.26.18
+Requires-Dist: websockets==10.4
+Requires-Dist: XlsxWriter==3.2.0
+Requires-Dist: yarl==1.18.3
+Requires-Dist: zipp==3.17.0
+
+## PDF Text Extractor
+
+PDF Text Extractor is a Python package for extracting text and images from PDF files. It supports extracting text directly from PDFs as well as from images using OCR (Tesseract).
+
+Features
+	•	Extract text directly from PDFs using PyMuPDF.
+	•	Extract images embedded in PDFs.
+	•	Perform OCR on extracted images using Tesseract.
+	•	Export extracted text to Markdown, XML, or dataset formats.
+---
+## Installation
+
+System Requirements
+
+Before installing, ensure you have the following system requirements met:
+-  Python Version: Python 3.12 or newer is required. 
+  - Tesseract OCR:
+    - Install Tesseract on your system. Instructions for common operating systems:
+    - Ubuntu/Debian:
+    ```shell
+      sudo apt update
+      sudo apt install tesseract-ocr libtesseract-dev
+      ```
+    - macOS (using Homebrew):
+    ```shell
+    brew install tesseract
+    ```
+- Pilow Dependencies:
+- PyMuPDF (fitz):
+	- PyMuPDF is included in the package dependencies.
+
+---
+## Python Dependencies
+
+The package has the following Python dependencies:
+- pytesseract
+- Pillow
+- PyMuPDF
+
+You can install all dependencies via pip:
+```shell
+pip install pdf-text-extractor
+```
+
+---
+## Usage
+
+1. Install the Package
+
+Install the package via pip:
+```shell
+pip install pdf-text-extractor
+```
+2. Import and Use the Library
+```python
+from pdf_text_extractor.extractor import PDFTextExtractor
+
+# Initialize the extractor
+pdf_path = "sample.pdf"
+image_dir = "extracted_images"
+output_text_file = "output.md"
+
+extractor = PDFTextExtractor(pdf_path, image_dir, output_text_file)
+
+# Extract text and save to Markdown
+extractor.extract_and_save_text()
+
+# Convert text to XML
+xml_content = extractor.convert_to_xml()
+print(xml_content)
+```
+
