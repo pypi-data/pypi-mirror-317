@@ -1,0 +1,7 @@
+bdax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bdax/blackjaxsampling.py,sha256=Yfu9BUGbehplhamaqMbHH9hWNUCts3i0cYhiP0NqgCE,4631
+bdax/flaxtraining.py,sha256=1Z-jaAEjXZMKvWVqYiXM5MBkylcD60Qd8gGqwD4unUE,2504
+bdax/jaxpymc.py,sha256=bjk8otvtis7WTgqATx4gM94TP_dP-X2X9Id8ddQVUFY,9680
+bdax-0.1.4.dist-info/METADATA,sha256=YunNpEVwZmQsrqAqOFtpmQzYj6PioXmvcvJWcjfFyzc,991
+bdax-0.1.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+bdax-0.1.4.dist-info/RECORD,,
