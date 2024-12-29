@@ -1,0 +1,30 @@
+en:
+  description: "Installs and manages a BrainFrame server."
+  usage: >-
+    brainframe <command> [<args>]
+
+
+    Commands:
+      install      Installs the BrainFrame server
+      backup       Backs up all persistent data for the server
+      update       Updates the BrainFrame server to a new version
+      info         Provides information about the BrainFrame server
+      compose      Runs all following commands and flags through docker-compose
+      uninstall    Uninstalls the BrainFrame server
+      shell        Runs preinstalled brainframe-cli commands in a docker shell
+
+    Examples:
+      brainframe install            Installs BrainFrame interactively
+      brainframe compose up -d      Starts BrainFrame
+      brainframe compose down       Stops BrainFrame
+      brainframe compose logs -f    View BrainFrame logs
+  command-help: "The command to run"
+  data-path-help: "The directory where the BrainFrame installation write data
+  to"
+  docker-compose-path-help: "The path to the docker-compose.yml"
+  unknown-command: "Unknown command: {command}"
+  no-command-provided: "This is a CLI tool for managing and installing the
+  BrainFrame OS, developing BrainFrame Apps and VisionCapsules.\n\n
+  To get started with a new BrainFrame instance, run \"brainframe install\".\n
+  To use brainframe & VisionCapsule tools, run \"brainframe shell\".\n
+  To see more options, run \"brainframe -h\"."
