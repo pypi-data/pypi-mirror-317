@@ -1,0 +1,5 @@
+recursive-include telebot_dialogue *
+include README.md
+include LICENSE
+include example.py
+include setup.py
