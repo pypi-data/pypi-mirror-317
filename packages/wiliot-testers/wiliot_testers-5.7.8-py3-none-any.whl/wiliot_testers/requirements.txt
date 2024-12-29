@@ -1,0 +1,11 @@
+setuptools_scm
+pyserial
+pandas
+numpy<2
+pyqtgraph
+matplotlib
+PyQt5-sip
+PyQt5
+pygubu>=0.35.1
+smart-open
+openpyxl
