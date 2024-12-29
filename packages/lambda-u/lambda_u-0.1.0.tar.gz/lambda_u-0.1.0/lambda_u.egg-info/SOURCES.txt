@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+lambda_u.egg-info/PKG-INFO
+lambda_u.egg-info/SOURCES.txt
+lambda_u.egg-info/dependency_links.txt
+lambda_u.egg-info/top_level.txt
+lambda_utils/__init__.py
+lambda_utils/collections.py
+lambda_utils/core.py
+lambda_utils/functional.py
+tests/test_lambda_utils.py
