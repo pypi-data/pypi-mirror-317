@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: drm-free-audible
+Version: 0.1.5
+Summary: A tool to remove DRM from Audible files
+Author: You Zhou
+Author-email: you-zhou@users.noreply.github.com
+Requires-Python: >=3.13,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: ffmpeg-python (>=0.2.0,<0.3.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Description-Content-Type: text/markdown
+
+# DRM free Audbile
+
+Python script to remove DRM from my Audible files, so that they can be played in
+devices like Garmin sports watches.
+
