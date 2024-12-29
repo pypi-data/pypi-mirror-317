@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: exrio
+Version: 0.0.1
+Requires-Dist: numpy <2
+Summary: Read and write OpenEXR files in Python with no system dependencies.
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# exrio
+
+Fast and dependency-free python library for reading and writing OpenEXR files.
+
+## Development
+
+### Install Tools
+
+- [Rust](https://www.rust-lang.org/tools/install)
+- [Python](https://www.python.org/downloads/)
+- [maturin](https://maturin.rs)
+
+### Run Tests
+
+```bash
+uv sync
+uv run pytest
+```
+
+### Run Examples
+
+```bash
+uv sync
+uv run examples/test.py
+```
+
+### Publish
+
+Create an account on [test.pypi.org](https://test.pypi.org) and register your GitHub OIDC provider on [Publishing](https://test.pypi.org/manage/account/publishing/).
+
