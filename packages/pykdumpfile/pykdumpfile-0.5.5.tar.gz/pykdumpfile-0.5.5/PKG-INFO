@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pykdumpfile
+Version: 0.5.5
+Summary: Python bindings to libkdumpfile
+Home-page: https://github.com/ptesarik/pykdumpfile
+Author: Petr Tesarik
+Author-email: ptesarik@suse.com
+License: GPLv2+
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.0
+License-File: LICENSE
+Requires-Dist: cffi>=1.8
+
+# pykdumpfile
+
+Bindings to the libkdumpfile shared library.
+
+## Links
+
+* [libkdumpfile](https://github.com/ptesarik/libkdumpfile)
+
+## License
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version.
