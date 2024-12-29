@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+Zazzle.egg-info/PKG-INFO
+Zazzle.egg-info/SOURCES.txt
+Zazzle.egg-info/dependency_links.txt
+Zazzle.egg-info/top_level.txt
+Zazzle.egg-info/zip-safe
+tests/test_01.py
+zazzle/__init__.py
+zazzle/zz_logging.py
