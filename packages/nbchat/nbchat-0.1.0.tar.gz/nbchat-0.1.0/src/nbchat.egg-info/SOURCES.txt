@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/nbchat/__init__.py
+src/nbchat/__version__.py
+src/nbchat/cli.py
+src/nbchat.egg-info/PKG-INFO
+src/nbchat.egg-info/SOURCES.txt
+src/nbchat.egg-info/dependency_links.txt
+src/nbchat.egg-info/entry_points.txt
+src/nbchat.egg-info/requires.txt
+src/nbchat.egg-info/top_level.txt
