@@ -1,0 +1,14 @@
+babel_langlib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+babel_langlib/caching.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+babel_langlib/datasets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+babel_langlib/formatter.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+babel_langlib/locales/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+babel_langlib/storage/__init__.py,sha256=SBWlRFjSHtYxH-fGLTluuRdqjYIZ-QSNMyG7O7b-TsE,49
+babel_langlib/storage/loader.py,sha256=AFXiA2tG17UyxQElB_OPMRujYLL_2zHJ7sNpw59DKBU,127
+babel_langlib/storage/storage.py,sha256=jH7InuqjWYGiygr5FOhIfyggx8cjrjk535izLFuu2OA,249
+babel_langlib/translators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+babel_langlib/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+babel_langlib-0.0.0.1.dist-info/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+babel_langlib-0.0.0.1.dist-info/METADATA,sha256=rvg1YqnmoxFD1rWfcTWo7cEpCL_FdwW1Cl4ho2gLPS4,5274
+babel_langlib-0.0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+babel_langlib-0.0.0.1.dist-info/RECORD,,
