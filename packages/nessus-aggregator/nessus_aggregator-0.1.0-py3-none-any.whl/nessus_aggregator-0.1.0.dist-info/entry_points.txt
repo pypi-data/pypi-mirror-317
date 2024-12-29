@@ -1,0 +1,2 @@
+[console_scripts]
+nessus-aggregator = nessus_aggregator.nessus_aggregator:main
