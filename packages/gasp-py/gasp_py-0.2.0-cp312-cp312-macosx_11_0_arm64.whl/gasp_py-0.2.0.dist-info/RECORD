@@ -1,0 +1,5 @@
+gasp_py-0.2.0.dist-info/METADATA,sha256=hfv19pDH1DlQ__SU5JGDnavzHrlL_m-00rUAzoBB4Ys,7105
+gasp_py-0.2.0.dist-info/WHEEL,sha256=IA6kOJLnwdRK_zTmnZOSQ4pyRBMY5E9U75JUC7ZcmKU,104
+gasp/__init__.py,sha256=RRRDrID0m7o4j_W8WaCM9bCDhtn-Kx7KhIJe6e34JDc,99
+gasp/gasp.cpython-312-darwin.so,sha256=FohNBRU839vfZ9no1Jq7beW1zCTy0sY10vO3Uthpns4,2062480
+gasp_py-0.2.0.dist-info/RECORD,,
