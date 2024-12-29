@@ -1,0 +1,12 @@
+spymarine/__init__.py,sha256=Ml2Rj3Jrw3Dsmup8E7PxiYARjFhatzwzfWaSvsB7cXM,1090
+spymarine/communication.py,sha256=-ELypewBao51i3HPAodTt_bA0n5r1miVLfSHHOBZQTA,8811
+spymarine/device.py,sha256=PjbKHMQe2JTe-KR532V9vnKJBmZ5jinZ8Sd_e4CTdI4,7032
+spymarine/device_reader.py,sha256=12ifcKV42Xgb7ejOhY-DcVI01b1YSeWL-gSC9BymSAE,4027
+spymarine/error.py,sha256=tzL8Vc1qTsobslaBWMh7z77ZiN4DzizVNzQtMdSNr1c,41
+spymarine/property_dict.py,sha256=qq9gWSjkbB6p07LxfNxM46AhXh6z5mGV4iqCO3MVMNE,2293
+spymarine/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spymarine/sensor.py,sha256=eALRefeDBaW7qmi39Z8XBHBvECPsKifExTJFCDt_Y9Y,3429
+spymarine-0.6.3.dist-info/METADATA,sha256=u7bV05qqPkbHaroK--XQ6qmZ717GtA8WJSLkUpSJyso,1838
+spymarine-0.6.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spymarine-0.6.3.dist-info/licenses/LICENSE,sha256=nYuZT4uOB8ZWOliXQFMAJ2FM3nPC_9Hk4w6VIcxOqm0,1075
+spymarine-0.6.3.dist-info/RECORD,,
