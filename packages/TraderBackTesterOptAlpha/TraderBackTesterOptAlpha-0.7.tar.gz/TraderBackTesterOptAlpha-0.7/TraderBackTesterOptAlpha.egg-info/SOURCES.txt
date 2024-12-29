@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+TraderBackTesterOptAlpha/TraderBackTesterDM.py
+TraderBackTesterOptAlpha/TraderBackTesterUtils.py
+TraderBackTesterOptAlpha/__init__.py
+TraderBackTesterOptAlpha/version.py
+TraderBackTesterOptAlpha.egg-info/PKG-INFO
+TraderBackTesterOptAlpha.egg-info/SOURCES.txt
+TraderBackTesterOptAlpha.egg-info/dependency_links.txt
+TraderBackTesterOptAlpha.egg-info/requires.txt
+TraderBackTesterOptAlpha.egg-info/top_level.txt
