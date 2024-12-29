@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: SoftwareAI
+Version: 0.3.19
+Summary: SoftwareAI is a framework with the aim of creating a software/application development company/organization governed by AI, its objective is not just to create the software with updates, documentation, schedules and spreadsheets, SoftwareAI is capable of running a software company completely with all the teams that make up a software company
+Home-page: https://github.com/ualers/SoftwareAI
+Author: ualers
+Author-email: freitasalexandre810@gmail.com
+License: Apache License 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: firebase-admin
+Requires-Dist: asyncio
+Requires-Dist: pandas
+Requires-Dist: tiktoken
+Requires-Dist: PyGithub
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: gitpython
+Requires-Dist: openai
+
+# 👥 SoftwareAI - Your software company governed by AI
+
+![Version](https://img.shields.io/badge/version-0.3.3-blue)
+![Status](https://img.shields.io/badge/status-beta-yellow)
+![License](https://img.shields.io/badge/license-Apache-green)
+
+# 📜 Table of Contents
+- [📖 About](https://github.com/ualers/SoftwareAI/blob/main/Docs/About/SoftwareAI.md)
+- [📖 Index Docs](#-indexdocs)
+- [🔄 Info-Update](https://github.com/ualers/SoftwareAI/blob/main/Docs/Update/Update.md)
+- [🚀 Starting SoftwareAI Chat](#-start-softwareai-chat)
+- [🚀 Starting SoftwareAI Editor](#-softwareai-editor)
+- [🚀 Starting Without Ui](#-get-started-softwareai-without-ui)
+- [👥 Index-Team](https://github.com/ualers/SoftwareAI/blob/main/Docs/IndexTeam/IndexTeam.md)
+- [🗺️ Roadmaps](https://github.com/ualers/SoftwareAI/blob/main/Docs/Roadmaps)
+- [📊 Flowchart](https://github.com/ualers/SoftwareAI/blob/main/Docs/Flowchart/Fluxogram-beta-v-0.1.8.pdf)
+- [📁 SoftwareAI Structure](https://github.com/ualers/SoftwareAI/blob/main/Docs/Structure/SoftwareAIStructure.md)
+- [🤝 Contributing](#-contributing)
+
+⚠️ **Note**: SoftwareAI is in beta phase and does not currently reflect the final product.
+
+## 🚀 SoftwareAI-Editor - Build Agents: Edit, Build and Bring your Agent to life
+
+📖 **SoftwareAI-Editor**: is the most important part when thinking about creating a company 100% governed by AI, here we will build and modify each agent for its specific use
+## 📚 [Editor Installation](https://github.com/ualers/SoftwareAI/blob/main/Docs/Installation/Editor.md)
+## 📚 [Editor RoadMap](https://github.com/ualers/SoftwareAI/blob/main/Docs/Roadmaps/Editor-Roadmap.md)
+
+## 🚀 Start SoftwareAI-Chat
+⚠️ **Note**: It is with great pleasure that we present a functional version of the softwareai chat, now you can select the agent and chat with him with images, files and messages (audio coming soon) in addition, inspired by the openai whiteboard we created our own whiteboard where all generated code goes for her, despite being very complete there is still a lot to be done if you find an error open an Issues
+![UI](Gifs/1221.gif)
+
+## 📚 [SoftwareAI-Chat Installation](https://github.com/ualers/SoftwareAI/blob/main/Docs/Installation/Chat.md)
+## 📚 [SoftwareAI-Chat RoadMap](https://github.com/ualers/SoftwareAI/blob/main/Docs/Roadmaps/Chat-Roadmap.md)
+#
+## 🚀 Get started SoftwareAI without UI
+- 🔧 SoftwareAI Installation: pip install SoftwareAI
+- 🔧 Usage:
+```python
+# Importing SoftwareAI Agents
+from softwareai.CoreApp._init_agents_ import AgentInitializer
+
+# Importing SoftwareAI Libraries
+from softwareai.CoreApp._init_libs_ import *
+
+# Initializing Agent
+byte_manager = AgentInitializer.get_agent('ByteManager') 
+
+# Usage Example
+message = "I request a script for technical analysis of Solana cryptocurrency"
+owner_response = byte_manager.AI_1_ByteManager_Company_Owners(message)
+print(owner_response)
+```
+## 💡 SoftwareAI without UI Features
+- 📊 Creation of pre-project documentation
+- 🗺️ Roadmap generation
+- 📅 Automatic schedules
+- 📝 Requirements analysis
+- 🔄 GitHub repository management
+- ⚡ Loop of 5 automatic improvements
+- 📚 Repository on github generated with the example above: https://github.com/A-I-O-R-G/solana-analyzer
+
+
+## 📖 IndexDocs
+- [About](https://github.com/ualers/SoftwareAI/blob/main/Docs/About)
+- [Core](https://github.com/ualers/SoftwareAI/blob/main/Docs/Core)
+- [Destilation](https://github.com/ualers/SoftwareAI/blob/main/Docs/Destilation/DestilationAgents.md)
+- [IndexTeam](https://github.com/ualers/SoftwareAI/blob/main/Docs/IndexTeam/IndexTeam.md)
+- [Installation](https://github.com/ualers/SoftwareAI/blob/main/Docs/Installation)
+- [Moderation](https://github.com/ualers/SoftwareAI/blob/main/Docs/Moderation/RemoveWords.md)
+- [Roadmaps](https://github.com/ualers/SoftwareAI/blob/main/Docs/Roadmaps)
+- [Structure](https://github.com/ualers/SoftwareAI/blob/main/Docs/Structure/SoftwareAIStructure.md)
+- [ToolsAndFunctions](https://github.com/ualers/SoftwareAI/blob/main/Docs/ToolsAndFunctions/doc-tools.md)
+- [Update](https://github.com/ualers/SoftwareAI/blob/main/Docs/Update/Update.md)
+## 🤝 Contributing
+While SoftwareAI is primarily AI-driven, we welcome contributions from the community:
+- 🐛 Bug Reports
+- 💡 Feature Suggestions
+- 📝 Documentation Improvements
+- 🔧 Code Contributions
+
+
