@@ -1,0 +1,16 @@
+docplex_extensions/__init__.py,sha256=3NHatOizNjlNID32VVkEjM_WmjMbtgoB0sujXvayWB4,1817
+docplex_extensions/_dict_mixins.py,sha256=oGdAEuMRxSYtvUm_IpK-diXSRaEefes2r-D1-Uz4sZA,7484
+docplex_extensions/_index_sets.py,sha256=CnbsXeuMOiGO9lVoMYaVy3KooDu5oOAUgFzHivLw6nE,47503
+docplex_extensions/_model_funcs.py,sha256=9dcrTC2-DVImmrdERvu22rApXhvMLGoNpFeMK_8TdeM,9224
+docplex_extensions/_pandas_accessors.py,sha256=MK0q8t9WF2dkKP0IhIlR2iF8HPY9xY66wDYxIaxZpt4,20298
+docplex_extensions/_param_dicts.py,sha256=DKmvAkice5CWE_7C68ouGY0grEWeynXeeVp4_zGQijA,26434
+docplex_extensions/_tuning_funcs.py,sha256=gTSTQTLIqmGhOHJkxUhtMnkAghrCvgEaIlRIEyL0wHM,20847
+docplex_extensions/_var_dicts.py,sha256=ocBfV9dR1xSxXwaXIdyvFacH2AdUnRm1GXCssBlcHqw,14597
+docplex_extensions/_var_funcs.py,sha256=XjP4b_2oCNu1jCBxDolkgDMYLgo28F9xtcfOoX2vUKc,16859
+docplex_extensions/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docplex_extensions-1.2.0.dist-info/LICENSE,sha256=rZP5TCNlchScoXvHvHktev3Btm3cQVCRB1Wg9tng4lw,11344
+docplex_extensions-1.2.0.dist-info/METADATA,sha256=Da9kEkrhcdrO6gDpcCfO_cMX5T5NiN3VijorRqgEPUo,18824
+docplex_extensions-1.2.0.dist-info/NOTICE,sha256=E1ewsfkv9wwcQCm2FeaEjqkiq6GQb-yQge0LmzUWDzA,2692
+docplex_extensions-1.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+docplex_extensions-1.2.0.dist-info/top_level.txt,sha256=rUwMvfsLV57Q5ja35srUCUmdny3iJTbl4KFR0XtICpo,19
+docplex_extensions-1.2.0.dist-info/RECORD,,
