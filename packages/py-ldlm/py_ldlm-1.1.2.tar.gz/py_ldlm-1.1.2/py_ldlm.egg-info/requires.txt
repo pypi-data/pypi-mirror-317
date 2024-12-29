@@ -1,0 +1,16 @@
+grpcio
+google-api-python-client
+
+[docs]
+sphinx
+sphinx_rtd_theme
+autodoc
+myst-parser
+setuptools-scm>=8
+m2r2
+
+[test]
+pytest
+pytest-asyncio
+frozendict
+coverage
