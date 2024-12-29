@@ -1,0 +1,10 @@
+README.md
+setup.py
+OPENYCVCONTRIB.egg-info/PKG-INFO
+OPENYCVCONTRIB.egg-info/SOURCES.txt
+OPENYCVCONTRIB.egg-info/dependency_links.txt
+OPENYCVCONTRIB.egg-info/requires.txt
+OPENYCVCONTRIB.egg-info/top_level.txt
+libname/__init__.py
+libname/hello.py
+libname/models/opencv_contrib-5.0.0-alpha.zip
