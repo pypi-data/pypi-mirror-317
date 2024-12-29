@@ -1,0 +1,15 @@
+numpy
+pyyaml
+httpx
+langchain
+sentence-transformers
+cerebras-cloud-sdk
+torch
+openai>=1.0.0
+google-generativeai
+Pillow
+
+[dev]
+pytest
+black
+flake8
