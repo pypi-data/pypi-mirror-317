@@ -1,0 +1,13 @@
+core_https/__init__.py,sha256=vbY7FkWyCqPvcHlSXEdG9hMWQci3K-PzZ8iKWNGyJ2k,510
+core_https/exceptions.py,sha256=cs4gfNsT2H5Hnk2bO_BjgKqnpCUQJocsLrQl5eHN5no,734
+core_https/utils.py,sha256=l95LyVWJsYfPlGLivBWuFOAe-bQk9Ocr-BAGEigBQFs,5024
+core_https/decorators/__init__.py,sha256=VXd75KnsgN5Tn9vZWoJyvfNMHuUsXGckrXAduMrx6uo,70
+core_https/decorators/response_wrapper.py,sha256=TMkk3AsL2Gyjkfx9y2zRAbHD5P0V0P8XNo8TsKca_6g,2586
+core_https/requesters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_https/requesters/base.py,sha256=OOT7KS5AdSEqu1EyQK8aUlFY4iWtz49KOV-fohWfN5E,572
+core_https/requesters/url_lib3.py,sha256=BuAsdblZ_yIyxp_lOGvIEwJmSFzoVlEG-PMxdHUztH4,886
+core_https-1.1.1.dist-info/LICENSE,sha256=dj8Wz7OWOIOTyLJzaYLn8RFz_W5uYWSGR2xS5lHNAl4,1082
+core_https-1.1.1.dist-info/METADATA,sha256=OYUbhKKRPCpHGgFkIKTveUAz-0M26pHwl50AS1xzwFk,2390
+core_https-1.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+core_https-1.1.1.dist-info/top_level.txt,sha256=Ufm6w6dLS6hyTPwMUXt4O6klJfLyKpkaG6csd2kmaDw,11
+core_https-1.1.1.dist-info/RECORD,,
