@@ -1,0 +1,16 @@
+LICENCE
+MANIFEST.in
+README.md
+pyproject.toml
+src/confluent_kafka_config/__init__.py
+src/confluent_kafka_config/client_pool.py
+src/confluent_kafka_config/consumer_context.py
+src/confluent_kafka_config/producer_context.py
+src/confluent_kafka_config/registry_context.py
+src/confluent_kafka_config/topic_context.py
+src/confluent_kafka_config/validation.py
+src/confluent_kafka_config.egg-info/PKG-INFO
+src/confluent_kafka_config.egg-info/SOURCES.txt
+src/confluent_kafka_config.egg-info/dependency_links.txt
+src/confluent_kafka_config.egg-info/requires.txt
+src/confluent_kafka_config.egg-info/top_level.txt
