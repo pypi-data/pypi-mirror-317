@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: WS-API
+Version: 0.2.1
+Summary: Access your Wealthsimple account using their (GraphQL) API.
+Home-page: https://github.com/gboudreau/ws-api-python
+Author: Guillaume Boudreau
+Author-email: guillaume@pommepause.com
+License: GPL-3.0
+Keywords: wealthsimple
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: requests
