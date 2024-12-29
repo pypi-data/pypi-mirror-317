@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tarot-contracts
+Version: 0.0.3
+Summary: A package with gRPC generated code
+Home-page: UNKNOWN
+Author: Vlad Balabash
+Author-email: <vladb951@gmail.com>
+License: UNKNOWN
+Keywords: python,grpc,tarotbot
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+A package with gRPC generated code of the tarot services
+
