@@ -1,0 +1,13 @@
+pyinn/Interpolator.py,sha256=QwKozl2BoCe7VoKDEAuiKmuQfgxhsgP23898HrFL-JY,19922
+pyinn/__init__.py,sha256=YcKxRecoK4pEbszG97_jNHqPh-15JUk7iLpwFQxixh8,143
+pyinn/dataset_classification.py,sha256=b5zsyL0uLjNmIddZwNGgtavUX5zEhg0DYFfvKaBtUQg,7419
+pyinn/dataset_regression.py,sha256=L_th67k1BdzcGJBXYoJbybw-vIspaLKzIMc5pHhKm6M,12936
+pyinn/main.py,sha256=-uq1PRoVpBta7wIwlBD4pYzH85UUrvJLEJCdq4jRxxI,2243
+pyinn/model.py,sha256=pMe37_dO48nL_ubN33le2TDUvbz26pMg3-vwzI8ywW4,6086
+pyinn/plot.py,sha256=7Gv7VIAPwGgSebjixDn5zwFYXzKzb-Ya4mOBxYizyIs,12989
+pyinn/train.py,sha256=6OQb1m9xbwXM0Tmk8zcjFG3cCaDYGdpr_tOdTabdmMs,21707
+pyinn-0.1.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyinn-0.1.3.dist-info/METADATA,sha256=wnIEKFUnwVeE-J_BTAJB0O_hafXEyhkEAY9blZH1VFc,3133
+pyinn-0.1.3.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+pyinn-0.1.3.dist-info/top_level.txt,sha256=IgnFdgl55F8xSAmdMMmlvjoPhZb_Wns9ebh6tUWDchw,6
+pyinn-0.1.3.dist-info/RECORD,,
