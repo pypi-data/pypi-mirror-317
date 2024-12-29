@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/astreum/__init__.py
+src/astreum.egg-info/PKG-INFO
+src/astreum.egg-info/SOURCES.txt
+src/astreum.egg-info/dependency_links.txt
+src/astreum.egg-info/top_level.txt
+src/astreum/machine/__init__.py
+src/astreum/machine/environment.py
+src/astreum/machine/error.py
+src/astreum/machine/expression.py
+src/astreum/machine/parser.py
+src/astreum/machine/tokenizer.py
