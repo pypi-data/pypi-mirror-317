@@ -1,0 +1,2 @@
+[console_scripts]
+polydispers = polydispers.cli:cli
