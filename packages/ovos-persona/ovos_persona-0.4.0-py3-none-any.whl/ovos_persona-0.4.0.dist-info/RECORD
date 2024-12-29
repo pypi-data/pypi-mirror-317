@@ -1,0 +1,11 @@
+ovos_persona/__init__.py,sha256=oHDqUwF4axgeLUky6AK8-6Lsm2qD9eR-rV9iVCHUe9o,14049
+ovos_persona/hpm.py,sha256=qg-VWAyZ3ESMe2GuW1mlaqjZ332LRornPYt5Ho1HRNc,2738
+ovos_persona/solvers.py,sha256=XZKnU3M3_ISnRJgs6TImauLOBc8N1f-7UxLQR2UHQcY,3633
+ovos_persona/version.py,sha256=rrhszohyTNtqgiA58O5LcWGFJaiPwza0yHPb9V1KW2k,114
+ovos_persona-0.4.0.dist-info/LICENSE,sha256=UtX2C2ym1W3Bwfa5XUZypAxpQ9gPremazYtcwt2GenA,11421
+ovos_persona-0.4.0.dist-info/METADATA,sha256=LVQsM2YuUL5wp9RrZyF2R04hAGpAeve1pPryTM1LMXg,358
+ovos_persona-0.4.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+ovos_persona-0.4.0.dist-info/entry_points.txt,sha256=62WDLaM-V4tUNG2t-9ypzpQCPGihMaEcR1Ayz0fzjTU,163
+ovos_persona-0.4.0.dist-info/top_level.txt,sha256=s5sIHCG67JpMg6LIm0HltAIp7HiNWRznITOBEjYH8YQ,13
+ovos_persona-0.4.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ovos_persona-0.4.0.dist-info/RECORD,,
