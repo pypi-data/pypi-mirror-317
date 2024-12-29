@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/blockhouse/__init__.py
+src/blockhouse/client.py
+src/blockhouse/exceptions.py
+src/blockhouse/s3_connector.py
+src/blockhouse/usage.py
+src/blockhouse_client.egg-info/PKG-INFO
+src/blockhouse_client.egg-info/SOURCES.txt
+src/blockhouse_client.egg-info/dependency_links.txt
+src/blockhouse_client.egg-info/requires.txt
+src/blockhouse_client.egg-info/top_level.txt
+src/tests/__init__.py
+src/tests/test_client.py
