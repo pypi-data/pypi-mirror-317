@@ -1,0 +1,9 @@
+bsky_bridge/__init__.py,sha256=Ds-0buYXG1EzFqSaPF-QUcfMd8mlMbNgcF8DL15Wcag,525
+bsky_bridge/bsky_session.py,sha256=fLZZz9HEwWhMwNWaSD45nwELPPEOXDASW8NZGEEaX50,7760
+bsky_bridge/image_utilities.py,sha256=qP1HoH7Oy3NGXH-DLeGrX91HTX6mK2jccvT3Y0pu7OM,1014
+bsky_bridge/post_utilities.py,sha256=f1i26pVr9EWtyMcO1WZJuXzytuHi_eYx35jApYsuFds,8618
+bsky_bridge-1.0.8.dist-info/LICENSE,sha256=hJgiyocWGpfy_4lcy8rGMY5DNKTmAWjIpL8mXZsMvf8,1061
+bsky_bridge-1.0.8.dist-info/METADATA,sha256=oE5OLyui9XgybKeN0x73p7pPutL6cPTfZscMcTHsod8,4270
+bsky_bridge-1.0.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+bsky_bridge-1.0.8.dist-info/top_level.txt,sha256=qBbgw44JEE369WjvLZC0VUlxL58_W4PftAgYd7lh8uQ,12
+bsky_bridge-1.0.8.dist-info/RECORD,,
