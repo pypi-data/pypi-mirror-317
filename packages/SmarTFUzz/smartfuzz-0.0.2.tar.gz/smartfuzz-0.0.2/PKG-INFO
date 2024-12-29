@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: SmarTFUzz
+Version: 0.0.2
+Summary: SmarTFUzz
+Project-URL: Homepage, https://github.com/dumbBits/stfu
+Project-URL: Issues, https://github.com/dumbBits/stfu/issues
+Author: dumbBits
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
