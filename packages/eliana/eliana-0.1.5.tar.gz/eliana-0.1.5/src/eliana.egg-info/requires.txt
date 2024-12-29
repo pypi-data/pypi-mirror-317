@@ -1,0 +1,8 @@
+pandas
+matplotlib
+numpy
+swifter
+scikit-learn
+pyarrow
+fastparquet
+dask[dataframe]
