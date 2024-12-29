@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: bkmeup
+Version: 0.1.2
+Summary: Archive & backup shell config elements
+Author-email: Ed Waldner <waldevburry@proton.me>
+Maintainer-email: Ed Waldner <waldevburry@proton.me>
+Project-URL: Homepage, https://github.com/ew98/bkmeup
+Project-URL: Documentation, https://github.com/ew98/bkmeup/wiki/BkMeUp
+Project-URL: Issues, https://github.com/ew98/bkmeup/issues
+Keywords: util,utility
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: argcomplete
+Requires-Dist: distro
+Requires-Dist: quickcolor
+Requires-Dist: delayviewer
+Requires-Dist: showexception
+
+# BkMeUp
+
+**BkMeUp** provides shell config file archive and backup functionality
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install **bkmeup**.
+
+```bash
+pip install bkmeup
+```
+
+## CLI Utility
+
+The following CLI is provided in this package.
+
+```bash
+╰─ bkmeup -h                                                                                                                             ─╯
+usage: bkmeup [-h] [--version] {show.env.info,show.dflt.bkup.list,create.archive} ...
+
+-.-.-. BkMeUp Shell Config archiver & bkup!
+
+positional arguments:
+  {show.env.info,show.dflt.bkup.list,create.archive}
+    show.env.info       show system environment info
+    show.dflt.bkup.list
+                        show list of default items to archive/bkup
+    create.archive      accumulate shell config files if they exist and archive them
+
+options:
+  -h, --help            show this help message and exit
+  --version             top-level package version
+
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+```
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+

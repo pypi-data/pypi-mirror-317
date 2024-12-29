@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bkmeup"
+description = "Archive & backup shell config elements"
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [{name = "Ed Waldner", email = "waldevburry@proton.me"},]
+maintainers = [{name = "Ed Waldner", email = "waldevburry@proton.me"},]
+# dynamic = ["version"]
+version = "0.1.2"
+requires-python = ">=3.9"
+dependencies = [
+    "argcomplete",
+    "distro",
+    "quickcolor",
+    "delayviewer",
+    "showexception",
+]
+keywords = [
+    "util", "utility"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/ew98/bkmeup"
+Documentation = "https://github.com/ew98/bkmeup/wiki/BkMeUp"
+Issues = "https://github.com/ew98/bkmeup/issues"
+
+[project.scripts]
+bkmeup = "bkmeup.cli:cli"
+
