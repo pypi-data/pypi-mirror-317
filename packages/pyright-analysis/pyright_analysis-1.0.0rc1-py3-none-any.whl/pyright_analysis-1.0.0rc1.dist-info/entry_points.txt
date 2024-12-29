@@ -1,0 +1,2 @@
+[console_scripts]
+pyright-analysis = pyright_analysis.cli:app
