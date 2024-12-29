@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+timespacex/__init__.py
+timespacex/analyzer.py
+timespacex/cli.py
+timespacex.egg-info/PKG-INFO
+timespacex.egg-info/SOURCES.txt
+timespacex.egg-info/dependency_links.txt
+timespacex.egg-info/entry_points.txt
+timespacex.egg-info/requires.txt
+timespacex.egg-info/top_level.txt
