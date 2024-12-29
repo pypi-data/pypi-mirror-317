@@ -1,0 +1,6 @@
+setup.py
+cusbara.egg-info/PKG-INFO
+cusbara.egg-info/SOURCES.txt
+cusbara.egg-info/dependency_links.txt
+cusbara.egg-info/requires.txt
+cusbara.egg-info/top_level.txt
