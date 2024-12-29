@@ -1,0 +1,11 @@
+blockhouse/__init__.py,sha256=eCv5fxQr9IZIEzlDaf881N8WRCYQoLkVUQlIZSOvEm0,44
+blockhouse/client.py,sha256=H-wng_d1exr5Eq3u0lkYkbOpTvbYjwVu7EhQrijO9kQ,312
+blockhouse/exceptions.py,sha256=a1sBtfpqL99xC_ONb5fPGSsxfMCSP94SssePf-H4P2Q,205
+blockhouse/s3_connector.py,sha256=jgCeKssK4WE1J9FrjghlMqIhQg2nXcUhTs9-PCkDDvE,1068
+blockhouse/usage.py,sha256=5MXI5dj1Zlpmco1gL3c0_bjKApo0wc3OebJ_yQONw8Q,191
+tests/__init__.py,sha256=wwzI0HWMz0FUp4V66XGRfzeaK3gaQUnIjDstG8ZUpFI,40
+tests/test_client.py,sha256=o_YzQnag-rr__rxPNs_-tuXJJNb-zxgBYDrhuxjfGQE,849
+blockhouse_client-0.1.1.dist-info/METADATA,sha256=f60HL3lWxG_Gqhvh9XkP3Xo8PIeJueFPuAxQTDbY0BE,373
+blockhouse_client-0.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+blockhouse_client-0.1.1.dist-info/top_level.txt,sha256=hC5DbWxwydShnbvkcG35fAIRzKU41u6TBNxPQE1SfZU,17
+blockhouse_client-0.1.1.dist-info/RECORD,,
