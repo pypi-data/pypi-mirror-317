@@ -1,0 +1,2 @@
+[console_scripts]
+cn-font-split-py = cn_font_split.cli:main
