@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "HvH_Maid_API"
+version = "0.0.8"
+authors = [
+  { name="Maid", email="lisasissy999@gmail.com" },
+]
+description = "a python api for haven and hearth game"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
