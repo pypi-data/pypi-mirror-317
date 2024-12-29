@@ -1,0 +1,2 @@
+[console_scripts]
+snow2dbt = snow2dbt.snow2dbt:snow2dbt
