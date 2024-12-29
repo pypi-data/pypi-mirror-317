@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: haaaash
+Version: 0.8.3
+Summary: hash 批量计算器
+Author: Gudupao
+Author-email: official@gudupao.top
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<div align="center">
+
+# Haaaash
+hash 批量计算器
+
+![PyPI - Version](https://img.shields.io/pypi/v/haaaash?label=PyPI) ![PyPI - License](https://img.shields.io/pypi/l/haaaash) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/haaaash) [![PyPI - Downloads](https://img.shields.io/pypi/dm/haaaash?label=PyPI%20Download)
+](https://pypi.org/project/haaaash/)
+
+</div>
+
+## Install
+使用 `pip install haaaash` 安装。
+
+## Docs
+通过 `haaaash -h` 查看帮助信息。
+
+或者查看 [![Docs](https://img.shields.io/badge/Docs-blue)
+](https://haaaash.gudupao.top)
