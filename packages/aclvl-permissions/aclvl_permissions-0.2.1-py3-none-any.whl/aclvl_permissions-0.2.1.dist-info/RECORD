@@ -1,0 +1,15 @@
+aclvl_permissions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aclvl_permissions/admin.py,sha256=bUH3jkgPsroy18fAk82UWkUQEvh7km8UBww5srB8C80,369
+aclvl_permissions/apps.py,sha256=_srbdlJI7z3FqKXVJZXLmjIJK-kOr1U5d9Uh0xH0Cu8,274
+aclvl_permissions/models.py,sha256=GnRajNujvlXqbbn5MRadfXXRvm9i_5Vcwzx8S_3BwCs,855
+aclvl_permissions/permissions.py,sha256=3ykrFm-uyu81AeZWzMQNq7XRL6Q6XWSMdxZJ3iAK4eM,3708
+aclvl_permissions/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aclvl_permissions/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aclvl_permissions/management/commands/aclvl_set_view_keys.py,sha256=28r7DVTxbT7yJw7pn_TbpE1XZnppTgI7GVXWwKs-bi0,2217
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_permissions.py,sha256=K4WZXqbYDfgXl9VZ781zajNzLkeS6awB2KO4RBr3pLA,503
+aclvl_permissions-0.2.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aclvl_permissions-0.2.1.dist-info/METADATA,sha256=hXvUhLJaGWkBQe7e-BoSx2O8grUqwWNgcQNRWQ8i0mw,4450
+aclvl_permissions-0.2.1.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+aclvl_permissions-0.2.1.dist-info/top_level.txt,sha256=Cuvne3_ORnrmpRTKRY6FLsaMzuR6peYhg38Rc5pMz-s,24
+aclvl_permissions-0.2.1.dist-info/RECORD,,
