@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: mloptiflow
+Version: 0.0.15
+Summary: Dynamic MLOps Framework with Integrated CLI for Automated ML Project Inception, Kafka-Driven Real-Time Model Monitoring, and Adaptive Canary Deployment Architectures
+Home-page: https://gitlab.com/mloptiflow/mloptiflow
+License: MIT
+Author: Tomas Kozak
+Author-email: tomas.kozak.inv@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: PyYAML (>=6.0.2,<7.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: fastapi (>=0.115.5,<0.116.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: uvicorn (>=0.32.1,<0.33.0)
+Project-URL: Repository, https://gitlab.com/mloptiflow/mloptiflow
+Description-Content-Type: text/markdown
+
+# MLOPTIFLOW
+
+Dynamic MLOps Framework with Integrated CLI for Automated ML Project Inception, Kafka-Driven Real-Time Model Monitoring, and Adaptive Canary Deployment Architectures
+
+
+## Installation
+
+1. create a new virtual environment with python ^3.11 and activate it
+
+2. install mloptiflow:
+
+```bash
+pip install mloptiflow
+```
+
+3. initialize a new project and choose a name and paradigm (currently supported paradigms are: `tabular_regression`, `tabular_classification`):
+
+```bash
+mloptiflow init <your-project-name> --paradigm=<paradigm-name>
+```
+
+4. `cd` into your project directory:
+
+```bash
+cd <your-project-name>
+```
+
+5. install dependencies:
+
+```bash
+poetry install
+```
+
+or if using `pip`:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+- TBA
+
+## Support
+- TBA
+
+## Roadmap
+- TBA
+
+## Contributing
+- TBA
+
+
+## License
+MIT
+

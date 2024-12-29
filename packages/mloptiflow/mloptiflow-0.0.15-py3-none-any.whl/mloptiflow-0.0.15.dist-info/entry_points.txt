@@ -1,0 +1,10 @@
+[console_scripts]
+fix=linter.linter:fix
+format=linter.linter:format
+format:fix=linter.linter:format_fix
+install_git_hooks=linter.linter:install_git_hooks
+lint=linter.linter:lint
+lint:fix=linter.linter:lint_fix
+mloptiflow=mloptiflow.cli:cli
+precommit=linter.linter:precommit
+
