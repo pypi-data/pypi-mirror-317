@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pathdf/__init__.py
+pathdf/pathdf.py
+pathdf.egg-info/PKG-INFO
+pathdf.egg-info/SOURCES.txt
+pathdf.egg-info/dependency_links.txt
+pathdf.egg-info/entry_points.txt
+pathdf.egg-info/requires.txt
+pathdf.egg-info/top_level.txt
