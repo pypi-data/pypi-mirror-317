@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jsonapi-client-framework
+Version: 0.0.1
+Summary: An object-oriented framework for JSON:API clients.
+Author: Felipe Batista da Silva
+Author-email: contact@batistadasilva.com
+Project-URL: Homepage, https://github.com/hostnfly/jsonapi-client-framework
+Project-URL: Issues, https://github.com/hostnfly/jsonapi-client-framework/issues
+Keywords: jsonapi
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: requests>=2
+Requires-Dist: jsonpickle>=4
+Requires-Dist: dataclasses-json
