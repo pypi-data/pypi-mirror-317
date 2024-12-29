@@ -1,0 +1,17 @@
+acemeta/Console.py,sha256=2EfWOXdZAEzGiXWYvCKBXPo-vrZLvkkCEyOFWf33stY,4959
+acemeta/Discord.py,sha256=cVtDHOR04YVocmQFMoKsMW37puEUj4IoMH7spJz1gZM,727
+acemeta/Files.py,sha256=Ri8tn5p03RTcg0hdYa_emQZ2Mts2fbNBSwlbECiTr2A,641
+acemeta/GitHub.py,sha256=5LNsYFSpKpzjwPJfseOILtFv6ZFDWgxUXj40SvjapDo,6091
+acemeta/Minecraft.py,sha256=C7yjxuDCEZhPqYWURTJwdlukT2bjCe7ZifuYBzrTkgw,72
+acemeta/Numbers.py,sha256=obl3mcyotMMZ5VFNba6FQCVfTKlvzNf6XdCOx1gVtZs,645
+acemeta/Stochastics.py,sha256=Zn_Iv4G02ugB2_gu-74-YPCR5KOPJa_YvhUVJxCFLgA,1698
+acemeta/__init__.py,sha256=qlRTg6enLapkaK00v0l_g2pplT03p9yMfO-_9r0KldE,846
+workflows/Discord.py,sha256=7stEXm7CsSB6Lu9DIM8mYXjPDUtWlvMJWc7jZOF_hA4,731
+workflows/GitHub.py,sha256=ACDcDrinykzW5GTtBQEHqQxmE07SBHi0n2EFiZLgUMw,5859
+workflows/__init__.py,sha256=5UeGowrIv_9FuuXpLqZfbDi3xAgIzP1dpZ7ZgfuE3Ro,385
+workflows/files.py,sha256=O1yQ5qZzWkvSIHtweUH8PxjrZRcJbbspoRFUU_WOXJA,700
+workflows.py-0.0.0.dist-info/LICENSE,sha256=3BZ_q4Fwde9Ivp3ClMpvtcWoRyWjsFL0xZzISMFFsW0,1087
+workflows.py-0.0.0.dist-info/METADATA,sha256=EdNpwJfEDRTJZkjgc2q3x975ACnFqgAEVGbw-09X1MI,1140
+workflows.py-0.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+workflows.py-0.0.0.dist-info/top_level.txt,sha256=Vj2LUSNvqIo10clsau6oNSgqOwbPfQl8rN8IMZ9dw4A,10
+workflows.py-0.0.0.dist-info/RECORD,,
