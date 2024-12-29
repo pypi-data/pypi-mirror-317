@@ -1,0 +1,15 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+click_log-stubs/METADATA.toml
+click_log-stubs/__init__.pyi
+click_log-stubs/core.pyi
+click_log-stubs/options.pyi
+click_log-stubs/py.typed
+types_click_log.egg-info/PKG-INFO
+types_click_log.egg-info/SOURCES.txt
+types_click_log.egg-info/dependency_links.txt
+types_click_log.egg-info/requires.txt
+types_click_log.egg-info/top_level.txt
