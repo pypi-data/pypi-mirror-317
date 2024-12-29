@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: atlassian-forms-submitter-sdk
+Version: 1.1.2
+Home-page: https://github.com/victor-mariano-leite/atlassianforms
+Author: Victor Mariano Leite
+Author-email: marianoleite44@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: atlassian-python-api
+
+# atlassianforms
