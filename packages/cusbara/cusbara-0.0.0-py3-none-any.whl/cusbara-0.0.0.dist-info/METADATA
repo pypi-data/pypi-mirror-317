@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: cusbara
+Version: 0.0.0
+Requires-Dist: setuptools ==69.5.1
+
