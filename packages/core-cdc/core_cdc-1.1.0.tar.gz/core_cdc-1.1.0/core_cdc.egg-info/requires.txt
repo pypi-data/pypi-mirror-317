@@ -1,0 +1,22 @@
+core-mixins>=1.1.2
+core-tests>=1.1.0
+
+[:python_version >= "3.7" and python_version < "3.8"]
+typing-extensions>=4.2.0
+
+[:python_version >= "3.8" and python_version < "3.11"]
+typing-extensions>=4.8.0
+
+[all]
+core-db[all]>=2.1.0
+mysql-replication>=1.0.0
+
+[mongo]
+core-db[mongo]>=2.1.0
+
+[mysql]
+core-db[mysql]>=2.1.0
+mysql-replication>=1.0.0
+
+[snowflake]
+core-db[snowflake]>=2.1.0
