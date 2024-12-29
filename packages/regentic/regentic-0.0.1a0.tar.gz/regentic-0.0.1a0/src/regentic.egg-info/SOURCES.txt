@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/regentic/__init__.py
+src/regentic.egg-info/PKG-INFO
+src/regentic.egg-info/SOURCES.txt
+src/regentic.egg-info/dependency_links.txt
+src/regentic.egg-info/requires.txt
+src/regentic.egg-info/top_level.txt
+src/tests/__init__.py
