@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+imagereader/__init__.py
+imagereader/core.py
+imagereader.egg-info/PKG-INFO
+imagereader.egg-info/SOURCES.txt
+imagereader.egg-info/dependency_links.txt
+imagereader.egg-info/requires.txt
+imagereader.egg-info/top_level.txt
+tests/teste.py
