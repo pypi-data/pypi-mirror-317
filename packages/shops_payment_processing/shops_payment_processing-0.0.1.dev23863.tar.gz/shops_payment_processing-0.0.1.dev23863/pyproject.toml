@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "shops_payment_processing"
+version = "0.0.1.dev23863"
+description = "Payment processing library for tg-shops."
+authors = ["Pavel Mulin <pavel@tg-shops.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10.0"
+fastapi = ">=0.112.2"
+httpx = ">=0.25.0"
+pydantic = ">=2.10.3"
+pydantic-core = ">=2.27.1"
+annotated-types = ">=0.7.0"
+typing_extensions = ">=4.12.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
