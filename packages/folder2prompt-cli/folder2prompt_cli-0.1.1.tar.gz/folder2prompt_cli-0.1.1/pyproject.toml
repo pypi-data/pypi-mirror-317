@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "folder2prompt-cli"
+version = "0.1.1"  # Update version as needed
+authors = [
+{ name = "James Kim", email = "hashd2035@gmail.com" }
+]
+description = "A CLI tool to convert files in a directory to a text output."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+
+]
+
+[project.scripts]
+folder2prompt = "folder2prompt_cli.main:main"
+
+[project.urls]
+"Homepage" = "https://github.com/hashd2035/folder2prompt"
+"Bug Tracker" = "https://github.com/hashd2035/folder2prompt/issues"
