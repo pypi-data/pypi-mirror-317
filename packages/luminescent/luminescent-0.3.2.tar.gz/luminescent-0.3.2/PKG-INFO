@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: luminescent
+Version: 0.3.2
+Summary: A description of your package
+Author: Paul Shen
+Author-email: pxshen@alumni.stanford.edu
+License-File: LICENSE
+Requires-Dist: gdsfactory
+Requires-Dist: pillow
+Requires-Dist: stl-to-voxel
+Requires-Dist: tidy3d
+Requires-Dist: electromagneticpython
+Requires-Dist: sortedcontainers
