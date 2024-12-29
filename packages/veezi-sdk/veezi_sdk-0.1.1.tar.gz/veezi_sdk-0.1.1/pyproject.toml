@@ -1,0 +1,17 @@
+[project]
+name = "veezi-sdk"
+version = "0.1.1"
+description = "SDK for interacting with the Veezi API"
+readme = "README.md"
+authors = [
+    { name = "Måns Östman", email = "mans.ostman@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.10.2",
+    "requests>=2.32.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
