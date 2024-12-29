@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+frps_st/__init__.py
+frps_st/frpc.exe
+frps_st/main.py
+frps_st/utils.py
+frps_st.egg-info/PKG-INFO
+frps_st.egg-info/SOURCES.txt
+frps_st.egg-info/dependency_links.txt
+frps_st.egg-info/entry_points.txt
+frps_st.egg-info/requires.txt
+frps_st.egg-info/top_level.txt
