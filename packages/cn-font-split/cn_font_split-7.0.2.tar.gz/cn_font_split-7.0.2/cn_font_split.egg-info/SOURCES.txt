@@ -1,0 +1,8 @@
+README.md
+setup.py
+cn_font_split.egg-info/PKG-INFO
+cn_font_split.egg-info/SOURCES.txt
+cn_font_split.egg-info/dependency_links.txt
+cn_font_split.egg-info/entry_points.txt
+cn_font_split.egg-info/requires.txt
+cn_font_split.egg-info/top_level.txt
