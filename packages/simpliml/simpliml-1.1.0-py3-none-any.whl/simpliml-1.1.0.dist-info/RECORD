@@ -1,0 +1,14 @@
+simpliml/__init__.py,sha256=7f6Kc416lfnOvjogCbE5TRyAbHHLnI6qCxUyhfmQuY4,413
+simpliml/about.py,sha256=_7QCB_5qDECm1TWPmx7FQEI1D1rf_6irW3nQk42aa2c,554
+simpliml/timeseriesforecast/__init__.py,sha256=BmNbSnIfP8TyiqmyTK6PTjSNUc_GNLSdwo4O8pvjdl4,2410
+simpliml/timeseriesforecast/dataAnalysis.py,sha256=_ArFVb3E18uN8gXyIxkF3ohHSAnMna2p2UZxwxsvIbU,10041
+simpliml/timeseriesforecast/dataBuild.py,sha256=uz3VVde-aY9LUQUkhKs1lyg_19ISVwQndR3Cds9Pq3Q,3020
+simpliml/timeseriesforecast/dataModeling.py,sha256=ZFLxZyrWz0MxlopWpg8p4cExAHivi5i6lHNL1Se54Nk,4088
+simpliml/timeseriesforecast/modelPyTorch.py,sha256=2HC6OZ7eNnbuUGhz5b8EIg7-lFTPlEB1NWS-HXMwzQw,4024
+simpliml/timeseriesforecast/modelScikitLearn.py,sha256=r5pcOE3MubAJ-PMkmEVwlm4a9VTbWt7waxfo6jT2voc,4739
+simpliml/timeseriesforecast/modelStatsModels.py,sha256=Kit4k_sLKIFEoTHVCPpgfTvXw3x0KLbd-3VYJrvlbZE,23219
+simpliml/timeseriesforecast/tsfCommon.py,sha256=efKVFl_M0e1nrwfmWCQAvLkSW-qXaq4_5EZeZIq1Ako,1898
+simpliml-1.1.0.dist-info/METADATA,sha256=s0VrXuqusESpcps1LYMzvOVyoV7uLs0PuQFRdsmPq5U,10660
+simpliml-1.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+simpliml-1.1.0.dist-info/top_level.txt,sha256=JlzD2P9iiSzMB091ZFoZ1VSzFNYk-yJwXXrOTqeb26k,9
+simpliml-1.1.0.dist-info/RECORD,,
