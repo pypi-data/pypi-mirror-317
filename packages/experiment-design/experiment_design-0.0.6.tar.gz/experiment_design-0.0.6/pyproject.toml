@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "experiment-design"
+version = "v0.0.6"
+description = "Tools to create designs of experiments"
+authors = ["Can Bogoclu"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "experiment_design"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^2.1.0"
+scipy = "^1.14.1"
+
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pre-commit = "^3.6.1"
+pre-commit-hooks = "^4.5.0"
+ruff = "^0.8.4"
+
+[tool.poetry.group.demo]
+optional = true
+
+[tool.poetry.group.demo.dependencies]
+seaborn = "^0.13.2"
+matplotlib = "^3.8.2"
+jupyter =  "^1.0.0"
+
+
+[tool.poetry-dynamic-versioning]
+enable = true
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
