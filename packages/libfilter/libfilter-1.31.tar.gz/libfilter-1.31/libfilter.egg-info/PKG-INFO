@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: libfilter
+Version: 1.31
+Summary: Signal/Audio Processing framework made with pure python
+Home-page: https://github.com/KubaPro010/libfilter
+Author: kuba201
+Project-URL: Source, https://github.com/KubaPro010/libfilter
+Keywords: fm,processor,pcm,signal
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# LibFilter
+libfilter is signal processing framework with multiple of included filters/oscilators/processors (DSP)
+
+# Included filters
+- AFTELSEncoder (custom time encoding, see afte_documentation.txt)
+- AFTESTSEncoder
+- DiffrentialDecoder/DiffrentialEncoder
+- FMStereoEncoder
+- DSBSCModulator
+- AMModulator
+- LSBModulator
+- USBModulator
+- FMModulator
+- BPSKModulator
+- QPSKModulator
+- FSKModulator
+- FourFSKModulator
+- MonoClipper
+- StereoClipper
+- MonoDeclipper
+- StereoDeclipper
+- StereoToMono
+- MonoFadeOut
+- StereoFadeOut
+- MonoFadeIn
+- StereoFadeIn
+- StereoRpitxCompressor
+- MonoRpitxCompressor
+- MonoExponentialLPF
+- StereoExponentialLPF
+- MonoExponentialHPF
+- StereoExponentialHPF
+- MonoButterworthLPF
+- StereoButterworthLPF
+- MonoButterworthHPF
+- StereoButterworthHPF
+- MonoButterworthBPF
+- StereoButterworthBPF
+- MonoPreemphasis
+- StereoPreemphasis
+- MonoDeemphasis
+- StereoDeemphasis
+- Sine/MultiSine
+- SquareOoscillator/MultiSquareoscillator
+- Triangle/MultiTriangle
+- Buffer
+- RMSCalculator
+- Decimator
+- Interpolator
+- DiscreteFourierTransform
+- FastFourierTransform
+- HilbertTransformer
+- (data encoders/decoders, float to s[8-32]le)
