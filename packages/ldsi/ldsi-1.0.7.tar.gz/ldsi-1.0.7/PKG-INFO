@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: ldsi
+Version: 1.0.7
+Summary: LDSI
+Home-page: https://github.com/laiss-labs/laiss-dsi
+Author: Júlio Papel
+Author-email: info@juliopapel.com
+License: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: anyio
+Requires-Dist: asyncer==0.0.8
+Requires-Dist: backoff
+Requires-Dist: cachetools
+Requires-Dist: cloudpickle
+Requires-Dist: datasets
+Requires-Dist: diskcache
+Requires-Dist: httpx
+Requires-Dist: jinja2
+Requires-Dist: joblib~=1.3
+Requires-Dist: json-repair
+Requires-Dist: litellm[proxy]==1.55.3
+Requires-Dist: magicattr~=0.1.6
+Requires-Dist: openai
+Requires-Dist: optuna
+Requires-Dist: pandas
+Requires-Dist: pydantic~=2.0
+Requires-Dist: regex
+Requires-Dist: requests
+Requires-Dist: tenacity>=8.2.3
+Requires-Dist: tqdm
+Requires-Dist: ujson
+Provides-Extra: chromadb
+Requires-Dist: chromadb~=0.4.14; extra == "chromadb"
+Provides-Extra: lancedb
+Requires-Dist: lancedb~=0.11.0; extra == "lancedb"
+Provides-Extra: qdrant
+Requires-Dist: qdrant-client; extra == "qdrant"
+Requires-Dist: fastembed; extra == "qdrant"
+Provides-Extra: marqo
+Requires-Dist: marqo~=3.1.0; extra == "marqo"
+Provides-Extra: mongodb
+Requires-Dist: pymongo~=3.12.0; extra == "mongodb"
+Provides-Extra: pinecone
+Requires-Dist: pinecone-client~=2.2.4; extra == "pinecone"
+Provides-Extra: weaviate
+Requires-Dist: weaviate-client~=4.6.5; extra == "weaviate"
+Provides-Extra: faiss-cpu
+Requires-Dist: sentence_transformers; extra == "faiss-cpu"
+Requires-Dist: faiss-cpu; extra == "faiss-cpu"
+Provides-Extra: milvus
+Requires-Dist: pymilvus~=2.3.7; extra == "milvus"
+Provides-Extra: google-vertex-ai
+Requires-Dist: google-cloud-aiplatform==1.43.0; extra == "google-vertex-ai"
+Provides-Extra: myscale
+Requires-Dist: clickhouse-connect; extra == "myscale"
+Provides-Extra: snowflake
+Requires-Dist: snowflake-snowpark-python; extra == "snowflake"
+Provides-Extra: fastembed
+Requires-Dist: fastembed; extra == "fastembed"
+Provides-Extra: groq
+Requires-Dist: groq~=0.8.0; extra == "groq"
+Provides-Extra: langfuse
+Requires-Dist: langfuse~=2.36.1; extra == "langfuse"
+Provides-Extra: pgvector
+Requires-Dist: psycopg2~=2.9.9; extra == "pgvector"
+Requires-Dist: pgvector~=0.2.5; extra == "pgvector"
+Provides-Extra: falkordb
+Requires-Dist: falkordb; extra == "falkordb"
+Requires-Dist: redis; extra == "falkordb"
+Requires-Dist: async-timeout; extra == "falkordb"
+
+<p align="center">
+  <img align="center" src="https://avatars.githubusercontent.com/u/190006171?s=200&v=4" width="160px" />
+</p>
+<p align="left">
+
+
+----
+
+O LDSI (Laiss Declarative Self Improve) é uma poderosa estrutura para programar e otimizar modelos de linguagem. Capacita os programadores a construir, iterar e melhorar rapidamente sistemas de IA modulares com as seguintes características principais:
+
+1. **Otimização Sistemática**: O LDSI oferece uma gama de otimizadores para refinar os seus programas de IA, desde a geração de instruções melhoradas até ao ajuste fino dos pesos do modelo.
+
+2. **Arquitetura Modular**: Construa sistemas de IA complexos utilizando módulos pré-definidos e intercambiáveis, simplificando o processo de desenvolvimento e reduzindo a dependência de técnicas de prompting intrincadas.
+
+3. **Compatibilidade entre Modelos de Linguagem**: Integre e melhore o desempenho de forma perfeita em vários modelos de linguagem, desde os modelos GPT de última geração até opções locais como T5-base ou Llama2.
+
+4. **Abordagem Declarativa**: Defina o comportamento e os objetivos do seu sistema de IA de forma declarativa, permitindo que o LDSI trate dos detalhes subjacentes de otimização e execução.
+
+5. **Prototipagem Rápida**: Acelere o seu ciclo de desenvolvimento com a API intuitiva do LDSI e ferramentas integradas para testes e avaliação.
+
+O LDSI foi concebido para simplificar o processo de criação de aplicações sofisticadas de IA, tornando-se uma ferramenta inestimável tanto para investigadores como para profissionais no campo do processamento de linguagem natural e desenvolvimento de IA.
+
+
+## Instalação
+
+
+```bash
+pip install ldsi
+```
+
