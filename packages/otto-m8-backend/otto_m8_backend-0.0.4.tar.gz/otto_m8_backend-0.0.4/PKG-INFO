@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: otto_m8_backend
+Version: 0.0.4
+Summary: Backend engine for otto-m8, a low code tool to build and deploy AI/ML workloads.
+Home-page: https://github.com/farhan0167/otto-m8
+Author: farhan0167
+Author-email: ahmadfarhanishraq@gmail.com
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+
+# Otto-m8 Backend
+
+Otto-m8 Backend is a backend engine for [otto-m8](https://github.com/farhan0167/otto-m8), a low code tool to build and deploy AI/ML workloads.
+This package does not need to be installed directly since it is installed via otto-m8's toolkit package.
