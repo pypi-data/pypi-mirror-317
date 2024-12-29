@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: QPutils
+Version: 0.0.3
+Summary: Data visualization tool
+Author: Appannagari Kaushik
+Author-email: appannagarikaushik.123@gmail.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: pandas
+Requires-Dist: matplotlib.pyplot
+Requires-Dist: numpy
+Requires-Dist: seaborn
+
+Long Description

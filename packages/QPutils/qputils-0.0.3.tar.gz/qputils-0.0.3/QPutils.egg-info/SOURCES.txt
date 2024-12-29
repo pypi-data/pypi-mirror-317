@@ -1,0 +1,15 @@
+CHANGELOG.txt
+MANIFEST.in
+README.md
+setup.py
+QPutils.egg-info/PKG-INFO
+QPutils.egg-info/SOURCES.txt
+QPutils.egg-info/dependency_links.txt
+QPutils.egg-info/requires.txt
+QPutils.egg-info/top_level.txt
+QUICKPLOT/__init__.py
+QUICKPLOT/plot_utils.py
+QuickPlot.egg-info/SOURCES.txt
+QuickPlot.egg-info/dependency_links.txt
+QuickPlot.egg-info/requires.txt
+QuickPlot.egg-info/top_level.txt
