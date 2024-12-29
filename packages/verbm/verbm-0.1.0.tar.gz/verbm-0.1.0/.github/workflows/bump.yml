@@ -1,0 +1,30 @@
+name: bump
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    if: ${{ ! startsWith(github.event.head_commit.message, 'Version bumped') }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0 # we need all history to get tags and analyze commits
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          cache: pip
+
+      - name: Install verbm
+        run: pip install .
+
+      - name: Bump version
+        run: verbm up auto --commit --tag --push
