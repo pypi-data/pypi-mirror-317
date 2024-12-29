@@ -1,0 +1,17 @@
+en:
+  portal:
+    description: "visioncapsule-tools is a group of commands written in Python. They
+    help to download, package and test VisionCapsules. To see options of each
+    command, run \"visioncapsule-tools {command} --help\"."
+    usage: >-
+      visioncapsule-tools <command> [<args>]
+
+      commands:
+        capsule_downloader
+
+      Examples:
+        visioncapsule-tools capsule_downloader
+ 
+    command-help: "The visioncapsule-tools command to run"
+    unknown-command: "Unknown command: {command}"
+    interrupted: "The operation was interrupted"
