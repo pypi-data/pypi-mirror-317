@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: alexx
+Version: 0.1.0
+Summary: A simple Hello World package
+Home-page: https://github.com/yourusername/hello-world
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Hello World
+
+A simple Python package that prints "Hello, World!".
+
+## Installation
+```bash
+pip install alex-test
+```
+
+## Usage
+```python
+from hello_world import say_hello
+
+say_hello()
+```
