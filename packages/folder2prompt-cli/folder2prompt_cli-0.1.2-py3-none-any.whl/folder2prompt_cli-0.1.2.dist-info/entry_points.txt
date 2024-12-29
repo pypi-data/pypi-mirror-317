@@ -1,0 +1,2 @@
+[console_scripts]
+folder2prompt = folder2prompt_cli.main:main
