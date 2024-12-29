@@ -1,0 +1,1 @@
+hivemind_plugin_manager
