@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: geodezyx
+Version: 4.5.2
+Summary: geodezyx (a.k.a. The GeodeZYX toolbox) aims to provide simple but useful functions for Geodesy and Geophysics.
+Home-page: https://github.com/IPGP/geodezyx
+Author: Pierre Sakic & Gustavo Mansur
+Author-email: sakic@ipgp.fr
+Keywords: geodesy,geophysics,reference frames,gnss
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: bs4~=0.0.2
+Requires-Dist: chardet
+Requires-Dist: collection~=0.1.6
+Requires-Dist: colorlog~=6.9.0
+Requires-Dist: hatanaka~=2.8.1
+Requires-Dist: natsort~=8.4.0
+Requires-Dist: matplotlib~=3.10.0
+Requires-Dist: numpy~=2.2.1
+Requires-Dist: pybind11
+Requires-Dist: pyorbital~=1.9.2
+Requires-Dist: pytwobodyorbit~=1.0.0
+Requires-Dist: pyyaml~=6.0.2
+Requires-Dist: pathvalidate~=3.2.1
+Requires-Dist: pandas~=2.2.3
+Requires-Dist: scipy~=1.14.1
+Requires-Dist: sympy~=1.13.3
+Requires-Dist: tabulate~=0.9.0
+Requires-Dist: tk
+Requires-Dist: tqdm~=4.67.1
+Requires-Dist: vincenty
+Requires-Dist: wheel~=0.45.1
+Requires-Dist: xarray~=2024.11.0
+Provides-Extra: full
+Requires-Dist: netCDF4; extra == "full"
+Requires-Dist: kepler.py; extra == "full"
+Requires-Dist: ncompress; extra == "full"
+Requires-Dist: seawater; extra == "full"
+Requires-Dist: gsw; extra == "full"
+
+geodezyx (a.k.a. The GeodeZYX toolbox) aims to provide all the functions which
+can be useful for Geodesy and Geophysics. 
+
+It includes low level functions, file management functions,
+time and space-coordinates conversion functions, 
+data (especially GNSS observations and orbits) retrieve functions, 
+plots and visual selection functions ...
+
+It is designed for Python 3 on a LINUX Ubuntu-like system.
+Also tested with Anaconda
+
+Documentation: https://ipgp.github.io/geodezyx  
+
+GitHub repository: https://github.com/IPGP/geodezyx 
+
+PyPi project: https://pypi.org/project/geodezyx
