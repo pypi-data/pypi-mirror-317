@@ -1,0 +1,1 @@
+from VirtoAI.bot import Bot
