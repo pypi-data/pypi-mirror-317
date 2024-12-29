@@ -1,0 +1,10 @@
+xmrig/__init__.py,sha256=kw7fb5Cq9GApP1ccGqIJiG7rcAAjDy8qw96Ty3DcvMA,6260
+xmrig/api.py,sha256=dZT0mrDgV9dfyhtzIkpbtIUBsVaPX1fz54v1GxJ63h0,15957
+xmrig/db.py,sha256=QZVOxUMuEku3NcGR5ga7MrItCkLxJe8aqf-z-ped31Y,6385
+xmrig/helpers.py,sha256=sGTX7X5-ZL9jXFN588GjqjF24kccGWhAQbjL_nITy-M,3726
+xmrig/manager.py,sha256=wTjQk3Q0UamAozx6tHcLlodgvUPfY2F1vpse8mOzWvU,8920
+xmrig/properties.py,sha256=nwHTABzJhXFeKtYCGDGqjQ9ragNKsnhKB_qA7eYM-HQ,106034
+xmrig_api-0.0.13.dist-info/METADATA,sha256=88ByT-_ZCXyFrWcvz_B5ZezAsVRljXt74aSe9mv0Ras,3973
+xmrig_api-0.0.13.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+xmrig_api-0.0.13.dist-info/licenses/LICENSE,sha256=kzw-5jRWwWQU43OkLzWtyZy8bIfobtbKg82sJILn3KY,1084
+xmrig_api-0.0.13.dist-info/RECORD,,
