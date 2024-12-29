@@ -1,0 +1,11 @@
+mcp_pinecone/__init__.py,sha256=eUtUa_wNG6k1g7FiG5NH_9j-JnERXzwrHjgMeMy5JW0,171
+mcp_pinecone/chunking.py,sha256=tq8PneQX7TULMgmTS9Mw9AYtq44MUkW9pTSneM9TnGY,2957
+mcp_pinecone/constants.py,sha256=ZoYIX_9e395H38Yx-KyNsSwQWCia0xBA59G3kKkRb-E,1900
+mcp_pinecone/pinecone.py,sha256=XSPqw4zb3IgnPesEIZU87Fcr7Weo_ydsKH9O0_qNYXk,8458
+mcp_pinecone/server.py,sha256=vTw6beH4XhQoVmnazELAXPotehEDPUgPgZo-3JrvRZE,17622
+mcp_pinecone/utils.py,sha256=e_gk3onMkm-tZKk6hLwNKET_xaICXNgCGErayI69nG0,665
+mcp_pinecone-0.1.5.dist-info/METADATA,sha256=RfoKgaWoGTwK39JIAp8lxe0ZG9_54fCjGHnnya1fV1s,6060
+mcp_pinecone-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_pinecone-0.1.5.dist-info/entry_points.txt,sha256=ntqVkQzEhbVidtE2O8gwwXyjny16PzCChFt1g057ows,51
+mcp_pinecone-0.1.5.dist-info/licenses/LICENSE,sha256=Z7YCVqOtyjBIpDvAf_V6hr-wtuEF12UpFZjCSV3H6dk,1070
+mcp_pinecone-0.1.5.dist-info/RECORD,,
