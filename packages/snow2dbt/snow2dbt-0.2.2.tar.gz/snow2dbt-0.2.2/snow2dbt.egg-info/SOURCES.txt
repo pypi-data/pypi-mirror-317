@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+snow2dbt/__init__.py
+snow2dbt/snow2dbt.py
+snow2dbt.egg-info/PKG-INFO
+snow2dbt.egg-info/SOURCES.txt
+snow2dbt.egg-info/dependency_links.txt
+snow2dbt.egg-info/entry_points.txt
+snow2dbt.egg-info/top_level.txt
