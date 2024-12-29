@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: PyPMT
+Version: 1.0.6
+Summary: Python package for analysis and visualization of polar datasets.
+Home-page: https://github.com/GatorGlaciology/PyPMT
+Author: Blake Wood
+Author-email: blakewood1@ufl.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Cartopy>=0.22.0
+Requires-Dist: geopy>=2.3.0
+Requires-Dist: matplotlib>=3.5.2
+Requires-Dist: numpy>=2.0.1
+Requires-Dist: pyproj>=3.5.0
+Requires-Dist: scipy>=1.14.0
+Requires-Dist: Shapely>=2.0.5
+Requires-Dist: geopandas>=0.10.0
+Requires-Dist: pathlib; python_version < "3.4"
+
+# PyPMT
+Python Polar Mapping Tools
+
+Python version of MATLAB mapping tools:
+
+https://www.mathworks.com/matlabcentral/fileexchange/47638-antarctic-mapping-tools
+https://www.mathworks.com/matlabcentral/fileexchange/63324-arctic-mapping-tools
+https://www.mathworks.com/matlabcentral/fileexchange/42353-bedmap2-toolbox-for-matlab
+https://www.mathworks.com/matlabcentral/fileexchange/69159-bedmachine
+https://www.mathworks.com/matlabcentral/fileexchange/47329-measures
+https://www.mathworks.com/matlabcentral/fileexchange/53152-ice-flowlines
+https://www.mathworks.com/matlabcentral/fileexchange/55352-how-to-estimate-subglacial-water-routes
+
+
+FYI, there are some existing Antarctic Python tools out there: https://antarctic-plots.readthedocs.io/en/latest/gallery/gallery.html
+- but they don't include Arctic examples, and I can't get some of the dependent packages to work
+
+Instead of having to download the data, can we import data from urls? (e.g. https://towardsdatascience.com/an-efficient-way-to-read-data-from-the-web-directly-into-python-a526a0b4f4cb)
+

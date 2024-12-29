@@ -1,0 +1,40 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+PyPMT.egg-info/PKG-INFO
+PyPMT.egg-info/SOURCES.txt
+PyPMT.egg-info/dependency_links.txt
+PyPMT.egg-info/requires.txt
+PyPMT.egg-info/top_level.txt
+data/SCAR_CGA_PLACE_NAMES.csv
+data/moa2014_coastline_v01.dbf
+data/moa2014_coastline_v01.evf
+data/moa2014_coastline_v01.gmt
+data/moa2014_coastline_v01.kml
+data/moa2014_coastline_v01.prj
+data/moa2014_coastline_v01.shp
+data/moa2014_coastline_v01.shx
+data/moa2014_coastline_v01.txt
+data/moa2014_grounding_line_v01.dbf
+data/moa2014_grounding_line_v01.evf
+data/moa2014_grounding_line_v01.gmt
+data/moa2014_grounding_line_v01.kml
+data/moa2014_grounding_line_v01.prj
+data/moa2014_grounding_line_v01.shp
+data/moa2014_grounding_line_v01.shx
+data/moa2014_grounding_line_v01.txt
+data/moa2014_islands_v01.dbf
+data/moa2014_islands_v01.evf
+data/moa2014_islands_v01.gmt
+data/moa2014_islands_v01.kml
+data/moa2014_islands_v01.prj
+data/moa2014_islands_v01.shp
+data/moa2014_islands_v01.shx
+data/moa2014_islands_v01.txt
+demos/2D Visualizations.html
+demos/3D Visualizations.html
+demos/Installation.html
+demos/Mathematical Functions.html
+demos/Welcome.html

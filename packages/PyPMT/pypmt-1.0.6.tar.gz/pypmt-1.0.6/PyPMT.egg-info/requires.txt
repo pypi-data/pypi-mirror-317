@@ -1,0 +1,11 @@
+Cartopy>=0.22.0
+geopy>=2.3.0
+matplotlib>=3.5.2
+numpy>=2.0.1
+pyproj>=3.5.0
+scipy>=1.14.0
+Shapely>=2.0.5
+geopandas>=0.10.0
+
+[:python_version < "3.4"]
+pathlib
