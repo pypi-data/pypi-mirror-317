@@ -1,0 +1,254 @@
+# Quick Question (qq)
+
+A cross-platform command-line tool that suggests and executes terminal commands using various LLM providers. It prioritizes local LLM providers for privacy and cost efficiency, with fallback to cloud providers when configured. This tool is actively maintained and tested on macOS and Windows. For ideas and feedback, please contact cv@southbrucke.com
+
+## Features
+
+- Multiple LLM provider support:
+  - Local providers (prioritized):
+    - LM Studio (on port 1234)
+    - Ollama (on port 11434)
+  - Cloud providers (requires API keys):
+    - OpenAI (OPENAI_API_KEY)
+    - Anthropic (ANTHROPIC_API_KEY)
+    - Groq (GROQ_API_KEY)
+    - Grok (GROK_API_KEY)
+- Intelligent model selection with preferred model ordering
+- Interactive command selection with rich UI
+- Command history tracking with interactive browsing
+- Configurable settings with persistent storage
+- Copy to clipboard or direct execution options
+- Platform-specific command suggestions
+- Cross-platform support (macOS and Windows)
+- Debug mode for troubleshooting
+- Asynchronous provider checking for fast startup
+- Developer mode with extensible actions
+- Custom action support for developer workflows
+
+## Installation
+
+### macOS/Linux
+```bash
+pip install qq
+```
+
+### Windows
+1. Install Python from [python.org](https://python.org)
+   - During installation, check "Add Python to PATH"
+2. Open a new Command Prompt or PowerShell
+3. Install qq:
+   ```cmd
+   pip install qq
+   ```
+4. Add the Scripts directory to your PATH:
+   - Open System Properties > Environment Variables
+   - Under "User variables", edit "Path"
+   - Add your Python Scripts directory:
+     ```
+     %USERPROFILE%\AppData\Local\Programs\Python\Python3x\Scripts
+     ```
+     (Replace Python3x with your Python version)
+5. Test the installation:
+   ```cmd
+   qq "hello world"
+   ```
+
+## Usage
+
+Basic command:
+```bash
+qq "your question here"
+```
+
+Show help:
+```bash
+qq
+```
+
+Configure settings:
+```bash
+qq --settings
+```
+
+View command history:
+```bash
+qq --history
+```
+
+Clear provider cache:
+```bash
+qq --clear-cache
+```
+
+Enable debug mode:
+```bash
+qq --debug "your question"
+```
+
+Enter developer mode:
+```bash
+qq --dev
+```
+
+## Provider Selection
+
+The tool follows this priority order:
+
+1. Checks for running local providers (LM Studio or Ollama)
+2. If no local providers are available, checks for configured cloud provider API tokens
+3. Uses the first available provider unless a specific default is set in settings
+
+### Model Selection
+The tool automatically selects the best available model based on provider capabilities and user preferences. Models are cached for improved performance. The selection prioritizes models in this order:
+- mistral
+- llama2
+- codellama
+- openhermes
+- neural-chat
+- stable-beluga
+- qwen
+- yi
+
+## Configuration
+
+Use `qq --settings` to configure:
+- Default provider selection
+- Command action (execute or copy to clipboard)
+- Default model for each provider
+- API keys for cloud providers
+
+Settings are stored in `~/.qq_settings.json` and persist across sessions.
+
+## Developer Mode
+
+Access developer mode with `qq --dev` to:
+- Execute predefined development actions
+- Create custom development workflows
+- Integrate with Git operations
+- Add your own custom actions
+
+### Custom Actions
+Create custom actions in `~/QuickQuestion/CustomDevActions/`:
+1. Create a new Python file
+2. Subclass `DevAction` from quickquestion.dev_actions.base
+3. Implement required methods:
+   - `name` property
+   - `description` property
+   - `execute()` method
+
+## Environment Variables
+
+Required for cloud providers:
+- `OPENAI_API_KEY` - OpenAI API key
+- `ANTHROPIC_API_KEY` - Anthropic API key
+- `GROQ_API_KEY` - Groq API key
+- `GROK_API_KEY` - Grok API key
+
+Optional:
+- `TEST_MODE=ci` - Enable CI mode for testing
+
+## File Locations
+
+- `~/.qq_settings.json` - User settings and preferences
+- `~/.qq_history.json` - Command history (last 100 commands)
+- `~/.qq_cache.json` - Provider and model cache
+- `~/QuickQuestion/CustomDevActions/` - Custom developer actions
+
+### Cache System
+- Provider configurations (1 hour TTL)
+- Model lists (1 hour TTL)
+- Other cached data (30 seconds TTL)
+- Clear with `qq --clear-cache`
+
+## Examples
+
+Search for files:
+```bash
+qq "find all python files modified in the last 24 hours"
+```
+
+Process management:
+```bash
+qq "how do I kill a process using port 8080"
+```
+
+Custom developer action:
+```python
+# ~/QuickQuestion/CustomDevActions/my_action.py
+from quickquestion.dev_actions.base import DevAction
+
+class MyCustomAction(DevAction):
+    @property
+    def name(self) -> str:
+        return "My Action"
+        
+    @property
+    def description(self) -> str:
+        return "Description of my custom action"
+
+    def execute(self) -> bool:
+        self.console.print("[green]Executing custom action[/green]")
+        return True
+```
+
+## Debugging
+
+Enable debug mode for detailed logging:
+```bash
+qq --debug "your question"
+```
+
+Debug mode shows:
+- Timestamped operation logs
+- Provider initialization details
+- Cache operations
+- UI interactions
+- SSL certificate handling
+- Cross-platform operations
+
+## Requirements
+
+- Python >= 3.9
+- Local LLM provider (LM Studio or Ollama) or cloud provider API key
+- Platform-specific dependencies handled automatically
+
+## Platform Support
+
+### macOS
+- Full support with native optimizations
+- Automatic SSL certificate handling
+- Native clipboard support
+
+### Windows
+- Full support for Command Prompt and PowerShell
+- Windows-specific command suggestions
+- Integrated clipboard support
+
+### Linux
+- Basic support (further optimization planned)
+
+## Coming Soon
+
+- Homebrew installation
+- Docker container
+- Standalone executables
+- Improved Linux support
+- GUI wrapper
+- Additional developer actions
+- Enhanced cloud provider integration
+- Expanded custom action capabilities
+
+## License
+
+Proprietary - All rights reserved
+
+## Support
+
+- Features/Feedback: qq@southbrucke.com
+- Bug Reports: qq_bug@southbrucke.com
+
+## Author
+
+Cristian Vyhmeister (cv@southbrucke.com)
+
+[https://southbrucke.com](https://southbrucke.com)
