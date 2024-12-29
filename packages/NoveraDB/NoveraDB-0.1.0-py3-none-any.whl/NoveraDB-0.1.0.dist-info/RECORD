@@ -1,0 +1,12 @@
+noveradb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+noveradb/db/__init__.py,sha256=QYoaMCX44FkLjiN1yVHQnUwaXDqGb2PljxW5EgR-X_w,772
+noveradb/db/doctor.py,sha256=2koa1Ai33MZwR60FvoHRIrqCruU1a6_m5tr1Q8gTHQg,1616
+noveradb/db/token.py,sha256=GcNS4rZrro1gWmVu_zPObBwY1PJYPcgKWf8i7vetFAw,3404
+noveradb/serializers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+noveradb/serializers/base.py,sha256=BMZbeiFkziPKKeoRc7vh1HMFjxM_WK0JdRd0GcIyq9g,1188
+noveradb/serializers/doctor.py,sha256=pQ6ZQLeVTqChk-p-bOyrImB-XAxk8tWAA3ZN4ovbSEo,3917
+noveradb/serializers/token.py,sha256=9tHgL3PNzxJ0tnEd95OtGv-5fZBSS2Q1TKB1A4ZUh9c,2256
+NoveraDB-0.1.0.dist-info/METADATA,sha256=nL0z_JenWX4dN8Pz5IlvEPuvyVqfGvlK8CVS3nF7Zms,667
+NoveraDB-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+NoveraDB-0.1.0.dist-info/top_level.txt,sha256=5Gi8WIdZrCXwvBFd6k898Xlz2AC7H2uwtF6LU1s1Tag,9
+NoveraDB-0.1.0.dist-info/RECORD,,

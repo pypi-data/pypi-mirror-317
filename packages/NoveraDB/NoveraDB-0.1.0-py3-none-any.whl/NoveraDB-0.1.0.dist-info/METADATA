@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: NoveraDB
+Version: 0.1.0
+Summary: "Database module for the NoveraApp."
+Author: Novera System
+Author-email: info@novera.com
+Keywords: novera,db
+Description-Content-Type: text/markdown
+Requires-Dist: motor==3.6.0
+Requires-Dist: phonenumbers==8.13.51
+Requires-Dist: pycountry==24.6.1
+Requires-Dist: pydantic<3.0.0,>=2.7.0
+Requires-Dist: pydantic-extra-types==2.10.1
+
+# NoveraDB
+
+Database module for the Novera.
+
+
+Environment Variables
+---------------------
+NOVERA_DB_CONN_STR - Connection string for mongodb server (default: mongodb://user:pass@127.0.0.1:27017)
+NOVERA_DB_DATABASE_NAME - Database name for the mongodb server (default: novera)
