@@ -1,0 +1,11 @@
+gitanalyzer/__init__.py,sha256=v9oMqJmPecqfMDDaF2JDJ9QwCXrp2hf7OgDcbtH1HRM,23
+gitanalyzer/git.py,sha256=WKUHDzbeODN7810ughXJRsn4FDGjeeSwTw0e6wcEoj8,14351
+gitanalyzer/repository.py,sha256=hoNrcPHe88bOJRi1DcSt7S-DwggRHwsZfHTuiWE_bqc,14491
+gitanalyzer/domain/__init__.py,sha256=WmlbI3r7CnkikDlCRbuB7hyhIysIKCH73f5JXe4Fxmw,124
+gitanalyzer/domain/commit.py,sha256=D4fQL1PjavY0zrMtTm_8l2ilJSQluNxAutX857SJ55k,31311
+gitanalyzer/domain/developer.py,sha256=K075XDiLs_Pj41Fy2QuEb1PBbsq5eCe40YA1s_6Nw8U,2277
+GitAnalyzer-1.0.0.dist-info/LICENSE,sha256=DOwG4OVfvD3FzuT8qbYH9my49OTbzzs8ATWU3RVnMuk,10173
+GitAnalyzer-1.0.0.dist-info/METADATA,sha256=IOLghZFaOyZOJ0QmXFOeHEPpkOahlfAfhFFrT3wk4AA,1330
+GitAnalyzer-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+GitAnalyzer-1.0.0.dist-info/top_level.txt,sha256=kIJzcjkUmUibMHxiUILqu50CDDgjfIDBG2V2lrZ3Y8w,12
+GitAnalyzer-1.0.0.dist-info/RECORD,,
