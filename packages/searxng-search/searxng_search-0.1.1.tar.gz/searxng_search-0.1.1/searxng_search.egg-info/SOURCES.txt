@@ -1,0 +1,14 @@
+LICENSE.md
+README.md
+pyproject.toml
+searxng_search/__init__.py
+searxng_search/exceptions.py
+searxng_search/py.typed
+searxng_search/searxng.py
+searxng_search/version.py
+searxng_search.egg-info/PKG-INFO
+searxng_search.egg-info/SOURCES.txt
+searxng_search.egg-info/dependency_links.txt
+searxng_search.egg-info/requires.txt
+searxng_search.egg-info/top_level.txt
+tests/test_searxng_search.py
