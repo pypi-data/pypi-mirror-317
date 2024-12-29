@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: maptial
+Version: 0.0.7
+Summary: Library to calculate density and potential maps from protein structures, and to calculate geoemetric properties of protein structures.
+Home-page: https://github.com/rae-gh/lib-maptial
+Author: Rachel Alcraft
+Author-email: Rachel Alcraft <Rachel.Alcraft@gmail.com>
+Maintainer-email: Rachel Alcraft <Rachel.Alcraft@gmail.com>
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Perl
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: biopython==1.81
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: plotly
+
+# lib-maptial
+
+## For developers
+Create a virtual environment
+```
+python3 -m venv .env-maps
+source .env-maps/bin/activate 
+pip install --upgrade pip
+pip install -r requirements.txt
+```
