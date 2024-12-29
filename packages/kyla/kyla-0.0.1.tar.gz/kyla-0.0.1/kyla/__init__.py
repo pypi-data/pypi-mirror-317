@@ -1,0 +1,1 @@
+from .script import to_camel_case
