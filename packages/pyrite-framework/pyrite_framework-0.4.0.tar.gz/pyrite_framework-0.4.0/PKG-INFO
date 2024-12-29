@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyrite_framework
+Version: 0.4.0
+Summary: A simple yet featureful framework for simplifying pygame games.
+Author-email: BetterBuiltFool <betterbuiltfool@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Software Development :: Libraries :: pygame
+Classifier: Typing :: Typed
+Requires-Python: >=3.12.4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame_ce>=2.5.2
