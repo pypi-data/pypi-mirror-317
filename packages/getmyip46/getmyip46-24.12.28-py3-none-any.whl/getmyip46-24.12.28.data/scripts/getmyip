@@ -1,0 +1,6 @@
+#!python
+
+from getmyip import getmyip
+
+if __name__ == '__main__':
+    getmyip()
