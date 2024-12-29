@@ -1,0 +1,17 @@
+dividebyzero/__init__.py,sha256=Yt6MDMkGghQvnB4aNxTQBDz9PbgnbF5CfZi2GwAAVgU,2589
+dividebyzero/array.py,sha256=YKZb3WkOz9pNKWwomsy_cK7eAWfoV_MlvfmOGpDMwgM,26331
+dividebyzero/exceptions.py,sha256=12Oqp2DCTGM7RPtxrimp9t5lX2-nsKYtPVuQxZXOyk8,346
+dividebyzero/linalg.py,sha256=6IvFWFuG3CDj3o6dNDakEh8kdA0IgsI4erFWOtnIcXc,4036
+dividebyzero/numpy_compat.py,sha256=uW7Ai6FhhwlnyHz6Zd6sozbOBuDGNIag5uro10FCrzU,838
+dividebyzero/numpy_registry.py,sha256=j5I0OtrNady5OhUV-eUdLQ2x68uXJGoEwkcVhbQWNec,1455
+dividebyzero/operators.py,sha256=9IoE7G8V0slVoTjTLVaXAg8Qrk_qtgpE3BisWDYYfIU,6003
+dividebyzero/random.py,sha256=9cj3swS3R6rezvmaJExarz99nAtxn2UdQXiilQRRbsw,2466
+dividebyzero/registry.py,sha256=qVw5deHL00wh8qAgGNdoxZKndHVIXe-lbFgK0ww3h4U,3133
+dividebyzero/quantum/__init__.py,sha256=bnYDTLWV2gAwCrOwfg86RVobXdWHfs0DILM0JjNKbLA,1323
+dividebyzero/quantum/gauge.py,sha256=znV0n0ju7PECLO66WyvqGrgHijYagn726Xda5QVoM2k,9240
+dividebyzero/quantum/gauge_groups.py,sha256=Nf64IwmuBhcqh7925aj2WexnUBV3StsibNozjAx_QE8,7015
+dividebyzero/quantum/holonomy.py,sha256=YpL-UuHNbFq7w5PPsSfOQt_0La_FjTIT-qrV_VQ0EUI,7131
+dividebyzero/quantum/tensor.py,sha256=MN3bv_mMJ2sYiVsB1onXR-3DXX78aJdvzWQTptEZzOA,16483
+dividebyzero-0.1.1.dist-info/METADATA,sha256=ZFbTeyYBtoVWUepaPxbBv5JHMHmzTx2tjkry8gWB46k,5083
+dividebyzero-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dividebyzero-0.1.1.dist-info/RECORD,,
