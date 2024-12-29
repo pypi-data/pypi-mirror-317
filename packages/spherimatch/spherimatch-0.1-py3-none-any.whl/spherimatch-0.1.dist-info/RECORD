@@ -1,0 +1,16 @@
+spherimatch/__init__.py,sha256=E9jCOa4P0ExWOR3k4SZI_xTCCF0nUrbev9FNhY2588g,468
+spherimatch/catalog.py,sha256=ot6nX759JZyZMcB4h2K51IetYfnPcad39SqhC4k2Kro,6707
+spherimatch/chunk.py,sha256=o6NpCmDFBM1tNo8MdTzZKJp4ZtJuI_noAWnNw-w9Pnw,1714
+spherimatch/chunk_generator.py,sha256=IrQnzOptHONlSunNygBj5mKC7lprxXDYbSplvBVL8IU,2886
+spherimatch/chunk_generator_grid.py,sha256=Fa1furltCsRuX6p4onQ-oxk5UJlhCDlLRQJIUzLaKug,7284
+spherimatch/disjoint_set.py,sha256=PJbyYrIj8pK9j3_4n_tluCy1IP0Q1nKK2hhLe9d_DKY,955
+spherimatch/euclidean_vs_angular_distance_local.py,sha256=7I6nDuw_TdvAZiim8jkAYHLnvE1d-HTojkV7oJ9Eje8,4875
+spherimatch/fof.py,sha256=rhK2YDJw1ZmQCA45N7bz6tSFqZlSlbLtTBxLisSt7rw,3566
+spherimatch/result_fof.py,sha256=VVVrdEnf7La_-H9rPYty0Zr4k-JXUXKOXY3ajkydGho,3403
+spherimatch/result_xmatch.py,sha256=vHjHkcZRDwECjJGPhEn7znfmvOr0kKAQ_N2aPpLr9pM,8465
+spherimatch/utilities_spherical.py,sha256=Gw4mzPxrxMJ5v8l3GSQdJ8Z1ZtMGMxqmS3vFVXMWK2U,7344
+spherimatch/xmatch.py,sha256=Bc0k35-aoF__bdGlnWMFnIJ82nj5KNk0CS2FdDRRrEk,6118
+spherimatch-0.1.dist-info/METADATA,sha256=1SjAOBLO2AQcLZANszO2cN5Zl018waNxL8RfKjCnQ7E,5630
+spherimatch-0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spherimatch-0.1.dist-info/licenses/LICENSE.txt,sha256=wJjrfjQwuS1GVHneUjWkNtzmOWlcMNcL6gBx8pWVSns,1096
+spherimatch-0.1.dist-info/RECORD,,
