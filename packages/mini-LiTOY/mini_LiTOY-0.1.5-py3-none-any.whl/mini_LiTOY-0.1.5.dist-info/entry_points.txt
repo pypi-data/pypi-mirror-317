@@ -1,0 +1,2 @@
+[console_scripts]
+mlitoy = mini_LiTOY.__init__:cli_launcher
