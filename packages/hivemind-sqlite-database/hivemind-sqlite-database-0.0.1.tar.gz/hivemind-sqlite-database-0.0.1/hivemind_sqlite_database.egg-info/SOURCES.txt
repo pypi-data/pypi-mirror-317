@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+setup.py
+hivemind_sqlite_database/__init__.py
+hivemind_sqlite_database/version.py
+hivemind_sqlite_database.egg-info/PKG-INFO
+hivemind_sqlite_database.egg-info/SOURCES.txt
+hivemind_sqlite_database.egg-info/dependency_links.txt
+hivemind_sqlite_database.egg-info/top_level.txt
