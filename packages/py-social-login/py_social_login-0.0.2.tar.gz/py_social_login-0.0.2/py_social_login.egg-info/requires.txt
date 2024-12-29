@@ -1,0 +1,8 @@
+PyJWT
+cryptography
+pydantic
+pytz
+requests
+
+[dev]
+flask
