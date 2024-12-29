@@ -1,0 +1,12 @@
+README.md
+setup.py
+aihcx/__init__.py
+aihcx/cli.py
+aihcx/client.py
+aihcx/commands.py
+aihcx.egg-info/PKG-INFO
+aihcx.egg-info/SOURCES.txt
+aihcx.egg-info/dependency_links.txt
+aihcx.egg-info/entry_points.txt
+aihcx.egg-info/requires.txt
+aihcx.egg-info/top_level.txt
