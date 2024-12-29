@@ -1,0 +1,11 @@
+main.py,sha256=CMdXCO1Yke8UNtVhk_RzTLif7_kPo57wYjG-TPCptmE,135
+source_adjust/__init__.py,sha256=e5601KmXOP2ySmKhBwmRrjNC9OTCIHjWr0ykgVQAkjY,138
+source_adjust/components.py,sha256=NyY7slCBvh9Ch17icuA7SBhSBu7nyICmOLooIrbAWRw,980
+source_adjust/manifest.yaml,sha256=iKcyVYbrB7D51IYn3Z8CmTPqYhWMu3qFStR26gnGanw,6359
+source_adjust/model.py,sha256=kXDS9NzVwiCsmeCYsyyq_nmR4mlFD9YstEHtG3-_6vY,14011
+source_adjust/run.py,sha256=bNMMZQSs0Yhh7-zDmLyeLHHYjnqBkDetg_XTyAZeZJo,225
+source_adjust/source.py,sha256=jBRXERARInKGCHpfVBHPUsvCEkUOSRBcTua2cjHWIwU,476
+airbyte_source_adjust-0.1.28.dist-info/METADATA,sha256=x5Hbzr_c1SD9LuTiqlF3iSVQZ-L1_E0GevkMn3mq9QQ,5206
+airbyte_source_adjust-0.1.28.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+airbyte_source_adjust-0.1.28.dist-info/entry_points.txt,sha256=mWZzCBxb5KerPMl435Msv0Uac2nYyyIoiHz9FX4Pk_Y,55
+airbyte_source_adjust-0.1.28.dist-info/RECORD,,

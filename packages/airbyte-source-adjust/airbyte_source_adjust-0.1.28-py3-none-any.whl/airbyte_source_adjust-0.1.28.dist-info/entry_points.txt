@@ -1,0 +1,3 @@
+[console_scripts]
+source-adjust=source_adjust.run:run
+
