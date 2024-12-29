@@ -1,0 +1,11 @@
+mldali/__init__.py,sha256=1c_UmdvLIDiimD7Yh3_UCNMKJzlGirwCH4RQaw0BcRw,266
+mldali/__version__.py,sha256=FVaR7FECqXYVLPTbZJc8xaVE53Dla9KUQqy1YxYZH0A,22
+mldali/const.py,sha256=qb2XYhrIOljBb5zStFMctMIQl9SB0ieb5pOCEDxGU_c,269
+mldali/controller.py,sha256=FHUI_9k655QKNPFm0RbcTdsfrkBDrvwtn48RvzNr8m0,3343
+mldali/light.py,sha256=4rCt7lc4mEpFNuH_te3RQd3hbJSVD1h0v8fFtml5kQg,1629
+mldali/shade.py,sha256=zFnedkK2iVLEjnLcQVmsbDcmZJyttJw9Av3KAxpTF6g,2381
+python_ml_dali-0.0.16.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+python_ml_dali-0.0.16.dist-info/METADATA,sha256=S185cUle3f29oL7Wfl-b6kJoxM4UmiNuubrRs0THi6w,1784
+python_ml_dali-0.0.16.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+python_ml_dali-0.0.16.dist-info/top_level.txt,sha256=aPzlkMo3yKe9fCG33q3KFNsBn0emCo5AK59USKlwqX8,7
+python_ml_dali-0.0.16.dist-info/RECORD,,
