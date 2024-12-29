@@ -1,0 +1,3 @@
+[console_scripts]
+source-alpha-vantage=source_alpha_vantage.run:run
+
