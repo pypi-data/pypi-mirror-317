@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: pysleuth
+Version: 0.1.2
+License-File: LICENSE
+Summary: A tool to analyze Python code for potential error.
+Author: Shuduo Sang <sangshuduo@gmail.com>
+Author-email: Shudou Sang <sangshuduo@gmail.com>
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/sangshuduo/pysleuth
+
+# PySleuth
+
+Hunging down your Python code errors with PySleuth.
+
