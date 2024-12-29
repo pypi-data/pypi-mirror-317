@@ -1,0 +1,16 @@
+bsg_ide/BSG_IDE.py,sha256=CA_sIRQWH47famMxCkXFlvFuOxvArXZQa46jIq3qy0o,333572
+bsg_ide/BeamerSlideGenerator.py,sha256=c0iAS9Yyk9O7my0dSqqAxgAHtBsIIpZb1os4d1hYX5c,95251
+bsg_ide/__init__.py,sha256=NQT_rK1WjhcJaqZGzdrjm45YHdIO3vAHIQuQAKfwxn8,723
+bsg_ide/airis4d_logo.png,sha256=8dKqHsHl5RpbgqXZxQCpwHAVVj6IDadlc5wf88Ukzwc,22196
+bsg_ide/bsg-ide.png,sha256=dU9MT3tlAS-Isount7Hd6l0brZA-u23WKTEXzp_T2nE,357016
+bsg_ide/requirements.txt,sha256=dKeTazLnN-JuLVKn0SuYkwS3Ruk1cE0EHCdYy6xI9sk,653
+bsg_ide/icons/airis4d_logo.png,sha256=8dKqHsHl5RpbgqXZxQCpwHAVVj6IDadlc5wf88Ukzwc,22196
+bsg_ide/icons/bsg-ide.png,sha256=dU9MT3tlAS-Isount7Hd6l0brZA-u23WKTEXzp_T2nE,357016
+bsg_ide/resources/airis4d_logo.png,sha256=8dKqHsHl5RpbgqXZxQCpwHAVVj6IDadlc5wf88Ukzwc,22196
+bsg_ide/resources/bsg-ide.png,sha256=dU9MT3tlAS-Isount7Hd6l0brZA-u23WKTEXzp_T2nE,357016
+bsg_ide-4.7.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+bsg_ide-4.7.dist-info/METADATA,sha256=eptpBwgZHQVw9Hu-sXXJK2g5YnM8SeQ0rUvtgD4DaaI,1738
+bsg_ide-4.7.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+bsg_ide-4.7.dist-info/entry_points.txt,sha256=NEJOfdbdI-2B8i-s_K4bjqWZkU5ON6EzzRJUmCouOo0,49
+bsg_ide-4.7.dist-info/top_level.txt,sha256=2vBAg11sh1HE4T69-TYdOiQ-ePvrOhhXIUU5m8qPR40,8
+bsg_ide-4.7.dist-info/RECORD,,
