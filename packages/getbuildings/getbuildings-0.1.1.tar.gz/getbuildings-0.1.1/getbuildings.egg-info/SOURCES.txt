@@ -1,0 +1,10 @@
+README.md
+setup.py
+getbuildings/__init__.py
+getbuildings/main.py
+getbuildings.egg-info/PKG-INFO
+getbuildings.egg-info/SOURCES.txt
+getbuildings.egg-info/dependency_links.txt
+getbuildings.egg-info/entry_points.txt
+getbuildings.egg-info/requires.txt
+getbuildings.egg-info/top_level.txt
