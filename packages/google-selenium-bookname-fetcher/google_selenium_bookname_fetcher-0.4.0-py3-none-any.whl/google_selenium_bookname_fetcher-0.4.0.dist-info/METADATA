@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: google-selenium-bookname-fetcher
+Version: 0.4.0
+Summary: A tool to fetch book names from Google using Selenium
+License: MIT
+Author: ozgur gundogan
+Author-email: ozgur@thedoor.social
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: selenium (>=4.27.1,<5.0.0)
+Project-URL: homepage, https://github.com/ozgurgundogan/google-selenium-bookname-fetcher
+Project-URL: issues, https://github.com/ozgurgundogan/google-selenium-bookname-fetcher/issues
+Project-URL: repository, https://github.com/ozgurgundogan/google-selenium-bookname-fetcher
+Description-Content-Type: text/markdown
+
+
