@@ -1,0 +1,3 @@
+[console_scripts]
+docowling=docowling.cli.main:app
+
