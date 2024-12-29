@@ -1,0 +1,17 @@
+worldnames/__init__.py,sha256=vztYdqP1xpUA0Q8KAUGtQEW7NdZot1zGkdNDxkS2NXM,4299
+worldnames/content.py,sha256=uW0GADyjxUFbdu1r-9kl5f1hzCE99wsYQquUCKk5EM8,2980
+worldnames/flow.py,sha256=hUeAbt7Bx0k94DKckY7bQwjqZLCSCcXtaoz7iCy5gSA,1439
+worldnames/populate.py,sha256=vKT5gi9UG53T1rzEg4fRNOQKdJNK5cuwhxiQEFTpmq8,3142
+worldnames/populatinghelpers.py,sha256=RWZBt6ucxGWKQlDVQJsahGFART82n3Cg8Oi2_9fICyo,1517
+worldnames/requirments.txt,sha256=2JgtnmSXAzxS7zUZVDpWU8w5gPI1Mevh7jI2__gRgJ8,157
+worldnames/worldnames.json,sha256=EWsXwopHdKwXdnK16QsV6jjKS8VM0Sx0wxbkb5Eqbmw,26454
+worldnames/databases/__init__.py,sha256=pUNgqyNHIaTPcDWu9BY6uL_P_FF4T3xtS2ZBAphzw9M,321
+worldnames/databases/customdatatypes.py,sha256=T_sEzAIBAeGbzW5q5ZDvuXGJVDBBT1YhGemiyypRAGk,5885
+worldnames/databases/my_sql.py,sha256=QVWWtDQkO2eLGoLG1m1GwXLYH8mpMkNkzkETE3eq3v4,4953
+worldnames/databases/sqlite.py,sha256=WeCbh-Bz-CirY5EGqdqBc6qgrwAPr7vl8HZy1UMyUNE,2470
+worldnames/databases/sqlsharing.py,sha256=QK3L6-chFnJTMmbZxeFGTwj9cMwUf9HZeJ6BvaUKhnU,6075
+worldnames/exceptions/__init__.py,sha256=0s-39zxJzscOaNAAgwUYqlEvs0gJncDIEyzKSrd3kSs,462
+worldnames-0.0.7.dist-info/METADATA,sha256=MbFF7tku5s4GBqatg9eRGaAqEcP7c8GBeBcrh6a23z8,2786
+worldnames-0.0.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+worldnames-0.0.7.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+worldnames-0.0.7.dist-info/RECORD,,
