@@ -1,0 +1,13 @@
+numpy
+torch
+torchaudio
+tqdm
+openai-whisper<=20240930,>=20230314
+
+[fw]
+faster-whisper
+
+[hf]
+transformers>=4.23.0
+optimum
+accelerate
