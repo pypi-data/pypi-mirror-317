@@ -1,0 +1,8 @@
+pulp>=2.7.0
+pandas>=1.3.0
+numpy>=1.21.0
+highspy>=1.5.0
+
+[test]
+pytest>=6.0
+pytest-cov>=2.0
