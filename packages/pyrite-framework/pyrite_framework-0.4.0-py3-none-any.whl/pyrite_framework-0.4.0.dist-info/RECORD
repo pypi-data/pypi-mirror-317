@@ -1,0 +1,10 @@
+pyrite/__init__.py,sha256=DvV6u9IXY9zfWwd-5yPp_F5-cHCqdjbfdeIkp9AfTw0,370
+pyrite/display_settings.py,sha256=fiQSRgCMYhoDH5f2pbavOdegEc0VpagK5VGcMiHvfeE,3336
+pyrite/game.py,sha256=myYJP-aPVQNIAgqcW8q_ovQWBtFmIGqnFOlMMEAm8fw,2456
+pyrite/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyrite/timing_settings.py,sha256=1M83VAOWyuu89FiokSEIM7x9nk1oCAmQx5Pyirzz3uk,4370
+pyrite_framework-0.4.0.dist-info/LICENSE,sha256=vaG-W-qCxhh_2WkfPMTQV2Ss6voY5LJzaNACg0fdFqw,1081
+pyrite_framework-0.4.0.dist-info/METADATA,sha256=uljfsFniVB1EgxGuDNUFM9Usz-u61V2nMh4w5Hf3N08,606
+pyrite_framework-0.4.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyrite_framework-0.4.0.dist-info/top_level.txt,sha256=lhj7_y_qa1CX0aM9Dj2y8mw-6fBxyTJTPMr7F-cfe94,7
+pyrite_framework-0.4.0.dist-info/RECORD,,
