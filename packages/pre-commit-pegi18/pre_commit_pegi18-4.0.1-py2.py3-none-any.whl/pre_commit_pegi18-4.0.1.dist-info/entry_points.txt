@@ -1,0 +1,2 @@
+[console_scripts]
+pre-commit-pegi18 = pre_commit.main:main
