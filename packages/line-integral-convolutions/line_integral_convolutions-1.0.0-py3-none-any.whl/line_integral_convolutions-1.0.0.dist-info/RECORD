@@ -1,0 +1,9 @@
+line_integral_convolutions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+line_integral_convolutions/fields.py,sha256=ImHV_dU_5ccFRTpefmPT1w92lqrCupMzL4ZRyCXIiR4,3121
+line_integral_convolutions/lic.py,sha256=zFzseTac-saosEmZycTlrLIV_Lu02jRbOpMTzaOHIsE,10723
+line_integral_convolutions/utils.py,sha256=pFooQBA0_9pY_FpD0dakhPa8Y5RM7mhszoPL5Gx83x8,2976
+line_integral_convolutions-1.0.0.dist-info/LICENSE.md,sha256=Qx759o2cP0kF0HvKb1i7gCeJ2lGX5E2mLe4DSfiIi7c,1066
+line_integral_convolutions-1.0.0.dist-info/METADATA,sha256=Gf1rtolhZOo9krgnMdgrWbQwxSByZ6vkbcFaXRYyevY,355
+line_integral_convolutions-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+line_integral_convolutions-1.0.0.dist-info/top_level.txt,sha256=xJAIO4KxvLf_CByuvlatwxeQ4v49jbCe5Z8bjKSjexM,27
+line_integral_convolutions-1.0.0.dist-info/RECORD,,
