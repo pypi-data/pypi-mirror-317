@@ -1,0 +1,3 @@
+[console_scripts]
+get_random_pi = RandomPi:get_random_pi
+get_randompi = RandomPi:get_random_pi
