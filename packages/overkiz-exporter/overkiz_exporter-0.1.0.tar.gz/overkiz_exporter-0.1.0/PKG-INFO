@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: overkiz-exporter
+Version: 0.1.0
+Summary: 
+Author: François Schmidts
+Author-email: francois@schmidts.fr
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Home Automation
+Classifier: Topic :: System :: Monitoring
+Requires-Dist: prometheus-client (>=0.21.1,<0.22.0)
+Requires-Dist: pyoverkiz (>=1.15.3,<2.0.0)
+Requires-Dist: the-conf (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Overkiz Exporter
+
+A simple open metrics exporter for metrics yielded from overkiz api
+
