@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hivemind-redis-database
+Version: 0.0.1
+Summary: redis database plugin for hivemind-core
+Home-page: https://github.com/JarbasHiveMind/hivemind-redis-database
+Author: jarbasAi
+Author-email: jarbasai@mailfence.com
+License: Apache-2.0
+Platform: UNKNOWN
+Requires-Dist: py-redis
+
+UNKNOWN
+
+
