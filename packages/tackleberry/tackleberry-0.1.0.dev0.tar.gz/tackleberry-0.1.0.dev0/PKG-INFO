@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: tackleberry
+Version: 0.1.0.dev0
+Summary: Tackleberry (or TB) is helping you tackle the access to AI
+Author-email: Torsten Raudßus <torsten@raudssus.de>
+License: MIT
+License-File: LICENSE.txt
+Requires-Python: >=3.8
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pyyaml>=6.0.0
+Requires-Dist: typing-extensions>=4.0.0
+Provides-Extra: dev
+Requires-Dist: black>=22.0.0; extra == 'dev'
+Requires-Dist: isort>=5.0.0; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Tackleberry
+
+![Tackleberry Factory](tackleberry.jpg)
