@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: xf-cli
+Version: 0.0.2
+Summary: XF makes repeated python commands faster through import preloading
+Author-email: Justin Leder <justin@turntable.so>
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: ipython>=8.18.1
+Requires-Dist: pickleshare>=0.7.5
+Requires-Dist: pyinstrument>=5.0.0
+Requires-Dist: rich>=13.9.4
+Requires-Dist: tomlkit>=0.13.2
+Requires-Dist: typer>=0.15.1
+Requires-Dist: uv>=0.5.11
+Provides-Extra: profile
+Requires-Dist: pyinstrument>=5.0.0; extra == 'profile'
+Provides-Extra: pytest
+Requires-Dist: pytest>=8.3.4; extra == 'pytest'
+Provides-Extra: pytest-django
+Requires-Dist: pytest-django>=4.9.0; extra == 'pytest-django'
+Requires-Dist: pytest>=8.3.4; extra == 'pytest-django'
+Description-Content-Type: text/markdown
+
+# XF
+
+XF stands for extra fast. XF imports your key packages on first call, so you don't pay a recurring tax for imports. Usually saves 1-10 seconds per invocation after startup.
+
+Key features
+- Comes with two modes: ipython mode and shell mode. Ipython feels like an ipython console; shell operates like a terminal.
+- Extensible: we will accept PRs for additional commands. See the `commands` directory for examples.
+- Easily profile any command using the `prof` prefix.
+- Can use your own environment or run in an isolated environment using the `--isolated` flag.
+
+Who would benefit from this:
+- You are a non-python developer using a python cli
+- You are a python developer
+
+Who would not benefit from this:
+- Production use cases
+- Long-running commands where a few seconds of savings don't make a difference
