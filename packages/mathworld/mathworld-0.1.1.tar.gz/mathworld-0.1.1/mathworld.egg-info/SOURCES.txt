@@ -1,0 +1,15 @@
+Documentation.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mathworld/__init__.py
+mathworld/elements.py
+mathworld/equations.py
+mathworld.egg-info/PKG-INFO
+mathworld.egg-info/SOURCES.txt
+mathworld.egg-info/dependency_links.txt
+mathworld.egg-info/requires.txt
+mathworld.egg-info/top_level.txt

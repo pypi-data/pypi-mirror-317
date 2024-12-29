@@ -1,0 +1,5 @@
+include Documentation.md
+include LICENSE
+exlude README.md
+exclude *.pyc
+exclude __pycache__/
