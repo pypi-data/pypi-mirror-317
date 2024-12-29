@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: craws
+Version: 0.1
+Summary: 爬虫者
+Home-page: https://github.com/markadc/craws
+Author: WangTuo
+Author-email: markadc@126.com
+License: MIT
+Keywords: Python,Spider
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: parsel
+Requires-Dist: loguru
+
+# 项目说明
+
+- ...
