@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "fastapi_router_handler"
+version = "0.1.0"
+description = "Python Fastapi's general exception handler"
+authors = ["KyungHo Kim <qqaa3030@gmail.com>"]
+license = "MIT-3"
+readme = "README.md"
+packages = [{ include = "fastapi_router_handler", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.115.6"
+httpx = "^0.28.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pre-commit = "^4.0.1"
+pytest-asyncio = "^0.25.0"
+emoji-logger = "^0.1.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
