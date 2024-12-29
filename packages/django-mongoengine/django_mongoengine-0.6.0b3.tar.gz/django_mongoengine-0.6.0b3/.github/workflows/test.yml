@@ -1,0 +1,61 @@
+# Docs:
+#  - https://docs.github.com/en/actions/guides/about-service-containers
+#  - https://github.com/actions/example-services/blob/main/.github/workflows/mongodb-service.yml
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python:
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "3.12"
+          - "3.13"
+          - "pypy3.10"
+        django:
+          - "Django>=4.2,<4.3"
+          - "Django>=5.0,<5.1"
+          - "Django>=5.1,<5.2"
+        exclude:
+          - python: "3.9"
+            django: "Django>=5.0,<5.1"
+          - python: "3.9"
+            django: "Django>=5.1,<5.2"
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      DJANGO: ${{ matrix.django }}
+    services:
+      mongodb:
+        image: mongo
+        ports:
+          - 27017:27017
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install poetry
+        run: pipx install poetry
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+          cache: 'poetry'
+      - name: Cache virtualenv
+        uses: actions/cache@v3
+        with:
+          key: venv-${{ runner.os }}-${{ steps.setup_python.outputs.python-version}}-${{ hashFiles('poetry.lock') }}
+          path: .venv
+      - name: Set up env
+        run: |
+          poetry install -q
+          poetry run pip install -q "${{ matrix.django }}"
+      - name: Run tests
+        run: |
+          poetry run ruff .
+          poetry run ruff format --check .
+          poetry run python -m pytest
