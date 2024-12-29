@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: PyPMT
+Version: 1.0.8
+Summary: Python package for analysis and visualization of polar datasets.
+Home-page: https://github.com/GatorGlaciology/PyPMT
+Author: Blake Wood
+Author-email: blakewood1@ufl.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Cartopy>=0.22.0
+Requires-Dist: geopy>=2.3.0
+Requires-Dist: matplotlib>=3.5.2
+Requires-Dist: numpy>=2.0.1
+Requires-Dist: pyproj>=3.5.0
+Requires-Dist: scipy>=1.14.0
+Requires-Dist: Shapely>=2.0.5
+Requires-Dist: geopandas>=0.10.0
+Requires-Dist: pathlib; python_version < "3.4"
+
+# PyPMT
+Python Polar Mapping Tools: A python library for analysis and visualization of polar datasets.
+
+This library is inspired by MATLAB's Antarctic Mapping Tools, which can be found here:
+https://www.mathworks.com/matlabcentral/fileexchange/47638-antarctic-mapping-tools
