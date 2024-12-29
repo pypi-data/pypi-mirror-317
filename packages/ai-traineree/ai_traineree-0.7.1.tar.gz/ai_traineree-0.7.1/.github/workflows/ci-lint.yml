@@ -1,0 +1,20 @@
+name: Linter
+
+on: [push, pull_request]
+
+jobs:
+  build-n-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with: # Latest on 2024-12-24
+          version: "0.5.11"
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+      - name: Lint
+        run: uvx ruff@0.3.0 check

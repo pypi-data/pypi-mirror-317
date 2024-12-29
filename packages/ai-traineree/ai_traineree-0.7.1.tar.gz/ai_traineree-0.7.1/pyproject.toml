@@ -1,0 +1,72 @@
+[project]
+name = "ai-traineree"
+version = "0.7.1"
+description = "Yet another zoo of (Deep) Reinforcement Learning methods in Python using PyTorch"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "torch>=2.0",
+    "jsons>=1.4",
+    "gymnasium==1.0.0",
+    "matplotlib>=3.7.5",
+]
+
+[build-system]
+requires = ["uv>=0.4.9", "hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "mock",
+    "pytest>=6.2.5",
+    "pytest-cov>=6.0.0",
+    "pytest-mock",
+    "pytest-timeout",
+    "gymnasium[box2d]==1.0.0",  # remember about Swig
+    "swig",
+]
+
+[project.optional-dependencies]
+
+plot = ["matplotlib"]
+tensorboard = ["tensorboard"]
+neptune = ["neptune-client", "psutil"]
+gym = ["gymnasium[all]==1.0.0"]
+# mlagents = ["mlagents"]
+# pettingzoo = ["pettingzoo[other]==1.11.0"]
+examples = [
+    "matplotlib",
+    "tensorboard",
+    "gymnasium==1.0.0",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.isort]
+line_length = 120
+profile = "black"
+
+[tool.black]
+line-length = 120
+
+[tool.pytest.ini_options]
+addopts = "--verbose --cov=ai_traineree --timeout=30"
+testpaths = ["ai_traineree", "tests"]
+
+[tool.coverage.run]
+omit = ["*/test_*.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == '__main__':",
+    "@abstract"
+]
