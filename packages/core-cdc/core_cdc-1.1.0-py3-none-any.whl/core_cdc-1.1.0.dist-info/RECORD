@@ -1,0 +1,17 @@
+core_cdc/__init__.py,sha256=3jQaYyjCk5d-pC1erP1S8KvyXdwl8vb-I12G08Gv478,47
+core_cdc/base.py,sha256=ALy53QZfNqOb3vOzkO-ZXlua5Rt6FglXNey33uA5tQo,4196
+core_cdc/processors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_cdc/processors/base.py,sha256=SljtMwb4q8uio0k6VC47ZeLvG_6ZNTvW0i4C02GGYVk,4473
+core_cdc/processors/mongo_stream.py,sha256=eG3mS2X2Ed-XhHsqU02mTZFt6XGJTKRCFJJ23eruqRM,3727
+core_cdc/processors/mssql.py,sha256=qROwtGcL2Rl5oLz2G6CD7hE1KdKk80f0NNd6nZsdNHU,3461
+core_cdc/processors/mysql_binlog.py,sha256=2Zuq24x8-0HrLpucYLEsyNZZlUQXbRR9uIv1tQC1tRA,4246
+core_cdc/processors/oracle.py,sha256=OocPiaogvFCWQGIF6sF3i8HNWlCOydAf6ZRZcP48IZc,2593
+core_cdc/targets/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+core_cdc/targets/base.py,sha256=RftDAUYVY4nGFV-uoWvwic-dIR0QFTYbtUiAZsKmFAI,3884
+core_cdc/targets/mysql.py,sha256=qDu-q7rquvRE6HvuqUZ0qXVw-HEgEdgtReH6EqG14aQ,1266
+core_cdc/targets/snowflake.py,sha256=CK-_hFOV6Ye_hklwzQ3g1dmlgcXlhHndAtx7XUYg2ho,2608
+core_cdc-1.1.0.dist-info/LICENSE,sha256=dj8Wz7OWOIOTyLJzaYLn8RFz_W5uYWSGR2xS5lHNAl4,1082
+core_cdc-1.1.0.dist-info/METADATA,sha256=NuYxzEU-fSNlMKONz02WzRSySmvLQ6n9mDdNQzDll58,18584
+core_cdc-1.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+core_cdc-1.1.0.dist-info/top_level.txt,sha256=q7MaqaXZwBAhmgYoBj1_Uox7qIlBYqDCd6_XP60sj6s,9
+core_cdc-1.1.0.dist-info/RECORD,,
