@@ -1,0 +1,13 @@
+arrendatools/__init__.py,sha256=VKvFmZ72TuoNL8cIi9h10F91BftqGcYrBZouMRcFcro,25
+arrendatools/modelo303/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arrendatools/modelo303/base.py,sha256=yMbXd1mPRjbZm5t3U8oJaiLey-xukxt_K6rG9XlywJE,609
+arrendatools/modelo303/datos_modelo_303.py,sha256=1hh-xxDZbQBX36_oS42C-DFZm94tm5gJ0LYRNLH8p0w,2329
+arrendatools/modelo303/ejercicio_2023.py,sha256=dhnAJTgf3OKMYcZELejR955--xuwhUZhIENFr1MFvWA,35615
+arrendatools/modelo303/ejercicio_2024.py,sha256=dwEKt2kvtG-J4FyCG63Dp8MR1zciltmETJ-z8awCrVk,37197
+arrendatools/modelo303/ejercicio_2025.py,sha256=DHgLfefurUIx4gi1TQ6Yg9XIKO29HOKXJdakMnE6kYE,36711
+arrendatools/modelo303/factory.py,sha256=nZC0Q7ybYU1EnlRUmzWbDqqVKh02wLucYv6ld2CLvKc,639
+arrendatools.modelo303-2025.0.0.dist-info/LICENSE,sha256=R5xzJCQj8mfv0qnRxP77IgwUbOoNGSNZhNni6Gx0ISY,1062
+arrendatools.modelo303-2025.0.0.dist-info/METADATA,sha256=URyCv3jGKKKhL750PmMrs2iKsUwg8SiWyyoYTZEDsdU,7815
+arrendatools.modelo303-2025.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+arrendatools.modelo303-2025.0.0.dist-info/top_level.txt,sha256=FrhdaIeLhEnd9ATh_dZIaQ0DLdNoutEL6-eTzGCtPp0,13
+arrendatools.modelo303-2025.0.0.dist-info/RECORD,,
