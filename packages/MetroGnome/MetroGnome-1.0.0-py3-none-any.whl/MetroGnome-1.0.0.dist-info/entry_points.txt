@@ -1,0 +1,5 @@
+[console_scripts]
+metrognome = metrognome.main:main
+
+[gui_scripts]
+metrognome = metrognome.main:main
