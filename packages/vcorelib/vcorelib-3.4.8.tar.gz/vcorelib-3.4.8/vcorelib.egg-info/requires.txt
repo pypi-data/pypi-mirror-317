@@ -1,0 +1,27 @@
+markdown
+cerberus
+tomli
+tomli-w
+importlib-resources
+ruamel.yaml
+fastjsonschema
+
+[test]
+pylint
+flake8
+black
+ruff
+mypy
+isort
+yamllint
+yambs
+vmklib>=2.0.3
+sphinx
+sphinx-book-theme
+pytest-asyncio
+setuptools-wrapper
+types-setuptools
+types-markdown
+
+[test:sys_platform != "win32" and sys_platform != "cygwin"]
+uvloop
