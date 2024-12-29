@@ -1,0 +1,35 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+[project]
+name = "maptial"
+description = "Library to calculate density and potential maps from protein structures, and to calculate geoemetric properties of protein structures."
+readme = "README.md"
+authors = [
+    { name = "Rachel Alcraft", email = "Rachel.Alcraft@gmail.com" },    
+]
+maintainers = [
+    { name = "Rachel Alcraft", email = "Rachel.Alcraft@gmail.com" },        
+]
+requires-python = ">=3.6"
+dependencies = [
+  "biopython==1.81",
+  "pandas",
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "plotly"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Perl",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Intended Audience :: Science/Research"
+]
+dynamic = ["version"]
