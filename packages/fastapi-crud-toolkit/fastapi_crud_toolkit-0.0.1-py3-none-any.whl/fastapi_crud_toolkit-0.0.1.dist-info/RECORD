@@ -1,0 +1,12 @@
+fastapi_crud_toolkit/__init__.py,sha256=iSQhbdIB7eG6Mj5VqAeJLym3UdNSFoJEdhJfY6aGm1I,183
+fastapi_crud_toolkit/openapi_responses.py,sha256=PJhJ68sb9j_vQrq0a9dtSO94V-8PZInh6q02k2JGa7s,884
+fastapi_crud_toolkit/utils.py,sha256=05roN05bDjdse40PbW2hGwl0DsbfcGEMgbGwk3cgq4A,1156
+fastapi_crud_toolkit/crud/__init__.py,sha256=OVoFEX131ev53I1N9KaUYo0KgC-2irzHnQifF2wo4zs,36
+fastapi_crud_toolkit/crud/mock.py,sha256=b0c9WMSOrqUr4zH0v6wjnctY7Y3bIgw0P-hgyQ1Q7VQ,2458
+fastapi_crud_toolkit/crud/model.py,sha256=xlw9I6gEFyG577tA7aViTuoEJxtttEVyEyXWtEJPUkU,2354
+fastapi_crud_toolkit/crud/permission.py,sha256=0MPQ2L9NYBTPYbOAvIetrSjspX5QQD9jGuz_8RcyIVY,5415
+fastapi_crud_toolkit/crud/template.py,sha256=BhJpTIhU8Q46CsEnjMPp0RFPpWCtc7hoL1P4OQL9G_M,1436
+fastapi_crud_toolkit-0.0.1.dist-info/METADATA,sha256=yMQRPkaIBXexJc-xGXPKekyF54mHGPzaWU_B2SXM4Pc,374
+fastapi_crud_toolkit-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastapi_crud_toolkit-0.0.1.dist-info/licenses/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+fastapi_crud_toolkit-0.0.1.dist-info/RECORD,,
