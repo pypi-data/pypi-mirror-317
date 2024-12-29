@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+nonebot_plugin_liarsbar/__init__.py
+nonebot_plugin_liarsbar/config.py
+nonebot_plugin_liarsbar.egg-info/PKG-INFO
+nonebot_plugin_liarsbar.egg-info/SOURCES.txt
+nonebot_plugin_liarsbar.egg-info/dependency_links.txt
+nonebot_plugin_liarsbar.egg-info/requires.txt
+nonebot_plugin_liarsbar.egg-info/top_level.txt
+nonebot_plugin_liarsbar/liars/__init__.py
+nonebot_plugin_liarsbar/liars/definitions.py
+nonebot_plugin_liarsbar/liars/main.py
