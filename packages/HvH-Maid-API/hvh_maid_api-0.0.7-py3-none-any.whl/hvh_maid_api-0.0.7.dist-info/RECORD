@@ -1,0 +1,10 @@
+HvH_Maid_API/__init__.py,sha256=KO-pNNCwsNfchYzP_weBm_S5ATgPgqqTZBh5fglt_Xg,236
+HvH_Maid_API/authclient.py,sha256=3ki6nj6dvdF614vjN1v2MLN1gZjGx8apBuS11oMLHy4,12584
+HvH_Maid_API/authsrv.crt,sha256=4BRNkNZ9PGolS_ytQvzItQ5EoMjKZcQyKRn-987LYZ0,1261
+HvH_Maid_API/byte_convertor.py,sha256=wcnyg2cw7xOA65yvV8NXR4OiC23ulmgHuXiGLoZrH70,863
+HvH_Maid_API/maid_game_client.py,sha256=XfyJ78FTjy9RRbblO_x5wEOTBzLjwBtRKfaSEy3m0M8,5769
+HvH_Maid_API/messagebuf.py,sha256=7ciYcAREDfrKegB8MMYNby0JMA5IqaT_-zJa-AMz_IE,8141
+hvh_maid_api-0.0.7.dist-info/METADATA,sha256=_k3JiYKaEWZVGERforrmzASA2SETZI9rXSvj-PV4sjg,388
+hvh_maid_api-0.0.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hvh_maid_api-0.0.7.dist-info/licenses/LICENSE,sha256=RBhg5hIyHCQyj9Hd6pdx4QVzRdIfplLdnbuNB0fm2H4,1093
+hvh_maid_api-0.0.7.dist-info/RECORD,,
