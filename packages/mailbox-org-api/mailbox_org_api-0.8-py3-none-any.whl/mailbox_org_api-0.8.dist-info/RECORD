@@ -1,0 +1,9 @@
+mailbox_org_api/APIClient.py,sha256=y3t4aMYnV6iNPazE8--R3C7vIh28G_YeGA88FgvqM-0,35546
+mailbox_org_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/tests.py,sha256=KbFrCW9oROopFMbJwAdlwTYc9DCNuq7zaULxph-G8tk,385
+mailbox_org_api-0.8.dist-info/LICENSE,sha256=2GnD51B04jJyrxC5b0qRJ2l6isOuRfCVm5elQf4taL0,1073
+mailbox_org_api-0.8.dist-info/METADATA,sha256=s8g_wWGSIZnSrKQ46_fMS0-g0QjeMIeLFMXWEjym4tU,4420
+mailbox_org_api-0.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mailbox_org_api-0.8.dist-info/top_level.txt,sha256=PsxSA9F5B5Ycv1h6G5Xm7fmcnImi5UU2hoY-sTFLrwA,22
+mailbox_org_api-0.8.dist-info/RECORD,,
