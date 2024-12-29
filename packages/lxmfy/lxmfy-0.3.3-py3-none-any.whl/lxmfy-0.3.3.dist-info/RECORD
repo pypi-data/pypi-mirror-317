@@ -1,0 +1,13 @@
+lxmfy/__init__.py,sha256=O7CORHMhBc4W8RmAj0C2XempVcz0qX4Du_JKzJYK9Lk,516
+lxmfy/cli.py,sha256=wFbWO3WTMfRnV4j0PtJbad3oarKp10pPIlCTf_l1u1k,6592
+lxmfy/cogs_core.py,sha256=y0WZlHhRBYqpMKoJHnuZ5NCxHu91uQv9xJiKHZosFtg,1897
+lxmfy/commands.py,sha256=DdQGfCG-UVK_aZI9jWofxkWcy1ztDHTG6_hCy2AZzyQ,3185
+lxmfy/core.py,sha256=Co_9f30QEKSN8e26BuITJdbmWkwCIxGfNGvtwNJzpRs,11074
+lxmfy/moderation.py,sha256=QG-VG1HEidKvsObHM5Qnam96ALl52nq8hTNZg-DPNyI,4503
+lxmfy/storage.py,sha256=EmgKOaTauhUzeSKFynCIfzfLq4YZ9_Tu0GNw1tlCmV4,3083
+lxmfy/transport.py,sha256=h02NS8wuuxTq_WKZDn55ndCWxOF2X7ZKlEnKAjAAfCc,3336
+lxmfy-0.3.3.dist-info/LICENSE.md,sha256=f3cfjz6C450aGb6gDBpN6pZO0YbI_XqotL4RwW-WOWk,1077
+lxmfy-0.3.3.dist-info/METADATA,sha256=Dg5PcCv2YfsnVpUnSGDVhtdx22PrqNHEJD-hLnog41o,2571
+lxmfy-0.3.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+lxmfy-0.3.3.dist-info/entry_points.txt,sha256=VBG01N_Wz7bI95o0RMyH12YEGyskXJM2JOnzpY8K2i4,40
+lxmfy-0.3.3.dist-info/RECORD,,
