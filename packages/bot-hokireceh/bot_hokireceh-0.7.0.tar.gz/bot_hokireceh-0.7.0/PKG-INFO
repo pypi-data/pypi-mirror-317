@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: bot-hokireceh
+Version: 0.7.0
+Summary: Bot Telegram untuk komunitas Hoki Receh
+Home-page: https://codeberg.org/pemulungrupiah/bot-hokireceh
+Author: HokiReceh
+Author-email: ads.hokireceh@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-telegram-bot==21.6
+Requires-Dist: aiohttp==3.10.0
+Requires-Dist: python-dotenv==0.21.0
+Requires-Dist: requests==2.26.0
+
+# Bot Hoki Receh
+
+**Bot Hoki Receh** adalah pustaka Python yang dibuat khusus untuk mengelola bot Telegram komunitas Hoki Receh. Dengan bot ini, Anda dapat memudahkan administrasi grup, memberikan informasi secara otomatis, dan menciptakan pengalaman lebih interaktif bagi para anggota.
+
+## Fitur Utama
+- **Integrasi Telegram**: Memanfaatkan pustaka `python-telegram-bot` untuk komunikasi dengan pengguna.
+- **Mudah Digunakan**: Dirancang agar mudah dipasang dan digunakan oleh semua anggota komunitas.
+- **Dukungan Lengkap untuk Environment Variables**: Konfigurasi bot lebih mudah dengan `python-dotenv` untuk pengaturan environment.
+- **Automatisasi Tugas**: Menyediakan berbagai fitur otomatis untuk grup, seperti mengirim pesan atau memonitor aktivitas grup.
+
+## Instalasi
+Untuk menginstal **Bot Hoki Receh**, cukup jalankan perintah berikut di terminal atau command prompt Anda:
+
+```bash
+pip install bot-hokireceh
