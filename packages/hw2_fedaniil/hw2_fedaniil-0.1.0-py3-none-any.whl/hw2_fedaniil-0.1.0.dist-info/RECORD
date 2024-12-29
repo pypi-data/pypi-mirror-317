@@ -1,0 +1,11 @@
+hw2_fedaniil/__about__.py,sha256=N8hLGP5_nR6j098niN7-U578yB55q7ViDFOB7d7pTXs,128
+hw2_fedaniil/__init__.py,sha256=LhCSNx2Me6997MlCorhTwCvNJ3cw_Le8sJliQWP_R9o,106
+hw2_fedaniil/article.py,sha256=gqx7D6BS96EyrwLVidJcZkoyteOs3b9umR73vGtdRnU,345
+hw2_fedaniil/image.py,sha256=1wBVqbN7TBsO8zp29u92E9BzDEw1JTLHbg0HoZjJrAA,228
+hw2_fedaniil/pdf.py,sha256=Se1QPPyyC36Q5ceAjO2N5X-G-RHh8YDG1CpJGCHg3No,380
+hw2_fedaniil/preamble.py,sha256=yaIqqsdb_tNsBRR65_dFYbJBDjtI8WkTuWBKvQv5aRQ,237
+hw2_fedaniil/table.py,sha256=CpEVTnrgrz4gFqjxpyAwFXE6h0H2i5h0ZSeSqxG3MMk,953
+hw2_fedaniil-0.1.0.dist-info/METADATA,sha256=debSG0WnfZUJNfmXJFjgI8EdYda5pEkNgUM5t1HdGwg,1264
+hw2_fedaniil-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hw2_fedaniil-0.1.0.dist-info/licenses/LICENSE.txt,sha256=x1RG7MBcjaqP_PM_8kO5Jkl2CCe4IiFnOIw4hSmHb7A,1098
+hw2_fedaniil-0.1.0.dist-info/RECORD,,
