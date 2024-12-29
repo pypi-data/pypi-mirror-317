@@ -1,0 +1,3 @@
+[console_scripts]
+source-outreach=source_outreach.run:run
+
