@@ -1,0 +1,14 @@
+codalpy/__init__.py,sha256=ERFgRugcBbLtkMou7hdHr2HaNmiJnW2Rl2zlJXQYsNM,44
+codalpy/codal.py,sha256=8doO990qC1Tl_Kk2R47WEVqZDyrzHWZmjAw2P56BCDQ,25849
+codalpy/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codalpy/utils/cols.py,sha256=oO0Ds1Dn3LNm9iRAjUvJHx-jRIazhqtPm8txLrY4Wjw,2164
+codalpy/utils/dicts.py,sha256=XlWQubixmM_opCqPO5bEV7kzpytIsXi7m3O2S9r74fo,6734
+codalpy/utils/etf.py,sha256=dWEN78iJjQS-XhJx61tNrXVpbk978YxQBkAc5ntLjWo,3649
+codalpy/utils/gen_df.py,sha256=7ZHB7F7HP5EkpGff5jBPzpZM_SeiPEu0wH52fcOOjgw,3690
+codalpy/utils/http.py,sha256=ujQRkXx4Z5tRW70-VksU1e_tDNmE_AfQdBsC3ANfDIQ,877
+codalpy/utils/models.py,sha256=eoidKNh5pXdDTWHjS8zowkwMdg9WrgdaP_AozO4WDfM,2645
+codalpy/utils/utils.py,sha256=xqTxPgJY8Ob7ABblOqld3gwxI6UtWFChoN73LSGIPXY,1463
+codalpy-0.3.1.dist-info/LICENSE.txt,sha256=mpF6CWOk3j2PVP_FRF6yLSC-rrHz6VAI95qak_SDWvY,1071
+codalpy-0.3.1.dist-info/METADATA,sha256=3X0Tt9qEeHugrkaeIk05Z-cKBL0R0ZtN52QAdqbBEMA,20286
+codalpy-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+codalpy-0.3.1.dist-info/RECORD,,
