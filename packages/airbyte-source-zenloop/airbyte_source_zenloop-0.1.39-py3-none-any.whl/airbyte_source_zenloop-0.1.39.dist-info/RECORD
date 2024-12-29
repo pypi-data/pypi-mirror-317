@@ -1,0 +1,11 @@
+source_zenloop/__init__.py,sha256=y1pKI-5aRHw7UaB2sEZq326-8To0NLfq1R0fdfxXtis,126
+source_zenloop/components.py,sha256=gk8ZJ8F_UqhNjSAdEKoEkrVbpZ0cwXnNMz6wmQ0kYz0,1175
+source_zenloop/manifest.yaml,sha256=UkyHO2iFXg0AYIwbzM-DWayTObKncc4DwDK8Q6pmsBQ,14462
+source_zenloop/run.py,sha256=JeekMAad6yrreQooFqDjmqhvbz7Z_vHgq6mJTTJZLNY,233
+source_zenloop/source.py,sha256=bwUrTf2UoBakTMUNJLNFERDApagu4aG5uqPI4_bTTP0,469
+source_zenloop/spec.json,sha256=id_Oxqhj_eKOlTQgIddazf1DYhaXUSF1ESdhxSnopP0,1278
+source_zenloop/streams.py,sha256=0-lu3DGIHTKxj33NCprd7X2dvEziKuiSnq51Rxb4E54,8925
+airbyte_source_zenloop-0.1.39.dist-info/METADATA,sha256=MXt_NTFnAUId8L64ZHIBd384l7sM4U342GgtLSro2x4,5232
+airbyte_source_zenloop-0.1.39.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+airbyte_source_zenloop-0.1.39.dist-info/entry_points.txt,sha256=PiZMMdbDYSxVKwAjtooZ2Qv3MzXEyZbvVVR7ZWQV1DM,57
+airbyte_source_zenloop-0.1.39.dist-info/RECORD,,
