@@ -1,0 +1,88 @@
+[project]
+name = "ritify"
+version = "1.0.2"
+description = "A rich console for Python"
+authors = [
+    { name = "Alex Graham", email = "destgraham@icloud.com" },
+]
+dependencies = [
+    "pygments>=2.18.0",
+    "markdown-it-py>=3.0.0",
+    "wcwidth>=0.2.13",
+    "emoji>=2.14.0",
+]
+requires-python = ">=3.13"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E4",
+    "E7",
+    "E9",
+    "F",
+]
+ignore = []
+fixable = [
+    "ALL",
+]
+unfixable = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+
+[tool.pylint.basic]
+module-naming-style = "snake_case"
+class-naming-style = "PascalCase"
+class-const-naming-style = "PascalCase"
+method-naming-style = "snake_case"
+function-naming-style = "snake_case"
+variable-naming-style = "snake_case"
+good-names = [
+    "_",
+    "f",
+    "i",
+    "j",
+    "k",
+]
+
+[tool.pylint.design]
+max-parents = 15
+max-attr = 40
+max-locals = 50
+max-args = 100
+max-branches = 150
+max-statements = 150
+max-returns = 150
+max-public-methods = 500
+
+[tool.pylint."messages control"]
+disable = [
+    "redefined-builtin",
+    "line-too-long",
+    "missing-class-docstring",
+    "missing-module-docstring",
+    "missing-function-docstring",
+]
