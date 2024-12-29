@@ -1,0 +1,6 @@
+mbapy>=0.10.4
+pygame
+nicegui
+openbabel-wheel
+networkx>=3
+DuIvyTools>=0.6.0
