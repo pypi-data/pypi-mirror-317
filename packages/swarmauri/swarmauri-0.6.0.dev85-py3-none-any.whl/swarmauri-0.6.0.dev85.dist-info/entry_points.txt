@@ -1,0 +1,3 @@
+[console_scripts]
+swarmauri-cli=swarmauri.cli:main
+
