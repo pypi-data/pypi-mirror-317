@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-09-19">
+
+<title>jax-smfsb: A python library for stochastic systems biology modelling and inference</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="paper_files/libs/clipboard/clipboard.min.js"></script>
+<script src="paper_files/libs/quarto-html/quarto.js"></script>
+<script src="paper_files/libs/quarto-html/popper.min.js"></script>
+<script src="paper_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="paper_files/libs/quarto-html/anchor.min.js"></script>
+<link href="paper_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="paper_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="paper_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="paper_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="paper_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">jax-smfsb: A python library for stochastic systems biology modelling and inference</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    Darren J. Wilkinson 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            1
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 19, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>Many biological processes, and especially molecular biochemical processes, exhibit non-trivial stochasticity in their dynamical behaviour <span class="citation" data-cites="Wilkinson2009">(<a href="#ref-Wilkinson2009" role="doc-biblioref">Wilkinson 2009</a>)</span>. The popular textbook <em>Stochastic modelling for systems biology, third edition</em> <span class="citation" data-cites="Wilkinson2018">(<a href="#ref-Wilkinson2018" role="doc-biblioref">Wilkinson 2018</a>)</span> describes the stochastic approach to modelling and simulation of biochemical processes, and how to do Bayesian inference for the parameters of such models using time course data <span class="citation" data-cites="Golightly2011">(<a href="#ref-Golightly2011" role="doc-biblioref">Golightly and Wilkinson 2011</a>)</span>. <code>jax-smfsb</code> provides a fast and efficient implementation of all of the algorithms described in <span class="citation" data-cites="Wilkinson2018">Wilkinson (<a href="#ref-Wilkinson2018" role="doc-biblioref">2018</a>)</span>, able to effectively exploit multiple cores and GPUs, leading to performance suitable for the analysis of non-trivial research problems.</p>
+</section>
+<section id="statement-of-need" class="level1">
+<h1>Statement of Need</h1>
+<p>Although there exist many tools for modelling biological network dynamics using deterministic approaches, typically based on ordinary differential equations (ODEs), there are relatively few flexible software libraries for modelling and simulation of stochastic biochemical networks, although <em>libRoadRunner</em> <span class="citation" data-cites="Welsh2022">(<a href="#ref-Welsh2022" role="doc-biblioref">Welsh et al. 2022</a>)</span> and <em>SBSCL</em> <span class="citation" data-cites="Panch2021">(<a href="#ref-Panch2021" role="doc-biblioref">Panchiwala et al. 2021</a>)</span> are notable examples. There are even fewer libraries for principled (fully Bayesian) inference for the parameters of such networks using data.</p>
+<p>In addition to describing the mathematical framework for stochastic modelling, simulation, and inference, <span class="citation" data-cites="Wilkinson2018">Wilkinson (<a href="#ref-Wilkinson2018" role="doc-biblioref">2018</a>)</span> also describes a software implementation of all of the algorithms. The language chosen to illustrate the implementation was R <span class="citation" data-cites="R">(<a href="#ref-R" role="doc-biblioref">R Core Team 2024</a>)</span>, and the library is available as the package <code>smfsb</code> <span class="citation" data-cites="Wilkinson2024">(<a href="#ref-Wilkinson2024" role="doc-biblioref">Wilkinson 2024</a>)</span>. While this library is of significant pedagogical value, the overheads of dynamic interpreted languages such as R make it unsuitable for the development of high-performance codes needed for non-trivial research problems. An implementation in the compiled strongly-typed functional language Scala <span class="citation" data-cites="Odersky2004">(<a href="#ref-Odersky2004" role="doc-biblioref">Odersky et al. 2004</a>)</span>, <code>scala-smfsb</code> <span class="citation" data-cites="Wilkinson2019">(<a href="#ref-Wilkinson2019" role="doc-biblioref">Wilkinson 2019</a>)</span> partially addresses this issue, but the lack of systems biology students and researchers familiar with Scala has limited the impact of this library. More recently, a Python <span class="citation" data-cites="Python">(<a href="#ref-Python" role="doc-biblioref">Van Rossum and Drake 2009</a>)</span> port of the library, <code>python-smfsb</code> <span class="citation" data-cites="Wilkinson2023">(<a href="#ref-Wilkinson2023" role="doc-biblioref">Wilkinson 2023</a>)</span> has been developed, utilising the Python libraries <code>numpy</code> <span class="citation" data-cites="NumPy">(<a href="#ref-NumPy" role="doc-biblioref">Harris et al. 2020</a>)</span> and <code>scipy</code> <span class="citation" data-cites="SciPy">(<a href="#ref-SciPy" role="doc-biblioref">Virtanen et al. 2020</a>)</span>. This is of significant pedagogical value, since Python has become a more popular programming language for systems biology modelling than R. Nevertheless, the performance of this library is similar to that of the R library, inadequate for serious research problems.</p>
+<p><code>jax-smfsb</code> addresses all of the limitations of the previously described implementations. It is essentially a port of <code>python-smfsb</code> with <code>numpy</code> and <code>scipy</code> replaced by JAX <span class="citation" data-cites="JAX">(<a href="#ref-JAX" role="doc-biblioref">Bradbury et al. 2018</a>)</span>. JAX is a state-of-the-art high-performance machine learning framework that turns out to be well-suited to a range of problems in numerical, scientific and statistical computing. JAX is effectively a functional language for differentiable array processing embedded in Python, allowing just-in-time compilation and execution on modern hardware with state-of-the-art performance. In addition to a large number of machine learning libraries based on JAX, a growing ecosystem of libraries for scientific computing is developing; see, for example, <code>diffrax</code> <span class="citation" data-cites="Kidger2021">(<a href="#ref-Kidger2021" role="doc-biblioref">Kidger 2021</a>)</span>, JAX-MD <span class="citation" data-cites="Schoenholz2021">(<a href="#ref-Schoenholz2021" role="doc-biblioref">Schoenholz and Cubuk 2021</a>)</span>, and JAX-Fluids <span class="citation" data-cites="Bezgin2023">(<a href="#ref-Bezgin2023" role="doc-biblioref">Bezgin, Buhendwa, and Adams 2023</a>)</span>. <code>jax-smfsb</code> adds to this ecosystem by providing tools for modelling, simulation and Bayesian inference for stochastic (biochemical) network models.</p>
+</section>
+<section id="features" class="level1">
+<h1>Features</h1>
+<p>In addition to providing a small library of pre-defined models, and allowing direct specification of models as stochastic Petri nets using JAX arrays, <code>jax-smfsb</code> can also parse models encoded in the Systems Biology Markup Language (SBML) <span class="citation" data-cites="SBML">(<a href="#ref-SBML" role="doc-biblioref">Keating et al. 2020</a>)</span> using <code>libSBML</code> <span class="citation" data-cites="Bornstein2008">(<a href="#ref-Bornstein2008" role="doc-biblioref">Bornstein et al. 2008</a>)</span>, in addition to those encoded using the SBML-shorthand notation used in <span class="citation" data-cites="Wilkinson2018">Wilkinson (<a href="#ref-Wilkinson2018" role="doc-biblioref">2018</a>)</span>. Exact and approximate stochastic simulation algorithms are provided for both the well-mixed and spatial (reaction-diffusion) case. Exact and approximate Bayesian inference algorithms for parameter inference are provided based on ABC <span class="citation" data-cites="Marin2011">(<a href="#ref-Marin2011" role="doc-biblioref">Marin et al. 2011</a>)</span>, ABC-SMC <span class="citation" data-cites="Toni2008">(<a href="#ref-Toni2008" role="doc-biblioref">Toni et al. 2008</a>)</span> or particle MCMC <span class="citation" data-cites="Andrieu2010">(<a href="#ref-Andrieu2010" role="doc-biblioref">Andrieu, Doucet, and Holenstein 2010</a>)</span> approaches.</p>
+<p>Many demos are provided in the <code>demos</code> directory. These are direct equivalents to the demos provided in the <code>python-smfsb</code> library, so it is easy to compare the performance of the Python+JAX implementations to the more conventional Python+Numpy implementation. Precise timings are very hardware dependent, but on a high-specification machine, speed-ups of around two orders of magnitude for computationally intensive simulation or inference tasks can be expected.</p>
+</section>
+<section id="references" class="level1 unnumbered">
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Andrieu2010" class="csl-entry" role="doc-biblioentry">
+Andrieu, Christophe, Arnaud Doucet, and Roman Holenstein. 2010. <span>“Particle Markov Chain Monte Carlo Methods.”</span> <em>Journal of the Royal Statistical Society Series B: Statistical Methodology</em> 72 (3): 269–342. <a href="https://doi.org/10.1111/j.1467-9868.2009.00736.x">https://doi.org/10.1111/j.1467-9868.2009.00736.x</a>.
+</div>
+<div id="ref-Bezgin2023" class="csl-entry" role="doc-biblioentry">
+Bezgin, Deniz A., Aaron B. Buhendwa, and Nikolaus A. Adams. 2023. <span>“JAX-Fluids: A Fully-Differentiable High-Order Computational Fluid Dynamics Solver for Compressible Two-Phase Flows.”</span> <em>Computer Physics Communications</em> 282 (January): 108527. <a href="https://doi.org/10.1016/j.cpc.2022.108527">https://doi.org/10.1016/j.cpc.2022.108527</a>.
+</div>
+<div id="ref-Bornstein2008" class="csl-entry" role="doc-biblioentry">
+Bornstein, Benjamin J., Sarah M. Keating, Akiya Jouraku, and Michael Hucka. 2008. <span>“LibSBML: An API Library for SBML.”</span> <em>Bioinformatics</em> 24 (6): 880–81. <a href="https://doi.org/10.1093/bioinformatics/btn051">https://doi.org/10.1093/bioinformatics/btn051</a>.
+</div>
+<div id="ref-JAX" class="csl-entry" role="doc-biblioentry">
+Bradbury, James, Roy Frostig, Peter Hawkins, Matthew James Johnson, Chris Leary, Dougal Maclaurin, George Necula, et al. 2018. <em><span>JAX</span>: Composable Transformations of <span>P</span>ython+<span>N</span>um<span>P</span>y Programs</em> (version 0.3.13). <a href="http://github.com/google/jax">http://github.com/google/jax</a>.
+</div>
+<div id="ref-Golightly2011" class="csl-entry" role="doc-biblioentry">
+Golightly, Andrew, and Darren J. Wilkinson. 2011. <span>“Bayesian Parameter Inference for Stochastic Biochemical Network Models Using Particle Markov Chain Monte Carlo.”</span> <em>Interface Focus</em> 1 (6): 807–20. <a href="https://doi.org/10.1098/rsfs.2011.0047">https://doi.org/10.1098/rsfs.2011.0047</a>.
+</div>
+<div id="ref-NumPy" class="csl-entry" role="doc-biblioentry">
+Harris, Charles R., K. Jarrod Millman, Stéfan J. van der Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, et al. 2020. <span>“Array Programming with <span>NumPy</span>.”</span> <em>Nature</em> 585 (7825): 357–62. <a href="https://doi.org/10.1038/s41586-020-2649-2">https://doi.org/10.1038/s41586-020-2649-2</a>.
+</div>
+<div id="ref-SBML" class="csl-entry" role="doc-biblioentry">
+Keating, Sarah M, Dagmar Waltemath, Matthias König, Fengkai Zhang, Andreas Dräger, Claudine Chaouiya, Frank T Bergmann, et al. 2020. <span>“SBML Level 3: An Extensible Format for the Exchange and Reuse of Biological Models.”</span> <em>Molecular Systems Biology</em> 16 (8). <a href="https://doi.org/10.15252/msb.20199110">https://doi.org/10.15252/msb.20199110</a>.
+</div>
+<div id="ref-Kidger2021" class="csl-entry" role="doc-biblioentry">
+Kidger, Patrick. 2021. <span>“<span>O</span>n <span>N</span>eural <span>D</span>ifferential <span>E</span>quations.”</span> PhD thesis, University of Oxford.
+</div>
+<div id="ref-Marin2011" class="csl-entry" role="doc-biblioentry">
+Marin, Jean-Michel, Pierre Pudlo, Christian P. Robert, and Robin J. Ryder. 2011. <span>“Approximate Bayesian Computational Methods.”</span> <em>Statistics and Computing</em> 22 (6): 1167–80. <a href="https://doi.org/10.1007/s11222-011-9288-2">https://doi.org/10.1007/s11222-011-9288-2</a>.
+</div>
+<div id="ref-Odersky2004" class="csl-entry" role="doc-biblioentry">
+Odersky, Martin, Philippe Altherr, Vincent Cremet, Burak Emir, Sebastian Maneth, Stéphane Micheloud, Nikolay Mihaylov, Michel Schinz, Erik Stenman, and Matthias Zenger. 2004. <span>“An Overview of the Scala Programming Language.”</span>
+</div>
+<div id="ref-Panch2021" class="csl-entry" role="doc-biblioentry">
+Panchiwala, Hemil, Shalin Shah, Hannes Planatscher, Mykola Zakharchuk, Matthias König, and Andreas Dräger. 2021. <span>“The Systems Biology Simulation Core Library.”</span> Edited by Jinbo Xu. <em>Bioinformatics</em> 38 (3): 864–65. <a href="https://doi.org/10.1093/bioinformatics/btab669">https://doi.org/10.1093/bioinformatics/btab669</a>.
+</div>
+<div id="ref-R" class="csl-entry" role="doc-biblioentry">
+R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-Schoenholz2021" class="csl-entry" role="doc-biblioentry">
+Schoenholz, Samuel S, and Ekin D Cubuk. 2021. <span>“JAX-MD: A Framework for Differentiable Physics.”</span> <em>Journal of Statistical Mechanics: Theory and Experiment</em> 2021 (12): 124016. <a href="https://doi.org/10.1088/1742-5468/ac3ae9">https://doi.org/10.1088/1742-5468/ac3ae9</a>.
+</div>
+<div id="ref-Toni2008" class="csl-entry" role="doc-biblioentry">
+Toni, Tina, David Welch, Natalja Strelkowa, Andreas Ipsen, and Michael P. H Stumpf. 2008. <span>“Approximate Bayesian Computation Scheme for Parameter Inference and Model Selection in Dynamical Systems.”</span> <em>Journal of The Royal Society Interface</em> 6 (31): 187–202. <a href="https://doi.org/10.1098/rsif.2008.0172">https://doi.org/10.1098/rsif.2008.0172</a>.
+</div>
+<div id="ref-Python" class="csl-entry" role="doc-biblioentry">
+Van Rossum, Guido, and Fred L. Drake. 2009. <em>Python 3 Reference Manual</em>. Scotts Valley, CA: CreateSpace.
+</div>
+<div id="ref-SciPy" class="csl-entry" role="doc-biblioentry">
+Virtanen, Pauli, Ralf Gommers, Travis E. Oliphant, Matt Haberland, Tyler Reddy, David Cournapeau, Evgeni Burovski, et al. 2020. <span>“<span class="nocase"><span>SciPy</span> 1.0: Fundamental Algorithms for Scientific Computing in Python</span>.”</span> <em>Nature Methods</em> 17: 261–72. <a href="https://doi.org/10.1038/s41592-019-0686-2">https://doi.org/10.1038/s41592-019-0686-2</a>.
+</div>
+<div id="ref-Welsh2022" class="csl-entry" role="doc-biblioentry">
+Welsh, Ciaran, Jin Xu, Lucian Smith, Matthias König, Kiri Choi, and Herbert M Sauro. 2022. <span>“libRoadRunner 2.0: A High Performance SBML Simulation and Analysis Library.”</span> Edited by Pier Luigi Martelli. <em>Bioinformatics</em> 39 (1). <a href="https://doi.org/10.1093/bioinformatics/btac770">https://doi.org/10.1093/bioinformatics/btac770</a>.
+</div>
+<div id="ref-Wilkinson2009" class="csl-entry" role="doc-biblioentry">
+Wilkinson, Darren J. 2009. <span>“Stochastic Modelling for Quantitative Description of Heterogeneous Biological Systems.”</span> <em>Nature Reviews Genetics</em> 10 (2): 122–33. <a href="https://doi.org/10.1038/nrg2509">https://doi.org/10.1038/nrg2509</a>.
+</div>
+<div id="ref-Wilkinson2018" class="csl-entry" role="doc-biblioentry">
+———. 2018. <em>Stochastic Modelling for Systems Biology, Third Edition</em>. Chapman&amp; Hall/CRC Press.
+</div>
+<div id="ref-Wilkinson2019" class="csl-entry" role="doc-biblioentry">
+———. 2019. <span>“Scala-Smfsb.”</span> <em>GitHub Repository</em>. GitHub. <a href="https://github.com/darrenjw/scala-smfsb">https://github.com/darrenjw/scala-smfsb</a>.
+</div>
+<div id="ref-Wilkinson2023" class="csl-entry" role="doc-biblioentry">
+———. 2023. <span>“Python-Smfsb.”</span> <em>GitHub Repository</em>. GitHub. <a href="https://github.com/darrenjw/python-smfsb">https://github.com/darrenjw/python-smfsb</a>.
+</div>
+<div id="ref-Wilkinson2024" class="csl-entry" role="doc-biblioentry">
+———. 2024. <em>Smfsb: Stochastic Modelling for Systems Biology</em>. <a href="https://CRAN.R-project.org/package=smfsb">https://CRAN.R-project.org/package=smfsb</a>.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
