@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+img2csv/__init__.py
+img2csv/img2csv.py
+img2csv.egg-info/PKG-INFO
+img2csv.egg-info/SOURCES.txt
+img2csv.egg-info/dependency_links.txt
+img2csv.egg-info/entry_points.txt
+img2csv.egg-info/requires.txt
+img2csv.egg-info/top_level.txt
