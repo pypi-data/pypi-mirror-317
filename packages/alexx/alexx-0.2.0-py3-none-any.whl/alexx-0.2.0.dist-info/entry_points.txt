@@ -1,0 +1,2 @@
+[console_scripts]
+alexx = hello_world.main:main
