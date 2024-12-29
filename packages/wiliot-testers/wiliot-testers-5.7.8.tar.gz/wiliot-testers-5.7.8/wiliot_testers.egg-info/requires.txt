@@ -1,0 +1,15 @@
+setuptools_scm
+pyserial
+yoctopuce
+pandas
+numpy<2
+pyqtgraph
+matplotlib
+PyQt5-sip
+PyQt5
+pygubu>=0.35.1
+appdirs
+pillow
+wiliot-api>=4.10.2
+wiliot-core>=5.8.3
+wiliot-tools>=4.8.1
