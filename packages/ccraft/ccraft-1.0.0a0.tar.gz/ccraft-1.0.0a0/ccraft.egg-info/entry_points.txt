@@ -1,0 +1,2 @@
+[console_scripts]
+ccraft = ccraft.__main__:launch
