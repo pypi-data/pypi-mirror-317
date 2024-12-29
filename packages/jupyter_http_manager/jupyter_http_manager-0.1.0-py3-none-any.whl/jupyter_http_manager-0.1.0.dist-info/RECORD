@@ -1,0 +1,13 @@
+jupyter_http_manager/__init__.py,sha256=SCBuNYMLxwn9As0ys82HH-fVRyvdRS0dzYncZZvM3ys,45
+jupyter_http_manager/main.py,sha256=PMCgm0FMUdOPQzfnShDMiqCNjvixwxS6ojs0kyC11ko,4660
+jupyter_http_manager/plugin.py,sha256=NROOYj55RnZfYmlNSyLGwxlbCHiK4EI76W6T2AOqjt8,4334
+jupyter_http_manager/schema.py,sha256=P-sHDOnM6mld0linzmwbsUhDnMuTFRLzSgZ0dtk1uTo,2198
+jupyter_http_manager/webapi/dependencies.py,sha256=U-SWi2RANIEiF7msrehd-HwoC3pD3Hzi398mKNnqwks,314
+jupyter_http_manager/webapi/lifespan.py,sha256=hQLjqyHXvfdnPOb468adxl8lSvdtrzZZAg3SeMnCmnM,585
+jupyter_http_manager/webapi/main.py,sha256=2IqXIZLVMFRpJwlSnl3V8fieyv4qkQx7OF5edHoZhds,8108
+jupyter_http_manager/webapi/schema.py,sha256=ERFhTQuCxdcoP_a3OcH06EMni0TAr3evpjYrcwSSylc,340
+jupyter_http_manager/webapi/state.py,sha256=BWfgmppHLcdhHyoNUIvX93Na_XKs_JQTE6t3oDf4bxs,907
+jupyter_http_manager-0.1.0.dist-info/METADATA,sha256=UFr_uQzGn2tm31ZRgJSsfnavJGoaNhUiEMEbvhshhjI,3299
+jupyter_http_manager-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+jupyter_http_manager-0.1.0.dist-info/entry_points.txt,sha256=kfu-DoCLNIePuSLA6HYJ9SsZf2Br1LA7Rjyq71PwJz8,72
+jupyter_http_manager-0.1.0.dist-info/RECORD,,

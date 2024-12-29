@@ -1,0 +1,3 @@
+[console_scripts]
+jupyter-manager=jupyter_http_manager.webapi.main:cli
+
