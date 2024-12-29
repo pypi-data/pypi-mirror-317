@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cad-pyrx
+Version: 2.1.6
+Summary: Python ObjectArx Wrappers
+Home-page: https://github.com/CEXT-Dan/PyRx
+Author: PyRx Dev Team
+Author-email: daniel@cadext.com
+License: LGPLV3
+Keywords: AutoCAD,BricsCAD,GStarCAD,ZwCAD,CAD,PYTHON,Wrappers,ARX
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12.0,<3.13.0
+License-File: LICENSE.txt
+Requires-Dist: wxPython>=4.2.2
+Requires-Dist: debugpy>=1.8.0
+Requires-Dist: pywin32
