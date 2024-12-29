@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+perceptive_crop_image/__init__.py
+perceptive_crop_image/crop.py
+perceptive_crop_image.egg-info/PKG-INFO
+perceptive_crop_image.egg-info/SOURCES.txt
+perceptive_crop_image.egg-info/dependency_links.txt
+perceptive_crop_image.egg-info/requires.txt
+perceptive_crop_image.egg-info/top_level.txt
