@@ -1,0 +1,2 @@
+[console_scripts]
+srun-swpu-cli = srun_swpu_cli.cli:main

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/srun_swpu_cli.egg-info/PKG-INFO
+src/srun_swpu_cli.egg-info/SOURCES.txt
+src/srun_swpu_cli.egg-info/dependency_links.txt
+src/srun_swpu_cli.egg-info/entry_points.txt
+src/srun_swpu_cli.egg-info/requires.txt
+src/srun_swpu_cli.egg-info/top_level.txt
