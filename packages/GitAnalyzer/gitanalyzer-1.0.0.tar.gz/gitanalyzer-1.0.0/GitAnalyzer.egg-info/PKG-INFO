@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: GitAnalyzer
+Version: 1.0.0
+Summary: A toolkit for Mining Software Repositories (MSR)
+Home-page: https://github.com/codingwithshawnyt/GitAnalyzer
+Author: Shawn Ray
+Author-email: shawnray5699@gmail.com
+License: Apache License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >=3.5
+License-File: LICENSE
+Requires-Dist: types-pytz
+Requires-Dist: gitpython
+Requires-Dist: pytz
+Requires-Dist: lizard
+
+GitAnalyzer is a versatile Python toolkit for analyzing Git repositories. It simplifies the process of extracting data such as commits, contributors, file changes, diffs, and source code, and supports exporting data to CSV format.
