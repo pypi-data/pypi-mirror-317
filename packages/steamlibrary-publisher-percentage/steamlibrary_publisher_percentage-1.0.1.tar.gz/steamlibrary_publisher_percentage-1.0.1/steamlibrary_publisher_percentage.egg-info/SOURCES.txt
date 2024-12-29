@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+steam-exporter.py
+steamlibrary_publisher_percentage.egg-info/PKG-INFO
+steamlibrary_publisher_percentage.egg-info/SOURCES.txt
+steamlibrary_publisher_percentage.egg-info/dependency_links.txt
+steamlibrary_publisher_percentage.egg-info/requires.txt
+steamlibrary_publisher_percentage.egg-info/top_level.txt
