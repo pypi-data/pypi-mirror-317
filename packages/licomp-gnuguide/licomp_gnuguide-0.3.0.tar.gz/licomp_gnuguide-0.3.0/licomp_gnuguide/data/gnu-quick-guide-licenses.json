@@ -1,0 +1,89 @@
+{
+  "meta": {},
+  "licenses": {
+    "Zlib": {
+      "allowed": [
+        "LGPL-2.1-only",
+        "LGPL-2.1-or-later",
+        "LGPL-3.0-only"
+      ]
+    },
+    "MIT": {
+      "allowed": [
+        "LGPL-2.1-only",
+        "LGPL-2.1-or-later",
+        "LGPL-3.0-only"
+      ]
+    },
+    "BSD-3-Clause": {
+      "allowed": [
+        "LGPL-2.1-only",
+        "LGPL-2.1-or-later",
+        "LGPL-3.0-only"
+      ]
+    },
+    "ISC": {
+      "allowed": [
+        "LGPL-2.1-only",
+        "LGPL-2.1-or-later",
+        "LGPL-3.0-only"
+      ]
+    },
+    "Public Domain": {
+      "allowed": [
+        "LGPL-2.1-only",
+        "LGPL-2.1-or-later",
+        "LGPL-3.0-only"
+      ]
+    },
+    "X11": {
+      "allowed": [
+        "LGPL-2.1-only",
+        "LGPL-2.1-or-later",
+        "LGPL-3.0-only"
+      ]
+    },
+    "LGPL-2.1-only": {
+      "allowed": [
+        "GPL-2.0-only",
+        "GPL-2.0-or-later",
+        "LGPL-3.0-only"
+      ]
+    },
+    "LGPL-2.1-or-later": {
+      "allowed": [
+        "GPL-2.0-only",
+        "GPL-2.0-or-later",
+        "LGPL-3.0-only",
+        "LGPL-3.0-or-later"
+      ]
+    },
+    "GPL-2.0-only": {
+      "allowed": [
+      ]
+    },
+    "GPL-2.0-or-later": {
+      "allowed": [
+        "GPL-3.0-only"
+      ]
+    },
+    "Xfree86-1.1": {
+      "allowed": [
+        "LGPL-3.0-only"
+      ]
+    },
+    "Apache-2.0": {
+      "allowed": [
+        "LGPL-3.0-only"
+      ]
+    },
+    "LGPL-3.0-only": {
+      "allowed": [
+        "GPL-3.0-only"
+      ]
+    },
+    "GPL-3.0-only": {
+      "allowed": []
+    }
+  }
+}

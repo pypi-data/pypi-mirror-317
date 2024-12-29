@@ -1,0 +1,2 @@
+[console_scripts]
+licomp-gnuguide = licomp_gnuguide.__main__:main

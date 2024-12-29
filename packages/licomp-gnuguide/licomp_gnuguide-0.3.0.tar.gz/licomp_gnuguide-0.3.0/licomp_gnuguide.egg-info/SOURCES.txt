@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+LICENSES/GPL-3.0-or-later.txt
+licomp_gnuguide/__main__.py
+licomp_gnuguide/config.py
+licomp_gnuguide/gnuguide.py
+licomp_gnuguide.egg-info/PKG-INFO
+licomp_gnuguide.egg-info/SOURCES.txt
+licomp_gnuguide.egg-info/dependency_links.txt
+licomp_gnuguide.egg-info/entry_points.txt
+licomp_gnuguide.egg-info/requires.txt
+licomp_gnuguide.egg-info/top_level.txt
+licomp_gnuguide/data/gnu-quick-guide-licenses.json
+tests/test_gnuiguide.py
