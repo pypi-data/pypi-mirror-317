@@ -1,0 +1,6 @@
+exrio-0.0.1.dist-info/METADATA,sha256=vtRuCeuuHAxoTeK9iyIQ7R3QjAh9x5G8QMHtwTxXZDg,788
+exrio-0.0.1.dist-info/WHEEL,sha256=sFdbHGm9NXNFyI0BaBbkkPzLWVGW8qMVSgLTFVmv4r0,123
+exrio/image.py,sha256=-t8v_B1cX4Jm3mVMppL7xDO9R3z-Hh8n4sggaDbrQ2c,3236
+exrio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+exrio/_rust.abi3.so,sha256=GnLbPkifxabdO2r0mRwxvf4u6JOMDz06DVoqBxN_CC0,2118648
+exrio-0.0.1.dist-info/RECORD,,
