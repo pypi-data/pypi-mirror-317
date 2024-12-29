@@ -1,0 +1,2 @@
+include src/sound_effects/*
+recursive-include src/sound_effects/*

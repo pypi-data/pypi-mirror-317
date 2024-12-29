@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ti-ding
+Version: 1.2.0
+Summary: A CLI tool to notify you with sound when a terminal process completes.
+Author: Anand Chourasia
+Author-email: anandchourasia007@gmail.com
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: playsound==1.2.2
+Requires-Dist: plyer
+
+# ti-ding
+Python package to notify when a process is finished in the terminal.
+
+
+## pip installation
+Installation: ``` pip install ti-ding ```  
+Usage: ``` notify <command> ```
+
+## download repo
+Build: ```python -m build```
+       ```pip install .```         
+Usage: ``` notify <command> ```
+
+## Next goals 
+Add support for mac and unix commands  
+Add option to use different audio files
