@@ -1,0 +1,1 @@
+from .fits_reader import FITSInfo
