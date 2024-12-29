@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: git-installer
+Version: 0.1.0
+Summary: Python library to detect and install Git across different platforms.
+Home-page: https://github.com/DominoPrusa/python-git-installer
+Author: Dominik Průša
+Author-email: domino@let.email
+License: MIT or WTFPL
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: requests
