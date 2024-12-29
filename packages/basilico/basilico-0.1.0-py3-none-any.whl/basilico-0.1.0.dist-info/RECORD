@@ -1,0 +1,12 @@
+basilico/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+basilico/alpine.py,sha256=CUMVMcxR4hFn7ndl3QU6IDbROAJjJD45TfZs34CGdkg,2481
+basilico/attributes.py,sha256=mHwqydmB9DnVdWMKUbVWlL9r16-xvp1XgLTfvCdOqO8,8537
+basilico/components.py,sha256=Il_gZt2FlDf9rD7AL6rTMVf0S9WDb7PdQURqCE4Y--k,1121
+basilico/elements.py,sha256=lhMxRfVDf104_Gj-XfyGC3P9uN6cQcOJWjpkZz5u6JU,14120
+basilico/htmx.py,sha256=x8Z1Fu_1jTx8MKgCv3Jg6iIu8VghKwQnOU1jQjcE3LY,3686
+basilico/node.py,sha256=QW5OVZlmFQhsIW6KqL3rVjN-H18EkcbUF9Ye7wuE8DY,240
+basilico/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+basilico-0.1.0.dist-info/METADATA,sha256=QStjL1crwfEcQXTQ8NBn1l8SyfwjmpH5NhjlB2K0eMo,3788
+basilico-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+basilico-0.1.0.dist-info/licenses/LICENSE.md,sha256=yiBibtKocpXUdOYBw73q503R3mY9nT0J0IhTJF1bV7A,1063
+basilico-0.1.0.dist-info/RECORD,,
