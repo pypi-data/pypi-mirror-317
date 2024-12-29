@@ -1,0 +1,11 @@
+fastapi_router_handler/__init__.py,sha256=kaKfAM9i5lETxajsyr8MIExrgcH-JClb7YEPnrV-P2U,370
+fastapi_router_handler/handlers/__init__.py,sha256=5pPzT1leuGuueO0m3wrMTAS5E19HPILQhO8vFJNKxNw,149
+fastapi_router_handler/handlers/async_handler.py,sha256=QjvYLhPZ1Kg6PkPQ1Q4iksaugtss9JfgdilShhRawKE,2631
+fastapi_router_handler/handlers/base.py,sha256=9YkTqio0ITuAb0Vr1G-XCFJZ5oLl3AXl0G143RmQXxk,763
+fastapi_router_handler/middleware/__init__.py,sha256=pXCLw82DwtQ3rP4x69JbG4Yt9lyunuT7HUUNCdhKrBc,89
+fastapi_router_handler/middleware/exception_middleware.py,sha256=zd9XZ9AGqAMHDDE1zurc6Ew4Wk5L6oFQBVG8oF67aoY,638
+fastapi_router_handler/types/__init__.py,sha256=92rJHDxBR4wyeI7ymgkGOZeMJuXh2ip48BtaGlLkrIA,135
+fastapi_router_handler/types/custom_types.py,sha256=rW5Fn5ZlMq7J-DAS8A78SHQtFj1Nx-z-p62pQOU8Buw,242
+fastapi_router_handler-0.1.0.dist-info/METADATA,sha256=XnPgYr64yeNM-WHUQVt7kJzkENNQTtx1fFFgdyN8TX0,2599
+fastapi_router_handler-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+fastapi_router_handler-0.1.0.dist-info/RECORD,,
