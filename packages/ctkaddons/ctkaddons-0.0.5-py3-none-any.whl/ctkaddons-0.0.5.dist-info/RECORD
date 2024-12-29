@@ -1,0 +1,10 @@
+ctkaddons/__init__.py,sha256=Vv2iHmGin9BYPez7qOHvTV7h0e__tjLMintwiCEAAwY,123
+ctkaddons/calender.py,sha256=qxTlUyjPnFpDxYZ2lkmv-M3a3KiQQgtZDDTpSpUC86A,4482
+ctkaddons/date_select.py,sha256=bkPbTSUq9MOnmwxJ3L1dYf1H9OM3NmKwObQZQUp-oxc,10111
+ctkaddons/side_pane/__init__.py,sha256=k1N0Vl18y85lpWCD1NybZG2zS1BYq61HkHvIhWGx05c,38
+ctkaddons/side_pane/side_panel.py,sha256=DXKSrjSm4hXzMwhKVjx3vV5Cfu5XS0vVS5x-P4g3yGs,2200
+ctkaddons/side_pane/side_panel_child.py,sha256=nVYf95vcAR0THHvyAkcRwznfVWzAtPklgNL05mEZdv8,4781
+ctkaddons-0.0.5.dist-info/METADATA,sha256=wisHGhGVBGTjJ6uIGlkiDZlYsOf9IFXmciuOrsHr3js,1211
+ctkaddons-0.0.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ctkaddons-0.0.5.dist-info/top_level.txt,sha256=LHYOvnum4XLajUWBjxp0Bu8fHOIAlhxFWBTBaCRDCsw,10
+ctkaddons-0.0.5.dist-info/RECORD,,
