@@ -1,0 +1,7 @@
+sysfunc/__init__.py,sha256=8TaEJVg_Kf3Wd0TrZ-0sEr7dx_uyPjQJCHjWBCdgUu0,55212
+sysfunc/pyarmor_runtime_000000/__init__.py,sha256=fMgJYhzPEphQrnMKeSN3UqVp-DCUxRCsykslUEmgtUc,103
+sysfunc/pyarmor_runtime_000000/pyarmor_runtime.pyd,sha256=i4Lx874YtvJr9U-2Q0atseV5BloPNs7i1nu5evVkjTE,638976
+sysfunc-0.8.dist-info/METADATA,sha256=UNVxR4vRNQrrVrEZ31Mt9vNUwKWwrNo_HukwRl_oIiA,304
+sysfunc-0.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+sysfunc-0.8.dist-info/top_level.txt,sha256=3gafu7NoNeGzVmahEXxag82-oEazaR9wEZFMC_FWjUk,8
+sysfunc-0.8.dist-info/RECORD,,
