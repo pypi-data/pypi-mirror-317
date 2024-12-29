@@ -1,0 +1,15 @@
+LICENSE,sha256=s0505OwhlttsArY30E2thhxp0mVmI_LN6JFl17MO2_g,1063
+mystbin/__init__.py,sha256=SrVVp6tnh4Kcxw-lvzq6Htqpl955Y5E0ZiIjhSldTWM,1567
+mystbin/client.py,sha256=ponQtsYD8L2Y1oZeC91c81RUItGrizvhY0MKF_Bd7xw,4869
+mystbin/errors.py,sha256=O9nrDBOFncFAwb9POLXEgN_xQ85cCSeRkTS73MwDycw,1750
+mystbin/http.py,sha256=np6_Op_5tOZbVzt6DEClDpXZdwVJC62TKY8BQI93ukY,10188
+mystbin/paste.py,sha256=14zurXMVdF5jzp2gYuEWvlEyjPaOKNOLDRwsfWPTHDY,5678
+mystbin/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mystbin/types/__init__.py,sha256=8gI3hZdBSDc0Wmy4Sl5OaQRRbdXmCYgZVIksOlIbkLU,1149
+mystbin/types/responses.py,sha256=uN6PpVopKO1I0ozrfFnui_GdvOAkPWcuVJ5UDW9RaD8,1663
+mystbin/utils.py,sha256=UfxSs8-9JwAXCaLIb5RcEhc7dnHXhlaVIIsum20soBY,1451
+mystbin_py-7.1.0.dist-info/METADATA,sha256=slW5Kd0mnZ-WxIsJ3JU8chn-e6w4bdKrMbUGqt1A_G0,4680
+mystbin_py-7.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+mystbin_py-7.1.0.dist-info/entry_points.txt,sha256=su77ylV1nV5CNeJeBQQgsexWuvfPGTCm-KV9qK8OJTA,74
+mystbin_py-7.1.0.dist-info/licenses/LICENSE,sha256=s0505OwhlttsArY30E2thhxp0mVmI_LN6JFl17MO2_g,1063
+mystbin_py-7.1.0.dist-info/RECORD,,
