@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: unprint
+Version: 0.0.12
+Summary: A simple package to unprint stuff in terminal
+Project-URL: Homepage, https://github.com/zlliu246/unprint
+Project-URL: Issues, https://github.com/zlliu246/unprint/issues
+Author-email: Liu Zuo Lin <zlliu246@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Unprint
+
+Unprint stuff in your terminal just by using unprint()
+
+```
+from unprint import unprint
+
+print('apple')
+
+print('this will be unprinted')
+print('this will also be unprinted')
+print('this too will be unprinted')
+
+unprint(3)
+# unprints 3 lines
+
+print('this will be below apple')
+```
+
+Unprinting with a delay
+
+```
+from unprint import unprint
+
+print('apple')
+
+print('this will be unprinted')
+print('this will also be unprinted')
+print('this too will be unprinted')
+
+unprint(3, delay=2)
+# unprints 3 lines after a delay of 2 seconds
+
+print('this will be after apple')
+```
