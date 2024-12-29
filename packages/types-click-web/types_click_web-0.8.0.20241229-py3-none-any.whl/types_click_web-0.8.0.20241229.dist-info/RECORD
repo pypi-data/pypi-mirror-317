@@ -1,0 +1,14 @@
+click_web-stubs/METADATA.toml,sha256=YXx2vRi1Mu_GSpi2W298CvguVMqMQn9Nul5Ixya68Gw,136
+click_web-stubs/__init__.pyi,sha256=vHpwtNRVfjgEtKKv2tI3y8fxXLL-8wMg-5GemaPcKts,467
+click_web-stubs/exceptions.pyi,sha256=tXpyQLAwBh74SrDfQXSjaZ_JQ95yUmgSQQJ3nx339gw,86
+click_web-stubs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+click_web-stubs/web_click_types.pyi,sha256=XFAk_BCSE_2wfiIzEo4ErJ9OFdPAZzG2r24QZyBlzgY,620
+click_web-stubs/resources/cmd_exec.pyi,sha256=PaTVWbkMGim6fmWE0TDVR1FsIV9XP9RIiph4W_cZePs,2851
+click_web-stubs/resources/cmd_form.pyi,sha256=PLQV9dCXbfvoBWgG-RqlaEzZ1GwTGkAmI1VyoAy8r_g,294
+click_web-stubs/resources/index.pyi,sha256=PB4z3cIVmExA8pxzHcyOr3_AzeV057CSNoTytiIokMk,191
+click_web-stubs/resources/input_fields.pyi,sha256=iSWojFlwa_9tfi6DeqpBqcXKSU9EQlCC8OXkMv9XS7k,1367
+types_click_web-0.8.0.20241229.dist-info/LICENSE,sha256=KV-FOMlK5cMEMwHPfP8chS2ranhqjd7kceBhtA1eyr4,12657
+types_click_web-0.8.0.20241229.dist-info/METADATA,sha256=bcanP--T22jpjTs8xXhw4LWXH5JedgXvUUatqENsr5A,1918
+types_click_web-0.8.0.20241229.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+types_click_web-0.8.0.20241229.dist-info/top_level.txt,sha256=I0qn-fUw8sMfjnqAaNo-nh6gV9Pr9eAaFCkOlwLoHCc,16
+types_click_web-0.8.0.20241229.dist-info/RECORD,,
