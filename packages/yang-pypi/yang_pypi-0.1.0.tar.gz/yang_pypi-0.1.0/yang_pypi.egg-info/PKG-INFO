@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: yang_pypi
+Version: 0.1.0
+Summary: 首次上传，测试
+Author: GuangZe
+Author-email: 2127617756@qq.com
+Description-Content-Type: text/markdown
+License-File: license_demo.py
+Requires-Dist: loguru
