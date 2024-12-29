@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: tulit
+Version: 0.0.5
+Summary: TULIT - The Universal Legal Informatics Toolkit, is set of legal informatics utilities collected in a Python package that focuses on the retrieval of legal data and metadata from official sources in the EU, and their transformation in pythonic data structures
+License: EUPL 1.2
+Author: AlessioNar
+Author-email: alessio.nardin@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: chardet (>=5.2.0,<6.0.0)
+Requires-Dist: coverage (>=7.6.9,<8.0.0)
+Requires-Dist: genbadge (>=1.1.1,<2.0.0)
+Requires-Dist: lxml (>=5.3.0,<6.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: pytest (>=8.3.3,<9.0.0)
+Requires-Dist: pytest-cov (>=6.0.0,<7.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: spacy (>=3.7.6,<4.0.0)
+Requires-Dist: sparqlwrapper (>=2.0.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# `tulit`, The Universal Legal Informatics Toolkit
+
+[![Publish Package to PyPI](https://github.com/AlessioNar/op_cellar/actions/workflows/publish.yml/badge.svg)](https://github.com/AlessioNar/op_cellar/actions/workflows/publish.yml)
+
+## 1. Introduction
+
+The `tulit` package provides utilities to work with legal data in a way that legal informatics practitioners can focus on addding value. 
+
+## 2. Getting started
+
+### 2.1 Installation
+
+To install the `tulit` package, you can use the following command:
+
+```bash
+pip install tulit
+```
+
+or using poetry:
+
+```bash
+poetry add tulit
+```
+
+### 2.2 Usage
+
+Full documentation is available at [https://tulit-docs.readthedocs.io/en/latest/index.html](https://tulit-docs.readthedocs.io/en/latest/index.html)
+
+## Acknowledgements
+
+The `tulit` package has been inspired by a series of previous packages and builds upon some of their architectures and workflows. We would like to acknowledge the following sources that have contributed to the ideation of the `tulit` package:
+
+* The [eu_corpus_compiler](https://github.com/seljaseppala/eu_corpus_compiler) repository by Selja Seppala concerning the methods used to query the CELLAR SPARQL API and WEB APIs
+* The implementation of the Akoma Ntoso parser made in the [SORTIS project repository](https://code.europa.eu/regulatory-reporting/sortis)
+
+* [EURLEX package by step 21](https://github.com/step21/eurlex)
+* [the eurlex package by kevin91nl](https://github.com/kevin91nl/eurlex/)
+* [the eurlex2lexparency package](https://github.com/Lexparency/eurlex2lexparency)
+* [the extraction_libraries by the Maastricht Law and Tech Lab](https://github.com/maastrichtlawtech/extraction_libraries)
+* [the closer library by the Maastricht Law and Tech Lab](https://github.com/maastrichtlawtech/closer)
+
+### Use of existing standards and structured formats
+
+* [LegalDocML (Akoma Ntoso)](https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=3425f20f-b704-4076-9fab-018dc7d3efbe)
+* [LegalHTML](https://art.uniroma2.it/legalhtml/)
+* [FORMEX](https://op.europa.eu/documents/3938058/5910419/formex_manual_on_screen_version.html)
+
+
