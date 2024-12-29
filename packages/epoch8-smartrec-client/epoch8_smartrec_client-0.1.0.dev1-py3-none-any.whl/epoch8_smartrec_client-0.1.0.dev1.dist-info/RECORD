@@ -1,0 +1,5 @@
+smartrec_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+smartrec_client/triton_client.py,sha256=1A6ziJuVXEC5GrAOmnRoIFnXo-t_OEzX2jKtYop6lng,5772
+epoch8_smartrec_client-0.1.0.dev1.dist-info/METADATA,sha256=aucMqZYBFTIpPTGch-9BJszE2BfJAkDLrxP1kq1PDUk,195
+epoch8_smartrec_client-0.1.0.dev1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+epoch8_smartrec_client-0.1.0.dev1.dist-info/RECORD,,
