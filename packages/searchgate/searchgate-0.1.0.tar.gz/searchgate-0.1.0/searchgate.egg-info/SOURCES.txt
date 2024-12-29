@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+searchgate.egg-info/PKG-INFO
+searchgate.egg-info/SOURCES.txt
+searchgate.egg-info/dependency_links.txt
+searchgate.egg-info/requires.txt
+searchgate.egg-info/top_level.txt

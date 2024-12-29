@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: searchgate
+Version: 0.1.0
+Summary: A simple package to perform searches using different search engines.
+Home-page: https://github.com/iridesc/searchgate
+Author: Irid
+Author-email: irid.zzy@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: bs4
+
+# SearchGate
