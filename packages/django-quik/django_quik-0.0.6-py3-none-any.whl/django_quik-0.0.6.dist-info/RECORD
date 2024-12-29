@@ -1,0 +1,11 @@
+django_quik/__init__.py,sha256=YyW4NZ8zRtqO6ZQFUEG7yw_VMFX9z38pjvJG6dwxn4w,398
+django_quik/cli.py,sha256=bcjMx-UOYmttMhV-L8APYcgdmRG5lKyAmWUJmoWP3Gw,4375
+django_quik/config.py,sha256=ejFXeWTPnDa0lAJLHPTklDyqLgHwvfSywuvaz1pBl-s,166
+django_quik/loader.py,sha256=D-fSQip5j2Jdp8pRHuj52lBA4dFYmU374Pix2r12efY,4865
+django_quik/server/__init__.py,sha256=dEpH9UoZ6ntgHBv9P7Z42_M_Gz0GSOr2ILgQ4HqRVOo,13552
+django_quik/server/http.py,sha256=kyKhefvkNHNLEsZGdI2LX4dvuxdxJ2xZI_L95TJqr2E,7328
+django_quik-0.0.6.dist-info/METADATA,sha256=PBLoQiNkDCZ06kerGDxobunKuAwv3BORQ4xiQ39xX9M,1632
+django_quik-0.0.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_quik-0.0.6.dist-info/entry_points.txt,sha256=-d-OpR3QGrGPi7hTmpCJc6b8CrqFkxnNXJJKvPMDS9w,59
+django_quik-0.0.6.dist-info/top_level.txt,sha256=uaA0z8defphoVI4TkvrKprAe_TSuntgpfGBu8K1LSWw,12
+django_quik-0.0.6.dist-info/RECORD,,
