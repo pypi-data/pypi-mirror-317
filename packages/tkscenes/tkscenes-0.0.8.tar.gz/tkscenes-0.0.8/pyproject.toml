@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tkscenes"
+version = "0.0.8"
+authors = [
+  { name="TonyLovesMusic", email="tony.tonylovescoding@example.com" },
+]
+description = "A package for TKinter and CustomTKinter"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/TonyLovesCoding/tkscenes"
+Issues = "https://github.com/TonyLovesCoding/tkscenes/issues"
