@@ -1,0 +1,153 @@
+Metadata-Version: 2.1
+Name: qtstrap
+Version: 0.7.1
+Summary: Like Bootstrap, but qt-er.
+Author-email: David Kincaid <daelonsuzuka@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2021 DaelonSuzuka
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/qtstrap/qtstrap
+Project-URL: Documentation, https://docs.qtstrap.dev
+Project-URL: Repository, https://github.com/qtstrap/qtstrap
+Project-URL: Issues, https://github.com/qtstrap/qtstrap/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Widget Sets
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: qtpy>=2.4.1
+Requires-Dist: appdirs>=1.4.4
+Requires-Dist: qtawesome>=1.3.1
+Requires-Dist: pydantic>=2.9.0
+Requires-Dist: pydantic-settings>=2.7.0
+
+# QtStrap: Qt application bootstrapping framework
+
+
+[![license](https://img.shields.io/pypi/l/qtstrap.svg)](./LICENSE)
+[![pypi version](https://img.shields.io/pypi/v/qtstrap.svg)](https://pypi.org/project/qtstrap/)
+[![PyPI status](https://img.shields.io/pypi/status/qtstrap.svg)](https://github.com/qtstrap/qtstrap)
+
+
+Qt is excellent, but it's also enormous. There's a lot of topics, and many of them have hidden gotchas. PySide2 and PyQt are also excellent, letting us leverage the powerful Qt libraries from up in the clouds in PythonLand, but this arrangement has its own gotchas. 
+
+The goal of qtstrap is get your applications up and running quickly, so you can focus on your problem instead of on Qt's idiosyncracies.
+
+# Features
+
+More complete docs are available [here](https://docs.qtstrap.dev).
+
+* `qtstrap` command line tool to bootstrap new projects
+* crossplatform makefile with useful development commands
+* preconfigured build system using PyInstaller and InnoSetup
+* custom Qt widgets with useful behaviors
+* Pythonic layout system using ContextLayouts
+* Some other stuff I haven't remembered yet
+
+# Quick start
+
+```sh
+$ mkdir test && cd test
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+$ python3 -m pip install qtstrap PySide6
+$ qtstrap init
+```
+
+The init script will prompt you to enter the name of your application and the name of its publisher(which is probably you), and then it will generate an application skeleton.
+
+You can test that everything installed properly by executing:
+```sh
+$ python3 app/main.py
+```
+If you see a window like this, then you're good to go:
+
+![screenshot](docs/screenshot1.png) 
+
+## Custom Widgets
+
+- `LabelEdit`
+- `HLine` and `VLine`
+- `LinkLabel`
+- Buttons:
+  - `StateButton`
+  - `IconToggleButton`
+  - `ConfirmToggleButton`
+  - `MenuButton`
+- Persistent Widgets (for rapid prototyping of saved data):
+  - `PersistentCheckableAction`
+  - `PersistentCheckBox`
+  - `PersistentComboBox`
+  - `PersistentLineEdit`
+  - `PersistentListWidget`
+  - `PersistentPlainTextEdit`
+  - `PersistentTabWidget`
+  - `PersistentTextEdit`
+  - `PersistentTreeWidget`
+
+## Utility Classes and Functions
+- `Adapter`
+- `TimeStamp`
+- `StringBuilder`
+- `call_later()`
+
+## decorators:
+- `@accepts_file_drops`
+- `@trace`
+- `@singleton`
+
+## context managers:
+- `Defer`
+- `SignalBlocker`
+
+## qtstrap.extras:
+  - `CommandPalette`, like VSCode or SublimeText
+  - Logging Subsystem: log to local database + log viewer widgets
+  - `CodeEditor`: Custom QTextEditor subclass customized for code editing
+
+
+# Dependencies
+
+* Python 3
+* PySide2/PySide6 or PyQt5/PyQt6
+* Make(optional, but recommended)
+
+# Installation
+
+```sh 
+pip install qtstrap
+```
+
+# Contributing
+
+Contributions are always welcome. Feel free to [open an issue](https://github.com/qtstrap/qtstrap/issues/new)
+or [start a new discussion](https://github.com/qtstrap/qtstrap/discussions/new) on our GitHub.
