@@ -1,0 +1,21 @@
+name: Action for running tests and linters
+description: 'Run tests and linters'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install uv
+      shell: bash
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+    - name: Run tests
+      shell: bash
+      run: |
+        uv run coverage run -m pytest -xv ./tests/test.py
+        uv run coverage report
+        uv run coverage html
+    - name: Linting
+      shell: bash
+      run: |
+        uv run ruff format --check src/
+        uv run ruff check src/
