@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+reloreta/__init__.py
+reloreta/core.py
+reloreta.egg-info/PKG-INFO
+reloreta.egg-info/SOURCES.txt
+reloreta.egg-info/dependency_links.txt
+reloreta.egg-info/requires.txt
+reloreta.egg-info/top_level.txt
