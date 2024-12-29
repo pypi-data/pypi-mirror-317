@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: CalculateAndPermutations16_qjarishekka
+Version: 1.1.4
+Summary: calculate a ecuation given as an array and calculate combinations permutations and factorial
+Author-email: Qjari Shekka <1032234412@pfur.ru>
+Project-URL: Homepage, https://https://github.com/qjarishekka/CalculateAndPermutations16t
+Project-URL: Issues, https://https://github.com/qjarishekka/CalculateAndPermutations16/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# README
+
+## CONTENTS OF THIS FILE
+
+* Introduction
+* Requirements
+* Installation
+* Configuration
+* Maintainers
+
+## INTRODUCTION
+
+* This library was made to easy calculate the result of a formula given as a string and calulate fatorial, 
+permutations and combinations. Module calc can solve ONLY BASIC MATEMATICS and solve them from left to right.
+
+## REQUIREMENTS
+
+* those modules only require python  3.12.X
+
+## INSTALLATION
+
+* Install as you would normally install a contributed Drupal module. Visit
+  https://www.drupal.org/documentation/install/modules-themes/modules-7 for
+  further information.
+
+
+## CONFIGURATION
+
+* The module has no menu or modifiable settings. There is no configuration.
+
+## MAINTAINERS
+
+* Qjari Shekka Calizaya Arce  https://pypi.org/user/qjari/
