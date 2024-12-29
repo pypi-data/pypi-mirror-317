@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: message-support
+Version: 0.1.1
+Summary: Python library for interacting with message.support's API.
+Home-page: https://message.support
+Author: Message.Support
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# Message Support API Library
+
+A Python library for interacting with the `message.support` API. Easily fetch leads filtered by category, country, domains, and exclusions.
+
+## Installation
+```bash
+pip install message-support
