@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: line-integral-convolutions
+Version: 1.0.0
+Summary: A script showcasing my implementation for computing line integral convolution.
+Author: Neco Kriel
+Author-email: neco.kriel@anu.edu.au
+License-File: LICENSE.md
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: numba
+Requires-Dist: scikit-image
