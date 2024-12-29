@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+alexx.egg-info/PKG-INFO
+alexx.egg-info/SOURCES.txt
+alexx.egg-info/dependency_links.txt
+alexx.egg-info/entry_points.txt
+alexx.egg-info/top_level.txt
+hello_world/__init__.py
+hello_world/main.py
