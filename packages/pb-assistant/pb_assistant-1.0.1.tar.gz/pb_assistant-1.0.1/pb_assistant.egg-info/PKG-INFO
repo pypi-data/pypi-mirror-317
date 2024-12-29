@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: pb-assistant
+Version: 1.0.1
+Summary: A Python library to answer questions based on given data and additional queries using Gemini.
+Home-page: https://github.com/FalconX80/pb_assistant
+Author: Priyanshu Bhatt
+Author-email: priyanshubhatt80@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# PB Assistant Library
+
+**Question Assistant** is a Python library that uses AI to answer user queries based on custom data or an external AI model when the data is insufficient. It also includes features for recognizing questions about the assistant's name and determining the relevance of a query to the provided data.
+
+---
+
+## Features
+
+- **Custom Query Answering**: Answers user queries using provided data or Gemini AI.
+- **Name Recognition**: Detects and responds to queries about the assistant's name.
+- **Data Relevance Check**: Identifies whether a query is related to the given data.
+- **Configurable Assistant**: Rename the assistant as needed.
+
+---
+
+## Installation
+
+Install the library via pip:
+
+```bash
+pip install pb-assistant
+```
+
+---
+
+## Usage
+
+### Import and Initialize the Assistant
+
+```python
+from pb_assistant import pbAssistant
+
+# Create an assistant instance with a default name
+assistant = pbAssistant(name="Assistant")
+```
+
+### Changing the Name
+
+```python
+assistant.change_name("Alexa")
+```
+
+### Running the Main Execution Loop
+
+```python
+assistant.main_execution(api_key="your_api_key", data="Your provided data here.")
+```
+
+### Example Usage
+
+```python
+from pb_assistant import pbAssistant
+
+# Initialize the assistant
+assistant = pbAssistant()
+
+# Optionally, rename the assistant
+assistant.change_name("Jarvis")
+
+# Run the assistant
+assistant.main_execution(api_key="your_api_key", data="Information about Python, AI, and Machine Learning.")
+```
+
+---
+
+## Requirements
+
+- Python 3.7 or higher
+- `google-generativeai` (installed automatically with the package)
+
+---
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m "Add your feature"`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
+
+For issues or feature requests, feel free to create an issue in the [GitHub repository](https://github.com/FalconX80/pb_assistant).
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## Author
+
+Priyanshu Bhatt  
+Feel free to reach out at [priyanshubhatt80@gmail.com](mailto:priyanshubhatt80@gmail.com).
+
+---
