@@ -1,0 +1,12 @@
+zvamz/__init__.py,sha256=lcxQFDzQrpo-WGKoVs0rcwd_ICGoRD-0Nt26g6GpNEQ,1837
+zvamz/api.py,sha256=wYEahDJDtgj4AJ5_TuQIO3aS1xKlKEv9ACYK6udyZ-M,113257
+zvamz/fc_address.py,sha256=Sm1J8wo5CPQXteicg-0hTmk9Nz8NqBFvzknp_6ppR-Q,232959
+zvamz/fcmap.py,sha256=lEby-Ww3hlZhf9lQyZo2V3_kerov1CaomgT-Lg9kSbs,33563
+zvamz/marketplaces.py,sha256=Z9cqUv6LHAlRs-7ce_DKIXhxBb9ZUNtaRk9QzBRAucs,4088
+zvamz/ratelimit.py,sha256=D1hdY4FHw4mXZ79rZly-FQWPlid12UWPwxWfFB_vxMA,2107
+zvamz/reports.py,sha256=VLNZl79DFqHyMv91hS2LgUStycovF8S05E6iclkuEtk,44422
+zvamz/spapi_daterange_reports.py,sha256=6HU7Z3m5LVDiC4WR4aN70SifoIWYgK8f5C1ePn2OFkE,12023
+zvamz/walmart_report.py,sha256=Mt2mczI0mUeWM1a641n-x-g_FErhzWGGcgD8EamY_IY,3499
+zvamz-0.0.40.dist-info/METADATA,sha256=17xqjwo-bEYI35Vyk00nvPhDGWo7x58w2JmGG-Ufido,896
+zvamz-0.0.40.dist-info/WHEEL,sha256=iAMR_6Qh95yyjYIwRxyjpiFq4FhDPemrEV-SyWIQB3U,92
+zvamz-0.0.40.dist-info/RECORD,,
