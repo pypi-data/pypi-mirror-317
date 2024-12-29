@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: rsv
+Version: 1.5.2
+Summary: A module for reading and writing an RSV document file.
+Home-page: https://github.com/romanin-rf/rsv
+Author: Romanin
+Author-email: semina054@gmail.com
+License: MIT
+Project-URL: Repository, https://github.com/romanin-rf/rsv
+Keywords: rsv,csv,io,file,format,dump,load,read,write
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+
+# rsv.py
+# Description
+A module for reading and writing an [RSV](https://github.com/Stenway/RSV-Challenge) document file.
+
+# Using
+```python
+import rsv
+
+sample_data = [
+    ["Name", "Description", None],
+    [],
+    [None, ":)"]
+]
+
+with open("document.rsv", "wb") as file:
+    rsv.dump(sample_data, file)
+
+# The first load method.
+# It is the most efficient and suitable for working even with large arrays.
+# Since it loads data from the file sequentially when loading.
+with open("document.rsv", "rb") as file:
+    data = rsv.load(file)
+
+# The second load method.
+# It is suitable for working with small arrays.
+# Since it loads the entire file into memory at once and only then parses it.
+with open("document.rsv", "rb") as file:
+    data = rsv.load_split(file)
+
+# The third load method.
+# This is the most efficient possible method suitable for working with any arrays of any size.
+# Loads the file line by line, the use of `for` is required.
+with open("document.rsv", "rb") as file:
+    lines = []
+    for line in file.load_generator():
+        # And here you can do whatever you want...
+        lines.append(line)
+```
+
+## Notes
+It is also worth noting that no one forbids you to use the `Encoder`/`Decoder` directly:
+```python
+import rsv
+
+rsv_encoder = rsv.Encoder(open("document.rsv", "wb"))
+rsv_decoder = rsv.Decoder(open("document.rsv", "rb"))
+```
