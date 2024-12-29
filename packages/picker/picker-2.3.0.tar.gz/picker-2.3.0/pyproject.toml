@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "picker"
+dynamic = ["version"]
+description = "A Django sports picker app"
+license = { file = "LICENSE" }
+readme = { file = "README.rst", content-type = "text/x-rst" }
+keywords = ["django", "sports", "football"]
+authors = [
+    { name = "David Krauth", email = "dakrauth@gmail.com" },
+]
+requires-python = ">=3.10"
+classifiers = [
+        "License :: OSI Approved :: MIT License",
+        "Environment :: Web Environment",
+        "Framework :: Django",
+        "Framework :: Django :: 4.2",
+        "Framework :: Django :: 5.0",
+        "Framework :: Django :: 5.1",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12"
+]
+
+dependencies = [
+    "Django>=4.2",
+    "django-bootstrap5",
+    "Pillow>=6.2.1",
+    "python-dateutil>=2.8.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/dakrauth/django-picker"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "coverage",
+    "pytest-django",
+    "pytest-cov",
+    "freezegun"
+]
+dev = [
+    "tox",
+    "build",
+    "ipython",
+    "twine",
+    "ruff",
+    "ipdb",
+    "django-extensions",
+    "pytest-sugar",
+    "pytest-clarity"
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "picker.__init__.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["picker*"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+cache-dir = ".dev/ruff"
+line-length = 100
+indent-width = 4
+
+[tool.ruff.lint]
+ignore = ["E741"]
