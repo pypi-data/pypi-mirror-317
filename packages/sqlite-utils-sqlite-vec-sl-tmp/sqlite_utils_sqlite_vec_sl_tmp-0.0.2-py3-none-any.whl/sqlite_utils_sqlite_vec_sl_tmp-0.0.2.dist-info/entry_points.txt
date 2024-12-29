@@ -1,0 +1,3 @@
+[sqlite_utils]
+sqlite_vec_sl_tmp = sqlite_utils_sqlite_vec_sl_tmp
+
