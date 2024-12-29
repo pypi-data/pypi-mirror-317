@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+safe_migrations/__init__.py
+safe_migrations/utils.py
+safe_migrations.egg-info/PKG-INFO
+safe_migrations.egg-info/SOURCES.txt
+safe_migrations.egg-info/dependency_links.txt
+safe_migrations.egg-info/requires.txt
+safe_migrations.egg-info/top_level.txt
+safe_migrations/management/__init__.py
+safe_migrations/management/commands/__init__.py
+safe_migrations/management/commands/safe_migration.py
+tests/__init__.py
