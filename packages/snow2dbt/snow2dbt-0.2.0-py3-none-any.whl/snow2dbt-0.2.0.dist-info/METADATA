@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: snow2dbt
+Version: 0.2.0
+Summary: Command Line to reverse engineering a Snowflake Table to DBT Model file
+Author: Tensor
+Author-email: clementparsy02@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENCE
