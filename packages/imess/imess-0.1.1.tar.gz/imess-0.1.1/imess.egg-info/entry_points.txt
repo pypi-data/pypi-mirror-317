@@ -1,0 +1,4 @@
+[console_scripts]
+imess_init = imess.init:main
+imess_load = imess.load:main
+imess_run = imess.run:main

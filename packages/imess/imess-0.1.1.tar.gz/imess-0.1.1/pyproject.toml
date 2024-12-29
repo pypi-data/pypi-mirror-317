@@ -1,0 +1,45 @@
+[project]
+name = "imess"
+version = "0.1.1"
+requires-python = ">=3.10"
+readme = "README.md"
+description = "Analyze your iMessage data"
+authors = [
+    {name = "Michael Wornow"},
+]
+dependencies = [
+    "pandas==2.2.3",
+    "numpy==2.2.1",
+    "plotnine==0.14.4",
+    "matplotlib==3.10.0",
+    "mizani==0.13.1",
+    "wordcloud==1.9.4",
+    "stop-words==2018.7.23",
+    "nltk==3.9.1",
+    "wordfreq==3.1.1",
+    "stopwords==1.0.1",
+    "vobject==0.9.9",
+    "pytypedstream==0.1.0",
+    "pyarrow==18.1.0",
+    "phonenumbers==8.13.52",
+    "Levenshtein==0.26.1",
+    "calplot==0.1.7.5",
+    "tqdm==4.67.1",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools-markdown"]
+build-backend = "setuptools.build_meta" 
+
+[tool.setuptools]
+packages = ["imess"]
+
+[project.scripts]
+imess_load = "imess.load:main"
+imess_run = "imess.run:main"
+imess_init = "imess.init:main"
+
+[project.urls]
+Homepage = "https://github.com/Miking98/imess"
+Documentation = "https://github.com/Miking98/imess"
+Source = "https://github.com/Miking98/imess"
