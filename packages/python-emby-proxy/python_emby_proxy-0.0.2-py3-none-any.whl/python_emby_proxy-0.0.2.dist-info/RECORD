@@ -1,0 +1,10 @@
+LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+emby_proxy/__init__.py,sha256=cb9B2uvHl38-fR4GA2IiljCJ2SeT_0F2Rk5_S-Gt9yw,4440
+emby_proxy/__main__.py,sha256=yn4OUsGQks0wGt8BCMU8IqmxbzCUM6BGticAis6xfzw,3651
+emby_proxy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_emby_proxy-0.0.2.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+python_emby_proxy-0.0.2.dist-info/LICENSE_zh,sha256=q-myI00wQhoEr6FKz3tNdaQSXmUpfKM8we90pvvVGJM,28917
+python_emby_proxy-0.0.2.dist-info/METADATA,sha256=zG01IRBxc5YFB3qZaI6Qji4tR5yAdVHvqiLc5JBOusY,2460
+python_emby_proxy-0.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+python_emby_proxy-0.0.2.dist-info/entry_points.txt,sha256=V8n7YasyfIS8cSYpJDBgXUM20GGUFgFIf8xRbkK1E5U,98
+python_emby_proxy-0.0.2.dist-info/RECORD,,
