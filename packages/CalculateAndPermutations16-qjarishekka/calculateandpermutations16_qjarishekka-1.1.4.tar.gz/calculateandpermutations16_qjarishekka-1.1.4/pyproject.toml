@@ -1,0 +1,18 @@
+[project]
+name = "CalculateAndPermutations16_qjarishekka"
+version = "1.1.4"
+authors = [
+  { name="Qjari Shekka", email="1032234412@pfur.ru" },
+]
+description = "calculate a ecuation given as an array and calculate combinations permutations and factorial"
+readme = "README.md"
+requires-python = ">=3.12.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://https://github.com/qjarishekka/CalculateAndPermutations16t"
+Issues = "https://https://github.com/qjarishekka/CalculateAndPermutations16/issues"
