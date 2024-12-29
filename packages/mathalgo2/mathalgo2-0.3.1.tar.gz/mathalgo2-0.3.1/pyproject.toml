@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mathalgo2"
+version = "0.3.1"
+authors = [
+  { name="Donseking", email="0717albert@gmail.com" },
+]
+description = "MathAlgo2 是一個全面的 Python 數學演算法工具包，專注於提供多樣化的數學計算與演算法實現。本工具包適合研究人員、學生以及需要進行數學計算的開發者使用。"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+] 
