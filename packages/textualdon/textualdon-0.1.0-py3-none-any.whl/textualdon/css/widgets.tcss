@@ -1,0 +1,44 @@
+# All of these are in the widgets module
+
+# simplebutton.py
+SimpleButton:hover {
+    background: $primary;
+    color: $text;
+}
+
+SimpleButton:focus {
+    background: $primary;
+    color: $text;
+}
+
+# NewsWidget and HashtagWidget
+.titlebar {
+    background: $secondary-background;
+    padding: 0 1 0 1;
+}
+
+.trend_footer {
+    width: 1fr;
+    height: 2;
+    margin: 0;
+    padding: 0;
+    &.news {
+        background: $secondary-background;
+    }
+    &.nums {
+        width: 1fr;
+        content-align: left middle;
+    }
+    &.sparkline {
+        width: auto;
+        content-align: right middle;
+        margin: 0 2 0 2;
+    }
+}
+
+.sparkline {
+    width: 14;
+    margin: 0;
+    padding: 0;
+    # background: $surface;
+}
