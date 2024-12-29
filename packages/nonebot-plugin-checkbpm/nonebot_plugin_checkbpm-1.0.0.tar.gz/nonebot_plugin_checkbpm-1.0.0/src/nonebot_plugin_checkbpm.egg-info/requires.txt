@@ -1,0 +1,6 @@
+nonebot2>=2.3.1
+nonebot-adapter-onebot>=2.1.0
+librosa>=0.9.1
+numpy>=1.0
+
+[test]
