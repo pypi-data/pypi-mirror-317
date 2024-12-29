@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "pydantic-extra"
+description = "Готовые модели pydantic для частых задач"
+readme = "readme.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Ярыкин Евгений", email = "pypi@zedzhen.ru" }
+]
+dependencies = ['pydantic~=2.10', 'typing-extensions>=4.10,!=4.12.0,<4.13']
+dynamic = ["version"]
+
+[project.urls]
+source = "https://github.com/zedzhen/pydantic-extra"
+
+[project.optional-dependencies]
+db = ['sqlalchemy~=2.0']
+
+[tool.setuptools.dynamic]
+version = {attr = "pydantic_extra.__version__"}

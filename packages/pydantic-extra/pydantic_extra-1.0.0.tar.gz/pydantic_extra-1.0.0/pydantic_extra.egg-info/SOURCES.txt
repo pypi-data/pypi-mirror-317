@@ -1,0 +1,11 @@
+LICENSE
+pyproject.toml
+readme.md
+pydantic_extra/__init__.py
+pydantic_extra/db.py
+pydantic_extra/smtp.py
+pydantic_extra.egg-info/PKG-INFO
+pydantic_extra.egg-info/SOURCES.txt
+pydantic_extra.egg-info/dependency_links.txt
+pydantic_extra.egg-info/requires.txt
+pydantic_extra.egg-info/top_level.txt
