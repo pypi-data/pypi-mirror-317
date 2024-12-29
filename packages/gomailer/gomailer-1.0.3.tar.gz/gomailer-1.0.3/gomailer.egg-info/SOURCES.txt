@@ -1,0 +1,11 @@
+README.md
+setup.py
+gomailer/__init__.py
+gomailer/automation.py
+gomailer/client.py
+gomailer/contacts.py
+gomailer/mailing.py
+gomailer.egg-info/PKG-INFO
+gomailer.egg-info/SOURCES.txt
+gomailer.egg-info/dependency_links.txt
+gomailer.egg-info/top_level.txt
