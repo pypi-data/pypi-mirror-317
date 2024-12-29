@@ -1,0 +1,10 @@
+AUTHORS
+LICENSE
+README.md
+cplay.py
+pyproject.toml
+cplay_ng.egg-info/PKG-INFO
+cplay_ng.egg-info/SOURCES.txt
+cplay_ng.egg-info/dependency_links.txt
+cplay_ng.egg-info/entry_points.txt
+cplay_ng.egg-info/top_level.txt
