@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/base.py
+src/collections.py
+src/integration.py
+src/sampling.py
+src/utils.py
+src/vector.py
+test/test_collections.py
+test/test_integrals.py
+vegas_params.egg-info/PKG-INFO
+vegas_params.egg-info/SOURCES.txt
+vegas_params.egg-info/dependency_links.txt
+vegas_params.egg-info/requires.txt
+vegas_params.egg-info/top_level.txt
