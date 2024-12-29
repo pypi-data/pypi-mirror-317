@@ -1,0 +1,11 @@
+CHANGELOG.txt
+MANIFEST.in
+README.md
+setup.py
+QUICKPLOT/__init__.py
+QUICKPLOT/plots.py
+QuickPlot.egg-info/PKG-INFO
+QuickPlot.egg-info/SOURCES.txt
+QuickPlot.egg-info/dependency_links.txt
+QuickPlot.egg-info/requires.txt
+QuickPlot.egg-info/top_level.txt
