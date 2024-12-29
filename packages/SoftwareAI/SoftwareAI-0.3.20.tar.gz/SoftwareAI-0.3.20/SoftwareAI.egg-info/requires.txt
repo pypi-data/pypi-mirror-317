@@ -1,0 +1,9 @@
+firebase-admin
+asyncio
+pandas
+tiktoken
+PyGithub
+requests
+python-dotenv
+gitpython
+openai
