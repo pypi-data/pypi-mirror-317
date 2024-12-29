@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ayonix.egg-info/PKG-INFO
+ayonix.egg-info/SOURCES.txt
+ayonix.egg-info/dependency_links.txt
+ayonix.egg-info/entry_points.txt
+ayonix.egg-info/requires.txt
+ayonix.egg-info/top_level.txt
+src/__init__.py
+src/main.py
