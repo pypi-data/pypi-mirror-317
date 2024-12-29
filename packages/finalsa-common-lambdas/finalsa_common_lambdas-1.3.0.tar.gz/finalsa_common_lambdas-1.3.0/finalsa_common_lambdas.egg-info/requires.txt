@@ -1,0 +1,7 @@
+boto3>=1.35.0
+pydantic>=2.5.2
+finalsa-common-logger>=0.0.1
+finalsa-common-models>=1.0.1
+finalsa-sqs-client>=1.0.0
+finalsa-traceability>=0.0.1
+orjson>=3.10.12
