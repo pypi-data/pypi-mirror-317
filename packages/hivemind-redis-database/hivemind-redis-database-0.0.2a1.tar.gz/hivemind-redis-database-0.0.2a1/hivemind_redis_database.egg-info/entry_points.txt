@@ -1,0 +1,3 @@
+[hivemind.database]
+hivemind-redis-db-plugin=hivemind_redis_database:RedisDB
+
