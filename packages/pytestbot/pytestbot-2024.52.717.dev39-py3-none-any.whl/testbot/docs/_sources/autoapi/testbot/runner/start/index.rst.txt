@@ -1,0 +1,56 @@
+:py:mod:`testbot.runner.start`
+==============================
+
+.. py:module:: testbot.runner.start
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.runner.start.init_test
+   testbot.runner.start.main
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.runner.start.__copyright__
+   testbot.runner.start.__author__
+   testbot.runner.start.__email__
+   testbot.runner.start.package_path
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) TCL DIGITAL TECHNOLOGY (SHENZHEN) CO., LTD.'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@tcl.com'
+
+   
+
+.. py:data:: package_path
+
+   
+
+.. py:function:: init_test()
+
+
+.. py:function:: main()
+
+

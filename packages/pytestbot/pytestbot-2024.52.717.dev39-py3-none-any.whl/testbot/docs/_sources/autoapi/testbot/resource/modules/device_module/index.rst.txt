@@ -1,0 +1,87 @@
+:py:mod:`testbot.resource.modules.device_module`
+================================================
+
+.. py:module:: testbot.resource.modules.device_module
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.modules.device_module.DeviceModuleBase
+   testbot.resource.modules.device_module.PowerModule
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.modules.device_module.__copyright__
+   testbot.resource.modules.device_module.__author__
+   testbot.resource.modules.device_module.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: DeviceModuleBase(resource, *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`testbot.resource.modules.module.ModuleBase`
+
+   测试设备资源模块基类
+
+
+.. py:class:: PowerModule(resource, *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`DeviceModuleBase`
+
+   电源模块API接口集
+
+   .. py:method:: set_power(on: bool) -> bool
+
+      给设备上电或断电
+
+      :param on: True是上电，False是断电
+      :type on: bool
+      :return: 是否断电或上电成功
+      :rtype: bool
+
+
+   .. py:method:: power_on() -> bool
+
+      给设备上电
+
+      :return: 上电是否成功
+      :rtype: bool
+
+
+   .. py:method:: power_off() -> bool
+
+      给设备断电
+
+      :return: 断电是否成功
+      :rtype: bool
+
+
+

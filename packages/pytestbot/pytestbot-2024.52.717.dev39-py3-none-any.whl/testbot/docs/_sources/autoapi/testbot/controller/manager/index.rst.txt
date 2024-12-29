@@ -1,0 +1,82 @@
+:py:mod:`testbot.controller.manager`
+====================================
+
+.. py:module:: testbot.controller.manager
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.controller.manager.load_settings
+   testbot.controller.manager.load_test_list
+   testbot.controller.manager.init_engine
+   testbot.controller.manager.load_resource
+   testbot.controller.manager.get_test_list
+   testbot.controller.manager.run_test
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.controller.manager.__copyright__
+   testbot.controller.manager.__author__
+   testbot.controller.manager.__email__
+   testbot.controller.manager.runner
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:data:: runner
+
+   
+
+.. py:function:: load_settings(setting_path=None)
+
+   加载所有静态配置
+
+
+.. py:function:: load_test_list(testlist)
+
+   读取测试用例并且返回测试用例对象
+
+
+.. py:function:: init_engine()
+
+   实例化测试引擎
+
+
+.. py:function:: load_resource(resource_file, username)
+
+   装载测试资源
+
+
+.. py:function:: get_test_list()
+
+
+.. py:function:: run_test()
+
+   执行测试用例
+
+

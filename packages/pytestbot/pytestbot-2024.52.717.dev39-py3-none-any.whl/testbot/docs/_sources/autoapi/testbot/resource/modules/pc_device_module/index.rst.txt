@@ -1,0 +1,69 @@
+:py:mod:`testbot.resource.modules.pc_device_module`
+===================================================
+
+.. py:module:: testbot.resource.modules.pc_device_module
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.modules.pc_device_module.PCDeviceModuleBase
+   testbot.resource.modules.pc_device_module.NetworkModule
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.modules.pc_device_module.__copyright__
+   testbot.resource.modules.pc_device_module.__author__
+   testbot.resource.modules.pc_device_module.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: PCDeviceModuleBase(resource, *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`testbot.resource.modules.device_module.DeviceModuleBase`
+
+   PC测试设备源模块基类
+
+
+.. py:class:: NetworkModule(resource, *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`PCDeviceModuleBase`
+
+   PC 网络模块API接口集
+
+   .. py:method:: get_ip_address() -> str
+
+      获取IP地址
+
+      :return: IP地址
+      :rtype: str
+
+
+

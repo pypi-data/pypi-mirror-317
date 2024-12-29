@@ -1,0 +1,147 @@
+:py:mod:`testbot.result.logger`
+===============================
+
+.. py:module:: testbot.result.logger
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.result.logger.PackageFilter
+   testbot.result.logger.LoggerManager
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.result.logger._zip_directory
+   testbot.result.logger._check_and_create_directory
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.result.logger.__copyright__
+   testbot.result.logger.__author__
+   testbot.result.logger.__email__
+   testbot.result.logger.logger_level
+   testbot.result.logger.logger_manager
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:data:: logger_level
+
+   
+
+.. py:function:: _zip_directory(dirpath, output_file)
+
+   将目标文件夹压缩成zip包并且输出到output_file
+   并且将文件删除
+
+
+.. py:function:: _check_and_create_directory(filename)
+
+
+.. py:class:: PackageFilter
+
+
+   Bases: :py:obj:`logging.Filter`
+
+   Filter instances are used to perform arbitrary filtering of LogRecords.
+
+   Loggers and Handlers can optionally use Filter instances to filter
+   records as desired. The base filter class only allows events which are
+   below a certain point in the logger hierarchy. For example, a filter
+   initialized with "A.B" will allow events logged by loggers "A.B",
+   "A.B.C", "A.B.C.D", "A.B.D" etc. but not "A.BB", "B.A.B" etc. If
+   initialized with the empty string, all events are passed.
+
+   .. py:method:: filter(record)
+
+      Determine if the specified record is to be logged.
+
+      Returns True if the record should be logged, or False otherwise.
+      If deemed appropriate, the record may be modified in-place.
+
+
+
+.. py:class:: LoggerManager
+
+
+   Bases: :py:obj:`object`
+
+   日志管理器，可注册多个日志对象，支持模块日志和用例日志分离。
+
+
+
+   .. py:method:: register(logger_name: str, filename: str = None, console: bool = True, default_level: str = logging.INFO, **kwargs) -> logging.Logger
+
+      注册logger。
+      for_test参数默认False，开启则支持模块日志；is_test参数默认False，开启则支持用例日志。
+
+      :param logger_name: 日志名称
+      :type logger_name: str
+      :param filename: 文件名称
+      :type filename: str
+      :param console: 是否控制台输出
+      :type console: bool
+      :param default_level: 默认日志级别
+      :type default_level: str
+      :param kwargs:
+      :type kwargs:
+      :return: 创建或已注册的日志Logger对象
+      :rtype: logging.Logger
+
+
+   .. py:method:: unregister(logger_name: str)
+
+      删除注册的logger，同时将需要打包的logger文件打包
+
+      :param logger_name: 日志名称
+      :type logger_name: str
+      :return:
+      :rtype:
+
+
+   .. py:method:: _achieve_files(logger_name)
+
+
+   .. py:method:: get_logger(logger_name: str) -> logging.Logger
+
+      获取日志对象
+      :param logger_name: 日志名称
+      :type logger_name: str
+      :return: 日志对象
+      :rtype: logging.Logger
+
+
+
+.. py:data:: logger_manager
+
+   
+

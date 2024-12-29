@@ -1,0 +1,620 @@
+======================================
+快速入门
+======================================
+
+前提条件
+=============
+
+硬件环境
+---------------
+
+* 主机：Windows PC或树莓派
+* 一台TV设备
+* 指令串口。主机与TV设备之间通过USB串口设备进行指令通信
+* 红外串口。主机通过红外串口向TV设备发生红外码
+* 采集卡视频口。主机通过采集卡视频口，抓取TV设备当前画面
+* 电源控制。主机可以通过电源硬件模块控制TV设备的通断电，在Windows平台，主要通过带USB控制线的黄色电源插排，在树莓派Raspbian平台，主要通过树莓派扩展板的DC继电器控制口
+
+软件环境
+---------------
+
+* 主机上已安装Python，Python版本仅支持3.8
+* 支持Windows和Linux（Raspbian）操作系统
+
+
+网络环境
+---------------
+
+* 主机与TV设备在同一个网络，可以相互访问IP地址
+* 主机能够访问以下网址：
+
+.. code-block::
+
+    * 制品服务器
+
+
+
+安装框架
+===========
+
+
+.. tabs::
+
+   .. tab:: 安装最新版本
+       会安装最新的版本，以及其依赖库。
+
+       .. code-block::
+
+            python -m pip install testbot --index-url https://gitlab.com/api/v4/projects/57304654/packages/pypi/simple
+
+   .. tab:: 安装指定版本
+       会安装指定的版本，以及其依赖库。
+
+       .. code-block::
+
+            python -m pip install testbot==x.x.x --index-url https://gitlab.com/api/v4/projects/57304654/packages/pypi/simple
+
+
+* 检查当前安装的版本
+
+.. code-block::
+
+    python -m pip show testbot
+
+返回信息如下：其中Version是当前已安装工具的版本号，Summary里提交ID是当前版本是基于代码仓库的哪个commitid编译打包的，方便我们定位问题。
+
+.. code-block::
+
+    Name: testbot
+    Version: 2024.45.4
+    Summary: TESTBOT测试框架，分支名称：master，提交ID：7e33f39f
+    Home-page: https://gitlab.com/nuangua/testbot
+    Author: Nuanguang Gu(Sunny)
+    Author-email: nuanguang.gu@aliyun.com
+    License: Copyright (c) 2024 Nuanguang Gu(Sunny).
+    Location: c:\python38\lib\site-packages
+    Requires: adbutils
+    Required-by:
+
+* 卸载tatf
+
+.. code-block::
+
+    python -m pip uninstall -y testbot
+
+
+环境检测程序（开发中）
+=======================
+
+检查项
+-------------------
+
+* 是否有指令串口
+* 是否有红外串口
+* 是否有采集卡
+* 是否有U盘
+* 是否能够访问TV设备IP地址
+* 是否能够访问公司网络
+* 是否能够访问国内网络
+* 是否能够访问海外网络
+* 音频线是否连接
+* 电源断电上电是否正常
+* 网络通断是否正常
+* U盘切换是否正常
+* 采集卡是否正常
+* 红外指令是否正常
+* WIFI打开关闭是否正常
+* adb连接是否正常
+* 检测是否有声音
+* 检测是否有信源HDMI/TV
+
+测试环境的检查项
+----------------------
+
+.. tabs::
+
+   .. tab:: 冒烟检查项
+
+        * 是否有指令串口
+        * 是否有红外串口
+        * 是否有采集卡
+        * 是否有U盘
+        * 是否能够访问TV设备IP地址
+        * 是否能够访问公司网络
+        * 是否能够访问国内网络
+        * 是否能够访问海外网络
+        * 音频线是否连接
+        * 电源断电上电是否正常
+        * 网络通断是否正常
+        * U盘切换是否正常
+        * 采集卡是否正常
+        * 红外指令是否正常
+        * WIFI打开关闭是否正常
+        * adb连接是否正常
+        * 检测是否有声音
+        * 检测是否有信源HDMI/TV
+
+   .. tab:: 门禁检查项
+
+        * 是否有指令串口
+        * 是否有红外串口
+        * 是否有采集卡
+        * 是否有U盘
+        * 是否能够访问TV设备IP地址
+        * 是否能够访问公司网络
+        * 是否能够访问国内网络
+        * 是否能够访问海外网络
+        * 音频线是否连接
+        * 电源断电上电是否正常
+        * 网络通断是否正常
+        * U盘切换是否正常
+        * 采集卡是否正常
+        * 红外指令是否正常
+        * WIFI打开关闭是否正常
+        * adb连接是否正常
+        * 检测是否有声音
+        * 检测是否有信源HDMI/TV
+
+   .. tab:: 媒资检查项
+
+        * 是否有采集卡
+        * 是否有U盘
+        * 是否能够访问TV设备IP地址
+        * 是否能够访问公司网络
+        * 音频线是否连接
+        * 采集卡是否正常
+        * adb连接是否正常
+        * 检测是否有声音
+
+执行检查程序
+---------------
+
+执行以下命令，开始检查当前测试环境是否支持某种测试类型的执行。若某几个检查项未通过检查，请手动检查并恢复相应的硬件、软件或网络环境。
+
+.. code-block::
+
+    python -m tatf.cli env inspect --type smoke  --type media
+
+
+检查结果如下：
+
+.. code-block::
+
+    当前测试环境是否支持测试类型smoke的执行：【PASS】
+        是否有指令串口：【PASS】
+        是否有红外串口：【PASS】
+        是否有采集卡：【PASS】
+        是否有U盘：【PASS】
+        是否能够访问TV设备IP地址：【PASS】
+        是否能够访问公司网络：【PASS】
+        是否能够访问国内网络：【PASS】
+        是否能够访问海外网络：【PASS】
+        音频线是否连接：【PASS】
+        电源断电上电是否正常：【PASS】
+        网络通断是否正常：【PASS】
+        U盘切换是否正常：【PASS】
+        采集卡是否正常：【PASS】
+        红外指令是否正常：【PASS】
+        WIFI打开关闭是否正常：【PASS】
+        adb连接是否正常：【PASS】
+        检测是否有声音：【PASS】
+        检测是否有信源HDMI/TV：【PASS】
+
+    当前测试环境是否支持测试类型media的执行：【PASS】
+        是否有采集卡：【PASS】
+        是否有U盘：【PASS】
+        是否能够访问TV设备IP地址：【PASS】
+        是否能够访问公司网络：【PASS】
+        音频线是否连接：【PASS】
+        采集卡是否正常：【PASS】
+        adb连接是否正常：【PASS】
+        检测是否有声音：【PASS】
+
+编写测试脚本
+============================
+
+我们将所有用例脚本，统一提交到一个代码仓库tatf-apps。
+
+拉取脚本仓库最新代码
+-------------------------
+
+在开发脚本时，请确保你的本地开发分支的代码已经同步到最新提交ID。
+
+.. code-block::
+
+    # 第一次需克隆代码到本地
+    git clone git@gitlab.com:nuangua/testbot.git
+    # 切换到本地master分支
+    git checkout master
+    # 本地若有修改的代码，需提交到暂存区
+    git stash
+    # 拉取远端master分支最新代码
+    git pull --all
+    # 本地若有修改，恢复修改代码
+    git stash pop
+    # 若没有开发分支smoke，创建一个新开发分支smoke，用于开发smoke脚本
+    git branch smoke
+    # 切换到你的开发分支smoke
+    git checkout smoke
+    # 将本地master分支最新代码同步到分支smoke的代码
+    git rebase master
+
+脚本仓库目录结构简介
+-----------------------
+
+您开发的脚本，必须按照规范，上传到脚本仓库指定的目录。如系统冒烟测试脚本应该放到目录 **SMOKE_TEST_SYSTEM** 。若未按照规范创建和编写脚本，您的脚本将不会被merge到master分支。
+
+
+* requirements-dev.txt【开发依赖库】
+* requirements-test.txt【测试依赖库】
+* requirements.txt【脚本依赖库】
+* setup.py【打包配置文件】
+* testbots【基于testbot测试框架开发的应用库，包括测试脚本和测试工具】
+* scripts【测试脚本模块】
+* CHECK_TEST【点检测试脚本模块，所有点检脚本都在该目录下】
+* COMMON_TEST【通用测试脚本模块，所有通用脚本都在该目录下】
+* PERFORMANCE_TEST【性能测试脚本模块，所有性能脚本都在该目录下】
+* SMOKE_TEST【冒烟测试脚本模块，所有冒烟脚本都在该目录下】
+    * SMOKE_TEST_MIDDLEWARE【中间件冒烟测试脚本模块，所有中间件冒烟脚本都在该目录下】
+    * SMOKE_TEST_SYSTEM【系统冒烟测试脚本模块，所有系统冒烟脚本都在该目录下】
+* SPECIAL_TEST【专项测试脚本模块，所有专项脚本都在该目录下】
+    * SPECIAL_TEST_MEDIA【媒资遍历专项测试脚本模块，所有媒资遍历专项脚本都在该目录下】
+* STABILITY_TEST【稳定性测试脚本模块，所有稳定性脚本都在该目录下】
+* SYSTEM_TEST【系统测试脚本模块，所有系统脚本都在该目录下】
+* tools【测试工具模块】
+
+.. code-block::
+
+    │   requirements-dev.txt【开发依赖库】
+    │   requirements-test.txt【测试依赖库】
+    │   requirements.txt【脚本依赖库】
+    │   setup.py【打包配置文件】
+    │
+    └───testbot_apps【基于测试框架开发的应用库，包括测试脚本和测试工具】
+        │   __init__.py
+        │
+        ├───scripts【测试脚本模块】
+        │   │   __init__.py
+        │   │
+        │   ├───CHECK_TEST【点检测试脚本模块，所有点检脚本都在该目录下】
+        │   │       __init__.py
+        │   │
+        │   ├───COMMON_TEST【通用测试脚本模块，所有通用脚本都在该目录下】
+        │   │       __init__.py
+        │   │
+        │   ├───PERFORMANCE_TEST【性能测试脚本模块，所有性能脚本都在该目录下】
+        │   │       __init__.py
+        │   │
+        │   ├───SMOKE_TEST【冒烟测试脚本模块，所有冒烟脚本都在该目录下】
+        │   │   │   __init__.py
+        │   │   │
+        │   │   ├───SMOKE_TEST_MIDDLEWARE【中间件冒烟测试脚本模块，所有中间件冒烟脚本都在该目录下】
+        │   │   │       __init__.py
+        │   │   │
+        │   │   └───SMOKE_TEST_SYSTEM【系统冒烟测试脚本模块，所有系统冒烟脚本都在该目录下】
+        │   │           __init__.py
+        │   │
+        │   ├───SPECIAL_TEST【专项测试脚本模块，所有专项脚本都在该目录下】
+        │   │   │   __init__.py
+        │   │   │
+        │   │   └───SPECIAL_TEST_MEDIA【媒资遍历专项测试脚本模块，所有媒资遍历专项脚本都在该目录下】
+        │   │           __init__.py
+        │   │
+        │   ├───STABILITY_TEST【稳定性测试脚本模块，所有稳定性脚本都在该目录下】
+        │   │       __init__.py
+        │   │
+        │   └───SYSTEM_TEST【系统测试脚本模块，所有系统脚本都在该目录下】
+        │           __init__.py
+        │
+        └───tools【测试工具模块】
+                __init__.py
+
+
+用例基类TestCaseBase简介
+--------------------------
+
+该类定义了所有用例的父类，该基类提供了setup()/test()/cleanup()等抽象方法，子类需实现这些方法。
+
+.. autoapiclass:: testbot.case.base.TestCaseBase
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+创建一条测试脚本
+----------------------
+
+所有的测试脚本的用例类必须继承自该用例基类。下面是一个子类例子。该子类实现了collect_resource()、setup()/test()/cleanup()等方法。此外，如果该用例需要从外部配置文件读取一些用例特有的配置信息，可以在该用例类里创建一个配置类，该类是一个类中类。
+默认该配置文件名称与该配置类名相同。
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :linenos:
+
+该测试脚本由头部声明、作者版权信息、用例信息、用例子类（用例注解、获取资源对象方法collect_resource、初始化测试方法setup、执行测试方法test、清理测试方法cleanup、用例配置类、两种验证点编写方式）等。
+
+* 头部声明
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :lines: 1-2
+   :linenos:
+
+* 作者版权信息
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :lines: 4-6
+   :linenos:
+
+* 用例信息
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :lines: 8-30
+   :linenos:
+
+* 用例注解
+
+用例注解可以选择指定优先级priority、测试类型test_type、测试用例ID、测试用例名称等信息。
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :lines: 32-33,39-40
+   :linenos:
+
+* 获取资源对象方法collect_resource
+
+框架会自动发现当前测试环境上的测试资源，并保存到 **%TESTBOT_HOME/configs/ResourcePool.json%** ，并允许用户自己添加无法自动发现的测试资源。
+
+测试资源配置文件如下：
+
+.. literalinclude:: ../testbot/example/ResourcePool.json
+   :language: json
+   :linenos:
+
+下面代码演示了如何在用例里获取测试资源对象：
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :lines: 42-79
+   :linenos:
+
+* 初始化测试方法setup
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :lines: 81-106
+   :linenos:
+
+* 执行测试方法test
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :lines: 108-143
+   :linenos:
+
+* 清理测试方法cleanup
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :lines: 145-150
+   :linenos:
+
+* 用例配置类及使用
+
+用例配置类为您创建的用例类自动创建一个配置文件对象属性，支持对配置文件的序列化和反序列化。
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :lines: 34-34,152-154
+   :linenos:
+
+.. note::
+
+    * 这里定义了一个用例配置类TCDemoSetting、类属性case_setting1和case_setting2，并赋予默认值
+    * 该配置文件被创建并保存在于您用例脚本相同目录下，并且其配置文件名称与配置类相同，如当前用例脚本路径是 **D:\codes\testbot\testbot\example\TCDemo.py** ，那么配置文件路径为 **D:/codes/testbot/testbot/example/TCDemoSetting.json**
+    * 若配置文件已存在，则忽略默认值，加载配置文件里的数据
+    * 可以手动编辑该配置文件，新增字段
+    * 在用例类里，通过 **self.setting** 对象读取配置文件信息，如下代码所示：
+
+        .. literalinclude:: ../testbot/example/TCDemo.py
+           :language: python
+           :lines: 96-96
+           :linenos:
+
+* 用例配置示例
+
+.. literalinclude:: ../testbot/example/TCDemoSetting.json
+   :language: json
+   :linenos:
+
+* 经典验证点和结构化验证点写法
+
+结构化验证点，借助with关键字，实现对报错异常的上下文管理。您可以使用经典验证点和结构化验证点两者之一实现自己的用例。
+
+以下是两种验证点的使用方式示例：
+
+# 经典验证点示例
+
+.. tabs:: 经典验证点示例
+
+   .. group-tab:: 示例1
+
+        .. literalinclude:: ../testbot/example/TCDemo.py
+           :language: python
+           :lines: 43-62
+           :linenos:
+
+   .. group-tab:: 示例2
+
+        .. literalinclude:: ../testbot/example/TCDemo.py
+           :language: python
+           :lines: 82-91
+           :linenos:
+
+   .. group-tab:: 示例3
+
+        .. literalinclude:: ../testbot/example/TCDemo.py
+           :language: python
+           :lines: 109-120
+           :linenos:
+
+# 结构化验证点示例
+
+.. tabs:: 结构化验证点示例
+
+   .. group-tab:: 示例1
+
+        .. literalinclude:: ../testbot/example/TCDemo.py
+           :language: python
+           :lines: 64-79
+           :linenos:
+
+   .. group-tab:: 示例2
+
+        .. literalinclude:: ../testbot/example/TCDemo.py
+           :language: python
+           :lines: 93-106
+           :linenos:
+
+   .. group-tab:: 示例3
+
+        .. literalinclude:: ../testbot/example/TCDemo.py
+           :language: python
+           :lines: 122-143
+           :linenos:
+
+
+执行测试脚本
+----------------------
+
+* 测试资源池配置文件ResourcePool.json
+
+.. literalinclude:: ../testbot/example/ResourcePool.json
+   :language: json
+   :linenos:
+
+* 用例列表类TCList
+
+.. autoapiclass:: testbot.testengine.testlist.TestList
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 用例列表配置类TestListSetting
+
+.. autoapiclass:: testbot.testengine.testlist.TestList.TestListSetting
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+* 测试用例列表TCList.json
+
+我们执行器以测试用例列表为单位，执行测试任务。
+cases字段指定需要执行的测试用例模块路径，如 **testbot.example.TCDemo.TCDemo** 。
+
+下面是一个测试用例列表配置文件：
+
+.. literalinclude:: ../testbot/example/TCList.json
+   :language: json
+   :linenos:
+
+* 测试用例列表配置文件TCListSetting.json
+
+.. literalinclude:: ../testbot/example/TCListSetting.json
+   :language: json
+   :linenos:
+
+.. note::
+
+    * 该配置文件被创建并保存在于您用例脚本相同目录下，并且其配置文件名称与配置类相同
+    * 若配置文件已存在，则忽略默认值，加载配置文件里的数据
+    * 可以手动编辑该配置文件，新增字段
+
+* 测试用例脚本TCDemo.py
+
+.. literalinclude:: ../testbot/example/TCDemo.py
+   :language: python
+   :linenos:
+
+* 测试用例配置文件
+
+.. literalinclude:: ../testbot/example/TCDemoSetting.json
+   :language: json
+   :linenos:
+
+.. code-block::
+
+    ├───testbot_apps
+    │   │   __init__.py
+    │   │
+    │   ├───examples
+    │   │   │   __init__.py
+    │   │   │
+    │   │   ├───demo
+    │   │   │   │   OUTPUT.log
+    │   │   │   │   README.md
+    │   │   │   │   ResourcePool.json
+    │   │   │   │   RESULT.json
+    │   │   │   │   TCDemo.py
+    │   │   │   │   TCDemoSetting.json
+    │   │   │   │   TCList.json
+    │   │   │   │   TCListSetting.json
+    │   │   │   │   __init__.py
+
+* 执行测试
+
+在testbot-apps项目根目录下，执行以下命令：
+
+.. code-block::
+
+    python -m testbot.runner.start -t testbot_apps/examples/demo/TCList.json -r testbot_apps/examples/demo/ResourcePool.json -u sunny
+
+* 测试日志
+
+.. literalinclude:: ../testbot/example/OUTPUT.log
+   :linenos:
+
+* 测试数据
+
+.. literalinclude:: ../testbot/example/RESULT.json
+   :language: json
+   :linenos:
+
+提交脚本代码
+-----------------
+
+提交本地开发分支代码到您自己的远程开发分支而非master分支。
+
+
+.. code-block::
+
+    # 添加文件
+    git add .
+    # 检查待提交的文件列表
+    git status
+    # 提交代码
+    git commit -m "新增一条冒烟脚本"
+    # 推到远程仓库
+    git push origin smoke
+
+然后，在GitLab的 `Merge Requests <https://gitlab.com/nuangua/testbot/-/merge_requests>`_ 创建一个Merge请求，等待CICD流水线执行完和代码评审组均通过后，方可合入到master分支。
+
+代码通过以下，表示合入成功：
+
+*  `CICD流水线 <https://gitlab.com/nuangua/testbot/-/pipelines>`_ 【PASS】
+
+若您的代码，在执行CICD流水线时，失败了，请自行查看流水线日志并修复代码问题
+
+*  `合并请求 <https://gitlab.com/nuangua/testbot/-/merge_requests>`_ 【PASS】
+
+若您的代码，未通过合并请求，代码评审组会将您的合并请求打回，并给出具体的问题描述信息，请根据问题描述信息进行修改您的代码
+
+.. note::
+
+    若您的代码提交已通过CICD流水线验证，仍未通过合并请求，请联系以下代码评审组成员：
+
+    * 【姓名：顾暖光】【账号：nuanguang.gu】【邮箱：nuanguang.gu@aliyun.com】

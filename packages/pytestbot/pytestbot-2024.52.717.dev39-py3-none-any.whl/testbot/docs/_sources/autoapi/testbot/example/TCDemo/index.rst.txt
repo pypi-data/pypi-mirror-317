@@ -1,0 +1,113 @@
+:py:mod:`testbot.example.TCDemo`
+================================
+
+.. py:module:: testbot.example.TCDemo
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.example.TCDemo.TCDemo
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.example.TCDemo.__copyright__
+   testbot.example.TCDemo.__author__
+   testbot.example.TCDemo.__email__
+   testbot.example.TCDemo.tc
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   SQAOSTC-78198
+   @Introduction   : Idle期按红外遥控器数字键唤醒电视
+   @Description    : 功能描述：
+   串口出现：DeviceIdleController: Moved from STATE_LOCATING to STATE_IDLE.时，电视进入Idle界面
+   @Precondition   :
+   1、STR为ON，Doze mode为ON
+   2、调整Idle时间的方法：串口执行：dumpsys deviceidle IDLE_TIMEOUT set 300000（300000为时间，可修改）
+   3、遥控器未配对
+   @Steps:
+   1、连接网络，切换到HDMI信源
+   2、串口执行：
+   1.dumpsys deviceidle tlog set DEBUG 1 ；
+   2.logcat | grep DeviceIdleController&；按Power键待机
+   3、有切换到idle状态的打印后，使用红外遥控器，按数字键，检查电视变化
+   4、Doze mode设置为关，使用红外遥控器按数字键待机开机
+
+   【备注】仅适用海外
+   @Expected       :
+   2、串口打印：DeviceIdleController: Moved from STATE_LOCATING to STATE_IDLE.
+   3、电视整响应遥控器按键操作，成功唤醒
+   4、待机串口不会有Doze模式打印，电视可以响应遥控器按键操作，成功唤醒
+
+   :type: @TC_ID
+
+.. py:class:: TCDemo
+
+
+   Bases: :py:obj:`testbot.case.base.TestCaseBase`
+
+   .. py:class:: TCDemoSetting(setting_path, filename)
+
+
+      Bases: :py:obj:`testbot.config.setting.TestSettingBase`
+
+      测试设置基类
+
+
+      .. py:attribute:: case_setting1
+         :value: 'setting1'
+
+         
+
+      .. py:attribute:: case_setting2
+         :value: 10
+
+         
+
+      .. py:attribute:: TIMEOUT
+         :value: 60
+
+         
+
+
+   .. py:method:: collect_resource(node: testbot.result.testreporter.CaseEntry, pool: testbot.resource.pool.ResourcePool)
+
+
+   .. py:method:: setup(node: testbot.result.testreporter.CaseEntry, **kwargs)
+
+
+   .. py:method:: test(node: testbot.result.testreporter.CaseEntry, **kwargs)
+
+
+   .. py:method:: cleanup(node: testbot.result.testreporter.CaseEntry, **kwargs)
+
+
+
+.. py:data:: tc
+
+   
+

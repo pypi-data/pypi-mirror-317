@@ -1,0 +1,64 @@
+:py:mod:`testbot.config`
+========================
+
+.. py:module:: testbot.config
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   logicmodule/index.rst
+   setting/index.rst
+   static_setting/index.rst
+   static_setting_demo/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:data:: ROOT_PATH
+
+   
+
+.. py:data:: ROOT_PATH
+
+   
+
+.. py:data:: CONFIG_PATH
+
+   
+
+.. py:data:: LOGS_PATH
+
+   
+
+.. py:data:: MODULE_LOGS_PATH
+
+   
+
+.. py:data:: CASE_LOGS_PATH
+
+   
+
+.. py:data:: RUNNER_LOGS_PATH
+
+   
+

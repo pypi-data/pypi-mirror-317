@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>快速入门 &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+        <script src="_static/tabs.js?v=3030b3cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="搭建GitLab流水线" href="dev_pipeline_setup.html" />
+    <link rel="prev" title="Indices and tables" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">快速入门</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">前提条件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">硬件环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">软件环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">网络环境</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">安装框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">环境检测程序（开发中）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">检查项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">测试环境的检查项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">执行检查程序</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">编写测试脚本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">拉取脚本仓库最新代码</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">脚本仓库目录结构简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testcasebase">用例基类TestCaseBase简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">创建一条测试脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">执行测试脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">提交脚本代码</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">快速入门</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/usage_quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>快速入门<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<section id="id2">
+<h2>前提条件<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3>硬件环境<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>主机：Windows PC或树莓派</p></li>
+<li><p>一台TV设备</p></li>
+<li><p>指令串口。主机与TV设备之间通过USB串口设备进行指令通信</p></li>
+<li><p>红外串口。主机通过红外串口向TV设备发生红外码</p></li>
+<li><p>采集卡视频口。主机通过采集卡视频口，抓取TV设备当前画面</p></li>
+<li><p>电源控制。主机可以通过电源硬件模块控制TV设备的通断电，在Windows平台，主要通过带USB控制线的黄色电源插排，在树莓派Raspbian平台，主要通过树莓派扩展板的DC继电器控制口</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>软件环境<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>主机上已安装Python，Python版本仅支持3.8</p></li>
+<li><p>支持Windows和Linux（Raspbian）操作系统</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>网络环境<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>主机与TV设备在同一个网络，可以相互访问IP地址</p></li>
+<li><p>主机能够访问以下网址：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">制品服务器</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id6">
+<h2>安装框架<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">安装最新版本</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">安装指定版本</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>会安装最新的版本，以及其依赖库。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">testbot</span> <span class="o">--</span><span class="n">index</span><span class="o">-</span><span class="n">url</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">v4</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="mi">57304654</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span><span class="n">simple</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>会安装指定的版本，以及其依赖库。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">testbot</span><span class="o">==</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span> <span class="o">--</span><span class="n">index</span><span class="o">-</span><span class="n">url</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">v4</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="mi">57304654</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span><span class="n">simple</span>
+</pre></div>
+</div>
+</div></div>
+<ul class="simple">
+<li><p>检查当前安装的版本</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">show</span> <span class="n">testbot</span>
+</pre></div>
+</div>
+<p>返回信息如下：其中Version是当前已安装工具的版本号，Summary里提交ID是当前版本是基于代码仓库的哪个commitid编译打包的，方便我们定位问题。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Name: testbot
+Version: 2024.45.4
+Summary: TESTBOT测试框架，分支名称：master，提交ID：7e33f39f
+Home-page: https://gitlab.com/nuangua/testbot
+Author: Nuanguang Gu(Sunny)
+Author-email: nuanguang.gu@aliyun.com
+License: Copyright (c) 2024 Nuanguang Gu(Sunny).
+Location: c:\python38\lib\site-packages
+Requires: adbutils
+Required-by:
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>卸载tatf</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">uninstall</span> <span class="o">-</span><span class="n">y</span> <span class="n">testbot</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>环境检测程序（开发中）<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+<section id="id8">
+<h3>检查项<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>是否有指令串口</p></li>
+<li><p>是否有红外串口</p></li>
+<li><p>是否有采集卡</p></li>
+<li><p>是否有U盘</p></li>
+<li><p>是否能够访问TV设备IP地址</p></li>
+<li><p>是否能够访问公司网络</p></li>
+<li><p>是否能够访问国内网络</p></li>
+<li><p>是否能够访问海外网络</p></li>
+<li><p>音频线是否连接</p></li>
+<li><p>电源断电上电是否正常</p></li>
+<li><p>网络通断是否正常</p></li>
+<li><p>U盘切换是否正常</p></li>
+<li><p>采集卡是否正常</p></li>
+<li><p>红外指令是否正常</p></li>
+<li><p>WIFI打开关闭是否正常</p></li>
+<li><p>adb连接是否正常</p></li>
+<li><p>检测是否有声音</p></li>
+<li><p>检测是否有信源HDMI/TV</p></li>
+</ul>
+</section>
+<section id="id9">
+<h3>测试环境的检查项<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">冒烟检查项</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">门禁检查项</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1">媒资检查项</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>是否有指令串口</p></li>
+<li><p>是否有红外串口</p></li>
+<li><p>是否有采集卡</p></li>
+<li><p>是否有U盘</p></li>
+<li><p>是否能够访问TV设备IP地址</p></li>
+<li><p>是否能够访问公司网络</p></li>
+<li><p>是否能够访问国内网络</p></li>
+<li><p>是否能够访问海外网络</p></li>
+<li><p>音频线是否连接</p></li>
+<li><p>电源断电上电是否正常</p></li>
+<li><p>网络通断是否正常</p></li>
+<li><p>U盘切换是否正常</p></li>
+<li><p>采集卡是否正常</p></li>
+<li><p>红外指令是否正常</p></li>
+<li><p>WIFI打开关闭是否正常</p></li>
+<li><p>adb连接是否正常</p></li>
+<li><p>检测是否有声音</p></li>
+<li><p>检测是否有信源HDMI/TV</p></li>
+</ul>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>是否有指令串口</p></li>
+<li><p>是否有红外串口</p></li>
+<li><p>是否有采集卡</p></li>
+<li><p>是否有U盘</p></li>
+<li><p>是否能够访问TV设备IP地址</p></li>
+<li><p>是否能够访问公司网络</p></li>
+<li><p>是否能够访问国内网络</p></li>
+<li><p>是否能够访问海外网络</p></li>
+<li><p>音频线是否连接</p></li>
+<li><p>电源断电上电是否正常</p></li>
+<li><p>网络通断是否正常</p></li>
+<li><p>U盘切换是否正常</p></li>
+<li><p>采集卡是否正常</p></li>
+<li><p>红外指令是否正常</p></li>
+<li><p>WIFI打开关闭是否正常</p></li>
+<li><p>adb连接是否正常</p></li>
+<li><p>检测是否有声音</p></li>
+<li><p>检测是否有信源HDMI/TV</p></li>
+</ul>
+</div><div aria-labelledby="tab-1-1-2" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-2" name="1-2" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>是否有采集卡</p></li>
+<li><p>是否有U盘</p></li>
+<li><p>是否能够访问TV设备IP地址</p></li>
+<li><p>是否能够访问公司网络</p></li>
+<li><p>音频线是否连接</p></li>
+<li><p>采集卡是否正常</p></li>
+<li><p>adb连接是否正常</p></li>
+<li><p>检测是否有声音</p></li>
+</ul>
+</div></div>
+</section>
+<section id="id10">
+<h3>执行检查程序<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<p>执行以下命令，开始检查当前测试环境是否支持某种测试类型的执行。若某几个检查项未通过检查，请手动检查并恢复相应的硬件、软件或网络环境。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">tatf</span><span class="o">.</span><span class="n">cli</span> <span class="n">env</span> <span class="n">inspect</span> <span class="o">--</span><span class="nb">type</span> <span class="n">smoke</span>  <span class="o">--</span><span class="nb">type</span> <span class="n">media</span>
+</pre></div>
+</div>
+<p>检查结果如下：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>当前测试环境是否支持测试类型smoke的执行：【PASS】
+    是否有指令串口：【PASS】
+    是否有红外串口：【PASS】
+    是否有采集卡：【PASS】
+    是否有U盘：【PASS】
+    是否能够访问TV设备IP地址：【PASS】
+    是否能够访问公司网络：【PASS】
+    是否能够访问国内网络：【PASS】
+    是否能够访问海外网络：【PASS】
+    音频线是否连接：【PASS】
+    电源断电上电是否正常：【PASS】
+    网络通断是否正常：【PASS】
+    U盘切换是否正常：【PASS】
+    采集卡是否正常：【PASS】
+    红外指令是否正常：【PASS】
+    WIFI打开关闭是否正常：【PASS】
+    adb连接是否正常：【PASS】
+    检测是否有声音：【PASS】
+    检测是否有信源HDMI/TV：【PASS】
+
+当前测试环境是否支持测试类型media的执行：【PASS】
+    是否有采集卡：【PASS】
+    是否有U盘：【PASS】
+    是否能够访问TV设备IP地址：【PASS】
+    是否能够访问公司网络：【PASS】
+    音频线是否连接：【PASS】
+    采集卡是否正常：【PASS】
+    adb连接是否正常：【PASS】
+    检测是否有声音：【PASS】
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id11">
+<h2>编写测试脚本<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h2>
+<p>我们将所有用例脚本，统一提交到一个代码仓库tatf-apps。</p>
+<section id="id12">
+<h3>拉取脚本仓库最新代码<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<p>在开发脚本时，请确保你的本地开发分支的代码已经同步到最新提交ID。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 第一次需克隆代码到本地</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@gitlab</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">nuangua</span><span class="o">/</span><span class="n">testbot</span><span class="o">.</span><span class="n">git</span>
+<span class="c1"># 切换到本地master分支</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+<span class="c1"># 本地若有修改的代码，需提交到暂存区</span>
+<span class="n">git</span> <span class="n">stash</span>
+<span class="c1"># 拉取远端master分支最新代码</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="o">--</span><span class="nb">all</span>
+<span class="c1"># 本地若有修改，恢复修改代码</span>
+<span class="n">git</span> <span class="n">stash</span> <span class="n">pop</span>
+<span class="c1"># 若没有开发分支smoke，创建一个新开发分支smoke，用于开发smoke脚本</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="n">smoke</span>
+<span class="c1"># 切换到你的开发分支smoke</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">smoke</span>
+<span class="c1"># 将本地master分支最新代码同步到分支smoke的代码</span>
+<span class="n">git</span> <span class="n">rebase</span> <span class="n">master</span>
+</pre></div>
+</div>
+</section>
+<section id="id13">
+<h3>脚本仓库目录结构简介<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<p>您开发的脚本，必须按照规范，上传到脚本仓库指定的目录。如系统冒烟测试脚本应该放到目录 <strong>SMOKE_TEST_SYSTEM</strong> 。若未按照规范创建和编写脚本，您的脚本将不会被merge到master分支。</p>
+<ul class="simple">
+<li><p>requirements-dev.txt【开发依赖库】</p></li>
+<li><p>requirements-test.txt【测试依赖库】</p></li>
+<li><p>requirements.txt【脚本依赖库】</p></li>
+<li><p>setup.py【打包配置文件】</p></li>
+<li><p>testbots【基于testbot测试框架开发的应用库，包括测试脚本和测试工具】</p></li>
+<li><p>scripts【测试脚本模块】</p></li>
+<li><p>CHECK_TEST【点检测试脚本模块，所有点检脚本都在该目录下】</p></li>
+<li><p>COMMON_TEST【通用测试脚本模块，所有通用脚本都在该目录下】</p></li>
+<li><p>PERFORMANCE_TEST【性能测试脚本模块，所有性能脚本都在该目录下】</p></li>
+<li><dl class="simple">
+<dt>SMOKE_TEST【冒烟测试脚本模块，所有冒烟脚本都在该目录下】</dt><dd><ul>
+<li><p>SMOKE_TEST_MIDDLEWARE【中间件冒烟测试脚本模块，所有中间件冒烟脚本都在该目录下】</p></li>
+<li><p>SMOKE_TEST_SYSTEM【系统冒烟测试脚本模块，所有系统冒烟脚本都在该目录下】</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SPECIAL_TEST【专项测试脚本模块，所有专项脚本都在该目录下】</dt><dd><ul>
+<li><p>SPECIAL_TEST_MEDIA【媒资遍历专项测试脚本模块，所有媒资遍历专项脚本都在该目录下】</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>STABILITY_TEST【稳定性测试脚本模块，所有稳定性脚本都在该目录下】</p></li>
+<li><p>SYSTEM_TEST【系统测试脚本模块，所有系统脚本都在该目录下】</p></li>
+<li><p>tools【测试工具模块】</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>│   requirements-dev.txt【开发依赖库】
+│   requirements-test.txt【测试依赖库】
+│   requirements.txt【脚本依赖库】
+│   setup.py【打包配置文件】
+│
+└───testbot_apps【基于测试框架开发的应用库，包括测试脚本和测试工具】
+    │   __init__.py
+    │
+    ├───scripts【测试脚本模块】
+    │   │   __init__.py
+    │   │
+    │   ├───CHECK_TEST【点检测试脚本模块，所有点检脚本都在该目录下】
+    │   │       __init__.py
+    │   │
+    │   ├───COMMON_TEST【通用测试脚本模块，所有通用脚本都在该目录下】
+    │   │       __init__.py
+    │   │
+    │   ├───PERFORMANCE_TEST【性能测试脚本模块，所有性能脚本都在该目录下】
+    │   │       __init__.py
+    │   │
+    │   ├───SMOKE_TEST【冒烟测试脚本模块，所有冒烟脚本都在该目录下】
+    │   │   │   __init__.py
+    │   │   │
+    │   │   ├───SMOKE_TEST_MIDDLEWARE【中间件冒烟测试脚本模块，所有中间件冒烟脚本都在该目录下】
+    │   │   │       __init__.py
+    │   │   │
+    │   │   └───SMOKE_TEST_SYSTEM【系统冒烟测试脚本模块，所有系统冒烟脚本都在该目录下】
+    │   │           __init__.py
+    │   │
+    │   ├───SPECIAL_TEST【专项测试脚本模块，所有专项脚本都在该目录下】
+    │   │   │   __init__.py
+    │   │   │
+    │   │   └───SPECIAL_TEST_MEDIA【媒资遍历专项测试脚本模块，所有媒资遍历专项脚本都在该目录下】
+    │   │           __init__.py
+    │   │
+    │   ├───STABILITY_TEST【稳定性测试脚本模块，所有稳定性脚本都在该目录下】
+    │   │       __init__.py
+    │   │
+    │   └───SYSTEM_TEST【系统测试脚本模块，所有系统脚本都在该目录下】
+    │           __init__.py
+    │
+    └───tools【测试工具模块】
+            __init__.py
+</pre></div>
+</div>
+</section>
+<section id="testcasebase">
+<h3>用例基类TestCaseBase简介<a class="headerlink" href="#testcasebase" title="Permalink to this heading"></a></h3>
+<p>该类定义了所有用例的父类，该基类提供了setup()/test()/cleanup()等抽象方法，子类需实现这些方法。</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.case.base.</span></span><span class="sig-name descname"><span class="pre">TestCaseBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>测试用例基类</p>
+<dl class="simple">
+<dt>用户应该实现以下3个方法：</dt><dd><ul class="simple">
+<li><p>collect_resource: 初始化资源对象</p></li>
+<li><p>setup: 测试执行之前的初始化工作</p></li>
+<li><p>test: 测试执行体</p></li>
+<li><p>cleanup: 测试执行之后的清理工作</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="autoapi/testbot/result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase.cleanup"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>执行每个循环之后的清理工作</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>args</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cleanup_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="autoapi/testbot/result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase.cleanup_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>执行测试之后的清理工作</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>args</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collect_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="autoapi/testbot/result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pool</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="fwk_apis.html#testbot.resource.pool.ResourcePool" title="testbot.resource.pool.ResourcePool"><span class="pre">testbot.resource.pool.ResourcePool</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase.collect_resource"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>初始化资源对象</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pool</strong> (<a class="reference internal" href="fwk_apis.html#testbot.resource.pool.ResourcePool" title="testbot.resource.pool.ResourcePool"><em>ResourcePool</em></a>) – 资源池</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_setting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">setting_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase.get_setting"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>获取测试用例配置文件实例</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_var</span></span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase.output_var"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>The test case output variable
+Can be collected by Test Engine
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="autoapi/testbot/result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase.setup"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>执行测试的每个循环之前的初始化工作</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>args</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">setup_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="autoapi/testbot/result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase.setup_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>执行测试之前的初始化工作</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>args</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="autoapi/testbot/result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/case/base.html#TestCaseBase.test"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>测试执行体</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>args</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id14">
+<h3>创建一条测试脚本<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+<p>所有的测试脚本的用例类必须继承自该用例基类。下面是一个子类例子。该子类实现了collect_resource()、setup()/test()/cleanup()等方法。此外，如果该用例需要从外部配置文件读取一些用例特有的配置信息，可以在该用例类里创建一个配置类，该类是一个类中类。
+默认该配置文件名称与该配置类名相同。</p>
+<p>该测试脚本由头部声明、作者版权信息、用例信息、用例子类（用例注解、获取资源对象方法collect_resource、初始化测试方法setup、执行测试方法test、清理测试方法cleanup、用例配置类、两种验证点编写方式）等。</p>
+<ul class="simple">
+<li><p>头部声明</p></li>
+</ul>
+<ul class="simple">
+<li><p>作者版权信息</p></li>
+</ul>
+<ul class="simple">
+<li><p>用例信息</p></li>
+</ul>
+<ul class="simple">
+<li><p>用例注解</p></li>
+</ul>
+<p>用例注解可以选择指定优先级priority、测试类型test_type、测试用例ID、测试用例名称等信息。</p>
+<ul class="simple">
+<li><p>获取资源对象方法collect_resource</p></li>
+</ul>
+<p>框架会自动发现当前测试环境上的测试资源，并保存到 <strong>%TESTBOT_HOME/configs/ResourcePool.json%</strong> ，并允许用户自己添加无法自动发现的测试资源。</p>
+<p>测试资源配置文件如下：</p>
+<p>下面代码演示了如何在用例里获取测试资源对象：</p>
+<ul class="simple">
+<li><p>初始化测试方法setup</p></li>
+</ul>
+<ul class="simple">
+<li><p>执行测试方法test</p></li>
+</ul>
+<ul class="simple">
+<li><p>清理测试方法cleanup</p></li>
+</ul>
+<ul class="simple">
+<li><p>用例配置类及使用</p></li>
+</ul>
+<p>用例配置类为您创建的用例类自动创建一个配置文件对象属性，支持对配置文件的序列化和反序列化。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><p>这里定义了一个用例配置类TCDemoSetting、类属性case_setting1和case_setting2，并赋予默认值</p></li>
+<li><p>该配置文件被创建并保存在于您用例脚本相同目录下，并且其配置文件名称与配置类相同，如当前用例脚本路径是 <strong>D:codestestbottestbotexampleTCDemo.py</strong> ，那么配置文件路径为 <strong>D:/codes/testbot/testbot/example/TCDemoSetting.json</strong></p></li>
+<li><p>若配置文件已存在，则忽略默认值，加载配置文件里的数据</p></li>
+<li><p>可以手动编辑该配置文件，新增字段</p></li>
+<li><p>在用例类里，通过 <strong>self.setting</strong> 对象读取配置文件信息，如下代码所示：</p>
+<blockquote>
+<div></div></blockquote>
+</li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>用例配置示例</p></li>
+</ul>
+<ul class="simple">
+<li><p>经典验证点和结构化验证点写法</p></li>
+</ul>
+<p>结构化验证点，借助with关键字，实现对报错异常的上下文管理。您可以使用经典验证点和结构化验证点两者之一实现自己的用例。</p>
+<p>以下是两种验证点的使用方式示例：</p>
+<p># 经典验证点示例</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-56S65L6LMQ==" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-56S65L6LMQ==" name="56S65L6LMQ==" role="tab" tabindex="0">示例1</button><button aria-controls="panel-2-56S65L6LMg==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-56S65L6LMg==" name="56S65L6LMg==" role="tab" tabindex="-1">示例2</button><button aria-controls="panel-2-56S65L6LMw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-56S65L6LMw==" name="56S65L6LMw==" role="tab" tabindex="-1">示例3</button></div><p>经典验证点示例</p>
+<div aria-labelledby="tab-2-56S65L6LMQ==" class="sphinx-tabs-panel group-tab" id="panel-2-56S65L6LMQ==" name="56S65L6LMQ==" role="tabpanel" tabindex="0"></div><div aria-labelledby="tab-2-56S65L6LMg==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-56S65L6LMg==" name="56S65L6LMg==" role="tabpanel" tabindex="0"></div><div aria-labelledby="tab-2-56S65L6LMw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-56S65L6LMw==" name="56S65L6LMw==" role="tabpanel" tabindex="0"></div></div>
+<p># 结构化验证点示例</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-56S65L6LMQ==" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-56S65L6LMQ==" name="56S65L6LMQ==" role="tab" tabindex="0">示例1</button><button aria-controls="panel-3-56S65L6LMg==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-56S65L6LMg==" name="56S65L6LMg==" role="tab" tabindex="-1">示例2</button><button aria-controls="panel-3-56S65L6LMw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-56S65L6LMw==" name="56S65L6LMw==" role="tab" tabindex="-1">示例3</button></div><p>结构化验证点示例</p>
+<div aria-labelledby="tab-3-56S65L6LMQ==" class="sphinx-tabs-panel group-tab" id="panel-3-56S65L6LMQ==" name="56S65L6LMQ==" role="tabpanel" tabindex="0"></div><div aria-labelledby="tab-3-56S65L6LMg==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-56S65L6LMg==" name="56S65L6LMg==" role="tabpanel" tabindex="0"></div><div aria-labelledby="tab-3-56S65L6LMw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-56S65L6LMw==" name="56S65L6LMw==" role="tabpanel" tabindex="0"></div></div>
+</section>
+<section id="id15">
+<h3>执行测试脚本<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>测试资源池配置文件ResourcePool.json</p></li>
+</ul>
+<ul class="simple">
+<li><p>用例列表类TCList</p></li>
+</ul>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.testengine.testlist.</span></span><span class="sig-name descname"><span class="pre">TestList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>测试列表类</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestListSetting</span></span><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList.TestListSetting"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <a class="reference internal" href="fwk_apis.html#testbot.config.setting.SettingBase" title="testbot.config.setting.SettingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">testbot.config.setting.SettingBase</span></code></a></p>
+<p>配置基类</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">case_setting_path</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> </em><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList.TestListSetting.case_setting_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">follow_priority</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">True</span></em><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList.TestListSetting.follow_priority"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">priority_to_run</span></span><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList.TestListSetting.priority_to_run"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">random_seed</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList.TestListSetting.random_seed"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">run_type</span></span><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList.TestListSetting.run_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">skip_if_high_priority_failed</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">True</span></em><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList.TestListSetting.skip_if_high_priority_failed"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>读取测试列表</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/testlist.html#TestList.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>将测试列表保存成json格式的文件</p>
+</dd></dl>
+
+</dd></dl>
+
+<ul class="simple">
+<li><p>用例列表配置类TestListSetting</p></li>
+</ul>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.testengine.testlist.TestList.</span></span><span class="sig-name descname"><span class="pre">TestListSetting</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="fwk_apis.html#testbot.config.setting.SettingBase" title="testbot.config.setting.SettingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">testbot.config.setting.SettingBase</span></code></a></p>
+<p>配置基类</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">case_setting_path</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> </em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">follow_priority</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">True</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">priority_to_run</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">random_seed</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">run_type</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">skip_if_high_priority_failed</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">True</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<ul class="simple">
+<li><p>测试用例列表TCList.json</p></li>
+</ul>
+<p>我们执行器以测试用例列表为单位，执行测试任务。
+cases字段指定需要执行的测试用例模块路径，如 <strong>testbot.example.TCDemo.TCDemo</strong> 。</p>
+<p>下面是一个测试用例列表配置文件：</p>
+<ul class="simple">
+<li><p>测试用例列表配置文件TCListSetting.json</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>该配置文件被创建并保存在于您用例脚本相同目录下，并且其配置文件名称与配置类相同</p></li>
+<li><p>若配置文件已存在，则忽略默认值，加载配置文件里的数据</p></li>
+<li><p>可以手动编辑该配置文件，新增字段</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>测试用例脚本TCDemo.py</p></li>
+</ul>
+<ul class="simple">
+<li><p>测试用例配置文件</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├───testbot_apps
+│   │   __init__.py
+│   │
+│   ├───examples
+│   │   │   __init__.py
+│   │   │
+│   │   ├───demo
+│   │   │   │   OUTPUT.log
+│   │   │   │   README.md
+│   │   │   │   ResourcePool.json
+│   │   │   │   RESULT.json
+│   │   │   │   TCDemo.py
+│   │   │   │   TCDemoSetting.json
+│   │   │   │   TCList.json
+│   │   │   │   TCListSetting.json
+│   │   │   │   __init__.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>执行测试</p></li>
+</ul>
+<p>在testbot-apps项目根目录下，执行以下命令：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">testbot</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">start</span> <span class="o">-</span><span class="n">t</span> <span class="n">testbot_apps</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">demo</span><span class="o">/</span><span class="n">TCList</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">r</span> <span class="n">testbot_apps</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">demo</span><span class="o">/</span><span class="n">ResourcePool</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">u</span> <span class="n">sunny</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>测试日志</p></li>
+</ul>
+<ul class="simple">
+<li><p>测试数据</p></li>
+</ul>
+</section>
+<section id="id16">
+<h3>提交脚本代码<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+<p>提交本地开发分支代码到您自己的远程开发分支而非master分支。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 添加文件</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="c1"># 检查待提交的文件列表</span>
+<span class="n">git</span> <span class="n">status</span>
+<span class="c1"># 提交代码</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;新增一条冒烟脚本&quot;</span>
+<span class="c1"># 推到远程仓库</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">smoke</span>
+</pre></div>
+</div>
+<p>然后，在GitLab的 <a class="reference external" href="https://gitlab.com/nuangua/testbot/-/merge_requests">Merge Requests</a> 创建一个Merge请求，等待CICD流水线执行完和代码评审组均通过后，方可合入到master分支。</p>
+<p>代码通过以下，表示合入成功：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gitlab.com/nuangua/testbot/-/pipelines">CICD流水线</a> 【PASS】</p></li>
+</ul>
+<p>若您的代码，在执行CICD流水线时，失败了，请自行查看流水线日志并修复代码问题</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gitlab.com/nuangua/testbot/-/merge_requests">合并请求</a> 【PASS】</p></li>
+</ul>
+<p>若您的代码，未通过合并请求，代码评审组会将您的合并请求打回，并给出具体的问题描述信息，请根据问题描述信息进行修改您的代码</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>若您的代码提交已通过CICD流水线验证，仍未通过合并请求，请联系以下代码评审组成员：</p>
+<ul class="simple">
+<li><p>【姓名：顾暖光】【账号：nuanguang.gu】【邮箱：<a class="reference external" href="mailto:nuanguang&#46;gu&#37;&#52;&#48;aliyun&#46;com">nuanguang<span>&#46;</span>gu<span>&#64;</span>aliyun<span>&#46;</span>com</a>】</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Indices and tables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dev_pipeline_setup.html" class="btn btn-neutral float-right" title="搭建GitLab流水线" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

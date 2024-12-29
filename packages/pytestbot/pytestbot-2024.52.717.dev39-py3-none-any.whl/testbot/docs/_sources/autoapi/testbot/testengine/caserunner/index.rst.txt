@@ -1,0 +1,208 @@
+:py:mod:`testbot.testengine.caserunner`
+=======================================
+
+.. py:module:: testbot.testengine.caserunner
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.testengine.caserunner.CaseRunnerSetting
+   testbot.testengine.caserunner.RunningStatus
+   testbot.testengine.caserunner.CaseRunner
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.testengine.caserunner.__copyright__
+   testbot.testengine.caserunner.__author__
+   testbot.testengine.caserunner.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   Test Engine
+
+.. py:class:: CaseRunnerSetting
+
+
+   Bases: :py:obj:`testbot.config.setting.SettingBase`
+
+   The case runner setting
+
+   .. py:attribute:: default_case_setting_path
+
+      
+
+   .. py:attribute:: log_path
+
+      
+
+   .. py:attribute:: case_log
+
+      
+
+   .. py:attribute:: log_level
+      :value: 'INFO'
+
+      
+
+
+.. py:exception:: CaseImportError(msg, inner_ex=None)
+
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+
+.. py:exception:: TestEngineNotReadyError(msg)
+
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+
+.. py:class:: RunningStatus
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   Generic enumeration.
+
+   Derive from this class to define new enumerations.
+
+   .. py:attribute:: Idle
+      :value: 1
+
+      
+
+   .. py:attribute:: Running
+      :value: 3
+
+      
+
+
+.. py:class:: CaseRunner
+
+
+   Bases: :py:obj:`object`
+
+   测试用例执行器
+
+   .. py:property:: resource_ready
+
+      资源是否已准备好
+
+      :return:
+      :rtype:
+
+   .. py:property:: test_list_ready
+
+      测试用例列表是否已准备好
+
+      :return:
+      :rtype:
+
+   .. py:method:: load_resource(file_name: str, username: str)
+
+      加载测试资源
+
+      :param file_name: 资源文件路径
+      :type file_name: str
+      :param username: 资源拥有者
+      :type username: str
+      :return:
+      :rtype:
+
+
+   .. py:method:: load_test(test_name: str) -> testbot.case.base.TestCaseBase
+
+      实例化测试用例
+
+      :param test_name: 测试名称
+      :type test_name: str
+      :return:
+      :rtype:
+
+
+   .. py:method:: print_module_info()
+
+
+   .. py:method:: set_test_list(test_list: testbot.testengine.testlist.TestList)
+
+      #装载测试列表
+
+
+   .. py:method:: start()
+
+      测试引擎开始执行
+
+
+   .. py:method:: wait_for_test_done()
+
+      等待测试完成
+
+      :return:
+      :rtype:
+
+
+   .. py:method:: run_case_lcm(test: testbot.case.base.TestCaseBase, node: testbot.result.testreporter.CaseEntry)
+
+      执行测试用例生命周期管理
+      这个方法应该在子线程被运行
+
+
+   .. py:method:: _import_list_case(case_tree_node, test_list, log_path=None)
+
+      递归导入测试列表中的测试用例
+
+
+   .. py:method:: __init_precondition(test: testbot.case.base.TestCaseBase)
+
+
+   .. py:method:: __pre_check(test: testbot.case.base.TestCaseBase)
+
+
+   .. py:method:: __get_case_log(path, case_name)
+
+
+   .. py:method:: __main_test_thread()
+
+
+   .. py:method:: __run_test_list(testlist)
+
+
+   .. py:method:: __run_case(test: testbot.case.base.TestCaseBase, node: testbot.result.testreporter.CaseEntry)
+
+      测试用例执行线程
+
+
+   .. py:method:: __call_cleanup(test: testbot.case.base.TestCaseBase, node: testbot.result.testreporter.CaseEntry)
+
+      执行清除操作
+
+
+

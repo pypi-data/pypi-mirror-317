@@ -1,0 +1,29 @@
+:py:mod:`testbot_webui.manage`
+==============================
+
+.. py:module:: testbot_webui.manage
+
+.. autoapi-nested-parse::
+
+   Django's command-line utility for administrative tasks.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot_webui.manage.main
+
+
+
+.. py:function:: main()
+
+   Run administrative tasks.
+
+

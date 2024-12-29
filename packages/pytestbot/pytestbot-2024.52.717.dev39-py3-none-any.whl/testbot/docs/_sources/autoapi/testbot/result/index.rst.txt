@@ -1,0 +1,36 @@
+:py:mod:`testbot.result`
+========================
+
+.. py:module:: testbot.result
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   logger/index.rst
+   logger_demo/index.rst
+   reporter/index.rst
+   testreporter/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+

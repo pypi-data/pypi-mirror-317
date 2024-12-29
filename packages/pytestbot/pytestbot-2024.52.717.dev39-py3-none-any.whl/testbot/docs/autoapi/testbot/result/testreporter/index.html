@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>testbot.result.testreporter &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js?v=359c27e9"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">testbot.result.testreporter</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/testbot/result/testreporter/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-testbot.result.testreporter">
+<span id="testbot-result-testreporter"></span><h1><a class="reference internal" href="#module-testbot.result.testreporter" title="testbot.result.testreporter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">testbot.result.testreporter</span></code></a><a class="headerlink" href="#module-testbot.result.testreporter" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.result.testreporter.ResultType" title="testbot.result.testreporter.ResultType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResultType</span></code></a></p></td>
+<td><p>Generic enumeration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.result.testreporter.NodeEntry" title="testbot.result.testreporter.NodeEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NodeEntry</span></code></a></p></td>
+<td><p>代表一般节点，比如测试列表</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CaseEntry</span></code></a></p></td>
+<td><p>代表测试用例的节点</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.result.testreporter.CaseStepEntry" title="testbot.result.testreporter.CaseStepEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CaseStepEntry</span></code></a></p></td>
+<td><p>测试步骤节点</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.result.testreporter.StepReporter" title="testbot.result.testreporter.StepReporter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StepReporter</span></code></a></p></td>
+<td><p>测试结果，用单例实现</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.result.testreporter.__copyright__" title="testbot.result.testreporter.__copyright__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__copyright__</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.result.testreporter.__author__" title="testbot.result.testreporter.__author__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__author__</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.result.testreporter.__email__" title="testbot.result.testreporter.__email__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__email__</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.result.testreporter.TIME_FORMAT" title="testbot.result.testreporter.TIME_FORMAT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TIME_FORMAT</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.result.testreporter.logger" title="testbot.result.testreporter.logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">logger</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.result.testreporter.__copyright__">
+<span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">__copyright__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Copyright</span> <span class="pre">(c)</span> <span class="pre">2024</span> <span class="pre">Nuanguang</span> <span class="pre">Gu(Sunny)</span> <span class="pre">Reserved'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#__copyright__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.__copyright__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.result.testreporter.__author__">
+<span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">__author__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Nuanguang</span> <span class="pre">Gu(Sunny)'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#__author__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.__author__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.result.testreporter.__email__">
+<span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">__email__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'nuanguang.gu&#64;aliyun.com'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#__email__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.__email__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.result.testreporter.TIME_FORMAT">
+<span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">TIME_FORMAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'%Y-%m-%d</span> <span class="pre">%H:%M:%S'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#TIME_FORMAT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.TIME_FORMAT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.result.testreporter.ResultType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">ResultType</span></span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#ResultType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.ResultType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Generic enumeration.</p>
+<p>Derive from this class to define new enumerations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.result.testreporter.ResultType.PASS">
+<span class="sig-name descname"><span class="pre">PASS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Passed'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#ResultType.PASS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.ResultType.PASS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.result.testreporter.ResultType.FAIL">
+<span class="sig-name descname"><span class="pre">FAIL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Failed'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#ResultType.FAIL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.ResultType.FAIL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.result.testreporter.ResultType.ERROR">
+<span class="sig-name descname"><span class="pre">ERROR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Errored'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#ResultType.ERROR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.ResultType.ERROR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.result.testreporter.ResultType.BLOCK">
+<span class="sig-name descname"><span class="pre">BLOCK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Blocked'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#ResultType.BLOCK"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.ResultType.BLOCK" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.result.testreporter.ResultType.SKIP">
+<span class="sig-name descname"><span class="pre">SKIP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Skipped'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#ResultType.SKIP"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.ResultType.SKIP" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.result.testreporter.ResultType.INFO">
+<span class="sig-name descname"><span class="pre">INFO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Information'</span></em><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#ResultType.INFO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.ResultType.INFO" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="testbot.result.testreporter.StepEnd">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">StepEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#StepEnd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.StepEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">NodeEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>代表一般节点，比如测试列表</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry.__enter__">
+<span class="sig-name descname"><span class="pre">__enter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry.__enter__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry.__enter__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_tb</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry.__exit__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry.__exit__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry.start_node">
+<span class="sig-name descname"><span class="pre">start_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry.start_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry.start_node" title="Permalink to this definition"></a></dt>
+<dd><p>创建新的普通节点</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>headline</strong> (<em>str</em>) – 步骤头信息</p></li>
+<li><p><strong>message</strong> (<em>str</em>) – 失败详情</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#testbot.result.testreporter.NodeEntry" title="testbot.result.testreporter.NodeEntry">NodeEntry</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry.start_case">
+<span class="sig-name descname"><span class="pre">start_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry.start_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry.start_case" title="Permalink to this definition"></a></dt>
+<dd><p>创建新用例节点</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>headline</strong> (<em>str</em>) – 步骤头信息</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry">CaseEntry</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry.get_json">
+<span class="sig-name descname"><span class="pre">get_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry.get_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry.get_json" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry.to_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry.to_text">
+<span class="sig-name descname"><span class="pre">to_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry.to_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry.to_text" title="Permalink to this definition"></a></dt>
+<dd><p>将结果生成文本类型的结构</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry._get_intent">
+<span class="sig-name descname"><span class="pre">_get_intent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry._get_intent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry._get_intent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry._get_dot_line">
+<span class="sig-name descname"><span class="pre">_get_dot_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_max</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry._get_dot_line"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry._get_dot_line" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry.get_friend_print">
+<span class="sig-name descname"><span class="pre">get_friend_print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry.get_friend_print"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry.get_friend_print" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.NodeEntry.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#NodeEntry.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.NodeEntry.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">CaseEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#testbot.result.testreporter.NodeEntry" title="testbot.result.testreporter.NodeEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NodeEntry</span></code></a></p>
+<p>代表测试用例的节点</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.__enter__">
+<span class="sig-name descname"><span class="pre">__enter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.__enter__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.__enter__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_tb</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.__exit__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.__exit__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry._get_result_headline">
+<span class="sig-name descname"><span class="pre">_get_result_headline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headline_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">59</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry._get_result_headline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry._get_result_headline" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.start" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.passed">
+<span class="sig-name descname"><span class="pre">passed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.passed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.passed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.failed">
+<span class="sig-name descname"><span class="pre">failed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.failed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.failed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.blocked">
+<span class="sig-name descname"><span class="pre">blocked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.blocked"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.blocked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.skipped">
+<span class="sig-name descname"><span class="pre">skipped</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.skipped"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.skipped" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.errored">
+<span class="sig-name descname"><span class="pre">errored</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.errored"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.errored" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.info">
+<span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.get_json">
+<span class="sig-name descname"><span class="pre">get_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.get_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.get_json" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.get_friend_print">
+<span class="sig-name descname"><span class="pre">get_friend_print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.get_friend_print"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.get_friend_print" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseEntry.update_result">
+<span class="sig-name descname"><span class="pre">update_result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseEntry.update_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseEntry.update_result" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseStepEntry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">CaseStepEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_no</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_continue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseStepEntry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseStepEntry" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CaseEntry</span></code></a></p>
+<p>测试步骤节点</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseStepEntry.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_tb</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseStepEntry.__exit__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseStepEntry.__exit__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseStepEntry.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseStepEntry.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseStepEntry.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseStepEntry.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_continue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseStepEntry.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseStepEntry.start" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.CaseStepEntry.get_json">
+<span class="sig-name descname"><span class="pre">get_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#CaseStepEntry.get_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.CaseStepEntry.get_json" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.result.testreporter.StepReporter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">StepReporter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#StepReporter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.StepReporter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>测试结果，用单例实现</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.result.testreporter.StepReporter.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#StepReporter.instance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.StepReporter.instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.StepReporter.get_instance">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#StepReporter.get_instance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.StepReporter.get_instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.StepReporter.start_node">
+<span class="sig-name descname"><span class="pre">start_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">headline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#StepReporter.start_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.StepReporter.start_node" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.testreporter.StepReporter.print">
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#StepReporter.print"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.StepReporter.print" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.result.testreporter.logger">
+<span class="sig-prename descclassname"><span class="pre">testbot.result.testreporter.</span></span><span class="sig-name descname"><span class="pre">logger</span></span><a class="reference internal" href="../../../../_modules/testbot/result/testreporter.html#logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.testreporter.logger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>testbot.config.logicmodule &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js?v=359c27e9"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">testbot.config.logicmodule</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/testbot/config/logicmodule/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-testbot.config.logicmodule">
+<span id="testbot-config-logicmodule"></span><h1><a class="reference internal" href="#module-testbot.config.logicmodule" title="testbot.config.logicmodule"><code class="xref py py-mod docutils literal notranslate"><span class="pre">testbot.config.logicmodule</span></code></a><a class="headerlink" href="#module-testbot.config.logicmodule" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.config.logicmodule.ModuleType" title="testbot.config.logicmodule.ModuleType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModuleType</span></code></a></p></td>
+<td><p>Generic enumeration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.config.logicmodule.ModuleBase" title="testbot.config.logicmodule.ModuleBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModuleBase</span></code></a></p></td>
+<td><p>逻辑配置模块的基类</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.config.logicmodule.ModuleSetting" title="testbot.config.logicmodule.ModuleSetting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModuleSetting</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.config.logicmodule.ModuleManager" title="testbot.config.logicmodule.ModuleManager"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModuleManager</span></code></a></p></td>
+<td><p>配置模块的管理</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.config.logicmodule.__copyright__" title="testbot.config.logicmodule.__copyright__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__copyright__</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.config.logicmodule.__author__" title="testbot.config.logicmodule.__author__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__author__</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#testbot.config.logicmodule.__email__" title="testbot.config.logicmodule.__email__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__email__</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#testbot.config.logicmodule.mm" title="testbot.config.logicmodule.mm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mm</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.__copyright__">
+<span class="sig-prename descclassname"><span class="pre">testbot.config.logicmodule.</span></span><span class="sig-name descname"><span class="pre">__copyright__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Copyright</span> <span class="pre">(c)</span> <span class="pre">2024</span> <span class="pre">Nuanguang</span> <span class="pre">Gu(Sunny)</span> <span class="pre">Reserved'</span></em><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#__copyright__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.__copyright__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.__author__">
+<span class="sig-prename descclassname"><span class="pre">testbot.config.logicmodule.</span></span><span class="sig-name descname"><span class="pre">__author__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Nuanguang</span> <span class="pre">Gu(Sunny)'</span></em><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#__author__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.__author__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.__email__">
+<span class="sig-prename descclassname"><span class="pre">testbot.config.logicmodule.</span></span><span class="sig-name descname"><span class="pre">__email__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'nuanguang.gu&#64;aliyun.com'</span></em><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#__email__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.__email__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.config.logicmodule.</span></span><span class="sig-name descname"><span class="pre">ModuleType</span></span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Generic enumeration.</p>
+<p>Derive from this class to define new enumerations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleType.PRE">
+<span class="sig-name descname"><span class="pre">PRE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleType.PRE"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleType.PRE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleType.PARALLEL">
+<span class="sig-name descname"><span class="pre">PARALLEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleType.PARALLEL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleType.PARALLEL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleType.POST">
+<span class="sig-name descname"><span class="pre">POST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleType.POST"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleType.POST" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.config.logicmodule.</span></span><span class="sig-name descname"><span class="pre">ModuleBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">report</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../result/reporter/index.html#testbot.result.reporter.ResultReporter" title="testbot.result.reporter.ResultReporter"><span class="pre">testbot.result.reporter.ResultReporter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../../../fwk_apis.html#testbot.resource.pool.ResourcePool" title="testbot.resource.pool.ResourcePool"><span class="pre">testbot.resource.pool.ResourcePool</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleBase" title="Permalink to this definition"></a></dt>
+<dd><p>逻辑配置模块的基类</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleBase.module_type">
+<span class="sig-name descname"><span class="pre">module_type</span></span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleBase.module_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleBase.module_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleBase.priority">
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">99</span></em><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleBase.priority"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleBase.priority" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleBase.action">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">action</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleBase.action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleBase.action" title="Permalink to this definition"></a></dt>
+<dd><p>实现该方法来实现模块的逻辑功能</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleBase.do">
+<span class="sig-name descname"><span class="pre">do</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleBase.do"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleBase.do" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleBase.stop">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleBase.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleBase.stop" title="Permalink to this definition"></a></dt>
+<dd><p>实现该方法来实现模块逻辑功能的终止方法</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleSetting">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.config.logicmodule.</span></span><span class="sig-name descname"><span class="pre">ModuleSetting</span></span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleSetting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleSetting" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../../../fwk_apis.html#testbot.config.setting.SettingBase" title="testbot.config.setting.SettingBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">testbot.config.setting.SettingBase</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleSetting.module_list_file">
+<span class="sig-name descname"><span class="pre">module_list_file</span></span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleSetting.module_list_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleSetting.module_list_file" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleSetting.module_setting_path">
+<span class="sig-name descname"><span class="pre">module_setting_path</span></span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleSetting.module_setting_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleSetting.module_setting_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.config.logicmodule.</span></span><span class="sig-name descname"><span class="pre">ModuleManager</span></span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleManager" title="Permalink to this definition"></a></dt>
+<dd><p>配置模块的管理</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleManager.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleManager.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleManager.load" title="Permalink to this definition"></a></dt>
+<dd><p>从模块列表装载所有模块类</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleManager.add_module">
+<span class="sig-name descname"><span class="pre">add_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleManager.add_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleManager.add_module" title="Permalink to this definition"></a></dt>
+<dd><p>添加模块</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleManager.get_module_instances">
+<span class="sig-name descname"><span class="pre">get_module_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_reporter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resources</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleManager.get_module_instances"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleManager.get_module_instances" title="Permalink to this definition"></a></dt>
+<dd><p>获取模块的实例化列表</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleManager.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleManager.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleManager.save" title="Permalink to this definition"></a></dt>
+<dd><p>保存所有模块到模块配置列表</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleManager.run_module">
+<span class="sig-name descname"><span class="pre">run_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleManager.run_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleManager.run_module" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.ModuleManager.stop_module">
+<span class="sig-name descname"><span class="pre">stop_module</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#ModuleManager.stop_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.ModuleManager.stop_module" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="testbot.config.logicmodule.mm">
+<span class="sig-prename descclassname"><span class="pre">testbot.config.logicmodule.</span></span><span class="sig-name descname"><span class="pre">mm</span></span><a class="reference internal" href="../../../../_modules/testbot/config/logicmodule.html#mm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.logicmodule.mm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>编码规范 &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="框架核心API接口" href="fwk_apis.html" />
+    <link rel="prev" title="培训宣讲推广" href="dev_training.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">编码规范</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">代码提交规范</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">代码仓库管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">代码分支管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">代码更新与提交</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">请求合并代码</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python">Python通用编码规范</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">框架编码规范</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">接口编码规范</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tcl-tv">为TCL TV设备创建一个接口模块类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">接口方法定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">打印日志信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">接口模块类命名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">接口方法命名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">代码注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api">调用其他模块的API接口</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">脚本编码规范</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">编码规范</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dev_coding_spec.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>编码规范<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<section id="id2">
+<h2>代码提交规范<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3>代码仓库管理<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>统一使用git线上管理，避免本地仓库</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 克隆框架代码仓库</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@gitlab</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">nuangua</span><span class="o">/</span><span class="n">testbot</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>代码分支管理<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>引入develop分支与master分支管理</p></li>
+</ul>
+<p>develop分支：不允许合并请求，只允许推送代码</p>
+<p>master分支：允许合并请求，不允许推送代码</p>
+</section>
+<section id="id5">
+<h3>代码更新与提交<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>代码提交前必须先更新master分支最新代码后提交，禁止出现代码被覆盖</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 查看当前开发分支，例如当前在develop分支</span>
+<span class="n">git</span> <span class="n">branch</span>
+
+<span class="c1"># 将当前修改的代码提交到暂存区</span>
+<span class="n">git</span> <span class="n">stash</span>
+
+<span class="c1"># 切到master分支</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+
+<span class="c1"># 拉取master分支最新代码</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="o">--</span><span class="nb">all</span>
+
+<span class="c1"># 切换到develop开发分支</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">develop</span>
+
+<span class="c1"># 将master最新代码同步到develop分支</span>
+<span class="n">git</span> <span class="n">rebase</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+
+<span class="c1"># 从暂存区取出修改的代码</span>
+<span class="n">git</span> <span class="n">stash</span> <span class="n">pop</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>提交注释需与提交内容相对应</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 添加想要提交的文件</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">XXX</span><span class="o">.</span><span class="n">py</span> <span class="n">YYY</span><span class="o">.</span><span class="n">json</span>
+
+<span class="c1"># 提交代码</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;代码提交评论&quot;</span>
+
+<span class="c1"># 推送本地提交到远程smoke分支</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">develop</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>请求合并代码<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>请求合并开发分支develop的代码到master</p></li>
+</ul>
+</section>
+</section>
+<section id="python">
+<h2>Python通用编码规范<a class="headerlink" href="#python" title="Permalink to this heading"></a></h2>
+</section>
+<section id="id7">
+<h2>框架编码规范<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+</section>
+<section id="id8">
+<h2>接口编码规范<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<section id="tcl-tv">
+<h3>为TCL TV设备创建一个接口模块类<a class="headerlink" href="#tcl-tv" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>所有TCL TV设备模块接口类必须继承自类TCLTVDeviceModuleBase</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">testbot.resource.modules.device_module</span> <span class="kn">import</span> <span class="n">DeviceModuleBase</span>
+
+<span class="k">class</span> <span class="nc">PowerModule</span><span class="p">(</span><span class="n">TCLTVDeviceModuleBase</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h3>接口方法定义<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>接口方法的参数、类型必须指定，返回值类型必须指定</p></li>
+<li><p>配置Pycharm自动生成方法参数描述信息（配置路径Pycharm-&gt;Settings-&gt;Editor-&gt;General→Smart Keys-&gt;Python）</p></li>
+<li><p>接口方法的注释，必须有参数描述，注释可通过Pycharm自动生成</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">testbot.resource.modules.device_module</span> <span class="kn">import</span> <span class="n">DeviceModuleBase</span>
+
+<span class="k">class</span> <span class="nc">PowerModule</span><span class="p">(</span><span class="n">TCLTVDeviceModuleBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    TCL TV电源模块API接口集</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">set_power</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        给TCL TV设备上电或断电</span>
+
+<span class="sd">        :param on: True是上电，False是断电</span>
+<span class="sd">        :type on: bool</span>
+<span class="sd">        :return: 是否断电或上电成功</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;给TV设备上电/断电&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h3>打印日志信息<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>用例对象可通过self.logger.&lt;LEVEL&gt;打印不同级别的日志信息</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">testbot.resource.modules.device_module</span> <span class="kn">import</span> <span class="n">DeviceModuleBase</span>
+
+<span class="k">class</span> <span class="nc">PowerModule</span><span class="p">(</span><span class="n">TCLTVDeviceModuleBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    TCL TV电源模块API接口集</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">set_power</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        给TCL TV设备上电或断电</span>
+
+<span class="sd">        :param on: True是上电，False是断电</span>
+<span class="sd">        :type on: bool</span>
+<span class="sd">        :return: 是否断电或上电成功</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;给TV设备上电/断电&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;打印DEBUG级别的日志信息&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;打印INFO级别的日志信息&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;打印WARN级别的日志信息&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;打印ERROR级别的日志信息&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">critial</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;打印CRITIAL级别的日志信息&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h3>接口模块类命名<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>模块接口类名使用驼峰式命名</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>接口方法命名<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>接口方法命名应使用小写字母和下划线，如：set_power()</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>代码注释<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>模块接口类注释</p></li>
+<li><p>接口方法注释</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">testbot.resource.modules.device_module</span> <span class="kn">import</span> <span class="n">DeviceModuleBase</span>
+
+<span class="k">class</span> <span class="nc">PowerModule</span><span class="p">(</span><span class="n">TCLTVDeviceModuleBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    TCL TV电源模块API接口集</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">set_power</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        给TCL TV设备上电或断电</span>
+
+<span class="sd">        :param on: True是上电，False是断电</span>
+<span class="sd">        :type on: bool</span>
+<span class="sd">        :return: 是否断电或上电成功</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;给TV设备上电/断电&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</section>
+<section id="api">
+<h3>调用其他模块的API接口<a class="headerlink" href="#api" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>通过self.&lt;模块类名&gt;.&lt;接口名&gt;(参数列表)，调用其他模块的接口</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tatf.resource.modules.device_module</span> <span class="kn">import</span> <span class="n">DeviceModuleBase</span>
+
+<span class="k">class</span> <span class="nc">PowerModule</span><span class="p">(</span><span class="n">TCLTVDeviceModuleBase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">set_power</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">CommSerialModule</span><span class="o">.</span><span class="n">send_command</span><span class="p">(</span><span class="n">cmd</span><span class="o">=</span><span class="s2">&quot;reboot&quot;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>注意：禁止直接或间接循环调用接口，可通过重写__set_attribute__()方法检测</p>
+</div>
+</section>
+</section>
+<section id="id14">
+<h2>脚本编码规范<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dev_training.html" class="btn btn-neutral float-left" title="培训宣讲推广" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fwk_apis.html" class="btn btn-neutral float-right" title="框架核心API接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

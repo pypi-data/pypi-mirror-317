@@ -1,0 +1,188 @@
+:py:mod:`testbot.config.setting`
+================================
+
+.. py:module:: testbot.config.setting
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.config.setting.SettingBase
+   testbot.config.setting.TestSettingBase
+   testbot.config.setting.StaticSettingManager
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.config.setting.dynamic_setting
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.config.setting.__copyright__
+   testbot.config.setting.__author__
+   testbot.config.setting.__email__
+   testbot.config.setting._DEFAULT_PATH
+   testbot.config.setting.static_setting
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:data:: _DEFAULT_PATH
+
+   
+
+.. py:exception:: SettingError(*args, **kwargs)
+
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+
+.. py:class:: SettingBase
+
+
+   配置基类
+
+   .. py:attribute:: file_name
+
+      
+
+   .. py:attribute:: setting_path
+
+      
+
+   .. py:method:: _get_full_path()
+      :classmethod:
+
+      获取配置文件全路径
+      :return: 配置文件全路径
+      :rtype: str
+
+
+   .. py:method:: save()
+      :classmethod:
+
+      保存配置文件
+
+      :return: None
+      :rtype: NoneType
+
+
+   .. py:method:: load()
+      :classmethod:
+
+      加载配置文件
+
+      :return: None
+      :rtype: NoneType
+
+
+
+.. py:function:: dynamic_setting(cls)
+
+   对SettingBase子类进行动态配置
+
+   :param cls:
+   :type cls:
+   :return:
+   :rtype:
+
+
+.. py:class:: TestSettingBase(setting_path, filename)
+
+
+   Bases: :py:obj:`SettingBase`
+
+   测试设置基类
+
+
+
+.. py:class:: StaticSettingManager
+
+
+   Bases: :py:obj:`object`
+
+   静态配置管理类
+
+   .. py:property:: setting_path
+      :type: str
+
+      设置路径
+
+      :return: 设置路径
+      :rtype: str
+
+   .. py:method:: add_setting(setting_name: str, setting_class: object)
+
+      添加配置对象
+
+      :param setting_name: 配置名称
+      :type setting_name: str
+      :param setting_class: 配置类
+      :type setting_class: object
+      :return:
+      :rtype:
+
+
+   .. py:method:: setting(setting_name: str, *args: tuple, **kwargs: dict)
+
+      配置文件的注册装饰器
+
+      :param setting_name: 配置名称
+      :type setting_name: str
+      :param args:
+      :type args:
+      :param kwargs:
+      :type kwargs:
+      :return:
+      :rtype:
+
+
+   .. py:method:: sync_path()
+
+      同步所有配置的路径
+
+
+   .. py:method:: save_all()
+
+      保存所有配置
+
+
+   .. py:method:: load_all()
+
+      读取所有配置
+
+
+
+.. py:data:: static_setting
+
+   
+

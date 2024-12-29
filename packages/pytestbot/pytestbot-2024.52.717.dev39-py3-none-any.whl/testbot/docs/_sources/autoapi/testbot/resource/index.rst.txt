@@ -1,0 +1,49 @@
+:py:mod:`testbot.resource`
+==========================
+
+.. py:module:: testbot.resource
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   modules/index.rst
+   protoc/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   constraint/index.rst
+   device/index.rst
+   error/index.rst
+   pool/index.rst
+   port/index.rst
+   resource/index.rst
+   tcl_tv_device/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+

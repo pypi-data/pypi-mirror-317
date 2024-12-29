@@ -1,0 +1,269 @@
+================================
+框架核心API接口
+================================
+
+
+资源模块
+==============
+
+
+我们将自动化测试过程中的所有测试实体，如测试设备类、测试服务类、测试软件类等均看做测试资源。在这一层，测试资源将提供其所拥有的所有基础接口，并对外开放。
+
+* 测试设备类
+
+测试设备类资源是测试过程中用到的硬件设备，如测试TV设备、测试手机设备、机械手设备、色彩分析仪设备等。
+
+* 测试服务类
+
+测试服务类资源是测试过程中用到的系统服务，如HTTP服务、FTP服务、TCP服务等。
+
+* 测试软件类
+
+测试软件类资源是测试过程中用到的软件，可以是命令行形式的也可以是GUI形式的。
+
+资源拓扑图
+---------------------
+
+.. image:: _static/topo.svg
+
+资源类Resource
+---------------------
+
+.. autoapiclass:: testbot.resource.resource.Resource
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+设备类Device
+---------------------
+
+.. autoapiclass:: testbot.resource.device.Device
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+端口类Port
+---------------------
+
+.. autoapiclass:: testbot.resource.device.Port
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+资源池类ResourcePool
+---------------------
+
+.. autoapiclass:: testbot.resource.pool.ResourcePool
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+资源池序列化反序列化
+---------------------
+
+下面是一个例子，介绍了如何创建一个资源池，并进行序列化和反序列化：
+
+.. literalinclude:: ../src/testbot/resource/pool_demo.py
+   :language: python
+   :linenos:
+
+资源池类可以从json文件将json数据反序列化为资源池对象，反之亦可，即可以将资源池对象序列化为json数据并保存到本地json文件。如下是一个序列化后的json格式的资源池：
+
+.. literalinclude:: ../src/testbot/resource/pool.json
+   :language: JSON
+   :linenos:
+
+
+插件模块
+==============
+
+配置模块
+==============
+
+支持静态配置和动态配置。静态配置，既可以将本地json文件反序列化为类对象，也可以将类对象序列化为本地json文件，一般用于框架公共模块配置文件的持久化；动态配置，将本地json文件反序列化为类对象，一般用于用例类的特有参数配置。
+
+配置基类SettingBase
+---------------------
+
+.. autoapiclass:: testbot.config.setting.SettingBase
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+静态配置管理器类StaticSettingManager
+---------------------------------------
+
+.. autoapiclass:: testbot.config.setting.StaticSettingManager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+创建静态配置
+-------------------
+
+下面是一个创建静态配置的例子。该例子为Resource模块创建了一个配置文件ResourceSetting.json，可通过ResourceSetting类对配置文件的json数据进行双向读取和保存。我们可以手动往配置文件里添加新属性，类ResourceSetting就可访问该属性。
+
+.. literalinclude:: ../src/testbot/config/static_setting_demo.py
+   :language: python
+   :linenos:
+
+该Resource模块的静态配置文件内容如下：
+
+.. literalinclude:: ../src/testbot/config/ResourceSetting.json
+   :language: JSON
+   :linenos:
+
+创建动态配置
+-------------------
+
+下面是一个创建动态配置的例子。该例子为用例类创建了一个配置文件
+
+.. literalinclude:: ../src/testbot/config/dynamic_setting_demo.py
+   :language: python
+   :linenos:
+
+该用例的动态配置文件内容如下：
+
+.. literalinclude:: ../src/testbot/config/TestClass_MySetting.json
+   :language: JSON
+   :linenos:
+
+配置文件目录
+--------------------
+
+默认情况下，模块配置文件将会保存到目录~/TESTBOT/configs下。
+
+.. code-block::
+
+    C:\USERS\NUANGUANG.GU\TESTBOT
+    ├───configs
+    │       CaseRunnerSetting.json
+    │       ModuleSetting.json
+    │       ResourcePool.json
+    │       ResourceSetting.json
+    │
+    └───logs
+        ├───cases
+        │   └───20240905180219
+        │       └───A Demo Test List
+        │               TCDemo.log
+        │
+        ├───modules
+        │       Resource.log
+        │
+        └───runner
+                CaseRunner.log
+
+
+用例模块
+==============
+
+用例基类TestCaseBase
+--------------------------
+
+该类定义了所有用例的父类，该基类提供了collect_resource()、setup_class()/setup()/test()/cleanup()/cleanup_class()等抽象方法，子类需实现这些方法。
+
+.. autoapiclass:: tbot.case.base.TestCaseBase
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+子类示例
+--------------
+
+下面是一个子类例子。该子类实现了collect_resource()、setup_class()/setup()/test()/cleanup()/cleanup_class()等方法。此外，如果该用例需要从外部配置文件读取一些用例特有的配置信息，可以在该用例类里创建一个配置类，该类是一个类中类。
+默认该配置文件名称与该配置类名相同。
+
+.. literalinclude:: ../src/testbot/example/TCDemo.py
+   :language: python
+   :linenos:
+
+
+
+执行模块
+==============
+
+用例执行器类CaseRuner
+--------------------------
+
+.. autoapiclass:: testbot.testengine.caserunner.CaseRunner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+执行测试
+--------------
+
+下面命令时执行一次测试任务，参数-t指定了要执行的测试用例列表，参数-r指定了测试资源配置文件，参数-u指定了该测试资源只允许哪个用户使用。
+
+.. code-block::
+
+    python -m testbot.runner.start -t .\src\testbot\example\TCList.json -r .\src\testbot\example\ResourcePool.json -u dechen
+
+
+执行结果如下：
+
+.. literalinclude:: ../src/testbot/example/OUTPUT.log
+   :linenos:
+
+结果模块
+==============
+
+日志管理器类LoggerManager
+----------------------------------
+
+.. autoapiclass:: testbot.result.logger.LoggerManager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+创建日志类对象
+------------------------
+
+模块tbot.result.logger对外共享一个日志管理器对象logger_manager，方便各个模块和用例使用它来注册各自的日志对象。
+
+下面是一个例子，介绍了如何创建一个Resource模块和用例的日志对象，用于各自的日志输出：
+
+.. literalinclude:: ../src/testbot/result/logger_demo.py
+   :language: python
+   :linenos:
+
+日志目录和日志内容如下。您会发现，模块Resource日志对象的日志信息，除了保存到模块日志文件Resource.log，还保存到用例日志文件TestCase.log。
+
+.. image:: _static/logger_info.png
+
+日志文件目录
+--------------------
+
+默认情况下，模块配置文件将会保存到目录~/TESTBOT/logs。
+
+.. code-block::
+
+    C:\USERS\NUANGUANG.GU\TESTBOT
+    ├───configs
+    │       CaseRunnerSetting.json
+    │       ModuleSetting.json
+    │       ResourcePool.json
+    │       ResourceSetting.json
+    │
+    └───logs
+        ├───cases
+        │   └───20240905180219
+        │       └───A Demo Test List
+        │               TCDemo.log
+        │
+        ├───modules
+        │       Resource.log
+        │
+        └───runner
+                CaseRunner.log
+
+
+结构化步骤信息
+-------------------
+
+.. literalinclude:: ../src/testbot/example/OUTPUT.log
+   :linenos:

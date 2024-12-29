@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>框架核心API接口 &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="基础原子API接口" href="base_apis.html" />
+    <link rel="prev" title="编码规范" href="dev_coding_spec.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dev_pipeline_setup.html">搭建GitLab流水线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">框架核心API接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">资源模块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">资源拓扑图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resource">资源类Resource</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testbot.resource.resource.Resource"><code class="docutils literal notranslate"><span class="pre">Resource</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#device">设备类Device</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testbot.resource.device.Device"><code class="docutils literal notranslate"><span class="pre">Device</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#port">端口类Port</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testbot.resource.device.Port"><code class="docutils literal notranslate"><span class="pre">Port</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#resourcepool">资源池类ResourcePool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testbot.resource.pool.ResourcePool"><code class="docutils literal notranslate"><span class="pre">ResourcePool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">资源池序列化反序列化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">插件模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">配置模块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#settingbase">配置基类SettingBase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testbot.config.setting.SettingBase"><code class="docutils literal notranslate"><span class="pre">SettingBase</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#staticsettingmanager">静态配置管理器类StaticSettingManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testbot.config.setting.StaticSettingManager"><code class="docutils literal notranslate"><span class="pre">StaticSettingManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">创建静态配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">创建动态配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">配置文件目录</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">用例模块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#testcasebase">用例基类TestCaseBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">子类示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">执行模块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#caseruner">用例执行器类CaseRuner</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testbot.testengine.caserunner.CaseRunner"><code class="docutils literal notranslate"><span class="pre">CaseRunner</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">执行测试</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">结果模块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#loggermanager">日志管理器类LoggerManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testbot.result.logger.LoggerManager"><code class="docutils literal notranslate"><span class="pre">LoggerManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">创建日志类对象</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">日志文件目录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">结构化步骤信息</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">框架核心API接口</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/fwk_apis.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>框架核心API接口<a class="headerlink" href="#api" title="Permalink to this heading"></a></h1>
+<section id="id1">
+<h2>资源模块<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>我们将自动化测试过程中的所有测试实体，如测试设备类、测试服务类、测试软件类等均看做测试资源。在这一层，测试资源将提供其所拥有的所有基础接口，并对外开放。</p>
+<ul class="simple">
+<li><p>测试设备类</p></li>
+</ul>
+<p>测试设备类资源是测试过程中用到的硬件设备，如测试TV设备、测试手机设备、机械手设备、色彩分析仪设备等。</p>
+<ul class="simple">
+<li><p>测试服务类</p></li>
+</ul>
+<p>测试服务类资源是测试过程中用到的系统服务，如HTTP服务、FTP服务、TCP服务等。</p>
+<ul class="simple">
+<li><p>测试软件类</p></li>
+</ul>
+<p>测试软件类资源是测试过程中用到的软件，可以是命令行形式的也可以是GUI形式的。</p>
+<section id="id2">
+<h3>资源拓扑图<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<img alt="_images/topo.svg" src="_images/topo.svg" /></section>
+<section id="resource">
+<h3>资源类Resource<a class="headerlink" href="#resource" title="Permalink to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.resource.resource.Resource">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.resource.resource.</span></span><span class="sig-name descname"><span class="pre">Resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/resource.html#Resource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.resource.Resource" title="Permalink to this definition"></a></dt>
+<dd><p>代表所有测试资源设备的配置类，字段动态定义</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.resource.resource.Resource.MODULES">
+<span class="sig-name descname"><span class="pre">MODULES</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['testbot.resource.modules.device_module.PowerModule']</span></em><a class="reference internal" href="_modules/testbot/resource/resource.html#Resource.MODULES"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.resource.Resource.MODULES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.resource.resource.Resource.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="reference internal" href="_modules/testbot/resource/resource.html#Resource.description"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.resource.Resource.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.resource.Resource.from_dict">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/resource.html#Resource.from_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.resource.Resource.from_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.resource.resource.Resource.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="reference internal" href="_modules/testbot/resource/resource.html#Resource.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.resource.Resource.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.resource.Resource.register_module">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/resource.html#Resource.register_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.resource.Resource.register_module" title="Permalink to this definition"></a></dt>
+<dd><p>注册接口模块类</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>module</strong> (<em>str</em>) – 接口模块类包路径</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.resource.Resource.to_dict">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/resource.html#Resource.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.resource.Resource.to_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.resource.resource.Resource.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="reference internal" href="_modules/testbot/resource/resource.html#Resource.type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.resource.Resource.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="device">
+<h3>设备类Device<a class="headerlink" href="#device" title="Permalink to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.resource.device.Device">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.resource.device.</span></span><span class="sig-name descname"><span class="pre">Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Device" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#testbot.resource.resource.Resource" title="testbot.resource.resource.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">testbot.resource.resource.Resource</span></code></a></p>
+<p>代表所有测试设备类</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.device.Device.add_port">
+<span class="sig-name descname"><span class="pre">add_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Device.add_port"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Device.add_port" title="Permalink to this definition"></a></dt>
+<dd><p>添加端口</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – 端口名称</p></li>
+<li><p><strong>args</strong> (<em>tuple</em>) – 元祖参数</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 键值对参数</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.device.Device.from_dict">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Device.from_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Device.from_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.device.Device.get_comm_instance">
+<span class="sig-name descname"><span class="pre">get_comm_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Device.get_comm_instance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Device.get_comm_instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.device.Device.get_port_count">
+<span class="sig-name descname"><span class="pre">get_port_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Device.get_port_count"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Device.get_port_count" title="Permalink to this definition"></a></dt>
+<dd><p>获取端口数量</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>kwargs</strong> (<em>dict</em>) – 键值对参数</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>端口数量</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.device.Device.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Device.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Device.to_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="port">
+<h3>端口类Port<a class="headerlink" href="#port" title="Permalink to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.resource.device.Port">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.resource.device.</span></span><span class="sig-name descname"><span class="pre">Port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#testbot.resource.device.Device" title="testbot.resource.device.Device"><span class="pre">Device</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Port"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Port" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#testbot.resource.resource.Resource" title="testbot.resource.resource.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">testbot.resource.resource.Resource</span></code></a></p>
+<p>代表所有端口类</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.device.Port.from_dict">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Port.from_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Port.from_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.device.Port.get_comm_instance">
+<span class="sig-name descname"><span class="pre">get_comm_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Port.get_comm_instance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Port.get_comm_instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.device.Port.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/device.html#Port.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.device.Port.to_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="resourcepool">
+<h3>资源池类ResourcePool<a class="headerlink" href="#resourcepool" title="Permalink to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.resource.pool.</span></span><span class="sig-name descname"><span class="pre">ResourcePool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>资源池类，负责资源的序列化和反序列化以及储存和读取</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool.add_device">
+<span class="sig-name descname"><span class="pre">add_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool.add_device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool.add_device" title="Permalink to this definition"></a></dt>
+<dd><p>添加设备到资源池</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device_name</strong> (<em>str</em>) – 设备名称</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 键值对参数</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool.collect_all_device">
+<span class="sig-name descname"><span class="pre">collect_all_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">list()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool.collect_all_device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool.collect_all_device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool.collect_connection_route">
+<span class="sig-name descname"><span class="pre">collect_connection_route</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">list()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool.collect_connection_route"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool.collect_connection_route" title="Permalink to this definition"></a></dt>
+<dd><p>获取资源连接路由</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> – </p></li>
+<li><p><strong>constraints</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>链接路由</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool.collect_device">
+<span class="sig-name descname"><span class="pre">collect_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">list()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool.collect_device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool.collect_device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool.discover_resources">
+<span class="sig-name descname"><span class="pre">discover_resources</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool.discover_resources"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool.discover_resources" title="Permalink to this definition"></a></dt>
+<dd><p>发现测试资源</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">owner</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool.load" title="Permalink to this definition"></a></dt>
+<dd><p>加载文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – 文件路径</p></li>
+<li><p><strong>owner</strong> (<em>str</em>) – 资源所有人</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool.release"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool.release" title="Permalink to this definition"></a></dt>
+<dd><p>释放当前资源</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool.reserve">
+<span class="sig-name descname"><span class="pre">reserve</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool.reserve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool.reserve" title="Permalink to this definition"></a></dt>
+<dd><p>占用当前资源</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.resource.pool.ResourcePool.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/resource/pool.html#ResourcePool.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.resource.pool.ResourcePool.save" title="Permalink to this definition"></a></dt>
+<dd><p>保存文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – 文件路径</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id3">
+<h3>资源池序列化反序列化<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>下面是一个例子，介绍了如何创建一个资源池，并进行序列化和反序列化：</p>
+<p>资源池类可以从json文件将json数据反序列化为资源池对象，反之亦可，即可以将资源池对象序列化为json数据并保存到本地json文件。如下是一个序列化后的json格式的资源池：</p>
+</section>
+</section>
+<section id="id4">
+<h2>插件模块<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+</section>
+<section id="id5">
+<h2>配置模块<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<p>支持静态配置和动态配置。静态配置，既可以将本地json文件反序列化为类对象，也可以将类对象序列化为本地json文件，一般用于框架公共模块配置文件的持久化；动态配置，将本地json文件反序列化为类对象，一般用于用例类的特有参数配置。</p>
+<section id="settingbase">
+<h3>配置基类SettingBase<a class="headerlink" href="#settingbase" title="Permalink to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.config.setting.SettingBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.config.setting.</span></span><span class="sig-name descname"><span class="pre">SettingBase</span></span><a class="reference internal" href="_modules/testbot/config/setting.html#SettingBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.SettingBase" title="Permalink to this definition"></a></dt>
+<dd><p>配置基类</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.config.setting.SettingBase.file_name">
+<span class="sig-name descname"><span class="pre">file_name</span></span><a class="reference internal" href="_modules/testbot/config/setting.html#SettingBase.file_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.SettingBase.file_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.setting.SettingBase.load">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/config/setting.html#SettingBase.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.SettingBase.load" title="Permalink to this definition"></a></dt>
+<dd><p>加载配置文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.setting.SettingBase.save">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/config/setting.html#SettingBase.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.SettingBase.save" title="Permalink to this definition"></a></dt>
+<dd><p>保存配置文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testbot.config.setting.SettingBase.setting_path">
+<span class="sig-name descname"><span class="pre">setting_path</span></span><a class="reference internal" href="_modules/testbot/config/setting.html#SettingBase.setting_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.SettingBase.setting_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="staticsettingmanager">
+<h3>静态配置管理器类StaticSettingManager<a class="headerlink" href="#staticsettingmanager" title="Permalink to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.config.setting.StaticSettingManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.config.setting.</span></span><span class="sig-name descname"><span class="pre">StaticSettingManager</span></span><a class="reference internal" href="_modules/testbot/config/setting.html#StaticSettingManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.StaticSettingManager" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>静态配置管理类</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.setting.StaticSettingManager.add_setting">
+<span class="sig-name descname"><span class="pre">add_setting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">setting_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting_class</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/config/setting.html#StaticSettingManager.add_setting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.StaticSettingManager.add_setting" title="Permalink to this definition"></a></dt>
+<dd><p>添加配置对象</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>setting_name</strong> (<em>str</em>) – 配置名称</p></li>
+<li><p><strong>setting_class</strong> (<em>object</em>) – 配置类</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.setting.StaticSettingManager.load_all">
+<span class="sig-name descname"><span class="pre">load_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/config/setting.html#StaticSettingManager.load_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.StaticSettingManager.load_all" title="Permalink to this definition"></a></dt>
+<dd><p>读取所有配置</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.setting.StaticSettingManager.save_all">
+<span class="sig-name descname"><span class="pre">save_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/config/setting.html#StaticSettingManager.save_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.StaticSettingManager.save_all" title="Permalink to this definition"></a></dt>
+<dd><p>保存所有配置</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.setting.StaticSettingManager.setting">
+<span class="sig-name descname"><span class="pre">setting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">setting_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/config/setting.html#StaticSettingManager.setting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.StaticSettingManager.setting" title="Permalink to this definition"></a></dt>
+<dd><p>配置文件的注册装饰器</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>setting_name</strong> (<em>str</em>) – 配置名称</p></li>
+<li><p><strong>args</strong> – </p></li>
+<li><p><strong>kwargs</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="testbot.config.setting.StaticSettingManager.setting_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setting_path</span></span><a class="reference internal" href="_modules/testbot/config/setting.html#StaticSettingManager.setting_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.StaticSettingManager.setting_path" title="Permalink to this definition"></a></dt>
+<dd><p>设置路径</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>设置路径</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.config.setting.StaticSettingManager.sync_path">
+<span class="sig-name descname"><span class="pre">sync_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/config/setting.html#StaticSettingManager.sync_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.config.setting.StaticSettingManager.sync_path" title="Permalink to this definition"></a></dt>
+<dd><p>同步所有配置的路径</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id6">
+<h3>创建静态配置<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>下面是一个创建静态配置的例子。该例子为Resource模块创建了一个配置文件ResourceSetting.json，可通过ResourceSetting类对配置文件的json数据进行双向读取和保存。我们可以手动往配置文件里添加新属性，类ResourceSetting就可访问该属性。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/usr/bin/env python</span>
+<span class="linenos"> 2</span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved&quot;</span>
+<span class="linenos"> 5</span><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Nuanguang Gu(Sunny)&quot;</span>
+<span class="linenos"> 6</span><span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;nuanguang.gu@aliyun.com&quot;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kn">import</span> <span class="nn">os</span>
+<span class="linenos">10</span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="linenos">11</span><span class="kn">from</span> <span class="nn">testbot.config.setting</span> <span class="kn">import</span> <span class="n">static_setting</span><span class="p">,</span> <span class="n">SettingBase</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">15</span>    <span class="c1"># 基于配置基类SettingBase，创建一个配置子类，该配置子类使用装饰器static_setting装饰</span>
+<span class="linenos">16</span>    <span class="nd">@static_setting</span><span class="o">.</span><span class="n">setting</span><span class="p">(</span><span class="s2">&quot;ResourceSetting&quot;</span><span class="p">)</span>
+<span class="linenos">17</span>    <span class="k">class</span> <span class="nc">ResourceSetting</span><span class="p">(</span><span class="n">SettingBase</span><span class="p">):</span>
+<span class="linenos">18</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">19</span><span class="sd">        资源设置类</span>
+<span class="linenos">20</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">21</span>        <span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;ResourceSetting.json&quot;</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span>        <span class="n">resource_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()),</span> <span class="s2">&quot;TBOT&quot;</span><span class="p">,</span> <span class="s2">&quot;configs&quot;</span><span class="p">)</span>
+<span class="linenos">24</span>        <span class="n">auto_connect</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>    <span class="c1"># 从本地json文件ResourceSetting.json加载属性信息到类ResourceSetting，由于第一次没有该文件，会创建并使用类的默认属性值</span>
+<span class="linenos">28</span>    <span class="n">ResourceSetting</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span>    <span class="c1"># 读取属性ResourceSetting.auto_connect</span>
+<span class="linenos">31</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ResourceSetting.auto_connect=</span><span class="si">{</span><span class="n">ResourceSetting</span><span class="o">.</span><span class="n">auto_connect</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span>    <span class="c1"># 设置属性ResourceSetting.auto_connect</span>
+<span class="linenos">34</span>    <span class="n">ResourceSetting</span><span class="o">.</span><span class="n">auto_connect</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>    <span class="c1"># 读取属性ResourceSetting.auto_connect</span>
+<span class="linenos">37</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ResourceSetting.auto_connect=</span><span class="si">{</span><span class="n">ResourceSetting</span><span class="o">.</span><span class="n">auto_connect</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span>    <span class="c1"># 将当前的属性信息保存到本地文件ResourceSetting.json</span>
+<span class="linenos">40</span>    <span class="n">ResourceSetting</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="linenos">41</span>
+<span class="linenos">42</span>    <span class="c1"># 从本地json文件ResourceSetting.json加载属性信息到类ResourceSetting，由于第一次没有该文件，会创建并使用类的默认属性值</span>
+<span class="linenos">43</span>    <span class="n">ResourceSetting</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span>    <span class="c1"># 读取属性ResourceSetting.auto_connect</span>
+<span class="linenos">46</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ResourceSetting.auto_connect=</span><span class="si">{</span><span class="n">ResourceSetting</span><span class="o">.</span><span class="n">auto_connect</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>该Resource模块的静态配置文件内容如下：</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&quot;resource_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Users\\nuanguang.gu\\TBOT\\configs&quot;</span><span class="p">,</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&quot;auto_connect&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="linenos">4</span><span class="w">    </span><span class="nt">&quot;hello&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HelloWorld&quot;</span>
+<span class="linenos">5</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3>创建动态配置<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<p>下面是一个创建动态配置的例子。该例子为用例类创建了一个配置文件</p>
+<p>该用例的动态配置文件内容如下：</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="nt">&quot;field1&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="linenos">3</span><span class="w">    </span><span class="nt">&quot;field2&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="linenos">4</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h3>配置文件目录<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<p>默认情况下，模块配置文件将会保存到目录~/TESTBOT/configs下。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>C:\USERS\NUANGUANG.GU\TESTBOT
+├───configs
+│       CaseRunnerSetting.json
+│       ModuleSetting.json
+│       ResourcePool.json
+│       ResourceSetting.json
+│
+└───logs
+    ├───cases
+    │   └───20240905180219
+    │       └───A Demo Test List
+    │               TCDemo.log
+    │
+    ├───modules
+    │       Resource.log
+    │
+    └───runner
+            CaseRunner.log
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id9">
+<h2>用例模块<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h2>
+<section id="testcasebase">
+<h3>用例基类TestCaseBase<a class="headerlink" href="#testcasebase" title="Permalink to this heading"></a></h3>
+<p>该类定义了所有用例的父类，该基类提供了collect_resource()、setup_class()/setup()/test()/cleanup()/cleanup_class()等抽象方法，子类需实现这些方法。</p>
+</section>
+<section id="id10">
+<h3>子类示例<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<p>下面是一个子类例子。该子类实现了collect_resource()、setup_class()/setup()/test()/cleanup()/cleanup_class()等方法。此外，如果该用例需要从外部配置文件读取一些用例特有的配置信息，可以在该用例类里创建一个配置类，该类是一个类中类。
+默认该配置文件名称与该配置类名相同。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="ch">#!/usr/bin/env python</span>
+<span class="linenos">  2</span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="linenos">  3</span>
+<span class="linenos">  4</span><span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved&quot;</span>
+<span class="linenos">  5</span><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Nuanguang Gu(Sunny)&quot;</span>
+<span class="linenos">  6</span><span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;nuanguang.gu@aliyun.com&quot;</span>
+<span class="linenos">  7</span>
+<span class="linenos">  8</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">  9</span><span class="sd">@TC_ID          : SQAOSTC-78198</span>
+<span class="linenos"> 10</span><span class="sd">@Introduction   : Idle期按红外遥控器数字键唤醒电视</span>
+<span class="linenos"> 11</span><span class="sd">@Description    : 功能描述：</span>
+<span class="linenos"> 12</span><span class="sd">串口出现：DeviceIdleController: Moved from STATE_LOCATING to STATE_IDLE.时，电视进入Idle界面</span>
+<span class="linenos"> 13</span><span class="sd">@Precondition   : </span>
+<span class="linenos"> 14</span><span class="sd">1、STR为ON，Doze mode为ON</span>
+<span class="linenos"> 15</span><span class="sd">2、调整Idle时间的方法：串口执行：dumpsys deviceidle IDLE_TIMEOUT set 300000（300000为时间，可修改）</span>
+<span class="linenos"> 16</span><span class="sd">3、遥控器未配对</span>
+<span class="linenos"> 17</span><span class="sd">@Steps:</span>
+<span class="linenos"> 18</span><span class="sd">1、连接网络，切换到HDMI信源</span>
+<span class="linenos"> 19</span><span class="sd">2、串口执行：</span>
+<span class="linenos"> 20</span><span class="sd">1.dumpsys deviceidle tlog set DEBUG 1 ；</span>
+<span class="linenos"> 21</span><span class="sd">2.logcat | grep DeviceIdleController&amp;；按Power键待机</span>
+<span class="linenos"> 22</span><span class="sd">3、有切换到idle状态的打印后，使用红外遥控器，按数字键，检查电视变化</span>
+<span class="linenos"> 23</span><span class="sd">4、Doze mode设置为关，使用红外遥控器按数字键待机开机</span>
+<span class="linenos"> 24</span>
+<span class="linenos"> 25</span><span class="sd">【备注】仅适用海外</span>
+<span class="linenos"> 26</span><span class="sd">@Expected       :</span>
+<span class="linenos"> 27</span><span class="sd">2、串口打印：DeviceIdleController: Moved from STATE_LOCATING to STATE_IDLE.</span>
+<span class="linenos"> 28</span><span class="sd">3、电视整响应遥控器按键操作，成功唤醒</span>
+<span class="linenos"> 29</span><span class="sd">4、待机串口不会有Doze模式打印，电视可以响应遥控器按键操作，成功唤醒</span>
+<span class="linenos"> 30</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 31</span>
+<span class="linenos"> 32</span><span class="kn">from</span> <span class="nn">testbot.case.base</span> <span class="kn">import</span> <span class="n">TestCaseBase</span><span class="p">,</span> <span class="n">TestType</span>
+<span class="linenos"> 33</span><span class="kn">from</span> <span class="nn">testbot.case.decorator</span> <span class="kn">import</span> <span class="n">case</span>
+<span class="linenos"> 34</span><span class="kn">from</span> <span class="nn">testbot.config.setting</span> <span class="kn">import</span> <span class="n">TestSettingBase</span>
+<span class="linenos"> 35</span><span class="kn">from</span> <span class="nn">testbot.resource.pool</span> <span class="kn">import</span> <span class="n">ResourcePool</span>
+<span class="linenos"> 36</span><span class="kn">from</span> <span class="nn">testbot.result.testreporter</span> <span class="kn">import</span> <span class="n">CaseEntry</span>
+<span class="linenos"> 37</span>
+<span class="linenos"> 38</span>
+<span class="linenos"> 39</span><span class="nd">@case</span><span class="p">(</span><span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">test_type</span><span class="o">=</span><span class="n">TestType</span><span class="o">.</span><span class="n">SMOKE_TEST</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">testcase_id</span><span class="o">=</span><span class="s2">&quot;SQAOSTC-78198&quot;</span><span class="p">,</span> <span class="n">testcase_name</span><span class="o">=</span><span class="s2">&quot;测试用例Demo演示&quot;</span><span class="p">)</span>
+<span class="linenos"> 40</span><span class="k">class</span> <span class="nc">TCDemo</span><span class="p">(</span><span class="n">TestCaseBase</span><span class="p">):</span>
+<span class="linenos"> 41</span>
+<span class="linenos"> 42</span>    <span class="k">def</span> <span class="nf">collect_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">CaseEntry</span><span class="p">,</span> <span class="n">pool</span><span class="p">:</span> <span class="n">ResourcePool</span><span class="p">):</span>
+<span class="linenos"> 43</span>        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;执行collect_resource方法&quot;</span><span class="p">)</span>
+<span class="linenos"> 44</span>        <span class="c1"># 结构化验证点实现方式</span>
+<span class="linenos"> 45</span>        <span class="c1"># with node.start(headline=&quot;筛选设备&quot;, message=&quot;&quot;) as step:</span>
+<span class="linenos"> 46</span>        <span class="c1">#     with step.start(headline=&quot;筛选PC设备&quot;, message=&quot;&quot;) as step2:</span>
+<span class="linenos"> 47</span>        <span class="c1">#         self.pc = pool.collect_device(device_type=&quot;PCDevice&quot;, count=1)[0]</span>
+<span class="linenos"> 48</span>        <span class="c1">#         if self.pc:</span>
+<span class="linenos"> 49</span>        <span class="c1">#             step2.passed(message=&quot;筛选PC设备成功&quot;)</span>
+<span class="linenos"> 50</span>        <span class="c1">#         else:</span>
+<span class="linenos"> 51</span>        <span class="c1">#             step2.failed(message=&quot;筛选PC设备失败&quot;)</span>
+<span class="linenos"> 52</span>        <span class="c1">#     with step.start(headline=&quot;筛选TV设备&quot;, message=&quot;&quot;) as step2:</span>
+<span class="linenos"> 53</span>        <span class="c1">#         self.tv = pool.collect_device(device_type=&quot;TVDevice&quot;, count=1)[0]</span>
+<span class="linenos"> 54</span>        <span class="c1">#         if self.tv:</span>
+<span class="linenos"> 55</span>        <span class="c1">#             step2.passed(message=&quot;筛选TV设备成功&quot;)</span>
+<span class="linenos"> 56</span>        <span class="c1">#         else:</span>
+<span class="linenos"> 57</span>        <span class="c1">#             step2.failed(message=&quot;筛选TV设备失败&quot;)</span>
+<span class="linenos"> 58</span>        <span class="k">pass</span>
+<span class="linenos"> 59</span>
+<span class="linenos"> 60</span>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">CaseEntry</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="linenos"> 61</span>        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;执行setup方法&quot;</span><span class="p">)</span>
+<span class="linenos"> 62</span>        <span class="c1"># 结构化验证点实现方式</span>
+<span class="linenos"> 63</span>        <span class="c1"># self.logger.info(f&quot;case_setting1={self.setting.case_setting1}, case_setting2={self.setting.case_setting2}, TIMEOUT={self.setting.TIMEOUT}&quot;)</span>
+<span class="linenos"> 64</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 65</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;设置STR为ON&quot;</span><span class="p">)</span>
+<span class="linenos"> 66</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 67</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;设置STR为ON&quot;</span><span class="p">)</span>
+<span class="linenos"> 68</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;设置待机时长&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 69</span>            <span class="k">pass</span>
+<span class="linenos"> 70</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 71</span>            <span class="n">step</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;安装WIFI apk&quot;</span><span class="p">)</span>
+<span class="linenos"> 72</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;断开有线连接&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 73</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;断开有线连接&quot;</span><span class="p">)</span>
+<span class="linenos"> 74</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 75</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;连接并检查WIFI热点&quot;</span><span class="p">)</span>
+<span class="linenos"> 76</span>
+<span class="linenos"> 77</span>    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">CaseEntry</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="linenos"> 78</span>        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;执行test方法&quot;</span><span class="p">)</span>
+<span class="linenos"> 79</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 80</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;打开Youtube播放任意视频&quot;</span><span class="p">)</span>
+<span class="linenos"> 81</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 82</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;按power键进入待机状态&quot;</span><span class="p">)</span>
+<span class="linenos"> 83</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 84</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;等待5秒后，按power键唤醒电视&quot;</span><span class="p">)</span>
+<span class="linenos"> 85</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 86</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;开机后检查WIFI热点&quot;</span><span class="p">)</span>
+<span class="linenos"> 87</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 88</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;开机后进入在线视频&quot;</span><span class="p">)</span>
+<span class="linenos"> 89</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 90</span>            <span class="c1"># self.tv.PowerModule.power_off()</span>
+<span class="linenos"> 91</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;给电视断电&quot;</span><span class="p">)</span>
+<span class="linenos"> 92</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 93</span>            <span class="c1"># self.tv.PowerModule.power_on()</span>
+<span class="linenos"> 94</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;给电视上电&quot;</span><span class="p">)</span>
+<span class="linenos"> 95</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 96</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;等待30秒后，按power键唤醒电视&quot;</span><span class="p">)</span>
+<span class="linenos"> 97</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos"> 98</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;开机后检查WIFI热点&quot;</span><span class="p">)</span>
+<span class="linenos"> 99</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos">100</span>            <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="linenos">101</span>            <span class="k">pass</span>
+<span class="linenos">102</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;开机后进入Launcher页面&quot;</span><span class="p">)</span>
+<span class="linenos">103</span>        <span class="k">with</span> <span class="n">step</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos">104</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;打开Youtube播放任意视频&quot;</span><span class="p">)</span>
+<span class="linenos">105</span>
+<span class="linenos">106</span>    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">CaseEntry</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="linenos">107</span>        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;执行cleanup方法&quot;</span><span class="p">)</span>
+<span class="linenos">108</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos">109</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;断开WIFI热点&quot;</span><span class="p">)</span>
+<span class="linenos">110</span>        <span class="k">with</span> <span class="n">node</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">step</span><span class="p">:</span>
+<span class="linenos">111</span>            <span class="n">step</span><span class="o">.</span><span class="n">passed</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;关闭WIFI开关&quot;</span><span class="p">)</span>
+<span class="linenos">112</span>
+<span class="linenos">113</span>    <span class="k">class</span> <span class="nc">TCDemoSetting</span><span class="p">(</span><span class="n">TestSettingBase</span><span class="p">):</span>
+<span class="linenos">114</span>        <span class="n">case_setting1</span> <span class="o">=</span> <span class="s2">&quot;setting1&quot;</span>
+<span class="linenos">115</span>        <span class="n">case_setting2</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="linenos">116</span>        <span class="n">TIMEOUT</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="linenos">117</span>
+<span class="linenos">118</span>
+<span class="linenos">119</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">120</span>    <span class="n">tc</span> <span class="o">=</span> <span class="n">TCDemo</span><span class="p">()</span>
+<span class="linenos">121</span>    <span class="n">tc</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id11">
+<h2>执行模块<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h2>
+<section id="caseruner">
+<h3>用例执行器类CaseRuner<a class="headerlink" href="#caseruner" title="Permalink to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.testengine.caserunner.</span></span><span class="sig-name descname"><span class="pre">CaseRunner</span></span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>测试用例执行器</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.load_resource">
+<span class="sig-name descname"><span class="pre">load_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner.load_resource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.load_resource" title="Permalink to this definition"></a></dt>
+<dd><p>加载测试资源</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_name</strong> (<em>str</em>) – 资源文件路径</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – 资源拥有者</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.load_test">
+<span class="sig-name descname"><span class="pre">load_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner.load_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.load_test" title="Permalink to this definition"></a></dt>
+<dd><p>实例化测试用例</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>test_name</strong> (<em>str</em>) – 测试名称</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.print_module_info">
+<span class="sig-name descname"><span class="pre">print_module_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner.print_module_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.print_module_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.resource_ready">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resource_ready</span></span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner.resource_ready"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.resource_ready" title="Permalink to this definition"></a></dt>
+<dd><p>资源是否已准备好</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.run_case_lcm">
+<span class="sig-name descname"><span class="pre">run_case_lcm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="autoapi/testbot/case/base/index.html#testbot.case.base.TestCaseBase" title="testbot.case.base.TestCaseBase"><span class="pre">testbot.case.base.TestCaseBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="autoapi/testbot/result/testreporter/index.html#testbot.result.testreporter.CaseEntry" title="testbot.result.testreporter.CaseEntry"><span class="pre">testbot.result.testreporter.CaseEntry</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner.run_case_lcm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.run_case_lcm" title="Permalink to this definition"></a></dt>
+<dd><p>执行测试用例生命周期管理
+这个方法应该在子线程被运行</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.set_test_list">
+<span class="sig-name descname"><span class="pre">set_test_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="autoapi/testbot/testengine/testlist/index.html#testbot.testengine.testlist.TestList" title="testbot.testengine.testlist.TestList"><span class="pre">testbot.testengine.testlist.TestList</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner.set_test_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.set_test_list" title="Permalink to this definition"></a></dt>
+<dd><p>#装载测试列表</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.start" title="Permalink to this definition"></a></dt>
+<dd><p>测试引擎开始执行</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.test_list_ready">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">test_list_ready</span></span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner.test_list_ready"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.test_list_ready" title="Permalink to this definition"></a></dt>
+<dd><p>测试用例列表是否已准备好</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.testengine.caserunner.CaseRunner.wait_for_test_done">
+<span class="sig-name descname"><span class="pre">wait_for_test_done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/testengine/caserunner.html#CaseRunner.wait_for_test_done"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.testengine.caserunner.CaseRunner.wait_for_test_done" title="Permalink to this definition"></a></dt>
+<dd><p>等待测试完成</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id12">
+<h3>执行测试<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<p>下面命令时执行一次测试任务，参数-t指定了要执行的测试用例列表，参数-r指定了测试资源配置文件，参数-u指定了该测试资源只允许哪个用户使用。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">testbot</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">start</span> <span class="o">-</span><span class="n">t</span> <span class="o">.</span>\<span class="n">src</span>\<span class="n">testbot</span>\<span class="n">example</span>\<span class="n">TCList</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">r</span> <span class="o">.</span>\<span class="n">src</span>\<span class="n">testbot</span>\<span class="n">example</span>\<span class="n">ResourcePool</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">u</span> <span class="n">dechen</span>
+</pre></div>
+</div>
+<p>执行结果如下：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span>[2024-12-04 14:25:09,585][INFO][CaseRunner][tatf.testengine.caserunner.__init__  :+78][pid|tid:48832|34832]:执行器装载完毕
+<span class="linenos">  2</span>[2024-12-04 14:25:09,587][INFO][Resource  ][tatf.resource.pool.load      :+140][pid|tid:48832|34832]:Entering ResourcePool.load...
+<span class="linenos">  3</span>[2024-12-04 14:25:09,589][INFO][Resource  ][tatf.resource.resource.__init__  :+167][pid|tid:48832|34832]:Initialize Device...
+<span class="linenos">  4</span>[2024-12-04 14:25:09,590][INFO][Resource  ][tatf.resource.resource.__init__  :+167][pid|tid:48832|34832]:Initialize Device...
+<span class="linenos">  5</span>[2024-12-04 14:25:09,590][INFO][Resource  ][tatf.resource.pool.load      :+174][pid|tid:48832|34832]:Exiting ResourcePool.load...
+<span class="linenos">  6</span>[2024-12-04 14:25:09,590][INFO][CaseRunner][tatf.testengine.caserunner.load_resource:+113][pid|tid:48832|34832]:测试资源装载完毕
+<span class="linenos">  7</span>[2024-12-04 14:25:09,592][INFO][CaseRunner][tatf.testengine.caserunner.load_test :+148][pid|tid:48832|34832]:正在加载用例模块: tatf.example.TCDemo...
+<span class="linenos">  8</span>[2024-12-04 14:25:09,592][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+158][pid|tid:48832|34832]:################################################################################
+<span class="linenos">  9</span>[2024-12-04 14:25:09,605][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+173][pid|tid:48832|34832]:############## tatf模块 【Version】:2024.49.2.dev19,【概要】:TATF测试框架，分支名称：，提交ID：,【安装路径】:tatf 2024.49.2.dev19 ##############
+<span class="linenos"> 10</span>C:\Python38\lib\site-packages\pkginfo\installed.py:62: UserWarning: No PKG-INFO found for package: tatf_aw
+<span class="linenos"> 11</span>  warnings.warn(&#39;No PKG-INFO found for package: %s&#39; % self.package_name)
+<span class="linenos"> 12</span>C:\Python38\lib\site-packages\pkginfo\distribution.py:178: UnknownMetadataVersion: Unknown metadata version: None
+<span class="linenos"> 13</span>  warnings.warn(UnknownMetadataVersion(self.metadata_version))
+<span class="linenos"> 14</span>[2024-12-04 14:25:10,019][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+173][pid|tid:48832|34832]:############## tatf_aw模块 【Version】:None,【概要】:None,【安装路径】:None ##############
+<span class="linenos"> 15</span>C:\Python38\lib\site-packages\pkginfo\installed.py:62: UserWarning: No PKG-INFO found for package: tatf_scripts
+<span class="linenos"> 16</span>  warnings.warn(&#39;No PKG-INFO found for package: %s&#39; % self.package_name)
+<span class="linenos"> 17</span>[2024-12-04 14:25:10,432][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+173][pid|tid:48832|34832]:############## tatf_scripts模块 【Version】:None,【概要】:None,【安装路径】:None ##############
+<span class="linenos"> 18</span>C:\Python38\lib\site-packages\pkginfo\installed.py:62: UserWarning: No PKG-INFO found for package: tatf_tools
+<span class="linenos"> 19</span>  warnings.warn(&#39;No PKG-INFO found for package: %s&#39; % self.package_name)
+<span class="linenos"> 20</span>[2024-12-04 14:25:10,845][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+173][pid|tid:48832|34832]:############## tatf_tools模块 【Version】:None,【概要】:None,【安装路径】:None ##############
+<span class="linenos"> 21</span>[2024-12-04 14:25:10,845][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+174][pid|tid:48832|34832]:################################################################################
+<span class="linenos"> 22</span>[2024-12-04 14:25:10,859][INFO][CaseRunner][tatf.testengine.caserunner.set_test_list:+186][pid|tid:48832|34832]:测试列表装载完毕
+<span class="linenos"> 23</span>[2024-12-04 14:25:10,868][INFO][TCDemo    ][tatf.case.precondition.is_meet   :+37][pid|tid:48832|45808]:测试用例的类型必须是COMMON_TEST
+<span class="linenos"> 24</span>[2024-12-04 14:25:10,868][INFO][CaseRunner][tatf.testengine.caserunner.__run_case:+319][pid|tid:48832|45808]:self.resource_pool={&#39;M70JP90W&#39;: &lt;tatf.resource.resource.Device object at 0x0000027F023B7940&gt;, &#39;5C0AD0760BB0C50AD&#39;: &lt;tatf.resource.resource.Device object at 0x0000027F023887F0&gt;}
+<span class="linenos"> 25</span>[2024-12-04 14:25:10,872][INFO][CaseRunner][tatf.example.TCDemo.setup     :+60][pid|tid:48832|45808]:case_setting1=setting1, case_setting2=10, TIMEOUT=60
+<span class="linenos"> 26</span>[2024-12-04 14:25:10,874][INFO][CaseRunner][tatf.testengine.caserunner.__run_case:+349][pid|tid:48832|45808]:执行次数：3
+<span class="linenos"> 27</span>[2024-12-04 14:25:10,878][INFO][Resource  ][tatf.resource.modules.device_module.power_off :+53][pid|tid:48832|45808]:给设备断电
+<span class="linenos"> 28</span>[2024-12-04 14:25:10,879][INFO][Resource  ][tatf.resource.modules.device_module.power_on  :+43][pid|tid:48832|45808]:给设备上电
+<span class="linenos"> 29</span>[2024-12-04 14:25:10,885][INFO][Resource  ][tatf.resource.modules.device_module.power_off :+53][pid|tid:48832|45808]:给设备断电
+<span class="linenos"> 30</span>[2024-12-04 14:25:10,886][INFO][Resource  ][tatf.resource.modules.device_module.power_on  :+43][pid|tid:48832|45808]:给设备上电
+<span class="linenos"> 31</span>[2024-12-04 14:25:10,892][INFO][Resource  ][tatf.resource.modules.device_module.power_off :+53][pid|tid:48832|45808]:给设备断电
+<span class="linenos"> 32</span>[2024-12-04 14:25:10,896][INFO][Resource  ][tatf.resource.modules.device_module.power_on  :+43][pid|tid:48832|45808]:给设备上电
+<span class="linenos"> 33</span>&lt;测试节点&gt; 【步骤】:Root,【失败描述】:&lt;测试节点&gt; 【步骤】:测试套件,【失败描述】:        &lt;测试用例&gt; 【步骤】:TCDemo,【失败描述】:------------------------------------------------------------------PASSED
+<span class="linenos"> 34</span>&lt;测试节点&gt; 【步骤】:执行测试,【失败描述】:        &lt;测试用例&gt; 【步骤】:执行测试,【失败描述】:--------------------------------------------------------------------PASSED
+<span class="linenos"> 35</span>            &lt;测试步骤-1&gt; 【步骤】:执行用例,【失败描述】:INFO: TCDemo--------------------------------------------------PASSED
+<span class="linenos"> 36</span>                &lt;筛选资源-1&gt; 【步骤】:收集测试资源,【失败描述】:--------------------------------------------------------PASSED
+<span class="linenos"> 37</span>                    &lt;测试步骤-1&gt; 【步骤】:筛选设备,【失败描述】:------------------------------------------------------PASSED
+<span class="linenos"> 38</span>                        &lt;测试步骤-1&gt; 【步骤】:筛选PC设备,【失败描述】:筛选PC设备成功----------------------------------------PASSED
+<span class="linenos"> 39</span>                        &lt;测试步骤-2&gt; 【步骤】:筛选TV设备,【失败描述】:筛选TV设备成功----------------------------------------PASSED
+<span class="linenos"> 40</span>                &lt;前提条件-2&gt; 【步骤】:初始化前置条件,【失败描述】:-------------------------------------------------------PASSED
+<span class="linenos"> 41</span>                    &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:设置STR为ON--------------------------------------------------PASSED
+<span class="linenos"> 42</span>                    &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:设置STR为ON--------------------------------------------------PASSED
+<span class="linenos"> 43</span>                    &lt;测试步骤-3&gt; 【步骤】:,【失败描述】:设置待机时长----------------------------------------------------PASSED
+<span class="linenos"> 44</span>                    &lt;测试步骤-4&gt; 【步骤】:,【失败描述】:INFO: 安装WIFI apk------------------------------------------PASSED
+<span class="linenos"> 45</span>                    &lt;测试步骤-5&gt; 【步骤】:,【失败描述】:断开有线连接断开有线连接----------------------------------------------PASSED
+<span class="linenos"> 46</span>                    &lt;测试步骤-6&gt; 【步骤】:,【失败描述】:连接并检查WIFI热点-----------------------------------------------PASSED
+<span class="linenos"> 47</span>                &lt;测试主体-3&gt; 【步骤】:执行测试主体,【失败描述】:--------------------------------------------------------PASSED
+<span class="linenos"> 48</span>                    &lt;测试步骤-1&gt; 【步骤】:执行测试主体第0次,【失败描述】:-------------------------------------------------PASSED
+<span class="linenos"> 49</span>                        &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频---------------------------------------PASSED
+<span class="linenos"> 50</span>                        &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:按power键进入待机状态-----------------------------------------PASSED
+<span class="linenos"> 51</span>                        &lt;测试步骤-3&gt; 【步骤】:,【失败描述】:等待5秒后，按power键唤醒电视-------------------------------------PASSED
+<span class="linenos"> 52</span>                        &lt;测试步骤-4&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 53</span>                        &lt;测试步骤-5&gt; 【步骤】:,【失败描述】:开机后进入在线视频---------------------------------------------PASSED
+<span class="linenos"> 54</span>                        &lt;测试步骤-6&gt; 【步骤】:,【失败描述】:给电视断电-------------------------------------------------PASSED
+<span class="linenos"> 55</span>                        &lt;测试步骤-7&gt; 【步骤】:,【失败描述】:给电视上电-------------------------------------------------PASSED
+<span class="linenos"> 56</span>                        &lt;测试步骤-8&gt; 【步骤】:,【失败描述】:等待30秒后，按power键唤醒电视------------------------------------PASSED
+<span class="linenos"> 57</span>                        &lt;测试步骤-9&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 58</span>                        &lt;测试步骤-10&gt; 【步骤】:,【失败描述】:开机后进入Launcher页面--------------------------------------PASSED
+<span class="linenos"> 59</span>                            &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频-----------------------------------PASSED
+<span class="linenos"> 60</span>                    &lt;测试步骤-2&gt; 【步骤】:执行测试主体第1次,【失败描述】:-------------------------------------------------PASSED
+<span class="linenos"> 61</span>                        &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频---------------------------------------PASSED
+<span class="linenos"> 62</span>                        &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:按power键进入待机状态-----------------------------------------PASSED
+<span class="linenos"> 63</span>                        &lt;测试步骤-3&gt; 【步骤】:,【失败描述】:等待5秒后，按power键唤醒电视-------------------------------------PASSED
+<span class="linenos"> 64</span>                        &lt;测试步骤-4&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 65</span>                        &lt;测试步骤-5&gt; 【步骤】:,【失败描述】:开机后进入在线视频---------------------------------------------PASSED
+<span class="linenos"> 66</span>                        &lt;测试步骤-6&gt; 【步骤】:,【失败描述】:给电视断电-------------------------------------------------PASSED
+<span class="linenos"> 67</span>                        &lt;测试步骤-7&gt; 【步骤】:,【失败描述】:给电视上电-------------------------------------------------PASSED
+<span class="linenos"> 68</span>                        &lt;测试步骤-8&gt; 【步骤】:,【失败描述】:等待30秒后，按power键唤醒电视------------------------------------PASSED
+<span class="linenos"> 69</span>                        &lt;测试步骤-9&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 70</span>                        &lt;测试步骤-10&gt; 【步骤】:,【失败描述】:开机后进入Launcher页面--------------------------------------PASSED
+<span class="linenos"> 71</span>                            &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频-----------------------------------PASSED
+<span class="linenos"> 72</span>                    &lt;测试步骤-3&gt; 【步骤】:执行测试主体第2次,【失败描述】:-------------------------------------------------PASSED
+<span class="linenos"> 73</span>                        &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频---------------------------------------PASSED
+<span class="linenos"> 74</span>                        &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:按power键进入待机状态-----------------------------------------PASSED
+<span class="linenos"> 75</span>                        &lt;测试步骤-3&gt; 【步骤】:,【失败描述】:等待5秒后，按power键唤醒电视-------------------------------------PASSED
+<span class="linenos"> 76</span>                        &lt;测试步骤-4&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 77</span>                        &lt;测试步骤-5&gt; 【步骤】:,【失败描述】:开机后进入在线视频---------------------------------------------PASSED
+<span class="linenos"> 78</span>                        &lt;测试步骤-6&gt; 【步骤】:,【失败描述】:给电视断电-------------------------------------------------PASSED
+<span class="linenos"> 79</span>                        &lt;测试步骤-7&gt; 【步骤】:,【失败描述】:给电视上电-------------------------------------------------PASSED
+<span class="linenos"> 80</span>                        &lt;测试步骤-8&gt; 【步骤】:,【失败描述】:等待30秒后，按power键唤醒电视------------------------------------PASSED
+<span class="linenos"> 81</span>                        &lt;测试步骤-9&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 82</span>                        &lt;测试步骤-10&gt; 【步骤】:,【失败描述】:开机后进入Launcher页面--------------------------------------PASSED
+<span class="linenos"> 83</span>                            &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频-----------------------------------PASSED
+<span class="linenos"> 84</span>                &lt;后置清理-4&gt; 【步骤】:清理后置条件,【失败描述】:--------------------------------------------------------PASSED
+<span class="linenos"> 85</span>                    &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:断开WIFI热点--------------------------------------------------PASSED
+<span class="linenos"> 86</span>                    &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:关闭WIFI开关--------------------------------------------------PASSED
+<span class="linenos"> 87</span>
+<span class="linenos"> 88</span>{&quot;headline&quot;: &quot;Root&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:09&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u6d4b\u8bd5\u5957\u4ef6&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;TCDemo&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;}]}, {&quot;headline&quot;:
+<span class="linenos"> 89</span> &quot;\u6267\u884c\u6d4b\u8bd5&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u6267\u884c\u7528\u4f8b&quot;, &quot;message&quot;: &quot;INFO: TCDemo&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [
+<span class="linenos"> 90</span>{&quot;headline&quot;: &quot;\u6536\u96c6\u6d4b\u8bd5\u8d44\u6e90&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u7b5b\u9009\u8bbe\u5907&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u7b5b\u9009PC\u8bbe\u5907&quot;, &quot;message&quot;: &quot;\u7b5b\u9009PC\u8bbe\u5907\u6210\u529f
+<span class="linenos"> 91</span>&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;1-&quot;}, {&quot;headline&quot;: &quot;\u7b5b\u9009TV\u8bbe\u5907&quot;, &quot;message&quot;: &quot;\u7b5b\u9009TV\u8bbe\u5907\u6210\u529f&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;1-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}], &quot;
+<span class="linenos"> 92</span>result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;COLLECT_RESOURCE&quot;}, {&quot;headline&quot;: &quot;\u521d\u59cb\u5316\u524d\u7f6e\u6761\u4ef6&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u8bbe\u7f6eSTR\u4e3aON&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;},
+<span class="linenos"> 93</span>{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u8bbe\u7f6eSTR\u4e3aON&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u8bbe\u7f6e\u5f85\u673a\u65f6\u957f&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;
+<span class="linenos"> 94</span>message&quot;: &quot;INFO: \u5b89\u88c5WIFI apk&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u65ad\u5f00\u6709\u7ebf\u8fde\u63a5\u65ad\u5f00\u6709\u7ebf\u8fde\u63a5&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;
+<span class="linenos"> 95</span>}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u8fde\u63a5\u5e76\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;SETUP&quot;}, {&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5\u4e3b\u4f53&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;c
+<span class="linenos"> 96</span>hildren&quot;: [{&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5\u4e3b\u4f53\u7b2c0\u6b21&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST
+<span class="linenos"> 97</span>-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6309power\u952e\u8fdb\u5165\u5f85\u673a\u72b6\u6001&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f855\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-0
+<span class="linenos"> 98</span>4 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165\u5728\u7eb
+<span class="linenos"> 99</span>f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6\u65ad\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6
+<span class="linenos">100</span>\u4e0a\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f8530\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;hea
+<span class="linenos">101</span>dline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165Launcher\u9875\u9762&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;,
+<span class="linenos">102</span> &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-10-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-0&quot;}, {&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5\u4e3b\u4f53\u7b2c1\u6
+<span class="linenos">103</span>b21&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6309power\u952e\u8fdb\u5165\u5f8
+<span class="linenos">104</span>5\u673a\u72b6\u6001&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f855\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;},
+<span class="linenos">105</span> {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165\u5728\u7ebf\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;re
+<span class="linenos">106</span>sult&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6\u65ad\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6\u4e0a\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;res
+<span class="linenos">107</span>ult&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f8530\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;
+<span class="linenos">108</span>, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165Launcher\u9875\u9762&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;,
+<span class="linenos">109</span>&quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-10-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-1&quot;}, {&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5\u4e3b\u4f53\u7b2c2\u6b21&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{
+<span class="linenos">110</span>&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6309power\u952e\u8fdb\u5165\u5f85\u673a\u72b6\u6001&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [
+<span class="linenos">111</span>], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f855\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\
+<span class="linenos">112</span>u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165\u5728\u7ebf\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u
+<span class="linenos">113</span>7ed9\u7535\u89c6\u65ad\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6\u4e0a\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7
+<span class="linenos">114</span>b49\u5f8530\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed
+<span class="linenos">115</span>&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165Launcher\u9875\u9762&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;,
+<span class="linenos">116</span> &quot;prefix&quot;: &quot;TEST-23-10-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-2&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST&quot;}, {&quot;headline&quot;: &quot;\u6e05\u7406\u540e\u7f6e\u6761\u4ef6&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u65ad\u5f00WIFI
+<span class="linenos">117</span>\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5173\u95edWIFI\u5f00\u5173&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;CLEANUP&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;p
+<span class="linenos">118</span>refix&quot;: &quot;RUNCASE&quot;}], &quot;result&quot;: &quot;Passed&quot;}]}]}
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id13">
+<h2>结果模块<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h2>
+<section id="loggermanager">
+<h3>日志管理器类LoggerManager<a class="headerlink" href="#loggermanager" title="Permalink to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="testbot.result.logger.LoggerManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testbot.result.logger.</span></span><span class="sig-name descname"><span class="pre">LoggerManager</span></span><a class="reference internal" href="_modules/testbot/result/logger.html#LoggerManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.logger.LoggerManager" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>日志管理器，可注册多个日志对象，支持模块日志和用例日志分离。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.logger.LoggerManager.get_logger">
+<span class="sig-name descname"><span class="pre">get_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/result/logger.html#LoggerManager.get_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.logger.LoggerManager.get_logger" title="Permalink to this definition"></a></dt>
+<dd><p>获取日志对象
+:param logger_name: 日志名称
+:type logger_name: str
+:return: 日志对象
+:rtype: logging.Logger</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.logger.LoggerManager.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">console</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">logging.INFO</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/result/logger.html#LoggerManager.register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.logger.LoggerManager.register" title="Permalink to this definition"></a></dt>
+<dd><p>注册logger。
+for_test参数默认False，开启则支持模块日志；is_test参数默认False，开启则支持用例日志。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logger_name</strong> (<em>str</em>) – 日志名称</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – 文件名称</p></li>
+<li><p><strong>console</strong> (<em>bool</em>) – 是否控制台输出</p></li>
+<li><p><strong>default_level</strong> (<em>str</em>) – 默认日志级别</p></li>
+<li><p><strong>kwargs</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>创建或已注册的日志Logger对象</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>logging.Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testbot.result.logger.LoggerManager.unregister">
+<span class="sig-name descname"><span class="pre">unregister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testbot/result/logger.html#LoggerManager.unregister"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testbot.result.logger.LoggerManager.unregister" title="Permalink to this definition"></a></dt>
+<dd><p>删除注册的logger，同时将需要打包的logger文件打包</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>logger_name</strong> (<em>str</em>) – 日志名称</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id14">
+<h3>创建日志类对象<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+<p>模块tbot.result.logger对外共享一个日志管理器对象logger_manager，方便各个模块和用例使用它来注册各自的日志对象。</p>
+<p>下面是一个例子，介绍了如何创建一个Resource模块和用例的日志对象，用于各自的日志输出：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/usr/bin/env python</span>
+<span class="linenos"> 2</span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved&quot;</span>
+<span class="linenos"> 5</span><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Nuanguang Gu(Sunny)&quot;</span>
+<span class="linenos"> 6</span><span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;nuanguang.gu@aliyun.com&quot;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="kn">import</span> <span class="nn">os</span>
+<span class="linenos"> 9</span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="linenos">10</span><span class="kn">from</span> <span class="nn">tbot.result.logger</span> <span class="kn">import</span> <span class="n">logger_manager</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">14</span>    <span class="n">RESOURCE_LOGGER_FILENAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()),</span> <span class="s2">&quot;TBOT&quot;</span><span class="p">,</span> <span class="s2">&quot;logs&quot;</span><span class="p">,</span> <span class="s2">&quot;Resource.log&quot;</span><span class="p">)</span>
+<span class="linenos">15</span>    <span class="n">TC_LOGGER_FILENAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()),</span> <span class="s2">&quot;TBOT&quot;</span><span class="p">,</span> <span class="s2">&quot;logs&quot;</span><span class="p">,</span> <span class="s2">&quot;TestCase.log&quot;</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>    <span class="c1"># 注册Resource模块日志对象</span>
+<span class="linenos">18</span>    <span class="n">resource_module_logger</span> <span class="o">=</span> <span class="n">logger_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">logger_name</span><span class="o">=</span><span class="s2">&quot;Resource&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">RESOURCE_LOGGER_FILENAME</span><span class="p">,</span> <span class="n">for_test</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="c1"># 注册用例对象</span>
+<span class="linenos">20</span>    <span class="n">tc_logger</span> <span class="o">=</span> <span class="n">logger_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">logger_name</span><span class="o">=</span><span class="s2">&quot;TestCase&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">TC_LOGGER_FILENAME</span><span class="p">,</span> <span class="n">is_test</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span>    <span class="c1"># Resource模块日志打印信息</span>
+<span class="linenos">23</span>    <span class="n">resource_module_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;这是Resource模块日志&quot;</span><span class="p">)</span>
+<span class="linenos">24</span>    <span class="c1"># 用例日志打印信息</span>
+<span class="linenos">25</span>    <span class="n">tc_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;这是用例日志&quot;</span><span class="p">)</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>    <span class="c1"># 在用例执行结束后，去注册用例日志</span>
+<span class="linenos">28</span>    <span class="n">logger_manager</span><span class="o">.</span><span class="n">unregister</span><span class="p">(</span><span class="s2">&quot;TestCase&quot;</span><span class="p">)</span>
+<span class="linenos">29</span>
+</pre></div>
+</div>
+<p>日志目录和日志内容如下。您会发现，模块Resource日志对象的日志信息，除了保存到模块日志文件Resource.log，还保存到用例日志文件TestCase.log。</p>
+<img alt="_images/logger_info.png" src="_images/logger_info.png" />
+</section>
+<section id="id15">
+<h3>日志文件目录<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+<p>默认情况下，模块配置文件将会保存到目录~/TESTBOT/logs。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>C:\USERS\NUANGUANG.GU\TESTBOT
+├───configs
+│       CaseRunnerSetting.json
+│       ModuleSetting.json
+│       ResourcePool.json
+│       ResourceSetting.json
+│
+└───logs
+    ├───cases
+    │   └───20240905180219
+    │       └───A Demo Test List
+    │               TCDemo.log
+    │
+    ├───modules
+    │       Resource.log
+    │
+    └───runner
+            CaseRunner.log
+</pre></div>
+</div>
+</section>
+<section id="id16">
+<h3>结构化步骤信息<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span>[2024-12-04 14:25:09,585][INFO][CaseRunner][tatf.testengine.caserunner.__init__  :+78][pid|tid:48832|34832]:执行器装载完毕
+<span class="linenos">  2</span>[2024-12-04 14:25:09,587][INFO][Resource  ][tatf.resource.pool.load      :+140][pid|tid:48832|34832]:Entering ResourcePool.load...
+<span class="linenos">  3</span>[2024-12-04 14:25:09,589][INFO][Resource  ][tatf.resource.resource.__init__  :+167][pid|tid:48832|34832]:Initialize Device...
+<span class="linenos">  4</span>[2024-12-04 14:25:09,590][INFO][Resource  ][tatf.resource.resource.__init__  :+167][pid|tid:48832|34832]:Initialize Device...
+<span class="linenos">  5</span>[2024-12-04 14:25:09,590][INFO][Resource  ][tatf.resource.pool.load      :+174][pid|tid:48832|34832]:Exiting ResourcePool.load...
+<span class="linenos">  6</span>[2024-12-04 14:25:09,590][INFO][CaseRunner][tatf.testengine.caserunner.load_resource:+113][pid|tid:48832|34832]:测试资源装载完毕
+<span class="linenos">  7</span>[2024-12-04 14:25:09,592][INFO][CaseRunner][tatf.testengine.caserunner.load_test :+148][pid|tid:48832|34832]:正在加载用例模块: tatf.example.TCDemo...
+<span class="linenos">  8</span>[2024-12-04 14:25:09,592][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+158][pid|tid:48832|34832]:################################################################################
+<span class="linenos">  9</span>[2024-12-04 14:25:09,605][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+173][pid|tid:48832|34832]:############## tatf模块 【Version】:2024.49.2.dev19,【概要】:TATF测试框架，分支名称：，提交ID：,【安装路径】:tatf 2024.49.2.dev19 ##############
+<span class="linenos"> 10</span>C:\Python38\lib\site-packages\pkginfo\installed.py:62: UserWarning: No PKG-INFO found for package: tatf_aw
+<span class="linenos"> 11</span>  warnings.warn(&#39;No PKG-INFO found for package: %s&#39; % self.package_name)
+<span class="linenos"> 12</span>C:\Python38\lib\site-packages\pkginfo\distribution.py:178: UnknownMetadataVersion: Unknown metadata version: None
+<span class="linenos"> 13</span>  warnings.warn(UnknownMetadataVersion(self.metadata_version))
+<span class="linenos"> 14</span>[2024-12-04 14:25:10,019][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+173][pid|tid:48832|34832]:############## tatf_aw模块 【Version】:None,【概要】:None,【安装路径】:None ##############
+<span class="linenos"> 15</span>C:\Python38\lib\site-packages\pkginfo\installed.py:62: UserWarning: No PKG-INFO found for package: tatf_scripts
+<span class="linenos"> 16</span>  warnings.warn(&#39;No PKG-INFO found for package: %s&#39; % self.package_name)
+<span class="linenos"> 17</span>[2024-12-04 14:25:10,432][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+173][pid|tid:48832|34832]:############## tatf_scripts模块 【Version】:None,【概要】:None,【安装路径】:None ##############
+<span class="linenos"> 18</span>C:\Python38\lib\site-packages\pkginfo\installed.py:62: UserWarning: No PKG-INFO found for package: tatf_tools
+<span class="linenos"> 19</span>  warnings.warn(&#39;No PKG-INFO found for package: %s&#39; % self.package_name)
+<span class="linenos"> 20</span>[2024-12-04 14:25:10,845][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+173][pid|tid:48832|34832]:############## tatf_tools模块 【Version】:None,【概要】:None,【安装路径】:None ##############
+<span class="linenos"> 21</span>[2024-12-04 14:25:10,845][INFO][CaseRunner][tatf.testengine.caserunner.print_module_info:+174][pid|tid:48832|34832]:################################################################################
+<span class="linenos"> 22</span>[2024-12-04 14:25:10,859][INFO][CaseRunner][tatf.testengine.caserunner.set_test_list:+186][pid|tid:48832|34832]:测试列表装载完毕
+<span class="linenos"> 23</span>[2024-12-04 14:25:10,868][INFO][TCDemo    ][tatf.case.precondition.is_meet   :+37][pid|tid:48832|45808]:测试用例的类型必须是COMMON_TEST
+<span class="linenos"> 24</span>[2024-12-04 14:25:10,868][INFO][CaseRunner][tatf.testengine.caserunner.__run_case:+319][pid|tid:48832|45808]:self.resource_pool={&#39;M70JP90W&#39;: &lt;tatf.resource.resource.Device object at 0x0000027F023B7940&gt;, &#39;5C0AD0760BB0C50AD&#39;: &lt;tatf.resource.resource.Device object at 0x0000027F023887F0&gt;}
+<span class="linenos"> 25</span>[2024-12-04 14:25:10,872][INFO][CaseRunner][tatf.example.TCDemo.setup     :+60][pid|tid:48832|45808]:case_setting1=setting1, case_setting2=10, TIMEOUT=60
+<span class="linenos"> 26</span>[2024-12-04 14:25:10,874][INFO][CaseRunner][tatf.testengine.caserunner.__run_case:+349][pid|tid:48832|45808]:执行次数：3
+<span class="linenos"> 27</span>[2024-12-04 14:25:10,878][INFO][Resource  ][tatf.resource.modules.device_module.power_off :+53][pid|tid:48832|45808]:给设备断电
+<span class="linenos"> 28</span>[2024-12-04 14:25:10,879][INFO][Resource  ][tatf.resource.modules.device_module.power_on  :+43][pid|tid:48832|45808]:给设备上电
+<span class="linenos"> 29</span>[2024-12-04 14:25:10,885][INFO][Resource  ][tatf.resource.modules.device_module.power_off :+53][pid|tid:48832|45808]:给设备断电
+<span class="linenos"> 30</span>[2024-12-04 14:25:10,886][INFO][Resource  ][tatf.resource.modules.device_module.power_on  :+43][pid|tid:48832|45808]:给设备上电
+<span class="linenos"> 31</span>[2024-12-04 14:25:10,892][INFO][Resource  ][tatf.resource.modules.device_module.power_off :+53][pid|tid:48832|45808]:给设备断电
+<span class="linenos"> 32</span>[2024-12-04 14:25:10,896][INFO][Resource  ][tatf.resource.modules.device_module.power_on  :+43][pid|tid:48832|45808]:给设备上电
+<span class="linenos"> 33</span>&lt;测试节点&gt; 【步骤】:Root,【失败描述】:&lt;测试节点&gt; 【步骤】:测试套件,【失败描述】:        &lt;测试用例&gt; 【步骤】:TCDemo,【失败描述】:------------------------------------------------------------------PASSED
+<span class="linenos"> 34</span>&lt;测试节点&gt; 【步骤】:执行测试,【失败描述】:        &lt;测试用例&gt; 【步骤】:执行测试,【失败描述】:--------------------------------------------------------------------PASSED
+<span class="linenos"> 35</span>            &lt;测试步骤-1&gt; 【步骤】:执行用例,【失败描述】:INFO: TCDemo--------------------------------------------------PASSED
+<span class="linenos"> 36</span>                &lt;筛选资源-1&gt; 【步骤】:收集测试资源,【失败描述】:--------------------------------------------------------PASSED
+<span class="linenos"> 37</span>                    &lt;测试步骤-1&gt; 【步骤】:筛选设备,【失败描述】:------------------------------------------------------PASSED
+<span class="linenos"> 38</span>                        &lt;测试步骤-1&gt; 【步骤】:筛选PC设备,【失败描述】:筛选PC设备成功----------------------------------------PASSED
+<span class="linenos"> 39</span>                        &lt;测试步骤-2&gt; 【步骤】:筛选TV设备,【失败描述】:筛选TV设备成功----------------------------------------PASSED
+<span class="linenos"> 40</span>                &lt;前提条件-2&gt; 【步骤】:初始化前置条件,【失败描述】:-------------------------------------------------------PASSED
+<span class="linenos"> 41</span>                    &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:设置STR为ON--------------------------------------------------PASSED
+<span class="linenos"> 42</span>                    &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:设置STR为ON--------------------------------------------------PASSED
+<span class="linenos"> 43</span>                    &lt;测试步骤-3&gt; 【步骤】:,【失败描述】:设置待机时长----------------------------------------------------PASSED
+<span class="linenos"> 44</span>                    &lt;测试步骤-4&gt; 【步骤】:,【失败描述】:INFO: 安装WIFI apk------------------------------------------PASSED
+<span class="linenos"> 45</span>                    &lt;测试步骤-5&gt; 【步骤】:,【失败描述】:断开有线连接断开有线连接----------------------------------------------PASSED
+<span class="linenos"> 46</span>                    &lt;测试步骤-6&gt; 【步骤】:,【失败描述】:连接并检查WIFI热点-----------------------------------------------PASSED
+<span class="linenos"> 47</span>                &lt;测试主体-3&gt; 【步骤】:执行测试主体,【失败描述】:--------------------------------------------------------PASSED
+<span class="linenos"> 48</span>                    &lt;测试步骤-1&gt; 【步骤】:执行测试主体第0次,【失败描述】:-------------------------------------------------PASSED
+<span class="linenos"> 49</span>                        &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频---------------------------------------PASSED
+<span class="linenos"> 50</span>                        &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:按power键进入待机状态-----------------------------------------PASSED
+<span class="linenos"> 51</span>                        &lt;测试步骤-3&gt; 【步骤】:,【失败描述】:等待5秒后，按power键唤醒电视-------------------------------------PASSED
+<span class="linenos"> 52</span>                        &lt;测试步骤-4&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 53</span>                        &lt;测试步骤-5&gt; 【步骤】:,【失败描述】:开机后进入在线视频---------------------------------------------PASSED
+<span class="linenos"> 54</span>                        &lt;测试步骤-6&gt; 【步骤】:,【失败描述】:给电视断电-------------------------------------------------PASSED
+<span class="linenos"> 55</span>                        &lt;测试步骤-7&gt; 【步骤】:,【失败描述】:给电视上电-------------------------------------------------PASSED
+<span class="linenos"> 56</span>                        &lt;测试步骤-8&gt; 【步骤】:,【失败描述】:等待30秒后，按power键唤醒电视------------------------------------PASSED
+<span class="linenos"> 57</span>                        &lt;测试步骤-9&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 58</span>                        &lt;测试步骤-10&gt; 【步骤】:,【失败描述】:开机后进入Launcher页面--------------------------------------PASSED
+<span class="linenos"> 59</span>                            &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频-----------------------------------PASSED
+<span class="linenos"> 60</span>                    &lt;测试步骤-2&gt; 【步骤】:执行测试主体第1次,【失败描述】:-------------------------------------------------PASSED
+<span class="linenos"> 61</span>                        &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频---------------------------------------PASSED
+<span class="linenos"> 62</span>                        &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:按power键进入待机状态-----------------------------------------PASSED
+<span class="linenos"> 63</span>                        &lt;测试步骤-3&gt; 【步骤】:,【失败描述】:等待5秒后，按power键唤醒电视-------------------------------------PASSED
+<span class="linenos"> 64</span>                        &lt;测试步骤-4&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 65</span>                        &lt;测试步骤-5&gt; 【步骤】:,【失败描述】:开机后进入在线视频---------------------------------------------PASSED
+<span class="linenos"> 66</span>                        &lt;测试步骤-6&gt; 【步骤】:,【失败描述】:给电视断电-------------------------------------------------PASSED
+<span class="linenos"> 67</span>                        &lt;测试步骤-7&gt; 【步骤】:,【失败描述】:给电视上电-------------------------------------------------PASSED
+<span class="linenos"> 68</span>                        &lt;测试步骤-8&gt; 【步骤】:,【失败描述】:等待30秒后，按power键唤醒电视------------------------------------PASSED
+<span class="linenos"> 69</span>                        &lt;测试步骤-9&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 70</span>                        &lt;测试步骤-10&gt; 【步骤】:,【失败描述】:开机后进入Launcher页面--------------------------------------PASSED
+<span class="linenos"> 71</span>                            &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频-----------------------------------PASSED
+<span class="linenos"> 72</span>                    &lt;测试步骤-3&gt; 【步骤】:执行测试主体第2次,【失败描述】:-------------------------------------------------PASSED
+<span class="linenos"> 73</span>                        &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频---------------------------------------PASSED
+<span class="linenos"> 74</span>                        &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:按power键进入待机状态-----------------------------------------PASSED
+<span class="linenos"> 75</span>                        &lt;测试步骤-3&gt; 【步骤】:,【失败描述】:等待5秒后，按power键唤醒电视-------------------------------------PASSED
+<span class="linenos"> 76</span>                        &lt;测试步骤-4&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 77</span>                        &lt;测试步骤-5&gt; 【步骤】:,【失败描述】:开机后进入在线视频---------------------------------------------PASSED
+<span class="linenos"> 78</span>                        &lt;测试步骤-6&gt; 【步骤】:,【失败描述】:给电视断电-------------------------------------------------PASSED
+<span class="linenos"> 79</span>                        &lt;测试步骤-7&gt; 【步骤】:,【失败描述】:给电视上电-------------------------------------------------PASSED
+<span class="linenos"> 80</span>                        &lt;测试步骤-8&gt; 【步骤】:,【失败描述】:等待30秒后，按power键唤醒电视------------------------------------PASSED
+<span class="linenos"> 81</span>                        &lt;测试步骤-9&gt; 【步骤】:,【失败描述】:开机后检查WIFI热点-------------------------------------------PASSED
+<span class="linenos"> 82</span>                        &lt;测试步骤-10&gt; 【步骤】:,【失败描述】:开机后进入Launcher页面--------------------------------------PASSED
+<span class="linenos"> 83</span>                            &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:打开Youtube播放任意视频-----------------------------------PASSED
+<span class="linenos"> 84</span>                &lt;后置清理-4&gt; 【步骤】:清理后置条件,【失败描述】:--------------------------------------------------------PASSED
+<span class="linenos"> 85</span>                    &lt;测试步骤-1&gt; 【步骤】:,【失败描述】:断开WIFI热点--------------------------------------------------PASSED
+<span class="linenos"> 86</span>                    &lt;测试步骤-2&gt; 【步骤】:,【失败描述】:关闭WIFI开关--------------------------------------------------PASSED
+<span class="linenos"> 87</span>
+<span class="linenos"> 88</span>{&quot;headline&quot;: &quot;Root&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:09&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u6d4b\u8bd5\u5957\u4ef6&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;TCDemo&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;}]}, {&quot;headline&quot;:
+<span class="linenos"> 89</span> &quot;\u6267\u884c\u6d4b\u8bd5&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u6267\u884c\u7528\u4f8b&quot;, &quot;message&quot;: &quot;INFO: TCDemo&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [
+<span class="linenos"> 90</span>{&quot;headline&quot;: &quot;\u6536\u96c6\u6d4b\u8bd5\u8d44\u6e90&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u7b5b\u9009\u8bbe\u5907&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;\u7b5b\u9009PC\u8bbe\u5907&quot;, &quot;message&quot;: &quot;\u7b5b\u9009PC\u8bbe\u5907\u6210\u529f
+<span class="linenos"> 91</span>&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;1-&quot;}, {&quot;headline&quot;: &quot;\u7b5b\u9009TV\u8bbe\u5907&quot;, &quot;message&quot;: &quot;\u7b5b\u9009TV\u8bbe\u5907\u6210\u529f&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;1-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}], &quot;
+<span class="linenos"> 92</span>result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;COLLECT_RESOURCE&quot;}, {&quot;headline&quot;: &quot;\u521d\u59cb\u5316\u524d\u7f6e\u6761\u4ef6&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u8bbe\u7f6eSTR\u4e3aON&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;},
+<span class="linenos"> 93</span>{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u8bbe\u7f6eSTR\u4e3aON&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u8bbe\u7f6e\u5f85\u673a\u65f6\u957f&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;
+<span class="linenos"> 94</span>message&quot;: &quot;INFO: \u5b89\u88c5WIFI apk&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u65ad\u5f00\u6709\u7ebf\u8fde\u63a5\u65ad\u5f00\u6709\u7ebf\u8fde\u63a5&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;
+<span class="linenos"> 95</span>}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u8fde\u63a5\u5e76\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;SETUP&quot;}, {&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5\u4e3b\u4f53&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;c
+<span class="linenos"> 96</span>hildren&quot;: [{&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5\u4e3b\u4f53\u7b2c0\u6b21&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST
+<span class="linenos"> 97</span>-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6309power\u952e\u8fdb\u5165\u5f85\u673a\u72b6\u6001&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f855\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-0
+<span class="linenos"> 98</span>4 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165\u5728\u7eb
+<span class="linenos"> 99</span>f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6\u65ad\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6
+<span class="linenos">100</span>\u4e0a\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f8530\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;hea
+<span class="linenos">101</span>dline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165Launcher\u9875\u9762&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;,
+<span class="linenos">102</span> &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-10-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-01-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-0&quot;}, {&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5\u4e3b\u4f53\u7b2c1\u6
+<span class="linenos">103</span>b21&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6309power\u952e\u8fdb\u5165\u5f8
+<span class="linenos">104</span>5\u673a\u72b6\u6001&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f855\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;},
+<span class="linenos">105</span> {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165\u5728\u7ebf\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;re
+<span class="linenos">106</span>sult&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6\u65ad\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6\u4e0a\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;res
+<span class="linenos">107</span>ult&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f8530\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;
+<span class="linenos">108</span>, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165Launcher\u9875\u9762&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;,
+<span class="linenos">109</span>&quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-10-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-12-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-1&quot;}, {&quot;headline&quot;: &quot;\u6267\u884c\u6d4b\u8bd5\u4e3b\u4f53\u7b2c2\u6b21&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{
+<span class="linenos">110</span>&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6309power\u952e\u8fdb\u5165\u5f85\u673a\u72b6\u6001&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [
+<span class="linenos">111</span>], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7b49\u5f855\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\
+<span class="linenos">112</span>u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165\u5728\u7ebf\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u
+<span class="linenos">113</span>7ed9\u7535\u89c6\u65ad\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7ed9\u7535\u89c6\u4e0a\u7535&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u7
+<span class="linenos">114</span>b49\u5f8530\u79d2\u540e\uff0c\u6309power\u952e\u5524\u9192\u7535\u89c6&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u68c0\u67e5WIFI\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed
+<span class="linenos">115</span>&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5f00\u673a\u540e\u8fdb\u5165Launcher\u9875\u9762&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u6253\u5f00Youtube\u64ad\u653e\u4efb\u610f\u89c6\u9891&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;,
+<span class="linenos">116</span> &quot;prefix&quot;: &quot;TEST-23-10-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-23-&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST-2&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;TEST&quot;}, {&quot;headline&quot;: &quot;\u6e05\u7406\u540e\u7f6e\u6761\u4ef6&quot;, &quot;message&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [{&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u65ad\u5f00WIFI
+<span class="linenos">117</span>\u70ed\u70b9&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}, {&quot;headline&quot;: &quot;&quot;, &quot;message&quot;: &quot;\u5173\u95edWIFI\u5f00\u5173&quot;, &quot;timestamp&quot;: &quot;2024-12-04 14:25:10&quot;, &quot;children&quot;: [], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;prefix&quot;: &quot;CLEANUP&quot;}], &quot;result&quot;: &quot;Passed&quot;, &quot;p
+<span class="linenos">118</span>refix&quot;: &quot;RUNCASE&quot;}], &quot;result&quot;: &quot;Passed&quot;}]}]}
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dev_coding_spec.html" class="btn btn-neutral float-left" title="编码规范" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="base_apis.html" class="btn btn-neutral float-right" title="基础原子API接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

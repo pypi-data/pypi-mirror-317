@@ -1,0 +1,120 @@
+:py:mod:`testbot.resource.resource`
+===================================
+
+.. py:module:: testbot.resource.resource
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.resource.Resource
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.resource.register_resource
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.resource.__copyright__
+   testbot.resource.resource.__author__
+   testbot.resource.resource.__email__
+   testbot.resource.resource._resource_device_mapping
+   testbot.resource.resource._resource_port_mapping
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:data:: _resource_device_mapping
+
+   
+
+.. py:data:: _resource_port_mapping
+
+   
+
+.. py:exception:: ResourceError(msg)
+
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+
+.. py:function:: register_resource(category, resource_type, comm_callback)
+
+   注册配置接口实例化的方法或者类。
+
+
+.. py:class:: Resource(name: str = '', *args, **kwargs)
+
+
+   代表所有测试资源设备的配置类，字段动态定义
+
+   .. py:attribute:: name
+      :type: str
+
+      
+
+   .. py:attribute:: type
+      :type: str
+
+      
+
+   .. py:attribute:: description
+      :type: str
+
+      
+
+   .. py:attribute:: MODULES
+      :value: ['testbot.resource.modules.device_module.PowerModule']
+
+      
+
+   .. py:method:: register_module(module: str)
+      :classmethod:
+
+      注册接口模块类
+
+      :param module: 接口模块类包路径
+      :type module: str
+      :return:
+      :rtype:
+
+
+   .. py:method:: to_dict() -> dict
+      :abstractmethod:
+
+
+   .. py:method:: from_dict()
+      :classmethod:
+
+
+

@@ -1,0 +1,234 @@
+:py:mod:`testbot.result.reporter`
+=================================
+
+.. py:module:: testbot.result.reporter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.result.reporter.StepResult
+   testbot.result.reporter.NodeType
+   testbot.result.reporter.ResultNode
+   testbot.result.reporter.ResultReporter
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.result.reporter.locker
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.result.reporter.__copyright__
+   testbot.result.reporter.__author__
+   testbot.result.reporter.__email__
+   testbot.result.reporter.rr
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:class:: StepResult
+
+
+   Bases: :py:obj:`enum.IntEnum`
+
+   表示节点的状态
+
+   .. py:attribute:: INFO
+      :value: 1
+
+      
+
+   .. py:attribute:: PASS
+      :value: 2
+
+      
+
+   .. py:attribute:: FAIL
+      :value: 4
+
+      
+
+   .. py:attribute:: EXCEPTION
+      :value: 8
+
+      
+
+   .. py:attribute:: WARNING
+      :value: 16
+
+      
+
+   .. py:attribute:: ERROR
+      :value: 32
+
+      
+
+
+.. py:class:: NodeType
+
+
+   Bases: :py:obj:`enum.IntEnum`
+
+   表示节点的类型
+
+   .. py:attribute:: Step
+      :value: 1
+
+      
+
+   .. py:attribute:: Case
+      :value: 2
+
+      
+
+   .. py:attribute:: TestList
+      :value: 4
+
+      
+
+   .. py:attribute:: Other
+      :value: 256
+
+      
+
+
+.. py:class:: ResultNode(header, status=None, message='', parent=None, node_type=NodeType.Other)
+
+
+   Bases: :py:obj:`object`
+
+   测试结果节点
+
+   .. py:property:: is_leaf
+
+
+   .. py:method:: add_child(header, status=StepResult.INFO, message='', node_type=NodeType.Other)
+
+      添加新的子节点并返回该节点
+
+
+   .. py:method:: set_status(status)
+
+      设置当前节点的状态，并且同时更新父节点的状态
+
+
+   .. py:method:: add(status, header, message='')
+
+      简化的add方法，提供给事件驱动
+
+
+   .. py:method:: get_test_point_stats()
+
+
+   .. py:method:: get_test_case_stats()
+
+
+   .. py:method:: to_dict()
+
+      将结果节点输出成字典结构
+
+
+   .. py:method:: to_text(indent=0)
+
+      将结果生成文本类型的结构
+
+
+   .. py:method:: _get_intent(indent)
+
+
+   .. py:method:: _get_dot_line(line, line_max)
+
+
+
+.. py:function:: locker(lock)
+
+
+.. py:class:: ResultReporter(logger)
+
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: my_lock
+
+      
+
+   .. py:method:: search_result(case_name)
+
+      搜索给定的测试用例名称的测试结果
+
+
+   .. py:method:: _search_result(node, case_name)
+
+
+   .. py:method:: add_node(header, message='', status=StepResult.INFO, node_type=NodeType.Other)
+
+
+   .. py:method:: pop()
+
+
+   .. py:method:: add_test(case_name)
+
+
+   .. py:method:: end_test()
+
+
+   .. py:method:: add_list(list_name)
+
+
+   .. py:method:: end_list()
+
+
+   .. py:method:: add_step_group(group_name)
+
+
+   .. py:method:: add_event_group(group_name)
+
+
+   .. py:method:: end_step_group()
+
+
+   .. py:method:: add_precheck_result(result, headline)
+
+
+   .. py:method:: is_high_priority_passed(priority)
+
+
+   .. py:method:: add(status: StepResult, headline, message='')
+
+
+   .. py:method:: _log_info(message)
+
+
+
+.. py:data:: rr
+
+   
+

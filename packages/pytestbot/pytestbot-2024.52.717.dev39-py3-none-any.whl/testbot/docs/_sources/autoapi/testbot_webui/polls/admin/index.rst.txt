@@ -1,0 +1,6 @@
+:py:mod:`testbot_webui.polls.admin`
+===================================
+
+.. py:module:: testbot_webui.polls.admin
+
+

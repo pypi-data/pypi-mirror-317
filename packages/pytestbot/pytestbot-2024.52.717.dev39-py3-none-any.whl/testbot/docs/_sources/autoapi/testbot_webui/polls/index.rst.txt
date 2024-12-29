@@ -1,0 +1,20 @@
+:py:mod:`testbot_webui.polls`
+=============================
+
+.. py:module:: testbot_webui.polls
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   admin/index.rst
+   apps/index.rst
+   models/index.rst
+   tests/index.rst
+   urls/index.rst
+   views/index.rst
+
+

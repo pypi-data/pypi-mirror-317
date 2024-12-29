@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>搭建GitLab流水线 &mdash; testbot 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+        <script src="_static/tabs.js?v=3030b3cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="培训宣讲推广" href="dev_training.html" />
+    <link rel="prev" title="快速入门" href="usage_quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            testbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">使用文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage_quickstart.html">快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">开发文档</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">搭建GitLab流水线</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">编写流水线配置脚本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">流水线脚本示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">流水线变量配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">安装流水线代理程序</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows主机安装代理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raspbianlinux">Raspbian树莓派Linux主机安装代理</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">触发流水线执行</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">代码提交触发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">手动触发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">定时触发</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">版本发布</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">版本分类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">版本存储</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">安装更新版本</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev_training.html">培训宣讲推广</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_coding_spec.html">编码规范</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fwk_apis.html">框架核心API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="base_apis.html">基础原子API接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buz_apis.html">业务封装API接口</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">脚本文档</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dfm_scripts.html">DFM测试脚本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">testbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">搭建GitLab流水线</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dev_pipeline_setup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gitlab">
+<h1>搭建GitLab流水线<a class="headerlink" href="#gitlab" title="Permalink to this heading"></a></h1>
+<p>我们希望可以借助Gitlab CI/CD流水线的能力，实现源码从提交开始，经过平台问题拦截、API文档生成、代码编写规范校验、源码加密、版本编译打包发布，到最终部署到测试环境等端到端的完全自动化。</p>
+<img alt="_static/cicd_pipeline.png" src="_static/cicd_pipeline.png" />
+<section id="id1">
+<h2>编写流水线配置脚本<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>我们通过编写pipeline流水线脚本（.gitlab-ci.yml）来定义流水线流程。该文件定义了流水线有4条阶段：安装install、测试test、构建build、发布release、部署deploy。</p>
+<img alt="_static/gitlab_pipeline.png" src="_static/gitlab_pipeline.png" />
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">安装install</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">测试test</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">构建build</button><button aria-controls="panel-0-0-3" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-3" name="0-3" role="tab" tabindex="-1">发布release</button><button aria-controls="panel-0-0-4" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-4" name="0-4" role="tab" tabindex="-1">部署deploy</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>在Windows主机安装依赖库</p></li>
+<li><p>在Linux主机安装依赖库</p></li>
+</ul>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>在Windows主机执行单元测试</p></li>
+<li><p>在Linux主机执行单元测试</p></li>
+</ul>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>在Windows主机生成API文档</p></li>
+<li><p>在Windows主机编译打包pypi安装包</p></li>
+<li><p>在Linux主机编译打包pypi安装包</p></li>
+</ul>
+</div><div aria-labelledby="tab-0-0-3" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-3" name="0-3" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>在Windows主机将pypi安装包上传发布到pypi仓库</p></li>
+<li><p>在Linux主机将pypi安装包上传发布到pypi仓库</p></li>
+<li><p>在Linux主机创建仓库的tag版本分支</p></li>
+</ul>
+</div><div aria-labelledby="tab-0-0-4" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-4" name="0-4" role="tabpanel" tabindex="0"><ul class="simple">
+<li><p>在Windows主机上传更新API文档</p></li>
+<li><p>将最新pypi安装包版本部署到测试环境上（主动推送/定时更新）</p></li>
+</ul>
+</div></div>
+<section id="id2">
+<h3>流水线脚本示例<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>下面是编写的pipeline yaml文件。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="c1"># You can override the included template(s) by including variable overrides</span>
+<span class="linenos">  2</span><span class="c1"># SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings</span>
+<span class="linenos">  3</span><span class="c1"># Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/pipeline/#customization</span>
+<span class="linenos">  4</span><span class="c1"># Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings</span>
+<span class="linenos">  5</span><span class="c1"># Container Scanning customization: https://docs.gitlab.com/ee/user/application_security/container_scanning/#customizing-the-container-scanning-settings</span>
+<span class="linenos">  6</span><span class="c1"># Note that environment variables can be set in several places</span>
+<span class="linenos">  7</span><span class="c1"># See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence</span>
+<span class="linenos">  8</span><span class="nt">stages</span><span class="p">:</span>
+<span class="linenos">  9</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">install</span>
+<span class="linenos"> 10</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="linenos"> 11</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="linenos"> 12</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">release</span>
+<span class="linenos"> 13</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="linenos"> 14</span>
+<span class="linenos"> 15</span><span class="nt">cache</span><span class="p">:</span>
+<span class="linenos"> 16</span><span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
+<span class="linenos"> 17</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dist/</span>
+<span class="linenos"> 18</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myenv/</span>
+<span class="linenos"> 19</span>
+<span class="linenos"> 20</span><span class="nt">before_script</span><span class="p">:</span>
+<span class="linenos"> 21</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/os-release</span>
+<span class="linenos"> 22</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /proc/version</span>
+<span class="linenos"> 23</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apt update</span>
+<span class="linenos"> 24</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apt-cache policy python3</span>
+<span class="linenos"> 25</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apt install python3 -y</span>
+<span class="linenos"> 26</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -V</span>
+<span class="linenos"> 27</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apt install python3-venv -y</span>
+<span class="linenos"> 28</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m venv myenv</span>
+<span class="linenos"> 29</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source myenv/bin/activate</span>
+<span class="linenos"> 30</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">which python</span>
+<span class="linenos"> 31</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">which python3</span>
+<span class="linenos"> 32</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">which pip</span>
+<span class="linenos"> 33</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">which pip3</span>
+<span class="linenos"> 34</span>
+<span class="linenos"> 35</span><span class="nt">install-dependencies</span><span class="p">:</span>
+<span class="linenos"> 36</span><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">install</span>
+<span class="linenos"> 37</span><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="linenos"> 38</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab-org</span>
+<span class="linenos"> 39</span><span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="linenos"> 40</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="linenos"> 41</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpha</span>
+<span class="linenos"> 42</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beta</span>
+<span class="linenos"> 43</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rc</span>
+<span class="linenos"> 44</span><span class="w">  </span><span class="nt">before_script</span><span class="p">:</span>
+<span class="linenos"> 45</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /etc/os-release</span>
+<span class="linenos"> 46</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cat /proc/version</span>
+<span class="linenos"> 47</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apt update</span>
+<span class="linenos"> 48</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apt-cache policy python3</span>
+<span class="linenos"> 49</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apt install python3 -y</span>
+<span class="linenos"> 50</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -V</span>
+<span class="linenos"> 51</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apt install python3-venv -y</span>
+<span class="linenos"> 52</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m venv myenv</span>
+<span class="linenos"> 53</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source myenv/bin/activate</span>
+<span class="linenos"> 54</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">which python</span>
+<span class="linenos"> 55</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">which python3</span>
+<span class="linenos"> 56</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">which pip</span>
+<span class="linenos"> 57</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">which pip3</span>
+<span class="linenos"> 58</span><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="linenos"> 59</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Install-&gt;Dependencies...&quot;</span>
+<span class="linenos"> 60</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m pip install -r requirements-dev.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --trusted-host pypi.tuna.tsinghua.edu.cn</span>
+<span class="linenos"> 61</span>
+<span class="linenos"> 62</span><span class="nt">test-unittest</span><span class="p">:</span>
+<span class="linenos"> 63</span><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="linenos"> 64</span><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="linenos"> 65</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab-org</span>
+<span class="linenos"> 66</span><span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="linenos"> 67</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="linenos"> 68</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpha</span>
+<span class="linenos"> 69</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beta</span>
+<span class="linenos"> 70</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rc</span>
+<span class="linenos"> 71</span><span class="w">  </span><span class="nt">before_script</span><span class="p">:</span>
+<span class="linenos"> 72</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">export PYTHONIOENCODING=utf8</span>
+<span class="linenos"> 73</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source myenv/bin/activate</span>
+<span class="linenos"> 74</span><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="linenos"> 75</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Test-&gt;Run Unittest...&quot;</span>
+<span class="linenos"> 76</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 setup.py test</span>
+<span class="linenos"> 77</span>
+<span class="linenos"> 78</span><span class="nt">build-api-docs</span><span class="p">:</span>
+<span class="linenos"> 79</span><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="linenos"> 80</span><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="linenos"> 81</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab-org</span>
+<span class="linenos"> 82</span><span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="linenos"> 83</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="linenos"> 84</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpha</span>
+<span class="linenos"> 85</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beta</span>
+<span class="linenos"> 86</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rc</span>
+<span class="linenos"> 87</span><span class="w">  </span><span class="nt">before_script</span><span class="p">:</span>
+<span class="linenos"> 88</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">export PYTHONIOENCODING=utf8</span>
+<span class="linenos"> 89</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source myenv/bin/activate</span>
+<span class="linenos"> 90</span><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="linenos"> 91</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Build-&gt;Generate APIs Documentation...&quot;</span>
+<span class="linenos"> 92</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rm -rf dist/html/*</span>
+<span class="linenos"> 93</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">make html</span>
+<span class="linenos"> 94</span>
+<span class="linenos"> 95</span><span class="nt">build-packages</span><span class="p">:</span>
+<span class="linenos"> 96</span><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="linenos"> 97</span><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="linenos"> 98</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab-org</span>
+<span class="linenos"> 99</span><span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="linenos">100</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="linenos">101</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpha</span>
+<span class="linenos">102</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beta</span>
+<span class="linenos">103</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rc</span>
+<span class="linenos">104</span><span class="w">  </span><span class="nt">before_script</span><span class="p">:</span>
+<span class="linenos">105</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">export PYTHONIOENCODING=utf8</span>
+<span class="linenos">106</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source myenv/bin/activate</span>
+<span class="linenos">107</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;CI_COMMIT_BRANCH=$CI_COMMIT_BRANCH&quot;</span>
+<span class="linenos">108</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME&quot;</span>
+<span class="linenos">109</span><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="linenos">110</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Build-&gt;Packaging...&quot;</span>
+<span class="linenos">111</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rm -rf dist/*.whl</span>
+<span class="linenos">112</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 setup.py bdist_wheel</span>
+<span class="linenos">113</span>
+<span class="linenos">114</span><span class="nt">release-packages</span><span class="p">:</span>
+<span class="linenos">115</span><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">release</span>
+<span class="linenos">116</span><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="linenos">117</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab-org</span>
+<span class="linenos">118</span><span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="linenos">119</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="linenos">120</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpha</span>
+<span class="linenos">121</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beta</span>
+<span class="linenos">122</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rc</span>
+<span class="linenos">123</span><span class="w">  </span><span class="nt">before_script</span><span class="p">:</span>
+<span class="linenos">124</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">export PYTHONIOENCODING=utf8</span>
+<span class="linenos">125</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source myenv/bin/activate</span>
+<span class="linenos">126</span><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="linenos">127</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Release-&gt;Packages...&quot;</span>
+<span class="linenos">128</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token python -m twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi dist/*.whl --skip-existing --verbose</span>
+<span class="linenos">129</span>
+<span class="linenos">130</span><span class="nt">release-tag</span><span class="p">:</span>
+<span class="linenos">131</span><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">release</span>
+<span class="linenos">132</span><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="linenos">133</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab-org</span>
+<span class="linenos">134</span><span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="linenos">135</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="linenos">136</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpha</span>
+<span class="linenos">137</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beta</span>
+<span class="linenos">138</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rc</span>
+<span class="linenos">139</span><span class="w">  </span><span class="nt">before_script</span><span class="p">:</span>
+<span class="linenos">140</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">export PYTHONIOENCODING=utf8</span>
+<span class="linenos">141</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source myenv/bin/activate</span>
+<span class="linenos">142</span><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="linenos">143</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Release-&gt;Create Tag Branch...&quot;</span>
+<span class="linenos">144</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git --version</span>
+<span class="linenos">145</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git remote remove origin</span>
+<span class="linenos">146</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git remote add origin http://${GITLAB_USERNAME}:${GITLAB_PASSWORD}@gitlab.com/nuangua/testbot.git</span>
+<span class="linenos">147</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git config user.name &quot;%GITLAB_USER_NAME%&quot;</span>
+<span class="linenos">148</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git config user.email &quot;%GITLAB_USER_EMAIL%&quot;</span>
+<span class="linenos">149</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version=$(date +%Y.%W.%u.%H%M)</span>
+<span class="linenos">150</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git tag -a &quot;v${version}&quot; -m &quot;Version ${version} created by gitlab-ci Release stage&quot;</span>
+<span class="linenos">151</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo git push origin &quot;v${version}&quot;</span>
+<span class="linenos">152</span>
+<span class="linenos">153</span><span class="nt">pages</span><span class="p">:</span>
+<span class="linenos">154</span><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="linenos">155</span><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+<span class="linenos">156</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab-org</span>
+<span class="linenos">157</span><span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="linenos">158</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="linenos">159</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpha</span>
+<span class="linenos">160</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beta</span>
+<span class="linenos">161</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rc</span>
+<span class="linenos">162</span><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="linenos">163</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Deploy-&gt;Update APIs Documentation&quot;</span>
+<span class="linenos">164</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rm -rf public/*</span>
+<span class="linenos">165</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cp -r dist/html public/</span>
+<span class="linenos">166</span><span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="linenos">167</span><span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="linenos">168</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id3">
+<h2>流水线变量配置<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<p>流水线脚本需要从环境变量读取到GitLab和NEXUS服务器的认证信息，请到TATF仓库的 <a class="reference external" href="https://gitlab.com/nuangua/testbot/-/settings/ci_cd">CI/CD Settings</a> 的Variables页面，添加以下参数：</p>
+<img alt="_static/cicd_variables.png" src="_static/cicd_variables.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NEXUS_USERNAME</span> <span class="o">=</span> <span class="n">nuangua</span>
+<span class="n">NEXUS_PASSWORD</span> <span class="o">=</span> <span class="p">{</span><span class="n">NEXUS</span> <span class="n">PASSWORD</span><span class="p">}</span>
+<span class="n">GITLAB_USERNAME</span> <span class="o">=</span> <span class="p">{</span><span class="n">GITLAB</span> <span class="n">USERNAME</span><span class="p">}</span>
+<span class="n">GITLAB_USERNAME</span> <span class="o">=</span> <span class="p">{</span><span class="n">GITLAB</span> <span class="n">EMAIL</span><span class="p">}</span>
+<span class="n">GITLAB_PASSWORD</span> <span class="o">=</span> <span class="p">{</span><span class="n">GITLAB</span> <span class="n">PASSWORD</span><span class="p">}</span>
+<span class="n">TWINE_REPOSITORY_URL</span> <span class="o">=</span> <span class="p">{</span><span class="n">TWINE</span> <span class="n">REPOSITORY</span> <span class="n">URL</span><span class="p">}</span>
+<span class="n">TWINE_USERNAME</span> <span class="o">=</span> <span class="n">nuangua</span>
+<span class="n">TWINE_PASSWORD</span> <span class="o">=</span> <span class="p">{</span><span class="n">TWINE</span> <span class="n">PASSWORD</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>安装流水线代理程序<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<p>流水线的执行，依赖Gitlab Runner，由于我们的流水线脚本既需要在Windows主机上执行，也需要在Linux主机上执行。因此，我们需要分别在一台Windows主机和一台Linux主机上安装GitLab Runner。</p>
+<p>请到TATF仓库的 <a class="reference external" href="https://gitlab.com/nuangua/testbot/-/settings/ci_cd">CI/CD Settings</a> 的Runner页面，点击链接 <a class="reference external" href="https://docs.gitlab.com/runner/install/">Install GitLab Runner</a> ，选择操作系统类型进行相应的安装。</p>
+<img alt="_static/cicd_runners.png" src="_static/cicd_runners.png" />
+<section id="windows">
+<h3>Windows主机安装代理<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>下载最新的gitlab-runner程序</p></li>
+<li><p>创建文件夹 <strong>D:/GitLab-Runner/tatf</strong> ，拷贝gitlab-runner程序到该目录，修改程序名称为gitlab-runner.exe</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">GitLab</span><span class="o">-</span><span class="n">Runner</span>\<span class="n">testbot</span>
+<span class="n">cd</span> <span class="n">D</span><span class="p">:</span>\<span class="n">GitLab</span><span class="o">-</span><span class="n">Runner</span>\<span class="n">testbot</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>以管理员权限打开命令行窗口，注册一个Runner，过程会提示你输入URL和注册token等信息，该信息可以在Runner页面找到；tag输入为windows</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">GitLab</span><span class="o">-</span><span class="n">Runner</span>\<span class="n">testbot</span>\<span class="n">gitlab</span><span class="o">-</span><span class="n">runner</span><span class="o">.</span><span class="n">exe</span> <span class="n">register</span>
+</pre></div>
+</div>
+<img alt="_static/runner_register.png" src="_static/runner_register.png" />
+<ul class="simple">
+<li><p>注册完成后，会在当前目录生成一个config.toml配置文件，修改配置文件的shell参数为cmd</p></li>
+</ul>
+<img alt="_static/runner_config.png" src="_static/runner_config.png" />
+<ul class="simple">
+<li><p>以管理员权限打开命令行窗口，安装Runner服务</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">GitLab</span><span class="o">-</span><span class="n">Runner</span>\<span class="n">testbot</span>\<span class="n">gitlab</span><span class="o">-</span><span class="n">runner</span><span class="o">.</span><span class="n">exe</span> <span class="n">install</span> <span class="o">--</span><span class="n">service</span> <span class="n">tatf</span><span class="o">-</span><span class="n">runner</span> <span class="o">--</span><span class="n">config</span> <span class="n">D</span><span class="p">:</span>\<span class="n">GitLab</span><span class="o">-</span><span class="n">Runner</span>\<span class="n">testbot</span>\<span class="n">config</span><span class="o">.</span><span class="n">toml</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>打开命令行窗口，启动Runner服务</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">GitLab</span><span class="o">-</span><span class="n">Runner</span>\<span class="n">testbot</span>\<span class="n">gitlab</span><span class="o">-</span><span class="n">runner</span><span class="o">.</span><span class="n">exe</span> <span class="n">start</span> <span class="o">--</span><span class="n">service</span> <span class="n">testbot</span><span class="o">-</span><span class="n">runner</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>打开PowerShell窗口，查看Runner日志流</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">WinEvent</span> <span class="o">-</span><span class="n">ProviderName</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">runner</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>到浏览器Runner页面检查Runner状态</p></li>
+</ul>
+<img alt="_static/runner_list.png" src="_static/runner_list.png" />
+</section>
+<section id="raspbianlinux">
+<h3>Raspbian树莓派Linux主机安装代理<a class="headerlink" href="#raspbianlinux" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>安装最新版本的gitlab-runner程序</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="s2">&quot;https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">bash</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">runner</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>创建文件夹 <strong>/opt/GitLab-Runner/tatf</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">GitLab</span><span class="o">-</span><span class="n">Runner</span><span class="o">/</span><span class="n">testbot</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">GitLab</span><span class="o">-</span><span class="n">Runner</span><span class="o">/</span><span class="n">testbot</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>打开命令行窗口，注册一个Runner，过程会提示你输入URL和注册token等信息，该信息可以在Runner页面找到；tag输入为raspbian</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">runner</span> <span class="n">register</span>
+</pre></div>
+</div>
+<img alt="_static/runner_register_raspbian.png" src="_static/runner_register_raspbian.png" />
+<ul class="simple">
+<li><p>打开命令行窗口，安装Runner服务，安装过程会提示你输入URL和注册token等信息</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">runner</span> <span class="n">install</span> <span class="n">install</span> <span class="o">--</span><span class="n">service</span> <span class="n">testbot</span><span class="o">-</span><span class="n">runner</span> <span class="o">--</span><span class="n">user</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">runner</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>打开命令行窗口，启动Runner服务</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">runner</span> <span class="n">start</span> <span class="o">--</span><span class="n">service</span> <span class="n">testbot</span><span class="o">-</span><span class="n">runner</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>打开命令行窗口，查看Runner日志流</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">journalctl</span> <span class="o">-</span><span class="n">xefu</span> <span class="n">testbot</span><span class="o">-</span><span class="n">runner</span><span class="o">.</span><span class="n">service</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id6">
+<h2>触发流水线执行<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<p>GitLab CICD流水线支持3种流水线触发方式：代码提交触发、手动触发、定时触发。</p>
+<section id="id7">
+<h3>代码提交触发<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<p>任何一笔代码提交到仓库TATF，都会触发该仓库相应CICD流水线的执行。</p>
+</section>
+<section id="id8">
+<h3>手动触发<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<img alt="_static/trigger_pipeline.png" src="_static/trigger_pipeline.png" />
+</section>
+<section id="id9">
+<h3>定时触发<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<img alt="_static/schedule_trigger.png" src="_static/schedule_trigger.png" />
+</section>
+</section>
+<section id="id10">
+<h2>版本发布<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h2>
+<p>当前我们仅提供pip安装的手动方式，后续我们将会提供一键式安装python、tatf库的命令。</p>
+<section id="id11">
+<h3>版本分类<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<p>流水线会自动对源码进行编译、打包，生成一个pypi安装包。安装包版本类型有：alpha版本、beta版本、rc版本和正式版本，分别对应着alpha分支、beta分支、rc分支和master分支的代码。</p>
+<img alt="_static/cicd_pipeline.png" src="_static/cicd_pipeline.png" />
+</section>
+<section id="id12">
+<h3>版本存储<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<p>安装包会被上传到一个pypi仓库进行持久化储存。</p>
+<img alt="_static/pypi_repo.png" src="_static/pypi_repo.png" />
+</section>
+<section id="id13">
+<h3>安装更新版本<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>安装最新版本</p></li>
+</ul>
+<p>会安装最新的testbot版本，以及其依赖库。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">testbot</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>安装指定版本</p></li>
+</ul>
+<p>会安装指定的testbot版本，以及其依赖库。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">testbot</span><span class="o">==</span><span class="mf">2024.45.4</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>检查当前安装的版本</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">show</span> <span class="n">testbot</span>
+</pre></div>
+</div>
+<p>返回信息如下：其中Version是当前已安装工具的版本号，Summary里提交ID是当前版本是基于代码仓库的哪个commitid编译打包的，方便我们定位问题。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Name: testbot
+Version: 2024.45.4
+Summary: TESTBOT测试框架，分支名称：master，提交ID：7e33f39f
+Home-page: https://gitlab.com/nuangua/testbot
+Author: Nuanguang Gu(Sunny)
+Author-email: nuanguang.gu@aliyun.com
+License: Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.
+Location: c:\python38\lib\site-packages
+Requires: adbutils
+Required-by:
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>卸载</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">uninstall</span> <span class="o">-</span><span class="n">y</span> <span class="n">testbot</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="usage_quickstart.html" class="btn btn-neutral float-left" title="快速入门" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dev_training.html" class="btn btn-neutral float-right" title="培训宣讲推广" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

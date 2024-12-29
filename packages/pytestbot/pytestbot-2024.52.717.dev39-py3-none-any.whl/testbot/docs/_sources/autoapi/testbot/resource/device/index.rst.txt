@@ -1,0 +1,194 @@
+:py:mod:`testbot.resource.device`
+=================================
+
+.. py:module:: testbot.resource.device
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.device.Device
+   testbot.resource.device.Port
+   testbot.resource.device.PCDevice
+   testbot.resource.device.RPIDevice
+   testbot.resource.device.AndroidDevice
+   testbot.resource.device.TVDevice
+   testbot.resource.device.PhoneDevice
+   testbot.resource.device.TabletDevice
+   testbot.resource.device.MonitorDevice
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.device.add_module
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.resource.device.__copyright__
+   testbot.resource.device.__author__
+   testbot.resource.device.__email__
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:function:: add_module(module_class)
+
+
+.. py:class:: Device(name: str = '', *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`testbot.resource.resource.Resource`
+
+   代表所有测试设备类
+
+   .. py:method:: add_port(name: str, *args: tuple, **kwargs: dict)
+
+      添加端口
+
+      :param name: 端口名称
+      :type name: str
+      :param args: 元祖参数
+      :type args: tuple
+      :param kwargs: 键值对参数
+      :type kwargs: dict
+      :return: None
+      :rtype: NoneType
+
+
+   .. py:method:: get_port_count(**kwargs: dict)
+
+      获取端口数量
+
+      :param kwargs: 键值对参数
+      :type kwargs: dict
+      :return: 端口数量
+      :rtype: int
+
+
+   .. py:method:: to_dict()
+
+
+   .. py:method:: get_comm_instance(new=False)
+
+
+   .. py:method:: from_dict(dict_obj)
+      :staticmethod:
+
+
+
+.. py:class:: Port(parent_device: Device = None, name: str = '', *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`testbot.resource.resource.Resource`
+
+   代表所有端口类
+
+   .. py:method:: get_comm_instance(new=False)
+
+
+   .. py:method:: to_dict()
+
+
+   .. py:method:: from_dict(dict_obj, parent)
+      :staticmethod:
+
+
+
+.. py:class:: PCDevice(name: str = '', *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`Device`
+
+   PC主机设备类
+
+   .. py:method:: to_dict() -> dict
+
+
+
+.. py:class:: RPIDevice(name: str = '', *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`Device`
+
+   树莓派设备类
+
+   .. py:method:: to_dict() -> dict
+
+
+
+.. py:class:: AndroidDevice(name: str = '', *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`Device`
+
+   安卓设备类
+
+
+.. py:class:: TVDevice(name: str = '', *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`AndroidDevice`
+
+   电视设备类
+
+   .. py:method:: to_dict() -> dict
+
+
+
+.. py:class:: PhoneDevice(name: str = '', *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`AndroidDevice`
+
+   手机设备类
+
+
+.. py:class:: TabletDevice(name: str = '', *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`AndroidDevice`
+
+   平板设备类
+
+   .. py:method:: to_dict() -> dict
+
+
+
+.. py:class:: MonitorDevice(name: str = '', *args: tuple, **kwargs: dict)
+
+
+   Bases: :py:obj:`AndroidDevice`
+
+   商显设备类
+
+   .. py:method:: to_dict() -> dict
+
+
+

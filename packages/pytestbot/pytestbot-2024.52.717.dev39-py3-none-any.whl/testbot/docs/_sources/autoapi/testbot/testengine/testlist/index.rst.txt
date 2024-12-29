@@ -1,0 +1,109 @@
+:py:mod:`testbot.testengine.testlist`
+=====================================
+
+.. py:module:: testbot.testengine.testlist
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot.testengine.testlist.TestList
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   testbot.testengine.testlist.__copyright__
+   testbot.testengine.testlist.__author__
+   testbot.testengine.testlist.__email__
+   testbot.testengine.testlist.tl
+
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:exception:: TestListError(message, ex=None)
+
+
+   Bases: :py:obj:`Exception`
+
+   用来描述测试列表的一系列错误异常
+
+
+.. py:class:: TestList(filepath)
+
+
+   测试列表类
+
+   .. py:class:: TestListSetting
+
+
+      Bases: :py:obj:`testbot.config.setting.SettingBase`
+
+      配置基类
+
+      .. py:attribute:: random_seed
+         :value: 0
+
+         
+
+      .. py:attribute:: case_setting_path
+         :value: ''
+
+         
+
+      .. py:attribute:: skip_if_high_priority_failed
+         :value: True
+
+         
+
+      .. py:attribute:: follow_priority
+         :value: True
+
+         
+
+      .. py:attribute:: run_type
+
+         
+
+      .. py:attribute:: priority_to_run
+
+         
+
+
+   .. py:method:: load()
+
+      读取测试列表
+
+
+   .. py:method:: save()
+
+      将测试列表保存成json格式的文件
+
+
+
+.. py:data:: tl
+
+   
+

@@ -1,0 +1,218 @@
+==================================
+编码规范
+==================================
+
+代码提交规范
+=================
+
+代码仓库管理
+------------------
+
+* 统一使用git线上管理，避免本地仓库
+
+.. code-block::
+
+    # 克隆框架代码仓库
+    git clone git@gitlab.com:nuangua/testbot.git
+
+
+代码分支管理
+---------------
+
+* 引入develop分支与master分支管理
+
+develop分支：不允许合并请求，只允许推送代码
+
+master分支：允许合并请求，不允许推送代码
+
+
+代码更新与提交
+-------------------
+
+* 代码提交前必须先更新master分支最新代码后提交，禁止出现代码被覆盖
+
+.. code-block::
+
+    # 查看当前开发分支，例如当前在develop分支
+    git branch
+    
+    # 将当前修改的代码提交到暂存区
+    git stash
+    
+    # 切到master分支
+    git checkout master
+    
+    # 拉取master分支最新代码
+    git pull --all
+    
+    # 切换到develop开发分支
+    git checkout develop
+    
+    # 将master最新代码同步到develop分支
+    git rebase origin/master
+    
+    # 从暂存区取出修改的代码
+    git stash pop
+
+
+* 提交注释需与提交内容相对应
+
+
+.. code-block::
+
+    # 添加想要提交的文件
+    git add XXX.py YYY.json
+    
+    # 提交代码
+    git commit -m "代码提交评论"
+    
+    # 推送本地提交到远程smoke分支
+    git push origin develop
+
+请求合并代码
+-----------------
+
+* 请求合并开发分支develop的代码到master
+
+Python通用编码规范
+======================
+
+框架编码规范
+======================
+
+接口编码规范
+======================
+
+为TCL TV设备创建一个接口模块类
+---------------------------------
+
+* 所有TCL TV设备模块接口类必须继承自类TCLTVDeviceModuleBase
+
+.. code-block::
+
+    from testbot.resource.modules.device_module import DeviceModuleBase
+    
+    class PowerModule(TCLTVDeviceModuleBase):
+        ...
+
+接口方法定义
+---------------
+
+* 接口方法的参数、类型必须指定，返回值类型必须指定
+* 配置Pycharm自动生成方法参数描述信息（配置路径Pycharm->Settings->Editor->General→Smart Keys->Python）
+* 接口方法的注释，必须有参数描述，注释可通过Pycharm自动生成
+
+.. code-block::
+
+    from testbot.resource.modules.device_module import DeviceModuleBase
+    
+    class PowerModule(TCLTVDeviceModuleBase):
+        """
+        TCL TV电源模块API接口集
+        """
+    
+        def set_power(self, on: bool) -> bool:
+            """
+            给TCL TV设备上电或断电
+    
+            :param on: True是上电，False是断电
+            :type on: bool
+            :return: 是否断电或上电成功
+            :rtype: bool
+            """
+            self.logger.info("给TV设备上电/断电")
+            return False
+
+打印日志信息
+------------------
+
+* 用例对象可通过self.logger.<LEVEL>打印不同级别的日志信息
+
+.. code-block::
+
+    from testbot.resource.modules.device_module import DeviceModuleBase
+    
+    class PowerModule(TCLTVDeviceModuleBase):
+        """
+        TCL TV电源模块API接口集
+        """
+    
+        def set_power(self, on: bool) -> bool:
+            """
+            给TCL TV设备上电或断电
+    
+            :param on: True是上电，False是断电
+            :type on: bool
+            :return: 是否断电或上电成功
+            :rtype: bool
+            """
+            self.logger.info("给TV设备上电/断电")
+            self.logger.debug(msg="打印DEBUG级别的日志信息")
+            self.logger.info(msg="打印INFO级别的日志信息")  
+            self.logger.warn(msg="打印WARN级别的日志信息")
+            self.logger.error(msg="打印ERROR级别的日志信息")
+            self.logger.critial(msg="打印CRITIAL级别的日志信息")
+            return False
+
+
+接口模块类命名
+-----------------
+
+* 模块接口类名使用驼峰式命名
+
+接口方法命名
+-----------------
+
+* 接口方法命名应使用小写字母和下划线，如：set_power()
+
+代码注释
+---------------
+
+* 模块接口类注释
+* 接口方法注释
+
+.. code-block::
+
+    from testbot.resource.modules.device_module import DeviceModuleBase
+    
+    class PowerModule(TCLTVDeviceModuleBase):
+        """
+        TCL TV电源模块API接口集
+        """
+    
+        def set_power(self, on: bool) -> bool:
+            """
+            给TCL TV设备上电或断电
+    
+            :param on: True是上电，False是断电
+            :type on: bool
+            :return: 是否断电或上电成功
+            :rtype: bool
+            """
+            self.logger.info("给TV设备上电/断电")
+            return False
+
+调用其他模块的API接口
+-------------------------
+
+* 通过self.<模块类名>.<接口名>(参数列表)，调用其他模块的接口
+
+.. code-block::
+
+    from tatf.resource.modules.device_module import DeviceModuleBase
+    
+    class PowerModule(TCLTVDeviceModuleBase):
+    
+        def set_power(self, on: bool) -> bool:
+            self.CommSerialModule.send_command(cmd="reboot", timeout=10)
+            return False
+
+
+.. note::
+
+    注意：禁止直接或间接循环调用接口，可通过重写__set_attribute__()方法检测
+    
+
+
+脚本编码规范
+======================

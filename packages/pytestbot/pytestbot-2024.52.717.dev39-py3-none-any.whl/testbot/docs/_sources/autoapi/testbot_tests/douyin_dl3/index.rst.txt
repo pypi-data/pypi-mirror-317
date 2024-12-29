@@ -1,0 +1,28 @@
+:py:mod:`testbot_tests.douyin_dl3`
+==================================
+
+.. py:module:: testbot_tests.douyin_dl3
+
+
+Module Contents
+---------------
+
+.. py:data:: __copyright__
+   :value: 'Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved'
+
+   
+
+.. py:data:: __author__
+   :value: 'Nuanguang Gu(Sunny)'
+
+   
+
+.. py:data:: __email__
+   :value: 'nuanguang.gu@aliyun.com'
+
+   
+
+.. py:data:: headers
+
+   
+

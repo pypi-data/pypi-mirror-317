@@ -1,0 +1,18 @@
+:py:mod:`testbot_webui.mysite`
+==============================
+
+.. py:module:: testbot_webui.mysite
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   asgi/index.rst
+   settings/index.rst
+   urls/index.rst
+   wsgi/index.rst
+
+

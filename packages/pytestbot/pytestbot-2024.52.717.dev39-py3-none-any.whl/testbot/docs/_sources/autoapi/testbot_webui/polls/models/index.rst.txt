@@ -1,0 +1,56 @@
+:py:mod:`testbot_webui.polls.models`
+====================================
+
+.. py:module:: testbot_webui.polls.models
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   testbot_webui.polls.models.Question
+   testbot_webui.polls.models.Choice
+
+
+
+
+.. py:class:: Question(*args, **kwargs)
+
+
+   Bases: :py:obj:`django.db.models.Model`
+
+   Make subclasses preserve the alters_data attribute on overridden methods.
+
+   .. py:attribute:: question_text
+
+      
+
+   .. py:attribute:: pub_date
+
+      
+
+
+.. py:class:: Choice(*args, **kwargs)
+
+
+   Bases: :py:obj:`django.db.models.Model`
+
+   Make subclasses preserve the alters_data attribute on overridden methods.
+
+   .. py:attribute:: question
+
+      
+
+   .. py:attribute:: choice_text
+
+      
+
+   .. py:attribute:: votes
+
+      
+
+
