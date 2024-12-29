@@ -1,0 +1,2 @@
+[console_scripts]
+veezi-sdk = veezi_sdk:main
