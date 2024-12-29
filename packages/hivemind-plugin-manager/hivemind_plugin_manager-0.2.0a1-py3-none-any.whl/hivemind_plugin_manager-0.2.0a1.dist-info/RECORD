@@ -1,0 +1,9 @@
+hivemind_plugin_manager/__init__.py,sha256=_CCuqh5yVRg7OipJxyiyfc_-25mHtytWQeNmBHLa7kQ,5888
+hivemind_plugin_manager/database.py,sha256=64wDHhIRjLG3cUSLzvfkhFDad4Fe6F11wbwRhIMDCJs,9336
+hivemind_plugin_manager/protocols.py,sha256=ftWHlpQnqFFFeqzx3EGoYdtWRQeNFNncSMXtWwtcccI,5818
+hivemind_plugin_manager/version.py,sha256=1Giza3u7oQ5akqRk6fgcJBK4Coq8KBURbMGTCibRmnY,114
+hivemind_plugin_manager-0.2.0a1.dist-info/LICENSE.md,sha256=PMMimeaRR7uyq0XNQUDDCESBPue6yOQbLgnIyAutJIY,11347
+hivemind_plugin_manager-0.2.0a1.dist-info/METADATA,sha256=FtI8Nhm6q0o-OMuL-ADe2sPX9GEyX_Vr6Q00cPGtxcs,283
+hivemind_plugin_manager-0.2.0a1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+hivemind_plugin_manager-0.2.0a1.dist-info/top_level.txt,sha256=XxMPRndT8xCRAUYqENufV5dkWQj_koC7aiOoHFotktg,24
+hivemind_plugin_manager-0.2.0a1.dist-info/RECORD,,
