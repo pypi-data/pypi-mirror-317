@@ -1,0 +1,15 @@
+vdfpy/__init__.py,sha256=6aBCVnMDW6IfkrIGlLPxQPZnNdsOTmBvFo3akeTN9ME,931
+vdfpy/clustering.py,sha256=_a05OeqW9tPsvjwskY_EALneETsu2qGrpWK64IXG7O8,1680
+vdfpy/fleks/__init__.py,sha256=gepQTaLAN8LeVlKGbu3vjRyWA-10gLTt_8ms1EuiE8g,42
+vdfpy/fleks/fleks.py,sha256=1dLDmpPIUuGwb_4Mz6xPDBbyYvRYsk8Aups8soJje64,1481
+vdfpy/generator/__init__.py,sha256=DQkGoc-a93hYoTPthkBAXhMSTrsPHv49eXKzOmMUrEY,36
+vdfpy/generator/generator.py,sha256=A4QXkXhp_sQ9eMYywJKLhmX84RJYiBx8zu-lTJQES9g,5549
+vdfpy/spedas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vdfpy/spedas/spedas.py,sha256=CtN8QfFz0PTTWAy6li99AdMVLHUc2outp90PHRiLRuY,15
+vdfpy/vdfpy.py,sha256=tvfj1qtJCq7FX6AKn0VjNKreWmfSUegpUxCQkbor0bU,60
+vdfpy/vlasiator/__init__.py,sha256=J-tVg9dOG_22c3VPedRRmRZ_w_QVHEabF5MMxfkztiE,38
+vdfpy/vlasiator/vlasiator.py,sha256=yArVYu62qHk3Lcv5MUTz9Zo-kcEnKdfADJu0O83JNds,1149
+vdfpy-0.1.0.dist-info/LICENSE,sha256=LVcI0UpsUq-tth_d-vkXrHUZl1tldEJRMMAMl8Q_lB4,1090
+vdfpy-0.1.0.dist-info/METADATA,sha256=6VpMZGcgg_lC6OBxcFg-za2MS3V6xmDHuvvQOPS48JQ,1585
+vdfpy-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+vdfpy-0.1.0.dist-info/RECORD,,

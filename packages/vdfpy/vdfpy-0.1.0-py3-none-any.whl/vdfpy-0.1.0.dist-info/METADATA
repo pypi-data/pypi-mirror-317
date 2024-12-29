@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: vdfpy
+Version: 0.1.0
+Summary: Velocity distribution function classifier
+Author: Hongyang Zhou
+Author-email: hyzhou@umich.edu
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: flekspy (>=0.2.0,<0.3.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: pyspedas (>=1.7.1,<2.0.0)
+Requires-Dist: pyvlasiator (>=0.1.4,<0.2.0)
+Requires-Dist: scikit-learn (>=1.5.2,<2.0.0)
+Requires-Dist: scipy (>=1.14.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# vdfpy
+
+<p align="center">
+  <a href="https://github.com/henry2004y/vdfpy/actions">
+    <img src="https://github.com/henry2004y/vdfpy/actions/workflows/CI.yml/badge.svg">
+  </a>
+  <a href="https://henry2004y.github.io/vdfpy/">
+    <img src="https://img.shields.io/badge/docs-dev-blue">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue">
+  </a>
+  <a href="https://app.codecov.io/gh/henry2004y/vdfpy/">
+    <img src="https://img.shields.io/codecov/c/github/henry2004y/vdfpy">
+  </a>
+</p>
+
+Velocity distribution classifier in Python.
+
+## Installation
+
+```python
+python -m pip install vdfpy
+```
+
+## Usage
+
+We currently support extracting data from simulation (Vlasiator, FLEKS) and satellite observation (pyspedas).
+Please refer to the [documentation](https://henry2004y.github.io/vdfpy/) for more details.
+
+## License
+
+`vdfpy` is licensed under the terms of the MIT license.
+
