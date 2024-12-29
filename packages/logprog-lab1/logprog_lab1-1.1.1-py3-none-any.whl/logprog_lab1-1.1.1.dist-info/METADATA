@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: logprog_lab1
+Version: 1.1.1
+Summary: logprog_lab1
+Home-page: https://github.com/tesllaaa/logprog_lab1
+Author: regina_mikhailova
+Author-email: riga157@mail.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE.txt
