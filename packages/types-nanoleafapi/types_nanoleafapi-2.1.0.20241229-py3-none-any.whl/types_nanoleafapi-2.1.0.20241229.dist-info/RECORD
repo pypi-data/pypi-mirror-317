@@ -1,0 +1,11 @@
+nanoleafapi-stubs/METADATA.toml,sha256=OBopWxT5Se7uaVkeKhduk9jJLnyhu2_tJFHnQx5IQc0,82
+nanoleafapi-stubs/__init__.pyi,sha256=TvoFQhlNEL_0kEblVIUN4_axbq6NxYnTloUv7oIbj7c,511
+nanoleafapi-stubs/digital_twin.pyi,sha256=AM3LCDrx9pj2oCxPJG6cbozmbU5fGEU6n63S68aKk8Q,541
+nanoleafapi-stubs/discovery.pyi,sha256=tGIf-3AsxBCyvenJiLZKJPtJNcyTyuQnim1q6jQ7TXs,91
+nanoleafapi-stubs/nanoleaf.pyi,sha256=PTrTe4xWZVhejz3h9W6dNhkasBMwURLs1-0v1sXYOYo,2871
+nanoleafapi-stubs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+types_nanoleafapi-2.1.0.20241229.dist-info/LICENSE,sha256=KV-FOMlK5cMEMwHPfP8chS2ranhqjd7kceBhtA1eyr4,12657
+types_nanoleafapi-2.1.0.20241229.dist-info/METADATA,sha256=2h2qFclGxVO7qGuZJ8ABhqaSvoTAFPV21ccADjx_fGo,1872
+types_nanoleafapi-2.1.0.20241229.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+types_nanoleafapi-2.1.0.20241229.dist-info/top_level.txt,sha256=ZRtaHpUtI-Tds3bS4zkPFD1XrhCAMmvO64KalXb6W9A,18
+types_nanoleafapi-2.1.0.20241229.dist-info/RECORD,,
