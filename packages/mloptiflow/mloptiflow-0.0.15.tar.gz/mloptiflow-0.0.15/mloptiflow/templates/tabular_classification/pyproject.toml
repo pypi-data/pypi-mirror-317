@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "{{ project_name }}"
+version = "0.0.1"
+description = "Tabular Classification Template"
+authors = ["Name Surname <email@example.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mloptiflow = "^0.0.15"
+streamlit = "^1.41.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
