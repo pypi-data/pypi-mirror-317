@@ -1,0 +1,3 @@
+setuptools
+playwright
+playwright_stealth
