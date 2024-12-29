@@ -1,0 +1,2 @@
+[console_scripts]
+xlsx-to-fits = xlsx_to_fits.cli:main
