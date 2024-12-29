@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: belt-cli
+Version: 0.1.0
+Summary: CLI toolbelt
+Home-page: https://github.com/daveio/belt
+License: MIT
+Author: Dave Williams
+Author-email: dave@dave.io
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: chevron (>=0.14.0,<0.15.0)
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: cryptography (>=44.0.0,<45.0.0)
+Requires-Dist: dnspython (>=2.7.0,<3.0.0)
+Requires-Dist: mutagen (>=1.47.0,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: types-chevron (>=0.14.2.20240310,<0.15.0.0)
+Requires-Dist: wireguard-tools (>=0.5.0,<0.6.0)
+Project-URL: Repository, https://github.com/daveio/belt
+Description-Content-Type: text/markdown
+
+# `belt`: a cli toolbox
+
+## Language
+
+Python 3.12
+
+## Args and flags
+
+### Universal flags
+
+| Full flag               | Abbreviation  |
+| ----------------------- | ------------- |
+| `--config` `FILE`       | `-c` `FILE`   |
+| `--env-prefix` `PREFIX` | `-e` `PREFIX` |
+| `--help`                | `-h`          |
+| `--in` `FILE`           | `-i` `FILE`   |
+| `--out` `FILE`          | `-o` `FILE`   |
+| `--verbose`             | `-v`          |
+| `--version`             | `-V`          |
+
+### Functionality selection
+
+| Command  | Subcommand  | Function   | Positional           | Params                                      |
+| -------- | ----------- | ---------- | -------------------- | ------------------------------------------- |
+| `audio`  | `info`      |            |                      |                                             |
+| `crypt`  | `rand`      | `char`     | `LENGTH`             |                                             |
+| `crypt`  | `rand`      | `hex`      | `LENGTH`             |                                             |
+| `crypt`  | `rand`      | `pw`       | `LENGTH`             |                                             |
+| `crypt`  | `simple`    | `dec`      |                      | `-e`, `--env` `VAR` Use passphrase from env |
+| `crypt`  | `simple`    | `enc`      |                      | `-e`, `--env` `VAR` Use passphrase from env |
+| `crypt`  | `wireguard` |            |                      |                                             |
+| `dns`    | `flush`     |            |                      |                                             |
+| `dns`    | `lookup`    |            | `QUERY [RECORDTYPE]` | `-s`, `--server` `HOSTNAME` Use server      |
+|          |             |            |                      | `-r`, `--root` Use root servers             |
+| `dns`    | `sec`       |            | `DOMAIN.TLD`         |                                             |
+| `tls`    | `cert`      | `req`      | `COMMONNAME`         | `-c`, `--client` Request client cert        |
+| `tls`    | `cert`      | `selfsign` | `COMMONNAME`         | `-c`, `--client` Generate client cert       |
+| `tls`    | `ciphers`   |            | `HOSTNAME` `PORT`    |                                             |
+| `domain` | `expiry`    |            | `DOMAIN.TLD`         |                                             |
+| `domain` | `ns`        |            | `DOMAIN.TLD`         |                                             |
+
+## Features
+
+### 1.0
+
+- DNS
+  - Lookup
+  - DNSSEC check
+    - Remediation instructions
+  - OS cache flush
+- TLS
+  - Cipher list and order
+  - Certificate generation
+    - All features for client or server certificate
+    - Self signed
+    - Certificate request
+- Cryptography
+  - Simple encrypt/decrypt
+    - Password from readline or env var
+  - Generate WireGuard keypair
+  - Random generation
+    - Alphanumeric + symbols
+    - Alphanumeric
+    - Alphabetical
+    - Numeric
+    - Hex
+    - 0x prefixed hex
+- Domain
+  - Time to expiry from WHOIS
+  - Nameserver lookup from WHOIS
+- Audio files
+  - Get sample rate and bit depth
+
+### Planned
+
+- Git
+  - Clone
+  - Pull
+  - Push
+  - Branch
+  - Detect remote changes
+- SSH
+  - Tunnels
+  - Connections
+  - Config management
+  - Cipherspec validation
+    - Remediation
+- DNS
+  - Propagation checks
+    - Multiple public resolvers
+- Cloudflare
+  - Clear cache
+- Workspace
+  - Replicate `ws` functionality
+

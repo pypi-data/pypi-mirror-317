@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "belt-cli"
+version = "0.1.0"
+description = "CLI toolbelt"
+authors = ["Dave Williams <dave@dave.io>"]
+license = "MIT"
+repository = "https://github.com/daveio/belt"
+readme = "README.md"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+keywords = []
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+cryptography = "^44.0.0"
+click = "^8.1.8"
+wireguard-tools = "^0.5.0"
+chevron = "^0.14.0"
+types-chevron = "^0.14.2.20240310"
+mutagen = "^1.47.0"
+dnspython = "^2.7.0"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.31.0"
+bpython = "^0.24"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+belt = 'belt-cli:cli'
