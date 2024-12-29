@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: funcshauns
+Version: 0.1.1
+Summary: My Python functions
+License: MIT
+Author: Shaun Porwal
+Author-email: shaun.porwal@gmail.com
+Requires-Python: >=3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# funcshauns  
+My Python functions  
+
+## Publishing a New Version to TestPyPI and PyPI  
+
+### Steps for Publishing to TestPyPI (for Testing)  
+
+
