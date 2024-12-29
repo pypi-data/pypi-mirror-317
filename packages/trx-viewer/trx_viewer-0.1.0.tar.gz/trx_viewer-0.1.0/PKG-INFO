@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: trx-viewer
+Version: 0.1.0
+Summary: A helper program for reading .NET test files (TRX)
+Author-email: Roddy Rappaport <roddy.rappaport@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pyside6>=6.8.0
+Description-Content-Type: text/markdown
+
+# TRX Viewer
+
+TODO: Write stuff
