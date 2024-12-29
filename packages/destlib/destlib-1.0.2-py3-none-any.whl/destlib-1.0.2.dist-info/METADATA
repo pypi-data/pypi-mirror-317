@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: destlib
+Version: 1.0.2
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
