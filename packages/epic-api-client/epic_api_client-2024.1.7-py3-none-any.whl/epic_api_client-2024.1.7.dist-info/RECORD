@@ -1,0 +1,13 @@
+epic_api_client/EPICClient.py,sha256=08UZ_rySyRFZrQ5IMMz6x1VVV9m8honX_2trLhAfhC4,7331
+epic_api_client/EPICClient_old.py,sha256=saL0uc-UhdDuwUUErzgm3CTEKA1d-vGskCwxXBRvcG0,12065
+epic_api_client/FHIRBase.py,sha256=syx700tALxE-2mQmQR-P8z1nsY_aTuSkEEPkVpQ2ZkQ,9244
+epic_api_client/FHIRExtension.py,sha256=iRk_QeGSbJLPqEDGOEFV4NUF0SpvAK-6bdfuaed4jfo,857
+epic_api_client/InternalBase.py,sha256=ea_o-9o_rsSxHAZF5yToMJtLVxJfJaHEPvuaQtjjGhE,7959
+epic_api_client/InternalExtension.py,sha256=MlvXVZX_uRuE9I-_KG2tbFNa2jkP0VDOI0omIUgbAh0,407
+epic_api_client/JWTGenerator.py,sha256=XgOOJB6HjrOqb0NXy3HVCQ4ZKQBkLTL1mm_dJj9n8oQ,1956
+epic_api_client/SimpleHttpClient.py,sha256=RbsZ3vuAkqr_FrlaOjSu1y8qziLVuB4CmGVuBalXfKQ,3083
+epic_api_client/__init__.py,sha256=5QLHQ_4xtjTN7lYXBHPqXuC05h2JotxFM-xi-oGajs8,103
+epic_api_client-2024.1.7.dist-info/METADATA,sha256=u7AOCzwUpb6ka_NKGmPESBgIHlBKJdXk8METq_YOeZU,3259
+epic_api_client-2024.1.7.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+epic_api_client-2024.1.7.dist-info/top_level.txt,sha256=LfHPPy-N7gEhRxJ3Ive8hJ5cP7VkNeOAydq5pof_4iU,16
+epic_api_client-2024.1.7.dist-info/RECORD,,
