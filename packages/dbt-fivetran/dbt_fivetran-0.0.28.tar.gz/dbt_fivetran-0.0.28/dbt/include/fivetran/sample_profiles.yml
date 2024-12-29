@@ -1,0 +1,20 @@
+fixed:
+  outputs:
+    dev:
+      type: fivetran
+      database: "???"
+      schema: "???"
+      max-memory: 4096
+      threads: 2
+      extensions:
+        - httpfs
+        - iceberg
+      secrets:
+        - type: s3
+          region: <aws-region>
+          key_id: <aws-client-id>
+          secret: <aws-client-secret>
+      polaris_uri: <catalog-base-url>
+      polaris_credentials: <clientId>:<clientSecret>
+      polaris_scope: "PRINCIPAL_ROLE:ALL"
+      polaris_catalog: <catalog-name>

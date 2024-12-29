@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: dbt-fivetran
+Version: 0.0.28
+Summary: dbt (data build tool) adapter for Fivetran Datalake
+Home-page: https://github.com/fivetran/dbt-fivetran
+Author: Emrah Diril
+Author-email: support@fivetran.com
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: dbt-common<2.0,>=1.10
+Requires-Dist: dbt-adapters<2.0,>=1.7
+Requires-Dist: dbt-duckdb>=1.8.3
+Requires-Dist: boto3>=1.34.51
+Requires-Dist: pyarrow>=18.0.0
+Requires-Dist: pyiceberg==0.7.1
+Requires-Dist: dbt-core>=1.8.0
+
+# Overview
+
+When you run dbt with this adapter, it will create a local duckdb file named as `<your-database-name>.local.db`. 
+It will be placed in `target` folder in your project folder if it exists. Otherwise, it will be placed in
+the root of your project folder.
+
+
+# Example profile
+
+```
+testprj:
+  target: dev
+  outputs:
+    dev:
+      type: fivetran
+      extensions:
+        - httpfs
+        - iceberg
+      threads: 1
+      max-memory: 4096
+      secrets:
+        - type: s3
+          region: <aws-region>
+          key_id: <aws-client-id>
+          secret: <aws-client-secret>
+      database: <s3-bucket-name>
+      schema: <schema-name>
+      polaris_uri: "https://polaris.fivetran.com"
+      polaris_credentials: <fivetranPolarisCredentials>
+      polaris_scope: "PRINCIPAL_ROLE:ALL"
+      polaris_catalog: <fivetran-group-id>
+```
