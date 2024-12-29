@@ -1,0 +1,200 @@
+Metadata-Version: 2.4
+Name: starbridge
+Version: 0.0.53
+Summary: Integrates Claude Desktop with Google workspace and Atlassian workspaces
+Project-URL: Homepage, https://helmuthva.gitbook.io/starbridge
+Project-URL: Source, https://github.com/helmut-hoffer-von-ankershoffen/starbridge
+Project-URL: Changelog, https://github.com/helmut-hoffer-von-ankershoffen/starbridge/releases
+Project-URL: Documentation, https://helmuthva.gitbook.io/starbridge
+Project-URL: Issues, https://github.com/helmut-hoffer-von-ankershoffen/starbridge/issues
+Author-email: Helmut Hoffer von Ankershoffen <helmuthva@googlemail.com>
+License: MIT License
+        
+        Copyright (c) [2024] [Helmut Hoffer von Ankershoffen (helmuthva@googlemail.com)]
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: anthropic,atlassian,bump-my-version,claude,codecov,confluence,cyclonedx,devcontainer,docker,docker-compose,git-cliff,gitbook,github-actions,google-drive,jira,logfire,mcp,nox,opentelemetry,pre-commit,pydantic,pytest,pytest-asyncio,pytest-cov,pytest-docker,pytest-env,pytest-xdist,renovate,ruff,sonarqube,typer,uv
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: OpenTelemetry :: Instrumentations
+Classifier: Framework :: Pydantic
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Typing :: Typed
+Requires-Python: <4.0,>=3.11
+Requires-Dist: atlassian-python-api>=3.41.16
+Requires-Dist: beautifulsoup4>=4.12.3
+Requires-Dist: email-validator>=2.2.0
+Requires-Dist: griffe>=1.5.1
+Requires-Dist: logfire[system-metrics]>=2.11.0
+Requires-Dist: markdownify>=0.14.1
+Requires-Dist: mcp>=1.1.2
+Requires-Dist: opentelemetry-api>=1.29.0
+Requires-Dist: opentelemetry-instrumentation-httpx>=0.50b0
+Requires-Dist: opentelemetry-instrumentation-requests>=0.50b0
+Requires-Dist: opentelemetry-instrumentation-sqlite3>=0.50b0
+Requires-Dist: opentelemetry-instrumentation-starlette>=0.50b0
+Requires-Dist: opentelemetry-instrumentation-urllib3>=0.50b0
+Requires-Dist: opentelemetry-instrumentation-urllib>=0.50b0
+Requires-Dist: opentelemetry-instrumentation>=0.50b0
+Requires-Dist: protego>=0.3.1
+Requires-Dist: pydantic-settings>=2.7.0
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: typer>=0.15.1
+Provides-Extra: dev
+Requires-Dist: bump-my-version>=0.29.0; extra == 'dev'
+Requires-Dist: cyclonedx-py>=1.0.1; extra == 'dev'
+Requires-Dist: detect-secrets>=1.5.0; extra == 'dev'
+Requires-Dist: git-cliff>=2.7.0; extra == 'dev'
+Requires-Dist: nox>=2024.10.9; extra == 'dev'
+Requires-Dist: pip-audit>=2.7.3; extra == 'dev'
+Requires-Dist: pip-licenses>=5.0.0; extra == 'dev'
+Requires-Dist: pre-commit>=4.0.1; extra == 'dev'
+Requires-Dist: pyright>=1.1.389; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.24.0; extra == 'dev'
+Requires-Dist: pytest-cov>=6.0.0; extra == 'dev'
+Requires-Dist: pytest-docker>=3.1.1; extra == 'dev'
+Requires-Dist: pytest-env>=1.1.5; extra == 'dev'
+Requires-Dist: pytest-xdist[psutil]>=3.6.1; extra == 'dev'
+Requires-Dist: pytest>=8.3.3; extra == 'dev'
+Requires-Dist: ruff>=0.3.0; extra == 'dev'
+Requires-Dist: tomli>=2.1.0; extra == 'dev'
+Provides-Extra: imaging
+Requires-Dist: cairosvg>=2.7.1; extra == 'imaging'
+Requires-Dist: svglib>=1.5.1; extra == 'imaging'
+Provides-Extra: notebook
+Requires-Dist: ipykernel>=6.29.5; extra == 'notebook'
+Requires-Dist: marimo>=0.10.7; extra == 'notebook'
+Description-Content-Type: text/markdown
+
+# [PRE-ALPHA] starbridge MCP server for Claude Desktop
+
+[![GitHub License](https://img.shields.io/github/license/helmut-hoffer-von-ankershoffen/starbridge?logo=opensourceinitiative&logoColor=3DA639&labelColor=414042&color=A41831)
+](LICENSE)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/starbridge.svg?logo=python&color=204361&labelColor=1E2933)](https://github.com/helmut-hoffer-von-ankershoffen/starbridge/blob/main/noxfile.py)
+[![CI](https://github.com/helmut-hoffer-von-ankershoffen/starbridge/actions/workflows/test-and-report.yml/badge.svg)](https://github.com/helmut-hoffer-von-ankershoffen/starbridge/actions/workflows/test-and-report.yml)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=helmut-hoffer-von-ankershoffen_starbridge&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=helmut-hoffer-von-ankershoffen_starbridge)
+[![Security](https://sonarcloud.io/api/project_badges/measure?project=helmut-hoffer-von-ankershoffen_starbridge&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=helmut-hoffer-von-ankershoffen_starbridge)
+[![Maintainability](https://sonarcloud.io/api/project_badges/measure?project=helmut-hoffer-von-ankershoffen_starbridge&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=helmut-hoffer-von-ankershoffen_starbridge)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=helmut-hoffer-von-ankershoffen_starbridge&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=helmut-hoffer-von-ankershoffen_starbridge)
+[![Coverage](https://codecov.io/gh/helmut-hoffer-von-ankershoffen/starbridge/graph/badge.svg?token=SX34YRP30E)](https://codecov.io/gh/helmut-hoffer-von-ankershoffen/starbridge)
+[![Ruff](https://img.shields.io/badge/style-Ruff-blue?color=D6FF65)](https://github.com/helmut-hoffer-von-ankershoffen/starbridge/blob/main/noxfile.py)
+[![GitHub - Version](https://img.shields.io/github/v/release/helmut-hoffer-von-ankershoffen/starbridge?label=GitHub&style=flat&labelColor=1C2C2E&color=blue&logo=GitHub&logoColor=white)](https://github.com/helmut-hoffer-von-ankershoffen/starbridge/releases)
+![GitHub - Commits](https://img.shields.io/github/commit-activity/m/helmut-hoffer-von-ankershoffen/starbridge/main?label=commits&style=flat&labelColor=1C2C2E&color=blue&logo=GitHub&logoColor=white)
+[![PyPI - Version](https://img.shields.io/pypi/v/starbridge.svg?label=PyPI&logo=pypi&logoColor=%23FFD243&labelColor=%230073B7&color=FDFDFD)](https://pypi.python.org/pypi/starbridge)
+[![PyPI - Status](https://img.shields.io/pypi/status/starbridge?logo=pypi&logoColor=%23FFD243&labelColor=%230073B7&color=FDFDFD)](https://pypi.python.org/pypi/starbridge)
+[![Docker - Version](https://img.shields.io/docker/v/helmuthva/starbridge?sort=semver&label=Docker&logo=docker&logoColor=white&labelColor=1354D4&color=10151B)](https://hub.docker.com/r/helmuthva/starbridge/tags)
+[![Docker - Size](https://img.shields.io/docker/image-size/helmuthva/starbridge?sort=semver&arch=arm64&label=image&logo=docker&logoColor=white&labelColor=1354D4&color=10151B)](https://hub.docker.com/r/helmuthva/starbridge/)
+
+
+> ⚠️ **WARNING**: This project is currently in pre-alpha phase, i.e. partly functional. Feel free to already watch or star the repository to stay updated on its progress.
+
+Integrates Claude Desktop with the WWW, Atlassian Confluence, and (later on) Google Workspace.
+
+1. **Make Claude a team member**: Makes Claude an informed member of your organisation by accessing your organization's key knowledge resources.
+2. **Integrate research and knowlege management**: Enables your teams to contribute, refine, and maintain your organisation's knowledge resources within Claude - seamlessly integrating research and sharing knowledge.
+3. **Improve efficiency**: Automate repetitive workflows such as generating Confluence pages from Google Docs.
+
+## Example Prompts
+
+* "Create a page about road cycling, focusing on Canyon bikes, in the personal confluence space of Helmut."
+
+## Setup
+
+```uvx starbridge install``` - that's all.
+
+Prequisites:
+- You are running Mac OS X
+- You already have the uv package manager installed
+- You already have Claude Desktop for Mac OS X installed
+- You don't care for the imaging extra
+
+If you (possibly) need to install homebrew, uv, and care for all extras:
+
+```shell
+if [[ "$OSTYPE" == "darwin"* ]]; then # Install dependencies for macOS X
+  if ! command -v brew &> /dev/null; then # Install Homebrew if not present
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+  brew install cairo
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then # Install dependencies for Linux
+  sudo apt-get update -y && sudo apt-get install curl libcairo2 -y
+fi
+if ! command -v uvx &> /dev/null; then # Install uv package manager if not present
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  source $HOME/.local/bin/env
+fi
+uvx --with "starbridge[imaging]" starbridge install # Install starbridge, including configuration and injection into Claude Desktop App
+```
+
+Starbridge can be [run within Docker](DOCKER.md).
+
+## MCP Server
+
+Starbridge implements the [MCP Server](https://modelcontextprotocol.io/docs/concepts/architecture) interface, with Claude acting as an MCP client.
+
+### Resources
+
+[TODO: Document resources exposed to Claude Desktop]
+
+### Prompts
+
+[TODO: Document prompts exposed to Claude Desktop]
+
+### Tools
+
+[TODO: Document tools exposed to Claude Desktop]
+
+## CLI
+
+[TODO: Document CLI commands]
+
+## Contributing
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for how to setup for development, and before making a pull request.
+
+## Resources
+
+* [MCP Press release](https://www.anthropic.com/news/model-context-protocol)
+* [MCP Specification and SDKs](https://github.com/modelcontextprotocol)
+* [MCP Info to amend Claude's context](https://modelcontextprotocol.io/llms-full.txt)
+* [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers)
+
+## Star History
+
+<a href="https://star-history.com/#helmut-hoffer-von-ankershoffen/starbridge&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=helmut-hoffer-von-ankershoffen/starbridge&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=helmut-hoffer-von-ankershoffen/starbridge&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=helmut-hoffer-von-ankershoffen/starbridge&type=Date" />
+ </picture>
+</a>
