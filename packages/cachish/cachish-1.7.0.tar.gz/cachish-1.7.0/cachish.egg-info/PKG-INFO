@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: cachish
+Version: 1.7.0
+Summary: Stale cache-ish thingie
+Home-page: https://github.com/thusoy/cachish
+Author: Tarjei Husøy
+Author-email: git@thusoy.com
+License: Hippocratic
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Provides-Extra: gunicorn
+License-File: LICENSE
+
+UNKNOWN
+
