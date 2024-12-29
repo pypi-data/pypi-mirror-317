@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+folder2prompt_cli/__init__.py
+folder2prompt_cli/main.py
+folder2prompt_cli.egg-info/PKG-INFO
+folder2prompt_cli.egg-info/SOURCES.txt
+folder2prompt_cli.egg-info/dependency_links.txt
+folder2prompt_cli.egg-info/entry_points.txt
+folder2prompt_cli.egg-info/top_level.txt
