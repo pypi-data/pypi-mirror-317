@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pycurl-requestx
+Version: 0.0.1
+Summary: An asynchronous HTTP client combining pycurl-requests and AnyIO, basically an async wrapper around pycurl-requests, all thanks to AnyIO.
+Home-page: https://github.com/profxadke/pycurl-requestx
+Author: Nikhil Aryal
+Author-email: "Nikhil Aryal (aka. OSHO)" <xadkeg@duck.com>
+License: MIT
+Keywords: pycurl,curl,libcurl,anyio,asyncio,http,client,httpx,requests,pycurl-requests,pycurl-requestx,trio,uvloop,async,asynchronous
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pycurl-requests
+Requires-Dist: anyio
