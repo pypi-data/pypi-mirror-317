@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: orra-sdk
+Version: 0.1.3
+Summary: Python SDK for Orra - Build reliable multi-agent applications
+License: MPL-2.0
+Author: Orra Team
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: httpx (>=0.26.0,<0.27.0)
+Requires-Dist: pydantic (>=2.0,<3.0)
+Requires-Dist: structlog (>=24.1.0)
+Requires-Dist: websockets (>=12.0,<13.0)
+Description-Content-Type: text/markdown
+
+# Orra SDK for Python
+
+Python SDK for building reliable multi-agent applications with Orra.
+
+## Installation
+
+```bash
+pip install orra-sdk
+```
+
+## Usage
+
+```python
+from orra import OrraService, Task
+from pydantic import BaseModel
+
+# Initialize the SDK
+svc = OrraService(
+    name="my-service",
+    description="A simple echo service",
+    url="https://api.orra.dev",
+    api_key="your-api-key"
+)
+
+# Define your models
+class Input(BaseModel):
+    message: str
+
+class Output(BaseModel):
+    response: str
+
+# Register your service
+@svc.handler()
+async def handle_message(request: Task[Input]) -> Output:
+    return Output(response=f"Echo: {request.input.message}")
+
+# Run the service
+if __name__ == "__main__":
+    svc.start()
+```
+
