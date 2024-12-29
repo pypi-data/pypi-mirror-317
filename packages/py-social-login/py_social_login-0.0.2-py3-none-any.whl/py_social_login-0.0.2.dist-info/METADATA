@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: py_social_login
+Version: 0.0.2
+Summary: Py Social Login
+Home-page: https://github.com/udaykrishna/py-social-login/
+Author: Uday Krishna
+Author-email: uday@udaykrishna.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: PyJWT
+Requires-Dist: cryptography
+Requires-Dist: pydantic
+Requires-Dist: pytz
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: flask; extra == "dev"
+
+# Social Login Library 
+
+Supports
+- Google OAuth 2.0
+- Apple OAuth
+
+# BUILD
+
+```
+python3 setup.py sdist bdist_wheel
+```
+
+# INSTALL
+
+```
+python3 setup.py install
+```
