@@ -1,0 +1,11 @@
+
+[develop]
+python-gmp[docs,tests]
+pre-commit
+
+[docs]
+sphinx
+
+[tests]
+pytest
+hypothesis
