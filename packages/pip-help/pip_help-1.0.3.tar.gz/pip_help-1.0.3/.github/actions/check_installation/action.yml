@@ -1,0 +1,27 @@
+name: Python package installation
+
+runs:
+  using: 'composite'
+
+  steps:
+    - name: Install uv
+      uses: astral-sh/setup-uv@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Build package
+      shell: bash
+      run: |
+        uv build --wheel
+    - name: Install package
+      shell: bash
+      id: run
+      run: |
+        uv tool install ./dist/pip_help-1.0.3-py3-none-any.whl
+    - name: Test installation
+      shell: bash
+      if: steps.run.outcome == 'success'
+      run: |
+        echo "Installation successful"
+
+
+          

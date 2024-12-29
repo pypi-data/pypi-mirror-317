@@ -1,0 +1,29 @@
+[project]
+name = "pip-help"
+version = "1.0.3"
+description = "pip-help is a command line tool for temporarily installing packages."
+readme = "README.md"
+authors = [
+    { name = "Lokesh Pawar", email = "ilokeshpawar@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+pip-help = "pip_help.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.9",
+    "pytest>=8.3.4",
+    "ruff>=0.8.4",
+]
+
+[project.urls]
+Source = "https://github.com/ilokeshpawar/pip-help"
