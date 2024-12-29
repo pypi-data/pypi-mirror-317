@@ -1,0 +1,17 @@
+numpy<2.0,>=1.19
+depq
+cycler
+kiwisolver
+matplotlib>=3.3.2
+scikit-learn
+sphinx_rtd_theme
+readthedocs-sphinx-search
+sphinxcontrib-details-directive
+autodocsumm
+pathos
+multiprocess
+dash
+dash-bootstrap-components
+plotly
+pandas
+scipy
