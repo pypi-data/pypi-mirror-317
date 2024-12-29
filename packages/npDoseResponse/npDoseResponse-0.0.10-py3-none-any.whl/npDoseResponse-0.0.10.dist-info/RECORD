@@ -1,0 +1,11 @@
+npDoseResponse/__init__.py,sha256=wdUW-Hvp-JivqA1jXvokn9JQg5pNpsUXzLeLWKMhqzM,513
+npDoseResponse/npDoseResponse.py,sha256=QJQASFt8igIsqtAJUwt3ZklJ9o0RRtBulIJ_uR2aBxw,36471
+npDoseResponse/npDoseResponseDR.py,sha256=niZNT6r9a2KGhwkfhOL6glTHq6FuDyL5B5F0vMB5aZQ,19079
+npDoseResponse/npDoseResponseDerivDR.py,sha256=phSDDWmfoc7O3TH8fNw0z6BvoTk6FGYiF5CwCvIO-5Q,58751
+npDoseResponse/rbf.py,sha256=dsn4x-ruzs8uFdw20xwhTbO7Hmdzo6k8kNKlW2oPbYc,5901
+npDoseResponse/utils.py,sha256=DSNrPjN0zT2lVXRRW-D5JBXiqSIyscU85oJZ9XsJfuE,15422
+npDoseResponse-0.0.10.dist-info/LICENSE,sha256=MiaCTtcO9ygj4oJ2W4G9sCVpsw-BPyQkQQEk8BuKbWI,1070
+npDoseResponse-0.0.10.dist-info/METADATA,sha256=cvy6bARtO2QJhX4Y0MLZFzQ19Wq2L7Uz7xSnQdduM5c,2403
+npDoseResponse-0.0.10.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+npDoseResponse-0.0.10.dist-info/top_level.txt,sha256=RpRewvOEIzyi22KVTPXnDIbSWi3Kkx5rz7yCL0XBKY4,15
+npDoseResponse-0.0.10.dist-info/RECORD,,
