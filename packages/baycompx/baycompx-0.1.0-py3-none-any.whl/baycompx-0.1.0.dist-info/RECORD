@@ -1,0 +1,7 @@
+baycompx/__init__.py,sha256=aqyRH6VNlf7EYbHpzbpR11h02gj8BMpANz4jj9vBd2E,54
+baycompx/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+baycompx/dists/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+baycompx/dists/normal.py,sha256=bVNv9quxCX8IZLanWIhg_kghIk01GN8SUE9uWslhWO0,3060
+baycompx-0.1.0.dist-info/METADATA,sha256=D-SgY7HcBCBTaPWngCsLcAL-WKeG-orMzHoqPnRx25U,129
+baycompx-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+baycompx-0.1.0.dist-info/RECORD,,
