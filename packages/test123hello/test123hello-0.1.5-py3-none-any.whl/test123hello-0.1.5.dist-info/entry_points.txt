@@ -1,0 +1,2 @@
+[console_scripts]
+test123hello = test123hello.hello:main
