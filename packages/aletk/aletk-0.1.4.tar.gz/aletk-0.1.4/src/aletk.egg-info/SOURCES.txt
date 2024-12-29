@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/aletk/ResultMonad.py
+src/aletk/__init__.py
+src/aletk/adapters.py
+src/aletk/py.typed
+src/aletk/utils.py
+src/aletk.egg-info/PKG-INFO
+src/aletk.egg-info/SOURCES.txt
+src/aletk.egg-info/dependency_links.txt
+src/aletk.egg-info/requires.txt
+src/aletk.egg-info/top_level.txt
