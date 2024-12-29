@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: srun-swpu
+Version: 0.1.0
+Summary: SWPU SRun Network Authentication Library
+Home-page: https://github.com/JustACP/srun-swpu
+Author: RE1IFE
+Author-email: me@re1ife.top
+License: GPL-3.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+Requires-Dist: colorama>=0.4.4
+
+# SRun SWPU 🌐
+
+A Python library for SWPU (Southwest Petroleum University) network authentication system. This library provides a streamlined way to handle login, logout, and session management for the SRun portal. 
+
+## ✨ Features
+
+- **Easy Authentication** 🔑
+  - Login/Logout operations
+  - Session management
+  - Status checking
+
+- **Multiple Network Types** 🌍
+  - China Mobile Wireless (`@yd`)
+  - China Mobile Wired (`@ydyx`)
+  - Student Network (`@stu`)
+  - Teacher Network (`@tch`)
+  - China Telecom (`@dxwx`)
+
+- **Developer Friendly** 👨‍💻
+  - Type hints support
+  - Comprehensive logging
+  - Exception handling
+  - Clean API design
