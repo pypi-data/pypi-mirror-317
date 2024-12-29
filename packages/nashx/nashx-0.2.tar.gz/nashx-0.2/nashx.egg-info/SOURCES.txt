@@ -1,0 +1,9 @@
+README.md
+setup.py
+nashx/__init__.py
+nashx/hasher.py
+nashx.egg-info/PKG-INFO
+nashx.egg-info/SOURCES.txt
+nashx.egg-info/dependency_links.txt
+nashx.egg-info/entry_points.txt
+nashx.egg-info/top_level.txt
