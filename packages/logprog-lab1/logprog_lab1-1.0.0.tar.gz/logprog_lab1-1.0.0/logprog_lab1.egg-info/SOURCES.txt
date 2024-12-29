@@ -1,0 +1,10 @@
+LICENSE.txt
+README
+setup.cfg
+setup.py
+logprog_lab1/__init__.py
+logprog_lab1/main.py
+logprog_lab1.egg-info/PKG-INFO
+logprog_lab1.egg-info/SOURCES.txt
+logprog_lab1.egg-info/dependency_links.txt
+logprog_lab1.egg-info/top_level.txt
