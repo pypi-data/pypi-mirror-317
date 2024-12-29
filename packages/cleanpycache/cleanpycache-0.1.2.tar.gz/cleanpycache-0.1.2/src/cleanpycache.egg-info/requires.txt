@@ -1,0 +1,4 @@
+argcomplete
+quickcolor
+delayviewer
+showexception

@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/cleanpycache/__init__.py
+src/cleanpycache/cleanpycache.py
+src/cleanpycache/cli.py
+src/cleanpycache.egg-info/PKG-INFO
+src/cleanpycache.egg-info/SOURCES.txt
+src/cleanpycache.egg-info/dependency_links.txt
+src/cleanpycache.egg-info/entry_points.txt
+src/cleanpycache.egg-info/requires.txt
+src/cleanpycache.egg-info/top_level.txt
