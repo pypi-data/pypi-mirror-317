@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/CalculateAndPermutations16_qjarishekka.egg-info/PKG-INFO
+src/CalculateAndPermutations16_qjarishekka.egg-info/SOURCES.txt
+src/CalculateAndPermutations16_qjarishekka.egg-info/dependency_links.txt
+src/CalculateAndPermutations16_qjarishekka.egg-info/top_level.txt
+src/CalculateAndPermutations16_qjarishekka/Calc/Task.py
+src/CalculateAndPermutations16_qjarishekka/Calc/__init__.py
+src/CalculateAndPermutations16_qjarishekka/Comb/Comb.py
+src/CalculateAndPermutations16_qjarishekka/Comb/__init__.py
