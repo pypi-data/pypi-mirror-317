@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: MetroGnome
+Version: 1.0.0
+Summary: A cross-platform metronome using PyQt6
+Author-email: David Baucum <david@baucum.me>
+Maintainer-email: David Baucum <david@baucum.me>
+License: GPLv3
+Project-URL: homepage, https://gitlab.com/maxolasersquad/metrognome
+Project-URL: documentation, https://gitlab.com/maxolasersquad/metrognome/-/blob/main/README.md
+Project-URL: source, https://gitlab.com/maxolasersquad/metrognome
+Project-URL: issues, https://gitlab.com/maxolasersquad/metrognome/-/issues
+Project-URL: changelog, https://gitlab.com/maxolasersquad/metrognome/-/releases
+Keywords: metronome
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: PyQt6==6.7.1
+Requires-Dist: PyQt6-Qt6==6.7.3
+
+# Metrognome
+
+A cross-platform (Linux, MacOS, Windows) metronome application using Python 3.12
+and PyQt6.8.
+
+## Requirements
+
+* Python 3.12
+* ffmpeg
+
+## Installation
+
+To install the application locally run the following.
+
+```python3
+pip install .
+```
+
+## Development Setup Instructions
+
+1. Create a Virtual Environment
+    Linux/MacOS:
+
+    ```bash
+    python3 -m venv venv
+    ```
+
+    Windows:
+
+    ```powershell
+    python -m venv venv
+    ```
+
+2. Activate the Environment
+    Linux/MacOS:
+
+    ```bash
+    source venv/bin/activate
+    ```
+
+    Windows:
+
+    ```powershell
+    .\venv\Scripts\Activate
+    ```
+
+3. Install Dependencies
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Generate Sounds Files
+
+    ```bash
+    ./generate_sounds.sh
+    ```
+
+5. Run the application
+
+    ```bash
+    python3 -m metrognome.main
+    ```

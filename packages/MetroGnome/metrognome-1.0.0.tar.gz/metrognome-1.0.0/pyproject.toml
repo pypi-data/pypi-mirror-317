@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=75.6", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MetroGnome"
+version = "1.0.0"
+description = "A cross-platform metronome using PyQt6"
+authors = [ { name = "David Baucum", email = "david@baucum.me" } ]
+maintainers = [ { name = "David Baucum", email = "david@baucum.me" } ]
+requires-python = ">=3.12"
+dependencies = [ "PyQt6==6.7.1", "PyQt6-Qt6==6.7.3" ]
+readme = "README.md"
+license = { text = "GPLv3" }
+keywords = [ "metronome" ]
+
+[project.urls]
+homepage = "https://gitlab.com/maxolasersquad/metrognome"
+documentation = "https://gitlab.com/maxolasersquad/metrognome/-/blob/main/README.md"
+source = "https://gitlab.com/maxolasersquad/metrognome"
+issues = "https://gitlab.com/maxolasersquad/metrognome/-/issues"
+changelog = "https://gitlab.com/maxolasersquad/metrognome/-/releases"
+
+[project.scripts]
+metrognome = "metrognome.main:main"
+
+[project.gui-scripts]
+metrognome = "metrognome.main:main"
+
+[tool.setuptools.packages.find]
+include = ["metrognome"]
+
+[tool.setuptools.package-data]
+"metrognome" = ["resources/*.wav", "resources/*.svg"]
