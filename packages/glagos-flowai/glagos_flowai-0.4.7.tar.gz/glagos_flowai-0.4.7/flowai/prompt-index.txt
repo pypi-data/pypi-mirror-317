@@ -1,0 +1,6 @@
+label,description,context_command,prompt_file
+"staged-commit-message","Generate commit message for staged changes","git diff -w --staged","~/flowai-prompts/prompt-commit-message.txt"
+"main-commit-message","Generate commit message for all changes","git diff -w","~/flowai-prompts/prompt-commit-message.txt"
+"pull-request","Create pull request description","git log [Input branch name (example: main, dev, staging, etc)]..HEAD","~/flowai-prompts/prompt-pull-request.txt"
+"staged-code-review","Review staged changes","git diff -w --staged","~/flowai-prompts/prompt-code-review.txt"
+"code-review","Review all changes","git diff -w","~/flowai-prompts/prompt-code-review.txt"

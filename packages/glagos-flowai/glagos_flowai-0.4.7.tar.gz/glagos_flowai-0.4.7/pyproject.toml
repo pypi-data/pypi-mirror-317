@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "glagos-flowai"
+version = "0.4.7"
+description = "A Python CLI tool for streamlining development workflows with LLMs - commit messages, PR descriptions, code reviews and more"
+authors = ["Gabriel Lagos <gabriel@glagos.com>"]
+readme = "README.md"
+packages = [{include = "flowai"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.14"
+typer = "^0.9.0"
+rich = "^13.7.0"
+questionary = "^2.0.1"
+openai = "1.12.0"
+anthropic = "^0.18.1"
+groq = "^0.4.2"
+google-generativeai = "0.3.1"
+pyperclip = "^1.8.2"
+
+[tool.poetry.scripts]
+flowai = "flowai.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
