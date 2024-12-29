@@ -1,0 +1,2 @@
+[console_scripts]
+pip-help = pip_help.main:main
