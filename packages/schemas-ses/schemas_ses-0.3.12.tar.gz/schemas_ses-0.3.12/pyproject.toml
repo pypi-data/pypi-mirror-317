@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "schemas_ses"
+version = "0.3.12"
+description = ""
+authors = ["machkouroke <machkour20.mo1@gmail.com>"]
+readme = "README.md"
+packages = [{include = "Schemas_ses"}]
+
+[tool.poetry.dependencies]
+fastapi = "^0.115.0"
+python = "^3.11"
+pydantic = {extras = [ "email"], version = "^2.8.2"}
+pymongo = "^4.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
