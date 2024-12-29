@@ -1,0 +1,8 @@
+README.md
+setup.py
+SerialHelpers/__init__.py
+serialhelperslib.egg-info/PKG-INFO
+serialhelperslib.egg-info/SOURCES.txt
+serialhelperslib.egg-info/dependency_links.txt
+serialhelperslib.egg-info/requires.txt
+serialhelperslib.egg-info/top_level.txt
