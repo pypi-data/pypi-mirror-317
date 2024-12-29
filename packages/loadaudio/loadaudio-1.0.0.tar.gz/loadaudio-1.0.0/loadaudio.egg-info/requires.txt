@@ -1,0 +1,6 @@
+setuptools
+pydub
+requests
+numpy
+wheel
+typing

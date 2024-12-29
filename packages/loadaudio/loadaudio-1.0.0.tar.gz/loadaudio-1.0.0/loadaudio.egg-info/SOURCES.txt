@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+loadaudio/__init__.py
+loadaudio/utils.py
+loadaudio.egg-info/PKG-INFO
+loadaudio.egg-info/SOURCES.txt
+loadaudio.egg-info/dependency_links.txt
+loadaudio.egg-info/requires.txt
+loadaudio.egg-info/top_level.txt
