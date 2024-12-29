@@ -1,0 +1,10 @@
+ipilot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipilot/args.py,sha256=xtjr6B1XH9wUswMDK5cpTDWRrNA7Ld3RWmvNrW0F104,954
+ipilot/ip_info.py,sha256=NAy3Wdo92YhlKP1PCjXOsO7a4IwAPKyQP-9KyVb4l2E,1787
+ipilot/main.py,sha256=tiY9ZGNyN9cFamREDZPgImCs3wi4G_j-Io1ZQ1XI4zQ,2259
+ipilot/print_table.py,sha256=3QP3mdN5_0n4JVZ_S3r1Rn4FgmoHkWcZhmaM3MCp-WU,634
+ipilot/query_normalisation.py,sha256=9nOYhVwvr8eOfWfmE8_CptHpRSwCKXH9YDyKzUqUWe8,980
+ipilot-1.5.0.dist-info/METADATA,sha256=X-41YElZVRBi7HDdHCVVh6paZKIphD8J4xMZwVF7a14,1877
+ipilot-1.5.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+ipilot-1.5.0.dist-info/entry_points.txt,sha256=2Ve389A36UooJzr-7C1hdB99TlYR0aoBkrL4TDrgRqg,40
+ipilot-1.5.0.dist-info/RECORD,,
