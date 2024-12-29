@@ -1,0 +1,3 @@
+include djangoprime/core/commands/*.ico
+include djangoprime/core/commands/*.txt
+include LICENSE

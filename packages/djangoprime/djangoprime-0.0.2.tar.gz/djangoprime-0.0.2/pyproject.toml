@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "djangoprime"
+requires-python = ">= 3.11"
+version = "0.0.2"
+dependencies = [
+    "requests",
+    "unidecode",
+    "django",
+    "djangorestframework",
+    "pygments",
+    "djangorestframework-simplejwt",
+]
+authors = [
+    { name = "Ankaj Gupta", email = "ankajgupta02@gmail.com" },
+    { name = "Coder Website", email = "contact@coderwebsite.com" }
+]
+description = """DjangoPrime is an all-in-one Django library designed to accelerate your development process. It offers over 1000 custom exception classes, a powerful suite of middleware integrations, flexible JWT configuration services, and advanced tools for managing enums and models. DjangoPrime also includes pre-built solutions, absolute models, and modular components that allow developers to build scalable, maintainable, and sophisticated Django applications easily."""
+readme = "README.md"
+license = { text = "MIT" }
+keywords = [
+    "django", "djangoprime", "django-prime", "django project setup", "django jwt",
+    "django custom response", "django projects", "django modular components"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+"djangoprime" = ["*.txt", "*.ico"]

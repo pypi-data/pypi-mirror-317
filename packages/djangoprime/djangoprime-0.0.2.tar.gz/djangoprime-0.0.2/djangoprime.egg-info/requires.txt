@@ -1,0 +1,6 @@
+requests
+unidecode
+django
+djangorestframework
+pygments
+djangorestframework-simplejwt
