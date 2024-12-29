@@ -1,0 +1,13 @@
+COPYING
+COPYING.LESSER
+README.md
+setup.py
+mini_LiTOY/__init__.py
+mini_LiTOY/__main__.py
+mini_LiTOY/mini_LiTOY.py
+mini_LiTOY.egg-info/PKG-INFO
+mini_LiTOY.egg-info/SOURCES.txt
+mini_LiTOY.egg-info/dependency_links.txt
+mini_LiTOY.egg-info/entry_points.txt
+mini_LiTOY.egg-info/requires.txt
+mini_LiTOY.egg-info/top_level.txt
