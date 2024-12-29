@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "ai-stocks"
+version = "0.1.9"
+description = "AI Stocks 是一个强大的工具，旨在利用先进的人工智能技术为股票市场分析和预测提供支持。通过整合多种数据源和机器学习算法，该工具能够帮助投资者和分析师更深入地理解市场趋势，做出更明智的投资决策。"
+authors = ["sunjuzhong <129019668+sunjuzhong@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+akshare = "^1.15.32"
+torch = "^2.5.1"
+pandas = "^2.2.3"
+china-stock-data = "^0.1.6"
+matplotlib = "^3.9.2"
+scikit-learn = "^1.5.2"
+torchvision = "^0.20.1"
+numpy = "^2.1.3"
+scipy = "^1.14.1"
+keras = "^3.7.0"
+astock-loaders = "^0.1.8"
+toml = "^0.10.2"
+
+
+[tool.poetry.group.dev.dependencies]
+notebook = "^7.2.2"
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
