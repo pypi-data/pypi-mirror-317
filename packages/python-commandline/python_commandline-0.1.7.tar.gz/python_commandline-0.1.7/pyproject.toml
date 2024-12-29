@@ -1,0 +1,69 @@
+[tool.poetry]
+name = "python-commandline"
+version = "0.1.7"
+description = "A set of common Linux commands implementation in Python"
+authors = ["jacky.wu <jacky.wucheng@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fire = "^0.6.0"
+python-dotenv = "^1.0.1"
+pydantic = "^2.10.3"
+
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
+
+[tool.poetry.scripts]
+pycli = "python_commandline.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+mypy = "^1.10.1"
+poethepoet = "^0.27.0"
+ruff = "^0.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+# T20 is for flake8-print
+# I for isort, we use this to replace flake8-import-order
+lint.extend-select = ["T20", "I", "B", "E", "N", "C4", "PT", "RET", "SIM", "PTH", "TID", "ERA", "PERF", "UP"]
+lint.extend-ignore = ["RET503", "PERF203"]
+
+[tool.ruff.lint.isort]
+case-sensitive = false
+# merge all imports into a single import statement if "from" is the same
+combine-as-imports = true
+
+[tool.ruff.lint.flake8-tidy-imports]
+# Disallow all relative imports.
+ban-relative-imports = "all"
+
+[tool.mypy]
+strict = true
+# ignore-without-code: Enforce error codes for "#type: ignore" comments. <https://mypy.readthedocs.io/en/stable/error_code_list2.html#check-that-type-ignore-include-an-error-code-ignore-without-code>
+enable_error_code = ["ignore-without-code"]
+# import-untyped: the imported module has no types. <https://mypy.readthedocs.io/en/latest/error_code_list.html#check-that-import-target-can-be-found-import-untyped, since we cannot fix the third-party libraries which lack types>
+disable_error_code = ["import-untyped"]
+
+[[tool.mypy.overrides]]
+module = 'semantic_version'
+ignore_missing_imports = true
+
+[tool.poe.tasks]
+poetry-fix = "poetry run ruff check --fix"
+poetry-format = "poetry run ruff format"
+black-format = "poetry run black --line-length=120 ."
+format = ["black-format", "poetry-format"]
+
+publish.shell = "poetry build; poetry publish"
