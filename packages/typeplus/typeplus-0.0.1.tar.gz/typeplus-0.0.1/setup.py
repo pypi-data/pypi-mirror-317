@@ -1,0 +1,35 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="typeplus",
+    version="0.0.1",
+    description="Some Useful Type Definitions",
+    author="MoYan",
+    author_email="moyanjdc@qq.com",
+    packages=find_packages(),
+    long_description="Some Useful Type Definitions",  # 包的详细描述
+    long_description_content_type="text/markdown",  # 描述的内容类型
+    install_requires=[],
+    python_requires=">=3.5",
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Libraries",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Topic :: Utilities",
+        "Natural Language :: English",
+        "Natural Language :: Chinese (Simplified)",
+    ],
+    include_package_data=True,
+)

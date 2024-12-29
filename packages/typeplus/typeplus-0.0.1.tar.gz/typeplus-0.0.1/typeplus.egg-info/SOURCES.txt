@@ -1,0 +1,6 @@
+LICENSE
+setup.py
+typeplus.egg-info/PKG-INFO
+typeplus.egg-info/SOURCES.txt
+typeplus.egg-info/dependency_links.txt
+typeplus.egg-info/top_level.txt
