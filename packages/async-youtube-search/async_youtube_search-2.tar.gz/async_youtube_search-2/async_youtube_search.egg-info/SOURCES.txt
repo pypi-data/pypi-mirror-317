@@ -1,0 +1,8 @@
+README.md
+setup.py
+async_youtube_search/__init__.py
+async_youtube_search.egg-info/PKG-INFO
+async_youtube_search.egg-info/SOURCES.txt
+async_youtube_search.egg-info/dependency_links.txt
+async_youtube_search.egg-info/requires.txt
+async_youtube_search.egg-info/top_level.txt
