@@ -1,0 +1,18 @@
+include README.md
+include softwareai/Docs/About/SoftwareAI.md
+include softwareai/Docs/Core/Core.MD
+include softwareai/Docs/Core/CoreCompany.md
+include softwareai/Docs/Destilation/DestilationAgents.md
+include softwareai/Docs/IndexTeam/IndexTeam.md
+include softwareai/Docs/Installation/Chat.md
+include softwareai/Docs/Installation/Editor.md
+include softwareai/Docs/Installation/SoftwareAI.md
+include softwareai/Docs/Moderation/RemoveWords.md
+include softwareai/Docs/Roadmaps/Chat-Roadmap.md
+include softwareai/Docs/Roadmaps/Editor-Roadmap.md
+include softwareai/Docs/Roadmaps/SoftwareAI-Roadmap.md
+include softwareai/Docs/Structure/SoftwareAIStructure.md
+include softwareai/Docs/ToolsAndFunctions/doc-tools.md
+include softwareai/Docs/Update/Update.md
+include LICENSE
+recursive-include softwareai *
