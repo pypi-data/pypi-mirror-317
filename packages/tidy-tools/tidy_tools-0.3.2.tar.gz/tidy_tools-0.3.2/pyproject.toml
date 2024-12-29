@@ -1,0 +1,40 @@
+[project]
+name = "tidy-tools"
+version = "0.3.2"
+description = "Declarative programming for PySpark workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "attrs",
+    "loguru",
+    "pyspark>=3.5.0,<3.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.numpydoc_validation]
+checks = [
+    "all",   # report on all checks, except the below
+    "EX01",
+    "SA01",
+    "ES01",
+    "GL08",
+    "PR02",
+    "MD041"
+]
+# remember to use single quotes for regex in TOML
+exclude = [  # don't report on objects that match any of these regex
+    '\.undocumented_method$',
+    '\.__repr__$',
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "setuptools>=75.6.0",
+]
+lint = [
+    "ruff>=0.8.0",
+]
