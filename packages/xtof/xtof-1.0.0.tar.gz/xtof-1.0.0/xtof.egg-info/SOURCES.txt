@@ -1,0 +1,14 @@
+COPYING
+LICENSE
+README.md
+setup.py
+test/test.py
+xiang/__init__.py
+xiang/cli.py
+xiang/converter.py
+xtof.egg-info/PKG-INFO
+xtof.egg-info/SOURCES.txt
+xtof.egg-info/dependency_links.txt
+xtof.egg-info/entry_points.txt
+xtof.egg-info/requires.txt
+xtof.egg-info/top_level.txt
