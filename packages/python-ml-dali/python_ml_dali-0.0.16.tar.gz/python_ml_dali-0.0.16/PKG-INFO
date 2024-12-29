@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: python-ml-dali
+Version: 0.0.16
+Summary: A Python library to communicate with Dali controllers from Ministry of Light.
+Home-page: https://github.com/benoitdepaire/python-ml-dali
+Author: Benoit Depaire
+Author-email: benoit@depaire.net
+License: GNU GPLv3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asyncio
+Requires-Dist: pyserial
+Requires-Dist: aioserial
+
+# python-ml-dali
+A Python library to communicate with Dali controllers from Ministry of Light
+
+## Description
+This python libarary can be used to communicate with ML (Ministry of Light) Dali relais on a DALI bus, using the ML DALI USB controller. 
+## Documentation
+
+## QuickStart
+
+```python
+import asyncio
+from mldali import MLDaliLight
+
+async def turnOnOff(address):
+    light_fixture = MLDaliLight(address)
+    await asyncio.sleep(1)
+    await light_fixture.turn_on()
+    await asyncio.sleep(3)
+    await light_fixture.turn_off()
+
+async def turnOnOffDelayed(address):
+    await asyncio.sleep(2)
+    light_fixture = MLDaliLight(address)
+    await asyncio.sleep(1)
+    await light_fixture.turn_on()
+    await asyncio.sleep(1)
+    await light_fixture.turn_off()
+
+
+async def main():
+    await asyncio.gather(turnOnOff(12), turnOnOffDelayed(13), asyncio.sleep(20))
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(main())
+
+```
+
