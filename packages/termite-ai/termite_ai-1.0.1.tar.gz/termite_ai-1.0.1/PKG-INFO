@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: termite-ai
+Version: 1.0.1
+Summary: Generate terminal UIs from simple text prompts
+Home-page: https://github.com/shobrook/termite
+Author: shobrook
+Author-email: shobrookj@gmail.com
+License: Apache License
+Keywords: openai claude cli commandline tui terminal generative-ui
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Requires: openai
+Requires: anthropic
+Requires: ollama
+Requires: urwid
+Requires: rich
+Requires: textual
+Requires-Python: >=3
+License-File: LICENSE
+Requires-Dist: openai
+Requires-Dist: anthropic
+Requires-Dist: ollama
+Requires-Dist: urwid
+Requires-Dist: rich
+Requires-Dist: textual
