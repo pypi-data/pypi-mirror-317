@@ -1,0 +1,54 @@
+# LibFilter
+libfilter is signal processing framework with multiple of included filters/oscilators/processors (DSP)
+
+# Included filters
+- AFTELSEncoder (custom time encoding, see afte_documentation.txt)
+- AFTESTSEncoder
+- DiffrentialDecoder/DiffrentialEncoder
+- FMStereoEncoder
+- DSBSCModulator
+- AMModulator
+- LSBModulator
+- USBModulator
+- FMModulator
+- BPSKModulator
+- QPSKModulator
+- FSKModulator
+- FourFSKModulator
+- MonoClipper
+- StereoClipper
+- MonoDeclipper
+- MonoLimiter
+- StereoDeclipper
+- StereoToMono
+- MonoFadeOut
+- StereoFadeOut
+- MonoFadeIn
+- StereoFadeIn
+- StereoRpitxCompressor
+- MonoRpitxCompressor
+- MonoExponentialLPF
+- StereoExponentialLPF
+- MonoExponentialHPF
+- StereoExponentialHPF
+- MonoButterworthLPF
+- StereoButterworthLPF
+- MonoButterworthHPF
+- StereoButterworthHPF
+- MonoButterworthBPF
+- StereoButterworthBPF
+- MonoPreemphasis
+- StereoPreemphasis
+- MonoDeemphasis
+- StereoDeemphasis
+- Sine/MultiSine
+- SquareOoscillator/MultiSquareoscillator
+- Triangle/MultiTriangle
+- Buffer
+- RMSCalculator
+- Decimator
+- Interpolator
+- DiscreteFourierTransform
+- FastFourierTransform
+- HilbertTransformer
+- (data encoders/decoders, float to s[8-32]le)
