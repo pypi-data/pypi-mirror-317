@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: asf-lib
+Version: 0.0.1.5
+Summary: Under construction! Algorithm selection framework
+Author-email: Hadar Shavit <shavit@aim.rwth-aachen.de>
+Maintainer-email: Hadar Shavit <shavit@aim.rwth-aachen.de>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Algorithm Selection and Performance Prediction Framework
+Currently under development
+
+Roadmap:
+
+[] 
