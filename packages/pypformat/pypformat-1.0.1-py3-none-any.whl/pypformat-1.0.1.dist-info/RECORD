@@ -1,0 +1,13 @@
+pformat/__init__.py,sha256=iOrtyfDchmtdV6R0dYnKuX9Ea3eDsC17f0c45lx2JNQ,685
+pformat/common_types.py,sha256=kD1Rky8hv5U28pqzLfUy9sJo-HNHm-YpFrr_mh3-QD8,302
+pformat/format_options.py,sha256=HtXlP4UVuiu0dtduhS7Xy0Hj-J8KcwiqwnsTfFfsrwE,1504
+pformat/indentation_utility.py,sha256=0DDka6ygX7Qvp_ZoJBEwR92aAmbYKFehdeE4MwlYPhA,3085
+pformat/pretty_formatter.py,sha256=TWdqRId5KRRQ3j6WFACDzxu9F61R2WAsR33pHKMGJmU,8593
+pformat/text_style.py,sha256=o36IJP1Mwmjn99IK3kgzYUs-oX3bdKTy-tIWL_s9K8M,2247
+pformat/type_specific_formatters.py,sha256=xJ5rd9DE6jJGm52fwcSrpM1QPpckzlfJa8PQ6d_QZEw,2771
+pformat/typing_utility.py,sha256=LP1oRuGmWkvtKSBH735CD-vt34n18tsQ9VAXad90FiY,1705
+pypformat-1.0.1.dist-info/LICENSE,sha256=xcn3bQMM6Bt6CT-wzm4wPPyhh02GScx343T7hi9uPfw,1070
+pypformat-1.0.1.dist-info/METADATA,sha256=3d6b0B8RjkYL-JhRXT6pcZpslRrqT4knOW8lELXrJyI,6467
+pypformat-1.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pypformat-1.0.1.dist-info/top_level.txt,sha256=dXVKcZ3VZxtWWwG0i2FzxzTrtizjG1Dd9sUo55B4gjo,8
+pypformat-1.0.1.dist-info/RECORD,,
