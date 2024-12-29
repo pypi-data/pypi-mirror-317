@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dogcat_classifier
+Version: 0.2
+Summary: This project focuses on creating a machine learning model that classifies images of dogs and cats. The model is encapsulated within a Python package, making it easy to install and use. The package employs TensorFlow for model training and inference, while OpenCV and Pillow are utilized for image processing. It is distributed via PyPI (Python Package Index).
+Home-page: https://github.com/praneethmareddy/dogcat_classifier
+Author: Praneeth-mareddy
+Author-email: saip9091@gmail.com
+Requires-Dist: tensorflow
+Requires-Dist: tensorflow-hub
+Requires-Dist: pillow
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: opencv-python
+
