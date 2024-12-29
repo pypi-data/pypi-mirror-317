@@ -1,0 +1,3 @@
+[console_scripts]
+advanced-askai = advanced_askai.cli:main
+askai = advanced_askai.cli:main
