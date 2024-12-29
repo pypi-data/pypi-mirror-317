@@ -1,0 +1,2 @@
+[console_scripts]
+timespacex = timespacex.cli:main
