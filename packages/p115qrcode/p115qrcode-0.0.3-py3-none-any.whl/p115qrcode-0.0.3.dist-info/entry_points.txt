@@ -1,0 +1,3 @@
+[console_scripts]
+p115qrcode=p115qrcode.__main__:main
+
