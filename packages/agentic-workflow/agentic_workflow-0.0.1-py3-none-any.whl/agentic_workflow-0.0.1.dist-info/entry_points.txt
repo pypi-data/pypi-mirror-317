@@ -1,0 +1,4 @@
+[console_scripts]
+dev=src.main:run_dev
+prod=src.main:run
+
