@@ -1,0 +1,3 @@
+[console_scripts]
+fy=fy_tool_cli.main:fy_cli
+
