@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dogcat_classifier
+Version: 0.1
+Summary: A package for classifying Dog vs Cat images using a deep learning model.
+Home-page: https://github.com/yourusername/dogcat_classifier
+Author: Your Name
+Author-email: your-email@example.com
+Requires-Dist: tensorflow
+Requires-Dist: pillow
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: opencv-python

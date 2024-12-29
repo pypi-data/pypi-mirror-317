@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+dogcat_classifier/__init__.py
+dogcat_classifier/classifier.py
+dogcat_classifier/model.h5
+dogcat_classifier.egg-info/PKG-INFO
+dogcat_classifier.egg-info/SOURCES.txt
+dogcat_classifier.egg-info/dependency_links.txt
+dogcat_classifier.egg-info/requires.txt
+dogcat_classifier.egg-info/top_level.txt
