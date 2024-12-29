@@ -1,0 +1,2 @@
+[console_scripts]
+stagehand = stagehand.__main__:main
