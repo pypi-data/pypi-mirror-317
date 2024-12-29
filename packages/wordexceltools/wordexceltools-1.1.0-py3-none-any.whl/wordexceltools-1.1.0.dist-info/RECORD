@@ -1,0 +1,9 @@
+wordexceltools/__init__.py,sha256=8pljwBfnyvpHqf2wzV6k5rH1O1Q-iL_psdY3b96uIFA,81
+wordexceltools/common_tools.py,sha256=v_kDzHP0aSAja32tpDbyRk9KrF-nVavnbfgUipxXsSU,12978
+wordexceltools/excel_tools.py,sha256=tZxadMQ3eLCDcku0UlGKZDEjkEOamzHRI9yMCYn9jOM,55510
+wordexceltools/word_tools.py,sha256=VNeoCP_5cXpG_Sp3Fo2Z-cBzpOaQtbLpMeBLivVK1ds,19841
+wordexceltools-1.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+wordexceltools-1.1.0.dist-info/METADATA,sha256=7wm9oqXwN3NUO6ghxVzsCciglW6NHMPTRTRxDaLoFeg,6842
+wordexceltools-1.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wordexceltools-1.1.0.dist-info/top_level.txt,sha256=wenMBasysGuKdIjkUm-R_dz51GYcYB00yay0fS0pz-8,15
+wordexceltools-1.1.0.dist-info/RECORD,,
