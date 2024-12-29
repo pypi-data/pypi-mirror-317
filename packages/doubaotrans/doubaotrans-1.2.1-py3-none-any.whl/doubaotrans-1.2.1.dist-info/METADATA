@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: doubaotrans
+Version: 1.2.1
+Summary: Professional translation toolkit based on Doubao API
+Author-email: kilolonion <kilolonion@gmail.com>
+License: MIT
+Project-URL: Documentation, https://github.com/kilolonion/DoubaoTranslator/blob/main/README.md
+Project-URL: Source, https://github.com/kilolonion/DoubaoTranslator
+Project-URL: Bug Reports, https://github.com/kilolonion/DoubaoTranslator/issues
+Keywords: translation,nlp,machine-translation,ai-translation,doubao,multilingual,context-aware,async-translation
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: English
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai>=1.0.0
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: tenacity>=8.0.0
+Requires-Dist: python-dotenv>=0.19.0
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: langdetect>=1.0.9
+Requires-Dist: redis>=4.0.0
+
+# DoubaoTranslator
+
+[English](#english) | [简体中文](#简体中文)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kilolonion/DoubaoTranslator/main/docs/images/logo.png" alt="DoubaoTranslator Logo" width="200"/>
+</p>
+
+# English
+
+> Professional translation toolkit based on Doubao API
+> Version: 1.2.1
+
+## Features
+- Multi-language Support (17 languages)
+- Context-aware Translation
+- Custom Terminology Management
+- Style Customization
+- Async Processing
+- Performance Optimization
+
+[View full English documentation](https://github.com/kilolonion/DoubaoTranslator/blob/main/README.en.md)
+
+---
+
+# 简体中文
+
+> 基于豆包API的专业翻译工具包
+
+## 特性
+- 多语言支持（17种语言）
+- 上下文感知翻译
+- 自定义术语管理
+- 风格定制
+- 异步处理
+- 性能优化
+
+[查看完整中文文档](https://github.com/kilolonion/DoubaoTranslator/blob/main/README.zh.md)
+
+
