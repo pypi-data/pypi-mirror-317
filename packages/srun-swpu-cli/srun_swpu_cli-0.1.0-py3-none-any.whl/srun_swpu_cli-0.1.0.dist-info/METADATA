@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: srun-swpu-cli
+Version: 0.1.0
+Summary: SWPU SRun Network Authentication CLI
+Home-page: https://github.com/JustACP/srun-swpu-cli
+Author: RE1IFE
+Author-email: me@re1ife.top
+License: GPL-3.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: srun-swpu>=0.1.0
+Requires-Dist: rich>=13.0.0
+
+# SRun SWPU CLI 🖥️
+
+A command-line interface for SWPU (Southwest Petroleum University) network authentication system. This CLI tool provides an easy way to manage your network connection. 🚀
+
+## ✨ Features
+
+- **Simple Commands** 🎯
+  - Login to network
+  - Logout from network
+  - Check connection status
+
+- **Beautiful Output** 🎨
+  - Colored status messages
+  - Formatted traffic usage
+  - Clear error messages
+
+- **Network Support** 🌐
+  - China Mobile Wireless
+  - China Mobile Wired
+  - Student Network
+  - Teacher Network
+  - China Telecom Wireless
+
+## 📦 Installation & Use
+
+### Install from PyPI
+
+```bash
+pip install srun-swpu-cli
+```
+
+Or install with user scheme
+
+```bash
+pip install --user srun-swpu-cli
+```
+
+Or install in virtual environment (recommended)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate # On Windows: .venv\Scripts\activate
+pip install srun-swpu-cli
+```
+
+### Simply check current connection status
+```bash
+srun-swpu-cli status
+```
+
+### Login Sample
+```bash
+srun-swpu-cli login \
+--student-id student_id \
+--network-type china-mobile-wireless \
+--password "your_password"
+```
+
+### Logout Sample
+```bash
+srun-swpu-cli logout \
+--student-id student_id \
+--network-type china-mobile-wireless
+``` 
