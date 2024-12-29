@@ -1,0 +1,12 @@
+peewee-stubs/METADATA.toml,sha256=sWMAyu2iATH9wB320-B1BSCyIjrwCmU_J7lF3gcb9mk,393
+peewee-stubs/__init__.pyi,sha256=yAcnWCfqsKNSkarWjTJ13fT1BlDXmnvxOEwvLWU21P0,64905
+peewee-stubs/py.typed,sha256=la67KBlbjXN-_-DfGNcdOcjYumVpKG_Tkw-8n5dnGB4,8
+playhouse-stubs/METADATA.toml,sha256=sWMAyu2iATH9wB320-B1BSCyIjrwCmU_J7lF3gcb9mk,393
+playhouse-stubs/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+playhouse-stubs/flask_utils.pyi,sha256=7BQVRr3pMwpSfcn7JXOS0x30q2sM_mIWjdbcJXC8Gxk,990
+playhouse-stubs/py.typed,sha256=la67KBlbjXN-_-DfGNcdOcjYumVpKG_Tkw-8n5dnGB4,8
+types_peewee-3.17.8.20241229.dist-info/LICENSE,sha256=KV-FOMlK5cMEMwHPfP8chS2ranhqjd7kceBhtA1eyr4,12657
+types_peewee-3.17.8.20241229.dist-info/METADATA,sha256=_MVSJH-JZ4Xhe2FTW3Dq-Ee2LvkNAQM8cRQwONeq7jw,2010
+types_peewee-3.17.8.20241229.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+types_peewee-3.17.8.20241229.dist-info/top_level.txt,sha256=t97coVbntdi9fcg-4GOiJR8GE8fHsrNi_VcxXgimA6o,29
+types_peewee-3.17.8.20241229.dist-info/RECORD,,
