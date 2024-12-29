@@ -1,0 +1,23 @@
+cli_FSD/__init__.py,sha256=MigXIT7A1M9YZuH2MyjKReSziFwzbZX2boVYsLosR6s,22
+cli_FSD/api_routes.py,sha256=OgxvcGiyux-JnPAi-JPoyubuzJJGMGmxfDg0SzKYpIk,2188
+cli_FSD/chat_models.py,sha256=QLRvRh6_qcGBnxAFRKOEpN218WqZT655ncZYbNQEzU0,5978
+cli_FSD/command_handlers.py,sha256=cj6OLkmMudX5Gtr3MCZ1GBA2ni4hoKS7l7KLazNJJQo,3579
+cli_FSD/config.py,sha256=XHxK6IqyCbcSKE-IwQrmNAedar5olWBsjJV5yy7TmUg,1663
+cli_FSD/engine.py,sha256=Q6Uvttmqf6yuQkcKyOepBoK3UAN3YD2xYd6fnFlofPM,5806
+cli_FSD/main.py,sha256=WfscMQmBnbTReWnPT40B9fIFAc7vSl-ZuMoLPbxU-dM,4891
+cli_FSD/script_handlers.py,sha256=cjXIZaB-g_5c8U7tQH0EWm2XzN1zhlIFqxds11uYuog,18889
+cli_FSD/utils.py,sha256=lTxTE4mynZm1ISlaFVaj-gIHzmqBI4CBHXN3ApRRWNk,5928
+cli_FSD/legacy/__init__.py,sha256=jFewNjb0TjKfmGC6r9CbBwQJ_7ECTjHFw4ngHTBTut8,694
+cli_FSD/legacy/engine.py,sha256=Q6Uvttmqf6yuQkcKyOepBoK3UAN3YD2xYd6fnFlofPM,5806
+cli_FSD/legacy/main copy.py,sha256=6P4mXRHzqfO0r165H3CrtAmQaUlXH-dnsx27CmlVHwU,26243
+cli_FSD/legacy/main.py,sha256=1j7je8ybNHWlFTiTn7sb4AQe06bzL8SASIitGL2OVww,46353
+cli_FSD/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli_FSD/resources/assembler.py,sha256=zGkcTM-uZkOQgZwfbocoMKwl-1ebYvWKAylaKAxdFGQ,5753
+cli_FSD/resources/test-ollama.py,sha256=wRmqyya6rTLyrN0nqhwPbXRYmaSRHWlNTMA4X20XGwE,769
+cli_FSD/resources/v0.94.py,sha256=cjG8iF0tnmUnNEEpbSg9DE3beHlYJif5W77I9vYodwQ,46728
+cli_FSD-1.2.98.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+cli_FSD-1.2.98.dist-info/METADATA,sha256=_fEwz7yOgvqyLk0HDeCq3eK5wruylDxqNzRCfZ2dtcs,5253
+cli_FSD-1.2.98.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cli_FSD-1.2.98.dist-info/entry_points.txt,sha256=A3zXt-sPJEbiomHljMGbPRwNa3A5LEiQUsW_7XcdVgE,40
+cli_FSD-1.2.98.dist-info/top_level.txt,sha256=WiTkyL8mmVbnybNHXCUo-aYMyVdHAb4V-H1TLi_XlGc,8
+cli_FSD-1.2.98.dist-info/RECORD,,
