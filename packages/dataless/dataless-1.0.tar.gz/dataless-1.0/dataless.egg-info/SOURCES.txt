@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+app/__init__.py
+dataless.egg-info/PKG-INFO
+dataless.egg-info/SOURCES.txt
+dataless.egg-info/dependency_links.txt
+dataless.egg-info/top_level.txt
