@@ -1,0 +1,2 @@
+[console_scripts]
+treeview = gimi9_tree_view.treeview:main
