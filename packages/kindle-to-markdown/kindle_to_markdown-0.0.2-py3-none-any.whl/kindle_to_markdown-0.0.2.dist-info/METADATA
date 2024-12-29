@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: kindle_to_markdown
+Version: 0.0.2
+Summary: A simple program to convert Kindle HTML annotations to a Markdown file.
+License: Apache 2.0
+Author: Basti Tee
+Author-email: basti.tee@icloud.com
+Maintainer: Basti Tee
+Maintainer-email: basti.tee@icloud.com
+Requires-Python: >=3.9.0,<4.0.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: twine (>=6.0.1,<7.0.0)
+Description-Content-Type: text/markdown
+
+# Kindle Annotations to Markdown
+
+> A simple program to convert Kindle HTML annotations to a Markdown file
+
+## Features
+
+-   Conversion of page bookmarks, text highlights, and notes to Markdown
+-   Included reference positions of annotations
+-   Automatic detection of annotation file's language ([currently supported](kindle_to_markdown/languages.py))
+
+## Usage
+
+```shell
+$ kindle_to_markdown --help
+Usage: kindle_to_markdown [OPTIONS]
+
+  A simple program to convert Kindle HTML annotations to a Markdown file.
+
+Options:
+  -i, --input-file PATH   Path to the Kindle annotations HTML file.
+                          [required]
+  -o, --output-file PATH  Path to the Markdown file.
+  -p, --print-only        Only print Markdown to the console.
+  --help                  Show this message and exit.
+```
+
+## Installation
+
+### From PyPi
+
+```shell
+pip install kindle-to-markdown
+```
+
+### From Source
+
+Prerequisites:
+
+-   `python` in a [supported version](pyproject.toml) available on your path.
+-   Package manager `poetry` installed (e.g., `python -m pip install poetry`)
+
+```shell
+make
+poetry run python -m kindle_to_markdown --help
+```
+

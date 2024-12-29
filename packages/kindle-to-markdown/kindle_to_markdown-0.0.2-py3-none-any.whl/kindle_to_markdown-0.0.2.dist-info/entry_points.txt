@@ -1,0 +1,3 @@
+[console_scripts]
+kindle_to_markdown=kindle_to_markdown.__main__:main
+
