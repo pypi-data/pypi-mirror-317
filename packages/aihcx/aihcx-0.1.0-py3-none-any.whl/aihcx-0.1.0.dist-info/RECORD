@@ -1,0 +1,9 @@
+aihcx/__init__.py,sha256=5h0NwePGUZxU09OWuN37NhS_cPMJr8dg09umWOls1BM,59
+aihcx/cli.py,sha256=pGut6Usjt7gUqysO47p98r2F5GQt_25_H3gPDT2N07Y,2284
+aihcx/client.py,sha256=bA5WzDeSKH7gwehyN1uv8YcN_5jmLbSkYuEsByfeKvw,2421
+aihcx/commands.py,sha256=GDiB0BQYleA5v6KMopvtCSO1VVkcC-vkJHOptWMm-0Q,15972
+aihcx-0.1.0.dist-info/METADATA,sha256=biOgJpQF_AboKOm2agXcxDPdkjJJcRxwr-TIvQeOmH8,402
+aihcx-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+aihcx-0.1.0.dist-info/entry_points.txt,sha256=KNm0nYLGzAR286zDf3BDUGtBBpSTWfV01UKV5NRuQSE,41
+aihcx-0.1.0.dist-info/top_level.txt,sha256=iKnfTN_a0_fun6zfh3GpI_Drn9WHWubKQ06alkNBXWk,6
+aihcx-0.1.0.dist-info/RECORD,,

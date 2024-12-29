@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: aihcx
+Version: 0.1.0
+Summary: AI训练平台命令行工具
+Home-page: UNKNOWN
+Author: Baidu AIHC Team
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: Click>=8.0
+Requires-Dist: requests>=2.0.0
+Requires-Dist: tabulate>=0.8.0
+Requires-Dist: click-completion>=0.5.2
+Requires-Dist: pyyaml>=5.1
+Requires-Dist: bce-python-sdk-next>=100.9.19.19
+
+UNKNOWN
+
+

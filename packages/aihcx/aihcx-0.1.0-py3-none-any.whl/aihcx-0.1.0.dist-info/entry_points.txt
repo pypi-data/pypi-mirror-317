@@ -1,0 +1,3 @@
+[console_scripts]
+aihcx = aihcx.cli:cli
+
