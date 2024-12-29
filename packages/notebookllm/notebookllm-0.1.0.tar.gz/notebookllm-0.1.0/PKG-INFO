@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: notebookllm
+Version: 0.1.0
+Requires-Dist: nbformat
+Requires-Dist: jupyter_client
