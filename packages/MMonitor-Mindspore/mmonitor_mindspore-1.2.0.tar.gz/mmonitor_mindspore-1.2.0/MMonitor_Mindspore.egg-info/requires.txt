@@ -1,0 +1,6 @@
+wandb
+plotly
+seaborn
+transformers
+einops
+mindspore
