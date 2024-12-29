@@ -1,0 +1,184 @@
+# CHENYE-STOCK-ANALYSIS
+
+**CHENYE-STOCK-ANALYSIS** 是一个基于 [BaoStock](https://www.baostock.com) 的 Python 包，用于轻松获取中国 A 股市场的股票数据并进行常见的技术指标计算（如布林带、KDJ 指标）。此工具可帮助开发者快速实现股票数据分析与可视化。
+
+---
+
+## **功能特点**
+- **获取最新交易日数据：** 提供中国 A 股市场最近交易日的日期查询。
+- **股票代码过滤：** 获取所有非 ST 股、非科创板和非北交所股票代码及名称。
+- **股票数据采集：** 基于给定股票代码及日期范围，获取历史 K 线数据。
+- **技术指标计算：**
+  - **布林带（Bollinger Bands）**：计算中轨、上轨和下轨。
+  - **KDJ 指标**：计算 K、D、J 指标。
+- **数据导出：** 支持将获取到的股票数据保存为 CSV 文件。
+
+---
+
+## **安装**
+
+在 Python 环境中运行以下命令安装该包：
+```bash
+pip install CHENYE-STOCK-ANALYSIS==0.1.0
+```
+
+---
+
+## **如何使用**
+
+以下是使用该包的完整示例代码：
+
+```python
+# Step 1: 安装包
+!pip install CHENYE-STOCK-ANALYSIS==0.1.0
+
+# Step 2: 导入包
+from stock_analysis.stock_analysis import DataFetcher
+
+# Step 3: 初始化 DataFetcher
+fetcher = DataFetcher()
+
+try:
+    # 找到最近交易日
+    recent_trading_day = fetcher.find_recent_trading_day()
+    print(f"最近交易日: {recent_trading_day}")
+
+    # 获取所有 A 股股票代码和名称
+    codes, names = fetcher.get_all_stock_codes()
+    print(f"获取到 {len(codes)} 支股票")
+
+    # 限制为前 10 支股票（仅作示例）
+    limited_codes = codes[:10]
+    limited_names = names[:10]
+
+    # 获取所有股票的最近交易日数据
+    data = fetcher.get_data_for_all_stocks(limited_codes, limited_names, recent_trading_day)
+    print(data)
+
+    # 保存数据到本地文件
+    data.to_csv("stock_data.csv", index=False)
+    print("数据已保存到 stock_data.csv")
+finally:
+    # 注销 BaoStock
+    fetcher.logout()
+```
+
+---
+
+## **函数详细说明**
+
+### **1. `DataFetcher` 类**
+#### 初始化
+```python
+fetcher = DataFetcher()
+```
+- 作用：初始化 `DataFetcher` 对象，并登录到 BaoStock 系统。
+- 登录失败时会抛出异常。
+
+---
+
+### **2. `find_recent_trading_day()`**
+```python
+recent_trading_day = fetcher.find_recent_trading_day()
+```
+- 作用：获取中国 A 股市场最近的交易日。
+- 返回值：`str` 类型，格式为 `YYYYMMDD`。
+
+---
+
+### **3. `get_all_stock_codes()`**
+```python
+codes, names = fetcher.get_all_stock_codes()
+```
+- 作用：获取所有 A 股股票代码和名称，过滤掉 ST 股、科创板及北交所股票。
+- 返回值：
+  - `codes`：股票代码列表。
+  - `names`：股票名称列表。
+
+---
+
+### **4. `fetch_stock_data(code, start_date, end_date)`**
+```python
+df = fetcher.fetch_stock_data("sh.600000", "20231201", "20231231")
+```
+- 作用：根据指定股票代码和日期范围，获取历史 K 线数据。
+- 参数：
+  - `code`：股票代码（如 `sh.600000`）。
+  - `start_date`：起始日期，格式 `YYYYMMDD`。
+  - `end_date`：结束日期，格式 `YYYYMMDD`。
+- 返回值：`pandas.DataFrame`，包含日期、开盘价、收盘价等信息。
+
+---
+
+### **5. `compute_bollinger_bands(df, period=20, multiplier=2)`**
+```python
+df_with_bbands = fetcher.compute_bollinger_bands(df)
+```
+- 作用：计算布林带（Bollinger Bands）的中轨、上轨和下轨。
+- 参数：
+  - `df`：输入的 `pandas.DataFrame`，需包含 `close` 列。
+  - `period`：计算窗口，默认为 20。
+  - `multiplier`：标准差倍数，默认为 2。
+- 返回值：更新后的 `DataFrame`，新增以下列：
+  - `布林带中轨`
+  - `布林带上轨`
+  - `布林带下轨`
+
+---
+
+### **6. `compute_kdj(df, n=7, m1=3, m2=3)`**
+```python
+df_with_kdj = fetcher.compute_kdj(df)
+```
+- 作用：计算 KDJ 指标（K、D、J 值）。
+- 参数：
+  - `df`：输入的 `pandas.DataFrame`，需包含 `low`, `high`, `close` 列。
+  - `n`：计算周期，默认为 7。
+  - `m1`：K 值平滑周期，默认为 3。
+  - `m2`：D 值平滑周期，默认为 3。
+- 返回值：更新后的 `DataFrame`，新增以下列：
+  - `K值`
+  - `D值`
+  - `J值`
+
+---
+
+### **7. `build_stock_record(df, code, name, check_date)`**
+```python
+record = fetcher.build_stock_record(df, "sh.600000", "浦发银行", "20231231")
+```
+- 作用：构建单只股票在指定日期的记录（字典形式）。
+- 参数：
+  - `df`：包含指标计算结果的 `pandas.DataFrame`。
+  - `code`：股票代码。
+  - `name`：股票名称。
+  - `check_date`：目标日期，格式 `YYYYMMDD`。
+- 返回值：包含股票代码、名称、技术指标等信息的字典。
+
+---
+
+### **8. `get_data_for_all_stocks(codes, names, recent_trading_day)`**
+```python
+data = fetcher.get_data_for_all_stocks(codes, names, recent_trading_day)
+```
+- 作用：批量获取股票数据，并计算布林带和 KDJ 指标。
+- 参数：
+  - `codes`：股票代码列表。
+  - `names`：股票名称列表。
+  - `recent_trading_day`：最近交易日。
+- 返回值：包含所有股票数据的 `DataFrame`。
+
+---
+
+### **9. `logout()`**
+```python
+fetcher.logout()
+```
+- 作用：退出 BaoStock 系统。
+- 在程序结束时调用以释放资源。
+
+---
+
+## **支持和反馈**
+如果您在使用中有任何问题或建议，请通过 [GitHub Issues](https://github.com/CYFearless/CHENYE-STOCK-ANALYSIS/issues) 提交问题，我们会尽快回复。
+
