@@ -1,0 +1,10 @@
+click_log-stubs/METADATA.toml,sha256=RHGQxtEj9cqwZUEzpSJY_27FGOhFLSL-Uzdd8JLYUNk,113
+click_log-stubs/__init__.pyi,sha256=IlC3_nn3WD4y5QXoxwCEZ2wPbvcdB31sODQj3zgfXtw,201
+click_log-stubs/core.pyi,sha256=izy87xBHlgjypbB2Kiru2JeyksaIQ_KpnLkj2IKbyg0,389
+click_log-stubs/options.pyi,sha256=dMIDZCc48LD1cnK0C2L1Eqf4W46O4uU7kMeEVnfHyYg,337
+click_log-stubs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+types_click_log-0.4.0.20241229.dist-info/LICENSE,sha256=KV-FOMlK5cMEMwHPfP8chS2ranhqjd7kceBhtA1eyr4,12657
+types_click_log-0.4.0.20241229.dist-info/METADATA,sha256=eEBgBfsX7Pn-3hcfUvJNdaAOSy0OzhN81QseK6c3wvk,1883
+types_click_log-0.4.0.20241229.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+types_click_log-0.4.0.20241229.dist-info/top_level.txt,sha256=yw7K714on1zjCxnpsqup-ZX8MmB1pkHLEy8NfluT6ZA,16
+types_click_log-0.4.0.20241229.dist-info/RECORD,,
