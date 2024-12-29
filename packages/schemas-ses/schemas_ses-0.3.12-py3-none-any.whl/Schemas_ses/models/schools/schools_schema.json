@@ -1,0 +1,2083 @@
+{
+  "$defs": {
+    "CollectiveEquipment": {
+      "properties": {
+        "pedagogical_kits": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Pedagogical Kits"
+        },
+        "geographic_wall_maps": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Geographic Wall Maps"
+        },
+        "metric_compendiums": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Metric Compendiums"
+        },
+        "geometric_compendiums": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Geometric Compendiums"
+        },
+        "scientific_compendiums": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scientific Compendiums"
+        },
+        "scientific_boards": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scientific Boards"
+        },
+        "desktop_computers": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Desktop Computers"
+        },
+        "image_boxes": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Image Boxes"
+        },
+        "printers": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Printers"
+        },
+        "dictionaries": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Dictionaries"
+        },
+        "polyhedron_boxes": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Polyhedron Boxes"
+        },
+        "photocopiers": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Photocopiers"
+        }
+      },
+      "required": [
+        "pedagogical_kits",
+        "geographic_wall_maps",
+        "metric_compendiums",
+        "geometric_compendiums",
+        "scientific_compendiums",
+        "scientific_boards",
+        "desktop_computers",
+        "image_boxes",
+        "printers",
+        "dictionaries",
+        "polyhedron_boxes",
+        "photocopiers"
+      ],
+      "title": "CollectiveEquipment",
+      "type": "object"
+    },
+    "DisabledByAge": {
+      "properties": {
+        "kind": {
+          "additionalProperties": {
+            "$ref": "#/$defs/EffectifBySex"
+          },
+          "title": "Kind",
+          "type": "object"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "DisabledByAge",
+      "type": "object"
+    },
+    "Distance": {
+      "enum": [
+        "<=0.5",
+        "Entre 0.5 et 1km",
+        "Entre 1 et 3km",
+        ">=3"
+      ],
+      "title": "Distance",
+      "type": "string"
+    },
+    "EffectifBySex": {
+      "properties": {
+        "boys": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Boys"
+        },
+        "girls": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Girls"
+        }
+      },
+      "required": [
+        "boys",
+        "girls"
+      ],
+      "title": "EffectifBySex",
+      "type": "object"
+    },
+    "ExamCategoryResults": {
+      "properties": {
+        "inscrits": {
+          "$ref": "#/$defs/SexeCount"
+        },
+        "ont_compose": {
+          "$ref": "#/$defs/SexeCount"
+        },
+        "admis": {
+          "$ref": "#/$defs/SexeCount"
+        }
+      },
+      "required": [
+        "inscrits",
+        "ont_compose",
+        "admis"
+      ],
+      "title": "ExamCategoryResults",
+      "type": "object"
+    },
+    "ExamResult": {
+      "properties": {
+        "cep": {
+          "$ref": "#/$defs/ExamCategoryResults"
+        },
+        "cep_vie_active": {
+          "$ref": "#/$defs/ExamCategoryResults"
+        }
+      },
+      "required": [
+        "cep",
+        "cep_vie_active"
+      ],
+      "title": "ExamResult",
+      "type": "object"
+    },
+    "FinancialData": {
+      "properties": {
+        "previous_year_balance": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Previous Year Balance"
+        },
+        "state_subsidy_amount": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "State Subsidy Amount"
+        },
+        "other_parent_contributions": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Other Parent Contributions"
+        },
+        "other_financial_resources": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Other Financial Resources"
+        }
+      },
+      "required": [
+        "previous_year_balance",
+        "state_subsidy_amount",
+        "other_parent_contributions",
+        "other_financial_resources"
+      ],
+      "title": "FinancialData",
+      "type": "object"
+    },
+    "GeneralInfo": {
+      "description": "Se r\u00e9f\u00e8re \u00e0 la section Information g\u00e9n\u00e9rale sur l'\u00e9cole",
+      "properties": {
+        "property_and_boundaries": {
+          "$ref": "#/$defs/PropertyAndBoundaries"
+        },
+        "outdoor_facilities": {
+          "$ref": "#/$defs/OutdoorFacilities"
+        },
+        "water_and_hygiene_access": {
+          "$ref": "#/$defs/WaterAndHygieneAccess"
+        },
+        "school_services_and_equipment": {
+          "$ref": "#/$defs/SchoolServicesAndEquipment"
+        },
+        "management_bodies": {
+          "$ref": "#/$defs/ManagementBodies"
+        },
+        "sports_facilities": {
+          "$ref": "#/$defs/SportsFacilities"
+        }
+      },
+      "required": [
+        "property_and_boundaries",
+        "outdoor_facilities",
+        "water_and_hygiene_access",
+        "school_services_and_equipment",
+        "management_bodies",
+        "sports_facilities"
+      ],
+      "title": "GeneralInfo",
+      "type": "object"
+    },
+    "HighestDegree": {
+      "properties": {
+        "academic": {
+          "enum": [
+            "CEP",
+            "BEPC",
+            "BAC",
+            "LICENCE",
+            "MASTER"
+          ],
+          "title": "Academic",
+          "type": "string"
+        },
+        "professional": {
+          "enum": [
+            "CEAP",
+            "CAP"
+          ],
+          "title": "Professional",
+          "type": "string"
+        }
+      },
+      "required": [
+        "academic",
+        "professional"
+      ],
+      "title": "HighestDegree",
+      "type": "object"
+    },
+    "IdAndLocation": {
+      "description": "Se r\u00e9f\u00e8re \u00e0 la section Identification et localisation de l'\u00e9cole",
+      "properties": {
+        "school_status": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SchoolStatus"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "school_kind": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SchoolKind"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reference_year": {
+          "$ref": "#/$defs/ReferenceYear"
+        },
+        "loca_peda": {
+          "$ref": "#/$defs/LocaPeda"
+        },
+        "loca_territoire": {
+          "$ref": "#/$defs/LocaTerritoire"
+        }
+      },
+      "required": [
+        "school_status",
+        "school_kind",
+        "reference_year",
+        "loca_peda",
+        "loca_territoire"
+      ],
+      "title": "IdAndLocation",
+      "type": "object"
+    },
+    "LocaPeda": {
+      "description": "Se r\u00e9f\u00e8re \u00e0 la section Localisation dans le R\u00e9seau d'Animation P\u00e9dagogique",
+      "properties": {
+        "region_pedagogique": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RegionPedagogique"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "circonscription_scolaire": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Circonscription Scolaire"
+        },
+        "zone_pedagogique": {
+          "anyOf": [
+            {
+              "maximum": 6,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Zone Pedagogique"
+        },
+        "unite_pedagogique": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Unite Pedagogique"
+        }
+      },
+      "required": [
+        "region_pedagogique",
+        "circonscription_scolaire",
+        "zone_pedagogique",
+        "unite_pedagogique"
+      ],
+      "title": "LocaPeda",
+      "type": "object"
+    },
+    "LocaTerritoire": {
+      "description": "Se r\u00e9f\u00e8re \u00e0 la section Localisation dans l'Administration Territorialee",
+      "properties": {
+        "departement": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Departement"
+        },
+        "commune": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Commune"
+        },
+        "arrondissement": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Arrondissement"
+        },
+        "village": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Village"
+        },
+        "telephone": {
+          "anyOf": [
+            {
+              "pattern": "^(?:\\+?229)?\\s*(?:(?:6[0-9]{7})|(?:9[0-9]{7}))$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Telephone"
+        },
+        "email": {
+          "anyOf": [
+            {
+              "format": "email",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Email"
+        }
+      },
+      "required": [
+        "departement",
+        "commune",
+        "arrondissement",
+        "village",
+        "telephone",
+        "email"
+      ],
+      "title": "LocaTerritoire",
+      "type": "object"
+    },
+    "LocalType": {
+      "enum": [
+        "Salle",
+        "Bureau",
+        "Magasin",
+        "Latrine",
+        "Cuisine",
+        "Biblioth\u00e8que",
+        "Logement"
+      ],
+      "title": "LocalType",
+      "type": "string"
+    },
+    "ManagementBodies": {
+      "properties": {
+        "has_parents_association": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Parents Association"
+        },
+        "has_mothers_association": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Mothers Association"
+        },
+        "has_management_committee": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Management Committee"
+        },
+        "has_teachers_council": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Teachers Council"
+        },
+        "has_other_management_committees": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Other Management Committees"
+        }
+      },
+      "required": [
+        "has_parents_association",
+        "has_mothers_association",
+        "has_management_committee",
+        "has_teachers_council",
+        "has_other_management_committees"
+      ],
+      "title": "ManagementBodies",
+      "type": "object"
+    },
+    "NearbyEstablishments": {
+      "properties": {
+        "distance_to_preschool": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_first_primary_school": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_second_primary_school": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_secondary_school": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "distance_to_preschool",
+        "distance_to_first_primary_school",
+        "distance_to_second_primary_school",
+        "distance_to_secondary_school"
+      ],
+      "title": "NearbyEstablishments",
+      "type": "object"
+    },
+    "NumberOfVisit": {
+      "properties": {
+        "inspector": {
+          "title": "Inspector",
+          "type": "integer"
+        },
+        "director": {
+          "title": "Director",
+          "type": "integer"
+        },
+        "cp": {
+          "title": "Cp",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "inspector",
+        "director",
+        "cp"
+      ],
+      "title": "NumberOfVisit",
+      "type": "object"
+    },
+    "Office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "study_years": {
+          "$ref": "#/$defs/StudiesLevel"
+        },
+        "local_type": {
+          "$ref": "#/$defs/LocalType"
+        },
+        "year_of_commissioning": {
+          "maximum": 9999,
+          "minimum": 1000,
+          "title": "Year Of Commissioning",
+          "type": "integer"
+        },
+        "is_unused": {
+          "title": "Is Unused",
+          "type": "boolean"
+        },
+        "wall_material": {
+          "enum": [
+            "En dur",
+            "Semi-dur / banco",
+            "Autre: Planche / bambou",
+            "Sans mur"
+          ],
+          "title": "Wall Material",
+          "type": "string"
+        },
+        "wall_condition": {
+          "enum": [
+            "Bon / Acceptable",
+            "Mauvais"
+          ],
+          "title": "Wall Condition",
+          "type": "string"
+        },
+        "roof_material": {
+          "enum": [
+            "T\u00f4les",
+            "Tuiles / Fibro ciment / Dalles",
+            "Banco",
+            "Paille",
+            "Sans toit"
+          ],
+          "title": "Roof Material",
+          "type": "string"
+        },
+        "roof_condition": {
+          "enum": [
+            "Bon / Acceptable",
+            "Mauvais"
+          ],
+          "title": "Roof Condition",
+          "type": "string"
+        },
+        "door_material": {
+          "enum": [
+            "M\u00e9tallique",
+            "T\u00f4le / Bois",
+            "Non install\u00e9es"
+          ],
+          "title": "Door Material",
+          "type": "string"
+        },
+        "wall_nature": {
+          "enum": [
+            "Persiennes",
+            "Volets",
+            "Claustras",
+            "Non install\u00e9es"
+          ],
+          "title": "Wall Nature",
+          "type": "string"
+        },
+        "funding": {
+          "enum": [
+            "Collectivit\u00e9s locales",
+            "APE",
+            "Aide ext\u00e9rieure",
+            "Autres / Non d\u00e9termin\u00e9"
+          ],
+          "title": "Funding",
+          "type": "string"
+        },
+        "teacher_furniture": {
+          "$ref": "#/$defs/TeacherFurniture"
+        },
+        "surface_area": {
+          "description": "Surface area of the office (in m\u00b2)",
+          "title": "Surface Area",
+          "type": "number"
+        },
+        "blackboard": {
+          "description": "Number of blackboards",
+          "title": "Blackboard",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "study_years",
+        "local_type",
+        "year_of_commissioning",
+        "is_unused",
+        "wall_material",
+        "wall_condition",
+        "roof_material",
+        "roof_condition",
+        "door_material",
+        "wall_nature",
+        "funding",
+        "teacher_furniture",
+        "surface_area",
+        "blackboard"
+      ],
+      "title": "Office",
+      "type": "object"
+    },
+    "OfficeAndFurniture": {
+      "description": "Se r\u00e9f\u00e8re \u00e0 la section Locaux Et Mobiliers",
+      "properties": {
+        "offices": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Office"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Offices"
+        }
+      },
+      "required": [
+        "offices"
+      ],
+      "title": "OfficeAndFurniture",
+      "type": "object"
+    },
+    "OutdoorFacilities": {
+      "description": "Se r\u00e9f\u00e8re \u00e0 la sous section Am\u00e9nagements ext\u00e9rieurs",
+      "properties": {
+        "is_playground_shaded": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Is Playground Shaded"
+        },
+        "has_garden_or_school_field": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Garden Or School Field"
+        },
+        "has_adaptations_for_special_needs_children": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Adaptations For Special Needs Children"
+        }
+      },
+      "required": [
+        "is_playground_shaded",
+        "has_garden_or_school_field",
+        "has_adaptations_for_special_needs_children"
+      ],
+      "title": "OutdoorFacilities",
+      "type": "object"
+    },
+    "ParticipatorySchoolManagement": {
+      "properties": {
+        "is_ape_office_functional": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Is Ape Office Functional"
+        },
+        "has_all_required_members": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has All Required Members"
+        },
+        "num_meetings_previous_year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Num Meetings Previous Year"
+        },
+        "num_general_assemblies_previous_year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Num General Assemblies Previous Year"
+        },
+        "num_assemblies_budget": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Num Assemblies Budget"
+        },
+        "num_assemblies_academic_results": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Num Assemblies Academic Results"
+        },
+        "other_assembly_themes": {
+          "anyOf": [
+            {
+              "items": {
+                "enum": [
+                  "Environnement",
+                  "Sant\u00e9",
+                  "Kit Scolaire",
+                  "Maintien des enfants \u00e0 l'\u00e9cole"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Other Assembly Themes"
+        },
+        "result_communication_methods": {
+          "anyOf": [
+            {
+              "items": {
+                "enum": [
+                  "Carnet de correspondance",
+                  "R\u00e9union APE",
+                  "AG",
+                  "Echange avec les parents concern\u00e9"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Result Communication Methods"
+        },
+        "has_development_education_projects": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Development Education Projects"
+        }
+      },
+      "required": [
+        "is_ape_office_functional",
+        "has_all_required_members",
+        "num_meetings_previous_year",
+        "num_general_assemblies_previous_year",
+        "num_assemblies_budget",
+        "num_assemblies_academic_results",
+        "other_assembly_themes",
+        "result_communication_methods",
+        "has_development_education_projects"
+      ],
+      "title": "ParticipatorySchoolManagement",
+      "type": "object"
+    },
+    "ParticularSituationByAge": {
+      "properties": {
+        "situation": {
+          "additionalProperties": {
+            "$ref": "#/$defs/EffectifBySex"
+          },
+          "title": "Situation",
+          "type": "object"
+        }
+      },
+      "required": [
+        "situation"
+      ],
+      "title": "ParticularSituationByAge",
+      "type": "object"
+    },
+    "PedagogicalMaterial": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "quantities_by_grade": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Quantities By Grade",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "quantities_by_grade"
+      ],
+      "title": "PedagogicalMaterial",
+      "type": "object"
+    },
+    "Personnel": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "surname": {
+          "title": "Surname",
+          "type": "string"
+        },
+        "sexe": {
+          "enum": [
+            "M",
+            "F"
+          ],
+          "title": "Sexe",
+          "type": "string"
+        },
+        "birth_year": {
+          "maximum": 9999,
+          "minimum": 1000,
+          "title": "Birth Year",
+          "type": "integer"
+        },
+        "highest_degree": {
+          "$ref": "#/$defs/HighestDegree"
+        },
+        "grade": {
+          "title": "Grade",
+          "type": "string"
+        },
+        "statut": {
+          "enum": [
+            "ACPDE",
+            "ACE",
+            "AME",
+            "Communautaire",
+            "Fonctionnaire de l'\u00e9tat",
+            "Priv\u00e9",
+            "Autre"
+          ],
+          "title": "Statut",
+          "type": "string"
+        },
+        "fonction": {
+          "enum": [
+            "Directeur",
+            "Adjoint",
+            "Enseignant"
+          ],
+          "title": "Fonction",
+          "type": "string"
+        },
+        "real_indice": {
+          "title": "Real Indice",
+          "type": "integer"
+        },
+        "teached_subjects": {
+          "items": {
+            "$ref": "#/$defs/StudiesLevel"
+          },
+          "title": "Teached Subjects",
+          "type": "array"
+        },
+        "seniority": {
+          "$ref": "#/$defs/Seniority"
+        },
+        "last_formation_date": {
+          "format": "date",
+          "title": "Last Formation Date",
+          "type": "string"
+        },
+        "number_of_visit": {
+          "$ref": "#/$defs/NumberOfVisit"
+        },
+        "up_participation": {
+          "title": "Up Participation",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "surname",
+        "sexe",
+        "birth_year",
+        "highest_degree",
+        "grade",
+        "statut",
+        "fonction",
+        "real_indice",
+        "teached_subjects",
+        "seniority",
+        "last_formation_date",
+        "number_of_visit",
+        "up_participation"
+      ],
+      "title": "Personnel",
+      "type": "object"
+    },
+    "PropertyAndBoundaries": {
+      "description": "Se r\u00e9f\u00e8re \u00e0 la sous section Propri\u00e9t\u00e9 et d\u00e9limitations de l'\u00e9cole",
+      "properties": {
+        "school_property_title": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SchoolPropertyTitle"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "is_school_area_demarcated": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Is School Area Demarcated"
+        },
+        "is_school_area_fenced": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Is School Area Fenced"
+        }
+      },
+      "required": [
+        "school_property_title",
+        "is_school_area_demarcated",
+        "is_school_area_fenced"
+      ],
+      "title": "PropertyAndBoundaries",
+      "type": "object"
+    },
+    "ReferenceYear": {
+      "description": "Contient les informations de r\u00e9f\u00e9rence de l'ann\u00e9e scolaire",
+      "properties": {
+        "creation_year": {
+          "anyOf": [
+            {
+              "maximum": 9999,
+              "minimum": 1000,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Creation Year"
+        },
+        "creation_reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Creation Reference"
+        },
+        "creation_year_reference_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Creation Year Reference Date"
+        },
+        "extension_year": {
+          "anyOf": [
+            {
+              "maximum": 9999,
+              "minimum": 1000,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Extension Year"
+        },
+        "extension_reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Extension Reference"
+        },
+        "extension_year_reference_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Extension Year Reference Date"
+        }
+      },
+      "required": [
+        "creation_year",
+        "creation_reference",
+        "creation_year_reference_date",
+        "extension_year",
+        "extension_reference",
+        "extension_year_reference_date"
+      ],
+      "title": "ReferenceYear",
+      "type": "object"
+    },
+    "RegionPedagogique": {
+      "enum": [
+        "RP29",
+        "RP28",
+        "RP60",
+        "RP61"
+      ],
+      "title": "RegionPedagogique",
+      "type": "string"
+    },
+    "RepeatersByAge": {
+      "properties": {
+        "status": {
+          "additionalProperties": {
+            "$ref": "#/$defs/EffectifBySex"
+          },
+          "title": "Status",
+          "type": "object"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "title": "RepeatersByAge",
+      "type": "object"
+    },
+    "SchoolAccessibility": {
+      "properties": {
+        "permanent_access": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Permanent Access"
+        },
+        "paved_road_distance": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Paved Road Distance"
+        },
+        "all_vehicle_track_distance": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "All Vehicle Track Distance"
+        },
+        "offroad_vehicle_track_distance": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Offroad Vehicle Track Distance"
+        },
+        "two_wheeler_track_distance": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Two Wheeler Track Distance"
+        },
+        "pedestrian_track_distance": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Pedestrian Track Distance"
+        },
+        "other_access_means": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Other Access Means"
+        }
+      },
+      "required": [
+        "permanent_access",
+        "paved_road_distance",
+        "all_vehicle_track_distance",
+        "offroad_vehicle_track_distance",
+        "two_wheeler_track_distance",
+        "pedestrian_track_distance",
+        "other_access_means"
+      ],
+      "title": "SchoolAccessibility",
+      "type": "object"
+    },
+    "SchoolDistance": {
+      "description": "Se r\u00e9f\u00e8re \u00e0 la section Distance de l'\u00e9cole",
+      "properties": {
+        "distance_to_department_capital": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_commune_capital": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_arrondissement_capital": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_school_district_office": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_nearest_health_center": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_nearest_market": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "distance_to_farthest_served_village": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Distance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "distance_to_department_capital",
+        "distance_to_commune_capital",
+        "distance_to_arrondissement_capital",
+        "distance_to_school_district_office",
+        "distance_to_nearest_health_center",
+        "distance_to_nearest_market",
+        "distance_to_farthest_served_village"
+      ],
+      "title": "SchoolDistance",
+      "type": "object"
+    },
+    "SchoolKind": {
+      "enum": [
+        "Classique",
+        "Inclusif",
+        "Sp\u00e9cialis\u00e9",
+        "Autres"
+      ],
+      "title": "SchoolKind",
+      "type": "string"
+    },
+    "SchoolPropertyTitle": {
+      "enum": [
+        "Titre foncier",
+        "Acte de donation",
+        "Acte de l'autorit\u00e9 charg\u00e9e de l'administration territoriale",
+        "Contrat de location entre l'\u00e9cole et un propri\u00e9taire"
+      ],
+      "title": "SchoolPropertyTitle",
+      "type": "string"
+    },
+    "SchoolServicesAndEquipment": {
+      "properties": {
+        "is_electrified": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Is Electrified"
+        },
+        "has_functional_canteen": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Functional Canteen"
+        },
+        "has_kitchen_equipment": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Kitchen Equipment"
+        },
+        "has_food_store_in_good_condition": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Food Store In Good Condition"
+        },
+        "has_functional_library": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Functional Library"
+        },
+        "has_first_aid_kit": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has First Aid Kit"
+        }
+      },
+      "required": [
+        "is_electrified",
+        "has_functional_canteen",
+        "has_kitchen_equipment",
+        "has_food_store_in_good_condition",
+        "has_functional_library",
+        "has_first_aid_kit"
+      ],
+      "title": "SchoolServicesAndEquipment",
+      "type": "object"
+    },
+    "SchoolStatus": {
+      "enum": [
+        "Public",
+        "Priv\u00e9 LAIC",
+        "Priv\u00e9 confessionnel",
+        "Communautaire"
+      ],
+      "title": "SchoolStatus",
+      "type": "string"
+    },
+    "Seniority": {
+      "properties": {
+        "public": {
+          "title": "Public",
+          "type": "integer"
+        },
+        "department": {
+          "title": "Department",
+          "type": "integer"
+        },
+        "school": {
+          "title": "School",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "public",
+        "department",
+        "school"
+      ],
+      "title": "Seniority",
+      "type": "object"
+    },
+    "ServicesAndEnvironment": {
+      "properties": {
+        "is_school_flood_prone": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Is School Flood Prone"
+        },
+        "is_locality_electrified": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Is Locality Electrified"
+        },
+        "water_supply": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceEau"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "is_school_environment_polluted": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TypePollution"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "is_school_flood_prone",
+        "is_locality_electrified",
+        "water_supply",
+        "is_school_environment_polluted"
+      ],
+      "title": "ServicesAndEnvironment",
+      "type": "object"
+    },
+    "SexeCount": {
+      "properties": {
+        "M": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "M"
+        },
+        "F": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "F"
+        }
+      },
+      "required": [
+        "M",
+        "F"
+      ],
+      "title": "SexeCount",
+      "type": "object"
+    },
+    "SocioEnvironnement": {
+      "description": "Se r\u00e9f\u00e8re \u00e0 la section Environnement socio \u00e9conomique de l'\u00e9cole",
+      "properties": {
+        "distances": {
+          "$ref": "#/$defs/SchoolDistance"
+        },
+        "accessibility": {
+          "$ref": "#/$defs/SchoolAccessibility"
+        },
+        "services_and_environment": {
+          "$ref": "#/$defs/ServicesAndEnvironment"
+        },
+        "nearby_establishments": {
+          "$ref": "#/$defs/NearbyEstablishments"
+        }
+      },
+      "required": [
+        "distances",
+        "accessibility",
+        "services_and_environment",
+        "nearby_establishments"
+      ],
+      "title": "SocioEnvironnement",
+      "type": "object"
+    },
+    "SourceEau": {
+      "enum": [
+        "Eau courante",
+        "Puits",
+        "Forage",
+        "Citerne"
+      ],
+      "title": "SourceEau",
+      "type": "string"
+    },
+    "SportsFacilities": {
+      "properties": {
+        "has_marked_sports_field": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Marked Sports Field"
+        },
+        "has_equipped_sports_field": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Equipped Sports Field"
+        }
+      },
+      "required": [
+        "has_marked_sports_field",
+        "has_equipped_sports_field"
+      ],
+      "title": "SportsFacilities",
+      "type": "object"
+    },
+    "StudentEnrollmentByAge": {
+      "properties": {
+        "years": {
+          "additionalProperties": {
+            "$ref": "#/$defs/EffectifBySex"
+          },
+          "title": "Years",
+          "type": "object"
+        }
+      },
+      "required": [
+        "years"
+      ],
+      "title": "StudentEnrollmentByAge",
+      "type": "object"
+    },
+    "StudentsRecord": {
+      "description": "    ",
+      "properties": {
+        "student_enrollment_by_age": {
+          "additionalProperties": {
+            "$ref": "#/$defs/StudentEnrollmentByAge"
+          },
+          "title": "Student Enrollment By Age",
+          "type": "object"
+        },
+        "repeaters_by_age": {
+          "additionalProperties": {
+            "$ref": "#/$defs/RepeatersByAge"
+          },
+          "title": "Repeaters By Age",
+          "type": "object"
+        },
+        "disabled_by_age": {
+          "additionalProperties": {
+            "$ref": "#/$defs/DisabledByAge"
+          },
+          "title": "Disabled By Age",
+          "type": "object"
+        },
+        "particular_situation_by_age": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ParticularSituationByAge"
+          },
+          "title": "Particular Situation By Age",
+          "type": "object"
+        }
+      },
+      "required": [
+        "student_enrollment_by_age",
+        "repeaters_by_age",
+        "disabled_by_age",
+        "particular_situation_by_age"
+      ],
+      "title": "StudentsRecord",
+      "type": "object"
+    },
+    "StudiesLevel": {
+      "enum": [
+        "CI",
+        "CP",
+        "CE1",
+        "CE2",
+        "CM1",
+        "CM2"
+      ],
+      "title": "StudiesLevel",
+      "type": "string"
+    },
+    "TeacherFurniture": {
+      "properties": {
+        "teacher_desk_with_chair": {
+          "description": "Number of teacher's desks with chairs",
+          "title": "Teacher Desk With Chair",
+          "type": "integer"
+        },
+        "cupboard_or_closet": {
+          "description": "Number of cupboards or closets",
+          "title": "Cupboard Or Closet",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "teacher_desk_with_chair",
+        "cupboard_or_closet"
+      ],
+      "title": "TeacherFurniture",
+      "type": "object"
+    },
+    "TeacherPedagogicalMaterials": {
+      "properties": {
+        "materials": {
+          "items": {
+            "$ref": "#/$defs/PedagogicalMaterial"
+          },
+          "title": "Materials",
+          "type": "array"
+        }
+      },
+      "required": [
+        "materials"
+      ],
+      "title": "TeacherPedagogicalMaterials",
+      "type": "object"
+    },
+    "TeachingAndLearningEquipment": {
+      "properties": {
+        "collective_equipment": {
+          "$ref": "#/$defs/CollectiveEquipment"
+        },
+        "teacher_pedagogical_materials": {
+          "$ref": "#/$defs/TeacherPedagogicalMaterials"
+        }
+      },
+      "required": [
+        "collective_equipment",
+        "teacher_pedagogical_materials"
+      ],
+      "title": "TeachingAndLearningEquipment",
+      "type": "object"
+    },
+    "TeachingStaff": {
+      "properties": {
+        "personnel": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Personnel"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Personnel"
+        }
+      },
+      "required": [
+        "personnel"
+      ],
+      "title": "TeachingStaff",
+      "type": "object"
+    },
+    "TypePollution": {
+      "enum": [
+        "Sonore",
+        "Atmosph\u00e9rique"
+      ],
+      "title": "TypePollution",
+      "type": "string"
+    },
+    "WaterAndHygieneAccess": {
+      "properties": {
+        "has_drinking_water_on_site": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Drinking Water On Site"
+        },
+        "has_handwashing_facility": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Handwashing Facility"
+        },
+        "has_functional_latrines": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Functional Latrines"
+        },
+        "has_adapted_latrines_for_special_needs": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Adapted Latrines For Special Needs"
+        },
+        "has_equipped_urinal": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Has Equipped Urinal"
+        }
+      },
+      "required": [
+        "has_drinking_water_on_site",
+        "has_handwashing_facility",
+        "has_functional_latrines",
+        "has_adapted_latrines_for_special_needs",
+        "has_equipped_urinal"
+      ],
+      "title": "WaterAndHygieneAccess",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "database": {
+      "anyOf": [
+        {},
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Database"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "id_and_location": {
+      "$ref": "#/$defs/IdAndLocation"
+    },
+    "socio_environnement": {
+      "$ref": "#/$defs/SocioEnvironnement"
+    },
+    "general_info": {
+      "$ref": "#/$defs/GeneralInfo"
+    },
+    "office_and_furniture": {
+      "$ref": "#/$defs/OfficeAndFurniture"
+    },
+    "teaching_and_learning_equipment": {
+      "$ref": "#/$defs/TeachingAndLearningEquipment"
+    },
+    "teaching_staff": {
+      "$ref": "#/$defs/TeachingStaff"
+    },
+    "exam_results": {
+      "$ref": "#/$defs/ExamResult"
+    },
+    "participatory_school_management": {
+      "$ref": "#/$defs/ParticipatorySchoolManagement"
+    },
+    "financial_data": {
+      "$ref": "#/$defs/FinancialData"
+    },
+    "students_record": {
+      "$ref": "#/$defs/StudentsRecord"
+    }
+  },
+  "required": [
+    "name",
+    "id_and_location",
+    "socio_environnement",
+    "general_info",
+    "office_and_furniture",
+    "teaching_and_learning_equipment",
+    "teaching_staff",
+    "exam_results",
+    "participatory_school_management",
+    "financial_data",
+    "students_record"
+  ],
+  "title": "Schools",
+  "type": "object"
+}
