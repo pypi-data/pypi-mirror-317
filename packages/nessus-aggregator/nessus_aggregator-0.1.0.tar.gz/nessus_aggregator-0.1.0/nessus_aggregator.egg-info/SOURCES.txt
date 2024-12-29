@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+nessus-aggregator/requirements.txt
+nessus_aggregator.egg-info/PKG-INFO
+nessus_aggregator.egg-info/SOURCES.txt
+nessus_aggregator.egg-info/dependency_links.txt
+nessus_aggregator.egg-info/entry_points.txt
+nessus_aggregator.egg-info/top_level.txt
