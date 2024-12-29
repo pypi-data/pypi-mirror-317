@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+mystatistics/Binomialdistribution.py
+mystatistics/Gaussiandistribution.py
+mystatistics/Generaldistribution.py
+mystatistics/__init__.py
+mystatistics20241229.egg-info/PKG-INFO
+mystatistics20241229.egg-info/SOURCES.txt
+mystatistics20241229.egg-info/dependency_links.txt
+mystatistics20241229.egg-info/not-zip-safe
+mystatistics20241229.egg-info/top_level.txt
