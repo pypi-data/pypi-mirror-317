@@ -1,0 +1,10 @@
+from .screens.example import ExampleScreen
+from .simulations.example import ExampleSimulation
+
+
+class ScreensTyping:
+    example: ExampleScreen
+
+
+class SimulationsTyping:
+    example: ExampleSimulation
