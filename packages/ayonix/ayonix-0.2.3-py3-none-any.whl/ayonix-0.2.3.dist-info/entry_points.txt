@@ -1,0 +1,2 @@
+[console_scripts]
+call = src.main:main
