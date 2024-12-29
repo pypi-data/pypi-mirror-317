@@ -1,0 +1,2 @@
+[console_scripts]
+tuitorial = tuitorial:parse_yaml.cli
