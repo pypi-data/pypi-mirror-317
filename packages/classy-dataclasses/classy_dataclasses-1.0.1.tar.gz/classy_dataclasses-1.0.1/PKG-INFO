@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: classy-dataclasses
+Version: 1.0.1
+Summary: Superset of python dataclasses with additional features.
+Home-page: https://github.com/Nobbettt/classy-dataclasses
+License: MIT
+Keywords: dataclass,serializable,deserializable,static class variables,copyable,JSON,nested,resetable,flexible,encode,decode,classy
+Author: Norbert Laszlo
+Author-email: hello@norbert.laszlo.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Documentation, https://github.com/Nobbettt/classy-dataclasses
+Project-URL: Issues, https://github.com/Nobbettt/classydataclass/issues
+Project-URL: Repository, https://github.com/Nobbettt/classy-dataclasses
+Description-Content-Type: text/plain
+
+
