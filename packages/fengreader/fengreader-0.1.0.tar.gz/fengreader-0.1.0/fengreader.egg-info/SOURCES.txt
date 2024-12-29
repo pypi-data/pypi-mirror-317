@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+fengreader.egg-info/PKG-INFO
+fengreader.egg-info/SOURCES.txt
+fengreader.egg-info/dependency_links.txt
+fengreader.egg-info/requires.txt
+fengreader.egg-info/top_level.txt
+fits_reader/__init__.py
+fits_reader/fits_reader.py
+test/test.py
