@@ -1,0 +1,38 @@
+[project]
+name = "triss"
+version = "2.3"
+authors = [{name="Philip Brown", email="pdbrown.git@gmail.com"}]
+description = "Trivial secret sharing with authentication, support for M-of-N splits, and paper backups."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pillow==11.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest==8.3.4",
+    "hypothesis==6.123.2"
+]
+
+[project.scripts]
+triss = "triss.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/pdbrown/triss"
+"Bug Tracker" = "https://github.com/pdbrown/triss/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# Explicitly set "src" layout. setuptools can discover regular packages under
+# ./src automatically too, but won't discover namespace packages (packages
+# without an __init__.py file) unless configured as follows.
+[tool.setuptools.packages.find]
+where = ["src"]
