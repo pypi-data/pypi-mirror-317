@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: custom-sum
+Version: 1.0.0
+Summary: A Python package for summation with filtering and string concatenation.
+Author: Khalid Sulaiman Al-Mulaify
+Author-email: khalidmfy@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE .txt
