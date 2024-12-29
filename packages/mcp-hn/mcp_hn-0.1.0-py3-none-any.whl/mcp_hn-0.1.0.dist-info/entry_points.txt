@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-hn = mcp_hn:main
