@@ -1,0 +1,10 @@
+README.md
+setup.py
+OPENYCV.egg-info/PKG-INFO
+OPENYCV.egg-info/SOURCES.txt
+OPENYCV.egg-info/dependency_links.txt
+OPENYCV.egg-info/requires.txt
+OPENYCV.egg-info/top_level.txt
+libname/__init__.py
+libname/hello.py
+libname/models/opencv-5.0.0-alpha.zip

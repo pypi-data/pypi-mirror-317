@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: OPENYCV
+Version: 5.0.0
+Summary: OPENYCV
+Author: Malyoneeeeer
+Author-email: <malyoneeeeer@yahoo.com>
+Keywords: python
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: opencv-python
