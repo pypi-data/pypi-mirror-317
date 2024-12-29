@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mira-network
+Version: 0.1.0
+Summary: Default template for PDM package
+Author-email: Hamid Raza <contact@hamidraza.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# mira-network
