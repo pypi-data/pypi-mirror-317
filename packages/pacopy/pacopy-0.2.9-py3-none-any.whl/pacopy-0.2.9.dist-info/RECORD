@@ -1,0 +1,11 @@
+pacopy/__init__.py,sha256=bG7_P7xgwhwoeomgP6mSdtmhYuWezrigp-Kza1AcP9Y,330
+pacopy/_license_validation.py,sha256=Nr5__c_wwmAVFztUiuDPLdkl29Pf7YX7UTrzY9GGISQ,488
+pacopy/branch_switching.py,sha256=PS3D5UB9F_NwCNbpqPvfImceXB2MOw0jVwMiFvd6tLA,1444
+pacopy/errors.py,sha256=4RKanm8BgZECnpIIsQXuGOtahEytrlOWVxUIrXOgKbo,47
+pacopy/euler_newton.py,sha256=o7NRjrO8Yc26Ypr1smYVq3GeKN3ytU_nHyJ1UHmyD7s,17737
+pacopy/natural.py,sha256=cAEWmoPCrdtPyNlTSpDeckgRLpkphRKs-X9ymo4ZzM0,4219
+pacopy/newton.py,sha256=OQVzgiLSTwO_K63FAopCgaRzLpGylSzdAwFDs0BeK3g,810
+pacopy-0.2.9.dist-info/METADATA,sha256=QHSik6EtunEGelesvHwz49C1L5UilpjqGKekGI73ZvM,9446
+pacopy-0.2.9.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pacopy-0.2.9.dist-info/top_level.txt,sha256=bF2HHMv9xOP-4exUEhHbkhltWHXvIgLTRNW2IuUMvNM,7
+pacopy-0.2.9.dist-info/RECORD,,
