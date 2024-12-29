@@ -1,0 +1,11 @@
+vegas_params/__init__.py,sha256=1_roVVuyRo5p1DTo_UdVpgPcqKLQ9Ip8vyZtsI6mW_8,226
+vegas_params/base.py,sha256=FRDG-O9mWOYBHggiEkIw9QPg6pmPkHEKJmYYWjmuc8Y,7637
+vegas_params/collections.py,sha256=AqW1jLEmgMrtJ1aE4s8_1jqSj_gW_n-5FbPnbAnfi0E,1500
+vegas_params/integration.py,sha256=fVYWYpX2l1XrOtd-XoHfJDAGrI95ykA9UJvRAzpmJpQ,1604
+vegas_params/sampling.py,sha256=brV8xFFBb2p5nj3fM1U3towPoxpz2mHCH_9s38lzqhk,2590
+vegas_params/utils.py,sha256=pAm60PtNuYlnGogIPMLXk0lhJlOeXs98bjOUXIyo-bU,3566
+vegas_params/vector.py,sha256=7is8o7O68RmJAYPpvPO8arJQKrcGFjzX47BbwfbXyDM,1867
+vegas_params-0.2.0.dist-info/METADATA,sha256=8VLekyEYZ99ztcmcewSCIZ7xfdP8ahiaku42_thnW5g,4544
+vegas_params-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+vegas_params-0.2.0.dist-info/top_level.txt,sha256=yHEB_kjs0LDj3XlSSQuRw7CdKHqXxjaHDPpIV2eGVhk,13
+vegas_params-0.2.0.dist-info/RECORD,,
