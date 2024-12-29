@@ -1,0 +1,4 @@
+[console_scripts]
+dev=agentic_workflow.main:run_dev
+prod=agentic_workflow.main:run
+
