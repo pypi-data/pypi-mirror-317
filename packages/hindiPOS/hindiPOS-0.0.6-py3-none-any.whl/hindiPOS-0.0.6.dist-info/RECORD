@@ -1,0 +1,9 @@
+hindiPOS/__init__.py,sha256=u7_R4x9yqe8YR0zvYxrmBTNWnRObS0AdZ9EnosD8j8Q,24
+hindiPOS/bipos.csv,sha256=IfBs2vnOr2o2NGeqQdaKOobhyhtcLQDFh0x-q90qcAk,28315
+hindiPOS/hmm.py,sha256=9gnmIfqNZaaluRq3B04YdDtuJhlGyPbY3Uy3QPMa7Dc,3267
+hindiPOS/wdpos.csv,sha256=AAk-FFmu-T5lZm3E2UZreRzQ3YEpq_IUp_N2ICzozyI,9982064
+hindiPOS-0.0.6.dist-info/LICENSE.txt,sha256=nQgQ3RFDRgjXSd12xkBR7LNm9oCXaYvGiK0wpZztyt0,1094
+hindiPOS-0.0.6.dist-info/METADATA,sha256=J2iD_PvbViykwl2VnOr3VqLFja7lCR313osX_00VgUE,1185
+hindiPOS-0.0.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+hindiPOS-0.0.6.dist-info/top_level.txt,sha256=nD3740C2lbxAHvcW2RQvndVcHl_ScC6E3WT2vqrb_ec,9
+hindiPOS-0.0.6.dist-info/RECORD,,
