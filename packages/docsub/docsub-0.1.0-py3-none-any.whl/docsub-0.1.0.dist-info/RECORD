@@ -1,0 +1,12 @@
+docsub/__init__.py,sha256=e3S0EcDGJlWIp2hddSFjvt633jfeZ4W7VyAeLpfTWVM,37
+docsub/__main__.py,sha256=Y6GsIEKFf9o7x0Cf8Nb0yAMG6VEx3tVyoAn_A4s_GbA,60
+docsub/__version__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+docsub/cli.py,sha256=bD5AYXGZ4RaQctVrcPVwAV19wrggzo_BP7MEWK2dkzs,594
+docsub/config.py,sha256=T70LF9UgPnUH_s8CYaYdvHX3Lcw9ISZDcY-cdXR6H7Y,133
+docsub/process.py,sha256=Ozq2pywoHSHgWqWpIuycmsJo-7yNIcY0wJMIBFNoRG8,2708
+docsub/rules.py,sha256=JTRwWVvFIKioJDXO3HB_ekff6SMvvBaVU_avZkjEJXI,2197
+docsub-0.1.0.dist-info/METADATA,sha256=3qBxsa3MsTEfY6yiJ6t_yFQII_Ics_Go3kLYKQCupno,2145
+docsub-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+docsub-0.1.0.dist-info/entry_points.txt,sha256=FW3agDf7eg2ZVNrVKz2cZl_7fAAbcNtXzPMqoS1dXuw,42
+docsub-0.1.0.dist-info/licenses/LICENSE,sha256=t_Gu2JtigM6r4p3F6rb24Trtok3JmJJrEhfSTfgK8JU,1072
+docsub-0.1.0.dist-info/RECORD,,
