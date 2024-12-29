@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: py-listener
+Version: 0.1.0
+Summary: Real time speech to text
+Home-page: https://github.com/n1teshy/py-listener
+Author: Nitesh Yadav
+Author-email: nitesh.txt@gmail.com
+License: MIT
+Keywords: speech-to-text,offline speech to text,stt
+Platform: Posix; Windows
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: torchaudio
+Requires-Dist: numpy
+Requires-Dist: sounddevice
+Requires-Dist: openai-whisper
+
+# Listener
+
+Listener is a Python library for real-time speech to text conversion.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install py-listener
+```
+
+## Basic Usage
+
+```python
+from listener import Listener
+
+# prints what the speaker is saying, look at all
+# parameters of the constructor to find out more features
+listener = Listener(speech_handler=print)
+
+# start listening
+listener.listen()
+
+# stops listening
+listener.stop()
+
+# start listening again
+# listener.listen()
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
