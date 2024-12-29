@@ -1,0 +1,5 @@
+[console_scripts]
+new_game = cw_test.call:caller
+new_test = cw_test:test
+okl = cw_test.ggg:install_manim
+tscene = cw_test.manim_setup:main
