@@ -1,0 +1,16 @@
+ipybox/__init__.py,sha256=uUBguvi7nWQaXiPad943ggmQE0Ld7wD4oDVbmb8PN14,162
+ipybox/__main__.py,sha256=GsbPwrKtnBP6d7k5pjFqEUH7FDwMwi7iRIBkgHPD5IU,2686
+ipybox/config/default/dependencies.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipybox/config/default/environment.yml,sha256=hRrACh6MPJTk9fT2jlpoBB0m339CqL9lqCp_HyCFtCs,76
+ipybox/config/default/pyproject.toml,sha256=3dPHS6AyFCLpnS5JFLkh_xqIbmTQG-fX9gUf83S5lnU,353
+ipybox/container.py,sha256=Pso4On47P6kV1x8-ogLu8k6aRgHNxePHoc2ftZZM1qY,4376
+ipybox/docker/Dockerfile,sha256=NT6YXxm0S3xIROoQA1PRtmeMTECxBC9A1lAYh_AsIbc,1295
+ipybox/executor.py,sha256=87sR0tU_VRWb0qOMjrWXrrkJnhLREyL55HpVbKMHjx4,10921
+ipybox/modinfo.py,sha256=_TmtWS-FTm_Oj1NERSNrKTtXwqwSrElmMA-zxhU6ZMo,1115
+ipybox/scripts/cleanup.sh,sha256=b2_p_6W9SI50L_btGksbcFBbIZVSqrS7MNdSeYzo5nw,206
+ipybox/scripts/server.sh,sha256=n9ZdzDPyrarZx5owposq2xXH9ceol4hep7qy_o_Njjw,102
+ipybox/utils.py,sha256=zUgQ8zEexM3Y-mEEuIvF8p8zY53124fQZgoXS1UoQ4k,262
+ipybox-0.2.6.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+ipybox-0.2.6.dist-info/METADATA,sha256=iyWoxZ9UEEFWu0_rKyDXI5f9TIYfy4xbea96Mgi7uMI,3214
+ipybox-0.2.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ipybox-0.2.6.dist-info/RECORD,,
