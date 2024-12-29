@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: telebot_dialogue
+Version: 0.3.4
+Summary: Library for managing Telegram dialogues using pyTelegramBotAPI.
+Home-page: https://github.com/Tiver211/telebot-dialogue
+Author: tiver211
+Author-email: tiver@tiver211.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Библиотека для управления диалогами
+
+Эта библиотека на Python предназначена для управления диалогами с пользователями, позволяя разработчикам создавать, обрабатывать и сохранять состояния бесед. Она идеально подходит для интеграции с мессенджерами и чат-системами.
+
+## Возможности
+
+- **Управление диалогами**: Создание и контроль диалогов для отдельных пользователей.
+- **Контекст диалога**: Хранение и обновление данных, связанных с диалогом.
+- **Контроль состояния**: Приостановка, возобновление или завершение диалогов.
+- **История сообщений**: Отслеживание обмена сообщениями в рамках диалога.
+- **Сериализация**: Сохранение и восстановление состояния диалогов.
+- **Маршрутизация сообщений**: Автоматическая передача входящих сообщений в соответствующий обработчик.
+
+---
+
+## Установка
+
+Просто скопируйте предоставленные классы `Dialogue` и `DialogueManager` в ваш проект.
+
+---
+
+## Обзор классов
+
+### `Dialogue`
+Представляет сессию диалога для одного пользователя.
+
+#### Атрибуты
+- `user_id`: Уникальный идентификатор пользователя.
+- `handler`: Функция для обработки сообщений.
+- `context`: Словарь для хранения данных, связанных с диалогом.
+- `state`: Указывает активен ли диалог (`True`) или остановлен (`False`).
+- `history`: Список сообщений, отправленных и полученных в рамках диалога.
+
+#### Методы
+- **`stop_dialogue()`**: Останавливает диалог и вызывает функцию паузы, если она задана.
+- **`continue_dialogue()`**: Возобновляет приостановленный диалог.
+- **`update_context(key, value)`**: Обновляет данные в контексте диалога.
+- **`get_context(key, default)`**: Возвращает значение из контекста по ключу.
+- **`get_history()`**: Возвращает историю сообщений.
+- **`clear_context()`**: Очищает контекст.
+- **`clear_history()`**: Очищает историю сообщений.
+- **`reset_dialogue()`**: Сбрасывает состояние диалога, контекст и историю.
+- **`serialize()`**: Преобразует диалог в словарь для сохранения.
+- **`deserialize(data)`**: Восстанавливает диалог из словаря.
+- **`init_handler(message)`**: Обрабатывает новое сообщение и добавляет его в историю.
+- **`delete_dialogue()`**: Удаляет диалог и вызывает функцию завершения, если она задана.
+
+---
+
+### `DialogueManager`
+Управляет несколькими диалогами для разных пользователей.
+
+#### Атрибуты
+- `dialogues`: Словарь, где `user_id` — ключ, а объект `Dialogue` — значение.
+
+#### Методы
+- **`add_dialogue(dialogue, force)`**: Добавляет диалог. Если `force=True`, заменяет существующий диалог с тем же `user_id`.
+- **`find_dialogue(user_id)`**: Возвращает диалог по `user_id`.
+- **`handle_message(message)`**: Обрабатывает сообщение, перенаправляя его в соответствующий диалог.
+- **`stop_dialogue(user_id)`**: Останавливает диалог по `user_id`.
+- **`continue_dialogue(user_id)`**: Возобновляет остановленный диалог.
+- **`finish_dialogue(user_id)`**: Завершает и удаляет диалог по `user_id`.
+- **`update(user_id)`**: Предоставляет контекстный менеджер для безопасного обновления диалога.
+
+---
+
+## Примеры использования
+
+### Создание и управление диалогами
+```python
+from collections.abc import Callable
+
+# Пример функции-обработчика
+def message_handler(message, dialogue):
+    print(f"Пользователь {dialogue.user_id} отправил: {message}")
+
+# Создание менеджера диалогов
+manager = DialogueManager()
+
+# Создание нового диалога
+dialogue = Dialogue(user_id=123, handler=message_handler)
+manager.add_dialogue(dialogue)
+
+# Обработка входящего сообщения
+class MockMessage:
+    def __init__(self, user_id, text):
+        self.from_user = type('User', (object,), {'id': user_id})
+        self.text = text
+
+message = MockMessage(123, "Привет!")
+manager.handle_message(message)
+```
+
+### Обновление контекста диалога
+```python
+with manager.update(user_id=123) as dialogue:
+    if dialogue:
+        dialogue.update_context('тема', 'поддержка')
+```
+
+### Сериализация и десериализация диалога
+```python
+# Сохранение диалога
+data = dialogue.serialize()
+
+# Восстановление диалога
+new_dialogue = Dialogue.deserialize(data)
+```
+
+---
+
+## Вклад в проект
+
+Предложения и улучшения приветствуются! Вы можете отправлять pull request или создавать задачи с описанием новых функций и исправлений ошибок.
+
+---
+
+## Лицензия
+
+Библиотека распространяется под лицензией MIT.
