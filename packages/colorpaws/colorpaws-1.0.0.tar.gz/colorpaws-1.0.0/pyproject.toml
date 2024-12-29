@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colorpaws"
+version = "1.0.0"
+authors = [
+  { name="ikmalsaid", email="ikmalsaid@gmail.com" },
+]
+description = "A logging component with colored output and automated file organization."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+	"Topic :: System :: Logging",
+]
+dependencies = [
+    "colorama"
+]
+
+[project.urls]
+Homepage = "https://github.com/ikmalsaid/colorpaws"
+Issues = "https://github.com/ikmalsaid/colorpaws/issues"

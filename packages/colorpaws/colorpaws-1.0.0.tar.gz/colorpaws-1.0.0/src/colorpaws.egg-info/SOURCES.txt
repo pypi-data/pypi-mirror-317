@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/colorpaws/__init__.py
+src/colorpaws.egg-info/PKG-INFO
+src/colorpaws.egg-info/SOURCES.txt
+src/colorpaws.egg-info/dependency_links.txt
+src/colorpaws.egg-info/requires.txt
+src/colorpaws.egg-info/top_level.txt
