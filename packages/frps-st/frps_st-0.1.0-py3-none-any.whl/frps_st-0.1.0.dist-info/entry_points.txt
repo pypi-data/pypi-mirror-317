@@ -1,0 +1,2 @@
+[console_scripts]
+frps-st = frps_st.main:main
