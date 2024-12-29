@@ -1,0 +1,3 @@
+[console_scripts]
+textualdon=textualdon.__main__:run
+
