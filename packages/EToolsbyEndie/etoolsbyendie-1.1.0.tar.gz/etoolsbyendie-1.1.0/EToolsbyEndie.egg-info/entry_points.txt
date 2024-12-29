@@ -1,0 +1,3 @@
+[console_scripts]
+convert_file = ETools:convert_file
+download_video = ETools:download_video
