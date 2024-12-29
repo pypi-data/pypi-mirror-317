@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: live_calc
+Version: 0.0.2
+Summary: A live python calculator
+Author-email: Thomas Godden <thomas.godden@outlook.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: eel
+Requires-Dist: numpy
+Requires-Dist: pint
+Description-Content-Type: text/markdown
+
+# live_calc
+A live updating python calculator with numpy and units!
+New repository for: https://github.com/LegoYoda112/py-calc
+
+# Install
+`pip install live_calc`
+
+# Instructions
+Make a `saves` folder where you plan to use the calculator.
+
+Run `python -m live_calc` to launch.
+
+- `cmd/ctrl + o` - open file
+- `cmd/ctrl + s` - save file
