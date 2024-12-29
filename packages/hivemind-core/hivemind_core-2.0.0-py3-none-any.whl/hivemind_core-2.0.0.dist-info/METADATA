@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hivemind-core
+Version: 2.0.0
+Summary: Mesh Networking utilities for OpenVoiceOS
+Home-page: https://github.com/JarbasHiveMind/HiveMind-core
+Author: jarbasAI
+Author-email: jarbasai@mailfence.com
+License: Apache2.0
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: click-default-group
+Requires-Dist: rich
+Requires-Dist: pycryptodomex
+Requires-Dist: poorman-handshake>=0.1.0
+Requires-Dist: hivemind-bus-client<1.0.0,>=0.1.0
+Requires-Dist: HiveMind-presence<1.0.0,>=0.0.2a3
+Requires-Dist: ovos-utils<1.0.0,>=0.0.33
+Requires-Dist: ovos-bus-client<2.0.0,>=1.3.0
+Requires-Dist: pybase64
+Requires-Dist: json-database<1.0.0,>=0.9.0
+Requires-Dist: hivemind-plugin-manager<1.0.0,>=0.0.2
+Requires-Dist: hivemind-websocket-protocol<1.0.0,>=0.0.1
+Requires-Dist: hivemind-redis-database<1.0.0,>=0.0.1
+Requires-Dist: hivemind-sqlite-database<1.0.0,>=0.0.1
+
+UNKNOWN
+
+
