@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+tarot_contracts.egg-info/PKG-INFO
+tarot_contracts.egg-info/SOURCES.txt
+tarot_contracts.egg-info/dependency_links.txt
+tarot_contracts.egg-info/top_level.txt
