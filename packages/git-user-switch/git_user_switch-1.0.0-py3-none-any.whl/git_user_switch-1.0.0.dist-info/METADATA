@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: git-user-switch
+Version: 1.0.0
+Summary: A CLI tool to switch Git user profiles.
+Home-page: https://github.com/rosenari/git-user-switch
+License: MIT
+Author: rosenari
+Author-email: rosenari88@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pytest (>=8.3.4,<9.0.0)
+Project-URL: Repository, https://github.com/rosenari/git-user-switch
+Description-Content-Type: text/markdown
+
+# Git User Switch
+
+A CLI tool to switch Git user profiles easily.
+
+## Installation
+
+Install the package using `pip`:
+
+```bash
+pip install git-user-switch
+```
+
+## Configuration
+
+Set the GIT_USER_SWITCH_CONFIG environment variable to the path of your configuration file
+
+```
+export GIT_USER_SWITCH_CONFIG="/Users/user/config.json"
+```
+
+The configuration file should look like this
+```json
+{
+    "user1": {
+        "ssh_key": "~/.ssh/id_rsa_user1",
+        "git_name": "user-1",
+        "git_email": "user1@example.com"
+    },
+    "user2": {
+        "ssh_key": "~/.ssh/id_rsa_user2",
+        "git_name": "user-2",
+        "git_email": "user2@example.com"
+    }
+}
+```
+
+## Usage
+
+```bash
+git-user-switch user1
+```
+
+Try adding it to your zshrc or bashrc file and use it.
+
+```bash
+export GIT_USER_SWITCH_CONFIG="/Users/user/config.json"
+git-user-switch user1
+```

@@ -1,0 +1,3 @@
+[console_scripts]
+git-user-switch=git_user_switch.main:main
+
