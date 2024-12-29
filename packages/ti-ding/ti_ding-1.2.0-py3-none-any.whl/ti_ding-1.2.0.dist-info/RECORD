@@ -1,0 +1,10 @@
+src/__init__.py,sha256=NWMKyOmcwl2TEncfJGDg4JfYJ7cKEoUDl1IU4ZGWh5Q,116
+src/cli.py,sha256=BI6OV6up2gCrd3oahV668ph36QfJzCsa08ZpKJ5VNvo,1858
+src/sound_effects/error.wav,sha256=gwsgGbIflTLRzyvz67k5GcJNkrkqKqItIxOTpLj_tHI,344000
+src/sound_effects/success.wav,sha256=EtCAzf4qDyb-wyzXGvmyRGc-ItAaxo5ZI5AMhGrc6ag,276320
+ti_ding-1.2.0.dist-info/LICENSE,sha256=QgnysxQPTnGaTo5E1A30ZpYsuKYViMSSjjQr4D-lcKc,1093
+ti_ding-1.2.0.dist-info/METADATA,sha256=jSMVQOsSKdGdo_trEs3T927mcqTh3yQTJL6N-vJtNXU,766
+ti_ding-1.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ti_ding-1.2.0.dist-info/entry_points.txt,sha256=9NVdZSUE8asVSHSG9NT_X34y4nTCIGtPhZPxRw442XY,65
+ti_ding-1.2.0.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+ti_ding-1.2.0.dist-info/RECORD,,
