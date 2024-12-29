@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+setup.py
+hivemind_plugin_manager/__init__.py
+hivemind_plugin_manager/database.py
+hivemind_plugin_manager/protocols.py
+hivemind_plugin_manager/version.py
+hivemind_plugin_manager.egg-info/PKG-INFO
+hivemind_plugin_manager.egg-info/SOURCES.txt
+hivemind_plugin_manager.egg-info/dependency_links.txt
+hivemind_plugin_manager.egg-info/top_level.txt
