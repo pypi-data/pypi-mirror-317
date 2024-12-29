@@ -1,0 +1,8 @@
+README.md
+pyblkinfo.py
+pyproject.toml
+pyblkinfo.egg-info/PKG-INFO
+pyblkinfo.egg-info/SOURCES.txt
+pyblkinfo.egg-info/dependency_links.txt
+pyblkinfo.egg-info/entry_points.txt
+pyblkinfo.egg-info/top_level.txt
