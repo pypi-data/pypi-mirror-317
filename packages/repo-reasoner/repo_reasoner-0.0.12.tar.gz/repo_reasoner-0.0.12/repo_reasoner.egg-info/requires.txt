@@ -1,0 +1,4 @@
+typer
+requests
+langchain-core
+langchain-gigachat
