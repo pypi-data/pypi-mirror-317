@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: streamlit_custome_css
+Version: 1.0
+Summary: streamlit custome css function and sending mail services , text to speech 
+Home-page: UNKNOWN
+Author: leo joel roys
+Author-email: joelroys637@gmail.com
+License: MIT
+Project-URL: Source Repository, https://github.com/Joelroys637
+Description: # Title
+        streamlit custome css 
+        ## Heading 2
+               Copyright (c) 2024 leojoelroys
+        - **BOLD TEXT**: The streamlit_custome_css Package is a custom Python utility designed to enhance web and app development workflows by providing tools to streamline UI customization, interactivity, and email handling. It includes various modules for applying background images, modifying headers, and managing user interactions.
+        
+        ## Installation
+        open command prompt
+        type the following command:
+                    pip install streamlit_custome_css
+         
+        ## Functions
+        1)bg_image
+            Provides functionality to apply or customize background images for web or application interfaces.
+        
+        2)header_hide
+            Allows the dynamic hiding or modification of headers in your applications or websites.
+        
+        3)checkbox_into_button
+            Converts standard checkboxes into interactive buttons for improved UI design and usability.
+        
+        4)sidebar_bg_image
+            Adds background images or styles to sidebars, enhancing the visual appeal of navigation panels.
+        
+        5)mail
+            Facilitates email operations, such as sending automated emails with customized content or attachments.
+        
+        6)text to speech
+            it perform converting text into speech
+        ### Funtion(parameter)
+        
+        import naanthan_da_leo
+            1)bg_image code:
+              a='imagepath(or)url'
+              naanthan_da_leo.bg_image(a)
+        
+            2)header hide code:
+              naanthan_da_leo.header_hide()
+        
+            3)checkbox into button ---------> it is used to hold the old page (like, you create a login form the login is correct to open the other page but when you cick the other event of this page to load the old page):
+            naanthan_da_leo.checkbox_into_button()
+        
+            4)sidebar_bg code:
+            naanthan_da_leo.sidebar_bg_image('bg_image_path (or) url')
+        
+            5)sending email:
+            naanthan_da_leo.mail(sender_email,receiver_email,subject_fun,body_fun,password):
+            example:
+               sender_email---------->"you email id"
+               receiver_email---------->"sender email id"
+               subject_fun------>"email subject"
+               body_fun------->"email of the body"
+               password------>"enter you smtp password"(if you already have the smtp password enter here otherwise create a new password this link:https://smtpbd.com/how-to-find-smtp-server-username-and-password/)
+        
+            6)text to speech
+                user_input=input("Enter a speech sentence: ")
+                text_to_speech(user_input)
+        ### OWNER NAME:
+               LEO JOEL ROYS
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
