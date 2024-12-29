@@ -1,0 +1,2 @@
+[console_scripts]
+trx-viewer = trx_viewer.trx_viewer:main
