@@ -1,0 +1,2 @@
+[console_scripts]
+nbchat = nbchat.cli:app
