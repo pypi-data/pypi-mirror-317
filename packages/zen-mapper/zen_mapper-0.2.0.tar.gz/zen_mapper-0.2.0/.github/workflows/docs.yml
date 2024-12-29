@@ -1,0 +1,48 @@
+name: Docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build_docs:
+    name: Document zen mapper
+    runs-on: ubuntu-22.04
+    steps:
+      # Configure the runner
+      - name: git checkout
+        uses: actions/checkout@v4
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - name: Check Nixpkgs inputs
+        uses: DeterminateSystems/flake-checker-action@main
+        with:
+          fail-mode: true
+
+      - name: Build html docs
+        run: |
+          nix develop --command \
+            just docs
+
+      - name: Upload artifact
+        if: ${{ github.event_name == 'push' }}
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./docs/build/dirhtml
+
+      - name: Deploy to GitHub Pages
+        if: ${{ github.event_name == 'push' }}
+        id: deployment
+        uses: actions/deploy-pages@v3
