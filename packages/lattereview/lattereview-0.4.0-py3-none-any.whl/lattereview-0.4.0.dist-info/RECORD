@@ -1,0 +1,17 @@
+lattereview/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lattereview/agents/__init__.py,sha256=UXtGcZBW-pp7Rp4xQNPJ3OV3gzLaX3ZEMBl8Fslw_8s,100
+lattereview/agents/abstraction_reviewer.py,sha256=NW6_NLPeVTGBqvdpF0GjgUxgKA96tvgZVPWyU02kEXY,1286
+lattereview/agents/basic_reviewer.py,sha256=UV1IXTgVepMJ_PFLtbvDlgv5bozI0c4tFiakhBf-U48,12371
+lattereview/agents/scoring_reviewer.py,sha256=SxPbldf2QgVkz1ltPN-Lz3MMv0Bxl7Azr2YfVu-GxVM,1683
+lattereview/providers/__init__.py,sha256=sgt8IklOLbSOfvy3-F0fPE4AoIIQqF96a6_6Gzr285I,134
+lattereview/providers/base_provider.py,sha256=0UfrqS9Nuq1HssuXU0tZ1zEclsA5Mrzlu1xL69bKGhg,4054
+lattereview/providers/litellm_provider.py,sha256=REJYSyEilO-WBwoN0G-zD47LqGXZAMfN5ltzKLgMhHg,7456
+lattereview/providers/ollama_provider.py,sha256=hDRJDAOL5GVUsrolg_ifQu4h4MiJ1hQPP0AYZ0e2CQA,7908
+lattereview/providers/openai_provider.py,sha256=ZfPDkVSloqHhAX6cLL_xwsGmm47lwIg0wJheW9lboTU,7728
+lattereview/workflows/__init__.py,sha256=KM1viGLyEMhC1CT3o2I49Sg_2u12YeQe688l508zue8,44
+lattereview/workflows/review_workflow.py,sha256=Ro9Y4AnaTsFNzUogrbldbhpwPYOWKKUU_WjExfMIW9A,10346
+lattereview-0.4.0.dist-info/LICENSE,sha256=UwclQUESQM9H4nKVST3C-O_z3XEzFypSnXOf2U1fFRA,1072
+lattereview-0.4.0.dist-info/METADATA,sha256=M2yTKxD9lJKkPiBBppmprBGy05MrLxiYFEDl2fpnAgo,11220
+lattereview-0.4.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+lattereview-0.4.0.dist-info/top_level.txt,sha256=3WWBvl1_qos2ON9vtbqAkhcBxyYT1Fen1r4KZVCehT8,12
+lattereview-0.4.0.dist-info/RECORD,,
