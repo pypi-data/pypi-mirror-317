@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polydispers-lj-generator"
+dynamic = ["version"]
+description = "A tool to generate polydisperse Lennard-Jones systems."
+authors = [
+    { name = "Jakub Krajniak", email = "jkrajniak@gmail.com" }
+]
+scripts = { "polydispers" = "polydispers.cli:cli" }
+license = { text = "MIT" }
+dependencies = [
+    "numpy",
+    "scipy",
+    "tqdm",
+    "pyyaml",
+    "click",
+    "jinja2",
+]
+
+[tool.setuptools_scm]
+write_to = "polydispers/_version.py"
+
+[tool.setuptools.packages.find]
+where = [""]
+include = ["polydispers"]
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.ruff]
+line-length = 120
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+notebook = [
+    "jupyter",
+    "matplotlib",
+    "seaborn",
+    "pandas"
+]
