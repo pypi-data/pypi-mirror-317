@@ -1,0 +1,3 @@
+[console_scripts]
+kivy_tetris_package = kivy_tetris_package.main:main
+

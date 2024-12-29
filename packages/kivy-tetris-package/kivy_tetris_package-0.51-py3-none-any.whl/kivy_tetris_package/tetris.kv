@@ -1,0 +1,48 @@
+<MainGrid>
+    cols: 1
+    gameGrid: []
+    moveTiles: []
+    staticTiles: []
+    score: 0
+    sizeTile: 30
+    lastMove: ""
+    clockEvent: None
+    on_kv_post: root.setup()
+    on_size: root.changeSize()
+    FloatLayout:
+        size_hint: (1, 1)
+        Label:
+            text: "Tetris"
+            font_size: 30
+            size_hint: (0.5, 1)
+            pos_hint: {'x': 0.25, 'y': 0.45}
+        Label:
+            text: "Score: " + str(root.score)
+            id: scoreLabel
+            font_size: 25
+            size_hint: (0.5, 1)
+            pos_hint: {'x': 0.6, 'y': 0.4}
+        Button:
+            text: "Settings"
+            size_hint: (0.25, 0.2)
+            pos_hint: {'x': 0.725, 'y': 0.6}
+            on_press: root.settings()
+        Button:
+            text: 'Start(Will be done later)'
+            size_hint: (0.25, 0.2)
+            pos_hint: {'x': 0.725, 'y': 0.4}
+            #on_press: root.start()
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        size_hint: (1, 0.8)
+        padding: 10
+        id: tetrisCanvas
+
+<SettingsPopup>
+    title: 'Settings'
+    size_hint: (0.5, 0.5)
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Here will be some settings'

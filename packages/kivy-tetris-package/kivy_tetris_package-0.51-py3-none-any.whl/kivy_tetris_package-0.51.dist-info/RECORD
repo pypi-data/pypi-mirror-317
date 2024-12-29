@@ -1,0 +1,9 @@
+kivy_tetris_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kivy_tetris_package/main.py,sha256=tcNBZjBEO9uaIctozFKBXutbzbaMRIHtvOVv57jQXik,12414
+kivy_tetris_package/tetris.kv,sha256=1VIjt6C9Dyp_4dj7CTBSYSplHXldR2-fAnpMd-OEiQM,1243
+kivy_tetris_package-0.51.dist-info/LICENSE,sha256=CUu0y5oBBHvNj4cirMYPDQ5ew0YHxc_ndchH4gz85UI,1070
+kivy_tetris_package-0.51.dist-info/METADATA,sha256=AiVQ-BnMFrahuXSvAHQfaRkqXjtUvJBe94NydMigOfk,634
+kivy_tetris_package-0.51.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kivy_tetris_package-0.51.dist-info/entry_points.txt,sha256=24r3pCQP6xp2ZUM4EDRbqnlCz3-1YSnkGrklkmHikNI,71
+kivy_tetris_package-0.51.dist-info/top_level.txt,sha256=qIU_Hu15DJpHtLX5LZzv8XrREDbva4ilxd1LxLuI2UI,20
+kivy_tetris_package-0.51.dist-info/RECORD,,
