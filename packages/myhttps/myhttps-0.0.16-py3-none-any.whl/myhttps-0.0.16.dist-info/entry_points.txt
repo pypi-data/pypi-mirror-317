@@ -1,0 +1,2 @@
+[console_scripts]
+myhttps = myhttps.__main__:main
