@@ -1,0 +1,25 @@
+version: 1
+formatters:
+  simple:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: simple
+    level: DEBUG
+  file:
+    class: logging.FileHandler
+    level: INFO
+    formatter: simple
+    filename: logs/app.log
+
+root:
+  level: DEBUG
+  handlers: [console, file]
+
+loggers:
+  drm:
+    level: DEBUG
+    handlers: [console, file] # drm-specific logs will go to the console only
+    propagate: no # Prevent duplication of logs in the root handlers

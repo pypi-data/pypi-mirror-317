@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "drm-free-audible"
+version = "0.1.4"
+description = "A tool to remove DRM from Audible files"
+authors = ["You Zhou <you-zhou@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{ include = "drm_free_audible", from = "src" }]
+include = ["logging_config.yaml"]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pyyaml = "^6.0.2"
+ffmpeg-python = "^0.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+ruff = "^0.8.4"
+mypy = "^1.14.0"
+pre-commit = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+drmfree = "drm_free_audible.main:main"
+
+[tool.ruff]
+# Enable all rules (includes formatting)
+select = ["ALL"]
+# Ignore specific rules if needed
+ignore = []
+# Use line length of 88 (same as black)
+line-length = 88
+# Enable auto-formatting
+fix = true
+# Sort imports
+force-exclude = true
