@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: pydantic-extra
+Version: 1.0.0
+Summary: Готовые модели pydantic для частых задач
+Author-email: Ярыкин Евгений <pypi@zedzhen.ru>
+License: The zlib/libpng License
+        
+        Copyright (c) 2024 Ярыкин Евгений
+        
+        This software is provided 'as-is', without any express or implied
+        warranty. In no event will the authors be held liable for any damages
+        arising from the use of this software.
+        
+        Permission is granted to anyone to use this software for any purpose,
+        including commercial applications, and to alter it and redistribute it
+        freely, subject to the following restrictions:
+        
+        1. The origin of this software must not be misrepresented; you must not
+           claim that you wrote the original software. If you use this software
+           in a product, an acknowledgement in the product documentation would be
+           appreciated but is not required.
+        2. Altered source versions must be plainly marked as such, and must not be
+           misrepresented as being the original software.
+        3. This notice may not be removed or altered from any source distribution.
+        
+Project-URL: source, https://github.com/zedzhen/pydantic-extra
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic~=2.10
+Requires-Dist: typing-extensions!=4.12.0,<4.13,>=4.10
+Provides-Extra: db
+Requires-Dist: sqlalchemy~=2.0; extra == "db"
+
+# pydantic-extra
+
+Данный модуль содержит готовые модели pydantic для частых задач.
+
+установка
+`pip install pydantic-extra`
+
+# pydantic-extra.smtp
+
+## модель MailServer
+
+* `smtp_host` - хост
+* `smtp_port` - порт (по умолчанию: 465)
+* `smtp_ssl` - использовать ssl (по умолчанию: True)
+* `smtp_login`/`smtp_password` - данные для авторизации
+* `from_addr` - имя отправителя (по умолчанию: `smtp_login`)
+
+# pydantic-extra.db
+
+Требует дополнительные зависимости `db` (sqlalchemy) \
+`pip install pydantic-extra[db]`
+
+## модели DB(базовая модель), SQLite, Mysql(в т.ч. для MariaDB), AnyDB
+
+### SQLite
+
+* `type` - `sqlite`
+* `path` - путь до БД
+
+### AnyDB
+
+* `type` - `any`
+* `str` - строка подключения для sqlalchemy
+
+### Mysql
+
+* `type` - `mysql` или `mariadb`
+* `host` - хост
+* `port` - порт (по умолчанию: 3306)
+* `login`/`password` - данные для авторизации
+* `encoding` - кодировка (по умолчанию: `utf8mb4`)
+* `database` - имя БД
+
+### DB
+
+* `connect_str()` - возвращает строку подключения для sqlalchemy или sqlalchemy.URL
+* `setup()` - настраивает sqlalchemy для работы с данным диалектом
+
+## использование
+
+```python
+from pydantic import BaseModel, Field
+from pydantic_extra.db import T_DB
+
+
+class ExampleConfig(BaseModel):
+    db: T_DB = Field(discriminator='type')
+```
+
+С базой данной SQLite по умолчанию
+
+```python
+from pathlib import Path
+
+from pydantic import BaseModel, Field
+from pydantic_extra.db import T_DB, SQLite
+
+
+class ExampleConfig(BaseModel):
+    db: T_DB = Field(SQLite(type="sqlite", path=Path('example.sqlite')), discriminator='type')
+```
