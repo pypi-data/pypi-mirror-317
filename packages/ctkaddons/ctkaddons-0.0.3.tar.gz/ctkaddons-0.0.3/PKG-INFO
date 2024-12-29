@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ctkaddons
+Version: 0.0.3
+Summary: A package that add uneccessary widgets to customtkinter
+Author-email: TonyLovesMusic <tony.tonylovescoding@example.com>
+Project-URL: Homepage, https://github.com/TonyLovesCoding/CTkAddons
+Keywords: customtkinter,widgets,addon
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: customtkinter
+Requires-Dist: tkscenes>=0.0.7
+
+A package which adds extra widgets to CustomTKinter\
+See the code on [github](https://github.com/TonyLovesCoding/CTkAddons).
+
+> [!WARNING]\
+> This project is **EXTREMELY** early in development\
+> Proceed with caution!
+
+# Calender
+It's a calender... duh...
+
+# Side Panel
+It's a side panel\
+Use `ctkaddons.SidePanel()` to create a side panel
+
+If you want to add a scene, use `side_panel.add_scene()`, remember to pass in a key
