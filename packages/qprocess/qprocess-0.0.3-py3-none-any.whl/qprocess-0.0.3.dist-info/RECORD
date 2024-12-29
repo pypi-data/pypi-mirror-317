@@ -1,0 +1,8 @@
+qprocess/__init__.py,sha256=ctCmRzqbyGJw1nuEGD_6MD4-QP4O1c1vxG2-g7WlG1U,951
+qprocess/gaussian.py,sha256=2kyWuXquf0fuYwSWGmUcXUavlgMqzG2IBEFmPB-Gl6g,22389
+qprocess/mrcc.py,sha256=lmSafX5jAmKkBQCBxgBmDURogpVqPffR-gYNJgXfDoQ,11343
+qprocess-0.0.3.dist-info/LICENCE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qprocess-0.0.3.dist-info/METADATA,sha256=tCKr7iDvKSTYwnD9FV3NzO9oZHuhigNIqWG0lxVRA9M,564
+qprocess-0.0.3.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+qprocess-0.0.3.dist-info/top_level.txt,sha256=QgBq2dq45NIWd2ob2GyPb--1vvtOTWnAsI-vv24aBC0,9
+qprocess-0.0.3.dist-info/RECORD,,
