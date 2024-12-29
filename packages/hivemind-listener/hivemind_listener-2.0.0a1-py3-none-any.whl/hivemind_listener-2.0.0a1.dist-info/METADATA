@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: hivemind-listener
+Version: 2.0.0a1
+Summary: Mesh Networking utilities for OpenVoiceOS
+Home-page: https://github.com/JarbasHiveMind/HiveMind-listener
+Author: jarbasAI
+Author-email: jarbasai@mailfence.com
+License: Apache2.0
+Platform: UNKNOWN
+Requires-Dist: ovos-simple-listener
+Requires-Dist: hivemind-bus-client<1.0.0,>=0.1.0
+Requires-Dist: ovos-plugin-manager<1.0.0
+Requires-Dist: hivemind-core<3.0.0,>=2.0.0
+Requires-Dist: hivemind-plugin-manager<1.0.0,>=0.0.2
+Requires-Dist: ovos-bus-client<2.0.0,>=1.3.0
+Requires-Dist: click
+Requires-Dist: pybase64
+Requires-Dist: hivemind-websocket-protocol<1.0.0,>=0.0.1
+
+UNKNOWN
+
+
