@@ -1,0 +1,9 @@
+drm_free_audible/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drm_free_audible/drm.py,sha256=bh5sQbW_W0FmS5moD424e0MFrQNOkLyl2WEtL2EtpwY,2428
+drm_free_audible/logging_config.yaml,sha256=0ojN1ielr2ligbdwzhNGnsi70mIpc86OLQslyfcjYRQ,529
+drm_free_audible/main.py,sha256=aVP1dnryyqeavlNNoV293GgO98-HoFEitSzL5EW9q5E,1514
+drm_free_audible-0.1.6.dist-info/LICENSE,sha256=3y2QGslePLzs5vfIxmBAPGFCtAuCJkOzTtB8xDV9wTk,1065
+drm_free_audible-0.1.6.dist-info/METADATA,sha256=UBMLx2QgO90XJDEcTTddYsEAT3H3nB0G4ABnTDbmq1k,566
+drm_free_audible-0.1.6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+drm_free_audible-0.1.6.dist-info/entry_points.txt,sha256=Z33-J5sMsCRPOcY8UwshtZfBimIqaaVuTs5HYF_ztPg,54
+drm_free_audible-0.1.6.dist-info/RECORD,,
