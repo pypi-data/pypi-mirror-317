@@ -1,0 +1,11 @@
+cw_test/__init__.py,sha256=YredRZbm4WZDjrd2E6HQl7AOuYX1a4QvWACzct53s0U,1064
+cw_test/call.py,sha256=HOmJGiLeBRAs0J64r89ZU4rJJ5Mnzx3gqHlIdO1HMkw,135
+cw_test/ggg.py,sha256=3gdohyG_U-1sUsYq3e9Ezib0mza2o-lO0hQPLWTmEpo,1153
+cw_test/killian.py,sha256=rQacUZqvGXmZkBZZZ0fOAvjBwSu1Va0-PDLsON4TjS0,145
+cw_test/main.py,sha256=1Svb6tIH-piWt4eWqog5kg4aXkFdZwK0RtVTV2VkoXc,77
+cw_test/manim_setup.py,sha256=GTrJcMV3OvP9kcVpYddTQYY74-dz99-JjOCkStwUFIc,2977
+cw_test-0.7.1.data/scripts/killian.py,sha256=rQacUZqvGXmZkBZZZ0fOAvjBwSu1Va0-PDLsON4TjS0,145
+cw_test-0.7.1.dist-info/METADATA,sha256=QDGhasyNJXG6O9tfuP_VwNKF-v7A68Hw82xrRmlX4WE,51
+cw_test-0.7.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cw_test-0.7.1.dist-info/top_level.txt,sha256=9l8cL2rJkdx6C0tmnGsOVstt7B-l46roCpZAq3ecuvM,8
+cw_test-0.7.1.dist-info/RECORD,,
