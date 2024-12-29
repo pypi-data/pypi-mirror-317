@@ -1,0 +1,14 @@
+pytortilla/__init__.py,sha256=DrlGszW-kGII-N6FPRM-4UOrhl5fKTjLr0IoX1niATk,127
+pytortilla/create/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytortilla/create/main.py,sha256=tEqgzhdZw5jyOiRvPEyf2TB0TK_mxWT9xhvUsSu8FFA,7916
+pytortilla/create/utils.py,sha256=Gsl3Kl5lAAwxnyeOAOOdxb9k5wB91OYoJjjfKccBsxI,2971
+pytortilla/datamodel/__init__.py,sha256=7U3am3J3p25j7laUTIQuIKUb_wgCTjAA5LLQw1rIKBk,54
+pytortilla/datamodel/data/rai_admin0.parquet,sha256=szwwj4FDaYPI2XHH0-Je0gvfpoBPGHxssNenL5GfXPc,12441
+pytortilla/datamodel/data/rai_admin1.parquet,sha256=o2GJ85KDpfQlyrenjz1sCdWrF1xSiMAp0gWZR6ZhJMI,95686
+pytortilla/datamodel/data/rai_admin2.parquet,sha256=EyOUvbjzpFcmWg5bQIbmGyNZ7gxiHiBpdxUwNQfZmrQ,562571
+pytortilla/datamodel/main.py,sha256=yRe0wrKKWW30omlmIiG8frYRUEgDv_73zs9D5F6fXkE,13411
+pytortilla/datamodel/utils.py,sha256=EZpDzxiQSfFxRrEnS9sk8bNHwBeUIqgo9elHTvWtzDU,5133
+pytortilla-0.5.0.dist-info/LICENSE,sha256=YdB4BQMkMzWuKvXRIpQR4g91IQ_pwA5PSH2lNM97zFI,1070
+pytortilla-0.5.0.dist-info/METADATA,sha256=2s-dsEJ0vmwp-4WPVxmMGb7Fk2heYJegg2tsXgg57e8,1105
+pytortilla-0.5.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pytortilla-0.5.0.dist-info/RECORD,,
