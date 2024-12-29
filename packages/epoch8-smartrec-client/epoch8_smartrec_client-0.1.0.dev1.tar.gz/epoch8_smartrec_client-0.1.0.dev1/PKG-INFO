@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: epoch8-smartrec-client
+Version: 0.1.0.dev1
+Author-email: Shakirov Renat <renat@epoch8.co>
+Requires-Python: <4,>=3.10
+Requires-Dist: tritonclient[all]<=2.49.0,>=2.43.0
