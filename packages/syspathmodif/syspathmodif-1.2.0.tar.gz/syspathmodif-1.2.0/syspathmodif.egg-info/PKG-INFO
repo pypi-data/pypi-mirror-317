@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: syspathmodif
+Version: 1.2.0
+Summary: This library offers concise manners to modify list sys.path. The user should not need to directly interact with that list.
+Home-page: https://github.com/GRV96/syspathmodif
+Author: Guyllaume Rousseau
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## FRANÇAIS
+
+Cette bibliothèque offre des manières concises de modifier la liste `sys.path`.
+L'utilisateur ne devrait pas avoir besoin d'interagir directement avec cette
+liste.
+
+### Contenu
+
+Les fonctions de `syspathmodif` prennent un chemin de type `str` ou
+`pathlib.Path` comme argument.
+Elles convertissent les arguments de type `pathlib.Path` en `str` puisque
+`sys.path` n'est censée contenir que des chaînes de caractères.
+
+* `sp_append` ajoute le chemin donné à la fin de `sys.path`.
+* `sp_contains` indique si `sys.path` contient le chemin donné.
+* `sp_remove` enlève le chemin donné de `sys.path`.
+
+Dès son instanciation, la classe `SysPathBundle` contient plusieurs chemins et
+les ajoute à `sys.path`. Quand on vide (*clear*) une instance, elle efface son
+contenu et l'enlève de `sys.path`. Ainsi, cette classe facilite l'ajout et le
+retrait d'un groupe de chemins.
+
+Il est possible d'utiliser `SysPathBundle` comme un gestionnaire de contexte
+(*context manager*). Dans ce cas, l'instance est vidée à la fin du bloc `with`.
+
+Pour plus d'informations, consultez la documentation des fonctions et les démos
+dans le dépôt de code source.
+
+## ENGLISH
+
+This library offers concise manners to modify list `sys.path`.
+The user should not need to directly interact with that list.
+
+### Content
+
+The functions in `syspathmodif` take a path of type `str` or `pathlib.Path`
+as an argument.
+They convert arguments of type `pathlib.Path` to `str` since `sys.path` is
+supposed to contain only character strings.
+
+* `sp_append` appends the given path to the end of `sys.path`.
+* `sp_contains` indicates whether `sys.path` contains the given path.
+* `sp_remove` removes the given path from `sys.path`.
+
+Upon instantiation, class `SysPathBundle` stores several paths and adds them to
+`sys.path`. When a bundle is cleared, it erases its content and removes it from
+`sys.path`. Thus, this class facilitates adding and removing a group of paths.
+
+`SysPathBundle` can be used as a context manager. In that case, the instance is
+cleared at the `with` block's end.
+
+For more information, consult the functions' documentation and the demos in the
+source code repository.
