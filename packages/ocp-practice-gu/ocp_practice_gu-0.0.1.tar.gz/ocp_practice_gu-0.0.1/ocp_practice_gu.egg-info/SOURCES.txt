@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ocp_practice_gu/__init__.py
+ocp_practice_gu/ocp_helper.py
+ocp_practice_gu.egg-info/PKG-INFO
+ocp_practice_gu.egg-info/SOURCES.txt
+ocp_practice_gu.egg-info/dependency_links.txt
+ocp_practice_gu.egg-info/top_level.txt
