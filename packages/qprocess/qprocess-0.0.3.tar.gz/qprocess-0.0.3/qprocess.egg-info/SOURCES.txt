@@ -1,0 +1,13 @@
+LICENCE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+qprocess/__init__.py
+qprocess/gaussian.py
+qprocess/mrcc.py
+qprocess.egg-info/PKG-INFO
+qprocess.egg-info/SOURCES.txt
+qprocess.egg-info/dependency_links.txt
+qprocess.egg-info/requires.txt
+qprocess.egg-info/top_level.txt
