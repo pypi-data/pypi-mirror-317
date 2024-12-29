@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycurl-requestx"
+version = "0.1.0"
+description = "An asynchronous HTTP client combining pycurl-requests and AnyIO, basically an async wrapper around pycurl-requests, all thanks to AnyIO."
+authors = [
+    { name = "Nikhil Aryal (aka. OSHO)", email = "xadkeg@duck.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = [
+    "pycurl-requests",
+    "anyio"
+]
+readme = "README.md"
+keywords = ["pycurl", "curl", "libcurl", "anyio", "asyncio", "http", "client", "httpx", "requests", "pycurl-requests", "pycurl-requestx", "trio", "uvloop", "async", "asynchronous"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "flake8",
+    "black",
+    "mypy",
+    "uv",
+    "build",
+    "twine",
+    "pre-commit"
+]
+
+[tool.urls]
+homepage = "https://github.com/profxadke/pycurl-requestx"
+repository = "https://github.com/profxadke/pycurl-requestx"
