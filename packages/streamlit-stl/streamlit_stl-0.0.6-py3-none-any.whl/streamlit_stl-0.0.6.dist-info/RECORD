@@ -1,0 +1,13 @@
+streamlit_stl/.DS_Store,sha256=QKnMqYCI3000LsrwiL2LEDq_bZ18H0_He_pWdDjO5Rc,6148
+streamlit_stl/__init__.py,sha256=vw-gMSKsyYMDENPQ72BHTrFsJW94EvzeaJ9iwWz9Yxw,10811
+streamlit_stl/index.html,sha256=8PgvDamLfHejZKpcICr-hNE-VH6ESCrMHPTxcF49-lI,3403
+streamlit_stl/__pycache__/__init__.cpython-312.pyc,sha256=HiHhOkvyWNBjrACiS9FEN0wBBpZokN8aZeJHtygxRRU,10447
+streamlit_stl/three_js_scripts/OrbitControls.js,sha256=4ipyoS-kRbgxtKzEDqaHXBha6VU5HPPd61bXGDYkvjs,26375
+streamlit_stl/three_js_scripts/STLLoader.js,sha256=w5K5PRMx5kCCy9dt64UP5d4ROFRyo_TFt_6CuiFstJ4,9847
+streamlit_stl/three_js_scripts/stl-viewer.js,sha256=IbIEheuPKC4XZE5ydD6S490leexaYJkwiW9yPWw0UMs,4431
+streamlit_stl/three_js_scripts/three.min.js,sha256=3-nDjMnQVXjWP7HmVeaW8ZXEmAozSP6SF2bVb0I8WSE,604885
+streamlit_stl-0.0.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+streamlit_stl-0.0.6.dist-info/METADATA,sha256=GUblPMC3ro4VJ2GK1gkcxpvvzCCS2ayiaSizZfX2S6o,3853
+streamlit_stl-0.0.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+streamlit_stl-0.0.6.dist-info/top_level.txt,sha256=MejjBpo9PZ9cVMN2gj8-u5c9_mKwG47ucPjZL1aEcBE,14
+streamlit_stl-0.0.6.dist-info/RECORD,,
