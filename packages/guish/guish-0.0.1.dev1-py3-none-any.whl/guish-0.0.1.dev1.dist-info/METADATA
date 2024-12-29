@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: guish
+Version: 0.0.1.dev1
+Summary: A simple GUI.
+Author-email: Nick Stuer <nickstuer@duck.com>
+Project-URL: Homepage, https://github.com/nickstuer/guish
+Project-URL: Issues, https://github.com/nickstuer/guish/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Guish
+
+![banner]()
+
+![badge]()
+![badge]()
+[![license](https://img.shields.io/github/license/nickstuer/guish.svg)](LICENSE)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+Description of Guish goes here.
+
+## Table of Contents
+
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
+
+## 📖 Background
+
+### Any optional sections
+
+## 📌 Install
+
+This module depends upon a knowledge of [Markdown]().
+
+```
+# PyPI
+pip install guish
+```
+
+### Any optional sections
+
+## Dependencies
+Python 3.12 or greater
+
+## Usage
+
+```
+```
+
+### Any optional sections
+
+## 💻 Development
+
+#### Virtual Environment Setup
+Helpful notes on how to set up a virtual enviroment for developing python applications using VS Code on Windows.
+
+<details><summary><b>Show Instructions</b></summary>
+
+1. Open "Folder" in VS Code
+
+2. Create Virtual Environment
+    1. Press CTRL + SHIFT + P and Select 'Python: Create Virtual Environment'
+    2. Follow the prompts
+
+3. Change Default Terminal in VS Code
+    1. Press CTRL + SHIFT + P and Select 'Terminal: Select Default Profile'
+    2. Choose 'Command Prompt'
+
+4. Test the Virtual Environment
+     1. Press CTRL + SHIFT + ~ to open a terminal.
+     2. Ensure the prompt begins with '(.venv)'
+        
+</details>
+
+## 🏆 Contributing
+
+PRs accepted.
+
+If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+#### Bug Reports and Feature Requests
+Please use the [issue tracker](https://github.com/nickstuer/guish/issues) to report any bugs or request new features.
+
+#### Contributors
+
+
+## 📃 License
+
+[MIT © Nick Stuer](LICENSE)
