@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: swm-example-community-package
+Version: 0.6.0.dev86
+Summary: This repository includes an example of a First Class Swarmauri Example.
+Home-page: http://github.com/swarmauri/swarmauri-sdk
+License: Apache-2.0
+Author: Jacob Stewart
+Author-email: jacob@swarmauri.com
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: swarmauri_base (>=0.6.0.dev86,<0.7.0)
+Requires-Dist: swarmauri_core (>=0.6.0.dev86,<0.7.0)
+Project-URL: Repository, http://github.com/swarmauri/swarmauri-sdk
+Description-Content-Type: text/markdown
+
+# Swarmauri Example Community Package
