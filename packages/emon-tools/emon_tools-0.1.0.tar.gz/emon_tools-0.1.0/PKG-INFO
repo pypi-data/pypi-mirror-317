@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: emon-tools
+Version: 0.1.0
+Summary: A numpy subclass to read emoncms PHPFINA feeds as numpy array
+Home-page: https://github.com/vemonitor/emon-tools
+Author: Eli Serra
+Author-email: mano8@gmail.com
+License: MIT License
+Keywords: EmonCms,Python,PHPFINA
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.2.0
+Provides-Extra: test
+Requires-Dist: pytest>=8.3.4; extra == "test"
+Requires-Dist: pytest-cov>=6.0.0; extra == "test"
+Requires-Dist: coverage>=7.6.9; extra == "test"
+Provides-Extra: notebook
+Requires-Dist: jupyter>=1.0.0; extra == "notebook"
+Requires-Dist: pandas>=2.2.3; extra == "notebook"
+Requires-Dist: matplotlib>=3.9.3; extra == "notebook"
+Provides-Extra: time-series
+Requires-Dist: pandas>=2.2.3; extra == "time-series"
+Provides-Extra: plot
+Requires-Dist: pandas>=2.2.3; extra == "plot"
+Requires-Dist: matplotlib>=3.9.3; extra == "plot"
+
+# emon_tools
+Python Emoncms Tools and Api
