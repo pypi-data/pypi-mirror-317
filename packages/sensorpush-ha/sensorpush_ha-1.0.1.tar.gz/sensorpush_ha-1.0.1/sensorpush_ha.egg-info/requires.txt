@@ -1,0 +1,4 @@
+sensorpush-api>=2.1.0
+
+[release]
+build>=0.3.0
