@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: tinyGraphs
+Version: 0.0.1
+Summary: A minimal library for plotting training progress in Jupyter/Colab
+Author-email: rkal <rohkal505@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 [YOUR NAME]
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy 
+        of this software and associated documentation files (the "Software"), to deal 
+        in the Software without restriction, including without limitation the rights 
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+        copies of the Software, and to permit persons to whom the Software is 
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in 
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
+        THE SOFTWARE.
+Keywords: training,plotting,machine-learning,notebook
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: IPython
+
+# tinyGraphs
+
+A minimal library for plotting training progress in Jupyter/COLAB notebooks.
+
+## Installation
+
+pip install tinyGraphs
+
+## Usage
+
+```python
+
+train_losses, val_losses = [], []
+epochs = 3
+
+for epoch in range(epochs):
+    # Training
+    model.train()
+    running_train_loss = 0
+    for x, y in train_loader:
+        x, y = x.to(device), y.to(device)
+        optimizer.zero_grad()
+        loss = criterion(model(x), y)
+        loss.backward()
+        optimizer.step()
+        running_train_loss += loss.item()
+    train_losses.append(running_train_loss / len(train_loader))
+
+    # Validation
+    model.eval()
+    running_val_loss = 0
+    with torch.no_grad():
+        for x, y in val_loader:
+            x, y = x.to(device), y.to(device)
+            loss = criterion(model(x), y)
+            running_val_loss += loss.item()
+    val_losses.append(running_val_loss / len(val_loader))
+
+    # Plot using tinyGraphs
+    plot_training_progress(train_losses, val_losses, epoch, y_max = 0.5)
