@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: itmgr
+Version: 1.0.4
+Summary: An import manager that allow you to manage easily your importations in your project
+Home-page: https://github.com/Casssian/itmgr
+Author: Cassssian
+Author-email: Cassssian <enzod1604@gmail.com>
+Maintainer-email: Cassssian <enzod1604@gmail.com>
+Project-URL: Homepage, https://github.com/Cassssian/itmgr
+Project-URL: Bug Reports, https://github.com/Cassssian/itmgr
+Project-URL: Say Thanks!, https://github.com/Cassssian/itmgr
+Project-URL: Source, https://github.com/Cassssian/itmgr/
+Project-URL: Documentation, https://github.com/Cassssian/itmgr
+Project-URL: Changelog, https://github.com/Cassssian/itmgr
+Project-URL: Author, https://github.com/Cassssian
+Project-URL: Repository, https://github.com/Cassssian/itmgr.git
+Project-URL: Issues, https://github.com/Cassssian/itmgr/issues
+Keywords: import,importations,development,package-manager,module-manager,dynamic-import,pip-wrapper,dependency-management,python-imports,import-automation,package-installer,module-installer,import-helper,development-tools,python-utilities,package-management,module-handling,import-handling,dependency-installer,python-modules,import-utilities
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Natural Language :: French
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: Framework :: Pytest
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+
+# itmgr
+An import manager that allow you to manage easily your importations in your project
+
+ # Installation
+ You can install it using pip:
+ ```
+ pip install itmgr
+ ```
+
+# Usage
+```python
+from itmgr import * #Or use : install_and_import, importation, install, uninstall, remove_module
+
+# And write your importations and your code below
+```
+
+You can also add link between libs for importation and installations by using this line in your console : 
+```bash
+itmgr add lib_name link_to_install
+```
+
+
+# Contributing
+The contributions are welcome ! You can contribute by adding new features, fixing bugs, improving the documentation, etc.
+
+# Author
+- [Cassssian](https://github.com/Cassssian)

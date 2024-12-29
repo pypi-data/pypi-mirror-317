@@ -1,0 +1,115 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "itmgr"
+
+version = "1.0.4" # REQUIRED, although can be dynamic
+
+description = "An import manager that allow you to manage easily your importations in your project"
+
+readme = "README.md"
+
+requires-python = ">=3.10"
+
+license = { file = "LICENSE.txt" }
+
+# This field adds keywords for your project which will appear on the
+# project page. What does your project relate to?
+#
+# Note that this is a list of additional keywords, separated
+# by commas, to be used to assist searching for the distribution in a
+# larger catalog.
+keywords = ["import", "importations", "development", "package-manager", "module-manager", "dynamic-import", "pip-wrapper", "dependency-management", "python-imports", "import-automation", "package-installer", "module-installer", "import-helper", "development-tools", "python-utilities", "package-management", "module-handling", "import-handling", "dependency-installer", "python-modules", "import-utilities"]
+
+authors = [{ name = "Cassssian", email = "enzod1604@gmail.com" }]
+
+maintainers = [
+  { name = "Cassssian", email = "enzod1604@gmail.com" },
+]
+
+classifiers = [
+
+  "Development Status :: 4 - Beta",
+
+  "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: System :: Installation/Setup",
+    "Topic :: System :: Software Distribution",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+    "Natural Language :: French",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Information Technology",
+    "Framework :: Pytest",
+    "License :: OSI Approved :: MIT License"
+]
+
+dependencies = [
+    "pip>=21.0",
+    "setuptools>=61.0",
+    "wheel>=0.37.0",
+    "typing-extensions>=4.0",
+    "requests>=2.31.0",
+    "packaging>=23.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=3.0",
+    "black>=22.0",
+    "isort>=5.0",
+    "mypy>=0.9",
+    "pylint>=2.0",
+    "flake8>=4.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Cassssian/itmgr"
+"Bug Reports" = "https://github.com/Cassssian/itmgr"
+"Say Thanks!" = "https://github.com/Cassssian/itmgr"
+"Source" = "https://github.com/Cassssian/itmgr/"
+"Documentation" = "https://github.com/Cassssian/itmgr"
+"Changelog" = "https://github.com/Cassssian/itmgr"
+"Author" = "https://github.com/Cassssian"
+"Repository" = "https://github.com/Cassssian/itmgr.git"
+"Issues" = "https://github.com/Cassssian/itmgr/issues"
+
+[project.scripts]
+itmgr = "itmgr.itmgr:main"
+
+
+
+[tool.setuptools]
+packages = ["itmgr"]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=itmgr"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
