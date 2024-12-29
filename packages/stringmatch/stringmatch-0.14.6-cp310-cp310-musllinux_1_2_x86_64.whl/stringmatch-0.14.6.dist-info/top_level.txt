@@ -1,0 +1,3 @@
+00240ab4199daa13960e__mypyc
+stringmatch
+tests
