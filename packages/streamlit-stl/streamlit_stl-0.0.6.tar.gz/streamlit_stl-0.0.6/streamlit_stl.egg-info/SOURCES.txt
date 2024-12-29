@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+streamlit_stl/.DS_Store
+streamlit_stl/__init__.py
+streamlit_stl/index.html
+streamlit_stl.egg-info/PKG-INFO
+streamlit_stl.egg-info/SOURCES.txt
+streamlit_stl.egg-info/dependency_links.txt
+streamlit_stl.egg-info/top_level.txt
+streamlit_stl/__pycache__/__init__.cpython-312.pyc
+streamlit_stl/three_js_scripts/OrbitControls.js
+streamlit_stl/three_js_scripts/STLLoader.js
+streamlit_stl/three_js_scripts/stl-viewer.js
+streamlit_stl/three_js_scripts/three.min.js
