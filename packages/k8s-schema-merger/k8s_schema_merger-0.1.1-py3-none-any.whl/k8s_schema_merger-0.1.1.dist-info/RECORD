@@ -1,0 +1,7 @@
+k8s_schema_merger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+k8s_schema_merger/cli.py,sha256=XqxKGJU5Nsu0Mky8HtIGoIV3yDfisyoxbODHIBy7BZ8,3048
+k8s_schema_merger/core.py,sha256=_U4wD7Vm8ch--RLoT3pwK2R9Ux_UAn0znOtI3dNaqp4,6151
+k8s_schema_merger-0.1.1.dist-info/entry_points.txt,sha256=SK-a8HEeabSpUp2YcXoPJp9uJcejnRh7sV4Jxup6wAI,64
+k8s_schema_merger-0.1.1.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+k8s_schema_merger-0.1.1.dist-info/METADATA,sha256=BsZyyTEJhwU7gLxu_weD4fZYFJbG_h0uRnDwX5fwH2M,4828
+k8s_schema_merger-0.1.1.dist-info/RECORD,,

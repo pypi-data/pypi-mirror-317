@@ -1,0 +1,3 @@
+[console_scripts]
+k8s-schema-merger=k8s_schema_merger.cli:main
+
