@@ -1,0 +1,11 @@
+pynecil/__init__.py,sha256=09cS8xWNvBk7O8xg944Eup_l6nX3-xBj5zG_0u4O0ME,1095
+pynecil/client.py,sha256=FZBI-z5HWBWHdIuUl_bKeb0NLLybazcH0Cl59ZukcOk,24925
+pynecil/const.py,sha256=uDGQ-Gu7PwPHycLr-DKpJzyZGc9F5S2u0TmlzJ1Zmu4,5109
+pynecil/exceptions.py,sha256=2oEJ1CeoJ-QSZgyXxr7D3YFz8hl7A4836HjhEq-LYtU,910
+pynecil/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynecil/types.py,sha256=u4uh2Qc_odSUS8rjz3aKvDVsz4F__9cRBv6w01-kCKg,11227
+pynecil/update.py,sha256=AU9YzzdzQ4t5qFXomspIllG4jAwl19Uuy2Lkug_Sw-A,1370
+pynecil-3.0.1.dist-info/METADATA,sha256=GRXWzSA2gOkCi80YpJckXZx9aztH69r-6U4GwJW7P7w,2344
+pynecil-3.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pynecil-3.0.1.dist-info/licenses/LICENSE,sha256=oIinIOSJ49l1iVIRI3XGXFWt6SF7a83kEFBAY8ORwNI,1084
+pynecil-3.0.1.dist-info/RECORD,,
