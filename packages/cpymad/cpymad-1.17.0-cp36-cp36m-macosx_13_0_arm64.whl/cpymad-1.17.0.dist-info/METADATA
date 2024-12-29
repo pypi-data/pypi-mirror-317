@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cpymad
+Version: 1.17.0
+Summary: Cython binding to MAD-X
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: COPYING.rst
+Requires-Dist: numpy
+Requires-Dist: minrpc (>=0.0.8)
+
+UNKNOWN
+
