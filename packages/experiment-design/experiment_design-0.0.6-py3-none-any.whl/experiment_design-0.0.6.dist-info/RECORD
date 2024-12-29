@@ -1,0 +1,14 @@
+experiment_design/__init__.py,sha256=T03KXZf9VXuKblyFSMKULlPFOAYLiaEQcEO26l0kHyw,23
+experiment_design/covariance_modification.py,sha256=Wcl_FuhMnQZBj20QrohRaw8zykUlW9l9CwqLOYEtKW4,1666
+experiment_design/experiment_designer.py,sha256=ibZL0H6YkFA5uxrHPzwEGXT6mEnDVBSF1PAv-YIqmms,4376
+experiment_design/optimize.py,sha256=fcUNHPXWXI7LWYfyz8T1YX1nbiRldbTO9JouJ85E9n0,7620
+experiment_design/orthogonal_sampling.py,sha256=60WTDRbW4csMGV6k3c2UYP_owuGjIXNuDzTjXlTHCoE,9190
+experiment_design/random_sampling.py,sha256=TX2cgQI0kXxLRLs4vPgpn4Q4SiTgHaG89IKW_6a3jE8,3981
+experiment_design/scorers.py,sha256=qlVCQhE1AWtR0IXeJu9fGzVi8CBxnqpf9DqWmgNYzHs,9226
+experiment_design/variable/__init__.py,sha256=pdqt7h_VdsiWHDYjOi8wT2aGxtTzATYr2daQJd1tAsU,646
+experiment_design/variable/space.py,sha256=Xe8NyAJzWNdqe6SzGRWVElXfbGi51LaRxKyMNjVodkU,4229
+experiment_design/variable/variable.py,sha256=AQMFZFJBmiuHEPTAKJMvGGHHsi-lDuRLJcPgzziqRYM,10155
+experiment_design-0.0.6.dist-info/LICENSE,sha256=-zGdY2tdszqIzto--udmiEvyGeB5TJ51EYodpGCs-QA,1068
+experiment_design-0.0.6.dist-info/METADATA,sha256=Vc5Ugrd8HA18DB5cKz_ZNwPITSFy4xo1l3QPsdrnZyQ,2184
+experiment_design-0.0.6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+experiment_design-0.0.6.dist-info/RECORD,,
