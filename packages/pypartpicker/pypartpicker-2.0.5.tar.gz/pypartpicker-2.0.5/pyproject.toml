@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pypartpicker"
+version = "2.0.5"
+description = "A PCPartPicker data extractor for Python."
+authors = ["QuaKe"]
+readme = "README.md"
+homepage = "https://github.com/thefakequake/pypartpicker"
+repository = "https://github.com/thefakequake/pypartpicker"
+keywords = ["pcpartpicker", "pcpp", "scraping"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests-html = "^0.10.0"
+lxml = {extras = ["html-clean"], version = "^5.3.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
