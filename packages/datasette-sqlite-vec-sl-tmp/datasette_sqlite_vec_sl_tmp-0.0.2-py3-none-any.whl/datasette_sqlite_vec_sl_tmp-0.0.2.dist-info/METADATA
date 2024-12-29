@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: datasette-sqlite-vec-sl-tmp
+Version: 0.0.2
+Home-page: https://TODO.com
+Author: TODO
+License: MIT License, Apache License, Version 2.0
+Description-Content-Type: text/markdown
+Requires-Dist: datasette
+Requires-Dist: sqlite-vec-sl-tmp (==0.0.2)
+
+
+TODO readme

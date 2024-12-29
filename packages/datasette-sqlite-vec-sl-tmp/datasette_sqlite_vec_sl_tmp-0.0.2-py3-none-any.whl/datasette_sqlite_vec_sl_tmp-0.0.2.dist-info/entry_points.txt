@@ -1,0 +1,3 @@
+[datasette]
+sqlite_vec_sl_tmp = datasette_sqlite_vec_sl_tmp
+
