@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/BuildingsDownloader.egg-info/PKG-INFO
+src/BuildingsDownloader.egg-info/SOURCES.txt
+src/BuildingsDownloader.egg-info/dependency_links.txt
+src/BuildingsDownloader.egg-info/entry_points.txt
+src/BuildingsDownloader.egg-info/requires.txt
+src/BuildingsDownloader.egg-info/top_level.txt
