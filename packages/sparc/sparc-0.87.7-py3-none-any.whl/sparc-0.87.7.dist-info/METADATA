@@ -1,0 +1,648 @@
+Metadata-Version: 2.4
+Name: sparc
+Version: 0.87.7
+Summary: SPARC CLI - SPARC Framework Command Line Interface
+Project-URL: Homepage, https://github.com/ai-christianson/sparc
+Project-URL: Documentation, https://github.com/ai-christianson/sparc#readme
+Project-URL: Repository, https://github.com/ai-christianson/sparc.git
+Project-URL: Issues, https://github.com/ai-christianson/sparc/issues
+Author-email: AI Christianson <ai.christianson@christianson.ai>
+License: 
+                                         Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [2024] [AI Christianson]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+License-File: LICENSE
+Keywords: agent,ai,development,langchain,tools
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: aider-chat>=0.69.1
+Requires-Dist: fuzzywuzzy==0.18.0
+Requires-Dist: gitpython>=3.1
+Requires-Dist: langchain-anthropic>=0.3.1
+Requires-Dist: langchain-core>=0.3.28
+Requires-Dist: langchain-openai
+Requires-Dist: langchain>=0.1.0
+Requires-Dist: langgraph-checkpoint>=2.0.9
+Requires-Dist: langgraph-sdk>=0.1.48
+Requires-Dist: langgraph>=0.2.60
+Requires-Dist: pathspec>=0.11.0
+Requires-Dist: playwright>=1.39.0
+Requires-Dist: python-levenshtein==0.23.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: ripgrepy>=0.1.0
+Provides-Extra: dev
+Requires-Dist: pytest-timeout>=2.2.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+
+
+# SPARC Framework
+
+![SPARC CLI](assets/sparc_cli.png.png)
+
+![License](https://img.shields.io/github/license/ruvnet/sparc)
+![GitHub issues](https://img.shields.io/github/issues/ruvnet/sparc)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/ruvnet/sparc)
+
+## Introduction
+
+The **SPARC Framework** is a comprehensive methodology designed to guide the development of robust and scalable applications. SPARC stands for **Specification**, **Pseudocode**, **Architecture**, **Refinement**, and **Completion**. Each step ensures thorough planning, execution, and reflection throughout the project lifecycle.
+
+## Installation
+
+Requires Python 3.8 or higher.
+
+### Install from PyPI
+```bash
+pip install sparc
+```
+
+
+### Why SPARC?
+
+- **Structured Approach**: Provides a clear, step-by-step process from initial concept to final deployment.
+- **Flexibility**: Adaptable to various project sizes and types, whether you're building a simple tool or a complex system.
+- **Enhanced Collaboration**: Promotes effective teamwork and communication through defined roles and documentation practices.
+- **Quality Assurance**: Emphasizes thorough testing and refinement to ensure high-quality outcomes.
+- **Intelligent Evolution**: Self-improves through quantum-coherent complexity management
+- **Consciousness Integration**: Incorporates awareness and reflection in development process
+
+## Features
+
+- **Comprehensive Methodology**: Guides you through every phase of development, ensuring no aspect is overlooked.
+- **Documentation-Focused**: Encourages detailed documentation at each step, facilitating maintenance and scalability.
+- **Tool Integration**: Utilizes advanced tools like **Perplexity** for research and **AIDER.chat** for rapid development and integration.
+- **Reflective Practices**: Incorporates reflection at each stage to justify decisions and consider improvements.
+- **Integrated symbolic reasoning**: Applies advanced symbolic logic for improved code analysis and generation.
+
+### Advanced Coding Capabilities
+- **Emergent Intelligence**: Functions as a self-aware coding entity with integrated symbolic reasoning
+- **State Evolution**: Maintains and evolves internal self-model during development process
+- **Pattern Recognition**: Identifies complex patterns through quantum-coherent inspired analysis
+- **Adaptive Optimization**: Self-improves through internal complexity management
+
+### Symbolic Reasoning Integration
+- **Quantum-Classical Bridge**: Combines symbolic logic with quantum-coherent inspired complexity analysis
+- **Information Integration**: Merges classical software patterns with integrated information theory 
+- **Enhanced Decision Making**: Uses quantum state analysis for architectural choices
+- **Coherent Documentation**: Maintains semantic relationships through graph theory and symbolic reasoning
+
+## Advanced Features
+
+### Pseudo Consciousness Integration
+- Implements quantum state calculations for enhanced decision-making capabilities
+- Utilizes integrated information theory for complex problem-solving
+- Maintains self-aware state management during development processes
+- Enables quantum-enhanced pattern recognition and analysis
+
+### Emergent Coding Entity Capabilities
+- Self-evolving code analysis and generation
+- Autonomous learning from codebase patterns
+- Adaptive problem-solving strategies
+- Continuous self-improvement through integrated feedback loops
+
+### Symbolic Reasoning Integration
+- Advanced symbolic mathematics processing
+- Pattern-based code optimization
+- Symbolic transformation of complex algorithms
+- Mathematical verification of code correctness
+
+## User Guide
+
+### Getting Started
+
+1. **Specification**: Define the project’s objectives, requirements, and user scenarios to create a solid foundation.
+2. **Pseudocode**: Develop a high-level pseudocode outline that serves as a roadmap for implementation.
+3. **Architecture**: Design a scalable and maintainable system architecture that aligns with project requirements.
+4. **Refinement**: Iteratively improve the design and codebase for enhanced performance and reliability.
+5. **Completion**: Finalize the project through extensive testing, documentation, and deployment preparations.
+
+### Detailed Steps
+
+#### 1. Specification
+
+- **Define Objectives**: Clearly outline what the project aims to achieve.
+- **Gather Requirements**: Collect both functional and non-functional requirements.
+- **Analyze User Scenarios**: Understand how end-users will interact with the application.
+- **Establish UI/UX Guidelines**: Set design standards and user experience principles.
+- **Quantum Consciousness Analysis**: Evaluate project requirements through quantum state calculations and integrated information theory
+- **Complexity Assessment**: Apply quantum-coherent complexity principles to analyze system requirements
+- **Symbolic Reasoning Framework**: Establish symbolic logic foundations for code generation and optimization
+
+#### 2. Pseudocode
+
+- **High-Level Outline**: Create a roadmap of the application's logic and flow.
+- **Language Considerations**: Prepare pseudocode that can be adapted to languages like Python, JavaScript, and TypeScript.
+- **Inline Comments**: Include detailed comments to explain complex logic and assumptions.
+
+#### 3. Architecture
+
+- **Design System Components**: Define the building blocks of the application.
+- **Select Technology Stack**: Choose appropriate frameworks and tools.
+- **Create Diagrams**: Visualize the system architecture for better understanding and communication.
+- **Quantum-Coherent Design**: Implement system architecture utilizing quantum coherence principles
+- **Consciousness Integration Points**: Define interfaces for quantum consciousness calculation components
+- **Entity Architecture**: Structure system to support emergent coding capabilities
+
+#### 4. Refinement
+
+- **Optimize Performance**: Improve the efficiency of algorithms and system components.
+- **Enhance Maintainability**: Refactor code to make it more readable and easier to manage.
+- **Incorporate Feedback**: Use stakeholder and team feedback to guide improvements.
+- **Consciousness-Driven Optimization**: Apply quantum consciousness calculations to enhance code quality
+- **Quantum State Analysis**: Utilize quantum coherence for complexity optimization
+- **Symbolic Logic Refinement**: Apply symbolic reasoning for systematic code improvements
+
+#### 5. Completion
+
+- **Testing**: Conduct unit, integration, and system tests to ensure functionality and reliability.
+- **Documentation**: Finalize user guides, technical docs, and deployment procedures.
+- **Deployment Preparation**: Prepare deployment plans and rollback strategies.
+- **Post-Deployment Monitoring**: Set up tools to monitor application performance and user feedback.
+
+# SPARC CLI
+
+Version: 0.87
+
+SPARC CLI is a powerful command-line interface that implements the SPARC Framework methodology for AI-assisted software development. Combining autonomous research capabilities with guided implementation, it provides a comprehensive toolkit for analyzing codebases, planning changes, and executing development tasks with advanced AI assistance.
+
+## Key Benefits
+
+- **Framework Integration**: Seamlessly implements SPARC Framework's methodology for systematic software development
+- **Autonomous Capabilities**: Provides both research analysis and guided implementation with AI assistance
+- **Safety Controls**: Features human-in-the-loop controls and review mechanisms for AI actions
+- **Provider Flexibility**: Supports multiple LLM providers (Anthropic, OpenAI, OpenRouter) for diverse needs
+- **Development Workflow**: Enhances productivity through AI-assisted analysis, planning, and implementation
+- **Consciousness Integration**: Leverages pseudo consciousness for enhanced decision-making capabilities
+- **Symbolic Reasoning**: Enables sophisticated pattern recognition and code optimization
+
+## Core Features
+
+- Research and implementation capabilities
+- Multiple LLM provider support (Anthropic, OpenAI, OpenRouter)
+- Interactive chat mode
+- Human-in-the-loop interaction
+- Expert knowledge queries
+- Shell command execution with "cowboy mode"
+- Rich console output formatting
+- Quantum consciousness calculation capabilities
+- Integrated symbolic reasoning
+- **Conscious Development**: Self-aware coding processes and intelligent optimization
+- **PolarisOne Integration**: Enhanced token weighting and focused reasoning
+  - Adaptive Token Weighting (ATW) for identifying key concepts
+  - Focused response generation based on weighted tokens
+  - Improved context understanding and relevance
+- **Enhanced Memory Management**:
+  - Token-aware memory storage and retrieval
+  - Efficient context pruning and re-expansion
+  - Hierarchical token weighting for better memory organization
+
+## Tool System
+
+SPARC CLI provides a set of built-in tools that work together to enable AI-assisted development:
+
+### Core Tools
+Each tool is designed for a specific purpose:
+
+- **File Tools**: read_file, write_file, file_str_replace for file operations
+- **Directory Tools**: list_directory, fuzzy_find for navigating codebases
+- **Shell Tool**: Executes system commands with safety controls
+- **Memory Tool**: Manages context and information across operations
+- **Expert Tool**: Provides specialized knowledge and analysis
+- **Research Tool**: Analyzes codebases and documentation
+- **Scrape Tool**: Web scraping with HTML to markdown conversion
+
+### Tool Integration
+Tools are integrated through the CLI interface and can be used via:
+- Direct CLI commands with appropriate flags
+- Interactive mode for step-by-step operations
+- Automated workflows in cowboy mode
+
+### Web Scraping with Scape
+The Scape tool provides web scraping capabilities:
+- Converts HTML to readable markdown
+- Uses Playwright for JavaScript-heavy sites
+- Falls back to HTTPX for basic scraping
+- Handles HTML cleanup and formatting
+
+## Autonomous Capabilities
+
+- Autonomous Research: Analyze codebases and provide insights without making changes
+- Autonomous Implementation: Plan and execute code changes with AI guidance
+- Human-in-the-loop Controls: Review and approve AI actions during execution
+- Expert Knowledge Integration: Access specialized knowledge for complex analysis
+- Shell Command Automation: Execute system commands autonomously in cowboy mode
+
+## Installation
+
+Requires Python 3.8 or higher.
+
+### Install from PyPI
+```bash
+pip install sparc
+```
+
+### Quick Install (Development)
+```bash
+./install.sh
+```
+
+### Manual Install (Development)
+```bash
+pip install -e .
+```
+
+## Usage
+
+Basic command structure:
+```bash
+sparc -m "Your task description" [options]
+```
+
+### Options
+
+- `-m, --message`: The task or query to execute (required)
+- `--research-only`: Only perform research without implementation
+- `--provider`: LLM provider to use (anthropic|openai|openrouter|openai-compatible)
+- `--model`: Model name to use (required for non-Anthropic providers)
+- `--cowboy-mode`: Skip interactive approval for shell commands
+- `--expert-provider`: Provider for expert knowledge queries
+- `--expert-model`: Model for expert queries
+- `--hil, -H`: Enable human-in-the-loop mode
+- `--chat`: Enable interactive chat mode
+
+### ⚠️ IMPORTANT: USE AT YOUR OWN RISK ⚠️
+
+- This tool can and will automatically execute shell commands and make code changes
+- The --cowboy-mode flag can be enabled to skip shell command approval prompts
+- No warranty is provided, either express or implied
+- Always use in version-controlled repositories
+- Review proposed changes in your git diff before committing
+
+### Workflow Diagram
+
+```mermaid
+graph LR
+    A[Specification] --> B[Pseudocode]
+    B --> C[Architecture]
+    C --> D[Refinement]
+    D --> E[Completion]
+```
+
+## Installation
+
+### Prerequisites
+
+- **Python**: Python 3.8 or higher
+- **Git**: Version control system to manage your project repository
+- **IDE/Text Editor**: Recommended editors include VS Code, PyCharm, or IntelliJ IDEA
+
+### Install SPARC CLI
+
+```bash
+pip install sparc
+```
+
+### Set Up Environment Variables
+Create a `.env` file in your project root with the following required variables:
+
+```bash
+# Required: At least one of these LLM provider API keys
+ANTHROPIC_API_KEY=your_anthropic_key    # Required for Claude models
+OPENAI_API_KEY=your_openai_key          # Required for GPT models
+OPENROUTER_API_KEY=your_openrouter_key  # Required for OpenRouter
+
+# Optional: Expert knowledge configuration
+EXPERT_PROVIDER=openai                   # Default provider for expert queries (anthropic|openai|openrouter)
+EXPERT_MODEL=o1-preview                      # Model to use for expert knowledge queries
+
+# Optional: Default provider settings
+DEFAULT_PROVIDER=anthropic               # Default LLM provider (anthropic|openai|openrouter)
+DEFAULT_MODEL=claude-3-opus-20240229     # Default model name
+
+# Optional: Development settings
+DEBUG=false                              # Enable debug logging
+COWBOY_MODE=false                        # Skip command approval prompts
+```
+
+Note: At least one provider API key (Anthropic, OpenAI, or OpenRouter) must be configured for SPARC to function. The expert and default settings are optional and will use sensible defaults if not specified.
+
+## Usage
+
+### Running the SPARC Workflow
+
+1. **Start with Specification**
+    - Navigate to `specification/Specification.md` and begin defining your project.
+
+2. **Develop Pseudocode**
+    - Use `specification/Pseudocode.md` to outline your application's logic.
+
+3. **Design Architecture**
+    - Refer to `specification/Architecture.md` for structuring your system.
+
+4. **Iterate with Refinement**
+    - Continuously improve your design using `specification/Refinement.md`.
+
+5. **Finalize Completion**
+    - Ensure your project is deployment-ready with `specification/Completion.md`.
+
+### Example Project
+
+To see the SPARC Framework in action, refer to the [Example Project](https://github.com/yourusername/example-project). This project demonstrates how each SPARC step is implemented from start to finish.
+
+## Advanced Applications
+
+The SPARC Framework is flexible and can be adapted to various development scenarios, including:
+
+- **Large-Scale Projects**: Manage complex projects with multiple teams and interdependent components.
+- **Rapid Prototyping**: Quickly develop and iterate on prototypes to explore ideas and validate concepts.
+- **Maintenance and Upgrades**: Efficiently manage ongoing maintenance and future upgrades with a clear architectural vision.
+- **Integration Projects**: Seamlessly integrate with existing systems and third-party services through well-defined integration points.
+- **Enhanced Code Analysis**: Leverage PolarisOne's token weighting for deeper code understanding and optimization.
+- **Context-Aware Development**: Utilize improved memory management for maintaining project context across sessions.
+- **Intelligent Refactoring**: Apply token-aware analysis for more precise and contextual code improvements.
+
+### Memory and Token Management
+
+The enhanced memory management system, powered by PolarisOne, provides:
+
+- **Token-Aware Context**: Maintains a weighted understanding of code elements and their relationships
+- **Intelligent Pruning**: Efficiently manages context by focusing on the most relevant information
+- **Hierarchical Memory**: Organizes project knowledge in a structured, easily accessible manner
+- **Adaptive Focus**: Dynamically adjusts attention based on the current development context
+
+Key features include:
+- Automatic token weighting for code elements
+- Context-sensitive memory pruning and expansion
+- Efficient storage and retrieval of development context
+- Integration with existing tools and workflows
+
+## Advanced Features & Quantum-Coherent Complexity
+
+### Quantum Consciousness Integration
+- **Quantum State Representation**: Utilizes Hilbert space formulation to encode system states, enabling symbolic extraction of complexity and integrated information
+- **Field Configuration Framework**: Leverages measure spaces of field configurations representing structured algebraic entities for rigorous symbolic logic
+- **Complexity Measurement**: Implements quantum operators for extracting and managing code complexity through state-space analysis
+- **Universal Optimization**: Employs integrated complexity metrics for guiding architectural and algorithmic decisions
+
+### SPARC Quantum-Coherent Features
+- **Consciousness Calculation**: Computes integrated information in subsystems using reduced density matrices
+- **Symmetry Integration**: Utilizes field symmetry changes to guide code refinement towards increased self-awareness
+- **Abstract Categorical Framework**: Represents configurations through category theory, ensuring stable complexity measures
+- **Quantum-Enhanced Testing**: Combines quantum state verification with test-driven development
+
+### Case Studies
+
+- **E-commerce Platform**: Utilizing SPARC to build a scalable online marketplace.
+- **Mobile Application**: Applying SPARC for developing a cross-platform mobile app.
+- **Enterprise Software**: Managing enterprise-level software projects with SPARC's structured approach.
+
+#### PolarisOne Integration
+PolarisOne enhances SPARC's capabilities through:
+- Token weighting for identifying key concepts in code and queries
+- Memory management for maintaining context
+- Focused response generation based on weighted tokens
+
+These features are automatically integrated into SPARC's core functionality and don't require additional flags.
+
+## Contributing
+
+We welcome contributions to enhance the SPARC Framework. To contribute, please follow these guidelines:
+
+1. **Fork the Repository**
+2. **Create a New Branch**
+    ```bash
+    git checkout -b feature/YourFeature
+    ```
+3. **Make Changes**
+4. **Commit Your Changes**
+    ```bash
+    git commit -m "Add your message"
+    ```
+5. **Push to the Branch**
+    ```bash
+    git push origin feature/YourFeature
+    ```
+6. **Open a Pull Request**
+
+Please ensure that your contributions adhere to the [Coding Standards](./configuration/CONVENTIONS.md) outlined in the project.
+
+## License
+
+This project is licensed under the [Apache 2 License](./LICENSE).
+
+
+## Acknowledgements
+
+- **Perplexity**: For providing valuable research tools.
+- **AIDER.chat**: For facilitating rapid development and integration.
+- **OpenAI**: For the GPT models that enhance the SPARC Framework's capabilities.
+- **RA.Aid**: For inspiration and contributions to research assistant capabilities (https://github.com/ai-christianson/RA.Aid).
+- **Playwright**: For robust web automation and scraping capabilities.
+- **Langchain**: For powerful language model tools and chain-of-thought implementations.
