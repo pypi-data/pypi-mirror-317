@@ -1,0 +1,10 @@
+parselite/__init__.py,sha256=Nd7XAjB2UrS7VIy3WEzA8mDb19urXOz0rGrazgzhX3w,142
+parselite/_arxiv_latex.py,sha256=aCABUoUiTXDTMV3VLTxdFPoaWKPutkSKR3bjB4HP0zk,1451
+parselite/html_parser.py,sha256=NFKg4W49SIc5w68AI3LHP3cb2y0R_-0UXGti0FZs16k,1672
+parselite/main.py,sha256=sRaDOygPLIbhqz4P33fxdo-gdrliIQ-rw8ibWTqtFY4,4989
+parselite/yt_parser.py,sha256=3ygilTCdGGMcjY32yvv-Zj04V-1jjZCaSRh5nonHLfo,719
+parselite-0.3.13.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parselite-0.3.13.dist-info/METADATA,sha256=hvYV209JkmFgN2E02zNbfdbUUhj-PAckIwrJwKvYtNg,5250
+parselite-0.3.13.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+parselite-0.3.13.dist-info/top_level.txt,sha256=5U6OGeZYqVURdCbHMlddioVxSVQ9sY2GfruwB_ltztw,10
+parselite-0.3.13.dist-info/RECORD,,
