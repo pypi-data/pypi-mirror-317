@@ -1,0 +1,5 @@
+python-telegram-bot==21.6
+aiohttp==3.10.0
+python-dotenv==0.21.0
+requests==2.26.0
+googletrans==4.0.0-rc1
