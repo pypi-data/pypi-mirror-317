@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: fastcraft
+Version: 0.0.3
+Summary: Add your description here
+Author-email: Jmint <jeffreymintah737@gmail.com>
+Requires-Python: >=3.11
+Requires-Dist: rich>=13.9.4
+Requires-Dist: typer>=0.15.1

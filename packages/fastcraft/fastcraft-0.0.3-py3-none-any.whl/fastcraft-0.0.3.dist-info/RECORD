@@ -1,0 +1,12 @@
+fastcraft/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastcraft/main.py,sha256=6PmF1AAhTEUJ8Qs6RawGmiDCti9QlAnwfxK2KGLN7Rw,144
+fastcraft/cli/create_dir.py,sha256=VbyteDMw7vNBZ_iB0xVgQred-OnMM3HIyzN6ltQH6f4,1636
+fastcraft/cli/main.py,sha256=ZW6eZMysHn1wOf2ZYaZxGrDCXJFgV8jDsUitLBZhqD0,132
+fastcraft/utils/choices.py,sha256=mK-GHbXya1o29vCchLG4g-Qqx3ic63GzM0vq416k5CY,1110
+fastcraft/utils/file_writes.py,sha256=YHmyZGq0IhNtOMo__z1bzX42C-ls9v9RIAOut0RsXs8,981
+fastcraft/utils/generate_file_struct.py,sha256=46-rfFC8MgPrLIj8GrZiveZ4sOFDEijk6oZC2Fu1wDQ,1037
+fastcraft/utils/package_manager.py,sha256=b8ky9aj-USc4NYqCBQ0PJf7D30YWJGD-Bsl5RObX6hw,3162
+fastcraft-0.0.3.dist-info/METADATA,sha256=ACUJnMtJJ0j2khlHzvZ3Ir9nb_H75Z9Sls9AErTH8vE,218
+fastcraft-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastcraft-0.0.3.dist-info/entry_points.txt,sha256=W5e5cUhi_VvTWNYhvWbGiQLGOZx9_9xL1jqmU2eaBUY,45
+fastcraft-0.0.3.dist-info/RECORD,,
