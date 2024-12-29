@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jailmin
+Version: 0.0.3
+Summary: Python wrapper to jail manager Bastille as a CLI enhancer.
+Author-email: Ji-Haw Foo <jhfoo@kungfoo.info>
+Project-URL: Homepage, https://github.com/jhfoo/jailmin
+Keywords: bastille,freebsd,jail
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Jailmin: the lazy Bastille CLI
+Jailmin aspires to be the smart Bastille wrapper, so managing jails over CLI is easier (lazier).
+
+# How does it work?
+Jailmin maps to the same Bastille commands.
