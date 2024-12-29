@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+varsguard/__init__.py
+varsguard/cli.py
+varsguard.egg-info/PKG-INFO
+varsguard.egg-info/SOURCES.txt
+varsguard.egg-info/dependency_links.txt
+varsguard.egg-info/entry_points.txt
+varsguard.egg-info/top_level.txt
