@@ -1,0 +1,4 @@
+[console_scripts]
+get_open_socket=jupyter_http_manager.webapi.socket:main
+jupyter-manager=jupyter_http_manager.webapi.main:cli
+
