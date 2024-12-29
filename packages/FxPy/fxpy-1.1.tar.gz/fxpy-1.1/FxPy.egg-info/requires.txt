@@ -1,0 +1,5 @@
+pycountry
+pynput
+requests
+beautifulsoup4
+keyboard
