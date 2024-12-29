@@ -1,0 +1,19 @@
+# Python
+*.pyc
+*.ipynb
+__pycache__/
+.venv/
+venv/
+env/
+dist/
+build/
+docs/build/
+docs/source/_*
+
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+
+# Other
+.DS_Store
