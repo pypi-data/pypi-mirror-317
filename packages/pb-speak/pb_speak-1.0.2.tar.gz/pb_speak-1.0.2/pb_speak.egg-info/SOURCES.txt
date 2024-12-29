@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+pb_speak/__init__.py
+pb_speak/pb_speak.py
+pb_speak.egg-info/PKG-INFO
+pb_speak.egg-info/SOURCES.txt
+pb_speak.egg-info/dependency_links.txt
+pb_speak.egg-info/requires.txt
+pb_speak.egg-info/top_level.txt
