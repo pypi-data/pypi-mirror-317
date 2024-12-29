@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: brainlib
+Version: 0.0.1.post20241228
+Summary: Scalable Online Learning in Biological Neural Networks.
+Home-page: https://github.com/chaobrain/brainlib
+Author: BrainLib Developers
+Author-email: BrainLib Developers <chao.brain@qq.com>
+License: Apache-2.0 license
+Project-URL: homepage, http://github.com/chaobrain/brainlib
+Project-URL: repository, http://github.com/chaobrain/brainlib
+Keywords: brain simulation,brain-inspired computing
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: brainstate (>=0.1.0)
+Requires-Dist: brainunit
+Provides-Extra: cpu
+Requires-Dist: jaxlib ; extra == 'cpu'
+Provides-Extra: cpu_mini
+Requires-Dist: jaxlib ; extra == 'cpu_mini'
+Provides-Extra: cuda11
+Requires-Dist: jaxlib[cuda11] ; extra == 'cuda11'
+Provides-Extra: cuda11_mini
+Requires-Dist: jaxlib[cuda11] ; extra == 'cuda11_mini'
+Provides-Extra: cuda12
+Requires-Dist: jaxlib[cuda12] ; extra == 'cuda12'
+Provides-Extra: cuda12_mini
+Requires-Dist: jaxlib[cuda12] ; extra == 'cuda12_mini'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Provides-Extra: tpu
+Requires-Dist: jaxlib[tpu] ; extra == 'tpu'
+
+# BrainLib
