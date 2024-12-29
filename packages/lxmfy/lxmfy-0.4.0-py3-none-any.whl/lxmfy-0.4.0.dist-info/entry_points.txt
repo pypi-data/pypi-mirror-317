@@ -1,0 +1,4 @@
+[console_scripts]
+dev=scripts.dev:main
+lxmfy=lxmfy.cli:main
+

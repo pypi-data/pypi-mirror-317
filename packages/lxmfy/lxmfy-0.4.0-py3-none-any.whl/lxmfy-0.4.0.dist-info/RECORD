@@ -1,0 +1,15 @@
+lxmfy/__init__.py,sha256=O7CORHMhBc4W8RmAj0C2XempVcz0qX4Du_JKzJYK9Lk,516
+lxmfy/cli.py,sha256=dQDen2PdYis7zSd915Hj1P3baXqraGy6ODqrp9_5jwk,10966
+lxmfy/cogs_core.py,sha256=y0WZlHhRBYqpMKoJHnuZ5NCxHu91uQv9xJiKHZosFtg,1897
+lxmfy/commands.py,sha256=DdQGfCG-UVK_aZI9jWofxkWcy1ztDHTG6_hCy2AZzyQ,3185
+lxmfy/core.py,sha256=UFii8HCExwstxn1iGdYqdGC5Y-59t6Ch-j5QKI4BOQ4,11416
+lxmfy/moderation.py,sha256=GksWyIkouUsJLzCdXX1j2p2Hg-Pl0TPmDr9ofWwTYaI,4831
+lxmfy/storage.py,sha256=WYnxhYOCH_asJeh6cx4N85UQ1TPgjSE8One7Qfxc9AQ,3384
+lxmfy/templates/__init__.py,sha256=DLa-Xh-YLWy5tQU8BvEeLjk_EFa875Nyc9KnME8zLWU,182
+lxmfy/templates/full_bot.py,sha256=rDEiHD3TQktI13G6NlhBf2yHtqz4cTLykf1x573ch9g,5488
+lxmfy/transport.py,sha256=5P6AeY9wsW1GwZlRZjWj_pEi1rYkLn6HeihJ9h5tuIY,3725
+lxmfy-0.4.0.dist-info/LICENSE.md,sha256=f3cfjz6C450aGb6gDBpN6pZO0YbI_XqotL4RwW-WOWk,1077
+lxmfy-0.4.0.dist-info/METADATA,sha256=zPnoihgzzloIQY5Ef1VfGhRwOXTmNXTlBK9UBuBliPw,2571
+lxmfy-0.4.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+lxmfy-0.4.0.dist-info/entry_points.txt,sha256=1mxz1Na7IZcyk4O75LUyIsz2gaRVQGElUQQCB4M8rPs,61
+lxmfy-0.4.0.dist-info/RECORD,,
