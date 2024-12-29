@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cryptoservice"
+version = "0.1.1"
+description = "A cryptocurrency trading info package"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "python-binance>=1.0.22",
+    "pyyaml>=6.0.2",
+    "tomli>=2.2.1",
+    "tomli-w>=1.0.0",
+    "pandas>=2.2.3",
+    "pydantic-settings>=2.6.1",
+    "rich>=13.9.4",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+authors = [{ name = "Minnn", email = "minzzzai.s@gmail.com" }]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0.0",
+    "pytest-cov>=2.10.0",
+    "pre-commit>=2.0.0",
+    "python-dotenv>=0.15.0",
+]
+test = ["pytest>=6.0.0", "pytest-cov>=2.10.0"]
+
+[tool.semantic_release]
+version_variable = ["src/cryptoservice/__init__.py:__version__"]
+branch = "main"
+upload_to_pypi = true
+build_command = "pip install build && python -m build"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+include = "\\.pyi?$"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 100
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=src/cryptoservice --cov-report=term-missing"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cryptoservice"]
