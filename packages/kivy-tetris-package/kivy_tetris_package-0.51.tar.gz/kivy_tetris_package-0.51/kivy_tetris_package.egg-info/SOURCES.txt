@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+kivy_tetris_package/__init__.py
+kivy_tetris_package/main.py
+kivy_tetris_package/tetris.kv
+kivy_tetris_package.egg-info/PKG-INFO
+kivy_tetris_package.egg-info/SOURCES.txt
+kivy_tetris_package.egg-info/dependency_links.txt
+kivy_tetris_package.egg-info/entry_points.txt
+kivy_tetris_package.egg-info/requires.txt
+kivy_tetris_package.egg-info/top_level.txt
