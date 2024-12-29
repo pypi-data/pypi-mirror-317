@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: cp2kbrew
+Version: 0.1.0
+Summary: CP2K Dealing Programs
+Home-page: https://github.com/minu928/cp2kbrew
+Author: Knu
+Author-email: minu928@snu.ac.kr
+Keywords: cp2k
+Requires-Python: >=3.9.0
+License-File: LICENSE
+
