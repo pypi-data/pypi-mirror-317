@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/lib25519/__init__.py
+src/lib25519/_lib.py
+src/lib25519/dh.py
+src/lib25519/sign.py
+src/lib25519.egg-info/PKG-INFO
+src/lib25519.egg-info/SOURCES.txt
+src/lib25519.egg-info/dependency_links.txt
+src/lib25519.egg-info/top_level.txt
+tests/test_ed25519.py
+tests/test_x25519.py
