@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ccconfig
+Version: 0.0.1
+Summary: Lightweight configuration management library for Python
+Home-page: https://github.com/wang-zhibo/ccconfig
+Author: gm.zhibo.wang
+Author-email: gm.zhibo.wang@gmail.com
+Project-URL: Bug Reports, https://github.com/wang-zhibo/ccconfig/issues
+Project-URL: Source, https://github.com/wang-zhibo/ccconfig
+Keywords: configuration config python settings environment ini yaml
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML==6.0.1
+
+
+## ccconfig
+
+## Install
+
+`pip install ccconfig`
+
+## Usage
+
+example/main.py
+
+
