@@ -1,0 +1,12 @@
+flowai/__init__.py,sha256=KPkx_zrs-8oo71QOaVRUtDcUK8RAXSLW49_9ibuwxI0,23
+flowai/config_manager.py,sha256=Yk5x9QPJuBlnbJYpbyAlaVTEaelJxLkwFOYrQZRpfTM,3885
+flowai/llm_connector.py,sha256=LdE5XSalsIipe0GWrFwMcu157e0n3XmzzRr8DZShj-I,10304
+flowai/main.py,sha256=5v02AOBeMG_h7oBDGFFoe8xmsAMhE7bAClA4I8Z_jT8,24662
+flowai/prompt-code-review.txt,sha256=qq1bitV8y0kp2WKfCcYJAzoxpQTVdD5VMhdJgJ0AozQ,2671
+flowai/prompt-commit-message.txt,sha256=NQxzs4vbsqZoGJ926q0wkuG9-x3BbGPcScdmZAxqPOs,2915
+flowai/prompt-index.txt,sha256=A0TTT_esF6wtLCAu3_bu6n-yTicxrV4m51hpQ14lVn4,676
+flowai/prompt-pull-request.txt,sha256=HEepTtrKLBA-y4LSGGZRnlrvfu-ya7e6qzJ0A5rnGl4,1954
+glagos_flowai-0.4.8.dist-info/METADATA,sha256=FVT79XVEqkmASlSyb0x7zSd-pPNYS4tk5zQ9kZECnEo,7002
+glagos_flowai-0.4.8.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+glagos_flowai-0.4.8.dist-info/entry_points.txt,sha256=euhs-6ivjgmr2G9gn0CEFVGLy3xdAiOHoVKylentElg,42
+glagos_flowai-0.4.8.dist-info/RECORD,,
