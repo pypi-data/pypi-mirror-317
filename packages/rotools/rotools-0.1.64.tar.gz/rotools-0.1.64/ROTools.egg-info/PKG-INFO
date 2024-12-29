@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: rotools
+Version: 0.1.64
+Summary: Robert Olechowski python tools
+Home-page: https://github.com/RobertOlechowski/ROTools
+Author: Robert Olechowski
+Author-email: robertolechowski@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ROTools
+
+
+
+# Note
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass 
+```
+
+```
+python setup.py sdist
+rm .\dist\* 
+python -m build
+twine upload dist/*
+```
+
+
+```
+pip install --upgrade ROTools
+```
+
+
