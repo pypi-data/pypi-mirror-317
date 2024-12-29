@@ -1,0 +1,9 @@
+README.md
+setup.py
+discord_webhookspy/__init__.py
+discord_webhookspy/discord_webhookspy.py
+discord_webhookspy.egg-info/PKG-INFO
+discord_webhookspy.egg-info/SOURCES.txt
+discord_webhookspy.egg-info/dependency_links.txt
+discord_webhookspy.egg-info/requires.txt
+discord_webhookspy.egg-info/top_level.txt

@@ -1,0 +1,81 @@
+# discord-webhookspy
+
+discord-webhookspy is a Python library for Discord webhooks make to easy.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install discord-webhookspy
+```
+
+## Usage
+
+```python
+from discord_webhookspy import Webhook
+
+# Your webhook url
+webhook_url = 'https://discord.com/api/webhooks/blabla/blalblabla'
+
+# Sets the webhook
+webhook = Webhook(webhook_url)
+
+# Changes the your webhook name return 'My Bot'
+webhook.username('My Bot')
+
+# Content about what you wanna send return 'test'
+webhook.content('Bu bir test mesajıdır.') 
+
+# Webhook avatar pfp just url returns
+webhook.avatar('https://example.com/avatar.png')
+
+# Fields but you need to add embed first and you can use this infinity.
+webhook.field('Field 1', 'Value 1', inline=True)
+webhook.field('Field 2', 'Value 2', inline=False)
+
+# Returns webhook embed
+webhook.embed(
+    title="Webhook Title",
+    color=Webhook.Color.blue(),  # Color code (you can use any color decimal like 255)
+    desc="Description text",
+    author="Webhook Author",
+    image="https://example.com/image.png",
+    thumb="https://example.com/thumb.png",
+    footerText="Footer Text",
+    footerUrl="https://example.com/footer-icon.png"
+)
+
+# Send webhook response
+response = webhook.send()
+
+# Check the response
+if response.status_code == 204:
+    print("Webhook sended succesfully")
+else:
+    print(f"Webhook error: {response.status_code}")
+```
+
+## License
+
+MIT License
+
+Copyright (c) [2024] [ialperens]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
