@@ -1,0 +1,9 @@
+dogpile_breaker/__init__.py,sha256=iFmaZNfdUPGq8R-pFwhYpZLI6zp9ZdXZkFtFBaWyoXE,219
+dogpile_breaker/api.py,sha256=0kpqVfJGhxT5D90sNEWpTgxlEU6_cfRsPydYSVs8KLA,24932
+dogpile_breaker/exceptions.py,sha256=TNxO4sy0t4RIYTB7yanj4uGgpGBdJqnx8JEX2tfelQU,48
+dogpile_breaker/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dogpile_breaker/redis_backend.py,sha256=UU9jOJVFQbYI4Bk1-nmkhA4zs0QC_-l1Zi_eb1n4OPU,4799
+dogpile_breaker-0.2.0.dist-info/METADATA,sha256=z0dRmw94SrdhRW--6hLQetIZ-LJuiRrGWCmGx15pLgA,8495
+dogpile_breaker-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dogpile_breaker-0.2.0.dist-info/licenses/LICENSE,sha256=f7lWstIi78jyHZSpbfMbXWyuu8yyzKq8ihyh-Vgn6Tc,1066
+dogpile_breaker-0.2.0.dist-info/RECORD,,
