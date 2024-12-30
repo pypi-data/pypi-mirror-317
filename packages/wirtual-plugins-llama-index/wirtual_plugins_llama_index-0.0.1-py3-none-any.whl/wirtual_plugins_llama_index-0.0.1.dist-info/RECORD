@@ -1,0 +1,8 @@
+wirtual/plugins/llama_index/__init__.py,sha256=YM5XP3mrsJWJ9XUDt9BBYD7ij1cypAmhfkM7Ewfptl8,921
+wirtual/plugins/llama_index/llm.py,sha256=0wa6UcEiJgyakagimH4uLbsM9_Fnz_bcss1hE9YU15A,3598
+wirtual/plugins/llama_index/log.py,sha256=0KRruE-zn1SQfWSJxHtY2dcUlqd2KoYV5w-vaxMdXDQ,74
+wirtual/plugins/llama_index/version.py,sha256=7DuRfl8mH9oxBjHZDiE_nAy7bDbT2vKujoQTva6kgsw,614
+wirtual_plugins_llama_index-0.0.1.dist-info/METADATA,sha256=eRUS2rxVs_wJcGj7WP_E0lcH-1UlcNsLPBVMUpEj_yE,2218
+wirtual_plugins_llama_index-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wirtual_plugins_llama_index-0.0.1.dist-info/top_level.txt,sha256=4Rf8yHbj3yvH5QwATcj7VvRgh6gFijIX1-VffopPWD0,8
+wirtual_plugins_llama_index-0.0.1.dist-info/RECORD,,
