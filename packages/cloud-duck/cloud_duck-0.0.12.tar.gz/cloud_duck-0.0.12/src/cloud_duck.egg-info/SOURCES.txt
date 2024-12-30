@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cloud-duck/__init__.py
+src/cloud-duck/py.typed
+src/cloud-duck/_jsii/__init__.py
+src/cloud-duck/_jsii/cloud-duck@0.0.12.jsii.tgz
+src/cloud_duck.egg-info/PKG-INFO
+src/cloud_duck.egg-info/SOURCES.txt
+src/cloud_duck.egg-info/dependency_links.txt
+src/cloud_duck.egg-info/requires.txt
+src/cloud_duck.egg-info/top_level.txt
