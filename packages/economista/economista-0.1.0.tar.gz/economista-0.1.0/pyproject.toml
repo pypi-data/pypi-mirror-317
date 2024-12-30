@@ -1,0 +1,7 @@
+[project]
+name = "Economista"
+version = "0.1.0"
+description = "Descripción breve del proyecto"
+authors = [
+    { name = "Daniel Limon", email = "dani@dlimon.net" }
+]
