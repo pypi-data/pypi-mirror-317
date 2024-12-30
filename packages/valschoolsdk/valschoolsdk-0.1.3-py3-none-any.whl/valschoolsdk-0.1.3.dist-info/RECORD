@@ -1,0 +1,12 @@
+SchoolSDK/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SchoolSDK/client.py,sha256=BYjtN-UnatCGJE0A9lzLZAk7nPTI2V8NkEDtWaJ3KSY,2029
+SchoolSDK/config.py,sha256=UuVg4qC1iNl8edUy1ec8ppvoDglNJlvz94FZGLf3l5E,137
+SchoolSDK/exceptions.py,sha256=8v9sZzRrnfD2WTYQnve3T2UZiRBogMDCbdpfaMtMzeA,289
+SchoolSDK/utils.py,sha256=osl2Yxtb2zqwIGH-o-28M0gUBNBnuaswboWdMqxRjzY,225
+SchoolSDK/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SchoolSDK/tests/test_client.py,sha256=Wp4lfk0nTdk3ylNXN0CR6KgKt7qyvNzhFeWIQ9PoqMY,1749
+SchoolSDK/tests/test_utils.py,sha256=LkE0JbW-ZiLKyT2083aF3PkqVZDSawCWv7ksMqUS2yM,445
+valschoolsdk-0.1.3.dist-info/METADATA,sha256=-813XiWZtpunbOAwXY0k_YzTNYO66MA57H8ltPZbSl4,284
+valschoolsdk-0.1.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+valschoolsdk-0.1.3.dist-info/top_level.txt,sha256=dpSIVAZqaiEmVWdtyS3zoRvwaE60esqm4QpczmtJHrI,10
+valschoolsdk-0.1.3.dist-info/RECORD,,
