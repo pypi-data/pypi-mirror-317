@@ -1,0 +1,1 @@
+# will be replaced from cli with 'lazyenv init' to serve enviroment variables
