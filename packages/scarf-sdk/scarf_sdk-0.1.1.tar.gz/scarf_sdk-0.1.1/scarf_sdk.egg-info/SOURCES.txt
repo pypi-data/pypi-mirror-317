@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+examples/__init__.py
+examples/send_test_event.py
+scarf/__init__.py
+scarf/event_logger.py
+scarf/version.py
+scarf_sdk.egg-info/PKG-INFO
+scarf_sdk.egg-info/SOURCES.txt
+scarf_sdk.egg-info/dependency_links.txt
+scarf_sdk.egg-info/requires.txt
+scarf_sdk.egg-info/top_level.txt
+tests/__init__.py
+tests/test_event_logger.py
