@@ -1,0 +1,6 @@
+pandas
+
+[test]
+pytest
+pytest-cov
+pytest-sugar

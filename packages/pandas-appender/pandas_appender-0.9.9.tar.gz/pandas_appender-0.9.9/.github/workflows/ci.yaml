@@ -1,0 +1,86 @@
+name: ci
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+  linux-macos:
+    name: test-all ${{ matrix.os }} ${{ matrix.python-version }} ${{ matrix.ONE }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.7, 3.8, 3.9, '3.10', '3.11', '3.12', '3.13']
+        # 3.12 has no pandas wheel, takes a long time to build
+        EXTRA: [false]  # used to force includes to get included
+        ONE: [false]  # used to ask for pandas<2
+        include:
+          - python-version: 3.7
+            os: ubuntu-20.04  # oldest LTS in github actions
+            EXTRA: true
+          - python-version: 3.7
+            os: ubuntu-latest
+            EXTRA: true
+            ONE: true  # this wheel exists, does not in 3.13
+          - python-version: '3.11'
+            os: ubuntu-20.04
+            EXTRA: true
+          - python-version: '3.11'
+            os: macos-latest
+            EXTRA: true
+          - python-version: '3.11'
+            os: macos-latest
+            EXTRA: true
+            ONE: true  # this wheel exists, does not in 3.13
+          - python-version: '3.13'
+            os: macos-latest
+            EXTRA: true
+          - python-version: '3.7'
+            os: windows-latest
+            EXTRA: true
+          - python-version: '3.7'
+            os: windows-latest
+            EXTRA: true
+            ONE: true  # this wheel exists, does not in 3.13
+          - python-version: '3.13'
+            os: windows-latest
+            EXTRA: true
+
+    steps:
+
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install setuptools on python 3.12+
+      if: ${{ matrix.python-version >= '3.12' }}
+      run: |
+        pip install setuptools
+
+    - name: Install pandas<2 if needed
+      if: ${{ matrix.ONE }}
+      run: |
+        pip install 'numpy<2'  # or macos screws up
+        pip install 'pandas<2'
+
+    - name: 'Install dependencies'
+      run: |
+        python -m pip install --upgrade pip
+        pip install . .[test]
+
+    - name: 'pytest'
+      run: |
+        make test_coverage
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
