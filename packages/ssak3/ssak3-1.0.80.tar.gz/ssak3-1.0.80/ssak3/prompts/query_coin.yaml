@@ -1,0 +1,23 @@
+- version: 1
+  name: 'xrp_naver'
+  engine: 'naver'
+  fix: ''
+  query: 'xrp | xrp'
+  prompt: |
+    xrp
+  keywords:
+    - 'xrp'
+  description: |
+    xrp
+
+- version: 1
+  name: 'xrp_google'
+  engine: 'google'
+  fix: ''
+  query: 'xrp | xrp'
+  prompt: |
+    xrp
+  keywords:
+    - 'xrp'
+  description: |
+    xrp
