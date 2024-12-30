@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: get-def
+Version: 0.2
+Summary: Query the dictionaryapi and display definitions at the command line
+Project-URL: Homepage, https://codeberg.org/hyperreal/get-def
+Project-URL: Issues, https://codeberg.org/hyperreal/get-def/issues
+Author-email: Jeffrey Serio <hyperreal@fedoraproject.org>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: docopt>=0.6.2
+Requires-Dist: requests>=2.32.3
+Requires-Dist: rich>=13.9.4
+Description-Content-Type: text/markdown
+
+# get-def
+
+This program queries the [dictionaryapi.dev](https://dictionaryapi.dev/) and prints definitions to the command line in an aesthetically satisfying and ergonomic manner. Well, that's the intention, anyway.
+
+![get-def-computer.png](https://files.hyperreal.coffee/images/get-def-computer.png)
+
+## Installation
+
+``` shell
+pipx install get-def
+```
+
+## Usage
+
+``` shell
+get-def computer
+get-def corvid
+```
+

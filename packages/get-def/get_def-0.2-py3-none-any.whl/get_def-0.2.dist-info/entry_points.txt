@@ -1,0 +1,2 @@
+[console_scripts]
+get-def = get_def:main
