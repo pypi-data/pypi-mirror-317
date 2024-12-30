@@ -1,0 +1,154 @@
+# serializer version: 1
+# name: test_checkCopyFiles
+  12
+# ---
+# name: test_checkFiles
+  list([
+    True,
+    True,
+    True,
+    True,
+    True,
+    True,
+    True,
+    True,
+    True,
+    True,
+    True,
+    True,
+  ])
+# ---
+# name: test_copyAllFiles
+  list([
+    'ajs/',
+    'astatic/',
+    'blankDir/',
+    'z404.html',
+    'zPower7.html',
+    'zbonesboundhome.html',
+    'zbonescallhome.html',
+    'zbonescrawlhome.html',
+    'zbonesrunhome.html',
+    'zcontact.html',
+    'zemacsFiles.html',
+    'zindex.html',
+    'zmyRack.html',
+    'zreport.html',
+    'zrobots.txt',
+    'ztemplate.html',
+    'zzanotherThemeChanger.js',
+    'zzfavicon.ico',
+    'zzminimal-theme-switcher.js',
+    'zzpreloadImages.js',
+    'zzstyles.css',
+    'zztheDreadedTexFile.tex',
+    'zztheIdioticTimeDistributionOfAReport.pdf',
+  ])
+# ---
+# name: test_dir
+  Namespace(dir=True, inputFile=['dir'], templates_dir=None, output='.', no_warnings=False, verbose=False, copy_all=False)
+# ---
+# name: test_getIncludeFileText
+  tuple(
+    dict({
+    }),
+    0,
+    0,
+  )
+# ---
+# name: test_infile
+  Namespace(dir=False, inputFile=['inputFile'], templates_dir=None, output='.', no_warnings=False, verbose=False, copy_all=False)
+# ---
+# name: test_lookForInclude
+  tuple(
+    list([
+      'tests/testFolder/staging/404.html',
+      'tests/testFolder/staging/Power7.html',
+      'tests/testFolder/staging/bonesboundhome.html',
+      'tests/testFolder/staging/bonescallhome.html',
+      'tests/testFolder/staging/bonescrawlhome.html',
+      'tests/testFolder/staging/bonesrunhome.html',
+      'tests/testFolder/staging/contact.html',
+      'tests/testFolder/staging/emacsFiles.html',
+      'tests/testFolder/staging/index.html',
+      'tests/testFolder/staging/myRack.html',
+      'tests/testFolder/staging/report.html',
+      'tests/testFolder/staging/template.html',
+    ]),
+    list([
+      'tests/testFolder/sites/404.html',
+      'tests/testFolder/sites/Power7.html',
+      'tests/testFolder/sites/bonesboundhome.html',
+      'tests/testFolder/sites/bonescallhome.html',
+      'tests/testFolder/sites/bonescrawlhome.html',
+      'tests/testFolder/sites/bonesrunhome.html',
+      'tests/testFolder/sites/contact.html',
+      'tests/testFolder/sites/emacsFiles.html',
+      'tests/testFolder/sites/index.html',
+      'tests/testFolder/sites/myRack.html',
+      'tests/testFolder/sites/report.html',
+      'tests/testFolder/sites/template.html',
+    ]),
+  )
+# ---
+# name: test_readfilesDir
+  tuple(
+    list([
+      'tests/testFolder/staging/404.html',
+      'tests/testFolder/staging/Power7.html',
+      'tests/testFolder/staging/bonesboundhome.html',
+      'tests/testFolder/staging/bonescallhome.html',
+      'tests/testFolder/staging/bonescrawlhome.html',
+      'tests/testFolder/staging/bonesrunhome.html',
+      'tests/testFolder/staging/contact.html',
+      'tests/testFolder/staging/emacsFiles.html',
+      'tests/testFolder/staging/index.html',
+      'tests/testFolder/staging/myRack.html',
+      'tests/testFolder/staging/report.html',
+      'tests/testFolder/staging/template.html',
+    ]),
+    list([
+      'tests/testFolder/sites/404.html',
+      'tests/testFolder/sites/Power7.html',
+      'tests/testFolder/sites/bonesboundhome.html',
+      'tests/testFolder/sites/bonescallhome.html',
+      'tests/testFolder/sites/bonescrawlhome.html',
+      'tests/testFolder/sites/bonesrunhome.html',
+      'tests/testFolder/sites/contact.html',
+      'tests/testFolder/sites/emacsFiles.html',
+      'tests/testFolder/sites/index.html',
+      'tests/testFolder/sites/myRack.html',
+      'tests/testFolder/sites/report.html',
+      'tests/testFolder/sites/template.html',
+    ]),
+  )
+# ---
+# name: test_readfilesFile
+  tuple(
+    tuple(
+      list([
+        'tests/testFolder/staging/emacsFiles.html',
+      ]),
+      list([
+        'tests/testFolder/sites/emacsFiles.html',
+      ]),
+    ),
+    'tests/testFolder/templates',
+    0,
+  )
+# ---
+# name: test_templates_dir
+  Namespace(dir=True, inputFile=['dir'], templates_dir=['templates'], output='.', no_warnings=False, verbose=False, copy_all=False)
+# ---
+# name: test_templates_infile
+  Namespace(dir=False, inputFile=['inputFile'], templates_dir=['template'], output='.', no_warnings=False, verbose=False, copy_all=False)
+# ---
+# name: test_templates_output_dir
+  Namespace(dir=True, inputFile=['dir'], templates_dir=['templates'], output=['output'], no_warnings=False, verbose=False, copy_all=False)
+# ---
+# name: test_templates_output_infile
+  Namespace(dir=False, inputFile=['inputFile'], templates_dir=['template'], output=['output'], no_warnings=False, verbose=False, copy_all=False)
+# ---
+# name: test_verbose
+  Namespace(dir=False, inputFile=['inputFile'], templates_dir=None, output='.', no_warnings=False, verbose=True, copy_all=False)
+# ---
