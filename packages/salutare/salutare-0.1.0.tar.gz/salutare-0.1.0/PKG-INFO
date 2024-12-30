@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: salutare
+Version: 0.1.0
+Summary: A simple packet for generate a unique and safety passwords!
+Home-page: https://github.com/dannynicolae87/my_package_python_danny.git
+Author: Tarta Daniel Nicolae
+Author-email: dannynicolaeboy87@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Unique generate_password
+A simple packet for generate unique and safety passwords
+
+## Instalation
+
+```bash
+pip install unique_code_generator
