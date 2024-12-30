@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: avat
+Version: 0.0.5
+Summary: AI avatars
+Author-email: lorepieri <lorepieri@hotmail.it>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# AI Avatars
+
+Python SDK
