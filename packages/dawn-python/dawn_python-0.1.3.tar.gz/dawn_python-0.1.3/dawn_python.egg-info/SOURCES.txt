@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dawn_python.egg-info/PKG-INFO
+dawn_python.egg-info/SOURCES.txt
+dawn_python.egg-info/dependency_links.txt
+dawn_python.egg-info/top_level.txt
+pydawn/__init__.py
+pydawn/utils.py
+pydawn/webgpu.py
+pydawn/lib/libwebgpu_dawn.dylib
+test/test_f16_compute.py
+test/test_utils.py
