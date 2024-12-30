@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyautoev
+Version: 0.0.1
+Summary: club is public library
+Home-page: 
+Author: Isee
+Author-email: 
+Requires-Dist: pytz==2024.2
+Requires-Dist: sshtunnel==0.4.0
+Requires-Dist: PyMySQL==1.1.1
+Requires-Dist: SQLAlchemy==2.0.32
+Requires-Dist: redis==5.2.0
+
