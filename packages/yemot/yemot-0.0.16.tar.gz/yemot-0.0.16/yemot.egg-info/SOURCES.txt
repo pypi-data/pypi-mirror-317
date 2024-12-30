@@ -1,0 +1,12 @@
+LICENCE
+README.md
+setup.py
+yemot/__init__.py
+yemot/campaign.py
+yemot/client.py
+yemot/system.py
+yemot.egg-info/PKG-INFO
+yemot.egg-info/SOURCES.txt
+yemot.egg-info/dependency_links.txt
+yemot.egg-info/requires.txt
+yemot.egg-info/top_level.txt
