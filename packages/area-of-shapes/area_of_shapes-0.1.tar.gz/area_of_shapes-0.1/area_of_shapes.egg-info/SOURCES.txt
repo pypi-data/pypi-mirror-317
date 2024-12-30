@@ -1,0 +1,11 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+area_of_shapes.egg-info/PKG-INFO
+area_of_shapes.egg-info/SOURCES.txt
+area_of_shapes.egg-info/dependency_links.txt
+area_of_shapes.egg-info/top_level.txt
+shape_areas/__init__.py
+shape_areas/shape_areas.py
+shape_areas/testshape_area.py
