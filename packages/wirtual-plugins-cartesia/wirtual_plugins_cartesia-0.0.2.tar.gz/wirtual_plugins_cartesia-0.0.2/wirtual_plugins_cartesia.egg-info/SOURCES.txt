@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/cartesia/__init__.py
+wirtual/plugins/cartesia/log.py
+wirtual/plugins/cartesia/models.py
+wirtual/plugins/cartesia/py.typed
+wirtual/plugins/cartesia/tts.py
+wirtual/plugins/cartesia/version.py
+wirtual_plugins_cartesia.egg-info/PKG-INFO
+wirtual_plugins_cartesia.egg-info/SOURCES.txt
+wirtual_plugins_cartesia.egg-info/dependency_links.txt
+wirtual_plugins_cartesia.egg-info/requires.txt
+wirtual_plugins_cartesia.egg-info/top_level.txt
