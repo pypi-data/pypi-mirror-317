@@ -1,0 +1,7 @@
+README.md
+select_item.py
+setup.py
+termux_select.egg-info/PKG-INFO
+termux_select.egg-info/SOURCES.txt
+termux_select.egg-info/dependency_links.txt
+termux_select.egg-info/top_level.txt
