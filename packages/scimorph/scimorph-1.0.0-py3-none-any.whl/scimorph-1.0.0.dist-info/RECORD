@@ -1,0 +1,9 @@
+scimorph/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scimorph/main.py,sha256=2MnNB3_QqVGwTP14YRuNVEgL74m4Yh4Risxvgqei7M0,1336
+scimorph/savefig.py,sha256=yfINazUCOEMgeviMu71vDCZXfPIb_cDePq0CjrqySI8,1059
+scimorph/theme_publication.py,sha256=vw3YwdWINv880yn5HxKq3_LSuFWv6qSEk9z3pyBpEDA,4265
+scimorph-1.0.0.dist-info/LICENSE,sha256=9F9PNX36TFpFKMOWlWcJgHuz5yb4_LqKNG0COe95R2c,1498
+scimorph-1.0.0.dist-info/METADATA,sha256=KE7bZRwGi3n_gOG30zX0G34RSyuFKa6UoUVhfClP9jc,4234
+scimorph-1.0.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+scimorph-1.0.0.dist-info/top_level.txt,sha256=f3_s_k8vFGlCXgsG-TcIEcAjYTrM7w4iGMty40S5nd8,9
+scimorph-1.0.0.dist-info/RECORD,,
