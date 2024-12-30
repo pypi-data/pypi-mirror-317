@@ -1,0 +1,17 @@
+gemma_template/__init__.py,sha256=V0jatycnZbEkH8VzmK3C5dZ_JX0WRLoNOgiULJHYlYM,347
+gemma_template/__version__.py,sha256=ogsEUt_CTasD7E1uXcoFypFbdZQHIgUth7K4W_uCI-0,463
+gemma_template/constants.py,sha256=mymAaLI8Cy7AkdSNNmfB4TSrYcQPtdCZ4oLLfAInEgM,6480
+gemma_template/exceptions.py,sha256=4BPurQeB3-vdfDPiSc7wiD2-fwlvSPve5u0-6wdLV9I,384
+gemma_template/models.py,sha256=CwQoaoMR77WO6O97INMj-TXFouLwHbnJOKFWQCA5BJg,51099
+gemma_template/types.py,sha256=HU3-WMRXw160PN__1yfrQg1CtupOGR86cPKPHUUHjb4,343
+gemma_template/utils.py,sha256=T3A0rM5mwSfYsA4tmxjBTC0wWkoYU8BskGpV3BkAZIc,7451
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=AgSojM7yfgfTzr3cRILZKHD68oyskazgUDnAWXdI09M,1346
+tests/test_instruction_template.py,sha256=-DY0FGI16azqYER7dNj9wq_g1CPetrbDG2hqe2Oz7ts,2475
+tests/test_load_dataset.py,sha256=LCNKQkPghL5F72RqrgjadCZi-Qi0AFfVAzQZ2n5lRb4,2177
+tests/test_structure_template.py,sha256=DyVmCrkYfmkAf2fVQyAwzRX4C_nufQFRN_fMKzN_WF4,1714
+gemma_template-0.1.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gemma_template-0.1.5.dist-info/METADATA,sha256=gk-hJogsEgfNi9GXkrCM2I2bjnNIz8FvKTO8td9SX8o,12559
+gemma_template-0.1.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gemma_template-0.1.5.dist-info/top_level.txt,sha256=aA_IRn5xDrhg5OAbz1ZRWXnws5M1fh8ix834gtB96PU,21
+gemma_template-0.1.5.dist-info/RECORD,,
