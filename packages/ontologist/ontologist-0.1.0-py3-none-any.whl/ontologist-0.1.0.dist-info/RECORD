@@ -1,0 +1,11 @@
+ontologist/__init__.py,sha256=a1chevYDtnuI5P04L8evAQaEA3oel7efKAga3EuRn3c,260
+ontologist/entrypoints.py,sha256=r2cxekEXh988DMQm7or6XwXfVgFz3yKQ_ub0xGbkCIk,1583
+ontologist/models.py,sha256=TdfnIrVDpPJxsIfIYznQ6DnZcYuzW3mXDUhSiUQ9k5o,4256
+ontologist/retrievers.py,sha256=MSqgpFJd6fhHz852CQHx6ydjyYV1nryT4K-JtxV9uXc,5588
+ontologist/rules.py,sha256=8rTKAtROMNrcIgWrkFlZH4FgW317gGZgcRllp8yDsHo,2542
+ontologist/utils.py,sha256=jCzn4gzjqNxJ97q7K6KqlZ3NZczhas1kES7gqGZdWIA,710
+ontologist/validators.py,sha256=J3XKhOC3B1eyjK9tanQNSEp4q9Kx_0z4t5YTl1UNeco,5770
+ontologist-0.1.0.dist-info/LICENSE,sha256=ytUe-CoaMONAjTBnq1c7M8cHlSEDZtVQ8bopTWxJC2M,1072
+ontologist-0.1.0.dist-info/METADATA,sha256=RY72_Y7iTWf6OEeHQe3rj51yFA9EXBYttMLGbXQtvgE,2579
+ontologist-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+ontologist-0.1.0.dist-info/RECORD,,
