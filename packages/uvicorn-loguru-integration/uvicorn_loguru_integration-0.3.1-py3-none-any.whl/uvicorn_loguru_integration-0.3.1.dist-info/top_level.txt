@@ -1,0 +1,1 @@
+uvicorn_loguru_integration
