@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pytest-junit-xray-xml
+Version: 0.1.0
+Summary: Export test results in an augmented JUnit format for usage with Xray ()
+Author-email: Pascal Vaudrevange <pascal@vaudrevange.com>
+License: MIT license
+Project-URL: Changelog, https://github.com/PascalVaudrevange/pytest-junit-xray-xml/blob/main/CHANGELOG.md
+Project-URL: Homepage, https://github.com/PascalVaudrevange/pytest-junit-xray-xml
+Project-URL: Issues, https://github.com/PascalVaudrevange/pytest-junit-xray-xml/issues
+Project-URL: Repository, https://github.com/PascalVaudrevange/pytest-junit-xray-xml.git
+Keywords: xray,pytest,junit
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest
+Provides-Extra: test
+Requires-Dist: pytest-cov; extra == "test"
+Provides-Extra: build
+Requires-Dist: build; extra == "build"
+Provides-Extra: deploy
+Requires-Dist: twine; extra == "deploy"
+
+# pytest-junit-xray-xml
+This plugin for [pytest](https://pytest.org) exports test results in an extended JUnit format for consumption by the [Xray plugin](https://www.getxray.app/)
+ for [Jira](https://www.atlassian.com/software/jira).
