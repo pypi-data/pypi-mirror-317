@@ -1,0 +1,12 @@
+click
+
+[dev]
+build
+twine
+coverage
+mypy
+pytest
+pytest-cov
+pytest-mock
+ruff
+isort

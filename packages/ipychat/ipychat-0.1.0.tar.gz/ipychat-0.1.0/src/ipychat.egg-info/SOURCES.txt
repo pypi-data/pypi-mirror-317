@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/ipychat/__init__.py
+src/ipychat/__version__.py
+src/ipychat.egg-info/PKG-INFO
+src/ipychat.egg-info/SOURCES.txt
+src/ipychat.egg-info/dependency_links.txt
+src/ipychat.egg-info/entry_points.txt
+src/ipychat.egg-info/requires.txt
+src/ipychat.egg-info/top_level.txt
