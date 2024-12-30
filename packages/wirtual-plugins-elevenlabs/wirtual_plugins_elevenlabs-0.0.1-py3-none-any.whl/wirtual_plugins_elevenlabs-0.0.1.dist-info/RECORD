@@ -1,0 +1,10 @@
+wirtual/plugins/elevenlabs/__init__.py,sha256=ORVL9PxVhL1bD3pH5qb41P-yaOguLCfPOMHnKFPJemY,1264
+wirtual/plugins/elevenlabs/log.py,sha256=e9yxQ6xPbTJPozd6nwkFWZp2YpRD6rdwfrZ42wedu18,73
+wirtual/plugins/elevenlabs/models.py,sha256=ddBUlDT4707f64WDJASR0B60X0yQ-LRHK1ZpTuBJXK8,387
+wirtual/plugins/elevenlabs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wirtual/plugins/elevenlabs/tts.py,sha256=UaMEN64ZnupTQgc3lP-FTVXjYSyAyhA2idpwPvpFv5k,19471
+wirtual/plugins/elevenlabs/version.py,sha256=8ZMwr2XB70cB-Enolo5Sf-9UU5M5GXJ77h88dONd15E,615
+wirtual_plugins_elevenlabs-0.0.1.dist-info/METADATA,sha256=gWIbJ7IHfVqtCyM1Vux3teAnAl3nUcq_pdz9B0cNP9I,1329
+wirtual_plugins_elevenlabs-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wirtual_plugins_elevenlabs-0.0.1.dist-info/top_level.txt,sha256=4Rf8yHbj3yvH5QwATcj7VvRgh6gFijIX1-VffopPWD0,8
+wirtual_plugins_elevenlabs-0.0.1.dist-info/RECORD,,
