@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+joinly/ai.py
+joinly/join.py
+llm_joinly.egg-info/PKG-INFO
+llm_joinly.egg-info/SOURCES.txt
+llm_joinly.egg-info/dependency_links.txt
+llm_joinly.egg-info/requires.txt
+llm_joinly.egg-info/top_level.txt
+tests/test_join.py
