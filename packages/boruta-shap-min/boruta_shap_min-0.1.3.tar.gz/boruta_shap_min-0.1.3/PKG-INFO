@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: boruta-shap-min
+Version: 0.1.3
+Summary: Minimal version of BorutaShap
+Author: Eoghan Keany
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: lightgbm (>=4.5.0,<5.0.0)
+Requires-Dist: llvmlite (>=0.43.0,<0.44.0)
+Requires-Dist: matplotlib (>=3.10.0,<4.0.0)
+Requires-Dist: scipy (>=1.14.1,<2.0.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Requires-Dist: shap (>=0.46.0,<0.47.0)
+Requires-Dist: statsmodels (>=0.14.4,<0.15.0)
+Requires-Dist: xgboost (>=2.1.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+This project is derived from Eoghan Keany's Boruta-Shap project:
+   
+Eoghan Keany. (2020). BorutaShap : A wrapper feature selection method which combines the Boruta feature selection algorithm with Shapley values. (1.1). Zenodo. https://doi.org/10.5281/zenodo.4247618
+
+The original project can be found at
+
+   https://github.com/Ekeany/Boruta-Shap
+
+
+This version
+  - Removes the examples and notebooks to reduce dependencies
+  - Adds a Poetry file for dependency management
+  - Makes numerous PEP8 changes
+  - Rearranges the directory structure
+  - Removed catboost to allow more recent numpy
+  - Adds some additional tests
+
+The original project was released under the MIT license. This project is also released under the MIT license.
+
+In the unlikely event you have issues with this package, please contact me at the email address
+in the poetry file.
+
+
