@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/langchain_s3_cached_embeddings/__init__.py
+src/langchain_s3_cached_embeddings/s3_cached_embeddings.py
+src/langchain_s3_cached_embeddings.egg-info/PKG-INFO
+src/langchain_s3_cached_embeddings.egg-info/SOURCES.txt
+src/langchain_s3_cached_embeddings.egg-info/dependency_links.txt
+src/langchain_s3_cached_embeddings.egg-info/requires.txt
+src/langchain_s3_cached_embeddings.egg-info/top_level.txt
+tests/test_s3_cached_embeddings.py
