@@ -1,0 +1,2 @@
+[console_scripts]
+repod = repod.cli:main
