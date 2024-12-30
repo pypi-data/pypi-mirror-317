@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+mongodb_migrator/__init__.py
+mongodb_migrator/cli.py
+mongodb_migrator/core.py
+mongrate.egg-info/PKG-INFO
+mongrate.egg-info/SOURCES.txt
+mongrate.egg-info/dependency_links.txt
+mongrate.egg-info/entry_points.txt
+mongrate.egg-info/requires.txt
+mongrate.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_migrator.py
