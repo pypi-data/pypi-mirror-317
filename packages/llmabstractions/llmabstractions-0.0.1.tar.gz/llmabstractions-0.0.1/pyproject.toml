@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'llmabstractions'
+dynamic = [
+    'version'
+]
+description = 'A Python library abstracting the way you interact with LLMs.'
+readme = 'README.md'
+authors = [
+    { name = 'Kostas Tsolis', email='kostas.tsolis@dialectos.ai'}
+]
+license = { file = 'LICENSE'}
+requires-python = '>=3.9'
+dependencies = []
+
+[project.urls]
+homepage = 'https://github.com/dialectos-ai/llmabstractions'
+documentation = 'https://llmabstractions.readthedocs.io/en/latest/index.html'
+repository = 'https://github.com/dialectos-ai/llmabstractions'
