@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/silero/__init__.py
+wirtual/plugins/silero/log.py
+wirtual/plugins/silero/onnx_model.py
+wirtual/plugins/silero/py.typed
+wirtual/plugins/silero/vad.py
+wirtual/plugins/silero/version.py
+wirtual/plugins/silero/resources/__init__.py
+wirtual_plugins_silero.egg-info/PKG-INFO
+wirtual_plugins_silero.egg-info/SOURCES.txt
+wirtual_plugins_silero.egg-info/dependency_links.txt
+wirtual_plugins_silero.egg-info/requires.txt
+wirtual_plugins_silero.egg-info/top_level.txt
