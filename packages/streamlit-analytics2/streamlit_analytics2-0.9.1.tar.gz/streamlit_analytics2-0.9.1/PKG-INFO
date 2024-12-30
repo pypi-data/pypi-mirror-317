@@ -1,0 +1,141 @@
+Metadata-Version: 2.4
+Name: streamlit_analytics2
+Version: 0.9.1
+Summary: Track & visualize user interactions with your streamlit app.
+Project-URL: Repository, https://github.com/444B/streamlit-analytics2
+Project-URL: Documentation, https://github.com/444B/streamlit-analytics2/wiki
+Project-URL: Issues, https://github.com/444B/streamlit-analytics2/issues
+Author-email: 444B <contact+pypi@444b.me>
+License: MIT License
+        
+        Copyright (c) 2021 Johannes Rieke
+        
+        Copyright (c) 2024 444B
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: analytics,streamlit,streamlit-analytics,streamlit-analytics2,visualization
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.10
+Requires-Dist: altair>=5.5.0
+Requires-Dist: google-cloud-firestore>=2.19.0
+Requires-Dist: numpy>=2.2.1
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: streamlit>=1.37.0
+Requires-Dist: typing-extensions>=4.12.2
+Provides-Extra: dev
+Requires-Dist: bandit>=1.8.0; extra == 'dev'
+Requires-Dist: black>=24.10.0; extra == 'dev'
+Requires-Dist: build>=1.2.2.post1; extra == 'dev'
+Requires-Dist: flake8>=7.1.1; extra == 'dev'
+Requires-Dist: isort>=5.13.2; extra == 'dev'
+Requires-Dist: mypy>=1.14.0; extra == 'dev'
+Requires-Dist: pandas-stubs>=2.2.3.241126; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=8.3.4; extra == 'dev'
+Requires-Dist: twine>=6.0.1; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest-cov>=4.0.0; extra == 'test'
+Requires-Dist: pytest>=8.3.4; extra == 'test'
+Description-Content-Type: text/markdown
+
+# streamlit-analytics2 👀
+[![PyPi](https://img.shields.io/pypi/v/streamlit-analytics2)](https://pypi.org/project/streamlit-analytics2/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/streamlit-analytics2)](https://pypi.org/project/streamlit-analytics2/)
+![Build Status](https://github.com/444B/streamlit-analytics2/actions/workflows/release.yml/badge.svg)
+
+[![CodeFactor](https://www.codefactor.io/repository/github/444b/streamlit-analytics2/badge)](https://www.codefactor.io/repository/github/444b/streamlit-analytics2)
+![Coverage](https://codecov.io/gh/444B/streamlit-analytics2/branch/main/graph/badge.svg)
+
+![Known Vulnerabilities](https://snyk.io/test/github/444B/streamlit-analytics2/badge.svg)
+[![streamlit-analytics2](https://snyk.io/advisor/python/streamlit-analytics2/badge.svg)](https://snyk.io/advisor/python/streamlit-analytics2)
+
+**Enhanced tracking & visualization for your Streamlit apps.**
+
+Streamlit Analytics2 is a maintained, powerful tool for tracking user interactions and gathering insights from your Streamlit applications. With just a few lines of code, you can start monitoring user behavior and making data-driven decisions to improve your app.
+
+> [!Note]
+> This fork is confirmed to fix the deprecation ```st.experimental_get_query_params``` alerts.    [Context](https://docs.streamlit.io/library/api-reference/utilities/st.experimental_get_query_params)  
+> It also resolved 25 security issues that exist in the upstream (2 Critical, 11 High, 10 Moderate, 2 Low) 
+
+
+## Getting Started
+
+1. Install the package:
+   ```
+   pip install streamlit-analytics2
+   ```
+
+2. Import and initialize the tracker in your Streamlit script:
+   ```python
+   import streamlit as st
+   import streamlit_analytics2 as streamlit_analytics
+
+   with streamlit_analytics.track():
+      st.write("Hello, World!")
+      st.button("Click me")
+   ```
+
+3. Run your Streamlit app and append `?analytics=on` to the URL to view the analytics dashboard.
+
+## Contributing
+
+### Session-Level Analytics
+
+We have added a new feature to track session-level analytics. The default behavior of tracking across all sessions of your app is still supported, but now we also enable tracking at the individual session level as well. To do this, simply add a string representing a unique session ID to the track() function (recommended to be a UUID4):
+
+```python
+import streamlit as st
+import streamlit_analytics2 as streamlit_analytics
+
+with streamlit_analytics.track(session_id="1234567890"):
+    main()
+
+def main():
+    st.write("Hello, World!")
+    st.button("Click me")
+```
+
+## Moving Forward
+
+
+## Upcoming Features
+
+We're currently working on a major breaking release that will introduce exciting new features and enhancements:
+
+- Multi-page tracking: Monitor user interactions across multiple pages of your Streamlit app.
+- Improved metrics accuracy: Get more precise and reliable usage metrics.
+- Flexible data formats: Choose between CSV or JSON for storing and exporting analytics data.
+- Customization screen: Easily configure and customize the analytics settings through a user-friendly interface.
+
+Stay tuned for more updates and join our [community](https://github.com/444B/streamlit-analytics2/discussions) to be part of shaping the future of Streamlit Analytics2!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
