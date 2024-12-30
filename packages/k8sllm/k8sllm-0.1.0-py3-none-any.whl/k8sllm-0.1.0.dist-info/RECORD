@@ -1,0 +1,11 @@
+k8sllm/__init__.py,sha256=R4M72suP4jbY3vCdq-9gNzRSrKiCef_-CwqGUURZZrU,341
+k8sllm/cli.py,sha256=iuEUVT0FmRw5mWNh3U97di9Zt15YnjXvoU-H1cwTOY0,2732
+k8sllm/config.py,sha256=qW9nHfU2UZvaMVNFiryvawdlUgTHzpjjKsQYdybwD5A,1329
+k8sllm/context_manager.py,sha256=m99vsnyFkF4ohxAZoDcVtVSe1j2XhpUEUyc7t9sA35A,2493
+k8sllm/k8s_executor.py,sha256=6jn6OVqzhZJB7wbznRv4T7y8UR5j49OXt9a42djmFhA,3127
+k8sllm/llm_processor.py,sha256=Uu5ylTmV6JA6H4I-QYkmHlHEbUtzZ9Zji6lsa9bFyik,3151
+k8sllm-0.1.0.dist-info/METADATA,sha256=q7wQFrLz_txFbjqLQpECFz93ZrNRKsGnz_ZEs0D0RZw,2170
+k8sllm-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+k8sllm-0.1.0.dist-info/entry_points.txt,sha256=FUmRkyK4516_PMz7TIHsZsL0a7mx3wNxdHIlUNm6zqE,42
+k8sllm-0.1.0.dist-info/top_level.txt,sha256=wsGqYx0rdeGcOdInRSwXO23LnhpUc_aNECj67ufeCMk,7
+k8sllm-0.1.0.dist-info/RECORD,,
