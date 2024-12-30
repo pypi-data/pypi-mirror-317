@@ -1,0 +1,8 @@
+photo_management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+photo_management/photo_importer.py,sha256=K9kraxWujZWbjItB75xbjfVTWZPhv6MY-AsKtY8smXc,8481
+photo_management/photo_management.py,sha256=Ycew8Eq-c8zNYlm2NfSAmP_7-shBqA9uCb7-n93C4hc,1674
+photo_management-2024.1.dist-info/METADATA,sha256=Cq7pyirwJoSZ5N8baXEFqCkxvKblNmBwwu0SyduCxwk,1985
+photo_management-2024.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+photo_management-2024.1.dist-info/entry_points.txt,sha256=SvIaIEAT94Il0R8Z2CM3c_EUIviIEbdAxv4LktUe594,72
+photo_management-2024.1.dist-info/licenses/LICENSE,sha256=GJuoKwBbYJctrJoE0qMYRDSOnPPDuJfp9VTvbikg3Vw,1069
+photo_management-2024.1.dist-info/RECORD,,
