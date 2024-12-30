@@ -1,0 +1,10 @@
+nonebot_plugin_update-0.1.4.dist-info/METADATA,sha256=htcc3LZiHKvlDTakTkKx-3Nx7YtivN6CEtPjiVlHIFI,2929
+nonebot_plugin_update-0.1.4.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+nonebot_plugin_update-0.1.4.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+nonebot_plugin_update-0.1.4.dist-info/licenses/LICENSE,sha256=oSkNVAhTf3_hawkGn25IC4LRN5YchsUgOp2RbbJWKII,1083
+nonebot_plugin_update/__init__.py,sha256=9K-RLr_LIawXB2kZLYlOwFzjBjiB45Eevm7xv6tgDPo,1134
+nonebot_plugin_update/check.py,sha256=rFlzlS3v08ZzK06JM3VAxOsOexScmHh2v_KIqzZnJZc,3284
+nonebot_plugin_update/config.py,sha256=UZG4dY6v-HL8yh_F0Yk6WKqT1quyfw2XbtQBnddYmYI,226
+nonebot_plugin_update/model.py,sha256=prIUC4RT_1gaOrWWTr-v6FvS_WMGFDhWU-aTLcqdqg8,528
+nonebot_plugin_update/version.py,sha256=uRgDhlExtVt1eO6umEKGUkiiZisQHQCI-SOjpA36EJg,96
+nonebot_plugin_update-0.1.4.dist-info/RECORD,,
