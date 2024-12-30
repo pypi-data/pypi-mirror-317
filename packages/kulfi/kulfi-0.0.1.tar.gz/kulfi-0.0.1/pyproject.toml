@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kulfi"
+dynamic = ["version"]
+authors = [{ name = "Yasas" }]
+description = "A Python package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[tool.hatch.version]
+path = "src/kulfi/__init__.py"
+
+[project.urls]
+"Homepage" = "https://github.com/username/kulfi"
+"Bug Tracker" = "https://github.com/username/kulfi/issues"
