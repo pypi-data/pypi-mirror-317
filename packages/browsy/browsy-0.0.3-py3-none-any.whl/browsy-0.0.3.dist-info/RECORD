@@ -1,0 +1,11 @@
+browsy/__init__.py,sha256=RQHM5Qjl7e84rZRF3y4tQirAOFhl23HKC-qr8k_wj3I,71
+browsy/__main__.py,sha256=8EO3PUJ46aNRn49-RVNJg3X991ViiZd5GZL5pKhlhpU,1633
+browsy/_database.py,sha256=OqdP_Fv7F2zfRHlACdFNiawDdIGTde_pjLK5tIFYl7Q,4529
+browsy/_jobs.py,sha256=Psgroz3SsRNmrAekXwkRP30VPd65NVPMy0AAzn4kOrw,4595
+browsy/_server.py,sha256=9ycypTZmKm-SLXWAX_cowFEy9e207ZhKS9ec_aXw-uA,3119
+browsy/_worker.py,sha256=UU-y4lSeGUNhO24m_UidFnzuRpOuEWNI8rN7YSfZ8as,4323
+browsy-0.0.3.dist-info/METADATA,sha256=DlF_lmVWlBo2puMd9iEYR33HdlMQmI43XWgA3Ik6ExU,4388
+browsy-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+browsy-0.0.3.dist-info/entry_points.txt,sha256=mFgM6-QSOJcGgv4HXABZA9QYfXM34cL4phCkLn9euk4,47
+browsy-0.0.3.dist-info/licenses/LICENSE,sha256=IhA9Z_IWG3gvFrEZUIs_trXDdnKDnWrcz5uHAwgFqF8,1072
+browsy-0.0.3.dist-info/RECORD,,
