@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: docbuilderpy
+Version: 0.0.2
+Summary: Simple creation of documentation for Python projects.
+Author: Jan-Markus Langer
+License-File: LICENSE
+Requires-Dist: click

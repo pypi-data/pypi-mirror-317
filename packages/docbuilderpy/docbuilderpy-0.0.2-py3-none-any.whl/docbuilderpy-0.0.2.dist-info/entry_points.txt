@@ -1,0 +1,2 @@
+[console_scripts]
+docbuilderpy = docbuilderpy.cli:main
