@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "e-simulator"
+version = "0.1.1"
+description = ""
+authors = ["FatCoding3 <luongdoan000@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.3"
+joblib = "^1.4.2"
+matplotlib = "^3.10.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
