@@ -1,0 +1,2 @@
+option('build_python', type : 'boolean', value : true, description : 'Do build and install the Python extension. Note: build_C needs to be set to false for pip install to work on Windows.')
+option('build_C', type : 'boolean', value : true, description : 'Do build and install the C library.')
