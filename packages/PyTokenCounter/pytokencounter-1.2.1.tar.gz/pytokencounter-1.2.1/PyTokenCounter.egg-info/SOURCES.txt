@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+PyTokenCounter/__init__.py
+PyTokenCounter/_utils.py
+PyTokenCounter/cli.py
+PyTokenCounter/core.py
+PyTokenCounter.egg-info/PKG-INFO
+PyTokenCounter.egg-info/SOURCES.txt
+PyTokenCounter.egg-info/dependency_links.txt
+PyTokenCounter.egg-info/entry_points.txt
+PyTokenCounter.egg-info/requires.txt
+PyTokenCounter.egg-info/top_level.txt
