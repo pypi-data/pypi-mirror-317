@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+src/itmgr/__init__.py
+src/itmgr/itmgr.py
+src/itmgr.egg-info/PKG-INFO
+src/itmgr.egg-info/SOURCES.txt
+src/itmgr.egg-info/dependency_links.txt
+src/itmgr.egg-info/entry_points.txt
+src/itmgr.egg-info/requires.txt
+src/itmgr.egg-info/top_level.txt

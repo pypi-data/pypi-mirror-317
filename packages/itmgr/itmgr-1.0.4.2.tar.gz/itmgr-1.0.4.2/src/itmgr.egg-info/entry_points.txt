@@ -1,0 +1,2 @@
+[console_scripts]
+itmgr = itmgr.itmgr:main
