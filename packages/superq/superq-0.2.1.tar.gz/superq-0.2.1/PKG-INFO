@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: superq
+Version: 0.2.1
+Summary: Simple, durable, asyncio-compatible task queue inspired by Celery and Huey.
+Author: jtschoonhoven
+Author-email: jtschoonhoven@gmail.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: pymongo
+Requires-Dist: pymongo (>=3.7) ; extra == "pymongo"
+Description-Content-Type: text/markdown
+
+# SuperQ
+
+A simple, durable, asyncio-compatible task queue for Python.
+

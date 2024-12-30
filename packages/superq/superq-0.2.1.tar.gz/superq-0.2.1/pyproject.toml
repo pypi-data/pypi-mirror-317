@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "superq"
+version = "0.2.1"
+description = "Simple, durable, asyncio-compatible task queue inspired by Celery and Huey."
+authors = ["jtschoonhoven <jtschoonhoven@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+superq = "superq.cli:main"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+pymongo = { version = ">=3.7", optional = true }
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+mongomock = "^4.3.0"
+mypy = "^1.13.0"
+pytest-asyncio = "^0.24.0"
+pytest-mock = "^3.14.0"
+ruff = "^0.8.2"
+
+[tool.poetry.extras]
+pymongo = ["pymongo"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
