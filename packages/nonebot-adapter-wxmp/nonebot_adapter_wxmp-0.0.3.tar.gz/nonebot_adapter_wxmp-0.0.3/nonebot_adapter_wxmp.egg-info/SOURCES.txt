@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+nonebot/adapters/wxmp/__init__.py
+nonebot/adapters/wxmp/adapter.py
+nonebot/adapters/wxmp/bot.py
+nonebot/adapters/wxmp/config.py
+nonebot/adapters/wxmp/message.py
+nonebot/adapters/wxmp/event/__init__.py
+nonebot/adapters/wxmp/event/base.py
+nonebot/adapters/wxmp/event/miniprogram.py
+nonebot/adapters/wxmp/event/offical.py
+nonebot_adapter_wxmp.egg-info/PKG-INFO
+nonebot_adapter_wxmp.egg-info/SOURCES.txt
+nonebot_adapter_wxmp.egg-info/dependency_links.txt
+nonebot_adapter_wxmp.egg-info/requires.txt
+nonebot_adapter_wxmp.egg-info/top_level.txt
