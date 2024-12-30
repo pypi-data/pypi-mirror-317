@@ -1,0 +1,10 @@
+social_validator/__init__.py,sha256=sNUIXY4j-uBW0UNJ1UBlk71jQtO-yq-NEWFI_pOQcKY,23
+social_validator/exceptions.py,sha256=K3s4W4KhIiLB6RR9nsCCq0hMUASGxh7lGUOXlUvf0Uw,289
+social_validator/shared.py,sha256=pIrYRBZ9rY9U4sT5QfM8jFi8n8AQ4yjPb_9zPRgGowI,247
+social_validator/telegram.py,sha256=MSZs_iIKkuzp6AQvtB3hCOnAaj0icuhuGXquEL4fzLo,11640
+social_validator/twitch.py,sha256=7Wifz_kv3YLJJUGqu5gnLnQuS9NlKAuX0u_llB-kZ90,4996
+social_validator/youtube.py,sha256=87VDjaM1W3zS1Mb8PbtxbWFDrFY-9PkMaNceyn-3ADs,9971
+social_validator-0.3.1.dist-info/METADATA,sha256=xfJxJZlbjKr9_8o99Uv2tsrbBIQ6XfGAidSjGrFFk9k,3586
+social_validator-0.3.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+social_validator-0.3.1.dist-info/licenses/LICENSE,sha256=iiyqTBKHgQxG7hSkd8LhofH_uLS2x_1dLXIIew9CIYM,1062
+social_validator-0.3.1.dist-info/RECORD,,
