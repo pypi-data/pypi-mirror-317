@@ -1,0 +1,3 @@
+[console_scripts]
+musescore-manager=mscxyz.cli:execute
+
