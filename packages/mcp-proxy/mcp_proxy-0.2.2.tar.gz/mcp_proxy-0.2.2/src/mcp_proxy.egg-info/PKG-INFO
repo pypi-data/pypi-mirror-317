@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: mcp-proxy
+Version: 0.2.2
+Summary: A MCP server which proxies requests to a remote MCP server over SSE transport.
+Author-email: Sergey Parfenyuk <sergey.parfenyuk@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Sergey Parfenyuk
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/sparfenyuk/mcp-proxy
+Project-URL: Source, https://github.com/sparfenyuk/mcp-proxy
+Project-URL: Documentation, https://github.com/sparfenyuk/mcp-proxy
+Project-URL: Changelog, https://github.com/sparfenyuk/mcp-proxy/releases
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp
+
+# mcp-proxy
+
+- [mcp-proxy](#mcp-proxy)
+  - [About](#about)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+    - [Claude Desktop Configuration](#claude-desktop-configuration)
+  - [Advanced Configuration](#advanced-configuration)
+    - [Environment Variables](#environment-variables)
+
+## About
+
+Connect to MCP servers that run on SSE transport using the MCP Proxy server.
+
+```mermaid
+graph LR
+    A["Claude Desktop"] <--> B["mcp-proxy"]
+    B <--> C["External MCP Server"]
+
+    style A fill:#ffe6f9,stroke:#333,color:black,stroke-width:2px
+    style B fill:#e6e6ff,stroke:#333,color:black,stroke-width:2px
+    style C fill:#e6ffe6,stroke:#333,color:black,stroke-width:2px
+```
+
+> [!TIP]
+> As of now, Claude Desktop does not support MCP servers that run on SSE transport. This server is a workaround to enable the support.
+
+## Installation
+
+```bash
+uv tool install git+https://github.com/sparfenyuk/mcp-proxy
+```
+
+> [!NOTE]
+> If you have already installed the server, you can update it using `uv tool upgrade --reinstall` command.
+
+> [!NOTE]
+> If you want to delete the server, use the `uv tool uninstall mcp-proxy` command.
+
+## Configuration
+
+### Claude Desktop Configuration
+
+Configure Claude Desktop to recognize the MCP server.
+
+1. Open the Claude Desktop configuration file:
+   - in MacOS, the configuration file is located at `~/Library/Application Support/Claude/claude_desktop_config.json`
+   - in Windows, the configuration file is located at `%APPDATA%\Claude\claude_desktop_config.json`
+
+   > __Note:__
+   > You can also find claude_desktop_config.json inside the settings of Claude Desktop app
+
+2. Add the server configuration
+
+    ```json
+    {
+      "mcpServers": {
+        "mcp-proxy": {
+            "command": "mcp-proxy",
+            "env": {
+              "SSE_URL": "http://example.io/sse"
+            }
+        }
+      }
+    }
+
+    ```
+
+## Advanced Configuration
+
+### Environment Variables
+
+| Name             | Description                                                                        |
+| ---------------- | ---------------------------------------------------------------------------------- |
+| SSE_URL          | The MCP server SSE endpoint to connect to e.g. http://example.io/sse               |
+| API_ACCESS_TOKEN | Added in the `Authorization` header of the HTTP request as a `Bearer` access token |
