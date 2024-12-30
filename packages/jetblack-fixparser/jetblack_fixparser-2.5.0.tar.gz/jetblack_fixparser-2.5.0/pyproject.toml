@@ -1,0 +1,19 @@
+[project]
+name = "jetblack-fixparser"
+version = "2.5.0"
+description = "A parser for FIX messages"
+authors = [
+  { name="Rob Blackbourn", email="rob.blackbourn@gmail.com" },
+]
+requires-python = ">=3.8"
+readme = "README.md"
+dependencies = [
+  "ruamel.yaml"
+]
+[project.urls]
+Homepage = "https://github.com/rob-blackbourn/jetblack-fixparser"
+Issues = "https://github.com/rob-blackbourn/jetblack-fixparser/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
