@@ -1,0 +1,692 @@
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kims
+
+
+--- 
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-postgres-db
+  namespace: kims
+  labels:
+    app: kims-postgres-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-postgres-db
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: kims-postgres-db
+        tier: postgreSQL
+    spec:
+      containers:
+        - name: kims-postgres-db
+          image: postgres:10.3
+          ports:
+          - containerPort: 5432
+          env:
+          - name: POSTGRES_USER
+            valueFrom:
+              secretKeyRef:
+                name: postgres-db-credentials
+                key: user
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: postgres-db-credentials
+                key: password
+          - name: POSTGRES_NAME
+            value: 'postgres'
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/container_data
+              name: postgresql-volume-mount
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+      volumes:
+      - name: postgresql-volume-mount
+        persistentVolumeClaim:
+          claimName: kims-postgres-db-pv-claim
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kims-postgres-db
+  namespace: kims
+  labels:
+    app: kims-postgres-db
+spec:
+  type: ClusterIP
+  ports:
+  - port: 5432
+    targetPort: 5432
+    protocol: TCP
+  selector:
+    app: kims-postgres-db
+    tier: postgreSQL
+
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: kims-postgres-db-pv
+  namespace: kims
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 200M
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data"
+
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: 
+  labels: 
+    app: kims-postgres-db
+  name: kims-postgres-db-pv-claim
+  namespace: kims
+spec: 
+  accessModes: 
+    - ReadWriteOnce
+  resources: 
+    requests: 
+      storage: 100M
+  storageClassName: manual
+
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgres-db-credentials
+  namespace: kims
+  labels:
+    app: kims-postgres-db
+type: opaque
+stringData:
+  user: <:DB_USERNAME>
+  password: <:DB_PASSWORD>
+
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-data-controller
+  namespace: kims
+  labels:
+    app: kims-data-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-data-controller
+  template:
+    metadata:
+      labels:
+        app: kims-data-controller
+    spec:
+      containers:
+      - name: kims-data-controller
+        image: arjunbabuust/kims-data-controller:latest
+        imagePullPolicy: Always
+        securityContext:
+          privileged: true
+        command: ["python3", "main.py"]
+        ports:
+        - containerPort: 9001
+        env:
+          - name: DATABASE_HOST
+            value: "kims-postgres-db.kims.svc.cluster.local" # update this to reflect your IP 
+          - name: DATABASE_USER
+            value: <:DB_USERNAME>
+          - name: DATABASE_PASSWORD
+            value: <:DB_PASSWORD>
+          - name: DATABASE_NAME
+            value: 'postgres'
+          - name: DATABASE_PORT
+            value: '5432'
+          - name: KIMS_LLM_INVOKER_ENDPOINT
+            value: "kims-llm-invoker.kims.svc.cluster.local"
+          - name: KIMS_LLM_INVOKER_PORT
+            value: "9002"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kims-data-controller
+  namespace: kims
+  labels:
+    app: kims-data-controller
+spec:
+  ports:
+  - port: 9001
+    targetPort: 9001
+    protocol: TCP
+  type: ClusterIP
+  selector:
+    app: kims-data-controller
+
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-llm-invoker
+  namespace: kims
+  labels:
+    app: kims-llm-invoker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-llm-invoker
+  template:
+    metadata:
+      labels:
+        app: kims-llm-invoker
+    spec:
+      containers:
+      - name: kims-llm-invoker
+        image: arjunbabuust/kims-llm-invoker:latest
+        imagePullPolicy: Always
+        securityContext:
+          privileged: true
+        command: ["python3", "main.py"]
+        ports:
+        - containerPort: 9002
+        env:
+          - name: AZURE_OPENAI_API_KEY
+            value: "<:OPEN_AI_API_KEY>"
+          - name: AZURE_OPENAI_ENDPOINT
+            value: "<:OPEN_AI_ENDPOINT>"
+          - name: AZURE_OPENAI_API_VERSION
+            value: "<:OPEN_AI_VERSION>"
+          - name: AZURE_OPENAI_DEPLOYMENT_NAME
+            value: "<:OPEN_AI_DEPLOYMENT_NAME>"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kims-llm-invoker
+  namespace: kims
+  labels:
+    app: kims-llm-invoker
+spec:
+  ports:
+  - port: 9002
+    targetPort: 9002
+    protocol: TCP
+  type: ClusterIP
+  selector:
+    app: kims-llm-invoker
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-cluster-agent
+  namespace: kims
+  labels:
+    app: kims-cluster-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-cluster-agent
+  template:
+    metadata:
+      labels:
+        app: kims-cluster-agent
+    spec:
+      initContainers:
+      - name: init-config
+        image: busybox
+        command: ["/bin/sh", "-c", "for key in /etc/config/*; do echo $(basename $key)=$(cat $key) >> /etc/default/kims-cluster-agent; done"]
+        volumeMounts:
+        - name: env-config-volume
+          mountPath: /etc/config  # Mount ConfigMap as directory
+        - name: config-file-volume
+          mountPath: /etc/default  # Mount to /etc/default so the main container can read it
+          subPath: kims-cluster-agent-config
+          
+      containers:
+      - name: kims-cluster-agent
+        image: arjunbabuust/kims-cluster-agent:latest
+        imagePullPolicy: Always
+        securityContext:
+          privileged: true
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: kims-cluster-agent-config
+        volumeMounts:
+        - name: config-file-volume
+          mountPath: /etc/default/kims-cluster-agent  # Mount the single config file
+
+      volumes:
+        - name: env-config-volume
+          configMap:
+            name: kims-cluster-agent-config  # The ConfigMap to be mounted as a directory
+        - name: config-file-volume
+          emptyDir: {}  # An empty directory where the init container can create the file
+
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kims-cluster-agent-config
+  namespace: kims
+data:
+  KIMS_CONTROLLER_ENDPOINT: "kims-data-controller.kims.svc.cluster.local"
+  KIMS_CONTROLLER_PORT: "9001"
+  K8S_CLUSTER_NAME: "<:CLUSTER_NAME>"
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-diagnostic-agent
+  namespace: kims
+  labels:
+    app: kims-diagnostic-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-diagnostic-agent
+  template:
+    metadata:
+      labels:
+        app: kims-diagnostic-agent
+    spec:
+      containers:
+      - name: kims-diagnostic-agent
+        image: arjunbabuust/kims-diagnostic-agent:latest
+        imagePullPolicy: Always
+        securityContext:
+          privileged: true
+        command: ["python3", "run.py"]
+        ports:
+        - containerPort: 9004
+        env:
+          - name: KIMS_DATABASE_HOST
+            value: "kims-postgres-db.kims.svc.cluster.local"
+          - name: KIMS_DATABASE_USER
+            value: "postgres"
+          - name: KIMS_DATABASE_PASSWORD
+            value: "postgres"
+          - name: KIMS_DATABASE_NAME
+            value: 'postgres'
+          - name: KIMS_DATABASE_PORT
+            value: '5432'
+          - name: AZURE_OPENAI_API_KEY
+            value: "<:OPEN_AI_API_KEY>"
+          - name: AZURE_OPENAI_ENDPOINT
+            value: "<:OPEN_AI_ENDPOINT>"
+          - name: AZURE_OPENAI_API_VERSION
+            value: "<:OPEN_AI_VERSION>"
+          - name: AZURE_OPENAI_DEPLOYMENT_NAME
+            value: "<:OPEN_AI_DEPLOYMENT_NAME>"      
+          - name: KIMS_RESOLVER_AGENT_ENDPOINT
+            value: "kims-resolver-agent.kims.svc.cluster.local"
+          - name: KIMS_RESOLVER_AGENT_ENDPOINT_PORT
+            value: "9005"
+          
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kims-diagnostic-agent
+  namespace: kims
+  labels:
+    app: kims-diagnostic-agent
+spec:
+  ports:
+  - port: 9004
+    targetPort: 9004
+    protocol: TCP
+  type: ClusterIP
+  selector:
+    app: kims-diagnostic-agent
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-resolver-agent
+  namespace: kims
+  labels:
+    app: kims-resolver-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-resolver-agent
+  template:
+    metadata:
+      labels:
+        app: kims-resolver-agent
+    spec:
+      containers:
+      - name: kims-resolver-agent
+        image: arjunbabuust/kims-resolver-agent:latest
+        imagePullPolicy: Always
+        securityContext:
+          privileged: true
+        command: ["python3", "run.py"]
+        ports:
+        - containerPort: 9005
+        env:
+          - name: KIMS_DATABASE_HOST
+            value: "kims-postgres-db.kims.svc.cluster.local"
+          - name: KIMS_DATABASE_USER
+            value: "postgres"
+          - name: KIMS_DATABASE_PASSWORD
+            value: "postgres"
+          - name: KIMS_DATABASE_NAME
+            value: 'postgres'
+          - name: KIMS_DATABASE_PORT
+            value: '5432'
+          - name: KIMS_DIAGNOSTIC_AGENT_ENDPOINT
+            value: "kims-diagnostic-agent.kims.svc.cluster.local"
+          - name: KIMS_DIAGNOSTIC_AGENT_ENDPOINT_PORT
+            value: "9004"
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kims-resolver-agent
+  namespace: kims
+  labels:
+    app: kims-resolver-agent
+spec:
+  ports:
+  - port: 9005
+    targetPort: 9005
+    protocol: TCP
+  type: ClusterIP
+  selector:
+    app: kims-resolver-agent
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-ui-front-end
+  namespace: kims
+  labels:
+    app: kims-ui-front-end
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-ui-front-end
+  template:
+    metadata:
+      labels:
+        app: kims-ui-front-end
+    spec:
+      containers:
+      - name: kims-ui-front-end
+        image: arjunbabuust/kims-front-end:test
+        imagePullPolicy: Always
+        securityContext:
+          privileged: true
+        command: ["npm", "start"]
+        ports:
+        - containerPort: 3000
+        env:
+          - name: KIMS_UI_BACK_END_ENDPOINT
+            value: "kims-ui-back-end.kims.svc.cluster.local"
+          - name: KIMS_UI_BACK_END_PORT
+            value: "9003"
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kims-ui-front-end
+  namespace: kims
+  labels:
+    app: kims-ui-front-end
+spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
+    nodePort: 31000
+  type: NodePort
+  selector:
+    app: kims-ui-front-end
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-ui-back-end
+  namespace: kims
+  labels:
+    app: kims-ui-back-end
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-ui-back-end
+  template:
+    metadata:
+      labels:
+        app: kims-ui-back-end
+    spec:
+      containers:
+      - name: kims-ui-back-end
+        image: arjunbabuust/kims-ui-backend:test
+        imagePullPolicy: Always
+        securityContext:
+          privileged: true
+        command: ["python3", "run.py"]
+        ports:
+        - containerPort: 9003
+        env:
+          - name: KIMS_UI_FRONT_END_ENDPOINT
+            value: "kims-ui-front-end.kims.svc.cluster.local"
+          - name: KIMS_UI_FRONT_END_PORT
+            value: "3000"
+          - name: KIMS_DATABASE_HOST
+            value: "kims-postgres-db.kims.svc.cluster.local"
+          - name: KIMS_DATABASE_USER
+            value: "postgres"
+          - name: KIMS_DATABASE_PASSWORD
+            value: "postgres"
+          - name: KIMS_DATABASE_NAME
+            value: 'postgres'
+          - name: KIMS_DATABASE_PORT
+            value: '5432'
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kims-ui-back-end
+  namespace: kims
+  labels:
+    app: kims-ui-back-end
+spec:
+  ports:
+  - port: 9003
+    targetPort: 9003
+    protocol: TCP
+    nodePort: 31001
+  type: NodePort
+  selector:
+    app: kims-ui-back-end
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-redis-cache
+  namespace: kims
+  labels:
+    app: kims-redis-cache
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-redis-cache
+  template:
+    metadata:
+      labels:
+        app: kims-redis-cache
+    spec:
+      containers:
+      - name: kims-redis-cache
+        image: redis:latest
+        imagePullPolicy: Always
+        securityContext:
+          privileged: true
+        ports:
+        - containerPort: 6379
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kims-redis-cache
+  namespace: kims
+  labels:
+    app: kims-redis-cache
+spec:
+  ports:
+  - port: 6379
+    targetPort: 6379
+    protocol: TCP
+    nodePort: 31002
+  type: NodePort
+  selector:
+    app: kims-redis-cache
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kims-alert-manager
+  namespace: kims
+  labels:
+    app: kims-alert-manager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kims-alert-manager
+  template:
+    metadata:
+      labels:
+        app: kims-alert-manager
+    spec:
+      initContainers:
+      - name: init-config
+        image: busybox
+        command: ["/bin/sh", "-c", "for key in /etc/config/*; do echo $(basename $key)=$(cat $key) >> /etc/default/kims-alert-manager; done"]
+        volumeMounts:
+        - name: env-config-volume
+          mountPath: /etc/config  # Mount ConfigMap as directory
+        - name: config-file-volume
+          mountPath: /etc/default  # Mount to /etc/default so the main container can read it
+          subPath: kims-alert-manager-config
+          
+      containers:
+      - name: kims-alert-manager
+        image: arjunbabuust/kims-alert-manager:latest
+        imagePullPolicy: Always
+        securityContext:
+          privileged: true
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: kims-alert-manager-config
+        volumeMounts:
+        - name: config-file-volume
+          mountPath: /etc/default/kims-alert-manager  # Mount the single config file
+
+      volumes:
+        - name: env-config-volume
+          configMap:
+            name: kims-alert-manager-config  # The ConfigMap to be mounted as a directory
+        - name: config-file-volume
+          emptyDir: {}  # An empty directory where the init container can create the file
+
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kims-alert-manager-config
+  namespace: kims
+data:
+  KIMS_TEAMS_WEBHOOK_URL: "<:TEAMS_WEBHOOK_URL>"
+  DATABASE_NAME: "postgres"
+  DATABASE_USER: "<:DB_USERNAME>"
+  DATABASE_PASSWORD: "<:DB_PASSWORD>"
+  DATABASE_HOST: "kims-postgres-db.kims.svc.cluster.local"
+  DATABASE_PORT: "5432"
+  KIMS_UI_URL: "<:KIMS_UI_ENDPOINT>"
+
+
