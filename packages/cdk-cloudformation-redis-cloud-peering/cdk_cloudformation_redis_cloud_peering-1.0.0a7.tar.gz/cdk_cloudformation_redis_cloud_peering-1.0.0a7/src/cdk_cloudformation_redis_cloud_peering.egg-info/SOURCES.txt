@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk_cloudformation_redis_cloud_peering/__init__.py
+src/cdk_cloudformation_redis_cloud_peering/py.typed
+src/cdk_cloudformation_redis_cloud_peering.egg-info/PKG-INFO
+src/cdk_cloudformation_redis_cloud_peering.egg-info/SOURCES.txt
+src/cdk_cloudformation_redis_cloud_peering.egg-info/dependency_links.txt
+src/cdk_cloudformation_redis_cloud_peering.egg-info/requires.txt
+src/cdk_cloudformation_redis_cloud_peering.egg-info/top_level.txt
+src/cdk_cloudformation_redis_cloud_peering/_jsii/__init__.py
+src/cdk_cloudformation_redis_cloud_peering/_jsii/redis-cloud-peering@1.0.0-alpha.7.jsii.tgz
