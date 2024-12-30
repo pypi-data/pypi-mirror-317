@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hill-cipher-for-educational-use"
+version = "0.1.0"
+description = "A Python library for the classical Hill Cipher encryption algorithm."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Wataru Sakamoto", email = "heisei123abc@gmail.com" }
+]
+keywords = ["hill cipher", "cryptography", "encryption", "python"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security :: Cryptography"
+]
+dependencies = [
+    "numpy>=1.20"
+]
+requires-python = ">=3.7"
+
+[project.urls]
+Homepage = "https://github.com/wataru-sakamoto/hill-cipher"
+Documentation = "https://github.com/wataru-sakamoto/hill-cipher#readme"
+Source = "https://github.com/wataru-sakamoto/hill-cipher"
+BugTracker = "https://github.com/wataru-sakamoto/hill-cipher/issues"
