@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gev_analysis
+Version: 0.3.0
+Summary: A financial library for VaR and extreme value analysis
+Author: Tomasz Siatkowski
+Author-email: tomeksiat@gmail.com
+License: MIT
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: yfinance
