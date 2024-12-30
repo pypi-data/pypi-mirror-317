@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: py-progress-lib
+Version: 0.8.1
+Summary: Progress bar
+License: MIT
+Author: Drag-GameStudio
+Author-email: sinica911@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# py-progress
+
+Overview:
+py-progress is a Python library that allows you to easily display progress bar in your console while working with files and scripts. It provides customizable and visually appealing progress bars that help track the progress of ongoing tasks, making it easier for users to manage the execution of scripts or programs.
+
+Features:
+- Customizable text and color: Customize text, color, and background color for the progress bar to match your program's aesthetics.
+- Time estimation: It can estimate the time remaining to finish tasks, keeping users updated on the expected duration.
+- Easy integration: It can be integrated into your existing Python projects and scripts with minimal setup.
+
+Structure:
+py-progress is composed of a single Python file - progress.py, which includes two main classes.
+
+1. TextStyle: This class is responsible for handling and formatting text, color, and background color for the progress bar.
+2. ProgressBar: This class measures and displays the progress of ongoing tasks, supporting a progress bar, calculations, and time estimations.
+
+Usage:
+To start using the `py-progress` library, you must first import the required classes from the `py_progress` package. Then, create an instance of the `ProgressBar` class, passing the total number of parts to be completed. To update the progress, call the `progress()` or `progress_with_time()` methods with the appropriate arguments.
+
+Example:
+
+```python
+from py_progress.progress import ProgressBar
+from py_progress.progress import TextStyle
+
+# Initialize TextStyle
+text_style = TextStyle()
+
+# Create an instance of ProgressBar
+progress = ProgressBar(part=100)
+
+# Update progress without time estimation
+progress.progress("Task One")
+
+# Update progress with time estimation
+progress.progress_with_time("Task Two")
+```
+
+By incorporating py-progress into your Python projects, developers can enhance user experience by providing a clear visual indication of the progress of their tasks.
+# py-progress Documentation
+
+`py-progress` is a lightweight Python library for displaying progress bars in various environments. It aims to provide an easy and universal way to integrate progress bars into your projects.
+
+# progress.py:
+
+This Python module provides a simple progress bar to track the progress of tasks. It allows you to display the percentage of completion, custom text, and optionally, estimated time remaining.
+
+## Usage
+
+Before using the progress bar in your project, make sure you import the necessary components:
+
+```python
+from progress import ProgressBar, TextStyle
+from colorama import Fore, Back, Style, init
+```
+
+Call `init()` method to initialize Colorama:
+
+```python
+init()
+```
+
+Create a new instance of `ProgressBar` class specifying the total parts of the task:
+
+```python
+progress_bar = ProgressBar(part)
+```
+
+There are two methods available for the `ProgressBar` class:
+
+1. `progress(name)` - Updates the progress bar with the given name of the task.
+2. `progress_with_time(name)` - Updates the progress bar with the given name of the task and also displays the estimated time remaining for the task to be completed.
+
+Here's a simple example of using the `ProgressBar` class:
+
+```python
+from progress import ProgressBar, TextStyle
+from time import sleep
+
+init()
+
+# Create ProgressBar instance
+progress_bar = ProgressBar(part=100)
+
+# Update progress with an example task without time tracking
+for i in range(100):
+    progress_bar.progress(name="Processing task...")
+    sleep(0.1)
+
+# Update progress with an example task with time tracking
+progress_bar.start_time = time.time()
+for i in range(100):
+    progress_bar.progress_with_time(name="Processing task with time...")
+    sleep(0.1)
+```
+
+In this example, we are filling the progress bar by looping 100 times. The `progress(name)` updates the progress without any time tracking, while `progress_with_time(name)` updates the progress and also calculates and displays the estimated time remaining for the task to be completed.
+
