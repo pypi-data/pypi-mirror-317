@@ -1,0 +1,104 @@
+[project]
+name = "pyaspeller"
+version = "2.0.1"
+description = "Search tool typos in the text, files and websites."
+authors = [
+    { name = "Vasiliy Taranov", email = "taranov.vv@gmail.com" },
+]
+maintainers = [
+    { name = "Vasiliy Taranov", email = "taranov.vv@gmail.com" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = [
+    "spell",
+    "spelling",
+    "spellcheck",
+    "api",
+    "yandex",
+    "text",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Linguistic"
+]
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.32.3",
+]
+
+[project.urls]
+homepage = "https://github.com/oriontvv/pyaspeller"
+repository = "https://github.com/oriontvv/pyaspeller"
+changelog = "https://github.com/oriontvv/pyaspeller/blob/master/CHANGELOG.md"
+
+[project.scripts]
+pyaspeller = "src:pyaspeller"
+
+[build-system]
+requires = ['hatchling', 'hatch-fancy-pypi-readme>=22.5.0']
+build-backend = 'hatchling.build'
+
+[dependency-groups]
+dev = [
+    "coveralls>=4.0.1",
+    "mypy>=1.14.0",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "pytest-deadfixtures>=2.2.1",
+    "requests-mock>=1.12.1",
+    "ruff>=0.8.4",
+    "types-requests>=2.32.0.20241016",
+]
+
+[tool.coverage.run]
+relative_files = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+ignore = [
+    "N801",
+    "N802",
+    "N803",
+]
+select = [
+    "ANN",
+    "E",
+    "ERA",
+    "F",
+    "N",
+    "Q",
+    "TID",
+    "W",
+]
+
+[tool.ruff.lint.flake8-annotations]
+mypy-init-return = true
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.mypy]
+ignore_missing_imports = true
