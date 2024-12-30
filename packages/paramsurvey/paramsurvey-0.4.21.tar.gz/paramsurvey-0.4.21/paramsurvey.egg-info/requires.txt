@@ -1,0 +1,17 @@
+hdrhistogram
+pandas-appender>=0.9.1
+psutil
+
+[mpi]
+mpi4py
+
+[ray]
+boto3
+ray>=1
+
+[test]
+coverage
+pyfakefs
+pytest
+pytest-cov
+pytest-sugar
