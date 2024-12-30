@@ -1,0 +1,2 @@
+[console_scripts]
+meteopoint = meteopoint.meteopoint:app
