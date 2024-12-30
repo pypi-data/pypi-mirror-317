@@ -1,0 +1,9 @@
+click
+ruamel-yaml
+gitignore-parser
+jsonschema
+
+[dev]
+pytest
+pytest-cov
+poetry-plugin-export
