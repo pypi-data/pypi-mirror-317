@@ -1,0 +1,9 @@
+scipy
+numpy
+openeo
+matplotlib
+rasterio
+ipyleaflet
+ipywidgets
+scikit-learn
+scikit-image
