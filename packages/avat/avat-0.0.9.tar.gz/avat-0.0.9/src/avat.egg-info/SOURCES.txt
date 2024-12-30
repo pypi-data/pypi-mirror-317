@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/avat/__init__.py
+src/avat/api_request.py
+src/avat/avatars.py
+src/avat/utils.py
+src/avat.egg-info/PKG-INFO
+src/avat.egg-info/SOURCES.txt
+src/avat.egg-info/dependency_links.txt
+src/avat.egg-info/top_level.txt
