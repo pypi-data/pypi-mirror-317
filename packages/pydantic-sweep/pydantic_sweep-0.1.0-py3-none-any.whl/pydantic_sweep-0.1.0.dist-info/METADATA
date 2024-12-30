@@ -1,0 +1,83 @@
+Metadata-Version: 2.4
+Name: pydantic-sweep
+Version: 0.1.0
+Summary: Programmatic parameter sweeps for pydantic.
+Project-URL: Repository, https://github.com/befelix/pydantic_sweep
+Project-URL: Releases, https://github.com/befelix/pydantic_sweep/releases
+Project-URL: Documentation, https://berkenkamp.me/pydantic_sweep
+Author: Felix Berkenkamp
+License-Expression: MPL-2.0
+License-File: LICENSE
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: more-itertools>=10.5.0
+Requires-Dist: pydantic>=2.10.3
+Description-Content-Type: text/markdown
+
+# pydantic-sweep
+
+`pydantic_sweep` is a library to programmatically, safely and flexibly define 
+complex parameter sweeps over `pydantic` models in Python. 
+
+![PyPI - Version](https://img.shields.io/pypi/v/pydantic-sweep)
+![Static Badge](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)
+![GitHub branch check runs](https://img.shields.io/github/check-runs/befelix/pydantic_sweep/main)
+![GitHub License](https://img.shields.io/github/license/befelix/pydantic_sweep)
+
+**Highlights**:
+- Specify parameter sweeps in Python
+- Flexibility: specify complex parameter combinations by chaining simple operations
+- Safety checks for parameter combinations (get meaningful errors early)
+- `pydantic` field validation
+
+For example, the following code will instantiate models with `(x=5, y=1)` and 
+(`x=6, y=2)` and try each of those with seed values of `seed=43` and `seed=44`, 
+leading to four different configurations:
+
+```python
+import pydantic_sweep as ps
+
+class Model(ps.BaseModel):
+    seed: int = 42
+    x: int = 5
+    y: int
+
+models = ps.initialize(
+    Model, 
+    ps.config_product(
+        ps.field("seed", [43, 44]),
+        ps.config_zip(
+            ps.field("x", [ps.DefaultValue, 6]),
+            ps.field("y", [1, 2]),
+        )
+    )
+)
+
+# The code above is equivalent to
+models = [
+    Model(seed=43, x=5, y=1), 
+    Model(seed=43, x=6, y=2), 
+    Model(seed=44, x=5, y=1), 
+    Model(seed=44, x=6, y=2),
+]
+```
+
+To learn mode about the full capabilities of the library visit the
+[documentation page](https://berkenkamp.me/pydantic_sweep/).
+
+## Installation
+
+You can install the library by checking out the repo and running
+
+```bash
+pip install 'pydantic_sweep'
+```
