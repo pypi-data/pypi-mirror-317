@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: sonos-artwork
+Version: 1.0.0
+Summary: Displays Sonos Artwork playing in a zone
+Home-page: https://github.com/pypa/sampleproject
+Author: Philippe Legault
+Keywords: sonos
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.10, <4
+Description-Content-Type: text/markdown
+Requires-Dist: requests==2.32.3
+Requires-Dist: flet==0.25.2
+Requires-Dist: pyaml==24.12.1
+Requires-Dist: flet-timer==0.0.13
+Requires-Dist: typer==0.15.1
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# Sonos Artwork
+
+Displays Sonos artwork on a HyperPixel 4.0 Square.
+
+## Requirements
+
+The Sonos HTTP API running somewhere: https://github.com/jishi/node-sonos-http-api
+
+## Limitations
+
+Only work with Sonos Radio and Apple Music.
