@@ -1,0 +1,12 @@
+pywinmemscanner/__init__.py,sha256=iPtG9LldKw773z7yWwbFMtJ8j7_kauXqtzVNQZmAugg,41
+pywinmemscanner/__pycache__/__init__.cpython-312.pyc,sha256=8aNnPOhTukQeUTjn0eqynhgRqYyG1-9AJo8I_aeYJcw,291
+pywinmemscanner/errors/errors.py,sha256=3bobeYtEzepbnbmEWccNopqSbpYxXMTiEGZcuant7oU,239
+pywinmemscanner/source/src.py,sha256=t0n5HmwM5EvikFKVheHkki2YIBrLqa2f4u3NihaakFw,19314
+pywinmemscanner/utils/backend/MemoryScanner.dll,sha256=K7VqZUyGBRj0P5bkVm4wPAndIPC8lsjU0C6XjXvp3nw,15872
+pywinmemscanner/utils/backend/__pycache__/memory_extract.cpython-312.pyc,sha256=NNTzRUDq0B1SBHTLtVh6KaOuM1ZDnMlnlXmdBXnwHPI,4898
+pywinmemscanner/utils/backend/dist/memory_extract.py,sha256=1UTszej4vDPVfUH8h27JZ7OKjszWTyzL45RAPEA22eQ,3114
+pywinmemscanner-0.1.6.dist-info/LICENSE,sha256=59zfyhsjlqIwY6mA1TZybPxEvP6OIDyfXetJ530w7gc,1071
+pywinmemscanner-0.1.6.dist-info/METADATA,sha256=LxebOH_tSiwvEeIiOGg5K3WKycGy7xxep842gNH6Jwg,10976
+pywinmemscanner-0.1.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pywinmemscanner-0.1.6.dist-info/top_level.txt,sha256=NswgUecduihUdflt9aXfvwl6hHxztXmcphe7jLn4LtE,16
+pywinmemscanner-0.1.6.dist-info/RECORD,,
