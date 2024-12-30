@@ -1,0 +1,14 @@
+abarorm/__init__.py,sha256=Klt1I-6j1FxT2f13DdAyneq-2nj17Y2w7eWWwO1Lx0o,140
+abarorm/fields.py,sha256=Bi6-cY07Om44FTv5qsZW4rYSAVtzw_afqgaCx1KMjik,2962
+abarorm/mysql.ex.py,sha256=xTGRB2j0-p7va7a17kp2jZbvMLHnIvh6NFZkmileilk,13752
+abarorm/mysql.py,sha256=kbtpaLwIfsQFPu1JuzntUiaT1lmTaDd3a1jQhwXoP6Q,13745
+abarorm/psql.py,sha256=nIm4NauC-9VTYSIHyyBY-mX3FZyGVR--2mR0l_IVfa8,16619
+abarorm/sqlite.py,sha256=_NPON5yefHZWfml1_3PmLR_iqPDBZeSuWxCbiSHyJWI,15476
+abarorm/fields/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+abarorm/fields/psql.py,sha256=J0wbZ8VNNV7WIvTRKxdxxGIB3khmVpDUP0_Ht2Vf4Yk,3416
+abarorm/fields/sqlite.py,sha256=Bi6-cY07Om44FTv5qsZW4rYSAVtzw_afqgaCx1KMjik,2962
+abarorm-5.0.2.dist-info/LICENSE,sha256=BDVTIC80a5C5QzJzjx-L2PTVZLxpjsEHCi_h3p735Gw,11346
+abarorm-5.0.2.dist-info/METADATA,sha256=Kp1X7WmkZgFzLYrHNfIAwqrNp8Id1Gd1_s48vp5EsJg,11032
+abarorm-5.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+abarorm-5.0.2.dist-info/top_level.txt,sha256=8E0E0xSfHM2ZmTjDdBc2kjnpOeimJogBIChiwqdYq1E,8
+abarorm-5.0.2.dist-info/RECORD,,
