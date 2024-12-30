@@ -1,0 +1,17 @@
+donew/__init__.py,sha256=h-AeRZsr5BdjdaEBPTGlajYWLtIuymbGabM9K3Pc3Vk,1230
+donew/install.py,sha256=zjS2DwyiPPyieCoVowvQHwTHUVjILukujMQeS-deKbA,584
+donew/see/__init__.py,sha256=5r2BQpB0FBj-sDk-J0-AungWVZ0TGlZamcSiJJiiYR0,1727
+donew/see/processors/__init__.py,sha256=Dpj4vFaLhVs6mnq4LIhKg80mzgBIlQQcWaY9qCQc1jU,7478
+donew/see/processors/image.py,sha256=7xzoBVnIcxZ-b0gJyT_TWOdEjOtLqQiTiiK_Sbp5qxM,32285
+donew/see/processors/pdf.py,sha256=4T00CTdtV0C4CxAjHwG0CpKYN5Z5qvXtOsbeSQQ3sQM,21155
+donew/see/processors/web.py,sha256=t_goFp5mIRfjzo3Daen--RNs7g1iNzZwmslaz7C0BFE,27129
+donew/see/processors/web/scripts/element_detection.js,sha256=ldxkWrWeQ6aKvrZQrBFZLqW3-Q5uBfftv3fA9PSzTXE,7336
+donew/see/processors/web/scripts/highlight_elements.js,sha256=UV8eRLz87QPr6ZjtPXc387z_Ol0UYely3Iw2_aZuhRE,1305
+donew/see/processors/web/scripts/highlight_styles.css,sha256=3Q5p7nF28XTd8kKzs4336dKwxa69zIOKFVDV0mceJAk,506
+donew/see/processors/web/scripts/restore_text_markers.js,sha256=ulGcsz2WOwsQqK9n_4COFfgQM3qWgbrhc7syWdr5WeU,593
+donew/see/processors/web/scripts/text_markers.js,sha256=LiAIT0RmxFnvZF5BWkTv7kVUOTOGofnrZI7m6k2AioQ,5859
+donew-0.1.1.dist-info/METADATA,sha256=7elo5FPC9ZQTK24LxHMfZxQV9eMreBpvthjt_new-ps,6452
+donew-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+donew-0.1.1.dist-info/entry_points.txt,sha256=zsqKuRV_cyWCVJniVlMna4KKgAdS31Hm15dpylFpdBc,74
+donew-0.1.1.dist-info/licenses/LICENSE,sha256=eXcUv43MPUKhDRpmRsxItYe9V3lEWXedXcU6Itz_CNk,1068
+donew-0.1.1.dist-info/RECORD,,

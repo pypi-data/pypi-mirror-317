@@ -1,0 +1,2 @@
+[console_scripts]
+donew-install-browsers = donew.install:install_browsers
