@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: kulfi
+Version: 0.0.1
+Summary: A Python package
+Project-URL: Homepage, https://github.com/username/kulfi
+Project-URL: Bug Tracker, https://github.com/username/kulfi/issues
+Author: Yasas
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Kulfi
+
+A Python package.
+
+## Installation
+
+```bash
+pip install kulfi
+```
+
+## Usage
+
+```python
+import kulfi
+```
+
+## Development
+
+This project uses [Hatch](https://hatch.pypa.io/) for development operations.
+
+To build the package:
+```bash
+python -m build
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
