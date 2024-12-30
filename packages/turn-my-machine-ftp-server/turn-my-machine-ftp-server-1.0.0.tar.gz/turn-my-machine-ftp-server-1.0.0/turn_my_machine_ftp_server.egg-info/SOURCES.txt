@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/__init__.py
+src/ftp_server.py
+turn_my_machine_ftp_server.egg-info/PKG-INFO
+turn_my_machine_ftp_server.egg-info/SOURCES.txt
+turn_my_machine_ftp_server.egg-info/dependency_links.txt
+turn_my_machine_ftp_server.egg-info/top_level.txt
