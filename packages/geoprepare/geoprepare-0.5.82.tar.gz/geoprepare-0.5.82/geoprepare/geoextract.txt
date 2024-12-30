@@ -1,0 +1,220 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                               EWCM                                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[kenya]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+[rwanda]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+[malawi]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+[zambia]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+[united_republic_of_tanzania]
+category = EWCM
+scales = ['admin_1']  ; can be admin_1 (state level) or admin_2 (county level)
+growing_seasons = [1]  ; 1 is primary/long season, 2 is secondary/short season
+crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
+use_cropland_mask = True
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                               AMIS                                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[argentina]
+crops = ['sb', 'ww', 'mz']
+
+[austria]
+
+[australia]
+crops = ['ww', 'mz']
+
+[belgium]
+
+[brazil]
+crops = ['mz', 'sb', 'ww', 'rc']
+
+[bulgaria]
+
+[canada]
+
+[china]
+
+[croatia]
+
+[cyprus]
+
+[czech_republic]
+
+[denmark]
+
+[estonia]
+
+[finland]
+
+[france]
+crops = ['ww', 'mz']
+
+[germany]
+crops = ['ww', 'mz']
+
+[greece]
+
+[hungary]
+crops = ['ww', 'mz']
+
+[india]
+crops = ['rc', 'mz', 'ww', 'sb']
+
+[indonesia]
+crops = ['mz', 'rc']
+
+[italy]
+crops = ['ww', 'mz']
+
+[ireland]
+
+[japan]
+crops = ['rc']
+
+[kazakhstan]
+crops = ['sw']
+
+[malta]
+
+[mexico]
+crops = ['ww', 'mz', 'sb']
+
+[latvia]
+
+[lithuania]
+
+[luxembourg]
+
+[netherlands]
+
+[paraguay]
+crops = ['sb']
+
+[philippines]
+crops = ['rc']
+
+[poland]
+
+[portugal]
+
+[romania]
+crops = ['ww', 'mz']
+
+[republic_of_korea]
+crops = ['rc']
+
+[russian_federation]
+LIST_ABB_CROPS = ['ww', 'sw', 'mz']
+
+[slovakia]
+
+[slovenia]
+
+[south_africa]
+crops = ['mz', 'ww']
+
+[spain]
+crops = ['ww', 'mz']
+
+[sweden]
+
+[thailand]
+crops = ['rc']
+
+[turkey]
+crops = ['ww']
+
+[ukraine]
+LIST_ABB_CROPS = ['ww', 'mz', 'sb']
+
+[u.k._of_great_britain_and_northern_ireland]
+crops = ['ww', 'mz']
+
+[vietnam]
+crops = ['rc']
+
+[united_states_of_america]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                               Crops                                      ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[ww]
+mask = Percent_Winter_Wheat.tif
+
+[sw]
+mask = Percent_Spring_Wheat.tif
+
+[mz]
+mask = Percent_Maize.tif
+
+[sb]
+mask = Percent_Soybean.tif
+
+[rc]
+mask = Percent_Rice.tif
+
+[tf]
+mask = cropland_v9.tif
+
+[sr]
+mask = cropland_v9.tif
+
+[ml]
+mask = cropland_v9.tif
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                          Calendars                                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[EWCM]
+calendar_file = EWCM_2024-10-16.xlsx
+
+[AMIS]
+calendar_file = AMISCM_2024-11-11.xlsx
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                             Default                                      ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[DEFAULT]
+method = JRC
+redo = False
+threshold = True
+floor = 20
+ceil = 90
+countries = ['united_states_of_america']
+crops = ['ww', 'sb', 'sw', 'rc', 'mz']
+shp_boundary = gaul1_asap_v04.shp
+category = AMIS
+scales = ['admin_1']
+growing_seasons = [1]
+forecast_seasons = [2022]
+mask = cropland_v9.tif
+use_cropland_mask = False
+statistics_file = statistics.csv
+zone_file = countries.csv
+calendar_file = crop_calendar.csv
+eo_model = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'chirps', 'chirps_gefs', 'esi_4wk', 'soil_moisture_as1', 'soil_moisture_as2']
