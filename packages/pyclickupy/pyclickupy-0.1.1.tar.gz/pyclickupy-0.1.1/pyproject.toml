@@ -1,0 +1,23 @@
+[project]
+name = "pyclickupy"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q --cov=src/pyclickupy"
+testpaths = [
+    "tests",
+]
