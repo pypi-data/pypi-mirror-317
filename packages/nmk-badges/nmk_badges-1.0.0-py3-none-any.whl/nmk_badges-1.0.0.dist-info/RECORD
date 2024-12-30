@@ -1,0 +1,9 @@
+nmk_badges/__init__.py,sha256=3Xqnm4U0yX_pXTJCSn6qG8EhrsEvFnxXhnNrTi2bTbE,347
+nmk_badges/badges.yml,sha256=Z8z_b1ee-fWzSQERZzZ-uDLe0bmQZOMAVWXaxQEPJ8A,1210
+nmk_badges/builder.py,sha256=0DyT64hmdosfBKVDzKI663b2OuPRs0alaLwgbv7kMO0,2585
+nmk_badges/plugin.yml,sha256=wJKHkAOiOVKWxVJ8EHFoZmMxKYmWMZC2MOBXRSqkR4s,444
+nmk_badges-1.0.0.dist-info/LICENSE,sha256=PROo9EW7wP6jmSr_90OluItAsIB411b_CAqEBioMKpI,1074
+nmk_badges-1.0.0.dist-info/METADATA,sha256=Qln2xXTKKOEWC0paqKA2wiJTapvZDGXJ7pHFp0mgJJI,2493
+nmk_badges-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+nmk_badges-1.0.0.dist-info/top_level.txt,sha256=a3F7GCsNItetg3ZK9mlxZI0bI7c63bFLSavLNOLUP2U,11
+nmk_badges-1.0.0.dist-info/RECORD,,
