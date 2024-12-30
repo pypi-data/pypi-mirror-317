@@ -1,0 +1,13 @@
+pyproject.toml
+readme.md
+fastmcp_http/__init__.py
+fastmcp_http/__init__.pyi
+fastmcp_http/client.py
+fastmcp_http/client.pyi
+fastmcp_http/server.py
+fastmcp_http/server.pyi
+fastmcp_http.egg-info/PKG-INFO
+fastmcp_http.egg-info/SOURCES.txt
+fastmcp_http.egg-info/dependency_links.txt
+fastmcp_http.egg-info/requires.txt
+fastmcp_http.egg-info/top_level.txt
