@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/llama_index/__init__.py
+wirtual/plugins/llama_index/llm.py
+wirtual/plugins/llama_index/log.py
+wirtual/plugins/llama_index/version.py
+wirtual_plugins_llama_index.egg-info/PKG-INFO
+wirtual_plugins_llama_index.egg-info/SOURCES.txt
+wirtual_plugins_llama_index.egg-info/dependency_links.txt
+wirtual_plugins_llama_index.egg-info/requires.txt
+wirtual_plugins_llama_index.egg-info/top_level.txt
