@@ -1,0 +1,10 @@
+numpydoc
+ipython
+sphinx-rtd-theme
+sphinx-copybutton
+sphinx-togglebutton
+sphinx-design
+pydata-sphinx-theme==0.16.1
+pandas
+spacy
+regex
