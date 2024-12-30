@@ -1,0 +1,16 @@
+linters:
+  checkov:
+    enabled: true
+  tflint:
+    enabled: true
+  tfsec:
+    enabled: true
+output:
+  format: json  # Options: json, html
+  save_to: ./reports/report.json
+color_scheme:
+  CRITICAL: '#FF6F62'
+  HIGH: '#FFA07A'
+  MEDIUM: '#FFD700'
+  LOW: '#90EE90'
+  INFO: '#B0C4DE'
