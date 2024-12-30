@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ChillBot.py
+Version: 1.0.4
+Summary: An API wrapper for ChillBot's API
+Author: RainzDev
+Author-email: jessrblx16@gmail.com
+Project-URL: Homepage, https://github.com/RainzDev/ChillBot.py
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+
+# ChillBot.py
+An API wrapper for ChillBot's API.
+
+### Quick Example
+Here's an example where you can get the user top 10 music data
+```py
+import asyncio
+from ChillBot import Music
+
+async def main():
+    data = await Music.get_top_ten(123)
+    print(data)
+
+asyncio.run(main())
+```
