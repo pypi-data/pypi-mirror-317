@@ -1,0 +1,3 @@
+[console_scripts]
+dynamic-cli = dynamic_cli_builder:run_builder
+
