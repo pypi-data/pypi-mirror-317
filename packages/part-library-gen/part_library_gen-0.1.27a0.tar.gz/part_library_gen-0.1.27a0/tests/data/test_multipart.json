@@ -1,0 +1,71 @@
+[
+	{
+		"designator": "U?",
+		"part": "Test Part Name",
+		"manufacturer": "test_manufacturer",
+		"pins": {
+			"OUT1": {
+					"no": 1,
+					"func": "OutAnalog",
+					"desc": "Operational amplifier 1 output"
+			},
+			"IN1-": {
+				"no": 2,
+				"func": "InAnalog",
+				"desc": "Operational amplifier 1, negative input"
+			},
+			"IN1+": {
+				"no": 3,
+				"func": "InAnalog",
+				"desc": "Operational amplifier 1, positive input"
+			},
+			"VCC-": {
+				"no": 4,
+				"func": "PwrIn",
+				"desc": "Power supply, negative voltage"
+			},
+			"IN2+": {
+				"no": 5,
+				"func": "InAnalog",
+				"desc": "Operational amplifier 2, positive input"
+			},
+			"IN2-": {
+				"no": 6,
+				"func": "InAnalog",
+				"desc": "Operational amplifier 1, negative input"
+			},
+			"OUT2": {
+				"no": 7,
+				"func": "OutAnalog",
+				"desc": "Operational amplifier 1 output"
+			},
+			"V+": {
+				"no": 8,
+				"func": "PwrIn",
+				"desc": "Power supply, positive voltage"
+			}
+		},
+		"symbol_generator": {
+			"multipart": {
+				"A": {
+					"generator_name": "opamp",
+					"generator_data": {},
+					"pins": [
+						"IN1+",
+						"IN1-",
+						"OUT1"
+					]
+				},
+				"B": {
+					"generator_name": "opamp",
+					"generator_data": {},
+					"pins": [
+						"IN2+",
+						"IN2-",
+						"OUT2"
+					]
+				}
+			}
+		}
+	}
+]

@@ -1,0 +1,2 @@
+[console_scripts]
+part_library_gen = part_library_gen.app:main
