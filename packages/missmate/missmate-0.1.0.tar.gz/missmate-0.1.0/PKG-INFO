@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: missmate
+Version: 0.1.0
+Summary: Simple functions to complement matplotlib
+Home-page: https://github.com/vdplasthijs/missmat
+License: MIT
+Author: Thijs van der Plas
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: matplotlib (>=3.10.0,<4.0.0)
+Requires-Dist: numpy (>=2.2.1,<3.0.0)
+Project-URL: Repository, https://github.com/vdplasthijs/missmat
+Description-Content-Type: text/markdown
+
+# missmate
+Simple functions to complement matplotlib.
+
+missmate (missing matplotlib) is imported as `mim`
+
