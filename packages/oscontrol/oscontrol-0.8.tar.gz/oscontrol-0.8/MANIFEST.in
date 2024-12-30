@@ -1,0 +1,2 @@
+recursive-include oscontrol/pyarmor_runtime_000000 *
+include oscontrol/pyarmor_runtime_000000/pyarmor_runtime.pyd
