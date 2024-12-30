@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+examples/lambda_example.py
+examples/trading_example.py
+fear_and_greed/__init__.py
+fear_and_greed/fear_and_greed.py
+fear_and_greed_crypto.egg-info/PKG-INFO
+fear_and_greed_crypto.egg-info/SOURCES.txt
+fear_and_greed_crypto.egg-info/dependency_links.txt
+fear_and_greed_crypto.egg-info/requires.txt
+fear_and_greed_crypto.egg-info/top_level.txt
+tests/test_fear_and_greed.py
