@@ -1,0 +1,7 @@
+[project]
+name = "economista"
+version = "0.0.0"
+description = "Herramienta integral de análisis económico. Proyecto en desarrollo."
+authors = [
+    { name = "Daniel Limon", email = "dani@dlimon.net" }
+]

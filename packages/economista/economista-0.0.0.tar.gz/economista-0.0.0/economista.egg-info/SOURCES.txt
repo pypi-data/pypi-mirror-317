@@ -1,0 +1,6 @@
+pyproject.toml
+economista/__init__.py
+economista.egg-info/PKG-INFO
+economista.egg-info/SOURCES.txt
+economista.egg-info/dependency_links.txt
+economista.egg-info/top_level.txt
