@@ -1,0 +1,2 @@
+from opinionhub.task.correlation_judge import JudgeCompare,LongSentenceJudgeCompare
+from opinionhub.task.correlation_judge import AsyncJudgeCompare,AsyncLongSentenceJudgeCompare

@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+opinionhub/__init__.py
+opinionhub.egg-info/PKG-INFO
+opinionhub.egg-info/SOURCES.txt
+opinionhub.egg-info/dependency_links.txt
+opinionhub.egg-info/requires.txt
+opinionhub.egg-info/top_level.txt
+opinionhub.egg-info/zip-safe
+opinionhub/core/__init__.py
+opinionhub/core/llm.cpython-312-x86_64-linux-gnu.so
+opinionhub/task/__init__.py
+opinionhub/task/correlation_judge.cpython-312-x86_64-linux-gnu.so
