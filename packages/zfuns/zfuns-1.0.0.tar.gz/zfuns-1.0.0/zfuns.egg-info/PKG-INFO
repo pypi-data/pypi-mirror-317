@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: zfuns
+Version: 1.0.0
+Summary: 个人常用函数库
+Home-page: https://github.com/zhenghy/zfuns
+Author: Haiyang Zheng
+Author-email: wnfdsfy@gmail.com
+License: MIT
+Keywords: common,function,class
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: pymysql
+Requires-Dist: pywinrm
+Requires-Dist: sqlalchemy
+
+### zfun
+
+  > 个人常用函数库。**Z**henghy **Fun**tion**s**
+
+### Install:
+
+    pip3 install -U zfuns
+
+### Usage:
+
+    ...
