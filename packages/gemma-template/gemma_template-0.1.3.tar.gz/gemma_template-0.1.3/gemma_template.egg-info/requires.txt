@@ -1,0 +1,5 @@
+pydantic
+langdetect
+datasets
+tqdm
+nest-asyncio
