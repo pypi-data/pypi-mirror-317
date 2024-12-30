@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: termux-select
+Version: 0.1
+Summary: A simple script to select items
+Author: Sakib Salim
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# Select
+
+A simple Python script to select items.
+
+## Installation
+
+You can install the package using pip:
