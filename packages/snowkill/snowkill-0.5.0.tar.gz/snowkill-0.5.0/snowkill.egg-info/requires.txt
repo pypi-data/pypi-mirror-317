@@ -1,0 +1,14 @@
+snowflake-connector-python
+
+[dev]
+black
+pytest
+ruff
+
+[examples]
+markdown
+psycopg[binary]
+requests
+
+[postgres]
+psycopg[binary]
