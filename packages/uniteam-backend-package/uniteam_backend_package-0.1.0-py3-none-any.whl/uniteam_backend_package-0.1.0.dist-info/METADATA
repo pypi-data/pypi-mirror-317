@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: uniteam-backend-package
+Version: 0.1.0
+Summary: 
+Author: Fayaz Rafeek
+Author-email: fayaz@martiandays.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=2.10.4,<3.0.0)
+Description-Content-Type: text/markdown
+
+
