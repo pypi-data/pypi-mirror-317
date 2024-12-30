@@ -1,0 +1,13 @@
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+    {% block actions %}
+        <div class="object-tools">
+            <a href="{% url 'admin:update-packages' %}" class="button">Update Outdated Packages</a>
+        </div>
+        {{ block.super }}
+    {% endblock %}
+    <h2>Outdated Packages</h2>
+
+    {{ block.super}}
+{% endblock %}
