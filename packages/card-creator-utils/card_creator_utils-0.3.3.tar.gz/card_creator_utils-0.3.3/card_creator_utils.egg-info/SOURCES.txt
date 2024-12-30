@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+card_creator_utils/__init__.py
+card_creator_utils/card_creator.py
+card_creator_utils/prepare_print.py
+card_creator_utils/utils.py
+card_creator_utils.egg-info/PKG-INFO
+card_creator_utils.egg-info/SOURCES.txt
+card_creator_utils.egg-info/dependency_links.txt
+card_creator_utils.egg-info/requires.txt
+card_creator_utils.egg-info/top_level.txt
+tests/test_card_creator.py
+tests/test_prepare_print.py
