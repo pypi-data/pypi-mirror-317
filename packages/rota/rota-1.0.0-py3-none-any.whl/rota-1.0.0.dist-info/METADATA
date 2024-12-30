@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rota
+Version: 1.0.0
+Summary: Add your description here
+Author-email: Seu Nome <seuemail@example.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs>=1.4.4
+Requires-Dist: chardet>=5.2.0
+Requires-Dist: diff-match-patch>=20241021
+Requires-Dist: pydot>=3.0.3
+Requires-Dist: pytest>=8.3.4
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: uniplot>=0.16.2
