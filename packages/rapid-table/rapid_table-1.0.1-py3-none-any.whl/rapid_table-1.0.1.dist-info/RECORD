@@ -1,0 +1,17 @@
+rapid_table/__init__.py,sha256=dEkpwPugiOiB5MLuFwXvthuYQwsvACdNCY2rLnZlv4c,131
+rapid_table/main.py,sha256=WhjnOXpiM2Mxa709vrRqj6w_Dx4zE6b_q6kF8xDjYgk,5115
+rapid_table/utils.py,sha256=VFojb3SVMFpfKz9KFbDGokkNQEwTfTZE5QyNwfb4azY,6775
+rapid_table/models/slanet-plus.onnx,sha256=1XqUKvai9X1qSgNyVzxpaiN5v1hXxF4qxpmT87M0UUs,7758305
+rapid_table/table_matcher/__init__.py,sha256=MG5RnW1TllQdYPDoCEAWjhcAKEez44kaNHegLOW--Gk,106
+rapid_table/table_matcher/matcher.py,sha256=puVYGQv9PEOE1Wcgt3yDH2GE44RnGAI_wCmYhHKEd4Y,7175
+rapid_table/table_matcher/utils.py,sha256=JAPrLqiL8DAd4TDrqPNWyYWZ3EajjBPLMHtRtnDYDtU,9671
+rapid_table/table_structure/__init__.py,sha256=N_1OGAgiMrF4LB5_sP_OSOrh6pnBGZrrnph8RfQ3VHA,653
+rapid_table/table_structure/logger.py,sha256=UMGOXJPW3vJe7zMaLj2xV3TBCeECD-yUAzyhWbnd2zY,519
+rapid_table/table_structure/table_structure.py,sha256=b4nZk8Fy7VJ3ugd8u9WWIikn7e3AWMDGSYccuysUNd8,1966
+rapid_table/table_structure/utils.py,sha256=ZBGU6WFMILwCKnJwiQHXAb6xv-hZ5l2Dtc5rOqJyo-Q,18659
+rapid_table-1.0.1.dist-info/LICENSE,sha256=ft6CXJiFkHgTtcsOUA_nqsR2i04oksROQWhCEUyW03I,11337
+rapid_table-1.0.1.dist-info/METADATA,sha256=jedYqsvF0X3M0AJnWSa7uT6nAK5qLnLTmj_HV1JjGcE,971
+rapid_table-1.0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+rapid_table-1.0.1.dist-info/entry_points.txt,sha256=vEO4VaIJF5r-6KT3anzsMGPLmjQ3ZxWNAoZZRpXK2bk,54
+rapid_table-1.0.1.dist-info/top_level.txt,sha256=DkBPZpaze8SaoAvCufxilNpITY4n-rHH1lgHr6KHPgA,12
+rapid_table-1.0.1.dist-info/RECORD,,
