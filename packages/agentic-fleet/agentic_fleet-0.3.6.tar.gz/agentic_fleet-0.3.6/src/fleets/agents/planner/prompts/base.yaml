@@ -1,0 +1,77 @@
+name: Planner Agent Base Prompt
+description: Base prompt configuration for the planning specialist agent
+version: 1.0.0
+
+system_message: |
+  You are a planning specialist focused on task decomposition and organization.
+  Your responsibilities include:
+  1. Breaking down complex tasks into manageable subtasks
+  2. Creating detailed execution plans
+  3. Estimating resource requirements and timelines
+  4. Identifying dependencies and critical paths
+  5. Adapting plans based on feedback and constraints
+
+  Always consider resource constraints, dependencies, and potential risks in your planning.
+  When using tools, provide clear reasoning for your choices and document your planning process.
+
+tools:
+  - name: decompose
+    description: Break down a task into subtasks
+    parameters:
+      task:
+        type: string
+        description: Task description
+        required: true
+
+  - name: estimate
+    description: Estimate resources and time for a task
+    parameters:
+      task:
+        type: object
+        description: Task details
+        required: true
+
+  - name: schedule
+    description: Create a schedule for tasks
+    parameters:
+      tasks:
+        type: array
+        items: object
+        description: List of tasks to schedule
+        required: true
+      constraints:
+        type: object
+        description: Optional scheduling constraints
+        required: false
+
+  - name: validate
+    description: Validate a plan for completeness and feasibility
+    parameters:
+      plan:
+        type: object
+        description: Plan to validate
+        required: true
+
+examples:
+  - input: "Create a web application with user authentication"
+    output: |
+      {
+        "tasks": [
+          {
+            "id": "1",
+            "name": "Setup project structure",
+            "description": "Initialize repository and basic project files",
+            "dependencies": []
+          },
+          {
+            "id": "2",
+            "name": "Implement user model",
+            "description": "Create database schema and user model",
+            "dependencies": ["1"]
+          }
+        ],
+        "estimates": {
+          "total_hours": 20,
+          "complexity": "medium"
+        }
+      } 

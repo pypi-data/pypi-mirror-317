@@ -1,0 +1,96 @@
+[project]
+name = "agentic-fleet"
+version = "0.3.6"
+description = "A fleet of agentic AI assistants"
+authors = [
+    { name = "Zachary BENSALEM", email = "zachary@qredence.ai" },
+]
+requires-python = ">=3.9"
+readme = "README.md"
+dependencies = [
+    "openai>=1.0.0",
+    "aiohttp>=3.8.0",
+    "pydantic>=2.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0",
+    "numpy>=1.24.0",
+    "pandas>=2.2.3",
+    "beautifulsoup4>=4.9.3",
+    "opencv-python>=4.8.0",
+    "youtube-transcript-api==0.6.3",
+    "playwright>=1.40.0",
+    "pytest-playwright>=0.4.0",
+    "rich>=13.9.4",
+    "python-dotenv>=1.0.1",
+    "redis>=4.5.0",
+    "azure-identity>=1.15.0",
+    "prompty>=0.1.40",
+    "promptflow>=1.16.2",
+    "pyyaml>=6.0.0",
+    "jinja2>=3.0.0",
+    "watchdog>=3.0.0",
+    "packaging>=23.0",
+    "bing>=0.31",
+]
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+]
+dev = [
+    "black>=23.0.0",
+    "isort>=5.0.0",
+    "mypy>=1.0.0",
+    "pylint>=2.0.0",
+    "ruff>=0.1.0",
+]
+docs = [
+    "pdoc>=14.0.0",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.black]
+line-length = 88
+target-version = [
+    "py39",
+]
+include = "\\.pyi?$"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[tool.pylint.messages_control]
+disable = [
+    "C0111",
+    "C0103",
+    "C0330",
+    "C0326",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+python_files = [
+    "test_*.py",
+]
+addopts = "--cov=src/fleets --cov-report=term-missing"
