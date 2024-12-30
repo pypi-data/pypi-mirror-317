@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: amrita-converter
+Version: 0.1.0
+Summary: A simple function that can calculate the series and factorial of a number 
+Home-page: https://github.com/amrita09-pix/converter
+Author: Amrita
+Author-email: amrandal09@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Temp Converter
+
+A simple Python library to calculate basic series and factorial of a given number 
+ Eg - n = 5
+ series (5) = 5+4+3+2+1
+ factorial (5) = 5*4*3*2*1
+
+## Installation
+
+```bash
+pip install converter

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+amrita_converter.egg-info/PKG-INFO
+amrita_converter.egg-info/SOURCES.txt
+amrita_converter.egg-info/dependency_links.txt
+amrita_converter.egg-info/top_level.txt
+converter/__init__.py
+converter/convert.py
+test/test_converter.py
