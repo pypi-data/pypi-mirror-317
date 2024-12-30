@@ -1,0 +1,13 @@
+passagemath_coxeter3.libs/libcoxeter3-ae08804a.so,sha256=0MdXWUdmt-cP0a28hvhji7l37e9F6aS0JKgMnGPKwwQ,5807497
+passagemath_coxeter3-10.5.14.dist-info/METADATA,sha256=DLtuiRkNQAyAksPb7NXXC-qCs8vOLg9Apk8aM2qFX7k,2951
+passagemath_coxeter3-10.5.14.dist-info/RECORD,,
+passagemath_coxeter3-10.5.14.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_coxeter3-10.5.14.dist-info/WHEEL,sha256=SlsiAQ0ZjrPS-y-UMXaLkr8VHNzVM9NWFRhGw6y2yKY,113
+sage/all__sagemath_coxeter3.py,sha256=t7LLXMgYQKEeedzk3oKQ8wfkugk4pbhvZyA1YYuTCRY,47
+sage/libs/all__sagemath_coxeter3.py,sha256=t7LLXMgYQKEeedzk3oKQ8wfkugk4pbhvZyA1YYuTCRY,47
+sage/libs/coxeter3/all__sagemath_coxeter3.py,sha256=t7LLXMgYQKEeedzk3oKQ8wfkugk4pbhvZyA1YYuTCRY,47
+sage/libs/coxeter3/__init__.py,sha256=t7LLXMgYQKEeedzk3oKQ8wfkugk4pbhvZyA1YYuTCRY,47
+sage/libs/coxeter3/coxeter.pxd,sha256=40lRm9xY0NeniDxA_sbjOePwF1QiIBd_c66woPe5V6k,945
+sage/libs/coxeter3/coxeter.cpython-312-x86_64-linux-gnu.so,sha256=Zd1IR3XFMZg3l2cLnG28RvoFt37urmgmfqhSNp30Ob0,2116417
+sage/libs/coxeter3/decl.pxd,sha256=uX6okwZllpUQyNQQJ5YGy8esHBRy9-X1iesB5iCqqPY,5058
+sage/libs/coxeter3/coxeter_group.py,sha256=5Fz7jdUjZ6NlluXorW-x4M0C2y0uGbKo3z7URSi_cK0,24342
