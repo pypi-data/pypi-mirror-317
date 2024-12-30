@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/fal/__init__.py
+wirtual/plugins/fal/log.py
+wirtual/plugins/fal/py.typed
+wirtual/plugins/fal/stt.py
+wirtual/plugins/fal/version.py
+wirtual_plugins_fal.egg-info/PKG-INFO
+wirtual_plugins_fal.egg-info/SOURCES.txt
+wirtual_plugins_fal.egg-info/dependency_links.txt
+wirtual_plugins_fal.egg-info/requires.txt
+wirtual_plugins_fal.egg-info/top_level.txt
