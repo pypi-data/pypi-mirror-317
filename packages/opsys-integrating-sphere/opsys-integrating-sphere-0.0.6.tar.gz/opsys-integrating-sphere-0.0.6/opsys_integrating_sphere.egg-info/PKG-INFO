@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: opsys-integrating-sphere
+Version: 0.0.6
+Summary: python package for integrating sphere devices control
+Home-page: https://bitbucket.org/opsys_tech/opsys-integrating-sphere/src/master/
+Download-URL: https://bitbucket.org/opsys_tech/opsys-integrating-sphere/src/master/
+Author: dmitry.borovensky
+Author-email: dmitry.borovensky@opsys-tech.com
+License-File: LICENSE
