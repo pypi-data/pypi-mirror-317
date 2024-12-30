@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+partomatic.egg-info/PKG-INFO
+partomatic.egg-info/SOURCES.txt
+partomatic.egg-info/dependency_links.txt
+partomatic.egg-info/top_level.txt
+src/partomatic/__init__.py
+src/partomatic/automatable_part.py
+src/partomatic/partomatic.py
+src/partomatic/partomatic_config.py
+tests/test_automatable_part.py
+tests/test_partomatic.py
+tests/test_partomatic_config.py
