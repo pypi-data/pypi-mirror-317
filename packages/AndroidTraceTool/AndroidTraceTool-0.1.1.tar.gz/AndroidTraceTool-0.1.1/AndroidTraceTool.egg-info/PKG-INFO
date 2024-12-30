@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: AndroidTraceTool
+Version: 0.1.1
+Summary: A tool that support add trace by python code!
+Home-page: 
+Author: shersty
+Author-email: 2237321879@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+用于支持从外部向Android系统中添加trace

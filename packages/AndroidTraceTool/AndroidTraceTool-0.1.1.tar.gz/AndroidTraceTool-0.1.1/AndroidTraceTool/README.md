@@ -1,0 +1,1 @@
+用于支持从外部向Android系统中添加trace
