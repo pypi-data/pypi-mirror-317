@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+wrtn.egg-info/PKG-INFO
+wrtn.egg-info/SOURCES.txt
+wrtn.egg-info/dependency_links.txt
+wrtn.egg-info/requires.txt
+wrtn.egg-info/top_level.txt
