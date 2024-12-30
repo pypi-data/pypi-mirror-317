@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "openvisioncapsule-tools"
+version = "0.5.2"
+description = "A tool to help users to package, test OpenVisionCapsules"
+authors = ["Stephen Li <stephen@aotu.ai>"]
+license = "BSD License"
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyYAML = "^6.0.2"
+Cython = "0.29.30"
+matplotlib = "3.5.1"
+numpy = ">=1.19.2,<1.20.0"
+opencv_contrib_python = "*"
+opencv_contrib_python_headless = "*"
+openvino = "2024.1.0"
+pandas = "^1.1.5"
+Pillow = ">=7.0.0"
+python_i18n = "^0.3.9"
+setuptools = "73.0.1"
+tools = "0.1.9"
+tqdm = "4.54.1"
+vcap = ">=0.5.1"
+torch = "1.9.0"
+
+[tool.poetry.scripts]
+openvisioncapsule-tools = 'openvisioncapsule_tools.cli:cli_main'
+
+[tool.poetry.dev-dependencies]
+black = "^21.7b0"
+isort = "^5.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
