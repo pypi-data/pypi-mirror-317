@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-formatting-help"
+version = "1.0.2"
+description = "A package for formatting and transforming data"
+authors = [
+    { name = "Jack Gallant", email = "concise_sparsity287626@outlook.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+    "pandas>=1.0.0",
+    "python-dateutil>=2.8.0",
+]
