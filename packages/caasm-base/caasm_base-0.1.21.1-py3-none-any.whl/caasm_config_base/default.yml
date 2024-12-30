@@ -1,0 +1,52 @@
+## 数据库
+db:
+  setting:
+    mongo:
+      conn:
+        host: 127.0.0.1
+        port: 27017
+        username: admin
+        authentication_source: admin
+        connect: false
+      default_database: caasm
+
+# 日志配置
+log:
+  api:
+    - level: debug
+
+  scheduler:
+    - level: debug
+
+  default:
+    - level: debug
+
+  task:
+    - level: debug
+
+# 代理配置
+proxy:
+  socks5: [ ]
+
+# 适配器相关
+adapter:
+  file:
+    parser_dir: /data/data/collect/fetch/file
+    buffer_size: 300
+  database:
+    parser_dir: /data/data/collect/fetch/db
+  ftp:
+    parser_dir: /data/data/collect/fetch/ftp
+  smb:
+    parser_dir: /data/data/collect/fetch/smb
+
+kafka:
+  instances:
+    default:
+      bootstrap_servers: [ ]
+  parser:
+    points: [ ]
+  consumer_map: { }
+
+spider:
+  chrome_driver_path: /opt/caasm/caasm_data/chrome/chromedriver

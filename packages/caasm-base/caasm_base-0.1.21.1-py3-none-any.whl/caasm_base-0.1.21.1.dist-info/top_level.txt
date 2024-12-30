@@ -1,0 +1,5 @@
+caasm_adapter_base
+caasm_config_base
+caasm_persistence_base
+caasm_service_base
+caasm_tool
