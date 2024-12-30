@@ -1,0 +1,14 @@
+requests
+python-dotenv>=1.0.1
+
+[django]
+Django>=4.2
+
+[drf]
+djangorestframework>=3.12.3
+
+[fastapi]
+fastapi>=0.115.0
+
+[flask]
+Flask>=3.0.0
