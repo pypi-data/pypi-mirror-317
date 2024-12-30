@@ -1,0 +1,2 @@
+[console_scripts]
+toasty = toasty.cli:entrypoint
