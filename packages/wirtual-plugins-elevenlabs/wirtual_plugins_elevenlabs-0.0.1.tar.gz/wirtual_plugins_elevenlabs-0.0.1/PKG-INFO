@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: wirtual-plugins-elevenlabs
+Version: 0.0.1
+Summary: Agent Framework plugin for voice synthesis with ElevenLabs' API.
+Home-page: https://github.com/wirtualdev/wirtual-agents
+License: Apache-2.0
+Project-URL: Documentation, https://docs.wirtual.dev
+Project-URL: Website, https://wirtual.dev/
+Project-URL: Source, https://github.com/wirtualdev/wirtual-agents
+Keywords: webrtc,realtime,audio,video,wirtual,elevenlabs
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+Requires-Dist: wirtual-agents[codecs]>=0.0.1
+
+# Wirtual Plugins Elevenlabs
+
+Agent Framework plugin for voice synthesis with [ElevenLabs](https://elevenlabs.io/) API.
+
+## Installation
+
+```bash
+pip install wirtual-plugins-elevenlabs
+```
+
+## Pre-requisites
+
+You'll need an API key from ElevenLabs. It can be set as an environment variable: `ELEVEN_API_KEY`

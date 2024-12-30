@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/elevenlabs/__init__.py
+wirtual/plugins/elevenlabs/log.py
+wirtual/plugins/elevenlabs/models.py
+wirtual/plugins/elevenlabs/py.typed
+wirtual/plugins/elevenlabs/tts.py
+wirtual/plugins/elevenlabs/version.py
+wirtual_plugins_elevenlabs.egg-info/PKG-INFO
+wirtual_plugins_elevenlabs.egg-info/SOURCES.txt
+wirtual_plugins_elevenlabs.egg-info/dependency_links.txt
+wirtual_plugins_elevenlabs.egg-info/requires.txt
+wirtual_plugins_elevenlabs.egg-info/top_level.txt
