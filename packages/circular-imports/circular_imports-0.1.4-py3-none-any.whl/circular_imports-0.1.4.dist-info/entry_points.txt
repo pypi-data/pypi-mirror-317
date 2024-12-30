@@ -1,0 +1,3 @@
+[console_scripts]
+circular-imports=circular_imports.cli:main
+
