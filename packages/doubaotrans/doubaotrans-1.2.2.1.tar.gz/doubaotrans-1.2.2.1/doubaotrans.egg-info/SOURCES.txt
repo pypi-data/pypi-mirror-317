@@ -1,0 +1,16 @@
+.env.template
+LICENSE
+MANIFEST.in
+README.md
+glossary.template.json
+pyproject.toml
+setup.cfg
+setup.py
+doubaotrans/__init__.py
+doubaotrans.egg-info/PKG-INFO
+doubaotrans.egg-info/SOURCES.txt
+doubaotrans.egg-info/dependency_links.txt
+doubaotrans.egg-info/requires.txt
+doubaotrans.egg-info/top_level.txt
+doubaotrans/doubaotrans/__init__.py
+doubaotrans/doubaotrans/py.typed
