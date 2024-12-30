@@ -1,0 +1,10 @@
+primegenerators/__init__.py,sha256=OATcgugi5f6OFigMfeDeoq-0dF5H2AvcbI97_4sPdFo,61
+primegenerators/__main__.py,sha256=vXiLd6d6gtsh-iLdbhVFBeHZXpn7V-Q8ld1DPbGeLy4,1494
+primegenerators/algorithms.py,sha256=ZfCiOTGn2gjXs36Xgsp-OGctE35_D59UsukoHl8hMno,2574
+primegenerators/generators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+primegenerators/generators/eratosthenes_generator.py,sha256=7uhETLsi1H7P0FWk_-xKes0h2G33guUArEIgyjkBOiY,4787
+primegenerators/generators/factory.py,sha256=6JcIZUKGd-x_9A9eeZySkd4uOKxAkblmw4Qtto65fpo,628
+primegenerators/generators/prime_generator.py,sha256=RzuuyQA1LTzaXEJy6pzewRO1bJf85_m02-e9l8F4CjQ,1566
+primegenerators-0.0.12b1.dist-info/METADATA,sha256=Xjmc0yXQSbsI0BId0E1QJE8o9LVqDSuwxKLZ0CPhctM,3082
+primegenerators-0.0.12b1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+primegenerators-0.0.12b1.dist-info/RECORD,,
