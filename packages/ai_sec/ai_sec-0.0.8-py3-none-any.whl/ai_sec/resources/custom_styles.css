@@ -1,0 +1,138 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1,
+h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+  background-color: #34495e;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+}
+
+td {
+  vertical-align: top;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f4f6f9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.severity-critical {
+  background-color: #d9534f; /* Bright red */
+  color: white;
+  text-align: center;
+}
+
+.severity-high {
+  background-color: #f0ad4e; /* Bright orange */
+  color: white;
+  text-align: center;
+}
+
+.severity-medium {
+  background-color: #ffc107; /* Bright yellow */
+  color: black;
+  text-align: center;
+}
+
+.severity-low {
+  background-color: #5bc0de; /* Bright blue */
+  color: white;
+  text-align: center;
+}
+
+.severity-warning {
+  background-color: #f7c55f; /* Golden yellow */
+  color: black;
+  text-align: center;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.summary-table th,
+.summary-table td {
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.summary-table th {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.summary-table td:nth-child(2) {
+  text-align: right;
+}
+
+.scrollable-table {
+  max-width: 100%; /* Ensures it doesn't exceed the container width */
+  overflow-x: auto; /* Adds horizontal scrollbar if needed */
+  overflow-y: auto; /* Adds vertical scrollbar */
+  border: 1px solid #ddd; /* Optional: To visually separate the table */
+  border-radius: 5px; /* Matches the table's rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds shadow for aesthetics */
+  margin: 20px 0; /* Adds spacing from other elements */
+}
+
+table {
+  table-layout: auto; /* Adjust column width dynamically */
+}
+
+code {
+  font-family: monospace;
+  background-color: #eef2f7;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
