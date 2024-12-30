@@ -1,0 +1,11 @@
+auto_classification_generator/__init__.py,sha256=gELPoouilwaN2D9HcYMODgj7CS5JlHdZUfJ7rdpws3Y,451
+auto_classification_generator/classification_generator.py,sha256=aZYKGPyhenayj3KFvJ_HhqB01Adgh-qmIjEaR-EOnSE,21899
+auto_classification_generator/cli.py,sha256=bii3ZjMFw9mMchikPNaycxZKontxZP21S7i9jI9JCQg,6185
+auto_classification_generator/common.py,sha256=GsiKdCXQZAneI2QJdArogFIn_bd06b1j23ylLDIwOLk,4949
+auto_classification_generator/hash.py,sha256=wZiS_kJfa5g_QRrT1TqjPy2zrAIbWkcujbtgcOoR6K0,926
+auto_classification_generator-1.2.0.dist-info/LICENSE.md,sha256=SbvpEU5JIU3yzMMkyzrI0dGqHDoJR_lMKGdl6GZHsy4,11558
+auto_classification_generator-1.2.0.dist-info/METADATA,sha256=bE0kyZBOt1gPgQZ-qTEGjECPFbKEmkLBbGQ9a_ZOi5k,628
+auto_classification_generator-1.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+auto_classification_generator-1.2.0.dist-info/entry_points.txt,sha256=D6rQ5BhB8h1hoOX9ow5__KUPqzBDuJJb-t7EUdXsNTI,73
+auto_classification_generator-1.2.0.dist-info/top_level.txt,sha256=kMIUULVyXNTmW411hdSQQHtyAakvz3U6wVb1HsNZPFs,30
+auto_classification_generator-1.2.0.dist-info/RECORD,,
