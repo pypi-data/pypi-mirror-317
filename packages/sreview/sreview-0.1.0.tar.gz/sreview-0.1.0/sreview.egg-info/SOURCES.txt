@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+sreview.egg-info/PKG-INFO
+sreview.egg-info/SOURCES.txt
+sreview.egg-info/dependency_links.txt
+sreview.egg-info/requires.txt
+sreview.egg-info/top_level.txt
