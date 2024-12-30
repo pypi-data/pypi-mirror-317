@@ -1,0 +1,9 @@
+Inspyctor/__init__.py,sha256=-NWC1dxr9vU7Y3sRN-SDjG_f7RakNgdrZuxbd6ks6ws,718
+Inspyctor/analyzers.py,sha256=COoFEAjhfioiyeR7BVJEBLPcspbv16V9WyzKdRFCFvk,1252
+Inspyctor/cli.py,sha256=JD8uDLTLiWAcySStWPqNIHrgXOWOAASD6oHMwneaXnM,862
+Inspyctor/review.py,sha256=zAWaLA9oldljgg2SsPlQSL5Z6s7snGH3tfoNmkWB8xQ,1090
+inspyctor-0.2.0.dist-info/METADATA,sha256=9ebvtL3G3dwVjELdShRpFMt75fR66BJjfG4IJBJz2fk,2948
+inspyctor-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+inspyctor-0.2.0.dist-info/entry_points.txt,sha256=WdyeTauWn97JjUADed8fLWtugPedizp_7JeFBdMjqkQ,49
+inspyctor-0.2.0.dist-info/top_level.txt,sha256=Vi7IQwyZeBwQ6Ldiov2eXmc7YpR-CNWQ-ZRPqQ1KSbE,10
+inspyctor-0.2.0.dist-info/RECORD,,
