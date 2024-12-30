@@ -1,0 +1,2 @@
+[console_scripts]
+file-destroyer = file_destroyer.file_destroyer:main
