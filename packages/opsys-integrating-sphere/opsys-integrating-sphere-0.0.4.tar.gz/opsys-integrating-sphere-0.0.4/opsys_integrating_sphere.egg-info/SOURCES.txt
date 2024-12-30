@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+opsys_integrating_sphere/__init__.py
+opsys_integrating_sphere/artifex_controller.py
+opsys_integrating_sphere/i_sphere_abstract.py
+opsys_integrating_sphere/i_sphere_controller.py
+opsys_integrating_sphere/ophir_controller.py
+opsys_integrating_sphere.egg-info/PKG-INFO
+opsys_integrating_sphere.egg-info/SOURCES.txt
+opsys_integrating_sphere.egg-info/dependency_links.txt
+opsys_integrating_sphere.egg-info/not-zip-safe
+opsys_integrating_sphere.egg-info/requires.txt
+opsys_integrating_sphere.egg-info/top_level.txt
+test/test_artifex.py
+test/test_ophir.py
