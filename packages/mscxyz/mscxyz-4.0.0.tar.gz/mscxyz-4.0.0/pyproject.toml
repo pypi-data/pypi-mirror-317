@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "mscxyz"
+version = "4.0.0"
+description = "A command line tool to manipulate the XML based *.mscX and *.mscZ files of the notation software MuseScore."
+authors = ["Josef Friedrich <josef@friedrich.rocks>"]
+readme = "README.rst"
+homepage = "https://mscxyz.readthedocs.io"
+repository = "https://github.com/Josef-Friedrich/mscxyz"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+keywords = ["audio"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+lxml = "^5.3.0"
+termcolor = "^2.5.0"
+tmep = "^3.0.0"
+lxml-stubs = "^0.5.1"
+shtab = "^1.7.1"
+
+[tool.poetry.group.dev.dependencies]
+readme-patcher = "^0"
+tox = "^4"
+ruff = "^0"
+pytest = "^8"
+Sphinx = "^8"
+sphinx-rtd-theme = "^3"
+mypy = "^1"
+pip-tools = "^7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+"musescore-manager" = "mscxyz.cli:execute"
+
+[[tool.readme_patcher.file]]
+src = "README_template.rst"
+dest = "README.rst"
+
+[[tool.readme_patcher.file]]
+src = "cli_template.rst"
+dest = "docs/cli.rst"
+
+[tool.pytest]
+python_files = "*_test.py"
+
+[tool.pytest.ini_options]
+markers = ["only", "slow", "gui"]
+
+[tool.pyright]
+reportPrivateUsage = false
+
+[tool.mypy]
+strict = true
