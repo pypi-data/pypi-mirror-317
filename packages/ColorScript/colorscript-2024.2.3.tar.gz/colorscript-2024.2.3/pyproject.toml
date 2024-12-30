@@ -1,0 +1,19 @@
+[project]
+name = "ColorScript"
+version = "2024.2.3"
+authors = [
+  { name="Tariq Tayebi", email="tariq.tayebi1@education.nsw.gov.au" },
+]
+description = "A package for functionality with text, escape codes, octal and hexadecimal codes, and other data."
+readme = "README.md"
+requires-python = ">=2.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/TariqTheCoder/ColourScript-Documentation/"
+Documentation = "https://colourscript-documentation.readthedocs.io/"
+Issues = "https://github.com/TariqTheCoder/ColourScript-Documentation/issues/1"

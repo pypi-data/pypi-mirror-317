@@ -1,0 +1,61 @@
+![https://raw.githubusercontent.com/TariqTheCoder/ColourScript-Documentation/refs/heads/main/Screenshot%202024-11-22%20191301.png](https://raw.githubusercontent.com/TariqTheCoder/ColourScript-Documentation/refs/heads/main/Screenshot%202024-11-22%20191301.png)
+
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/colorscript)](https://pypi.org/project/ColorScript/)
+[![PyPI Licence](https://img.shields.io/pypi/l/colorscript.svg?v=1)](https://pypi.org/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+MIT+License)
+[![Docs Status](https://readthedocs.org/projects/colourscript-documentation/badge/?version=latest)](https://colourscript-documentation.readthedocs.io/en/latest/)
+# ColorScript Package
+
+This is a simple yet effective package to manipulate ASCII and other codes in Python. 
+More functionality has been added in later versions: Data has been added in version 0.0.6 and above.
+- ASCII escape codes
+- RGB codes for functionality not found in native Python
+- Data
+- Characters and functionality for strings and output
+
+*This module is authored by Tariq Tayebi: 2024 Sydney, Australia, and is licensed under the MIT License*
+
+## How To Use
+ColorScript is divided into two sections:
+- data, and
+- functions
+
+Functions allow to manipulate text, while data has codes and other important data for manipulating text.
+
+### Installation
+You can install ColorScript with pip:
+
+```commandline
+pip install ColorScript
+```
+
+or you can go to https://pypi.org/project/ColorScript and download the .whl file or tar.gz file on Linux and open it.
+
+**Note: You must have Python on your computer. You can install it at https://python.org**
+
+### Testing
+After you have installed it, you can import it into a Python file:
+```python
+from ColorScript import functions as cf #for importing functions
+
+from ColourScript import data as cd #for importing data
+```
+
+
+If you want to import both, type:
+```python
+from ColorScript import functions,data as cs
+```
+After the module has been imported, you can use it, for example:
+```python
+cs.text.AliceBlue("Hello World") #function
+
+x = cs.ANSI.codes.octal.COLOURS["GREEN"] #data
+
+```
+
+**Note that you have to explicitly type the colour you want the text to be, otherwise it will stay the same. For example if you type AliceBlue, all the text outputted in the future will be AliceBlue unless outputted as plain.**
+
+For a complete documentation on how to use this module, go to:
+https://colourscript-documentation.readthedocs.io/en/latest/
