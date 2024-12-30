@@ -1,0 +1,7 @@
+setup.py
+danya/__init__.py
+danya/main.py
+danya.egg-info/PKG-INFO
+danya.egg-info/SOURCES.txt
+danya.egg-info/dependency_links.txt
+danya.egg-info/top_level.txt
