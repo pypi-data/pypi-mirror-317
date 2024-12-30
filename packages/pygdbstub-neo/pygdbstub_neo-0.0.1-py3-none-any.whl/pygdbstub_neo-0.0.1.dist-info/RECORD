@@ -1,0 +1,12 @@
+pygdbstub/__init__.py,sha256=9YB53sDGKLygV0sI6tSNiJnADHMmmLYzJYS7Kv8H1O4,27559
+pygdbstub/__main__.py,sha256=5rFh1phk0U7ltOLKoQeY8IUR4s2JQ1BR1krDZwBgm-E,53
+pygdbstub/arch.py,sha256=xvi5rRrlj5BOcOjG3tq9oI8sLSTUMl7v5AT9mekhsEw,9005
+pygdbstub/boards.py,sha256=S33bTrVXeavak3DCLCw8tEmgQHisMKRgmW2g3SgAFpI,893
+pygdbstub/debug.py,sha256=JALVntEuWLsoNhOFEFMqkeeDEeiKHB7GHYA769zUECM,977
+pygdbstub/target/__init__.py,sha256=lN5p4ISpGwNslY7Xk0mI2Kjk6Qlv8d3_UuK6w5GOQhM,5436
+pygdbstub/target/microwatt.py,sha256=nfMvvzyV26qbqAw93TgY1VfYXTW2A0NKT2w-2Pn0lBY,12063
+pygdbstub_neo-0.0.1.dist-info/LICENSE,sha256=yUrvHViTJhrlaTq9gs7d0engvYjqsIgnmDKi7_N132Q,1069
+pygdbstub_neo-0.0.1.dist-info/METADATA,sha256=t6rZOQDedOJf-aMSsAjfaJ0SvmoSiU0LZdUZttGwreg,246
+pygdbstub_neo-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pygdbstub_neo-0.0.1.dist-info/top_level.txt,sha256=Fp2atJNLAZH0w09MMPRA1aBZAOn1eDxUSChd6sNbBXs,10
+pygdbstub_neo-0.0.1.dist-info/RECORD,,
