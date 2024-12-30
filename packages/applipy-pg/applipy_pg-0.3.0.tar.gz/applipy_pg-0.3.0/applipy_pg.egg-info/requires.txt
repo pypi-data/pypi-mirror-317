@@ -1,0 +1,12 @@
+applipy<3.0.0,>=2.4.0
+aiopg<2.0.0,>=1.4.0
+
+[dev]
+docker==7.1.0
+requests==2.32.3
+pytest==7.4.3
+pytest-asyncio==0.23.2
+pytest-cov==4.1.0
+mypy==1.8.0
+flake8==6.1.0
+testcontainers-postgres==0.0.1rc1
