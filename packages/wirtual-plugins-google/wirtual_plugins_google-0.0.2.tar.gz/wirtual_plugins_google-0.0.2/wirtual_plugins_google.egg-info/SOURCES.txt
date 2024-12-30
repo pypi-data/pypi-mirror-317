@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/google/__init__.py
+wirtual/plugins/google/log.py
+wirtual/plugins/google/models.py
+wirtual/plugins/google/py.typed
+wirtual/plugins/google/stt.py
+wirtual/plugins/google/tts.py
+wirtual/plugins/google/version.py
+wirtual_plugins_google.egg-info/PKG-INFO
+wirtual_plugins_google.egg-info/SOURCES.txt
+wirtual_plugins_google.egg-info/dependency_links.txt
+wirtual_plugins_google.egg-info/requires.txt
+wirtual_plugins_google.egg-info/top_level.txt
