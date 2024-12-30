@@ -1,0 +1,48 @@
+# package name
+package_name: titanic_model
+
+# data names
+training_data_file: train.csv
+test_data_file: test.csv
+raw_data_file: raw.csv
+
+# variables
+target : survived
+
+pipeline_name: titanic_pipeline
+pipeline_save_file: titanic_pipeline_output_v
+
+features:
+  - pclass
+  - sex
+  - age
+  - sibsp
+  - parch
+  - fare
+  - cabin
+  - embarked
+  - title
+
+test_size: 0.1
+
+random_state: 0
+
+categorical_variables:
+  - sex
+  - cabin
+  - embarked
+  - title
+
+numerical_variables:
+  - age
+  - fare
+
+cabin_variables:
+  - cabin
+
+unused_variables:
+  - name
+  - ticket
+  - boat
+  - body
+  - home.dest
