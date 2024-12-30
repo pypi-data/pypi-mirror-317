@@ -1,0 +1,14 @@
+.artifacts
+build
+dist
+mantelo/version.py
+*.egg-info
+.eggs
+*.pyc
+*.pyo
+.tox/
+.mypy/
+.venv/
+__pycache__
+
+docs/_build

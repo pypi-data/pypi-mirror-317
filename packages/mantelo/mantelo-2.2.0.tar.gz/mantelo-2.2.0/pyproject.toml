@@ -1,0 +1,140 @@
+[build-system]
+requires = [
+  "setuptools>=61.0",
+  "setuptools-scm[toml]>=6.2",
+  "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+
+[project.urls]
+Homepage = "https://github.com/derlin/mantelo"
+Documentation = "https://mantelo.readthedocs.io/en/latest/"
+Source = "https://github.com/derlin/mantelo"
+"Issue tracker" = "https://github.com/derlin/mantelo/issues"
+Changelog = "https://github.com/derlin/mantelo/CHANGELOG.md"
+
+[project]
+dynamic = ["version"] # see setuptools_scm
+name = "mantelo"
+description = "✨ Keycloak Admin REST Api Client for Python ✨"
+license = { file = "LICENSE" }
+authors = [{ name = "Lucy Linder", email = "lucy.derlin@gmail.com" }]
+readme = "README.md"
+keywords = ["keycloak", "http", "rest", "requests", "client"]
+
+classifiers = [
+  "Intended Audience :: Developers",
+  "Environment :: Web Environment",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Utilities",
+]
+
+requires-python = ">=3.10"
+
+dependencies = [
+  "attrs",
+  "requests",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build",
+  "coverage",
+  "tox",
+  "mypy",
+  "check-manifest",
+  "types-requests",
+  "types-slumber",
+]
+
+test = [
+  "pytest",
+  "pytest-cov",
+]
+
+docs = [
+  "sphinx",
+  "sphinx-book-theme",
+  "sphinx-autoapi",
+  "sphinx-copybutton",
+  "sphinxext-opengraph",
+]
+
+
+[tool.setuptools]
+platforms = ["any"]
+
+[tool.setuptools.packages.find]
+# Do not include tests in the wheel, as they
+# require keycloak anyway
+exclude=['tests*']
+
+
+[tool.check-manifest]
+ignore = [
+  "mantelo/version.py",
+  "codecov.yml",
+  "docker-compose.yml",
+  "Makefile",
+  "tox.ini",
+  "CONTRIBUTING.md",
+  "CODEOWNERS",
+  ".readthedocs.yaml",
+  ".release-please-manifest.json",
+  "docs/**",
+]
+
+
+[tool.setuptools_scm]
+write_to = "mantelo/version.py"
+
+
+[tool.ruff]
+extend = "/presets/ruff.toml"
+target-version = "py310"      # lowest supported version
+
+[tool.ruff.lint]
+extend-ignore = [
+  "S101",  # allow asserts
+]
+
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_lines = [
+  # Have to re-enable the standard pragma
+  "pragma: no cover",
+  "NOCOV",
+  # Don't complain if non-runnable code isn't run:
+  "if __name__ == .__main__.:",
+  "raise AssertionError",
+  "raise NotImplementedError",
+]
+precision = 2
+
+[tool.coverage.html]
+directory = ".artifacts/htmlcov"
+
+[tool.coverage.xml]
+output = ".artifacts/coverage.xml"
+
+[tool.coverage.run]
+branch = true
+relative_files = true
+source = ["."]
+data_file = ".artifacts/.coverage"
+omit = ["mantelo/version.py"]
+
+[tool.pytest.ini_options]
+markers = ["integration"]
+
+[tool.mypy]
+python_version = "3.10"
