@@ -1,0 +1,3 @@
+[console_scripts]
+parlant-qna=parlant_qna.cli:main
+
