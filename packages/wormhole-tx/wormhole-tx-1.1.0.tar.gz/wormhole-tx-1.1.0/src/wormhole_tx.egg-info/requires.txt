@@ -1,0 +1,2 @@
+magic-wormhole>=0.15.0
+colorama
