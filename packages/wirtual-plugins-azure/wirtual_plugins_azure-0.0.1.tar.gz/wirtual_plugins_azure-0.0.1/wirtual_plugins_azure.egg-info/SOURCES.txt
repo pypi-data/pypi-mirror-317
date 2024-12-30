@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/azure/__init__.py
+wirtual/plugins/azure/log.py
+wirtual/plugins/azure/py.typed
+wirtual/plugins/azure/stt.py
+wirtual/plugins/azure/tts.py
+wirtual/plugins/azure/version.py
+wirtual_plugins_azure.egg-info/PKG-INFO
+wirtual_plugins_azure.egg-info/SOURCES.txt
+wirtual_plugins_azure.egg-info/dependency_links.txt
+wirtual_plugins_azure.egg-info/requires.txt
+wirtual_plugins_azure.egg-info/top_level.txt
