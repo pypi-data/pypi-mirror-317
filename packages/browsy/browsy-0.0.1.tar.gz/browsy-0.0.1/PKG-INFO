@@ -1,0 +1,125 @@
+Metadata-Version: 2.4
+Name: browsy
+Version: 0.0.1
+Summary: Playwright-based browser automation service with HTTP API and Docker support
+Author-email: Michal Broton <michal@broton.dev>
+License-File: LICENSE
+Keywords: automation,browser,docker,pdf,playwright,queue,scraping,screenshot
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: FastAPI
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.9
+Requires-Dist: click>=8.1.7
+Requires-Dist: playwright>=1.49.1
+Requires-Dist: pydantic>=1.7.4
+Requires-Dist: requests>=2.32.3
+Provides-Extra: all
+Requires-Dist: aiosqlite>=0.20.0; extra == 'all'
+Requires-Dist: fastapi>=0.115.6; extra == 'all'
+Requires-Dist: uvicorn>=0.34.0; extra == 'all'
+Provides-Extra: server
+Requires-Dist: aiosqlite>=0.20.0; extra == 'server'
+Requires-Dist: fastapi>=0.115.6; extra == 'server'
+Requires-Dist: uvicorn>=0.34.0; extra == 'server'
+Provides-Extra: worker
+Requires-Dist: aiosqlite>=0.20.0; extra == 'worker'
+Description-Content-Type: text/markdown
+
+<div align="center">
+  <h1>:performing_arts: browsy</h1>
+</div>
+
+**browsy** is a lightweight queue system for browser automation tasks. It lets you easily schedule and run operations like screenshots, PDF generation, and web scraping through a simple HTTP API - all without external dependencies.
+
+
+## Getting Started
+
+The simplest way to spin browsy up is with Docker Compose. Check out the [documentation](https://broton.dev/) for all the details, but below is the quick and easy way to jump right in.
+
+Here's what you need to do:
+* Install browsy
+* Copy docker-compose.yml
+* Define jobs
+* Run docker compose
+* That's it! Just send requests to queue jobs and grab their results when they're done
+
+
+### Quick Start
+
+#### Install browsy
+
+```
+pip install browsy
+```
+
+#### Copy docker compose
+
+```
+git clone ...
+```
+
+#### Define a job
+
+`jobs/screenshot.py`:
+```py
+from browsy import BaseJob, Page
+
+class ScreenshotJob(BaseJob):
+    NAME = "screenshot"
+
+    url: str | None = None
+    html: str | None = None
+    full_page: bool = False
+
+    async def execute(self, page: Page) -> bytes:
+        if self.url:
+            await page.goto(self.url)
+        elif self.html:
+            await page.set_content(self.html)
+
+        return await page.screenshot(full_page=self.full_page)
+
+    async def validate_logic(self) -> bool:
+        # Ensure only one target is given, never both
+        if bool(self.url) == bool(self.html):
+            return False
+        
+        return True
+```
+
+In this example `url`, `html` and `full_page` are fields from Pydantic's `BaseModel`. They are used for new jobs validation.
+
+#### Run browsy
+
+```
+docker compose up --build
+```
+
+#### That's it!
+
+### Using browsy
+
+Trigger a job execution:
+```py
+from browsy import BrowsyClient
+
+client = BrowsyClient("http://127.0.0.1")
+job_id = client.add_job("screenshot", {"url": "https://broton.dev", full_page=True})
+screenshot = client.get_result(job_id=job_id).content
+```
+
+### Architecture
+
+![flow](.github/assets/flow.png)
