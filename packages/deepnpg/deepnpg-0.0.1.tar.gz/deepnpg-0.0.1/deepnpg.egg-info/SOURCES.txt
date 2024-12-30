@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+deepnpg/__init__.py
+deepnpg/conditioner.py
+deepnpg/datasets.py
+deepnpg/deepnpg.py
+deepnpg/errors.py
+deepnpg/solvers.py
+deepnpg/transform.py
+deepnpg.egg-info/PKG-INFO
+deepnpg.egg-info/SOURCES.txt
+deepnpg.egg-info/dependency_links.txt
+deepnpg.egg-info/requires.txt
+deepnpg.egg-info/top_level.txt

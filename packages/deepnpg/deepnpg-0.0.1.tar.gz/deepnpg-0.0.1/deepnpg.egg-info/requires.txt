@@ -1,0 +1,6 @@
+numpy>=1.17.3
+scipy>=1.7.0
+matplotlib>=3.5
+torch
+torch_geometric
+requests
