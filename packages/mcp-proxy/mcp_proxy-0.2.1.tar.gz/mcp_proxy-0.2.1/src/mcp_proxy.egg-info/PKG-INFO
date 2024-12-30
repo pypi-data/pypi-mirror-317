@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: mcp-proxy
+Version: 0.2.1
+Author-email: Sergey Parfenyuk <sergey.parfenyuk@gmail.com>
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: mcp
