@@ -1,0 +1,178 @@
+{% extends 'base/base.html' %}
+{% block title %}
+  Editor
+{% endblock %}
+
+{% block content %}
+  <script>
+    function send_code(event) {
+      event.preventDefault()
+    
+      const button = event.target
+    
+      const codeCellDiv = button.closest('.code-cell')
+    
+      const code = codeCellDiv.querySelector('textarea')
+    
+      fetch(window.location.href, {
+        method: 'POST',
+        body: JSON.stringify({ code: code.value, handler: 'Code Executor' }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const output = codeCellDiv.querySelector('.output')
+          output.innerHTML = '<p>' + data.output + '</p>'
+
+          console.log("OUTPUT >> " + data.output)
+        })
+        .catch((error) => {
+          console.error('[Error]', error)
+        })
+    }
+  </script>
+
+  <script>
+    function handle_break(command) {
+      purpose = prompt("Setting breakpoint on a line number (enter l) \nSetting breakpoint on function (enter f)\n list breakpoints (enter anything)?")
+      if (purpose == "l") {
+        line_number = prompt("Enter the line number: ")
+        command += " " + line_number
+      }
+      else if (purpose == "f") {
+        func_name = prompt("Enter the function name: ")
+        command += " " + func_name
+      }
+      return command
+    }
+
+    function handle_breakpoint_management(command) {
+      return command += " " + prompt("Enter the breakpoint number:")
+    }
+
+    function handle_return(command) {
+      manual_return = prompt("Would you like to manually return a value? (y/n)")
+      if (manual_return == "y") {
+        value = prompt("Enter a value")
+        command += " " + value
+      }
+      return command
+    }
+
+    function send_pdb_command(command) {
+      if (command == "break") {
+        command = handle_break(command)
+      } else if (command == "disable" || command == "enable" || command == "clear") {
+        command = handle_breakpoint_management(command)
+      } else if (command == "return") {
+        command = handle_return(command)
+      } else if (command == "jump") {
+        command += " " + prompt("Enter the line number you would like to jump to:")
+      } else if (command == "p" || command == "whatis") {
+        command += " " + prompt("Enter the name of the expression you would like to print:")
+      } else if (command == "source") {
+        command += " " + prompt("Enter the name of the object you would like to see the source code for:")
+      }
+
+      fetch('', {
+        method: 'POST',
+        body: JSON.stringify({ pdb_command: command, handler: 'PDB Command' }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const output = document.querySelector('.pdb-output')
+          output.innerHTML = `<pre>${data.output}</pre>`
+        })
+        .catch((error) => {
+          console.error('[Error]', error)
+        })
+    }
+
+    function handle_custom_pdb_command(event) {
+      event.preventDefault()
+      const commandInput = document.getElementById('pdb-command-input')
+      const command = commandInput.value.trim()
+
+      if (command) {
+        send_pdb_command(command)
+      }
+    }
+  </script>
+
+  <div id="editor-container">
+    <div class="code-cell border rounded p-3 mb-3">
+      <h4>Experimentation Here</h4>
+      <form class="form" action="" method="post">
+        <textarea class="form-control" rows="5" name="user_code" placeholder="Write your Python code here..."></textarea>
+        <div class="text-end mt-2">
+          <button class="btn btn-primary run-cell" onclick="send_code(event)">Run</button>
+        </div>
+      </form>
+      <div class="output"></div>
+    </div>
+    <button id="add-cell" class="btn btn-secondary">Add Code Cell</button>
+  </div>
+
+  <div id="pdb-shell" class="border rounded p-3 mt-4">
+    <h4>PDB Shell</h4>
+    <div class="button-group mb-3">
+      <h5>Execution Control</h5>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('break')" title="Set a breakpoint at a specific line or function.">Break</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('disable')" title="Disable a breakpoint by specifying its line number.">Disable Breakpoint</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('enable')" title="Enable a breakpoint by specifying its line number.">Enable Breakpoint</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('clear')" title="Clear all or specific breakpoints.">Clear Breakpoints</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('c')" title="Resume execution until the next breakpoint is reached.">Continue</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('s')" title="Execute the current line and step into function calls.">Step</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('n')" title="Execute the next line, skipping over function calls.">Next</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('return')" title="Execute until the current function returns.">Return</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('until')" title="Execute until a specific line or return from the function.">Until</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('jump')" title="Change the execution point to a specified line.">Jump</button>
+    </div>
+
+    <div class="button-group mb-3">
+      <h5>Inspection and Evaluation:</h5>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('l')" title="Display source code surrounding the current line.">List</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('p')" title="Evaluate and print the result of an expression.">Print</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('whatis')" title="Print the type of a variable or expression.">Whatis</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('source')" title="Show the source code of the current function or module.">Source</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('args')" title="Display the arguments passed to the current function.">Args</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('up')" title="Move up one level in the call stack.">Up</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('down')" title="Move down one level in the call stack.">Down</button>
+      <button class="btn btn-outline-primary me-2" onclick="send_pdb_command('where')" title="Print the stack trace with the most recent frame at the bottom.">Where</button>
+    </div>
+
+    <div class="mb-3">
+      <input id="pdb-command-input" type="text" class="form-control" placeholder="Enter Custom Command">
+      <button class="btn btn-outline-primary mt-2" onclick="handle_custom_pdb_command(event)">Send Command</button>
+    </div>
+
+    <div class="pdb-output border rounded p-2" style="height: 200px; overflow-y: scroll;">
+      <p>Debugger Output Will Appear Here...</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('add-cell').addEventListener('click', function () {
+      const editorContainer = document.getElementById('editor-container')
+      const newCell = document.createElement('div')
+    
+      newCell.className = 'code-cell border rounded p-3 mb-3'
+      newCell.innerHTML = `
+                          <h4>Experimentation Here</h4>
+                          <form action="" method="post"> 
+                            <textarea class="form-control" rows="5" id="code-cell" name="user_code"
+                            placeholder="Write your Python code here..."></textarea>
+                            <div class="text-end mt-2">
+                                <button class="btn btn-primary run-cell" onclick="send_code(event)">Run</button>
+                            </div>
+                          </form>
+                          <div class="output"></div>`
+      editorContainer.insertBefore(newCell, document.getElementById('add-cell'))
+    })
+  </script>
+{% endblock %}

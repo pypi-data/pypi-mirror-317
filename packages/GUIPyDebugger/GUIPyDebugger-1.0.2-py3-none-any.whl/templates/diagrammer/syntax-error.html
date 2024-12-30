@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% block title %}
+    Data Diagram
+{% endblock %}
+
+{% block content %} 
+<div class="container mt-4">
+    <h2 class="mb-3">Syntax Error Detected</h2>
+    <h4>{{ error_msg }}</h4>
+    <h5>"{{ error_text }}" in file: {{ error_file }} on line: {{ error_line }}</h5>
+
+{% endblock %}
