@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ConsoleOutput
+Version: 1.0.1
+Summary: Es una librería ligera y fácil de usar que permite aplicar estilos y colores a los textos que se imprimen en la consola
+Home-page: https://github.com/Carlos-dev-G/ConsoleOutput
+Author: Carlos-dev-G
+Author-email: baa4tsdev@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ConsoleOutput
+Es una libreria ligera y facil de usar que permite aplicar estilos y colores a los textos que se imprimen en la consola
