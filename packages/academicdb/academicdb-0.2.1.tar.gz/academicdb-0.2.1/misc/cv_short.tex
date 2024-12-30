@@ -1,0 +1,238 @@
+%------------------------------------
+% autoCV template - Russell Poldrack, 2022
+% License: MIT License
+%
+% Adapted from original template by: 
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+%------------------------------------
+
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, letterpaper]{article}
+\usepackage{fontspec} 
+\usepackage{multibib}
+\usepackage{multicol}
+\usepackage[compact]{titlesec}
+
+\titlespacing{\section}{2pt}{*2}{*0}
+\titlespacing{\subsection}{2pt}{*2}{*0}
+\titlespacing{\subsubsection}{2pt}{*2}{*0}
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{letterpaper, textwidth=7.25in, textheight=9.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+
+
+% ---- MARGIN YEARS
+\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\rmfamily\mdseries\upshape\Large}
+\subsectionfont{\rmfamily\bfseries\upshape\normalsize} 
+\subsubsectionfont{\rmfamily\mdseries\upshape\normalsize} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+
+\usepackage[bookmarks, colorlinks, breaklinks, pdftitle={Curriculum Vitae},pdfauthor={Author}]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue}
+
+\renewcommand\UrlFont{\color{red}\rmfamily\em}
+
+\setmainfont[Ligatures=TeX]{TeX Gyre Termes} 
+
+\begin{document}
+\reversemarginpar 
+{\LARGE Russell A. Poldrack}\\[4mm] 
+\vspace{-1cm} 
+
+\begin{multicols}{2} 
+Stanford University\\
+Department of Psychology\\
+Building 420\\
+450 Jane Stanford Way\\
+Stanford, CA, 94305-2130\\
+
+\columnbreak 
+
+Phone: 650-497-8488 \\
+email: russpold@stanford.edu \\
+url: \href{http://www.poldracklab.org}{www.poldracklab.org} \\
+url: \href{http://github.com/poldrack}{github.com/poldrack} \\
+Twitter: @russpoldrack \\
+ORCID: \href{https://orcid.org/0000-0001-6755-0259}{0000-0001-6755-0259} \\
+\end{multicols}
+
+\hrule
+
+\section*{Education and training}
+\noindent
+\textit{1985-1989}: B.A., Baylor University, Waco, TX
+
+\textit{1989-1995}: Ph.D., University of Illinois, Urbana/Champaign, IL
+
+\textit{1995-1999}: Postdoctoral Fellow, Stanford University, Stanford, CA
+
+
+\section*{Employment and professional aﬀiliations}
+\noindent
+
+\textit{2014-present}: Professor (Psychology), Stanford University
+
+\textit{2009-2014}: Professor (Psychology/Neurobiology), University of Texas
+
+\textit{2008-2009}: Assistant/Associate/Full Professor (Psychology/Psychiatry and Biobehavioral Sciences), UCLA
+
+\textit{1999-2002}: Assistant Professor (Radiology), Harvard Medical School
+
+
+\section*{Honors and Awards}
+\noindent
+\textit{2022}: Open Science Award, Organization for Human Brain Mapping
+
+\textit{2005}: Wiley Young Investigator Award, Organization for Human Brain Mapping
+
+\textit{2005}: Distinguished Scientific Award for Early Career Contributions to Psychology, American Psychological Association
+
+
+\section*{Active research funding}
+\noindent
+
+Principal Investigator, National Institute of Mental Health (\href{https://reporter.nih.gov/project-details/10515980}{\textit{R01MH130898}}), Data-driven validation of cognitive rdoc dimensions using deep phenotyping, 2022-2027\vspace{2mm}
+
+Principal Investigator, Wu Tsai Human Performance Alliance, Precise brain maps of motor skill training in humans, 2022-2023\vspace{2mm}
+
+Principal Investigator, National Institute of Mental Health (\href{https://reporter.nih.gov/project-details/10260312}{\textit{RF1MH121867}}), Nipreps: integrating neuroimaging preprocessing workflows across modalities, populations, and species, 2021-2024\vspace{2mm}
+
+Principal Investigator, National Institute of Mental Health (\href{http://projectreporter.nih.gov/project_info_description.cfm?aid=9770947}{\textit{R24MH117179}}), Openneuro: an open archive for analysis and sharing of brain initiative data, 2018-2023\vspace{2mm}
+
+Principal Investigator, National Institute of Mental Health (\href{http://projectreporter.nih.gov/project_info_description.cfm?aid=9906911}{\textit{R01MH117772}}), Characterizing cognitive control networks using a precision neuroscience approach, 2018-2023\vspace{2mm}
+
+Subcontract PI (F. Pestilli, PI), National Institute of Mental Health (\href{https://reporter.nih.gov/project-details/10253558}{\textit{R01MH126699}}), A community-driven development of the brain imaging data standard (bids) to describe macroscopic brain connections, 2021-2023\vspace{2mm}
+
+Subcontract PI (M. Shenton, PI), National Institute of Mental Health (\href{https://reporter.nih.gov/project-details/10092398}{\textit{U24MH124629}}), Psychosis risk evaluation, data integration and computational technologies (predict): data processing, analysis, and coordination center, 2020-2025\vspace{2mm}
+
+Subcontract PI (S. Makeig, PI), National Institute of Mental Health (\href{http://projectreporter.nih.gov/project_info_description.cfm?aid=9795341}{\textit{R24MH120037}}), Brain initiative resource: development of a human neuroelectromagnetic data archive and tools resource (nemar), 2019-2024\vspace{2mm}
+
+Subcontract PI (T. Yarkoni, PI), National Institute of Mental Health (\href{https://projectreporter.nih.gov/project_info_description.cfm?aid=9881347}{\textit{R01MH096906}}), Large-scale image-based meta-analysis of functional mri data, 2012-2023\vspace{2mm}
+
+
+\section*{Selected Publications}
+\noindent
+
+Ciric R, Thompson WH, Lorenz R et al. (2022). TemplateFlow: FAIR-sharing of multi-scale, multi-species brain models. \textit{Nature Methods, 19}, 1568-1571. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9718663}{OA} \href{https://doi.org/10.1038/s41592-022-01681-2}{DOI} \vspace{2mm}
+
+Jwa AS, Poldrack RA.  (2022). The spectrum of data sharing policies in neuroimaging data repositories. \textit{Human Brain Mapping, 43}, 2707-2721. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9057092}{OA} \href{https://doi.org/10.1002/hbm.25803}{DOI} \vspace{2mm}
+
+Poline JB, Kennedy DN, Sommer FT et al. (2022). Is Neuroscience FAIR? A Call for Collaborative Standardisation of Neuroscience Data. \textit{Neuroinformatics, 20}, 507-512. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9300762}{OA} \href{https://doi.org/10.1007/s12021-021-09557-0}{DOI} \vspace{2mm}
+
+Levitis E, Praag CD, Gau R et al. (2021). Centering inclusivity in the design of online conferences - An OHBM-Open Science perspective. \textit{GigaScience, 10}, giab051. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8377301}{OA} \href{https://doi.org/10.1093/gigascience/giab051}{DOI} \vspace{2mm}
+
+Markiewicz CJ, Gorgolewski KJ, Feingold F et al. (2021). The openneuro resource for sharing of neuroscience data. \textit{eLife, 10}, e71774. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8550750}{OA} \href{https://doi.org/10.7554/elife.71774}{DOI} \vspace{2mm}
+
+Botvinik-Nezer R, Holzmeister F, Camerer CF et al. (2020). Variability in the analysis of a single neuroimaging dataset by many teams. \textit{Nature, 582}, 84-88. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7771346}{OA} \href{https://doi.org/10.1038/s41586-020-2314-9}{DOI} \vspace{2mm}
+
+Dockès J, Poldrack RA, Primet R, Gözükan H, Yarkoni T, Suchanek F, Thirion B, Varoquaux G.  (2020). Neuroquery, comprehensive meta-analysis of human brain mapping. \textit{eLife, 9}. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7164961}{OA} \href{https://doi.org/10.7554/elife.53385}{DOI} \vspace{2mm}
+
+Poldrack RA, Huckins G, Varoquaux G.  (2020). Establishment of Best Practices for Evidence for Prediction: A Review. \textit{JAMA Psychiatry, 77}, 534-540. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7250718}{OA} \href{https://doi.org/10.1001/jamapsychiatry.2019.3671}{DOI} \vspace{2mm}
+
+Thompson WH, Wright J, Bissett PG, Poldrack RA.  (2020). Dataset decay and the problem of sequential analyses on open datasets. \textit{eLife, 9}, 1-17. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7237204}{OA} \href{https://doi.org/10.7554/elife.53498}{DOI} \vspace{2mm}
+
+Eisenberg IW, Bissett PG, Enkavi A, Li J, MacKinnon DP, Marsch LA, Poldrack RA.  (2019). Uncovering the structure of self-regulation through data-driven ontology discovery. \textit{Nature Communications, 10}, 2319. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6534563}{OA} \href{https://doi.org/10.1038/s41467-019-10301-1}{DOI} \href{https://github.com/IanEisenberg/Self_Regulation_Ontology/tree/master/Data}{Data} \href{https://github.com/IanEisenberg/Self_Regulation_Ontology}{Code} \href{https://osf.io/zk6w9/}{OSF} \vspace{2mm}
+
+Esteban O, Blair RW, Nielson DM, Varada JC, Marrett S, Thomas AG, Poldrack RA, Gorgolewski KJ.  (2019). Crowdsourced MRI quality metrics and expert quality annotations for training of humans and machines. \textit{Scientific Data, 6}, 30. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6472378}{OA} \href{https://doi.org/10.1038/s41597-019-0035-4}{DOI} \vspace{2mm}
+
+Esteban O, Markiewicz CJ, Blair RW et al. (2019). fMRIPrep: a robust preprocessing pipeline for functional MRI. \textit{Nature Methods, 16}, 111-116. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6319393}{OA} \href{https://doi.org/10.1038/s41592-018-0235-4}{DOI} \vspace{2mm}
+
+Poldrack RA, Gorgolewski KJ, Varoquaux G.  (2019). Computational and Informatic Advances for Reproducible Data Analysis in Neuroimaging. \textit{Annual Review of Biomedical Data Science, 2.0}, 119-138. \href{https://doi.org/10.1146/annurev-biodatasci-072018-021237}{DOI} \vspace{2mm}
+
+Poldrack RA, Feingold F, Frank MJ et al. (2019). The Importance of Standards for Sharing of Computational Models and Data. \textit{Computational Brain and Behavior, 2}, 229-232. \href{https://doi.org/10.1007/s42113-019-00062-x}{DOI} \vspace{2mm}
+
+Poldrack RA.  (2019). The Costs of Reproducibility. \textit{Neuron, 101}, 11-14. \href{https://doi.org/10.1016/j.neuron.2018.11.030}{OA} \href{https://doi.org/10.1016/j.neuron.2018.11.030}{DOI} \vspace{2mm}
+
+Enkavi A, Eisenberg IW, Bissett PG, Mazza GL, MacKinnon DP, Marsch LA, Poldrack RA.  (2019). Large-scale analysis of test–retest reliabilities of self-regulation measures. \textit{Proceedings of the National Academy of Sciences of the United States of America, 116}, 5472-5477. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6431228}{OA} \href{https://doi.org/10.1073/pnas.1818430116}{DOI} \href{https://github.com/IanEisenberg/Self_Regulation_Ontology/tree/master/Data}{Data} \href{https://osf.io/5mjns/}{OSF} \vspace{2mm}
+
+Poldrack RA.  (2018).  \textit{The New Mind Readers: What Neuroimaging Can and Cannot Reveal about our Thoughts}. Princeton, NJ: Princeton University Press.\vspace{2mm}
+
+Esteban O, Birman D, Schaer M, Koyejo OO, Poldrack RA, Gorgolewski KJ.  (2017). MRIQC: Advancing the automatic prediction of image quality in MRI from unseen sites. \textit{PLoS ONE, 12}, e0184661. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5612458}{OA} \href{https://doi.org/10.1371/journal.pone.0184661}{DOI} \href{https://osf.io/haf97/}{OSF} \vspace{2mm}
+
+Gorgolewski KJ, Alfaro-Almagro F, Auer T et al. (2017). BIDS apps: Improving ease of use, accessibility, and reproducibility of neuroimaging data analysis methods. \textit{PLoS Computational Biology, 13}, e1005209. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5363996}{OA} \href{https://doi.org/10.1371/journal.pcbi.1005209}{DOI} \vspace{2mm}
+
+Nichols TE, Das S, Eickhoff SB et al. (2017). Best practices in data analysis and sharing in neuroimaging using MRI. \textit{Nature Neuroscience, 20}, 299-303. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5685169}{OA} \href{https://doi.org/10.1038/nn.4500}{DOI} \vspace{2mm}
+
+Poldrack R.  (2017). Developing a reproducible workflow for large-scale phenotyping. In \textit{The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences}, 311-316. \vspace{2mm}
+
+Poldrack RA, Baker CI, Durnez J, Gorgolewski KJ, Matthews PM, Munafò MR, Nichols TE, Poline JB, Vul E, Yarkoni T.  (2017). Scanning the horizon: Towards transparent and reproducible neuroimaging research. \textit{Nature Reviews Neuroscience, 18}, 115-126. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6910649}{OA} \href{https://doi.org/10.1038/nrn.2016.167}{DOI} \href{https://osf.io/spr9a/}{OSF} \vspace{2mm}
+
+Poldrack RA, Gorgolewski KJ.  (2017). OpenfMRI: Open sharing of task fMRI data. \textit{NeuroImage, 144}, 259-261. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4669234}{OA} \href{https://doi.org/10.1016/j.neuroimage.2015.05.073}{DOI} \vspace{2mm}
+
+Gorgolewski KJ, Poldrack RA.  (2016). A Practical Guide for Improving Transparency and Reproducibility in Neuroimaging Research. \textit{PLoS Biology, 14}, e1002506. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4936733}{OA} \href{https://doi.org/10.1371/journal.pbio.1002506}{DOI} \vspace{2mm}
+
+Gorgolewski KJ, Auer T, Calhoun VD et al. (2016). The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments. \textit{Scientific Data, 3}, 160044. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4978148}{OA} \href{https://doi.org/10.1038/sdata.2016.44}{DOI} \vspace{2mm}
+
+Gorgolewski KJ, Varoquaux G, Rivera G et al. (2016). NeuroVault.org: A repository for sharing unthresholded statistical maps, parcellations, and atlases of the human brain. \textit{NeuroImage, 124}, 1242-1244. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806527}{OA} \href{https://doi.org/10.1016/j.neuroimage.2015.04.016}{DOI} \vspace{2mm}
+
+Poldrack RA, Congdon E, Triplett W et al. (2016). A phenome-wide examination of neural and cognitive function. \textit{Scientific Data, 3}, 160110. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5139672}{OA} \href{https://doi.org/10.1038/sdata.2016.110}{DOI} \href{https://openneuro.org/datasets/ds000030/versions/1.0.0}{Data} \vspace{2mm}
+
+Sochat VV, Eisenberg IW, Enkavi AZ, Li J, Bissett PG, Poldrack RA.  (2016). The experiment factory: Standardizing behavioral experiments. \textit{Frontiers in Psychology, 7}, 610. \href{https://doi.org/10.3389/fpsyg.2016.00610}{DOI} \vspace{2mm}
+
+Gorgolewski KJ, Varoquaux G, Rivera G et al. (2015). NeuroVault.Org: A web-based repository for collecting and sharing unthresholded statistical maps of the human brain. \textit{Frontiers in Neuroinformatics, 9}, 8. \href{https://doi.org/10.3389/fninf.2015.00008}{DOI} \vspace{2mm}
+
+Poldrack RA, Laumann TO, Koyejo O et al. (2015). Long-term neural and physiological phenotyping of a single human. \textit{Nature Communications, 6}, 8885. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4682164}{OA} \href{https://doi.org/10.1038/ncomms9885}{DOI} \href{https://openneuro.org/datasets/ds000031/versions/00001}{Data} \href{https://github.com/poldrack/myconnectome}{Code} \vspace{2mm}
+
+Poldrack RA, Farah MJ.  (2015). Progress and challenges in probing the human brain. \textit{Nature, 526}, 371-379. \href{https://doi.org/10.1038/nature15692}{DOI} \vspace{2mm}
+
+Poldrack RA, Poline JB.  (2015). The publication and reproducibility challenges of shared data. \textit{Trends in Cognitive Sciences, 19}, 59-61. \href{https://doi.org/10.1016/j.tics.2014.11.008}{DOI} \vspace{2mm}
+
+Poldrack RA, Gorgolewski KJ.  (2014). Making big data open: Data sharing in neuroimaging. \textit{Nature Neuroscience, 17}, 1510-1517. \href{https://doi.org/10.1038/nn.3818}{DOI} \vspace{2mm}
+
+Brakewood B, Poldrack RA.  (2013). The ethics of secondary data analysis: Considering the application of Belmont principles to the sharing of neuroimaging data. \textit{NeuroImage, 82}, 671-676. \href{https://doi.org/10.1016/j.neuroimage.2013.02.040}{DOI} \vspace{2mm}
+
+Poldrack RA, Barch DM, Mitchell JP, Wager TD, Wagner AD, Devlin JT, Cumba C, Koyejo O, Milham MP.  (2013). Towards open sharing of task-based fMRI data: The OpenfMRI project. \textit{Frontiers in Neuroinformatics, 7}, 12. \href{https://doi.org/10.3389/fninf.2013.00012}{DOI} \vspace{2mm}
+
+Poline JB, Breeze JL, Ghosh S et al. (2012). Data sharing in neuroimaging research. \textit{Frontiers in Neuroinformatics, 6}, 9. \href{https://doi.org/10.3389/fninf.2012.00009}{DOI} \vspace{2mm}
+
+Poldrack RA, Mumford JA, Nichols TE.  (2011).  \textit{Handbook of Functional MRI Data Analysis}. Cambridge: Cambridge University Press .\vspace{2mm}
+
+Poldrack RA, Kittur A, Kalar D, Miller E, Seppa C, Gil Y, Parker D, Sabb FW, Bilder RM.  (2011). The cognitive atlas: Toward a knowledge foundation for cognitive neuroscience. \textit{Frontiers in Neuroinformatics, 5}, 17. \href{https://doi.org/10.3389/fninf.2011.00017}{DOI} \vspace{2mm}
+
+Yarkoni T, Poldrack RA, Nichols TE, Essen DC, Wager TD.  (2011). Large-scale automated synthesis of human functional neuroimaging data. \textit{Nature Methods, 8}, 665-670. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3146590}{OA} \href{https://doi.org/10.1038/nmeth.1635}{DOI} \vspace{2mm}
+
+Poldrack RA, Fletcher PC, Henson RN, Worsley KJ, Brett M, Nichols TE.  (2008). Guidelines for reporting an fMRI study. \textit{NeuroImage, 40}, 409-414. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2287206}{OA} \href{https://doi.org/10.1016/j.neuroimage.2007.11.048}{DOI} \vspace{2mm}
+
+Tom SM, Fox CR, Trepel C, Poldrack RA.  (2007). The neural basis of loss aversion in decision-making under risk. \textit{Science, 315}, 515-518. \href{https://doi.org/10.1126/science.1134239}{DOI} \href{https://openneuro.org/datasets/ds000008/versions/00001}{Data} \vspace{2mm}
+
+Foerde K, Knowlton BJ, Poldrack RA.  (2006). Modulation of competing memory systems by distraction. \textit{Proceedings of the National Academy of Sciences of the United States of America, 103}, 11778-11783. \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1544246}{OA} \href{https://doi.org/10.1073/pnas.0602659103}{DOI} \href{https://openneuro.org/datasets/ds000011/versions/00001}{Data} \vspace{2mm}
+
+Poldrack RA.  (2006). Can cognitive processes be inferred from neuroimaging data?. \textit{Trends in Cognitive Sciences, 10}, 59-63. \href{https://doi.org/10.1016/j.tics.2005.12.004}{DOI} \vspace{2mm}
+
+Poldrack RA, Clark J, Paré-Blagoev EJ, Shohamy D, Moyano J, Myers C, Gluck MA.  (2001). Interactive memory systems in the human brain. \textit{Nature, 414}, 546-550. \href{https://doi.org/10.1038/35107080}{DOI} \href{https://openneuro.org/datasets/ds000052/versions/00001}{Data} \vspace{2mm}
+
+Wagner AD, Paré-Blagoev EJ, Clark J, Poldrack RA.  (2001). Recovering meaning: Left prefrontal cortex guides controlled semantic retrieval. \textit{Neuron, 31}, 329-338. \href{https://doi.org/10.1016/s0896-6273(01)00359-2}{OA} \href{https://doi.org/10.1016/s0896-6273(01)00359-2}{DOI} \vspace{2mm}
+
+Poldrack RA.  (2000). Imaging brain plasticity: Conceptual and methodological issues - A theoretical review. \textit{NeuroImage, 12}, 1-13. \href{https://doi.org/10.1006/nimg.2000.0596}{DOI} \vspace{2mm}
+
+
+
+
+\begin{center}
+{\footnotesize Last updated: \today — Generated using \href{https://github.com/poldrack/autoCV}{AutoCV} 
+}
+\end{center}
+
+
+\end{document}

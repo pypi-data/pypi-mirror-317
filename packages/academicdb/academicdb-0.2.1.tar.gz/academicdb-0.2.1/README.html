@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-99.9.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>readme</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="README_files/libs/clipboard/clipboard.min.js"></script>
+<script src="README_files/libs/quarto-html/quarto.js"></script>
+<script src="README_files/libs/quarto-html/popper.min.js"></script>
+<script src="README_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="README_files/libs/quarto-html/anchor.min.js"></script>
+<link href="README_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="README_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="README_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="README_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="README_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="academicdb-an-academic-database-builder" class="level2">
+<h2 class="anchored" data-anchor-id="academicdb-an-academic-database-builder"><em>academicdb</em>: An academic database builder</h2>
+<p>Why build your CV by hand when you can create it programmatically? This package uses a set of APIs (including Scopus, ORCID, CrossRef, and Pubmed) to generate a database of academic acheivements, and provides a tool to render those into a professional-looking CV. Perhaps more importantly, it provides a database of collaborators, which can be used to generate the notorious NSF collaborators spreadsheet.</p>
+<section id="installing-academicdb" class="level3">
+<h3 class="anchored" data-anchor-id="installing-academicdb">Installing academicdb</h3>
+<p>To install the current version:</p>
+<pre><code>pip install academicdb</code></pre>
+<p>In addition to the Python packages required by academicdb (which should be automatically installed), you will also need a MongoDB server to host the database. There are two relatively easy alternatives:</p>
+<ul>
+<li><a href="https://www.mongodb.com/docs/manual/installation/">Install MongoDB</a> on your own system.</li>
+<li>Create a free cloud MongoDB instance <a href="https://www.mongodb.com/cloud">here</a>.</li>
+</ul>
+</section>
+<section id="configuring-academicdb" class="level3">
+<h3 class="anchored" data-anchor-id="configuring-academicdb">Configuring academicdb</h3>
+<p>To use academicdb, you must first set up some configuration files, which will reside in <code>~/.academicdb</code>. The most important is <code>config.toml</code>, which contains all of the details about you that are used to retrieve your information. Here are the contents of mine as an example:</p>
+<pre><code>[researcher]
+lastname = "poldrack"
+middlename = "alan"
+firstname = "russell"
+email = "russpold@stanford.edu"
+orcid = "0000-0001-6755-0259"
+query = "poldrack-r"
+url = "http://poldrack.github.io"
+twitter = "@russpoldrack"
+github = "http://github.com/poldrack"
+phone = "650-497-8488"
+scholar_id = "RbmLvDIAAAAJ"
+scopus_id = "7004739390"
+address = [
+    "Stanford University",
+    "Department of Psychology",
+    "Building 420",
+    "450 Jane Stanford Way",
+    "Stanford, CA, 94305-2130",
+]</code></pre>
+<p>Most of this should be self-explanatory. There are several identifiers that you need to specify:</p>
+<ul>
+<li><strong>ORCID</strong>: This is a unique identifier for researchers. If you don’t already have an ORCID you can get one <a href="http://orcid.org">here</a>. You will need to enter information about your education, employment, invited position and distinctions, and memberships and service into your ORCID account since that is where academicdb looks for that information.</li>
+<li><strong>Google Scholar</strong>: You will also need to retrieve your Google Scholar ID. Once you have set up your profile, go to the “My Profile” page. The URL from that page contains your id: for example, my URL is <em>https://scholar.google.com/citations?user=RbmLvDIAAAAJ&amp;hl=en</em> and the ID is <em>RbmLvDIAAAAJ</em>.<br>
+</li>
+<li><strong>Scopus</strong>: Scopus is a service run by Elsevier. I know that they are the bad guys, but Scopus provides a service that is not available from anywhere else: For each reference it provides a set of unique identifiers for the coauthors, which can be used to retreive their affilation information. This is essential for generating the NSF collaborators spreadsheet.</li>
+</ul>
+</section>
+</section>
+<section id="obtaining-an-api-key-for-scopus" class="level2">
+<h2 class="anchored" data-anchor-id="obtaining-an-api-key-for-scopus">Obtaining an API key for Scopus</h2>
+<p>You will need to obtain an API key to access the Scopus database, which you can obtain from <a href="http://dev.elsevier.com/myapikey.html">http://dev.elsevier.com/myapikey.html</a>. This is used by the <a href="https://pybliometrics.readthedocs.io/en/stable/">pybliometrics</a> package to access the APIs; note that there are <a href="https://dev.elsevier.com/api_key_settings.html">weekly limits</a> on the number of records one can access from these APIs without a subscription. If your institution has a subscription and you are on the institution’s network, you may be able to bypass these.</p>
+<p>The first time you use the package, you will be asked by pybliometrics to enter your API key, which will be stored in <code>~/.pybliometrics/config.ini</code> for reuse.</p>
+</section>
+<section id="specifying-additional-information" class="level2">
+<h2 class="anchored" data-anchor-id="specifying-additional-information">specifying additional information</h2>
+<p>There are a number of pieces of information that are difficult to reliably obtain from ORCID or other APIs, so they must be specified in a set of text files, which should be saved in the base directory that is specified when the command line <code>dbbuilder</code> tool is used.</p>
+<ul>
+<li><code>editorial.csv</code></li>
+<li><code>talks.csv</code></li>
+<li><code>conference.csv</code></li>
+<li><code>teaching.csv</code></li>
+<li><code>funding.csv</code></li>
+</ul>
+<p>In addition, there may be references (including books, book chapters, and published conference papers) that are not detected by the automated search and need to be added by hand, using a file called <code>additional_pubs.csv</code> in the base directory.</p>
+<section id="database-setup" class="level4">
+<h4 class="anchored" data-anchor-id="database-setup">Database setup</h4>
+<p>By default, academicdb will use a MongoDB server on the local host with the default port number; if you have installed and started up MongoDB on your computer it should just work.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

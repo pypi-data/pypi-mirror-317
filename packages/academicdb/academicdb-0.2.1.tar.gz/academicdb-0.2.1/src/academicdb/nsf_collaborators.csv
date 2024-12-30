@@ -1,0 +1,698 @@
+type,name,affiliation,email,date
+A:,"Aberizk, Katrina","Department of Psychology, Emory University, Atlanta, United States",,12/19/2020
+A:,"Aburn, Matthew J.","QIMR Berghofer Medical Research Institute, Brisbane, Australia",,10/15/2019
+A:,"Aczél, Balázs","Eötvös Loránd Tudományegyetem, Budapest, Hungary",,11/09/2021
+A:,"Adcock, R. Alison","Department of Psychiatry and Behavioral Sciences, Duke University, Durham, United States",,05/20/2020
+A:,"Adebimpe, Azeez","Department of Psychiatry, University of Pennsylvania, Philadelphia, United States",,06/01/2022
+A:,"Adolphs, Ralph","California Institute of Technology, Pasadena, United States",,08/05/2020
+A:,"Afyouni, Soroosh","Nuffield Department of Medicine, Oxford, United Kingdom",,08/01/2021
+A:,"Albers, Casper J.","Department of Psychometrics and Statistics, Rijksuniversiteit Groningen, Groningen, Netherlands",,11/09/2021
+A:,"Alexander-Bloch, Aaron F.","Department of Psychiatry, University of Pennsylvania, Philadelphia, United States",,12/01/2021
+A:,"Allen, Christopher P.G.","College of Biomedical and Life Sciences, Cardiff, United Kingdom",,04/01/2020
+A:,"Alonso-Ortiz, Eva","NeuroPoly Lab, Polytechnique Montréal, Montreal, Canada",,08/01/2021
+A:,"Amlien, Inge K.","Center for Lifespan Changes in Brain and Cognition, Universitetet i Oslo, Oslo, Norway",,06/08/2020
+A:,"Ando, Ayaka","Clinic of Child and Adolescent Psychiatry, Universitätsklinikum Heidelberg, Heidelberg, Germany",,04/01/2020
+A:,"Andreassen, Ole Andreas","KG Jebsen Centre for Neurodevelopmental Disorders, Oslo Universitetssykehus, Oslo, Norway",,05/25/2021
+A:,"Apostolova, Liana G.","Indiana University-Purdue University Indianapolis, Indianapolis, United States",,06/01/2022
+A:,"Appelhoff, Stefan","Max Planck Institute for Human Development, Berlin, Germany",,08/01/2021
+A:,"Appleby, Brian Stephen","National Prion Disease Pathology Surveillance Center, Cleveland, United States",,06/01/2022
+A:,"Arbuckle, Spencer A.","Brain and Mind Institute, Western University, London, Canada",,01/01/2021
+A:,"Arnatkevic̆iūtė, Aurina","Faculty of Medicine, Nursing and Health Sciences, Clayton, Australia",,08/01/2021
+A:,"Aron, Adam R.","Department of Psychology, San Diego, United States",,04/01/2020
+A:,"Ascoli, Giorgio A.","Structures, George Mason University, Fairfax, United States",,01/21/2022
+A:,"Atay, Selim Melvin","Faculty of Medicine, Nursing and Health Sciences, Clayton, Australia",,08/01/2021
+A:,"Athey, Thomas L.","Institute for Computational Medicine, Johns Hopkins University, Baltimore, United States",,01/21/2022
+A:,"Auer, Tibor","MRC Cognition and Brain Sciences Unit, Cambridge, United Kingdom",,08/01/2021
+A:,"Avesani, Paolo","Bruno Kessler Foundation, Trento, Italy",,05/20/2020
+A:,"Avramopoulos, Dimitrios A.","McKusick-Nathans Department of Genetic Medicine, Johns Hopkins School of Medicine, Baltimore, United States",,05/25/2021
+A:,"Badhwar, Aman Preet","Institut de Génie Biomédical, University of Montreal, Montreal, Canada",,04/01/2020
+A:,"Bajracharya, Aahana","Washington University in St. Louis, St. Louis, United States",,05/20/2020
+A:,"Bakst, Leah","Department of Psychological & Brain Sciences, Boston University, Boston, United States",,05/20/2020
+A:,"Ball, Sheryl B.","Department of Economics, Virginia Polytechnic Institute and State University, Blacksburg, United States",,05/20/2020
+A:,"Baller, Erica B.","Department of Psychiatry, University of Pennsylvania, Philadelphia, United States",,06/01/2022
+A:,"Bankston, Adriana","Future of Research, Pittsfield, United States",,04/01/2020
+A:,"Baracchini, Giulia","Department of Neurology and Neurosurgery, Institut-Hôpital Neurologique de Montréal, Montreal, Canada",,08/01/2021
+A:,"Barch, Deanna M.","Department of Psychological and Brain Sciences, Washington University in St. Louis, St. Louis, United States",,07/01/2020
+A:,"Barilari, Marco","Crossmodal Perception and Plasticity Laboratory, Université Catholique de Louvain, Louvain-la-Neuve, Belgium",,05/20/2020
+A:,"Barmada, Sami J.","University of Michigan Medical School, Ann Arbor, United States",,06/01/2022
+A:,"Barnes, Carol A.","The University of Arizona, Tucson, United States",,01/01/2021
+A:,"Barrett, Jennifer A.","Olin Neuropsychiatry Research Center, Hartford, United States",,12/19/2020
+A:,"Bartels, Sophia Marie","Department of Health Behavior, The University of North Carolina at Chapel Hill, Chapel Hill, United States",,03/18/2022
+A:,"Bassett, Danielle Smith","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,09/02/2020
+A:,"Bastiaansen, Jojanneke A.","Department of Psychiatry, Universitair Medisch Centrum Groningen, Groningen, Netherlands",,11/09/2021
+A:,"Bault, Nadège","University of Plymouth, Plymouth, United Kingdom",,05/20/2020
+A:,"Bayer, Johanna M.M.","Baylor University Medical Center at Dallas, Dallas, United States",,08/01/2021
+A:,"Beam, Elizabeth","Stanford University, Palo Alto, United States",,11/11/2021
+A:,"Beaton, Derek","Rotman Research Institute, Toronto, Canada",,05/20/2020
+A:,"Beauvais, Michael J.S.","Faculty of Law, University of Toronto, Toronto, Canada",,08/01/2021
+A:,"Beitner, Julia","Department of Psychology, Goethe-Universität Frankfurt am Main, Frankfurt am Main, Germany",,05/20/2020
+A:,"Benjamin, Daniel J.","University of California, Los Angeles, Los Angeles, United States",,11/09/2021
+A:,"Benoit, Roland G.","Max Planck Institute for Human Cognitive and Brain Sciences, Leipzig, Germany",,05/20/2020
+A:,"Berkers, Ruud M.W.J.","Donders Institute for Brain, Cognition and Behaviour, Nijmegen, Netherlands",,05/20/2020
+A:,"Bertolero, Maxwell A.","University of Pennsylvania, Philadelphia, United States",,06/01/2022
+A:,"Betzel, Richard F.","Department of Psychological and Brain Sciences, Indiana University Bloomington, Bloomington, United States",,01/01/2020
+A:,"Bhanji, Jamil Palacios","Department of Psychology, Rutgers University-Newark Campus, Newark, United States",,05/20/2020
+A:,"Bielczyk, Natalia AAtalia","Stichting Solaris Onderzoek en Ontwikkeling, Nijmegen, Netherlands",,04/01/2020
+A:,"Bijsterbosch, Janine Diane","Washington University School of Medicine in St. Louis, Mallinckrodt Institute of Radiology, St. Louis, United States",,08/01/2021
+A:,"Bilder, Robert Martin","Jane & Terry Semel Institute for Neuroscience & Human Behavior, Los Angeles, United States",,05/25/2021
+A:,"Bilgin, Isil P.","Washington University School of Medicine in St. Louis, Mallinckrodt Institute of Radiology, St. Louis, United States",,08/01/2021
+A:,"Birk, Jeffrey L.","Columbia University, New York, United States",,07/01/2023
+A:,"Bissett, Patrick G.","Stanford University, Palo Alto, United States",,03/01/2023
+A:,"Biswal, Bharat B.","MOE Key Lab for Neuroinformation, University of Electronic Science and Technology of China, Chengdu, China",,05/20/2020
+A:,"Bitsios, Panos","Department of Psychiatry and Behavioral Sciences, University of Crete, Rethymnon, Greece",,05/25/2021
+A:,"Blair, Ross W.","Department of Psychology, Stanford University, Palo Alto, United States",,02/01/2023
+A:,"Blangero, John","Department of Human Genetics, The University of Texas Rio Grande Valley, Brownsville, United States",,12/01/2021
+A:,"Bobadilla-Suarez, Sebastian","Department of Experimental Psychology, University College London, London, United Kingdom",,05/20/2020
+A:,"Boehm, Udo","Department of Psychology, Universiteit van Amsterdam, Amsterdam, Netherlands",,11/09/2021
+A:,"Boeve, Bradley Bradley","Department of Radiology, Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Boffino, Catarina Costa","Universidade Metodista de Sao Paulo, Sao Bernardo do Campo, Brazil",,04/01/2020
+A:,"Bollmann, Saskia","The University of Queensland, Brisbane, Australia",,08/01/2021
+A:,"Bollmann, Steffen","Centre for Advanced Imaging, The University of Queensland, Brisbane, Australia",,08/01/2021
+A:,"Bordelon, Yvette","David Geffen School of Medicine at UCLA, Los Angeles, United States",,06/01/2022
+A:,"Bortolini, T.","Instituto D'Or de Pesquisa e Ensino, Rio de Janeiro, Brazil",,05/20/2020
+A:,"Botha, Hugo","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Bottenhorn, Katherine L.","Department of Psychology, Florida International University, Miami, United States",,08/01/2021
+A:,"Botvinik-Nezer, Rotem","Department of Psychological and Brain Sciences, Dartmouth College, Hanover, United States",,11/09/2021
+A:,"Bowring, Alexander","Nuffield Department of Medicine, Oxford, United Kingdom",,05/20/2020
+A:,"Boxer, Adam L.","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Bozoki, Andrea C.","Department of Neurology, The University of North Carolina at Chapel Hill, Chapel Hill, United States",,06/01/2022
+A:,"Braem, Senne","Department of Experimental Psychology, Universiteit Gent, Ghent, Belgium",,05/20/2020
+A:,"Braukmann, Ricarda","Donders Institute for Brain, Cognition and Behaviour, Nijmegen, Netherlands",,04/01/2020
+A:,"Breakspear, Michael J.","The University of Newcastle, Australia, Callaghan, Australia",,01/01/2020
+A:,"Bright, M. G.","Department of Biomedical Engineering, Northwestern University, Evanston, United States",,08/01/2021
+A:,"Bringmann, Laura F.","Department of Psychiatry, Universitair Medisch Centrum Groningen, Groningen, Netherlands",,11/09/2021
+A:,"Brooks, Hayley R.","Department of Psychology, University of Denver, Denver, United States",,05/20/2020
+A:,"Brudner, Emily G.","Department of Psychology, Rutgers University, Freehold, United States",,05/20/2020
+A:,"Brushaber, Danielle E.","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Bui, Tung T.","Department of Psychology, Stanford University, Palo Alto, United States",,03/01/2023
+A:,"Burdick, Katherine Elizabeth","Department of Psychiatry, Harvard Medical School, Boston, United States",,05/25/2021
+A:,"Busch, Niko A.","Institute for Psychology, Westfälische Wilhelms-Universität Münster, Munster, Germany",,11/09/2021
+A:,"Butler, Ellyn R.","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Bączkowski, Błażej M.","Department of Cognitive Psychology, Universität Hamburg, Hamburg, Germany",,05/20/2020
+A:,"Calderon, Cristian Buc","Department of Cognitive, Linguistic & Psychological Sciences, Brown University, Providence, United States",,05/20/2020
+A:,"Caldinelli, Chiara","Trinity College Dublin, Dublin, Ireland",,04/01/2020
+A:,"Calhoun, Vince D.","Georgia State University, Atlanta, United States",,08/01/2021
+A:,"Calhoun, Vince D.","Department of Computer Science, Georgia State University, Atlanta, United States",,01/01/2020
+A:,"Camerer, Colin F.","Division of the Humanities and Social Sciences, Pasadena, United States",,05/20/2020
+A:,"Camilleri, Julia A.","Institute of Neuroscience and Medicine (INM-7: Brain and Behaviour), Forschungszentrum Jülich (FZJ), Jülich, Germany",,05/20/2020
+A:,"Canning, Jessica R.","University of Washington, Seattle, United States",,03/09/2020
+A:,"Cannon, Tyrone D.","Yale School of Medicine, New Haven, United States",,05/25/2021
+A:,"Caruyer, Emmanuel","CNRS Centre National de la Recherche Scientifique, Paris, France",,11/09/2021
+A:,"Castrellon, Jaime J.","Department of Psychology and Neuroscience, Duke University, Durham, United States",,05/20/2020
+A:,"Cataldo, Andrea M.","Center for Depression, McLean Hospital, Belmont, United States",,11/09/2021
+A:,"Cecchetti, Luca","IMT School for Advanced Studies Lucca, Lucca, Italy",,05/20/2020
+A:,"Chan, Hangyee","King's College London, London, United Kingdom",,09/09/2022
+A:,"Chang, Sarah E.","Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Chen, Chia Yen","Biogen Inc., Cambridge, United States",,05/25/2021
+A:,"Chen, Xiao","Institute of Psychology Chinese Academy of Sciences, Beijing, China",,08/01/2021
+A:,"Cheplygina, Veronika","IT-Universitetet i København, Copenhagen, Denmark",,04/01/2020
+A:,"Chesnut, Megan","Department of Psychiatry and Behavioral Sciences, Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Chiba-Falek, Ornit","Department of Neurology, Duke University Medical Center, Durham, United States",,05/25/2021
+A:,"Choi, David","Department of Psychiatry and Behavioral Sciences, Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Chopra, Sidhant","Faculty of Medicine, Nursing and Health Sciences, Clayton, Australia",,08/01/2021
+A:,"Christoforou, Andrea Nikie","Department of Medical Genetics, Haukeland Universitetssjukehus, Bergen, Norway",,05/25/2021
+A:,"Cieslak, Matthew","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Cieslik, Edna Clarisse","Heinrich-Heine-Universität Düsseldorf, Dusseldorf, Germany",,05/20/2020
+A:,"Ciric, Rastko","Stanford University, Palo Alto, United States",,12/01/2022
+A:,"Cirulli, Elizabeth Trilby","Helix, San Mateo, United States",,05/25/2021
+A:,"Clark, David Glenn","The University of Alabama at Birmingham, Birmingham, United States",,06/01/2022
+A:,"Close, Thomas G.","School of Biomedical Engineering, The University of Sydney, Sydney, Australia",,08/01/2021
+A:,"Clucas, Jon C.","Center for Data Analytics, Innovation, and Rigor, Child Mind Institute, Inc., New York, United States",,06/29/2023
+A:,"Cocchi, Luca","QIMR Berghofer Medical Research Institute, Brisbane, Australia",,12/01/2019
+A:,"Cohen, Jonathan D.","Princeton University, Princeton, United States",,10/07/2019
+A:,"Colcombe, Stanley J.","Department of Psychiatry, NYU Grossman School of Medicine, New York, United States",,06/01/2022
+A:,"Cole, Michael W.","Rutgers University-Newark Campus, Newark, United States",,10/14/2019
+A:,"Cole, Zachary J.","Department of Psychology, University of Nebraska–Lincoln, Lincoln, United States",,05/20/2020
+A:,"Colenbier, Nigel","Ospedale San Camillo, Venice, Italy",,06/01/2020
+A:,"Collignon, Olivier","Institute of Research in Psychology & Institute of NeuroScience, Université Catholique de Louvain, Louvain-la-Neuve, Belgium",,05/20/2020
+A:,"Congdon, Eliza","University of California, Los Angeles, Los Angeles, United States",,05/25/2021
+A:,"Conley, Emily Drabant","23andMe Inc., Mountain View, United States",,05/25/2021
+A:,"Cook, Phillip A.","University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Cookson, Savannah L.","University of California, Berkeley, Berkeley, United States",,08/01/2021
+A:,"Coppola, Giovanni","Departments of Psychiatry and Neurology, Jane & Terry Semel Institute for Neuroscience & Human Behavior, Los Angeles, United States",,06/01/2022
+A:,"Cornelius, Talea M.","Center for Behavioral Cardiovascular Health, Columbia University Irving Medical Center, New York, United States",,07/01/2023
+A:,"Corvin, Aiden P.","Department of Psychology, National College of Ireland, Dublin, Ireland",,05/25/2021
+A:,"Covitz, Sydney","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Cowan, Nelson","College of Arts and Sciences, University of Missouri, Columbia, United States",,11/09/2021
+A:,"Cox, Robert W.","Scientific and Statistical Computing Core, NATIONAL INSTITUTE OF MENTAL HEALTH, Philadelphia, United States",,05/20/2020
+A:,"Craddock, R. Cameron","The University of Texas at Austin, Austin, United States",,08/01/2021
+A:,"Cullen, Kathleen E.","Johns Hopkins University, Baltimore, United States",,09/02/2020
+A:,"Cunningham, William Andrew","University of Toronto, Toronto, Canada",,05/20/2020
+A:,"Curran, Joanne E.","University of Texas Rio Grande Valley, Brownsville, United States",,12/19/2020
+A:,"Czoschke, Stefan","Institute of Medical Psychology, Goethe-Universität Frankfurt am Main, Frankfurt am Main, Germany",,05/20/2020
+A:,"Dadi, Kamalaker","Université Paris-Saclay, Gif-sur-Yvette, France",,05/20/2020
+A:,"Dallery, Jesse","University of Florida, Gainesville, United States",,03/18/2022
+A:,"Darby, Richard Ryan","Department of Neurology, Vanderbilt University Medical Center, Nashville, United States",,06/01/2022
+A:,"Davatzikos, Christos A.","University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Davies, Gail","Department of Psychology, The University of Edinburgh, Edinburgh, United Kingdom",,05/25/2021
+A:,"Davis, Charles P.","Department of Psychology and Neuroscience, Duke University, Durham, United States",,05/20/2020
+A:,"De La Vega, Alejandro","The University of Texas at Austin, Austin, United States",,08/30/2022
+A:,"De Luca, Alberto","Image Sciences Institute, Utrecht, Netherlands",,05/20/2020
+A:,"DeRosse, Pamela","Center for Psychiatric Neuroscience, Feinstein Institute for Medical Research, Manhasset, United States",,05/25/2021
+A:,"Deary, Ian J.","The University of Edinburgh, Edinburgh, United Kingdom",,05/25/2021
+A:,"Delgado, Mauricio R.","Department of Psychology, Rutgers University-Newark Campus, Newark, United States",,05/20/2020
+A:,"Delios, Andrew","Department of Strategy and Policy, NUS Business School, Singapore City, Singapore",,11/09/2021
+A:,"Delorme, Arnaud","Brain and Cognition Research Center in Toulouse, Toulouse, France",,01/01/2022
+A:,"Demeter, Damion V.","St Justine Community Health Department, Montreal, Canada",,08/01/2021
+A:,"Demetriou, Lysia","University of Oxford Medical Sciences Division, Oxford, United Kingdom",,05/20/2020
+A:,"Denbow, Dominique","Massachusetts General Hospital, Boston, United States",,12/19/2020
+A:,"Dennison, Jeffrey B.","Department of Psychology and Neuroscience Program, Temple University, Philadelphia, United States",,05/20/2020
+A:,"Di Maio, Paola","Ronin Institute, Montclair, United States",,08/01/2021
+A:,"Di, Xin","New Jersey Institute of Technology, Newark, United States",,05/20/2020
+A:,"Dickie, Erin W.","Department of Psychiatry, University of Toronto, Toronto, Canada",,08/01/2021
+A:,"Dickinson, Dwight","Clinical and Translational Neuroscience Branch, National Institute of Mental Health (NIMH), Bethesda, United States",,05/25/2021
+A:,"Dickson, Dennis W.","Department of Neuroscience, Mayo Clinic in Jacksonville, Florida, Jacksonville, United States",,06/01/2022
+A:,"Dickson, Dennis W.","Department of Neuroscience, Mayo Clinic in Jacksonville, Florida, Jacksonville, United States",,06/01/2022
+A:,"Diedrichsen, Jörn","Western University, London, Canada",,11/01/2022
+A:,"Djurovic, Srdjan","KG Jebsen Centre for Neurodevelopmental Disorders, Universitetet i Oslo, Oslo, Norway",,05/25/2021
+A:,"Dobryakova, Ekaterina","Center for Traumatic Brain Injury Research, Kessler Foundation, West Orange/New Jersey, United States",,05/20/2020
+A:,"Dockès, Jérôme","Université McGill, Montreal, Canada",,03/04/2020
+A:,"Dolui, Sudipto","University of Pennsylvania, Philadelphia, United States",,06/01/2022
+A:,"Donkin, Chris","Ludwig-Maximilians-Universität München, Munich, Germany",,11/09/2021
+A:,"Donnat, Claire","Department of Statistics, The University of Chicago, Chicago, United States",,05/20/2020
+A:,"Donohoe, Gary","School of Psychology, University of Galway, Galway, Ireland",,05/25/2021
+A:,"Doucet, Gaëlle Eve","Icahn School of Medicine at Mount Sinai, New York, United States",,12/19/2020
+A:,"Douw, Linda","Department of Anatomy and Neurosciences, Vrije Universiteit Amsterdam, Amsterdam, Netherlands",,01/01/2020
+A:,"Dreber, Anna","Handelshögskolan i Stockholm, Stockholm, Sweden",,11/09/2021
+A:,"DuPre, Elizabeth","Department of Neurology and Neurosurgery, Institut-Hôpital Neurologique de Montréal, Montreal, Canada",,08/01/2021
+A:,"Dukart, Juergen","Institute of Systems Neuroscience, Heinrich-Heine-Universität Düsseldorf, Dusseldorf, Germany",,05/20/2020
+A:,"Duncan, Niall W.","Brain and Consciousness, Taipei Medical University, Taipei, Taiwan",,05/20/2020
+A:,"Durnez, Joke","Stanford University, Palo Alto, United States",,12/01/2021
+A:,"Dutilh, Gilles","Basel Clinical Trial Unit, Basel, Switzerland",,11/09/2021
+A:,"Dávila, Diego G.","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Edmondson, Donald E.","Center for Behavioral Cardiovascular Health, Columbia University Irving Medical Center, New York, United States",,07/01/2023
+A:,"Edwards, Michael C.","Arizona State University, Tempe, United States",,12/01/2019
+A:,"Eed, Amr","CSIC-UMH - Instituto de Neurociencias (IN), San Juan de Alicante, Spain",,05/20/2020
+A:,"Egan, Gary F.","Monash University, Melbourne, Australia",,11/09/2021
+A:,"Eickhoff, Simon B.","Forschungszentrum Jülich (FZJ), Jülich, Germany",,08/01/2021
+A:,"Eisenberg, Ian W.","Department of Psychology, Stanford University, Palo Alto, United States",,02/22/2021
+A:,"Elliott, Mark A.","Center for Advanced Metabolic Imaging in Precision Medicine, Penn Medicine, Philadelphia, United States",,06/01/2022
+A:,"Ercan, Ece","Leids Universitair Medisch Centrum, Leiden, Netherlands",,04/01/2020
+A:,"Erhart, Andrew","Colorado Department of Public Health and Environment, Denver, United States",,05/20/2020
+A:,"Eriksson, Johan Gunnar","National University of Singapore, Singapore City, Singapore",,05/25/2021
+A:,"Espeseth, Thomas","Department of Psychology, Universitetet i Oslo, Oslo, Norway",,05/25/2021
+A:,"Esteban, O.","Centre Hospitalier Universitaire Vaudois, Lausanne, Switzerland",,12/01/2022
+A:,"Etkin, Amit","Department of Psychiatry and Behavioral Sciences, Stanford University, Palo Alto, United States",,11/11/2021
+A:,"Faber, Kelley M.","Indiana University Bloomington, Bloomington, United States",,06/01/2022
+A:,"Fagan, Anne M.","Washington University School of Medicine in St. Louis, St. Louis, United States",,06/01/2022
+A:,"Fair, Damien A.","Department of Pediatrics, University of Minnesota Twin Cities, Minneapolis, United States",,06/29/2023
+A:,"Farah, Martha Jann","Department of Psychology, University of Pennsylvania, Philadelphia, United States",,09/02/2020
+A:,"Feczko, Eric J.","Center for the Developing Brain, Child Mind Institute, Inc., New York, United States",,06/29/2023
+A:,"Feingold, Franklin W.","Stanford University, Palo Alto, United States",,08/01/2022
+A:,"Ferguson, Adam R.","University of California, San Francisco, San Francisco, United States",,01/21/2022
+A:,"Fields, Julie A.","Department of Psychiatry and Psychology, Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Fields, Julie A.","Department of Psychiatry and Psychology, Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Finc, Karolina","Centre for Modern Interdisciplinary Technologies, Uniwersytet Mikołaja Kopernika w Toruniu, Torun, Kujawsko-Pomorskie, Poland",,08/01/2021
+A:,"Flounders, Matthew W.","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Fontanesi, Laura","Department of Psychology, Universitat Basel, Basel, Switzerland",,05/20/2020
+A:,"Foo, Heidi","Department of Psychiatry, UNSW Medicine, Kensington, Australia",,04/01/2020
+A:,"Forsberg, Leah K.","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Fox, Andrew S.","California National Primate Research Center, Davis, United States",,01/01/2021
+A:,"Franco, Alexandre Rosa","Nathan S. Kline Institute for Psychiatric Research, Orangeburg, United States",,06/01/2022
+A:,"Frangou, Sophia","Mood Disorders Centre, University of British Columbia, Faculty of Medicine, Vancouver, Canada",,12/01/2021
+A:,"Frank, Michael Joshua","Department of Cognitive, Brown University, Providence, United States",,10/07/2019
+A:,"Freimer, Nelson B.","Jane & Terry Semel Institute for Neuroscience & Human Behavior, Los Angeles, United States",,05/25/2021
+A:,"Fricke, G. Matthew","Center for Advanced Research Computing, The University of New Mexico, Albuquerque, United States",,05/20/2020
+A:,"Frigo, Matteo","Université Côte d'Azur, Nice, France",,08/01/2021
+A:,"Fu, Shiguang","School of Management, Zhejiang University of Technology, Hangzhou, China",,05/20/2020
+A:,"Galasko, Douglas R.","Department of Neuroscience, University of Southern California, Los Angeles, United States",,06/01/2022
+A:,"Ganesan, Saampras","Department of Biomedical Engineering, University of Melbourne, Parkville, Australia",,08/01/2021
+A:,"Ganz, Melanie","Department of Computer Science, Københavns Universitet, Copenhagen, Denmark",,08/01/2021
+A:,"Gao, Mengxia","Laboratory of Neuropsychology & Human Neuroscience, The University of Hong Kong, Pokfulam, Hong Kong",,04/01/2020
+A:,"Garner, Kelly G.","Centre for Human Brain Health, University of Birmingham, Birmingham, United Kingdom",,08/01/2021
+A:,"Garza-Villarreal, Eduardo A.","Universidad Nacional Autónoma de México, Ciudad de México, Mexico",,08/01/2021
+A:,"Gau, Rémi","Institute of Psychological Sciences, Université Catholique de Louvain, Louvain-la-Neuve, Belgium",,08/01/2021
+A:,"Gavrilova, Ralitza","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Gavrilova, Ralitza H.","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Ge, Tian","Department of Psychiatry, Massachusetts General Hospital, Boston, United States",,05/25/2021
+A:,"Gendron, Tania F.","Department of Neuroscience, Mayo Clinic in Jacksonville, Florida, Jacksonville, United States",,06/01/2022
+A:,"Genon, Sarah","Institute of Neuroscience and Medicine (INM-7: Brain and Behaviour), Forschungszentrum Jülich (FZJ), Jülich, Germany",,05/20/2020
+A:,"Gernsbacher, Morton Ann","University of Wisconsin-Madison, Madison, United States",,11/09/2021
+A:,"Geschwind, Daniel H.","David Geffen School of Medicine at UCLA, Los Angeles, United States",,06/01/2022
+A:,"Ghosh, Satrajit S.","McGovern Institute, Cambridge, United States",,06/29/2023
+A:,"Giakoumaki, Stella G.","University of Crete, Rethymnon, Greece",,05/25/2021
+A:,"Giegling, Ina","Psychotherapy and Psychosomatics, Universitätsklinikum Halle und Medizinische Fakultät, Halle, Germany",,05/25/2021
+A:,"Gill, Michael","Department of Psychiatry, Trinity College Dublin, Dublin, Ireland",,05/25/2021
+A:,"Glahn, David C.","Harvard Medical School, Boston, United States",,12/01/2021
+A:,"Glatard, Tristan","Concordia University, Montreal, Canada",,08/01/2021
+A:,"Gleeson, Padraig","Department of Neuroscience, University College London, London, United Kingdom",,10/07/2019
+A:,"Glerean, E.","Department of Neuroscience and Biomedical Engineering, Aalto University, Espoo, Finland",,05/20/2020
+A:,"Goda, Yukiko","Laboratory for Synaptic Plasticity and Connectivity, RIKEN Center for Brain Science, Wako, Japan",,09/02/2020
+A:,"Godard-Sebillotte, Claire","School of Medicine, Montreal, Canada",,04/01/2020
+A:,"Goeman, Jelle J.","Department of Biomedical Data Sciences, Leids Universitair Medisch Centrum, Leiden, Netherlands",,05/20/2020
+A:,"Goldman, Jill S.","Columbia University, New York, United States",,06/01/2022
+A:,"Golowin, Sergej A.E.","Graduate Institute of Mind, Brain and Consciousness, Taipei Medical University, Taipei, Taiwan",,05/20/2020
+A:,"Gomez, Daniel E.P.","Department of Radiology, Harvard Medical School, Boston, United States",,06/08/2020
+A:,"Goncalves, Mathias","Stanford University, Palo Alto, United States",,06/29/2023
+A:,"Goncavles, Mathias","Stanford University, Palo Alto, United States",,10/18/2021
+A:,"Gonzalez, Oscar","The University of North Carolina at Chapel Hill, Chapel Hill, United States",,03/09/2020
+A:,"González-Escamilla, Gabriel","Department of Neurology, Universitätsmedizin Mainz, Mainz, Germany",,08/01/2021
+A:,"González-García, Carlos","Mind, Universidad de Granada, Granada, Spain",,05/20/2020
+A:,"Gorgolewski, Krzysztof J.","Stanford University, Palo Alto, United States",,12/01/2022
+A:,"Goswami, Rohit","Quansight Labs, Haskoli Islands, Reykjavik, Iceland",,08/01/2021
+A:,"Gotlib, Ian H.","Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Grabinski, Michael J.","Geisel School of Medicine at Dartmouth, Hanover, United States",,03/18/2022
+A:,"Grady, Cheryl L.","Department of Psychiatry, University of Toronto, Toronto, Canada",,05/20/2020
+A:,"Graff-Radford, Jonathan","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Grant, Struan F.A.","Department of Neurology, Mayo Clinic in Jacksonville, Florida, Jacksonville, United States",,06/01/2022
+A:,"Green, Mikella A.","Department of Psychology & Neuroscience, Duke University, Durham, United States",,05/20/2020
+A:,"Grethe, Jeffrey S.","SciCrunch Inc., San Diego, United States",,01/21/2022
+A:,"Griffiths, John D.","Krembil Centre for Neuroinformatics, Centre for Addiction and Mental Health, Toronto, Canada",,08/01/2021
+A:,"Grootswagers, Tijl","The MARCS Institute for Brain, Behaviour and Development, Bankstown, Australia",,08/01/2021
+A:,"Grossman, Murray","Department of Neurology, University of Pennsylvania, Philadelphia, United States",,06/01/2022
+A:,"Guassi Moreira, João F.","University of California, Los Angeles, Los Angeles, United States",,05/20/2020
+A:,"Guay, Samuel","University of Montreal, Montreal, Canada",,08/01/2021
+A:,"Guest, Olivia","Donders Institute for Brain, Cognition and Behaviour, Nijmegen, Netherlands",,08/01/2021
+A:,"Gur, Raquel E.","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Gur, Ruben C.","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Gálvan, Adriana","University of California, Los Angeles, Los Angeles, United States",,05/20/2020
+A:,"Gözükan, Hande","INRIA Institut National de Recherche en Informatique et en Automatique, Le Chesnay, France",,03/04/2020
+A:,"Hagen, McKenzie K.P.","Stanford University, Palo Alto, United States",,07/11/2022
+A:,"Hagen, McKenzie P.","Department of Psychology, Stanford University, Palo Alto, United States",,03/01/2023
+A:,"Haggard, Patrick N.","Département d'Études Cognitives, Laboratoire de Neurosciences Cognitives & Computationnelles, Paris, France",,09/02/2020
+A:,"Hakimi, Shabnam","Center for Cognitive Neuroscience, Duke University, Durham, United States",,05/20/2020
+A:,"Halchenko, Yaroslav O.","Department of Psychological and Brain Sciences, Dartmouth College, Hanover, United States",,06/29/2023
+A:,"Hall, Matt G.H.","National Physical Laboratory, Middlesex, United Kingdom",,06/01/2022
+A:,"Hamilton, J. Paul","Department of Biomedical and Clinical Sciences, Center for Social and Affective Neuroscience, None, None",,05/20/2020
+A:,"Han, Yinuo","Institute of Astronomy, Cambridge, United Kingdom",,10/15/2019
+A:,"Hancock, Roeland","University of Connecticut, Storrs, United States",,05/20/2020
+A:,"Handjaras, Giacomo","IMT School for Advanced Studies Lucca, Lucca, Italy",,05/20/2020
+A:,"Handwerker, Daniel A.","Section on Functional Imaging Methods, National Institute of Mental Health (NIMH), Bethesda, United States",,08/01/2021
+A:,"Hanson, Stephen José","Department of Psychology, Rutgers University-Newark Campus, Newark, United States",,10/14/2019
+A:,"Hardcastle, Nell","Squishymedia, Portland, United States",,10/18/2021
+A:,"Hariri, Ahmad R.","Department of Psychology and Neuroscience, Duke University, Durham, United States",,05/25/2021
+A:,"Harry, Bronson B.","The MARCS Institute for Brain, Behaviour and Development, Bankstown, Australia",,05/20/2020
+A:,"Hartmann, Annette M.","Psychotherapy and Psychosomatics, Universitätsklinikum Halle und Medizinische Fakultät, Halle, Germany",,05/25/2021
+A:,"Hastie, Trevor J.","Stanford Law School, Stanford, United States",,07/01/2020
+A:,"Hatzimanolis, Alex","National and Kapodistrian University of Athens, Athens, Greece",,05/25/2021
+A:,"Haugg, Amelie","Department of Child and Adolescent Psychiatry, Psychiatrische Universitätsklinik Zürich, Zurich, Switzerland",,04/01/2020
+A:,"Hawco, Colin S.","Centre for Addiction and Mental Health, Toronto, Canada",,05/20/2020
+A:,"Hawrylycz, Michael J.","Allen Institute for Brain Science, Washington, United States",,01/21/2022
+A:,"Headley, Drew B.","Center for Molecular and Behavioral Neuroscience, Newark, United States",,10/14/2019
+A:,"Hearne, Luke J.","QIMR Berghofer Medical Research Institute, Brisbane, Australia",,12/01/2019
+A:,"Herholz, Peer","University of Montreal, Montreal, Canada",,08/30/2022
+A:,"Herman, Gabrielle","Centre for Addiction and Mental Health, Toronto, Canada",,05/20/2020
+A:,"Hermosillo, Robert J.M.","University of Minnesota Twin Cities, Minneapolis, United States",,06/29/2023
+A:,"Hernandez, Leanna M.","Department of Psychiatry, Jane & Terry Semel Institute for Neuroscience & Human Behavior, Los Angeles, United States",,04/01/2020
+A:,"Heuer, Hilary W.","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Heuer, Katja","Unité de neuroanatomie appliquée et théorique, Université Paris Cité, Paris, France",,08/01/2021
+A:,"Heunis, Stephan","Technische Universiteit Eindhoven, Eindhoven, Netherlands",,08/01/2021
+A:,"Hill, David W.","Department of Psychology, The University of Edinburgh, Edinburgh, United Kingdom",,05/25/2021
+A:,"Hoekstra, Rink","Faculty of Behavioural and Social Sciences, Rijksuniversiteit Groningen, Groningen, Netherlands",,11/09/2021
+A:,"Hoffmann, Sabine","Department of Statistics, Ludwig-Maximilians-Universität München, Munich, Germany",,11/09/2021
+A:,"Hoffstaedter, Felix","Institute of Systems Neuroscience, Heinrich-Heine-Universität Düsseldorf, Dusseldorf, Germany",,05/20/2020
+A:,"Hogeveen, Jeremy P.","Department of Psychology, The University of New Mexico, Albuquerque, United States",,05/20/2020
+A:,"Holley, Daniel","California National Primate Research Center, Davis, United States",,01/01/2021
+A:,"Holmes, Avram J.","Yale School of Medicine, New Haven, United States",,11/01/2019
+A:,"Holmes, Susan","Stanford Law School, Stanford, United States",,05/20/2020
+A:,"Holt-Gosselin, Bailey","Interdepartmental Neuroscience Program, Yale School of Medicine, New Haven, United States",,07/01/2020
+A:,"Holzmeister, Felix","Department of Economics, Universität Innsbruck, Innsbruck, Austria",,11/09/2021
+A:,"Howard, Matthew A.","Department of Neurosurgery, University of Iowa, Iowa City, United States",,08/05/2020
+A:,"Hsiung, Ging Yuek R.","Department of Medicine, The University of British Columbia, Vancouver, Canada",,06/01/2022
+A:,"Hu, Chuanpeng","School of Psychology, Nanjing Normal University, Nanjing, China",,08/01/2021
+A:,"Hu, Hailan","Zhejiang University, Hangzhou, China",,09/02/2020
+A:,"Huang, Eric Jinsheng","University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Huang, Hailiang","Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, United States",,05/25/2021
+A:,"Huber, Jürgen","Department of Banking and Finance, Universität Innsbruck, Innsbruck, Austria",,11/09/2021
+A:,"Huckins, Grace","Stanford University, Palo Alto, United States",,05/01/2020
+A:,"Huckins, Laura","Pamela Sklar Division of Psychiatric Genomics, Icahn School of Medicine at Mount Sinai, New York, United States",,05/25/2021
+A:,"Huettel, Scott A.","Center for Cognitive Neuroscience, Duke University, Durham, United States",,05/20/2020
+A:,"Huey, Edward D.","Columbia University, New York, United States",,06/01/2022
+A:,"Hughes, Matthew E.","Swinburne University of Technology, Melbourne, Australia",,05/20/2020
+A:,"Huijser, Dorien C.","Department of Developmental and Educational Psychology, Universiteit Leiden, Leiden, Netherlands",,08/01/2021
+A:,"Hurd, Yasmin L.","Department of Neuroscience, Icahn School of Medicine at Mount Sinai, New York, United States",,09/02/2020
+A:,"Huys, Quentin J.M.","Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany",,10/07/2019
+A:,"Hwang, Kai","Department of Psychiatry, University of Iowa, Iowa City, United States",,12/01/2019
+A:,"Iacovella, Vittorio","Center for Mind/Brain Sciences (CIMeC), Università di Trento, Trento, Italy",,08/01/2021
+A:,"Iordan, Alexandru D.","University of Michigan, Ann Arbor, Ann Arbor, United States",,05/20/2020
+A:,"Irwin, David J.","Department of Neurology, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Isager, Peder Mortvedt","Oslo New University College, Oslo, Norway",,05/20/2020
+A:,"Isik, Ayse Ilkay","Department of Neuroscience, Max Planck Institute for Empirical Aesthetics, Frankfurt am Main, Germany",,05/20/2020
+A:,"Ito, Kaori L.","University of Southern California, Los Angeles, United States",,04/01/2020
+A:,"Ivry, Richard B.","University of California, Berkeley, Berkeley, United States",,11/01/2022
+A:,"Iwanir, Roni","Sagol School of Neuroscience, Tel Aviv University, Tel Aviv-Yafo, Israel",,05/20/2020
+A:,"Jaber, Basma","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Jacoby, Nir","Department of Psychology, Columbia University, New York, United States",,06/08/2020
+A:,"Jaffe, Paul I.","Stanford University, Palo Alto, United States",,01/19/2023
+A:,"Jahn, Andrew","University of Michigan, Ann Arbor, Ann Arbor, United States",,05/20/2020
+A:,"Janssen, Ronald J.","Olin Neuropsychiatry Research Center, Hartford, United States",,12/01/2021
+A:,"Jarecka, Dorota","McGovern Institute, Cambridge, United States",,06/29/2023
+A:,"Jeffery, Kate J.","Veterinary and Life Sciences, School of Medicine, Dentistry & Nursing, Glasgow, United Kingdom",,04/01/2020
+A:,"Johannesson, Magnus","Department of Economics, Handelshögskolan i Stockholm, Stockholm, Sweden",,11/09/2021
+A:,"Johannesson, Magnus","Department of Economics, Handelshögskolan i Stockholm, Stockholm, Sweden",,05/20/2020
+A:,"Johnson, Matthew R.","Department of Psychology, University of Nebraska–Lincoln, Lincoln, United States",,05/20/2020
+A:,"Johnstone, Tom","Swinburne University of Technology, Melbourne, Australia",,05/20/2020
+A:,"Jonas, Kai J.","Department of Work and Social Psychology, Universiteit Maastricht, Maastricht, Netherlands",,11/09/2021
+A:,"Jones, David Thomas","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Jones, Henry M.","Stanford University, Palo Alto, United States",,03/01/2023
+A:,"Joseph, Michael","Centre for Addiction and Mental Health, Toronto, Canada",,08/01/2021
+A:,"Josselyn, Sheena A.","University of Toronto Faculty of Medicine, Toronto, Canada",,09/02/2020
+A:,"Juliano, Anthony C.","Department of Complex Systems, University of Vermont, Burlington, United States",,05/20/2020
+A:,"Jwa, Anita S.","Stanford University, Palo Alto, United States",,02/10/2022
+A:,"Kable, Joseph W.","Department of Psychology, University of Pennsylvania, Philadelphia, United States",,05/20/2020
+A:,"Kantarci, Kejal","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Kantarci, Kejal M.","Department of Radiology, Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Karakuzu, Agah","NeuroPoly Lab, Montreal, Canada",,08/01/2021
+A:,"Kassinopoulos, Michalis","UCL Queen Square Institute of Neurology, London, United Kingdom",,05/20/2020
+A:,"Kastrati, Gránit","Department of Clinical Neurosciences, Karolinska Institutet, Stockholm, Sweden",,02/14/2020
+A:,"Keator, David Bryant","Department of Psychiatry and Human Behavior, University of California, Irvine, Irvine, United States",,01/21/2022
+A:,"Kebets, Valeria","McConnell Brain Imaging Centre, Montreal, Canada",,11/01/2019
+A:,"Keilholz, Shella D.","Emory University, Atlanta, United States",,01/01/2020
+A:,"Keller, Matthew C.","NYU Grossman School of Medicine, New York, United States",,05/25/2021
+A:,"Kennedy, David N.","University of Massachusetts Chan Medical School, Worcester, United States",,01/21/2022
+A:,"Kent, James D.","Department of Psychology, The University of Texas at Austin, Austin, United States",,08/30/2022
+A:,"Kerr, Adam B.","Center for Cognitive and Neurobiological Imaging, Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Kerwin, Diana R.","Northwestern University, Evanston, United States",,06/01/2022
+A:,"Kessler, Dan","Department of Statistics, University of Michigan, Ann Arbor, Ann Arbor, United States",,04/01/2020
+A:,"Kessler, Daniel","Michigan Medicine, Ann Arbor, United States",,01/01/2020
+A:,"Khakh, Baljit Singh","Department of Physiology, David Geffen School of Medicine at UCLA, Los Angeles, United States",,09/02/2020
+A:,"Khatibi, Ali","University of Birmingham, Birmingham, United Kingdom",,04/01/2020
+A:,"Kiar, Gregory","Center for the Developing Brain, Child Mind Institute, Inc., New York, United States",,06/29/2023
+A:,"Kiernan, Michaela","Stanford University School of Medicine, Stanford, United States",,03/18/2022
+A:,"Kim, Sunny Jung","Department of Health Behavior and Policy, VCU School of Medicine, Richmond, United States",,03/18/2022
+A:,"Kindel, Alexander T.","Princeton University, Princeton, United States",,11/09/2021
+A:,"King, Maedbh","Department of Psychology, University of California, Berkeley, Berkeley, United States",,11/01/2022
+A:,"Kirchler, Michael","Universität Innsbruck, Innsbruck, Austria",,11/09/2021
+A:,"Klink, Peter Christiaan","Laboratory of Visual Brain Therapy, Sorbonne Université, Paris, France",,01/01/2021
+A:,"Knoblich, Juergen A.","Institute of Molecular Biotechnology, Vienna, Vienna, Austria",,09/02/2020
+A:,"Knopman, David","Department of Neurology, Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Knopman, David S.","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Knowles, Emma E.M.","Children's Hospital Boston, Boston, United States",,12/01/2021
+A:,"Koba, Cemal","MoMiLab Research Unit, IMT School for Advanced Studies Lucca, Lucca, Italy",,05/20/2020
+A:,"Kobeleva, Xenia","Deutsches Zentrum für Neurodegenerative  Erkrankungen e.V., Bonn, Germany",,08/01/2021
+A:,"Koenis, Marinka M.G.","Olin Neuropsychiatry Research Center, Hartford, United States",,12/01/2021
+A:,"Koltai, Deborah C.","Department of Neurology, Duke University School of Medicine, Durham, United States",,05/25/2021
+A:,"Kong, Ru","Centre for Sleep & Cognition & Centre for Translational Magnetic Resonance Research, NUS Yong Loo Lin School of Medicine, Singapore City, Singapore",,11/01/2019
+A:,"Kong, Xiangzhen","Department of Psychology and Behavioral Sciences, Zhejiang University, Hangzhou, China",,05/20/2020
+A:,"Konte, Bettina","Medizinische Universität Wien, Vienna, Austria",,05/25/2021
+A:,"Kraft, Dominik","Department of Psychology, Goethe-Universität Frankfurt am Main, Frankfurt am Main, Germany",,01/01/2020
+A:,"Kramer, Joel H.","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Kremers, Walter","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Kremers, Walter Karl","Department of Health Sciences Research, Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Kucyi, Aaron","Department of Psychological and Brain Sciences, Drexel University, Philadelphia, United States",,01/01/2020
+A:,"Kumar, Manoj Krishna","Department of Zoology, University of Lucknow, Lucknow, India",,08/01/2021
+A:,"Kunkels, Yoram K.","Department of Psychiatry, Universitair Medisch Centrum Groningen, Groningen, Netherlands",,11/09/2021
+A:,"Kwok, Sze Chai","Beijing Normal University, Beijing, China",,01/01/2021
+A:,"Kyle, Colin T.","Department of Psychology, Center for Neuroscience, Davis, United States",,01/01/2021
+A:,"La, Christian","Department of Neurology and Neurological Sciences, Stanford University School of Medicine, Stanford, United States",,04/01/2020
+A:,"Lahti, Jari M.T.","Department of Psychology and Logopedics, Helsingin Yliopisto, Helsinki, Finland",,05/25/2021
+A:,"Laird, Angela R.","Department of Physics, Florida International University, Miami, United States",,08/01/2021
+A:,"Lam, Max Z.Y.","Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, United States",,05/25/2021
+A:,"Lapid, Maria I.","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Larson-Prior, Linda J.","University of Arkansas for Medical Sciences, Little Rock, United States",,08/01/2021
+A:,"Lautarescu, Alexandra","None, None, None",,08/01/2021
+A:,"Lavoie, Hannah A.","Department of Health Education and Behavior, University of Florida, Gainesville, United States",,03/18/2022
+A:,"Lazari, Alberto","University of Oxford Medical Sciences Division, Oxford, United Kingdom",,08/01/2021
+A:,"Le Hellard, Stéphanie","Universitetet i Bergen, Bergen, Norway",,05/25/2021
+A:,"Legarreta, Jon Haitz","Department of Computer Science, Université de Sherbrooke, Sherbrooke, Canada",,08/01/2021
+A:,"Lemley, Shea M.","Center for Technology and Behavioral Health, Geisel School of Medicine at Dartmouth, Hanover, United States",,03/18/2022
+A:,"Lencz, Todd","Division of Psychiatry Research, Zucker Hillside Hospital, New York, United States",,05/25/2021
+A:,"Lerma-Usabiaga, Garikoitz","BCBL – Basque Center on Cognition, Brain and Language, Donostia-San Sebastian, Spain",,07/01/2020
+A:,"Levitis, Elizabeth","Developmental Neurogenomics Unit, National Institute of Mental Health (NIMH), Bethesda, United States",,08/01/2021
+A:,"Li, Jamie K.","Department of Psychology, Stanford University, Palo Alto, United States",,03/01/2023
+A:,"Li, Jingwei","Institute of Systems Neuroscience, Heinrich-Heine-Universität Düsseldorf, Dusseldorf, Germany",,11/01/2019
+A:,"Li, Mike","Centre for Complex Systems, The University of Sydney, Sydney, Australia",,10/15/2019
+A:,"Li, Xinhui","School of Electrical and Computer Engineering, Atlanta, United States",,06/29/2023
+A:,"Li, Xueying","University of Chinese Academy of Sciences, Beijing, China",,08/01/2021
+A:,"Liem, Franziskus","Universität Zürich, Zurich, Switzerland",,06/08/2020
+A:,"Liewald, David C.M.","Department of Psychology, The University of Edinburgh, Edinburgh, United Kingdom",,05/25/2021
+A:,"Lindquist, Martin A.","Department of Biostatistics (G.W., M.L., None, None",,01/01/2020
+A:,"Lindsay, D. Stephen","University of Victoria, Victoria, Canada",,11/09/2021
+A:,"Litvan, Irene","Department of Neurology, University of California, San Diego, San Diego, United States",,06/01/2022
+A:,"Liu, Chunyu","Department of Psychiatry, Central South University, Changsha, China",,05/25/2021
+A:,"Lizier, Joseph T.","Centre for Complex Systems, The University of Sydney, Sydney, Australia",,10/15/2019
+A:,"Liégeois, Raphaël","Department of Radiology and Medical Informatics, Université de Genève Faculté de Médecine, Geneva, Switzerland",,01/01/2020
+A:,"Ljubenkov, Peter A.","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Logan, Gordon D.","Department of Psychology, Vanderbilt University, Nashville, United States",,03/19/2021
+A:,"London, Edythe D.","David Geffen School of Medicine at UCLA, Los Angeles, United States",,05/25/2021
+A:,"Lorenz, Romy","Stanford University, Palo Alto, United States",,12/01/2022
+A:,"Love, Bradley C.","University College London, London, United Kingdom",,10/07/2019
+A:,"Lowe, Michael R.","Department of Psychological and Brain Sciences, Drexel University, Philadelphia, United States",,03/18/2022
+A:,"Lucente, Diane E.","Center for Genomic Medicine, Massachusetts General Hospital, Boston, United States",,06/01/2022
+A:,"Lundervold, Astri Johansen","Department of Biological and Medical Psychology, Universitetet i Bergen, Bergen, Norway",,05/25/2021
+A:,"Lurie, Daniel J.","Department of Psychology, University of California, Berkeley, Berkeley, United States",,04/01/2020
+A:,"Lv, Jinglei","School of Biomedical Engineering, The University of Sydney, Sydney, Australia",,08/01/2021
+A:,"Léger, Gabriel C.","University of California, San Diego, San Diego, United States",,06/01/2022
+A:,"MacKinnon, David P.","Arizona State University, Tempe, United States",,03/18/2022
+A:,"MacNicol, Eilidh E.","King's College London, London, United Kingdom",,12/01/2022
+A:,"Mackenzie, Ian R.","University of British Columbia, Faculty of Medicine, Vancouver, Canada",,06/01/2022
+A:,"Majumdar, Amit","San Diego Supercomputer Center, San Diego, United States",,01/01/2022
+A:,"Makary, Meena M.","Department of Radiology, Harvard Medical School, Boston, United States",,04/01/2020
+A:,"Makeig, Scott D.","Swartz Center for Computational Neuroscience, Institute for Neural Computation, San Diego, United States",,01/01/2022
+A:,"Malhotra, Anil K.","Division of Psychiatry Research, Zucker Hillside Hospital, New York, United States",,05/25/2021
+A:,"Manapat, Patrick Don","Arizona State University, Tempe, United States",,12/01/2019
+A:,"Mancini, Matteo","Prifysgol Caerdydd, Cardiff, United Kingdom",,08/01/2021
+A:,"Mangin, Jean François","Department of Neurology, Všeobecná Fakultní Nemocnice v Praze, Prague, Czech Republic",,11/09/2021
+A:,"Mansour L, Sina","Melbourne Neuropsychiatry Centre, University of Melbourne, Parkville, Australia",,08/01/2021
+A:,"Marinazzo, Daniele","Department of Data Analysis, Universiteit Gent, Ghent, Belgium",,06/01/2020
+A:,"Markiewicz, Christopher J.","Stanford University, Palo Alto, United States",,06/29/2023
+A:,"Marsch, Lisa A.","Center for Technology and Behavioral Health, Geisel School of Medicine at Dartmouth, Hanover, United States",,03/18/2022
+A:,"Martone, Maryann E.","Department of Neurosciences, San Diego, United States",,01/21/2022
+A:,"Masdeu, Joseph C.","Department of Neurology, Houston Methodist, Houston, United States",,06/01/2022
+A:,"Mastrovito, Dana","Allen Institute for Brain Science, Washington, United States",,12/01/2021
+A:,"Mathias, Samuel R.","Harvard Medical School, Boston, United States",,12/01/2021
+A:,"Mattingley, Jason B.","The University of Queensland, Brisbane, Australia",,12/01/2019
+A:,"Matzke, Dóra","Department of Psychological Methods, Universiteit van Amsterdam, Amsterdam, Netherlands",,11/09/2021
+A:,"Mayberg, Helen S.","Nash Family Center for Advanced Circuit Therapeutics, Icahn School of Medicine at Mount Sinai, New York, United States",,01/21/2022
+A:,"Mazza, Gina L.","Department of Quantitative Health Sciences, Mayo Clinic Scottsdale-Phoenix, Arizona, Scottsdale, United States",,03/09/2020
+A:,"McGinnis, Scott M.","Department of Psychiatry, Harvard Medical School, Boston, United States",,06/01/2022
+A:,"McIntosh, Anthony Randal","Institute for Neuroscience and Neurotechnology, Simon Fraser University, Burnaby, Canada",,01/01/2020
+A:,"McMillian, Corey","Penn Frontotemporal Degeneration Center, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"McNeish, Daniel M.","Arizona State University, Tempe, United States",,05/24/2021
+A:,"Mehler, David Marc Anton","Department of Psychiatry, Westfälische Wilhelms-Universität Münster, Munster, Germany",,04/01/2020
+A:,"Melle, Ingrid S.","Division of Mental Health and Addiction, Universitetet i Oslo, Oslo, Norway",,05/25/2021
+A:,"Mentch, Jeff","Massachusetts Institute of Technology, Cambridge, United States",,08/30/2022
+A:,"Mester, Carly T.","Department of Quantitative Health Sciences, Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Metcalf, Stephen A.","University of Cambridge, Cambridge, United Kingdom",,03/18/2022
+A:,"Meunier, David","Aix Marseille Université, Marseille, France",,08/01/2021
+A:,"Milham, Michael Peter","Center for the Developing Brain, Child Mind Institute, Inc., New York, United States",,06/29/2023
+A:,"Mill, Ravi D.","Center for Molecular and Behavioral Neuroscience, Newark, United States",,10/14/2019
+A:,"Miller, Bruce L.","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Miller, Eric M.","Squishymedia, Portland, United States",,10/18/2021
+A:,"Miller, Robyn L.","Tri-Institutional Center for Translational Research in Neuroimaging and Data Science (TReNDS), Georgia State University, Atlanta, United States",,01/01/2020
+A:,"Miranda-Dominguez, Oscar","University of Minnesota Medical School, Minneapolis, United States",,06/29/2023
+A:,"Mollon, Josephine","Harvard Medical School, Boston, United States",,12/01/2021
+A:,"Moodie, Craig A.","Stanford University, Palo Alto, United States",,06/08/2020
+A:,"Moraczewski, Dustin","Data Science and Sharing Team, Bethesda, United States",,08/01/2021
+A:,"Moran, Rosalyn","Department of Neuroimaging, King's College London, London, United Kingdom",,10/07/2019
+A:,"Morris, Derek W.","Centre for Neuroimaging, University of Galway, Galway, Ireland",,05/25/2021
+A:,"Mumford, Jeanette A.","Stanford University, Palo Alto, United States",,03/01/2023
+A:,"Munafo, Marcus R.","MRC Integrative Epidemiology Unit, Bristol, United Kingdom",,11/09/2021
+A:,"Muniz, Felix B.","Department of Psychology, Arizona State University, Tempe, United States",,03/09/2020
+A:,"Murtha, Kristin","Department of Psychiatry, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Muthuraman, R.","Neurological Clinic, Universitätsmedizin Mainz, Mainz, Germany",,01/01/2020
+A:,"Mutsaerts, Henk Jmm","Amsterdam UMC - Vrije Universiteit Amsterdam, Amsterdam, Netherlands",,06/01/2022
+A:,"Méndez, Mario F.","Service of Neurology, VA Greater Los Angeles Healthcare System, Los Angeles, United States",,06/01/2022
+A:,"Müller, Eli J.","The University of Sydney, Sydney, Australia",,12/01/2019
+A:,"Nair, Remya R.","California Institute of Technology, Pasadena, United States",,08/05/2020
+A:,"Nandi, Tulika","Universitätsmedizin Mainz, Mainz, Germany",,08/01/2021
+A:,"Narayanan, Sridar","McConnell Brain Imaging Centre, Montreal, Canada",,04/01/2020
+A:,"Nastase, Samuel A.","Princeton University, Princeton, United States",,08/01/2021
+A:,"Nau, Matthias","Centre for Neural Computation, Norges Teknisk-Naturvitenskapelige Universitet, Trondheim, Norway",,08/01/2021
+A:,"Need, Anna C.","Genomics England Limited, London, United Kingdom",,05/25/2021
+A:,"Newell, Ben R.","UNSW Sydney, Sydney, Australia",,11/09/2021
+A:,"Nikolaidis, Aki","Center for the Developing Brain, Child Mind Institute, Inc., New York, United States",,08/01/2021
+A:,"Nilsonne, Gustav","Department of Clinical Neurosciences, Karolinska Institutet, Stockholm, Sweden",,11/09/2021
+A:,"Niso, Guiomar","CSIC - Instituto Cajal (IC), Madrid, Spain",,08/01/2021
+A:,"Noble, Stephanie M.","Department of Radiology and Biomedical Imaging, Yale School of Medicine, New Haven, United States",,08/01/2021
+A:,"Nosek, Brian A.","Center for Open Science, Charlottesville, United States",,11/09/2021
+A:,"Nørgaard, Martin","Center for Reproducible Neuroscience, Stanford University, Palo Alto, United States",,08/01/2021
+A:,"Oathes, Desmond J.","University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Obungoloch, Johnes","Mbarara University of Science and Technology, Mbarara, Uganda",,08/01/2021
+A:,"Ollier, William E.R.","Centre for Epidemiology, The University of Manchester, Manchester, United Kingdom",,05/25/2021
+A:,"Onken, Lisa Simon","National Institute on Aging (NIA), Bethesda, United States",,03/18/2022
+A:,"Onyike, Chiadi U.","Johns Hopkins School of Medicine, Baltimore, United States",,06/01/2022
+A:,"Oostenveld, Robert","Karolinska Institutet, Stockholm, Sweden",,08/01/2021
+A:,"Orban, Csaba","National University of Singapore, Singapore City, Singapore",,11/01/2019
+A:,"Orchard, Edwina R.","Faculty of Medicine, Nursing and Health Sciences, Clayton, Australia",,08/01/2021
+A:,"Otto, Michael W.","Department of Psychological and Brain Sciences, Boston University, Boston, United States",,07/01/2023
+A:,"Oya, Hiroyuki","Iowa Neuroscience Institute, University of Iowa, Iowa City, United States",,08/05/2020
+A:,"Palotie, Aarno","Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, United States",,05/25/2021
+A:,"Paret, Christian","Department of Psychosomatic Medicine and Psychotherapy, Medizinische Fakultät Mannheim, Mannheim, Germany",,08/01/2022
+A:,"Pascual, Maria Belen","Houston Methodist Hospital, Houston, United States",,06/01/2022
+A:,"Pasquini, Lorenzo","University of California, San Francisco, San Francisco, United States",,01/01/2020
+A:,"Payton, Antony","Faculty of Biology, Medicine and Health, Manchester, United Kingdom",,05/25/2021
+A:,"Pearlson, Godfrey David","Hartford Hospital, Hartford, United States",,12/01/2021
+A:,"Pelham, William E.","Department of Psychiatry, San Diego, United States",,03/09/2020
+A:,"Pendleton, Neil","Division of Neuroscience and Experimental Psychology, The University of Manchester, Manchester, United Kingdom",,05/25/2021
+A:,"Pernet, Cyril R.","Edinburgh Medical School, Edinburgh, United Kingdom",,02/01/2023
+A:,"Petkov, Christopher I.","University of Nottingham, Nottingham, United Kingdom",,08/05/2020
+A:,"Petrucelli, Leonard","Mayo Clinic in Jacksonville, Florida, Jacksonville, United States",,06/01/2022
+A:,"Petrucelli, Leonard","Department of Neuroscience, Mayo Clinic in Jacksonville, Florida, Jacksonville, United States",,06/01/2022
+A:,"Pinho, Ana Luísa","Université Paris-Saclay, Gif-sur-Yvette, France",,08/01/2021
+A:,"Poirazi, Panayiota","Institute of Molecular Biology and Biotechnology of the Foundation for Research and Technology Hellas, Heraklion, Greece",,09/02/2020
+A:,"Poline, Jean Baptiste","Neuro Data Science - ORIGAMI Laboratory, McConnell Brain Imaging Centre, Montreal, Canada",,01/21/2022
+A:,"Potts, Christopher","Stanford University, Palo Alto, United States",,11/11/2021
+A:,"Primet, Romain","INRIA Institut National de Recherche en Informatique et en Automatique, Le Chesnay, France",,03/04/2020
+A:,"Prinz, Marco R.","Center for Basics in NeuroModulation (NeuroModulBasics), Albert Ludwigs Universität Freiburg, Medizinische Fakultät, Freiburg im Breisgau, Germany",,09/02/2020
+A:,"Prochaska, Judith J.","Stanford University School of Medicine, Stanford, United States",,03/18/2022
+A:,"Pruszynski, J. Andrew","Department of Psychology, Western University, London, Canada",,01/01/2021
+A:,"Qiu, Anqi","National University of Singapore, Singapore City, Singapore",,08/01/2021
+A:,"Raamana, Pradeep Reddy","University of Pittsburgh School of Medicine, Pittsburgh, United States",,08/01/2021
+A:,"Rademakers, Rosa","Department of Neuroscience, Mayo Clinic in Jacksonville, Florida, Jacksonville, United States",,06/01/2022
+A:,"Ramanan, Vijay K.","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Ramos, Eliana Marisa","David Geffen School of Medicine at UCLA, Los Angeles, United States",,06/01/2022
+A:,"Rankin, Katherine P.","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Rao, Meghana","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Rascovsky, Katya","Department of Neurology, University of Pennsylvania Perelman School of Medicine, Philadelphia, United States",,06/01/2022
+A:,"Ravenzwaaij, Don Van","Rijksuniversiteit Groningen, Groningen, Netherlands",,11/09/2021
+A:,"Razi, Adeel","Monash University, Melbourne, Australia",,01/01/2020
+A:,"Reid, Andrew T.","University of Nottingham, Nottingham, United Kingdom",,10/14/2019
+A:,"Reinvang, Ivar R.","Department of Psychology, Universitetet i Oslo, Oslo, Norway",,05/25/2021
+A:,"Rieskamp, Jörg","Department of Psychology, Universitat Basel, Basel, Switzerland",,11/09/2021
+A:,"Rios, Jaime Ali H.","Department of Psychology, Stanford University, Palo Alto, United States",,03/01/2023
+A:,"Ritter, Aaron R.","School of Public Health, University of Nevada, Las Vegas, Las Vegas, United States",,06/01/2022
+A:,"Ritter, Petra","Department of Neurology and Experimental Neurology, Charité – Universitätsmedizin Berlin, Berlin, Germany",,10/07/2019
+A:,"Robbins, Trevor W.","Department of Psychology, University of Cambridge, Cambridge, United Kingdom",,02/22/2021
+A:,"Roberson, Erik D.","The University of Alabama at Birmingham, Birmingham, United States",,06/01/2022
+A:,"Rocca, Roberta","Department of Linguistics, Aarhus Universitet, Aarhus, Denmark",,08/30/2022
+A:,"Rodrigue, Amanda L.","Harvard Medical School, Boston, United States",,12/01/2021
+A:,"Roelfsema, Pieter R.","Netherlands Institute for Neuroscience - KNAW, Amsterdam, Netherlands",,09/02/2020
+A:,"Rogers, Timothy T.","Department of Psychology, University of Wisconsin-Madison, Madison, United States",,10/07/2019
+A:,"Rojas Martínez, Julio César","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Rokem, Ariel S.","Department of Psychology, University of Washington, Seattle, United States",,08/01/2021
+A:,"Rosen, Howard J.","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Roussos, Panos","Pamela Sklar Division of Psychiatric Genomics, Icahn School of Medicine at Mount Sinai, New York, United States",,05/25/2021
+A:,"Rujescu, Dan","Psychotherapy and Psychosomatics, Universitätsklinikum Halle und Medizinische Fakultät, Halle, Germany",,05/25/2021
+A:,"Rutherford, Saige E.","Radboud Universiteit, Nijmegen, Netherlands",,08/01/2021
+A:,"Räikkönen, Katri","Department of Psychology and Logopedics, Lääketieteellinen Tiedekunta, Helsinki, Finland",,05/25/2021
+A:,"Ré, C",,,01/01/2022
+A:,"Ré, Christopher M.","Stanford University, Palo Alto, United States",,06/01/2023
+A:,"Sabb, Fred W.","Prevention Science Institute, University of Oregon, Eugene, United States",,05/25/2021
+A:,"Salganik, Matthew J.","Department of Sociology, Princeton University, Princeton, United States",,11/09/2021
+A:,"Salo, Taylor","Department of Psychology, Florida International University, Miami, United States",,06/08/2020
+A:,"Sanchez-Romero, Ruben","Center for Molecular and Behavioral Neuroscience, Newark, United States",,10/14/2019
+A:,"Sarafoglou, Alexandra","Department of Psychology, Universiteit van Amsterdam, Amsterdam, Netherlands",,11/09/2021
+A:,"Satterthwaite, Theodore Daniel","Lifespan Informatics & Neuroimaging Center, University of Pennsylvania, Philadelphia, United States",,06/29/2023
+A:,"Savica, Rodolfo","Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Schafer, Robert John","Lumos Labs, San Francisco, United States",,01/19/2023
+A:,"Scherer, Emily Blood","Geisel School of Medicine at Dartmouth, Hanover, United States",,03/18/2022
+A:,"Schmahl, Christian G.","Department of Psychosomatic Medicine and Psychotherapy, Universität Heidelberg, Heidelberg, Germany",,08/01/2022
+A:,"Schmidt, Robert","Department of Psychology, The University of Sheffield, Sheffield, United Kingdom",,04/01/2020
+A:,"Scholz, Christin","Universiteit van Amsterdam, Amsterdam, Netherlands",,09/09/2022
+A:,"Schonberg, Tom","The University of Texas at Austin, Austin, United States",,11/09/2021
+A:,"Schweinsberg, Martin","Department of Organizational Behavior, ESMT Berlin, Berlin, Germany",,11/09/2021
+A:,"Scult, Matthew A.","Department of Psychiatry, Weill Cornell Medicine, New York, United States",,05/25/2021
+A:,"Seeley, William W.","Department of Pathology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Seidlitz, Jakob","Department of Psychiatry, University of Pennsylvania, Philadelphia, United States",,01/01/2021
+A:,"Shanks, David R.","University College London, London, United Kingdom",,11/09/2021
+A:,"Sharan, Malvika","Alan Turing Institute, London, United Kingdom",,08/01/2021
+A:,"Shaw, Thomas B.","The University of Queensland, Brisbane, Australia",,08/01/2021
+A:,"Shine, James M.","Faculty of Medicine and Health, Sydney, Australia",,03/01/2023
+A:,"Shiner, Melissa","Department of Psychiatry and Behavioral Sciences, Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Sicorello, Maurizio","Department of Psychosomatic Medicine and Psychotherapy, Medizinische Fakultät Mannheim, Mannheim, Germany",,08/01/2022
+A:,"Silberzahn, Raphael","University of Sussex, Brighton, United Kingdom",,11/09/2021
+A:,"Simons, Daniel J.","Department of Psychology, University of Illinois Urbana-Champaign, Urbana, United States",,11/09/2021
+A:,"Sivagnanam, Subhashini","San Diego Supercomputer Center, San Diego, United States",,01/01/2022
+A:,"Smidts, Ale","Erasmus Universiteit Rotterdam, Rotterdam, Netherlands",,09/09/2022
+A:,"Smyrnis, Nikolaos","Laboratory of Cognitive Neuroscience and Sensorimotor Control, University Mental Health, Athens, Greece",,05/25/2021
+A:,"Smyth, Heather L.","Arizona State University, Tempe, United States",,03/09/2020
+A:,"Sommer, Friedrich Tobias","Neuromorphic Computing Lab, Intel Corporation, Santa Clara, United States",,01/21/2022
+A:,"Spellman, Barbara A.","University of Virginia School of Law, Charlottesville, United States",,11/09/2021
+A:,"Spires-Jones, Tara L.","Edinburgh Medical School, Edinburgh, United Kingdom",,09/02/2020
+A:,"Sporns, Olaf","Cognitive Science Program, Indiana University Bloomington, Bloomington, United States",,07/01/2020
+A:,"St-Jean, Samuel","University of Alberta, Edmonton, Canada",,11/09/2021
+A:,"Staffaroni, Adam M.","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Stahl, Eli Ayumi","Icahn School of Medicine at Mount Sinai, New York, United States",,05/25/2021
+A:,"Starns, Jeffrey J.","University of Massachusetts Amherst, Amherst MA, United States",,11/09/2021
+A:,"Staveland, Brooke R.","University of California, Berkeley, Berkeley, United States",,07/01/2020
+A:,"Steen, Vidar Martin","Department of Medical Genetics, Haukeland Universitetssjukehus, Bergen, Norway",,05/25/2021
+A:,"Stefanis, Nikos","Department of Psychiatry, Eginition Hospital, Athens, Greece",,05/25/2021
+A:,"Stirm, Claire","San Diego Supercomputer Center, San Diego, United States",,01/01/2022
+A:,"Stirner, Madita","Department of Psychosomatic Medicine and Psychotherapy, Universität Heidelberg, Heidelberg, Germany",,08/01/2022
+A:,"Stoeckel, Luke Edward","National Institute on Aging (NIA), Bethesda, United States",,03/18/2022
+A:,"Stojić, Hrvoje","Secondmind Limited, Cambridge, United Kingdom",,06/08/2020
+A:,"Straub, Richard E.","Lieber Institute for Brain Development, Baltimore, United States",,05/25/2021
+A:,"Suchanek, Fabian M.","Télécom Paris, Palaiseau, France",,03/04/2020
+A:,"Summerfield, Christopher","University of Oxford Medical Sciences Division, Oxford, United Kingdom",,04/01/2020
+A:,"Sun, Nanbo","National University of Singapore, Singapore City, Singapore",,11/01/2019
+A:,"Sur, Mriganka","Picower Institute for Learning and Memory, Cambridge, United States",,09/02/2020
+A:,"Svarer, Claus","Neurobiology Research Unit, Rigshospitalet, Copenhagen, Denmark",,02/01/2023
+A:,"Sweeney, Mary Ann","Center for Technology and Behavioral Health, Geisel School of Medicine at Dartmouth, Hanover, United States",,03/18/2022
+A:,"Syeda, Warda Taqdees","University of Melbourne, Parkville, Australia",,08/01/2021
+A:,"Syrjanen, Jeremy A.","Department of Quantitative Health Sciences, Mayo Clinic, Rochester, United States",,06/01/2022
+A:,"Szaszi, Barnabas","Eötvös Loránd Tudományegyetem, Budapest, Hungary",,11/09/2021
+A:,"Tang, Siyi","Stanford University, Palo Alto, United States",,11/01/2019
+A:,"Tartaglia, Maria C.","Tanz Centre for Research in Neurodegenerative Diseases, Toronto, Canada",,06/01/2022
+A:,"Taylor, Jack Carson","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Testerman, Meghan M.","Princeton University, Princeton, United States",,08/01/2021
+A:,"Thirion, Bertrand","INRIA Institut National de Recherche en Informatique et en Automatique, Le Chesnay, France",,03/04/2020
+A:,"Thomas, Armin W.","Department of Psychology, Stanford University, Palo Alto, United States",,06/01/2023
+A:,"Thompson, Paul M.","Neuroscience Graduate Program, University of Southern California, Los Angeles, United States",,01/21/2022
+A:,"Thompson, William Hedley","Department of Clinical Neurosciences, Karolinska Institutet, Stockholm, Sweden",,12/01/2022
+A:,"Toro, Roberto","Unité de neuroanatomie appliquée et théorique, Université Paris Cité, Paris, France",,08/01/2021
+A:,"Tozzi, Leonardo","Department of Psychiatry and Behavioral Sciences, Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Trampush, Joey W.","Dept. Psychiat. and the Behav. Sci., Keck School of Medicine of USC, Los Angeles, United States",,05/25/2021
+A:,"Truong, Dung","Swartz Center for Computational Neuroscience, Institute for Neural Computation, San Diego, United States",,01/01/2022
+A:,"Turner, Brandon M.","Department of Psychology, The Ohio State University, Columbus, United States",,10/07/2019
+A:,"Uddin, Lucina Q.","University of California, Los Angeles, Los Angeles, United States",,06/01/2020
+A:,"Ueda, Hiroki R.","Department of Systems Pharmacology, Graduate School of Medicine, Tokyo, Japan",,09/02/2020
+A:,"Uhlmann, Eric Luis","Organisational Behaviour Area, INSEAD, Singapore, Singapore City, Singapore",,11/09/2021
+A:,"Unverhau, Nike","Department of Psychosomatic Medicine and Psychotherapy, Universität Heidelberg, Heidelberg, Germany",,08/01/2022
+A:,"Urai, Anne E.","Leids Universitair Medisch Centrum, Leiden, Netherlands",,04/01/2020
+A:,"Urchs, Sebastian","Institut-Hôpital Neurologique de Montréal, Montreal, Canada",,06/08/2020
+A:,"Vaghi, Matilde Maria Serena","Stanford University, Palo Alto, United States",,07/11/2022
+A:,"Valabrégue, Romain","Hôpital Universitaire Pitié Salpêtrière, Paris, France",,06/08/2020
+A:,"Valdés-Sosa, Pedro A.","BioCubaFarma, Centro de Neurociencias de Cuba, Havana, Cuba",,10/14/2019
+A:,"Valente, Matthew J.","Department of Psychology, Florida International University, Miami, United States",,03/09/2020
+A:,"Valeriani, Davide","Google LLC, Mountain View, United States",,04/01/2020
+A:,"Valk, Sofie Louise","Institute of Neuroscience and Medicine (INM-7: Brain and Behaviour), Forschungszentrum Jülich (FZJ), Jülich, Germany",,08/01/2021
+A:,"Van Der Laan, L. N.","Department of Communication and Cognition, Tilburg School of Humanities and Digital Sciences, Tilburg, Netherlands",,09/09/2022
+A:,"Van Doorn, Johnny B.","Department of Psychological Methods, Universiteit van Amsterdam, Amsterdam, Netherlands",,11/09/2021
+A:,"VandeVrede, Lawren","Department of Neurology, University of California, San Francisco, San Francisco, United States",,06/01/2022
+A:,"Varoquaux, Gaël","INRIA Saclay, Palaiseau, France",,08/01/2021
+A:,"Veldsman, Michele","Cambridge Cognition Ltd, Cambridge, United Kingdom",,08/01/2021
+A:,"Vidaurre, Diego","Aarhus Universitet, Aarhus, Denmark",,01/01/2020
+A:,"Vogelstein, Joshua T.","Center for Imaging Science, Johns Hopkins University, Baltimore, United States",,01/21/2022
+A:,"Vohryzek, Jakub","Center for Music in the Brain, Aarhus Universitet, Aarhus, Denmark",,08/01/2021
+A:,"Voineskos, Aristotle N.","Department of Psychiatry, University of Toronto, Toronto, Canada",,05/25/2021
+A:,"Váša, František","Centre for Neuroimaging Sciences, King's College London, London, United Kingdom",,08/01/2021
+A:,"Wagenmakers, Eric Jan M.","Department of Psychological Methods, Universiteit van Amsterdam, Amsterdam, Netherlands",,11/09/2021
+A:,"Wagner, Adina S.","Brain & Behaviour (INM-7), Forschungszentrum Jülich (FZJ), Jülich, Germany",,08/01/2021
+A:,"Walsh, Reubs J.","Section Clinical Psychology, Vrije Universiteit Amsterdam, Amsterdam, Netherlands",,08/01/2021
+A:,"Walters, Jonathon","Stanford University, Palo Alto, United States",,11/01/2022
+A:,"Walton, Courtney C.","University of Melbourne, Parkville, Australia",,04/01/2020
+A:,"Wandell, Brian A.","Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Ward, Phillip G.D.","Faculty of Medicine, Nursing and Health Sciences, Clayton, Australia",,04/01/2020
+A:,"Weinberger, Daniel R.","Lieber Institute for Brain Development, Johns Hopkins University, Baltimore, United States",,05/25/2021
+A:,"Weintraub, Sandra","Department of Neurology, Northwestern University Feinberg School of Medicine, Chicago, United States",,06/01/2022
+A:,"Wexler, Joseph","Stanford University, Palo Alto, United States",,10/18/2021
+A:,"Whicker, Cady L.","Geisel School of Medicine at Dartmouth, Hanover, United States",,03/18/2022
+A:,"Whitaker, Kirstie J.","Alan Turing Institute, London, United Kingdom",,08/01/2021
+A:,"Wicherts, Jelte M.","Tilburg School of Social and Behavioral Sciences, Tilburg, Netherlands",,11/09/2021
+A:,"Widén, Elisabeth E.","Helsingin Yliopisto, Helsinki, Finland",,05/25/2021
+A:,"Williams, Leanne Maree","Stanford University School of Medicine, Stanford, United States",,07/01/2020
+A:,"Wimmer, George Elliott","Wellcome Centre for Human Neuroimaging, London, United Kingdom",,09/14/2021
+A:,"Wintermark, Max","Department of Radiology, Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Wong, Bonnie M.","Harvard Medical School, Boston, United States",,06/01/2022
+A:,"Wright, Jessey","Stanford University, Palo Alto, United States",,06/08/2020
+A:,"Wszolek, Zbigniew K.","Department of Neurology, Mayo Clinic in Jacksonville, Florida, Jacksonville, United States",,06/01/2022
+A:,"Wszołek, Zbigniew K.","Department of Neurology, Mayo Clinic in Jacksonville, Florida, Jacksonville, United States",,06/01/2022
+A:,"Wu, Hua","Center for Cognitive and Neurobiological Imaging, Stanford University, Palo Alto, United States",,07/01/2020
+A:,"Xia, Yan","Central South University, Changsha, China",,05/25/2021
+A:,"Xie, Haiyi","Department of Biomedical Data Science, Geisel School of Medicine at Dartmouth, Hanover, United States",,03/18/2022
+A:,"Xie, Hua","Department of Psychology, University of Maryland, College Park, College Park, United States",,01/01/2020
+A:,"Yanes, Julio A.","Department of Biological Sciences, Auburn University, Auburn, United States",,04/01/2020
+A:,"Yarkoni, Tal","Department of Psychology, The University of Texas at Austin, Austin, United States",,08/30/2022
+A:,"Ye, Zhifang","Beijing Normal University, Beijing, China",,06/08/2020
+A:,"Yeo, B. T. Thomas","National University of Singapore, Singapore City, Singapore",,11/01/2019
+A:,"Yoshimoto, Kenneth K.","San Diego Supercomputer Center, San Diego, United States",,01/01/2022
+A:,"Youn, Choonhan","San Diego Supercomputer Center, San Diego, United States",,01/01/2022
+A:,"Yu, Jin","Department of Psychiatry, Zucker Hillside Hospital, New York, United States",,05/25/2021
+A:,"Zatony, Molly","Olin Neuropsychiatry Research Center, Hartford, United States",,12/19/2020
+A:,"Zeynep Enkavi, A.","California Institute of Technology, Pasadena, United States",,07/01/2021
+A:,"Zhan, Ming","National Institute of Mental Health (NIMH), Bethesda, United States",,10/07/2019
+A:,"Zhou, Xinqi","The Center of Psychosomatic Medicine, University of Electronic Science and Technology of China, Chengdu, China",,04/01/2020
+A:,"Zhou, Xufeng","School of Psychology and Cognitive Science, Key Laboratory of Brain Functional Genomics, Ministry of Education, Shanghai, China",,01/01/2021
+A:,"Zmigrod, Leor","Department of Psychology, University of Cambridge, Cambridge, United Kingdom",,02/22/2021
+A:,"de Hollander, Gilles","Spinoza Centre for Neuroimaging, Amsterdam, Netherlands",,10/07/2019
+A:,"de Leener, Benjamin","Department of Computer and Software Engineering, Polytechnique Montréal, Montreal, Canada",,08/01/2021
+A:,"de Ridder, Denise T.D.","Department of Sociology, Universiteit Utrecht, Utrecht, Netherlands",,09/09/2022
+A:,"van Assen, Marcel A.L.M.","Tilburg School of Social and Behavioral Sciences, Tilburg, Netherlands",,11/09/2021
+A:,"van Dongen, Noah N.N.","Department of Philosophy and Educational Sciences, Università degli Studi di Torino, Turin, Italy",,11/09/2021
+A:,"van Essen, David C.","Washington University School of Medicine in St. Louis, St. Louis, United States",,01/21/2022
+A:,"van Horn, John Darrell","University of Virginia, Charlottesville, United States",,02/01/2023
+A:,"van Praag, Cassandra Gould","University of Oxford Medical Sciences Division, Oxford, United Kingdom",,08/01/2021
+A:,"van de Steen, Frederik","Wellcome Centre for Human Neuroimaging, London, United Kingdom",,06/01/2020
+A:,"van den Akker, Olmo R.","Tilburg School of Social and Behavioral Sciences, Tilburg, Netherlands",,11/09/2021
+A:,"van den Bossche, Sofie","Department of Data Analysis, Universiteit Gent, Ghent, Belgium",,08/01/2021
