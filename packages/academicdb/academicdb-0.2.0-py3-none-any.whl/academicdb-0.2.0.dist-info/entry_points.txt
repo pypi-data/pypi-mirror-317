@@ -1,0 +1,4 @@
+[console_scripts]
+dbbuilder = academicdb.dbbuilder:main
+get_collaborators = academicdb.get_collaborators:main
+render_cv = academicdb.render_cv:main
