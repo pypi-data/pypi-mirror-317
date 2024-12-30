@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "surquest-utils-qdict"
+version = "0.0.1rc1"
+description = "This python on package simplifies the manipulation with the lists of multi-dimensional dictionaries as select, filter or join"
+authors = [
+    {name= "Michal Švarc", email= "michal.svarc@surquest.com"}
+]
+readme = "README.md"
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest==8.3.4",
+    "pytest-cov==6.0.0",
+]
+[project.urls]
+"Homepage" = "https://github.com/surquest/python-utils-qdict"
+"Bug Tracker" = "https://github.com/surquest/python-utils-qdict/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["surquest"]
+
+[tool.hatch.build.targets.sdist.sources]
+"src" = ""
