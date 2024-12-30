@@ -1,0 +1,12 @@
+wirtual/plugins/silero/__init__.py,sha256=zQC_HRourtvjKYOgZZ68tXLP9tsTwlPsB2qdT4Y_wCQ,1098
+wirtual/plugins/silero/log.py,sha256=EQagcSpz-znoaugnBAQaYZ0UryrykNiWtx6z8CgZkHA,69
+wirtual/plugins/silero/onnx_model.py,sha256=qNxfOFi9TPobMQ97ezDaXe7LRDNUq55Gx3x54hu-pd4,2831
+wirtual/plugins/silero/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wirtual/plugins/silero/vad.py,sha256=sEjDG5zdGkeksMNdb1YRu614-tbnPJwfJbXRB-Bg88s,21994
+wirtual/plugins/silero/version.py,sha256=OMtEBokYOpWXldHvxx8hHf5UAoyzdgE8g6QiP0gtG1Y,615
+wirtual/plugins/silero/resources/__init__.py,sha256=lhdIzaAxO0oU-bTKtG_S0ZJZYOvkz6cz1OrtUW1JTUA,49
+wirtual/plugins/silero/resources/silero_vad.onnx,sha256=a5nL_Tkka2cG-Y7BPHxQxrKZGB8kdPoFy8gEaswnQ5Y,2313101
+wirtual_plugins_silero-0.0.3.dist-info/METADATA,sha256=RcCFo6aAgupamWn3pgyKzCuvbAEXUVWpjwXkoxOyGXI,1279
+wirtual_plugins_silero-0.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wirtual_plugins_silero-0.0.3.dist-info/top_level.txt,sha256=4Rf8yHbj3yvH5QwATcj7VvRgh6gFijIX1-VffopPWD0,8
+wirtual_plugins_silero-0.0.3.dist-info/RECORD,,
