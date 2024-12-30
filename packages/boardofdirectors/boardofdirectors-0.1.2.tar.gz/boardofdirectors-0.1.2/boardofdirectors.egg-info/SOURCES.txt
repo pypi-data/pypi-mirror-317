@@ -1,0 +1,7 @@
+setup.py
+boardofdirectors/__init__.py
+boardofdirectors/core.py
+boardofdirectors.egg-info/PKG-INFO
+boardofdirectors.egg-info/SOURCES.txt
+boardofdirectors.egg-info/dependency_links.txt
+boardofdirectors.egg-info/top_level.txt
