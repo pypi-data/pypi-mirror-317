@@ -1,0 +1,10 @@
+licomp_gnuguide/__main__.py,sha256=LpJnu9y_11buM8hSiEp34QT4nInuagdwMcxB-NiMLRQ,774
+licomp_gnuguide/config.py,sha256=8OFEnAoWtlAMtbP0BuKicQj05TGr-x48V__Oo9TTLQ0,990
+licomp_gnuguide/gnuguide.py,sha256=C54e4Rls5eM2ZYcp0FVICFYtGtsEJjRCmetVx-G03fw,2985
+licomp_gnuguide/data/gnu-quick-guide-licenses.json,sha256=NY2sn2f_3TNB2Huik0olHsnTxUXDzVtc2qcNrCE9UTI,1531
+licomp_gnuguide-0.3.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+licomp_gnuguide-0.3.3.dist-info/METADATA,sha256=djqoZ0R3aE1wK2t7Bc912LniE2rx2f2bnlwkVdx-syA,1477
+licomp_gnuguide-0.3.3.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+licomp_gnuguide-0.3.3.dist-info/entry_points.txt,sha256=KkFd1Gpu8z05Oj4eLrIXWbjzzJ1IUph514eVEdSsjVw,67
+licomp_gnuguide-0.3.3.dist-info/top_level.txt,sha256=7xIXn2W5V4HfIGB2wuf5z13mDR3_iJO_XNv-odfkzX0,16
+licomp_gnuguide-0.3.3.dist-info/RECORD,,
