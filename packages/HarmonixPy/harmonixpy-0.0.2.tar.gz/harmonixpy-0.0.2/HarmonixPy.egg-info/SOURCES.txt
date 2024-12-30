@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+HarmonixPy.egg-info/PKG-INFO
+HarmonixPy.egg-info/SOURCES.txt
+HarmonixPy.egg-info/dependency_links.txt
+HarmonixPy.egg-info/requires.txt
+HarmonixPy.egg-info/top_level.txt
