@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+ggrab/__init__.py
+ggrab/ggrab.py
+ggrab.egg-info/PKG-INFO
+ggrab.egg-info/SOURCES.txt
+ggrab.egg-info/dependency_links.txt
+ggrab.egg-info/entry_points.txt
+ggrab.egg-info/requires.txt
+ggrab.egg-info/top_level.txt

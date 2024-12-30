@@ -1,0 +1,4 @@
+argcomplete
+pyperclip
+tiktoken
+esprima
