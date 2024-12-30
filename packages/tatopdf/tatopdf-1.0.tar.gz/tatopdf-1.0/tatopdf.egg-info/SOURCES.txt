@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+tatopdf/__init__.py
+tatopdf/pdf2text.py
+tatopdf/pdf_to_text.py
+tatopdf.egg-info/PKG-INFO
+tatopdf.egg-info/SOURCES.txt
+tatopdf.egg-info/dependency_links.txt
+tatopdf.egg-info/top_level.txt
