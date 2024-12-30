@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: wirtual-plugins-minimal
+Version: 0.0.1
+Summary: Minimal plugin template for Wirtual Agents
+Home-page: https://github.com/wirtualdev/wirtual-agents
+License: Apache-2.0
+Project-URL: Documentation, https://docs.wirtual.dev
+Project-URL: Website, https://wirtual.dev/
+Project-URL: Source, https://github.com/wirtualdev/wirtual-agents
+Keywords: webrtc,realtime,audio,video,wirtual
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+Requires-Dist: wirtual-agents>=0.0.1
+
+# Wirtual Plugins Minimal
+
+This is a minimal example of a Wirtual plugin for Agents.
+
+### Developer note
+
+When copying this directory over to create a new `wirtual-plugins` package, make sure it's nested within the `wirtual-plugins` folder and that the `"name"` field in `package.json` follows the proper naming convention for CI:
+
+```json
+{
+  "name": "wirtual-plugins-<name>",
+  "private": true
+}
+```

@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/minimal/__init__.py
+wirtual/plugins/minimal/log.py
+wirtual/plugins/minimal/version.py
+wirtual_plugins_minimal.egg-info/PKG-INFO
+wirtual_plugins_minimal.egg-info/SOURCES.txt
+wirtual_plugins_minimal.egg-info/dependency_links.txt
+wirtual_plugins_minimal.egg-info/requires.txt
+wirtual_plugins_minimal.egg-info/top_level.txt
