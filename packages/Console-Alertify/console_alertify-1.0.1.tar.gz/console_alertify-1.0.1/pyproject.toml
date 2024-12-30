@@ -1,0 +1,11 @@
+[tool.black]
+line-length = 79
+target-version = ['py39']
+exclude = '''(
+    (^|/)(\.venv|env|venv|requirements\.txt|Pipfile|Pipfile\.lock|tests|docs)($|/)
+)'''
+skip-string-normalization = true
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

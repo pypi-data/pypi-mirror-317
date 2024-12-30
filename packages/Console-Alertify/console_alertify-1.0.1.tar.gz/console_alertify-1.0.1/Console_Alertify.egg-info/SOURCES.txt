@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+ConsoleAlertify/ConsoleAlertify.py
+ConsoleAlertify/__init__.py
+Console_Alertify.egg-info/PKG-INFO
+Console_Alertify.egg-info/SOURCES.txt
+Console_Alertify.egg-info/dependency_links.txt
+Console_Alertify.egg-info/top_level.txt

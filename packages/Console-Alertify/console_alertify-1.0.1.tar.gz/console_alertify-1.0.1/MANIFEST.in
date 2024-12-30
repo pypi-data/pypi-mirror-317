@@ -1,0 +1,14 @@
+# Incluir todos los archivos Python de la carpeta principal y subcarpetas
+recursive-include ConsoleAlertify *.py
+
+# Incluir el archivo LICENSE
+include LICENSE
+
+# Incluir el archivo README.md
+include README.md
+
+# Incluir el archivo de configuración pyproject.toml
+include pyproject.toml
+
+# Excluir archivos compilados de Python (.pyc)
+global-exclude __pycache__/*
