@@ -1,0 +1,79 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-gradio"
+version = "0.1.7"
+description = "A Python package for creating Gradio applications with AI models"
+authors = [
+    { name = "AK", email = "ahsen.khaliq@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "gradio>=5.9.1",
+    "gradio-webrtc",
+    "numpy",
+    "websockets",
+    "twilio",
+    "Pillow",
+    "opencv-python",
+    "librosa",
+    "pydub",
+    "gradio_webrtc[vad]",
+    "numba==0.60.0",
+    "python-dotenv"
+]
+
+[project.urls]
+homepage = "https://github.com/AK391/ai-gradio"
+repository = "https://github.com/AK391/ai-gradio"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+    "flake8"
+]
+openai = ["openai>=1.58.1"]
+gemini = ["google-generativeai"]
+crewai = [
+    "crewai>=0.1.0",
+    "langchain>=0.1.0",
+    "langchain-openai>=0.0.2",
+    "crewai-tools>=0.0.1"
+]
+anthropic = ["anthropic>=1.0.0"]
+lumaai = ["lumaai>=0.0.3"]
+xai = ["openai>=1.58.1"]
+cohere = ["cohere>=5.0.0"]
+sambanova = ["openai>=1.58.1"]
+hyperbolic = ["openai>=1.58.1"]
+qwen = ["openai>=1.58.1"]
+all = [
+    "openai>=1.58.1",
+    "google-generativeai",
+    "crewai>=0.1.0",
+    "langchain>=0.1.0",
+    "langchain-openai>=0.0.2",
+    "crewai-tools>=0.0.1",
+    "anthropic>=1.0.0",
+    "lumaai>=0.0.3",
+    "cohere>=5.0.0",
+    "sambanova>=0.0.1",
+    "hyperbolic>=1.58.1"
+]
+fireworks = ["openai>=1.58.1"]
+together = ["openai>=1.58.1"]
+deepseek = ["openai>=1.58.1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["ai_gradio"]
+
