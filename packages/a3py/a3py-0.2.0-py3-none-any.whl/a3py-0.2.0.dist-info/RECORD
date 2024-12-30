@@ -1,0 +1,16 @@
+a3py/__init__.py,sha256=6-PRDkDOSpuwnF6rz7sXwPqkpbz7zuFsYPUhlPhiS6Y,47
+a3py/improved/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+a3py/improved/json.py,sha256=_Ny9HlAgjdV5CYx3JN8QEnbhTBlxZqx0HURNBEdkZIg,327
+a3py/improved/readable.py,sha256=iUDM5aPz6LmnGVRNTnKZCvsg-JAnxOQSzeE5syRaOKE,1002
+a3py/simplified/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+a3py/simplified/case.py,sha256=lAI2pJ1ETT_uddPSC3rQ9sbNzwfubpp-5caWOTmZhqQ,299
+a3py/simplified/concurrence.py,sha256=o_5-FnG_FDRWNZXtfND2RASRjmnYaC9daiqtveOLYwo,1699
+a3py/simplified/datetime.py,sha256=-IggiunJcaHXASkJSAh5FHlzTMRudNv1DLzWl7pLf0g,1872
+a3py/simplified/dynamic.py,sha256=XQRIPXCvQ_8EeWbd9wKqaRHCaQHMuXqGz-GVw7VDMXk,1190
+a3py/simplified/env.py,sha256=8qtGcPGBSqECM--CEuGnNyDxGhmQioFJIrhNT2rTQLw,699
+a3py/simplified/hashlib.py,sha256=yAIJq1me7cafkRVYeJ4cMvo7kUSDfTOiwQ5LnYwq7YQ,564
+a3py-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+a3py-0.2.0.dist-info/METADATA,sha256=a410vOUhtSfCPQIa6qn7xdChZzWyQ1v7sIXHifbB7ZE,1522
+a3py-0.2.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+a3py-0.2.0.dist-info/top_level.txt,sha256=Ijd6srQs7Je5B9H6ytXRbVCsQf0sM_UkCYSjtBGnuu4,5
+a3py-0.2.0.dist-info/RECORD,,
