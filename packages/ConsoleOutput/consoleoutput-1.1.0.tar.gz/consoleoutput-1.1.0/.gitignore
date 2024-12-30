@@ -1,0 +1,53 @@
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Archivos generados por el empaquetado
+*.egg-info/
+dist/
+build/
+
+# Entornos virtuales
+venv/
+env/
+
+# Archivos de editor
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de macOS
+.DS_Store
+
+# Archivos de Windows
+Thumbs.db
+
+# Archivos de prueba
+*.log
+*.coverage
+nosetests.xml
+coverage.xml
+
+# Archivos de configuración de herramientas de testing
+.tox/
+.nox/
+
+# Archivos de configuración del proyecto
+pyproject.toml
+setup.py
+Pipfile
+Pipfile.lock
+tox.ini
+noxfile.py
+
+# Archivos temporales
+*.swp
+
+# Otros archivos de configuración
+mypy.ini
+setup.cfg
+*.toml
