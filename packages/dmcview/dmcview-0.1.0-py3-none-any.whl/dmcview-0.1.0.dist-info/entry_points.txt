@@ -1,0 +1,3 @@
+[console_scripts]
+cli=dmcview.cli:main
+
