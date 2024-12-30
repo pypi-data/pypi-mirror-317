@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: astreum
+Version: 0.1.4
+Summary: Python library to interact with the Astreum blockchain and its Lispeum virtual machine.
+Author-email: "Roy R. O. Okello" <roy@stelar.xyz>
+Project-URL: Homepage, https://github.com/astreum/lib
+Project-URL: Issues, https://github.com/astreum/lib/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# lib
+
+Python library to interact with the Astreum blockchain and its Lispeum virtual machine.
+
+[View on PyPI](https://pypi.org/project/astreum/)
+
+## Testing
+
+python -m unittest discover -s tests
+
