@@ -1,0 +1,10 @@
+wirtual/plugins/rag/__init__.py,sha256=g5haskuo7BZrYYf2D8vU8WGB9oI9vvrV5g09yREnq-Y,1186
+wirtual/plugins/rag/annoy.py,sha256=fone-3vUGuC9OSrnt0tZCrOS-BXPVodDSZJNOavvfAs,2842
+wirtual/plugins/rag/chunking.py,sha256=4rJEUmJ-E9cQ_b988RXLhQBztaricDlG0F4M64f0PpQ,2419
+wirtual/plugins/rag/log.py,sha256=3PIQtj-hKA8hQnKcnd2baIiQP-rupFpGFw5KysaNKxI,66
+wirtual/plugins/rag/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wirtual/plugins/rag/version.py,sha256=8ZMwr2XB70cB-Enolo5Sf-9UU5M5GXJ77h88dONd15E,615
+wirtual_plugins_rag-0.0.1.dist-info/METADATA,sha256=-IU_jiS2Ah1aWv-mJO97Vmf0wuEKpWwf0EtYA3pMJKA,1115
+wirtual_plugins_rag-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wirtual_plugins_rag-0.0.1.dist-info/top_level.txt,sha256=4Rf8yHbj3yvH5QwATcj7VvRgh6gFijIX1-VffopPWD0,8
+wirtual_plugins_rag-0.0.1.dist-info/RECORD,,
