@@ -1,0 +1,14 @@
+celai_chatwoot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+celai_chatwoot/connector/__init__.py,sha256=7orPgs0W0WNKePcB5GTayL5f-w2M2urxDceg6y2fN3c,40
+celai_chatwoot/connector/bot_utils.py,sha256=VGTvQB9r5Hzt9RievNK52rp3wtOT3ap7o2ufw6Aa_XQ,7063
+celai_chatwoot/connector/model/__init__.py,sha256=HEJpsbMKSKnPdj6edCQQxXmDAuFlI6nPYz3j8OJSAkA,31
+celai_chatwoot/connector/model/woot_attachment.py,sha256=b0vywVSedLdyMPUYYZstLlTimZ24vK_ExDQFIDrLPVE,5648
+celai_chatwoot/connector/model/woot_lead.py,sha256=0HQztzjoPbGCTZYxdQpcOjTuEzscynS_3C48LFtQiag,3071
+celai_chatwoot/connector/model/woot_message.py,sha256=JMyTzd4ClwkA-1B49EFbu7pOq_sGnTNTcJzBOeqjcSM,1767
+celai_chatwoot/connector/msg_utils.py,sha256=r_KPDfxdjeH5vgZeQxFiD38bNR7necD95454MRTmzB0,15885
+celai_chatwoot/connector/sample_data/incoming_img_msg_from_web.json,sha256=IXa9x40_ubGpoHYRMiyjiFgRF0oNDCeY_Bpu9I3-Nsc,6217
+celai_chatwoot/connector/sample_data/incoming_text_msg_from_web.json,sha256=HMcqxj3a8r5Wqvg1uhy32YJ3hZQV2NeoxsjBoK9IsLk,4297
+celai_chatwoot/connector/woo_connector.py,sha256=7NuDYY9hacySAZJvD0EH6v5d2kcS_cB7ix63j7YPkqA,12942
+celai_chatwoot-0.2.1.dist-info/METADATA,sha256=cQy1fZfOY4frPvhgImRi0SMPZu9GXwCSBnKbSXIjmVk,3847
+celai_chatwoot-0.2.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+celai_chatwoot-0.2.1.dist-info/RECORD,,
