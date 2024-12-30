@@ -1,0 +1,9 @@
+rudra_log/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rudra_log/apis.py,sha256=Ef0VYD-0P1ApbhEfoLLRJk6_g6jHCULcaKR6MkHXq30,1231
+rudra_log/helpers.py,sha256=OpAJju4TZb9LN2-dVycvu9qHp5Ar_meFhbR2d8QXnRo,5644
+rudra_log/middleware.py,sha256=hb-uyD1UA72hEHAJ2YLL_PVeRMOIpz5oNSE0k6SV2M4,9943
+rudra_log/utils.py,sha256=Sr3QDxNPrBB1SDtsbebAKgkyY4IcT5lsDzgYRJrt3r4,2716
+django_rudra_log-0.5.9.dist-info/METADATA,sha256=Otg9zTCn7SMgz-gn8BiOEbQKYfWv4PGGPZ2W6X0LA8w,1105
+django_rudra_log-0.5.9.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_rudra_log-0.5.9.dist-info/top_level.txt,sha256=5TUfnm4E-G0P6RfTzMNZGXX_kTMHe7lZpYUirfDYvSQ,10
+django_rudra_log-0.5.9.dist-info/RECORD,,
