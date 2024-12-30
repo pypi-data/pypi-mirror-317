@@ -1,0 +1,67 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+
+[project]
+authors = [{ name = "liu xue yan", email = "liu_xue_yan@foxmail.com" }]
+description = "A python library for caching function results in redis, like that in stdlib's functools"
+name = "redis_func_cache"
+readme = "README.md"
+
+requires-python = ">=3.8"
+
+dependencies = [
+  "redis",
+  "importlib-resources; python_version<'3.9'",
+  "typing-extensions; python_version<'3.12'",
+]
+
+keywords = ["redis", "cache", "decorate", "decorator"]
+
+license = { text = "AGPLv3+" }
+
+classifiers = [
+  "License :: OSI Approved :: BSD License",
+  # "Development Status :: 1 - Planning",
+  # "Development Status :: 2 - Pre-Alpha",
+  # "Development Status :: 3 - Alpha",
+  "Development Status :: 4 - Beta",
+  # "Development Status :: 5 - Production/Stable",
+  # "Development Status :: 6 - Mature",
+  # "Development Status :: 7 - Inactive",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/tanbro/redis_func_cache"
+Documentation = "https://redis-func-cache.readthedocs.io/"
+Repository = "https://github.com/tanbro/redis_func_cache"
+"Bug Tracker" = "https://github.com/tanbro/redis_func_cache/issues"
+Changelog = "https://github.com/tanbro/spam/redis_func_cache/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+types = ["types-redis"]
+hiredis=["redis[hiredis]"]
+msgpack=["msgpack>=1.0"]
+cloudpickle=["cloudpickle"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"redcache.data" = ["redis_func_cache/lua/*.lua", "redis_func_cache/py.typed"]
+
+[tool.setuptools_scm]
+write_to = "src/redis_func_cache/_version.py"

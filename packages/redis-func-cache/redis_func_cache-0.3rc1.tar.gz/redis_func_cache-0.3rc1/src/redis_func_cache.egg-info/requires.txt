@@ -1,0 +1,19 @@
+redis
+
+[:python_version < "3.12"]
+typing-extensions
+
+[:python_version < "3.9"]
+importlib-resources
+
+[cloudpickle]
+cloudpickle
+
+[hiredis]
+redis[hiredis]
+
+[msgpack]
+msgpack>=1.0
+
+[types]
+types-redis
