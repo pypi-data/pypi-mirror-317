@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+./telenotif/__init__.py
+./telenotif/exceptions.py
+./telenotif/notif.py
+telenotif/__init__.py
+telenotif/exceptions.py
+telenotif/notif.py
+telenotif.egg-info/PKG-INFO
+telenotif.egg-info/SOURCES.txt
+telenotif.egg-info/dependency_links.txt
+telenotif.egg-info/requires.txt
+telenotif.egg-info/top_level.txt
+tests/test_notif.py

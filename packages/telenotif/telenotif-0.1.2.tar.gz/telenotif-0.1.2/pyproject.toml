@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telenotif"
+version = "0.1.2"  # Add this line and remove dynamic = ["version"]
+authors = [{name = "Sina", email = "sina7th@gmail.com"}]
+description = "A simple notification library using Telegram bots"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["telegram", "notification", "bot"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "python-telegram-bot>=20.0",
+]
