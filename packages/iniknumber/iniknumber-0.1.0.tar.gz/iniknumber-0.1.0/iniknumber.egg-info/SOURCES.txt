@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+iniknumber/__init__.py
+iniknumber/checker.py
+iniknumber.egg-info/PKG-INFO
+iniknumber.egg-info/SOURCES.txt
+iniknumber.egg-info/dependency_links.txt
+iniknumber.egg-info/requires.txt
+iniknumber.egg-info/top_level.txt
+iniknumber/data/location_data.csv
