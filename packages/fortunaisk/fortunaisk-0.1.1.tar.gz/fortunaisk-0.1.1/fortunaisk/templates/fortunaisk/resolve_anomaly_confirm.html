@@ -1,0 +1,28 @@
+{% extends "fortunaisk/base.html" %}
+{% load i18n humanize fortunaisk_tags static %}
+
+{% block page_title %}
+    {% trans "Resolve Anomaly" %}
+{% endblock page_title %}
+
+{% block details %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">
+        {% trans "Resolve Anomaly" %}: {{ anomaly.id }}
+    </h2>
+
+    <div class="alert alert-warning">
+        <p>{% trans "Are you sure you want to resolve this anomaly?" %}</p>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">
+            {% trans "Yes, Resolve" %}
+        </button>
+        <a href="{% url 'fortunaisk:admin_dashboard' %}" class="btn btn-secondary">
+            {% trans "Cancel" %}
+        </a>
+    </form>
+</div>
+{% endblock details %}
