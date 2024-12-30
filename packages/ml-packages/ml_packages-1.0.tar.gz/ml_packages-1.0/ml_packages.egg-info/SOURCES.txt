@@ -1,0 +1,15 @@
+README.md
+setup.py
+ml_packages.egg-info/PKG-INFO
+ml_packages.egg-info/SOURCES.txt
+ml_packages.egg-info/dependency_links.txt
+ml_packages.egg-info/requires.txt
+ml_packages.egg-info/top_level.txt
+mlpackages/LogisticRegression.py
+mlpackages/__init__.py
+mlpackages/knn.py
+mlpackages/linear_svm.py
+tests/__init__.py
+tests/test_knn.py
+tests/test_linear_svm.py
+tests/test_logistic_regression.py
