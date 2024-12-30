@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "at_common_functions"
+version = "1.0.12"
+authors = [
+    { name="Rui Chen", email="apextrader.ai@gmail.com" },
+]
+description = "A Python package providing common functions for workflow operations."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "at_common_workflow>=1.2.9",
+    "SQLAlchemy>=2.0.36",
+    "at-common-models>=0.1.11",
+    "aiomysql>=0.2.0",
+    "greenlet>=3.1.1",
+    "openai>=1.58.1",
+    "python-dotenv>=1.0.1",
+    "httpx>=0.28.1",
+    "tenacity>=9.0.0",
+    "jinja2>=3.1.5",
+    "jiter>=0.8.2",
+    "pandas>=2.2.3",
+    "numpy>=2.2.1",
+    "babel>=2.16.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4",
+    "pytest-asyncio>=0.25.0",
+    "build>=1.0.0",
+    "twine>=4.0.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/apex-trader/at-common-functions"
+"Bug Tracker" = "https://github.com/apex-trader/at-common-functions/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = [
+    "at_common_functions",
+    "at_common_functions.utils"
+]

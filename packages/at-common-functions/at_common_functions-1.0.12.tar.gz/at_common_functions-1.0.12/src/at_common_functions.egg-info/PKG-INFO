@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: at_common_functions
+Version: 1.0.12
+Summary: A Python package providing common functions for workflow operations.
+Author-email: Rui Chen <apextrader.ai@gmail.com>
+Project-URL: Homepage, https://github.com/apex-trader/at-common-functions
+Project-URL: Bug Tracker, https://github.com/apex-trader/at-common-functions/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: at_common_workflow>=1.2.9
+Requires-Dist: SQLAlchemy>=2.0.36
+Requires-Dist: at-common-models>=0.1.11
+Requires-Dist: aiomysql>=0.2.0
+Requires-Dist: greenlet>=3.1.1
+Requires-Dist: openai>=1.58.1
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: tenacity>=9.0.0
+Requires-Dist: jinja2>=3.1.5
+Requires-Dist: jiter>=0.8.2
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: numpy>=2.2.1
+Requires-Dist: babel>=2.16.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.4; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.25.0; extra == "dev"
+Requires-Dist: build>=1.0.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+
+# AT Common Functions
+
+A Python package providing common asynchronous task definitions and utilities for workflow operations.
+
+## Installation
+```bash
+pip install at_common_functions
+```
+
+## Usage
+### Database Storage Initialization
+```python
+from at_common_functions import init_storage
+
+# Initialize storage connection
+storage = init_storage(
+    host="localhost",
+    port=3306,
+    user="user",
+    password="password",
+    database="dbname"
+)
+```
+
+### Stock Data Operations
+```python
+from at_common_functions.stock import (
+    stock_get_overview,
+    stock_get_quotation,
+    stock_get_candlesticks,
+    stock_get_indicators,
+    stock_get_financials
+)
+
+async def main():
+    # Get stock overview
+    overview = await stock_get_overview("AAPL")
+    print(overview) # Contains symbol, name, sector, etc.
+
+    # Get current quotation
+    quotation = await stock_get_quotation("AAPL")
+    print(quotation) # Contains price, volume, timestamp
+    
+    # Get daily candlesticks
+    candlesticks = await stock_get_candlesticks("AAPL", "daily", limit=5)
+    print(candlesticks) # List of candlesticks with OHLCV data
+    
+    # Get technical indicators
+    indicators = await stock_get_indicators("AAPL", "daily", limit=5)
+    print(indicators) # List of indicators (SMA, RSI, etc.)
+    
+    # Get financial statements
+    financials = await stock_get_financials(
+        symbol="AAPL",
+        period="annual", # or "quarterly"
+        statement="income", # or "balance_sheet", "cash_flow"
+        limit=3
+    )
+    print(financials)
+```
+
+## Development
+
+1. Clone the repository
+2. Create a virtual environment: `python -m venv venv`
+3. Activate the virtual environment
+4. Install development dependencies: `pip install -e ".[dev]"`
+5. Run tests: `pytest`
+
+## Dependencies
+
+- Python >= 3.11
+- at_common_workflow >= 1.1.15
+- SQLAlchemy >= 2.0.36
+- at-common-models >= 0.1.3
+- aiomysql >= 0.2.0
+- greenlet >= 3.0.3
+
+### Development Dependencies
+- pytest >= 8.3.4
+- pytest-asyncio >= 0.24.0
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
