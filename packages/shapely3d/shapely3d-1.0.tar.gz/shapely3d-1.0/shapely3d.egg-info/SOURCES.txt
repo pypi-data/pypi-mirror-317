@@ -1,0 +1,9 @@
+README.md
+setup.py
+shapely3d/__init__.py
+shapely3d/shapely3d.py
+shapely3d.egg-info/PKG-INFO
+shapely3d.egg-info/SOURCES.txt
+shapely3d.egg-info/dependency_links.txt
+shapely3d.egg-info/requires.txt
+shapely3d.egg-info/top_level.txt

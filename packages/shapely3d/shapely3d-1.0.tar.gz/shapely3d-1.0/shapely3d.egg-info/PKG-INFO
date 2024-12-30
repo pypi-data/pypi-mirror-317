@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: shapely3d
+Version: 1.0
+Summary: 3d extension of Shapley library
+Home-page: https://git.n.xiaomi.com/ad/hdmap/hqmap-process/shapely3d.git
+Author: hhacai
+Author-email: 501351877@qq.com
+License: Apache 2.0
+Keywords: shapely,3d
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: shapely==1.8.1
+
+# Shapely3D
+
+* **简介**   
+基于shapely1.8.1的三维矢量表达和空间计算
