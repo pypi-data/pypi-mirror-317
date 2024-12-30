@@ -1,0 +1,45 @@
+[project]
+name = "nucleus-chat"
+description = "nucleus is AI tools assistant in your terminal"
+readme = "README.md"
+version = "0.1.0"  # Replace with your desired version
+
+keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.9,<3.13"
+dynamic = ["dependencies", "optional-dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/pratikkatte/Nucleus.git"
+
+[project.scripts]
+nucleus = "nucleus.main:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["nucleus"]
+
+[build-system]
+requires = ["setuptools>=68", "setuptools_scm[toml]>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.codespell]
+skip = "*.svg,Gemfile.lock"
+write-changes = true
+
