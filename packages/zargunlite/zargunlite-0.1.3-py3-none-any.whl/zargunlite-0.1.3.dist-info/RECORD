@@ -1,0 +1,12 @@
+zargunlite/__init__.py,sha256=myJRv82yxJ9UbARW3YGs5VUTKG2xhJTWiSMzUBJzOY4,265
+zargunlite/_version.py,sha256=L5DCMp1QAlSqy-8bW7d51bLubTxNjZGYc5fMQkb752U,411
+zargunlite/core.py,sha256=iU2jGtjwBi-edraCInyepg7kHtdaJuK-BI-B5OCCSTw,6393
+zargunlite/default_config.py,sha256=QcVh6C7b0qdvlEq9_utTiAU3WWPzmXVp9ox7awAm50A,15449
+zargunlite/model.py,sha256=dA-2jH6ag0WptyXRM1cq4HZi68qJmRfrWDFX9afEhEI,1931
+zargunlite/preprocess.py,sha256=lwedjBK36K8PAQ-FM4uMcusZebYHgAUU9drYfsek7pY,3088
+zargunlite/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zargunlite-0.1.3.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+zargunlite-0.1.3.dist-info/METADATA,sha256=QO-g8URV44fx9Vq4vXSDUeX_vyCLy-zdTEbLmMVvXhI,11342
+zargunlite-0.1.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+zargunlite-0.1.3.dist-info/top_level.txt,sha256=7BCKiCIfnkdvIuYtkHdevgfOVhXFfs9u3ZuK8mN3PyY,11
+zargunlite-0.1.3.dist-info/RECORD,,
