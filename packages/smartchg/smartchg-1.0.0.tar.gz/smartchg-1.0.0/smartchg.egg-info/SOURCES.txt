@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+smartchg/__init__.py
+smartchg/__main__.py
+smartchg/cli.py
+smartchg.egg-info/PKG-INFO
+smartchg.egg-info/SOURCES.txt
+smartchg.egg-info/dependency_links.txt
+smartchg.egg-info/entry_points.txt
+smartchg.egg-info/top_level.txt
+test/test_cli.py
