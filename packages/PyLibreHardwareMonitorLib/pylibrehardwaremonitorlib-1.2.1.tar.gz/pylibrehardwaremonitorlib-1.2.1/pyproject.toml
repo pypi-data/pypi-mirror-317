@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyLibreHardwareMonitorLib"
+version = "1.2.1"
+description = "A Python library for LibreHardwareMonitor DLL integration"
+authors = [
+    { name = "jianjun", email = "910667956@qq.com" }
+]
+license = { text = "Mozilla Public License Version 2.0" }
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "pythonnet",
+]
+
+[project.urls]
+homepage = "https://github.com/EVA-JianJun/PyLibreHardwareMonitorLib"
+repository = "https://github.com/EVA-JianJun/PyLibreHardwareMonitorLib"
+
+[tool.setuptools]
+# 指定包的目录
+packages = ["PyLibreHardwareMonitorLib"]
+
+[tool.setuptools.package-data]
+# 包含 DLL 文件
+PyLibreHardwareMonitorLib = ["dll/**/*"]
