@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: AlzPy
+Version: 0.1.0
+Summary: A library for data processing and analysis.
+Home-page: https://github.com/owensweeney97/AlzPy/tree/main
+Author: Owen Sweeney
+Author-email: owensweeney97@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pandas>=1.1.0
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: scipy>=1.5.0
+Requires-Dist: scikit-learn>=0.23.0
+Requires-Dist: statsmodels>=0.12.0
+Requires-Dist: matplotlib>=3.2.0
+Requires-Dist: patsy>=0.5.1

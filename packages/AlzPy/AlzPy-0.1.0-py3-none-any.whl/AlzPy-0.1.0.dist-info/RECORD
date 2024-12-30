@@ -1,0 +1,11 @@
+AlzPy/__init__.py,sha256=6xHbOja3mNI88LPGT4UTpreL4gvNJo0ADaoon4qHNPU,700
+AlzPy/data_analysis.py,sha256=lyGTY9xxHyyzLXLdaHxqDYJDbl65QN4yKzhUAWsetf4,7674
+AlzPy/data_processing.py,sha256=K4WV_2y-yMjwkjz93lMZbHYCNNA2hf5IH2fHCBPkuNU,21269
+AlzPy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AlzPy/tests/test_data_analysis.py,sha256=bzzpSbob0-rcQvqYULMi8ke46kUgjMXFloOQiMOeSpc,3751
+AlzPy/tests/test_data_processing.py,sha256=fG8wNs7Xe48Pfj-htR3PzDd5BjMTFoPNneWOUyzv8PM,5272
+AlzPy-0.1.0.dist-info/LICENSE,sha256=ha2bidGBdpbrWn4fvYkhT0JvjwPXpADYAqf16xFnjhA,1079
+AlzPy-0.1.0.dist-info/METADATA,sha256=j9pVDYeWaeOzilisgEawt7C1jVsANGGT64cbcdkNykI,630
+AlzPy-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+AlzPy-0.1.0.dist-info/top_level.txt,sha256=HnTtE_lfGmyDI9dhkM4IgQy4jXMv47F5xsZk_cmybw8,6
+AlzPy-0.1.0.dist-info/RECORD,,
