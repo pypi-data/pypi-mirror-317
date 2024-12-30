@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/maxbridge/__init__.py
+src/maxbridge/commandmanager.py
+src/maxbridge/maxscript.py
+src/maxbridge.egg-info/PKG-INFO
+src/maxbridge.egg-info/SOURCES.txt
+src/maxbridge.egg-info/dependency_links.txt
+src/maxbridge.egg-info/entry_points.txt
+src/maxbridge.egg-info/requires.txt
+src/maxbridge.egg-info/top_level.txt
