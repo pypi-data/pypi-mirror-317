@@ -1,0 +1,2 @@
+[console_scripts]
+nb2py = cli_nb2py.main:main

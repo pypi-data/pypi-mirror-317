@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+cli_nb2py/__init__.py
+cli_nb2py/main.py
+cli_nb2py.egg-info/PKG-INFO
+cli_nb2py.egg-info/SOURCES.txt
+cli_nb2py.egg-info/dependency_links.txt
+cli_nb2py.egg-info/entry_points.txt
+cli_nb2py.egg-info/requires.txt
+cli_nb2py.egg-info/top_level.txt
