@@ -1,0 +1,12 @@
+mlpackages/LogisticRegression.py,sha256=TGvRPlf3aSzX0FysAym-_OpoAL1tKEFYlWtyjzpZP4o,1203
+mlpackages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlpackages/knn.py,sha256=DEOLZofxzdbUsdKd_jo8JpClfjMl3H1mYRiMEqjl8uU,607
+mlpackages/linear_svm.py,sha256=tzDfTztxWdOR2eUEe6PvGjnD3u4kfLvfBSTFU1GAilE,1066
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_knn.py,sha256=-5Ky3OZtAVp_KfIcWxV6YLNYqsgm7uylk1NBjsr9RNE,379
+tests/test_linear_svm.py,sha256=NrtZgYJPHn6aNv_O9kYhKnYkMczxycPMbtC3vLjqajA,402
+tests/test_logistic_regression.py,sha256=Fa83RWUdbZb1lVL69BPqFM3GUfCDw7ZCB3rP9sDPbSY,437
+ml_packages-1.0.dist-info/METADATA,sha256=CoLWYBw07mmSfAvccGfc2H4QVVkzonsg0MNEtcvFPjs,2280
+ml_packages-1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ml_packages-1.0.dist-info/top_level.txt,sha256=VocRnVCGVsyqt_1gkqBo8nNJ8WCTHuvN06qPrmRbmLw,17
+ml_packages-1.0.dist-info/RECORD,,
