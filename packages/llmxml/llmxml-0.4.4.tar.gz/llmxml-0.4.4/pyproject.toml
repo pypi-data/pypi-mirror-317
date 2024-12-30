@@ -1,0 +1,26 @@
+[project]
+name = "llmxml"
+version = "0.4.4"
+description = "XML parsing for LLM outputs"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "partialjson>=0.0.8",
+    "pydantic>=2.10.2",
+]
+
+[dependency-groups]
+dev = [
+    "anthropic>=0.40.0",
+    "black>=24.10.0",
+    "google-generativeai>=0.8.3",
+    "instructor>=1.7.0",
+    "ipykernel>=6.29.5",
+    "jsonref>=1.1.0",
+    "pytest-xdist>=3.6.1",
+    "pytest>=8.3.4",
+    "python-dotenv>=1.0.1",
+]
+
+[tool.setuptools]
+packages = ["llmxml"]
