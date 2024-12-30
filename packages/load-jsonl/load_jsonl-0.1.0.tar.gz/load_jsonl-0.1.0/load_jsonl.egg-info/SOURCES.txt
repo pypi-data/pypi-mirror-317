@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+load_jsonl/__init__.py
+load_jsonl/loader.py
+load_jsonl.egg-info/PKG-INFO
+load_jsonl.egg-info/SOURCES.txt
+load_jsonl.egg-info/dependency_links.txt
+load_jsonl.egg-info/top_level.txt
