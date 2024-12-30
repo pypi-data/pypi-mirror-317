@@ -1,0 +1,11 @@
+wirtual/plugins/google/__init__.py,sha256=g9i8-elP6ZxMi-fohj6LsUNJTf-iW0KpsMmXf49727s,1132
+wirtual/plugins/google/log.py,sha256=RIR00gunJWhTNNpeyinqGFJqWpNGMfut606EAOrs8_s,69
+wirtual/plugins/google/models.py,sha256=cBXhZGY9bFaSCyL9VeSng9wsxhf3peJi3AUYBKV-8GQ,1343
+wirtual/plugins/google/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wirtual/plugins/google/stt.py,sha256=_7_rz8JzxRG0QILLw0eato_1RZGDM0XrRg7Wj5Pi-_c,18727
+wirtual/plugins/google/tts.py,sha256=YH9Ya8VFiX77lsrtBlXbAt6JHfuZ6JouWLpiu4sk9A4,9244
+wirtual/plugins/google/version.py,sha256=VA2AU88MRRB-tFnqykS0GbO_w6c8Su72h1I0zYYwU78,615
+wirtual_plugins_google-0.0.2.dist-info/METADATA,sha256=ITegDZBVRgkW7OZJmJcnfpghSzRj2-oatHpP4_8ZYsM,1829
+wirtual_plugins_google-0.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wirtual_plugins_google-0.0.2.dist-info/top_level.txt,sha256=4Rf8yHbj3yvH5QwATcj7VvRgh6gFijIX1-VffopPWD0,8
+wirtual_plugins_google-0.0.2.dist-info/RECORD,,
