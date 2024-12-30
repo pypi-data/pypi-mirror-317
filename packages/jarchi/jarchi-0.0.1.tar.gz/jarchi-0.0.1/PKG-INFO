@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: jarchi
+Version: 0.0.1
+Summary: Placeholder package to reserve this name
+Author-email: deizaad <deizaadmitra@gmail.com>
+License-Expression: MIT
+Requires-Python: >=3.8
