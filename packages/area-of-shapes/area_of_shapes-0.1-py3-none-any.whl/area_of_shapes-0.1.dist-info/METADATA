@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: area_of_shapes
+Version: 0.1
+Summary: A simple python package to calculate the area of different shapes
+Home-page: https://github.com/amaechijude/area
+Author: Amaechi Ugwu
+Author-email: amaechijude178@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Shape Areas
+
+A Python package to calculate areas of common plane shapes.
+
+## Installation
+
+```bash
+pip install shape-areas
+```
+
+## Usage
+```python
+from shape_areas.shape_areas import ShapeArea
+
+area = ShapeArea()
+print("Square area: ", area.square(2))
+## 4.0
+```
+
+
+---
+
+## Add `LICENSE`
+Include an appropriate license file (e.g., MIT License).
+
+---
+
+### Build the Package
+1. Install `build`:
+   ```bash
+   pip install build
+
+
