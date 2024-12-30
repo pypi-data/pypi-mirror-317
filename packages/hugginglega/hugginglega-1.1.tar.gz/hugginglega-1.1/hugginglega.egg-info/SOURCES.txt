@@ -1,0 +1,6 @@
+setup.py
+huggingleg2/__init__.py
+hugginglega.egg-info/PKG-INFO
+hugginglega.egg-info/SOURCES.txt
+hugginglega.egg-info/dependency_links.txt
+hugginglega.egg-info/top_level.txt
