@@ -1,0 +1,14 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+.ruff_cache
+.vscode
+.env
+data/
+docs/
+notebooks/
+tests/
+out/data/
+out/figs/
