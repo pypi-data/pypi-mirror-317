@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+conf.ini
+setup.py
+slowrevpy/__init__.py
+slowrevpy/__main__.py
+slowrevpy/slowrevpy.py
+slowrevpy.egg-info/PKG-INFO
+slowrevpy.egg-info/SOURCES.txt
+slowrevpy.egg-info/dependency_links.txt
+slowrevpy.egg-info/requires.txt
+slowrevpy.egg-info/top_level.txt
