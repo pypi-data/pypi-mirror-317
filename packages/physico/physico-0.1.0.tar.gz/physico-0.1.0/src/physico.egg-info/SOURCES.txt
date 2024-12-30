@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+src/physico/__init__.py
+src/physico/dataset.py
+src/physico/visualize.py
+src/physico.egg-info/PKG-INFO
+src/physico.egg-info/SOURCES.txt
+src/physico.egg-info/dependency_links.txt
+src/physico.egg-info/requires.txt
+src/physico.egg-info/top_level.txt
