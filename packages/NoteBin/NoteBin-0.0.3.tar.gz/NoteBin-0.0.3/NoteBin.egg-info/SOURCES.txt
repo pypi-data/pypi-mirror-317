@@ -1,0 +1,9 @@
+README.md
+setup.py
+NoteBin/__init__.py
+NoteBin/notetaker.py
+NoteBin.egg-info/PKG-INFO
+NoteBin.egg-info/SOURCES.txt
+NoteBin.egg-info/dependency_links.txt
+NoteBin.egg-info/requires.txt
+NoteBin.egg-info/top_level.txt
