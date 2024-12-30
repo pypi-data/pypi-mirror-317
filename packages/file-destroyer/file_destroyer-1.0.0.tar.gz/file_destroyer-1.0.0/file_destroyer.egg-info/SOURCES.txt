@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+FILE_DESTROYER/__init__.py
+FILE_DESTROYER/file_destroyer.py
+file_destroyer.egg-info/PKG-INFO
+file_destroyer.egg-info/SOURCES.txt
+file_destroyer.egg-info/dependency_links.txt
+file_destroyer.egg-info/entry_points.txt
+file_destroyer.egg-info/requires.txt
+file_destroyer.egg-info/top_level.txt
