@@ -1,0 +1,6 @@
+ctplanet.egg-info/
+ctplanet/__pycache__/
+examples/figs/
+examples/InSight/
+dist/
+build/
