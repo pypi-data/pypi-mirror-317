@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/sonos/__init__.py
+src/sonos/main.py
+src/sonos/utils.py
+src/sonos/etc/settings.yaml
+src/sonos_artwork.egg-info/PKG-INFO
+src/sonos_artwork.egg-info/SOURCES.txt
+src/sonos_artwork.egg-info/dependency_links.txt
+src/sonos_artwork.egg-info/entry_points.txt
+src/sonos_artwork.egg-info/requires.txt
+src/sonos_artwork.egg-info/top_level.txt
