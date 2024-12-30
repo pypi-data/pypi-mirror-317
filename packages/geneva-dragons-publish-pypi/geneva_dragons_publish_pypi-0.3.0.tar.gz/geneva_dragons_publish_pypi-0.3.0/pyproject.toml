@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "geneva-dragons-publish-pypi"
+version = "0.3.0"
+description = ""
+authors = ["saravanan <saravanan.s2@shell.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.8.18"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

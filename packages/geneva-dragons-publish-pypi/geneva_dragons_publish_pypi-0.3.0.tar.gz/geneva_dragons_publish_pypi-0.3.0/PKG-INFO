@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: geneva-dragons-publish-pypi
+Version: 0.3.0
+Summary: 
+Author: saravanan
+Author-email: saravanan.s2@shell.com
+Requires-Python: ==3.8.18
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+
