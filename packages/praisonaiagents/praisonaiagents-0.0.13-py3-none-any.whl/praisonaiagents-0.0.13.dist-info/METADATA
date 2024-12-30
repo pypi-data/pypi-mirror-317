@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: praisonaiagents
+Version: 0.0.13
+Summary: Praison AI agents for completing complex tasks with Self Reflection Agents
+Author: Mervin Praison
+Requires-Dist: pydantic
+Requires-Dist: rich
+Requires-Dist: openai
