@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: insta-science
+Version: 0.3.1
+Summary: A tool to help with installing and using `science` in Python projects.
+Author-email: John Sirois <john.sirois@gmail.com>
+Project-URL: Repository, https://github.com/a-scie/science-installers/tree/main/python
+Project-URL: Bug Tracker, https://github.com/a-scie/science-installers/issues
+Project-URL: Changelog, https://github.com/a-scie/science-installers/blob/main/python/CHANGES.md
+Keywords: automation,command,runner,testing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: ansicolors
+Requires-Dist: appdirs
+Requires-Dist: colorama; sys_platform == "win32"
+Requires-Dist: filelock
+Requires-Dist: httpx
+Requires-Dist: packaging
+Requires-Dist: tomli; python_version < "3.11"
+Requires-Dist: tqdm
+Requires-Dist: typing-extensions
+
+# insta-science
+
+[![PyPI Version](https://shields.io/pypi/v/insta-science.svg)](https://pypi.org/project/insta-science/)
+[![License](https://shields.io/pypi/l/insta-science.svg)](../LICENSE)
+[![Supported Pythons](https://shields.io/pypi/pyversions/insta-science.svg)](pyproject.toml)
+[![CI](https://img.shields.io/github/actions/workflow/status/a-scie/science-installers/python-ci.yml)](https://github.com/a-scie/science-installers/actions/workflows/python-ci.yml)
+
+The `insta-science` Python project distribution provides two convenience console scripts to make
+bootstrapping `science` for use in Python project easier:
++ `insta-science`: This is a shim script that ensures `science` is installed and then forwards all
+  supplied arguments to it. Instead of `science`, just use `insta-science`. You can configure the
+  `science` version to use, where to find `science` binaries and where to install them via the 
+  `[tool.insta-science]` table in your `pyproject.toml` file.
++ `insta-science-util`: This script provides utilities for managing `science` binaries. In
+  particular, it supports downloading families of `science` binaries for various platforms for
+  use in internal serving systems for offline or isolated installation.
+
+This project is under active early development and APIs and configuration are likely to change
+rapidly in breaking ways until the 1.0 release.
+
+## Development
+
+Development uses [`uv`](https://docs.astral.sh/uv/getting-started/installation/). Install as you
+best see fit.
+
+With `uv` installed, running `uv run dev-cmd` is enough to get the tools insta-science uses
+installed and run against the codebase. This includes formatting code, linting code, performing type
+checks and then running tests.
