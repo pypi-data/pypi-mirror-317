@@ -1,0 +1,10 @@
+wirtual/plugins/anthropic/__init__.py,sha256=P1LRAuPHqNHyNKt7b0ZAjhny8VQ5bZ95J8ZmVi9JrcY,1190
+wirtual/plugins/anthropic/llm.py,sha256=-4JoL1NE6hlTYrkSTBLCZVaJw2OAX2JJ2Gi1Mz76ulk,19095
+wirtual/plugins/anthropic/log.py,sha256=_CuM6eee5LLMEPSN99D-9ovHn1tspr_vi_e_OhNRFUk,72
+wirtual/plugins/anthropic/models.py,sha256=wyTr2nl6SL4ylN6s4mHJcqtmgV2mjJysZo89FknWdhI,213
+wirtual/plugins/anthropic/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wirtual/plugins/anthropic/version.py,sha256=8ZMwr2XB70cB-Enolo5Sf-9UU5M5GXJ77h88dONd15E,615
+wirtual_plugins_anthropic-0.0.1.dist-info/METADATA,sha256=fkHFwznwSHn7kaAq0Csf81XCJ0maIaAZgyfNoAsFkrE,1288
+wirtual_plugins_anthropic-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wirtual_plugins_anthropic-0.0.1.dist-info/top_level.txt,sha256=4Rf8yHbj3yvH5QwATcj7VvRgh6gFijIX1-VffopPWD0,8
+wirtual_plugins_anthropic-0.0.1.dist-info/RECORD,,
