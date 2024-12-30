@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+kaizen_deploy.egg-info/PKG-INFO
+kaizen_deploy.egg-info/SOURCES.txt
+kaizen_deploy.egg-info/dependency_links.txt
+kaizen_deploy.egg-info/top_level.txt
+src/main.py
+src/templates/manifest.yaml
