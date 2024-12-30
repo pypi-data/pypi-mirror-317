@@ -1,0 +1,11 @@
+cwtch/__init__.py,sha256=EfznJoiavpgjmVzmgFwJmLC-fxHA9opc2_QA_UCtL9k,468
+cwtch/config.py,sha256=reipZzhuULITwgfNEKolTghCNZ4sbj212lg4kD49N8g,349
+cwtch/cwtch.py,sha256=i-v1MJ44Wgr6zmVpXbD8GR1s_CUMKC_C2tW4wiAqZ_0,57851
+cwtch/errors.py,sha256=EmOVmixqmnJkAR_6lli5kZpzwEtS7baoqWt87f6-8pw,3510
+cwtch/metadata.py,sha256=rWLxzkwC1d7MFE_TrifIYrtOeGNSfovYfXc6cc5Q8fE,7061
+cwtch/types.py,sha256=OsXFi6Vzpbt0iV1GQJ24TSq94ad8EYz5shaxtDUsfR8,8240
+src/core.pyx,sha256=39cSDXMnn8S-J4zVXLEUJz9tUfHzY0FXhouKvbmXI-A,45455
+cwtch-0.11.0.dist-info/LICENSE,sha256=HyWZ8-DWMR_byooYl020UC2sZRssnpIazMtnZnVa9gA,1089
+cwtch-0.11.0.dist-info/METADATA,sha256=Y5cmW2ClOH1SDK5aibw2loatgtST5jlx4OvjC_KuUTE,1933
+cwtch-0.11.0.dist-info/WHEEL,sha256=lAZKqc9tfoDOw5cFump4zhIhyiHOm32GTe7g1jTfaws,94
+cwtch-0.11.0.dist-info/RECORD,,
