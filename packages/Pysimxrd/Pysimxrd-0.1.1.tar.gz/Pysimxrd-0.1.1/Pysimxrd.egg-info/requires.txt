@@ -1,0 +1,3 @@
+scipy
+ase
+pymatgen
