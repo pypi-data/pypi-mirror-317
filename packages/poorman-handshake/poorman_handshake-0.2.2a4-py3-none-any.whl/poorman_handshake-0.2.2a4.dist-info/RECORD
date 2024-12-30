@@ -1,0 +1,11 @@
+poorman_handshake/__init__.py,sha256=rDVEz1nu431mkoJcw4ovdesaFmqqRK7lcncOiXyRKqo,124
+poorman_handshake/version.py,sha256=UAz8B3xS3MhiDSoewLTQBFc8gFuA_FOKqJYUAVEOgqo,114
+poorman_handshake/asymmetric/__init__.py,sha256=F8GGBLDQcvsHXFsyETMnftQ2vVYSkXmOh973-eJFMxY,6255
+poorman_handshake/asymmetric/utils.py,sha256=GmTnADU2FVrL_2wPwrzulrqiGF81M0WmIJDZK-z6uY8,6552
+poorman_handshake/symmetric/__init__.py,sha256=yo-G1WNZ97p_63_dxW3qoHN4tOVP_dSZVhLzUTPBGGo,933
+poorman_handshake/symmetric/utils.py,sha256=JgHDXsUmecm0RczmlTPYZGf9_MTVN6HPgn03A9xCDAE,1926
+poorman_handshake-0.2.2a4.dist-info/LICENSE.md,sha256=X-L6Fie_7XT89H5w6cp_hTW_9moGXkd_cfmqZVG7Lao,11746
+poorman_handshake-0.2.2a4.dist-info/METADATA,sha256=VlfPdmcMh9xvq6AHHIId8AT-PI-bsFAd3tBASywzwoI,315
+poorman_handshake-0.2.2a4.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+poorman_handshake-0.2.2a4.dist-info/top_level.txt,sha256=W18dOptCfmh2XS1uWlZL01ZR6NQs4VBaYmMaQ2Py0Co,18
+poorman_handshake-0.2.2a4.dist-info/RECORD,,

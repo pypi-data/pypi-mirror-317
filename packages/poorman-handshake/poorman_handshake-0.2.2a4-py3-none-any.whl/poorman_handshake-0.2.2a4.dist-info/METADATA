@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: poorman-handshake
+Version: 0.2.2a4
+Summary: poor man's key exchange, powered by RSA
+Home-page: https://github.com/JarbasHiveMind/poorman_handshake
+Author: jarbasAi
+Author-email: jarbasai@mailfence.com
+License: Apache-2.0
+Platform: UNKNOWN
+Requires-Dist: pycryptodomex>=3.19.1
+
+UNKNOWN
+
+
