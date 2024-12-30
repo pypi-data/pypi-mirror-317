@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+lthash/__init__.py
+lthash/core.py
+lthash.egg-info/PKG-INFO
+lthash.egg-info/SOURCES.txt
+lthash.egg-info/dependency_links.txt
+lthash.egg-info/top_level.txt
