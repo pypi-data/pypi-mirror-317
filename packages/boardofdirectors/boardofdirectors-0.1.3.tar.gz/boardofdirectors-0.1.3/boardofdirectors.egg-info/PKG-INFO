@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: boardofdirectors
+Version: 0.1.3
+Summary: A package for machine learning models and preprocessing tools
+Author: Pseudonym
+Author-email: audiodramaa@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
