@@ -1,0 +1,10 @@
+mark_scraper/__init__.py,sha256=C0ECnnd01Lp5RuVEosRBXUG6lhTbgoj6psN2blQDKrQ,114
+mark_scraper/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mark_scraper/cli.py,sha256=cROqo5hOEib_Z37-yo3YHql-2BPdwTN0wSv3wC9xrUs,475
+mark_scraper/page.py,sha256=d0i1DtZflF6aHpYEmhWQ0pnVjJQh6FgiNz54hO5GqU0,277
+mark_scraper/scraper.py,sha256=fxahVkt6ar_pVQG1T7ViBfdNstY853t9pBJNWeT9D7c,2092
+mark_scraper-0.1.0.dist-info/METADATA,sha256=WdAr7_N_JP20yMswQQd68G8eVE02tguEkWkH-wjz0ww,1416
+mark_scraper-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mark_scraper-0.1.0.dist-info/entry_points.txt,sha256=Kgo-m3w6xVgL8RHMkOiW08YtR1xSzVD_tuvlfie1EkM,58
+mark_scraper-0.1.0.dist-info/top_level.txt,sha256=6TTI7FnWYGIfvVIWd7R6Xcymo_QE758JHbWdD6iXk8k,13
+mark_scraper-0.1.0.dist-info/RECORD,,
