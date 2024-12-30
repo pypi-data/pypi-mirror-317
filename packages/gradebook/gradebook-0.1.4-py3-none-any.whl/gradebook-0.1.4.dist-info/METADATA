@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: gradebook
+Version: 0.1.4
+Summary: Intuitive methods for managing academic records
+License: AGPL-3.0
+Author: kosmolebryce
+Author-email: k.lebryce@pm.me
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: jupyter (>=1.1.1,<2.0.0)
+Requires-Dist: mypy (>=1.13.0,<2.0.0)
+Requires-Dist: pylint (>=3.3.1,<4.0.0)
+Requires-Dist: pytest (>=8.3.3,<9.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Description-Content-Type: text/markdown
+
+# README.md
+
+## Gradebook 
+
+`v0.1.1`
+
+### Overview
+
+**Gradebook** is a Python CLI that provides straightforward methods for managing one's own academic records. It utilizes [`click`](https://github.com/pallets/click/) in conjunction with [`rich`](https://github.com/Textualize/rich) to compose an intuitive command-line frontend with fully implemented CRUD capabilities, along with convenient methods for visualizing summary data.
+
+It is currently in its initial stages of development and is likely to undergo several significant changes before a stable public release is available.
+
