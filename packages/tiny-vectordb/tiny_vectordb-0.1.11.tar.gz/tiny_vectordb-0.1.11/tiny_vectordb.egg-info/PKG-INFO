@@ -1,0 +1,126 @@
+Metadata-Version: 2.1
+Name: tiny_vectordb
+Version: 0.1.11
+Summary: A tiny jit vector database with minimal dependencies and maximum performance.
+Author-email: "Li, Mengxun" <mengxunli@whu.edu.cn>
+License: MIT License
+        
+        Copyright (c) 2023-Now Mengxun, Li
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/MenxLi/tiny_vectordb
+Project-URL: Bug Tracker, https://github.com/MenxLi/tiny_vectordb/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Topic :: Database
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C++
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pybind11
+Requires-Dist: ninja
+
+## Tiny Vector Database
+
+A lightweight vector database designed for small projects.
+
+**Features**
+- Just-in-time (JIT) compiling to optimize vector operations by setting the vector size at compile time.
+- Accelerates vector operations using [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page).
+- Processes vectors using only Python lists, no need for any additional third-party data formats.
+- Stores vectors as base-64 encoded strings in a SQLite database.
+
+**Performance**  
+More than 10x Faster than numpy-based vector operations.
+
+### Development Status
+
+It is currently compatible with g++ or clang++.   
+You may need to modify `compile_config` parameter in `VectorDatabase` initialization to inject your compile commands.   
+To make it work with other compiler, you may need to change `tiny_vectordb.jit` module.
+
+### Installation
+
+```bash
+pip install tiny_vectordb
+```
+Good to go!
+
+<details>
+<summary> Uninstallation (before version 0.1.11) </summary>
+
+### Uninstallation
+Previous to version 0.1.11, the package will emit some compiled files in the source directory, which may not be automatically removed using `pip uninstall`, so you need to run the following command manually if you want to uninstall the package comletely. 
+(After 0.1.11, you can also use the following command to clean up the cache files.)
+```bash
+python -c "import tiny_vectordb; tiny_vectordb.cleanup()"
+```
+After that, you can safely uninstall the package with: 
+```bash
+pip uninstall tiny_vectordb
+```
+</details>
+
+### Usage:
+```python
+from tiny_vectordb import VectorDatabase
+
+collection_configs = [
+    {
+        "name": "hello",
+        "dimension": 256,
+    },
+    {
+        "name": "world",
+        "dimension": 1000,
+    }
+]
+database = VectorDatabase("test.db", collection_configs)
+collection = database["hello"]
+
+# add vectors
+collection.setBlock(
+    ["id1", "id2"],             # ids
+    [[1] * 256, [2] * 256]      # vectors
+)
+
+# search for nearest vectors
+search_ids, search_scores = collection.search([1.9] * 256)  
+```
+For more usage, see `example.py`.
+
+---
+
+**Designing Note:**  
+
+1. No numpy array is used in the database, because I want it to be as lightweight as possible, and lists of numbers are eaiser to be converted into json for communication with http requests.
+
+2. The data are always stored in contiguous memory to ensure the best searching performance.  
+So the addition and deletion are preferred to be done in batches as they envolve memory reallocation.   
+Here are some useful functions for batch operations:
+```python
+class VectorCollection(Generic[NumVar]):
+    def addBlock(self, ids: list[str], vectors: list[list[NumVar]]) -> None:
+    def setBlock(self, ids: list[str], vectors: list[list[NumVar]]) -> None:
+    def deleteBlock(self, ids: list[str]) -> None:
+    def getBlock(self, ids: list[str]) -> list[list[NumVar]]:
+```
