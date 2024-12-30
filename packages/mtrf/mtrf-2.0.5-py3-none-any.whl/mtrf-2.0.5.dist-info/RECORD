@@ -1,0 +1,9 @@
+mtrf/__init__.py,sha256=zBo_giEhFN6Yb6jIhHfvTceu4UcU7a8yp177lz6PAvY,68
+mtrf/matrices.py,sha256=p1czh_ZmaAKDa3vYkLJd3IyjazG7_40yaOpNWMrgI_4,9423
+mtrf/model.py,sha256=Y8V-l9blPsTYjc94Tc6mjt2r2VNXMx5LaAHjakn7J7E,25988
+mtrf/stats.py,sha256=quryYudmW6f1PyBoq4at8WI8z5NpIylObPKaQ2GDqO0,16402
+mtrf-2.0.5.dist-info/LICENSE,sha256=cHBPn4TlsFXJmPx92KrOyI3qjUAA7pLHxBGloucqnX8,1532
+mtrf-2.0.5.dist-info/METADATA,sha256=fiDtghrtoeH_2CdBzC4V9d2S4LrLrm-SgH-01Dhvnj8,4249
+mtrf-2.0.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mtrf-2.0.5.dist-info/top_level.txt,sha256=ThU1VspfoxBxPB3J1UWdM6eqVTvGWHqW71Xp-VCVdpA,5
+mtrf-2.0.5.dist-info/RECORD,,
