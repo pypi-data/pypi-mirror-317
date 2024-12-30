@@ -1,0 +1,32 @@
+"""
+Configuration for the RDKit Python code
+
+"""
+from __future__ import annotations
+import os as os
+import rdkit as rdkit
+import sqlite3 as sqlite3
+import sys as sys
+import typing
+__all__ = ['ObsoleteCodeError', 'RDCodeDir', 'RDContribDir', 'RDDataDatabase', 'RDDataDir', 'RDDocsDir', 'RDProjDir', 'RDTestDatabase', 'UnimplementedCodeError', 'defaultDBPassword', 'defaultDBUser', 'molViewer', 'os', 'pythonExe', 'pythonTestCommand', 'rdkit', 'rpcTestPort', 'sqlite3', 'sys', 'usePgSQL', 'useSqlLite']
+class ObsoleteCodeError(Exception):
+    __firstlineno__: typing.ClassVar[int] = 39
+    __static_attributes__: typing.ClassVar[tuple] = tuple()
+class UnimplementedCodeError(Exception):
+    __firstlineno__: typing.ClassVar[int] = 43
+    __static_attributes__: typing.ClassVar[tuple] = tuple()
+RDCodeDir: str = 'C:/rdkit/build/temp.win-amd64-cpython-313/Release/rdkit_install/Lib/site-packages\\rdkit'
+RDContribDir: str = 'C:/rdkit/build/temp.win-amd64-cpython-313/Release/rdkit_install\\share/RDKit\\Contrib'
+RDDataDatabase: str = 'C:/rdkit/build/temp.win-amd64-cpython-313/Release/rdkit_install\\share/RDKit\\Data\\RDData.sqlt'
+RDDataDir: str = 'C:/rdkit/build/temp.win-amd64-cpython-313/Release/rdkit_install\\share/RDKit\\Data'
+RDDocsDir: str = 'C:/rdkit/build/temp.win-amd64-cpython-313/Release/rdkit_install\\share/RDKit\\Docs'
+RDProjDir: str = 'C:/rdkit/build/temp.win-amd64-cpython-313/Release/rdkit_install\\share/RDKit\\Projects'
+RDTestDatabase: str = 'C:/rdkit/build/temp.win-amd64-cpython-313/Release/rdkit_install\\share/RDKit\\Data\\RDTests.sqlt'
+defaultDBPassword: str = 'masterkey'
+defaultDBUser: str = 'sysdba'
+molViewer: str = 'PYMOL'
+pythonExe: str = 'C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-6jarmw4j\\cp313-win_amd64\\build\\venv\\Scripts\\python.exe'
+pythonTestCommand: str = 'python'
+rpcTestPort: int = 8423
+usePgSQL: bool = False
+useSqlLite: bool = True
