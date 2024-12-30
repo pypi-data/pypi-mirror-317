@@ -1,0 +1,23 @@
+.. currentmodule:: transport_data
+
+.. autosummary::
+   :toctree: _api
+   :recursive:
+
+   adb
+   cli
+   config
+   estat
+   iamc
+   ipcc
+   iso
+   itdp
+   jrc
+   oica
+   org
+   proto
+   report
+   store
+   testing
+   tests
+   util
