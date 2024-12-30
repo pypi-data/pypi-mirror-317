@@ -1,0 +1,11 @@
+pivirt/__init__.py,sha256=0I6AyJHs4XeermNZ9Num1Z4jV88mni8Fh4FvT0P16io,867
+pivirt/guestfish_utils.py,sha256=7gmWRsU1DK7dYRRm2tZAppBAYytA4S8p5vNmsyvyk-8,2681
+pivirt/logging_config.py,sha256=aQdCS58EehXIdJQvFY9fkavP9VNYl70rCEPEQ39mkt8,1380
+pivirt/qemu_utils.py,sha256=XAS2RExUiLYqn2hleS_HT7eIa1ANl0qSY4mQ2CfxEEY,1831
+pivirt/utils.py,sha256=X_42edkmjk0GNOWIqVR9fBDNOvxzu2PCj5hZdRgVS6M,6501
+pivirt/vm_manager.py,sha256=DVjNkBHn32KAB76rJj2ShW3V9NweE-8DlkuoQCWnHgs,14668
+pivirt_core-1.0.0.dist-info/LICENSE.txt,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+pivirt_core-1.0.0.dist-info/METADATA,sha256=ZsOKvXdXHl-LC3dMafbxla14qn7y0IIecaBg_n_NM68,5836
+pivirt_core-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pivirt_core-1.0.0.dist-info/top_level.txt,sha256=gKIfLL1UCTYeOR3Lpvdbn3HxTas2hZqukWPfk7wPkYY,7
+pivirt_core-1.0.0.dist-info/RECORD,,
