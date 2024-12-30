@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "labelme-to-yolo"
+version = "0.1.0"
+description = "A tool to convert LabelMe dataset annotations into YOLO format for instance segmentation."
+license = "MIT"
+authors = ["Tlaloc-Es <dev@tlaloc-es.com>"]
+homepage = "https://github.com/Tlaloc-Es/labelme-to-yolo"
+repository = "https://github.com/Tlaloc-Es/labelme-to-yolo"
+readme = "README.md"
+
+[tool.poetry.scripts]
+labelme2yolo = "labelme_to_yolo.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "*"
+click = "*"
+pydantic = "*"
+pyyaml = "*"
+albumentations = "^1.3.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+mypy = "*"
+ipykernel = "*"
+ipython = "*"
+commitizen = "*"
+poethepoet = "*"
+pre-commit = "*"
+
+[tool.poe.tasks]
+git_hooks_run = "pre-commit run --all-files"
+git_hooks_install = "pre-commit install"
+git_hooks_update = "pre-commit autoupdate"
+
+[tool.commitizen]
+version = "0.1.0"
+version_files = [
+    "pyproject.toml:^version"
+]
+tag_format = "$version"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
