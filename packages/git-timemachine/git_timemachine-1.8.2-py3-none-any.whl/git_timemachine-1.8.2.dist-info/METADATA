@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: git-timemachine
+Version: 1.8.2
+Summary: A command-line tool that helps you record commits on Git repositories at any time node.
+Home-page: https://github.com/garrett-he/git-timemachine
+License: GPL-3.0
+Keywords: git,timemachine,committing
+Author: Garrett HE
+Author-email: garrett.he@hotmail.com
+Requires-Python: >=3.10,<3.14
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: Utilities
+Requires-Dist: click (>=8.1.5,<9.0.0)
+Requires-Dist: ini-parser (>=1.2.1,<2.0.0)
+Requires-Dist: pygit2 (>=1.12.2,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Project-URL: Repository, https://github.com/garrett-he/git-timemachine.git
+Description-Content-Type: text/markdown
+
+![Logo](./logo/git-timemachine.png)
+
+![license](https://img.shields.io/github/license/garrett-he/git-timemachine)
+![build](https://img.shields.io/github/actions/workflow/status/garrett-he/git-timemachine/ubuntu-jammy.yml)
+![codecov](https://img.shields.io/codecov/c/github/garrett-he/git-timemachine)
+![version](https://img.shields.io/pypi/v/git-timemachine)
+![python](https://img.shields.io/pypi/pyversions/git-timemachine)
+![downloads](https://img.shields.io/pypi/dm/git-timemachine)
+
+# git-timemachine
+
+A command-line tool that helps you record commits on [Git][1] repositories at
+any time node.
+
+## Features
+
+* Show commit logs of a repository in specified format.
+* Record a commit on repository at the specified time node.
+* Review commit logs.
+* Limit maximum commits per day.
+
+## Installation
+
+To install git-timemachine, you can:
+
+1. Install git-timemachine via `pip`:
+
+    ```
+    pip install --user --upgrade git-timemachine
+    ```
+
+2. Download from [Releases][2], make sure command `git-timemachine` is in
+   your `$PATH` environment variable.
+
+## License
+
+Copyright (C) 2022 Garrett HE <garrett.he@hotmail.com>
+
+The GNU General Public License (GPL) version 3, see [COPYING](./COPYING).
+
+[1]: https://git-scm.com/
+
+[2]: https://github.com/garrett-he/git-timemachine/releases
+
