@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "steampie"
+authors = [
+  { name="offish", email="overutilization@gmail.com" },
+]
+description = "Interact with Steam using Python 3"
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["steam", "steampie", "steampy", "steamio"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["rsa", "beautifulsoup4", "requests"]
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://github.com/offish/steampie"
+"Bug Tracker" = "https://github.com/offish/steampie/issues"
+
+[tool.setuptools_scm]
