@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/clova/__init__.py
+wirtual/plugins/clova/common.py
+wirtual/plugins/clova/constants.py
+wirtual/plugins/clova/log.py
+wirtual/plugins/clova/models.py
+wirtual/plugins/clova/stt.py
+wirtual/plugins/clova/version.py
+wirtual_plugins_clova.egg-info/PKG-INFO
+wirtual_plugins_clova.egg-info/SOURCES.txt
+wirtual_plugins_clova.egg-info/dependency_links.txt
+wirtual_plugins_clova.egg-info/requires.txt
+wirtual_plugins_clova.egg-info/top_level.txt
