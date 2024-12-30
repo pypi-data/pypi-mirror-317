@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: it6720
+Version: 0.1.0
+Summary: JW8507 is a device of optical attenator
+Home-page: https://github.com/JerryZheng89/it6720_whl
+Author: Jerry Zheng
+Author-email: JerryZheng2018@outlook.com
+License: CC BY-NC 4.0
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyserial
+
+# IT6720
+![](https://badge.fury.io/py/license.svg)
+![LICENSE](https://licensebuttons.net/l/by-nc/4.0/88x31.png)
+
+## IT6720 lib
+This package is the library for device IT6720 or IT6721
+[IT6720 Product Main Page](https://cdn.itechate.com/en/product/info_128.aspx?itemid=126&lcid=109)
+
+## Product Overview
+
+IT6700 series power supplies are the most economical power supplies, they have the widest voltage and current utilization, one power supply can replace multiple power supplies, widely used in various testing occasions. 
+With the capacity of 100W, voltage output of 60V, current output of 5A, they can control the change rates of the voltage and current automatically.
+The power ratio can be up to 3 times.
+For instance, One IT6720 can subsitute previous 60V*1.6A/32/*3A/20V*5A 3 kinds of models to save your cost.
+
+## Basic Usage
+```python
+from it6720 import IT6720
+
+if __name__ == "__main__":
+    it6700 = IT6720("/dev/ttyUSB0")
+    if it6700.open():
+        print("set work mode to remote controll")
+        it6700.set_work_mode('remote')
+        it6700.set_voltage_max(5.0)
+        it6700.set_out_voltage(3.3) # set voltage 3.3V
+        it6700.set_out_current(0.888) # set current 0.888A
+        it6700.set_ouput_mode('on')
+        time.sleep(3)
+        print("------------ local -------------")
+        it6700.read_dev_status()
+        it6700.set_work_mode('local')
+        it6700.set_ouput_mode('off')
+        it6700.close()
+        print("it6700 series closed!")
+    else:
+        print(f"open serial port:{opat_port} failed!")
+```
