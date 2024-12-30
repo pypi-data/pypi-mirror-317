@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+data_formatting_help/__init__.py
+data_formatting_help/formatter.py
+data_formatting_help.egg-info/PKG-INFO
+data_formatting_help.egg-info/SOURCES.txt
+data_formatting_help.egg-info/dependency_links.txt
+data_formatting_help.egg-info/requires.txt
+data_formatting_help.egg-info/top_level.txt
+tests/__init__.py
+tests/test_formatter.py

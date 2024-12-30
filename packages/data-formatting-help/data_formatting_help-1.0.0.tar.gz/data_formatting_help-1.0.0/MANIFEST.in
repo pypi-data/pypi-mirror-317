@@ -1,0 +1,4 @@
+include READEME.md
+include LICENSE
+recursive-include data_formatting_help *
+recursive-include tests *
