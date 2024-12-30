@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: aletk
+Version: 0.1.5
+Summary: Collection of general purpose tools to work with Python
+Author-email: Luis Alejandro Bordo García <bgluiszz@gmail.com>
+License: MIT
+Project-URL: Repository, https://gitlab.com/alebg/aletk
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Typing :: Typed
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fuzzywuzzy
+Requires-Dist: python-Levenshtein
+Provides-Extra: dev
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: jupyter; extra == "dev"
+
+# Ale's Python Toolkit
+
+This is a collection of tools that I use to make my life easier when working with Python. I hope you find them useful too!
