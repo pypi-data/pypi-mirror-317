@@ -1,0 +1,2 @@
+[console_scripts]
+mongrate = mongodb_migrator.cli:cli
