@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seating-planner"
+version = "0.1.8"
+authors = [
+  { name="Zeynel Batuhan Organ", email="batuhan.organ@ozu.edu.tr" },
+]
+description = "A package for optimizing seating arrangements"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pulp>=2.7.0",
+    "pandas>=1.3.0",
+    "altair>=5.0.0",
+    "highspy>=1.5.1",
+    "numpy>=1.21.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=src/seating_planner --cov-report=term-missing"
+
+[tool.coverage.run]
+source = ["src/seating_planner"]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "pass",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^1.3.0"
+pulp = "^2.7.0"
+altair = "^5.0.0"
+highspy = "^1.5.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0.0" 
