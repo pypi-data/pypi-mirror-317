@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+dsfinvk/__init__.py
+dsfinvk/collection.py
+dsfinvk/fields.py
+dsfinvk/models.py
+dsfinvk/table.py
+dsfinvk/validate.py
+dsfinvk.egg-info/PKG-INFO
+dsfinvk.egg-info/SOURCES.txt
+dsfinvk.egg-info/dependency_links.txt
+dsfinvk.egg-info/requires.txt
+dsfinvk.egg-info/top_level.txt
