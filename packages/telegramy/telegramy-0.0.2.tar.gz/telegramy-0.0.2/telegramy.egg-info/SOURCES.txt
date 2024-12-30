@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+telegramy/__init__.py
+telegramy/telegram_manager.py
+telegramy.egg-info/PKG-INFO
+telegramy.egg-info/SOURCES.txt
+telegramy.egg-info/dependency_links.txt
+telegramy.egg-info/requires.txt
+telegramy.egg-info/top_level.txt

@@ -1,0 +1,45 @@
+# Telegramy
+
+**Telegramy** is a lightweight Python package designed for sending messages and images to Telegram groups with ease. This package provides a simple interface for interacting with Telegram, relying only on the `requests` library to communicate with Telegram's Bot API.
+
+---
+
+## Features
+
+- **Send Text Messages**: Easily send text messages to Telegram groups.
+- **Send Images**: Quickly share images with group members.
+- **Lightweight**: No unnecessary dependencies—built with only `requests`.
+- **Simple Configuration**: Set up using your Telegram bot token and group chat ID.
+
+---
+
+## Installation
+
+You can install **Telegramy** via pip:
+
+```bash
+pip install telegramy
+```
+
+## Creating a Telegram Bot
+
+1. Open Telegram and search for **@BotFather**.
+2. Start a chat with **@BotFather** and send the command `/newbot`.
+3. Follow the on-screen instructions to:
+   - Name your bot.
+   - Choose a unique username for your bot.
+4. Once the bot is created, **@BotFather** will provide you with a **token** to access the Telegram HTTP API.
+5. Copy the token and use it as the `token` parameter when initializing the `Sender` class in Telegramy.
+
+---
+
+## Retrieving a Chat ID
+
+1. Log in to [Telegram Web](https://web.telegram.org/) in your browser.
+2. Open the chat you want to retrieve the ID for.
+3. Look at the URL in your browser’s address bar. It should look something like this:  
+   `https://web.telegram.org/a/#-132132132`.
+4. Extract the part after the `#` symbol (e.g., `-132132132`).
+5. Replace the prefix `#-` with `-100`. For example:  
+   `#-132132132` → `-100132132132`.
+6. Use the final result (e.g., `-100132132132`) as your **chat ID** when sending messages with your bot.
