@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-packtrack"
+version = "24.12.1"
+description = "A Django app for monitoring outdated packages and dependencies."
+readme = "README.md"
+authors = [{name = "Grzegorz Krol", email = "grze.krol@proton.me"}]
+license = {text = "MIT"}
+keywords = ["django", "package", "monitor", "dependencies"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Django",
+    "Framework :: Django :: 5.0",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "django>=5.0",
+    "requests>=2.0",
+    "djangorestframework",
+    "djangorestframework-simplejwt",
+]
+
+[project.urls]
+homepage = "https://github.com/cjkpl/django-packtrack"
+repository = "https://github.com/cjkpl/django-packtrack"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["packtrack"]

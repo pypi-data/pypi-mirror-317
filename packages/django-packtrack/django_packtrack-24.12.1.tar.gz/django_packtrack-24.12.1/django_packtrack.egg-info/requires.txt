@@ -1,0 +1,4 @@
+django>=5.0
+requests>=2.0
+djangorestframework
+djangorestframework-simplejwt

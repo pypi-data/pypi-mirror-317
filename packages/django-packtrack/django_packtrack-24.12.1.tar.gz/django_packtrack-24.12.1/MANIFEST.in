@@ -1,0 +1,8 @@
+include LICENSE
+include README.md
+recursive-include packtrack/admin *
+recursive-include packtrack/management *
+recursive-include packtrack/migrations *
+recursive-include packtrack/templates *
+recursive-include packtrack/tests *
+recursive-include packtrack/models *
