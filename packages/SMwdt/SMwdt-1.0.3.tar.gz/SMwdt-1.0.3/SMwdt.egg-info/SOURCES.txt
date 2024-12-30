@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+SMwdt.egg-info/PKG-INFO
+SMwdt.egg-info/SOURCES.txt
+SMwdt.egg-info/dependency_links.txt
+SMwdt.egg-info/requires.txt
+SMwdt.egg-info/top_level.txt
+wdt/__init__.py
