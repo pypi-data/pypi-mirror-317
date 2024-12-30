@@ -1,0 +1,9 @@
+hivemind_audio_binary_protocol/__init__.py,sha256=wXgl50OAsXV9gqE7_awyXPTZd-PmXfUxHjd8BV5tNc4,19505
+hivemind_audio_binary_protocol/protocol.py,sha256=dS7r36Zafj2PDqZIz5zgVsRUlWpRimhqK-eV4Zvzxro,20936
+hivemind_audio_binary_protocol/transformers.py,sha256=6bthKhbuUDzJEmpAr3H0XW4dSIxvLCrqexHku84kkLw,8652
+hivemind_audio_binary_protocol/version.py,sha256=eDwz_4If80ULhXRgfofN7KTpGT5yd2fcpVlo5ab0rFM,114
+hivemind_audio_binary_protocol-2.1.0.dist-info/METADATA,sha256=8bSELJDlrAFmV9CvVkpNeN0JBoK3bRS1R7MDR0C1yuc,493
+hivemind_audio_binary_protocol-2.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+hivemind_audio_binary_protocol-2.1.0.dist-info/entry_points.txt,sha256=PjjAaqURcRLHhMC4zoklugBPWWP3GPfcjAtVIqOPrr8,126
+hivemind_audio_binary_protocol-2.1.0.dist-info/top_level.txt,sha256=Oam3HVB7MC2LDx5qApJUSygpUYN8Qk7J0h7Nh1K3hPA,31
+hivemind_audio_binary_protocol-2.1.0.dist-info/RECORD,,

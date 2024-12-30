@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: hivemind-audio-binary-protocol
+Version: 2.1.0
+Summary: Mesh Networking utilities for OpenVoiceOS
+Home-page: https://github.com/JarbasHiveMind/hivemind-audio-binary-protocol
+Author: jarbasAI
+Author-email: jarbasai@mailfence.com
+License: Apache2.0
+Platform: UNKNOWN
+Requires-Dist: ovos-simple-listener
+Requires-Dist: hivemind-bus-client<1.0.0,>=0.1.0
+Requires-Dist: ovos-plugin-manager<1.0.0
+Requires-Dist: hivemind-core<1.0.0,>=0.1.0
+Requires-Dist: click
+
+UNKNOWN
+
+
