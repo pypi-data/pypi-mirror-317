@@ -1,0 +1,5 @@
+wirtual-agents[codecs,images]>=0.0.1
+openai>=1.50
+
+[vertex]
+google-auth>=2.0.0
