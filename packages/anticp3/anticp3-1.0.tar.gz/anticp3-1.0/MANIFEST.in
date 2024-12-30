@@ -1,0 +1,8 @@
+include requirements.txt
+include environment.yaml
+include README.md
+recursive-include blast *
+recursive-include example *
+recursive-include model *
+recursive-include ncbi_blast_2.15 *
+recursive-include possum *
