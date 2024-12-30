@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: spinex_timeseries
+Version: 0.14
+Summary: A Python package for Timeseries
+Home-page: https://doi.org/10.1016/j.cie.2024.110812
+Requires-Python: >=3.6
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: scikit-learn>=1.6.0
+Requires-Dist: scipy>=1.14.1
+Requires-Dist: matplotlib>=3.0.0
+Requires-Dist: numba>=0.57.1
+Requires-Dist: seaborn>=0.11.0
+Requires-Dist: statsmodels>=0.13.0
+
+Please read more about this algorithm in: https://doi.org/10.1016/j.cie.2024.110812.
+
+At the moment, we are working diligently to improve and update SPINEX. Please share your thoughts and suggestions with us.
+
+# Example of using this algorithm
+
+import numpy as np
+
+from spinex_timeseries import SPINEX_Timeseries
+
+# Generate sample data
+
+time = np.linspace(0, 10, 200)
+
+data = np.cos(time) + np.random.normal(0, 0.03, 200)
+
+# Initialize the model
+
+model = SPINEX_Timeseries(data, forecast_horizon=20)
+
+# Make predictions
+
+predictions = model.predict()
+
+print("Predicted Values:", predictions)
+
+# Detect anomalies
+
+anomalies, threshold = model.detect_anomalies()
+
+print("Anomalies Detected:", anomalies)
+
+# Plot predictions
+
+model.plot_prediction()
