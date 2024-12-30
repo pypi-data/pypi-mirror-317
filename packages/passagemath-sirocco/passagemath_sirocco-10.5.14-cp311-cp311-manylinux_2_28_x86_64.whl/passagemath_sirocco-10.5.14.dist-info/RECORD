@@ -1,0 +1,11 @@
+passagemath_sirocco.libs/libmpfr-dad42597.so.6.2.1,sha256=SpeqSzlFujXVk3YbKtZg0ZT8uHikHX0usAw07GEJS0Y,766457
+passagemath_sirocco.libs/libgmp-bfca7259.so.10.5.0,sha256=Z23HvmkVQ3LV22fqDz_ZtRfhM2oxM0dq43Shq1sW8oE,527593
+passagemath_sirocco.libs/libsirocco-7aaf61bd.so.0.0.0,sha256=FmplWahzcOw0LXzfunzjOshUhGu5j2EPRRGZKbmuEno,1012385
+passagemath_sirocco-10.5.14.dist-info/METADATA,sha256=v05jGtliAhfoIu7VLTwf_HQ_d4BehHD7DaOJMovHtVI,3652
+passagemath_sirocco-10.5.14.dist-info/RECORD,,
+passagemath_sirocco-10.5.14.dist-info/top_level.txt,sha256=Kmzulf9WsphADFQuqgvdy5mvTLDj_V2zkFHU2s3UXos,6
+passagemath_sirocco-10.5.14.dist-info/WHEEL,sha256=UO082ao4TiA_Os50ZDC22xyI_w8ettWcRb2PiE4WbrA,113
+sage/all__sagemath_sirocco.py,sha256=dOSZkVBlAvSafx2IYY1n7lipWwoLMj0vLAY1glC7x2s,168
+sage/libs/sirocco.pyx,sha256=DZ7s-2kOwAtUPOVfIgvp7719ZXz1sSHXmDlOTMr7pg4,11170
+sage/libs/sirocco.cpython-311-x86_64-linux-gnu.so,sha256=U5TwRoZ50-5ZShq_0b95OTah0NTuqmSz4mwyHZPhn_w,891841
+sage/libs/all__sagemath_sirocco.py,sha256=BnLb9I-8oMsUKI5uRle_hxp92wdAAez3PgwDyMK-KRc,46
