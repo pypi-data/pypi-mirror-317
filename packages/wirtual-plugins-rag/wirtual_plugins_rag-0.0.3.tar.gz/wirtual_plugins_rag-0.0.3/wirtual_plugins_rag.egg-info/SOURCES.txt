@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/rag/__init__.py
+wirtual/plugins/rag/annoy.py
+wirtual/plugins/rag/chunking.py
+wirtual/plugins/rag/log.py
+wirtual/plugins/rag/py.typed
+wirtual/plugins/rag/version.py
+wirtual_plugins_rag.egg-info/PKG-INFO
+wirtual_plugins_rag.egg-info/SOURCES.txt
+wirtual_plugins_rag.egg-info/dependency_links.txt
+wirtual_plugins_rag.egg-info/requires.txt
+wirtual_plugins_rag.egg-info/top_level.txt

@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: wirtual-plugins-rag
+Version: 0.0.3
+Summary: Agent Framework plugin for RAG
+Home-page: https://github.com/wirtualdev/wirtual-agents
+License: Apache-2.0
+Project-URL: Documentation, https://docs.wirtual.dev
+Project-URL: Website, https://wirtual.dev/
+Project-URL: Source, https://github.com/wirtualdev/wirtual-agents
+Keywords: webrtc,realtime,audio,video,wirtual
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+Requires-Dist: wirtual-agents>=0.0.1
+Requires-Dist: annoy>=1.17
+
+## Installation
+
+```bash
+pip install wirtual-plugins-rag
+```
