@@ -1,0 +1,16 @@
+fridafuse/__about__.py,sha256=mDNFz-oPKM74M9Jbnrglnd-RXRmQ9Jk4GIXLR3_tGHs,748
+fridafuse/__init__.py,sha256=mAPfl4FLqo9a3vRAJksTH9Hp3hS9ObUfqO_poM682RQ,1266
+fridafuse/apk_utils.py,sha256=-me77RwctxaLp8WT-k1jQoSyKzFpC3dMD37evbQYV8c,2173
+fridafuse/cli.py,sha256=zqGCk0om-PtpwMa5iBecJuZ0k7SjEDoAaNZDQoBWHg8,2994
+fridafuse/constants.py,sha256=ZQ3UP7CCm6f1Bn0OyiVioWTFlPORfUdGSAAXKcHvBiQ,620
+fridafuse/downloader.py,sha256=T2YdF0wBSkyRZ_I0DmFroZBEVU63sYX5LZFYCgJSD1w,2051
+fridafuse/elf_reader.py,sha256=cNwU8oovMdw1HPbvvwnEvD2QeRrt19d2mOU1_TbIIsM,1164
+fridafuse/main.py,sha256=G2rtQoI7TzOdoU5tUtJBRi6UIbz3QbFxZmFvXgXAKe4,1294
+fridafuse/manifest_utils.py,sha256=so6cjbYcvRDU5tfWpzjEylmhAqjtxrcnTwz7Lj4O3qc,2269
+fridafuse/patcher.py,sha256=fcYWdPcaEHf9ejYeWycFWPQmrdOVRAsxxr_xvy3yBdQ,9628
+fridafuse/utils.py,sha256=ShgM6FYzta4WtdluHi1YjGZh68BTdDjCAxzMZhZ-smE,1769
+fridafuse-0.1.0.dist-info/METADATA,sha256=wzZpAPkhPsWykfAnQqN6Kw8-nZP_54w6vUEkjRJ2DZk,2727
+fridafuse-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fridafuse-0.1.0.dist-info/entry_points.txt,sha256=ZAat6esZJMA6qOaL3By9yYpB3lkCx-UgQaXWR8TM7Co,50
+fridafuse-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fridafuse-0.1.0.dist-info/RECORD,,
