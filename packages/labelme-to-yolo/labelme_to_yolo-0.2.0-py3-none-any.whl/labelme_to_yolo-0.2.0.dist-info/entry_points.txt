@@ -1,0 +1,3 @@
+[console_scripts]
+labelme2yolo=labelme_to_yolo.__main__:main
+

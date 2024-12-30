@@ -1,0 +1,7 @@
+labelme_to_yolo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+labelme_to_yolo/__main__.py,sha256=xf1Bg9dH49yRFtWBCScV4ykPVmsvvneIga7ZQgr0sS0,8708
+labelme_to_yolo/datatypes.py,sha256=h8aboRmpYjeRkvIZocoDjcS2-2medN1hYnzVTHpOQBQ,1158
+labelme_to_yolo-0.2.0.dist-info/METADATA,sha256=-mJp8JiyYkCH8uis3usTCj3GlNf99vg-PUkUsX5EOO8,3298
+labelme_to_yolo-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+labelme_to_yolo-0.2.0.dist-info/entry_points.txt,sha256=jkRWCu8YdIiIhJnmUGGx4haQ6Zm6kjtv0xPkzuN4uOI,62
+labelme_to_yolo-0.2.0.dist-info/RECORD,,
