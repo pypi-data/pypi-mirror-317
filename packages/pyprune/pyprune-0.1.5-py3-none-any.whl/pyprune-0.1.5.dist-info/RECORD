@@ -1,0 +1,8 @@
+pyprune/__init__.py,sha256=_ZOQEQ2i06DBpEE-X4mSRuaF5P9ElwcibXhQYJuaCuA,227
+pyprune/backtracking.py,sha256=3PfIIjx402PaY1qbH8lEJzYlXuEw3gtWivC7StbttX8,9331
+pyprune/subset.py,sha256=SaHBV33Kp14E4hd-lQBpU4xUyzyKfHWA6WQw0HDBopA,3367
+pyprune-0.1.5.dist-info/LICENSE,sha256=dVzrWXCPlSs1p7SJj7IUaYe-RN538r34o3NEjDk4BNY,1079
+pyprune-0.1.5.dist-info/METADATA,sha256=6mEkVHu3HB1G59gIvNhpgttCiCDqt5r2SwM9paBJJm8,5812
+pyprune-0.1.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyprune-0.1.5.dist-info/top_level.txt,sha256=aAt5HNA7fSO4Lo0ExFKARG_Yqg9Bj3lTLmg9K9TBkGs,8
+pyprune-0.1.5.dist-info/RECORD,,
