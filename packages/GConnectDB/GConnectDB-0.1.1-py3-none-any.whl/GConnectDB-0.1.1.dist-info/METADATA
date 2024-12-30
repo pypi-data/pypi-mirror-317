@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: GConnectDB
+Version: 0.1.1
+Summary: A library to connect to MySQL using SSH tunnel and Google Authentication
+Home-page: https://github.com/jagadeesan.murugesan/GConnectDB
+Author: Jagadeesan
+Author-email: jagadeesan.murugesan@saviynt.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mysql-connector-python
+Requires-Dist: pyotp
+
+# GConnectDB
+
+GConnectDB is a Python library for connecting to MySQL databases through an SSH tunnel using Google Authentication and TOTP.
+
+## Installation
+
+```bash
+pip install GConnectDB
