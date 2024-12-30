@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: tensorweaver
+Version: 0.0.0
+Summary: A package for tensor operations and deep learning (in development)
+Home-page: https://github.com/howl-anderson/TensorWeaver
+Author: Xiaoquan Kong
+Author-email: u1mail2me@gmail.com
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# TensorWeaver
+
+TensorWeaver is a Python package for tensor operations and deep learning (in development).
+
+## Installation
+
+```bash
+pip install tensorweaver
+```
+
+## Usage
+
+This package is currently under development. Future versions will include comprehensive documentation and features. 
