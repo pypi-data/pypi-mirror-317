@@ -1,0 +1,26 @@
+[project]
+name = "pyclickupy"
+version = "0.2.2"
+description = "Python SDK for the ClickUp API"
+dependencies = [
+    "requests",
+    "pydantic",
+    "word2number",
+    "timefhuman",
+    "pendulum"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q --cov=src/pyclickupy"
+testpaths = ["tests"]
+pythonpath = ["src"]
