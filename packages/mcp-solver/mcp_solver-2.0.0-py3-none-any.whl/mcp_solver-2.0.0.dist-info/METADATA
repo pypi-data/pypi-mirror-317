@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: mcp-solver
+Version: 2.0.0
+Summary: MCP server for constraint solving
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: mcp>=1.1.2
+Requires-Dist: minizinc
+Requires-Dist: tomli; python_version < '3.11'

@@ -1,0 +1,10 @@
+mcp_solver/__init__.py,sha256=8Frq0AMFya_lO7EKF0INOXnBnAmzbhtzETeYYEqa8BQ,168
+mcp_solver/constants.py,sha256=mQdiBMTMCOgMc53HiypxGYgsPWVfswm7_FliJgxeVWU,3654
+mcp_solver/memo.py,sha256=DyD6Xt3scrUSCDiI3bSGOiiAvAZcIhibgq2EAwsNEbg,2329
+mcp_solver/model_manager.py,sha256=PfcFL2KfGkPXiyHS1A_yfYknatNVOeH3-4xqPWT1wR8,9680
+mcp_solver/server.py,sha256=p6eeAPOZ_X3P0Uos-4wBmo-vy7nzTaqtd3sFEsR1vaE,11700
+mcp_solver-2.0.0.dist-info/METADATA,sha256=ht5vD0-AkIcmQ5DUdOM7xC400jW90oDSYe-WtVlP1H4,239
+mcp_solver-2.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_solver-2.0.0.dist-info/entry_points.txt,sha256=p5ro0NHLJNvYAqBOYS-wicSrHDI2mIsX7ZmLQul71cQ,54
+mcp_solver-2.0.0.dist-info/licenses/LICENSE,sha256=g6GLOvv7TIv80Imnlj9N1CjZ2HNW-zs9dhzTVV3BlhI,1092
+mcp_solver-2.0.0.dist-info/RECORD,,

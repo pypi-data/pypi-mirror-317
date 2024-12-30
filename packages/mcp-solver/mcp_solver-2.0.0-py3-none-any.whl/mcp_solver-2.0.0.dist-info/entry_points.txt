@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-solver = mcp_solver.server:main
