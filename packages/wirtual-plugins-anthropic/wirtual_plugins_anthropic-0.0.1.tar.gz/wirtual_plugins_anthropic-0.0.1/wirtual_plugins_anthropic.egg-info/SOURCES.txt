@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/anthropic/__init__.py
+wirtual/plugins/anthropic/llm.py
+wirtual/plugins/anthropic/log.py
+wirtual/plugins/anthropic/models.py
+wirtual/plugins/anthropic/py.typed
+wirtual/plugins/anthropic/version.py
+wirtual_plugins_anthropic.egg-info/PKG-INFO
+wirtual_plugins_anthropic.egg-info/SOURCES.txt
+wirtual_plugins_anthropic.egg-info/dependency_links.txt
+wirtual_plugins_anthropic.egg-info/requires.txt
+wirtual_plugins_anthropic.egg-info/top_level.txt
