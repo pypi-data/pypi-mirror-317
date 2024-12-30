@@ -1,0 +1,13 @@
+acsylla.libs/libuv-af31d33f.so.1.0.0,sha256=n9m9RpGN8lKEhSvuQv9G71gGcPsFZSByECwtg1ZTMHI,1127921
+acsylla.libs/libcrypto-bdaed0ea.so.1.1.1k,sha256=teTU1EbwIqcxLKEwQCCxVDDLNnMUyvbgJRzPb37I3uo,3215921
+acsylla.libs/libssl-60250281.so.1.1.1k,sha256=MCNuTI3K8vc-l_BvN5nElqPps2xW3COe2EZnuxtfQrE,666865
+acsylla-0.2.1.dist-info/METADATA,sha256=sYp8JLX_P2hzQK7COGhD2zygg-Td1fazG4mno1NYN9M,52949
+acsylla-0.2.1.dist-info/RECORD,,
+acsylla-0.2.1.dist-info/top_level.txt,sha256=OtzMFwAnAuF3SyydBU59D9a0iRzAkwoJhc-RuTU2LLY,8
+acsylla-0.2.1.dist-info/WHEEL,sha256=mvG2Y28SUI4rbhQ1bWVrRApVz8kYvUDSd8u3svWYeRg,114
+acsylla/__init__.py,sha256=9h5kttnGaSq2WfhUHZ6nIGLtJq0zRCtZDj_WSLzdef0,2228
+acsylla/errors.py,sha256=T1_VuMkREypn95JeC3uxcDzoPa4ZkwbfCDP40Ey023Q,7391
+acsylla/base.py,sha256=2GLLrGsawxGfLUO6sxfI2K8Qhv4IMTMgU7E_awi2N9Q,73893
+acsylla/version.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+acsylla/factories.py,sha256=xMAvzRHhkxUef-WmZBqtSMVcBYWaFXQ2dHT9j7Dshkg,32958
+acsylla/_cython/cyacsylla.cpython-311-x86_64-linux-gnu.so,sha256=Z1MZSnZxJV5jNWFvO6jo9rJPpkLembga6UGkqxx0h28,28103745
