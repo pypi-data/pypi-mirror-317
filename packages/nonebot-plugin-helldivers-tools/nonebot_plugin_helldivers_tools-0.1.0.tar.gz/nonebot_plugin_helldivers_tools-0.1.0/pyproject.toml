@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "nonebot_plugin_helldivers_tools"
+version = "0.1.0"
+description = "NoneBot2 绝地潜兵助手"
+readme = "README.md"
+packages = [{include = "nonebot_plugin_helldivers_tools"}]
+authors = ["sansenhoshi"]
+repository = "https://github.com/sansenhoshi/nonebot_plugin_helldivers_tools"
+keywords = ["nonebot2", "helldivers"]
+
+[tool.poetry.dependencies]
+httpx = ">=0.23.3"
+python = ">=3.9"
+nonebot2 = ">=2.2.0"
+nonebot-adapter-onebot = "^2.0.0"
+pillow = ">=9.5.0"
+playwright = ">=1.46.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
