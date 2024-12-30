@@ -1,0 +1,12 @@
+README.md
+setup.py
+uniurl/__init__.py
+uniurl/__version__.py
+uniurl/cli.py
+uniurl/core.py
+uniurl.egg-info/PKG-INFO
+uniurl.egg-info/SOURCES.txt
+uniurl.egg-info/dependency_links.txt
+uniurl.egg-info/entry_points.txt
+uniurl.egg-info/requires.txt
+uniurl.egg-info/top_level.txt
