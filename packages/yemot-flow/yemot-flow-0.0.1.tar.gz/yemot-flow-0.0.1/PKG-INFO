@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: yemot-flow
+Version: 0.0.1
+Summary: a tool for continuously processing or routing requests to the Yemot API
+Home-page: https://github.com/davidTheDeveloperY/yemot-flow
+Author: davidTheDeveloper
+Author-email: bc98400@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: advanced
+License-File: LICENCE
+
+# בדיקות והתקנת הפרוייקט
+## בדוק שיש לך את הגירסא המעודכנת של pip
+Windows
+```
+pip install --upgrade pip
+```
+
+Linux/MAC OS
+```
+python3 -m pip install --upgrade pip
+```
+
+
+## התקנת הפרוייקט
+Windows
+```
+pip install yemot-flow
+```
+
+Linux/MAC OS
+```
+python3 -m pip install yemot-flow
+```
+## מבנה הפרוייקט
+```
+yemot-flow
+│   README.md
+│   setup.py
+│   requirements.txt
+│
+└───yemot_flow
+│   │   __init__.py
+│   │   yemot_flow.py
+│   │   yemot_flow_test.py
+│   │
+│   └───data
+│       │   data.csv
+│       │   data.json
+│       │   data.xml
+│
+└───tests
+    │   test_yemot_flow.py
+```
+
+# הפרוייקט יעודכן בתקופה הקרובה באופן שוטף אז תתעדכנו
+
+
+
+
+
+
+### References
+https://f2.freeivr.co.il/post/
