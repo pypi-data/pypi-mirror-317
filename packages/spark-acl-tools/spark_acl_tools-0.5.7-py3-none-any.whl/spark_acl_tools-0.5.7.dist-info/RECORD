@@ -1,0 +1,13 @@
+spark_acl_tools/__init__.py,sha256=Dlpe1OCrN6MenEYcONpUKRsupYLA9qhHb-5KzS1w-mg,1809
+spark_acl_tools/functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spark_acl_tools/functions/generator.py,sha256=lL6bC5dwAq-v--vH4_dNIeowVTZGVbSIsBKUpyT9ttM,24690
+spark_acl_tools/functions/generator_acl.py,sha256=7DGAuwhrPYLAR-NNSI6roYgqrzIPed8mNNhUsoTK0UI,25591
+spark_acl_tools/utils/__init__.py,sha256=5HxY8WBt4sHEWXz-lTLGiI8VR6g2HG_Rbizd0W03pOw,75
+spark_acl_tools/utils/files/acl.xlsx,sha256=M8hvUbCR-ZkOLvMxdGdKvW-tqRIXuPUAcRyOTJByLpc,24363
+spark_acl_tools/utils/files/acl_complete.xlsx,sha256=1_lgokbiJSHARNU0JswVJY4gBz1M9p1sFr8nhJPaCJg,26191
+spark_acl_tools/utils/files/ns.csv,sha256=jnJg6fI7RBZonLLya8jFSe8KBg6-K3ISDcufZ1Yj_5Q,14586
+spark_acl_tools-0.5.7.dist-info/LICENSE,sha256=QXtBv9uSnDRs86kNzGZgiDg5RHk-R6GAIOHhYgpFUE8,1092
+spark_acl_tools-0.5.7.dist-info/METADATA,sha256=Hk5RJ6OkgjPY-ko3_bttVs3nPpSwf0j1Xgvi3kgntL4,5790
+spark_acl_tools-0.5.7.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+spark_acl_tools-0.5.7.dist-info/top_level.txt,sha256=MTVft2LbzvDokfBk_ABpgw0S9YpXo02Km4AlFFwaQMQ,16
+spark_acl_tools-0.5.7.dist-info/RECORD,,
