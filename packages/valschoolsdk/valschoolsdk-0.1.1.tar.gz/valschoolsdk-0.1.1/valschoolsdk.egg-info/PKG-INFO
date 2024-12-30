@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: valschoolsdk
+Version: 0.1.1
+Summary: A well-structured Python SDK template for school
+Author: ChideraVal
+Author-email: chideraval@example.com
+License: MIT
+Description-Content-Type: text/markdown
+
+This is the description for my SchoolSDK package!
