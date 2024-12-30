@@ -1,0 +1,11 @@
+eye_tracking_collector/assets/encsa.txt,sha256=PJihaObSIqNU8Bbi_hScvjE8_XwSodRFoSVjZzTsrUc,3237
+eye_tracking_collector/cli.py,sha256=CLFNW6b7sC90NoOk5HLYIcsTBZj2kIh0BU0pBinWDig,3561
+eye_tracking_collector/collect.py,sha256=tsTVHjD74hPDrkApFWJYPNvHN1X2jRAx0Ri7ZVMg_0o,12803
+eye_tracking_collector/upload/google/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eye_tracking_collector/upload/google/key.py,sha256=Ln7_gfD-gwmoeE5eEUmY91gDBOX57DJi5Hbu2x0frEs,1902
+eye_tracking_collector/upload/google/storage.py,sha256=3zZiBczb7CpDXo52UKvSt65REqk2C-T-Of1T90ZGfIc,3478
+eye_tracking_collector/upload/kaggle.py,sha256=m0MCu56PeboA0sGQI5wi74T-Ov_BNAjx4-7dzAeqb10,1864
+eye_tracking_collector-0.0.0.dist-info/METADATA,sha256=JRq6PkS2511uthh5sq9NM1LL2OAsxAPY4xDDnErjCMY,3117
+eye_tracking_collector-0.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+eye_tracking_collector-0.0.0.dist-info/entry_points.txt,sha256=6fDFPjs-gSYZ4USlKyTK43kUMBzwTcFcpJy0lTkeFbg,73
+eye_tracking_collector-0.0.0.dist-info/RECORD,,
