@@ -1,0 +1,142 @@
+Metadata-Version: 2.1
+Name: ume-shippy
+Version: 0.0.9
+Summary: A library with helper functions for the Smart Hospital Information Platform (SHIP)
+License: MIT
+Author: Felix Nensa
+Author-email: felix.nensa@uk-essen.de
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.11.11,<4.0.0)
+Requires-Dist: huggingface-hub (>=0.27.0,<0.28.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Shippy
+
+Shippy is a Python library designed to simplify interactions with the Smart Hospital Information Platform (SHIP), providing utilities for handling authentication, HTTP requests, and managing custom models. It includes a range of features such as token management, HTTP error handling, and FHIR client utilities.
+
+---
+
+## Features
+
+- **Authentication Utilities**: Functions for token management and authentication (`auth.py`).
+- **HTTP Client**: HTTP utilities for common SHIP tasks (`http.py`).
+- **Custom Models**: Use KITE inferencing `KITEModel` (`kite.py`).
+- **FHIR Client**: Simplified interaction with FHIR servers (`fhirclient.py`).
+
+---
+
+## Installation
+
+You can install `shippy` via pip:
+
+```bash
+pip install ume-shippy
+```
+
+---
+
+## Usage
+
+### Authentication
+
+Manage tokens and cookies easily.
+
+```python
+from aihttp.web import BaseRequest
+from shippy.auth import get_ship_token
+
+# Example: Extract token from request headers
+token = get_ship_token(request)
+print(token)
+```
+
+### HTTP Utilities
+
+Perform GET and POST requests with detailed error handling.
+
+```python
+from shippy.auth import get_ship_token
+from shippy.http import download_file
+
+# download file from url to tmpdir
+cookies = get_ship_token(request, as_cookie=True)
+url = "http://example.com/file.zip"
+with tempfile.TemporaryDirectory() as tmpdirname:
+    file_path = download_file(url, tmpdirname, cookies=cookies)
+```
+
+### Custom Models
+
+Work with predefined models such as `KITEModel`.
+
+```python
+from shippy.kite import KITEModel
+
+model = KITEModel()
+system_prompts = ["Du bist ein hilfreicher Assistent, der präzise Antworten auf medizinische Fragen gibt."]
+user_prompts = ["Ich habe Kopfschmerzen.", "Was könnten mögliche Ursachen sein?"]
+response = model.generate_response(system_prompts, user_prompts)
+print(response)
+```
+
+### FHIR Client
+
+Simplify interactions with FHIR servers.
+
+```python
+from shippy.fhirclient import FHIRClient
+
+# Initialize FHIR client
+client = FHIRClient(fhir_server="http://example.fhir.server", auth_token="your_token")
+resource = await client.resource("Patient", "123")
+print(resource)
+```
+
+---
+
+## Modules
+
+### `auth.py`
+
+- `get_host`: Get the hostname from a URL.
+- `is_subdomain`: Check if the given URL is a subdomain of one of our hosts.
+- `get_ship_token`: Get the ship token from the request headers.
+- `get_ship_token_from_response`: Get the ship token from the response Set-Cookie headers.
+- `may_forward_ship_token`: Check if we are allowed to forward the ship token to the destination URL.
+
+### `http.py`
+
+- `get_text_file`: Asynchronously download a text file from a URL and return its content as a string.
+- `download_file`: Asynchronously download a file from a URL and save it to the specified directory.
+
+### `kite.py`
+
+- `KITEModel`: A custom model for using KITE inferencing services.
+
+### `fhirclient.py`
+
+- `FHIRClient`: Simplifies FHIR server interactions.
+
+---
+
+
+## Contributing
+
+Contributions are welcome! Please submit issues or pull requests to the [GitHub repository](https://github.com/UMEssen/shippy).
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## Authors
+
+- Felix Nensa (felix.nensa@uk-essen.de)
