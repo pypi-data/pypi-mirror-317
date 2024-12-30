@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+forthright_django/__init__.py
+forthright_django/admin.py
+forthright_django/apps.py
+forthright_django/forthright_client.py
+forthright_django/forthright_server.py
+forthright_django/models.py
+forthright_django/tests.py
+forthright_django/urls.py
+forthright_django/views.py
+forthright_django.egg-info/PKG-INFO
+forthright_django.egg-info/SOURCES.txt
+forthright_django.egg-info/dependency_links.txt
+forthright_django.egg-info/top_level.txt
+forthright_django/migrations/__init__.py
