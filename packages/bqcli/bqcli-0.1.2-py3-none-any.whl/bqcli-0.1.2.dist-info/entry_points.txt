@@ -1,0 +1,2 @@
+[console_scripts]
+bqcli = bqcli:repl
