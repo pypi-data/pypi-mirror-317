@@ -1,0 +1,10 @@
+patchwork/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+patchwork/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+patchwork/app.py,sha256=gN3PDxzVx_Fu6yUpAst3pwpkhUhNp_gLYkSbOx41QS4,8967
+patchwork/logger.py,sha256=UxhTkcTdmWp-a83PyT3BzdrjYDb3zxBsrUEnSoa4V3s,5174
+patchwork/managed_files.py,sha256=Mfu-edl1F1rJLAbrqt7DL4Tn0CwZBo9wzwhK2Rbfn1Q,242
+patchwork/step.py,sha256=ijLVE-UfOkv4XWMrclj9oA5LhcAaQrmhqB3IvVcoGw0,5069
+york_patched-0.1.dist-info/METADATA,sha256=J7iCm4cmpmk_X-Sj6DH8FlTLjuNRfMSR3FX44YEIA6A,430
+york_patched-0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+york_patched-0.1.dist-info/top_level.txt,sha256=aLF4R1vFf2HfqmKmZHlBkLny_-8Ye5nT-Pi8pKL2vE8,10
+york_patched-0.1.dist-info/RECORD,,
