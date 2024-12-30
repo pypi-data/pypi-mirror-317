@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: django-service
+Version: 0.1.0
+Summary: Django application provide simple category/service details
+Author-email: DLRSP <dlrsp.dev@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2010-present DLRSP (https://dlrsp.org) and other contributors.
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: django,services
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Environment :: Web Environment
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django
+Requires-Dist: django-filer
+Requires-Dist: django-filer-optimizer
+Requires-Dist: django-modeltranslation
+Requires-Dist: django-model-mixin
+Requires-Dist: django-ordered-model
+Requires-Dist: django-taggit==4.0.0
+Requires-Dist: django-hashtag
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+Requires-Dist: codecov; extra == "test"
+Provides-Extra: lint
+Requires-Dist: black; extra == "lint"
+Requires-Dist: flake8; extra == "lint"
+
+# django-service [![PyPi license](https://img.shields.io/pypi/l/django-service.svg)](https://pypi.python.org/pypi/django-service)
+
+[![PyPi status](https://img.shields.io/pypi/status/django-service.svg)](https://pypi.python.org/pypi/django-service)
+[![PyPi version](https://img.shields.io/pypi/v/django-service.svg)](https://pypi.python.org/pypi/django-service)
+[![PyPi python version](https://img.shields.io/pypi/pyversions/django-service.svg)](https://pypi.python.org/pypi/django-service)
+[![PyPi downloads](https://img.shields.io/pypi/dm/django-service.svg)](https://pypi.python.org/pypi/django-service)
+[![PyPi downloads](https://img.shields.io/pypi/dw/django-service.svg)](https://pypi.python.org/pypi/django-service)
+[![PyPi downloads](https://img.shields.io/pypi/dd/django-service.svg)](https://pypi.python.org/pypi/django-service)
+
+## GitHub ![GitHub release](https://img.shields.io/github/tag/DLRSP/django-service.svg) ![GitHub release](https://img.shields.io/github/release/DLRSP/django-service.svg)
+
+## Test [![codecov.io](https://codecov.io/github/DLRSP/django-service/coverage.svg?branch=main)](https://codecov.io/github/DLRSP/django-service?branch=main) [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/DLRSP/django-service/main.svg)](https://results.pre-commit.ci/latest/github/DLRSP/django-service/main) [![gitthub.com](https://github.com/DLRSP/django-service/actions/workflows/ci.yaml/badge.svg)](https://github.com/DLRSP/django-service/actions/workflows/ci.yaml)
+
+## Check Demo Project
+
+- Check the demo repo on [GitHub](https://github.com/DLRSP/example/tree/django-service)
+
+## Requirements
+
+- Python 3.8+ supported.
+- Django 4.2+ supported.
+
+## Setup
+1. Install from **pip**:
+   ```shell
+   pip install django-services
+   ```
+2. Modify `settings.py` by adding the app to `INSTALLED_APPS`:
+   ```python
+   INSTALLED_APPS = (
+       # ...
+       "services",
+       # ...
+   )
+   ```
+3. Finally, modify your project `urls.py` with handlers for all errors:
+   ```python
+   # ...other imports...
+
+   urlpatterns = [
+       # ...other urls...
+   ]
+   ```
+4. Execute Django's command `migrate` inside your project's root:
+   ```shell
+   python manage.py migrate
+   Running migrations:
+    Applying services.0001_initial... OK
+   ```
+
+## Run Example Project
+```shell
+git clone --depth=50 --branch=django-services https://github.com/DLRSP/example.git DLRSP/example
+cd DLRSP/example
+python manage.py runserver
+```
+
+Now browser the app @ http://127.0.0.1:8000

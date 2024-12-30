@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% load static thumbnail compress %}
+
+{% block extra_title %}{{ object.name }} - {% endblock extra_title %}
+
+{% block head_canonical %}
+  <link href="{{ SITE_URL }}{{ request.get_full_path }}" rel="canonical">
+{% endblock head_canonical %}
+
+{% block preload %}
+  <link rel="preload" as="image" href="{{ object.thumbnail }}" >
+{% endblock preload %}
+
+{% block head_ldjson %}
+  <script type="application/ld+json"></script>
+{% endblock head_ldjson %}
+
+{% block css %}
+  {% compress css file service %}
+  <link rel="stylesheet" type="text/css" href="{% static 'base/css/style-blog.css' %}">
+  {% endcompress %}
+{% endblock css %}
+
+{% block content %}
+  <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="{{ MEDIA_URL }}{{ object.thumbnail }}">
+    <div class="container inner pt-120 pb-120 text-center">
+      <h2 class="heading mb-0">{{ object.name }}</h2>
+      <div class="space60"></div>
+      <div class="row counter">
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+ <div class="wrapper light-wrapper">
+    <div class="container inner">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="blog classic-view">
+            <div class="post">
+              <h1 class="post-title text-center">
+                  <a href="{{ SITE_URL }}{{ request.get_full_path }}" title="{{ object.name }}">{{ object.name }}</a>
+              </h1>
+
+              <div class="meta text-center">
+                  <span class="date">{{ object.modified }}</span>
+                  <span class="author">By <a href="#">{{ object.modified_by.get_full_name }}</a></span>
+<!--                  <span class="comments"><a href="#">2</a></span>-->
+                  <span class="category"><a href="#">{{ object.category }}</a></span>
+              </div>
+
+              <figure class="mb-25"><img src="style/images/art/b32.jpg" alt="" /></figure>
+              <div class="post-content">
+                {% if object.p1_title %}<h2>{{ object.p1_title }}</h2>{% endif %}
+                {{ object.p1 | safe }}
+                <div class="space10"></div>
+
+                {% if object.aphorism %}<blockquote class="icon icon-left">
+                  <p>Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                  <footer class="blockquote-footer">Very important person</footer>
+                </blockquote>
+                <div class="space10"></div>
+                {% endif%}
+
+                {% if image_list %}<div id="inline-gallery-container" class="inline-gallery-container"></div>
+                <div class="space70"></div>
+                {% endif%}
+
+                {% if object.p2 %}
+                {% if object.p2_title %}<h2>{{ object.p2_title }}</h2>{% endif %}
+                {{ object.p2 | safe }}
+                <div class="space10"></div>
+                <div class="tiles light-gallery">
+                  <div class="items row text-center">
+                    <div class="item col-md-6">
+                      <figure class="overlay overlay2"><a href="style/images/art/bp1-full.jpg"><img src="style/images/art/bp1.jpg" alt="" /></a></figure>
+                    </div>
+                    <!--/column -->
+                    <div class="item col-md-6">
+                      <figure class="overlay overlay2"><a href="style/images/art/bp2-full.jpg"><img src="style/images/art/bp2.jpg" alt="" /></a></figure>
+                    </div>
+                    <!--/column -->
+                  </div>
+                  <!--/.row -->
+                </div>
+                <!-- /.tiles -->
+                <div class="clearfix"></div>
+                {% endif%}
+
+                {% if object.p3 %}
+                {% if object.p3_title %}<h2>{{ object.p3_title }}</h2>{% endif %}
+                {{ object.p3 | safe }}
+                <div class="space10"></div>
+                <div class="clearfix"></div>
+                {% endif%}
+
+                {% if tags_list %}
+                <div class="mb-10 text-center">
+                {% for tag in tags_list %}
+                  <span class="badge badge-pill bg-aqua">{{ tag }}</span>
+<!--                <div class="meta tags mb-10 text-center"><a href="#">journal</a>, <a href="#">illustration</a>, <a href="#">design</a>, <a href="#">daily</a></div>-->
+                {% endfor %}
+                </div>
+                {% endif%}
+
+                <ul class="social social-mute social-s text-center">
+                  {% include "social.html" %}
+                </ul>
+                <!-- /.social -->
+              </div>
+              <!-- /.post-content -->
+            </div>
+            <!-- /.post -->
+            <div class="divider-icon"><i class="fa fa-pencil"></i></div>
+            <div class="post-nav-wrapper">
+              <div class="post-nav prev">
+                <div class="meta"><i class="fa fa-angle-double-left"></i>Previous Article</div>
+                <h3><a href="{% url 'service-detail' prev_obj.category__slug prev_obj.slug %}" title="{{ prev_obj.name }}">{{ prev_obj.name }}</a></h3>
+              </div>
+              <div class="post-nav next">
+                <div class="meta">Next Article<i class="fa fa-angle-double-right"></i></div>
+                <h3><a href="{% url 'service-detail' next_obj.category__slug next_obj.slug %}" title="{{ next_obj.name }}">{{ next_obj.name }}</a></h3>
+              </div>
+            </div>
+            <!-- /.post-nav -->
+            <div class="divider-icon"><i class="fa fa-pencil"></i></div>
+            <div class="row">
+              <div class="col-md-4">
+                <figure><img alt="" src="style/images/art/author.jpg" /></figure>
+              </div>
+              <!--/column -->
+              <div class="col-md-8">
+                <h4>About the Author</h4>
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac.</p>
+                <ul class="social social-color social-s">
+                  {% include "social.html" %}
+                </ul>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+            <div class="divider-icon"><i class="fa fa-pencil"></i></div>
+            <h4>Would you like to share your thoughts?</h4>
+            <p>Your email address will not be published. Required fields are marked *</p>
+            <div class="space20"></div>
+            <form class="comment-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name*">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email*">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Website">
+              </div>
+              <div class="form-group">
+                <textarea name="textarea" class="form-control" rows="5" placeholder="Enter your comment here..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-full-rounded">Submit</button>
+            </form>
+            <!-- /.comment-form -->
+          </div>
+          <!-- /.blog -->
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+  <div class="wrapper light-wrapper">
+    <div class="container inner">
+      <div class="blog grid image-grid grid-view boxed tiles tiles-m">
+        <div class="row isotope items">
+         	{% for object in object_list %}
+                <div class="item post grid-sizer col-md-6 col-lg-4">
+                    <figure class="overlay overlay4">
+                      <a href="{% url 'service-detail' object.slug %}" title="{{ object.name }}">
+                        <img class="lazyload" data-src="{{ MEDIA_URL }}{{ object.thumbnail }}" alt="{{ object.name }}" />
+                      </a>
+                      <figcaption class="d-flex text-left">
+                        <div class="align-self-end mt-auto">
+                          <div class="meta">
+                            <span class="category">{{ object.category__name }}</span>
+                          </div>
+                          <h2 class="post-title">{{ object.name }}</h2>
+                        </div>
+                      </figcaption>
+                    </figure>
+                </div>
+                <!-- /.post -->
+            {% empty %}
+              <div class="item post text-center">
+                <h2 class="post-title">Working in progress . . .</h2>
+              </div>
+              <!-- /.post -->
+            {% endfor %}
+        </div>
+        <!-- /.row --> 
+      </div>
+      <!-- /.grid -->
+      <div class="space60"></div>
+      <!--<div class="pagination bg">
+        <ul>
+          <li><a href="#" class="btn"><span><i class="fa fa-chevron-left"></i></span></a></li>
+          <li class="active"><a href="#" class="btn"><span>1</span></a></li>
+          <li><a href="#" class="btn"><span>2</span></a></li>
+          <li><a href="#" class="btn"><span>3</span></a></li>
+          <li><a href="#" class="btn"><span><i class="fa fa-chevron-right"></i></span></a></li>
+        </ul>
+      </div>-->
+      <!-- /.pagination --> 
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.wrapper -->
+{% endblock content %}
+
+{% block js %}
+  {% compress js file service-plugin %}
+  <!-- LIGHTGALLERY -->
+  <script src="{% static 'base/js/plugins/lightgallery.min.js' %}"></script>
+  <script src="{% static 'base/js/plugins/lg-autoplay.min.js' %}"></script>
+  <script src="{% static 'base/js/plugins/lg-thumbnail.min.js' %}"></script>
+  <script src="{% static 'base/js/plugins/lg-zoom.min.js' %}"></script>
+  {% endcompress %}
+
+  <!-- LIGHTGALLERY DYNAMIC -->
+  <script nonce="**CSP_NONCE**">
+      var $dynamicEl = [{% for image in images_list %}{
+            src: "{{ MEDIA_URL }}{{ image.thumbnail }}",
+            thumb: "{{ MEDIA_URL }}{{ image.thumbnail }}"
+            {% if image.place %},subHtml: '<div class="lightGallery-captions"><h4>{{ image.place }}</h4>{% if image.description %}<p>{{ image.description }}</p>{% endif %}</div>'{% endif %}
+          }{% if not forloop.last %},{% endif %}{% endfor %}
+     ];
+  </script>
+
+  {% compress js file service %}
+  {% endcompress %}
+{% endblock js %}

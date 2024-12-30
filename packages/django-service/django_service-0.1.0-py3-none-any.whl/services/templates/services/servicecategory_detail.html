@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static thumbnail%}
+
+{% block extra_title %} - {{ object.name }}{% endblock extra_title %}
+
+{% block head_ldjson %}
+<script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ SITE_TITLE }}",
+      "item": "{{ SITE_URL }}"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ object.name }}",
+      "item": "{{ SITE_URL }}{% url 'services-category-detail' object.slug %}"
+    }]
+  }
+</script>
+{% endblock head_ldjson %}
+
+{% block content %}
+  <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="{% thumbnail object.image 1920x1080 crop %}">
+    <div class="container inner pt-120 pb-120 text-center">
+      <h1 class="heading mb-0">{{ object.name }}</h1>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+  <div class="wrapper light-wrapper">
+    <div class="container inner">
+      <div id="slide-portfolio">
+        <div id="cube-grid-large" class="cbp">
+        {% for object in object_list %}
+           <div class="cbp-item">
+            <figure class="overlay overlay4">
+              <a href="{% url 'service-detail' object.category.slug object.slug %}" data-type="slide-portfolio-item-{{ forloop.counter }}" class="slide-portfolio-item">
+                <picture>
+                    <source srcset="{{ MEDIA_URL }}{{ object.thumbnail }}.webp" type="image/webp">
+                    <source srcset="{{ MEDIA_URL }}{{ object.thumbnail }}" type="image/jpeg">
+                    <img alt="{{ object.name }}" src="{{ MEDIA_URL }}{{ object.thumbnail }}">
+                </picture>
+              </a>
+              <figcaption class="d-flex">
+                <div class="align-self-end mt-auto ml-auto mr-auto">
+                  <h3 class="mb-5">{{ object.name }}</h3>
+                  <h2 class="mb-5">{{ object.description }}</h2>
+                  <div class="meta">
+                    <span class="description">{{ object.description }}</span>
+                  </div>
+<!--                  <div class="meta">-->
+<!--                    <span class="count">9 Photos</span>-->
+<!--                    <span class="category">Seasons</span>-->
+<!--                  </div>-->
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        <!--/.cbp-item -->
+        {% endfor %}
+        </div>
+        <!--/.cbp -->
+      </div>
+      <!--/#slide-portfolio -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+{% endblock content %}
