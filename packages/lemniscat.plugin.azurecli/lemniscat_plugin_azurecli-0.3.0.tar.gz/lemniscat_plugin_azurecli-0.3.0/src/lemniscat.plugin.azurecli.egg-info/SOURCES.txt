@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/lemniscat.plugin.azurecli.egg-info/PKG-INFO
+src/lemniscat.plugin.azurecli.egg-info/SOURCES.txt
+src/lemniscat.plugin.azurecli.egg-info/dependency_links.txt
+src/lemniscat.plugin.azurecli.egg-info/requires.txt
+src/lemniscat.plugin.azurecli.egg-info/top_level.txt
+src/lemniscat/plugin/azurecli/__init__.py
+src/lemniscat/plugin/azurecli/azurecli.py
+src/lemniscat/plugin/azurecli/filestore.py
+src/lemniscat/plugin/azurecli/main.py
+src/lemniscat/plugin/azurecli/plugin.yaml
+src/lemniscat/plugin/azurecli/requirements.txt
