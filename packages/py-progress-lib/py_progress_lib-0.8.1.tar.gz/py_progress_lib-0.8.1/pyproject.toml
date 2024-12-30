@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "py-progress-lib"
+version = "0.8.1"
+description = "Progress bar"
+authors = ["Drag-GameStudio <sinica911@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "py_progress" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
