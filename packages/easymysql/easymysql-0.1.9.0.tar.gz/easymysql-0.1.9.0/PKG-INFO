@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: easymysql
+Version: 0.1.9.0
+Summary: Easy MySQL Manager
+Home-page: https://github.com/alvarodeleon/easymysql
+Download-URL: https://github.com/alvarodeleon/easymysql/tarball/0.1.9.0
+Author: Alvaro De Leon
+Author-email: deleon@adl.com.uy
+Keywords: mysql,sql,query
+License-File: LICENSE.txt
+Requires-Dist: pymysql
