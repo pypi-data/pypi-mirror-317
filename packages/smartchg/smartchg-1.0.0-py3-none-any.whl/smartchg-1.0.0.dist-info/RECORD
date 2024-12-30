@@ -1,0 +1,9 @@
+smartchg/__init__.py,sha256=BXZeWxw49JD0XB_DYLTJxBHimrSQ5Up4f90LtOkcNQk,139
+smartchg/__main__.py,sha256=nbcVLaqmDeh5j1di7XB1EdBsYMe0mivPCF2lHVe5R9Y,107
+smartchg/cli.py,sha256=GeauHNrmjZb7ER6BA1kC1CVJcPFmB2iUPZAlEqZg2bU,9882
+smartchg-1.0.0.dist-info/LICENSE,sha256=Ujoen1V2-Tpmgh4JKYhLjzri5uItlJW2Lbot8TSPjdc,1062
+smartchg-1.0.0.dist-info/METADATA,sha256=yVA9ciPGNzJ-iWXANUC5MzycMeaU90kVdUSR8gmASt8,1289
+smartchg-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+smartchg-1.0.0.dist-info/entry_points.txt,sha256=20kkDafLtnGnVcPeUWS5xZ2TNBCY8b2EkqDN2QoVBys,47
+smartchg-1.0.0.dist-info/top_level.txt,sha256=yYghvhp187IcoFCccAcXIe5Z67Fex3HrQxz9Kj892pw,9
+smartchg-1.0.0.dist-info/RECORD,,
