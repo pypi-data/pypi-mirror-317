@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/ColorScript/__init__.py
+src/ColorScript/data.py
+src/ColorScript/functions.py
+src/ColorScript.egg-info/PKG-INFO
+src/ColorScript.egg-info/SOURCES.txt
+src/ColorScript.egg-info/dependency_links.txt
+src/ColorScript.egg-info/top_level.txt
