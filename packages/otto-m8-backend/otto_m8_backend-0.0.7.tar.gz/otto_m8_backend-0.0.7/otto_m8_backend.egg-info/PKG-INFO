@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: otto_m8_backend
+Version: 0.0.7
+Summary: Backend engine for otto-m8, a low code tool to build and deploy AI/ML workloads.
+Home-page: https://github.com/farhan0167/otto-m8
+Author: farhan0167
+Author-email: farhan0167 <ahmadfarhanishraq@gmail.com>
+Project-URL: Homepage, https://otto-m8.com
+Project-URL: Issues, https://github.com/farhan0167/otto-m8/issues
+Requires-Python: >=3.11.4
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.6
+Requires-Dist: uvicorn>=0.34.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: pillow>=11.0.0
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: psycopg2-binary>=2.9.10
+Requires-Dist: openai>=1.58.1
+Requires-Dist: pypdf>=5.1.0
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: sqlalchemy>=2.0.36
+Requires-Dist: transformers>=4.47.1
+Requires-Dist: langchain>=0.3.13
+Requires-Dist: langchain-community>=0.3.13
+Requires-Dist: docker>=7.1.0
+Requires-Dist: huggingface-hub>=0.27.0
+Requires-Dist: redis>=5.2.1
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: torch>=2.5.1
+Requires-Dist: torchvision>=0.20.1
+Requires-Dist: passlib>=1.7.4
+Requires-Dist: python-multipart>=0.0.20
+Requires-Dist: bcrypt>=4.2.1
