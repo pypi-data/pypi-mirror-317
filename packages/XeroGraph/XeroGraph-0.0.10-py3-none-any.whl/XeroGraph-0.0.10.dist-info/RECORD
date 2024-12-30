@@ -1,0 +1,15 @@
+XeroGraph/__init__.py,sha256=9cKpkvrbj2xh535tPpWW54CayqnocnyePpnxofzsP1Q,741
+XeroGraph/compare.py,sha256=Dy5rZ2hl3NIGnYMPOoNWa3vummVQaf4g0EOHpbulsj4,8830
+XeroGraph/main.py,sha256=ZLOheIYQ3ykQytftCJPvockFIToUJ0er675qxFB3OtM,32748
+XeroGraph/utils.py,sha256=W2RvLnQmZhsfmz4p8PdXRrzbBDBw8246B_Y8JrTHi-4,25810
+XeroGraph/xputer_main.py,sha256=bH4_dyOd5d2r5aIUJYJ8ldC95VgCpmy2Pov4PqQ4NcY,46908
+XeroGraph/data/ACTG175.txt,sha256=1cgcj70fKxQFx66TWaK1iXNZmZ9vmIvYyLe4fbGhG1Y,171221
+XeroGraph/data/AML.csv,sha256=JRef1pLADyxF_EiAh7nAPV2xrJaYn9JLAyRNnZ66s28,1641110
+XeroGraph/data/Breast_cancer.csv,sha256=HVPzIQEY3zbflwe1nfQGGDdmqvgcTKP9oAwM-SdZ3J8,113579
+XeroGraph/data/PIMA_Indian.csv,sha256=A4biXEXudRVJwTkTPsdYhMMGf1U6mKT0l4JV2dyndto,23780
+XeroGraph/data/Student_dropout.csv,sha256=9Dx3r3dc2tLjFLup3ngTCmZ_bJOVTZNO-PpIHDtm28o,369203
+XeroGraph-0.0.10.dist-info/LICENSE,sha256=MTYF-6xpRekyTUglRweWtbfbwBL1I_3Bgfbm_SNOuI8,11525
+XeroGraph-0.0.10.dist-info/METADATA,sha256=fd01varV0KKLqzZ26bzMHhLI4t1uk8X79xYhqSVcd6A,8301
+XeroGraph-0.0.10.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+XeroGraph-0.0.10.dist-info/top_level.txt,sha256=mmykxNrDzGBXwjS_J6Avt6Hun7hWHQxA82wiA9_fo1E,10
+XeroGraph-0.0.10.dist-info/RECORD,,
