@@ -1,0 +1,560 @@
+Metadata-Version: 2.1
+Name: spaceport
+Version: 0.1.3
+Summary: Spaceport executes specs as test code
+Author-email: Elementary Dev <dev@elem.app>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Homepage, https://github.com/elem-dev/spaceport
+Project-URL: GitHub, https://github.com/elem-dev/spaceport
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiofiles>=24.1.0
+Requires-Dist: anthropic>=0.41.0
+Requires-Dist: click>=8.1.7
+Requires-Dist: jinja2>=3.1.4
+Requires-Dist: numpy>=2.2.0
+Requires-Dist: openai>=1.57.0
+Requires-Dist: packaging>=24.2
+Requires-Dist: pydantic>=2.10.3
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: ruamel-yaml>=0.18.6
+
+# Spaceport
+
+> [!WARNING]
+> Spaceport is currently a proof-of-concept. The documentation may be incomplete and the features are unstable and not well-tested.
+
+Spaceport is a novel approach to automating system and end-to-end testing.
+
+It turns specs[^1] into test code and executes them.
+
+Even better, if your product doesn't have a proper spec (yet), Spaceport can read through reference sources (READMEs, docs, comments, unit tests, ...) and write one for you.
+
+[^1]: Specs generated by Spaceport or written in a special language style will have better outcomes. See [how it works](#how-it-works).
+
+## A simple demo
+
+Suppose we want to test that Wikipedia has a page about spaceport.
+
+0. [Install Spaceport and the `simpl.browser` extension](#installing-spaceport)
+
+1. Prepare a spec defining the expected behavior:
+
+   ```sh
+   cat << 'EOF' > wiki.md
+   Wikipedia should have a page about "spaceport".
+
+   >> Searching for "spaceport" yields a Wikipedia page
+   > - GIVEN:
+   >   - Wikipedia homepage: https://en.wikipedia.org/wiki/Main_Page
+   > - USE a browser
+   > - Go to the Wikipedia homepage
+   > - Input "spaceport" into the search bar and click the search button
+   > - Verify the new page's heading contains "spaceport"
+   EOF
+   ```
+
+   Spaceport will only process the specially formatted blockquote (an executable spec) in the file. You can freely add other Markdown content (such as background info, team details, comments) without affecting tests.
+
+   Don't fret if you feel like the executable spec's language is a bit tedious. Except for two special keywords (`USE` and `GIVEN`), the rest is just natural language, written in an unambitious style. Also for practical use, Spaceport can write the executable spec for you.
+
+2. Add a Spaceport project named `wiki`:
+
+   ```sh
+   sp add wiki -a wiki.md
+   ```
+
+3. Generate the test code:
+
+   ```sh
+   sp code wiki
+   ```
+
+   The generated code is written into `wiki.md` right after the blockquote.
+
+4. Run the test:
+
+   ```sh
+   sp test wiki
+   ```
+
+## How it works
+
+At its core, Spaceport performs three tasks:
+
+1. Writing feature specs and [executable specs](docs/Reference.md#executable-specs) based on less-structured reference sources
+2. Generating [test code](docs/Reference.md#test-code) from executable specs
+3. Running the test code in dedicated test environments
+
+The first two tasks make use of LLMs. The third task relies on a built-in library that provides functionality for interacting with various types of test subjects.
+
+A feature spec is, a specification of features, that describes their expected behavior. It does not concern itself with the implementation details. On the other hand, tests are always about the details. Otherwise, how could we pre-empt when a user makes an unexpected move on our product?
+
+Enter the executable spec. It is a semi-structured break-down of _expected behavior_ into clear, imperative steps. Each step precisely describes what action should a user take and what outcome should be observed.
+
+For example, this is a feature spec:
+
+- Spaceport CLI allows users to initialize a workspace
+
+And this is an executable spec:
+
+```markdown
+> - USE a shell terminal
+> - Type `sp init` and press Enter
+> - Check that Spaceport workspace files are created
+```
+
+Combined with the feature spec, executable specs serve multiple purposes:
+
+- They bridge high-level product requirements to low-level test details
+- They act as an intermediary between human-readable documentation and programmatic test code
+- They facilitate collaboration between technical and non-technical team members
+- They serve as living documentation that stays in sync with the actual system behavior
+
+## Quick start
+
+### Prerequisites
+
+- Python 3.12 (required, support for older versions of Python is WIP)
+- Docker (optional, for containerized testing)
+- Anthropic API key (strongly recommended for spec and code generation; can be replaced with OpenAI's API key)
+- OpenAI API key (required for text embedding)
+
+### Installing Spaceport
+
+#### Step 1. Install the CLI
+
+We recommend installing the CLI in an isolated environment so its dependencies do not conflict with your other Python code.
+
+With [pipx](https://pypa.github.io/pipx/):
+
+```sh
+pipx install spaceport
+```
+
+or with [uv](https://docs.astral.sh/uv/):
+
+```sh
+uv tool install spaceport
+```
+
+
+
+#### Step 2. Install extensions (optional)
+
+To reduce package size, some testing functionality is implemented as extensions. You can install them with the following command:
+
+```sh
+sp tc install <extension>...
+```
+
+Available extensions are:
+
+- `simpl.container` - For testing in Docker containers - you also need to have Docker installed
+- `simpl.browser` - For testing web applications
+- `simpl.sqldb` - For testing SQL databases
+
+#### Step 3. Set up API keys
+
+Spaceport uses the OpenAI API for text embedding and the Anthropic API for spec and code generation. You need to set both keys inside the CLI config directory with an `.env` file.
+
+```sh
+# Get the toolchain config directory
+export SPACEPORT_DOTENV="$(sp tc get-config-dir)/.env"
+
+# Set the API keys
+echo "SPACEPORT_OPENAI_API_KEY=<your OpenAI API key>" >> $SPACEPORT_DOTENV
+echo "SPACEPORT_ANTHROPIC_API_KEY=<your Anthropic API key>" >> $SPACEPORT_DOTENV
+```
+
+See [AI vendors](docs/Reference.md#ai-vendors) for changing the AI vendors if you only have access to OpenAI models.
+
+### Typical workflow
+
+A typical workflow is as follows:
+
+1. (Optional) Use `sp init` to initialize a workspace
+2. Prepare reference sources for a project and use `sp add` to add the project to the workspace (it initializes the workspace if not already done)
+3. Use `sp make` to generate executable specs from the reference sources
+4. Specify the test environment in `sp-env.yaml` and the fixtures in the generated specs
+5. Use `sp code` to generate test code from the specs
+6. Use `sp test` to run the tests
+
+Steps 3-6 are deliberately designed to be incremental, so that you may review and edit the generated contents before proceeding to the next step.
+
+#### Step 1. Initialize a workspace
+
+Spaceport works in workspaces. A workspace is a directory containing a `spaceport.yaml` file (the workspace manifest). It may also contain a `sp-env.yaml` file (the environment manifest), a `sp-projects` directory for project artifacts.
+
+> [!TIP]
+> We recommend setting up the Spaceport workspace directly inside your code repo, so you can manage the code and specs in sync, and conveniently integrate Spaceport into the CI/CD pipeline.
+
+Just run the following command in the directory you want to set up as a workspace. This will create a workspace manifest automatically.
+
+```sh
+sp init
+```
+
+#### Step 2. Prepare reference sources and add a project
+
+You may have multiple projects in a workspace so that different specs can be tested in different projects, each with its own or shared environment manifests.
+
+A project should have an [artifact](docs/Reference.md#project-artifacts) file, either prepared by you or generated by Spaceport, as the source of truth for executable specs and test code. Artifacts are placed under the `sp-projects` directory by default.
+
+To auto-generate a project's artifact, Spaceport relies on one primary reference source and may have multiple secondary reference sources ("other sources"). This distinction allows Spaceport to generate more spot-on specs by focusing on the primary source and only using other sources for context.
+
+Note that a source does not need to be a file of source code. It can be any text file, such as a README, a business plan, a conversation transcript, etc.
+
+Run `sp add` to add a project to the workspace and specify its primary and other sources.
+
+```sh
+sp add <project name> -p <primary source> -o <other source 1> -o <other source 2> ...
+```
+
+#### Step 3. Generate specs
+
+This command generates an artifact for the added project.
+
+```sh
+sp make <project name>
+```
+
+The artifact will be named `<project name>.md` and placed in the `sp-projects` directory. It contains the following contents:
+
+- A `## Summary` section that summarizes the project
+- A `## Details` section that describes the project in more detail
+- A `## Open Questions` section that lists the open questions that the Rewriter could not answer and needs your help
+- A `## Executables` section that contains the executable specs and other commentary content
+
+An [executable spec](docs/Reference.md#executable-specs) consists of consecutive blockquotes that describe a single scenario. Its format is as follows:
+
+```markdown
+>> <spec name>
+> - GIVEN:
+>   - <context 1>
+>   - <context 2>
+>   - ...
+> - USE <tool> with <some context>
+> - <some action>
+> - <some verification>
+```
+
+Only executable specs are further transformed into test code.
+
+#### Step 4. Specify the test environment and fixtures
+
+> [!NOTE]
+> Admittedly, this step is more manual and complex than the others. There are several permanent and temporary limitations:
+> - First and foremost, details about test environments are NOT part of the specs. Given this, we have not made and no plan to make Spaceport automatically detect and configure the test environment. We are exploring ways to make this easier, but in the end, test environment configuration is a task that is best left to you.
+> - Second, Spaceport does not have a built-in way to generate test fixtures today. This is a feature we are working on but can be a bit tricky to get right.
+
+If you plan to run tests in a local environment, then you do not need to do anything with the environment manifest. For tests with Docker, see [here](docs/Guides.md#testing-with-docker).
+
+However, you do need to specify data fixtures in the generated specs. Open the project artifact file and look for bullet points after 'GIVEN' (case sensitive). Each bullet point is a fixture that _Spaceport thinks_ the spec requires. 
+
+Here is an example taken from the generated artifact for Spaceport CLI:
+
+```markdown
+>> Generate specifications for a project
+> - GIVEN:
+>   - a workspace directory
+>   - a project name with source files
+>   - verifiable condition for generated specs
+```
+
+What you need to do is add descriptions of the required data after each bullet point:
+
+```markdown
+>> Generate specifications for a project
+> - GIVEN:
+>   - a workspace directory: `fixtures/test-project`
+>   - a project name with source files: project name - `test-project`, primary source - `docs.md`
+>   - verifiable condition for generated specs: `sp-projects/test-project.md` is generated; it contains blockquotes that start with `>>` and followed by lines that start with `> -`
+```
+
+You can see that simple data structures can just be provided as-is. Complex conditions can be described in natural language on the same line. We are working on a more rigid data validation system to make complex conditions easier to write and test (see [roadmap](docs/Roadmap.md)).
+
+You may find more details about the environment manifest in the [reference](docs/Reference.md#manifests).
+
+#### Step 5. Generate test code
+
+> [!WARNING]
+> Be careful when using code formatters (like Prettier) on artifact files. Their default settings may mess with some special syntax that Spaceport relies on, leading to failed or incorrect code generation and execution.
+>
+> Consider adding `sp-projects/*.md` to your code formatter's ignore list.
+
+Run the following command to generate test code for all specs in a project:
+
+```sh
+sp code <project name>
+```
+
+The generated code is placed immediately after each executable spec in the project artifact like this:
+
+````markdown
+>> Generate specifications for a project
+> - GIVEN:
+>   - a workspace directory: `fixtures/test-project`
+>   - a project name with source files: project - `test-project`, primary source - `docs.md`
+> - USE a terminal
+> - Change directory to the workspace directory
+> - Run `sp make {project_name}`
+```py .test
+# GIVEN:
+# - a workspace directory: `fixtures/test-project`
+# - a project name with source files: project - `test-project`, primary source - `docs.md`
+workspace_dir = "fixtures/test-project"
+project_name = "test-project"
+
+# USE a terminal
+T.use("terminal")
+
+# Change directory to the workspace directory
+T.set_working_dir("term//", workspace_dir)
+
+# Run `sp make {project_name}`
+T.input_text("term//input", f"sp make {project_name}")
+T.input_enter("term//input")
+T.wait_till_complete("term//")
+```
+````
+
+#### Step 6. Run tests
+
+Run all tests in a project:
+
+```sh
+sp test <project name>
+```
+
+A test report will be printed out.
+
+## How is Spaceport different
+
+### vs. unit tests and integration tests
+
+Spaceport does not replace unit tests and integration tests but complements them. It excels at end-to-end and system testing by simulating real user interactions. For testing internal APIs and components, it is often easier to stick with your existing unit testing strategy.
+
+### vs. using an LLM to write tests directly
+
+While LLMs can write general test code, Spaceport provides several benefits over direct generation:
+
+- More reliable: Spaceport's generation process is more controlled and stable, making the generated code more reliable and less likely to be wrong or contain bugs
+- More interpretable: Spaceport uses a natural language format for specs and ties test code strictly to the spec, making it easier to understand and debug the tests
+- Less boilerplate: Spaceport's generation process is more efficient, reducing boilerplate code
+
+### vs. Cucumber/SpecFlow
+
+Spaceport shares some similarities with Cucumber/SpecFlow in that both use natural language to describe test scenarios. However, there are key differences:
+
+- Auto-generation: Spaceport can auto-generate executable specs AND test code from existing documentation, while Cucumber/SpecFlow requires manually writing Gherkin specs and implementing step definitions
+- Language flexibility: Spaceport's spec format is more flexible and natural, less constrained by stringent syntactic requirements
+
+## Next steps
+
+- Check out the [guides](docs/Guides.md) for practical examples and tips, especially how to review and edit generated content and debug tests.
+- Learn more about the core concepts and inner workings of Spaceport in the [reference](docs/Reference.md).
+- Review the [Spaceport CLI](docs/CLI.md) documentation for available CLI commands and their usage.
+- Keep an eye on the [roadmap](docs/Roadmap.md) for upcoming features and improvements.
