@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+create_struc.egg-info/PKG-INFO
+create_struc.egg-info/SOURCES.txt
+create_struc.egg-info/dependency_links.txt
+create_struc.egg-info/entry_points.txt
+create_struc.egg-info/top_level.txt
+structure/__init__.py
+structure/main.py
