@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: voip-utils
+Version: 0.2.2
+Summary: Voice over IP Utilities
+Author-email: The Home Assistant Authors <hello@home-assistant.io>
+License: Apache-2.0
+Project-URL: Source Code, https://github.com/home-assistant-libs/voip-utils
+Keywords: home,assistant,voip,phone
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Communications :: Internet Phone
+Classifier: Topic :: Communications :: Telephony
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: opuslib==3.0.1
+
+# VoIP Utils
+
+Voice over IP utilities for the [voip integration](https://www.home-assistant.io/integrations/voip/).
+
+## Test outgoing call
+Install dependencies from requirements_dev.txt
+
+Set environment variables for source and destination endpoints in .env file
+    CALL_SRC_USER = "homeassistant"
+    CALL_SRC_IP = "192.168.1.1"
+    CALL_SRC_PORT = 5060
+    CALL_VIA_IP = "192.168.1.1"
+    CALL_DEST_IP = "192.168.1.2"
+    CALL_DEST_PORT = 5060
+    CALL_DEST_USER = "phone"
+
+Run script
+python call_example.py
+
