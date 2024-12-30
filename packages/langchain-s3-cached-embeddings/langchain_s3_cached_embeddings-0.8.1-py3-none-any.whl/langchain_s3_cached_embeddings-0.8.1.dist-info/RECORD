@@ -1,0 +1,7 @@
+langchain_s3_cached_embeddings/__init__.py,sha256=0img4T52ju4S4zriUC_diRjadV3H_BdgeHMAHkBsU8E,67
+langchain_s3_cached_embeddings/s3_cached_embeddings.py,sha256=WgPkiC5skH1utUP8IkBPQVDjH17bdd6h2PW8ZRqc3uM,6658
+langchain_s3_cached_embeddings-0.8.1.dist-info/LICENSE,sha256=vDHGxbSwmKsrVZgMYepcfyJg61LdQ1aokIv5LfpxgI4,1073
+langchain_s3_cached_embeddings-0.8.1.dist-info/METADATA,sha256=bcZmVdd1csXwbACcROTqHTJux0-B9oTePw3Yl4LYdWI,1284
+langchain_s3_cached_embeddings-0.8.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+langchain_s3_cached_embeddings-0.8.1.dist-info/top_level.txt,sha256=cR-sY73BYb1J0uLSipRj-KWTYkoYm5BTUuILwn5hmy8,31
+langchain_s3_cached_embeddings-0.8.1.dist-info/RECORD,,
