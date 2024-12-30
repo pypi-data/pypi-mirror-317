@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ytdlmusic
+Version: 3.0.0
+Summary: ytdlmusic is a command-line program to search and download music files from YouTube without use browser.
+Home-page: https://github.com/thib1984/ytdlmusic
+Author: thib1984
+Author-email: thibault.garcon@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: yt_dlp
+Requires-Dist: tinytag
+Requires-Dist: unidecode
+Requires-Dist: termcolor
+Requires-Dist: colorama
+Requires-Dist: validators
+Requires-Dist: setuptools
+
+The complete description/installation/use/FAQ is available at : https://github.com/thib1984/ytdlmusic#readme
