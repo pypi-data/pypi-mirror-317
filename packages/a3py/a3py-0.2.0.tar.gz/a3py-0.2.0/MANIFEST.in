@@ -1,0 +1,3 @@
+graft a3py
+global-exclude __pycache__
+global-exclude *.py[co]

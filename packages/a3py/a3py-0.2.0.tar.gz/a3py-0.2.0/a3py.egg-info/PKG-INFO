@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: a3py
+Version: 0.2.0
+Summary: Python utils.
+Author-email: three-kinds <3179158552@qq.com>
+License: Apache 2.0
+Project-URL: Homepage, https://github.com/three-kinds/a3py
+Project-URL: Source, https://github.com/three-kinds/a3py
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ujson>=5.2.0
+
+# a3py
+
+Python utils. 
+
+[History.](HISTORY.md)
+
+## Install
+
+```shell script
+pip install a3py
+
+```
+
+## Examples
+
+### 1. Simplified example
+
+```python
+from datetime import date
+from a3py.simplified.datetime import date2str
+
+assert date2str(date(2019, 10, 3)) == '2019-10-03'
+
+```
+
+### 2. Improved example
+
+```python
+from a3py.improved.json import fast_dumps
+
+fast_dumps([1, 2, 3])
+
+```
+
+### 3. Readable example
+
+```python
+from a3py.improved.readable import get_readable_size
+
+assert get_readable_size(1024 * 1024) == "1.0MB"
+
+```
