@@ -1,0 +1,12 @@
+mongodb_migrator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mongodb_migrator/cli.py,sha256=t7wR16iBnSa2qHEPopHmgb_A_1J4yCAT11hUmcqfAws,2059
+mongodb_migrator/core.py,sha256=YIoPX92Ukbe4dz_7GN7eDYy9ZgIBd-MknpfAxwUwxoc,8022
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=7-G5mFgytgJYujRw5bRMBAZlo3zHY759JGRawx6JdJ4,198
+tests/test_migrator.py,sha256=FylIArordyl0-w-BWhTBDqA5ucoBVcXd7PZpNNzrmV0,2924
+mongrate-0.0.4.dist-info/LICENSE,sha256=Qb_IFh9xmh40ZBYMEpXsvSIOEcTZoz4JpMEr6qSN_Sg,1075
+mongrate-0.0.4.dist-info/METADATA,sha256=liTuj71_0vB4WiD4m5_9LG8Fk0bhs3-QnhURBpXttZk,4193
+mongrate-0.0.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mongrate-0.0.4.dist-info/entry_points.txt,sha256=Mo7puaFf95aq7WNSfBfgMinjm4xuS5sdYYy314Dd32Y,54
+mongrate-0.0.4.dist-info/top_level.txt,sha256=ymqVlkbzpj11IN2HWCghFeKypOqye4XSA189JiLN3DI,23
+mongrate-0.0.4.dist-info/RECORD,,
