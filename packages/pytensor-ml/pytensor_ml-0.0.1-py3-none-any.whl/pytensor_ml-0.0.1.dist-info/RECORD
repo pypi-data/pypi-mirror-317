@@ -1,0 +1,12 @@
+pytensor_ml/__init__.py,sha256=htsfZfnuVHBMdZK-uUxA2b-BAMCOMcSGOh8JAaC-de0,331
+pytensor_ml/_version.py,sha256=Le3Kceo6xzWYj5fRYAQ_ETf9ebt7UwsEo9TSEbbCnNs,497
+pytensor_ml/activations.py,sha256=xkfxW0WuQ3dzTd2P1uuaeYcKwJHE_ocUHiNNP3v9coM,1224
+pytensor_ml/layers.py,sha256=LDRu5w259_T6dTzTIiT97ohyOCc5j354DzqIQyzOa6s,1462
+pytensor_ml/loss.py,sha256=FCAZtZq3f63wpexyro98GrR7y-cVhlA8Zkuu9DHFDjg,1941
+pytensor_ml/model.py,sha256=QUOLFZL-RjklD0FlWqqgCrGn-hH1-XUxDnwNWDiAE8k,3340
+pytensor_ml/optimizers.py,sha256=KVMmmnFgMg81P1BRTmSP5lacC68o1R2mfGFPWbliuxU,6759
+pytensor_ml-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pytensor_ml-0.0.1.dist-info/METADATA,sha256=_EQLtzji63q9wySezC_ojsHczMtnl3STYkK3UJJX0eQ,14062
+pytensor_ml-0.0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+pytensor_ml-0.0.1.dist-info/top_level.txt,sha256=zZW3xa3l-g2leebMmra4XvyMXH7a4LNV0bJqHL8Czzo,12
+pytensor_ml-0.0.1.dist-info/RECORD,,
