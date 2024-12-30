@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+patchwork/__init__.py
+patchwork/__main__.py
+patchwork/app.py
+patchwork/logger.py
+patchwork/managed_files.py
+patchwork/step.py
+york_patched.egg-info/PKG-INFO
+york_patched.egg-info/SOURCES.txt
+york_patched.egg-info/dependency_links.txt
+york_patched.egg-info/requires.txt
+york_patched.egg-info/top_level.txt
