@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/avatars-ai/__init__.py
+src/avatars-ai/api_request.py
+src/avatars-ai/lina.py
+src/avatars-ai/utils.py
+src/avatars_ai.egg-info/PKG-INFO
+src/avatars_ai.egg-info/SOURCES.txt
+src/avatars_ai.egg-info/dependency_links.txt
+src/avatars_ai.egg-info/top_level.txt
