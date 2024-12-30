@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cp2kbrew
+Version: 0.2.0
+Summary: CP2K Dealing Programs
+Home-page: https://github.com/minu928/cp2kbrew
+Author: Minwoo Kim
+Author-email: minu928@snu.ac.kr
+Keywords: cp2k
+Requires-Python: >=3.10.0
+License-File: LICENSE
+Requires-Dist: numpy<2.0.0,>=1.21.0
+Requires-Dist: tqdm>=4.0.0
+Requires-Dist: unitbrew>=0.0.1
