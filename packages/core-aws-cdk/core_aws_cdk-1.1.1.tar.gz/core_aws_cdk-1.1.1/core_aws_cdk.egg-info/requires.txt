@@ -1,0 +1,2 @@
+aws-cdk-lib>=2.173.4
+core-tests>=1.1.0
