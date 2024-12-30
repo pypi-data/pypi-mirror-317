@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+mark_scraper/__init__.py
+mark_scraper/__main__.py
+mark_scraper/cli.py
+mark_scraper/page.py
+mark_scraper/scraper.py
+mark_scraper.egg-info/PKG-INFO
+mark_scraper.egg-info/SOURCES.txt
+mark_scraper.egg-info/dependency_links.txt
+mark_scraper.egg-info/entry_points.txt
+mark_scraper.egg-info/requires.txt
+mark_scraper.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_scraper.py
