@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: python-snoo
+Version: 1.0.0
+Summary: A package to control Snoos.
+Home-page: https://github.com/Lash-L/python-snoo
+License: GPL-3.0-only
+Keywords: snoo,homeassistant
+Author: Lash-L
+Author-email: Lash-L@users.noreply.github.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: aiohttp
+Requires-Dist: freenub (>=0.1.0,<0.2.0)
+Project-URL: Repository, https://github.com/Lash-L/python-snoo
+Description-Content-Type: text/markdown
+
+
