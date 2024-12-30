@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mangomango"
+version = "0.1.0"
+description = "A simple MongoDB client that works with Pydantic models."
+authors = ["Izak <frdev.izak@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.10.4"
+pymongo = "^4.10.1"
+rich = "^13.9.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
