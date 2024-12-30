@@ -1,0 +1,100 @@
+Metadata-Version: 2.4
+Name: textual-shell
+Version: 0.9.0
+Summary: A shell widget for textual.
+Project-URL: Homepage, https://github.com/Jason-Lawrence/textual-shell/
+Author-email: Jason Lawrence <thejasonlawrence1@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Jason-Lawrence
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: rustworkx>=0.15.1
+Requires-Dist: textual>=1.0.0
+Description-Content-Type: text/markdown
+
+# Textual-Shell
+
+Welcome to the Textual-Shell documentation! This is an addon for the Textual framework.
+
+### What is Textual-Shell?
+
+It is a collection of widgets that can be used to build a custom shell application. It draws inspiration from the cmd2 and prompt-toolkit libraries. 
+
+## Quick Start
+
+Install it with:
+``` 
+pip install textual-shell
+```
+
+```py title='Basic Shell'
+import os
+
+from textual.app import ComposeResult
+from textual.containers import Grid
+from textual.geometry import Offset
+from textual.widgets import Header, Footer
+
+from textual_shell.app import ShellApp
+from textual_shell.command import Help, Set
+from textual_shell.widgets import CommandList, Shell, SettingsDisplay
+
+class BasicShell(ShellApp):
+    
+    CSS_PATH = 'style.css'
+    theme = 'tokyo-night'
+        
+    cmd_list = [Help(), Set()]
+    command_names = [cmd.name for cmd in cmd_list]
+    CONFIG_PATH = os.path.join(os.environ.get('HOME', os.getcwd()), '.config.yaml')
+    HISTORY_LOG = os.path.join(os.environ.get('HOME', os.getcwd()), '.shell_history.log')
+    
+    def compose(self) -> ComposeResult:
+        yield Header()
+        yield Footer()
+        yield Grid(
+            CommandList(self.command_names),
+            Shell(
+                self.cmd_list,
+                prompt='prompt <$ ',
+                suggestion_offset=Offset(10, 3)
+            ),
+            SettingsDisplay(self.CONFIG_PATH),
+            id='app-grid'
+        )
+        
+        
+if __name__ == '__main__':
+    BasicShell().run()
+
+```
+
+## TODO:
+
+* Command line validation
+* write documentation on Commands
+* write documentation on shell key binds
+* redo key binds
