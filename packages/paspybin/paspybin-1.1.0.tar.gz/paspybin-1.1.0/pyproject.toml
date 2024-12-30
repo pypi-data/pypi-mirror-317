@@ -1,0 +1,100 @@
+[tool.poetry]
+name = "paspybin"
+version = "1.1.0"
+description = "Python Pastebin API Wrapper"
+authors = ["Kira <kiraware@github.com>"]
+maintainers = ["Kira <kiraware@github.com>", "vexra <vexra@github.com>"]
+packages = [{ include = "*", from = "src" }]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/kiraware/paspybin"
+repository = "https://github.com/kiraware/paspybin"
+documentation = "https://paspybin.readthedocs.io/en/latest/"
+keywords = ["pastebin", "api"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Framework :: AsyncIO",
+    "Framework :: aiohttp",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/kiraware/paspybin/issues"
+
+[tool.poetry.dependencies]
+aiohttp = "^3.9.1"
+defusedxml = "^0.7.1"
+python = "^3.11"
+types-defusedxml = "^0.7.0.20240218"
+
+[tool.poetry.group.dev.dependencies]
+bandit = "^1.7.6"
+mypy = "^1.8.0"
+poethepoet = "^0.31.1"
+ruff = "^0.8.1"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.24.0"
+pytest-cov = "^6.0.0"
+pytest-dotenv = "^0.5.2"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.4"
+mkdocstrings = { extras = ["python"], version = "^0.27.0" }
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+backend-path = ["src"]
+
+[tool.poe.tasks]
+bandit = "bandit -c pyproject.toml -r ."
+mypy = "mypy"
+ruff-fix = "ruff check --fix"
+ruff = "ruff check"
+lint = ["bandit", "mypy", "ruff"]
+format-check = "ruff format --check"
+format = "ruff format"
+docs-build = "poetry run mkdocs build"
+docs-serve = "poetry run mkdocs serve"
+test = "pytest --cov=src"
+
+[tool.bandit]
+targets = ["src", "tests"]
+exclude_dirs = ["venv"]
+
+[tool.bandit.assert_used]
+skips = ["*_test.py", "*test_*.py"]
+
+[tool.mypy]
+files = ["src", "tests"]
+strict_optional = false
+
+[tool.ruff]
+exclude = [".venv", ".git", "__pycache__", "build", "dist", "venv"]
+line-length = 88
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "C90", "I", "B"]
+ignore = ["E501", "C901"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.pytest.ini_options]
+addopts = ["-vvv", "--doctest-modules", "--import-mode=importlib"]
+pythonpath = [".", "src"]
+testpaths = ["tests"]
+asyncio_default_fixture_loop_scope = "function"
+asyncio_mode = "auto"
+env_files = [".env"]
