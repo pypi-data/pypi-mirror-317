@@ -1,0 +1,201 @@
+# SPDX-FileCopyrightText: 2024 Jan Schmitz <schmitz@num.uni-sb.de>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+workflow:
+  rules: # Run Pipeline for merge requests, tags and the default branch
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+default:
+  image:
+    name: alpine:latest
+    pull_policy: [always, if-not-present]
+  tags:
+    - nix
+
+.default_template:
+  parallel:
+    matrix:
+      - ARCH: [x86_64] #, aarch64]
+        OS: [linux, darwin]
+
+  tags:
+    - ${ARCH}-${OS}
+  dependencies: []
+
+.before_script_template:
+  before_script:
+     - |
+      if [ "$OS" == "linux" ]; then
+        apk update
+        apk add build-base pkgconf meson python3-dev
+      else if [ "$OS" == "darwin" ]; then
+        brew install meson ninja pkg-config python3
+      else
+        echo "OS '$OS' not handled yet."
+      fi
+      fi
+      # Prepare Python venv
+      python3 -m venv .venv
+      source .venv/bin/activate
+
+build:
+  stage: build
+  extends: .default_template
+  script:
+    - nix build
+
+build-dbg:
+  stage: build
+  extends: .default_template
+  script:
+    - nix build .#epsteinlib_dbg
+
+build-manually:
+  stage: build
+  extends:
+    - .default_template
+    - .before_script_template
+  script:
+    - python3 -m pip install -r python/requirements.txt
+    - meson setup build -Dbuildtype=release
+    - meson compile -C build
+  artifacts:
+    name: 'build_files'
+    expose_as: 'build_files'
+    paths:
+      - build/
+
+pip-install:
+  stage: build
+  extends:
+    - .default_template
+    - .before_script_template
+  script:
+    - python3 -m pip install .
+
+build-docs:
+  stage: build
+  script:
+    - nix develop -c doxygen
+  artifacts:
+    name: 'docs'
+    expose_as: 'Documentation'
+    paths:
+      - html/
+  tags:
+    - nix
+  dependencies: []
+
+tests:
+  stage: test
+  extends: .default_template
+  script:
+    - nix develop -c tests
+  artifacts:
+    name: 'coverage_report'
+    expose_as: 'Coverage Report'
+    paths:
+      - html/
+  coverage: '/^TOTAL.*\s+(\d+\%)$/'
+  dependencies: []
+
+flake-check:
+  stage: test
+  extends: .default_template
+  script:
+    - nix flake check
+
+run:
+  stage: test
+  extends: .default_template
+  script:
+    - nix run
+  timeout: 2m
+
+run-dbg:
+  stage: test
+  extends: .default_template
+  script:
+    - nix run .#epsteinlib_dbg
+  timeout: 2m
+
+pre-commit:
+  stage: test
+  script:
+    - nix develop -c pre-commit run -a
+  needs: []
+  tags:
+    - nix
+    - x86_64-linux
+  dependencies: []
+
+meson-test:
+  stage: test
+  extends:
+    - .default_template
+    - .before_script_template
+  script:
+    - !reference [build-manually, script]
+    - meson test -v -C build
+  # Not supported in gitlab right now...
+  # https://forum.gitlab.com/t/ci-specifying-artifact-dependencies-when-using-parallel-matrix/45026/6
+  #needs:
+  #  - job: build-manually
+  #    artifacts: true
+  #    parallel:
+  #      matrix:
+  #        - ARCH: $ARCH
+  #          OS: $OS
+
+
+pages:
+  stage: deploy
+  # Only works when https://docs.gitlab.com/ee/ci/yaml/#pagespagespath_prefix gets free
+  # makes pages-preview obsolete
+  #variables:
+  #  PAGES_PREFIX: "" # No prefix by default (main)
+  #pages:
+  #  path_prefix: "$PAGES_PREFIX"
+  script:
+    - mv html public
+    - echo "Pages accessible through ${CI_PAGES_URL}/${PAGES_PREFIX}"
+  dependencies:
+    - build-docs
+    - tests
+  artifacts:
+    paths:
+      - public
+  rules:
+   - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+   #- if: $CI_PIPELINE_SOURCE == "merge_request_event"
+   #  variables:
+   #    PAGES_PREFIX: '_mr-$CI_MERGE_REQUEST_IID'
+  tags:
+    - x86_64-linux
+
+
+pages-preview:
+  stage: deploy
+  script:
+    - ls -alh html
+  needs:
+    - build-docs
+    - tests
+  dependencies:
+    - build-docs
+    - tests
+  artifacts:
+    paths:
+      - html
+  environment:
+      name: preview/$CI_COMMIT_REF_SLUG
+      url: "https://gl-pages.num.uni-sb.de/$CI_PROJECT_NAMESPACE/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/html/index.html"
+      auto_stop_in: 1 week
+  rules:
+   - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+   - if: $CI_COMMIT_TAG
+  tags:
+    - x86_64-linux
