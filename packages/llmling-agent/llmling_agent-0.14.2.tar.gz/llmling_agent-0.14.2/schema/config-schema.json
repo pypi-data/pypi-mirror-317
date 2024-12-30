@@ -1,0 +1,2690 @@
+{
+  "$defs": {
+    "AgentConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for a single agent in the system.\n\nDefines an agent's complete configuration including its model, environment,\ncapabilities, and behavior settings. Each agent can have its own:\n- Language model configuration\n- Environment setup (tools and resources)\n- Response type definitions\n- System prompts and default user prompts\n- Role-based capabilities\n\nThe configuration can be loaded from YAML or created programmatically.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Name of the agent",
+          "title": "Name"
+        },
+        "inherits": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Name of agent config to inherit from",
+          "title": "Inherits"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional description of the agent's purpose",
+          "title": "Description"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "discriminator": {
+                "mapping": {
+                  "random": "#/$defs/RandomMultiModel",
+                  "string": "#/$defs/StringModel",
+                  "test": "#/$defs/_TestModelWrapper"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/StringModel"
+                },
+                {
+                  "$ref": "#/$defs/RandomMultiModel"
+                },
+                {
+                  "$ref": "#/$defs/_TestModelWrapper"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "The model to use for this agent. Can be either a simple model name\nstring (e.g. 'openai:gpt-4') or a structured model definition.",
+          "title": "Model"
+        },
+        "environment": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "discriminator": {
+                "mapping": {
+                  "file": "#/$defs/FileEnvironment",
+                  "inline": "#/$defs/InlineEnvironment"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/FileEnvironment"
+                },
+                {
+                  "$ref": "#/$defs/InlineEnvironment"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Environment configuration (path or object)",
+          "title": "Environment"
+        },
+        "session_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Opetional id of a session to load.",
+          "title": "Session Id"
+        },
+        "result_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "discriminator": {
+                "mapping": {
+                  "import": "#/$defs/ImportedResponseDefinition",
+                  "inline": "#/$defs/InlineResponseDefinition"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/InlineResponseDefinition"
+                },
+                {
+                  "$ref": "#/$defs/ImportedResponseDefinition"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Name of the response definition to use",
+          "title": "Result Type"
+        },
+        "retries": {
+          "default": 1,
+          "description": "Number of retries for failed operations (maps to pydantic-ai's retries)",
+          "title": "Retries",
+          "type": "integer"
+        },
+        "result_tool_name": {
+          "default": "final_result",
+          "description": "Name of the tool used for structured responses",
+          "title": "Result Tool Name",
+          "type": "string"
+        },
+        "result_tool_description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Custom description for the result tool",
+          "title": "Result Tool Description"
+        },
+        "result_retries": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Max retries for result validation",
+          "title": "Result Retries"
+        },
+        "end_strategy": {
+          "default": "early",
+          "description": "The strategy for handling multiple tool calls when a final result is found",
+          "enum": [
+            "early",
+            "exhaustive"
+          ],
+          "title": "End Strategy",
+          "type": "string"
+        },
+        "avatar": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "URL or path to agent's avatar image",
+          "title": "Avatar"
+        },
+        "system_prompts": {
+          "description": "System prompts for the agent",
+          "items": {
+            "type": "string"
+          },
+          "title": "System Prompts",
+          "type": "array"
+        },
+        "user_prompts": {
+          "description": "Default user prompts for the agent",
+          "items": {
+            "type": "string"
+          },
+          "title": "User Prompts",
+          "type": "array"
+        },
+        "context_sources": {
+          "description": "Initial context sources to load",
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "file": "#/$defs/FileContextSource",
+                "prompt": "#/$defs/PromptContextSource",
+                "resource": "#/$defs/ResourceContextSource"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/FileContextSource"
+              },
+              {
+                "$ref": "#/$defs/ResourceContextSource"
+              },
+              {
+                "$ref": "#/$defs/PromptContextSource"
+              }
+            ]
+          },
+          "title": "Context Sources",
+          "type": "array"
+        },
+        "include_role_prompts": {
+          "default": true,
+          "description": "Whether to include default prompts based on the agent's role.",
+          "title": "Include Role Prompts",
+          "type": "boolean"
+        },
+        "model_settings": {
+          "description": "Additional settings to pass to the model",
+          "title": "Model Settings",
+          "type": "object"
+        },
+        "config_file_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Config file path for resolving environment.",
+          "title": "Config File Path"
+        },
+        "role": {
+          "anyOf": [
+            {
+              "enum": [
+                "basic",
+                "overseer",
+                "specialist",
+                "assistant"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": "basic",
+          "description": "Role name (built-in or custom) determining agent's capabilities.",
+          "title": "Role"
+        },
+        "triggers": {
+          "description": "Event sources that activate this agent",
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "files": "#/$defs/FileWatchConfig",
+                "webhook": "#/$defs/WebhookConfig"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/FileWatchConfig"
+              },
+              {
+                "$ref": "#/$defs/WebhookConfig"
+              }
+            ]
+          },
+          "title": "Triggers",
+          "type": "array"
+        },
+        "forward_to": {
+          "description": "Targets to forward results to.",
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "agent": "#/$defs/AgentTarget",
+                "file": "#/$defs/FileTarget"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/AgentTarget"
+              },
+              {
+                "$ref": "#/$defs/FileTarget"
+              }
+            ]
+          },
+          "title": "Forward To",
+          "type": "array"
+        },
+        "workers": {
+          "description": "Worker agents which will be available as tools.",
+          "items": {
+            "$ref": "#/$defs/WorkerConfig"
+          },
+          "title": "Workers",
+          "type": "array"
+        }
+      },
+      "title": "AgentConfig",
+      "type": "object"
+    },
+    "AgentTarget": {
+      "description": "Forward messages to another agent.",
+      "properties": {
+        "type": {
+          "const": "agent",
+          "default": "agent",
+          "description": "Type discriminator for agent targets.",
+          "title": "Type",
+          "type": "string"
+        },
+        "wait_for_completion": {
+          "default": true,
+          "description": "Whether to wait for the result before continuing.\n\nIf True, message processing will wait for the target to complete.\nIf False, message will be forwarded asynchronously.",
+          "title": "Wait For Completion",
+          "type": "boolean"
+        },
+        "name": {
+          "description": "Name of target agent.",
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "AgentTarget",
+      "type": "object"
+    },
+    "CLIResource": {
+      "description": "Resource from CLI command execution.",
+      "properties": {
+        "type": {
+          "const": "cli",
+          "default": "cli",
+          "description": "Discriminator field identifying this as a CLI-based resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for file system watching, if supported."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "command": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          ],
+          "description": "Command to execute (string or sequence of arguments).",
+          "title": "Command"
+        },
+        "shell": {
+          "default": false,
+          "description": "Whether to run the command through a shell.",
+          "title": "Shell",
+          "type": "boolean"
+        },
+        "cwd": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Working directory for command execution.",
+          "title": "Cwd"
+        },
+        "timeout": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Maximum time in seconds to wait for command completion.",
+          "title": "Timeout"
+        }
+      },
+      "required": [
+        "command"
+      ],
+      "title": "CLIResource",
+      "type": "object"
+    },
+    "CallableResource": {
+      "description": "Resource from executing a Python callable.",
+      "properties": {
+        "type": {
+          "const": "callable",
+          "default": "callable",
+          "description": "Discriminator field identifying this as a callable-based resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for file system watching, if supported."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "import_path": {
+          "description": "Dotted import path to the callable to execute.",
+          "title": "Import Path",
+          "type": "string"
+        },
+        "keyword_args": {
+          "description": "Keyword arguments to pass to the callable.",
+          "title": "Keyword Args",
+          "type": "object"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "CallableResource",
+      "type": "object"
+    },
+    "Capabilities": {
+      "description": "Defines what operations an agent is allowed to perform.\n\nControls an agent's permissions and access levels including:\n- Agent discovery and delegation abilities\n- History access permissions\n- Statistics viewing rights\n- Tool usage restrictions\n\nCan be defined per role or customized per agent.",
+      "properties": {
+        "can_list_agents": {
+          "default": false,
+          "description": "Whether the agent can discover other available agents.",
+          "title": "Can List Agents",
+          "type": "boolean"
+        },
+        "can_delegate_tasks": {
+          "default": false,
+          "description": "Whether the agent can delegate tasks to other agents.",
+          "title": "Can Delegate Tasks",
+          "type": "boolean"
+        },
+        "can_observe_agents": {
+          "default": false,
+          "description": "Whether the agent can monitor other agents' activities.",
+          "title": "Can Observe Agents",
+          "type": "boolean"
+        },
+        "history_access": {
+          "default": "none",
+          "description": "Level of access to conversation history.\n\nLevels:\n- none: No access to history\n- own: Can only access own conversations\n- all: Can access all agents' conversations",
+          "enum": [
+            "none",
+            "own",
+            "all"
+          ],
+          "title": "History Access",
+          "type": "string"
+        },
+        "stats_access": {
+          "default": "none",
+          "description": "Level of access to usage statistics.\n\nLevels:\n- none: No access to statistics\n- own: Can only view own statistics\n- all: Can view all agents' statistics",
+          "enum": [
+            "none",
+            "own",
+            "all"
+          ],
+          "title": "Stats Access",
+          "type": "string"
+        }
+      },
+      "title": "Capabilities",
+      "type": "object"
+    },
+    "Config": {
+      "additionalProperties": true,
+      "description": "Root configuration model.",
+      "properties": {
+        "version": {
+          "default": "1.0",
+          "description": "Version string for this configuration format.",
+          "title": "Version",
+          "type": "string"
+        },
+        "global_settings": {
+          "$ref": "#/$defs/GlobalSettings"
+        },
+        "context_processors": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ProcessorConfig"
+          },
+          "description": "Content processors available for resource transformation.",
+          "title": "Context Processors",
+          "type": "object"
+        },
+        "resources": {
+          "additionalProperties": {
+            "discriminator": {
+              "mapping": {
+                "callable": "#/$defs/CallableResource",
+                "cli": "#/$defs/CLIResource",
+                "path": "#/$defs/PathResource",
+                "source": "#/$defs/SourceResource",
+                "text": "#/$defs/TextResource"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/PathResource"
+              },
+              {
+                "$ref": "#/$defs/TextResource"
+              },
+              {
+                "$ref": "#/$defs/CLIResource"
+              },
+              {
+                "$ref": "#/$defs/SourceResource"
+              },
+              {
+                "$ref": "#/$defs/CallableResource"
+              }
+            ]
+          },
+          "description": "Resource definitions keyed by name.",
+          "title": "Resources",
+          "type": "object"
+        },
+        "resource_groups": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": "Groups of resources for logical organization.",
+          "title": "Resource Groups",
+          "type": "object"
+        },
+        "tools": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ToolConfig"
+          },
+          "description": "Tool definitions keyed by name.",
+          "title": "Tools",
+          "type": "object"
+        },
+        "toolsets": {
+          "additionalProperties": {
+            "discriminator": {
+              "mapping": {
+                "custom": "#/$defs/CustomToolsetConfig",
+                "entry_points": "#/$defs/EntryPointToolsetConfig",
+                "openapi": "#/$defs/OpenAPIToolsetConfig"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/OpenAPIToolsetConfig"
+              },
+              {
+                "$ref": "#/$defs/EntryPointToolsetConfig"
+              },
+              {
+                "$ref": "#/$defs/CustomToolsetConfig"
+              }
+            ]
+          },
+          "description": "Toolset configurations for extensible tool collections.",
+          "title": "Toolsets",
+          "type": "object"
+        },
+        "prompts": {
+          "additionalProperties": {
+            "discriminator": {
+              "mapping": {
+                "file": "#/$defs/FilePrompt",
+                "function": "#/$defs/DynamicPrompt",
+                "text": "#/$defs/StaticPrompt"
+              },
+              "propertyName": "type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/StaticPrompt"
+              },
+              {
+                "$ref": "#/$defs/DynamicPrompt"
+              },
+              {
+                "$ref": "#/$defs/FilePrompt"
+              }
+            ]
+          },
+          "description": "Prompt definitions keyed by name.",
+          "title": "Prompts",
+          "type": "object"
+        }
+      },
+      "title": "Config",
+      "type": "object"
+    },
+    "CustomToolsetConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for custom toolsets.",
+      "properties": {
+        "namespace": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional namespace prefix for tool names",
+          "title": "Namespace"
+        },
+        "type": {
+          "const": "custom",
+          "default": "custom",
+          "description": "Discriminator field identifying this as a custom toolset.",
+          "title": "Type",
+          "type": "string"
+        },
+        "import_path": {
+          "description": "Dotted import path to the custom toolset implementation class.",
+          "title": "Import Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "CustomToolsetConfig",
+      "type": "object"
+    },
+    "DynamicPrompt": {
+      "additionalProperties": false,
+      "description": "Dynamic prompt loaded from callable.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "description": {
+          "description": "Human-readable description of what this prompt does.",
+          "title": "Description",
+          "type": "string"
+        },
+        "arguments": {
+          "description": "List of arguments that this prompt accepts.",
+          "items": {
+            "$ref": "#/$defs/PromptParameter"
+          },
+          "title": "Arguments",
+          "type": "array"
+        },
+        "metadata": {
+          "description": "Additional metadata for storing custom prompt information.",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "import_path": {
+          "description": "Dotted import path to the callable that generates the prompt.",
+          "title": "Import Path",
+          "type": "string"
+        },
+        "template": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional template string for formatting the callable's output.",
+          "title": "Template"
+        },
+        "completions": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional mapping of argument names to completion functions.",
+          "title": "Completions"
+        },
+        "type": {
+          "const": "function",
+          "default": "function",
+          "description": "Discriminator field identifying this as a function-based prompt.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "import_path"
+      ],
+      "title": "DynamicPrompt",
+      "type": "object"
+    },
+    "EntryPointToolsetConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for entry point toolsets.",
+      "properties": {
+        "namespace": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional namespace prefix for tool names",
+          "title": "Namespace"
+        },
+        "type": {
+          "const": "entry_points",
+          "default": "entry_points",
+          "description": "Discriminator field identifying this as an entry point toolset.",
+          "title": "Type",
+          "type": "string"
+        },
+        "module": {
+          "description": "Python module path",
+          "title": "Module",
+          "type": "string"
+        }
+      },
+      "required": [
+        "module"
+      ],
+      "title": "EntryPointToolsetConfig",
+      "type": "object"
+    },
+    "FileContextSource": {
+      "description": "Load context from a file.",
+      "properties": {
+        "type": {
+          "const": "file",
+          "default": "file",
+          "title": "Type",
+          "type": "string"
+        },
+        "convert_to_md": {
+          "default": false,
+          "title": "Convert To Md",
+          "type": "boolean"
+        },
+        "metadata": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Metadata",
+          "type": "object"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "FileContextSource",
+      "type": "object"
+    },
+    "FileEnvironment": {
+      "description": "File-based environment configuration.\n\nLoads environment settings from external YAML files, supporting:\n- Reusable environment configurations\n- Separation of concerns\n- Environment sharing between agents\n- Version control of environment settings",
+      "properties": {
+        "type": {
+          "const": "file",
+          "default": "file",
+          "title": "Type",
+          "type": "string"
+        },
+        "config_file_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Config File Path"
+        },
+        "uri": {
+          "description": "Path to environment file",
+          "minLength": 1,
+          "title": "Uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri"
+      ],
+      "title": "FileEnvironment",
+      "type": "object"
+    },
+    "FilePrompt": {
+      "additionalProperties": false,
+      "description": "Prompt loaded from a file.\n\nThis type of prompt loads its content from a file, allowing for longer or more\ncomplex prompts to be managed in separate files. The file content is loaded\nand parsed according to the specified format.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "description": {
+          "description": "Human-readable description of what this prompt does.",
+          "title": "Description",
+          "type": "string"
+        },
+        "arguments": {
+          "description": "List of arguments that this prompt accepts.",
+          "items": {
+            "$ref": "#/$defs/PromptParameter"
+          },
+          "title": "Arguments",
+          "type": "array"
+        },
+        "metadata": {
+          "description": "Additional metadata for storing custom prompt information.",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "format": "path",
+              "type": "string"
+            }
+          ],
+          "description": "Path to the file containing the prompt content.",
+          "title": "Path"
+        },
+        "format": {
+          "default": "text",
+          "description": "Format of the file content (text, markdown, or jinja2 template).",
+          "enum": [
+            "text",
+            "markdown",
+            "jinja2"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "type": {
+          "const": "file",
+          "default": "file",
+          "description": "Discriminator field identifying this as a file-based prompt.",
+          "title": "Type",
+          "type": "string"
+        },
+        "watch": {
+          "default": false,
+          "description": "Whether to watch the file for changes and reload automatically.",
+          "title": "Watch",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "description",
+        "path"
+      ],
+      "title": "FilePrompt",
+      "type": "object"
+    },
+    "FileTarget": {
+      "description": "Save messages to a file.",
+      "properties": {
+        "type": {
+          "const": "file",
+          "default": "file",
+          "title": "Type",
+          "type": "string"
+        },
+        "wait_for_completion": {
+          "default": true,
+          "description": "Whether to wait for the result before continuing.\n\nIf True, message processing will wait for the target to complete.\nIf False, message will be forwarded asynchronously.",
+          "title": "Wait For Completion",
+          "type": "boolean"
+        },
+        "path": {
+          "description": "Path to output file. Supports variables: {date}, {time}, {agent}",
+          "title": "Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "FileTarget",
+      "type": "object"
+    },
+    "FileWatchConfig": {
+      "description": "File watching event source.",
+      "properties": {
+        "type": {
+          "const": "files",
+          "default": "files",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "paths": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Paths",
+          "type": "array"
+        },
+        "extensions": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extensions"
+        },
+        "ignore_paths": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ignore Paths"
+        },
+        "recursive": {
+          "default": true,
+          "title": "Recursive",
+          "type": "boolean"
+        },
+        "debounce": {
+          "default": 1600,
+          "title": "Debounce",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "paths"
+      ],
+      "title": "FileWatchConfig",
+      "type": "object"
+    },
+    "GlobalSettings": {
+      "additionalProperties": false,
+      "description": "Global settings that apply to all components.",
+      "properties": {
+        "timeout": {
+          "default": 30,
+          "description": "Maximum time in seconds to wait for operations",
+          "title": "Timeout",
+          "type": "integer"
+        },
+        "max_retries": {
+          "default": 3,
+          "description": "Maximum number of retries for failed operations",
+          "title": "Max Retries",
+          "type": "integer"
+        },
+        "requirements": {
+          "description": "List of package requirments for the functions used in this file.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Requirements",
+          "type": "array"
+        },
+        "pip_index_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Alternative PyPI index URL for package installation",
+          "title": "Pip Index Url"
+        },
+        "extra_paths": {
+          "description": "Additional import paths",
+          "items": {
+            "type": "string"
+          },
+          "title": "Extra Paths",
+          "type": "array"
+        },
+        "scripts": {
+          "description": "PEP723 scripts (can be imported and will be scanned for dependencies)",
+          "items": {
+            "type": "string"
+          },
+          "title": "Scripts",
+          "type": "array"
+        },
+        "prefer_uv": {
+          "default": false,
+          "description": "Explicitely use uv for package installation / management ",
+          "title": "Prefer Uv",
+          "type": "boolean"
+        },
+        "log_level": {
+          "default": "INFO",
+          "description": "Log level for LLMling core.",
+          "enum": [
+            "DEBUG",
+            "INFO",
+            "WARNING",
+            "ERROR",
+            "CRITICAL"
+          ],
+          "title": "Log Level",
+          "type": "string"
+        },
+        "jinja_environment": {
+          "$ref": "#/$defs/Jinja2Config",
+          "description": "Jinja2 environment configuration"
+        },
+        "llm_capabilities": {
+          "$ref": "#/$defs/LLMCapabilitiesConfig",
+          "description": "Control which system capabilities are exposed to LLMs."
+        }
+      },
+      "title": "GlobalSettings",
+      "type": "object"
+    },
+    "ImportedResponseDefinition": {
+      "additionalProperties": false,
+      "description": "Response definition that imports an existing Pydantic model.\n\nAllows using externally defined Pydantic models as response types.\nBenefits:\n- Reuse existing model definitions\n- Full Python type support\n- Complex validation logic\n- IDE support for imported types\n\nExample:\n    responses:\n      AnalysisResult:\n        type: import\n        import_path: myapp.models.AnalysisResult",
+      "properties": {
+        "type": {
+          "const": "import",
+          "default": "import",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "import_path": {
+          "title": "Import Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "ImportedResponseDefinition",
+      "type": "object"
+    },
+    "InlineEnvironment": {
+      "description": "Direct environment configuration without external files.\n\nAllows embedding complete environment settings directly in the agent\nconfiguration instead of referencing external files. Useful for:\n- Self-contained configurations\n- Testing and development\n- Simple agent setups",
+      "properties": {
+        "type": {
+          "const": "inline",
+          "default": "inline",
+          "title": "Type",
+          "type": "string"
+        },
+        "config_file_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Config File Path"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uri"
+        },
+        "config": {
+          "$ref": "#/$defs/Config",
+          "description": "Inline configuration"
+        }
+      },
+      "required": [
+        "config"
+      ],
+      "title": "InlineEnvironment",
+      "type": "object"
+    },
+    "InlineResponseDefinition": {
+      "additionalProperties": false,
+      "description": "Inline definition of an agent's response structure.\n\nAllows defining response types directly in the configuration using:\n- Field definitions with types and descriptions\n- Optional validation constraints\n- Custom field descriptions\n\nExample:\n    responses:\n      BasicResult:\n        type: inline\n        fields:\n          success: {type: bool, description: \"Operation success\"}\n          message: {type: str, description: \"Result details\"}",
+      "properties": {
+        "type": {
+          "const": "inline",
+          "default": "inline",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "fields": {
+          "additionalProperties": {
+            "$ref": "#/$defs/ResponseField"
+          },
+          "title": "Fields",
+          "type": "object"
+        }
+      },
+      "required": [
+        "fields"
+      ],
+      "title": "InlineResponseDefinition",
+      "type": "object"
+    },
+    "Jinja2Config": {
+      "additionalProperties": false,
+      "description": "Configuration for Jinja2 environment.\n\nSee: https://jinja.palletsprojects.com/en/3.1.x/api/#jinja2.Environment",
+      "properties": {
+        "block_start_string": {
+          "default": "{%",
+          "description": "String denoting the beginning of a block (default: '{%').",
+          "title": "Block Start String",
+          "type": "string"
+        },
+        "block_end_string": {
+          "default": "%}",
+          "description": "String denoting the end of a block (default: '%}').",
+          "title": "Block End String",
+          "type": "string"
+        },
+        "variable_start_string": {
+          "default": "{{",
+          "description": "String denoting the beginning of a variable (default: '{{').",
+          "title": "Variable Start String",
+          "type": "string"
+        },
+        "variable_end_string": {
+          "default": "}}",
+          "description": "String denoting the end of a variable (default: '}}').",
+          "title": "Variable End String",
+          "type": "string"
+        },
+        "comment_start_string": {
+          "default": "{#",
+          "description": "String denoting the beginning of a comment (default: '{#').",
+          "title": "Comment Start String",
+          "type": "string"
+        },
+        "comment_end_string": {
+          "default": "#}",
+          "description": "String denoting the end of a comment (default: '#}').",
+          "title": "Comment End String",
+          "type": "string"
+        },
+        "line_statement_prefix": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Prefix that begins a line-based statement (e.g., '#' for line statements).",
+          "title": "Line Statement Prefix"
+        },
+        "line_comment_prefix": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Prefix that begins a line-based comment.",
+          "title": "Line Comment Prefix"
+        },
+        "trim_blocks": {
+          "default": false,
+          "description": "Remove first newline after a block (affects whitespace control).",
+          "title": "Trim Blocks",
+          "type": "boolean"
+        },
+        "lstrip_blocks": {
+          "default": false,
+          "description": "Remove leading spaces and tabs from the start of a line to a block.",
+          "title": "Lstrip Blocks",
+          "type": "boolean"
+        },
+        "newline_sequence": {
+          "default": "\n",
+          "description": "Sequence that starts a newline (default: '\n').",
+          "enum": [
+            "\n",
+            "\r\n",
+            "\r"
+          ],
+          "title": "Newline Sequence",
+          "type": "string"
+        },
+        "keep_trailing_newline": {
+          "default": false,
+          "description": "Preserve the trailing newline when rendering templates.",
+          "title": "Keep Trailing Newline",
+          "type": "boolean"
+        },
+        "extensions": {
+          "description": "List of Jinja2 extensions to load (e.g., 'jinja2.ext.do').",
+          "items": {
+            "type": "string"
+          },
+          "title": "Extensions",
+          "type": "array"
+        },
+        "undefined": {
+          "default": "default",
+          "description": "Behavior when accessing undefined variables (default, strict, debug, chainable).",
+          "enum": [
+            "default",
+            "strict",
+            "debug",
+            "chainable"
+          ],
+          "title": "Undefined",
+          "type": "string"
+        },
+        "filters": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Custom filters as mapping of names to import paths.",
+          "title": "Filters",
+          "type": "object"
+        },
+        "tests": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Custom tests as mapping of names to import paths.",
+          "title": "Tests",
+          "type": "object"
+        },
+        "globals": {
+          "description": "Global variables available to all templates.",
+          "title": "Globals",
+          "type": "object"
+        }
+      },
+      "title": "Jinja2Config",
+      "type": "object"
+    },
+    "LLMCapabilitiesConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for LLM system capabilities.",
+      "properties": {
+        "load_resource": {
+          "default": false,
+          "description": "Whether the LLM can load and access resource content.",
+          "title": "Load Resource",
+          "type": "boolean"
+        },
+        "get_resources": {
+          "default": false,
+          "description": "Whether the LLM can discover available resources.",
+          "title": "Get Resources",
+          "type": "boolean"
+        },
+        "install_package": {
+          "default": false,
+          "description": "Whether the LLM can install new Python packages for future tools.",
+          "title": "Install Package",
+          "type": "boolean"
+        },
+        "register_tool": {
+          "default": false,
+          "description": "Whether the LLM can register importable functions as new tools.",
+          "title": "Register Tool",
+          "type": "boolean"
+        },
+        "register_code_tool": {
+          "default": false,
+          "description": "Whether the LLM can create new tools from provided Python code.",
+          "title": "Register Code Tool",
+          "type": "boolean"
+        },
+        "chain_tools": {
+          "default": false,
+          "description": "Whether the LLM gains capability to chain multiple tool calls into one.",
+          "title": "Chain Tools",
+          "type": "boolean"
+        }
+      },
+      "title": "LLMCapabilitiesConfig",
+      "type": "object"
+    },
+    "MessageContent": {
+      "description": "Content item in a message.",
+      "properties": {
+        "type": {
+          "enum": [
+            "text",
+            "resource",
+            "image_url",
+            "image_base64"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "content": {
+          "title": "Content",
+          "type": "string"
+        },
+        "alt_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Alt Text"
+        }
+      },
+      "required": [
+        "type",
+        "content"
+      ],
+      "title": "MessageContent",
+      "type": "object"
+    },
+    "OpenAPIToolsetConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for OpenAPI toolsets.",
+      "properties": {
+        "namespace": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional namespace prefix for tool names",
+          "title": "Namespace"
+        },
+        "type": {
+          "const": "openapi",
+          "default": "openapi",
+          "description": "Discriminator field identifying this as an OpenAPI toolset.",
+          "title": "Type",
+          "type": "string"
+        },
+        "spec": {
+          "description": "URL or path to the OpenAPI specification document.",
+          "title": "Spec",
+          "type": "string"
+        },
+        "base_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional base URL for API requests, overrides the one in spec.",
+          "title": "Base Url"
+        }
+      },
+      "required": [
+        "spec"
+      ],
+      "title": "OpenAPIToolsetConfig",
+      "type": "object"
+    },
+    "PathResource": {
+      "description": "Resource loaded from a file or URL.",
+      "properties": {
+        "type": {
+          "const": "path",
+          "default": "path",
+          "description": "Discriminator field identifying this as a path-based resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for watching the file for changes."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "format": "path",
+              "type": "string"
+            }
+          ],
+          "description": "Path to the file or URL to load.",
+          "title": "Path"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "PathResource",
+      "type": "object"
+    },
+    "ProcessingStep": {
+      "description": "Configuration for a processing step.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "parallel": {
+          "default": false,
+          "title": "Parallel",
+          "type": "boolean"
+        },
+        "required": {
+          "default": true,
+          "title": "Required",
+          "type": "boolean"
+        },
+        "kwargs": {
+          "title": "Kwargs",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "ProcessingStep",
+      "type": "object"
+    },
+    "ProcessorConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for content processors.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "import_path": {
+          "title": "Import Path",
+          "type": "string"
+        },
+        "async_execution": {
+          "default": false,
+          "title": "Async Execution",
+          "type": "boolean"
+        },
+        "timeout": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timeout"
+        },
+        "cache_results": {
+          "default": false,
+          "title": "Cache Results",
+          "type": "boolean"
+        },
+        "metadata": {
+          "title": "Metadata",
+          "type": "object"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "ProcessorConfig",
+      "type": "object"
+    },
+    "PromptContextSource": {
+      "description": "Load context from a prompt.",
+      "properties": {
+        "type": {
+          "const": "prompt",
+          "default": "prompt",
+          "title": "Type",
+          "type": "string"
+        },
+        "convert_to_md": {
+          "default": false,
+          "title": "Convert To Md",
+          "type": "boolean"
+        },
+        "metadata": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Metadata",
+          "type": "object"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "arguments": {
+          "title": "Arguments",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "PromptContextSource",
+      "type": "object"
+    },
+    "PromptMessage": {
+      "description": "A message in a prompt template.",
+      "properties": {
+        "role": {
+          "enum": [
+            "system",
+            "user",
+            "assistant",
+            "tool"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "content": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/MessageContent"
+            },
+            {
+              "items": {
+                "$ref": "#/$defs/MessageContent"
+              },
+              "type": "array"
+            }
+          ],
+          "default": "",
+          "title": "Content"
+        }
+      },
+      "required": [
+        "role"
+      ],
+      "title": "PromptMessage",
+      "type": "object"
+    },
+    "PromptParameter": {
+      "description": "Prompt argument with validation information.",
+      "properties": {
+        "name": {
+          "description": "Name of the argument as used in the prompt.",
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Human-readable description of the argument.",
+          "title": "Description"
+        },
+        "required": {
+          "default": false,
+          "description": "Whether this argument must be provided when formatting the prompt.",
+          "title": "Required",
+          "type": "boolean"
+        },
+        "type_hint": {
+          "default": "str",
+          "description": "Type annotation for the argument, defaults to str.",
+          "title": "Type Hint",
+          "type": "string"
+        },
+        "default": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Default value if argument is optional.",
+          "title": "Default"
+        },
+        "completion_function": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional function to provide argument completions.",
+          "title": "Completion Function"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "PromptParameter",
+      "type": "object"
+    },
+    "RandomMultiModel": {
+      "additionalProperties": false,
+      "description": "Randomly selects from configured models.\n\nExample YAML configuration:\n    ```yaml\n    model:\n      type: random\n      models:\n        - openai:gpt-4\n        - openai:gpt-3.5-turbo\n    ```",
+      "properties": {
+        "type": {
+          "const": "random",
+          "default": "random",
+          "title": "Type",
+          "type": "string"
+        },
+        "models": {
+          "description": "List of models to use.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Models",
+          "type": "array"
+        }
+      },
+      "required": [
+        "models"
+      ],
+      "title": "RandomMultiModel",
+      "type": "object"
+    },
+    "ResourceContextSource": {
+      "description": "Load context from a resource.",
+      "properties": {
+        "type": {
+          "const": "resource",
+          "default": "resource",
+          "title": "Type",
+          "type": "string"
+        },
+        "convert_to_md": {
+          "default": false,
+          "title": "Convert To Md",
+          "type": "boolean"
+        },
+        "metadata": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Metadata",
+          "type": "object"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "arguments": {
+          "title": "Arguments",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "ResourceContextSource",
+      "type": "object"
+    },
+    "ResponseField": {
+      "additionalProperties": false,
+      "description": "Field definition for inline response types.\n\nDefines a single field in an inline response definition, including:\n- Data type specification\n- Optional description\n- Validation constraints\n\nUsed by InlineResponseDefinition to structure response fields.",
+      "properties": {
+        "type": {
+          "description": "Data type of the response field",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional description of what this field represents",
+          "title": "Description"
+        },
+        "constraints": {
+          "anyOf": [
+            {
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional validation constraints for the field",
+          "title": "Constraints"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "ResponseField",
+      "type": "object"
+    },
+    "SourceResource": {
+      "description": "Resource from Python source code.",
+      "properties": {
+        "type": {
+          "const": "source",
+          "default": "source",
+          "description": "Discriminator field identifying this as a source code resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for file system watching, if supported."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "import_path": {
+          "description": "Dotted import path to the Python module or object.",
+          "title": "Import Path",
+          "type": "string"
+        },
+        "recursive": {
+          "default": false,
+          "description": "Whether to include submodules recursively.",
+          "title": "Recursive",
+          "type": "boolean"
+        },
+        "include_tests": {
+          "default": false,
+          "description": "Whether to include test files and directories.",
+          "title": "Include Tests",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "SourceResource",
+      "type": "object"
+    },
+    "StaticPrompt": {
+      "additionalProperties": false,
+      "description": "Static prompt defined by message list.",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "description": {
+          "description": "Human-readable description of what this prompt does.",
+          "title": "Description",
+          "type": "string"
+        },
+        "arguments": {
+          "description": "List of arguments that this prompt accepts.",
+          "items": {
+            "$ref": "#/$defs/PromptParameter"
+          },
+          "title": "Arguments",
+          "type": "array"
+        },
+        "metadata": {
+          "description": "Additional metadata for storing custom prompt information.",
+          "title": "Metadata",
+          "type": "object"
+        },
+        "messages": {
+          "description": "List of messages that make up this prompt.",
+          "items": {
+            "$ref": "#/$defs/PromptMessage"
+          },
+          "title": "Messages",
+          "type": "array"
+        },
+        "type": {
+          "const": "text",
+          "default": "text",
+          "description": "Discriminator field identifying this as a static text prompt.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "messages"
+      ],
+      "title": "StaticPrompt",
+      "type": "object"
+    },
+    "StringModel": {
+      "additionalProperties": false,
+      "description": "Wrapper for string model names.",
+      "properties": {
+        "type": {
+          "const": "string",
+          "default": "string",
+          "title": "Type",
+          "type": "string"
+        },
+        "identifier": {
+          "enum": [
+            "openai:gpt-4o",
+            "openai:gpt-4o-mini",
+            "openai:gpt-4-turbo",
+            "openai:gpt-4",
+            "openai:o1-preview",
+            "openai:o1-mini",
+            "openai:o1",
+            "openai:gpt-3.5-turbo",
+            "groq:llama-3.3-70b-versatile",
+            "groq:llama-3.1-70b-versatile",
+            "groq:llama3-groq-70b-8192-tool-use-preview",
+            "groq:llama3-groq-8b-8192-tool-use-preview",
+            "groq:llama-3.1-70b-specdec",
+            "groq:llama-3.1-8b-instant",
+            "groq:llama-3.2-1b-preview",
+            "groq:llama-3.2-3b-preview",
+            "groq:llama-3.2-11b-vision-preview",
+            "groq:llama-3.2-90b-vision-preview",
+            "groq:llama3-70b-8192",
+            "groq:llama3-8b-8192",
+            "groq:mixtral-8x7b-32768",
+            "groq:gemma2-9b-it",
+            "groq:gemma-7b-it",
+            "gemini-1.5-flash",
+            "gemini-1.5-pro",
+            "gemini-2.0-flash-exp",
+            "vertexai:gemini-1.5-flash",
+            "vertexai:gemini-1.5-pro",
+            "mistral:mistral-small-latest",
+            "mistral:mistral-large-latest",
+            "mistral:codestral-latest",
+            "mistral:mistral-moderation-latest",
+            "ollama:codellama",
+            "ollama:gemma",
+            "ollama:gemma2",
+            "ollama:llama3",
+            "ollama:llama3.1",
+            "ollama:llama3.2",
+            "ollama:llama3.2-vision",
+            "ollama:llama3.3",
+            "ollama:mistral",
+            "ollama:mistral-nemo",
+            "ollama:mixtral",
+            "ollama:phi3",
+            "ollama:qwq",
+            "ollama:qwen",
+            "ollama:qwen2",
+            "ollama:qwen2.5",
+            "ollama:starcoder2",
+            "claude-3-5-haiku-latest",
+            "claude-3-5-sonnet-latest",
+            "claude-3-opus-latest",
+            "test"
+          ],
+          "title": "Identifier",
+          "type": "string"
+        }
+      },
+      "required": [
+        "identifier"
+      ],
+      "title": "StringModel",
+      "type": "object"
+    },
+    "TestModel": {
+      "properties": {
+        "call_tools": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "const": "all",
+              "type": "string"
+            }
+          ],
+          "default": "all",
+          "title": "Call Tools"
+        },
+        "custom_result_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Custom Result Text"
+        },
+        "custom_result_args": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Custom Result Args"
+        },
+        "seed": {
+          "default": 0,
+          "title": "Seed",
+          "type": "integer"
+        },
+        "agent_model_function_tools": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/ToolDefinition"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Agent Model Function Tools"
+        },
+        "agent_model_allow_text_result": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Agent Model Allow Text Result"
+        },
+        "agent_model_result_tools": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/ToolDefinition"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Agent Model Result Tools"
+        }
+      },
+      "title": "TestModel",
+      "type": "object"
+    },
+    "TextResource": {
+      "description": "Raw text resource.",
+      "properties": {
+        "type": {
+          "const": "text",
+          "default": "text",
+          "description": "Discriminator field identifying this as a text-based resource.",
+          "title": "Type",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "description": "Human-readable description of the resource.",
+          "title": "Description",
+          "type": "string"
+        },
+        "uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Canonical URI for this resource, set during registration if unset.",
+          "title": "Uri"
+        },
+        "processors": {
+          "description": "Processing steps to apply when loading this resource.",
+          "items": {
+            "$ref": "#/$defs/ProcessingStep"
+          },
+          "title": "Processors",
+          "type": "array"
+        },
+        "watch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WatchConfig"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Configuration for file system watching, if supported."
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Technical identifier (automatically set from config key during registration).",
+          "title": "Name"
+        },
+        "content": {
+          "description": "The actual text content of the resource.",
+          "title": "Content",
+          "type": "string"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "title": "TextResource",
+      "type": "object"
+    },
+    "ToolConfig": {
+      "additionalProperties": false,
+      "description": "Configuration for a tool.",
+      "properties": {
+        "import_path": {
+          "description": "Import path to the tool implementation (e.g. 'mymodule.tools.MyTool')",
+          "title": "Import Path",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional override for the tool's display name",
+          "title": "Name"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional override for the tool's description",
+          "title": "Description"
+        }
+      },
+      "required": [
+        "import_path"
+      ],
+      "title": "ToolConfig",
+      "type": "object"
+    },
+    "ToolDefinition": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "parameters_json_schema": {
+          "title": "Parameters Json Schema",
+          "type": "object"
+        },
+        "outer_typed_dict_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Outer Typed Dict Key"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "parameters_json_schema"
+      ],
+      "title": "ToolDefinition",
+      "type": "object"
+    },
+    "WatchConfig": {
+      "additionalProperties": false,
+      "description": "Watch configuration for resources.",
+      "properties": {
+        "enabled": {
+          "default": false,
+          "description": "Whether the watch is enabled",
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "patterns": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "List of pathspec patterns (.gitignore style)",
+          "title": "Patterns"
+        },
+        "ignore_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Path to .gitignore-style file",
+          "title": "Ignore File"
+        }
+      },
+      "title": "WatchConfig",
+      "type": "object"
+    },
+    "WebhookConfig": {
+      "description": "Webhook event source.",
+      "properties": {
+        "type": {
+          "const": "webhook",
+          "default": "webhook",
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "port": {
+          "title": "Port",
+          "type": "integer"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "secret": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Secret"
+        }
+      },
+      "required": [
+        "name",
+        "port",
+        "path"
+      ],
+      "title": "WebhookConfig",
+      "type": "object"
+    },
+    "WorkerConfig": {
+      "description": "Configuration for a worker agent.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "reset_history_on_run": {
+          "default": true,
+          "title": "Reset History On Run",
+          "type": "boolean"
+        },
+        "pass_message_history": {
+          "default": false,
+          "title": "Pass Message History",
+          "type": "boolean"
+        },
+        "share_context": {
+          "default": false,
+          "title": "Share Context",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "WorkerConfig",
+      "type": "object"
+    },
+    "_TestModelWrapper": {
+      "additionalProperties": false,
+      "description": "Wrapper for TestModel.",
+      "properties": {
+        "type": {
+          "const": "test",
+          "default": "test",
+          "title": "Type",
+          "type": "string"
+        },
+        "model": {
+          "$ref": "#/$defs/TestModel"
+        }
+      },
+      "required": [
+        "model"
+      ],
+      "title": "_TestModelWrapper",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Complete agent configuration manifest defining all available agents.\n\nThis is the root configuration that:\n- Defines available response types (both inline and imported)\n- Configures all agent instances and their settings\n- Sets up custom role definitions and capabilities\n- Manages environment configurations\n\nA single manifest can define multiple agents that can work independently\nor collaborate through the orchestrator.",
+  "properties": {
+    "responses": {
+      "additionalProperties": {
+        "discriminator": {
+          "mapping": {
+            "import": "#/$defs/ImportedResponseDefinition",
+            "inline": "#/$defs/InlineResponseDefinition"
+          },
+          "propertyName": "type"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/InlineResponseDefinition"
+          },
+          {
+            "$ref": "#/$defs/ImportedResponseDefinition"
+          }
+        ]
+      },
+      "description": "Mapping of response names to their definitions",
+      "title": "Responses",
+      "type": "object"
+    },
+    "agents": {
+      "additionalProperties": {
+        "$ref": "#/$defs/AgentConfig"
+      },
+      "description": "Mapping of agent IDs to their configurations",
+      "title": "Agents",
+      "type": "object"
+    },
+    "roles": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Capabilities"
+      },
+      "description": "Custom role definitions",
+      "title": "Roles",
+      "type": "object"
+    }
+  },
+  "required": [
+    "agents"
+  ],
+  "title": "AgentsManifest",
+  "type": "object"
+}
