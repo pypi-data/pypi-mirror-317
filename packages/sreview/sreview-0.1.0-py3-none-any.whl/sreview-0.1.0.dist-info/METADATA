@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: sreview
+Version: 0.1.0
+Summary: A movie review sentiment analysis model using ALBERT
+Home-page: https://huggingface.co/kmack/imdb-albert-calssification
+Author: Sandun Lakshan
+Author-email: sandunlakshan213@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: sentencepiece
+
+# SReview - Movie Review Sentiment Analysis with ALBERT
+
+A simple sentiment analysis model based on the ALBERT architecture to classify Movie Review positive or negetive, hosted on Hugging Face.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install sreview
