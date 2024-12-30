@@ -1,0 +1,7 @@
+wslink<3,>=2.2.1
+more-itertools
+
+[dev]
+pre-commit
+ruff
+pytest
