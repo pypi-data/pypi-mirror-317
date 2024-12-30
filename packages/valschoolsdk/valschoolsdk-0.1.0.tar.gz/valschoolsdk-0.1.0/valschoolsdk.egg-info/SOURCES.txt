@@ -1,0 +1,8 @@
+README.md
+setup.py
+tests/test_client.py
+tests/test_utils.py
+valschoolsdk.egg-info/PKG-INFO
+valschoolsdk.egg-info/SOURCES.txt
+valschoolsdk.egg-info/dependency_links.txt
+valschoolsdk.egg-info/top_level.txt
