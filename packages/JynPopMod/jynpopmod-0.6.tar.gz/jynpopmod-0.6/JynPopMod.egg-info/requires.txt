@@ -1,0 +1,8 @@
+requests
+pyperclip
+pyttsx3
+SpeechRecognition
+psutil
+mouse
+pyautogui
+better_profanity

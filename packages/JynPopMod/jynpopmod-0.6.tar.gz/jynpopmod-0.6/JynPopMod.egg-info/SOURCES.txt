@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+JynPopMod/__init__.py
+JynPopMod/module.py
+JynPopMod.egg-info/PKG-INFO
+JynPopMod.egg-info/SOURCES.txt
+JynPopMod.egg-info/dependency_links.txt
+JynPopMod.egg-info/requires.txt
+JynPopMod.egg-info/top_level.txt
