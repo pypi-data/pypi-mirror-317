@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: expreport
+Version: 1.0.4
+Summary: export data from csv to documents word,excel
+Author: Aymen Jemi
+Author-email: jemiaymen@gmail.com
+License: MIT
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: docxtpl==0.18.0
+Requires-Dist: pandas==2.2.2
+Requires-Dist: xlsxwriter==3.2.0

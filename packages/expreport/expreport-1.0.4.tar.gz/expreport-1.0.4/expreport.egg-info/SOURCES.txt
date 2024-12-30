@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+expreport/__init__.py
+expreport/script.py
+expreport.egg-info/PKG-INFO
+expreport.egg-info/SOURCES.txt
+expreport.egg-info/dependency_links.txt
+expreport.egg-info/entry_points.txt
+expreport.egg-info/requires.txt
+expreport.egg-info/top_level.txt
+expreport/data/template.docx
