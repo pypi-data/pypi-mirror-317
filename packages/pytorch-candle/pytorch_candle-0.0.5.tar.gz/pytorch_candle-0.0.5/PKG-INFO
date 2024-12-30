@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pytorch-candle
+Version: 0.0.5
+Summary: Training module for training PyTorch models
+Home-page: https://github.com/paraglondhe/pytorch-candle
+Author: Parag Londhe
+Author-email: <paraglondhe123@gmail.com>
+Keywords: python,pytorch,model training,deep learning,AI
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=1.9.0
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Requires-Dist: torchsummary
+
+A versatile PyTorch training framework to simplify and enhance the model training process. It includes a trainer class with efficient training methods, famous built in pre-trained architectures, metrics tracking, custom and built-in callbacks support, and much more!
