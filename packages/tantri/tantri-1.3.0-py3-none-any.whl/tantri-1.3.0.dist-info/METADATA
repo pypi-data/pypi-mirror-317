@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: tantri
+Version: 1.3.0
+Summary: Python dipole model evaluator
+License: GPL-3.0-only
+Author: Deepak
+Author-email: dmallubhotla+github@gmail.com
+Requires-Python: >=3.8.1,<3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: numpy (>=1.22.3,<2.0.0)
+Requires-Dist: scipy (>=1.10,<1.11)
+Description-Content-Type: text/markdown
+
+# tantri - generating telegraph noise and other Dipole TLS calculations
+
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-green.svg?style=flat-square)](https://conventionalcommits.org)
+[![PyPI](https://img.shields.io/pypi/v/tantri?style=flat-square)](https://pypi.org/project/tantri/)
+[![Jenkins](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins.deepak.science%2Fjob%2Fgitea-physics%2Fjob%2Ftantri%2Fjob%2Fmaster&style=flat-square)](https://jenkins.deepak.science/job/gitea-physics/job/tantri/job/master/)
+![Jenkins tests](https://img.shields.io/jenkins/tests?compact_message&jobUrl=https%3A%2F%2Fjenkins.deepak.science%2Fjob%2Fgitea-physics%2Fjob%2Ftantri%2Fjob%2Fmaster%2F&style=flat-square)
+![Jenkins Coverage](https://img.shields.io/jenkins/coverage/cobertura?jobUrl=https%3A%2F%2Fjenkins.deepak.science%2Fjob%2Fgitea-physics%2Fjob%2Ftantri%2Fjob%2Fmaster%2F&style=flat-square)
+![Maintenance](https://img.shields.io/maintenance/yes/2024?style=flat-square)
+
+
+Named as an oblique half-pun on both tantri as a form of generating, and tantri as a telegraph or wire.
+
+## dev
+
+Build with `just`, preferred over `do.sh` I think.
+
+## CLI
+
+The json files for dots and dipoles have a specific format that ignores extraneous data but is sad about missing fields.
+
