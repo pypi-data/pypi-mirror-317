@@ -1,0 +1,7 @@
+GUIPyDebugger
+about
+core
+diagrammer
+editor
+static
+templates
