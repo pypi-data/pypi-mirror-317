@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+ChillBot/__init__.py
+ChillBot/base_urls.py
+ChillBot/exceptions.py
+ChillBot/music.py
+ChillBot/requests.py
+ChillBot.py.egg-info/PKG-INFO
+ChillBot.py.egg-info/SOURCES.txt
+ChillBot.py.egg-info/dependency_links.txt
+ChillBot.py.egg-info/requires.txt
+ChillBot.py.egg-info/top_level.txt
