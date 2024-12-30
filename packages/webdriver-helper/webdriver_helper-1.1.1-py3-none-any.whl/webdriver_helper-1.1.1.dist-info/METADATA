@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: webdriver-helper
+Version: 1.1.1
+Summary: 自动下载浏览器驱动，使selenium 4.0开箱即用，并一些提高增强的功能
+License: Apache-2.0
+Author-email: dongfangtianyu <7629022+dongfangtianyu@users.noreply.github.com>
+Requires-Python: >=3.10
+Requires-Dist: selenium>=4.25.0
+Project-URL: Homepage, https://github.com/dongfangtianyu/webdriver-helper
+Description-Content-Type: text/markdown
+
+# WebDriver助手
+
+WebDriver助手（webdriver-helpler）是一个第三方库，通过增加一些额外的能力，让selenium更加好用
+
+- 😊 自动**下载**合适的浏览器驱动（国内镜像加速）
+- 😊 自动**创建**和返回WebDriver对象（本地浏览器或远程浏览器）
+- 😊 可以**调试**Python和浏览器（Chromium内核）
+- 😊 可以**拖拽**上传文件
+- 😊 可以**修改**文件下载目录（Chromium内核）
+- 😊 可以**设置**思考时间（实验性）
+- 😊 内置了Base Page以便进行**POM封装**
+
+
+
+
+
+
+## 链接
+- [webdriver-helper安装说明](https://mp.weixin.qq.com/s/vvzdZsQVGLohROZyU_JD1w)
+- [WebDriver助手 2.2.0使用说明](https://mp.weixin.qq.com/s/fvdWRfZowsmcGt8jprgOsw)
+- [Web自动化测试注意：chromedriver 115改变了发布方式](https://mp.weixin.qq.com/s/du3Evw4PtpKOrozPD_xqjA)
