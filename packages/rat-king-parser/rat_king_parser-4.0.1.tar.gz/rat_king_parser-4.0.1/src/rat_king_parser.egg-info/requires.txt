@@ -1,0 +1,7 @@
+dnfile
+pycryptodomex
+yara-python
+
+[maco]
+maco
+validators
