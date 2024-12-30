@@ -1,0 +1,31 @@
+[project]
+name = "momo-psb"
+version = "0.1.0"
+description = "A Python SDK for integrating with the MTN MoMo API (Payment Service Bank)"
+readme = "README.md"
+authors = [
+    { name = "Ifeanyi Nneji", email = "ifeanyinneji777@gmail.com" }
+]
+license = { text = "MIT License" }
+homepage = "https://github.com/nneji123/momo-psb-api-sdk-python"
+repository = "https://github.com/nneji123/momo-psb-api-sdk-python"
+requires-python = ">=3.12"
+keywords = ["MTN", "MoMo", "API", "SDK", "Python", "Payment", "Mobile Money"]
+
+dependencies = [
+    "requests>=2.25.1"
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
