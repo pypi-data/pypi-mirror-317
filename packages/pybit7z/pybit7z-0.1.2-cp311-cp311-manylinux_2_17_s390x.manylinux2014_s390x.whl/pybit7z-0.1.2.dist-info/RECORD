@@ -1,0 +1,13 @@
+pybit7z-0.1.2.dist-info/METADATA,sha256=JiBno3dK9ZCTpjH4QLIrgwmyEbL1PidZNWlVVOv-B-M,8110
+pybit7z-0.1.2.dist-info/RECORD,,
+pybit7z-0.1.2.dist-info/WHEEL,sha256=nCLZH4bQ-hb27qnh1n175b98weiH9I5iPLajedNYt0s,154
+pybit7z-0.1.2.dist-info/licenses/LICENSE,sha256=2I3yMS1n1hD9PilLLFd0YmcgWxqocb3yJltxpMcoCiE,11326
+pybit7z/ld64.so.1,sha256=nhtltORRaP4VLW5lh4440X6qWIrG32HS4RtlTGRfz_4,170432
+pybit7z/_version.pyi,sha256=j5kbzfm6lOn8BzASXWjGIA1yT0OlHTWqlbyZ8Si_o0E,118
+pybit7z/_core.pyi,sha256=tAkLKRSjlhsHvVT7gutwfy0_NWs5CSISiPI9TQYGDLo,87582
+pybit7z/_core.cpython-311-s390x-linux-gnu.so,sha256=ddzo5qJH0DBkP6wx9J4EiFnPetkLbPVuXrGSZ_XaQpk,1674496
+pybit7z/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pybit7z/__init__.py,sha256=YiLw1SvVo9uEXnT83yl98k9cInesnEnFNaCX54_3E1s,589
+pybit7z/_version.py,sha256=SFCDdrYA67D1Je-jHgVVh4LOopkPvuV6NMtqSJ7Tfhg,411
+pybit7z/ld-2.17.so,sha256=nhtltORRaP4VLW5lh4440X6qWIrG32HS4RtlTGRfz_4,170432
+pybit7z/lib7zip.so,sha256=IJsumvJ78sCFdEKNFuTdpWnPApBokqzLE4YsO8ULsnk,4140913
