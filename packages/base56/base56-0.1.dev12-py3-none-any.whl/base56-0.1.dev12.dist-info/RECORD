@@ -1,0 +1,15 @@
+base56/.gitignore,sha256=ztkjgRwL9Uud1OEi36hGQeDGk3OLK1NfDEO8YqGYy8o,11
+base56/__init__.py,sha256=B5X4UlydRsy6MJIzOJFnkJKurLlOuIiEbRpQXohHlE8,420
+base56/_version.py,sha256=UGZ7NWyvd8MUoFM34E9r8Yp8k1KnHbwonvEo_AN70PM,421
+base56/alphabet.py,sha256=Mmc12o3pd_bzbOnaNScAJ3rIg3Hh3mZHYY3RxpdaVpM,2387
+base56/encoding.py,sha256=Actyk7_URk7fUmBMPbcq9e3gs1w-cSJUo8uNCKxeXMk,2376
+base56/version.py,sha256=ByXlZC-vAOZfkpZfh05KiLVnOH8IcSrQzylVZmjcnpA,1518
+base56/test/conftest.py,sha256=h1yNypwIruyCg1POJqz9yUKvxO8sxoQEEPZOFmVeagg,231
+base56/test/test_alphabet.py,sha256=6pkCmXvu-Wfd5I_y4qQwBiuPakABUZvmGb4QB1hkia0,483
+base56/test/test_compatibility.py,sha256=t5iTKYOtG-J2FMd5EIygrNKGz8EckqI--i9lsJ_xEyE,764
+base56/test/test_encoding.py,sha256=-31UOm7g6uI2WOY-9rR48Q4JnKfCsjQrNmB29cKEE70,2644
+base56/test/test_with_doctest.py,sha256=hv4LAWKu6i53uDuu1AhBmPx0TEjHX35vTjXPWxZom9o,1624
+base56-0.1.dev12.dist-info/METADATA,sha256=71zm9TvP8qHLZPOuUr95SnracPqJQI-dOlzCeQUxSvY,3274
+base56-0.1.dev12.dist-info/WHEEL,sha256=C2FUgwZgiLbznR-k0b_5k3Ai_1aASOXDss3lzCUsUug,87
+base56-0.1.dev12.dist-info/licenses/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+base56-0.1.dev12.dist-info/RECORD,,
