@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pyhurl
+Version: 1.0.6
+Summary: A set of useful functions that I use in projects.
+Home-page: https://github.com/hurongliang/pyhurl
+Author: Rongliang Hu
+Author-email: hurongliang@gmail.com
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymysql
+Requires-Dist: python-dotenv
+Requires-Dist: oss2
+Requires-Dist: openai
+Requires-Dist: ollama
+
+# pyhurl
+
+A set of useful functions that I use in projects.
+
+## Release Notes:
+
+1.0.0
+- First Release
+
+1.0.1
+- support oss related functions
+
+1.0.2
+- Allow custom llm client params.
+
+1.0.3
+- Update SqliteClient:
+  - fix database lock error
+  - rename methods for better readability
+- Important: SqliteClient class is not compatible with previous versions, please adjust your code accordingly.
+
+1.0.4
+- Fix SqliteClient:
+  - fix discard exception when update error
+
+1.0.5
+- Use LLMClient instance instead of LLMClient class to make it more flexible.
+
+1.0.6
+- fix sqlite function error: no such function SQRT
