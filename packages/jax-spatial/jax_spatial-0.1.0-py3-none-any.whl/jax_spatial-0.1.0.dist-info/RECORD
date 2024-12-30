@@ -1,0 +1,11 @@
+jax_spatial/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax_spatial/kinematics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax_spatial/kinematics/jacobian.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax_spatial/lie/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax_spatial/lie/se3.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax_spatial/spatial/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax_spatial/spatial/twist.py,sha256=46IYkRS3mMnSPE4aAPBriTNN-Co_dRvoFFBIPjAhae4,1132
+jax_spatial-0.1.0.dist-info/METADATA,sha256=UEw7n5QOMKBUkj0cSpgBA_cAbQs5hqsdirPqIp-cFL0,318
+jax_spatial-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jax_spatial-0.1.0.dist-info/licenses/LICENSE,sha256=vSpoFdiQcH5WfcYcq6skYHO0xtK02rR7HAkq-W0xRs4,1069
+jax_spatial-0.1.0.dist-info/RECORD,,
