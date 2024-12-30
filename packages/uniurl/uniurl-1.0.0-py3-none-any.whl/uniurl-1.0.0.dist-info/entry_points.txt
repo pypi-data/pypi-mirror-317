@@ -1,0 +1,2 @@
+[console_scripts]
+uniurl = uniurl.cli:main

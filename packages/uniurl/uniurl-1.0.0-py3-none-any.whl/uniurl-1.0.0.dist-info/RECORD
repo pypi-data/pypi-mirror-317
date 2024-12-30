@@ -1,0 +1,9 @@
+uniurl/__init__.py,sha256=U1TOFEB2l3lZw_rDppP7yZQyTbGR1UgZrlxB3X8QM1c,178
+uniurl/__version__.py,sha256=vGrReGMYE3ZvhkR4GKjtOkDqrxyT0srhT1BJb2Gon4M,87
+uniurl/cli.py,sha256=m7LCMpfTq6HPydZHTpMIkTQLxyf3nCQ9OYT1U-X5Y6A,19224
+uniurl/core.py,sha256=6knly7zjbnESs96hEPF3T7zXqNDZJPn8YA4IXXjmWGM,758
+uniurl-1.0.0.dist-info/METADATA,sha256=bwqZGsmiMQGtnKCn0AEXszJBVI7Dv_Wj3yHQt4wWOU4,1898
+uniurl-1.0.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+uniurl-1.0.0.dist-info/entry_points.txt,sha256=lmyEEzb50BZ9EORA-3GSytPkARs9g18ZYpMm780_xMU,43
+uniurl-1.0.0.dist-info/top_level.txt,sha256=UpV5EYjBy7NWAlZv3FCWCYdhOOpZgELI7s16hxsjcsw,7
+uniurl-1.0.0.dist-info/RECORD,,
