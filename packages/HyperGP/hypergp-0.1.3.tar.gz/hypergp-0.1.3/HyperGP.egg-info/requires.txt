@@ -1,0 +1,4 @@
+numpy
+dill
+matplotlib
+psutil
