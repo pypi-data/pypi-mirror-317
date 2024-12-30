@@ -1,0 +1,14 @@
+pycalib/__init__.py,sha256=Dn5odG7QbyxGMf7leKod1Dv_2Z8bCJen2sxmG7V8Ifc,284
+pycalib/ba.py,sha256=Rhr8bpJuG6_Ag-wNk18RcUJG7xTnJddzFbZK2HxNhSk,11033
+pycalib/bal.py,sha256=nRmJiJTPofOSv_Qdh2gkTvyru5GSIzZh8p5l4hXo7JE,6579
+pycalib/calib.py,sha256=T6PdLrV67i4OLWjAJB4Qvosb_2RLdUjIQYoYY45PbM8,17089
+pycalib/diamond.py,sha256=q7SwXJISNFDR23H7A_IKaV41FQjeMQAV7_4KGiNGW3s,1532
+pycalib/plot.py,sha256=vb5JCIHp_tXEmiICukXujmeGqYZ4h3kIFL_a-rH4zcA,3572
+pycalib/sphere.py,sha256=V4s463k-txBLkDdeqLAi42eM8MzYO7Ib7Ahg0y5SwYI,3761
+pycalib/timestamp.py,sha256=dq86v6s5lr_FGZK5KQV9wXvsCiOnjL3cqO3vcARzs0I,3855
+pycalib/util.py,sha256=f9-xztlerMEHhOG1-z2MSww3IunC_P2UGCkCS_JVnvw,3650
+pycalib_simple-2024.12.25.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pycalib_simple-2024.12.25.1.dist-info/METADATA,sha256=BwX8OowCbFM3Gon5UL5bCANbZysa7oP7hzAQZDxkU-0,9651
+pycalib_simple-2024.12.25.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+pycalib_simple-2024.12.25.1.dist-info/top_level.txt,sha256=HBmIildkvEjTh-Uod2cUU-sd9aCMvj32h-BMw7hp1Tg,8
+pycalib_simple-2024.12.25.1.dist-info/RECORD,,
