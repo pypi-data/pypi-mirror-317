@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: stefan
+Version: 0.1.1
+Summary: Stefan The Coder - your AI assistant
+License: MIT
+Author: Martin Sumera
+Author-email: sumera.martin@gmail.com
+Requires-Python: >=3.10,<3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: crewai-tools (>=0.14.0,<0.15.0)
+Requires-Dist: crewai[agentops] (>=0.80.0,<0.81.0)
+Requires-Dist: gspread (>=6.1.4,<7.0.0)
+Requires-Dist: litellm (>=1.53.1,<2.0.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: pydantic (>=2.10.0,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.6.1,<3.0.0)
+Requires-Dist: pytest (>=8.3.3,<9.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Description-Content-Type: text/markdown
+
+KMP coder
+
+## Testing
+
+```bash
+poetry run pytest # Will run all tests
+```
+
+```bash
+poetry run pytest -m "not slow" # Will run all tests except slow tests with real API calls (e.g. gspread)
+```
+
+```bash
+poetry run pytest -m "slow" # Will run all slow tests with real API calls (e.g. gspread)
+```
+
