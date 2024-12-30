@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: skopein
+Version: 0.1.0
+Summary: tools for digital ballistics analysis of image files
+Author: Bruno Constanzo
+Author-email: bconstanzo@ufasta.edu.ar
+License: LGPL 2.1
+Project-URL: Source, https://github.com/bconstanzo/skopein/
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# skopein
+tools for digital ballistics analysis of image files
