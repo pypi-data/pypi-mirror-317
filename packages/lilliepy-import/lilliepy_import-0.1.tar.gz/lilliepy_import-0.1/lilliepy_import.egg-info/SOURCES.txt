@@ -1,0 +1,8 @@
+README.md
+setup.py
+lilliepy_import/__init__.py
+lilliepy_import/main.py
+lilliepy_import.egg-info/PKG-INFO
+lilliepy_import.egg-info/SOURCES.txt
+lilliepy_import.egg-info/dependency_links.txt
+lilliepy_import.egg-info/top_level.txt
