@@ -1,0 +1,9 @@
+pyoxipng-9.1.0.dist-info/METADATA,sha256=etGVultAZ85BGighaOVUtess8VrdxGFfWfoU9X5DALI,14135
+pyoxipng-9.1.0.dist-info/WHEEL,sha256=Da0pTAYHZIOxAGF-KDFyHgLEM3vKB0_T46SclvbRUpY,105
+pyoxipng-9.1.0.dist-info/licenses/LICENSE,sha256=BV2GjjKo4DeD_j6b_BOlOjHohZrBo3LJeJixVZ5qIjY,1069
+oxipng.libs/libgcc_s-b5472b99.so.1,sha256=wh8CpjXz9IccAyeERcB7YDEx7NH2jF-PykwOyYNeRRI,453841
+oxipng/__init__.py,sha256=u43m0qyNwn92aDwgWaL-Bjm6AsxmTUJIYVrizX7UsUQ,107
+oxipng/__init__.pyi,sha256=5kGEJWFhbRZ_sfVnaVUm8-AMx7FsZvZwB-OPa0SVEZI,5931
+oxipng/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oxipng/oxipng.cpython-311-i386-linux-musl.so,sha256=5BuUByRTbJw7On_9G2n65u0QASHPE5utT6gRfWqEwOs,1502229
+pyoxipng-9.1.0.dist-info/RECORD,,
