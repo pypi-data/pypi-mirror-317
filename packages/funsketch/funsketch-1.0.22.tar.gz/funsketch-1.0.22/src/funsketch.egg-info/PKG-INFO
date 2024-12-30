@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: funsketch
+Version: 1.0.22
+Summary: funsketch
+Author-email: niuliangtao <farfarfun@qq.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: funai>=1.0.1
+Requires-Dist: funddb>=1.2.11
+Requires-Dist: fundrive[baidu]>=1.2.74
+Requires-Dist: funsecret>=1.4.30
+Requires-Dist: funtalk>=1.0.21
+Requires-Dist: funutil>=1.0.46
+Requires-Dist: moviepy>=2.0.0
+
+# funsketch
