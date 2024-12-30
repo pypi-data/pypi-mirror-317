@@ -1,0 +1,7 @@
+README.md
+setup.py
+dma/__init__.py
+dma.egg-info/PKG-INFO
+dma.egg-info/SOURCES.txt
+dma.egg-info/dependency_links.txt
+dma.egg-info/top_level.txt
