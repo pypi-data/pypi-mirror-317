@@ -1,0 +1,16 @@
+quick_spirit_downloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quick_spirit_downloader/downloader/__init__.py,sha256=EXPvc7M9xYTjVWav3lDDqFlhcvTYjtAZtcsgTg1JQYk,102
+quick_spirit_downloader/downloader/http_async_downloader.py,sha256=poOvyS8YjMo_E17LiI-klYStrLgRezSq7P0Y5MoQ7Tg,1073
+quick_spirit_downloader/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quick_spirit_downloader/tests/test_http_downloader.py,sha256=Ju5nC7Y76atf2WgUyN9FUQVRgFcj33jq9Cj0uu_Y8zI,418
+quick_spirit_http/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quick_spirit_http/http/__init__.py,sha256=LQJ2SJ1ghtldWSW6KyQW2vQkNZJu6DcqPhzbO15af4s,217
+quick_spirit_http/http/http_async_client.py,sha256=KFllZ4eYUgw9R_V9qajzHmwcCkui1BJEbix33fFH97w,6487
+quick_spirit_http/http/http_errors.py,sha256=_Hsj_OAfllFjZkW5NjN9c4Qw8zsSg5M4eOnNyepOKCU,272
+quick_spirit_http/http/models.py,sha256=nQGsnaerR1DIUoIdjNFSoLQUc16QMJVXnBa9qTDEKIo,188
+quick_spirit_http/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quick_spirit_http/tests/test_network_client.py,sha256=od4i3PYwjCbrXbXrFy521MRnWqa_jcrzrJ_fomh4eYE,1437
+quickspirit-1.0.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+quickspirit-1.0.0.dist-info/METADATA,sha256=Vxupkt51I4NXr4y_mq5Qdo2izrwU0T3zp0nudTd9UQw,727
+quickspirit-1.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+quickspirit-1.0.0.dist-info/RECORD,,
