@@ -1,0 +1,2 @@
+[console_scripts]
+midi-keyboard = midi_keyboard.__main__:main
