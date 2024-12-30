@@ -1,0 +1,17 @@
+Index: pyproject.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[project]\nname = \"dogpile_breaker\"\nversion = \"0.1.0\"\ndescription = \"Add your description here\"\nreadme = \"README.md\"\nauthors = [\n    { name = \"Dmitry P.\", email = \"wwarne@gmail.com\" }\n]\nrequires-python = \">=3.10\"\ndependencies = [\n    \"async-timeout>=5.0.1 ; python_full_version < '3.11'\",\n    \"redis>=5.1\",\n]\n\n[build-system]\nrequires = [\"hatchling\"]\nbuild-backend = \"hatchling.build\"\n\n[dependency-groups]\ndev = [\n    \"mypy>=1.13.0\",\n    \"ruff>=0.8.3\",\n]\n\n[tool.ruff]\nline-length = 120\nindent-width = 4\ntarget-version = \"py310\"\n\n[tool.ruff.lint]\nselect = [\"ALL\"]\nignore = [\n    \"D\", # no-blank-line-before-class\n    \"COM812\",\n    \"ISC001\",\n    \"PLR0913\", #  Too many arguments in function definition\n    \"FIX002\",\n    \"TD003\",\n    \"TD002\",\n    \"ANN401\",\n    \"T201\",\n]\n
+===================================================================
+diff --git a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	(revision f65ade2ef2722d5b5df334d6ec8ac488e051d954)
++++ b/pyproject.toml	(date 1735402482498)
+@@ -1,7 +1,7 @@
+ [project]
+ name = "dogpile_breaker"
+ version = "0.1.0"
+-description = "Add your description here"
++description = "Cache for Asyncio Applications with Anti-Dogpile Effect"
+ readme = "README.md"
+ authors = [
+     { name = "Dmitry P.", email = "wwarne@gmail.com" }
