@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/JSONSchema_MDit.egg-info/PKG-INFO
+src/JSONSchema_MDit.egg-info/SOURCES.txt
+src/JSONSchema_MDit.egg-info/dependency_links.txt
+src/JSONSchema_MDit.egg-info/not-zip-safe
+src/JSONSchema_MDit.egg-info/requires.txt
+src/JSONSchema_MDit.egg-info/top_level.txt
+src/jsonschema_mdit/__init__.py
+src/jsonschema_mdit/main.py
+src/jsonschema_mdit/protocol.py
+src/jsonschema_mdit/schema.py

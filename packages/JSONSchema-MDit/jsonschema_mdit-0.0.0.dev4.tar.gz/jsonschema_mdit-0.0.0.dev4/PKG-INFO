@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: JSONSchema-MDit
+Version: 0.0.0.dev4
+Requires-Python: >=3.10
+Requires-Dist: MDit==0.0.0.dev54
+Requires-Dist: PySerials==0.0.0.dev57
+Requires-Dist: PyLinks==0.0.0.dev67
