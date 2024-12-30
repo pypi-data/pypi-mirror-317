@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: easy-inspect
+Version: 0.1.0
+Summary: High-level, zero-code interface for evaluating LLMs using Inspect-AI
+Author-Email: Daniel Tan <dtch1997@users.noreply.github.com>
+License: MIT
+Requires-Python: >=3.12
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: inspect-ai>=0.3.55
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: matplotlib>=3.10.0
+Requires-Dist: plotly>=5.24.1
+Provides-Extra: examples
+Requires-Dist: ipykernel>=6.29.5; extra == "examples"
+Requires-Dist: python-dotenv>=1.0.1; extra == "examples"
+Requires-Dist: ipywidgets>=8.1.5; extra == "examples"
+Requires-Dist: openai>=1.58.1; extra == "examples"
+Requires-Dist: anthropic>=0.42.0; extra == "examples"
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.4; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.25.0; extra == "dev"
+Description-Content-Type: text/markdown
+
+# Easy Inspect
+
+A high-level, zero-code interface for evaluating LLMs built on top of [Inspect-AI](https://inspect.ai-safety-institute.org.uk/).
+
+## Overview
+
+Easy Inspect provides a simple way to evaluate language models using YAML configuration files. It handles all the complexity of setting up evaluation tasks, running models, and analyzing results.
+
+## Features
+
+- Define evaluation questions using simple YAML files
+- Support for multiple question types:
+  - Free-form text responses
+  - Numerical ratings (0-100)
+  - Model-graded evaluations
+- Built-in support for multiple LLM providers (OpenAI, Anthropic)
+- Automatic result caching and logging
+- Easy results analysis and visualization
+
+## Installation
+
+```bash
+git clone https://github.com/dtch1997/easy-eval.git
+cd easy-eval
+pip install -e .
+```
+
+## Usage
+
+See the [examples](examples) directory for usage examples.
