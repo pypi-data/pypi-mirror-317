@@ -1,0 +1,11 @@
+dsfinvk/__init__.py,sha256=o4fw9rMbQJRPBLBngKpWOHH4saW3Gw-Ubl9qDdnetfg,18
+dsfinvk/collection.py,sha256=1envhwdfCLUAROSn2IiepRpir5U_Dqb_mdG_K3TGV54,884
+dsfinvk/fields.py,sha256=4-_oFTMyvbJIpy3pmMMBuHlrNsQFs3NvdRdmfuGraxw,3296
+dsfinvk/models.py,sha256=2jG8UyXPZVVeN6y_9ApWUA96_WwzMlk8hhXicQ9n9-U,25946
+dsfinvk/table.py,sha256=opm2Mxpff3LfYhH6vRWUEVyO63v8wfCQykiMVnoKCQs,982
+dsfinvk/validate.py,sha256=GcbRTN-NN5bkyFGyV6o7VTic_WaUeDGil81awTXlK2I,5775
+dsfinvk-2.4.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+dsfinvk-2.4.0.dist-info/METADATA,sha256=Dem9Dxe3ejGGi_qWuZ6oMPmae63xVRF1ncAQ8Gc55rQ,1763
+dsfinvk-2.4.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+dsfinvk-2.4.0.dist-info/top_level.txt,sha256=zAqDqSs9mYnQYmzJIHIZyzAM-s2-1teTKoEyKiru4Ys,8
+dsfinvk-2.4.0.dist-info/RECORD,,
