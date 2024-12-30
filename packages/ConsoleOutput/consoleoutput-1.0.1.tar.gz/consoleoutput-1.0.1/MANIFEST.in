@@ -1,0 +1,9 @@
+include LICENSE
+include README.md
+include .gitignore
+
+# Incluir el directorio ConsoleOutput y sus archivos
+recursive-include ConsoleOutput *
+
+# Opcional: excluir carpetas no relevantes como .vscode
+exclude .vscode

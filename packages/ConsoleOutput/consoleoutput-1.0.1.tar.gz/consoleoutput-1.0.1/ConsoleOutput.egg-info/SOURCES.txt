@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+ConsoleOutput/ConsoleOutput.py
+ConsoleOutput/__init__.py
+ConsoleOutput.egg-info/PKG-INFO
+ConsoleOutput.egg-info/SOURCES.txt
+ConsoleOutput.egg-info/dependency_links.txt
+ConsoleOutput.egg-info/top_level.txt
