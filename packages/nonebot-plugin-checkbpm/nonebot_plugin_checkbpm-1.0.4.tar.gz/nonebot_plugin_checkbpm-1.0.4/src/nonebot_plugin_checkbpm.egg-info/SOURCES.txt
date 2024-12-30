@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/nonebot_plugin_checkbpm/__init__.py
+src/nonebot_plugin_checkbpm.egg-info/PKG-INFO
+src/nonebot_plugin_checkbpm.egg-info/SOURCES.txt
+src/nonebot_plugin_checkbpm.egg-info/dependency_links.txt
+src/nonebot_plugin_checkbpm.egg-info/requires.txt
+src/nonebot_plugin_checkbpm.egg-info/top_level.txt
