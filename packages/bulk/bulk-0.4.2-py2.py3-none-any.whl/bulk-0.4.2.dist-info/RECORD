@@ -1,0 +1,15 @@
+bulk/__init__.py,sha256=6ZKE9dGcw9PE0dXEyZF8Pgu9_18OhWUMxkVrXZw-06Y,2578
+bulk/__main__.py,sha256=1ARNUapdZvfvP2BhaHNZh-oFeRC9OzK94EYr5u_ey50,6067
+bulk/_bokeh_utils.py,sha256=3jBu03VvUXWaxAAgYPcqzkvu7ftR7K_KBylXihrfGHI,6827
+bulk/widgets.py,sha256=LCd5Jd1IJ8bQcEnxeEyVnlP7CY7AX0NCbA7fCAiKRvk,2631
+bulk/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bulk/cli/download.py,sha256=XIFvHDkRoseBt3dn6V1VDXjHa7VO6-gufKTgCIbA6hY,2688
+bulk/cli/image.py,sha256=n0QFC_FHopNJ-ZaIfWgp8ETy4rKLjwxYvH1_L88b7To,4647
+bulk/cli/text.py,sha256=-BcqKKb5bBVIxO3675R62XluEefmT-JW5LyQ9lyTyTk,3146
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bulk-0.4.2.dist-info/LICENSE,sha256=I-h54hQhK7CZRPQ8cqSpH3-O-U2vRPlazp6JXdV-VGA,1077
+bulk-0.4.2.dist-info/METADATA,sha256=EAV-bgbpnGPJeyjchOeJUtU2UUuuNvbAOTjyjH_b9RY,358
+bulk-0.4.2.dist-info/WHEEL,sha256=pxeNX5JdtCe58PUSYP9upmc7jdRPgvT0Gm9kb1SHlVw,109
+bulk-0.4.2.dist-info/entry_points.txt,sha256=rub4SqefyYrwyeia0GR0BGJEt8O49tBh3edXdc3Mr_w,47
+bulk-0.4.2.dist-info/top_level.txt,sha256=GDabd4iYxsNE_lcvoaLtH7_MNJ5KoR-RrEh9Cpbh7Dc,11
+bulk-0.4.2.dist-info/RECORD,,
