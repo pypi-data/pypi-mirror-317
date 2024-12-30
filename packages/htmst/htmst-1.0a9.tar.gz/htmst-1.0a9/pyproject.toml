@@ -1,0 +1,49 @@
+[project]
+name = "htmst"
+version = "1.0a9"
+readme = "README.md"
+description = "HTML to AST with positions"
+authors = [{ name = "Al Mahdi", email = "picometproject@gmail.com" }]
+license = { text = "MIT" }
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Typing :: Typed",
+]
+keywords = ["html", "parser", "ast", "position"]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.urls]
+Funding = "https://buymeacoffee.com/almahdi404"
+Repository = "https://github.com/picomet/htmst"
+
+[dependency-groups]
+test = ["htmst", "pytest==8.3.3"]
+dev = ["pre-commit==4.0.1", "pytest-watcher==0.4.3", "ruff==0.8.0"]
+
+[tool.uv.sources]
+htmst = { workspace = true }
+
+[tool.ruff]
+fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "W", "SIM", "I"]
+fixable = ["I"]
+
+[tool.ruff.lint.isort]
+section-order = [
+  "future",
+  "standard-library",
+  "third-party",
+  "first-party",
+  "local-folder",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

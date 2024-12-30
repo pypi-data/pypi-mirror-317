@@ -1,0 +1,13 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+src/htmst/__init__.py
+src/htmst/parser.py
+src/htmst/py.typed
+src/htmst/structures.py
+src/htmst.egg-info/PKG-INFO
+src/htmst.egg-info/SOURCES.txt
+src/htmst.egg-info/dependency_links.txt
+src/htmst.egg-info/top_level.txt
+tests/test_all.py
