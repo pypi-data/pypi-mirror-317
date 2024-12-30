@@ -1,0 +1,13 @@
+ansicolors
+appdirs
+filelock
+httpx
+packaging
+tqdm
+typing-extensions
+
+[:python_version < "3.11"]
+tomli
+
+[:sys_platform == "win32"]
+colorama
