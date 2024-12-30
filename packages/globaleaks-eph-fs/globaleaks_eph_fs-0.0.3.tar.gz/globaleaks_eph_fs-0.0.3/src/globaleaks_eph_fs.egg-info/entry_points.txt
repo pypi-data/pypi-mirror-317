@@ -1,0 +1,2 @@
+[console_scripts]
+globaleaks-eph-fs = globaleaks_eph_fs:main

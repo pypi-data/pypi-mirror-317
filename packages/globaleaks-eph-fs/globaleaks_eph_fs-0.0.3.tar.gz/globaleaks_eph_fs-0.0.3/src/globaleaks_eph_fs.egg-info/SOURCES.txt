@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/globaleaks_eph_fs/__init__.py
+src/globaleaks_eph_fs/antani.py
+src/globaleaks_eph_fs.egg-info/PKG-INFO
+src/globaleaks_eph_fs.egg-info/SOURCES.txt
+src/globaleaks_eph_fs.egg-info/dependency_links.txt
+src/globaleaks_eph_fs.egg-info/entry_points.txt
+src/globaleaks_eph_fs.egg-info/requires.txt
+src/globaleaks_eph_fs.egg-info/top_level.txt
