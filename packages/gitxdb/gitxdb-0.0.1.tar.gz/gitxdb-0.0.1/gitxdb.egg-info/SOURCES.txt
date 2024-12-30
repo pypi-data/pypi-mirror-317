@@ -1,0 +1,6 @@
+README.md
+setup.py
+gitxdb.egg-info/PKG-INFO
+gitxdb.egg-info/SOURCES.txt
+gitxdb.egg-info/dependency_links.txt
+gitxdb.egg-info/top_level.txt

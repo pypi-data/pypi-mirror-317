@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: gitxdb
+Version: 0.0.1
+Summary: Use a local folder as a database.
+Home-page: https://gitdb.ai
+Author: xlate
+Author-email: dyllan@xlate.ai
