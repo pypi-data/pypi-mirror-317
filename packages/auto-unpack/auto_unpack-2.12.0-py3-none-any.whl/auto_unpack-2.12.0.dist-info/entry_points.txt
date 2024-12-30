@@ -1,0 +1,2 @@
+[console_scripts]
+auto-unpack = auto_unpack.cli:main
