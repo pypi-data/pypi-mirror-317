@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+bachstelze/__main__.py
+bachstelze.egg-info/PKG-INFO
+bachstelze.egg-info/SOURCES.txt
+bachstelze.egg-info/dependency_links.txt
+bachstelze.egg-info/entry_points.txt
+bachstelze.egg-info/top_level.txt

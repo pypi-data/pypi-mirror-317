@@ -1,0 +1,2 @@
+[console_scripts]
+bachstelze = bachstelze.__main__:main

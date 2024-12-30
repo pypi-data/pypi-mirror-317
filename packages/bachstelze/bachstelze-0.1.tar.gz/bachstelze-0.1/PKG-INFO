@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: bachstelze
+Version: 0.1
+Summary: Command-line RSS feed reader.
+Home-page: https://github.com/PascalinDe/bachstelze
+Author: Carine Dengler
+Author-email: bachstelze@pascalin.de
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.12
+License-File: LICENSE
