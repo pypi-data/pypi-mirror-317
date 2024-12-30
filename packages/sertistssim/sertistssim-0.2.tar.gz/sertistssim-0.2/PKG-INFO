@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: sertistssim
+Version: 0.2
+Summary: Time-Series Simulator by Sertis
+Author: Kornpob Bhirombhakdi
+Author-email: kbhir@sertiscorp.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# sertistssim
+
+# Time-Series Simulator by Sertis
+
+## Kornpob Bhirombhakdi, kbhir@sertiscorp.com
+
+### Installation
+pip install sertistssim
