@@ -1,0 +1,10 @@
+wirtual/plugins/cartesia/__init__.py,sha256=n1VZgWkr7Osx2SLDWeWFZguDEfsoRW28PAAwiDrtgm0,1110
+wirtual/plugins/cartesia/log.py,sha256=dvX8bI2tmcFtPrC9QtoyRG4Py7oLnj8DynmY0mlo3cc,71
+wirtual/plugins/cartesia/models.py,sha256=fOO276Vzw3OkDUWUVcw7PH95ctFy38rj3q9I6_mYQ7M,950
+wirtual/plugins/cartesia/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wirtual/plugins/cartesia/tts.py,sha256=9ZU_GPkKYdpcsUSwjybp-1D3M82g5VCHiumQ8AnjdWk,13892
+wirtual/plugins/cartesia/version.py,sha256=8ZMwr2XB70cB-Enolo5Sf-9UU5M5GXJ77h88dONd15E,615
+wirtual_plugins_cartesia-0.0.1.dist-info/METADATA,sha256=758VI8t77lP2BNMua1kT6RP4y1T6YXajqHEQL2E_aB4,1271
+wirtual_plugins_cartesia-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wirtual_plugins_cartesia-0.0.1.dist-info/top_level.txt,sha256=4Rf8yHbj3yvH5QwATcj7VvRgh6gFijIX1-VffopPWD0,8
+wirtual_plugins_cartesia-0.0.1.dist-info/RECORD,,
