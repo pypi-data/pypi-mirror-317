@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: bqcli
+Version: 0.1.2
+Summary: REPL for BigQuery
+Author-email: Jan Červenka <jan.cervenka@yahoo.com>
+Requires-Python: >=3.12
+Requires-Dist: google-cloud-bigquery>=3.27.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: prompt-toolkit>=3.0.48
+Requires-Dist: pygments>=2.18.0
+Description-Content-Type: text/markdown
+
+## bqcli = REPL For BigQuery
+
