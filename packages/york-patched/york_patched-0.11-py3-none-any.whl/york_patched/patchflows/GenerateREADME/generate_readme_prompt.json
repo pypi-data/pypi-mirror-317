@@ -1,0 +1,15 @@
+[
+  {
+    "id": "generateREADME",
+    "prompts": [
+      {
+        "role": "system",
+        "content": "Provide summary code"
+      },
+      {
+        "role": "user",
+        "content": "{{affectedCode}}"
+      }
+    ]
+  }
+]
