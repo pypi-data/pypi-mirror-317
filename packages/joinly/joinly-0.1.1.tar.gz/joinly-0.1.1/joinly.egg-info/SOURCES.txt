@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+joinly/__init__.py
+joinly/ai.py
+joinly/join.py
+joinly.egg-info/PKG-INFO
+joinly.egg-info/SOURCES.txt
+joinly.egg-info/dependency_links.txt
+joinly.egg-info/requires.txt
+joinly.egg-info/top_level.txt
+tests/test_join.py
