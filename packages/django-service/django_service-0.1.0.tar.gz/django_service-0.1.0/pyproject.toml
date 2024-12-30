@@ -1,0 +1,154 @@
+[build-system]
+requires = ["setuptools >= 40.8.0", "django < 5"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-service"
+description = "Django application provide simple category/service details"
+readme = "README.md"
+authors = [
+    {name = "DLRSP", email = "dlrsp.dev@gmail.com"},
+]
+requires-python = ">=3.8"
+dynamic = ["dependencies", "version"]
+license = {file = "LICENSE"}
+keywords = ["django", "services"]
+classifiers = [
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 4 - Beta",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+
+  # Pick your license
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+
+  # Specify the Django versions
+  "Framework :: Django",
+  "Framework :: Django :: 4.2",
+
+  # Specify the OS/Environment info
+  "Environment :: Web Environment",
+  "Operating System :: OS Independent",
+
+  # Specify the optional Topic
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+  "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+test = [
+  "coverage",
+  "codecov"
+]
+lint = [
+  "black",
+  "flake8"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements/requirements.in"}
+version = {attr = "services.VERSION"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+mypy_path = "src/"
+no_implicit_optional = true
+show_error_codes = true
+warn_unreachable = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+allow_untyped_defs = true
+
+[tool.pytest.ini_options]
+addopts = """\
+    --strict-config
+    --strict-markers
+    --ds=tests.settings
+    """
+django_find_project = false
+
+[tool.coverage.paths]
+source = ["src", ".tox/*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["services"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+[tool.flake8]
+max-line-length = 120
+exclude = [
+    ".git",
+    "__pycache__"
+]
+extend-ignore = [
+    "E203","E501","W503"
+]
+count = true
+
+[tool.towncrier]
+package = "services"
+package_dir = "src"
+filename = "CHANGELOG.rst"
+directory = "news/"
+version = "0.1.0"
+
+# For rendering properly for this project
+issue_format = "`#{issue} <https://github.com/DLRSP/django-service/issues/{issue}>`_"
+# template = "tools/news/template.rst"
+
+# Grouping of entries, within our changelog
+type = [
+  { name = "Process",                   directory = "process", showcontent = true },
+  { name = "Deprecations and Removals", directory = "removal", showcontent = true },
+  { name = "Features",                  directory = "feature", showcontent = true },
+  { name = "Bug Fixes",                 directory = "bugfix",  showcontent = true },
+  { name = "Vendored Libraries",        directory = "vendor",  showcontent = true },
+  { name = "Improved Documentation",    directory = "doc",     showcontent = true },
+  { name = "Trivial Changes",           directory = "trivial", showcontent = false },
+]
+
+# bump-my-version
+[tool.bumpversion]
+current_version = "0.1.0"
+allow_dirty = true
+
+[[tool.bumpversion.files]]
+filename = "./setup.cfg"
+
+[[tool.bumpversion.files]]
+filename = "./src/services/__init__.py"
