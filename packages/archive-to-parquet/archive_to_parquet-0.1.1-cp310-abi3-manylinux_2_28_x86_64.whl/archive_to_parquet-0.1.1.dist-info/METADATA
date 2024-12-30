@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: archive-to-parquet
+Version: 0.1.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/orf/archive-to-parquet
+
+# Archive to Parquet
+
