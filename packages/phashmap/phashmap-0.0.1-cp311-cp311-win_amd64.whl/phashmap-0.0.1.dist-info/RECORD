@@ -1,0 +1,12 @@
+_getpy.cp311-win_amd64.pyd,sha256=xI_-r_f51FsJuBdefSoIKXZSV16SaL2XMKtHY8PMBGc,5018624
+getpy/__init__.py,sha256=Ws-hLzei4XhmmodskkejZre3XfMfBDHJyhCXXnvI0G8,189
+getpy/getpy.py,sha256=9_6ltglKfpH1znjVlUAecVaUWwH7kzGw62W5XPLHZ6k,6470
+getpy/getpy_types.py,sha256=EDzcn_7945XcF2MZHRvLpbtFrd0TAOaM1SP3DJblJZc,15887
+phashmap/__init__.py,sha256=hWu5q4aIlQw1mgQSCzupvccU6aEpxvor6-4lS4QW8bg,207
+phashmap/phashmap.py,sha256=JcjH5V4Eq3JwOg81obgA_9yTJZ59elhRm3asPWRI3mU,6479
+phashmap/phashmap_types.py,sha256=EDzcn_7945XcF2MZHRvLpbtFrd0TAOaM1SP3DJblJZc,15887
+phashmap-0.0.1.dist-info/LICENSE,sha256=m7SIiOQD-lAkovzzxqP6dbErPPlAgxDqYBxTatBSzII,1067
+phashmap-0.0.1.dist-info/METADATA,sha256=qWjdgK8a4HOdnBQE-n9EOFY4AAfdMJ60NEqh11PNoJY,10038
+phashmap-0.0.1.dist-info/WHEEL,sha256=nkBcd8Ko0v5sEcSagm2-x_RVrb8gBSkTa8VFFZ0Mr1o,101
+phashmap-0.0.1.dist-info/top_level.txt,sha256=r50Sr7WTqpeUZTbxUtb8sdIJbWG6FfIDrry5eLaWGTI,16
+phashmap-0.0.1.dist-info/RECORD,,
