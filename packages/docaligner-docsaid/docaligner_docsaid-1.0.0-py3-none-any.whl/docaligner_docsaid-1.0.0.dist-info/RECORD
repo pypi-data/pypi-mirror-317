@@ -1,0 +1,13 @@
+docaligner/__init__.py,sha256=aplKD3Z40027NaMUfRe7_HE5Be_QSygCwCdTPgLe8yU,46
+docaligner/aligner.py,sha256=kEBEix4wlf5tAJzXsCQlN9ynZE6ZZ1sbgt-1w6MwntE,2314
+docaligner/heatmap_reg/__init__.py,sha256=R08-7_Sjd2NI1A9fiHh_1X82ZMnZKvqlVSvHvse7EF8,21
+docaligner/heatmap_reg/infer.py,sha256=kz43574h71A8OGeL31XsRnZS3V9D1yvzsT-K6K7EYfg,3615
+docaligner/heatmap_reg/ckpt/README.md,sha256=WrKjhFZ9tIAxbVwhudBQ-Vf6kEkDngKcB6XOn2Y-OUo,224
+docaligner/point_reg/__init__.py,sha256=R08-7_Sjd2NI1A9fiHh_1X82ZMnZKvqlVSvHvse7EF8,21
+docaligner/point_reg/infer.py,sha256=3n3FadArgFh3FKiFWc_YlhAgqOXAUkAzHcv3JYOBz4I,2778
+docaligner/point_reg/ckpt/README.md,sha256=9FQHztqWON0sOS7u_rPQviE-e_TQanlE79p4e5KXvgE,223
+docaligner_docsaid-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+docaligner_docsaid-1.0.0.dist-info/METADATA,sha256=4iMTWEel_lUjQ-4I1n9NQ9aUUZO_JojyhSfqn7Fckjo,14370
+docaligner_docsaid-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+docaligner_docsaid-1.0.0.dist-info/top_level.txt,sha256=jaZO8I60QhEo5L5mY_Nl1Hz-c0uw68dvwKsJoVX3wkY,11
+docaligner_docsaid-1.0.0.dist-info/RECORD,,
