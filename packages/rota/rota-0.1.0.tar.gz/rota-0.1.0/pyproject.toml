@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rota"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Seu Nome", email = "seuemail@example.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+rota = "rota.hello:main"

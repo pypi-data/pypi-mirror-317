@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+rota/__init__.py
+rota/hello.py
+rota.egg-info/PKG-INFO
+rota.egg-info/SOURCES.txt
+rota.egg-info/dependency_links.txt
+rota.egg-info/entry_points.txt
+rota.egg-info/top_level.txt
