@@ -1,0 +1,14 @@
+[project]
+name = "gisboys-library"
+version = "0.2.3"
+description = "Python library used and complemented by GisSense"
+readme = "README.md"
+authors = [
+    { name = "Collin", email = "collin@gissense.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
