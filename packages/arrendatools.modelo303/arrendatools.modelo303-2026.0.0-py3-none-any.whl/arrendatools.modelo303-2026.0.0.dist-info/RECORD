@@ -1,0 +1,14 @@
+arrendatools/__init__.py,sha256=NwWcFEQ0gXpLlrgL6hECPGpTou5efo4AX4WFptqaSI0,25
+arrendatools/modelo303/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arrendatools/modelo303/datos.py,sha256=lXwmNjeDttOIKzMxg6fogTdETGvQrwRgYKbm8LuhV18,2329
+arrendatools/modelo303/factory.py,sha256=1iLZioPXICKcj_XEF3k_lpfEmLJpDgPSCpOl06S4y5M,3031
+arrendatools/modelo303/generador.py,sha256=xbv28gLf8jP3KUeZE7z65MvBLtQferg5GAXF9Z0ZJBU,619
+arrendatools/modelo303/generadores/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arrendatools/modelo303/generadores/generador_ejercicio_2023.py,sha256=J2PwfP6msIcPTd6h4ThZX7GDKLtzvX7-px9MnwTDaoM,36112
+arrendatools/modelo303/generadores/generador_ejercicio_2024.py,sha256=9NTqvDqvWnj6-Ao9mVmy8zXKOYUkrya1IpEtXpHttB0,37520
+arrendatools/modelo303/generadores/generador_ejercicio_2025.py,sha256=ckIO0llWT2NaN-dCaqUxuzi_iHKrOSudkU0N6QGiceM,37520
+arrendatools.modelo303-2026.0.0.dist-info/LICENSE,sha256=R5xzJCQj8mfv0qnRxP77IgwUbOoNGSNZhNni6Gx0ISY,1062
+arrendatools.modelo303-2026.0.0.dist-info/METADATA,sha256=aNMhx5D9KSxyxXBF-xPmLJW_QH2kfQOhpHFhBXEsPSk,7868
+arrendatools.modelo303-2026.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+arrendatools.modelo303-2026.0.0.dist-info/top_level.txt,sha256=FrhdaIeLhEnd9ATh_dZIaQ0DLdNoutEL6-eTzGCtPp0,13
+arrendatools.modelo303-2026.0.0.dist-info/RECORD,,
