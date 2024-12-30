@@ -1,0 +1,9 @@
+passagemath_macaulay2-10.5.14.dist-info/RECORD,,
+passagemath_macaulay2-10.5.14.dist-info/WHEEL,sha256=s0e6rchuYvf1uWwYYvw-DrYg4d1f3Gk1GJUmq-rc_RI,109
+passagemath_macaulay2-10.5.14.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_macaulay2-10.5.14.dist-info/METADATA,sha256=czCPV3xaoLDZWCKCDVRR4cAj7xaRSgsXbHQSDBO4IUU,3948
+sage/all__sagemath_macaulay2.py,sha256=dusclb4Hmz0oCLwLoUjsZpJgicQ86SYTxcBs6niXRGI,90
+sage/libs/macaulay2.cpython-311-darwin.so,sha256=p7VrwGb3163xoRld8IxGe2NiXMfcHudXTQ-_EF-lvbs,55440
+sage/libs/all__sagemath_macaulay2.py,sha256=I4_PgMCVN3wUDxKpim8b8UputIBtI-h0qU-BuXddhrU,48
+sage/interfaces/macaulay2.py,sha256=l_HQTciDdtJ0Ztoe-cJTgCx_mSscn-3VaunQD0x3LuE,66844
+sage/interfaces/all__sagemath_macaulay2.py,sha256=I4_PgMCVN3wUDxKpim8b8UputIBtI-h0qU-BuXddhrU,48
