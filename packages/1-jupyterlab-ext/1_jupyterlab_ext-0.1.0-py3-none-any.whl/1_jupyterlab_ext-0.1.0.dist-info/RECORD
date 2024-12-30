@@ -1,0 +1,13 @@
+1_jupyterlab_ext/__init__.py,sha256=IXZK7jiNxEdDrtOwo9MOy4oIhafxAxphBRAyiMIPW_k,585
+1_jupyterlab_ext/_version.py,sha256=CXJl0vWHa-zfZJ_mhGVB60E0diyNNF7RIidcWrfQJOA,175
+1_jupyterlab_ext-0.1.0.data/data/share/jupyter/labextensions/myextension/package.json,sha256=itFykmRpjT-N9wZoTOj4ClABAUiE5JMnqaPWnVfYZGA,5511
+1_jupyterlab_ext-0.1.0.data/data/share/jupyter/labextensions/myextension/static/509.4e601a5643eb6e73fd72.js,sha256=TmAaVkPrbnP9cm2_qXB8_UUXEM-RRy7gZaYTQhWe9g4,299
+1_jupyterlab_ext-0.1.0.data/data/share/jupyter/labextensions/myextension/static/728.f1bb61530b8cb9d29eb7.js,sha256=8bthUwuMudKet9FjDLKZz67G2IerNLvoIqq1oomZF8Y,3993
+1_jupyterlab_ext-0.1.0.data/data/share/jupyter/labextensions/myextension/static/remoteEntry.596906178b8dbfde0acb.js,sha256=WWkGF4uNv94Ky1Dp8CIadctz9ZdTS9xyr9IHrzlQSb0,3952
+1_jupyterlab_ext-0.1.0.data/data/share/jupyter/labextensions/myextension/static/style.js,sha256=3tbZFq1s3Dg-MWNOv55R_AFDZ3-np9U07eFBVeR289Q,154
+1_jupyterlab_ext-0.1.0.data/data/share/jupyter/labextensions/myextension/static/third-party-licenses.json,sha256=W6N2sSD7tQihMqQk64F9xMd1Flfr2KO97esAiHUOYdM,2453
+1_jupyterlab_ext-0.1.0.data/data/share/jupyter/labextensions/myextension/install.json,sha256=fcvyua-3fBMlxavGnnfe0SFfWrow7aZWjH76poSrgW8,193
+1_jupyterlab_ext-0.1.0.dist-info/METADATA,sha256=-OI8Y9-K52NCPSXuPTLTKg-fl7qizl3Hpa5G3VqVq1Q,5262
+1_jupyterlab_ext-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+1_jupyterlab_ext-0.1.0.dist-info/licenses/LICENSE,sha256=7wux2XkjoiClub1bgUOdL1-H8UMDMM1Gc1vYGkpSwhk,1518
+1_jupyterlab_ext-0.1.0.dist-info/RECORD,,
