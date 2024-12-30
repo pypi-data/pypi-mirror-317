@@ -1,0 +1,12 @@
+[project]
+name = "lmdeployv1"
+version = "0.0.8.dev6"
+description = "LMDeploy api client"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "bceidaas==0.0.1.dev2",
+    "openai==1.55.0",
+    "pyrate-limiter~=2.10.0",
+    "tenacity==8.2.2",
+]
