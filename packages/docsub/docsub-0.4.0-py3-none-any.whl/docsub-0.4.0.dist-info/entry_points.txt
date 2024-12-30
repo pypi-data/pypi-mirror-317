@@ -1,0 +1,2 @@
+[console_scripts]
+docsub = docsub.cli:cli
