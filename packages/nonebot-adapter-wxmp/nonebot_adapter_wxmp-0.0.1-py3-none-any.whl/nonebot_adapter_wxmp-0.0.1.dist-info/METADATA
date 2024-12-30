@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: nonebot-adapter-wxmp
+Version: 0.0.1
+Summary: Nonebot Adapter for Weixin Official Accounts Platform
+Author-email: YangRucheng <admin@yangrucheng.top>
+License: AGPLv3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: nonebot2>=2.2.1
+Requires-Dist: xmltodict>=0.14.0
