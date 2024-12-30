@@ -1,0 +1,4 @@
+ovos-simple-listener
+ovos-plugin-manager<1.0.0
+hivemind-plugin-manager<1.0.0,>=0.3.0
+pybase64
