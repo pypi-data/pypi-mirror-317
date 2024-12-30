@@ -1,0 +1,15 @@
+forthright_django/__init__.py,sha256=OxgaxonFuxVIqifQrNa3eJvd4tTC5d6yhu1UlCT4Sqc,229
+forthright_django/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+forthright_django/apps.py,sha256=jX2OcEzbmRJ5B_Dbgasd3z_s6DWajeaTun4DvkL0m1Q,184
+forthright_django/forthright_client.py,sha256=KTN1DISG9Da8GXQtBI4-UXrTD_MAslDiuwyjeN07elo,4149
+forthright_django/forthright_server.py,sha256=WuJ14MQNFXKjxv3JpV_OYLjsSEDWQrPxbDrg2QGDlKI,3286
+forthright_django/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+forthright_django/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+forthright_django/urls.py,sha256=3B6MUHS0QIko52OC8X-n5_bTZX9I8hegfyv6LV6bti4,116
+forthright_django/views.py,sha256=dKCG336h0f4fX2fBfmDxbQATmWo-0NZuYyErUARhlXQ,1289
+forthright_django/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forthright_django-0.0.6.dist-info/LICENSE,sha256=vnHaGtpABNk3tTSkdgc2PwTanMPhGD4K3cLDvixwFhg,1070
+forthright_django-0.0.6.dist-info/METADATA,sha256=aMq9ynsHtrxFbkF7R_fKSQBsp5uzvCgix1kuuGuudtI,3108
+forthright_django-0.0.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+forthright_django-0.0.6.dist-info/top_level.txt,sha256=iADfSntcxvMoAYjfztVgiGoZg8CDhHZaLpmHYzBndqw,18
+forthright_django-0.0.6.dist-info/RECORD,,
