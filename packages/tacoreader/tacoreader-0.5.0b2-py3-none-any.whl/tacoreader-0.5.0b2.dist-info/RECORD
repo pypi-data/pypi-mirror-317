@@ -1,0 +1,13 @@
+tacoreader/TortillaDataFrame.py,sha256=xmndbyh7Jdin1Gj4py4xiSCCRmLe8SxtHX0Wls8D700,6496
+tacoreader/__init__.py,sha256=B3nfZB0wxwot3WZrT71rnTGx3TA2Oit3IqUp0d8Mmqg,352
+tacoreader/compile.py,sha256=ReVm93sccV3UCPWvWjPN0FMI6ZLTOL2EuqVfcir7nP8,7398
+tacoreader/compile_utils.py,sha256=SFs-fwW2hDtb2Mzn8UiDTJ6PW2rcYh5UIXmZesLV02U,2307
+tacoreader/datasets.py,sha256=WOps7o8ypz9A8ArBQ6ZuYv6q3OWxsImiP3BvajlOKMo,1202
+tacoreader/loader_dataframe.py,sha256=rUWlTFBwigrlfvQpjD9zPu6AfgIMU67FS8Yp5w39gEA,3208
+tacoreader/loader_metadata.py,sha256=TjgtCK1YLy4yrLE9jH4G1WrPLaQiMYwNukQhjAYIGzI,2462
+tacoreader/loader_utils.py,sha256=bgVQ9zdWlitPeQn4fTwQKzJFET0wqgl_HjlCRwALEKE,1355
+tacoreader/sanity.py,sha256=oUdGb8odg1MvssFEClc9EAK93xqT9AWlNTyymcrjiuo,4044
+tacoreader-0.5.0b2.dist-info/LICENSE,sha256=YdB4BQMkMzWuKvXRIpQR4g91IQ_pwA5PSH2lNM97zFI,1070
+tacoreader-0.5.0b2.dist-info/METADATA,sha256=ZGb5ythdzkCQG284lgGnJamU8NF-B6XcAGXHauaR3Ws,3357
+tacoreader-0.5.0b2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tacoreader-0.5.0b2.dist-info/RECORD,,
