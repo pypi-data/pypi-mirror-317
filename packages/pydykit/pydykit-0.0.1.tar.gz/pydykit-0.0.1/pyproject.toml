@@ -1,0 +1,52 @@
+[build-system]
+requires = [
+  "setuptools >= 61.0",
+  "setuptools-scm>=8",
+  ]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = [
+  "version",
+]
+name = "pydykit"
+dependencies = [
+  "numpy",
+  "pandas",
+  "plotly",
+  "scipy",
+  "pyyaml",
+  "pydantic",
+  "pytest"
+]
+requires-python = ">=3.12"
+authors = [
+  {name = "Philipp L. Kinon"},
+  {name = "Julian Karl Bauer"},
+]
+maintainers = [
+  {name = "Philipp L. Kinon"},
+  {name = "Julian Karl Bauer"},
+]
+description = "..."
+readme = "README.md"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[tool.setuptools.package-data]
+"pydykit.example_files" = ["*.yml"]
+
+[tool.setuptools.packages.find]
+include = ["pydykit"]
+exclude = [
+  "docs*",
+  "tests",
+  "scripts",
+]
+namespaces = false
+
+[tool.setuptools_scm]
+root = "./" # Path to directory containing .git
+version_file = "pydykit/_version.py"
