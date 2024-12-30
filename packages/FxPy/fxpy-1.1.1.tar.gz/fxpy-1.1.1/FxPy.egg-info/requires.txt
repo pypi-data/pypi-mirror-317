@@ -1,0 +1,7 @@
+pycountry
+pynput
+requests
+beautifulsoup4
+keyboard
+pandas
+openpyxl

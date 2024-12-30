@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: FxPy
+Version: 1.1.1
+Summary: ForexPy: A currency conversion tool that also scraps the web and gives the Forex Exchange rates from major services.
+Home-page: https://www.github.com/navrajkalsi/fxpy
+Author: Navraj Singh Kalsi
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pycountry
+Requires-Dist: pynput
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: keyboard
+Requires-Dist: pandas
+Requires-Dist: openpyxl
