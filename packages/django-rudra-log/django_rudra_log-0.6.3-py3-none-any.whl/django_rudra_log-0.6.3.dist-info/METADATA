@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: django-rudra-log
+Version: 0.6.3
+Summary: Helps to log api and celery tasks
+Home-page: https://github.com/Rudra370
+Author: Rudra Gupta
+Author-email: rudra9506@gmail.com
+License: BSD-3-Clause
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+Requires-Dist: Django>=4.1.0
+Requires-Dist: djangorestframework>=3.13.1
+Requires-Dist: celery>=5.2.7
+
+1. update version in setup.cfg
+2. build command = py -m build
+3. publish command = py -m twine upload --repository pypi dist/*
