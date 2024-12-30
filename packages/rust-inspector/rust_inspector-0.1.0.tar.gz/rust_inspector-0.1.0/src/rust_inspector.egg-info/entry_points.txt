@@ -1,0 +1,2 @@
+[scancode_scan]
+rust_symbol = rust_inspector.plugin:RustSymbolScannerPlugin
