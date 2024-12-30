@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: freeact
+Version: 0.1.0
+Summary: A general-purpose CodeAct Agent
+Home-page: https://github.com/gradion-ai/freeact
+License: Apache-2.0
+Author: Martin Krasser
+Author-email: martin@gradion.ai
+Requires-Python: >=3.11,<3.14
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aioconsole (>=0.8.1,<0.9.0)
+Requires-Dist: aiofiles (>=24.1,<25.0)
+Requires-Dist: anthropic (>=0.39.0,<0.40.0)
+Requires-Dist: google-genai (>=0.3.0,<0.4.0)
+Requires-Dist: httpx (>=0.27.2,<0.28.0)
+Requires-Dist: ipybox (>=0.2.6,<0.3.0)
+Requires-Dist: python-dotenv (>=1.0,<2.0)
+Requires-Dist: typer (>=0.12.5,<0.13.0)
+Description-Content-Type: text/markdown
+
+# freeact
+
+`freeact` is a lightweight Python implementation of AI agents that use *code actions*—snippets of executable Python code—to dynamically interact with and adapt to their environment.
+
+## Documentation
+
+The official documentation is available [here](https://gradion-ai.github.io/freeact/).
+
+## Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/gradion-ai/freeact.git
+cd freeact
+```
+
+Create a new Conda environment and activate it:
+
+```bash
+conda env create -f environment.yml
+conda activate freeact
+```
+
+Install dependencies with Poetry:
+
+```bash
+poetry install --with docs
+```
+
+Install pre-commit hooks:
+
+```bash
+invoke precommit-install
+```
+
+Run tests:
+
+```bash
+pytest -s tests
+```
+
