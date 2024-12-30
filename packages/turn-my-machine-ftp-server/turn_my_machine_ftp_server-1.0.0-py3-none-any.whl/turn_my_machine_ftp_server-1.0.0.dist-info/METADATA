@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: turn-my-machine-ftp-server
+Version: 1.0.0
+Summary: A free open source TP server implementation 
+Home-page: https://github.com/HipsterSantos/py-turn-my-machine-ftp-server.git
+Author: Santos campos (HipsterSantos)
+License: MIT
+
