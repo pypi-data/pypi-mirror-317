@@ -1,0 +1,10 @@
+fastmcp_http/__init__.py,sha256=4EZUnaCPmU86scQuPwkD_lM-BDD80wLGbtYnoQtW7zM,78
+fastmcp_http/__init__.pyi,sha256=GRL_GePDaM2s5epLYJUmLd-zpx7KUtVGFDJLnG0jXNg,176
+fastmcp_http/client.py,sha256=hW9_56OpJ427qcOL09raSZkq0d1HfpXibE9K8uS0_jE,3402
+fastmcp_http/client.pyi,sha256=bxFYW8E6FJ5X7y0su3VXk8yTgRaamTdLrmvq2XlFLaw,1253
+fastmcp_http/server.py,sha256=VHNfw4fSYsEE-g5yLs7HxoewkKDCwzS-Q_BwqxSCcsU,4987
+fastmcp_http/server.pyi,sha256=R6svryaj7jtUa1XgF8yq9MpcZA-QNJtgKHPpqpYJ7B4,1821
+fastmcp_http-0.1.4.dist-info/METADATA,sha256=REFeBUyLbfU-vqSbsQBrPuq2IQXFooWo573Au2OWags,1914
+fastmcp_http-0.1.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+fastmcp_http-0.1.4.dist-info/top_level.txt,sha256=iS1fkgRgwDlucPVsmwZ4uESyf1Ir3ZoY7NCqndpVcVA,13
+fastmcp_http-0.1.4.dist-info/RECORD,,
