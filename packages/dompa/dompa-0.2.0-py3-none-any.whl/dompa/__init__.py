@@ -1,0 +1,2 @@
+from .dompa import Dompa
+

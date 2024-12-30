@@ -1,0 +1,10 @@
+dompa/__init__.py,sha256=MUiS9i2fO3aw9YhlfglAh8LbY2xiGPfIDynfoeWwJPI,28
+dompa/dompa.py,sha256=8-WMziyy0MFHS-TNG5i8Y6BrZS0xSfYgtsC1s0ZJ3ik,9840
+dompa/nodes/__init__.py,sha256=smWLMZ8UtqRx_n8caCQuUvv-SsM4v8LQK_L4MRPKnlI,84
+dompa/nodes/ir_node.py,sha256=x03_0uENUgf8zl1SDwnGPy_W-itWNBbad9lmDyKbbKw,297
+dompa/nodes/node.py,sha256=w5hw-8Zhw63-_JEFeGdVPYMEgR1j-AjvSkvzjBVEKpY,419
+dompa/nodes/text_node.py,sha256=0EuSzaj3DHfgaSc1RXvrc2FbQSQXxn4kU-7bDLJ-D5w,106
+dompa-0.2.0.dist-info/METADATA,sha256=zws_tsge3DymMO8PVlPHNwMWa8o8moAwobPTGODPg18,439
+dompa-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+dompa-0.2.0.dist-info/top_level.txt,sha256=ZTumkBeosVYsCDheh7EZ8WzzB28sgU2dxHhPlxdIRo8,6
+dompa-0.2.0.dist-info/RECORD,,
