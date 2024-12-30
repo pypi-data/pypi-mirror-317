@@ -1,0 +1,2 @@
+[console_scripts]
+psc = PDB_score.main:main
