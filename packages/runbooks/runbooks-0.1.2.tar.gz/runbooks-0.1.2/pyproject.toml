@@ -1,0 +1,82 @@
+[project]
+## https://docs.astral.sh/uv/concepts/projects/config/
+name = "runbooks"
+authors = [
+    {name = "runbooks maintainers", email = "nnthanh101@gmail.com"},
+]
+version = "0.1.2"
+description = "CloudOps Automation for DevOps and SRE teams."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+requires-python = ">=3.11"
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+# [project.urls]
+# Homepage = "https://cloudops.oceansoft.io"
+# Changelog = "https://github.com/nnthanh101/CloudOps/blob/master/CHANGELOG.md"
+# Releases = "https://github.com/nnthanh101/CloudOps/releases"
+# Source = "https://github.com/nnthanh101/CloudOps"
+# bug_reports = "https://github.com/nnthanh101/CloudOps/issues"
+
+dependencies = [
+  "requests>=2.32.3",
+  "loguru>=0.7.3",
+  "typer>=0.15.1",
+  "tqdm>=4.67.1",
+  "boto3>=1.35.90",
+  "moto>=5.0.25"
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3.4", 
+  "ruff>=0.8.4",
+  "pytest-cov>=6.0.0"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+license-files = []
+
+[tool.ruff]
+## Linting and Formatting Configurations
+## https://docs.astral.sh/ruff/configuration/
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I"]
+ignore = ["F401", "E501", "F811"] 
+fixable = ["I"]
+unfixable = []
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.pytest.ini_options]
+## Test Configuration
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "--cov=src/cloudops --cov-report=term-missing"
+
+[project.scripts]
+## Will run the function by just typing `sync-down` and `sync-up` in the CLI
+# sync-down = "cloudops.cli:sync_down"
+# sync-up = "cloudops.cli:sync_up"
+# cloudops = "cloudops.runbooks:main"
+# check-code-quality = "cloudops.toolkit:check_code_quality"
