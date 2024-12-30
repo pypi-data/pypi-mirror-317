@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: unitbrew
+Version: 0.0.1
+Home-page: https://github.com/minu928/unitbrew
+Author: Minwoo Kim
+Author-email: minu928@snu.ac.kr
+Requires-Python: >=3.10
+License-File: LICENSE
+
