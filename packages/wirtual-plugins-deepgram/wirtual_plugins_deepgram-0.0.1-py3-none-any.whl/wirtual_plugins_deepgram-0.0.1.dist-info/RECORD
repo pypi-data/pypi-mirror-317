@@ -1,0 +1,12 @@
+wirtual/plugins/deepgram/__init__.py,sha256=o1BgJLSoxrTkSUHXkKrFMl9e0bF6am2TFrDMV4U6j7g,584
+wirtual/plugins/deepgram/_utils.py,sha256=0O3O77qURXjYYCenl5McE85fcBApaQvQl5zKQzvYfR8,1276
+wirtual/plugins/deepgram/log.py,sha256=qV5xSAKAvQAwgZA-Ecd0cP1OfiBLFtkR8JiidVazw88,71
+wirtual/plugins/deepgram/models.py,sha256=ZUkruW2vu3RhPYZyN8Lyz1y_J1V7lop5l-72ewVK-FY,1165
+wirtual/plugins/deepgram/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wirtual/plugins/deepgram/stt.py,sha256=1ceTLSg-JwUQLxVp66Ns4MsrVVasffXQL27jHNFggbg,26124
+wirtual/plugins/deepgram/tts.py,sha256=REOHvcYGM1ZIISgLatQsys7dbStKSO8mh4LrBvheRfU,14669
+wirtual/plugins/deepgram/version.py,sha256=8ZMwr2XB70cB-Enolo5Sf-9UU5M5GXJ77h88dONd15E,615
+wirtual_plugins_deepgram-0.0.1.dist-info/METADATA,sha256=8WntoeV6MHIMV1Hhol4ra_ZL6kbSXinKM-l-bZ6oeq4,1357
+wirtual_plugins_deepgram-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wirtual_plugins_deepgram-0.0.1.dist-info/top_level.txt,sha256=4Rf8yHbj3yvH5QwATcj7VvRgh6gFijIX1-VffopPWD0,8
+wirtual_plugins_deepgram-0.0.1.dist-info/RECORD,,
