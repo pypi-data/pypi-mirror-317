@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/assemblyai/__init__.py
+wirtual/plugins/assemblyai/log.py
+wirtual/plugins/assemblyai/py.typed
+wirtual/plugins/assemblyai/stt.py
+wirtual/plugins/assemblyai/version.py
+wirtual_plugins_assemblyai.egg-info/PKG-INFO
+wirtual_plugins_assemblyai.egg-info/SOURCES.txt
+wirtual_plugins_assemblyai.egg-info/dependency_links.txt
+wirtual_plugins_assemblyai.egg-info/requires.txt
+wirtual_plugins_assemblyai.egg-info/top_level.txt
