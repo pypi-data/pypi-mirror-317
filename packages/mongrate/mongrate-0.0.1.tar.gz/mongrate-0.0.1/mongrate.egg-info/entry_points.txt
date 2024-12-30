@@ -1,0 +1,2 @@
+[console_scripts]
+mongodb-migrator = mongodb_migrator.cli:cli
