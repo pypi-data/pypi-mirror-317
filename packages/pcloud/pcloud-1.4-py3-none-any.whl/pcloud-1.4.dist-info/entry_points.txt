@@ -1,0 +1,3 @@
+[fs.opener]
+pcloud = pcloud.pcloudfs:PCloudOpener
+pcloud+eapi = pcloud.pcloudfs:PCloudOpener
