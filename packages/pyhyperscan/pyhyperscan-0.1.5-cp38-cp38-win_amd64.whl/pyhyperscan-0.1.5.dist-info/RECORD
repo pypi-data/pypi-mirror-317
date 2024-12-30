@@ -1,0 +1,8 @@
+pyhyperscan/__init__.py,sha256=weySDD60YQGsG2_ywMULpl4tkVsC57FbrFtQdpjU0VQ,787
+pyhyperscan/hs.dll,sha256=gTH28DbO8G8aqhlJds4Z6SBpZJXHWRc39FqTwOH7x2o,3993088
+pyhyperscan/hs_runtime.dll,sha256=A1BS1zuL8tnC016OhxjfOHX0Ggl4FS3szvKcEcSjQc4,834560
+pyhyperscan/pyhyperscan.cp38-win_amd64.pyd,sha256=2jnInqkp2BMptHnd2aDViWf4yu4u1zV_M0F_jTA6D58,56320
+pyhyperscan-0.1.5.dist-info/METADATA,sha256=TiWjMg4l5PagGESOt7lOFUvaGm7DXi_XjsXN4HQQW_s,5340
+pyhyperscan-0.1.5.dist-info/WHEEL,sha256=M2GQ3lde8oJhlQPj2wbRvnqE3cuovPJasri5X5aCmck,100
+pyhyperscan-0.1.5.dist-info/top_level.txt,sha256=W-Ks2_IRl4loKgcnfGuwzEeQYZ7kEel10coQ1Wloa80,12
+pyhyperscan-0.1.5.dist-info/RECORD,,
