@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: turntable-cli
+Version: 0.4.11
+Summary: Python backend for Turntable
+Author-email: Ian Tracey <ian@turntable.so>, Justin Leder <justin@turntable.so>, Khanh Nguyen <khanh@turntable.so>
+Project-URL: homepage, https://www.turntable.so/
+Project-URL: documentation, https://turntable-so.github.io/docs/
+Project-URL: changelog, https://turntable-so.github.io/docs/changelog
+Requires-Python: <3.13,>=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlglot[rs]>=23.0.0
+Requires-Dist: shandy-sqlfmt[jinjafmt]>=0.19.2
+Requires-Dist: orjson>=3.10.3
+Requires-Dist: networkx>=2.7
+Requires-Dist: typer[all]>=0.12.0
+Requires-Dist: ruamel-yaml>=0.17.32
+Requires-Dist: python-dateutil>=2.8.2
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: mpire>=2.8.0
+Requires-Dist: pygithub>=2.1.1
+Requires-Dist: deepmerge>=1.1.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: tabulate>=0.9.0
+Requires-Dist: logtail-python>=0.2.7
+Requires-Dist: posthog>=3.5.0
+Requires-Dist: pydantic>=2.7.1
+
+# Turntable CLI
