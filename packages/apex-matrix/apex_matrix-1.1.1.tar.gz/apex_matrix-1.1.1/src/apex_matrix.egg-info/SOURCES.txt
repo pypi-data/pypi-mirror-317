@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/apex_matrix/__init__.py
+src/apex_matrix/matrix.py
+src/apex_matrix.egg-info/PKG-INFO
+src/apex_matrix.egg-info/SOURCES.txt
+src/apex_matrix.egg-info/dependency_links.txt
+src/apex_matrix.egg-info/top_level.txt
+tests/test_matrix.py

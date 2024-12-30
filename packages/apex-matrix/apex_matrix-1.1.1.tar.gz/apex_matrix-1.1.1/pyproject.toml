@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apex_matrix"
+version = "1.1.1"
+authors = [
+  { name="Byron Farrell", email="byronfarrell22@gmail.com" },
+]
+description = "A simple matrix class that handles basic matrix operations"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Byron-Farrell/Matrix"
+Issues = "https://github.com/Byron-Farrell/Matrix/issues"
