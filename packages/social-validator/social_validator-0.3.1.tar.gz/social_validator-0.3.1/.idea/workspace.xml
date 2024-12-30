@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53864b46-f099-496b-ae2c-cf3361d431be" name="Changes" comment="chore: add python 3.12 &amp; python 3.13 version classifiers" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="perf/structure" />
+                <branch-info repo="$PROJECT_DIR$" source="feat/youtube" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="chore/update-classifiers" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Flacy&quot;
+  }
+}</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="fix: bump minimal requirement python version" />
+        <option name="rewordedMessage" value="fix: bump minimal requirement python version" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="db3aab64b449c5631130182d2a0c8e514e819ef4" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Flacy/social-validator.git",
+    "accountId": "73a30bc4-5f81-4fc3-86ad-b23a7f966782"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "Flacy",
+    "repository": "social-validator"
+  }
+}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2WFhpVCRRXr7UeC225cneoV26rW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Projects/social-validator/tests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\social-validator\tests" />
+      <recent name="D:\Projects\social-validator\social_validator/telegram" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\social-validator\social_validator" />
+      <recent name="D:\Projects\social-validator\tests\telegram" />
+      <recent name="D:\Projects\social-validator\social_validator\telegram" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.twitch">
+    <configuration name="input" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="social-validator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/telegram" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/telegram/input.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="twitch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="social-validator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/social_validator/twitch" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Projects\social-validator\social_validator\twitch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_validation.test_valid_strict_username" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="social-validator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/youtube" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_validation.test_valid_strict_username&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.telegram.test_validation.test_valid_id" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="social-validator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.telegram.test_validation.test_valid_id&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for tests.telegram.test_validation.test_valid_id" />
+        <item itemvalue="Python tests.Python tests for test_validation.test_valid_strict_username" />
+        <item itemvalue="Python.twitch" />
+        <item itemvalue="Python.input" />
+        <item itemvalue="Python tests.Python tests for tests.telegram.test_validation.test_valid_id" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53864b46-f099-496b-ae2c-cf3361d431be" name="Changes" comment="" />
+      <created>1696334418240</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696334418240</updated>
+      <workItem from="1696334425154" duration="26029000" />
+      <workItem from="1696383119030" duration="12935000" />
+      <workItem from="1696575749278" duration="22758000" />
+      <workItem from="1696714532358" duration="14000" />
+      <workItem from="1696823954055" duration="7000" />
+      <workItem from="1697181124473" duration="3139000" />
+      <workItem from="1697361441544" duration="9884000" />
+      <workItem from="1697446170668" duration="13854000" />
+      <workItem from="1697530908830" duration="11487000" />
+      <workItem from="1697547454317" duration="3941000" />
+      <workItem from="1697621453401" duration="8689000" />
+      <workItem from="1697697902046" duration="16148000" />
+      <workItem from="1697784473930" duration="3431000" />
+      <workItem from="1697871850722" duration="13044000" />
+      <workItem from="1697895085958" duration="1577000" />
+      <workItem from="1697960871216" duration="7246000" />
+      <workItem from="1698102834876" duration="32000" />
+      <workItem from="1698854725867" duration="39000" />
+      <workItem from="1699405115178" duration="8962000" />
+      <workItem from="1699454308625" duration="7000" />
+      <workItem from="1699459567190" duration="8105000" />
+      <workItem from="1699477464812" duration="280000" />
+      <workItem from="1699477760003" duration="599000" />
+      <workItem from="1699478368678" duration="334000" />
+      <workItem from="1699478713234" duration="6262000" />
+      <workItem from="1699485068402" duration="3466000" />
+      <workItem from="1699488583404" duration="402000" />
+      <workItem from="1699566945279" duration="1963000" />
+      <workItem from="1699581055041" duration="16018000" />
+      <workItem from="1699642807305" duration="7703000" />
+      <workItem from="1699681092853" duration="10075000" />
+      <workItem from="1699692452583" duration="534000" />
+      <workItem from="1699840359219" duration="21320000" />
+      <workItem from="1699871606394" duration="1769000" />
+      <workItem from="1699906206593" duration="1616000" />
+      <workItem from="1700050147888" duration="10000" />
+      <workItem from="1700050202898" duration="49000" />
+      <workItem from="1704175695361" duration="1824000" />
+      <workItem from="1704218869343" duration="3712000" />
+      <workItem from="1704223952541" duration="4968000" />
+      <workItem from="1704256172996" duration="3743000" />
+      <workItem from="1704348252590" duration="7389000" />
+      <workItem from="1704388491380" duration="836000" />
+      <workItem from="1704448948076" duration="4000" />
+      <workItem from="1704866896619" duration="963000" />
+      <workItem from="1730781520116" duration="8000" />
+      <workItem from="1732933858991" duration="236000" />
+      <workItem from="1733091561676" duration="597000" />
+      <workItem from="1733138659196" duration="5000" />
+      <workItem from="1735505091512" duration="703000" />
+    </task>
+    <task id="LOCAL-00013" summary="perf: renamed 'tests' -&gt; 'ci'">
+      <option name="closed" value="true" />
+      <created>1697883306476</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697883306476</updated>
+    </task>
+    <task id="LOCAL-00014" summary="perf: bump version '0.1.0' -&gt; '0.1.1'">
+      <option name="closed" value="true" />
+      <created>1697883578634</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1697883578634</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: add base python classifiers">
+      <option name="closed" value="true" />
+      <created>1697884406376</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1697884406376</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix: bump version '0.1.1' -&gt; '0.1.2'">
+      <option name="closed" value="true" />
+      <created>1697884493302</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1697884493302</updated>
+    </task>
+    <task id="LOCAL-00017" summary="perf: add codecov">
+      <option name="closed" value="true" />
+      <created>1697886065157</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697886065157</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix: add report generation">
+      <option name="closed" value="true" />
+      <created>1697887568538</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697887568538</updated>
+    </task>
+    <task id="LOCAL-00019" summary="docs: add badges">
+      <option name="closed" value="true" />
+      <created>1697888733503</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1697888733503</updated>
+    </task>
+    <task id="LOCAL-00020" summary="docs: update readme">
+      <option name="closed" value="true" />
+      <created>1697964875803</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1697964875803</updated>
+    </task>
+    <task id="LOCAL-00021" summary="docs: update readme">
+      <option name="closed" value="true" />
+      <created>1697965078320</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1697965078320</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test: add uncovered lines tests">
+      <option name="closed" value="true" />
+      <created>1697967587078</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697967587078</updated>
+    </task>
+    <task id="LOCAL-00023" summary="perf: divided modules and shared validators">
+      <option name="closed" value="true" />
+      <created>1699411580885</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699411580885</updated>
+    </task>
+    <task id="LOCAL-00024" summary="perf: rename shared check 'name' -&gt; 'id'">
+      <option name="closed" value="true" />
+      <created>1699412746207</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699412746207</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fix: avoid function shadowing">
+      <option name="closed" value="true" />
+      <created>1699413236002</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699413236002</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix: avoid function shadowing">
+      <option name="closed" value="true" />
+      <created>1699413266350</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699413266350</updated>
+    </task>
+    <task id="LOCAL-00027" summary="perf: update readme">
+      <option name="closed" value="true" />
+      <created>1699461659290</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1699461659290</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feat: impl twitch">
+      <option name="closed" value="true" />
+      <created>1699487998428</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1699487998428</updated>
+    </task>
+    <task id="LOCAL-00029" summary="perf: remove extra spaces">
+      <option name="closed" value="true" />
+      <created>1699488201171</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1699488201171</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: impl twitch">
+      <option name="closed" value="true" />
+      <created>1699488796276</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1699488796276</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat: add reserved word check">
+      <option name="closed" value="true" />
+      <created>1699602161342</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1699602161342</updated>
+    </task>
+    <task id="LOCAL-00032" summary="perf: convert set to frozenset">
+      <option name="closed" value="true" />
+      <created>1699643374710</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1699643374710</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: add description validation">
+      <option name="closed" value="true" />
+      <created>1699647750992</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1699647750992</updated>
+    </task>
+    <task id="LOCAL-00034" summary="perf: update docstrings">
+      <option name="closed" value="true" />
+      <created>1699647765881</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1699647765881</updated>
+    </task>
+    <task id="LOCAL-00035" summary="perf: impl shared input data">
+      <option name="closed" value="true" />
+      <created>1699683629222</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1699683629222</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fix: remove invalid unicode char">
+      <option name="closed" value="true" />
+      <created>1699686417633</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1699686417633</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fix: remove invalid unicode char">
+      <option name="closed" value="true" />
+      <created>1699686497594</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1699686497594</updated>
+    </task>
+    <task id="LOCAL-00038" summary="test: impl tests for twitch">
+      <option name="closed" value="true" />
+      <created>1699687805491</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1699687805491</updated>
+    </task>
+    <task id="LOCAL-00039" summary="perf: reformat by black">
+      <option name="closed" value="true" />
+      <created>1699689196637</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1699689196637</updated>
+    </task>
+    <task id="LOCAL-00040" summary="perf: isort">
+      <option name="closed" value="true" />
+      <created>1699689922632</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1699689922632</updated>
+    </task>
+    <task id="LOCAL-00041" summary="chore: bump version '0.1.2' -&gt; '0.2.0'">
+      <option name="closed" value="true" />
+      <created>1699690990877</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1699690990877</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fix: add check for escaped strings">
+      <option name="closed" value="true" />
+      <created>1699860155206</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1699860155206</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix: add check for reserved words">
+      <option name="closed" value="true" />
+      <created>1699860554342</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1699860554342</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix: add check for reserved words">
+      <option name="closed" value="true" />
+      <created>1699861054351</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1699861054351</updated>
+    </task>
+    <task id="LOCAL-00045" summary="test: add tests for reserved words and escaped strings">
+      <option name="closed" value="true" />
+      <created>1699862856608</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1699862856608</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fix: typing">
+      <option name="closed" value="true" />
+      <created>1699862878931</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1699862878931</updated>
+    </task>
+    <task id="LOCAL-00047" summary="test: add case sensitivity tests for IDs">
+      <option name="closed" value="true" />
+      <created>1699865509345</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1699865509345</updated>
+    </task>
+    <task id="LOCAL-00048" summary="test: add case sensitivity tests for IDs">
+      <option name="closed" value="true" />
+      <created>1699865541159</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1699865541159</updated>
+    </task>
+    <task id="LOCAL-00049" summary="perf: change import style">
+      <option name="closed" value="true" />
+      <created>1699866565359</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1699866565359</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fix: add conversion to lowercase">
+      <option name="closed" value="true" />
+      <created>1699872605391</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1699872605391</updated>
+    </task>
+    <task id="LOCAL-00051" summary="test: add case sensitivity check">
+      <option name="closed" value="true" />
+      <created>1699872881140</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1699872881140</updated>
+    </task>
+    <task id="LOCAL-00052" summary="perf: change import style">
+      <option name="closed" value="true" />
+      <created>1699872896701</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1699872896701</updated>
+    </task>
+    <task id="LOCAL-00053" summary="chore: bump version '0.2.0' -&gt; '0.2.1'">
+      <option name="closed" value="true" />
+      <created>1699906240213</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1699906240213</updated>
+    </task>
+    <task id="LOCAL-00054" summary="chore: bump version '0.2.0' -&gt; '0.2.1'">
+      <option name="closed" value="true" />
+      <created>1699907530772</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1699907530772</updated>
+    </task>
+    <task id="LOCAL-00055" summary="feat: impl username validation">
+      <option name="closed" value="true" />
+      <created>1704229058889</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1704229058889</updated>
+    </task>
+    <task id="LOCAL-00056" summary="feat: impl base validators and add arguments to exceptions">
+      <option name="closed" value="true" />
+      <created>1704351892793</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1704351892793</updated>
+    </task>
+    <task id="LOCAL-00057" summary="perf: change video_url -&gt; video_id">
+      <option name="closed" value="true" />
+      <created>1704354399976</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1704354399976</updated>
+    </task>
+    <task id="LOCAL-00058" summary="test: add tests">
+      <option name="closed" value="true" />
+      <created>1704355512718</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1704355512718</updated>
+    </task>
+    <task id="LOCAL-00059" summary="chore: bump version '0.2.1' -&gt; '0.3.0'">
+      <option name="closed" value="true" />
+      <created>1704355543340</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1704355543340</updated>
+    </task>
+    <task id="LOCAL-00060" summary="test: add empty strings">
+      <option name="closed" value="true" />
+      <created>1704388760811</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1704388760811</updated>
+    </task>
+    <task id="LOCAL-00061" summary="chore: add python 3.12 &amp; python 3.13 version classifiers">
+      <option name="closed" value="true" />
+      <created>1735505466608</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1735505466608</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="perf: convert set to frozenset" />
+    <MESSAGE value="feat: add description validation" />
+    <MESSAGE value="perf: update docstrings" />
+    <MESSAGE value="perf: impl shared input data" />
+    <MESSAGE value="fix: remove invalid unicode char" />
+    <MESSAGE value="test: impl tests for twitch" />
+    <MESSAGE value="perf: reformat by black" />
+    <MESSAGE value="perf: isort" />
+    <MESSAGE value="chore: bump version '0.1.2' -&gt; '0.2.0'" />
+    <MESSAGE value="fix: add check for escaped strings" />
+    <MESSAGE value="fix: add check for reserved words" />
+    <MESSAGE value="test: add tests for reserved words and escaped strings" />
+    <MESSAGE value="fix: typing" />
+    <MESSAGE value="test: add case sensitivity tests for IDs" />
+    <MESSAGE value="fix: add conversion to lowercase" />
+    <MESSAGE value="test: add case sensitivity check" />
+    <MESSAGE value="perf: change import style" />
+    <MESSAGE value="chore: bump version '0.2.0' -&gt; '0.2.1'" />
+    <MESSAGE value="feat: impl username validation" />
+    <MESSAGE value="feat: impl base validators and add arguments to exceptions" />
+    <MESSAGE value="perf: change video_url -&gt; video_id" />
+    <MESSAGE value="test: add tests" />
+    <MESSAGE value="chore: bump version '0.2.1' -&gt; '0.3.0'" />
+    <MESSAGE value="test: add empty strings" />
+    <MESSAGE value="chore: add python 3.12 &amp; python 3.13 version classifiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add python 3.12 &amp; python 3.13 version classifiers" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="VALID_BOT_IDS" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/social_validator$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1699405472581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/social_validator/twitch" />
+    <SUITE FILE_PATH="coverage/social_validator$.coverage" NAME=" Coverage Results" MODIFIED="1704353424448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/youtube" />
+    <SUITE FILE_PATH="coverage/social_validator$input.coverage" NAME="input Coverage Results" MODIFIED="1697723052646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/telegram" />
+  </component>
+</project>

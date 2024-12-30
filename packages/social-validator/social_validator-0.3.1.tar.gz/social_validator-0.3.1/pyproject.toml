@@ -1,0 +1,42 @@
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
+
+[project]
+name = 'social-validator'
+description = 'Validator for data from social networks & messengers'
+readme = 'README.md'
+requires-python = '>=3.8'
+license = 'MIT'
+authors = [
+    { name = 'Andrew Krylov', email = 'any@lunte.dev' },
+]
+classifiers = [
+    'Topic :: Internet',
+    'Topic :: Utilities',
+    'Topic :: Software Development',
+    'Topic :: Software Development :: Libraries',
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Information Technology',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Typing :: Typed',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+]
+
+dynamic = ['version']
+
+[project.urls]
+Homepage = 'https://github.com/flacy/social-validator'
+Repository = 'https://github.com/flacy/social-validator'
+
+[tool.hatch.version]
+path = 'social_validator/__init__.py'

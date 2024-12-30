@@ -1,0 +1,47 @@
+Index: tests/youtube/input.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from social_validator import youtube\r\nfrom tests.shared.input import ESCAPED_STRING, RANDOM_UNICODE_STRING\r\n\r\nVALID_STRICT_USERNAMES = (\r\n    \"t\" * youtube.USERNAME_MIN_LENGTH,\r\n    \"t\" * youtube.USERNAME_MAX_LENGTH,\r\n    \"1test\",\r\n    \"1test1\",\r\n    \"1test-\",\r\n    \"1TEST-\",\r\n    \"1test-----\",\r\n    \"1test-----____\",\r\n    \"1test-----____----\",\r\n    \"1test-----___asd_--123--\",\r\n    \"1test-----___asd_--.123--\",\r\n    \"1test-----___asd_....123--\",\r\n    \"-------___asd_....123--\",\r\n    \"__-----___asd_....123--\",\r\n    \"__-----___asd_....123--\",\r\n    \"__--____\",\r\n    \"__-\",\r\n    \"___\",\r\n    \"---\",\r\n    \"1.....\",\r\n    \"2.....----____\",\r\n    \"----____......\",\r\n)\r\nVALID_SOFT_USERNAMES = (\r\n    ('-' * 100) + 'tes',\r\n    ('-' * 100) + 'test',\r\n    ('-' * 100) + 'TEST',\r\n    ('-' * 100) + 'test.',\r\n    ('-' * 100) + 'test___----',\r\n    ('-' * 100) + 'test' + ('-' * 100),\r\n    ('-' * 100) + 'test' + ('_' * 100),\r\n    ('-' * 100) + '1..' + ('_' * 100),\r\n    ('-' * 100) + '2-._._-' + ('_' * 100),\r\n)\r\nINVALID_SOFT_USERNAMES = (\r\n    ('_' * 100) + ('a' * (youtube.USERNAME_MIN_LENGTH - 1)),\r\n    ('-' * 100) + ('a' * (youtube.USERNAME_MAX_LENGTH + 1)),\r\n    ('_' * 100) + ('a' * (youtube.USERNAME_MAX_LENGTH + 1)),\r\n    ('-' * 100) + ('a' * (youtube.USERNAME_MIN_LENGTH - 1)),\r\n    ('_' * 100) + ('1' * (youtube.USERNAME_MIN_LENGTH - 1)),\r\n    ('-' * 100) + ('1' * (youtube.USERNAME_MAX_LENGTH + 1)),\r\n    RANDOM_UNICODE_STRING,\r\n    ESCAPED_STRING,\r\n)\r\nINVALID_STRICT_USERNAMES = (\r\n    '',\r\n    't' * (youtube.USERNAME_MIN_LENGTH - 1),\r\n    't' * (youtube.USERNAME_MAX_LENGTH + 1),\r\n    '.' * youtube.USERNAME_MIN_LENGTH,\r\n    '......1',\r\n    '.____',\r\n    '.----',\r\n    '.____----',\r\n    '.____----123',\r\n    '.____----123test',\r\n    RANDOM_UNICODE_STRING,\r\n    ESCAPED_STRING,\r\n)\r\n\r\nVALID_VIDEO_IDS = (\r\n    '1asdfgher14',\r\n    '1asdfgher--',\r\n    '1asdfgh__--',\r\n    '-asdfgh__--',\r\n    '_asdfgh__--',\r\n    '___----__--',\r\n    '___----__-1',\r\n    '___----__-a',\r\n    '___----__a1',\r\n    '___--a-__a1',\r\n)\r\nINVALID_VIDEO_IDS = (\r\n    'a' * (youtube.VIDEO_ID_LENGTH - 1),\r\n    'a' * (youtube.VIDEO_ID_LENGTH + 1),\r\n    'a.12ijd2h3j',\r\n    'a=12ijd2h3j',\r\n    'a+12ijd2h3j',\r\n    'a!12ijd2h3j',\r\n    'a@12ijd2h3j',\r\n    'a#12ijd2h3j',\r\n    'a$12ijd2h3j',\r\n    'a%12ijd2h3j',\r\n    'a&12ijd2h3j',\r\n    'a?12ijd2h3j',\r\n    'a*12ijd2h3j',\r\n    'a<>()d2h3j',\r\n    RANDOM_UNICODE_STRING[:youtube.VIDEO_ID_LENGTH],\r\n    (ESCAPED_STRING * 2)[:youtube.VIDEO_ID_LENGTH],\r\n)\r\n\r\nVALID_VIDEO_NAMES = (\r\n    'a' * youtube.VIDEO_NAME_MIN_LENGTH,\r\n    'a' * youtube.VIDEO_NAME_MAX_LENGTH,\r\n    RANDOM_UNICODE_STRING,\r\n)\r\nINVALID_VIDEO_NAMES = (\r\n    'a' * (youtube.VIDEO_NAME_MIN_LENGTH - 1),\r\n    'a' * (youtube.VIDEO_NAME_MAX_LENGTH + 1),\r\n    '<',\r\n    '>',\r\n    ESCAPED_STRING,\r\n)\r\n\r\nVALID_VIDEO_DESCRIPTIONS = (\r\n    '',\r\n    'a' * youtube.VIDEO_DESCRIPTION_MAX_LENGTH,\r\n    RANDOM_UNICODE_STRING,\r\n)\r\nVALID_VIDEO_DESCRIPTIONS_SHORT = (\r\n    '',\r\n    'a' * youtube.VIDEO_DESCRIPTION_SHORT_MAX_LENGTH,\r\n    RANDOM_UNICODE_STRING,\r\n)\r\nINVALID_VIDEO_DESCRIPTIONS = (\r\n    'a' * (youtube.VIDEO_DESCRIPTION_MAX_LENGTH + 1),\r\n    '<',\r\n    '>',\r\n    ESCAPED_STRING,\r\n)\r\nINVALID_VIDEO_DESCRIPTIONS_SHORT = (\r\n    'a' * (youtube.VIDEO_DESCRIPTION_SHORT_MAX_LENGTH + 1),\r\n    '<',\r\n    '>',\r\n    ESCAPED_STRING,\r\n)\r\n\r\nVALID_VIDEO_COMMENTS = (\r\n    'a' * youtube.VIDEO_COMMENT_MIN_LENGTH,\r\n    'a' * youtube.VIDEO_COMMENT_MAX_LENGTH,\r\n    RANDOM_UNICODE_STRING,\r\n)\r\nINVALID_VIDEO_COMMENTS = (\r\n    'a' * (youtube.VIDEO_COMMENT_MIN_LENGTH - 1),\r\n    'a' * (youtube.VIDEO_COMMENT_MAX_LENGTH + 1),\r\n    ESCAPED_STRING,\r\n)\r\n\r\n# combine a lower and upper case\r\nRESERVED_USERNAMES = list(youtube.RESERVED_USERNAMES) + [w.upper() for w in youtube.RESERVED_USERNAMES]\r\n
+===================================================================
+diff --git a/tests/youtube/input.py b/tests/youtube/input.py
+--- a/tests/youtube/input.py	
++++ b/tests/youtube/input.py	
+@@ -37,10 +37,13 @@
+     ('-' * 100) + '2-._._-' + ('_' * 100),
+ )
+ INVALID_SOFT_USERNAMES = (
++    '',
++    '---______---',
++    '--a',
+     ('_' * 100) + ('a' * (youtube.USERNAME_MIN_LENGTH - 1)),
+-    ('-' * 100) + ('a' * (youtube.USERNAME_MAX_LENGTH + 1)),
+     ('_' * 100) + ('a' * (youtube.USERNAME_MAX_LENGTH + 1)),
+     ('-' * 100) + ('a' * (youtube.USERNAME_MIN_LENGTH - 1)),
++    ('-' * 100) + ('a' * (youtube.USERNAME_MAX_LENGTH + 1)),
+     ('_' * 100) + ('1' * (youtube.USERNAME_MIN_LENGTH - 1)),
+     ('-' * 100) + ('1' * (youtube.USERNAME_MAX_LENGTH + 1)),
+     RANDOM_UNICODE_STRING,
+@@ -74,6 +77,7 @@
+     '___--a-__a1',
+ )
+ INVALID_VIDEO_IDS = (
++    '',
+     'a' * (youtube.VIDEO_ID_LENGTH - 1),
+     'a' * (youtube.VIDEO_ID_LENGTH + 1),
+     'a.12ijd2h3j',
+@@ -98,6 +102,7 @@
+     RANDOM_UNICODE_STRING,
+ )
+ INVALID_VIDEO_NAMES = (
++    '',
+     'a' * (youtube.VIDEO_NAME_MIN_LENGTH - 1),
+     'a' * (youtube.VIDEO_NAME_MAX_LENGTH + 1),
+     '<',
+@@ -134,6 +139,7 @@
+     RANDOM_UNICODE_STRING,
+ )
+ INVALID_VIDEO_COMMENTS = (
++    '',
+     'a' * (youtube.VIDEO_COMMENT_MIN_LENGTH - 1),
+     'a' * (youtube.VIDEO_COMMENT_MAX_LENGTH + 1),
+     ESCAPED_STRING,
