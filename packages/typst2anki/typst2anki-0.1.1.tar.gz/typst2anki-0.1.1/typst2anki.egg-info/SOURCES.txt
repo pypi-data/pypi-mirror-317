@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+typst2anki/__init__.py
+typst2anki/api.py
+typst2anki/generator.py
+typst2anki/get_data.py
+typst2anki/main.py
+typst2anki/parse.py
+typst2anki/process.py
+typst2anki.egg-info/PKG-INFO
+typst2anki.egg-info/SOURCES.txt
+typst2anki.egg-info/dependency_links.txt
+typst2anki.egg-info/entry_points.txt
+typst2anki.egg-info/requires.txt
+typst2anki.egg-info/top_level.txt
