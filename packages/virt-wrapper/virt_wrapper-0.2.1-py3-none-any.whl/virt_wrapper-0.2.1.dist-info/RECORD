@@ -1,0 +1,14 @@
+virt_wrapper/__init__.py,sha256=y6Z2e8V800rg0SOeOE2yd72ZaNQ4a3LZRFBQXZwZkOA,194
+virt_wrapper/base.py,sha256=wsWhVDncAoNKDXtBv0a4wfSFQeEtP33kf9SqrypHCPc,3959
+virt_wrapper/disk.py,sha256=Qc_eBb6WTkLzJe0lS8laHD1xYiRJQYHZk9oi3gr276Q,597
+virt_wrapper/memory.py,sha256=Yr6MSr3u2YDzLFiO-A3cTS2pb6zDFL6FQGsOZTBSZlc,277
+virt_wrapper/network.py,sha256=Yyz34OqAWta7duu9AioDZlW-Cg28AZtEsZmefCGJjQc,265
+virt_wrapper/snapshot.py,sha256=1tY9kchQrI_iK_Yixj2JoFQAJb5mik_mIqjsF0GeLs8,725
+virt_wrapper/storage.py,sha256=hq37pCQaQgbwXHdwOZ_7s8Ex4jHiSwb4GGcSlNgrwt0,246
+virt_wrapper/drivers/common.py,sha256=L82gYDZWss8mrtqE5HPYhYGxEySYKLcKhu4sjg8MjOI,779
+virt_wrapper/drivers/hyperv.py,sha256=e2-svJNk8_ZWXGSVAVVH3fV7usXGUOYeDET4-JG8ZxM,8756
+virt_wrapper/drivers/kvm.py,sha256=eAGIa0VO6K1OlZXRiqQdqNbqWNPPWQu_UdhrQ0Y5YL4,15141
+virt_wrapper-0.2.1.dist-info/METADATA,sha256=yn76Zae0Fuefz8mNc7H2mTdTd7gGAwKqF2ZiU6gSu08,3300
+virt_wrapper-0.2.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+virt_wrapper-0.2.1.dist-info/top_level.txt,sha256=0K2EqH-NVjUPBdJ68peDbRsyH-G2QR2FH2xDNimhY6M,13
+virt_wrapper-0.2.1.dist-info/RECORD,,
