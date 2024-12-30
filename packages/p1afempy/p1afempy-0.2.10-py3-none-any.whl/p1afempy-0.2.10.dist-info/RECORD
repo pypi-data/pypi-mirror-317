@@ -1,0 +1,12 @@
+p1afempy/__init__.py,sha256=1UGuQLk0riigIKLoejztsOzDKkrupLigCJyj7YhePiI,218
+p1afempy/data_structures.py,sha256=qAGTvUhWzUFNMFNuam3dKMeBrwOFaoNBB9SdgmO6yHM,1669
+p1afempy/indicators.py,sha256=_Ja5oZQjb67qIhtUVr9B_yn5p6ri4ChQUMj1Yqchgjw,3228
+p1afempy/io_helpers.py,sha256=9iTEKIU6Qix4p1Upy7SwJy39GfpRGWnQiMd8adDO3b0,4311
+p1afempy/mesh.py,sha256=xkWT8Z1XiKB6rXIGSgrQjFdUYFHjnY5yQnEnUeWyleM,19327
+p1afempy/refinement.py,sha256=-qRZ0INkB3A9XwSXJMkqlnIUt41O18SyBxloV_ry5eI,39806
+p1afempy/solvers.py,sha256=16pIBTjuGXrTNR2tqqYWN_3AKcQzGCsMV4z6ga8BWs4,9554
+p1afempy-0.2.10.dist-info/LICENSE,sha256=Mr1dChEjEHieE6lj8Z9Jh34sFfAmxvrMMcW4KchTKHk,1050
+p1afempy-0.2.10.dist-info/METADATA,sha256=k4XkKAMkmwgqXiMwbCAQZl6gypVjuHP8PiLXnZs36Sk,13571
+p1afempy-0.2.10.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+p1afempy-0.2.10.dist-info/top_level.txt,sha256=N3Re2vlEishyWg4DoI9tlyZ3VuTD_txMLNnT_RYGb3c,9
+p1afempy-0.2.10.dist-info/RECORD,,
