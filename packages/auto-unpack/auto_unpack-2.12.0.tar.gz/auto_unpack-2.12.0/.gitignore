@@ -1,0 +1,11 @@
+__pycache__
+.venv
+.cache
+output
+info
+dist
+config/*.local.yaml
+site/
+
+*.log
+release/template/**/requirements*.lock
