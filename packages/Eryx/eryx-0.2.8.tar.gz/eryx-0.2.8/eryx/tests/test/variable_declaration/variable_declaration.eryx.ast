@@ -1,0 +1,167 @@
+Program(
+  body: [    
+    VariableDeclaration(
+      constant: False,
+      identifier: Identifier(
+        symbol: "integer"
+      ),
+      value: NumericLiteral(
+        value: 10.0
+      )
+    ),
+    
+    VariableDeclaration(
+      constant: True,
+      identifier: Identifier(
+        symbol: "flt"
+      ),
+      value: NumericLiteral(
+        value: 15.5
+      )
+    ),
+    
+    VariableDeclaration(
+      constant: False,
+      identifier: Identifier(
+        symbol: "neg_num"
+      ),
+      value: NumericLiteral(
+        value: -100.0
+      )
+    ),
+    
+    VariableDeclaration(
+      constant: False,
+      identifier: Identifier(
+        symbol: "string"
+      ),
+      value: StringLiteral(
+        value: "abc"
+      )
+    ),
+    
+    VariableDeclaration(
+      constant: True,
+      identifier: Identifier(
+        symbol: "obj"
+      ),
+      value: ObjectLiteral(
+        properties: [          
+          Property(
+            key: "integer",
+            value: None
+          ),
+          
+          Property(
+            key: "flt",
+            value: None
+          ),
+          
+          Property(
+            key: "neg_num",
+            value: None
+          ),
+          
+          Property(
+            key: "abc_str",
+            value: Identifier(
+              symbol: "string"
+            )
+          ),
+          
+          Property(
+            key: "nested",
+            value: ObjectLiteral(
+              properties: [                
+                Property(
+                  key: "nested_val",
+                  value: NumericLiteral(
+                    value: 100.0
+                  )
+                ),
+                
+                Property(
+                  key: "nest_squared",
+                  value: ObjectLiteral(
+                    properties: [                      
+                      Property(
+                        key: "maybe",
+                        value: StringLiteral(
+                          value: "works"
+                        )
+                      )
+                    ]
+                  )
+                )
+              ]
+            )
+          )
+        ]
+      )
+    ),
+    
+    VariableDeclaration(
+      constant: False,
+      identifier: Identifier(
+        symbol: "arr"
+      ),
+      value: ArrayLiteral(
+        elements: [          
+          NumericLiteral(
+            value: 1.0
+          ),
+          
+          NumericLiteral(
+            value: -2.0
+          ),
+          
+          NumericLiteral(
+            value: 3.14
+          ),
+          
+          StringLiteral(
+            value: "4"
+          ),
+          
+          ObjectLiteral(
+            properties: [              
+              Property(
+                key: "n",
+                value: NumericLiteral(
+                  value: 5.0
+                )
+              )
+            ]
+          ),
+          
+          ArrayLiteral(
+            elements: [              
+              NumericLiteral(
+                value: 6.0
+              ),
+              
+              NumericLiteral(
+                value: 7.0
+              )
+            ]
+          ),
+          
+          Identifier(
+            symbol: "obj"
+          )
+        ]
+      )
+    ),
+    
+    CallExpression(
+      arguments: [        
+        Identifier(
+          symbol: "arr"
+        )
+      ],
+      caller: Identifier(
+        symbol: "print"
+      )
+    )
+  ]
+)
