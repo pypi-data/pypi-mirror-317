@@ -1,0 +1,67 @@
+[tool.poetry]
+package-mode = true
+name = "eye-tracking-collector"
+version = "0.0.0"
+authors = [
+    "Popis <piotrpopis98@icloud.com>",
+    "Chewsiuk <michalchwesiuk@pw.edu.pl>",
+]
+description = "Tool for eye-tracking data collection"
+readme = "README.md"
+include = ["assets/*"]
+
+
+[tool.poetry.scripts]
+eye-tracking-collector = "eye_tracking_collector.cli:app"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0.0"
+opencv-python = ">=4.10.0.84"
+mediapipe = ">=0.10.20"
+pyqt6 = "^6.8.0"
+screeninfo = "^0.8.1"
+typer = "^0.15.1"
+cryptography = "^44.0.0"
+google-api-python-client = "^2.156.0"
+tabulate = "^0.9.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+pre-commit = "*"
+
+[build-system]
+requires = ["poetry-core", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+pattern = '^v?((?P<epoch>\d+)!)?(?P<base>\d+(\.\d+)*)'
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report xml --cov-report html --cov-report term-missing --junit-xml py-junit.xml"
+
+[tool.coverage.run]
+source = ["eye-tracking-collector"]
+
+[tool.black]
+line-length = 88
+
+[tool.flake8]
+max-line-length = 98
+per-file-ignores = "__init__.py:F401"
+ignore = ["E501", "E203", "W503"]
+
+[tool.isort]
+atomic = true
+profile = "black"
+line_length = 88
+skip_gitignore = true
+known_first_party = ["black"]
+
+[tool.bandit]
+skips = ["B403", "B301"]
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
