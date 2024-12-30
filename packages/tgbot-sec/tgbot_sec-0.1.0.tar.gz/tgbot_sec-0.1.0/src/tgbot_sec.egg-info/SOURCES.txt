@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/secuMod/__init__.py
+src/secuMod/main.py
+src/tgbot_sec.egg-info/PKG-INFO
+src/tgbot_sec.egg-info/SOURCES.txt
+src/tgbot_sec.egg-info/dependency_links.txt
+src/tgbot_sec.egg-info/top_level.txt
