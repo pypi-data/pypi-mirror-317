@@ -1,0 +1,12 @@
+cleanpy/__init__.py,sha256=DPQopTjds71n7QeaNE4iGC-mJj5puld7nbc5t8LoH-8,198
+cleanpy/__main__.py,sha256=DUNE6ihM4apMjjVpye5Z4XLNKFr43lqM3l7b3fUO77w,7220
+cleanpy/__version__.py,sha256=KffMdTsAt-SfufKdj418_LINvk4lNdInvCpPv0eKdOU,268
+cleanpy/_const.py,sha256=QS1wXGaAqOILAi8bzrGXG7-3sSymmlzMAyHXTHpROSs,4447
+cleanpy/_finder.py,sha256=eOhWQUvtGlGEd4KjBaHjFD4ffuj5uaCXOReez7JnI3U,3352
+cleanpy/_manipulator.py,sha256=qYE9bZ_iRdY7LpO45wzUy5rojjFV3fk4QChuSAWxdBo,2812
+cleanpy-0.5.1.dist-info/LICENSE,sha256=om41fP5rpV-Njh6dgsko7n7TwezTUbKUVcp6P11aZk0,1079
+cleanpy-0.5.1.dist-info/METADATA,sha256=PiYkrfMUKv83rm86kYHE_63gTH7gx37qP6bkGHZhIEI,6471
+cleanpy-0.5.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cleanpy-0.5.1.dist-info/entry_points.txt,sha256=Y7VKm1WwHxQ4Rj7JZdkUb3ViR_o8GOPHrC0L_9STak8,50
+cleanpy-0.5.1.dist-info/top_level.txt,sha256=XGvp12IXdehUeV4UyUCRRjGRp4yDjh5NCehG0-SAZf4,8
+cleanpy-0.5.1.dist-info/RECORD,,
