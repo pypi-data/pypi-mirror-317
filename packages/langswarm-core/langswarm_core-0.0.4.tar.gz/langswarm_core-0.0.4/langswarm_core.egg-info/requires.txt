@@ -1,0 +1,9 @@
+langchain
+tiktoken
+llama-index
+pyyaml
+
+[dev]
+pytest
+black
+flake8
