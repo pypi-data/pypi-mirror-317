@@ -1,0 +1,10 @@
+meteopoint/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+meteopoint/__main__.py,sha256=yiXQQ72NNb0jSIsrYWuxAFaswdcpAVTQ8J83rBRV7MU,100
+meteopoint/city_aliases.py,sha256=ZXRTWT0xAtafF9wLOiszzrP_OEqbJAtfkTNkjbUug7s,632
+meteopoint/config.py,sha256=uCoDwxBwBqEqalDGFbfw0goNGG3HjeHl1jHgghzkseI,4544
+meteopoint/meteopoint.py,sha256=Zid0zMb5QoSZoF9hP1Qj4kRjTWcOLAb2O5f0hy7oHS8,22952
+meteopoint-0.1.0.dist-info/METADATA,sha256=Dz8cELYw9YudvMw8rtO2WZLTzCoLyUrnZwWDZXGgrI0,3010
+meteopoint-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+meteopoint-0.1.0.dist-info/entry_points.txt,sha256=QX9zarqgNEjyZy5y0hpaMOgnatu7ChdSlbpK80lzhuA,57
+meteopoint-0.1.0.dist-info/top_level.txt,sha256=_OeBco5sC25G5lKPGgsHZzkYFWqRSoauQWlNi-3ALAU,11
+meteopoint-0.1.0.dist-info/RECORD,,
