@@ -1,0 +1,6 @@
+pyproject.toml,sha256=0UL_xDsuiBUjEncUYP_zPCmuzOIfnAzKsJB24-DzEHY,806
+go_bin-1.23.3.data/scripts/go,sha256=-4rPIpvrBmXlhSuox8l1z5O2gM-Za7HxJHEoc7PnAbU,13397130
+go_bin-1.23.3.dist-info/METADATA,sha256=1ONH47cq-eR_4G3eSJaX4iiWUpMqEshOhxs8neBWtJo,1719
+go_bin-1.23.3.dist-info/WHEEL,sha256=ulz77WjIncqphsbH-m3oD6w5nIwGJ34DrkGIzGffdqM,88
+go_bin-1.23.3.dist-info/licenses/LICENSE,sha256=P_te03YIieIzk4EnP3-blVrdJGbhityi_YcHwxaL7gk,1071
+go_bin-1.23.3.dist-info/RECORD,,
