@@ -1,0 +1,1 @@
+wirtual-agents>=0.12.3
