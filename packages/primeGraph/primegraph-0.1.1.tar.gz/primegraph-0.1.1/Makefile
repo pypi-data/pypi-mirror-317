@@ -1,0 +1,47 @@
+.PHONY: clean build test publish lint type-check format check-all lock check
+
+clean:
+	rm -rf dist/
+	find . -type d -name __pycache__ -exec rm -rf {} +
+	find . -type d -name .mypy_cache -exec rm -rf {} +
+	find . -type d -name .ruff_cache -exec rm -rf {} +
+
+test:
+	uv run pytest -v -k "not test_postgresql_checkpoint"
+
+build: clean
+	uv build
+
+lint:
+	uv run ruff check .
+
+format:
+	uv run ruff format .
+
+type-check:
+	uv run mypy .
+
+lock:
+	uv lock
+
+check: lock lint type-check test
+	
+
+check-all: lock lint type-check test	
+	uv run pip check
+
+publish-test: check-all build
+	source .env && uv publish --publish-url https://test.pypi.org/legacy/ --token $$PYPI_TOKEN_TEST
+
+publish: check-all build
+	source .env && uv publish --token $$PYPI_TOKEN_PROD
+
+install:
+	uv venv
+	uv sync
+
+update:
+	uv update
+
+test-actions:
+	act push
