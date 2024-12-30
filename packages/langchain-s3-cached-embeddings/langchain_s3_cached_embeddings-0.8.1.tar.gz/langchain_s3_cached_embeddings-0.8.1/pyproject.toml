@@ -1,0 +1,39 @@
+[project]
+name = "langchain-s3-cached-embeddings"
+version = "0.8.1"
+description = "langchain embeddings wrapper to persist embeddings for re-use later"
+authors = [
+    {name = "Carmine DiMascio", email = "cdimascio@gmail.com"},
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+dependencies = [
+    "boto3>=1.35.90", 
+    "langchain-core>=0.3.28",
+    ]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.pdm]
+distribution = true
+name = "langchain-s3-cached-embeddings"
+version = "0.8.1"
+description = "langchain embeddings wrapper to persist embeddings for re-use later"
+authors = ["Carmine DiMascio (cdimascio@gmail.com)"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/cdimascio/langchain-s3-cached-embeddings"
+repository = "https://github.com/cdimascio/langchain-s3-cached-embeddings"
+
+packages = [{ include = "langchain_s3_cached_embeddings", from = "src" }]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+    "pytest-mock>=3.14.0",
+    "moto>=5.0.25",
+]
