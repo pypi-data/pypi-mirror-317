@@ -1,0 +1,11 @@
+minio_sync_tool/__init__.py,sha256=1PZIVYUcFt5_G6cGODHo1sVwqzBa69s6lYAH4QLR7ZQ,37
+minio_sync_tool/cli.py,sha256=2mHcZjgxg87CdfR-yj7nrlPKJ48rKstT5yxMJHhaiTs,2421
+minio_sync_tool/minio_helper.py,sha256=k6OzZMmBp-bGEHk8BWuhdpPnpU5D6fPQsGVcDpA09GY,7088
+minio_sync_tool/utils.py,sha256=Uzc-mxuHR1XhDy4Cu9bRNF1kwKPBzJZ9ZeuoxtOa1Zw,847
+minio_sync_tool/tasks/__init__.py,sha256=6Rmpo87A6-YDPYHFZm4n6LEoHU4rvOQBOC8_181eydA,57
+minio_sync_tool/tasks/sync_repo.py,sha256=yB1E8lLmuKdvwxShhhUuxgV9jSyWgbSgFxUyev5Ucm8,2742
+minio_sync_tool-0.1.0.dist-info/METADATA,sha256=1Jo4PvF5B90dvx_WKLtn49VjLc7I5DpkUeEgz3dABL4,2096
+minio_sync_tool-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+minio_sync_tool-0.1.0.dist-info/entry_points.txt,sha256=Yg7msHORNHyGv5WyfXDrfhCHzFU-_gLCFO1Of58Hi5w,61
+minio_sync_tool-0.1.0.dist-info/top_level.txt,sha256=jaiESSjw6hYBKSNA6bVtHYEXc6nhDG-HAG33dlCtp9g,16
+minio_sync_tool-0.1.0.dist-info/RECORD,,
