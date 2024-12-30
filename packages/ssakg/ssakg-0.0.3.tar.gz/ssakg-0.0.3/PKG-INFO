@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: ssakg
+Version: 0.0.3
+Summary: Sequential Structural Associative Knowledge Graph (ssakg)
+Home-page: https://github.com/PrzemyslawStok/ssakg
+Author: Przemysław Stokłosa
+Author-email: przemyslaw.stoklosa@gmail.com
+License: Apache 2.0
+Keywords: semantic memory,structural graphs,graph density,sequence storage,sequence retrieval,context based memory,graph based memory,mirna sequences
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy~=1.26.2
+Requires-Dist: networkx~=3.2.1
+Requires-Dist: matplotlib~=3.8.2
+Requires-Dist: pandas~=2.2.0
+Requires-Dist: tabulate~=0.9.0
+Requires-Dist: PyPrind~=2.11.3
+Requires-Dist: seaborn~=0.13.2
+
+# SSAKG
+
+Sequential Structural Associative Knowledge Graph (SSAKG) is a semantic memory.
+It can memorize sequences and then read them using a context. 
+The context contains random sequence elements. The elements of the context are not ordered.
+## Requirements
+
+- **Minimum Python Version:** 3.10
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install ssakg.
+
+```bash
+pip install ssakg
+```
+
+## Usage
+
+```python
+from ssakg import SSAKG
+
+# This basic example creates very simple ssakg, and stores two sequences.
+# The program shows how sequences are stored in Associative Knowledge Graph.
+
+ssakg = SSAKG(number_of_symbols=10, sequence_length=3, graphs_to_drawing=True)
+ssakg.insert([1, 2, 3])
+ssakg.insert([2, 4, 5])
+ssakg.show()
+```
+
+## Examples
+Examples of the use of the program:
+
+[Basics](https://github.com/PrzemyslawStok/ssakg/blob/main/examples/ssakg_basic.ipynb)\
+[Reading sequences](https://github.com/PrzemyslawStok/ssakg/blob/main/examples/ssakg_reading.ipynb)  
+[SSAKG memory](https://github.com/PrzemyslawStok/ssakg/blob/main/examples/ssakg_tests.ipynb)  
+
+[miRNA example](https://github.com/PrzemyslawStok/ssakg/blob/main/microrna/mirna_example.ipynb)
+
+## Requirements
+
+- **Minimum Python Version:** 3.10
+
+## License
+
+[Apache 2.0](LICENSE)
