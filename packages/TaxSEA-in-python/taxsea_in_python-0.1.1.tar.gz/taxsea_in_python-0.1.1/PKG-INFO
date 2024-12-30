@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: TaxSEA_in_python
+Version: 0.1.1
+Summary: A small package for converting bacterial names into NCBI IDs
+Author-email: Cong Pham <phamleminhcong34@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: importlib-resources>=5.0.0
+
+# TaxSEA_in_python project
+
+This package is a version of TaxSEA but build in python. 
+
+## Installation
+
+```bash
+pip install TaxSEA_in_python
+```
+
+## Usage
+
+```python
+from TaxSEA_in_python import get_IDs
+
+bacteria = ['Eubacterium_sp.', 'Ruminococcaceae_', 'Blautia_', 'Lactiplantibacillus_plantarum'] # Input must be a list.
+
+# Converting bacterial names into NCBI ID
+bacterial_ID = get_IDs.NCBI(bacteria) 
+
+# Finding the Taxons correspond to those bacterial names.
+bacterial_taxon = get_IDs.Taxon(bacteria)
+print(bacterial_taxon)
+```
+"""

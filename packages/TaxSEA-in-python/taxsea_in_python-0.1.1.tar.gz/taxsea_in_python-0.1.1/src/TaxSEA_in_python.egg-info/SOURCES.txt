@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+src/TaxSEA_in_python/__init__.py
+src/TaxSEA_in_python/__main__.py
+src/TaxSEA_in_python/get_IDs.py
+src/TaxSEA_in_python.egg-info/PKG-INFO
+src/TaxSEA_in_python.egg-info/SOURCES.txt
+src/TaxSEA_in_python.egg-info/dependency_links.txt
+src/TaxSEA_in_python.egg-info/entry_points.txt
+src/TaxSEA_in_python.egg-info/requires.txt
+src/TaxSEA_in_python.egg-info/top_level.txt
+src/TaxSEA_in_python/data/Local_NCBI_db.csv
+tests/test_package.py
