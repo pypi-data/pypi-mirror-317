@@ -1,0 +1,8 @@
+company_name_matcher/__init__.py,sha256=LfGUTJ6d9FqkxGnsENtPV6IpHb1v_nQphmyXcBw1lOU,167
+company_name_matcher/company_name_matcher.py,sha256=HQ6GLVxNniDaO48MCgwmzW9hvzjD7UeuSp2kEpzU6L8,6241
+company_name_matcher/vector_store.py,sha256=CtCIMjWwYzOf8BqD3Vvc-teychmwKs2W7iWEZceUn5Q,5933
+company_name_matcher-0.1.1.dist-info/LICENSE,sha256=B2aIASgG_RRGeQaSGqwJKsqVpq-BM7NtHA3WQG7_zSk,1072
+company_name_matcher-0.1.1.dist-info/METADATA,sha256=2XqMY6C6x9zF6-2Xt00Ah2J25Vz0g84c5e_olLiYXtg,7643
+company_name_matcher-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+company_name_matcher-0.1.1.dist-info/top_level.txt,sha256=1WDjsCgOc11kFqXcH928ZCgEKOvFlPIi6WtePMsoARQ,21
+company_name_matcher-0.1.1.dist-info/RECORD,,
