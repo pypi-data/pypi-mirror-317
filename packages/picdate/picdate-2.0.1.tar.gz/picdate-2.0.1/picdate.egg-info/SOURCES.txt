@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+picdate/__init__.py
+picdate/picdate.py
+picdate.egg-info/PKG-INFO
+picdate.egg-info/SOURCES.txt
+picdate.egg-info/dependency_links.txt
+picdate.egg-info/entry_points.txt
+picdate.egg-info/requires.txt
+picdate.egg-info/top_level.txt

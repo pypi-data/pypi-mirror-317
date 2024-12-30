@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["picdate*"]
+
+[project]
+name = "picdate"
+version = "2.0.1"
+authors = [{name="Po-Hsuan Huang", email="aben20807@gmail.com"}]
+description = "PicDate: Quick and Simple Date Marking for Photos"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Multimedia :: Graphics",
+]
+dependencies = ["pillow"]
+
+[project.urls]
+"Homepage" = "https://github.com/aben20807/picdate"
+"Bug Tracker" = "https://github.com/aben20807/picdate/issues"
+
+[project.scripts]
+picdate = "picdate.picdate:cli"
