@@ -1,0 +1,7 @@
+README.md
+setup.py
+tensorweaver/__init__.py
+tensorweaver.egg-info/PKG-INFO
+tensorweaver.egg-info/SOURCES.txt
+tensorweaver.egg-info/dependency_links.txt
+tensorweaver.egg-info/top_level.txt
