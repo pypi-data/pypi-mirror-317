@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "ki2-mqtt-viewer"
+version = "1.0.0"
+description = "MQTT Viewer is a user-friendly application designed to help users interact with MQTT brokers effortlessly. With an intuitive interface, it allows users to connect to an MQTT server, view and log messages for different topics, and publish messages with ease."
+authors = ["Adrien KERFOURN <ak.sitecontact@gmail.com>"]
+packages = [{include = "mqtt_viewer"}]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+pyside6 = [
+    { version = "^6.8.1.1", markers = "sys_platform == 'macos'" },
+    { version = "6.8.1", markers = "sys_platform == 'win32'" },
+    { version = "6.8.1", markers = "sys_platform == 'linux'" },
+]
+typing-extensions = "^4.12.2"
+ki2-python-utils = "^0.3.5"
+paho-mqtt = "^2.1.0"
+platformdirs = "^4.3.6"
+
+[tool.poetry.scripts]
+mqtt-viewer = "mqtt_viewer.main_gui:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
