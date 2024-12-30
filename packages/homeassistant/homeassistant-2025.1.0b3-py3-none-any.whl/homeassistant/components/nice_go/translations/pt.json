@@ -1,0 +1,54 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida"
+        },
+        "error": {
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "email": "E-mail",
+                    "password": "Palavra-passe"
+                },
+                "title": "A autentica\u00e7\u00e3o expirou para {name}"
+            },
+            "user": {
+                "data": {
+                    "email": "E-mail",
+                    "password": "Palavra-passe"
+                }
+            }
+        }
+    },
+    "entity": {
+        "light": {
+            "light": {
+                "name": "Luz"
+            }
+        }
+    },
+    "exceptions": {
+        "close_cover_error": {
+            "message": "Erro ao fechar a barreira: {exception}"
+        },
+        "light_off_error": {
+            "message": "Erro ao desligar a luz: {exception}"
+        },
+        "light_on_error": {
+            "message": "Erro ao ligar a luz: {exception}"
+        },
+        "open_cover_error": {
+            "message": "Erro ao abrir a barreira: {exception}"
+        },
+        "switch_off_error": {
+            "message": "Erro ao desligar o interruptor: {exception}"
+        },
+        "switch_on_error": {
+            "message": "Erro ao ligar o interruptor: {exception}"
+        }
+    }
+}

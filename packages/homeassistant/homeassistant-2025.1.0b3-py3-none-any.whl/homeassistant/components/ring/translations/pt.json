@@ -1,0 +1,87 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Conta j\u00e1 configurada",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida"
+        },
+        "error": {
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "password": "Palavra-passe"
+                },
+                "title": "A autentica\u00e7\u00e3o expirou para {name}"
+            },
+            "reconfigure": {
+                "data": {
+                    "password": "Palavra-passe"
+                },
+                "description": "Criar\u00e1 um novo Dispositivo Autorizado para {username} em ring.com.",
+                "title": "Reconfigurar a Integra\u00e7\u00e3o Ring"
+            },
+            "user": {
+                "data": {
+                    "password": "Palavra-passe",
+                    "username": "Nome de Utilizador"
+                }
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "open_door": {
+                "name": "Abrir porta"
+            }
+        },
+        "camera": {
+            "last_recording": {
+                "name": "\u00daltima grava\u00e7\u00e3o"
+            },
+            "live_view": {
+                "name": "Ao vivo"
+            }
+        },
+        "light": {
+            "light": {
+                "name": "Luz"
+            }
+        },
+        "sensor": {
+            "doorbell_volume": {
+                "name": "Volume da campainha"
+            },
+            "mic_volume": {
+                "name": "Volume do micro"
+            },
+            "voice_volume": {
+                "name": "Volume da voz"
+            },
+            "volume": {
+                "name": "Volume"
+            },
+            "wifi_signal_strength": {
+                "name": "For\u00e7a do sinal Wi-Fi"
+            }
+        },
+        "siren": {
+            "siren": {
+                "name": "Sirene"
+            }
+        },
+        "switch": {
+            "in_home_chime": {
+                "name": "Toque interno"
+            },
+            "motion_detection": {
+                "name": "Movimento detetado"
+            },
+            "siren": {
+                "name": "Sirene"
+            }
+        }
+    }
+}

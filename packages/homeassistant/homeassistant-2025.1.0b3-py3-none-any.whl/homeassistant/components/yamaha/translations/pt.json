@@ -1,0 +1,22 @@
+{
+    "services": {
+        "enable_output": {
+            "fields": {
+                "enabled": {
+                    "name": "Ativo"
+                },
+                "port": {
+                    "name": "Porta"
+                }
+            }
+        },
+        "select_scene": {
+            "fields": {
+                "scene": {
+                    "description": "Nome do cen\u00e1rio. O padr\u00e3o para o RX-V437 \u00e9 'Visualiza\u00e7\u00e3o de Filmes BD/DVD', 'Visualiza\u00e7\u00e3o de TV', 'Audi\u00e7\u00e3o de \u00c1udio NET' ou 'Audi\u00e7\u00e3o de R\u00e1dio'.",
+                    "name": "Cen\u00e1rio"
+                }
+            }
+        }
+    }
+}

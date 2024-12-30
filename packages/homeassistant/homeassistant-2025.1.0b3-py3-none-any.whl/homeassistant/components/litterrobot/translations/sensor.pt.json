@@ -1,0 +1,9 @@
+{
+    "state": {
+        "litterrobot__status_code": {
+            "off": "Desligado",
+            "offline": "Offline",
+            "p": "Em pausa"
+        }
+    }
+}

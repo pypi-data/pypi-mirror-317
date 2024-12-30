@@ -1,0 +1,37 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "mac": "Endere\u00e7o MAC"
+                }
+            }
+        }
+    },
+    "entity": {
+        "number": {
+            "comfort": {
+                "name": "Temperatura de conforto"
+            }
+        },
+        "sensor": {
+            "away_until": {
+                "name": "Esperar at\u00e9"
+            },
+            "valve": {
+                "name": "V\u00e1lvula"
+            }
+        },
+        "switch": {
+            "away": {
+                "name": "Ausente"
+            },
+            "lock": {
+                "name": "Fechadura"
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "config": {
+        "abort": {
+            "reconfigure_successful": "Pakartotinis konfig\u016bravimas buvo s\u0117kmingas"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "no_data": "API prisijung\u0119s, bet atsakymas buvo tu\u0161\u010dias"
+        },
+        "step": {
+            "reconfigure": {
+                "data": {
+                    "areas": "Regionai",
+                    "currency": "Valiuta"
+                },
+                "data_description": {
+                    "areas": "Sritys, kuriose rodomos kainos pagal Nordpool rinkos sritis.",
+                    "currency": "Pasirinkite valiut\u0105, kuria norite rodyti kainas. EUR yra bazin\u0117 valiuta."
+                }
+            },
+            "user": {
+                "data": {
+                    "areas": "Regionai",
+                    "currency": "Valiuta"
+                },
+                "data_description": {
+                    "areas": "Sritys, kuriose rodomos kainos pagal Nordpool rinkos sritis.",
+                    "currency": "Pasirinkite valiut\u0105, kuria norite rodyti kainas. EUR yra bazin\u0117 valiuta."
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "block_average": {
+                "name": "{block} vidurkis"
+            },
+            "block_end_time": {
+                "name": "{block} laikas iki"
+            },
+            "block_max": {
+                "name": "{block} did\u017eiausia kaina"
+            },
+            "block_min": {
+                "name": "{block} ma\u017eiausia kaina"
+            },
+            "block_start_time": {
+                "name": "{block} laikas nuo"
+            },
+            "currency": {
+                "name": "Valiuta"
+            },
+            "current_price": {
+                "name": "Dabartin\u0117 kaina"
+            },
+            "daily_average": {
+                "name": "Dienos vidurkis"
+            },
+            "exchange_rate": {
+                "name": "Keitimo kursas"
+            },
+            "highest_price": {
+                "name": "Auk\u0161\u010diausia kaina"
+            },
+            "last_price": {
+                "name": "Praeita kaina"
+            },
+            "lowest_price": {
+                "name": "Ma\u017eiausia kaina"
+            },
+            "next_price": {
+                "name": "Sekanti kaina"
+            },
+            "updated_at": {
+                "name": "Paskutin\u012f kart\u0105 atnaujinta"
+            }
+        }
+    },
+    "exceptions": {
+        "initial_update_failed": {
+            "message": "Pradinis naujinimas nepavyko paleid\u017eiant ir \u012fvyko klaida {error}"
+        }
+    }
+}

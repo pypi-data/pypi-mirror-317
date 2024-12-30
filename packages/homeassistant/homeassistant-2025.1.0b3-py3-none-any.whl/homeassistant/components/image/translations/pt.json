@@ -1,0 +1,17 @@
+{
+    "entity_component": {
+        "_": {
+            "name": "Imagem"
+        }
+    },
+    "services": {
+        "snapshot": {
+            "fields": {
+                "filename": {
+                    "name": "Nome do ficheiro"
+                }
+            }
+        }
+    },
+    "title": "Imagem"
+}

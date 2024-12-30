@@ -1,0 +1,257 @@
+{
+    "common": {
+        "state_not_supported": "N\u00e3o suportado",
+        "state_supported": "Suportado"
+    },
+    "config": {
+        "error": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "id_exists": "O id da gateway j\u00e1 existe",
+            "timeout_connect": "Excedido o tempo limite para estabelecer liga\u00e7\u00e3o"
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "device": "Caminho ou URL",
+                    "id": "ID",
+                    "name": "Nome"
+                }
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "hot_water_config": {
+                "state": {
+                    "on": "Tanque de armazenamento"
+                }
+            },
+            "supports_central_heating_setpoint_transfer": {
+                "state": {
+                    "off": "N\u00e3o suportado",
+                    "on": "Suportado"
+                }
+            },
+            "supports_central_heating_setpoint_writing": {
+                "state": {
+                    "off": "N\u00e3o suportado",
+                    "on": "Suportado"
+                }
+            },
+            "supports_ch_2": {
+                "state": {
+                    "off": "N\u00e3o suportado",
+                    "on": "Suportado"
+                }
+            },
+            "supports_cooling": {
+                "state": {
+                    "off": "N\u00e3o suportado",
+                    "on": "Suportado"
+                }
+            },
+            "supports_hot_water": {
+                "state": {
+                    "off": "N\u00e3o suportado",
+                    "on": "Suportado"
+                }
+            },
+            "supports_hot_water_setpoint_transfer": {
+                "state": {
+                    "off": "N\u00e3o suportado",
+                    "on": "Suportado"
+                }
+            },
+            "supports_hot_water_setpoint_writing": {
+                "state": {
+                    "off": "N\u00e3o suportado",
+                    "on": "Suportado"
+                }
+            },
+            "supports_pump_control": {
+                "state": {
+                    "off": "N\u00e3o suportado",
+                    "on": "Suportado"
+                }
+            },
+            "supports_remote_reset": {
+                "state": {
+                    "off": "N\u00e3o suportado",
+                    "on": "Suportado"
+                }
+            }
+        },
+        "button": {
+            "cancel_room_setpoint_override": {
+                "name": "Cancelar a substitui\u00e7\u00e3o do ponto de ajuste da sala."
+            }
+        },
+        "select": {
+            "gpio_mode_n": {
+                "name": "Modo GPIO {gpio_id}",
+                "state": {
+                    "away": "Ausente",
+                    "dhw_block": "Bloquear \u00e1gua quente",
+                    "ds1820": "DS1820",
+                    "ground": "Terra",
+                    "home": "Casa",
+                    "input": "Entrada",
+                    "led_e": "LED E",
+                    "led_f": "LED F",
+                    "vcc": "Vcc (5V)"
+                }
+            },
+            "led_mode_n": {
+                "name": "Modo LED {led_id}",
+                "state": {
+                    "boiler_maintenance_required": "A caldeira precisa de manuten\u00e7\u00e3o",
+                    "boiler_traffic": "Tr\u00e1fego na interface da caldeira",
+                    "central_heating_on": "O aquecimento central est\u00e1 ligado",
+                    "comfort_mode_on": "O modo de conforto est\u00e1 ligado",
+                    "flame_on": "A chama da caldeira est\u00e1 ligada",
+                    "hot_water_on": "A \u00e1gua quente est\u00e1 ligada",
+                    "raised_power_mode_active": "Modo de pot\u00eancia elevada ativo",
+                    "receive_any": "A receber em qualquer interface",
+                    "setpoint_override_active": "Est\u00e1 ativa a sobreposi\u00e7\u00e3o do objetivo",
+                    "thermostat_traffic": "Tr\u00e1fego na interface do termostato",
+                    "transmit_any": "A transmitir em qualquer interface",
+                    "transmit_error_detected": "Detetado um erro de transmiss\u00e3o"
+                }
+            }
+        }
+    },
+    "issues": {
+        "deprecated_import_from_configuration_yaml": {
+            "description": "A configura\u00e7\u00e3o da integra\u00e7\u00e3o do OpenTherm Gateway atrav\u00e9s do configuration.yaml est\u00e1 obsoleta. A sua configura\u00e7\u00e3o foi migrada para entradas de configura\u00e7\u00e3o. Por favor, remova qualquer configura\u00e7\u00e3o do OpenTherm Gateway do seu configuration.yaml.",
+            "title": "Configura\u00e7\u00e3o obsoleta"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "floor_temperature": "Temperatura do Piso",
+                    "read_precision": "Ler Precis\u00e3o",
+                    "set_precision": "Definir precis\u00e3o",
+                    "temporary_override_mode": "Modo de Substitui\u00e7\u00e3o do Ponto de Ajuste Tempor\u00e1rio"
+                }
+            }
+        }
+    },
+    "services": {
+        "reset_gateway": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                }
+            }
+        },
+        "send_transparent_command": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                }
+            }
+        },
+        "set_central_heating_ovrd": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                }
+            }
+        },
+        "set_clock": {
+            "fields": {
+                "date": {
+                    "name": "Data"
+                },
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                }
+            }
+        },
+        "set_control_setpoint": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                }
+            }
+        },
+        "set_gpio_mode": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                },
+                "id": {
+                    "name": "ID"
+                },
+                "mode": {
+                    "name": "Modo"
+                }
+            }
+        },
+        "set_hot_water_ovrd": {
+            "fields": {
+                "dhw_override": {
+                    "description": "Controlar a op\u00e7\u00e3o de ativa\u00e7\u00e3o da \u00e1gua quente sanit\u00e1ria. Se a caldeira tiver sido configurada para permitir que a unidade de controlo do ambiente decida quando manter uma pequena quantidade de \u00e1gua pr\u00e9-aquecida, este comando pode influenciar isso. O valor deve ser 0 ou 1, para ativar a substitui\u00e7\u00e3o no estado desligado ou ligado, ou \"A\" para desativar a substitui\u00e7\u00e3o.\n.",
+                    "name": "Sobrepor \u00e1gua quente sanit\u00e1ria"
+                },
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                }
+            }
+        },
+        "set_hot_water_setpoint": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                },
+                "temperature": {
+                    "description": "O ponto de ajuste da \u00e1gua quente sanit\u00e1ria a definir no gateway. Nem todas as caldeiras suportam esta funcionalidade. S\u00e3o aceites valores entre 0 e 90, mas nem todas as caldeiras suportam este intervalo. Verifique os valores dos sensores slave_dhw_min_setp e slave_dhw_max_setp para ver o intervalo suportado na sua caldeira.",
+                    "name": "Temperatura"
+                }
+            }
+        },
+        "set_led_mode": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                },
+                "id": {
+                    "name": "ID"
+                },
+                "mode": {
+                    "name": "Modo"
+                }
+            }
+        },
+        "set_max_modulation": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                },
+                "level": {
+                    "name": "N\u00edvel"
+                }
+            }
+        },
+        "set_outside_temperature": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                },
+                "temperature": {
+                    "name": "Temperatura"
+                }
+            }
+        },
+        "set_setback_temperature": {
+            "fields": {
+                "gateway_id": {
+                    "name": "ID do Gateway"
+                }
+            }
+        }
+    }
+}

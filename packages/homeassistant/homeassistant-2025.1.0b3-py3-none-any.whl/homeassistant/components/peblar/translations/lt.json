@@ -1,0 +1,86 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Prietaisas jau sukonfig\u016bruotas",
+            "no_serial_number": "Aptiktas Peblar \u012frenginys nepateik\u0117 serijos numerio."
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_auth": "Neteisingas autentifikavimas",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Host",
+                    "password": "Slapta\u017eodis"
+                },
+                "data_description": {
+                    "host": "Peblar EV \u012fkroviklio pagrindinio kompiuterio pavadinimas arba IP adresas j\u016bs\u0173 nam\u0173 tinkle."
+                }
+            },
+            "zeroconf_confirm": {
+                "data": {
+                    "password": "Slapta\u017eodis"
+                },
+                "data_description": {
+                    "password": "Tas pats slapta\u017eodis, kur\u012f naudojate prisijungdami prie Peblar \u012frenginio vietin\u0117s \u017einiatinklio s\u0105sajos."
+                }
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "active_error_codes": {
+                "name": "Aktyvios klaidos"
+            },
+            "active_warning_codes": {
+                "name": "Aktyv\u016bs \u012fsp\u0117jimai"
+            }
+        },
+        "number": {
+            "charge_current_limit": {
+                "name": "\u012ekrovimo riba"
+            }
+        },
+        "sensor": {
+            "charge_current_limit_source": {
+                "name": "Apriboti \u0161altin\u012f",
+                "state": {
+                    "charging_cable": "\u012ekrovimo laidas",
+                    "current_limiter": "Srov\u0117s ribotuvas",
+                    "dynamic_load_balancing": "Dinaminis apkrovos balansavimas",
+                    "external_power_limit": "I\u0161orin\u0117s galios riba",
+                    "group_load_balancing": "Grupin\u0117s apkrovos balansavimas",
+                    "hardware_limitation": "Aparatin\u0117s \u012frangos apribojimas",
+                    "high_temperature": "Auk\u0161ta temperat\u016bra",
+                    "household_power_limit": "Buitin\u0117s galios riba",
+                    "installation_limit": "Montavimo riba",
+                    "local_modbus_api": "Modbus API",
+                    "local_rest_api": "REST API",
+                    "ocpp_smart_charging": "OCPP i\u0161manusis \u012fkrovimas",
+                    "overcurrent_protection": "Apsauga nuo vir\u0161srovi\u0173",
+                    "phase_imbalance": "Fazi\u0173 disbalansas",
+                    "power_factor": "Galios koeficientas",
+                    "solar_charging": "Saul\u0117s \u012fkrovimas"
+                }
+            },
+            "cp_state": {
+                "name": "B\u016bsena",
+                "state": {
+                    "charging": "\u012ekrovimas",
+                    "error": "Klaida",
+                    "fault": "Gedimas",
+                    "invalid": "Neteisingas",
+                    "no_ev_connected": "N\u0117ra prijungtas EV",
+                    "suspended": "Sustabdytas"
+                }
+            }
+        },
+        "switch": {
+            "force_single_phase": {
+                "name": "Vienfaz\u0117 j\u0117ga"
+            }
+        }
+    }
+}

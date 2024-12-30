@@ -1,0 +1,75 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "invalid_host": "Endere\u00e7o IP ou anfitri\u00e3o inv\u00e1lido.",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "unknown": "Erro inesperado"
+        },
+        "flow_title": "{device}",
+        "step": {
+            "reconfigure": {
+                "data": {
+                    "host": "Anfitri\u00e3o"
+                },
+                "data_description": {
+                    "host": "O endere\u00e7o IP ou o nome do host do seu dispositivo Fronius."
+                }
+            },
+            "user": {
+                "data": {
+                    "host": "Anfitri\u00e3o"
+                },
+                "data_description": {
+                    "host": "O endere\u00e7o IP ou o nome do host do seu dispositivo Fronius."
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "capacity_maximum": {
+                "name": "Capacidade m\u00e1xima"
+            },
+            "current_ac": {
+                "name": "Corrente AC"
+            },
+            "energy_total": {
+                "name": "Energia total"
+            },
+            "error_code": {
+                "name": "C\u00f3digo de erro"
+            },
+            "error_message": {
+                "state": {
+                    "update_file_not_recognised_or_missing": "Ficheiro de atualiza\u00e7\u00e3o n\u00e3o reconhecido ou em falta",
+                    "wired_shut_down_triggered": "Foi acionado um encerramento por cabo",
+                    "write_or_read_error_occurred": "Ocorreu um erro de leitura ou escrita"
+                }
+            },
+            "inverter_state": {
+                "name": "Inverter estado"
+            },
+            "led_color": {
+                "name": "Cor do LED"
+            },
+            "led_state": {
+                "name": "Estado do LED"
+            },
+            "relative_self_consumption": {
+                "name": "Autoconsumo relativo"
+            },
+            "status_message": {
+                "state": {
+                    "idle": "Inativo"
+                }
+            },
+            "temperature_cell": {
+                "name": "Temperatura"
+            }
+        }
+    }
+}

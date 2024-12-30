@@ -1,0 +1,15 @@
+{
+    "config": {
+        "abort": {
+            "reconfigure_successful": "Yeniden yap\u0131land\u0131rma ba\u015far\u0131l\u0131 oldu"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "country": "\u00dclke"
+                }
+            }
+        }
+    },
+    "title": "Tatil"
+}

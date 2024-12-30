@@ -1,0 +1,61 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida"
+        },
+        "error": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "password_error": "Autentica\u00e7\u00e3o inv\u00e1lida"
+        },
+        "step": {
+            "password": {
+                "data": {
+                    "password": "Palavra-passe"
+                },
+                "data_description": {
+                    "password": "A palavra-passe do utilizador geral do seu dispositivo Solar-Log."
+                }
+            },
+            "reauth_confirm": {
+                "data": {
+                    "password": "Palavra-passe"
+                },
+                "data_description": {
+                    "has_password": "A palavra-passe \u00e9 necess\u00e1ria, se a API JSON aberta estiver desativada ou se desejar aceder a dados adicionais fornecidos pelo seu dispositivo Solar-Log.",
+                    "password": "A palavra-passe do utilizador geral do seu dispositivo Solar-Log."
+                }
+            },
+            "reconfigure": {
+                "data": {
+                    "password": "Palavra-passe"
+                },
+                "data_description": {
+                    "has_password": "A palavra-passe \u00e9 necess\u00e1ria, se a API JSON aberta estiver desativada ou se desejar aceder a dados adicionais fornecidos pelo seu dispositivo Solar-Log.",
+                    "password": "A palavra-passe do utilizador geral do seu dispositivo Solar-Log."
+                }
+            },
+            "user": {
+                "data": {
+                    "host": "Anfitri\u00e3o"
+                },
+                "data_description": {
+                    "has_password": "A palavra-passe \u00e9 necess\u00e1ria, se a API JSON aberta estiver desativada ou se desejar aceder a dados adicionais fornecidos pelo seu dispositivo Solar-Log."
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "auth_failed": {
+            "message": "Erro ao iniciar sess\u00e3o na API."
+        },
+        "config_entry_not_ready": {
+            "message": "Erro ao carregar a entrada de configura\u00e7\u00e3o."
+        },
+        "update_error": {
+            "message": "Erro ao atualizar dados da API."
+        }
+    }
+}

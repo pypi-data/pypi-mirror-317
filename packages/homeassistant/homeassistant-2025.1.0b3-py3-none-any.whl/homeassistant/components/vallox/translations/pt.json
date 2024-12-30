@@ -1,0 +1,79 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Servi\u00e7o j\u00e1 configurado",
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_host": "Endere\u00e7o IP ou anfitri\u00e3o inv\u00e1lido.",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida",
+            "unknown": "Erro inesperado"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_host": "Endere\u00e7o IP ou anfitri\u00e3o inv\u00e1lido.",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "reconfigure": {
+                "data": {
+                    "host": "Anfitri\u00e3o"
+                }
+            },
+            "user": {
+                "data": {
+                    "host": "Anfitri\u00e3o"
+                }
+            }
+        }
+    },
+    "selector": {
+        "profile": {
+            "options": {
+                "away": "Ausente",
+                "boost": "Turbo",
+                "extra": "Extra",
+                "fireplace": "Lareira",
+                "home": "Casa"
+            }
+        }
+    },
+    "services": {
+        "set_profile": {
+            "description": "Ativar um perfil e, opcionalmente, definir a dura\u00e7\u00e3o.",
+            "fields": {
+                "duration": {
+                    "description": "Dura\u00e7\u00e3o da ativa\u00e7\u00e3o, se omitida, o dispositivo usa a dura\u00e7\u00e3o armazenada. A dura\u00e7\u00e3o de 65535 ativa o perfil sem tempo limite. A dura\u00e7\u00e3o aplica-se apenas aos perfis Turbo, Lareira e Extra.",
+                    "name": "Dura\u00e7\u00e3o"
+                },
+                "profile": {
+                    "description": "Perfil a ativar",
+                    "name": "Perfil"
+                }
+            },
+            "name": "Ativar perfil por dura\u00e7\u00e3o"
+        },
+        "set_profile_fan_speed_away": {
+            "fields": {
+                "fan_speed": {
+                    "description": "Velocidade da ventoinha.",
+                    "name": "Velocidade da ventoinha"
+                }
+            }
+        },
+        "set_profile_fan_speed_boost": {
+            "fields": {
+                "fan_speed": {
+                    "description": "Velocidade da ventoinha.",
+                    "name": "Velocidade da ventoinha"
+                }
+            }
+        },
+        "set_profile_fan_speed_home": {
+            "fields": {
+                "fan_speed": {
+                    "description": "Velocidade da ventoinha.",
+                    "name": "Velocidade da ventoinha"
+                }
+            }
+        }
+    }
+}

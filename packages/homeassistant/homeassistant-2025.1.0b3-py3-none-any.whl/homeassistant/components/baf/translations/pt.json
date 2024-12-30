@@ -1,0 +1,45 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "unknown": "Erro inesperado"
+        },
+        "flow_title": "{name} - {model} ({ip_address})",
+        "step": {
+            "user": {
+                "data": {
+                    "ip_address": "Endere\u00e7o IP"
+                }
+            }
+        }
+    },
+    "entity": {
+        "fan": {
+            "baf": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "auto": "Auto"
+                        }
+                    }
+                }
+            }
+        },
+        "sensor": {
+            "ip_address": {
+                "name": "Endere\u00e7o IP"
+            },
+            "wifi_ssid": {
+                "name": "SSID do Wi-Fi"
+            }
+        },
+        "switch": {
+            "light_dim_to_warm_enable": {
+                "name": "Escurecer para quente"
+            }
+        }
+    }
+}

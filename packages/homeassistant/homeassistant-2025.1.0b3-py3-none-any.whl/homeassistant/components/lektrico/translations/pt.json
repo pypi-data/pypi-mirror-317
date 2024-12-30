@@ -1,0 +1,84 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "cannot_connect": "A liga\u00e7\u00e3o falhou"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "device_name": "Nome",
+                    "host": "Anfitri\u00e3o"
+                }
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "contactor_failure": {
+                "name": "Contactos do rel\u00e9 fundidos"
+            },
+            "critical_temp": {
+                "name": "Sobreaquecimento"
+            },
+            "meter_fault": {
+                "name": "Erro de medi\u00e7\u00e3o"
+            },
+            "overcurrent": {
+                "name": "Sobrecorrente"
+            },
+            "overvoltage": {
+                "name": "Sobrevoltagem"
+            },
+            "rcd_error": {
+                "name": "Erro Rcd"
+            },
+            "state_e_activated": {
+                "name": "Erro Ev"
+            },
+            "undervoltage": {
+                "name": "Subvoltagem"
+            }
+        },
+        "button": {
+            "charge_start": {
+                "name": "Iniciar carregamento"
+            },
+            "charge_stop": {
+                "name": "Parar carregamento"
+            }
+        },
+        "select": {
+            "load_balancing_mode": {
+                "state": {
+                    "disabled": "Desativado"
+                }
+            }
+        },
+        "sensor": {
+            "limit_reason": {
+                "state": {
+                    "1p_charging_disabled": "Carregamento 1p desativado",
+                    "overtemperature": "Sobreaquecimento",
+                    "switching_phases": "A trocar fases"
+                }
+            },
+            "state": {
+                "state": {
+                    "locked": "Trancada"
+                }
+            }
+        },
+        "switch": {
+            "authentication": {
+                "name": "Autentica\u00e7\u00e3o"
+            },
+            "lock": {
+                "name": "Fechadura"
+            }
+        }
+    }
+}

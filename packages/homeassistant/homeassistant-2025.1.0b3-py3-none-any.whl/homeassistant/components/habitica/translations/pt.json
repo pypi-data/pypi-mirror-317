@@ -1,0 +1,342 @@
+{
+    "common": {
+        "config_entry_name": "Selecionar personagem",
+        "dailies": "Di\u00e1rios",
+        "todos": "A Fazer",
+        "unit_experience_points": "XP",
+        "unit_health_points": "HP",
+        "unit_mana_points": "MP",
+        "unit_tasks": "tarefas"
+    },
+    "config": {
+        "abort": {
+            "already_configured": "Conta j\u00e1 configurada"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "advanced": {
+                "data": {
+                    "api_key": "Token API",
+                    "url": "URL",
+                    "verify_ssl": "Verificar o certificado SSL"
+                },
+                "data_description": {
+                    "api_key": "Token da API da conta Habitica",
+                    "api_user": "ID de utilizador da sua conta Habitica",
+                    "url": "URL da instala\u00e7\u00e3o do Habitica para ligar. O padr\u00e3o \u00e9 `{default_url}`"
+                },
+                "title": "Iniciar sess\u00e3o noutras inst\u00e2ncias"
+            },
+            "login": {
+                "data": {
+                    "password": "Palavra-passe"
+                },
+                "data_description": {
+                    "password": "Palavra-passe para a conta para ligar o Home Assistant ao Habitica.",
+                    "username": "Email ou nome de utilizador (sens\u00edvel a mai\u00fasculas e min\u00fasculas) para ligar o Home Assistant \u00e0 sua conta Habitica."
+                },
+                "description": "Insira os seus dados de login para come\u00e7ar a usar o Habitica com o Home Assistant\n\n[Esqueceu-se da sua palavra-passe?]({forgot_password})"
+            },
+            "user": {
+                "menu_options": {
+                    "advanced": "Iniciar sess\u00e3o noutras inst\u00e2ncias"
+                },
+                "title": "Habitica - Transforme a sua vida num jogo"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "brightness": {
+                "name": "Brilho Escaldante"
+            },
+            "defensive_stance": {
+                "name": "Postura Defensiva"
+            },
+            "earth": {
+                "name": "Terramoto"
+            },
+            "frost": {
+                "name": "Geada Arrepiante"
+            },
+            "heal": {
+                "name": "Luz Curadora"
+            },
+            "heal_all": {
+                "name": "B\u00ean\u00e7\u00e3o"
+            },
+            "intimidate": {
+                "name": "Olhar Intimidante"
+            },
+            "mpheal": {
+                "name": "Onda Et\u00e9rea"
+            },
+            "protect_aura": {
+                "name": "Aura Protetora"
+            },
+            "stealth": {
+                "name": "Furtividade"
+            },
+            "tools_of_trade": {
+                "name": "Ferramentas do Of\u00edcio"
+            },
+            "valorous_presence": {
+                "name": "Presen\u00e7a Valente"
+            }
+        },
+        "calendar": {
+            "dailys": {
+                "name": "Di\u00e1rios",
+                "state_attributes": {
+                    "yesterdaily": {
+                        "name": "Di\u00e1ria de ontem",
+                        "state": {
+                            "false": "N\u00e3o",
+                            "true": "Sim"
+                        }
+                    }
+                }
+            },
+            "todos": {
+                "name": "A Fazer"
+            }
+        },
+        "sensor": {
+            "constitution": {
+                "state_attributes": {
+                    "level": {
+                        "name": "N\u00edvel"
+                    }
+                }
+            },
+            "dailys": {
+                "unit_of_measurement": "tarefas"
+            },
+            "experience": {
+                "unit_of_measurement": "XP"
+            },
+            "experience_max": {
+                "unit_of_measurement": "XP"
+            },
+            "gems": {
+                "unit_of_measurement": "joias"
+            },
+            "gold": {
+                "unit_of_measurement": "GP"
+            },
+            "habits": {
+                "unit_of_measurement": "tarefas"
+            },
+            "health": {
+                "unit_of_measurement": "HP"
+            },
+            "health_max": {
+                "unit_of_measurement": "HP"
+            },
+            "intelligence": {
+                "state_attributes": {
+                    "level": {
+                        "name": "N\u00edvel"
+                    }
+                }
+            },
+            "level": {
+                "name": "N\u00edvel"
+            },
+            "mana": {
+                "unit_of_measurement": "MP"
+            },
+            "mana_max": {
+                "unit_of_measurement": "MP"
+            },
+            "perception": {
+                "name": "Perce\u00e7\u00e3o",
+                "state_attributes": {
+                    "allocated": {
+                        "name": "Pontos de atributo alocados"
+                    },
+                    "buffs": {
+                        "name": "Buffs"
+                    },
+                    "class": {
+                        "name": "B\u00f3nus de equipamento de classe"
+                    },
+                    "equipment": {
+                        "name": "Equipamento de combate."
+                    },
+                    "level": {
+                        "name": "N\u00edvel"
+                    }
+                }
+            },
+            "rewards": {
+                "unit_of_measurement": "tarefas"
+            },
+            "strength": {
+                "name": "For\u00e7a",
+                "state_attributes": {
+                    "allocated": {
+                        "name": "Pontos de atributo alocados"
+                    },
+                    "buffs": {
+                        "name": "Buffs"
+                    },
+                    "class": {
+                        "name": "B\u00f3nus de equipamento de classe"
+                    },
+                    "equipment": {
+                        "name": "Equipamento de combate."
+                    },
+                    "level": {
+                        "name": "N\u00edvel"
+                    }
+                }
+            },
+            "todos": {
+                "unit_of_measurement": "tarefas"
+            }
+        }
+    },
+    "exceptions": {
+        "entry_not_found": {
+            "message": "O personagem selecionado n\u00e3o est\u00e1 configurado no Home Assistant."
+        },
+        "entry_not_loaded": {
+            "message": "O caractere selecionado n\u00e3o est\u00e1 atualmente carregado ou est\u00e1 desativado no Home Assistant."
+        },
+        "not_enough_mana": {
+            "message": "N\u00e3o foi poss\u00edvel lan\u00e7ar a habilidade, mana insuficiente. O seu personagem tem {mana}, mas a habilidade custa {cost}."
+        },
+        "quest_action_unallowed": {
+            "message": "A\u00e7\u00e3o n\u00e3o permitida, apenas o l\u00edder da miss\u00e3o ou o l\u00edder do grupo pode realizar esta a\u00e7\u00e3o."
+        },
+        "quest_not_found": {
+            "message": "N\u00e3o foi poss\u00edvel concluir a a\u00e7\u00e3o, miss\u00e3o ou grupo n\u00e3o encontrado."
+        },
+        "skill_not_found": {
+            "message": "N\u00e3o foi poss\u00edvel lan\u00e7ar a habilidade, o seu personagem n\u00e3o possui a habilidade ou feiti\u00e7o {skill}."
+        },
+        "task_not_found": {
+            "message": "N\u00e3o foi poss\u00edvel concluir a a\u00e7\u00e3o, n\u00e3o foi poss\u00edvel encontrar a tarefa {task}."
+        }
+    },
+    "issues": {
+        "deprecated_api_call": {
+            "description": "A a\u00e7\u00e3o `habitica.api_call` do Habitica est\u00e1 obsoleta e ser\u00e1 removida no Home Assistant 2025.5.0.\n\nPor favor, atualize as suas automa\u00e7\u00f5es e scripts para usar outras a\u00e7\u00f5es e entidades do Habitica.",
+            "title": "A a\u00e7\u00e3o habitica.api_call do Habitica est\u00e1 obsoleta."
+        }
+    },
+    "selector": {
+        "skill_select": {
+            "options": {
+                "backstab": "Ladino: Facada nas costas",
+                "fireball": "Mago: Explos\u00e3o de chamas",
+                "pickpocket": "Ladino: Bater carteira",
+                "smash": "Guerreiro: Destrui\u00e7\u00e3o brutal"
+            }
+        }
+    },
+    "services": {
+        "abort_quest": {
+            "description": "Termine a miss\u00e3o em andamento do seu grupo. Todo o progresso ser\u00e1 perdido e o rolo da miss\u00e3o ser\u00e1 devolvido ao invent\u00e1rio do propriet\u00e1rio. Apenas o l\u00edder da miss\u00e3o ou o l\u00edder do grupo pode realizar esta a\u00e7\u00e3o.",
+            "fields": {
+                "config_entry": {
+                    "description": "Escolha a personagem do Habitica para a qual deseja realizar a a\u00e7\u00e3o.",
+                    "name": "Selecionar personagem"
+                }
+            },
+            "name": "Abortar uma miss\u00e3o ativa"
+        },
+        "accept_quest": {
+            "description": "Aceitar convite pendente para uma miss\u00e3o.",
+            "fields": {
+                "config_entry": {
+                    "description": "Escolha a personagem do Habitica para a qual deseja realizar a a\u00e7\u00e3o.",
+                    "name": "Selecionar personagem"
+                }
+            },
+            "name": "Aceitar um convite para uma miss\u00e3o"
+        },
+        "api_call": {
+            "fields": {
+                "args": {
+                    "name": "Args"
+                },
+                "name": {
+                    "name": "Nome"
+                },
+                "path": {
+                    "name": "Caminho"
+                }
+            }
+        },
+        "cancel_quest": {
+            "description": "Cancele uma miss\u00e3o que ainda n\u00e3o come\u00e7ou. Todas as convites aceites e pendentes ser\u00e3o cancelados e o rolo da miss\u00e3o ser\u00e1 devolvido ao invent\u00e1rio do propriet\u00e1rio. Apenas o l\u00edder da miss\u00e3o ou o l\u00edder do grupo pode realizar esta a\u00e7\u00e3o.",
+            "fields": {
+                "config_entry": {
+                    "description": "Escolha a personagem do Habitica para a qual deseja realizar a a\u00e7\u00e3o.",
+                    "name": "Selecionar personagem"
+                }
+            },
+            "name": "Cancelar uma miss\u00e3o pendente"
+        },
+        "cast_skill": {
+            "description": "Use uma habilidade ou feiti\u00e7o do seu personagem Habitica numa tarefa espec\u00edfica para afetar seu progresso ou estado.",
+            "fields": {
+                "config_entry": {
+                    "description": "Escolha o personagem do Habitica para lan\u00e7ar a habilidade.",
+                    "name": "Selecionar personagem"
+                },
+                "skill": {
+                    "description": "Selecione a habilidade ou feiti\u00e7o que deseja lan\u00e7ar na tarefa. Apenas habilidades correspondentes \u00e0 classe do seu personagem podem ser usadas.",
+                    "name": "Habilidade"
+                },
+                "task": {
+                    "description": "O nome (ou ID da tarefa) da tarefa que deseja direcionar com a habilidade ou feiti\u00e7o.",
+                    "name": "Nome da tarefa"
+                }
+            },
+            "name": "Lance uma habilidade."
+        },
+        "leave_quest": {
+            "description": "Saia da miss\u00e3o atual em que est\u00e1 a participar.",
+            "fields": {
+                "config_entry": {
+                    "description": "Escolha a personagem do Habitica para a qual deseja realizar a a\u00e7\u00e3o.",
+                    "name": "Selecionar personagem"
+                }
+            }
+        },
+        "score_reward": {
+            "fields": {
+                "task": {
+                    "description": "O nome (ou ID da tarefa) da recompensa personalizada.",
+                    "name": "Nome da recompensa"
+                }
+            },
+            "name": "Comprar uma recompensa"
+        },
+        "transformation": {
+            "description": "Use um item de transforma\u00e7\u00e3o do invent\u00e1rio da sua personagem do Habitica em um membro do seu grupo ou em si mesmo.",
+            "fields": {
+                "config_entry": {
+                    "description": "Escolha a personagem do Habitica para usar o item de transforma\u00e7\u00e3o.",
+                    "name": "Selecionar personagem"
+                },
+                "item": {
+                    "description": "Selecione o item de transforma\u00e7\u00e3o que deseja usar. O item deve estar no invent\u00e1rio da personagem.",
+                    "name": "Item de transforma\u00e7\u00e3o"
+                },
+                "target": {
+                    "description": "O nome da personagem que deseja que use o item de transforma\u00e7\u00e3o. Tamb\u00e9m pode especificar o nome de utilizador ou o ID do jogador.",
+                    "name": "Personagem alvo"
+                }
+            },
+            "name": "Utilizar um item de transforma\u00e7\u00e3o"
+        }
+    }
+}

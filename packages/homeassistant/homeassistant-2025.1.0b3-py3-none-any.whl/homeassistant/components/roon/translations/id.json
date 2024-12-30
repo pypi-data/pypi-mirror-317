@@ -1,0 +1,34 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Perangkat sudah dikonfigurasi"
+        },
+        "error": {
+            "invalid_auth": "Autentikasi tidak valid",
+            "unknown": "Kesalahan tak terduga"
+        },
+        "step": {
+            "fallback": {
+                "data": {
+                    "host": "Host",
+                    "port": "Port"
+                },
+                "description": "Tidak dapat menemukan server Roon, masukkan Nama Host dan Port Anda."
+            }
+        }
+    },
+    "entity": {
+        "event": {
+            "volume": {
+                "state_attributes": {
+                    "event_type": {
+                        "state": {
+                            "volume_down": "Volume turun",
+                            "volume_up": "Volume naik"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Servi\u00e7o j\u00e1 configurado"
+        },
+        "error": {
+            "invalid_ics_file": "Ficheiro .ics inv\u00e1lido"
+        },
+        "step": {
+            "import": {
+                "description": "Pode importar eventos no formato iCal (ficheiro .ics)."
+            },
+            "user": {
+                "data": {
+                    "import": "Data de in\u00edcio"
+                }
+            }
+        }
+    },
+    "selector": {
+        "import": {
+            "options": {
+                "create_empty": "Criar um calend\u00e1rio vazio",
+                "import_ics_file": "Carregar um ficheiro iCalendar (.ics)."
+            }
+        }
+    }
+}

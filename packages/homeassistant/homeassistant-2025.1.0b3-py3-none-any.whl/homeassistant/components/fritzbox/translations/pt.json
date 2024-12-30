@@ -1,0 +1,86 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "already_in_progress": "O processo de configura\u00e7\u00e3o j\u00e1 est\u00e1 a decorrer",
+            "no_devices_found": "Nenhum dispositivo encontrado na rede",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida"
+        },
+        "error": {
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida",
+            "no_devices_found": "Nenhum dispositivo encontrado na rede"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "confirm": {
+                "data": {
+                    "password": "Palavra-passe",
+                    "username": "Nome de Utilizador"
+                }
+            },
+            "reauth_confirm": {
+                "data": {
+                    "password": "Palavra-passe",
+                    "username": "Nome de Utilizador"
+                }
+            },
+            "reconfigure": {
+                "data": {
+                    "host": "Anfitri\u00e3o"
+                },
+                "data_description": {
+                    "host": "O nome do host ou endere\u00e7o IP do seu router FRITZ!Box."
+                },
+                "description": "Atualize as suas informa\u00e7\u00f5es de configura\u00e7\u00e3o para {name}."
+            },
+            "user": {
+                "data": {
+                    "host": "Anfitri\u00e3o",
+                    "password": "Palavra-passe",
+                    "username": "Nome de Utilizador"
+                },
+                "data_description": {
+                    "host": "Nome de anfitri\u00e3o ou endere\u00e7o IP do seu router FRITZ!Box."
+                }
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "alarm": {
+                "name": "Alarme"
+            }
+        },
+        "climate": {
+            "thermostat": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Pr\u00e9-definido",
+                        "state": {
+                            "comfort": "Conforto",
+                            "eco": "Eco",
+                            "holiday": "Feriado"
+                        }
+                    }
+                }
+            }
+        },
+        "sensor": {
+            "comfort_temperature": {
+                "name": "Temperatura confort\u00e1vel"
+            },
+            "eco_temperature": {
+                "name": "Temperatura Eco"
+            }
+        }
+    },
+    "exceptions": {
+        "change_hvac_while_active_mode": {
+            "message": "N\u00e3o \u00e9 poss\u00edvel alterar o modo HVAC enquanto o modo de f\u00e9rias ou ver\u00e3o est\u00e1 ativo no dispositivo."
+        },
+        "change_preset_while_active_mode": {
+            "message": "N\u00e3o \u00e9 poss\u00edvel alterar o predefinido enquanto o modo de f\u00e9rias ou ver\u00e3o est\u00e1 ativo no dispositivo."
+        }
+    }
+}

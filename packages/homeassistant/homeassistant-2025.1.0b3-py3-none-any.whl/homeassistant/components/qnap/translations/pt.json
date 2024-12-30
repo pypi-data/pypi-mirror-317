@@ -1,0 +1,49 @@
+{
+    "config": {
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Anfitri\u00e3o",
+                    "password": "Palavra-passe",
+                    "port": "Porta",
+                    "ssl": "Utiliza um certificado SSL",
+                    "username": "Nome de Utilizador",
+                    "verify_ssl": "Verificar o certificado SSL"
+                },
+                "data_description": {
+                    "host": "Nome de anfitri\u00e3o ou endere\u00e7o IP do seu dispositivo QNAP."
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "cpu_temp": {
+                "name": "Temperatura do CPU"
+            },
+            "cpu_usage": {
+                "name": "Utiliza\u00e7\u00e3o do CPU"
+            },
+            "memory_free": {
+                "name": "Mem\u00f3ria dispon\u00edvel"
+            },
+            "memory_percent_used": {
+                "name": "Utiliza\u00e7\u00e3o de mem\u00f3ria"
+            },
+            "memory_used": {
+                "name": "Mem\u00f3ria utilizada"
+            },
+            "status": {
+                "name": "Estado"
+            },
+            "system_temp": {
+                "name": "Temperatura do sistema"
+            }
+        }
+    }
+}

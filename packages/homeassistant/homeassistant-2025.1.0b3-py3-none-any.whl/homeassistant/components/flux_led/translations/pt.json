@@ -1,0 +1,86 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "already_in_progress": "O processo de configura\u00e7\u00e3o j\u00e1 est\u00e1 a decorrer",
+            "no_devices_found": "Nenhum dispositivo encontrado na rede"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou"
+        },
+        "flow_title": "{model} {id} ({ipaddr})",
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Anfitri\u00e3o"
+                },
+                "description": "Se voc\u00ea deixar o host vazio, a descoberta ser\u00e1 usada para localizar dispositivos."
+            }
+        }
+    },
+    "entity": {
+        "number": {
+            "music_segments": {
+                "name": "Segmentos musicais"
+            },
+            "segments": {
+                "name": "Segmentos"
+            }
+        },
+        "switch": {
+            "music": {
+                "name": "M\u00fasica"
+            },
+            "remote_access": {
+                "name": "Acesso remoto"
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "mode": "O modo de brilho escolhido."
+                }
+            }
+        }
+    },
+    "services": {
+        "set_custom_effect": {
+            "fields": {
+                "colors": {
+                    "name": "Cores"
+                },
+                "speed_pct": {
+                    "name": "Velocidade"
+                },
+                "transition": {
+                    "name": "Transi\u00e7\u00e3o"
+                }
+            }
+        },
+        "set_music_mode": {
+            "fields": {
+                "brightness": {
+                    "name": "Brilho"
+                },
+                "effect": {
+                    "name": "Efeito"
+                },
+                "light_screen": {
+                    "description": "Modo de ecr\u00e3 claro para pixels bidimensionais (apenas para modelos endere\u00e7\u00e1veis)."
+                },
+                "sensitivity": {
+                    "name": "Sensibilidade"
+                }
+            }
+        },
+        "set_zones": {
+            "fields": {
+                "colors": {
+                    "name": "Cores"
+                }
+            }
+        }
+    }
+}

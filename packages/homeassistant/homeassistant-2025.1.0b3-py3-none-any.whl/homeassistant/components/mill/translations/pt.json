@@ -1,0 +1,33 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Conta j\u00e1 configurada"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou"
+        },
+        "step": {
+            "cloud": {
+                "data": {
+                    "password": "Palavra-passe",
+                    "username": "Nome de Utilizador"
+                }
+            },
+            "local": {
+                "data": {
+                    "ip_address": "Endere\u00e7o IP"
+                }
+            }
+        }
+    },
+    "services": {
+        "set_room_temperature": {
+            "fields": {
+                "comfort_temp": {
+                    "description": "Temp. de conforto",
+                    "name": "Temperatura de conforto"
+                }
+            }
+        }
+    }
+}

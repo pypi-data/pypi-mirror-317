@@ -1,0 +1,143 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida"
+        },
+        "step": {
+            "bluetooth_selection": {
+                "data": {
+                    "mac": "Dispositivo"
+                }
+            },
+            "machine_selection": {
+                "data": {
+                    "host": "Endere\u00e7o IP"
+                }
+            },
+            "reauth_confirm": {
+                "data": {
+                    "password": "Palavra-passe"
+                },
+                "data_description": {
+                    "password": "A sua palavra-passe da aplica\u00e7\u00e3o La Marzocco"
+                },
+                "description": "\u00c9 necess\u00e1ria uma nova autentica\u00e7\u00e3o. Por favor, introduza novamente a sua palavra-passe."
+            },
+            "reconfigure": {
+                "data": {
+                    "password": "Palavra-passe",
+                    "username": "Nome de Utilizador"
+                },
+                "data_description": {
+                    "password": "A sua palavra-passe da aplica\u00e7\u00e3o La Marzocco",
+                    "username": "O seu nome de utilizador da aplica\u00e7\u00e3o La Marzocco."
+                }
+            },
+            "user": {
+                "data": {
+                    "password": "Palavra-passe",
+                    "username": "Nome de Utilizador"
+                },
+                "data_description": {
+                    "password": "A sua palavra-passe da aplica\u00e7\u00e3o La Marzocco",
+                    "username": "O seu nome de utilizador da aplica\u00e7\u00e3o La Marzocco."
+                }
+            }
+        }
+    },
+    "entity": {
+        "calendar": {
+            "auto_on_off_schedule": {
+                "name": "Agendamento de auto ligar/desligar ({id})"
+            }
+        },
+        "number": {
+            "preinfusion_off": {
+                "name": "Tempo de pr\u00e9-infus\u00e3o"
+            },
+            "preinfusion_off_key": {
+                "name": "Tecla {key} do tempo de pr\u00e9-infus\u00e3o"
+            },
+            "smart_standby_time": {
+                "name": "Tempo de espera inteligente"
+            }
+        },
+        "select": {
+            "active_bbw": {
+                "state": {
+                    "a": "Receita A",
+                    "b": "Receita B"
+                }
+            },
+            "smart_standby_mode": {
+                "name": "Modo de espera inteligente",
+                "state": {
+                    "last_brewing": "\u00daltima fermenta\u00e7\u00e3o",
+                    "power_on": "Ligado"
+                }
+            },
+            "steam_temp_select": {
+                "state": {
+                    "1": "1",
+                    "2": "2",
+                    "3": "3"
+                }
+            }
+        },
+        "switch": {
+            "smart_standby_enabled": {
+                "name": "Modo de espera inteligente ativado"
+            }
+        }
+    },
+    "exceptions": {
+        "api_error": {
+            "message": "Erro ao comunicar com a API"
+        },
+        "authentication_failed": {
+            "message": "A autentica\u00e7\u00e3o falhou"
+        },
+        "auto_on_off_error": {
+            "message": "Erro ao definir o modo autom\u00e1tico ligado/desligado para {state} em {id}"
+        },
+        "button_error": {
+            "message": "Erro ao executar o bot\u00e3o {key}"
+        },
+        "number_exception": {
+            "message": "Erro ao definir o valor {value} para o n\u00famero {key}"
+        },
+        "number_exception_key": {
+            "message": "Erro ao definir o valor {value} para o n\u00famero {key}, chave {physical_key}"
+        },
+        "select_option_error": {
+            "message": "Erro ao definir a op\u00e7\u00e3o selecionada {option} para {key}"
+        },
+        "switch_off_error": {
+            "message": "Erro ao desligar interruptor {key}"
+        },
+        "switch_on_error": {
+            "message": "Erro ao ligar interruptor {key}"
+        },
+        "update_failed": {
+            "message": "Erro ao atualizar {key}"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "use_bluetooth": "Usar Bluetooth"
+                },
+                "data_description": {
+                    "use_bluetooth": "A integra\u00e7\u00e3o deve tentar usar Bluetooth para controlar a m\u00e1quina?"
+                }
+            }
+        }
+    }
+}

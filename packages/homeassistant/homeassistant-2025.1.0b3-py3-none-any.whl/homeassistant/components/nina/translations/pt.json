@@ -1,0 +1,32 @@
+{
+    "config": {
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "_e_to_h": "Cidade/pa\u00eds (E-H)",
+                    "_i_to_l": "Cidade/pa\u00eds (I-L)"
+                },
+                "title": "Selecione a cidade/distrito"
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "_e_to_h": "Cidade/pa\u00eds (E-H)",
+                    "_i_to_l": "Cidade/pa\u00eds (I-L)"
+                },
+                "title": "Op\u00e7\u00f5es"
+            }
+        }
+    }
+}

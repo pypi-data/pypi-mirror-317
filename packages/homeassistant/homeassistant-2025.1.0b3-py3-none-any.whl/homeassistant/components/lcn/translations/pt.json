@@ -1,0 +1,241 @@
+{
+    "config": {
+        "abort": {
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida"
+        },
+        "error": {
+            "authentication_error": "A autentica\u00e7\u00e3o falhou. Nome de utilizador ou palavra-passe errados."
+        },
+        "step": {
+            "reconfigure": {
+                "data": {
+                    "acknowledge": "Solicitar confirma\u00e7\u00e3o dos m\u00f3dulos",
+                    "dim_mode": "Modo dimmer",
+                    "ip_address": "Endere\u00e7o IP",
+                    "password": "Palavra-passe",
+                    "port": "Porta",
+                    "username": "Nome de Utilizador"
+                },
+                "data_description": {
+                    "acknowledge": "Repetir o envio de comandos se n\u00e3o for recebida uma resposta (aumenta o tr\u00e1fego do barramento).",
+                    "dim_mode": "O n\u00famero de passos usados para dimerizar sa\u00eddas."
+                }
+            },
+            "user": {
+                "data": {
+                    "acknowledge": "Solicitar confirma\u00e7\u00e3o dos m\u00f3dulos",
+                    "dim_mode": "Modo dimmer",
+                    "host": "Nome",
+                    "ip_address": "Endere\u00e7o IP",
+                    "password": "Palavra-passe",
+                    "port": "Porta",
+                    "username": "Nome de Utilizador"
+                },
+                "data_description": {
+                    "acknowledge": "Repetir o envio de comandos se n\u00e3o for recebida uma resposta (aumenta o tr\u00e1fego do barramento).",
+                    "dim_mode": "O n\u00famero de passos usados para dimerizar sa\u00eddas."
+                }
+            }
+        }
+    },
+    "device_automation": {
+        "trigger_type": {
+            "fingerprint": "C\u00f3digo de impress\u00e3o digital recebido"
+        }
+    },
+    "issues": {
+        "deprecated_keylock_sensor": {
+            "title": "Sensor bin\u00e1rio de bloqueio de chave LCN obsoleto"
+        },
+        "deprecated_regulatorlock_sensor": {
+            "description": "A sua entidade de sensor bin\u00e1rio de bloqueio do regulador LCN `{entity}` est\u00e1 a ser utilizada em automa\u00e7\u00f5es ou scripts. Est\u00e1 dispon\u00edvel uma entidade de comutador de bloqueio do regulador, que deve ser utilizada no futuro.\n\nAjuste as suas automatiza\u00e7\u00f5es ou scripts para corrigir este problema.",
+            "title": "Sensor bin\u00e1rio de bloqueio do regulador LCN obsoleto"
+        }
+    },
+    "services": {
+        "address_to_device_id": {
+            "fields": {
+                "host": {
+                    "name": "Nome do anfitri\u00e3o"
+                },
+                "segment_id": {
+                    "description": "ID do segmento alvo.",
+                    "name": "ID do segmento"
+                },
+                "type": {
+                    "description": "Tipo alvo.",
+                    "name": "Tipo"
+                }
+            }
+        },
+        "dyn_text": {
+            "fields": {
+                "address": {
+                    "description": "Endere\u00e7o do m\u00f3dulo."
+                },
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "row": {
+                    "description": "Linha de texto.",
+                    "name": "Linha"
+                },
+                "text": {
+                    "name": "Texto"
+                }
+            }
+        },
+        "led": {
+            "fields": {
+                "address": {
+                    "description": "Endere\u00e7o do m\u00f3dulo."
+                },
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                }
+            }
+        },
+        "lock_keys": {
+            "fields": {
+                "address": {
+                    "description": "Endere\u00e7o do m\u00f3dulo."
+                },
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "time": {
+                    "name": "Hora"
+                }
+            }
+        },
+        "lock_regulator": {
+            "fields": {
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "state": {
+                    "name": "Estado"
+                }
+            }
+        },
+        "output_abs": {
+            "fields": {
+                "address": {
+                    "description": "Endere\u00e7o do m\u00f3dulo."
+                },
+                "brightness": {
+                    "name": "Brilho"
+                },
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "transition": {
+                    "description": "Tempo de transi\u00e7\u00e3o.",
+                    "name": "Transi\u00e7\u00e3o"
+                }
+            }
+        },
+        "output_rel": {
+            "fields": {
+                "brightness": {
+                    "name": "Brilho"
+                },
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                }
+            }
+        },
+        "output_toggle": {
+            "fields": {
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                }
+            }
+        },
+        "pck": {
+            "fields": {
+                "address": {
+                    "description": "Endere\u00e7o do m\u00f3dulo.",
+                    "name": "Endere\u00e7o"
+                },
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "pck": {
+                    "name": "PCK"
+                }
+            },
+            "name": "PCK"
+        },
+        "relays": {
+            "fields": {
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "state": {
+                    "name": "Estado"
+                }
+            },
+            "name": "Rel\u00e9s"
+        },
+        "send_keys": {
+            "fields": {
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "state": {
+                    "name": "Estado"
+                }
+            }
+        },
+        "var_abs": {
+            "fields": {
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "value": {
+                    "name": "Valor"
+                },
+                "variable": {
+                    "name": "Vari\u00e1vel"
+                }
+            }
+        },
+        "var_rel": {
+            "fields": {
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "value": {
+                    "name": "Valor"
+                },
+                "variable": {
+                    "name": "Vari\u00e1vel"
+                }
+            }
+        },
+        "var_reset": {
+            "fields": {
+                "device_id": {
+                    "description": "O device_id do m\u00f3dulo ou grupo LCN.",
+                    "name": "Dispositivo"
+                },
+                "variable": {
+                    "name": "Vari\u00e1vel"
+                }
+            }
+        }
+    }
+}

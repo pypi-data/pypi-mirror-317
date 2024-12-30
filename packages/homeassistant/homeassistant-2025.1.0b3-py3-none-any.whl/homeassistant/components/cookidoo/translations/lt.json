@@ -1,0 +1,33 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Prietaisas jau sukonfig\u016bruotas",
+            "reauth_successful": "Pakartotinis autentifikavimas buvo s\u0117kmingas",
+            "reconfigure_successful": "Pakartotinis konfig\u016bravimas buvo s\u0117kmingas"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_auth": "Neteisingas autentifikavimas",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "step": {
+            "language": {
+                "data": {
+                    "language": "Kalba"
+                }
+            },
+            "reauth_confirm": {
+                "data": {
+                    "email": "El. pa\u0161tas",
+                    "password": "Slapta\u017eodis"
+                }
+            },
+            "user": {
+                "data": {
+                    "email": "El. pa\u0161tas",
+                    "password": "Slapta\u017eodis"
+                }
+            }
+        }
+    }
+}

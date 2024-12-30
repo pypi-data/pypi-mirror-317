@@ -1,0 +1,28 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Servi\u00e7o j\u00e1 configurado"
+        },
+        "error": {
+            "unknown": "Erro inesperado"
+        }
+    },
+    "entity": {
+        "calendar": {
+            "discount_games": {
+                "state_attributes": {
+                    "games": {
+                        "name": "Jogos"
+                    }
+                }
+            },
+            "free_games": {
+                "state_attributes": {
+                    "games": {
+                        "name": "Jogos"
+                    }
+                }
+            }
+        }
+    }
+}
