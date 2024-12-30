@@ -1,0 +1,16 @@
+flowai/__init__.py,sha256=_N6Bcsk7Q3BOL8q8u1VwcKnBu-g3NUl5-wrZhv3QuEY,23
+flowai/config_manager.py,sha256=Yk5x9QPJuBlnbJYpbyAlaVTEaelJxLkwFOYrQZRpfTM,3885
+flowai/docs/README.md,sha256=xczdU5tp-4uImKKKFCz5iNhKRYndYFwmAu6-iEzvSck,7038
+flowai/docs/commands.md,sha256=y4H2bB4F-6tXNtyBHULSfp5-a_dsFHpu4i10-4hQa1g,7110
+flowai/docs/creating-prompts.md,sha256=0GKEo3KwgQDXz_NuwayvplO2q4vx7Ss7EL-LV4MY0TM,4452
+flowai/llm_connector.py,sha256=LdE5XSalsIipe0GWrFwMcu157e0n3XmzzRr8DZShj-I,10304
+flowai/main.py,sha256=oltMbSQOG75ODH_M6xiT_KRnZYD1XNQxJDEWg6L5_Hg,35032
+flowai/prompts/prompt-code-review.txt,sha256=qq1bitV8y0kp2WKfCcYJAzoxpQTVdD5VMhdJgJ0AozQ,2671
+flowai/prompts/prompt-commit-message.txt,sha256=NQxzs4vbsqZoGJ926q0wkuG9-x3BbGPcScdmZAxqPOs,2915
+flowai/prompts/prompt-help.txt,sha256=sLfTvmI6jNFczW6-rq7TMDV29VFsoaHDeGxu2RfPSPI,522
+flowai/prompts/prompt-index.txt,sha256=NkPZHXxX50tdS5dhHIMiGUY9dGwE69oRzdb5SKjREKc,912
+flowai/prompts/prompt-pull-request.txt,sha256=HEepTtrKLBA-y4LSGGZRnlrvfu-ya7e6qzJ0A5rnGl4,1954
+glagos_flowai-0.5.6.dist-info/METADATA,sha256=9lRrv1PGPylHCuIpLJ3A2bPveoUSMocJs237Qax1Kvk,7089
+glagos_flowai-0.5.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+glagos_flowai-0.5.6.dist-info/entry_points.txt,sha256=euhs-6ivjgmr2G9gn0CEFVGLy3xdAiOHoVKylentElg,42
+glagos_flowai-0.5.6.dist-info/RECORD,,
