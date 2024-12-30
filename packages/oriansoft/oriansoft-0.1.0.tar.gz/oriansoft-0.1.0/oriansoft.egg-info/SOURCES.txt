@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+orian/__init__.py
+orian/main.py
+orian/src/__init__.py
+orian/src/crop_image.py
+orian/src/functions.py
+oriansoft.egg-info/PKG-INFO
+oriansoft.egg-info/SOURCES.txt
+oriansoft.egg-info/dependency_links.txt
+oriansoft.egg-info/top_level.txt
