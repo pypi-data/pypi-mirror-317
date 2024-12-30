@@ -1,0 +1,2 @@
+[console_scripts]
+fastoai = fastoai.cli:app
