@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "cxfiler"
+version = "1.0.1"
+description = "An intuitive, modern file explorer for use in a terminal"
+authors = ["Charlie Koch <charles@cerrax.com>"]
+license = "BSD-2-Clause"
+readme = "pypi_doc.md"
+packages = [{ include = "cxfiler", from = "src" }]
+
+[tool.poetry.urls]
+Homepage = "http://cerrax.com"
+#Documentation = "https://readthedocs.org"
+Repository = "https://gitlab.com/charles.w.koch/filer"
+#Issues = "https://github.com/me/spam/issues"
+Changelog = "https://gitlab.com/charles.w.koch/filer/-/blob/main/CHANGELOG.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+bwk = "1.1.0"
+cerrax-py = "1.0.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+candk = "*"
+
+[tool.poetry.scripts]
+cxfiler = "cxfiler.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
