@@ -1,0 +1,11 @@
+wirtual/plugins/clova/__init__.py,sha256=WelhQwAYhVLN1OYJjlXDe1k1rSj6lJQLIYSgdiA4Xp4,508
+wirtual/plugins/clova/common.py,sha256=67vNmTLX7le5nTpM4N8MFNmQuIYCXy7NKf9-OkP1JmI,359
+wirtual/plugins/clova/constants.py,sha256=b6X_va-KsJWDsDdjo-nka7yae_9fVmTnTb_sQm8gQao,66
+wirtual/plugins/clova/log.py,sha256=pxMKYqaBpxgVRYTvNhSTKKMQmm163QPLoi8ALrih078,68
+wirtual/plugins/clova/models.py,sha256=8T54ja_j3laEgT2M-KCltjwfJAVLgXo6z8F6gSofgcg,384
+wirtual/plugins/clova/stt.py,sha256=t_SSdfT5DBmbUKFW7TmVjoSf4jT6KD5DRgmV4ZkUHzE,5759
+wirtual/plugins/clova/version.py,sha256=8ZMwr2XB70cB-Enolo5Sf-9UU5M5GXJ77h88dONd15E,615
+wirtual_plugins_clova-0.0.1.dist-info/METADATA,sha256=OWkXXqJiY98rY_xc8Fs3WvJSxeknaLx9YDbWk3wMW0k,1402
+wirtual_plugins_clova-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+wirtual_plugins_clova-0.0.1.dist-info/top_level.txt,sha256=4Rf8yHbj3yvH5QwATcj7VvRgh6gFijIX1-VffopPWD0,8
+wirtual_plugins_clova-0.0.1.dist-info/RECORD,,
