@@ -1,0 +1,8 @@
+maimai_ffi/arcade.cp310-win_arm64.pyd,sha256=qYRocuSYvfg4nEcMBPMqkEgNNBwjCqR5PEhovjGhOHg,93696
+maimai_ffi/model.cp310-win_arm64.pyd,sha256=NDMZNByCW_s9cGOopblAhSZ71u5hYRN4uAk48GyOBg8,24064
+maimai_ffi/request.cp310-win_arm64.pyd,sha256=eH_XkLt2k_qLpp_MEhcy_flj9RoGqjsEf20wapRBdww,122880
+maimai_ffi-0.2.1.dist-info/LICENSE,sha256=mRbmVG3yeA_7nM05JltnUYxt7OziHUjMFVAjomvIOJA,1091
+maimai_ffi-0.2.1.dist-info/METADATA,sha256=p4Xsc_tb8EIfvBHIRVn9whhOHIS3VT-99MNvVpJMDYo,147
+maimai_ffi-0.2.1.dist-info/WHEEL,sha256=49G_xlOw2xqiSZ4hPKdZ1oszLybBc2Pb3xnefM2ruH8,101
+maimai_ffi-0.2.1.dist-info/top_level.txt,sha256=3bx1KFtVvou8igiS3c9umVlMbVRzHLNpv6fOJZFYAIo,11
+maimai_ffi-0.2.1.dist-info/RECORD,,
