@@ -1,0 +1,3 @@
+[console_scripts]
+ylz_utils=ylz_utils.cli.main:run
+
