@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+fbchese.egg-info/PKG-INFO
+fbchese.egg-info/SOURCES.txt
+fbchese.egg-info/dependency_links.txt
+fbchese.egg-info/requires.txt
+fbchese.egg-info/top_level.txt
+package/__init__.py
+package/main.py

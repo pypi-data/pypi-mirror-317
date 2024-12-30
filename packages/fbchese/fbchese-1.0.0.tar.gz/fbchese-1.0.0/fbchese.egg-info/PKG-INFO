@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: fbchese
+Version: 1.0.0
+Summary: This is my first module
+Home-page: https://t.me/pozozal
+Author: pozozal
+Author-email: 12@mail4.uk
+Project-URL: Documentation, https://t.me/pozozal
+Keywords: example python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+jopka
