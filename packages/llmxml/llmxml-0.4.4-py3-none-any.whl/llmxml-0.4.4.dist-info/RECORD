@@ -1,0 +1,10 @@
+llmxml/__init__.py,sha256=3xZK6SXv1M9J8ZMi5gCp5vcQcgTD3Bb3a7A3Zr20R94,209
+llmxml/parser.py,sha256=Z8CrknR3WmnHhOTB_fPePrO8fFBfW0AWRkNXbw7IIno,19983
+llmxml/patch.py,sha256=_oBKD1-gfEuGvryLAQSgT7-WQCKpcijeI69QF-vkUDQ,8277
+llmxml/prompting.py,sha256=7tCJLGnsYjpk0BR9jAqAoZZSdjr5FkVVx4k2fye5VWM,6712
+llmxml/prompts.py,sha256=Tlg70JPxMo2qoGp0MzRnYJGv7m-bISlUPrmiUqZa0BE,12990
+llmxml-0.4.4.dist-info/LICENSE,sha256=WuqVOpiNWO9OD8MZBptyGrHkPDlFp-WJGS0cYnkLuyU,1062
+llmxml-0.4.4.dist-info/METADATA,sha256=GJaG76LYX5bynMhovdsVKOs3_qOVMpCbcNW-PUjKi18,2688
+llmxml-0.4.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+llmxml-0.4.4.dist-info/top_level.txt,sha256=aBBPqCybjoKjk4Ja-FMgq12lTu7Ag83EJGGYn6m3wnk,7
+llmxml-0.4.4.dist-info/RECORD,,
