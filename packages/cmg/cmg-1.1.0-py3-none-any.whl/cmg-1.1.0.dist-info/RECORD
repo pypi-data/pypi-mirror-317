@@ -1,0 +1,14 @@
+cmg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cmg/cli.py,sha256=dStPMf967iVze3EbaztSl7eCMKTloWZFBDa8qbAtJOo,936
+cmg/generator.py,sha256=AruPU6Ddat0DOfH672KxRAoJa0eXT_vivAW_6d5t2ZQ,2052
+cmg/schema.py,sha256=N1otearxGPaPqL-PuwL3C1lP7TvXCcr9tng7Sh5rYC4,15602
+cmg/templates/cmakelists_txt_j2.py,sha256=rfFL6xZHB-c0gbBu8HpIqXumvqzCn6-d2OzyWqUEl8g,987
+cmg/templates/klass_cpp_j2.py,sha256=HMIdP9hcCFIdhkpirL_tuRwyhsouRwIE_OadP0zhoPM,7072
+cmg/templates/klass_hpp_j2.py,sha256=hfywtXC6WQB7QNtsBhMu5CRdC6Z2PoJx84LiA7F5oos,4132
+cmg/templates/test_cpp_j2.py,sha256=vheesj-9ckK2BAr3XPRs7rU_2QSil40uo22xHpAmbDY,5785
+cmg/validation.py,sha256=AWbLyfMDsS06cMC5PWN1vhDuk__VlDukd91fSDRLJLg,10102
+cmg-1.1.0.dist-info/LICENSE,sha256=lhYOd9KPtLBt4JdRjhI2K__u8XEEB_GK3lmBsf7Zemw,1079
+cmg-1.1.0.dist-info/METADATA,sha256=QHD8bXB0B-IzWoyXm-PjSYzB79ZMC9xhk-rdcAR_sv4,5083
+cmg-1.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+cmg-1.1.0.dist-info/entry_points.txt,sha256=IaW14bdNE4RIy4pAHT_KP4zh9QRWih3gbfyzMvcFLcM,35
+cmg-1.1.0.dist-info/RECORD,,
