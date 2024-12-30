@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+epilepsy_bids_loader/__init__.py
+epilepsy_bids_loader/bids_loader.py
+epilepsy_bids_loader/common.py
+epilepsy_bids_loader/cross_validation.py
+epilepsy_bids_loader/manifest_loader.py
+epilepsy_bids_loader/montage.py
+epilepsy_bids_loader/segment.py
+epilepsy_bids_loader/structs.py
+epilepsy_bids_loader/utils.py
+epilepsy_bids_loader.egg-info/PKG-INFO
+epilepsy_bids_loader.egg-info/SOURCES.txt
+epilepsy_bids_loader.egg-info/dependency_links.txt
+epilepsy_bids_loader.egg-info/requires.txt
+epilepsy_bids_loader.egg-info/top_level.txt

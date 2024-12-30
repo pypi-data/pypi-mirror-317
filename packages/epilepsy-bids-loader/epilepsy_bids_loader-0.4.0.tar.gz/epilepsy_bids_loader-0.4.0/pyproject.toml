@@ -1,0 +1,25 @@
+[project]
+name = "epilepsy-bids-loader"
+version = "0.4.0"
+description = "A data loader for BIDS compatible epilepsy EEG datasets for machine learning pipelines."
+authors= [
+  { name = "Johnson Zhou", email = "johnson.j.zhou@icloud.com" }
+]
+dependencies = [
+  "numpy",
+  "scipy",
+  "torch",
+  "matplotlib",
+  "pandas",
+  "pyEDFlib",
+  "pyyaml"
+]
+readme = "README.md"
+requires-python = ">= 3.11"
+
+[build-system]
+requires = ["setuptools", "build", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["epilepsy_bids_loader"]
