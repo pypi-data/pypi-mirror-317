@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/cloudops/__init__.py
+src/cloudops/toolkit.py
+src/cloudops101.egg-info/PKG-INFO
+src/cloudops101.egg-info/SOURCES.txt
+src/cloudops101.egg-info/dependency_links.txt
+src/cloudops101.egg-info/requires.txt
+src/cloudops101.egg-info/top_level.txt
+tests/test_toolkit.py
