@@ -1,0 +1,3 @@
+[console_scripts]
+bookworm=bookworm_genai.__main__:main
+
