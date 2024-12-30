@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: nucleus-chat
+Version: 0.1.0
+Summary: nucleus is AI tools assistant in your terminal
+Project-URL: Homepage, https://github.com/pratikkatte/Nucleus.git
+Keywords: egg,bacon,sausage,tomatoes,Lobster Thermidor
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <3.13,>=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: anthropic==0.42.0
+Requires-Dist: anyio==4.7.0
+Requires-Dist: bidict==0.23.1
+Requires-Dist: blinker==1.9.0
+Requires-Dist: certifi==2024.12.14
+Requires-Dist: charset-normalizer==3.4.1
+Requires-Dist: click==8.1.8
+Requires-Dist: defusedxml==0.7.1
+Requires-Dist: distro==1.9.0
+Requires-Dist: Flask==3.1.0
+Requires-Dist: Flask-Cors==5.0.0
+Requires-Dist: Flask-SocketIO==5.5.0
+Requires-Dist: h11==0.14.0
+Requires-Dist: httpcore==1.0.7
+Requires-Dist: httpx==0.28.1
+Requires-Dist: idna==3.10
+Requires-Dist: itsdangerous==2.2.0
+Requires-Dist: Jinja2==3.1.5
+Requires-Dist: jiter==0.8.2
+Requires-Dist: jsonpatch==1.33
+Requires-Dist: jsonpointer==3.0.0
+Requires-Dist: langchain-anthropic==0.3.1
+Requires-Dist: langchain-core==0.3.28
+Requires-Dist: langchain-openai==0.2.14
+Requires-Dist: langsmith==0.2.6
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: MarkupSafe==3.0.2
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: openai==1.58.1
+Requires-Dist: orjson==3.10.12
+Requires-Dist: packaging==24.2
+Requires-Dist: prompt_toolkit==3.0.48
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: pydantic_core==2.27.2
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: python-engineio==4.11.2
+Requires-Dist: python-socketio==5.12.1
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: regex==2024.11.6
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rich==13.9.4
+Requires-Dist: simple-websocket==1.1.0
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: tenacity==9.0.0
+Requires-Dist: tiktoken==0.8.0
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: urllib3==2.3.0
+Requires-Dist: wcwidth==0.2.13
+Requires-Dist: Werkzeug==3.1.3
+Requires-Dist: wsproto==1.2.0
+
+
+# Nucleus
+The Ultimate IDE for Bioinformaticians
+
+"A tool tailored for bioinformaticians—just as software developers have Visual Studio Code, bioinformaticians have Nucleus."
+
+
+![Demo of the tool](assets/demo.gif)
+
+## Getting started
+
+You can get started quickly like this:
+
+```
+pip install -r requirements.txt
+
+cd nucleus
+```
+
+To set the `OPENAI_API_KEY` environment variable.
+```
+export OPENAI_API_KEY="sk-...."
+```
+
+To run
+```python
+python nucleus.py
+```
+
+## Features
+- [x] Based on query provide commands related to bioinformatic tools.
+- [x] Execute the command.
+- [x] suggest filenames on tab-press while query input.
+- [x] Able to execute normal terminal commands as well as commands sent as query.
+- [ ] local severs spinoff with chat interface.
+- [ ] Visualization of bio-files. spin off jbrowse component.
