@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/durkinza.cdk_networkfirewall_l2.egg-info/PKG-INFO
+src/durkinza.cdk_networkfirewall_l2.egg-info/SOURCES.txt
+src/durkinza.cdk_networkfirewall_l2.egg-info/dependency_links.txt
+src/durkinza.cdk_networkfirewall_l2.egg-info/requires.txt
+src/durkinza.cdk_networkfirewall_l2.egg-info/top_level.txt
+src/durkinza/cdk_networkfirewall_l2/__init__.py
+src/durkinza/cdk_networkfirewall_l2/py.typed
+src/durkinza/cdk_networkfirewall_l2/_jsii/__init__.py
+src/durkinza/cdk_networkfirewall_l2/_jsii/cdk-networkfirewall-l2@0.1.1.jsii.tgz
