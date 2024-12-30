@@ -1,0 +1,2 @@
+[console_scripts]
+rota = rota.__main__:main
