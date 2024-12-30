@@ -1,0 +1,5 @@
+archive_to_parquet-0.1.1.dist-info/METADATA,sha256=KpMyYfDWC24MNTfp72S2TnvnCtidIG_E89iYglXvSyo,440
+archive_to_parquet-0.1.1.dist-info/WHEEL,sha256=O8fhzvA8DYIEsU5wuE7cO9Z3PLVyHSvh_zrTDddaFLQ,105
+archive_to_parquet/__init__.py,sha256=qnXu1BCejCv6Ier3CTytMWi0uo7ekQGVuPJDxUJhhj4,155
+archive_to_parquet/archive_to_parquet.abi3.so,sha256=tceBNwcp6P7qGok_8zwxjIstjRHEeEp5-Qk_kGmP3SQ,29495808
+archive_to_parquet-0.1.1.dist-info/RECORD,,
