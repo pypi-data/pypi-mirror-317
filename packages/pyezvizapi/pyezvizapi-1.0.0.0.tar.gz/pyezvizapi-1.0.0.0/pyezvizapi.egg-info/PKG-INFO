@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyezvizapi
+Version: 1.0.0.0
+Summary: Pilot your Ezviz cameras
+Home-page: https://github.com/RenierM26/pyEzvizApi/
+Author: Renier Moorcroft
+Author-email: RenierM26@users.github.com
+License: Apache Software License 2.0
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: LICENSE.md
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: paho-mqtt
+Requires-Dist: xmltodict
+Requires-Dist: pycryptodome
+
+Pilot your Ezviz cameras with this module. Please view readme on github
