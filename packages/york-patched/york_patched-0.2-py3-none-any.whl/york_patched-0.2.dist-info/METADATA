@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: york_patched
+Version: 0.2
+Summary: An example of a python package from pre-existing code
+Home-page: https://github.com/Vipulpatel12/york_patched
+Author: Vipul Patel
+Author-email: vipul108patel.vp@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy
+
+# york_patched
