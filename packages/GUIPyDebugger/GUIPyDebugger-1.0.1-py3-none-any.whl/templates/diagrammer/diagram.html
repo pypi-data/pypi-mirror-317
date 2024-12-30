@@ -1,0 +1,134 @@
+{% extends 'base/base.html' %}
+{% block style %}
+<style>
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 20px;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    details {
+        margin-left: 20px;
+    }
+
+    .hover-item {
+        position: relative;
+        cursor: pointer;
+        margin: 10px 0;
+    }
+    
+    .hover-info {
+        visibility: hidden;
+        opacity: 0;
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        border-radius: 4px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1000;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: pre-wrap;
+        transition: opacity 0.3s, visibility 0.3s;
+        font-size: 18px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Show tooltip on hover */
+    .hover-item:hover .hover-info {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+{% endblock %}
+
+{% block title %}
+    Data Diagram
+{% endblock %}
+
+{% block content %} 
+<div class="container mt-4">
+    <h2 class="mb-3">Project Data Mappings</h2>
+    {% for module in modules %}
+    <details>
+        <summary class="hover-item">
+            <img src="../../static/images/module.png" height="25px" width="25px"/>
+              {{ module.name }}
+              <span class="hover-info">{{ module.path }}</span>
+        </summary>
+        <ul>
+            {% for class in module.classes %}
+            <li>
+                <details>
+                    <summary class="hover-item"><img src="../../static/images/class.png" height="25px" width="25px"/>
+                        {{ class.signature }}
+                        <span class="hover-info">Line: {{ class.line_no }}<br><br>{{ class.docstring }}</span>
+                    </summary>
+                    <ul>
+                        {% for method in class.methods %}
+                        <li class="hover-item">
+                            <img src="../../static/images/function.png" height="25px" width="25px"/>
+                            {{ method.name }}
+                            <span class="hover-info">{{ method.line_no }}<br><br>{{ method.docstring }}</span>
+                        </li>
+                        {% endfor %}
+                        {% for attr in class.instance_attrs %}
+                        <li class="hover-item">
+                            <img src="../../static/images/attribute.png" height="25px" width="25px"/>
+                            {{ attr }}
+                            <span class="hover-info">Instance Attribute</span>
+                        </li>
+                        {% endfor %}
+                        {% for attr in class.class_attrs %}
+                        <li class="hover-item">
+                            <img src="../../static/images/attribute.png" height="25px" width="25px"/>
+                            {{ attr }}
+                            <span class="hover-info">Class Attribute</span>
+                        </li>
+                        {% endfor %}
+                        <li class="hover-item">
+                            <img src="../../static/images/view.jpg" height="25px" width="25px">
+                            Hover to view {{ class.signature }} contents
+                            <span class="hover-info">{{ class.contents }}</span>
+                        </li>
+                    </ul>
+                </details>
+            </li>
+            {% endfor %}
+            {% for func in module.functions %}
+            <li>
+                <details>
+                    <summary class="hover-item">
+                        <img src="../../static/images/function.png" height="25px" width="25px"/>
+                        {{ func.signature }}
+                        <span class="hover-info">Line: {{ func.line_no }}<br><br>{{ func.docstring }}</span>
+                    </summary>
+                    <ul>
+                        {% for local in func.locals %}
+                        <li>
+                            <img src="../../static/images/attribute.png" height="25px" width="25px"/>
+                            {{ local }} 
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </details>
+            </li>
+            <li class="hover-item">
+                <img src="../../static/images/view.jpg" height="25px" width="25px">
+                Hover to view {{ func.signature }} contents
+                <span class="hover-info">{{ func.contents }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </details>
+    {% endfor %}
+</div>
+{% endblock %}
