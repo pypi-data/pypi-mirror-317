@@ -1,0 +1,9 @@
+matplotlib
+meshio
+numpy<2
+pyparsing
+pyvista
+scipy
+sympy
+tables
+packaging
