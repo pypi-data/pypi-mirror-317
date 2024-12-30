@@ -1,0 +1,15 @@
+geodesix/__init__.py,sha256=rq90csK_TlE2QoNQWZuOuekNyd_BI4umPgpQDKYRcR0,83
+geodesix/kinematics/__init__.py,sha256=SSB-OZB7fDcEkfqYQjgc0ZVRVpyczqHbt0GOFcAyj0s,40
+geodesix/kinematics/jacobian.py,sha256=wRvfgS2rAKPCb5RPF2vC9j_9Rxcvovedtqan-FZazb8,3819
+geodesix/lie/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geodesix/lie/s3.py,sha256=g_qxvrf96FwtmQXlvfYR92zgUXlGp60zwQv1tTZR9bY,4910
+geodesix/lie/se3.py,sha256=dHKMe_ODWgmdUGqdkCy8OMzbdGCF2LSRkzxVtyOk0_A,8438
+geodesix/lie/so3.py,sha256=Nr8QLme63Hr-w2DCeRf60v3EeIAAsEfGJAUbznbg8Lw,2444
+geodesix/spatial/__init__.py,sha256=QhEnLETkfQiuzWwgrtrhLkavdafjv1hr716Zf85uB54,44
+geodesix/spatial/screw.py,sha256=QFqu3vDX06QU2GxqyqLv-bcii22BuxTwCj0f7YsQ0uI,5094
+geodesix/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geodesix/util/math.py,sha256=wHVkQlT47aFRC64ybKoqOi2gGwHqFwVEf-0hDdumxes,747
+geodesix-0.1.0.dist-info/METADATA,sha256=7lWuY4TSIANft2gzaGm7t2HQzKzAY2dcWBgYc0Q8HVA,389
+geodesix-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+geodesix-0.1.0.dist-info/licenses/LICENSE,sha256=vSpoFdiQcH5WfcYcq6skYHO0xtK02rR7HAkq-W0xRs4,1069
+geodesix-0.1.0.dist-info/RECORD,,
