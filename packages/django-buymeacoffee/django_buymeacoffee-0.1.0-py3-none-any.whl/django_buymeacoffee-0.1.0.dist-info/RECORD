@@ -1,0 +1,17 @@
+django_buymeacoffee/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_buymeacoffee/admin.py,sha256=2SBCXaQtRlNPuqmRE82wN5hH07zzkcy8kxwBmy6PP5E,1851
+django_buymeacoffee/api.py,sha256=H9ooChYjjua3Zl7Bz4LunII_I6ue7LL71_nE1fd-0CQ,6353
+django_buymeacoffee/apps.py,sha256=YKp7Jw1cj4I7NQZUxAJ-8BJgonSfYKfHYrFqQhSSUrY,363
+django_buymeacoffee/models.py,sha256=ldV4mJJLWMKie1u_lnDkIwHFcyXH2VidgkkKXbRCV70,4013
+django_buymeacoffee/tests.py,sha256=NTGipgVgzIl9jYd0F4UcYgUoCrS40vR-AexueFFL69A,3766
+django_buymeacoffee/urls.py,sha256=GbnzQw_cFo_Op5VXRuYdMBIr43EzANir6KeIF-a_VuQ,168
+django_buymeacoffee/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+django_buymeacoffee/docs/index.rst,sha256=dpYllA-uMTzZWVLddebZ2Y2svjYxptBXdYj3nWTFQTo,2191
+django_buymeacoffee/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_buymeacoffee/tests/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+django_buymeacoffee/tests/test_webhooks.py,sha256=O4J6UaRKXE3kjv-2OyUrp9wTYq1h6XdrsHCtHyL6xW8,7866
+django_buymeacoffee-0.1.0.dist-info/LICENSE,sha256=uhnttr7JC4vanLLF_-o06q4F66VTtzZV_Lib5O5HXo0,1091
+django_buymeacoffee-0.1.0.dist-info/METADATA,sha256=XvJYWYuHSxNAjRAJ_Wqaq7IYldJL8JshPqYP0ZqzDU0,1765
+django_buymeacoffee-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_buymeacoffee-0.1.0.dist-info/top_level.txt,sha256=2n9B3pyumXqTEh8vIwJ-pFlUmO65Lr_dYgTYmkSYsAU,20
+django_buymeacoffee-0.1.0.dist-info/RECORD,,
