@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "half_utils"
+version = "1.0.1"
+authors = [
+    { name = "Half_nothing", email = "Half_nothing@163.com" },
+]
+description = "Useful tool class"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = { text = "GPL-3.0-only" }
+dependencies = [
+    "json5>=0.10.0",
+    "loguru>=0.7.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/half-nothing/python-utils"
+Issues = "https://github.com/half-nothing/python-utils/issues"
+
+[tool.pdm]
+distribution = true

@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: half_utils
+Version: 1.0.1
+Summary: Useful tool class
+Author-email: Half_nothing <Half_nothing@163.com>
+License: GPL-3.0-only
+Project-URL: Homepage, https://github.com/half-nothing/python-utils
+Project-URL: Issues, https://github.com/half-nothing/python-utils/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: json5>=0.10.0
+Requires-Dist: loguru>=0.7.3
+
+<div align="center" style="text-align:center">
+   <h1> Pigeon-Server-Bot-V3 </h1>
+   <p>
+      <code><b> v1.0.0 </b></code>
+   </p>
+   <p>
+      <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/Pigeon-Server/Pigeon-Server-Bot-V3?label=Python">
+      <img alt="GitHub License" src="https://img.shields.io/github/license/Pigeon-Server/Pigeon-Server-Bot-V3?label=License"/>
+      <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Pigeon-Server/Pigeon-Server-Bot-V3/python-test.yml?label=Build">
+   </p>
+</div>
