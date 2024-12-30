@@ -1,0 +1,9 @@
+README.md
+setup.py
+TitlesArt.egg-info/PKG-INFO
+TitlesArt.egg-info/SOURCES.txt
+TitlesArt.egg-info/dependency_links.txt
+TitlesArt.egg-info/top_level.txt
+titles_art/__init__.py
+titles_art/abecedario_ascii.py
+titles_art/main.py
