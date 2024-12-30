@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: 770
+Version: 1.0.0
+Summary: This Module Creates a Purple Fade Effect on ASCII Art and Text.
+Home-page: https://github.com/vChimera/770
+Author: Anvil
+Author-email: _@chimera.rip
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+useage
+
+
+ASCII Art = """
+bnr1   = "@@@@@@@@  @@@@@@@@   @@@@@@@@   "
+bnr2   = "@@@@@@@@  @@@@@@@@  @@@@@@@@@@  "
+bnr3   = "     @@!       @@!  @@!   @@@@  "
+bnr4   = "    !@!       !@!   !@!  @!@!@  "
+bnr5   = "   @!!       @!!    @!@ @! !@!  "
+bnr6   = "  !!!       !!!     !@!!!  !!!  "
+bnr7   = " !!:       !!:      !!:!   !!!  "
+bnr8   = ":!:       :!:       :!:    !:!  "
+bnr9   = " ::        ::       ::::::: ::  "
+bnr10  = ": :       : :        : : :  :   "
+bnr11  = ""
+bnr12  = "Made by Anvil <3"
+
+
+
+def banner()
+    770(bnr0)
+    770(bnr1)
+    770(bnr2)
+    770(bnr3)
+    770(bnr4)
+    770(bnr5)
+    770(bnr6)
+    770(bnr7)
+    770(bnr8)
+    770(bnr9)
+    770(bnr10)
+    770(bnr11)
+
+banner()
+"""
+
+Printing Text = """
+input(770("Choice => "))
+
+
+770("Hello World!")
