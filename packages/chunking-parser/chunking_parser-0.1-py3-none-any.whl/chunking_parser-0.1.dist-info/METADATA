@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: chunking_parser
+Version: 0.1
+Summary: A library to get the chunks of text from file
+Home-page: https://github.com/yourusername/my_library
+Author: Aashish sharma
+Author-email: aashish@oppdoor.com
+Requires-Dist: fastapi
+Requires-Dist: pymupdf
+Requires-Dist: pytesseract
+Requires-Dist: setuptools
