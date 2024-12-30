@@ -1,0 +1,8 @@
+surquest/utils/qdict/__init__.py,sha256=PpAKHpwLPy3ff7Ixs5ZI70Z4irIU3WmymYBlXjLdKMs,157
+surquest/utils/qdict/attribute.py,sha256=kYu1xKMNIakwaLgKfgkg946UgFYIsVXxp1YhjiP8-Ts,2300
+surquest/utils/qdict/dataset.py,sha256=48QrhEM0mxYrCnjqcfcPoI9dURpcJDRI6eaowGVklwY,8608
+surquest/utils/qdict/helpers.py,sha256=P_z9hQzWWQTJtVZoN2afvbFNAKC129INMVULAXVIgOc,225
+surquest_utils_qdict-0.0.1rc2.dist-info/METADATA,sha256=iZcE0KalwN7H9iE4g3F7CrhYXkUpWx4p7kAXwQdyOBc,5247
+surquest_utils_qdict-0.0.1rc2.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+surquest_utils_qdict-0.0.1rc2.dist-info/licenses/LICENSE,sha256=H0BOf6A3FARsaaFUEv5q9b3WBBqDRO8AC2t_QfOJ7Cw,1065
+surquest_utils_qdict-0.0.1rc2.dist-info/RECORD,,
