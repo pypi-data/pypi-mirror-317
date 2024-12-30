@@ -1,0 +1,2 @@
+[console_scripts]
+date62 = date62.cli:cli
