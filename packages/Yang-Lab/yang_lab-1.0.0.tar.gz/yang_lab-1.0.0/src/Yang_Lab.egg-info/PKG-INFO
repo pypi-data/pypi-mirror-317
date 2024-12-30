@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: Yang-Lab
+Version: 1.0.0
+Summary: 来自小杨的测试
+Author-email: GuangZe <2127617756@qq.com>
+Project-URL: Homepage, https://github.com/GuangzeYang/PyQt_Custom_Widget.git
+Project-URL: Issues, https://baidu.com/
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# 注意
+
+**这就是个测试呀**
