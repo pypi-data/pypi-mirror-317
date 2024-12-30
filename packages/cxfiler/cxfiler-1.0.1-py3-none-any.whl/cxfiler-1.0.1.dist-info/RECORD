@@ -1,0 +1,16 @@
+cxfiler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cxfiler/base.py,sha256=V3ct1aaaY6ajAFPnEU9oZrloVsdF73FIQmJ_GnuQT1c,7155
+cxfiler/main.py,sha256=sUZYv8wzSFqbUnb6WMbBfsJB_IkYulgpdQ4dCb2F1RQ,939
+cxfiler/multiline_strings.py,sha256=sCHi90Bs5DN9DIpgWPx0WwDWR_GYwaRhCxSr48pdrbU,931
+cxfiler/screens/__init__.py,sha256=g3RYa7uvuJ2osvrFgMBXzQPqUISAtbo4yOKCPjw05Zw,120
+cxfiler/screens/actions.py,sha256=igQtjwry15Pp6qKg-NZv7pu7cPrejOPrfkyRNDvb6oo,7419
+cxfiler/screens/filelist.py,sha256=MC4xc5BQUzWCB6I_yi6r_Z8iA6kJlt_2aFDbz1JKQ98,6920
+cxfiler/screens/help.py,sha256=0mzyJnvmU59LN_RqukG9QgrVG0U4Bw4ALcfIVVwcXyM,653
+cxfiler/screens/rename.py,sha256=9WO-y5Teb3pmMvhuBbktcHzx4uHaNsTV8MB232aUl1E,2584
+cxfiler/strings.py,sha256=PzMpwXpy7pMXJy5cgt5uwieV7vnK2HGPwvUE2niuxC8,1381
+cxfiler/utils.py,sha256=OO2hF1UIyZxYO2Z5nj7G4CAPT_V02vyNdmfwzZ_g-xA,4545
+cxfiler-1.0.1.dist-info/LICENSE,sha256=XTHX8If6nnsAkTWaDRfr5Kct1sjKjNs2IBys-996f-g,1301
+cxfiler-1.0.1.dist-info/METADATA,sha256=D8MNHOmDpagSfsQfrYSu2v75GDuCRWSsFkzIGUU2QaE,3544
+cxfiler-1.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+cxfiler-1.0.1.dist-info/entry_points.txt,sha256=oiav4pDz6Th807pBaJIw0_3ckXWuErWSxOIXk3h8hTQ,45
+cxfiler-1.0.1.dist-info/RECORD,,
