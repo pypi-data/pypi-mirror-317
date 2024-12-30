@@ -1,0 +1,14 @@
+README.md
+setup.py
+SchoolSDK/__init__.py
+SchoolSDK/client.py
+SchoolSDK/config.py
+SchoolSDK/exceptions.py
+SchoolSDK/utils.py
+SchoolSDK/tests/__init__.py
+SchoolSDK/tests/test_client.py
+SchoolSDK/tests/test_utils.py
+valschoolsdk.egg-info/PKG-INFO
+valschoolsdk.egg-info/SOURCES.txt
+valschoolsdk.egg-info/dependency_links.txt
+valschoolsdk.egg-info/top_level.txt
