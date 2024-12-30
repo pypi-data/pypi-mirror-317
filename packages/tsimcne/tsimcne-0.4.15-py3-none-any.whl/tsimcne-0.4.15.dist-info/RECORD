@@ -1,0 +1,12 @@
+tsimcne-0.4.15.dist-info/METADATA,sha256=3nSmzRb0GkRaYdVl2l5mRCfgPvr2JJFIP4mUXOA9sFA,3434
+tsimcne-0.4.15.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+tsimcne-0.4.15.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+tsimcne/__init__.py,sha256=4FqvcLCjf4xxUJqP-gYg3zIV8LVKAXhWHsb93pagmpM,64
+tsimcne/ffcv_augmentation.py,sha256=tQqZ2sX2D90pL7lxcbEEOAM1sWXTFJdGyMo4iyYdHYQ,1244
+tsimcne/imagedistortions.py,sha256=HrCcLc3a0bBiKsZ1AFvewpe_90Gs65jmfYb3KfP9Kl8,5113
+tsimcne/losses/infonce.py,sha256=le_jx_SEvVwnplLZVPVWdWKxn6BfC_c6lxKmbk5tk1M,5105
+tsimcne/lrschedule.py,sha256=VhbwkR7O7nbCTHH43bKWGT32zkzH3BdDJfeb76dPo2E,4491
+tsimcne/models/mutate_model.py,sha256=96WrOg3kuw3vb6QVN4zBmLp4Cb5Oe_oyQdGJZHm6daI,2446
+tsimcne/models/simclr_like.py,sha256=_CVGLFlvTFU83gSP9vI-aP5tULumlpUhEaiJsdDCEV4,12286
+tsimcne/tsimcne.py,sha256=r9His25bScN22T64ZaFbBEcjECcsjz7DRYPI198LvAA,42849
+tsimcne-0.4.15.dist-info/RECORD,,
