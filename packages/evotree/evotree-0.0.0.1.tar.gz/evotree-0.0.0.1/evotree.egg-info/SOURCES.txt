@@ -1,0 +1,12 @@
+LICENSE
+README.md
+command.py
+setup.cfg
+setup.py
+evotree/basicdraw.py
+evotree.egg-info/PKG-INFO
+evotree.egg-info/SOURCES.txt
+evotree.egg-info/dependency_links.txt
+evotree.egg-info/entry_points.txt
+evotree.egg-info/requires.txt
+evotree.egg-info/top_level.txt
