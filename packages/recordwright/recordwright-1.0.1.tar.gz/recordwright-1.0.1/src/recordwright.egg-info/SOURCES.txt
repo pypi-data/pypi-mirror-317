@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/recordwright/__init__.py
+src/recordwright/dndsim.js
+src/recordwright/jquery-3.7.0.min.js
+src/recordwright/play.js
+src/recordwright/record.js
+src/recordwright/replay.js
+src/recordwright.egg-info/PKG-INFO
+src/recordwright.egg-info/SOURCES.txt
+src/recordwright.egg-info/dependency_links.txt
+src/recordwright.egg-info/requires.txt
+src/recordwright.egg-info/top_level.txt
