@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "tgSecuLib"
+version = "0.2.0"
+description = "This is a security module"
+authors = [{ name="jffwxs", email="kvostrecova0207@mail.ru" }]
+license = { text = "MIT" }
+readme = "README.md"
