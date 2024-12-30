@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: spacecases-common
+Version: 0.10.1
+Summary: Common code shared across SpaceCases projects
+Author-email: William Redding <williamdredding@proton.me>
+License: GPL-3 license
+Project-URL: homepage, https://github.com/username/spacecases-common
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ruff==0.8.4
+Requires-Dist: mypy==1.14.0
+Requires-Dist: pydantic==2.10.4
+
+# spacecases-common
+
+```bash
+pip install spacecases-common
+```
