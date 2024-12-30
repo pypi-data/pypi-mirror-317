@@ -1,0 +1,10 @@
+pytest
+
+[build]
+build
+
+[deploy]
+twine
+
+[test]
+pytest-cov
