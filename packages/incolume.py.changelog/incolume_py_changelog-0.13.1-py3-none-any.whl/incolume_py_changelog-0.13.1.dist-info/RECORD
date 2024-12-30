@@ -1,0 +1,11 @@
+CHANGELOG.md,sha256=sSudUPQuAKse8FDrUn9Et6oTpocxK5sqnBObOQa5niA,163
+README.md,sha256=gV-nhpInugVzMXGJZqK2I4qMDWQ8S2aDM0sviui6RNY,5903
+incolume/py/changelog/__init__.py,sha256=McdmbgCnlz7panm8ZYZ3YlmVeS09aiorMRRW7BY_kJg,3470
+incolume/py/changelog/changelog.py,sha256=2FZK9_fql-5-JK2-XDta9Vk9OyWsZQKsjW5kAdRC1po,20978
+incolume/py/changelog/cli.py,sha256=yz4ymkHVrHAZGLlo91yKWSuvlS1LF_ms4DVTs_7fDpw,1592
+incolume/py/changelog/version.txt,sha256=glJlA9UeK8GWSxgHU60Cp0ZSJ66UxBdSZJ02n6ogPqs,7
+pyproject.toml,sha256=2S8P90F-UlyM8jLPGVZmU8mCTUTsdV2akX1p3O4-hG0,19103
+incolume_py_changelog-0.13.1.dist-info/METADATA,sha256=ME8iF69JgYLILCMbqxHIuiMY8A8CYocsmgLlfvciwno,12871
+incolume_py_changelog-0.13.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+incolume_py_changelog-0.13.1.dist-info/entry_points.txt,sha256=WOAkrUaQN7S7ZaZ10QgfQo2n8clvGaYjYBzzkAV0tRA,238
+incolume_py_changelog-0.13.1.dist-info/RECORD,,
