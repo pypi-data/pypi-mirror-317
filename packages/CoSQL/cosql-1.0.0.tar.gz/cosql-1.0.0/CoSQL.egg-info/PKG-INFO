@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: CoSQL
+Version: 1.0.0
+Summary: Comet용 SQLite3 비동기 라이브러리
+Home-page: https://github.com/cwmet/CoSQL
+Author: Comet
+Requires-Python: >=3.11
+Requires-Dist: asyncio

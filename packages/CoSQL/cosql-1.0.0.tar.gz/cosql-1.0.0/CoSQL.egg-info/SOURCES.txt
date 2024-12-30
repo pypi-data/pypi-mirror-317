@@ -1,0 +1,12 @@
+README.md
+setup.py
+CoSQL/__init__.py
+CoSQL/__version__.py
+CoSQL/context.py
+CoSQL/core.py
+CoSQL/cursor.py
+CoSQL.egg-info/PKG-INFO
+CoSQL.egg-info/SOURCES.txt
+CoSQL.egg-info/dependency_links.txt
+CoSQL.egg-info/requires.txt
+CoSQL.egg-info/top_level.txt
