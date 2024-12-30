@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: rxconf
+Version: 0.0.3
+Summary: Powerful and flexible library for realtime configuration management in Python
+Home-page: https://github.com/realkarych/rxconf/
+License: MIT
+Keywords: configuration,settings,yaml,json,toml,ini,env
+Author: Andrey Karchevsky
+Author-email: karych@karych.ru
+Requires-Python: >=3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Dist: aiofiles (>=24.1.0,<25.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0) ; python_version < "3.11"
+Project-URL: Documentation, https://realkarych.github.io/rxconf/
+Project-URL: Repository, https://github.com/realkarych/rxconf/
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <a href="https://github.com/realkarych/rxconf">
+  <img src="https://github.com/user-attachments/assets/d9e426cf-5ad6-4a1d-8c5d-ac9dbdd1e63a" alt="RxConf"></a>
+</p>
+
+<p align="center">
+    <em>RxConf library, easy to use, powerful and flexible for [realtime] configuration management in Python</em>
+</p>
+
+<p align="center">
+  <img src="https://realkarych.github.io/rxconf/coverage.svg" alt="Coverage">
+  <img src="https://github.com/realkarych/rxconf/actions/workflows/run_tests.yml/badge.svg" alt="Tests status">
+  <img src="https://img.shields.io/pypi/v/rxconf" alt="PyPI version">
+  <img src="https://img.shields.io/pypi/pyversions/rxconf?color=dark-green" alt="Supported Python versions">
+  <img src="https://img.shields.io/badge/Supported%20OS-Windows%2C%20macOS%2C%20Linux-default" alt="Supported OS">
+  <img src="https://static.pepy.tech/badge/rxconf/month" alt="Downloads per month">
+</p>
+
+---
+
+**Documentation:** <https://realkarych.github.io/rxconf/>
+
+**Source code:** <https://github.com/realkarych/rxconf/>
+
+**TL;DR:** `pip install rxconf`
+
+---
+
+<h1 align="center">
+Currently in develop...
+</h1>
+
+<h3 align="center">
+The first stable version will be 1.0.0
+</h3>
+
+- [ ] Implement observers
+- [ ] Implement triggers
+- [ ] Docs: public docs & docstrings
+
