@@ -1,0 +1,5 @@
+notifier/__init__.py,sha256=BlxrOXBkX2WsyeVFptAHhO7MENTCyKR9QmwVUXj8D54,29
+notifier/discord_notifier.py,sha256=VxoGqvHRieHqJN9ttlG5M9mzep7cDqTKxTm_XCMeKhE,2323
+dugudugu_discord_notifier-0.2.0.dist-info/METADATA,sha256=5RMwoh8D3Zi0DWuLgY9SamYiiFKhbb_QocmKO6L6HYM,2745
+dugudugu_discord_notifier-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+dugudugu_discord_notifier-0.2.0.dist-info/RECORD,,
