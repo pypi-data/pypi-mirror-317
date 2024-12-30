@@ -1,0 +1,10 @@
+lazyenv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lazyenv/cli.py,sha256=KzRLcht_rHw9d4-OjBhZlJTr5-mF31wePO3DYL-JV0o,1096
+lazyenv/env.py,sha256=mTTKsVa-4Y6tfyC9l-ZWFDxSfs9XdMeDhBZwLMMEquM,77
+lazyenv/env.template,sha256=gOEQm306VevXiKUe-D9ziIdEPWyQ53e936ZSgbeN3vk,27
+lazyenv/main.py,sha256=07blVZ0TUCTTwjUJGrNUdwIx00vINfS7VMT_kOoMGjI,1196
+lazyenv-0.1.0.dist-info/METADATA,sha256=hoqXMkHQK8nETjzQGiPk9xxpjbUjlu7PzYJBb8WPwOU,3967
+lazyenv-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lazyenv-0.1.0.dist-info/entry_points.txt,sha256=SWTXg1Fh97mm3PXjj0kNYxIDQlvSuwSqetCL_KfrvR8,44
+lazyenv-0.1.0.dist-info/licenses/LICENSE,sha256=N9Z4cpOkzmXjU2sTgWldORsuJZJJJc7lTLnSIdgolgs,1071
+lazyenv-0.1.0.dist-info/RECORD,,

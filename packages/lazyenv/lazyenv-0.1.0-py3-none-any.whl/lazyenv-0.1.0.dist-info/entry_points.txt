@@ -1,0 +1,2 @@
+[console_scripts]
+lazyenv = lazyenv:cli.cli
