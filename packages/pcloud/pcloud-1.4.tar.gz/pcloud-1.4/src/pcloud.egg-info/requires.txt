@@ -1,0 +1,7 @@
+requests
+requests-toolbelt
+wheel>=0.45.1
+setuptools>=75.6.0
+
+[pyfs]
+fs
