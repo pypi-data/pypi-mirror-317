@@ -1,0 +1,38 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "user": {
+                "data_description": {
+                    "garage_name": "O nome da garagem que quer monitorizar."
+                },
+                "description": "Selecione uma garagem da lista"
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "state": {
+                "name": "Estado"
+            }
+        },
+        "sensor": {
+            "free_space_long": {
+                "unit_of_measurement": "carros"
+            },
+            "free_space_short": {
+                "unit_of_measurement": "carros"
+            },
+            "long_capacity": {
+                "unit_of_measurement": "carros"
+            },
+            "short_capacity": {
+                "unit_of_measurement": "carros"
+            }
+        }
+    }
+}

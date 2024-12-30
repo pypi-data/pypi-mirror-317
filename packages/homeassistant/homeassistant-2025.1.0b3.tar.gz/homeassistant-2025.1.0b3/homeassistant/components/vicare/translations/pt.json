@@ -1,0 +1,180 @@
+{
+    "config": {
+        "abort": {
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida",
+            "single_instance_allowed": "J\u00e1 configurado. Apenas uma \u00fanica configura\u00e7\u00e3o \u00e9 poss\u00edvel.",
+            "unknown": "Erro inesperado"
+        },
+        "error": {
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida"
+        },
+        "flow_title": "{name} ({host})",
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "password": "Palavra-passe"
+                }
+            },
+            "user": {
+                "data": {
+                    "password": "Palavra-passe",
+                    "username": "E-mail"
+                }
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "domestic_hot_water_charging": {
+                "name": "Carregamento de AQS"
+            },
+            "domestic_hot_water_circulation_pump": {
+                "name": "Bomba circulat\u00f3ria de AQS"
+            },
+            "domestic_hot_water_pump": {
+                "name": "Bomba de AQS"
+            }
+        },
+        "number": {
+            "comfort_cooling_temperature": {
+                "name": "Temperatura de arrefecimento confort\u00e1vel"
+            },
+            "comfort_temperature": {
+                "name": "Temperatura confort\u00e1vel"
+            },
+            "dhw_hysteresis_switch_off": {
+                "name": "Interruptor de histerese da AQS desligado"
+            },
+            "dhw_hysteresis_switch_on": {
+                "name": "Interruptor de histerese da AQS ligado"
+            },
+            "dhw_secondary_temperature": {
+                "name": "Temperatura secund\u00e1ria da AQS"
+            },
+            "dhw_temperature": {
+                "name": "Temperatura da AQS"
+            },
+            "normal_cooling_temperature": {
+                "name": "Temperatura de arrefecimento normal"
+            },
+            "normal_temperature": {
+                "name": "Temperatura normal"
+            },
+            "reduced_cooling_temperature": {
+                "name": "Temperatura de arrefecimento baixa"
+            },
+            "reduced_temperature": {
+                "name": "Temperatura reduzida"
+            }
+        },
+        "sensor": {
+            "dhw_storage_bottom_temperature": {
+                "name": "Temperatura inferior do armazenamento AQS"
+            },
+            "dhw_storage_temperature": {
+                "name": "Temperatura de armazenamento de AQS"
+            },
+            "dhw_storage_top_temperature": {
+                "name": "Temperatura superior do armazenamento de AQS"
+            },
+            "energy_dhw_summary_consumption_heating_currentday": {
+                "name": "Consumo de eletricidade para AQS hoje"
+            },
+            "energy_dhw_summary_consumption_heating_currentmonth": {
+                "name": "Consumo de eletricidade para AQS este m\u00eas"
+            },
+            "energy_dhw_summary_consumption_heating_currentyear": {
+                "name": "Consumo de eletricidade para AQS este ano"
+            },
+            "energy_summary_dhw_consumption_heating_lastsevendays": {
+                "name": "Consumo de eletricidade para AQS nos \u00faltimos sete dias"
+            },
+            "ess_discharge_this_month": {
+                "name": "Descarga da bateria este m\u00eas"
+            },
+            "ess_discharge_this_week": {
+                "name": "Descarga da bateria esta semana"
+            },
+            "ess_discharge_this_year": {
+                "name": "Descarga da bateria este ano"
+            },
+            "ess_discharge_today": {
+                "name": "Descarga da bateria hoje"
+            },
+            "ess_discharge_total": {
+                "name": "Total de descarga da bateria"
+            },
+            "ess_power_current": {
+                "name": "Pot\u00eancia da bateria"
+            },
+            "ess_state": {
+                "name": "Estado da bateria",
+                "state": {
+                    "charge": "A carregar",
+                    "discharge": "A descarregar",
+                    "standby": "Em espera"
+                }
+            },
+            "hotwater_gas_consumption_heating_this_month": {
+                "name": "Consumo de g\u00e1s para AQS este m\u00eas"
+            },
+            "hotwater_gas_consumption_heating_this_week": {
+                "name": "Consumo de g\u00e1s para AQS esta semana"
+            },
+            "hotwater_gas_consumption_heating_this_year": {
+                "name": "Consumo de g\u00e1s para AQS este ano"
+            },
+            "hotwater_gas_consumption_today": {
+                "name": "Consumo de g\u00e1s para AQS hoje"
+            },
+            "hotwater_gas_summary_consumption_heating_currentday": {
+                "name": "Consumo de g\u00e1s para AQS hoje"
+            },
+            "hotwater_gas_summary_consumption_heating_currentmonth": {
+                "name": "Consumo de g\u00e1s para AQS este m\u00eas"
+            },
+            "hotwater_gas_summary_consumption_heating_currentyear": {
+                "name": "Consumo de g\u00e1s para AQS este ano"
+            },
+            "hotwater_gas_summary_consumption_heating_lastsevendays": {
+                "name": "Consumo de g\u00e1s para AQS dos \u00faltimos sete dias"
+            },
+            "hotwater_max_temperature": {
+                "name": "Temperatura m\u00e1x. da AQS"
+            },
+            "hotwater_min_temperature": {
+                "name": "Temperatura m\u00edn. da AQS"
+            },
+            "hotwater_out_temperature": {
+                "name": "Temperatura de sa\u00edda da AQS"
+            },
+            "pcc_energy_consumption": {
+                "name": "Energia importada da rede"
+            },
+            "pcc_energy_feed_in": {
+                "name": "Energia injetada na rede"
+            },
+            "pcc_transfer_power_exchange": {
+                "name": "Troca de energia com a rede"
+            },
+            "photovoltaic_energy_production_today": {
+                "name": "Produ\u00e7\u00e3o de energia solar hoje"
+            },
+            "photovoltaic_power_production_current": {
+                "name": "Pot\u00eancia solar"
+            },
+            "photovoltaic_status": {
+                "name": "Estado solar",
+                "state": {
+                    "production": "A produzir",
+                    "ready": "Em espera"
+                }
+            }
+        },
+        "water_heater": {
+            "domestic_hot_water": {
+                "name": "\u00c1gua quente dom\u00e9stica"
+            }
+        }
+    }
+}

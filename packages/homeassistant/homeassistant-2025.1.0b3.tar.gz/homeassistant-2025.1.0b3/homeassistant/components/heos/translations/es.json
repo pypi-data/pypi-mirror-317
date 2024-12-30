@@ -1,0 +1,35 @@
+{
+    "config": {
+        "abort": {
+            "single_instance_allowed": "Ya est\u00e1 configurado. Solo es posible una \u00fanica configuraci\u00f3n."
+        },
+        "error": {
+            "cannot_connect": "No se pudo conectar"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Host"
+                }
+            }
+        }
+    },
+    "services": {
+        "sign_in": {
+            "fields": {
+                "password": {
+                    "description": "La contrase\u00f1a de la cuenta HEOS.",
+                    "name": "Contrase\u00f1a"
+                },
+                "username": {
+                    "description": "El nombre de usuario o correo electr\u00f3nico de la cuenta HEOS.",
+                    "name": "Nombre de usuario"
+                }
+            },
+            "name": "Inicia sesi\u00f3n"
+        },
+        "sign_out": {
+            "name": "Cerrar sesi\u00f3n"
+        }
+    }
+}

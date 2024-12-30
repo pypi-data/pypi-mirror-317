@@ -1,0 +1,16 @@
+{
+    "exceptions": {
+        "file_path_not_accessible": {
+            "message": "{file_path} yoluna eri\u015filemiyor"
+        }
+    },
+    "services": {
+        "update_file_path": {
+            "fields": {
+                "file_path": {
+                    "name": "Dosya yolu"
+                }
+            }
+        }
+    }
+}

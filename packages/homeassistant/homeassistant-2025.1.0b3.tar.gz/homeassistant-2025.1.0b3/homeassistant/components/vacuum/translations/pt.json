@@ -1,0 +1,63 @@
+{
+    "device_automation": {
+        "action_type": {
+            "clean": "Mandar {entity_name} limpar",
+            "dock": "Enviar {entity_name} para a base"
+        },
+        "condition_type": {
+            "is_cleaning": "{entity_name} est\u00e1 a limpar",
+            "is_docked": "{entity_name} est\u00e1 na base"
+        },
+        "extra_fields": {
+            "for": "Dura\u00e7\u00e3o"
+        },
+        "trigger_type": {
+            "cleaning": "{entity_name} come\u00e7ou a limpar",
+            "docked": "{entity_name} chegou \u00e0 base"
+        }
+    },
+    "entity_component": {
+        "_": {
+            "name": "Aspirador",
+            "state": {
+                "cleaning": "A Limpar",
+                "docked": "Na Base",
+                "error": "Erro",
+                "idle": "Inativo",
+                "off": "Desligado",
+                "on": "Ligado",
+                "paused": "Em pausa",
+                "returning": "A regressar \u00e0 base"
+            }
+        }
+    },
+    "services": {
+        "pause": {
+            "name": "Pausar"
+        },
+        "start": {
+            "description": "Inicia ou retoma a tarefa de limpeza.",
+            "name": "Iniciar"
+        },
+        "start_pause": {
+            "description": "Inicia, pausa ou retoma a tarefa de limpeza.",
+            "name": "Iniciar/Pausa"
+        },
+        "stop": {
+            "description": "Para a tarefa de limpeza em curso.",
+            "name": "Parar"
+        },
+        "toggle": {
+            "name": "Alternar"
+        },
+        "turn_off": {
+            "description": "Para a tarefa de limpeza em curso e regressa \u00e0 base.",
+            "name": "Desligar"
+        },
+        "turn_on": {
+            "description": "Inicia uma tarefa de limpeza.",
+            "name": "Ligar"
+        }
+    },
+    "title": "Aspirador"
+}

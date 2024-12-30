@@ -1,0 +1,17 @@
+{
+    "services": {
+        "send_message": {
+            "fields": {
+                "data": {
+                    "name": "Dados"
+                },
+                "message": {
+                    "name": "Mensagem"
+                },
+                "target": {
+                    "name": "Alvo"
+                }
+            }
+        }
+    }
+}

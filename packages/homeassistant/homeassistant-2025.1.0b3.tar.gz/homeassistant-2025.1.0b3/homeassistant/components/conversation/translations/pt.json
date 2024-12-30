@@ -1,0 +1,26 @@
+{
+    "conversation": {
+        "agent": {
+            "done": "Conclu\u00eddo"
+        }
+    },
+    "services": {
+        "process": {
+            "fields": {
+                "text": {
+                    "name": "Texto"
+                }
+            },
+            "name": "Processo"
+        },
+        "reload": {
+            "fields": {
+                "language": {
+                    "name": "Idioma"
+                }
+            },
+            "name": "Recarregar"
+        }
+    },
+    "title": "Conversa"
+}

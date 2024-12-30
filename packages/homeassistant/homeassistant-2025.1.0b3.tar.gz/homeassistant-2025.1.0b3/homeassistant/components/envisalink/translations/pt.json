@@ -1,0 +1,21 @@
+{
+    "services": {
+        "alarm_keypress": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entidade"
+                }
+            }
+        },
+        "invoke_custom_function": {
+            "fields": {
+                "partition": {
+                    "name": "Parti\u00e7\u00e3o"
+                },
+                "pgm": {
+                    "name": "PGM"
+                }
+            }
+        }
+    }
+}

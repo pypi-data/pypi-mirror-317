@@ -1,0 +1,361 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida",
+            "unique_id_mismatch": "O endere\u00e7o MAC do dispositivo n\u00e3o corresponde ao endere\u00e7o MAC anterior"
+        },
+        "error": {
+            "api_error": "Ocorreu um erro de API",
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida",
+            "not_admin": "O utilizador precisa ser administrador, o utilizador \"{username}\" tem n\u00edvel de autoriza\u00e7\u00e3o \"{userlevel}\".",
+            "unknown": "Erro inesperado",
+            "update_needed": "Falha ao iniciar sess\u00e3o devido a firmware desatualizado, por favor atualize o firmware para a vers\u00e3o {needed_firmware} usando o Centro de Download Reolink: {download_center_url}, atualmente a vers\u00e3o {current_firmware} est\u00e1 instalada."
+        },
+        "flow_title": "{hostname} ({ip_address})",
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Anfitri\u00e3o",
+                    "password": "Palavra-passe",
+                    "port": "Porta",
+                    "use_https": "Ativar HTTPS",
+                    "username": "Nome de Utilizador"
+                },
+                "description": "Consulte os [passos de resolu\u00e7\u00e3o de problemas]({troubleshooting_link}) se encontrar problemas. {error}"
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "animal": {
+                "name": "Animal",
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "animal_lens_0": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "animal_lens_1": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "face": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "face_lens_0": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "face_lens_1": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "motion_lens_0": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "motion_lens_1": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "package": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "package_lens_0": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "package_lens_1": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "person": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "person_lens_0": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "person_lens_1": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "pet": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "pet_lens_0": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "pet_lens_1": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "vehicle": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "vehicle_lens_0": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            },
+            "vehicle_lens_1": {
+                "state": {
+                    "off": "Limpo",
+                    "on": "Detetado"
+                }
+            }
+        },
+        "light": {
+            "floodlight": {
+                "name": "Projetor"
+            },
+            "status_led": {
+                "name": "LED de estado"
+            }
+        },
+        "number": {
+            "ai_animal_sensitivity": {
+                "name": "Sensibilidade IA para animais"
+            },
+            "ai_face_sensitivity": {
+                "name": "Sensibilidade IA para caras"
+            },
+            "ai_package_sensitivity": {
+                "name": "Sensibilidade IA para pacotes"
+            },
+            "ai_person_sensitivity": {
+                "name": "Sensibilidade IA para pessoas"
+            },
+            "ai_pet_sensitivity": {
+                "name": "Sensibilidade IA para animais de estima\u00e7\u00e3o"
+            },
+            "ai_vehicle_sensitivity": {
+                "name": "Sensibilidade IA para ve\u00edculos"
+            },
+            "alarm_volume": {
+                "name": "Volume do alarme"
+            },
+            "message_volume": {
+                "name": "Volume de mensagem"
+            },
+            "volume": {
+                "name": "Volume"
+            },
+            "zoom": {
+                "name": "Zoom"
+            }
+        },
+        "select": {
+            "auto_track_method": {
+                "state": {
+                    "digital": "Digital"
+                }
+            },
+            "binning_mode": {
+                "name": "Modo de binning",
+                "state": {
+                    "auto": "Auto",
+                    "off": "Desligado",
+                    "on": "Ligado"
+                }
+            },
+            "day_night_mode": {
+                "state": {
+                    "auto": "Auto",
+                    "blackwhite": "Preto & branco",
+                    "color": "Cor"
+                }
+            },
+            "doorbell_led": {
+                "state": {
+                    "auto": "Auto"
+                }
+            },
+            "floodlight_mode": {
+                "state": {
+                    "auto": "Auto",
+                    "off": "Desligado",
+                    "schedule": "Hor\u00e1rio"
+                }
+            },
+            "hdr": {
+                "name": "HDR",
+                "state": {
+                    "off": "Desligado",
+                    "on": "Ligado"
+                }
+            },
+            "hub_alarm_ringtone": {
+                "state": {
+                    "alarm": "Alarme",
+                    "moonlight": "Luar",
+                    "operetta": "Operetta",
+                    "originaltune": "Melodia original",
+                    "pianokey": "Tecla de piano",
+                    "waybackhome": "De volta a casa"
+                }
+            },
+            "hub_visitor_ringtone": {
+                "name": "Toque do hub para visitantes",
+                "state": {
+                    "alarm": "Alarme",
+                    "attraction": "Atra\u00e7\u00e3o",
+                    "citybird": "P\u00e1ssaro de cidade",
+                    "goodday": "Bom dia",
+                    "hophop": "Pular Pular",
+                    "loop": "Ciclo",
+                    "moonlight": "Luar",
+                    "operetta": "Operetta",
+                    "originaltune": "Melodia original",
+                    "pianokey": "Tecla de piano",
+                    "waybackhome": "De volta a casa"
+                }
+            },
+            "motion_tone": {
+                "state": {
+                    "attraction": "Atra\u00e7\u00e3o",
+                    "citybird": "P\u00e1ssaro de cidade",
+                    "goodday": "Bom dia",
+                    "hophop": "Pular Pular",
+                    "loop": "Ciclo",
+                    "moonlight": "Luar",
+                    "off": "Desligado",
+                    "operetta": "Operetta",
+                    "originaltune": "Melodia original",
+                    "pianokey": "Tecla de piano",
+                    "waybackhome": "De volta a casa"
+                }
+            },
+            "package_tone": {
+                "state": {
+                    "off": "Desligado"
+                }
+            },
+            "people_tone": {
+                "state": {
+                    "off": "Desligado"
+                }
+            },
+            "play_quick_reply_message": {
+                "name": "Tocar uma mensagem de resposta r\u00e1pida"
+            },
+            "visitor_tone": {
+                "state": {
+                    "goodday": "Bom dia",
+                    "off": "Desligado"
+                }
+            }
+        },
+        "sensor": {
+            "cpu_usage": {
+                "name": "Uso do CPU"
+            },
+            "hdd_storage": {
+                "name": "Armazenamento {hdd_index} HDD"
+            },
+            "ptz_tilt_position": {
+                "name": "Posi\u00e7\u00e3o de inclina\u00e7\u00e3o da PTZ"
+            },
+            "sd_storage": {
+                "name": "Armazenamento {hdd_index} SD"
+            },
+            "wifi_signal": {
+                "name": "Sinal de Wi-Fi"
+            }
+        },
+        "siren": {
+            "siren": {
+                "name": "Sirene"
+            }
+        },
+        "switch": {
+            "hdr": {
+                "name": "HDR"
+            },
+            "hub_ringtone_on_event": {
+                "name": "Toque do hub em evento"
+            }
+        }
+    },
+    "exceptions": {
+        "api_error": {
+            "message": "O dispositivo respondeu com um erro: {err}."
+        },
+        "config_entry_not_ready": {
+            "message": "Erro ao tentar configurar {host}: {err}."
+        },
+        "connection_error": {
+            "message": "N\u00e3o foi poss\u00edvel conectar ao dispositivo: {err}."
+        },
+        "firmware_install_error": {
+            "message": "Erro ao tentar atualizar o firmware da Reolink: {err}."
+        },
+        "invalid_content_type": {
+            "message": "Recebido um tipo de conte\u00fado diferente do esperado: {err}."
+        }
+    },
+    "issues": {
+        "https_webhook": {
+            "description": "Os produtos Reolink n\u00e3o podem enviar eventos de movimento para um endere\u00e7o HTTPS (SSL). Configure um endere\u00e7o HTTP (local) em \"URL do Home Assistant\" nas [configura\u00e7\u00f5es de rede] ( {network_link} ). O endere\u00e7o atual (local) \u00e9: ` {base_url} `, um endere\u00e7o v\u00e1lido pode, por exemplo, ser `http://192.168.1.10:8123` onde `192.168.1.10` \u00e9 o IP do dispositivo Home Assistant",
+            "title": "Reolink webhook URL usa HTTPS (SSL)"
+        },
+        "webhook_url": {
+            "description": "N\u00e3o foi recebido o estado ONVIF inicial de {name}. Muito provavelmente, a c\u00e2mara Reolink n\u00e3o consegue aceder ao URL atual (local) do Assistente Dom\u00e9stico `{base_url}`, configure um endere\u00e7o HTTP (local) em \"URL do Assistente Dom\u00e9stico\" nas [defini\u00e7\u00f5es de rede]({network_link}) que aponte para o Assistente Dom\u00e9stico. Por exemplo, `http://192.168.1.10:8123` em que `192.168.1.10` \u00e9 o IP do dispositivo do Assistente Dom\u00e9stico. Al\u00e9m disso, certifique-se de que a c\u00e2mara Reolink consegue aceder a esse URL. Usar a sondagem de estado de movimento r\u00e1pido/AI at\u00e9 que o primeiro envio ONVIF seja recebido."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "protocol": "Protocolo"
+                }
+            }
+        }
+    }
+}

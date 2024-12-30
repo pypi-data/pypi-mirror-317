@@ -1,0 +1,74 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Conta j\u00e1 configurada",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida"
+        },
+        "error": {
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "configuration": {
+                "data": {
+                    "device_name": "Nome do Dispositivo"
+                }
+            },
+            "reauth": {
+                "data": {
+                    "password": "Palavra-passe",
+                    "username": "Nome de Utilizador"
+                }
+            },
+            "user": {
+                "data": {
+                    "password": "Palavra-passe",
+                    "username": "Nome de Utilizador"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "heating": {
+                "state": {
+                    "off": "Desligado"
+                }
+            },
+            "hot_water": {
+                "state": {
+                    "off": "Desligado",
+                    "on": "Ligado"
+                }
+            }
+        }
+    },
+    "services": {
+        "boost_heating_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "boost_heating_on": {
+            "fields": {
+                "temperature": {
+                    "name": "Temperatura"
+                },
+                "time_period": {
+                    "name": "Per\u00edodo de tempo"
+                }
+            }
+        },
+        "boost_hot_water": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID da entidade"
+                },
+                "on_off": {
+                    "name": "Modo"
+                }
+            }
+        }
+    }
+}

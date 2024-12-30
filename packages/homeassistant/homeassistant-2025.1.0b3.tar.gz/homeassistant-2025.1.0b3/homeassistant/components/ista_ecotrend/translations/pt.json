@@ -1,0 +1,44 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "email": "E-mail",
+                    "password": "Palavra-passe"
+                },
+                "data_description": {
+                    "email": "Introduza o endere\u00e7o de email associado \u00e0 sua conta ista EcoTrend",
+                    "password": "Introduza a palavra-passe da sua conta ista EcoTrend"
+                },
+                "title": "A autentica\u00e7\u00e3o expirou para {name}"
+            },
+            "user": {
+                "data": {
+                    "email": "E-mail",
+                    "password": "Palavra-passe"
+                },
+                "data_description": {
+                    "email": "Introduza o endere\u00e7o de email associado \u00e0 sua conta ista EcoTrend",
+                    "password": "Introduza a palavra-passe da sua conta ista EcoTrend"
+                },
+                "description": "Ligue a sua conta **ista EcoTrend** ao Home Assistant para acessar os dados mensais de consumo de aquecimento e \u00e1gua."
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "heating": {
+                "unit_of_measurement": "unidades"
+            }
+        }
+    }
+}

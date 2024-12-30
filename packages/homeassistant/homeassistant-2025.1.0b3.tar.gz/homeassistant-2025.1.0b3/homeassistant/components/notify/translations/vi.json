@@ -1,0 +1,10 @@
+{
+    "services": {
+        "notify": {
+            "name": "G\u1eedi th\u00f4ng b\u00e1o"
+        },
+        "send_message": {
+            "name": "G\u1eedi tin nh\u1eafn th\u00f4ng b\u00e1o"
+        }
+    }
+}

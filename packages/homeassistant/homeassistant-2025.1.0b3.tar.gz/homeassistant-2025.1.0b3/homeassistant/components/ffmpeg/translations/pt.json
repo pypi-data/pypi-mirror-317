@@ -1,0 +1,23 @@
+{
+    "services": {
+        "restart": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entidade"
+                }
+            },
+            "name": "Reiniciar"
+        },
+        "start": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entidade"
+                }
+            },
+            "name": "Iniciar"
+        },
+        "stop": {
+            "name": "Parar"
+        }
+    }
+}

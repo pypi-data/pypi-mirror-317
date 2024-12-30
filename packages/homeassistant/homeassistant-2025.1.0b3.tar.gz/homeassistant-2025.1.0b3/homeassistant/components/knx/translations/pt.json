@@ -1,0 +1,312 @@
+{
+    "config": {
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_ip_address": "Endere\u00e7o IPv4 inv\u00e1lido.",
+            "keyfile_invalid_signature": "A palavra-chave para decifrar o ficheiro `.knxkeys' est\u00e1 errada.",
+            "keyfile_no_backbone_key": "O ficheiro `.knxkeys' n\u00e3o cont\u00e9m uma chave de backbone para um encaminhamento seguro.",
+            "keyfile_no_tunnel_for_host": "O arquivo '.knxkeys' n\u00e3o cont\u00e9m credenciais para o host ` {host} `.",
+            "keyfile_not_found": "O arquivo `.knxkeys` especificado n\u00e3o foi encontrado no caminho config/.storage/knx/"
+        },
+        "step": {
+            "connection_type": {
+                "data_description": {
+                    "connection_type": "Por favor, selecione o tipo de liga\u00e7\u00e3o que deseja usar para a sua liga\u00e7\u00e3o KNX."
+                },
+                "title": "Liga\u00e7\u00e3o KNX"
+            },
+            "knxkeys_tunnel_select": {
+                "data": {
+                    "tunnel_endpoint_ia": "Selecione o endpoint do t\u00fanel usado para a liga\u00e7\u00e3o."
+                },
+                "data_description": {
+                    "tunnel_endpoint_ia": "'Autom\u00e1tico' seleciona um endpoint de t\u00fanel livre para si ao ligar. Se n\u00e3o tiver certeza, esta \u00e9 a melhor op\u00e7\u00e3o."
+                },
+                "title": "Terminal do t\u00fanel"
+            },
+            "manual_tunnel": {
+                "data": {
+                    "host": "Anfitri\u00e3o",
+                    "local_ip": "Interface IP local",
+                    "port": "Porta"
+                },
+                "data_description": {
+                    "local_ip": "IP local ou nome da interface utilizado para a liga\u00e7\u00e3o a partir do Home Assistant. Deixe em branco para utilizar a auto-descoberta.",
+                    "tunneling_type": "Selecione o tipo de tunelamento do seu dispositivo de tunelamento KNX/IP. Interfaces mais antigas podem suportar apenas `UDP`."
+                },
+                "title": "Defini\u00e7\u00f5es do t\u00fanel"
+            },
+            "routing": {
+                "data": {
+                    "individual_address": "Endere\u00e7o individual",
+                    "local_ip": "Interface IP local",
+                    "multicast_group": "Grupo multicast",
+                    "multicast_port": "Porta multicast"
+                },
+                "data_description": {
+                    "local_ip": "IP local ou nome da interface utilizado para a liga\u00e7\u00e3o a partir do Home Assistant. Deixe em branco para utilizar a auto-descoberta.",
+                    "multicast_group": "Grupo multicast usado pela sua instala\u00e7\u00e3o. Por defeito \u00e9 `224.0.23.12`.",
+                    "multicast_port": "Porta multicast usada pela sua instala\u00e7\u00e3o. Por defeito \u00e9 `3671`.",
+                    "routing_secure": "Selecione se a sua instala\u00e7\u00e3o usa comunica\u00e7\u00e3o criptografada de acordo com o padr\u00e3o KNX IP Secure. Esta configura\u00e7\u00e3o requer dispositivos e configura\u00e7\u00e3o compat\u00edveis. Ser-lhe-\u00e3o solicitadas credenciais no pr\u00f3ximo passo."
+                },
+                "title": "Roteamento"
+            },
+            "secure_key_source_menu_routing": {
+                "menu_options": {
+                    "secure_routing_manual": "Configure manualmente a chave de backbone IP Secure."
+                },
+                "title": "KNX IP-Secure"
+            },
+            "secure_key_source_menu_tunnel": {
+                "description": "Como deseja configurar o KNX/IP Secure?",
+                "menu_options": {
+                    "secure_tunnel_manual": "Configure manualmente as credenciais IP Secure."
+                },
+                "title": "KNX IP-Secure"
+            },
+            "secure_knxkeys": {
+                "data_description": {
+                    "knxkeys_file": "Selecione um ficheiro `.knxkeys`. Este pode ser exportado do ETS."
+                },
+                "title": "Importar KNX Keyring"
+            },
+            "secure_routing_manual": {
+                "data": {
+                    "sync_latency_tolerance": "Toler\u00e2ncia \u00e0 lat\u00eancia de rede"
+                },
+                "title": "Encaminhamento seguro"
+            },
+            "secure_tunnel_manual": {
+                "data": {
+                    "user_id": "ID do utilizador",
+                    "user_password": "Palavra-passe do utilizador"
+                },
+                "title": "Tunelamento seguro"
+            },
+            "tcp_tunnel_endpoint": {
+                "data": {
+                    "tunnel_endpoint_ia": "Selecione o endpoint do t\u00fanel usado para a liga\u00e7\u00e3o."
+                },
+                "data_description": {
+                    "tunnel_endpoint_ia": "'Autom\u00e1tico' seleciona um endpoint de t\u00fanel livre para si ao ligar. Se n\u00e3o tiver certeza, esta \u00e9 a melhor op\u00e7\u00e3o."
+                },
+                "title": "Terminal do t\u00fanel"
+            },
+            "tunnel": {
+                "data_description": {
+                    "gateway": "Selecione uma interface de tunelamento KNX que deseja usar para a liga\u00e7\u00e3o."
+                },
+                "title": "T\u00fanel"
+            }
+        }
+    },
+    "device_automation": {
+        "trigger_type": {
+            "telegram": "Telegrama"
+        }
+    },
+    "entity": {
+        "climate": {
+            "knx_climate": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "name": "Pr\u00e9-definido",
+                        "state": {
+                            "auto": "Auto",
+                            "comfort": "Conforto",
+                            "economy": "Eco",
+                            "standby": "Standby"
+                        }
+                    }
+                }
+            }
+        },
+        "sensor": {
+            "connected_since": {
+                "name": "Liga\u00e7\u00e3o estabelecida"
+            },
+            "connection_type": {
+                "name": "Tipo de liga\u00e7\u00e3o"
+            },
+            "individual_address": {
+                "name": "Endere\u00e7o individual"
+            },
+            "telegram_count": {
+                "name": "Telegramas",
+                "unit_of_measurement": "telegramas"
+            },
+            "telegrams_incoming": {
+                "unit_of_measurement": "telegramas"
+            },
+            "telegrams_incoming_error": {
+                "unit_of_measurement": "erros"
+            },
+            "telegrams_outgoing": {
+                "unit_of_measurement": "telegramas"
+            },
+            "telegrams_outgoing_error": {
+                "unit_of_measurement": "erros"
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_ip_address": "Endere\u00e7o IPv4 inv\u00e1lido.",
+            "keyfile_invalid_signature": "A palavra-chave para decifrar o ficheiro `.knxkeys' est\u00e1 errada.",
+            "keyfile_no_backbone_key": "O ficheiro `.knxkeys' n\u00e3o cont\u00e9m uma chave de backbone para um encaminhamento seguro.",
+            "keyfile_no_tunnel_for_host": "O arquivo '.knxkeys' n\u00e3o cont\u00e9m credenciais para o host ` {host} `.",
+            "keyfile_not_found": "O arquivo `.knxkeys` especificado n\u00e3o foi encontrado no caminho config/.storage/knx/"
+        },
+        "step": {
+            "communication_settings": {
+                "data": {
+                    "rate_limit": "Limite de taxa",
+                    "telegram_log_size": "Limite do hist\u00f3rico de telegramas"
+                },
+                "data_description": {
+                    "telegram_log_size": "Telegramas a manter em mem\u00f3ria para o monitor de grupos de paineis KNX. M\u00e1ximo: {telegram_log_size_max}"
+                },
+                "title": "Defini\u00e7\u00f5es de comunica\u00e7\u00e3o"
+            },
+            "connection_type": {
+                "data_description": {
+                    "connection_type": "Por favor, selecione o tipo de liga\u00e7\u00e3o que deseja usar para a sua liga\u00e7\u00e3o KNX."
+                },
+                "title": "Liga\u00e7\u00e3o KNX"
+            },
+            "init": {
+                "menu_options": {
+                    "communication_settings": "Defini\u00e7\u00f5es de comunica\u00e7\u00e3o"
+                }
+            },
+            "knxkeys_tunnel_select": {
+                "data": {
+                    "tunnel_endpoint_ia": "Selecione o endpoint do t\u00fanel usado para a liga\u00e7\u00e3o."
+                },
+                "data_description": {
+                    "tunnel_endpoint_ia": "'Autom\u00e1tico' seleciona um endpoint de t\u00fanel livre para si ao ligar. Se n\u00e3o tiver certeza, esta \u00e9 a melhor op\u00e7\u00e3o."
+                },
+                "title": "Terminal do t\u00fanel"
+            },
+            "manual_tunnel": {
+                "data": {
+                    "host": "Anfitri\u00e3o",
+                    "local_ip": "Interface IP local",
+                    "port": "Porta"
+                },
+                "data_description": {
+                    "local_ip": "IP local ou nome da interface utilizado para a liga\u00e7\u00e3o a partir do Home Assistant. Deixe em branco para utilizar a auto-descoberta.",
+                    "tunneling_type": "Selecione o tipo de tunelamento do seu dispositivo de tunelamento KNX/IP. Interfaces mais antigas podem suportar apenas `UDP`."
+                },
+                "title": "Defini\u00e7\u00f5es do t\u00fanel"
+            },
+            "routing": {
+                "data": {
+                    "individual_address": "Endere\u00e7o individual",
+                    "multicast_group": "Grupo multicast",
+                    "multicast_port": "Porta multicast"
+                },
+                "data_description": {
+                    "multicast_group": "Grupo multicast usado pela sua instala\u00e7\u00e3o. Por defeito \u00e9 `224.0.23.12`.",
+                    "multicast_port": "Porta multicast usada pela sua instala\u00e7\u00e3o. Por defeito \u00e9 `3671`.",
+                    "routing_secure": "Selecione se a sua instala\u00e7\u00e3o usa comunica\u00e7\u00e3o criptografada de acordo com o padr\u00e3o KNX IP Secure. Esta configura\u00e7\u00e3o requer dispositivos e configura\u00e7\u00e3o compat\u00edveis. Ser-lhe-\u00e3o solicitadas credenciais no pr\u00f3ximo passo."
+                },
+                "title": "Roteamento"
+            },
+            "secure_knxkeys": {
+                "data_description": {
+                    "knxkeys_file": "Selecione um ficheiro `.knxkeys`. Este pode ser exportado do ETS."
+                }
+            },
+            "secure_routing_manual": {
+                "data": {
+                    "sync_latency_tolerance": "Toler\u00e2ncia \u00e0 lat\u00eancia de rede"
+                },
+                "title": "Encaminhamento seguro"
+            },
+            "secure_tunnel_manual": {
+                "data": {
+                    "user_id": "ID do utilizador",
+                    "user_password": "Palavra-passe do utilizador"
+                },
+                "title": "Tunelamento seguro"
+            },
+            "tcp_tunnel_endpoint": {
+                "data": {
+                    "tunnel_endpoint_ia": "Selecione o endpoint do t\u00fanel usado para a liga\u00e7\u00e3o."
+                },
+                "data_description": {
+                    "tunnel_endpoint_ia": "'Autom\u00e1tico' seleciona um endpoint de t\u00fanel livre para si ao ligar. Se n\u00e3o tiver certeza, esta \u00e9 a melhor op\u00e7\u00e3o."
+                },
+                "title": "Terminal do t\u00fanel"
+            },
+            "tunnel": {
+                "data_description": {
+                    "gateway": "Selecione uma interface de tunelamento KNX que deseja usar para a liga\u00e7\u00e3o."
+                },
+                "title": "T\u00fanel"
+            }
+        }
+    },
+    "services": {
+        "event_register": {
+            "fields": {
+                "address": {
+                    "name": "Endere\u00e7o de grupo"
+                },
+                "remove": {
+                    "name": "Remover registo de evento"
+                },
+                "type": {
+                    "description": "Se definido, a carga \u00fatil ser\u00e1 descodificada conforme o DPT fornecido na chave de dados do evento `value`. Os tipos de sensores KNX s\u00e3o valores v\u00e1lidos (veja [aqui](https://www.home-assistant.io/integrations/knx/#value-types)).",
+                    "name": "Tipo de valor"
+                }
+            },
+            "name": "Registar knx_event"
+        },
+        "exposure_register": {
+            "description": "Adiciona ou remove exposi\u00e7\u00f5es ao barramento KNX. Apenas as exposi\u00e7\u00f5es adicionadas com esta a\u00e7\u00e3o podem ser removidas.",
+            "fields": {
+                "address": {
+                    "description": "O estado do endere\u00e7o do grupo ou as atualiza\u00e7\u00f5es de atributos ser\u00e3o enviadas para o barramento KNX. Os pedidos de GroupValueRead ser\u00e3o respondidos. Por endere\u00e7o, apenas uma exposi\u00e7\u00e3o pode ser registada.",
+                    "name": "Endere\u00e7o de grupo"
+                },
+                "attribute": {
+                    "description": "Atributo da entidade que ser\u00e1 enviado para o barramento KNX. Se n\u00e3o for definido, o estado ser\u00e1 enviado. Por exemplo, para uma luz, o estado \u00e9 \"ligado\" ou \"desligado\" - com o atributo, pode expor o seu \"brilho\".",
+                    "name": "Atributo de entidade"
+                }
+            }
+        },
+        "read": {
+            "fields": {
+                "address": {
+                    "name": "Endere\u00e7o de grupo"
+                }
+            }
+        },
+        "reload": {
+            "name": "Recarregar"
+        },
+        "send": {
+            "fields": {
+                "address": {
+                    "name": "Endere\u00e7o de grupo"
+                },
+                "payload": {
+                    "description": "Payload a enviar para o barramento. Os inteiros s\u00e3o tratados como payloads DPT 1/2/3. Para DPTs > 6 bits, envie uma lista. Cada valor representa 1 octeto (0-255). Preencha com 0 at\u00e9 ao comprimento do byte DPT.",
+                    "name": "Payload"
+                },
+                "response": {
+                    "description": "Se definido como `True`, o telegrama ser\u00e1 enviado como um `GroupValueResponse` em vez de um `GroupValueWrite`.",
+                    "name": "Enviar como Resposta"
+                },
+                "type": {
+                    "description": "Se definido, a carga \u00fatil n\u00e3o ser\u00e1 enviada como bytes brutos, mas codificada conforme o DPT fornecido. Os tipos de sensores KNX s\u00e3o valores v\u00e1lidos (veja https://www.home-assistant.io/integrations/knx/#value-types).",
+                    "name": "Tipo de valor"
+                }
+            },
+            "name": "Enviar para o barramento KNX."
+        }
+    }
+}

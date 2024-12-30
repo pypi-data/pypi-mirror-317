@@ -1,0 +1,51 @@
+{
+    "services": {
+        "create_group": {
+            "fields": {
+                "name": {
+                    "name": "Nome"
+                }
+            }
+        },
+        "create_person": {
+            "fields": {
+                "group": {
+                    "name": "Grupo"
+                },
+                "name": {
+                    "description": "Nome da pessoa",
+                    "name": "Nome"
+                }
+            }
+        },
+        "delete_group": {
+            "fields": {
+                "name": {
+                    "name": "Nome"
+                }
+            }
+        },
+        "delete_person": {
+            "fields": {
+                "group": {
+                    "name": "Grupo"
+                },
+                "name": {
+                    "description": "Nome da pessoa",
+                    "name": "Nome"
+                }
+            }
+        },
+        "face_person": {
+            "fields": {
+                "group": {
+                    "name": "Grupo"
+                },
+                "person": {
+                    "description": "Nome da pessoa",
+                    "name": "Pessoa"
+                }
+            }
+        }
+    }
+}

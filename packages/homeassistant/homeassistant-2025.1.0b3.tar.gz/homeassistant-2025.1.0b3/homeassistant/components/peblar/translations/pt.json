@@ -1,0 +1,81 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou",
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida",
+            "unknown": "Erro inesperado"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "password": "Palavra-passe"
+                }
+            },
+            "reconfigure": {
+                "data": {
+                    "host": "Anfitri\u00e3o",
+                    "password": "Palavra-passe"
+                }
+            },
+            "user": {
+                "data": {
+                    "host": "Anfitri\u00e3o",
+                    "password": "Palavra-passe"
+                }
+            },
+            "zeroconf_confirm": {
+                "data": {
+                    "password": "Palavra-passe"
+                }
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "smart_charging": {
+                "state": {
+                    "scheduled": "Agendado"
+                }
+            }
+        },
+        "sensor": {
+            "current_phase_1": {
+                "name": "Corrente fase 1"
+            },
+            "current_phase_2": {
+                "name": "Corrente fase 2"
+            },
+            "current_phase_3": {
+                "name": "Corrente fase 3"
+            },
+            "power_phase_1": {
+                "name": "Pot\u00eancia fase 1"
+            },
+            "power_phase_2": {
+                "name": "Pot\u00eancia fase 2"
+            },
+            "power_phase_3": {
+                "name": "Pot\u00eancia fase 3"
+            },
+            "voltage_phase_1": {
+                "name": "Tens\u00e3o fase 1"
+            },
+            "voltage_phase_2": {
+                "name": "Tens\u00e3o fase 2"
+            },
+            "voltage_phase_3": {
+                "name": "Tens\u00e3o fase 3"
+            }
+        },
+        "update": {
+            "customization": {
+                "name": "Personaliza\u00e7\u00e3o"
+            }
+        }
+    }
+}

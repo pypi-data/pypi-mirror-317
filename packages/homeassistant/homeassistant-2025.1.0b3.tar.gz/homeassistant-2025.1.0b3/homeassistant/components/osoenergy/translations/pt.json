@@ -1,0 +1,163 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "reauth_successful": "Reautentica\u00e7\u00e3o bem sucedida"
+        },
+        "error": {
+            "invalid_auth": "Autentica\u00e7\u00e3o inv\u00e1lida"
+        },
+        "step": {
+            "reauth": {
+                "data": {
+                    "api_key": "Chave da API"
+                }
+            },
+            "user": {
+                "data": {
+                    "api_key": "Chave da API"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "heater_mode": {
+                "state": {
+                    "off": "Desligado"
+                }
+            },
+            "optimization_mode": {
+                "state": {
+                    "off": "Desligado"
+                }
+            }
+        }
+    },
+    "services": {
+        "get_profile": {
+            "description": "Obter o perfil de temperatura do aquecedor de \u00e1gua",
+            "name": "Obter perfil do aquecedor"
+        },
+        "set_profile": {
+            "description": "Definir o perfil de temperatura do aquecedor de \u00e1gua",
+            "fields": {
+                "hour_00": {
+                    "description": "00:00 horas",
+                    "name": "00:00"
+                },
+                "hour_01": {
+                    "name": "01:00"
+                },
+                "hour_02": {
+                    "name": "02:00"
+                },
+                "hour_03": {
+                    "name": "03:00"
+                },
+                "hour_04": {
+                    "name": "04:00"
+                },
+                "hour_05": {
+                    "description": "Hora 05:00",
+                    "name": "05:00"
+                },
+                "hour_06": {
+                    "description": "Hora 06:00",
+                    "name": "06:00"
+                },
+                "hour_07": {
+                    "description": "Hora 07:00",
+                    "name": "07:00"
+                },
+                "hour_08": {
+                    "description": "Hora 08:00",
+                    "name": "08:00"
+                },
+                "hour_09": {
+                    "description": "Hora 09:00",
+                    "name": "09:00"
+                },
+                "hour_10": {
+                    "description": "10:00 horas",
+                    "name": "10:00"
+                },
+                "hour_11": {
+                    "description": "11:00 horas",
+                    "name": "11:00"
+                },
+                "hour_12": {
+                    "description": "12:00 horas",
+                    "name": "12:00"
+                },
+                "hour_13": {
+                    "description": "13:00 horas",
+                    "name": "13:00"
+                },
+                "hour_14": {
+                    "description": "14:00 horas",
+                    "name": "14:00"
+                },
+                "hour_15": {
+                    "description": "15:00 horas",
+                    "name": "15:00"
+                },
+                "hour_16": {
+                    "description": "16:00 horas",
+                    "name": "16:00"
+                },
+                "hour_17": {
+                    "description": "17:00 horas",
+                    "name": "17:00"
+                },
+                "hour_18": {
+                    "description": "18:00 horas",
+                    "name": "18:00"
+                },
+                "hour_19": {
+                    "description": "19:00 horas",
+                    "name": "19:00"
+                },
+                "hour_20": {
+                    "description": "20:00 horas",
+                    "name": "20:00"
+                },
+                "hour_21": {
+                    "description": "21:00 horas",
+                    "name": "21:00"
+                },
+                "hour_22": {
+                    "description": "22:00 horas",
+                    "name": "22:00"
+                },
+                "hour_23": {
+                    "description": "23:00 horas",
+                    "name": "23:00"
+                }
+            },
+            "name": "Definir perfil do aquecedor"
+        },
+        "set_v40_min": {
+            "description": "Defina a quantidade m\u00ednima de \u00e1gua a 40\u00b0C para um aquecedor."
+        },
+        "turn_off": {
+            "description": "Desligue o aquecimento por uma hora ou at\u00e9 que a temperatura m\u00ednima seja atingida.",
+            "fields": {
+                "until_temp_limit": {
+                    "description": "Escolha se o aquecimento deve estar desligado at\u00e9 que a temperatura m\u00ednima (Verdadeiro) seja atingida ou por uma hora (Falso).",
+                    "name": "At\u00e9 ao limite de temperatura"
+                }
+            },
+            "name": "Desligar aquecimento"
+        },
+        "turn_on": {
+            "description": "Ligue o aquecimento por uma hora ou at\u00e9 que a temperatura m\u00e1xima seja atingida.",
+            "fields": {
+                "until_temp_limit": {
+                    "description": "Escolha se o aquecimento deve estar ligado at\u00e9 que a temperatura m\u00e1xima (Verdadeiro) seja atingida ou por uma hora (Falso).",
+                    "name": "At\u00e9 ao limite de temperatura"
+                }
+            }
+        }
+    }
+}

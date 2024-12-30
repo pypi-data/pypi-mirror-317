@@ -1,0 +1,22 @@
+{
+    "entity": {
+        "event": {
+            "notification": {
+                "state_attributes": {
+                    "event_type": {
+                        "state": {
+                            "time_to_change_water_filter": "Musisz wymieni\u0107 filtr wody"
+                        }
+                    }
+                }
+            }
+        },
+        "sensor": {
+            "rinse_level": {
+                "state": {
+                    "rinselevel_0": "O"
+                }
+            }
+        }
+    }
+}

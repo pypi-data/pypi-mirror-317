@@ -1,0 +1,20 @@
+{
+    "services": {
+        "aux": {
+            "fields": {
+                "state": {
+                    "name": "Estado"
+                }
+            },
+            "name": "Aux"
+        },
+        "panic": {
+            "fields": {
+                "code": {
+                    "name": "C\u00f3digo"
+                }
+            },
+            "name": "P\u00e2nico"
+        }
+    }
+}

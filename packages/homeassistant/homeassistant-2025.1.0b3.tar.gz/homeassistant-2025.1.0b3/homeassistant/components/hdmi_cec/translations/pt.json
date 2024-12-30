@@ -1,0 +1,33 @@
+{
+    "services": {
+        "select_device": {
+            "fields": {
+                "device": {
+                    "name": "Dispositivo"
+                }
+            }
+        },
+        "send_command": {
+            "fields": {
+                "cmd": {
+                    "name": "Comando"
+                }
+            }
+        },
+        "standby": {
+            "name": "Em espera"
+        },
+        "update": {
+            "name": "Actualizar"
+        },
+        "volume": {
+            "fields": {
+                "mute": {
+                    "description": "Silencia o sistema de \u00e1udio.",
+                    "name": "Silenciar"
+                }
+            },
+            "name": "Volume"
+        }
+    }
+}

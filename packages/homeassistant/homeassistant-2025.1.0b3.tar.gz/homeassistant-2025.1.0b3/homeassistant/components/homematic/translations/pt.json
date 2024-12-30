@@ -1,0 +1,49 @@
+{
+    "services": {
+        "set_device_value": {
+            "fields": {
+                "address": {
+                    "name": "Endere\u00e7o"
+                },
+                "channel": {
+                    "description": "Canal para chamar uma tecla premida.",
+                    "name": "Canal"
+                },
+                "value": {
+                    "description": "Novo valor",
+                    "name": "Valor"
+                },
+                "value_type": {
+                    "name": "Tipo de valor"
+                }
+            }
+        },
+        "set_install_mode": {
+            "fields": {
+                "mode": {
+                    "name": "Modo"
+                },
+                "time": {
+                    "name": "Hora"
+                }
+            }
+        },
+        "set_variable_value": {
+            "fields": {
+                "name": {
+                    "name": "Nome"
+                },
+                "value": {
+                    "description": "Novo valor"
+                }
+            }
+        },
+        "virtualkey": {
+            "fields": {
+                "channel": {
+                    "description": "Canal para chamar uma tecla premida."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Quer dar in\u00edcio \u00e0 configura\u00e7\u00e3o?"
+            }
+        }
+    },
+    "services": {
+        "turn_on": {
+            "fields": {
+                "color_extract_path": {
+                    "name": "Caminho"
+                },
+                "color_extract_url": {
+                    "name": "URL"
+                }
+            },
+            "name": "Ligar"
+        }
+    }
+}

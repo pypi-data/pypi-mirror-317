@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "already_in_progress": "Konfig\u016bracijos procesas jau vyksta",
+            "single_instance_allowed": "Jau sukonfig\u016bruota. Galima tik viena konfig\u016bracija."
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Host"
+                }
+            }
+        }
+    },
+    "services": {
+        "sign_in": {
+            "fields": {
+                "password": {
+                    "description": "HEOS paskyros slapta\u017eodis.",
+                    "name": "Slapta\u017eodis"
+                },
+                "username": {
+                    "description": "HEOS paskyros naudotojo vardas arba el.",
+                    "name": "Naudotojo vardas"
+                }
+            },
+            "name": "Prisijungti"
+        },
+        "sign_out": {
+            "name": "Atsijungti"
+        }
+    }
+}

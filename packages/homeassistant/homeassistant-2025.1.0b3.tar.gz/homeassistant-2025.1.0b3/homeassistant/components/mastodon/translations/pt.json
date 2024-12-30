@@ -1,0 +1,33 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Servi\u00e7o j\u00e1 configurado"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "access_token": "Token de Acesso",
+                    "base_url": "URL"
+                },
+                "data_description": {
+                    "access_token": "O token de acesso para a aplica\u00e7\u00e3o criada na sua conta Mastodon.",
+                    "client_id": "A chave do cliente para a aplica\u00e7\u00e3o criada na sua conta Mastodon.",
+                    "client_secret": "O segredo do cliente para a aplica\u00e7\u00e3o criada na sua conta Mastodon."
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "followers": {
+                "unit_of_measurement": "contas"
+            },
+            "following": {
+                "unit_of_measurement": "contas"
+            },
+            "posts": {
+                "unit_of_measurement": "publica\u00e7\u00f5es"
+            }
+        }
+    }
+}
