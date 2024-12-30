@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: telegramy
+Version: 0.0.1
+Summary: A Python package to send messages and images to Telegram groups using 'requests' package only.
+Author: Yan Sido
+Author-email: yansido1@gmail.com
+Keywords: python,telegram,telegram-sender,telegram sender,telegramy,telegramy sender,telegramy python,telegramy sender python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+
+# Telegramy
+
+**Telegramy** is a lightweight Python package designed for sending messages and images to Telegram groups with ease. This package provides a simple interface for interacting with Telegram, relying only on the `requests` library to communicate with Telegram's Bot API.
+
+---
+
+## Features
+
+- **Send Text Messages**: Easily send text messages to Telegram groups.
+- **Send Images**: Quickly share images with group members.
+- **Lightweight**: No unnecessary dependencies—built with only `requests`.
+- **Simple Configuration**: Set up using your Telegram bot token and group chat ID.
+
+---
+
+## Installation
+
+You can install **Telegramy** via pip:
+
+```bash
+pip install telegramy
+```
