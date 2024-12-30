@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: daschlab
+Version: 1.0.0
+Summary: DASCH data analysis
+Home-page: https://github.com/pkgw/daschlab
+Author: Peter Williams
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: astropy>=6
+Requires-Dist: bokeh>=3.1
+Requires-Dist: dataclasses-json>=0.6
+Requires-Dist: ipykernel>=6
+Requires-Dist: numpy>=1.20
+Requires-Dist: pillow>=10
+Requires-Dist: pycairo>=1.20
+Requires-Dist: pytz>=2024
+Requires-Dist: pywwt>=0.25
+Requires-Dist: requests>=2
+Requires-Dist: scipy>=1.10
+Requires-Dist: toasty>=0.20
+Requires-Dist: tqdm>=4.60
+Provides-Extra: docs
+Requires-Dist: astropy-sphinx-theme; extra == "docs"
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-automodapi; extra == "docs"
+
+Daschlab is a Python package that assists with the retrieval and astrophysical
+analysis of data from [DASCH], the project to scan Harvard College Observatory’s
+collection of [astronomical glass plates][agp]. *daschlab* provides access to
+hundreds of terabytes of scientific data documenting the history of the entire
+night sky over the years ~1880–1990.
+
+[DASCH]: https://dasch.cfa.harvard.edu/
+[agp]: https://platestacks.cfa.harvard.edu/
+
+
+For more information, including installation instructions, please visit [the
+project homepage].
+
+[the project homepage]: https://daschlab.readthedocs.io/
