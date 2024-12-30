@@ -1,0 +1,218 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vtbassmatt.com/demilich/demilich.json",
+  "title": "Schema for Demilich skeleton definitions.",
+  "definitions": {
+    "SlotTable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {
+        "creatures": {
+          "type": "integer",
+          "title": "Creature count"
+        },
+        "spells": {
+          "type": "integer",
+          "title": "Spell count"
+        },
+        "races": {
+          "type": "object",
+          "patternProperties": {
+            "[A-Za-z_][A-Za-z0-9_]*": {"type": "number"}
+          },
+          "title": "Distribution of races"
+        },
+        "classes": {
+          "type": "object",
+          "patternProperties": {
+            "[A-Za-z_][A-Za-z0-9_]*": {"type": "number"}
+          },
+          "title": "Distribution of classes"
+        },
+        "keywords": {
+          "type": "object",
+          "patternProperties": {
+            "[A-Za-z_][A-Za-z0-9_]*": {"type": "number"}
+          },
+          "title": "Distribution of keywords"
+        },
+        "creature_slots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CreatureSlot"
+          }
+        },
+        "spell_slots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SpellSlot"
+          }
+        }
+      }
+    },
+    "CreatureSlot": {
+      "type": "object",
+      "required": ["mv", "power", "toughness"],
+      "properties": {
+        "mv": {
+          "oneOf": [
+            {"type": "integer", "title": "Single mana value"},
+            {"type": "array", "items": {"type": "integer"}, "title": "List of mana value options"}
+          ],
+          "title": "Mana value for creature slot",
+          "description": "If a single mana value is given, this slot will have that power. If a list is given, Demilich will pick one."
+        },
+        "power": {
+          "oneOf": [
+            {"type": "integer", "title": "Single power"},
+            {"type": "array", "items": {"type": "integer"}, "title": "List of power options"}
+          ],
+          "title": "Power for creature slot",
+          "description": "If a single power is given, this slot will have that power. If a list is given, Demilich will pick one."
+        },
+        "toughness": {
+          "oneOf": [
+            {"type": "integer", "title": "Single toughness"},
+            {"type": "array", "items": {"type": "integer"}, "title": "List of toughness options"}
+          ],
+          "title": "Toughness for creature slot",
+          "description": "If a single toughness is given, this slot will have that power. If a list is given, Demilich will pick one."
+        }
+      }
+    },
+    "SpellSlot": {
+      "type": "object",
+      "title": "A spell slot",
+      "description": "May include just instructions or instructions plus a list of possible cards to fill the slot",
+      "additionalProperties": false,
+      "required": ["instruction"],
+      "properties": {
+        "instruction": {
+          "type": "string",
+          "title": "What kind of spell goes here",
+          "description": "Instructions to the designer about the nature of this spell slot."
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Card"
+          }
+        }
+      }
+    },
+    "Card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "cost", "type", "text"],
+      "properties": {
+        "name": {"type": "string", "title": "Card name"},
+        "cost": {"type": "string", "title": "Card cost"},
+        "type": {"type": "string", "title": "Card type"},
+        "text": {"type": "string", "title": "Text of the card"},
+        "subtypes": {"type": "array", "items": {"type": "string"}, "title": "List of subtypes"},
+        "stats": {
+          "type": "array",
+          "items": {"type": "integer"},
+          "minItems": 2,
+          "maxItems": 2,
+          "title": "If present, power and toughness of this card"
+        }
+      }
+    }
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Name for this skeleton definition"
+    },
+    "white": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "common": {"$ref": "#/definitions/SlotTable"},
+        "uncommon": {"$ref": "#/definitions/SlotTable"},
+        "rare": {"$ref": "#/definitions/SlotTable"},
+        "mythic": {"$ref": "#/definitions/SlotTable"}    
+      },
+      "title": "White frame slots"
+    },
+    "blue": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "common": {"$ref": "#/definitions/SlotTable"},
+        "uncommon": {"$ref": "#/definitions/SlotTable"},
+        "rare": {"$ref": "#/definitions/SlotTable"},
+        "mythic": {"$ref": "#/definitions/SlotTable"}    
+      },
+      "title": "Blue frame slots"
+    },
+    "black": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "common": {"$ref": "#/definitions/SlotTable"},
+        "uncommon": {"$ref": "#/definitions/SlotTable"},
+        "rare": {"$ref": "#/definitions/SlotTable"},
+        "mythic": {"$ref": "#/definitions/SlotTable"}    
+      },
+      "title": "Black frame slots"
+    },
+    "red": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "common": {"$ref": "#/definitions/SlotTable"},
+        "uncommon": {"$ref": "#/definitions/SlotTable"},
+        "rare": {"$ref": "#/definitions/SlotTable"},
+        "mythic": {"$ref": "#/definitions/SlotTable"}    
+      },
+      "title": "Red frame slots"
+    },
+    "green": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "common": {"$ref": "#/definitions/SlotTable"},
+        "uncommon": {"$ref": "#/definitions/SlotTable"},
+        "rare": {"$ref": "#/definitions/SlotTable"},
+        "mythic": {"$ref": "#/definitions/SlotTable"}    
+      },
+      "title": "Green frame slots"
+    },
+    "multicolor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "common": {"$ref": "#/definitions/SlotTable"},
+        "uncommon": {"$ref": "#/definitions/SlotTable"},
+        "rare": {"$ref": "#/definitions/SlotTable"},
+        "mythic": {"$ref": "#/definitions/SlotTable"}    
+      },
+      "title": "Multicolor frame slots"
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "common": {"$ref": "#/definitions/SlotTable"},
+        "uncommon": {"$ref": "#/definitions/SlotTable"},
+        "rare": {"$ref": "#/definitions/SlotTable"},
+        "mythic": {"$ref": "#/definitions/SlotTable"}    
+      },
+      "title": "Artifact frame slots"
+    },
+    "land": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "common": {"$ref": "#/definitions/SlotTable"},
+        "uncommon": {"$ref": "#/definitions/SlotTable"},
+        "rare": {"$ref": "#/definitions/SlotTable"},
+        "mythic": {"$ref": "#/definitions/SlotTable"}    
+      },
+      "title": "Land frame slots"
+    }
+  }
+}

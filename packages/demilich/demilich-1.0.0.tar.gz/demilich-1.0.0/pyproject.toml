@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "demilich"
+version = "1.0.0"
+description = "Demilich, the MTG skeleton wizard"
+authors = ["Matt Cooper <vtbassmatt@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/vtbassmatt/demilich"
+repository = "https://github.com/vtbassmatt/demilich"
+documentation = "https://github.com/vtbassmatt/demilich"
+keywords = ["game", "tcg", "mtg", "magic"]
+packages = [{include = "demilich", from = "src"}]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/vtbassmatt/demilich/issues"
+
+[tool.poetry.scripts]
+demilich = "demilich.cli:app"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = "^0.15.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,1244 @@
+#:schema ./demilich.schema.json
+title = "Play Booster 2024"
+
+[white.common]
+creatures = 11
+spells = 4
+
+[white.common.races]
+nothing = 1
+avatar = 1
+bird = 5
+cat = 5
+dinosaur = 1
+dog = 1
+giant = 1
+human = 20
+kithkin = 2
+loxodon = 1
+spirit = 5
+unicorn = 1
+
+[white.common.classes]
+nothing = 2
+cleric = 2
+knight = 4
+monk = 2
+mystic = 1
+nomad = 1
+samurai = 1
+scout = 4
+soldier = 4
+
+[white.common.keywords]
+double_strike = 0.2
+first_strike = 0.25
+flying = 3
+lifelink = 1
+vigilance = 2
+
+[[white.common.creature_slots]]
+mv = 1
+power = [1, 2]
+toughness = 1
+
+[[white.common.creature_slots]]
+mv = 2
+power = 2
+toughness = 1
+
+[[white.common.creature_slots]]
+mv = 2
+power = [1, 2, 3]
+toughness = [1, 2]
+
+[[white.common.creature_slots]]
+mv = 2
+power = 2
+toughness = [2, 3]
+
+[[white.common.creature_slots]]
+mv = 3
+power = [2, 3]
+toughness = 3
+
+[[white.common.creature_slots]]
+mv = 3
+power = [2, 3]
+toughness = 3
+
+[[white.common.creature_slots]]
+mv = 3
+power = 3
+toughness = 3
+
+[[white.common.creature_slots]]
+mv = 4
+power = [3, 4]
+toughness = [3, 4]
+
+[[white.common.creature_slots]]
+mv = 4
+power = 4
+toughness = 4
+
+[[white.common.creature_slots]]
+mv = [5, 6]
+power = [4, 5]
+toughness = [4, 5]
+
+[[white.common.creature_slots]]
+mv = [6, 7]
+power = [4, 5, 6]
+toughness = [4, 5]
+
+[[white.common.spell_slots]]
+instruction = "Combat-related removal"
+
+  [[white.common.spell_slots.options]]
+  name = "Divine Verdict"
+  cost = "{3}{W}"
+  type = "Instant"
+  text = "Destroy target attacking or blocking creature."
+
+  [[white.common.spell_slots.options]]
+  name = "Eriette's Lullaby"
+  cost = "{1}{W}"
+  type = "Sorcery"
+  text = "Destroy target tapped creature. You gain 2 life."
+
+  [[white.common.spell_slots.options]]
+  name = "Luminous Rebuke"
+  cost = "{4}{W}"
+  type = "Instant"
+  text = "This spell costs {3} less to cast if it targets a tapped creature. // Destroy target creature."
+
+  [[white.common.spell_slots.options]]
+  name = "Seized from Slumber"
+  cost = "{4}{W}"
+  type = "Instant"
+  text = "This spell costs {3} less to cast if it targets a tapped creature. // Destroy target creature."
+
+[[white.common.spell_slots]]
+instruction = "Banishing Light"
+
+  [[white.common.spell_slots.options]]
+  name = "Banishing Light"
+  cost = "{2}{W}"
+  type = "Enchantment"
+  text = "When this enchantment enters, exile target nonland permanent an opponent controls until this enchantment leaves the battlefield."
+
+  [[white.common.spell_slots.options]]
+  name = "Journey to Nowhere"
+  cost = "{1}{W}"
+  type = "Enchantment"
+  text = "When Journey to Nowhere enters, exile target creature. // When Journey to Nowhere leaves the battlefield, return the exiled card to the battlefield under its owner's control."
+
+  [[white.common.spell_slots.options]]
+  name = "Oblivion Ring"
+  cost = "{2}{W}"
+  type = "Enchantment"
+  text = "When Oblivion Ring enters, exile another target nonland permanent. //  When Oblivion Ring leaves the battlefield, return the exiled card to the battlefield under its owner's control."
+
+  [[white.common.spell_slots.options]]
+  name = "Chains of Custody"
+  cost = "{2}{W}"
+  type = "Enchantment"
+  subtypes = ["Aura"]
+  text = "Enchant creature you control // When Chains of Custody enters, exile target nonland permanent an opponent controls until Chains of Custody leaves the battlefield. // Enchanted creature has ward {2}."
+
+[[white.common.spell_slots]]
+instruction = "Combat trick"
+
+  [[white.common.spell_slots.options]]
+  name = "Adamant Will"
+  cost = "{1}{W}"
+  type = "Instant"
+  text = "Target creature gets +2/+2 and gains indestructible until end of turn."
+
+  [[white.common.spell_slots.options]]
+  name = "Fleeting Flight"
+  cost = "{W}"
+  type = "Instant"
+  text = "Put a +1/+1 counter on target creature. It gains flying until end of turn. Prevent all combat damage that would be dealt to it this turn."
+
+  [[white.common.spell_slots.options]]
+  name = "Military Discipline"
+  cost = "{W}"
+  type = "Enchantment"
+  subtypes = ["Aura"]
+  text = "Flash // Enchant creature // When Military Discipline enters, enchanted creature gains first strike until end of turn. // Enchanted creature gets +1/+0."
+
+  [[white.common.spell_slots.options]]
+  name = "Take Up the Shield"
+  cost = "{1}{W}"
+  type = "Instant"
+  text = "Put a +1/+1 counter on target creature. It gains lifelink and indestructible until end of turn."
+
+[[white.common.spell_slots]]
+instruction = "Disenchant/removal"
+
+  [[white.common.spell_slots.options]]
+  name = "Disenchant"
+  cost = "{1}{W}"
+  type = "Instant"
+  text = "Destroy target artifact or enchantment."
+
+  [[white.common.spell_slots.options]]
+  name = "Invoke the Divine"
+  cost = "{2}{W}"
+  type = "Instant"
+  text = "Destroy targert artifact or enchantment. You gain 4 life."
+
+  [[white.common.spell_slots.options]]
+  name = "Make Your Move"
+  cost = "{2}{W}"
+  type = "Instant"
+  text = "Destroy target artifact, enchantment, or creature with power 4 or greater."
+
+  [[white.common.spell_slots.options]]
+  name = "Destroy Evil"
+  cost = "{1}{W}"
+  type = "Instant"
+  text = "Choose one — // • Destroy target creature with toughness 4 or greater. // • Destroy target enchantment."
+
+[white.uncommon]
+creatures = 10
+spells = 4
+
+[white.rare]
+spells = 9
+
+
+
+[blue.common]
+creatures = 8
+spells = 7
+
+[blue.common.races]
+nothing = 1
+bird = 3
+crab = 2
+dog = 1
+faerie = 1
+homarid = 2
+human = 2
+merfolk = 4
+otter = 1
+spirit = 2
+turtle = 1
+zombie = 1
+
+[blue.common.classes]
+nothing = 2
+advisor = 1
+artificer = 1
+mystic = 1
+ninja = 2
+nomad = 1
+pirate = 1
+rogue = 4
+scout = 4
+wizard = 2
+
+[blue.common.keywords]
+defender = 0.5
+flash = 0.5
+flying = 3
+vigilance = 1.5
+ward_N = 0.5
+
+[[blue.common.creature_slots]]
+mv = 2
+power = 1
+toughness = [1, 2]
+
+[[blue.common.creature_slots]]
+mv = 2
+power = [1, 2]
+toughness = 2
+
+[[blue.common.creature_slots]]
+mv = 3
+power = [2, 3]
+toughness = 3
+
+[[blue.common.creature_slots]]
+mv = 3
+power = 3
+toughness = 3
+
+[[blue.common.creature_slots]]
+mv = 3
+power = [3, 4]
+toughness = [3, 4]
+
+[[blue.common.creature_slots]]
+mv = 4
+power = 4
+toughness = 4
+
+[[blue.common.creature_slots]]
+mv = [5, 6]
+power = [4, 5]
+toughness = [5, 6]
+
+[[blue.common.creature_slots]]
+mv = [6, 7]
+power = [4, 5, 6]
+toughness = [5, 6]
+
+[[blue.common.spell_slots]]
+instruction = "Protective instant"
+
+  [[blue.common.spell_slots.options]]
+  name = "Dive Down"
+  cost = "{U}"
+  type = "Instant"
+  text = "Target creature you control gets +0/+3 and gains hexproof until end of turn."
+
+  [[blue.common.spell_slots.options]]
+  name = "Shore Up"
+  cost = "{U}"
+  type = "Instant"
+  text = "Target creature you control gets +1/+1 and gains hexproof until end of turn. Untap it."
+
+  [[blue.common.spell_slots.options]]
+  name = "Water Wings"
+  cost = "{1}{U}"
+  type = "Instant"
+  text = "Until end of turn, target creature you control has base power and toughness 4/4 and gains flying and hexproof."
+
+[[blue.common.spell_slots]]
+instruction = "Counterspell"
+
+  [[blue.common.spell_slots.options]]
+  name = "Out of Air"
+  cost = "{2}{U}{U}"
+  type = "Instant"
+  text = "This spell costs {2} less to cast if it targets a creature spell. // Counter target spell."
+
+  [[blue.common.spell_slots.options]]
+  name = "Cancel"
+  cost = "{1}{U}{U}"
+  type = "Instant"
+  text = "Counter target spell."
+
+  [[blue.common.spell_slots.options]]
+  name = "Disdainful Stroke"
+  cost = "{1}{U}"
+  type = "Instant"
+  text = "Counter target spell with mana value 4 or greater."
+
+  [[blue.common.spell_slots.options]]
+  name = "Negate"
+  cost = "{1}{U}"
+  type = "Instant"
+  text = "Counter target noncreature spell."
+
+  [[blue.common.spell_slots.options]]
+  name = "Refute"
+  cost = "{1}{U}{U}"
+  type = "Instant"
+  text = "Counter target spell. Draw a card, then discard a card."
+
+[[blue.common.spell_slots]]
+instruction = "Cantrip"
+
+  [[blue.common.spell_slots.options]]
+  name = "Zhalfirin Shapecraft"
+  cost = "{1}{U}"
+  type = "Instant"
+  text = "Target creature has base power and toughness 4/3 until end of turn. // Draw a card."
+
+  [[blue.common.spell_slots.options]]
+  name = "Enter the Enigma"
+  cost = "{U}"
+  type = "Sorcery"
+  text = "Target creature can't be blocked this turn. // Draw a card."
+
+  [[blue.common.spell_slots.options]]
+  name = "Opt"
+  cost = "{U}"
+  type = "Instant"
+  text = "Scry 1. // Draw a card."
+
+[[blue.common.spell_slots]]
+instruction = "Draw 2-3"
+
+  [[blue.common.spell_slots.options]]
+  name = "Quick Study"
+  cost = "{2}{U}"
+  type = "Instant"
+  text = "Draw two cards."
+
+  [[blue.common.spell_slots.options]]
+  name = "Ancestral Reminiscence"
+  cost = "{3}{U}"
+  type = "Sorcery"
+  text = "Draw three cards, then discard a card."
+
+  [[blue.common.spell_slots.options]]
+  name = "Into the Fae Court"
+  cost = "{3}{U}{U}"
+  type = "Sorcery"
+  text = "Draw three cards. Creature a 1/1 blue Faerie creature token with flying and \"This creature can block only creatures with flying.\""
+
+[[blue.common.spell_slots]]
+instruction = "Witness Protection aura"
+
+  [[blue.common.spell_slots.options]]
+  name = "Witness Protection"
+  cost = "{U}"
+  type = "Enchantment"
+  subtypes = ["Aura"]
+  text = "Enchant creature // Enchanted creature loses all abilities and is a green and white Citizen creature with base power and toughness 1/1 named Legitimate Businessperson."
+
+  [[blue.common.spell_slots.options]]
+  name = "Stop Cold"
+  cost = "{3}{U}"
+  type = "Enchantment"
+  subtypes = ["Aura"]
+  text = "Flash // Enchant artifact or creature // When Stop Cold enter, tap enchanted permanent. // Enchanted permanent loses all abilities and doesn't untap during its controller's untap step."
+
+  [[blue.common.spell_slots.options]]
+  name = "Frogify"
+  cost = "{1}{U}"
+  type = "Enchantment"
+  subtypes = ["Aura"]
+  text = "Enchant creature // Enchanted creature loses all abilities and is a blue Frog creature with base power and toughness 1/1."
+
+  [[blue.common.spell_slots.options]]
+  name = "Stasis Field"
+  cost = "{1}{U}"
+  type = "Enchantment"
+  subtypes = ["Aura"]
+  text = "Enchant creature // Enchanted creature has base power and toughness 0/2, has defender, and loses all other abilities."
+
+[[blue.common.spell_slots]]
+instruction = "Top or bottom"
+
+  [[blue.common.spell_slots.options]]
+  name = "Dire Downdraft"
+  cost = "{3}{U}"
+  type = "Instant"
+  text = "This spell costs {1} less to cast if it targets an attacking or tapped creature. // Target creature's owner puts it on their choice of the top or bottom of their library."
+
+  [[blue.common.spell_slots.options]]
+  name = "Desynchronize"
+  cost = "{4}{U}"
+  type = "Instant"
+  text = "Target nonland permanent's owner puts it on their choice of the top or bottom of their library. Scry 2."
+
+  [[blue.common.spell_slots.options]]
+  name = "Misleading Motes"
+  cost = "{3}{U}"
+  type = "Instant"
+  text = "Target creature's owner puts it on their choice of the top or bottom of their library."
+
+  [[blue.common.spell_slots.options]]
+  name = "Unlucky Drop"
+  cost = "{3}{U}"
+  type = "Instant"
+  text = "Target artifact or creature's owner puts it on their choice of the top or bottom of their library."
+
+[[blue.common.spell_slots]]
+instruction = "Modal spell"
+
+  [[blue.common.spell_slots.options]]
+  name = "Twist Reality"
+  cost = "{1}{U}{U}"
+  type = "Instant"
+  text = "Choose one — // • Counter target spell. // • Manifest dread."
+
+  [[blue.common.spell_slots.options]]
+  name = "Urza's Rebuff"
+  cost = "{1}{U}{U}"
+  type = "Instant"
+  text = "Choose one — // • Counter target spell. // • Tap up to two target creatures."
+
+  [[blue.common.spell_slots.options]]
+  name = "Jailbreak Scheme"
+  cost = "{U}"
+  type = "Sorcery"
+  text = "Spree // + {3} — Put a +1/+1 counter on target creature. It can't be blocked this turn. // + {2} — Target artifact or creature's owner puts it on the top of bottom of their library."
+
+[blue.uncommon]
+creatures = 7
+spells = 7
+
+[blue.rare]
+spells = 9
+
+
+
+[black.common]
+creatures = 9
+spells = 6
+
+[black.common.races]
+nothing = 1
+bat = 1
+faerie = 1
+horror = 2
+human = 1
+imp = 1
+nightmare = 1
+rat = 2
+skeleton = 2
+vampire = 4
+zombie = 1
+
+[black.common.classes]
+nothing = 4
+assassin = 3
+cleric = 1
+knight = 3
+minion = 1
+ninja = 2
+nomad = 1
+rogue = 3
+samurai = 1
+warlock = 2
+
+[black.common.keywords]
+deathtouch = 1.25
+flying = 2
+lifelink = 1
+menace = 1.5
+
+[[black.common.creature_slots]]
+mv = [1, 2]
+power = [1, 2]
+toughness = 1
+
+[[black.common.creature_slots]]
+mv = 2
+power = [1, 2]
+toughness = [1, 2]
+
+[[black.common.creature_slots]]
+mv = 2
+power = 2
+toughness = [1, 2]
+
+[[black.common.creature_slots]]
+mv = 3
+power = [2, 3]
+toughness = [2, 3]
+
+[[black.common.creature_slots]]
+mv = 3
+power = [2, 3]
+toughness = 3
+
+[[black.common.creature_slots]]
+mv = 4
+power = [3, 4]
+toughness = 4
+
+[[black.common.creature_slots]]
+mv = [4, 5]
+power = [4, 5]
+toughness = 4
+
+[[black.common.creature_slots]]
+mv = [5, 5]
+power = [4, 5]
+toughness = [3, 4]
+
+[[black.common.creature_slots]]
+mv = [6, 7]
+power = [4, 5]
+toughness = [4, 5]
+
+[[black.common.spell_slots]]
+instruction = "Small conditional removal"
+
+  [[black.common.spell_slots.options]]
+  name = "Cracked Skull"
+  cost = "{2}{B}"
+  type = "Enchantment"
+  subtypes = ["Aura"]
+  text = "Enchant creature // When Cracked Skull enters, look at target player's hand. You may choose a nonland card from it. That player discards that card. // When enchanted creature is dealt damage, destroy it."
+
+  [[black.common.spell_slots.options]]
+  name = "Mirrodin Avenged"
+  cost = "{B}"
+  type = "Instant"
+  text = "Destroy target creature that was dealt damage this turn. // Draw a card."
+
+  [[black.common.spell_slots.options]]
+  name = "Vanquish the Weak"
+  cost = "{2}{B}"
+  type = "Instant"
+  text = "Destroy target creature with power 3 or less."
+
+[[black.common.spell_slots]]
+instruction = "Combat trick"
+
+  [[black.common.spell_slots.options]]
+  name = "Bladed Battle-Fan"
+  cost = "{1}{B}"
+  type = "Artifact"
+  subtypes = ["Equipment"]
+  text = "Flash // When Bladed Battle-Fan enters, attach it to target creature you control. That creature gains indestructible until end of turn. // Equipped creature gets +1/+0. // Equip {1}"
+
+  [[black.common.spell_slots.options]]
+  name = "Moment of Defiance"
+  cost = "{2}{B}"
+  type = "Instant"
+  text = "Target creature gets +2/+1 and gains lifelink until end of turn. // Draw a card."
+
+  [[black.common.spell_slots.options]]
+  name = "Skulduggery"
+  cost = "{B}"
+  type = "Instant"
+  text = "Until end of turn, target creature you control gets +1/+1 and target creature an opponent controls gets -1/-1."
+
+  [[black.common.spell_slots.options]]
+  name = "Undying Malice"
+  cost = "{B}"
+  type = "Instant"
+  text = "Until end of turn, target creature gains \"When this creature dies, return it to the battlefield under its owner's control with a +1/+1 counter on it.\""
+
+  # It's questionable whether this counts as a combat trick.
+  # Leaving it here for future consideration and because it demos `stats`.
+  # [[black.common.spell_slots.options]]
+  # name = "Rooftop Assassin"
+  # cost = "{3}{B}"
+  # type = "Creature"
+  # subtypes = ["Vampire", "Assassin"]
+  # text = "Flash // Flying, lifelink // When Rooftop Assassin enters, destroy target creature an opponent controls that was dealt damage this turn."
+  # stats = [2, 2]
+
+[[black.common.spell_slots]]
+instruction = "Card draw with a cost"
+
+  [[black.common.spell_slots.options]]
+  name = "Corrupted Conviction"
+  cost = "{B}"
+  type = "Instant"
+  text = "As an additional cost to cast this spell, sacrifice a creature. // Draw two cards."
+
+  [[black.common.spell_slots.options]]
+  name = "Diresight"
+  cost = "{2}{B}"
+  type = "Sorcery"
+  text = "Surveil 2, then draw two cards. You lose 2 life."
+
+  [[black.common.spell_slots.options]]
+  name = "Fanatical Offering"
+  cost = "{1}{B}"
+  type = "Instant"
+  text = "As an additional cost to cast this spell, sacrifice an artifact or creature. // Draw two cards and create a Map token."
+
+[[black.common.spell_slots]]
+instruction = "Coercion+"
+
+  [[black.common.spell_slots.options]]
+  name = "Coercion"
+  cost = "{2}{B}"
+  type = "Sorcery"
+  text = "Target opponent reveals their hand. You choose a card from it. That player discards that card."
+
+  [[black.common.spell_slots.options]]
+  name = "Duress"
+  cost = "{B}"
+  type = "Sorcery"
+  text = "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card."
+
+  [[black.common.spell_slots.options]]
+  name = "Pilfer"
+  cost = "{1}{B}"
+  type = "Sorcery"
+  text = "Target opponent reveals their hand. You choose a nonland card from it. That player discards that card."
+
+[[black.common.spell_slots]]
+instruction = "Unconditional removal"
+
+  [[black.common.spell_slots.options]]
+  name = "Annihilating Glare"
+  cost = "{B}"
+  type = "Sorcery"
+  text = "As an additional cost to cast this spell, pay {4} or sacrifice an artifact or creature. // Destroy target creature or planeswalker."
+
+  [[black.common.spell_slots.options]]
+  name = "Bone Splinters"
+  cost = "{B}"
+  type = "Sorcery"
+  text = "As an additional cost to cast this spell, sacrifice a creature. // Destroy target creature."
+
+  [[black.common.spell_slots.options]]
+  name = "Murder"
+  cost = "{1}{B}{B}"
+  type = "Instant"
+  text = "Destroy target creature."
+
+[[black.common.spell_slots]]
+instruction = "Slightly overcosted removal"
+
+  [[black.common.spell_slots.options]]
+  name = "Extinguish the Light"
+  cost = "{2}{B}{B}"
+  type = "Instant"
+  text = "Destroy target creature or planeswalker. If its mana value was 3 or less, you gain 3 life."
+
+  [[black.common.spell_slots.options]]
+  name = "Overwhelming Remorse"
+  cost = "{4}{B}"
+  type = "Instant"
+  text = "This spell costs {1} less to cast for each creature card in your graveyard. // Exile target creature or planeswalker."
+
+  [[black.common.spell_slots.options]]
+  name = "Shatter the Oath"
+  cost = "{3}{B}{B}"
+  type = "Sorcery"
+  text = "Destroy target creature or enchantment. Create a Wicked Role token attached to up to one target creature you control."
+
+[black.uncommon]
+creatures = 8
+spells = 7
+
+[black.rare]
+spells = 9
+
+
+
+[red.common]
+creatures = 9
+spells = 6
+
+[red.common.races]
+devil = 1
+dwarf = 2
+giant = 1
+goblin = 3
+gremlin = 1
+minotaur = 1
+ogre = 1
+orc = 2
+
+[red.common.classes]
+nothing = 5
+artificer = 1
+barbarian = 1
+berserker = 1
+knight = 2
+pirate = 2
+samurai = 1
+shaman = 4
+warrior = 4
+
+[red.common.keywords]
+double_strike = 0.2
+first_strike = 0.25
+haste = 1.5
+menace = 1.5
+reach = 1
+trample = 1.5
+
+[[red.common.creature_slots]]
+mv = [1, 2]
+power = [1, 2]
+toughness = 1
+
+[[red.common.creature_slots]]
+mv = 2
+power = 2
+toughness = [1, 2]
+
+[[red.common.creature_slots]]
+mv = 2
+power = [2, 3]
+toughness = [1, 2]
+
+[[red.common.creature_slots]]
+mv = 3
+power = [3, 4]
+toughness = [3, 4]
+
+[[red.common.creature_slots]]
+mv = 3
+power = [3, 4]
+toughness = 3
+
+[[red.common.creature_slots]]
+mv = [3, 4]
+power = 3
+toughness = [3, 4]
+
+[[red.common.creature_slots]]
+mv = [4, 5]
+power = 4
+toughness = 4
+
+[[red.common.creature_slots]]
+mv = 5
+power = [4, 5]
+toughness = [3, 4]
+
+[[red.common.creature_slots]]
+mv = 6
+power = [4, 5]
+toughness = [3, 4]
+
+[[red.common.spell_slots]]
+instruction = "Direct damage for 2"
+
+  [[red.common.spell_slots.options]]
+  name = "Burst Lightning"
+  cost = "{R}"
+  type = "Instant"
+  text = "Kicker {4} // Burst Lightning deals 2 damage to any target. If this spell was kicked, it deals 4 damage instead."
+
+  [[red.common.spell_slots.options]]
+  name = "Shock"
+  cost = "{R}"
+  type = "Instant"
+  text = "Shock deals 2 damage to any target."
+
+[[red.common.spell_slots]]
+instruction = "Combat trick"
+
+  [[red.common.spell_slots.options]]
+  name = "Ancestor's Aid"
+  cost = "{1}{R}"
+  type = "Instant"
+  text = "Target creature gets +2/+0 and gains first strike until end of turn. // Create a Treasure token."
+
+  [[red.common.spell_slots.options]]
+  name = "Sure Strike"
+  cost = "{1}{R}"
+  type = "Instant"
+  text = "Target creature gets +3/+0 and gains first strike until end of turn."
+
+  [[red.common.spell_slots.options]]
+  name = "Kindled Heroism"
+  cost = "{R}"
+  type = "Instant"
+  text = "Target creature gets +1/+0 and gains first strike until end of turn. Scry 1."
+
+[[red.common.spell_slots]]
+instruction = "Rummage/impulse draw"
+
+  [[red.common.spell_slots.options]]
+  name = "Grab the Prize"
+  cost = "{1}{R}"
+  type = "Sorcery"
+  text = "As an additional cost to cast this spell, discard a card. // Draw two cards. If the discarded card wasn't a land card, Grab the Prize deals 2 damage to each opponent."
+
+  [[red.common.spell_slots.options]]
+  name = "Demand Answers"
+  cost = "{1}{R}"
+  type = "Instant"
+  text = "As an additional cost to cast this spell, sacrifice an artifact or discard a card. // Draw two cards."
+
+  [[red.common.spell_slots.options]]
+  name = "Thrill of Possibility"
+  cost = "{1}{R}"
+  type = "Instant"
+  text = "As an additional cost to cast this spell, discard a card. // Draw two cards."
+
+[[red.common.spell_slots]]
+instruction = "Modal Shatter"
+
+  [[red.common.spell_slots.options]]
+  name = "Agate Assault"
+  cost = "{2}{R}"
+  type = "Sorcery"
+  text = "Choose one — // • Agate Assault deals 4 damage to target creature. If that creature would die this turn, exile it instead. // • Exile target artifact."
+
+  [[red.common.spell_slots.options]]
+  name = "Abrade"
+  cost = "{1}{R}"
+  type = "Instant"
+  text = "Choose one — // • Abrade deals 3 damage to target creature. // • Destroy target artifact."
+
+  [[red.common.spell_slots.options]]
+  name = "Shredded Sails"
+  cost = "{1}{R}"
+  type = "Instant"
+  text = "Choose one — // • Destroy target artifact. // • Shredded Sails deals 4 damage to target creature with flying. // Cycling {2}"
+
+[[red.common.spell_slots]]
+instruction = "Efficient direct damage for 4"
+
+  [[red.common.spell_slots.options]]
+  name = "Flame Lash"
+  cost = "{3}{R}"
+  type = "Instant"
+  text = "Flame Lash deals 4 damage to any target."
+
+  [[red.common.spell_slots.options]]
+  name = "Cut In"
+  cost = "{3}{R}"
+  type = "Sorcery"
+  text = "Cut In deals 4 damage to target creature. // Create a Young Hero Role token attached to up to one target creature you control."
+
+  [[red.common.spell_slots.options]]
+  name = "Explosive Derailment"
+  cost = "{R}"
+  type = "Instant"
+  text = "Spree // + {2} — Explosive Derailment deals 4 damage to target creature. // + {2} — Destroy target artifact."
+
+[[red.common.spell_slots]]
+instruction = "Direct damage for 6 (5 mana)"
+
+  [[red.common.spell_slots.options]]
+  name = "Conduct Electricity"
+  cost = "{4}{R}"
+  type = "Instant"
+  text = "Conduct Electricity deals 6 damage to target creature and 2 damage to up to one target creature token."
+
+  [[red.common.spell_slots.options]]
+  name = "Trick Shot"
+  cost = "{4}{R}"
+  type = "Instant"
+  text = "Trick Shot deals 6 damage to target creature and 2 damage to up to one other target creature token."
+
+  [[red.common.spell_slots.options]]
+  name = "Impossible Inferno"
+  cost = "{4}{R}"
+  type = "Instant"
+  text = "Impossible Inferno deals 6 damage to target creature. // Delirium — If there are four or more card types among cards in your graveyard, exile the top card of your library. You may play it until the end of your next turn."
+
+  [[red.common.spell_slots.options]]
+  name = "Incinerating Blast"
+  cost = "{4}{R}"
+  type = "Sorcery"
+  text = "Incinerating Blast deals 6 damage to target creature. // You may discard a card. If you do, draw a card."
+
+[red.uncommon]
+creatures = 7
+spells = 8
+
+[red.rare]
+spells = 9
+
+
+
+[green.common]
+creatures = 10
+spells = 5
+
+[green.common.races]
+ape = 1
+bear = 1
+cat = 1
+centaur = 1
+dinosaur = 3
+elf = 4
+faerie = 1
+human = 2
+loxodon = 1
+merfolk = 1
+rhox = 1
+spider = 1
+treefolk = 1
+troll = 1
+
+[green.common.classes]
+nothing = 4
+archer = 1
+druid = 3
+monk = 1
+nomad = 1
+ranger = 2
+scout = 1
+shaman = 1
+warrior = 3
+
+[green.common.keywords]
+deathtouch = 1
+haste = 0.2
+reach = 1.5
+trample = 1.5
+vigilance = 1.5
+ward_N = 0.5
+
+[[green.common.creature_slots]]
+mv = [1, 2]
+power = 1
+toughness = 1
+
+[[green.common.creature_slots]]
+mv = 2
+power = 2
+toughness = 2
+
+[[green.common.creature_slots]]
+mv = 2
+power = 2
+toughness = 3
+
+[[green.common.creature_slots]]
+mv = 3
+power = [3, 4]
+toughness = 3
+
+[[green.common.creature_slots]]
+mv = 3
+power = [3, 4]
+toughness = [3, 4]
+
+[[green.common.creature_slots]]
+mv = [3, 4]
+power = [3, 4]
+toughness = [3, 4, 5]
+
+[[green.common.creature_slots]]
+mv = [4, 5]
+power = [4, 5]
+toughness = [4, 5]
+
+[[green.common.creature_slots]]
+mv = 5
+power = 5
+toughness = [5, 6]
+
+[[green.common.creature_slots]]
+mv = 6
+power = 6
+toughness = 6
+
+[[green.common.creature_slots]]
+mv = [6, 7]
+power = [6, 7]
+toughness = 6
+
+[[green.common.spell_slots]]
+instruction = "Fight spell"
+
+  [[green.common.spell_slots.options]]
+  name = "Epic Confrontation"
+  cost = "{1}{G}"
+  type = "Sorcery"
+  text = "Target creature you control gets +1/+2 until end of turn. It fights target creature you don't control."
+
+  [[green.common.spell_slots.options]]
+  name = "Ruthless Predation"
+  cost = "{1}{G}"
+  type = "Sorcery"
+  text = "Target creature you control gets +1/+2 until end of turn. It fights target creature you don't control."
+
+  [[green.common.spell_slots.options]]
+  name = "Prey Upon"
+  cost = "{G}"
+  type = "Sorcery"
+  text = "Target creature you control fights target creature you don't control."
+
+[[green.common.spell_slots]]
+instruction = "Bite spell"
+
+  [[green.common.spell_slots.options]]
+  name = "Bite Down"
+  cost = "{1}{G}"
+  type = "Instant"
+  text = "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control."
+
+  [[green.common.spell_slots.options]]
+  name = "Rabid Bite"
+  cost = "{1}{G}"
+  type = "Sorcery"
+  text = "Target creature you control deals damage equal to its power to target creature or planeswalker you don't control."
+
+  [[green.common.spell_slots.options]]
+  name = "Monstrous Emergence"
+  cost = "{1}{G}"
+  type = "Sorcery"
+  text = "As an additional cost to cast this spell, choose a creature you control or reveal a creature card from your hand. // Monstrous Emergence deals damage equal to the power of the creature you chose or the card you revealed to target creature."
+
+[[green.common.spell_slots]]
+instruction = "Combat trick (power pump)"
+
+  [[green.common.spell_slots.options]]
+  name = "Giant Growth"
+  cost = "{G}"
+  type = "Instant"
+  text = "Target creature gets +3/+3 until end of turn."
+
+  [[green.common.spell_slots.options]]
+  name = "Fanatical Strength"
+  cost = "{1}{G}"
+  type = "Instant"
+  text = "Target creature gets +3/+3 and gains trample until end of turn."
+
+  [[green.common.spell_slots.options]]
+  name = "For the Family"
+  cost = "{G}"
+  type = "Instant"
+  text = "Target creature gets +2/+2 until end of turn. If you control four or more creatures, that creature gets +4/+4 until end of turn instead."
+
+[[green.common.spell_slots]]
+instruction = "Mana acceleration"
+
+  [[green.common.spell_slots.options]]
+  name = "New Horizons"
+  cost = "{2}{G}"
+  type = "Enchantment"
+  subtypes = ["Aura"]
+  text = "Enchant land // When this Aura enters, put a +1/+1 counter on target creature you control. // Enchanted land has \"{T}: Add two mana of any one color.\""
+
+  [[green.common.spell_slots.options]]
+  name = "Heaped Harvest"
+  cost = "{2}{G}"
+  type = "Artifact"
+  subtypes = ["Food"]
+  text = "When Heaped Harvest enters and when you sacrifice it, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle. // {2}, {T}, Sacrifice Heaped Harvest: You gain 3 life."
+
+  [[green.common.spell_slots.options]]
+  name = "Return from the Wilds"
+  cost = "{2}{G}"
+  type = "Sorcery"
+  text = "Choose two — // • Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. // • Create a 1/1 white Human creature token. // • Create a Food token."
+
+[[green.common.spell_slots]]
+instruction = "Dig for lands and/or creatures"
+
+  [[green.common.spell_slots.options]]
+  name = "Bushwhack"
+  cost = "{G}"
+  type = "Sorcery"
+  text = "Choose one — // • Search your library for a basic land card, reveal it, put it into your hand, then shuffle. // • Target creature you control fights target creature you don't control."
+
+  [[green.common.spell_slots.options]]
+  name = "Commune with Nature"
+  cost = "{G}"
+  type = "Sorcery"
+  text = "Look at the top five cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in any order."
+
+  [[green.common.spell_slots.options]]
+  name = "In the Presence of Ages"
+  cost = "{2}{G}"
+  type = "Instant"
+  text = "Reveal the top four cards of your library. You may put a creature card and/or a land card from among them into your hand. Put the rest into your graveyard."
+
+[green.uncommon]
+creatures = 9
+spells = 5
+
+[green.rare]
+spells = 9
+
+
+
+[artifact.common]
+creatures = 3
+spells = 3
+
+[artifact.common.races]
+construct = 3
+gargoyle = 1
+golem = 3
+myr = 3
+scarecrow = 1
+thopter = 1
+toy = 1
+
+[artifact.common.classes]
+nothing = 22
+drone = 1
+soldier = 1
+warrior = 1
+
+[[artifact.common.creature_slots]]
+mv = 2
+power = 1
+toughness = 1
+
+[[artifact.common.creature_slots]]
+mv = 3
+power = 2
+toughness = 2
+
+[[artifact.common.creature_slots]]
+mv = 4
+power = 3
+toughness = 3
+
+[[artifact.common.spell_slots]]
+instruction = "Removal"
+
+  [[artifact.common.spell_slots.options]]
+  name = "Bear Trap"
+  cost = "{1}"
+  type = "Artifact"
+  text = "Flash // {3}, {T}, Sacrifice Bear Trap: It deals 3 damage to target creature."
+
+  [[artifact.common.spell_slots.options]]
+  name = "Meteorite"
+  cost = "{2}"
+  type = "Artifact"
+  text = "When Meteorite enters, it deals 2 damage to any target. // {T}: Add one mana of any color."
+
+  [[artifact.common.spell_slots.options]]
+  name = "Runaway Boulder"
+  cost = "{6}"
+  type = "Artifact"
+  text = "Flash // When Runaway Boulder enters, it deals 6 damage to target creature an opponent controls. // Cycling {2}"
+
+[[artifact.common.spell_slots]]
+instruction = "Manalith+ ability"
+
+  [[artifact.common.spell_slots.options]]
+  name = "Manalith"
+  cost = "{3}"
+  type = "Artifact"
+  text = "{T}: Add one mana of any color."
+
+  [[artifact.common.spell_slots.options]]
+  name = "Letter of Acceptance"
+  cost = "{3}"
+  type = "Artifact"
+  text = "{T}: Add one mana of any color. // {2}, {T}, Sacrifice Letter of Acceptance: Draw a card."
+
+  [[artifact.common.spell_slots.options]]
+  name = "Network Terminal"
+  cost = "{3}"
+  type = "Artifact"
+  text = "{T}: Add one mana of any color. // {1}, {T}, Tap another untapped artifact you control: Draw a card, then discard a card."
+
+[[artifact.common.spell_slots]]
+instruction = "Land fixing"
+
+  [[artifact.common.spell_slots.options]]
+  name = "Energy Refractor"
+  cost = "{2}"
+  type = "Artifact"
+  text = "When Energy Refractor enters, draw a card. // {2}: Add one mana of any color."
+
+  [[artifact.common.spell_slots.options]]
+  name = "Prophetic Prism"
+  cost = "{2}"
+  type = "Artifact"
+  text = "When Prophetic Prism enters, draw a card. // {1}, {T}: Add one mana of any color."
+
+  [[artifact.common.spell_slots.options]]
+  name = "Urn of Godfire"
+  cost = "{1}"
+  type = "Artifact"
+  text = "{2}: Add one mana of any color. // {6}, {T}, Sacrifice Urn of Godfire: Destroy target creature or enchantment."
+
+[artifact.uncommon]
+creatures = 4
+spells = 3
+
+[artifact.rare]
+spells = 5
+
+
+
+[multicolor.uncommon]
+creatures = 20
+
+[multicolor.rare]
+spells = 10
+
+[multicolor.mythic]
+spells = 20
+
+
+
+[land.rare]
+spells = 10
