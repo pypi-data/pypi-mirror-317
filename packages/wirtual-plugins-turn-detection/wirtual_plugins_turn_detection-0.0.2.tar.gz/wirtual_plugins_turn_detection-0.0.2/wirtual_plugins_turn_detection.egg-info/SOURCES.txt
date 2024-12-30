@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/turn_detector/__init__.py
+wirtual/plugins/turn_detector/eou.py
+wirtual/plugins/turn_detector/log.py
+wirtual/plugins/turn_detector/version.py
+wirtual_plugins_turn_detection.egg-info/PKG-INFO
+wirtual_plugins_turn_detection.egg-info/SOURCES.txt
+wirtual_plugins_turn_detection.egg-info/dependency_links.txt
+wirtual_plugins_turn_detection.egg-info/requires.txt
+wirtual_plugins_turn_detection.egg-info/top_level.txt
