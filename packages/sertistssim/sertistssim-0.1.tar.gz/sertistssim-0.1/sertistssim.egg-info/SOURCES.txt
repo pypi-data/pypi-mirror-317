@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+sertistssim/__init__.py
+sertistssim/sertistssim.py
+sertistssim.egg-info/PKG-INFO
+sertistssim.egg-info/SOURCES.txt
+sertistssim.egg-info/dependency_links.txt
+sertistssim.egg-info/top_level.txt
+tests/__init__.py
+tests/testcode.py
