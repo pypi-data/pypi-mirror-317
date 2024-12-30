@@ -1,0 +1,2 @@
+[pytest11]
+pytest_junit_xray_xml = pytest_junit_xray_xml.plugin
