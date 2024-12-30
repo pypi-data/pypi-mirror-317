@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: meteopoint
+Version: 0.2.0
+Summary: A beautiful CLI tool for weather and environmental data
+Home-page: https://github.com/yourusername/meteopoint
+Author: MeteoPoint Contributors
+Author-email: your.email@example.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: typer>=0.9.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: rich>=13.7.0
+Requires-Dist: argcomplete>=3.2.1
+
+# MeteoPoint 🌤️
+
+A beautiful CLI tool for weather and environmental data, featuring air quality monitoring with WHO guideline comparisons.
+
+## Quick Start (2 minutes)
+
+```bash
+# Install globally
+pip install meteopoint
+
+# Run the interactive setup
+meteopoint setup
+
+# Start using it!
+meteopoint paris
+meteopoint nyc
+```
+
+## Features
+
+- 🌡️ Comprehensive weather data with beautiful display
+- 💨 Air quality monitoring with WHO guideline comparisons
+- 🏭 Top 5 most significant pollutants with health impact assessment
+- 🌍 Enhanced accuracy with dual API support
+- 🔄 2-day weather forecast with precipitation probability
+- 🌅 Sunrise and sunset times
+- 📍 Built-in city aliases (nyc, sf, etc.)
+
+## Examples
+
+```bash
+# Basic usage
+meteopoint paris
+
+# Use Fahrenheit
+meteopoint paris --fahrenheit
+
+# Get minimal output
+meteopoint paris --format minimal
+
+# Get JSON output
+meteopoint paris --format json
+
+# Save a city alias
+meteopoint save "New York" --alias nyc
+
+# Set default city
+meteopoint config --default-city paris
+```
+
+## City Aliases
+
+Common city aliases are built-in:
+- nyc → New York
+- sf → San Francisco
+- la → Los Angeles
+- lon → London
+- paris → Paris
+- And many more!
+
+## Requirements
+
+- Python 3.7+
+- Free API key from OpenWeather (required)
+- Free Google Maps API key (optional, enhances air quality data) 

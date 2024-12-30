@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/meteopoint/__init__.py
+src/meteopoint/__main__.py
+src/meteopoint/city_aliases.py
+src/meteopoint/config.py
+src/meteopoint/meteopoint.py
+src/meteopoint.egg-info/PKG-INFO
+src/meteopoint.egg-info/SOURCES.txt
+src/meteopoint.egg-info/dependency_links.txt
+src/meteopoint.egg-info/entry_points.txt
+src/meteopoint.egg-info/requires.txt
+src/meteopoint.egg-info/top_level.txt
