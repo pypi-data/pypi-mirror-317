@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_complex.py
+tests/test_components.py
+tests/test_library.py
+tests/test_request_body.py
+wapiti_swagger/wapiti_swagger.egg-info/PKG-INFO
+wapiti_swagger/wapiti_swagger.egg-info/SOURCES.txt
+wapiti_swagger/wapiti_swagger.egg-info/dependency_links.txt
+wapiti_swagger/wapiti_swagger.egg-info/requires.txt
+wapiti_swagger/wapiti_swagger.egg-info/top_level.txt
