@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: photo-management
+Version: 2024.1
+Summary: Tools for managing a simple photo library
+Author-email: Sam H <samhutchins@users.noreply.github.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: pyexiftool>=0.5.6
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: rich>=13.9.4
+Requires-Dist: typer>=0.15.1
+Description-Content-Type: text/markdown
+
+# Photo Management
+
+This is a small script I've written to help manage my photo library. It uses exiftool and ImageMagick, you'll need to install those separately
+
+By default, the photo library is in `~/Pictures`, but you can choose a custom location
+
+See `manage-photos --help` for more information

@@ -1,0 +1,2 @@
+[console_scripts]
+manage-photos = photo_management.photo_management:app
