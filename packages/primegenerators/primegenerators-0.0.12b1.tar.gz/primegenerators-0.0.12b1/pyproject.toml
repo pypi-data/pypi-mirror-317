@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "primegenerators"
+version = "0.0.12b1"
+description = "A library of prime number generators and analyzers, that also has a command-line interface"
+keywords = ["prime", "numbers", "generator", "cli"]
+authors = ["big-jr <githubcomms@softwarepragmatism.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Topic :: Software Development :: Libraries",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = { version = "^7.4.3", source = "pypi" }
+black = { version = "^24.0.0", source = "pypi" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
