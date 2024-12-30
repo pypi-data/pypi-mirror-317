@@ -1,0 +1,2 @@
+recursive-include *.dex
+recursive-include *.md
