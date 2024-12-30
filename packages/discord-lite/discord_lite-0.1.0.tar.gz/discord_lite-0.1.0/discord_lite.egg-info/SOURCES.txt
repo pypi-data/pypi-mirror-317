@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+discord_lite.egg-info/PKG-INFO
+discord_lite.egg-info/SOURCES.txt
+discord_lite.egg-info/dependency_links.txt
+discord_lite.egg-info/requires.txt
+discord_lite.egg-info/top_level.txt
+discordlite/__init__.py
+discordlite/bot.py
+discordlite/gateway.py
+discordlite/http.py
+discordlite/intents.py
