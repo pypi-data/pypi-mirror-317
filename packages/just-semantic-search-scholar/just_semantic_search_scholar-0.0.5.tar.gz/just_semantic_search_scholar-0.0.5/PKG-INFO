@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: just-semantic-search-scholar
+Version: 0.0.5
+Summary: Semantic and hybrid search with scholar
+License: AGPL-3.0-or-later
+Keywords: python,llm,science,review,hybrid search,semantic search
+Author: Anton Kulaga
+Author-email: antonkulaga@gmail.com
+Requires-Python: >=3.11,<3.14
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: huggingface-hub (>=0.27.0)
+Requires-Dist: just-semantic-search (==0.0.0)
+Requires-Dist: rich (>=13.9.4)
+Requires-Dist: scholarly (>=1.7.11)
+Requires-Dist: semanticscholar (>=0.9.0)
+Requires-Dist: sentence-transformers (>=2.2.2)
+Requires-Dist: transformers (>=4.44.2)
+Requires-Dist: triton (>=2.0.0)
+Requires-Dist: typer (>=0.9.0)
+Description-Content-Type: text/markdown
+
+Semantic Scholar - related semantic search
