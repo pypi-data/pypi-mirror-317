@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "just-semantic-search-meili"
+version = "0.0.5"
+description = "Semantic and hybrid search with meilisearch"
+authors = ["Anton Kulaga <antonkulaga@gmail.com>"]
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+keywords = ["python", "llm", "science", "review", "hybrid search", "semantic search"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: Unix",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+]
+
+packages = [
+    { include = "just_semantic_search" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.14"
+transformers = ">=4.44.2"
+meilisearch-python-sdk = ">=3.6.2"
+triton = ">=2.0.0"
+sentence-transformers = ">=2.2.2"
+typer = ">=0.9.0"
+just-semantic-search = { version = "0.0.0", allow-prereleases = true }
+rich = ">=13.9.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0"]
+build-backend = "poetry.core.masonry.api" 
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+style = "pep440"
