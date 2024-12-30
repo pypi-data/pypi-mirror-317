@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: COSQL
+Version: 0.2.0
+Summary: SQLite3 wrapper for asyncio
+Home-page: https://github.com/cwmet/COSQL
+Author: Comet
+Requires-Python: >=3.12
+Requires-Dist: asyncio
