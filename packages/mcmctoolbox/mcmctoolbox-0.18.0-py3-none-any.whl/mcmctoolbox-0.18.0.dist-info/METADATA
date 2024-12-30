@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: mcmctoolbox
+Version: 0.18.0
+Summary: MCMC Algorithms
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: jax>=0.4.38
+Requires-Dist: matplotlib>=3.10.0
+Requires-Dist: scipy>=1.14.1
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: stein-thinning>=0.2.0
+Requires-Dist: tqdm>=4.67.1
+Description-Content-Type: text/markdown
+
+# mcmctoolbox
+MCMC Algorithms
+
+# Installing via Git
+One can pip install the package directly from this repository:
+```
+pip install git+https://github.com/congyewang/mcmctoolbox
+```
