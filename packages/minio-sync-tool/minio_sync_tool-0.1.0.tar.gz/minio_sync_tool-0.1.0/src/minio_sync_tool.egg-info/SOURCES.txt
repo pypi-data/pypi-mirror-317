@@ -1,0 +1,14 @@
+README.md
+setup.py
+src/minio_sync_tool/__init__.py
+src/minio_sync_tool/cli.py
+src/minio_sync_tool/minio_helper.py
+src/minio_sync_tool/utils.py
+src/minio_sync_tool.egg-info/PKG-INFO
+src/minio_sync_tool.egg-info/SOURCES.txt
+src/minio_sync_tool.egg-info/dependency_links.txt
+src/minio_sync_tool.egg-info/entry_points.txt
+src/minio_sync_tool.egg-info/requires.txt
+src/minio_sync_tool.egg-info/top_level.txt
+src/minio_sync_tool/tasks/__init__.py
+src/minio_sync_tool/tasks/sync_repo.py

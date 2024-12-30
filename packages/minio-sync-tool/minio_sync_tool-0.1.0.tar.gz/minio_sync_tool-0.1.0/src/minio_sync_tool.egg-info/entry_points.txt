@@ -1,0 +1,2 @@
+[console_scripts]
+minio_sync_tool = minio_sync_tool.cli:main
