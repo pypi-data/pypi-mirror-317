@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openhands_dynamic_agent_factory"
+version = "0.1.0"
+authors = [
+  { name="Makafeli", email="info@yasin.nu" },
+]
+keywords = ["openhands", "llm", "agent", "factory", "code-analysis"]
+description = "Dynamic agent factory for OpenHands that generates micro-agents based on technology keywords"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "openhands>=0.17.0",
+    "dataclasses;python_version<'3.7'"
+]
+
+[project.optional-dependencies]
+python = ["ast", "pylint>=3.0.0"]
+react = ["esprima>=4.0.0", "eslint>=8.0.0"]
+node = ["acorn>=8.0.0", "eslint>=8.0.0"]
+sql = ["sqlparse>=0.4.0", "sqlalchemy>=2.0.0"]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.0.0",
+    "mypy>=1.0.0",
+    "flake8>=6.0.0"
+]
+all = [
+    "ast",
+    "pylint>=3.0.0",
+    "esprima>=4.0.0",
+    "eslint>=8.0.0",
+    "acorn>=8.0.0",
+    "sqlparse>=0.4.0",
+    "sqlalchemy>=2.0.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/makafeli/openhands-dynamic-agent-factor"
+"Bug Tracker" = "https://github.com/makafeli/openhands-dynamic-agent-factor/issues"
