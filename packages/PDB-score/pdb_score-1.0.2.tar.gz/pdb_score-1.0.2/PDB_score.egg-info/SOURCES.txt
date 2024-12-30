@@ -1,0 +1,12 @@
+LICENSE
+setup.py
+PDB_score/ProteinStructure.py
+PDB_score/__init__.py
+PDB_score/core.py
+PDB_score/main.py
+PDB_score.egg-info/PKG-INFO
+PDB_score.egg-info/SOURCES.txt
+PDB_score.egg-info/dependency_links.txt
+PDB_score.egg-info/entry_points.txt
+PDB_score.egg-info/requires.txt
+PDB_score.egg-info/top_level.txt
