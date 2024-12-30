@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+wirtual/plugins/deepgram/__init__.py
+wirtual/plugins/deepgram/_utils.py
+wirtual/plugins/deepgram/log.py
+wirtual/plugins/deepgram/models.py
+wirtual/plugins/deepgram/py.typed
+wirtual/plugins/deepgram/stt.py
+wirtual/plugins/deepgram/tts.py
+wirtual/plugins/deepgram/version.py
+wirtual_plugins_deepgram.egg-info/PKG-INFO
+wirtual_plugins_deepgram.egg-info/SOURCES.txt
+wirtual_plugins_deepgram.egg-info/dependency_links.txt
+wirtual_plugins_deepgram.egg-info/requires.txt
+wirtual_plugins_deepgram.egg-info/top_level.txt
