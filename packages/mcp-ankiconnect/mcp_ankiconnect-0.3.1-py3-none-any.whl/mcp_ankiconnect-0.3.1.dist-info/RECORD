@@ -1,0 +1,10 @@
+mcp_ankiconnect/__init__.py,sha256=mwTJUvoW6JcW-GGRv72YRSA1uee6Cjg-oc31abyt6A4,225
+mcp_ankiconnect/ankiconnect_client.py,sha256=c71qSYR_QJLbBj4PWSGdKp2rqbv60rPzEXIZUH4uElA,5475
+mcp_ankiconnect/config.py,sha256=9D_QhXbT6QHPuO016E4uiM1ri53ILgrPGAW3EhfjoSs,902
+mcp_ankiconnect/main.py,sha256=UG8jOAb_vybQgG7r_SghA7eRwJ_Nazi8JIRAbmmYmcg,253
+mcp_ankiconnect/server.py,sha256=yDDQ_PfUgSdAZtc2CwQFXiurP_1NLb-2vs9T81mWOSw,9080
+mcp_ankiconnect/server_prompts.py,sha256=ZQy827Ct_ZrxxQoBNo8U3eI9o_n40S7_SVCCcu0N1mQ,3520
+mcp_ankiconnect-0.3.1.dist-info/METADATA,sha256=u_hiSAVQnJsa7MgIKuX2w1FENuOSI6SlN3-0ibBCPuE,3160
+mcp_ankiconnect-0.3.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_ankiconnect-0.3.1.dist-info/entry_points.txt,sha256=nWufp4yfzHodcH4ZnhFWI79nG2ZOkrQyNBLoQ58Qjdo,62
+mcp_ankiconnect-0.3.1.dist-info/RECORD,,
