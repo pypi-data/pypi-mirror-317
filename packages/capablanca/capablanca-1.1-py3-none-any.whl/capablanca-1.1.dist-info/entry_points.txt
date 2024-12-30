@@ -1,0 +1,2 @@
+[console_scripts]
+jaque = capablanca.satpy:main
