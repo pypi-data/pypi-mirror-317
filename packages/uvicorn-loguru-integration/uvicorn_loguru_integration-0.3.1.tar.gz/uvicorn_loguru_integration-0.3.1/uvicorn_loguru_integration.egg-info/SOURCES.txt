@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+uvicorn_loguru_integration.py
+uvicorn_loguru_integration.egg-info/PKG-INFO
+uvicorn_loguru_integration.egg-info/SOURCES.txt
+uvicorn_loguru_integration.egg-info/dependency_links.txt
+uvicorn_loguru_integration.egg-info/requires.txt
+uvicorn_loguru_integration.egg-info/top_level.txt
