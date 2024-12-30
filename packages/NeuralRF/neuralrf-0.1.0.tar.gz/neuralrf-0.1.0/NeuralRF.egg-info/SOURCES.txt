@@ -1,0 +1,7 @@
+LICENSE
+setup.py
+NeuralRF.egg-info/PKG-INFO
+NeuralRF.egg-info/SOURCES.txt
+NeuralRF.egg-info/dependency_links.txt
+NeuralRF.egg-info/requires.txt
+NeuralRF.egg-info/top_level.txt
