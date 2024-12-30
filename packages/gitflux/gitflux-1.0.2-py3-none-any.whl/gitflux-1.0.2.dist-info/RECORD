@@ -1,0 +1,15 @@
+gitflux/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitflux/__main__.py,sha256=17N2N8TP0hNsTguZD44wJNDJk-I-3tC43ABKeChQBu4,1458
+gitflux/commands/__init__.py,sha256=w4N8dyL4Ne424YPzZt_zsLVkOaD6UqHb4CFoaK9Ammw,219
+gitflux/commands/create_repos.py,sha256=PtXRea3FkzKIeZSS9b1hcrKcaBSTWBEyI53N_Hhqd3A,508
+gitflux/commands/delete_repos.py,sha256=6KHvbWnWnPRBBYR0a-YnEe9WEJ9282cW2KUAoUS4BsE,846
+gitflux/commands/list_repos.py,sha256=2g6u_nmIDkfv59c00kn5gChKRYh8LUF26JpgHAW-nPs,327
+gitflux/providers/__init__.py,sha256=NSYbSO6rLFEd0xAuFlNhQBh4MI3wNvE41zdzM7Htpic,374
+gitflux/providers/gitee.py,sha256=N4s2sInMpa2RLocHueSuK92WFTZPyS0Ajx24Xikhtso,2296
+gitflux/providers/github.py,sha256=tcmcr5c5_J7aIROda61ZC8wUVyHz7qA4wNS9bAFtsEQ,1770
+gitflux/typing.py,sha256=4vK_HcgBRVUmqEXqxMwncOtBVAfTYY_dQJ3GFBUL_LI,191
+gitflux-1.0.2.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+gitflux-1.0.2.dist-info/METADATA,sha256=mj1v3Sk5SIBYMXA2p6KQxWL-r16DNyYX2AlBXn7Dllc,960
+gitflux-1.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+gitflux-1.0.2.dist-info/entry_points.txt,sha256=_r-v7llSIlBe07J9y5OqWLnNbeiMWE99Y59B_KHh82c,48
+gitflux-1.0.2.dist-info/RECORD,,
