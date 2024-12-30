@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: easysocket-nishant4i
+Version: 0.1.2
+Summary: A simple WebSocket library for Flask and Django
+Author: Nishant Maurya
+Author-email: mauryanishant2005@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: websockets>=10.0
+Requires-Dist: python-socketio>=5.0.0
+Provides-Extra: flask
+Requires-Dist: flask>=2.0.0; extra == "flask"
+Requires-Dist: gevent-websocket>=0.10.1; extra == "flask"
+Provides-Extra: django
+Requires-Dist: django>=3.2; extra == "django"
+Requires-Dist: channels>=3.0.0; extra == "django"
