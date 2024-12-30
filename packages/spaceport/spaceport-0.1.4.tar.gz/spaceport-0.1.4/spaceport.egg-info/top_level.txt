@@ -1,0 +1,11 @@
+demo
+dist
+docs
+fixtures
+logs
+pylib
+sp-projects
+spaceport
+spaceport_cli
+spaceport_simpl
+tests
