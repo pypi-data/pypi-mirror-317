@@ -1,0 +1,10 @@
+orian/__init__.py,sha256=fk99lJ5xjAqfWOv7D08RFuUGA7Qws0D0HkiaXipyl6E,19
+orian/main.py,sha256=HQL_dMU1qOR_kmWEn-NI-uB4VPib6SyS5CXbDralzZs,68
+orian/src/__init__.py,sha256=yCKdCCjNyPtrvvImtoKmIg6fxCLPCgoEHIHT6EJsVrE,37
+orian/src/crop_image.py,sha256=amuiVLzoVLD3Sf74imciHilsxOHo1Vi1icosGWkw8gw,39
+orian/src/functions.py,sha256=EghUYnZdDxp-BWyeE0ThgmNeKZs0ugL2WVJocsP6Xkk,82
+oriansoft-0.1.0.dist-info/LICENSE.txt,sha256=K6dGOuFbd9SNP8NGeV8J2FAP7sX4jKa89bJQpzuL2ng,1053
+oriansoft-0.1.0.dist-info/METADATA,sha256=hU70yR-74oj6ploLAxICYcGiA4APaFiewBoZavr_VGw,583
+oriansoft-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+oriansoft-0.1.0.dist-info/top_level.txt,sha256=eevKsY_FIc8J6_XvcAjTaRqtUkplcRTaH13G-eb0uc4,6
+oriansoft-0.1.0.dist-info/RECORD,,
