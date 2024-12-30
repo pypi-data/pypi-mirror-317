@@ -1,0 +1,14 @@
+[project]
+name = "tiptoi-dl"
+version = "0.1.0"
+description = "A TipToi Download helper"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "requests>=2.32.3",
+    "tqdm>=4.67.1",
+]
+
+[project.scripts]
+tiptoi-dl = "tiptoidl:main"
